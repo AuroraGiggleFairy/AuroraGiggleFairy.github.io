@@ -1,6 +1,6 @@
 # AuroraGiggleFairy Mods
 ## HUDPlus 
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/AGF-A20HUDPlus1.4.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.4.1.zip)
 
 This is TEST. Download it fool!
 
