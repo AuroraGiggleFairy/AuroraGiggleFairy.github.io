@@ -1,6 +1,6 @@
 # AuroraGiggleFairy Mods
 
-### My name is AuroraGiggleFairy (AF), previously known as RilesPlus.
+### My name is AuroraGiggleFairy (AGF), previously known as RilesPlus.
 
 ### Below are the latest versions of my mods.
 
