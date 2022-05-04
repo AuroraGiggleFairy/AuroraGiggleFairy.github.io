@@ -70,4 +70,4 @@ Step 1: [Download](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2F
 
 Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-MoreZombies1.0.0.zip) and install my patch.
 
-Khaine is a legend among modders. My patch is just some alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
+Khaine is a legend among modders. My patch has minor alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
