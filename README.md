@@ -1,15 +1,15 @@
 # AuroraGiggleFairy Mods
 
-### -My name is AuroraGiggleFairy (AF), previously known as RilesPlus.
+### My name is AuroraGiggleFairy (AF), previously known as RilesPlus.
 
-### -Below are the latest versions of my mods.
+### Below are the latest versions of my mods.
 
-### -If you have any questions or issues, feel free to contact me on my discord: 
+### If you have any questions or issues, feel free to contact me on my discord: 
 
 https://discord.gg/Vm5eyW6N4r
 
 
- ### -All listed mods are Server Side, EAC Friendly, and attempts to support ALL languages.
+ ### All listed mods are Server Side, EAC Friendly, and attempts to support ALL languages.
 
 <p>&nbsp;</p>
 
