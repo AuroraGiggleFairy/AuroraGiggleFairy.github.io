@@ -71,3 +71,9 @@ Step 1: [Download](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2F
 Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-60BBM-AGFPatch1.0.0.zip) and install my patch.
 
 Khaine is a legend among modders. My patch has minor alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
+
+<p>&nbsp;</p>
+
+## **A20 AGF HUD Compatibility with Khaine's 15 slot TOOLBELT** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip)
+
+This is for those that like to use my HUD with Khaine's 15 slot toolbelt. :-)
