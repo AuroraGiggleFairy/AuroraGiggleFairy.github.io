@@ -68,6 +68,6 @@ Wandering Hordes are increased slighty to give that extra edge and NOT be too di
 ## **A20 AGF Small Modification of Khaine's 60 Slot Backpack**
 Step 1: [Download](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2FKhaineGB%2FKhaineA20ModletsXML%2Ftree%2Fmain%2FKHA20-60BBM) and install Khaine's 60 slot inventory mod.
 
-Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-MoreZombies1.0.0.zip) and install my patch.
+Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-60BBM-AGFPatch1.0.0.zip) and install my patch.
 
 Khaine is a legend among modders. My patch has minor alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
