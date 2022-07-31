@@ -17,7 +17,7 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 <p>&nbsp;</p>
 
-## **A20 Vanilla Plus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VanillaPlus3.1.1.zip)
+## **A20 Vanilla Plus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VanillaPlus3.2.1.zip)
 
 So many many many things. I am still working on how to explain this one even with pictures. Seriously awesome mod with TONS of hours and testing, data collecting, tweaking, etc etc. The overall goal is to simplify and enhance the vanilla experience.... and this is my iteration of that.
 
