@@ -14,11 +14,11 @@
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, etc. Details in the readme.
 
-HUD Compatibility patches (need main HUD plus the patch to work)
+  HUD Compatibility patches (need main HUD plus the patch to work)
 
-Darkness Falls (version 4.1.1) [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2DFPatch.zip)
+    Darkness Falls (version 4.1.1) [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2DFPatch.zip)
 
-Khaine's 15 Slot Toolbelt (independant of DF) [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip)
+    Khaine's 15 Slot Toolbelt (independant of DF) [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip)
 
 <p>&nbsp;</p>
 
