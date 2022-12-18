@@ -10,10 +10,13 @@
 
 <p>&nbsp;</p>
 
-## **A20 HUDPlus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.4.1.zip)
+## **A20 HUDPlus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, etc. Details in the readme.
 
+HUD Compatibility patches (need main HUD plus the patch to work)
+Darkness Falls (version 4.1.1) [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2DFPatch.zip)
+Khaine's 15 Slot Toolbelt (independant of DF) [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip)
 
 <p>&nbsp;</p>
 
@@ -71,9 +74,3 @@ Step 1: [Download](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2F
 Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-60BBM-AGFPatch1.0.0.zip) and install my patch.
 
 Khaine is a legend among modders. My patch has minor alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
-
-<p>&nbsp;</p>
-
-## **A20 AGF HUD Compatibility with Khaine's 15 slot TOOLBELT** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip)
-
-This is for those that like to use my HUD with Khaine's 15 slot toolbelt. :-)
