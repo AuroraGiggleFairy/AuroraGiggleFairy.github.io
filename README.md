@@ -10,7 +10,7 @@
 
 <p>&nbsp;</p>
 
-## **A20 HUDPlus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2DFPatch.zip)
+## **A20 HUDPlus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, etc. Details in the readme.
 
