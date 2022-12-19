@@ -17,9 +17,9 @@ A HUD overhaul that provides additional information while attempting to keep the
 <p>&nbsp;</p>
 
 ### **Compatibility Patches:** 
-Darkness Falls v4.1.1 Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2DFPatch.zip)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Darkness Falls v4.1.1 Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2DFPatch.zip)
 
-Khaine's 15 Slot Toolbelt Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip) (do not use with Darkness Falls patch)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Khaine's 15 Slot Toolbelt Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip) (do not use with Darkness Falls patch)
 
 <p>&nbsp;</p>
 
