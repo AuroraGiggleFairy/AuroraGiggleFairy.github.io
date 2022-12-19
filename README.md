@@ -14,8 +14,6 @@
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, etc. Details in the readme.
 
-<p>&nbsp;</p>
-
 ### ***Compatibility Patches:***
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Darkness Falls v4.1.1 Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/d453c9a09b9f26541a6329dbe36fbaaa4e2c27d7/AGF-A20HUDPlus1.5.2DFPatch.zip)
