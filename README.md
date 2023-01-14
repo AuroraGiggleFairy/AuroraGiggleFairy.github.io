@@ -10,7 +10,7 @@
 
 <p>&nbsp;</p>
 
-## **A20 HUDPlus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip)
+## **A20 HUDPlus** - [Download v1.5.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, etc. Details in the readme.
 
@@ -22,25 +22,25 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 <p>&nbsp;</p>
 
-## **A20 HUDPlus** - [Download v.1.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip)
+## **A20 Backpack 72** - [Download v1.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip)
 
 72 slot backpack mod. Inlcudes lockable slots, slightly reduced encumbrance penalty, full language support, and is server side. This is one of AGF's favorites.
   
 <p>&nbsp;</p>
 
-## **A20 Vanilla Plus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VanillaPlus3.2.1.zip)
+## **A20 Vanilla Plus** - [Download v3.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VanillaPlus3.2.1.zip)
 
 So many many many things. I am still working on how to explain this one even with pictures. Seriously awesome mod with TONS of hours and testing, data collecting, tweaking, etc etc. The overall goal is to simplify and enhance the vanilla experience.... and this is my iteration of that.
 
 <p>&nbsp;</p>
 
-## **A20 Cosmetic System** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20CosmeticSystem1.1.1.zip)
+## **A20 Cosmetic System** - [Download v1.1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20CosmeticSystem1.1.1.zip)
 
 Look the way you want without sacrificing armor is the goal here. Cosmetic with no to minimal costs is my policy. Craft AND bundle dyes. Invisible Dye to hide clothing you don't wish to show. Orange Dye that follows the theme of the game. Facial Piercings are back. Cosmetic Mods to make armor appear like a different clothing article. Flashlight and Nightvision mods to go onto your helmet or chest, so you can have both. High Performance Running Soles mod.
 
 <p>&nbsp;</p>
 
-## **A20 Vehicles Plus** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VehiclesPlus1.1.1.zip)
+## **A20 Vehicles Plus** - [Download v1.1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VehiclesPlus1.1.1.zip)
 
 All vehicles speeds are increased slighty, as I felt the bicycle felt too slow to me. Each vehicle has 1 additional row of storage because I'm a hoarder. Expanded Seat Mod is now useless as you can always seat 2 people on the bicycle, minibike, and motorcycle. 5 can sit on the 4x4 like I had it since A18 and looks more comfortable than A20 settings. ALSO, gyrocopter seats 4 people. Yes, 4. ALSO ALSO, accidental / intentional jumping out of the gyrocopter removes fall damage, up to 8 seconds.
 
@@ -70,7 +70,7 @@ After turning on twitch integration and experiencing more pvp, I decided the dea
 
 <p>&nbsp;</p>
 
-## **A20 More Zombies** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-MoreZombies1.0.0.zip)
+## **A20 More Zombies** - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-MoreZombies1.0.0.zip)
 
 Wandering Hordes are increased slighty to give that extra edge and NOT be too disruptive to gameplay or performance. Biome spawning that amplify the difficulty of each biome... except the Forest. Forest spawns more timid animals. Essentially, this creates a zombie environment where new and veteran players can find something fitting to them. Like vanilla, the biome porgression goes Forest -- Desert -- Snow -- Wasteland.
 
