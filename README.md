@@ -20,6 +20,11 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Khaine's 15 Slot Toolbelt Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip) (do not use with Darkness Falls patch)
 
+<p>&nbsp;</p>
+
+## **A20 HUDPlus** - [Download v.1.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip)
+
+72 slot backpack mod. Inlcudes lockable slots, slightly reduced encumbrance penalty, full language support, and is server side. This is one of AGF's favorites.
   
 <p>&nbsp;</p>
 
