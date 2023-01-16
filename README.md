@@ -46,9 +46,9 @@ All vehicles speeds are increased slighty, as I felt the bicycle felt too slow t
 
 <p>&nbsp;</p>
 
-## **A20 Decoration Block** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20DecoBlock1.00.zip)
+## **A20 Decoration Block** - [Download v1.1.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20DecoBlock1.1.3.zip)
 
-GREAT for the athetic enthusiasts. A single block that has shape options spanning across most of the models in the game. These models range from kitchen appliances, garage equipment, electricals, commercial, and decorative. Also, if they could be a container, they are, including the ones that "appear" open. 200 max hit points, and when they break you get the block back.
+One block to rule them all... specifically one block that allows you to create over 1,000 of the block models! Perfect for decorating and organizing. Blocks are weaker than Wood Blocks (300hp), but resistant to explosives. If you break it, returns to your inventory. Works server side, full language support. Enjoy!
 
 <p>&nbsp;</p>
 
