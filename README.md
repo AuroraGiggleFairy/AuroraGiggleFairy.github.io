@@ -77,6 +77,7 @@ Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github
 
 Khaine is a legend among modders. My patch has minor alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
 
+<p>&nbsp;</p>
 
 ## **A20 Backpack 72** - [Download v1.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip)
 
