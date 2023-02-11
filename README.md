@@ -85,7 +85,7 @@ Khaine is a legend among modders. My patch has minor alterations to his beautifu
   
 <p>&nbsp;</p>
 
-## **A20 Backpack 84** - [Download v1.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack84Plus1.2.1.zip)
+## **A20 Backpack 84** - [Download v1.2.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack84Plus1.2.2.zip)
 
 84 slot backpack mod and storages with 168 slot! Inlcudes lockable slots, slightly reduced encumbrance penalty, full language support, and is server side. 
   
