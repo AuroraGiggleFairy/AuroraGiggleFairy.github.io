@@ -6,15 +6,31 @@
 
 ### If you have any questions or issues, feel free to contact me on my [DISCORD](https://discord.gg/Vm5eyW6N4r).
 
-### All listed mods are Server Side, EAC Friendly, and attempts to support ALL languages.
+### All listed mods (except for one, which is stated) are Server Side, EAC Friendly, and attempts to support ALL languages.
 
 <p>&nbsp;</p>
 
-## **A20 HUDPlus** - [Download v1.5.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip)
+## **A21 HUDPlus** - [Download v1.5.2]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.8.0.zip))
 
-A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, etc. Details in the readme.
+A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and minimized under the compass a way to show your location and skull difficulty.
 
-### ***Compatibility Patches:***
+<p>&nbsp;</p>
+
+## **A21 Backpack 72** - [Download v1.2.3]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.3.zip))
+
+72 slot backpack mod and storages with 168 slot!. Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
+  
+<p>&nbsp;</p>
+
+## **A21 Backpack 84** - [Download v1.2.3]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack84Plus1.2.2.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.3.zip))
+
+84 slot backpack mod and storages with 168 slot! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
+  
+<p>&nbsp;</p>
+
+
+## ***A20 Old Mods***
+### ***HUD Compatibility Patches:***
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Darkness Falls v4.1.1 Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2DFPatch.zip)
 
@@ -28,65 +44,3 @@ So many many many things. I am still working on how to explain this one even wit
 
 <p>&nbsp;</p>
 
-## **A20 Cosmetic System** - [Download v1.1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20CosmeticSystem1.1.1.zip)
-
-Look the way you want without sacrificing armor is the goal here. Cosmetic with no to minimal costs is my policy. Craft AND bundle dyes. Invisible Dye to hide clothing you don't wish to show. Orange Dye that follows the theme of the game. Facial Piercings are back. Cosmetic Mods to make armor appear like a different clothing article. Flashlight and Nightvision mods to go onto your helmet or chest, so you can have both. High Performance Running Soles mod.
-
-<p>&nbsp;</p>
-
-## **A20 Vehicles Plus** - [Download v1.1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VehiclesPlus1.1.1.zip)
-
-All vehicles speeds are increased slighty, as I felt the bicycle felt too slow to me. Each vehicle has 1 additional row of storage because I'm a hoarder. Expanded Seat Mod is now useless as you can always seat 2 people on the bicycle, minibike, and motorcycle. 5 can sit on the 4x4 like I had it since A18 and looks more comfortable than A20 settings. ALSO, gyrocopter seats 4 people. Yes, 4. ALSO ALSO, accidental / intentional jumping out of the gyrocopter removes fall damage, up to 8 seconds.
-
-<p>&nbsp;</p>
-
-## **A20 Decoration Block** - [Download v1.1.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20DecoBlock1.1.3.zip)
-
-One block to rule them all... specifically one block that allows you to create over 1,000 of the block models! Perfect for decorating and organizing. Blocks are weaker than Wood Blocks (300hp), but resistant to explosives. If you break it, returns to your inventory. Works server side, full language support. Enjoy!
-
-<p>&nbsp;</p>
-
-## **A20 Quick Intro Quest** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20QuickIntroQuest1.01.zip)
-
-Super quick start. You go into game, click continue, place the bedroll you have in your toolbelt, and BAM done. Time to head to trader and you have all the items and xp you would have as if you had gone through all the quests.... again.
-
-<p>&nbsp;</p>
-
-## **A20 Trader Hours** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-TraderHours1.00.zip)
-
-Super simple mod that just makes the trader opens shortly after morning actually hits, at 4:05 instead of vanilla 6:05.
-
-<p>&nbsp;</p>
-
-## **A20 Death Penalty Reduction** - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20DeathPenaltyEdit1.0.0.zip)
-
-After turning on twitch integration and experiencing more pvp, I decided the death penalty needed to be reduced a bit. Vanilla is every time you die, you have to earn 25% of your xp to a max possible of 50%. My reduction makes it 10% xp to your max possible 30%.
-
-<p>&nbsp;</p>
-
-## **A20 More Zombies** - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-MoreZombies1.0.0.zip)
-
-Wandering Hordes are increased slighty to give that extra edge and NOT be too disruptive to gameplay or performance. Biome spawning that amplify the difficulty of each biome... except the Forest. Forest spawns more timid animals. Essentially, this creates a zombie environment where new and veteran players can find something fitting to them. Like vanilla, the biome porgression goes Forest -- Desert -- Snow -- Wasteland.
-
-<p>&nbsp;</p>
-
-## **A20 AGF Small Modification of Khaine's 60 Slot Backpack**
-Step 1: [Download](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2FKhaineGB%2FKhaineA20ModletsXML%2Ftree%2Fmain%2FKHA20-60BBM) and install Khaine's 60 slot inventory mod.
-
-Step 2: [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-60BBM-AGFPatch1.0.0.zip) and install my patch.
-
-Khaine is a legend among modders. My patch has minor alterations to his beautiful work. Lockable Slots are included and positioned differently. How the icons fit (by the pixel) I had adjusted to my anal retentive preference.
-
-<p>&nbsp;</p>
-
-## **A20 Backpack 72** - [Download v1.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip)
-
-72 slot backpack mod. Inlcudes lockable slots, slightly reduced encumbrance penalty, full language support, and is server side. This is one of AGF's favorites.
-  
-<p>&nbsp;</p>
-
-## **A20 Backpack 84** - [Download v1.2.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack84Plus1.2.2.zip)
-
-84 slot backpack mod and storages with 168 slot! Inlcudes lockable slots, slightly reduced encumbrance penalty, full language support, and is server side. 
-  
-<p>&nbsp;</p>
