@@ -18,6 +18,7 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Addon - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-Addon1.4.0.zip) - *Not Server Side, EAC Must be Off*
 
+<p>&nbsp;</p>
 
 ## **A21 Backpack 72** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.3.zip)
 
@@ -31,6 +32,11 @@ A HUD overhaul that provides additional information while attempting to keep the
   
 <p>&nbsp;</p>
 
+## **A21 Vanilla Plus... So Far** - [Download v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v4.zip)
+
+
+  
+<p>&nbsp;</p>
 
 ## ***A20 Old Mods***
 ### ***HUD Compatibility Patches:***
