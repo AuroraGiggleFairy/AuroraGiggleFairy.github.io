@@ -6,7 +6,7 @@
 
 ### If you have any questions or issues, feel free to contact me on my [DISCORD](https://discord.gg/Vm5eyW6N4r).
 
-### All listed mods (except for one, which is stated) are Server Side, EAC Friendly, and attempts to support ALL languages.
+### All listed mods (except for one) are Server Side, EAC Friendly, and attempts to support ALL languages.
 
 <p>&nbsp;</p>
 
