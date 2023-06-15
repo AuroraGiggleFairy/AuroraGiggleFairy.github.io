@@ -10,9 +10,15 @@
 
 <p>&nbsp;</p>
 
-## **A21 HUDPlus** - [Download v1.5.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.8.0.zip)
+## **A21 HUDPlus** - [Download v1.8.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.8.0.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and minimized under the compass a way to show your location and skull difficulty.
+
+<p>&nbsp;</p>
+
+### ***HUD Addon, NOT Server Side, EAC must be off:***
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Addon - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-Addon1.4.0.zip)
 
 <p>&nbsp;</p>
 
