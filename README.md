@@ -10,19 +10,19 @@
 
 <p>&nbsp;</p>
 
-## **A21 HUDPlus** - [Download v1.5.2]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.8.0.zip))
+## **A21 HUDPlus** - [Download v1.5.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.8.0.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and minimized under the compass a way to show your location and skull difficulty.
 
 <p>&nbsp;</p>
 
-## **A21 Backpack 72** - [Download v1.2.3]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack72Plus1.2.1.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.3.zip))
+## **A21 Backpack 72** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.3.zip)
 
 72 slot backpack mod and storages with 168 slot!. Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
-## **A21 Backpack 84** - [Download v1.2.3]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20Backpack84Plus1.2.2.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.3.zip))
+## **A21 Backpack 84** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.3.zip)
 
 84 slot backpack mod and storages with 168 slot! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
