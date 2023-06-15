@@ -6,7 +6,7 @@
 
 ### If you have any questions or issues, feel free to contact me on my [DISCORD](https://discord.gg/Vm5eyW6N4r).
 
-### You may even catch me streaming playing or modding here: [TWITCH](https://www.twitch.tv/AuroraGiggleFairy)
+### You may even catch me modding live on stream on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
 
 ### All listed mods (unless stated otherwise) are Server Side, EAC Friendly, and attempts to support ALL languages.
 
