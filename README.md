@@ -22,19 +22,19 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 <p>&nbsp;</p>
 
-## **A21 Backpack 72** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.4.zip)
+## **A21 Backpack 72** - [Download v1.2.4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.4.zip)
 
 72 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
-## **A21 Backpack 84** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.4.zip)
+## **A21 Backpack 84** - [Download v1.2.4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.4.zip)
 
 84 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus... So Far** - [Download v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v6.4.zip)
+## **A21 Vanilla Plus... So Far** - [Download v6.4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v6.4.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets and their status in being updated to A21. The ones that are READY are included in the download.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Is A21 ready! (Crafting on one page, basic doors are simplified and put into one variant, etc)
