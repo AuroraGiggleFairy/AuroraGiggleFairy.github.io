@@ -133,6 +133,11 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 <p>&nbsp;</p>
 
 ## ***A20 Old Mods***
+
+## **A20 HUDPlus** - [Download v1.7.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.7.2.zip)
+
+<p>&nbsp;</p>
+
 ### ***HUD Compatibility Patches:***
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Darkness Falls v4.1.1 Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2DFPatch.zip)
