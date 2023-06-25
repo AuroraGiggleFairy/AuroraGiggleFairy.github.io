@@ -1,0 +1,12 @@
+<AGFVanillaPlus-Core>
+<!--
+
+<append xpath="/controls">
+	<agf_number_entry>
+		<label depth="4" name="numbers" pos="0,-10" width="80" height="40" font_size="16" color="222, 206, 163" pivot="center" />
+	</agf_number_entry>
+</append>
+-->
+
+
+</AGFVanillaPlus-Core>

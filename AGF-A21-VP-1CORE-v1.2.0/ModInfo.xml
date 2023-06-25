@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+    <Name value="AGF-A21-VanillaPlusCore"/> <!-- (Required) Internal name, like an ID, of the mod. Should be globally unique, like an author prefix + name. Only allowed chars: Numbers, latin letters, underscores, dash -->
+    <DisplayName value="AGF Vanila Plus Core"/> <!-- (Required) Name used for display purposes, like shown in the mods UI at some point. Could be the same as you would later on use on workshop or wherever mods get distributed -->
+    <Version value="1.2.0" /> <!-- (Required) SemVer version of the mod. Has to be in the format major.minor[.build[.revision]] (i.e. build and revision can be left out, recommend using them though as typically done with Semantic Versioning -->
+    <Description value="Core parts of VP, fixes, and a few other features."/> <!-- (Optional) More text to show on UIs -->
+    <Author value="AuroraGiggleFairy (AGF)"/> <!-- (Optional) Name(s) of the author(s) -->
+   	<Website value="https://discord.gg/Vm5eyW6N4r"/> <!-- (Optional) URL of a website of the mod -->
+</xml>

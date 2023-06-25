@@ -1,0 +1,89 @@
+<AGFVanillaPlus-Core>
+
+
+<!--ARMORS APPEAR IN CRAFTING LIST-->
+		<append xpath="/items/item[@name='armorSteelMaster']/property[@name='Group']/@value">,Clothing</append>
+		<append xpath="/items/item[@name='armorIronMaster']/property[@name='Group']/@value">,Clothing</append>
+		<append xpath="/items/item[@name='armorLeatherMaster']/property[@name='Group']/@value">,Clothing</append>
+		<append xpath="/items/item[@name='armorMilitaryMaster']/property[@name='Group']/@value">,Clothing</append>
+		<append xpath="/items/item[@name='armorMiningHelmet']/property[@name='Group']/@value">,Clothing</append>
+		<append xpath="/items/item[@name='armorFirefightersHelmet']/property[@name='Group']/@value">,Clothing</append>
+
+
+<!--Bundle Icon Color, for differentiation-->
+		<append xpath="/items/item[@name='resourceRockSmallBundle']"> 
+			<property name="CustomIconTint" value="930CF8"/>
+		</append>
+		<append xpath="/items/item[@name='resourceLockPickBundle']"> 
+			<property name="CustomIconTint" value="930CF8"/>
+		</append>
+		<append xpath="/items/item[@name='ammoBundleMaster']"> 
+			<property name="CustomIconTint" value="930CF8"/>
+		</append>
+
+
+<!--Admin Stuff, quicker Block Replace Tool action-->
+		<set xpath="/items/item[@name='meleeToolBlockReplaceTool']/property[@class='Action1']/property[@name='Delay']/@value">.1</set>
+		
+		
+<!--Admin, give XP to a player-->
+		<append xpath="/items"><!--XP multiplier affects the actual xp given-->
+			<item name="levelUp100k">
+				<property name="CustomIcon" value="schematicMaster"/>
+				<property name="CreativeMode" value="Dev"/>						
+				<property name="HoldType" value="31"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mpaper"/>
+				<property name="Weight" value="5"/>
+				<property name="Stacknumber" value="50"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="UseAnimation" value="false"/>
+					<property name="Sound_start" value="read_mod"/>
+					<property name="Sound_in_head" value="true"/>
+			  </property>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100000"/>
+				</effect_group>					  
+			</item>
+			<item name="levelUp1m">
+				<property name="CustomIcon" value="schematicMaster"/>
+				<property name="CreativeMode" value="Dev"/>						
+				<property name="HoldType" value="31"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mpaper"/>
+				<property name="Weight" value="5"/>
+				<property name="Stacknumber" value="50"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="UseAnimation" value="false"/>
+					<property name="Sound_start" value="read_mod"/>
+					<property name="Sound_in_head" value="true"/>
+			  </property>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="1000000"/>
+				</effect_group>					  
+			</item>							
+		</append>
+	
+
+<!--SORTING PLUS, just some group changes for AUTO SORTING purposes-->
+		<set xpath="/items/item[@name='foodCornMeal']/property[@name='Group']/@value">Food/Cooking,Resources,CFFood/Cooking</set>
+		<set xpath="/items/item[@name='resourceCropCottonPlant']/property[@name='Group']/@value">Food/Cooking,Resources,CFFood/Cooking</set>
+		<set xpath="/items/item[@name='resourceCropAloeLeaf']/property[@name='Group']/@value">Food/Cooking,Science</set>
+	
+
+	
+<!--Doors Plus!-->
+		<!--important to allow upgrading doors with my variant versions-->
+		<append xpath="/items/item/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,miscwoodDoorVariantHelper,miscironDoorVariantHelper,miscsteelDoorVariantHelper</append>
+
+
+
+
+
+</AGFVanillaPlus-Core>

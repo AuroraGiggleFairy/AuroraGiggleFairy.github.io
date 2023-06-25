@@ -1,0 +1,12 @@
+<AGFVanillaPlus-Core>
+
+
+<!--To have a separate page for the checklist-->
+	<insertbefore xpath="/xui/ruleset/window_group[@name='crafting']">
+		<window_group name="schematics" open_backpack_on_open="false" close_compass_on_open="false">
+			<window name="Schematics"/>
+		</window_group>
+	</insertbefore>
+
+
+</AGFVanillaPlus-Core>

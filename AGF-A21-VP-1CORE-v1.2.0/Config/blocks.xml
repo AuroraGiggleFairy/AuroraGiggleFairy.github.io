@@ -1,0 +1,192 @@
+<AGFVanillaPlus-Core>
+	
+			
+<!--FIX of car salvaging. Removed pass through damage on vehicles as it negates harvesting potential.--><!--NOTE: This is a FIX, don't delete unless you have something to replace it-->
+		<set xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@name='PassThroughDamage']/@value">false</set>
+		<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/property[@name='PassThroughDamage']/@value">false</set>
+
+
+<!--Repair the Unrepairable!-->
+
+		
+
+<!--Test Blocks for modders-->
+	<append xpath="blocks">
+		<block name="agfTestButcherBlock">
+			<property name="CustomIcon" value="goreBlockAnimal"/>			
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="MaxDamage" value="10"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="FallDamage" value=".9"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Density" value="0.9"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" count="10" tag="allHarvest" tool_category="Butcher"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" count="10" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="10" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="10" tag="butcherHarvest"/>
+			<drop event="Destroy" name="resourceBone" count="10" tag="butcherHarvest"/>
+			
+			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+			<property name="SortOrder1" value="7000"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+		<block name="agfTestSalvageBlock">
+			<property name="CustomIcon" value="cntCar03SedanDamage2Master"/>		
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="@:Entities/Vehicles/Car/car_black_dmg2Prefab.prefab"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="ModelOffset" value="0,-0.25,0"/>
+			<property name="TintColor" value="B0B0B0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,6"/>
+			<property name="ShowModelOnFall" value="false"/>
+			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			
+			<drop event="Harvest" name="ammoGasCan" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceOil" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="10" tag="salvageHarvest"/>
+			
+			<drop event="Harvest" name="resourceScrapIron" count="1" tag="allHarvest"/>
+	
+			<drop event="Destroy" count="0"/>
+			<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+			<property name="PlacementDistance" value="6"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+			<property name="SortOrder1" value="7000"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+	</append>
+
+
+<!--Doors Plus-->
+	<!--Door Modifications-->				
+		<set xpath="/blocks/block[@name='woodHatch']/property[@name='MaxDamage']/@value">1000</set>
+		<set xpath="/blocks/block[@name='woodHatch']/property[@name='MeshDamage']/@value">
+		Door/DMG0, 1000,
+		Door/DMG1, 500,
+		-, 1 </set>
+		
+		<set xpath="/blocks/block[@name='ironHatchWhite']/property[@name='MaxDamage']/@value">5000</set>
+		<set xpath="/blocks/block[@name='ironHatchWhite']/property[@name='MeshDamage']/@value">
+		Door/DMG0, 5000,
+		Door/DMG1, 2500,
+		-, 1 </set>		
+		
+		<set xpath="/blocks/block[@name='vaultDoor01']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='vaultDoor01_Powered']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='vaultDoor01']/property[@name='MeshDamage']/@value">
+		Door/DMG0, 21000,
+		Door/DMG1, 14000,
+		Door/DMG2, 7000,
+		-, 1 </set>	
+
+		<set xpath="/blocks/block[@name='vaultDoor01Double']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='vaultDoor01Double_Powered']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='vaultDoor01Double']/property[@name='MeshDamage']/@value">
+		Door/DMG0, 21000,
+		Door/DMG1, 14000,
+		Door/DMG2, 7000,
+		-, 1 </set>	
+
+
+		<set xpath="/blocks/block[@name='cellarDoorDoubleSteel']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='cellarDoorDoubleSteel']/property[@name='MeshDamage']/@value">
+		DMG0, 21000,
+		DMG1, 15750,
+		DMG2, 10500,
+		DMG3, 5250,
+		-, 1 </set>	
+	
+		<set xpath="/blocks/block[@name='shuttersSteel01']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='shuttersSteel01']/property[@name='MeshDamage']/@value">
+		DMG0, 21000,
+		DMG1, 15750,
+		DMG2, 10500,
+		DMG3, 5250,
+		-, 1 </set>	
+	
+		<set xpath="/blocks/block[@name='shuttersSteel02']/property[@name='MaxDamage']/@value">21000</set>
+		<set xpath="/blocks/block[@name='shuttersSteel02']/property[@name='MeshDamage']/@value">
+		DMG0, 21000,
+		DMG1, 15750,
+		DMG2, 10500,
+		DMG3, 5250,
+		-, 1 </set>	
+	
+	
+	
+	
+	
+	
+	<!--Door Variant Blocks-->
+		<append xpath="/blocks">
+			<block name="miscwoodDoorVariantHelper">
+				<property name="Extends" value="oldWoodDoor"/>
+				<property name="CustomIcon" value="oldWoodDoor"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="DescriptionKey" value="afgMiscDesc"/>
+				<property name="ItemTypeIcon" value="all_blocks"/>
+				<property name="SelectAlternates" value="true"/>
+				<property name="PlaceAltBlockValue" value="oldWoodDoor,oldWoodDoorDouble,woodHatch,cellarDoorDoubleWood,shuttersWood01,shuttersWood02"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="PickupJournalEntry" value="shapeMenuTip"/>
+			</block>
+			<block name="miscironDoorVariantHelper">
+				<property name="Extends" value="ironDoorWhite"/>
+				<property name="CustomIcon" value="ironDoorWhite"/><property name="CustomIconTint" value="747474"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="DescriptionKey" value="afgMiscDesc"/>
+				<property name="ItemTypeIcon" value="all_blocks"/>
+				<property name="SelectAlternates" value="true"/>
+				<property name="PlaceAltBlockValue" value="ironDoorGrey,ironDoorWhite,ironDoorBrown,ironDoorRed,ironDoorOrange,ironDoorYellow,ironDoorGreen,ironDoorBlue,ironDoorPurple,ironDoorBlack,ironDoorPink,ironDoorArmyGreen,ironDoorDoubleGrey,ironDoorDoubleWhite,ironDoorDoubleBrown,ironDoorDoubleRed,ironDoorDoubleOrange,ironDoorDoubleYellow,ironDoorDoubleGreen,ironDoorDoubleBlue,ironDoorDoublePurple,ironDoorDoubleBlack,ironDoorDoublePink,ironDoorDoubleArmyGreen,ironHatchBlack,ironHatchWhite,ironHatchBrown,ironHatchRed,ironHatchOrange,ironHatchYellow,ironHatchGreen,ironHatchBlue,ironHatchPurple,ironHatchGrey,ironHatchPink,cellarDoorDoubleIron,shuttersIron01,shuttersIron02"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="PickupJournalEntry" value="shapeMenuTip"/>
+			</block>
+			<block name="miscsteelDoorVariantHelper">
+				<property name="Extends" value="vaultDoor01"/>
+				<property name="CustomIcon" value="vaultDoor01"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="DescriptionKey" value="afgMiscDesc"/>
+				<property name="ItemTypeIcon" value="all_blocks"/>
+				<property name="SelectAlternates" value="true"/>
+				<property name="PlaceAltBlockValue" value="vaultDoor01,vaultDoor01Double,vaultHatch01,cellarDoorDoubleSteel,shuttersSteel01,shuttersSteel02"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="PickupJournalEntry" value="shapeMenuTip"/>
+			</block>
+		</append>	
+
+
+<set xpath="/blocks/block[@name='oldWoodDoor']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscironDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='oldWoodDoorDouble']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscironDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='woodHatch']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscironDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='cellarDoorDoubleWood']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscironDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='shuttersWood01']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscironDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='shuttersWood02']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscironDoorVariantHelper</set>
+
+<set xpath="/blocks/block[@name='ironDoorWhite']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscsteelDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='ironDoorDoubleWhite']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscsteelDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='ironHatchWhite']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscsteelDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='cellarDoorDoubleIron']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscsteelDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='shuttersIron01']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscsteelDoorVariantHelper</set>
+<set xpath="/blocks/block[@name='shuttersIron02']/property[@class='UpgradeBlock']/property[@name='Item']/@value">miscsteelDoorVariantHelper</set>
+
+
+
+
+</AGFVanillaPlus-Core>
