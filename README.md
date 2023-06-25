@@ -22,62 +22,62 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 <p>&nbsp;</p>
 
-## **A21 Backpack 72** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.3.zip)
+## **A21 Backpack 72** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.4.zip)
 
 72 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
-## **A21 Backpack 84** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.3.zip)
+## **A21 Backpack 84** - [Download v1.2.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.4.zip)
 
 84 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus... So Far** - [Download v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v4.zip)
+## **A21 Vanilla Plus... So Far** - [Download v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v6.4.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets and their status in being updated to A21. The ones that are READY are included in the download.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Is A21 ready except for the crafting checklist.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Is A21 ready! (Crafting on one page, basic doors are simplified and put into one variant, etc)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AmmoPlus - Is A21 ready! Allows you to scrap ammo to receive all of its ingredients.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ArmorVisionPlus - Not Ready. :( Allows helmet light and nightvision to attach to armor.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ArmorVisionPlus - Is A21 ready! Allows helmet light and nightvision to attach to armor.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AutomobilesRespawn - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AutomobilesRespawn - Is A21 ready! Vehicles that are salvaged, will respawn.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BattleAxeMod - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BattleAxeMod - Is A21 ready!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BetterEggChance - Is A21 ready! Raises chance of eggs found in birdnests from 35% to 63%.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BookCollections - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BookCollections - Is A21 ready! Allows you to combine books (not crafting magazines) for collections or selling for more dukes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CosmeticMods - Is A21 ready! Make your armor appear like other clothing.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CraftableHazmat - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CraftableHazmat - <--might not be a thing for A21.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeathPenalty10Percent - Is A21 Ready! Max penalty of death is 10% instead of 50%.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DecorationBlock - Not Ready. :(
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Is A21 ready!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DyesPlus - Is A21 ready! Craft, bundle dyes. Added Invisible and Orange dye.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElectricityPlus - Is A21 ready! More power from generators. Engines, Batteries, Solar cells stack. New "power core" item to power banks.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FarmingPlus - Not Ready. :( Plant birdnests and beehives for eggs, feathers, and honey.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FarmingPlus - Is A21 ready! Plant birdnests and beehives for eggs, feathers, and honey.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FuelPlus - Is A21 ready! Craft stacks of wood or coal into an item that burns for 10 minutes, 60 minutes, or 600 minutes.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HPRunningSolesMod - Not Ready. :( High Performance Running Shoes, as a mod for your boots!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HPRunningSolesMod - Is A21 ready! High Performance Running Shoes, as a mod for your boots!
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JunkTurretPlus - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JunkTurretPlus - Is A21 ready! Each skill point in robotics adds 50 magazine size, up to 250.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LanternPickupPlus - Is A21 ready! Pick up flashlights (all of them), lanterns (new and old), jack-o-lanterns, and burning barrels. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MasterTool - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MasterTool - Is A21 ready! Schematic can only be found in the highest tier quests in their hardened chests.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MaxLevel500 - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MaxLevel500 - Is A21 ready! ... Why? just because. lol.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MiningPlus - Is A21 Ready! Mining Pallet Perk includes clay, sand, and brass.
 
@@ -101,7 +101,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StayLongerZombieLoot - Is A21 Ready! Zombie loot stays for 1 hour instead of 20 minutes.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StorageSizesPlus - Is A21 Ready!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StorageSizesPlus - Is A21 Ready! Just a simple increase to basic storages.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TacticalRiflePlus - Is A21 Ready! Removes 3 round burst and slight increase to magazine size.
 
@@ -113,7 +113,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderOpensEarly - Is A21 Ready! Traders open at 4:05 instead of 6:05.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderVendingMachine - Not Ready. :( Purchase a trader managed vending machine you can place anywhere.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderVendingMachine - Is A21 Ready! Purchase a trader managed vending machine you can place anywhere.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleDissassembly - Is A21 Ready! Recollect parts of your vehicle at a workstation.
 
