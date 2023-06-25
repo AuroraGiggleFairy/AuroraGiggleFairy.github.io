@@ -45,7 +45,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AutomobilesRespawn - Is A21 ready! Vehicles that are salvaged, will respawn.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BattleAxeMod - Is A21 ready!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BattleAxeMod - Is A21 ready! An axe only attachment that improves its entity dmg, but reduces its block dmg.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BetterEggChance - Is A21 ready! Raises chance of eggs found in birdnests from 35% to 63%.
 
