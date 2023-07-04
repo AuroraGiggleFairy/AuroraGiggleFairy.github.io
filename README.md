@@ -35,7 +35,7 @@ A HUD overhaul that provides additional information while attempting to keep the
 <p>&nbsp;</p>
 
 ## **A21 Vanilla Plus... So Far** - [Download v9.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v9.0.zip)
-This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets and their status in being updated to A21. The ones that are READY are included in the download.
+This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
 
