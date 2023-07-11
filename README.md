@@ -24,7 +24,7 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus KH15 Compatibility Patch - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip) - Makes HUDPlus and Khaine's 15 slots toolbelt work together.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *If you use with addon, lower UI size to 96% in the game menus*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *If you use with addon, lower UI size to 96% in the game menus*
 
 <p>&nbsp;</p>
 
