@@ -22,6 +22,8 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Addon - [Download v1.5.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-Addon1.5.0.zip) - *Not Server Side, EAC Must be Off*
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus KH15 Compatibility Patch - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip) - If you want the main HUD to work with Khaine's 15 slots, you will need KH's 15 toolbelt mod, AGF HUDPlus, and this patch. *If you use with addon, lower UI size to 96% in the game menus*
+
 <p>&nbsp;</p>
 
 ## **A21 Backpack 72** - [Download v1.2.5](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.5.zip)
