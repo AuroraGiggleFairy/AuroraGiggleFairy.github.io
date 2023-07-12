@@ -12,7 +12,7 @@
 
 <p>&nbsp;</p>
 
-## **A21 HUDPlus** - [Download v1.9.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.9.0.zip)
+## **A21 HUDPlus** - [Download v1.9.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.9.1.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date and skulls seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and location name minimized.
 
