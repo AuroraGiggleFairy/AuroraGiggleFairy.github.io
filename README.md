@@ -12,7 +12,7 @@
 
 <p>&nbsp;</p>
 
-## **A21 HUDPlus** - [Download v1.9.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.9.1.zip)
+## **A21 HUDPlus** - [Download v1.9.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.9.2.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date and skulls seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and location name minimized.
 
@@ -20,7 +20,9 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Health Bars - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-HealthBarsv1.0.0.zip) - See enemy health with an AGF Style
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Addon - [Download v1.5.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-Addon1.5.0.zip) - *Not Server Side, EAC Must be Off*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Skulls on HUD - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-SkullsOnHudv1.0.0.zip) - See skulls on HUD with an AGF Style
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Addon - [Download v1.5.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-Addon1.5.1.zip) - *Not Server Side, EAC Must be Off*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus KH15 Compatibility Patch - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA21-z15SlotCompAGFHUD.zip) - Makes HUDPlus and Khaine's 15 slots toolbelt work together.
 
