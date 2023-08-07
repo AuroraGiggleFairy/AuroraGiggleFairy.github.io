@@ -48,6 +48,7 @@ Place the bedroll down that you now start with and you have completed the intro 
 NOTE: Only install on a new game. Installing on an existing game will reset all characters.
   
 <p>&nbsp;</p>
+
 ## **A21 Vanilla Plus... So Far** - [Download v9.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v9.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
