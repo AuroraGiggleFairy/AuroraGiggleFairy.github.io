@@ -42,7 +42,7 @@ A HUD overhaul that provides additional information while attempting to keep the
   
 <p>&nbsp;</p>
 
-## **A21 Quick Intro Quest** - [Download v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21QuickIntroQuest-v1.0.1.zip)
+## **A21 Quick Intro Quest** - [Download v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-QuickIntroQuest-v1.0.1.zip)
 
 Place the bedroll down that you now start with and you have completed the intro quests. Gain all items/xp/skill points as normal and can head to trader.
 NOTE: Only install on a new game. Installing on an existing game will reset all characters.
