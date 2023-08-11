@@ -50,7 +50,7 @@ Place the bedroll down that you now start with and you have completed the intro 
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus... So Far** - [Download v9.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v9.0.zip)
+## **A21 Vanilla Plus... So Far** - [Download v11.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v11.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
@@ -77,11 +77,11 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Self Explanatory? 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DyesPlus - Craft, bundle dyes. Added Invisible and Orange dye.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DyesPlus - Craft, bundle dyes. Added Invisible and Orange dye. Total of 28 new colors!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElectricityPlus - More power from generators. Engines, Batteries, Solar cells stack. New "power core" item to power banks.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FarmingPlus - Plant birdnests and beehives for eggs, feathers, and honey.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FarmingPlus - Plant birdnests and beehives for eggs, feathers, and honey. 3 crops for 1 seed at tier 3 living off the land.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FuelPlus - Craft stacks of wood or coal into an item that burns for 10 minutes, 60 minutes, or 600 minutes.
 
@@ -95,17 +95,13 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MaxLevel500 - ... Why? just because. lol.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MiningPlus - Mining Pallet Perk includes clay, sand, and brass.
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ModSlotsPlus - Improved slots that keeps with progression.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PaintbrushPlus - Paint for free, hold trigger, and shorter range.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProgressiveBiomeSpawning - Forest is easiest, Wasteland is extra hard now.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PumpkinsPlus - So Far, check out the "Molo-Jack-Ovs".
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QuickIntroQuest - Quickest intro quest... ***If installed on an existing saved game, characters will reset to level 1.***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PumpkinsPlus - "Molo-Jack-Ovs" and wear a jack-o-lantern as a helmet!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrapBattery2Acid - Self Explanatory?
 
@@ -142,8 +138,6 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleStorageSizes - Adds one row of storage to each vehicle.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSafeAircraftJumps - Not Ready. :(
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WanderingHordePlus - Simply adds 4 to the total spawn for the hordes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZombieCorpseLeaveQuicker - For performance, zombie corpses leave after 10 seconds instead of 30.
 
