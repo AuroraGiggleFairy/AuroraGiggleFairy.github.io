@@ -50,7 +50,7 @@ Place the bedroll down that you now start with and you have completed the intro 
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus... So Far** - [Download v11.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v11.0.zip)
+## **A21 Vanilla Plus... So Far** - [Download v12.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v12.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
@@ -73,7 +73,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeathPenalty10Percent - Max penalty of death is 10% instead of 50%.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DecorationBlock - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DecorationBlock - READY (as of v12)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Self Explanatory? 
 
@@ -119,7 +119,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TacticalRiflePlus - Removes 3 round burst and slight increase to magazine size.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tier6Crafting - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tier6Crafting - READY (as of v12)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tires2Wheels - New wheel recipe from tires you find in the world.
 
@@ -137,7 +137,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleStorageSizes - Adds one row of storage to each vehicle.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSafeAircraftJumps - Not Ready. :(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSafeAircraftJumps - READY (as of v12)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZombieCorpseLeaveQuicker - For performance, zombie corpses leave after 10 seconds instead of 30.
 
