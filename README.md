@@ -30,13 +30,13 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 <p>&nbsp;</p>
 
-## **A21 Backpack 72** - [Download v1.2.6](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.6.zip)
+## **A21 Backpack 72** - [Download v1.2.7](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.7.zip)
 
 72 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
-## **A21 Backpack 84** - [Download v1.2.5](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.5.zip)
+## **A21 Backpack 84** - [Download v1.2.7](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.7.zip)
 
 84 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
