@@ -50,7 +50,7 @@ Place the bedroll down that you now start with and you have completed the intro 
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus... So Far** - [Download v12.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-SoFar-v12.0.zip)
+## **A21 Vanilla Plus.** - [Download v13.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-v13.0.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
@@ -68,6 +68,8 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BetterEggChance - Raises chance of eggs found in birdnests from 35% to 63%.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BookCollections - Allows you to combine books (not crafting magazines) for collections or selling for more dukes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CompilableDews - Craft 5 Dew Collectors into a single one that acts like 5!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CosmeticMods - Make your armor appear like other clothing.
 
@@ -119,7 +121,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TacticalRiflePlus - Removes 3 round burst and slight increase to magazine size.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tier6Crafting - READY (as of v12)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tier6Crafting - Achieve Tier 4 in a pertaining skill and gain a +1 crafting level to those items.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tires2Wheels - New wheel recipe from tires you find in the world.
 
