@@ -143,6 +143,14 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZombieCorpseLeaveQuicker - For performance, zombie corpses leave after 10 seconds instead of 30.
 
+
+### ***Compatibility Patches:***
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use With Bdubs Vehicles - [Download v1.0.0]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-HealthBarsv1.0.0.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip) - See enemy health with an AGF Style
+
+
+
+
   
 <p>&nbsp;</p>
 
