@@ -146,7 +146,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 ### ***Compatibility Patches:***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use With Bdubs Vehicles - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bdubs Vehicles Compatibility Patch - [Download v1.0.A21](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip)
 
 
 
