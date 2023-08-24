@@ -146,7 +146,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 ### ***Compatibility Patches:***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use With Bdubs Vehicles - [Download v1.0.0]([https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-HealthBarsv1.0.0.zip](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip) - See enemy health with an AGF Style
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use With Bdubs Vehicles - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip)
 
 
 
