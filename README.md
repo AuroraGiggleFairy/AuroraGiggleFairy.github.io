@@ -50,7 +50,7 @@ Place the bedroll down that you now start with and you have completed the intro 
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus.** - [Download v13.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-v13.0.0.zip)
+## **A21 Vanilla Plus.** - [Download v13.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-v13.1.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
@@ -69,13 +69,13 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BookCollections - Allows you to combine books (not crafting magazines) for collections or selling for more dukes.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CompilableDews - Craft 5 Dew Collectors into a single one that acts like 5!
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CosmeticMods - Make your armor appear like other clothing.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeathPenalty10Percent - Max penalty of death is 10% instead of 50%.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DecorationBlock - READY (as of v12)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DewsPlus - Craft 5 Dew Collectors into a single one that acts like 5, and are now 2x2 instead of 3x3 (safe to update)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Self Explanatory? 
 
