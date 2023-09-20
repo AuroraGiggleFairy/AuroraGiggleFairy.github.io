@@ -8,7 +8,7 @@
 
 ### You may even catch me modding live on stream on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
 
-### If you appreciate my work, donations are definitely welcome but not required. [DONATE](https://www.paypal.com/donate/?business=APMRP5RZTQG3Y&no_recurring=0&item_name=Hey%2C+Listen%21+I+am+AuroraGiggleFairy%21+You+may+support+me+directly.+Anything+helps+%26+not+required.+Feed+me%2C+I+am+a+hungry+girl+%3B%29&currency_code=USD).
+### If you appreciate my work, donations are definitely welcome but not required. [DONATE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
 
 ### All listed mods (unless stated otherwise) are Server Side, EAC Friendly, and attempts to support ALL languages.
 
