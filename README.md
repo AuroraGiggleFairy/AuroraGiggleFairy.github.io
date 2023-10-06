@@ -1,6 +1,6 @@
 # AuroraGiggleFairy Mods
 
-### My name is AuroraGiggleFairy *AGF*.
+### My name is AuroraGiggleFairy (AGF).
 
 ### Below are the latest versions of my mods.
 
@@ -10,7 +10,7 @@
 
 ### If you appreciate my work, donations are definitely welcome but not required. [DONATE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
 
-### All listed mods *unless stated otherwise* are Server Side, EAC Friendly, and attempts to support ALL languages.
+### All listed mods *(unless stated otherwise)* are Server Side, EAC Friendly, and attempts to support ALL languages.
 
 <p>&nbsp;</p>
 
