@@ -1,6 +1,6 @@
 # AuroraGiggleFairy Mods
 
-### My name is AuroraGiggleFairy (AGF).
+### My name is AuroraGiggleFairy *AGF*.
 
 ### Below are the latest versions of my mods.
 
@@ -10,7 +10,7 @@
 
 ### If you appreciate my work, donations are definitely welcome but not required. [DONATE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
 
-### All listed mods (unless stated otherwise) are Server Side, EAC Friendly, and attempts to support ALL languages.
+### All listed mods *unless stated otherwise* are Server Side, EAC Friendly, and attempts to support ALL languages.
 
 <p>&nbsp;</p>
 
@@ -168,7 +168,7 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 ### ***Compatibility Patches:***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bdubs Vehicles Compatibility Patch - [Download v1.0.A21](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip) needs updates, but still works
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bdubs Vehicles Compatibility Patch - [Download v1.0.A21](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip) *needs updates, but still works*
 
 
 
