@@ -14,6 +14,12 @@
 
 <p>&nbsp;</p>
 
+## **Entire Server Side Package** - [Download v1.]()
+
+You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
+
+<p>&nbsp;</p>
+
 ## **A21 HUDPlus** - [Download v1.9.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.9.2.zip)
 
 A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date and skulls seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and location name minimized.
