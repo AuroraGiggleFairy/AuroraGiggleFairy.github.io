@@ -14,7 +14,7 @@
 
 <p>&nbsp;</p>
 
-## **Entire Server Side Package** - [Download v1.]()
+## **Entire Server Side Package** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v1.zip)
 
 You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
 
@@ -58,12 +58,10 @@ Place the bedroll down that you now start with and you have completed the intro 
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus.** - [Download v13.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21-VP-v13.1.0.zip)
+## **A21 Vanilla Plus.** - [Download v14.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-VP-Package-v14.0.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 988 - 988 is Suicide Hotline. Turns all noose blocks into rope.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AmmoPlus - Allows you to scrap ammo to receive all of its ingredients and better stacks.
 
@@ -77,6 +75,10 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BookCollections - Allows you to combine books (not crafting magazines) for collections or selling for more dukes.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BundleMods - Bundle the in game mods to save on storage space.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CompactTrees - Take 5 tree seeds and craft them into a x5 seed. Single tree that acts like 5.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CosmeticMods - Make your armor appear like other clothing.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeathPenalty10Percent - Max penalty of death is 10% instead of 50%.
@@ -86,6 +88,8 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DewsPlus - Craft 5 Dew Collectors into a single one that acts like 5, and are now 2x2 instead of 3x3 (safe to update)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Self Explanatory? 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrinkableAcid - You can drink acid to go on a fun trip and likely die.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DyesPlus - Craft, bundle dyes. Added Invisible and Orange dye. Total of 28 new colors!
 
@@ -101,17 +105,25 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LanternPickupPlus - Pick up flashlights (all of them), lanterns (new and old), jack-o-lanterns, and burning barrels. 
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LargerHordes - Wandering Hordes are a lot larger than vanilla and hopefully not too large to hurt performance.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MasterTool - Schematic can only be found in the highest tier quests in their hardened chests.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MaxLevel500 - ... Why? just because. lol.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mod988 - 988 is Suicide Hotline. Turns all noose blocks into rope.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ModSlotsPlus - Improved slots that keeps with progression.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PaintbrushPlus - Paint for free, hold trigger, and shorter range.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PlayerResetQuests - You can now tell the trader to give you fresh quest options.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProgressiveBiomeSpawning - Forest is easiest, Wasteland is extra hard now.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PumpkinsPlus - "Molo-Jack-Ovs" and wear a jack-o-lantern as a helmet!
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QuickStart - No tutorial quests but you start as if you have done them.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrapBattery2Acid - Self Explanatory?
 
@@ -135,26 +147,28 @@ This is packed with a TON of modlets, allowing you to remove any features you do
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ToolImprovments - Better types of tools are slightly faster. Chainsaw can butcher 70% like an axe.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderOpensEarly - Traders open at 4:05 instead of 6:05.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderAlwaysOpen - Traders are always open, never close.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderVendingMachine - Purchase a trader managed vending machine you can place anywhere.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleDissassembly - Recollect parts of your vehicle at a workstation.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSeating - 2 seats for bicycle, minibike, and motorcycle. 5 for truck. 4 for gyro copter. Bwahahahaha!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehiclePerformance - Enhanced speeds, easier mountain climbing, double health
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSpeeds - Increased speeds to a point to each vehicle. Bicycle actually feels faster than running.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSafeAircraftJumps - When exiting a vehicle, you have about 7 seconds to hit the ground to avoid fall damage.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSeating - 2 seats for bicycle, minibike, and motorcycle. 5 for truck. 4 for gyro copter. Bwahahahaha!
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleStorageSizes - Adds one row of storage to each vehicle.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSafeAircraftJumps - READY (as of v12)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleUseLessGas - Vehicles consume gas at a slower rate for longer travels between refills.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZombieCorpseLeaveQuicker - For performance, zombie corpses leave after 10 seconds instead of 30.
 
 
 ### ***Compatibility Patches:***
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bdubs Vehicles Compatibility Patch - [Download v1.0.A21](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bdubs Vehicles Compatibility Patch - [Download v1.0.A21](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip) (needs updates, but still works)
 
 
 
