@@ -16,7 +16,7 @@
 
 ## **Entire Server Side Package** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v1.zip)
 
-You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
+(Does not yet included backpack updates for A21.2) You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
 
 <p>&nbsp;</p>
 
@@ -40,13 +40,13 @@ A HUD overhaul that provides additional information while attempting to keep the
 
 ## **A21 Backpack 72** - [Download v1.2.9](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.9.zip)
 
-72 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
+(Updated for A21.2) 72 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
 ## **A21 Backpack 84** - [Download v1.2.9](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.9.zip)
 
-84 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
+(Updated for A21.2) 84 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
   
 <p>&nbsp;</p>
 
