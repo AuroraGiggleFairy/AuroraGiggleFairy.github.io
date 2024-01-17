@@ -14,9 +14,9 @@
 
 <p>&nbsp;</p>
 
-## **Entire Server Side Package** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v1.zip)
+## **Entire Server Side Package** - [Download v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v4.zip)
 
-(Does not yet included backpack updates for A21.2) You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
+You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
 
 <p>&nbsp;</p>
 
