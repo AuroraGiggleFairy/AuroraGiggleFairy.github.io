@@ -50,7 +50,7 @@ A HUD overhaul that provides additional information while attempting to keep the
   
 <p>&nbsp;</p>
 
-## **A21 Vanilla Plus.** - [Download v14.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-VP-Package-v14.0.0.zip)
+## **A21 Vanilla Plus.** - [Download v15.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-VP-Package-v15.0.0.zip)
 This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
