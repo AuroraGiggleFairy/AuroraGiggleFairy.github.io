@@ -12,6 +12,28 @@
 
 ### All listed mods *(unless stated otherwise)* are Server Side, EAC Friendly, and attempts to support ALL languages.
 
+# VERSION 1.0 is REALLY HERE?!
+
+## **Entire Server Side Package...So Far** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v5.zip)
+
+Updating my mods is a process of experimenting the new system as I slowly introduce what makes sense. 
+
+&nbsp; HUDPlus
+&nbsp; Backpack84Plus
+&nbsp; Simplified Stack Sizes
+&nbsp; Traders Always Open
+&nbsp; Vehicle Storage Sizes
+&nbsp; Dyes Plus
+&nbsp; Crafting List on one Page
+&nbsp; DoorsPlus
+&nbsp; Stackable Batteries & Solar Cells
+&nbsp; Rebundle Bundles
+&nbsp; ...more
+
+<p>&nbsp;</p>
+
+##BELOW HERE is ALPHA MODS.
+
 <p>&nbsp;</p>
 
 ## **Entire Server Side Package** - [Download v5](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v5.zip)
