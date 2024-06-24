@@ -14,7 +14,7 @@
 
 # VERSION 1.0 is REALLY HERE?!
 
-## **Entire Server Side Package...So Far** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v5.zip)
+## **Entire Server Side Package...So Far** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1.0-Package-SoFar-v1.zip)
 
 Updating my mods is a process of experimenting the new system as I slowly introduce what makes sense. 
 
