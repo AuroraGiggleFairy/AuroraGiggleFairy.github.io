@@ -19,15 +19,25 @@
 Updating my mods is a process of experimenting the new system as I slowly introduce what makes sense. 
 
 &nbsp; HUDPlus
+
 &nbsp; Backpack84Plus
+
 &nbsp; Simplified Stack Sizes
+
 &nbsp; Traders Always Open
+
 &nbsp; Vehicle Storage Sizes
+
 &nbsp; Dyes Plus
+
 &nbsp; Crafting List on one Page
+
 &nbsp; DoorsPlus
+
 &nbsp; Stackable Batteries & Solar Cells
+
 &nbsp; Rebundle Bundles
+
 &nbsp; ...more
 
 <p>&nbsp;</p>
