@@ -18,8 +18,6 @@
 
 Very intricately going through my mods, making improvements, better notes, and interacting with those who enjoy 7d2d!
 
-Backpack 84 slots with extra large storage option, my main hud, enemy health bars, vanilla plus core (crafting levels on one page, doorsplus, batteries/solar cells stack, scrap batteries into acid, slight more sand harvesting, admin stuff, etc), automobiles respawn, better egg chance in nests, drinkable acid, dyes plus, fuel plus (10min, 60min, 600min fuel options), pickup lanterns/flashlights/burning barrels, Mod988, paintbrushplus, simplified stack sizes (comes with special ammo scrapping to get more resources back), smelting plus, tactical rifle adjustment, trader always open, traders sell more magazines, larger vehicle storage, vehicles use less gas.
-
 &nbsp;&nbsp; HUDPlus-1Main: My Main HUD
 
 &nbsp;&nbsp; HUDPlus-2Addon-Healthbars: Enemy health bars
@@ -28,19 +26,19 @@ Backpack 84 slots with extra large storage option, my main hud, enemy health bar
 
 &nbsp;&nbsp; VP-1Core: -The core of Vanilla Plus
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Crafting Levels on one Page (click purple book icon)
+&nbsp;&nbsp;-Crafting Levels on one Page (click purple book icon)
 
-&nbsp;&nbsp;&nbsp;&nbsp;-DoorsPlus (hatches are shapes with the doors)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-DoorsPlus (hatches are shapes with the doors)
 
-&nbsp;&nbsp;&nbsp;&nbsp;-Batteries/Solarcells now stack
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Batteries/Solarcells now stack
 
-&nbsp;&nbsp;&nbsp;&nbsp;-Scrapping batteries gives you acid
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Scrapping batteries gives you acid
 
-&nbsp;&nbsp;&nbsp;&nbsp;-Slight more sand harvesting
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Slight more sand harvesting
 
-&nbsp;&nbsp;&nbsp;&nbsp;-Rebundle bundles
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Rebundle bundles
 
-&nbsp;&nbsp;&nbsp;&nbsp;-Some admin stuff
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Some admin stuff
 
 &nbsp;&nbsp; AutomobilesRespawn: Salvaged vehicles respawn (10 real life hours, can be changed in file)
 
@@ -56,11 +54,11 @@ Backpack 84 slots with extra large storage option, my main hud, enemy health bar
 
 &nbsp;&nbsp; Mod988: 988 is the shortent Suicide Hotline number. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;-This replaces the noose block with rope. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-This replaces the noose block with rope. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;-It is worth to provide this for those who may need it.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-It is worth to provide this for those who may need it.
 
-&nbsp;&nbsp;&nbsp;&nbsp;-The 8 is the infinity symbol. Life continues.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-The 8 is the infinity symbol. Life continues.
 
 &nbsp;&nbsp; PaintbrushPlus: Painting requires no paint, can click and hold, shorter range, etc
 
@@ -68,11 +66,11 @@ Backpack 84 slots with extra large storage option, my main hud, enemy health bar
 
 &nbsp;&nbsp; SmeltingPlus:
 
-&nbsp;&nbsp;&nbsp;&nbsp;-3 slots in forges, with text alignment
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-3 slots in forges, with text alignment
 
-&nbsp;&nbsp;&nbsp;&nbsp;-craft out clay, sand or rock in 1 units (OCD relief)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-craft out clay, sand or rock in 1 units (OCD relief)
 
-&nbsp;&nbsp;&nbsp;&nbsp;-sand smelts at 1:5 ratio instead of 1:4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-sand smelts at 1:5 ratio instead of 1:4
 
 &nbsp;&nbsp; TacticalRiflePlus: removed 3 round burst, magazine size 36 instead of 30
 
