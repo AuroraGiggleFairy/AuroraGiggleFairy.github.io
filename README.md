@@ -1,84 +1,114 @@
 # AuroraGiggleFairy Mods
 
-### My name is AuroraGiggleFairy (AGF).
+- My name is AuroraGiggleFairy (AGF).
+  
+- Below are the latest versions of my mods.
+  
+- If you have any questions or issues, feel free to contact me on my [DISCORD](https://discord.gg/Vm5eyW6N4r).
+  
+- You may even catch me live on stream on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
+  
+- Donations are IMMENSELY appreciated, not required [DONATE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
+      
+<p>&nbsp;</p>
 
-### Below are the latest versions of my mods.
+## Important Information
 
-### If you have any questions or issues, feel free to contact me on my [DISCORD](https://discord.gg/Vm5eyW6N4r).
+- All mods are **Server-Side** unless specifically noted otherwise
+  
+  - "What is a **Server-Side** Mod?"
+    
+  - *A mod that can be installed on JUST the server and will automatically work for joining players.*
+    
+- All mods are **EAC-Friendly** unless specifically noted otherwise
+  
+  - "What does **EAC-Friendly** Mean?"
+    
+  - *A mod that will work with EAC on OR off.*
+    
+- 7d2d currently is in 13 languages. All my mods attempt to as well.
+  
+  - "What if there is an error in my language?"
+    
+  - *Please inform me in my [DISCORD](https://discord.gg/Vm5eyW6N4r).*
+    
+<p>&nbsp;</p>
 
-### You may even catch me modding live on stream on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
+## VERSION 1.0 is REALLY HERE?!
 
-### If you appreciate my work, donations are definitely welcome but not required. [DONATE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
+### Entire Server Side Package...- [Download v2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1.0-Package-v2-Halfway.zip)
 
-### All listed mods *(unless stated otherwise)* are Server Side, EAC Friendly, and attempts to support ALL languages.
+#### ***HALFWAY done with UPDATES***
 
-# VERSION 1.0 is REALLY HERE?!
-
-## **Entire Server Side Package...HALFWAY done with UPDATES** - [Download v2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1.0-Package-v2-Halfway.zip)
-
-Very intricately going through my mods, making improvements, better notes, and interacting with those who enjoy 7d2d!
-
-&nbsp;&nbsp; HUDPlus-1Main: My Main HUD
-
-&nbsp;&nbsp; HUDPlus-2Addon-Healthbars: Enemy health bars
-
-&nbsp;&nbsp; Backpack84Plus: 84 Backpack Slots with Larger Storage Chest option
-
-&nbsp;&nbsp; VP-1Core: -The core of Vanilla Plus
-
-&nbsp;&nbsp;-Crafting Levels on one Page (click purple book icon)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-DoorsPlus (hatches are shapes with the doors)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Batteries/Solarcells now stack
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Scrapping batteries gives you acid
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Slight more sand harvesting
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Rebundle bundles
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Some admin stuff
-
-&nbsp;&nbsp; AutomobilesRespawn: Salvaged vehicles respawn (10 real life hours, can be changed in file)
-
-&nbsp;&nbsp; BetterEggChance: Better Egg chance in birdnests (63% chance instead of 35%)
-
-&nbsp;&nbsp; DrinkableAcid: LOTS of fun times to be had... and maybe death.
-
-&nbsp;&nbsp; DyesPlus: 27 more dye colors
-
-&nbsp;&nbsp; FuelPlus: Wood or Coal in 10min, 60min, 600min varients of burn times
-
-&nbsp;&nbsp; LanternPickupPlus: Pickup those lanterns, burning barrels, jack-o-lanterns
-
-&nbsp;&nbsp; Mod988: 988 is the shortent Suicide Hotline number. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-This replaces the noose block with rope. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-It is worth to provide this for those who may need it.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-The 8 is the infinity symbol. Life continues.
-
-&nbsp;&nbsp; PaintbrushPlus: Painting requires no paint, can click and hold, shorter range, etc
-
-&nbsp;&nbsp; SimplifiedStackSizes: Vanilla-esque stack sizes, scrapping ammo provides more resources, etc
-
-&nbsp;&nbsp; SmeltingPlus:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-3 slots in forges, with text alignment
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-craft out clay, sand or rock in 1 units (OCD relief)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-sand smelts at 1:5 ratio instead of 1:4
-
-&nbsp;&nbsp; TacticalRiflePlus: removed 3 round burst, magazine size 36 instead of 30
-
-&nbsp;&nbsp; TraderAlwaysOpen: 24/7 open traders... (Tested need, are they open during bloodmoon? Doesn't seem like it.)
-
-&nbsp;&nbsp; VehicleStorageSizes: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows)
-
-&nbsp;&nbsp; VehiclesUseLessGas: Travel much farther without needing to refill vehicles
+- **HUDPlus-1Main**: My Main HUD
+  
+- **HUDPlus-2Addon-Healthbars**: Enemy health bars
+  
+- **Backpack84Plus**: 84 Backpack Slots with Larger Storage Chest option
+  
+- **VP-1Core**: The core of Vanilla Plus
+  
+    - Crafting Levels on one Page (click purple book icon)    
+    
+    - DoorsPlus (hatches are shapes with the doors)
+      
+    - Batteries/Solarcells now stack
+      
+    - Scrapping batteries gives you acid
+      
+    - Slight more sand harvesting
+      
+    - Rebundle bundles
+      
+    - Some admin stuff
+      
+- **AutomobileRespawns**:
+  
+    - Salvaged vehicles respawn in 10 real life hours
+    
+    - Leaves a seat behind to indicate respawn location
+      
+- **BetterEggChance**: Better Egg chance in birdnests (63% chance instead of 35%)
+  
+- **DrinkableAcid**: LOTS of fun times to be had... and maybe death.
+  
+- **DyesPlus**: 27 more dye colors
+  
+- **FuelPlus**: Wood or Coal in 10min, 60min, 600min varients of burn times
+  
+- **LanternPickupPlus**: Pickup those lanterns, burning barrels, jack-o-lanterns
+  
+- **Mod988**: 988 is the shortent Suicide Hotline number.
+  
+    - This replaces the noose block with rope.
+    
+    - It is worth to provide this for those who may need it.
+      
+    - The 8 is the infinity symbol. Life continues.
+      
+- **PaintbrushPlus**: Painting requires no paint, can click and hold, shorter range, etc
+  
+- **SimplifiedStackSizes**:
+  
+    - Vanilla-esque stack sizes
+    
+    - Ammo scrapping provides more resources
+    
+- **SmeltingPlus**:
+  
+    - 3 slots in forges, with text alignment
+    
+    - craft out clay, sand or rock in 1 units (OCD relief)
+    
+    - sand smelts at 1:5 ratio instead of 1:4
+    
+- **TacticalRiflePlus**: removed 3 round burst, magazine size 36 instead of 30
+  
+- **TraderAlwaysOpen**: 24/7 open traders... Maybe except BloodMoon?
+  
+- **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows)
+  
+- **VehiclesUseLessGas**: Travel much farther without needing to refill vehicles
 
 <p>&nbsp;</p>
 
