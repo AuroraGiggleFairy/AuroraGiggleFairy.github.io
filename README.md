@@ -1,4 +1,4 @@
-# AuroraGiggleFairy Mods
+# AGF Mods
 
 - My name is AuroraGiggleFairy (AGF).
   
