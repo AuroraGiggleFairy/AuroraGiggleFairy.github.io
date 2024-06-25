@@ -14,9 +14,11 @@
 
 # VERSION 1.0 is REALLY HERE?!
 
-## **Entire Server Side Package...So Far** - [Download v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1.0-Package-SoFar-v1.zip)
+## **Entire Server Side Package...HALFWAY done with UPDATES** - [Download v2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1.0-Package-v2-Halfway.zip)
 
-Updating my mods is a process of experimenting the new system as I slowly introduce what makes sense. 
+Very intricately going through my mods, making improvements, better notes, and interacting with those who enjoy 7d2d!
+
+Backpack 84 slots with extra large storage option, my main hud, enemy health bars, vanilla plus core (crafting levels on one page, doorsplus, batteries/solar cells stack, scrap batteries into acid, slight more sand harvesting, admin stuff, etc), automobiles respawn, better egg chance in nests, drinkable acid, dyes plus, fuel plus (10min, 60min, 600min fuel options), pickup lanterns/flashlights/burning barrels, Mod988, paintbrushplus, simplified stack sizes (comes with special ammo scrapping to get more resources back), smelting plus, tactical rifle adjustment, trader always open, traders sell more magazines, larger vehicle storage, vehicles use less gas.
 
 &nbsp; HUDPlus
 
