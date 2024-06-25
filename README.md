@@ -28,7 +28,7 @@ Backpack 84 slots with extra large storage option, my main hud, enemy health bar
 
 &nbsp;&nbsp; VP-1Core: -The core of Vanilla Plus
 
-&nbsp;&nbsp;&nbsp;&nbsp;-Crafting Levels on one Page (click purple book icon)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Crafting Levels on one Page (click purple book icon)
 
 &nbsp;&nbsp;&nbsp;&nbsp;-DoorsPlus (hatches are shapes with the doors)
 
