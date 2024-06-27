@@ -118,9 +118,9 @@
   
     - 3 slots in forges, with text alignment
     
-    - craft out clay, sand or rock in 1 units (OCD relief)
+    - Craft out clay, sand or rock in 1 units (OCD relief)
     
-    - sand smelts at 1:5 ratio instead of 1:4
+    - Sand smelts at 1:5 ratio instead of 1:4
  
 - **StayLongerAnimalCorpse**: Disappears after 10 minutes instead of 5
 
