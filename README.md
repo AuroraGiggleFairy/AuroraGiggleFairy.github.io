@@ -36,7 +36,7 @@
 
 ## VERSION 1.0 is REALLY HERE?!
 
-### Entire Server Side Package...- [Download v2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1.0-Package-v2.1-Halfway.zip)
+### Entire Server Side Package...- [Download v3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v3.zip)
 
 #### ***HALFWAY done with UPDATES***
 
@@ -69,15 +69,31 @@
     - Leaves a seat behind to indicate respawn location
       
 - **BetterEggChance**: Better Egg chance in birdnests (63% chance instead of 35%)
+
+- **CompactTrees**: Craft 5 seeds into one to plant a x5 tree.
   
 - **DrinkableAcid**: LOTS of fun times to be had... and maybe death.
   
 - **DyesPlus**: 27 more dye colors
+
+- **FarmingPlus**:
+
+    - Plant a birdnest for feather and eggs
+    - 
+    - Plant a bee flower for honey
+    - 
+    - Maxed Living Off the Land, always get a seed back
+    - 
+    - x5 seeds to plant 5 in one spot
+ 
+- **FuelBurnPlus**: Craft a fuel item in 10min, 60min, 600min variants
   
-- **FuelPlus**: Wood or Coal in 10min, 60min, 600min varients of burn times
-  
-- **LanternPickupPlus**: Pickup those lanterns, burning barrels, jack-o-lanterns
-  
+- **JunkTurretPlus**: Each level in robotics adds 50 to junk turret magazine size
+
+- **MasterTool**: All the tools in one, end game item, hard to get schematic
+
+- **MaxLevel500**: Max level of 500. Why not? lol
+   
 - **Mod988**: 988 is the shortent Suicide Hotline number.
   
     - This replaces the noose block with rope.
@@ -87,6 +103,10 @@
     - The 8 is the infinity symbol. Life continues.
       
 - **PaintbrushPlus**: Painting requires no paint, can click and hold, shorter range, etc
+
+- **PickupLanternPlus**: Pickup those lanterns, burning barrels, jack-o-lanterns
+
+- **PlayerResetQuests**: You can tell the trader to reset the quest options
   
 - **SimplifiedStackSizes**:
   
@@ -101,10 +121,22 @@
     - craft out clay, sand or rock in 1 units (OCD relief)
     
     - sand smelts at 1:5 ratio instead of 1:4
+ 
+- **StayLongerAnimalCorpse**: Disappears after 10 minutes instead of 5
+
+- **StayLongerPlayerBackpack**: Disappears after 5 hours isntead of 1
+
+- **StayLongerZombieLoot**: Disappears after 1 hour instead of 20 minutes
     
-- **TacticalRiflePlus**: removed 3 round burst, magazine size 36 instead of 30
+- **TacticalRiflePlus**: Removed 3 round burst, magazine size 36 instead of 30
+
+- **Tires2Wheels**: You make wheels with acid OR tires you find in the world.
   
 - **TraderAlwaysOpen**: 24/7 open traders... Maybe except BloodMoon?
+
+- **TraderSellsMoreBooks**: Per magazine, traders sell between 2 and 5 instead of 1 and 3.
+
+- **VehiclePerformance**: Vehicles are faster, better handling, climb mountains more easily, and gyro's can reverse better.
   
 - **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows)
   
