@@ -38,7 +38,7 @@
 
 ### Entire Server Side Package...- [Download v3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v3.1.zip)
 
-#### ***HALFWAY done with UPDATES***
+#### ***More than HALFWAY done with UPDATES***
 
 - **HUDPlus-1Main**: My Main HUD
   
