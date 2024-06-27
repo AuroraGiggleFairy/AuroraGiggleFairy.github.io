@@ -79,11 +79,11 @@
 - **FarmingPlus**:
 
     - Plant a birdnest for feather and eggs
-    - 
+      
     - Plant a bee flower for honey
-    - 
+      
     - Maxed Living Off the Land, always get a seed back
-    - 
+      
     - x5 seeds to plant 5 in one spot
  
 - **FuelBurnPlus**: Craft a fuel item in 10min, 60min, 600min variants
