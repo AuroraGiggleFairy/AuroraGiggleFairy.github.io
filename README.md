@@ -38,7 +38,7 @@
 
 ### Entire Server Side Package...- [Download v4.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v4.1.zip)
 
-#### ***I have 16 more mods to update for V1!!!***
+####**Here are the mods included in the package.**
 
 - **HUDPlus-1Main**: My Main HUD.
   
@@ -50,7 +50,7 @@
   
     - Crafting Levels on one Page (click purple book icon). 
     
-    - DoorsPlus (hatches are shapes with the doors).
+    - DoorsPlus (hatches are shapes within the doors).
       
     - Batteries/Solarcells now stack.
       
@@ -88,7 +88,7 @@
 
 - **FarmingPlus**:
 
-    - Plant a birdnest for feather and eggs.
+    - Plant a birdnest for feathers and eggs.
       
     - Plant a bee flower for honey.
       
@@ -100,11 +100,11 @@
   
 - **JunkTurretPlus**: Each level in robotics adds 50 to junk turret magazine size.
 
-- **MasterTool**: All the tools in one, end game item, hard to get schematic.
+- **MasterTool**: All the tools in one, end game item, VERY hard to get schematic.
 
 - **MaxLevel500**: Max level of 500. Why not? lol.
    
-- **Mod988**: 988 is the shortent Suicide Hotline number.
+- **Mod988**: 988 is the new and shortened Suicide Hotline number.
   
     - This replaces the noose block with rope.
     
@@ -128,13 +128,13 @@
   
 - **SimplifiedStackSizes**:
   
-    - Vanilla-esque stack sizes.
+    - Vanilla friendly stack sizes.
     
-    - Ammo scrapping provides more resources.
+    - Ammo scrapping returns more resources.
     
 - **SmeltingPlus**:
   
-    - 3 slots in forges, with text alignment.
+    - 3 slots in forges, with aligned text.
     
     - Craft out clay, sand or rock in 1 units (OCD relief).
     
@@ -142,7 +142,7 @@
  
 - **StayLongerAnimalCorpse**: Disappears after 10 minutes instead of 5.
 
-- **StayLongerPlayerBackpack**: Disappears after 5 hours isntead of 1.
+- **StayLongerPlayerBackpack**: Disappears after 5 hours instead of 1.
 
 - **StayLongerZombieLoot**: Disappears after 1 hour instead of 20 minutes.
     
@@ -168,9 +168,11 @@
       
     - Wasteland at night is a NIGHTMARE.
  
-- **ZombieCorpseLeaveQuicker**: Zombie corpses disappear after 10 seconds instead of 30.
+- **ZombieCorpseLeaveQuicker**: Disappears after 10 seconds instead of 30.
 
 - **ZombieLargerHordes**: A performance friendly increase in wandering horde sizes.
+
+#### ***So close to updating my remaining mods from A21 to V1!***
 
 <p>&nbsp;</p>
 
