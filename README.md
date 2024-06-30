@@ -38,37 +38,37 @@
 
 ### Entire Server Side Package...- [Download v4.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v4.1.zip)
 
-#### ***I have 16 more mods to update to V1!!!***
+#### ***I have 16 more mods to update for V1!!!***
 
-- **HUDPlus-1Main**: My Main HUD
+- **HUDPlus-1Main**: My Main HUD.
   
-- **HUDPlus-2Addon-Healthbars**: Enemy health bars
+- **HUDPlus-2Addon-Healthbars**: Enemy health bars.
   
-- **Backpack84Plus**: 84 Backpack Slots with Larger Storage Chest option
+- **Backpack84Plus**: 84 Backpack Slots with Larger Storage Chest option.
   
-- **VP-1Core**: The core of Vanilla Plus
+- **VP-1Core**: The core of Vanilla Plus.
   
-    - Crafting Levels on one Page (click purple book icon)    
+    - Crafting Levels on one Page (click purple book icon). 
     
-    - DoorsPlus (hatches are shapes with the doors)
+    - DoorsPlus (hatches are shapes with the doors).
       
-    - Batteries/Solarcells now stack
+    - Batteries/Solarcells now stack.
       
-    - Scrapping batteries gives you acid
+    - Scrapping batteries gives you acid.
       
-    - Slight more sand harvesting
+    - Slight more sand harvesting.
       
-    - Rebundle bundles
+    - Rebundle bundles.
       
-    - Some admin stuff
+    - Some admin stuff.
       
 - **AutomobileRespawns**:
   
-    - Salvaged vehicles respawn in 10 real life hours
+    - Salvaged vehicles respawn in 10 real life hours.
     
-    - Leaves a seat behind to indicate respawn location
+    - Leaves a seat behind to indicate respawn location.
       
-- **BetterEggChance**: Better Egg chance in birdnests (63% chance instead of 35%)
+- **BetterEggChance**: Better Egg chance in birdnests (63% chance instead of 35%).
 
 - **CompactTrees**: Craft 5 seeds into one to plant a x5 tree.
 
@@ -76,33 +76,33 @@
   
     - Craft 5 dew collectors into one that acts like 5!
  
-    - Dew Collectors now 2x2 instead of 3x3
+    - Dew Collectors now 2x2 instead of 3x3.
  
-    - Safe for existing saves
+    - Safe for existing saves.
  
-    - Destroy existing 3x3 dew collectors to get 2x2 
+    - Destroy existing 3x3 dew collectors to get 2x2.
   
 - **DrinkableAcid**: LOTS of fun times to be had... and maybe death.
   
-- **DyesPlus**: 27 more dye colors
+- **DyesPlus**: 27 more dye colors.
 
 - **FarmingPlus**:
 
-    - Plant a birdnest for feather and eggs
+    - Plant a birdnest for feather and eggs.
       
-    - Plant a bee flower for honey
+    - Plant a bee flower for honey.
       
-    - Maxed Living Off the Land, always get a seed back
+    - Maxed Living Off the Land, always get a seed back.
       
-    - x5 seeds to plant 5 in one spot
+    - x5 seeds to plant 5 in one spot.
  
-- **FuelBurnPlus**: Craft a fuel item in 10min, 60min, 600min variants
+- **FuelBurnPlus**: Craft a fuel item in 10min, 60min, 600min variants.
   
-- **JunkTurretPlus**: Each level in robotics adds 50 to junk turret magazine size
+- **JunkTurretPlus**: Each level in robotics adds 50 to junk turret magazine size.
 
-- **MasterTool**: All the tools in one, end game item, hard to get schematic
+- **MasterTool**: All the tools in one, end game item, hard to get schematic.
 
-- **MaxLevel500**: Max level of 500. Why not? lol
+- **MaxLevel500**: Max level of 500. Why not? lol.
    
 - **Mod988**: 988 is the shortent Suicide Hotline number.
   
@@ -112,11 +112,11 @@
       
     - The 8 is the infinity symbol. Life continues.
  
-- **PaintbrushPlus**: Painting requires no paint, can click and hold, shorter range, etc
+- **PaintbrushPlus**: Painting requires no paint, can click and hold, shorter range, etc.
 
-- **PickupLanternPlus**: Pickup those lanterns, burning barrels, jack-o-lanterns
+- **PickupLanternPlus**: Pickup those lanterns, burning barrels, jack-o-lanterns.
 
-- **PlayerResetQuests**: You can tell the trader to reset the quest options
+- **PlayerResetQuests**: You can tell the trader to reset the quest options.
 
 - **PumpkinsPlus**:
 
@@ -128,25 +128,25 @@
   
 - **SimplifiedStackSizes**:
   
-    - Vanilla-esque stack sizes
+    - Vanilla-esque stack sizes.
     
-    - Ammo scrapping provides more resources
+    - Ammo scrapping provides more resources.
     
 - **SmeltingPlus**:
   
-    - 3 slots in forges, with text alignment
+    - 3 slots in forges, with text alignment.
     
-    - Craft out clay, sand or rock in 1 units (OCD relief)
+    - Craft out clay, sand or rock in 1 units (OCD relief).
     
-    - Sand smelts at 1:5 ratio instead of 1:4
+    - Sand smelts at 1:5 ratio instead of 1:4.
  
-- **StayLongerAnimalCorpse**: Disappears after 10 minutes instead of 5
+- **StayLongerAnimalCorpse**: Disappears after 10 minutes instead of 5.
 
-- **StayLongerPlayerBackpack**: Disappears after 5 hours isntead of 1
+- **StayLongerPlayerBackpack**: Disappears after 5 hours isntead of 1.
 
-- **StayLongerZombieLoot**: Disappears after 1 hour instead of 20 minutes
+- **StayLongerZombieLoot**: Disappears after 1 hour instead of 20 minutes.
     
-- **TacticalRiflePlus**: Removed 3 round burst, magazine size 36 instead of 30
+- **TacticalRiflePlus**: Removed 3 round burst, magazine size 36 instead of 30.
 
 - **Tires2Wheels**: You make wheels with acid OR tires you find in the world.
   
@@ -156,21 +156,21 @@
 
 - **VehiclePerformance**: Vehicles are faster, better handling, climb mountains more easily, and gyro's can reverse better.
   
-- **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows)
+- **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows).
   
-- **VehiclesUseLessGas**: Travel much farther without needing to refill vehicles
+- **VehiclesUseLessGas**: Travel much farther without needing to refill vehicles.
 
 - **ZombieBiomeSpawning**:
 
-    - Forest is slightly easier
+    - Forest is slightly easier (more timid animals).
       
-    - Each biome is more wandering enemies
+    - Biomes get progressively worse than vanilla.
       
-    - -Wasteland at night is MORE of a nightmare
+    - Wasteland at night is a NIGHTMARE.
  
-- **ZombieCorpseLeaveQuicker**: Zombie corpses disappear in 10 seconds instead of 30
+- **ZombieCorpseLeaveQuicker**: Zombie corpses disappear after 10 seconds instead of 30.
 
-- **ZombieLargerHordes**: A performance friendly increase in wandering horde sizes
+- **ZombieLargerHordes**: A performance friendly increase in wandering horde sizes.
 
 <p>&nbsp;</p>
 
