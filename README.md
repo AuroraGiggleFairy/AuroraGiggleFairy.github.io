@@ -36,7 +36,7 @@
 
 ## VERSION 1.0 is REALLY HERE?!
 
-### Entire Server Side Package...- [Download v4.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v4.0.zip)
+### Entire Server Side Package...- [Download v4.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v4.1.zip)
 
 #### ***More than HALFWAY done with UPDATES***
 
