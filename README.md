@@ -36,7 +36,7 @@
 
 ## VERSION 1.0 is REALLY HERE?!
 
-### Entire Server Side Package...- [Download v3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v3.1.zip)
+### Entire Server Side Package...- [Download v4.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v4.0.zip)
 
 #### ***More than HALFWAY done with UPDATES***
 
@@ -71,6 +71,16 @@
 - **BetterEggChance**: Better Egg chance in birdnests (63% chance instead of 35%)
 
 - **CompactTrees**: Craft 5 seeds into one to plant a x5 tree.
+
+- **DewsPlus**:
+  
+    - Craft 5 dew collectors into one that acts like 5!
+ 
+    - Dew Collectors now 2x2 instead of 3x3
+ 
+    - Safe for existing saves
+ 
+    - Destroy existing 3x3 dew collectors to get 2x2 
   
 - **DrinkableAcid**: LOTS of fun times to be had... and maybe death.
   
@@ -101,12 +111,20 @@
     - It is worth to provide this for those who may need it.
       
     - The 8 is the infinity symbol. Life continues.
-      
+ 
 - **PaintbrushPlus**: Painting requires no paint, can click and hold, shorter range, etc
 
 - **PickupLanternPlus**: Pickup those lanterns, burning barrels, jack-o-lanterns
 
 - **PlayerResetQuests**: You can tell the trader to reset the quest options
+
+- **PumpkinsPlus**:
+
+    - Turn Molotovs into Molo-Jack-Ovs... It's awesome.
+ 
+    - Wear a Jack-O-Lantern on your helmet (dye slot).
+
+- **QuickerQuestStart**: Just redeem the first row of quests... rewarded and done.
   
 - **SimplifiedStackSizes**:
   
@@ -141,6 +159,18 @@
 - **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows)
   
 - **VehiclesUseLessGas**: Travel much farther without needing to refill vehicles
+
+- **ZombieBiomeSpawning**:
+
+    - Forest is slightly easier
+      
+    - Each biome is more wandering enemies
+      
+    - -Wasteland at night is MORE of a nightmare
+ 
+- **ZombieCorpseLeaveQuicker**: Zombie corpses disappear in 10 seconds instead of 30
+
+- **ZombieLargerHordes**: A performance friendly increase in wandering horde sizes
 
 <p>&nbsp;</p>
 
