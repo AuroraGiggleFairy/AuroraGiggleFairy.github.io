@@ -38,6 +38,8 @@
 
 ### Entire Server Side Package...so far.- [Download v5.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v5.0.zip)
 
+#### ***RECOMEND WHEN INSTALLING, DELETE EXISTING AGF MODS THEN ADD NEW PACKAGE***
+
 #### **Here are the mods included in the package:**
 
 - **HUDPlus-1Main**: My Main HUD.
