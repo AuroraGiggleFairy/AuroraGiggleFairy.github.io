@@ -34,17 +34,23 @@
     
 <p>&nbsp;</p>
 
-## VERSION 1.0 is REALLY HERE?!
+## VERSION 1.0 MODS
 
-### Entire Server Side Package...- [Download v4.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v4.1.zip)
+### Entire Server Side Package...so far.- [Download v5.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v5.0.zip)
 
 #### **Here are the mods included in the package:**
 
 - **HUDPlus-1Main**: My Main HUD.
   
+- **HUDPlus-2Addon-Calendar**: Adds Days of the week, bloodmoon every 7 days will be on Sunday.
+  
 - **HUDPlus-2Addon-Healthbars**: Enemy health bars.
   
-- **Backpack84Plus**: 84 Backpack Slots with Larger Storage Chest option.
+- **Backpack84Plus**:
+
+    - 84 Backpack Slots with Larger Storage Chest option.
+ 
+    - Larger Storage Chest comes in more shapes.
   
 - **VP-1Core**: The core of Vanilla Plus.
   
@@ -96,6 +102,12 @@
       
     - x5 seeds to plant 5 in one spot.
  
+- **FloraHarvester**:
+
+    - Special tool to quickly cut grass and crops.
+ 
+    - Unlocks at level 4 of seed crafting.
+ 
 - **FuelBurnPlus**: Craft a fuel item in 10min, 60min, 600min variants.
   
 - **JunkTurretPlus**: Each level in robotics adds 50 to junk turret magazine size.
@@ -111,6 +123,14 @@
     - It is worth to provide this for those who may need it.
       
     - The 8 is the infinity symbol. Life continues.
+ 
+- **ModSlotsPlus**:
+
+    - Quality of Life Mod Slot numbers that keeps progression.
+ 
+    - Goal to keep mod slots when upgrading to higher tier equipment
+ 
+    - Small addition of mod slots to higher quality equipment
  
 - **PaintbrushPlus**: Painting requires no paint, can click and hold, shorter range, etc.
 
@@ -149,12 +169,24 @@
 - **TacticalRiflePlus**: Removed 3 round burst, magazine size 36 instead of 30.
 
 - **Tires2Wheels**: You make wheels with acid OR tires you find in the world.
+
+- **ToolImprovements**:
+    
+    - Ratching slightly faster, impact driver slightly more.
+ 
+    - Hammer repairs/upgrade slightly faster.
+ 
+    - Chainsaws now butcher harvest 70% like axes.
   
 - **TraderAlwaysOpen**: 24/7 open traders... Maybe except BloodMoon?
 
 - **TraderSellsMoreBooks**: Per magazine, traders sell between 2 and 5 instead of 1 and 3.
 
 - **VehiclePerformance**: Vehicles are faster, better handling, climb mountains more easily, and gyro's can reverse better.
+
+- **VehicleSafeAircraftJumps**: Intentional or Accidental exits of vehicles, safe landing for 8 seconds.
+
+- **VehicleSeating**: Bicycles have 2 seats that are kind of personal.
   
 - **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows).
   
