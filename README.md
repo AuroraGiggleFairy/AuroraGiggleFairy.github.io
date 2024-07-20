@@ -36,7 +36,7 @@
 
 ## VERSION 1.0 MODS
 
-### Entire Server Side Package...so far.- [Download v5.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v5.1.zip)
+### Entire Server Side Package...so far.- [Download v5.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v5.2.zip)
 
 - Updated for V1.0 (b325+)
 
