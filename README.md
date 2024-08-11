@@ -36,13 +36,17 @@
 
 ## VERSION 1.0 MODS
 
-### Entire Server Side Package...so far.- [Download v5.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v5.2.zip)
+### Entire Server Side Package...so far.- [Download v6.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v6.0.zip)
 
-- Updated for V1.0 (b325+)
+- Purple Book Icon on HUD!!! Click it.
 
 - FunPimps new lockable slots system but with clear visuals!
 
 - Rechargeable Batteries a new item for battery banks to work correctly.
+
+- FarmingPlus updated to account for Farmer Armor
+
+- FUTURE UPDATE: Version 7 will include the completed Decoration Block Mod! 
 
 #### ***RECOMEND WHEN INSTALLING, DELETE EXISTING AGF MODS THEN ADD NEW PACKAGE***
 
