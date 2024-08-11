@@ -42,7 +42,7 @@
 
 - FunPimps new lockable slots system but with clear visuals!
 
-- Rechargeable Batteries a new item for battery banks to work correctly.
+- Rechargeable Batteries, a new item for battery banks to work correctly.
 
 - FarmingPlus updated to account for Farmer Armor
 
@@ -52,7 +52,19 @@
 
 #### **Here are the mods included in the package:**
 
-- **HUDPlus-1Main**: My Main HUD.
+- **HUDPlus-1Main**:
+
+    - My Main HUD.
+ 
+    - Click the Purple Book Icon!
+ 
+        - Crafting Levels on ONE Page
+ 
+        - Books Unlocks and Details on ONE Page (hover cursor)
+ 
+        - Unlockables through schematics and books on ONE Page
+ 
+        - Armor Details on ONE Page
   
 - **HUDPlus-2Addon-Calendar**: Adds Days of the week, bloodmoon every 7 days will be on Sunday.
   
