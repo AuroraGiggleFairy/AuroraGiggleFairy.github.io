@@ -34,23 +34,39 @@
     
 <p>&nbsp;</p>
 
-## VERSION 1.0 MODS
+## VERSION 1.2 MODS
 
-### Entire Server Side Package...so far.- [Download v6.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-V1-Package-v6.0.zip)
-
-- Purple Book Icon on HUD!!! Click it.
-
-- FunPimps new lockable slots system but with clear visuals!
-
-- Rechargeable Batteries, a new item for battery banks to work correctly.
-
-- FarmingPlus updated to account for Farmer Armor
-
-- FUTURE UPDATE: Version 7 will include the completed Decoration Block Mod! 
+### Entire Server Side Package.- [Download v7.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V1.2-PACKAGE-v7.2.zip)
 
 #### ***RECOMEND WHEN INSTALLING, DELETE EXISTING AGF MODS THEN ADD NEW PACKAGE***
 
-#### **Here are the mods included in the package:**
+#### **Here are the folders and mods included in the package:**
+
+- **AAA.ALL BACKPACK OPTIONS**:
+
+  - The package automatically comes with the 84 slot backpack installed.
+ 
+  - You can replace it with the 72 slot or 60 slot versions within this folder.
+ 
+  - The 72 slot appears the same as 84, but with one less row.
+ 
+  - The 60 slot version has the vanilla visual size of its inventory, easier to read.
+ 
+  - ALL backpacks come with larger storage options.
+ 
+- **AdminModdingSupport**: (No affect on gameplay, just support tools for admins/modders)
+
+  - Admin Replace Tool can function quicker
+ 
+  - XP books to give to players if needed
+ 
+  - A block for testing butchering and salvaging
+
+- **Backpack84Plus**: (You can switch this out if you wish.)
+
+    - 84 Backpack Slots with Larger Storage Chest option.
+ 
+    - Larger Storage Chest comes in more shapes.
 
 - **HUDPlus-1Main**:
 
@@ -69,28 +85,14 @@
 - **HUDPlus-2Addon-Calendar**: Adds Days of the week, bloodmoon every 7 days will be on Sunday.
   
 - **HUDPlus-2Addon-Healthbars**: Enemy health bars.
-  
-- **Backpack84Plus**:
 
-    - 84 Backpack Slots with Larger Storage Chest option.
+- **AlternativeRecipes**: (Adds these recipes, not replace existing ones)
+
+  - Craft cobblestone blocks directly from stone and clay (vanilla math)
  
-    - Larger Storage Chest comes in more shapes.
-  
-- **VP-1Core**: The core of Vanilla Plus.
-  
-    - Crafting Levels on one Page (click purple book icon). 
-    
-    - DoorsPlus (hatches are shapes within the doors).
-      
-    - Batteries/Solarcells now stack.
-      
-    - Scrapping batteries gives you acid.
-      
-    - Slight more sand harvesting.
-      
-    - Rebundle bundles.
-      
-    - Some admin stuff.
+  - First Aid Kits directly from cloth (vanilla math)
+ 
+  - First Aid Bandages from cloth (vanilla math)
       
 - **AutomobileRespawns**:
   
@@ -100,8 +102,48 @@
       
 - **BetterEggChance**: Better Egg chance in birdnests (63% chance instead of 35%).
 
+- **BuyTraderVendingMachines**:
+
+  - Get a high trader stage with a trader, you can purchase vending machines
+ 
+  - (The vending machines that get restocked daily)
+
 - **CompactTrees**: Craft 5 seeds into one to plant a x5 tree.
 
+- **DecorationBlock**: (THE BIGGEST MOD I HAVE)
+
+    - *One Block to decorate them all, *
+
+    - *One block to define them,*
+      
+    - *One block to bring them all,*
+      
+    - *And in the darkness survive them.*
+ 
+    - Over 5,000 in game models all within one block.
+ 
+    - Craft at a workbench.
+ 
+    - If the block is normally a container, it is a secured one for you (10 x 10)
+ 
+    - Each block has 500hp, but high explosive resistance.
+ 
+    - If you break one, it returns to your inventory.
+ 
+    - If it falls, you can pick it up for a brief time.
+ 
+    - HIGH COMPATIBILITY as this is standalone.
+ 
+    - Lights can be powered with electricity.
+ 
+    - Upgradeable blocks (labelled) can be upgraded with steel.
+ 
+    - ALL DOORS, plus unbarricaded versions.
+ 
+    - If the block has "campfire" in the name, you can use it as a campfire.
+ 
+    - JUST SO AWESOME. PLAY WITH IT!!!!
+ 
 - **DewsPlus**:
   
     - Craft 5 dew collectors into one that acts like 5!
@@ -136,9 +178,19 @@
   
 - **JunkTurretPlus**: Each level in robotics adds 50 to junk turret magazine size.
 
-- **MasterTool**: All the tools in one, end game item, VERY hard to get schematic.
+- **MasterTool**:
+
+    - All the tools in one, end game item, VERY hard to obtain.
+ 
+    - Does the work of an auger, chainsaw, knife, wrench, and nailgun, with minimal damage output
 
 - **MaxLevel500**: Max level of 500. Why not? lol.
+
+- **MiningPlus**:
+
+    - Mining Perk allows you to ALSO bundle clay, sand, and brass
+ 
+    - Sand mining is very slightly increased
    
 - **Mod988**: 988 is the new and shortened Suicide Hotline number.
   
@@ -147,6 +199,10 @@
     - It is worth to provide this for those who may need it.
       
     - The 8 is the infinity symbol. Life continues.
+ 
+- **ModBundling**:
+
+    - In game mods, can now be bundled to save space
  
 - **ModSlotsPlus**:
 
@@ -169,13 +225,17 @@
     - Wear a Jack-O-Lantern on your helmet (dye slot).
 
 - **QuickerQuestStart**: Just redeem the first row of quests... rewarded and done.
+
+- **RenamesForAutoSort**:
+
+    - A naming scheme to make auto sorting more effective.
+ 
+    - Try it out, it is safe to add/remove from existing games.
+ 
+- **ScrapBatts4Acid**:
+
+    - Scrap batteries for Acid (no longer gives lead).
   
-- **SimplifiedStackSizes**:
-  
-    - Vanilla friendly stack sizes.
-    
-    - Ammo scrapping returns more resources.
-    
 - **SmeltingPlus**:
   
     - 3 slots in forges, with aligned text.
@@ -183,6 +243,28 @@
     - Craft out clay, sand or rock in 1 units (OCD relief).
     
     - Sand smelts at 1:5 ratio instead of 1:4.
+ 
+- **StackableEngBattCells**:
+
+    - Engines, Batteries, and Solar Cells now stack
+ 
+    - Battery Banks, replace batteries with craftable "Rechargeable-Battery"
+ 
+- **StacksBundlesAmmoPlus**:
+
+    - Simplified stack sizes, keeps close to vanilla
+ 
+    - All Ammo (except turret) stacks to 500
+ 
+    - You can rebundle the bundles you have opened.
+ 
+    - Bundled items icon now tinted for visual differentation assistance
+ 
+    - Scrapping ammo turns it into a bundle with its ingredients. Open to collect.
+ 
+    - If you have a lot of scrapped bundles, can craft them into combined bundles.
+ 
+    - All archery ammo requires feathers. And Feathers can be made from plastic. 
  
 - **StayLongerAnimalCorpse**: Disappears after 10 minutes instead of 5.
 
@@ -210,7 +292,7 @@
 
 - **VehicleSafeAircraftJumps**: Intentional or Accidental exits of vehicles, safe landing for 8 seconds.
 
-- **VehicleSeating**: Bicycles have 2 seats that are kind of personal.
+- **VehicleSeating**: Bicycles have 2 seats that are janky looking (On my to do list to make it look better).
   
 - **VehicleStorageSizes**: 1 extra row of vehicle storages (Ex: Bicycle should have 2 rows).
   
@@ -227,6 +309,16 @@
 - **ZombieCorpseLeaveQuicker**: Disappears after 10 seconds instead of 30.
 
 - **ZombieLargerHordes**: A performance friendly increase in wandering horde sizes.
+
+- **zzzAGF-V1-VP-DoorsPlus**:
+
+    - You want this to load last alphabetically.
+ 
+    - Door Variants, that contain each door type (includes hatches)
+ 
+    - No longer have to build doors/hatches/cellars/shutters seperately
+ 
+    - Includes ALL doors in the game
 
 #### ***So close to updating my remaining mods from A21 to V1!***
 
