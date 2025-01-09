@@ -8,7 +8,7 @@
   
 - You may even catch me live on stream on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
   
-- Donations are IMMENSELY appreciated, not required [DONATE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
+- Donations are IMMENSELY appreciated, not required. [DONATE HERE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
       
 <p>&nbsp;</p>
 
