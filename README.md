@@ -40,6 +40,10 @@
 
 #### ***RECOMEND WHEN INSTALLING, DELETE EXISTING AGF MODS THEN ADD NEW PACKAGE***
 
+- No longer has a 1Core file.
+
+- You may pick and choose the mods you want. BEST with my HUD installed.
+
 #### **Here are the folders and mods included in the package:**
 
 - **AAA.ALL BACKPACK OPTIONS**:
