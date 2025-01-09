@@ -120,13 +120,13 @@
 
 - **DecorationBlock**: (THE BIGGEST MOD I HAVE)
 
-    - *One Block to decorate them all, *
+      - *One Block to decorate them all,*
 
-    - *One block to define them,*
+      - *One block to define them,*
       
-    - *One block to bring them all,*
+      - *One block to bring them all,*
       
-    - *And in the darkness survive them.*
+      - *And in the darkness survive them.*
  
     - Over 5,000 in game models all within one block.
  
