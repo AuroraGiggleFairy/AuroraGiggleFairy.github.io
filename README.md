@@ -325,7 +325,7 @@
  
     - Includes ALL doors in the game
 
-#### ***So close to updating my remaining mods from A21 to V1!***
+#### ***Now let's see what happens when version 2.0 comes out!***
 
 <p>&nbsp;</p>
 
