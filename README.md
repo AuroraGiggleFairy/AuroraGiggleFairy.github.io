@@ -44,6 +44,10 @@
 
 - You may pick and choose the mods you want. BEST with my HUD installed.
 
+- Each Mod has a readme with more description details
+
+- All xml files should be clearly labelled in case you want to browse.
+
 #### **Here are the folders and mods included in the package:**
 
 - **AAA.ALL BACKPACK OPTIONS**:
