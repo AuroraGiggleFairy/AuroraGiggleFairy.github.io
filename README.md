@@ -38,9 +38,9 @@
 
 ### AGF V1 HUDPlus and its optional Addons.- [Download v4.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20V1%20HUDPlus%20and%20Optional%20Addons.zip)
 
--AGF-V1-HUDPlus-1Main-Full-v4.0.0 is the primary one. Includes all the display features PLUS the Purple Book!
+- AGF-V1-HUDPlus-1Main-Full-v4.0.0 is the primary one. Includes all the display features PLUS the Purple Book!
 
--After installing the 1Main-Full, you can add these as well
+- After installing the 1Main-Full, you can add these as well
 
   - Enemy Health Bars
   
@@ -51,7 +51,7 @@
     - Every 7 Days or 15 while keeping day counter
       
     - Every 7 Days or 15 replacing day counter
-    - 
+    
     - (Want a custom number? Contact me via discord)
 
 ### Entire Server Side Package.- [Download v7.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V1.2-PACKAGE-v7.2.zip)
