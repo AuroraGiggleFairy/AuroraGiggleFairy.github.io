@@ -54,11 +54,9 @@
     
     - (Want a custom number? Contact me via discord)
 
-### Entire Server Side Package.- [Download v7.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V1.2-PACKAGE-v7.2.zip)
+### Entire Server Side Package For V1.- [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20V1%20Full%20Mod%20Package%20-%20Final%20before%20V2.zip)
 
 #### ***RECOMEND WHEN INSTALLING, DELETE EXISTING AGF MODS THEN ADD NEW PACKAGE***
-
-- No longer has a 1Core file.
 
 - You may pick and choose the mods you want. BEST with my HUD installed.
 
@@ -68,17 +66,25 @@
 
 #### **Here are the folders and mods included in the package:**
 
-- **AAA.ALL BACKPACK OPTIONS**:
+- **OPTIONALS - Backpack**:
 
-  - The package automatically comes with the 84 slot backpack installed.
+  - The package automatically comes with the 60 slot backpack installed.
  
-  - You can replace it with the 72 slot or 60 slot versions within this folder.
+  - You can replace it with the 72 slot or 84 slot versions within this folder.
  
-  - The 72 slot appears the same as 84, but with one less row.
- 
-  - The 60 slot version has the vanilla visual size of its inventory, easier to read.
+  - The 60 slot version has the vanilla visual size of its inventory.
  
   - ALL backpacks come with larger storage options.
+ 
+  - The 72 slot and 84 slots visually are smaller allowing a larger storage option than the 60.
+
+- **OPTIONALS - HUD**:
+
+  - The package automatically comes with HUDPlus-1Main-Full, 2Addon-Healthbars, 3Addon-BMCounter07-keepdaycount.
+ 
+  - In this folder you can add/swap out other addons like 2Addon-WeekDay
+ 
+  - With 3Addon files, only choose one of these. Need a custom counter? Contact me on discord.
  
 - **AdminModdingSupport**: (No affect on gameplay, just support tools for admins/modders)
 
@@ -88,9 +94,9 @@
  
   - A block for testing butchering and salvaging
 
-- **Backpack84Plus**: (You can switch this out if you wish.)
+- **Backpack60Plus**: (You can switch this out if you wish.)
 
-    - 84 Backpack Slots with Larger Storage Chest option.
+    - 60 Backpack Slots with Larger Storage Chest option.
  
     - Larger Storage Chest comes in more shapes.
 
@@ -98,7 +104,7 @@
 
     - My Main HUD.
  
-    - Click the Purple Book Icon!
+    - Click the Purple Book Icon! (Now with Zooming Feature)
  
         - Crafting Levels on ONE Page
  
@@ -108,9 +114,7 @@
  
         - Armor Details on ONE Page
   
-- **HUDPlus-2Addon-Calendar**: Adds Days of the week, bloodmoon every 7 days will be on Sunday.
-  
-- **HUDPlus-2Addon-Healthbars**: Enemy health bars.
+- **HUDPlus-2Addon-Healthbars**: Enemy health bars, redone for this update
 
 - **AlternativeRecipes**: (Adds these recipes, not replace existing ones)
 
@@ -135,6 +139,14 @@
   - (The vending machines that get restocked daily)
 
 - **CompactTrees**: Craft 5 seeds into one to plant a x5 tree.
+
+- **CraftStackEngBattCells**:
+
+    - Engines, Batteries, and Solar Cells now stack
+ 
+    - Engines, Solar Banks, and Solar Cells now craftable
+ 
+    - Battery Banks, replace batteries with craftable "Rechargeable-Battery"
 
 - **DecorationBlock**: (THE BIGGEST MOD I HAVE)
 
@@ -205,7 +217,7 @@
 
     - All the tools in one, end game item, VERY hard to obtain.
  
-    - Does the work of an auger, chainsaw, knife, wrench, and nailgun, with minimal damage output
+    - Does the work of an auger, chainsaw, knife, wrench, and nailgun, with minimal damage output.
 
 - **MaxLevel500**: Max level of 500. Why not? lol.
 
@@ -247,7 +259,7 @@
  
     - Wear a Jack-O-Lantern on your helmet (dye slot).
 
-- **QuickerQuestStart**: Just redeem the first row of quests... rewarded and done.
+- **QuickerQuestStart**: Just redeem the first row of challenges... rewarded and done.
 
 - **RenamesForAutoSort**:
 
@@ -266,12 +278,6 @@
     - Craft out clay, sand or rock in 1 units (OCD relief).
     
     - Sand smelts at 1:5 ratio instead of 1:4.
- 
-- **StackableEngBattCells**:
-
-    - Engines, Batteries, and Solar Cells now stack
- 
-    - Battery Banks, replace batteries with craftable "Rechargeable-Battery"
  
 - **StacksBundlesAmmoPlus**:
 
