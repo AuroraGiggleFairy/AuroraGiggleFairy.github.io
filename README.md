@@ -115,7 +115,9 @@
         - Armor Details on ONE Page
   
 - **HUDPlus-2Addon-Healthbars**: Enemy health bars, redone for this update
-
+  
+- **HUDPlus-3Addon-BMCounter07Days-KeepDayCount**: Blood Moon countdown timer for every 7 days
+  
 - **AlternativeRecipes**: (Adds these recipes, not replace existing ones)
 
   - Craft cobblestone blocks directly from stone and clay (vanilla math)
