@@ -257,7 +257,7 @@
 
 - **PlayerResetQuests**: You can tell the trader to reset the quest options.
 
-- **PumpkinsPlus**:
+- **PumpkinsPlus**: *(Inspired by GodSponge)*
 
       This is hell-o-ween.
       This is hell-o-ween,    
@@ -267,7 +267,7 @@
       Everyone burns when the pumpkin's thrown!
       -Malgor_vt
   
-    - Turn Molotovs into Molo-Jack-Ovs... It's awesome. (Thanks ProfSeatbelt for the name!)
+    - Turn Molotovs into Molo-Jack-Ovs... It's awesome. *(Thanks ProfSeatbelt for the name!)*
  
     - Wear a Jack-O-Lantern on your helmet (dye slot).
 
