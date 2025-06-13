@@ -34,7 +34,7 @@
     
 <p>&nbsp;</p>
 
-## VERSION 1.2 MODS
+## VERSION 1.4 MODS
 
 ### AGF V1 HUDPlus and its optional Addons.- [Download v4.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20V1%20HUDPlus%20and%20Optional%20Addons.zip)
 
