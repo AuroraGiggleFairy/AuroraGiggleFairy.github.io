@@ -267,7 +267,7 @@
       Everyone burns when the pumpkin's thrown!
       -Malgor_vt
   
-    - Turn Molotovs into Molo-Jack-Ovs... It's awesome.
+    - Turn Molotovs into Molo-Jack-Ovs... It's awesome. (Thanks ProfSeatbelt for the name!)
  
     - Wear a Jack-O-Lantern on your helmet (dye slot).
 
