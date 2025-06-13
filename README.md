@@ -259,6 +259,14 @@
 
 - **PumpkinsPlus**:
 
+      This is hell-o-ween.
+      This is hell-o-ween,    
+      Hell-o-ween, Hell-o-ween,
+      Hell-o-ween, Hell-o-ween.     
+      In this town, we call home,
+      Everyone burns when the pumpkin's thrown!
+      -Malgor_vt
+  
     - Turn Molotovs into Molo-Jack-Ovs... It's awesome.
  
     - Wear a Jack-O-Lantern on your helmet (dye slot).
