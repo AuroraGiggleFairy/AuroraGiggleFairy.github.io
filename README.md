@@ -34,6 +34,28 @@
     
 <p>&nbsp;</p>
 
+## VERSION 2 MODS!!!
+
+### AGF V2 HUDPlus and (Not yet addons).- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
+
+- Know that at this time, storm alerts will not show up in writing.
+
+-Let me know if you find something!
+   
+<p>&nbsp;</p>
+
+### AGF V2 Backpack Options.- [Download v2.3.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20OPTIONALS%20-%20V2%20Backpacks.zip)
+
+  - Pick from within the folder, slots of 60, 72, or 84.
+ 
+  - ALL backpacks come with larger storage options and shapes!
+    
+  - The 60 slot version has the vanilla visual size of its inventory.
+ 
+  - The 72 slot and 84 slots visually are smaller allowing a larger storage option than the 60.
+
+<p>&nbsp;</p>
+
 ## VERSION 1.4 MODS
 
 ### AGF V1 HUDPlus and its optional Addons.- [Download v4.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20V1%20HUDPlus%20and%20Optional%20Addons.zip)
