@@ -36,11 +36,13 @@
 
 ## VERSION 2 MODS!!!
 
+<p>&nbsp;</p>
+
 ### AGF V2 HUDPlus and (Not yet addons).- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
 
-- Know that at this time, storm alerts will not show up in writing.
+  - Know that at this time, storm alerts will not show up in writing.
 
--Let me know if you find something!
+  - Let me know if you find something!
    
 <p>&nbsp;</p>
 
