@@ -46,11 +46,11 @@
 
 ### AGF V2 Backpack Options.
 
-## -[Backpack60 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack60Plus-v2.3.1.zip)
+#### -[Backpack60 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack60Plus-v2.3.1.zip)
 
-## -[Backpack72 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack72Plus-v2.3.1.zip)
+#### -[Backpack72 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack72Plus-v2.3.1.zip)
 
-## -[Backpack84 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack84Plus-v2.3.1.zip)
+#### -[Backpack84 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack84Plus-v2.3.1.zip)
 
   - Pick from within the folder, slots of 60, 72, or 84.
  
