@@ -36,7 +36,7 @@
 
 ## VERSION 2 MODS!!!
 
-### AGF V2 HUDPlus and Optional Addons.- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20OPTIONALS%20-%20V2%20-%20ALL%20HUD%20Files%20&%20Addons.zip)
+### AGF V2 HUDPlus and Optional Addons.- [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20OPTIONALS%20-%20V2%20-%20ALL%20HUD%20Files%20&%20Addons.zip)
 
 | Overview | Other Features | Purple Book |
 |---|---|---|
