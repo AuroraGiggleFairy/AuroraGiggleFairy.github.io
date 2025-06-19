@@ -38,15 +38,10 @@
 
 ### AGF V2 HUDPlus and (Not yet addons).- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
 
-<figure>
-  <img src="[image1.png](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-OtherFeatures.jpeg)" alt="Description of image 1">
-  <figcaption>Caption for image 1</figcaption>
-</figure>
-
-<figure>
-  <img src="[image2.png](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-PurpleBook.jpeg)" alt="Description of image 2">
-  <figcaption>Caption for image 2</figcaption>
-</figure>
+| Column 1 Header | Column 2 Header | Column 3 Header |
+|---|---|---|
+| ![image 1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-OtherFeatures.jpeg) | ![image 2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-PurpleBook.jpeg) | ![image 3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg)
+| ![image 3](image3.png) | ![image 4](image4.png) |
 
   - Know that at this time, storm alerts will not show up in writing.
 
