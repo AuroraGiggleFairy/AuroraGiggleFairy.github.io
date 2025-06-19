@@ -38,7 +38,9 @@
 
 ### AGF V2 HUDPlus and Optional Addons.- [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20OPTIONALS%20-%20V2%20-%20ALL%20HUD%20Files%20&%20Addons.zip)
 
-[![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://flic.kr/s/aHBqjCiEMq)
+[![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
+
+[All HUD Images](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
 
   - HUD is READY
 
