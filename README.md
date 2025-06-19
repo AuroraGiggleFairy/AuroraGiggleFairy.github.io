@@ -36,15 +36,15 @@
 
 ## VERSION 2 MODS!!!
 
-### AGF V2 HUDPlus and (Not yet addons).- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
+### AGF V2 HUDPlus and Optional Addons.- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20OPTIONALS%20-%20V2%20-%20ALL%20HUD%20Files%20&%20Addons.zip)
 
 | Overview | Other Features | Purple Book |
 |---|---|---|
 |![Overview](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg)|![Other Features](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-OtherFeatures.jpeg)|![Purple Book](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-PurpleBook.jpeg)|
 
-  - Know that at this time, storm alerts will not show up in writing.
+  - HUD is READY
 
-  - Let me know if you find something!
+  - Know there is a new optional addon to show written storm alert warnings.
    
 <p>&nbsp;</p>
 
