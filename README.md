@@ -40,7 +40,7 @@
 
 | Overview | Other Features | Purple Book |
 |---|---|---|
-|![Overview](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg)|![Other Features](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-OtherFeatures.jpeg)|![Purple Book](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-PurpleBook.jpeg)|
+|![Overview](Images/7d2dMod-HudPlus1.jpeg)|![Other Features](Images/7d2dMod-HudPlus1-OtherFeatures.jpeg)|![Purple Book](Images/7d2dMod-HudPlus1-PurpleBook.jpeg)|
 
   - HUD is READY
 
