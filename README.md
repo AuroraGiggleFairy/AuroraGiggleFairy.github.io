@@ -38,6 +38,16 @@
 
 ### AGF V2 HUDPlus and (Not yet addons).- [Download v4.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
 
+<figure>
+  <img src="[image1.png](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-OtherFeatures.jpeg)" alt="Description of image 1">
+  <figcaption>Caption for image 1</figcaption>
+</figure>
+
+<figure>
+  <img src="[image2.png](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1-PurpleBook.jpeg)" alt="Description of image 2">
+  <figcaption>Caption for image 2</figcaption>
+</figure>
+
   - Know that at this time, storm alerts will not show up in writing.
 
   - Let me know if you find something!
