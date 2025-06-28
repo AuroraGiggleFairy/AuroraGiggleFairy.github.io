@@ -77,7 +77,7 @@
 
 <p>&nbsp;</p>
 
-## AGF V2 Backpack Options *Pick One*
+## AGF V2 Backpack Options - *Pick One*
 
 #### -[Download Backpack60 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack60Plus-v2.3.1.zip)
 
@@ -97,7 +97,7 @@
 
 <p>&nbsp;</p>
 
-## AGF V2 Vanilla Plus Options *Pick Any*
+## AGF V2 Vanilla Plus Options - *Pick Any*
 
 ### You may download the whole package [HERE](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar.zip) and/or pick individually below:
 
