@@ -36,55 +36,44 @@
     
 <p>&nbsp;</p>
 
-## VERSION 2 MODS!!!
+# VERSION 2 MODS!!!
 
-### AGF V2 HUDPlus and Optional Addons.
+## AGF V2 HUDPlus and Optional Addons.
 
 [![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
 
-#### Step 1, Pick One:
 
-##### [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
 
-##### [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip)
+### Step 1, Pick ONE: 
+| [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)  |  [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
+|----------|----------|
 
-- Compact Stat Display
+  - Compact Stat Display, Lockable Inventory slots with clear visuals, Wider and accurate compass with center mark, Improved chatbox readability, Map information moved to side panel, Crafting times improved readability, Date, Time, and skulls on all menus, Quest Selection viewing improved readability, Simple colors for interactive blocks, 5 crafting slots evenly centered, Read books improved readability, 
 
-- Lockable Inventory slots with clear visuals
+  - PURPLE BOOK (for the FULL HUD), All Magazine Crafting on one page (can zoom in, click on magazine), All Books information on one page, All Unlockables on one page, Armor Details on one page (can zoom in)
 
-- Wider and accurate compass with center mark
+### Step 2, OPTIONAL, Pick ANY from Below:
 
-- Improved chatbox readability
+  - [HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-HealthBars-v3.0.0.zip) - When targeting enemy, displays their health bar.
 
-- Map information moved to side panel
+  - [OnScreenWrittenStormAlerts](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-OnScreenWrittenStormAlerts-v1.0.0.zip) - When storms are coming, display written alerts.
 
-- Crafting times improved readability
+  - [WeekDay](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-WeekDay-v1.1.0.zip) - Displays the day of the week next to the day counter.
 
-- Date, Time, and skulls on all menus
+### Step 3, BLOOD MOON COUNTDOWN OPTION, Pick ONLY ONE from Below:
 
-- Quest Selection viewing improved readability
+*Note that these only work for fixed blood moon days. If you want a different variable than what is shown below, contact me (look above for discord).*
 
-- Simple colors for interactive blocks
+  - Bloom Moon Countdown for every 7 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-KeepDayCount-v1.0.1.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-NoDayCount-v1.0.2.zip)
 
-- 5 crafting slots evenly centered
+  - Bloom Moon Countdown for every 10 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-KeepDayCount-v1.0.0.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-NoDayCount-v1.0.0.zip)
 
-- Read books improved readability
-
-- PURPLE BOOK (for the FULL HUD)
-
-  - All Magazine Crafting on one page (can zoom in, click on magazine)
- 
-  - All Books information on one page
- 
-  - All Unlockables on one page
- 
-  - Armor Details on one page (can zoom in)
-
+  - Bloom Moon Countdown for every 15 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-KeepDayCount-v1.0.1.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-NoDayCount-v1.0.2.zip)
 
    
 <p>&nbsp;</p>
 
-### AGF V2 Backpack Options.
+## AGF V2 Backpack Options.
 
 #### -[Download Backpack60 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack60Plus-v2.3.1.zip)
 
@@ -92,13 +81,71 @@
 
 #### -[Download Backpack84 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack84Plus-v2.3.1.zip)
 
-  - Pick from within the folder, slots of 60, 72, or 84.
+  - Pick One!
  
   - ALL backpacks come with larger storage options and shapes!
     
   - The 60 slot version has the vanilla visual size of its inventory.
  
   - The 72 slot and 84 slots visually are smaller allowing a larger storage option than the 60.
+
+<p>&nbsp;</p>
+
+## AGF V2 Vanilla Plus Options.
+
+### You may download the whole package [here](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar.zip) OR pick individually below:
+
+  - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip)
+
+  - [AutomobilesRespawn-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AutomobilesRespawn-v2.0.2.zip)
+
+  - [BetterEggChance-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.0.0.zip)
+
+  - [CompactTrees-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.2.zip)
+
+  - [CraftStackEngBattCells-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.0.0.zip)
+
+  - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip)
+
+  - [DewsPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.0.3.zip)
+
+  - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip)
+
+  - [DyesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.0.0.zip)
+
+  - [FarmingPlus-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.0.zip)
+
+  - [FuelBurnPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.1.0.zip)
+
+  - [MaxLevel500-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MaxLevel500-v2.0.2.zip)
+
+  - [MiningPlus-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MiningPlus-v1.1.0.zip)
+
+  - [Mod988-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-Mod988-v2.0.1.zip)
+
+  - [NEW GAME ONLY QuickerQuestStart-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-NewGameOnly.QuickerQuestStart-v1.0.1.zip)
+
+  - [PaintbrushPlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PaintbrushPlus-v2.0.0.zip)
+
+  - [PickupLanternsPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PickupLanternsPlus-v2.0.1.zip)
+
+  - [PumpkinsPlus-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.2.zip)
+
+  - [RenamesForAutoSort-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.1.zip)
+
+  - [ScrapBatts4Acid-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.0.0.zip)
+
+  - [SmeltingPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.0.1.zip)
+
+  - [StacksBundlesAmmoPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.0.1.zip)
+
+  - [StayLongerZombieLoot-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerZombieLoot-v2.0.1.zip)
+
+  - [TacticalRiflePlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.0.0.zip)
+
+  - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip)
+
+  - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip)
 
 <p>&nbsp;</p>
 
