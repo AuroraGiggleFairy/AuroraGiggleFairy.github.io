@@ -98,7 +98,7 @@
 
 ## AGF V2 Vanilla Plus Options - *Pick Any*
 
-### You may download the whole package [HERE](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar.zip) and/or pick individually below:
+### You may download the whole package [HERE](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(2).zip) and/or pick individually below:
 
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
 
@@ -118,7 +118,7 @@
 
   - [DyesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.0.0.zip) *27 more dyes, craftable, simple naming scheme*
 
-  - [FarmingPlus-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.0.zip) *Bridnets, BeeHive, and five in one farming*
+  - [FarmingPlus-v5.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.1.zip) *Bridnets, BeeHive, and five in one farming*
 
   - [FuelBurnPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.1.0.zip) *Burn items for 10min, 60min, or 600min*
 
