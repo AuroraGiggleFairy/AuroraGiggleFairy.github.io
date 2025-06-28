@@ -46,7 +46,8 @@
 
 ### Step 1, Pick ONE: 
 | [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)  |  [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
-|----------|----------|
+| :---------:|:--------:|
+| Whole HUD | Good if using LOTS of mods |
 
   - Compact Stat Display, Lockable Inventory slots with clear visuals, Wider and accurate compass with center mark, Improved chatbox readability, Map information moved to side panel, Crafting times improved readability, Date, Time, and skulls on all menus, Quest Selection viewing improved readability, Simple colors for interactive blocks, 5 crafting slots evenly centered, Read books improved readability, 
 
