@@ -43,6 +43,7 @@
 [![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
 
 ### Step 1, Pick ONE: 
+
 | [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)  |  [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
 | :---------: | :--------: |
 | Whole HUD | Good if using LOTS of mods |
