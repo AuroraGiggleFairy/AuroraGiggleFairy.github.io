@@ -38,7 +38,7 @@
 
 # VERSION 2 MODS!!!
 
-## AGF V2 HUDPlus and Optional Addons.
+## AGF V2 HUDPlus and Optional Addons
 
 [![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
 
@@ -77,7 +77,7 @@
 
 <p>&nbsp;</p>
 
-## AGF V2 Backpack Options.
+## AGF V2 Backpack Options *Pick One*
 
 #### -[Download Backpack60 v2.3.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF-V2-Backpack60Plus-v2.3.1.zip)
 
@@ -97,7 +97,7 @@
 
 <p>&nbsp;</p>
 
-## AGF V2 Vanilla Plus Options.
+## AGF V2 Vanilla Plus Options *Pick Any*
 
 ### You may download the whole package [HERE](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar.zip) and/or pick individually below:
 
