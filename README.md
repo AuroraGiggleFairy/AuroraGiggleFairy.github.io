@@ -68,11 +68,11 @@
 
 *Note that these only work for fixed blood moon days. If you want a different variable than what is shown below, contact me (look above for discord).*
 
-  - Bloom Moon Countdown for every 7 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-KeepDayCount-v1.0.1.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-NoDayCount-v1.0.2.zip)
+  - Bloom Moon Countdown for every 7 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-KeepDayCount-v1.0.1.zip) -OR- [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-NoDayCount-v1.0.2.zip)
 
-  - Bloom Moon Countdown for every 10 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-KeepDayCount-v1.0.0.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-NoDayCount-v1.0.0.zip)
+  - Bloom Moon Countdown for every 10 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-KeepDayCount-v1.0.0.zip) -OR- [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-NoDayCount-v1.0.0.zip)
 
-  - Bloom Moon Countdown for every 15 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-KeepDayCount-v1.0.1.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-NoDayCount-v1.0.2.zip)
+  - Bloom Moon Countdown for every 15 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-KeepDayCount-v1.0.1.zip) -OR- [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-NoDayCount-v1.0.2.zip)
 
 <p>&nbsp;</p>
 
