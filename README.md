@@ -42,8 +42,6 @@
 
 [![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
 
-
-
 ### Step 1, Pick ONE: 
 | [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)  |  [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
 | :---------:|:--------:|
@@ -53,6 +51,8 @@
 
   - PURPLE BOOK (for the FULL HUD), All Magazine Crafting on one page (can zoom in, click on magazine), All Books information on one page, All Unlockables on one page, Armor Details on one page (can zoom in)
 
+<p>&nbsp;</p>
+
 ### Step 2, OPTIONAL, Pick ANY from Below:
 
   - [HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-HealthBars-v3.0.0.zip) - When targeting enemy, displays their health bar.
@@ -60,6 +60,8 @@
   - [OnScreenWrittenStormAlerts](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-OnScreenWrittenStormAlerts-v1.0.0.zip) - When storms are coming, display written alerts.
 
   - [WeekDay](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-WeekDay-v1.1.0.zip) - Displays the day of the week next to the day counter.
+
+<p>&nbsp;</p>
 
 ### Step 3, BLOOD MOON COUNTDOWN OPTION, Pick ONLY ONE from Below:
 
@@ -71,7 +73,8 @@
 
   - Bloom Moon Countdown for every 15 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-KeepDayCount-v1.0.1.zip) | [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-NoDayCount-v1.0.2.zip)
 
-   
+<p>&nbsp;</p>
+
 <p>&nbsp;</p>
 
 ## AGF V2 Backpack Options.
@@ -89,6 +92,8 @@
   - The 60 slot version has the vanilla visual size of its inventory.
  
   - The 72 slot and 84 slots visually are smaller allowing a larger storage option than the 60.
+
+<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
@@ -147,6 +152,8 @@
   - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon*
 
   - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip) *corpses leave after 10 seconds instead of 30*
+
+<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
