@@ -38,15 +38,49 @@
 
 ## VERSION 2 MODS!!!
 
-### AGF V2 HUDPlus and Optional Addons.- [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20OPTIONALS%20-%20V2%20-%20ALL%20HUD%20Files%20&%20Addons.zip)
+### AGF V2 HUDPlus and Optional Addons.
 
 [![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
 
-[All HUD Images](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
+#### Step 1, Pick One:
 
-  - HUD is READY
+##### [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)
 
-  - Know there is a new optional addon to show written storm alert warnings.
+##### [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip)
+
+- Compact Stat Display
+
+- Lockable Inventory slots with clear visuals
+
+- Wider and accurate compass with center mark
+
+- Improved chatbox readability
+
+- Map information moved to side panel
+
+- Crafting times improved readability
+
+- Date, Time, and skulls on all menus
+
+- Quest Selection viewing improved readability
+
+- Simple colors for interactive blocks
+
+- 5 crafting slots evenly centered
+
+- Read books improved readability
+
+- PURPLE BOOK (for the FULL HUD)
+
+  - All Magazine Crafting on one page (can zoom in, click on magazine)
+ 
+  - All Books information on one page
+ 
+  - All Unlockables on one page
+ 
+  - Armor Details on one page (can zoom in)
+
+
    
 <p>&nbsp;</p>
 
