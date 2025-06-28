@@ -31,6 +31,8 @@
   - "What if there is an error in my language?"
     
   - *Please inform me in my [DISCORD](https://discord.gg/Vm5eyW6N4r).*
+ 
+- Where do I install the mods? (See Image Right Below... coming soon)
     
 <p>&nbsp;</p>
 
