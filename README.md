@@ -93,59 +93,59 @@
 
 ## AGF V2 Vanilla Plus Options.
 
-### You may download the whole package [here](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar.zip) OR pick individually below:
+### You may download the whole package [HERE](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar.zip) and/or pick individually below:
 
-  - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip)
+  - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
 
-  - [AutomobilesRespawn-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AutomobilesRespawn-v2.0.2.zip)
+  - [AutomobilesRespawn-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AutomobilesRespawn-v2.0.2.zip) 
 
-  - [BetterEggChance-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.0.0.zip)
+  - [BetterEggChance-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.0.0.zip) *63% instead of 35%*
 
-  - [CompactTrees-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.2.zip)
+  - [CompactTrees-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.2.zip) *Planting 5 trees as one*
 
-  - [CraftStackEngBattCells-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.0.0.zip)
+  - [CraftStackEngBattCells-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.0.0.zip) *Craft and stack enginges, batteries, solar cells, and solar bnkas*
 
-  - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip)
+  - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip) *One block to rule them all*
 
-  - [DewsPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.0.3.zip)
+  - [DewsPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.0.3.zip) *Now 2x2 and can combine 5 into one*
 
-  - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip)
+  - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip) *For a good time!*
 
-  - [DyesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.0.0.zip)
+  - [DyesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.0.0.zip) *27 more dyes, craftable, simple naming scheme*
 
-  - [FarmingPlus-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.0.zip)
+  - [FarmingPlus-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.0.zip) *Bridnets, BeeHive, and five in one farming*
 
-  - [FuelBurnPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.1.0.zip)
+  - [FuelBurnPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.1.0.zip) *Burn items for 10min, 60min, or 600min*
 
   - [MaxLevel500-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MaxLevel500-v2.0.2.zip)
 
-  - [MiningPlus-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MiningPlus-v1.1.0.zip)
+  - [MiningPlus-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MiningPlus-v1.1.0.zip) *Mining Perk now bundles sand, brass, and clay*
 
-  - [Mod988-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-Mod988-v2.0.1.zip)
+  - [Mod988-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-Mod988-v2.0.1.zip) *You deserve it. 988 is Suicide Hotline Number. Nooses are now plain rope*
 
-  - [NEW GAME ONLY QuickerQuestStart-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-NewGameOnly.QuickerQuestStart-v1.0.1.zip)
+  - [NEW GAME ONLY QuickerQuestStart-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-NewGameOnly.QuickerQuestStart-v1.0.1.zip) *Quickly Redeem Intro Challenges*
 
-  - [PaintbrushPlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PaintbrushPlus-v2.0.0.zip)
+  - [PaintbrushPlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PaintbrushPlus-v2.0.0.zip) *No paint needed, hold to paint, short distance*
 
-  - [PickupLanternsPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PickupLanternsPlus-v2.0.1.zip)
+  - [PickupLanternsPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PickupLanternsPlus-v2.0.1.zip) *Pick up lanterns, flashlights, burning barrels*
 
-  - [PumpkinsPlus-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.2.zip)
+  - [PumpkinsPlus-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.2.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
 
-  - [RenamesForAutoSort-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.1.zip)
+  - [RenamesForAutoSort-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.1.zip) *Adds prefixs to similar items*
 
-  - [ScrapBatts4Acid-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.0.0.zip)
+  - [ScrapBatts4Acid-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.0.0.zip) 
 
-  - [SmeltingPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.0.1.zip)
+  - [SmeltingPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.0.1.zip) *3 slot forge, sand smelts equally with clay and stone*
 
-  - [StacksBundlesAmmoPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.0.1.zip)
+  - [StacksBundlesAmmoPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.0.1.zip) *Caculated and simplified stack sizes, rebundle bundles, ammo disassembly*
 
-  - [StayLongerZombieLoot-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerZombieLoot-v2.0.1.zip)
+  - [StayLongerZombieLoot-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerZombieLoot-v2.0.1.zip) *Stays for 1 hour instead of 20 minutes*
 
-  - [TacticalRiflePlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.0.0.zip)
+  - [TacticalRiflePlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.0.0.zip) *Auto instead of burst, slight magazine increase*
 
-  - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip)
+  - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon*
 
-  - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip)
+  - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip) *corpses leave after 10 seconds instead of 30*
 
 <p>&nbsp;</p>
 
