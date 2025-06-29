@@ -100,7 +100,7 @@
 
 ## AGF V2 Vanilla Plus Options - *Pick Any*
 
-### You may download the whole package [HERE](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(2).zip) and/or pick individually below:
+### You may download the whole package [HERE v3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(3).zip) and/or pick individually below:
 
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
 
@@ -151,6 +151,8 @@
   - [TacticalRiflePlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.0.0.zip) *Auto instead of burst, slight magazine increase*
 
   - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon*
+
+  - [WriteStoryOnCrate-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-WriteStoryOnCrate-v1.0.0.zip) *Message-Crate, can write a long note on it.
 
   - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip) *corpses leave after 10 seconds instead of 30*
 
