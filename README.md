@@ -33,6 +33,8 @@
   - *Please inform me in my [DISCORD](https://discord.gg/Vm5eyW6N4r).*
  
 - Where do I install the mods? (See Image Right Below... coming soon)
+
+[![Installation Instructions](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg)
     
 <p>&nbsp;</p>
 
