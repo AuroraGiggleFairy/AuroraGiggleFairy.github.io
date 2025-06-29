@@ -32,10 +32,10 @@
     
   - *Please inform me in my [DISCORD](https://discord.gg/Vm5eyW6N4r).*
  
-- Where do I install the mods? (See Image Below) TEST
+- Where do I install the mods? (See Image Below)
 
 <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true">
-  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true" alt="Instructions" width="65%" height="65%"></img>
+  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true" alt="Instructions" width="65%" height="65%">
 </a>
 
 <p>&nbsp;</p>
@@ -44,7 +44,9 @@
 
 ## AGF V2 HUDPlus and Optional Addons
 
-<img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%"></img>
+<a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true">
+  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%"></img>
+</a>
 
 ### Step 1, Pick ONE:
 
