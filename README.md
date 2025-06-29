@@ -32,7 +32,7 @@
     
   - *Please inform me in my [DISCORD](https://discord.gg/Vm5eyW6N4r).*
  
-- Where do I install the mods? (See Image Below)
+- Where do I install the mods? (See Image Below) TEST
 
 <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true">
   <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true" alt="Instructions" width="65%" height="65%"></img>
