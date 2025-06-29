@@ -34,7 +34,9 @@
  
 - Where do I install the mods? (See Image Below)
 
-<img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true" alt="Instructions" width="65%" height="65%"></img>
+<a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true">
+  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg?raw=true" alt="Instructions" width="65%" height="65%"></img>
+</a>
 
 <p>&nbsp;</p>
 
@@ -152,7 +154,7 @@
 
   - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon*
 
-  - [WriteStoryOnCrate-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-WriteStoryOnCrate-v1.0.0.zip) *Message-Crate, can write a long note on it.
+  - [WriteStoryOnCrate-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-WriteStoryOnCrate-v1.0.0.zip) *Message-Crate, can write a long note on it.*
 
   - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip) *corpses leave after 10 seconds instead of 30*
 
