@@ -34,7 +34,7 @@
  
 - Where do I install the mods? (See Image Right Below... coming soon)
 
-[![Installation Instructions](https://live.staticflickr.com/65535/54621612830_c8d2d16385_b.jpg)](https://www.flickr.com/photos/203085843@N08/54621612830/in/album-72177720327221219)
+<img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg" alt="Alt text" width="65%" height="65%"> 
 
 <p>&nbsp;</p>
 
@@ -42,7 +42,7 @@
 
 ## AGF V2 HUDPlus and Optional Addons
 
-[![HUDPlus Images](https://live.staticflickr.com/65535/54599557467_ecf90f09d2_z.jpg)](https://www.flickr.com/photos/203085843@N08/54599557467/in/album-72177720326991434)
+<img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg" alt="Alt text" width="65%" height="65%"> 
 
 ### Step 1, Pick ONE:
 
