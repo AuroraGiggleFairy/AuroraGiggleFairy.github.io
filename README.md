@@ -34,8 +34,8 @@
  
 - Where do I install the mods? (See Image Right Below... coming soon)
 
-[![Installation Instructions](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dModInstallation.jpeg)
-    
+[![Installation Instructions](https://live.staticflickr.com/65535/54621612830_c8d2d16385_b.jpg)](https://www.flickr.com/photos/203085843@N08/54621612830/in/album-72177720327221219)
+
 <p>&nbsp;</p>
 
 # VERSION 2 MODS!!!
@@ -110,7 +110,7 @@
 
   - [CompactTrees-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.2.zip) *Planting 5 trees as one*
 
-  - [CraftStackEngBattCells-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.0.0.zip) *Craft and stack enginges, batteries, solar cells, and solar bnkas*
+  - [CraftStackEngBattCells-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.0.0.zip) *Craft and stack enginges, batteries, solar cells, and solar banks*
 
   - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip) *One block to rule them all*
 
