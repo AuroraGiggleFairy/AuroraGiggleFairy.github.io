@@ -45,7 +45,7 @@
 ## AGF V2 HUDPlus and Optional Addons
 
 <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true">
-  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%"></img>
+  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
 ### Step 1, Pick ONE:
