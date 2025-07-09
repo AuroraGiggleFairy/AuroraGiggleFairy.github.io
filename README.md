@@ -56,7 +56,7 @@
 
   - Compact Stat Display, Lockable Inventory slots with clear visuals, Wider and accurate compass with center mark, Improved chatbox readability, Map information moved to side panel, Crafting times improved readability, Date, Time, and skulls on all menus, Quest Selection viewing improved readability, Simple colors for interactive blocks, 5 crafting slots evenly centered, Read books improved readability, 
 
-  - PURPLE BOOK (for the FULL HUD), All Magazine Crafting on one page (can zoom in, click on magazine), All Books information on one page, All Unlockables on one page, Armor Details on one page (can zoom in)
+  - PURPLE BOOK, All Magazine Crafting on one page (can zoom in, click on magazine), All Books information on one page, All Unlockables on one page, Armor Details on one page (can zoom in)
 
 <p>&nbsp;</p>
 
@@ -104,7 +104,9 @@
 
 ## AGF V2 Vanilla Plus Options - *Pick Any*
 
-### You may download the "Giggle Pack" *(Thanks IAmMrFlare)* [HERE v3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(4).zip) and/or pick individually below: 
+### You may download the "Giggle Pack" [HERE v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(4).zip) and/or pick individually below: 
+
+*Thanks for the name IAmMrFlare*
 
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
 
