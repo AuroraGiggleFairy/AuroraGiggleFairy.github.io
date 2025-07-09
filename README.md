@@ -50,7 +50,7 @@
 
 ### Step 1, Pick ONE:
 
-| [HUDPlus 1Main Full](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-Full-v4.1.0.zip)  |  [HUDPlus 1Main NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
+| [HUDPlus 1Main a.WithPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-A.WithPurpleBook-v4.1.1.zip)  |  [HUDPlus 1Main B.NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
 | :---------: | :--------: |
 | Whole HUD | Good if using LOTS of mods |
 
@@ -118,7 +118,7 @@
 
   - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip) *One block to rule them all*
 
-  - [DewsPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.0.3.zip) *Now 2x2 and can combine 5 into one*
+  - [DewsPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.1.0.zip) *Now 2x2 and can combine 5 into one*
 
   - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip) *For a good time!*
 
@@ -127,6 +127,8 @@
   - [FarmingPlus-v5.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.1.zip) *Birdnests, BeeHives, and five in one farming*
 
   - [FuelBurnPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.1.0.zip) *Burn items for 10min, 60min, or 600min*
+
+  - [MasterTool-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MasterTool-v5.0.0.zip) *End Game All-in-one Tool*
 
   - [MaxLevel500-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MaxLevel500-v2.0.2.zip)
 
@@ -140,9 +142,11 @@
 
   - [PickupLanternsPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PickupLanternsPlus-v2.0.1.zip) *Pick up lanterns, flashlights, burning barrels*
 
+  - [PlayerResetQuests-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PlayerResetQuests-v2.0.1.zip) *Reset your quest options!*
+
   - [PumpkinsPlus-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.2.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
 
-  - [RenamesForAutoSort-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.1.zip) *Adds prefixs to similar items*
+  - [RenamesForAutoSort-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.2.zip) *Adds prefixs to similar items*
 
   - [ScrapBatts4Acid-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.0.0.zip) 
 
@@ -150,15 +154,23 @@
 
   - [StacksBundlesAmmoPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.0.1.zip) *Caculated and simplified stack sizes, rebundle bundles, ammo disassembly*
 
+  - [StayLongerAnimalCorpse-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerAnimalCorpse-v2.0.1.zip) *Animal Corpses disappear after 10 minutes instead of 5*
+
+  - [StayLongerPlayerBackpack-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerPlayerBackpack-v2.0.1.zip) *Dropped Player Backpack disappears after 5 hours instead of 1*
+
   - [StayLongerZombieLoot-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerZombieLoot-v2.0.1.zip) *Stays for 1 hour instead of 20 minutes*
 
   - [TacticalRiflePlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.0.0.zip) *Auto instead of burst, slight magazine increase*
 
   - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon*
 
+  - [VehicleStorageSize-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehicleStorageSizes-v2.0.1.zip) *Vehciles have +1 row of storage*
+
   - [WriteStoryOnCrate-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-WriteStoryOnCrate-v1.0.0.zip) *Message-Crate, can write a long note on it.*
 
   - [ZombieCorpseLeaveQuicker-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip) *corpses leave after 10 seconds instead of 30*
+
+  - [ZombieLargerHordes-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieLargerHordes-v2.0.1.zip) *A few more zombies in the wandering hordes*
 
 <p>&nbsp;</p>
 
