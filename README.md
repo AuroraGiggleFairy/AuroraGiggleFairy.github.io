@@ -104,7 +104,7 @@
 
 ## AGF V2 Vanilla Plus Options - *Pick Any*
 
-### You may download the whole package [HERE v3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(3).zip) and/or pick individually below:
+### You may download the "Giggle Pack" *(Thanks IAmMrFlare)* [HERE v3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(4).zip) and/or pick individually below: 
 
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
 
