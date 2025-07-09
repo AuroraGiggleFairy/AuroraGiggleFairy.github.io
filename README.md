@@ -50,7 +50,7 @@
 
 ### Step 1, Pick ONE:
 
-| [HUDPlus 1Main a.WithPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-A.WithPurpleBook-v4.1.1.zip)  |  [HUDPlus 1Main B.NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
+| [HUDPlus 1Main A.WithPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-A.WithPurpleBook-v4.1.1.zip)  |  [HUDPlus 1Main B.NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-NoPurpleBook-v4.1.0.zip) |
 | :---------: | :--------: |
 | Whole HUD | Good if using LOTS of mods |
 
