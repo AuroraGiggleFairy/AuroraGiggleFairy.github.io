@@ -62,7 +62,7 @@
 
 ### Step 2, OPTIONAL, Pick ANY from Below:
 
-  - [HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-HealthBars-v3.0.0.zip) - When targeting enemy, displays their health bar.
+  - [HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-HealthBars-v3.0.0.zip) - When targeting enemy, displays their health bar. *(Works Standalone)*
 
   - [OnScreenWrittenStormAlerts](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-OnScreenWrittenStormAlerts-v1.0.0.zip) - When storms are coming, display written alerts.
 
