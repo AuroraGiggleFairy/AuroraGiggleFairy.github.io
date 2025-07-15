@@ -82,6 +82,14 @@
 
 <p>&nbsp;</p>
 
+### Step 4, COMPATIBILITY PATCHES:
+
+*Compatibility Patches requires both my HUDPlus-1Main AND the associated mod. KEEP THE 'Z' IN THE FOLDER NAME!!!*
+
+  - [Patch v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/zPatch-KH15SLot-AGFHud-v2.0.0.zip) for Khaine's 15 Slot Toolbelt and AGF HUDPlus-1Main: 
+
+<p>&nbsp;</p>
+
 <p>&nbsp;</p>
 
 ## AGF V2 Backpack Options - *Pick One*
