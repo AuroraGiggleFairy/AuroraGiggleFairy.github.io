@@ -128,6 +128,11 @@
 
   - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip) *One block to rule them all*
 
+        One Block to decorate them all,
+        One block to define them,    
+        One block to bring them all,      
+        And in the darkness survive them.
+
   - [DewsPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.1.0.zip) *Now 2x2 and can combine 5 into one*
 
   - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip) *For a good time!*
@@ -155,6 +160,14 @@
   - [PlayerResetQuests-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PlayerResetQuests-v2.0.1.zip) *Reset your quest options!*
 
   - [PumpkinsPlus-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.2.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
+
+        This is hell-o-ween.
+        This is hell-o-ween,    
+        Hell-o-ween, Hell-o-ween,
+        Hell-o-ween, Hell-o-ween.     
+        In this town, we call home,
+        Everyone burns when the pumpkin's thrown!
+        -Malgor_vt
 
   - [RenamesForAutoSort-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.2.zip) *Adds prefixs to similar items*
 
