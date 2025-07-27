@@ -92,13 +92,13 @@
 
 <p>&nbsp;</p>
 
-## AGF V2 Backpack Options - *Pick One*
+## AGF V2.2 Backpack Options - *Pick One*
 
-#### -[Download Backpack60 v2.3.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack60Plus-v2.3.2.zip)
+#### -[Download Backpack60 v2.4.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack60Plus-v2.4.0.zip)
 
-#### -[Download Backpack72 v2.3.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack72Plus-v2.3.2.zip)
+#### -[Download Backpack72 v2.4.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack72Plus-v2.4.0.zip)
 
-#### -[Download Backpack84 v2.3.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack84Plus-v2.3.2.zip)
+#### -[Download Backpack84 v2.4.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack84Plus-v2.4.0.zip)
 
   - ALL backpacks come with larger storage options and shapes!
     
