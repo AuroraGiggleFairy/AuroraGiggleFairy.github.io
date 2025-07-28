@@ -92,7 +92,7 @@
 
 <p>&nbsp;</p>
 
-## AGF V2.2 Backpack Options - *Pick One*
+## AGF 7d2d V2.2 Backpack Options - *Pick One*
 
 #### -[Download Backpack60 v2.4.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack60Plus-v2.4.0.zip)
 
