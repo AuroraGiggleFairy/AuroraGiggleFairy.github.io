@@ -217,6 +217,7 @@
   - [DyesPlus-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.1.0.zip) *27 more dyes, craftable, simple naming scheme*
 
   - [FarmingPlus-v5.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.2.0.zip) *Birdnests, BeeHives, and five in one farming*
+    
   	- Birdnest and Beehives now plantable for eggs, feathers, and honey.
   		- Naturally discovered through traders and loot.
   		- Unlocks at seed crafting level 20.
@@ -250,6 +251,7 @@
   - [PlayerResetQuests-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PlayerResetQuests-v2.0.1.zip) *Reset your quest options!*
 
   - [PumpkinsPlus-v2.0.4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.4.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
+
     - Throw pumpkins that explode like molotovs.
     - Wear a pumpkin as an armor mod on your helmet!
   
@@ -268,6 +270,7 @@
   - [ScrapBatts4Acid-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.1.0.zip) *Scrap Batteries for Acid instead of Lead*
 
   - [SmeltingPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.2.0.zip)
+
   	- Forges have 3 slots with text nicely centered.
   	- Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
   	- Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folks, lol!)
@@ -283,6 +286,7 @@
   - [StayLongerZombieLoot-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerZombieLoot-v2.0.1.zip) *Stays for 1 hour instead of 20 minutes*
  
   - [SurvivableImmersiveStorms-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SurvivableImmersiveStorms-v1.0.0.zip) *NEW!!!*
+
    	- The Siren alert for storms is gone
   	- Visually more noticeable when storm is incoming
   	- Visibility feels impacted
