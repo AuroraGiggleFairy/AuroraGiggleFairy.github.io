@@ -52,13 +52,17 @@
   - A single Hud Compatibility mod that can incorporate patches for many other mods out there
 - You may still use what you wish or delete things you don't want!
 
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
 ## AGF V2 HUDPlus
 
 <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true">
   <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
-#### [AGF V2 HUDPlus Pack v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack.zip) - *contains all HUD mods*
+### [AGF V2 HUDPlus Pack v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack.zip) - *contains all HUD mods*
 
 #### - OR - Pick and Choose Below
 
