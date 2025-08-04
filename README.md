@@ -42,51 +42,89 @@
 
 # VERSION 2 MODS!!!
 
-## AGF V2 HUDPlus and Optional Addons
+## Download my [Giggle Pack! v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack.zip) *contains EVERYTHING*
+
+*Thanks for the name IAmMrFlare*
+
+- Now utilizes conditional formating.
+  - Allows for mods to be installed standalone
+  - Less yellow errors based on which mods you choose
+  - A single Hud Compatibility mod that can incorporate patches for many other mods out there
+- You may still use what you wish or delete things you don't want!
+
+## AGF V2 HUDPlus
 
 <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true">
   <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
-### Step 1, Pick ONE:
+#### [AGF V2 HUDPlus Pack v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack.zip) - *contains all HUD mods*
 
-| [HUDPlus v4.1.2 WithPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-A.WithPurpleBook-v4.1.2.zip)  |  [HUDPlus v4.1.2 NoPurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-B.NoPurpleBook-v4.1.2.zip) |
-| :---------: | :--------: |
-| Whole HUD | Good if using LOTS of mods |
+#### - OR - Pick and Choose Below
 
-  - Compact Stat Display, Lockable Inventory slots with clear visuals, Wider and accurate compass with center mark, Improved chatbox readability, Map information moved to side panel, Crafting times improved readability, Date, Time, and skulls on all menus, Quest Selection viewing improved readability, Simple colors for interactive blocks, 5 crafting slots evenly centered, Read books improved readability, 
+- [HUDPlus-1Main-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-v5.0.0.zip) *Works Standalone*
+   - Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
+	- Lockable slots have easy visuals.
+	- Wider and accurate compass with a center mark.
+	- Lowered toolbelt for backpack mod compatibility and added slot numbers.
+	- Improved readability of the chat output when sending and receiving messages.
+	- Map information moved to its own section next to the map with labels.
+	- Crafting and burning times adjusted for easier viewing.
+	- Date, Time and Skulls displayed on all menus.
+	- Viewing quest selections made easier with improved background, color, and poi_names.
+	- Simple color coordination of interactive blocks or npcs.
+	- 5 crafting slots positioned evenly.
+	- Read schematics / magazines / books have read book icon of slight transparency and green
 
-  - PURPLE BOOK, All Magazine Crafting on one page (can zoom in, click on magazine), All Books information on one page, All Unlockables on one page, Armor Details on one page (can zoom in)
+- [HUDPlus-HUDPlus-2EnhancedPatch-ClientSideNoEAC-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2EnhancedPatch-ClientSideNoEAC-v1.0.0.zip)
+	- Requires HUDPlus-1Main installed, EAC off, and this Patch installed client side.
+	- Food and Water displays both amount and percentages.
+	- XP to Next Level and Lootstage is displayed.
+	- Can see current capacity of your inventory.
 
-<p>&nbsp;</p>
+- [HUDPlus-Compatibilities-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/zzzAGF-V2-HUDPlus-Compatibilities-v3.0.0.zip)
+  - Can detect if you have both my HUD and one of the mods for compatibility:
+    - Dewtas' 18 slot toolbelt
+    - Khaine's 15 slot toolbelt
+    - Wookie's 12 slot toolbelt
+  - More can be added into this single patch.
+  
+- [HUDPlus-PurpleBook-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-PurpleBook-v1.0.0.zip) *Works Standalone*
+  - Next to icon to open crafting menu, there is a purple open book icon.
+  - The following details are provided on a single page (with zooming options):
+    - Crafting Magazines levels and unlocks
+    - Books Read
+    - Unlocks from Schematics and Books
+    - Armor Details
+  
+- [HUDPlus-BMCounter-KeepDayCount-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-BMCounter-KeepDayCount-v2.0.0.zip) *Works Standalone*
+	- This adds a blood moon countdown under the compass.
+	- Currently works with these Blood Moon fixed frequencies:
+		- 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30
+	- If the frequency or bloodmoon range is different than the above, the mod will not apply.
 
-### Step 2, OPTIONAL, Pick ANY from Below:
+- [HUDPlus-BMCounter-NoDayCount-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-BMCounter-NoDayCount-v2.0.0.zip) *Works Standalone*
+	- This replaces the day count with a blood moon countdown.
+	- Currently works with these Blood Moon fixed frequencies:
+		- 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30
+	- If the frequency or bloodmoon range is different than the above, the mod will not apply.
 
-  - [HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-HealthBars-v3.0.0.zip) - When targeting enemy, displays their health bar. *(Works Standalone)*
+- [HUDPlus-HealthBars-v4.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-HealthBars-v4.0.0.zip) *Works Standalone*
+  - Health Bars for entities are visible when looking at them.
+  - Easier to read format than vanilla.
 
-  - [OnScreenWrittenStormAlerts](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-OnScreenWrittenStormAlerts-v1.0.0.zip) - When storms are coming, display written alerts.
-
-  - [WeekDay](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2Addon-WeekDay-v1.1.0.zip) - Displays the day of the week next to the day counter.
-
-<p>&nbsp;</p>
-
-### Step 3, BLOOD MOON COUNTDOWN OPTION, Pick ONLY ONE from Below:
-
-*Note that these only work for fixed blood moon days. If you want a different variable than what is shown below, contact me (look above for discord).*
-
-  - Bloom Moon Countdown for every 7 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-KeepDayCount-v1.0.1.zip) -OR- [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter07Days-NoDayCount-v1.0.2.zip)
-
-  - Bloom Moon Countdown for every 10 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-KeepDayCount-v1.0.0.zip) -OR- [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter10Days-NoDayCount-v1.0.0.zip)
-
-  - Bloom Moon Countdown for every 15 days: [Keep Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-KeepDayCount-v1.0.1.zip) -OR- [Replace Day Counter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-3Addon-BMCounter15Days-NoDayCount-v1.0.2.zip)
-
-<p>&nbsp;</p>
-
-### Step 4, COMPATIBILITY PATCHES:
-
-*Compatibility Patches requires both my HUDPlus-1Main AND the associated mod. KEEP THE 'Z' IN THE FOLDER NAME!!!*
-
-  - [Patch v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/zPatch-KH15SLot-AGFHud-v2.0.0.zip) for Khaine's 15 Slot Toolbelt and AGF HUDPlus-1Main: 
+- [HUDPlus-RemoveEnteringPopUp-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-RemoveEnteringPopUp-v1.0.0.zip) *Works Standalone*
+	- Removes the pop-ups of poi names when you enter new areas.
+  
+- [HUDPlus-RemoveWrittenStormAlerts-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-RemoveWrittenStormAlerts-v1.0.0.zip) *Works Standalone*
+	- Removes the written weather alerts that pop-up when a storm is coming.
+  
+- [HUDPlus-TinyBuffsPopUp-v1.0.0-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-TinyBuffsPopUp-v1.0.0.zip) 
+	- Shrinks the buff pop ups by half. (This was requested, lol)
+  - Visually very small.
+  
+- [HUDPlus-WeekDay-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-WeekDay-v2.0.0.zip) *Works Standalone*
+  - Adds next to the Day number, the day of the week.
 
 <p>&nbsp;</p>
 
@@ -112,19 +150,31 @@
 
 ## AGF V2 Vanilla Plus Options - *Pick Any*
 
-### You may download the "Giggle Pack" [HERE v4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VanillaPlus-SoFar%20(4).zip) and/or pick individually below: 
+### You may download the Vanilla Plus Collection [HERE v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Vanilla%20Plus%20Collection.zip) and/or pick individually below: 
 
-*Thanks for the name IAmMrFlare*
-
+  - [AdminModdingSupport-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AdminModdingSupport-v1.0.2.zip)
+    
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
 
-  - [AutomobilesRespawn-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AutomobilesRespawn-v2.0.2.zip) 
+  - [ArmorHarvestMods-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ArmorHarvestMods-v1.1.0.zip)
 
-  - [BetterEggChance-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.0.0.zip) *63% instead of 35%*
+	- At Armor Crafting Level 100, you can now make the following:
+		- modArmorFarmer
+		- modArmorMiner
+		- modArmorScavenger
+		- modArmorLumberjack
+	- These are built with the same ingredients as a full set of armor at quality 6.
+	- The mods take the harvesting aspects and you can attach them to the armor of choice.
 
-  - [CompactTrees-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.2.zip) *Planting 5 trees as one*
+  - [AutomobilesRespawn-v2.0.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AutomobilesRespawn-v2.0.3.zip) *Leaves a seat, regrows after 10 IRL hours*
 
-  - [CraftStackEngBattCells-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.0.0.zip) *Craft and stack enginges, batteries, solar cells, and solar banks*
+  - [BetterEggChance-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.1.0.zip) *63% instead of 35%*
+
+  - [BuyTraderVendingMachines-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BuyTraderVendingMachines-v2.0.2.zip) *High trader relations offers restocking vending machines*
+
+  - [CompactTrees-v2.0.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.3.zip) *Planting 5 trees as one*
+
+  - [CraftStackEngBattCells-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.1.0.zip) *Craft and stack enginges, batteries, solar cells, and solar banks*
 
   - [DecorationBlock-v3.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DecorationBlock-v3.0.2.zip) *One block to rule them all*
 
@@ -132,60 +182,120 @@
         One block to define them,    
         One block to bring them all,      
         And in the darkness survive them.
+    
+	- Over 5,700 in game models all within one block!
+	- Craft at a workbench.
+	- Levels in perkAdvancedEngineering slightly reduces ingredient costs.
+	- If the block is normally a container, it is secured in its deco version size (10 x 10)
+	- Strong as Wood Blocks (500hp), but high explosive resistance.
+	- When a player breaks one, it returns to their inventory.
+	- When blocks break to falls, zombies, or explosions, high chance of picking it up shortly after.
+	- HIGH COMPATIBILITY as it only adds its own code and NOT dependent on existing ones.
+	- If it is a light, it can be powered with electricity.
+	- If the block says, "upgrade" you can upgrade it with 10 forged steel to hitpoints of 5,000
+	- Doors also come in unbarricaded versions
+	- If the block says "campfire" you can use it as a campfire.
 
-  - [DewsPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.1.0.zip) *Now 2x2 and can combine 5 into one*
+  - [DewsPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.2.0.zip) *Now 2x2 and can combine 5 into one*
 
   - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip) *For a good time!*
+   	- Lose 30% water
+  	- Bleeding, approximately 120hp damage over the duration
+  	- Trippy screen effect
+  	- Painting screen effect
+  	- Fast buff
+	  - Jump buff
+	  - Danceoff Music Plays
+  	- Celebration (on kill enemy turns to confetti)
+	  - Silly Sounds
+  
+  - [DyesPlus-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.1.0.zip) *27 more dyes, craftable, simple naming scheme*
 
-  - [DyesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.0.0.zip) *27 more dyes, craftable, simple naming scheme*
+  - [FarmingPlus-v5.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.2.0.zip) *Birdnests, BeeHives, and five in one farming*
+  	- Birdnest and Beehives now plantable for eggs, feathers, and honey.
+  		- Naturally discovered through traders and loot.
+  		- Unlocks at seed crafting level 20.
+  	- x5 and x25 Farming is available at the Seed Workbench, level 20 Seed Crafting:
+  		- Take 5 seeds, click recipe, and craft them into a single x5 seed.
+  		- Essentially 1 seed acts like 5 in one space.
+  		- Seeds, except for mushrooms and birdnests, requires x5 farm plots as well.
+  		- Same proportions for x25 variants
+  	- Level 3 of Living Off the Land craft x70 faster at seed workbench.
 
-  - [FarmingPlus-v5.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.0.1.zip) *Birdnests, BeeHives, and five in one farming*
+  - [FloraHarvester-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FloraHarvester-v2.1.0.zip) *Quickly harvest grass and crops*
 
-  - [FuelBurnPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.1.0.zip) *Burn items for 10min, 60min, or 600min*
+  - [FuelBurnPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FuelBurnPlus-v2.2.0.zip) *Burn items for 10min, 60min, or 600min*
 
-  - [MasterTool-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MasterTool-v5.0.0.zip) *End Game All-in-one Tool*
+  - [MasterTool-v6.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MasterTool-v6.0.0.zip) *End Game All-in-one Tool*
 
-  - [MaxLevel500-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MaxLevel500-v2.0.2.zip)
+  - [MaxLevel500-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MaxLevel500-v2.0.2.zip) *Why not? I am not sure why...*
 
-  - [MiningPlus-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MiningPlus-v1.1.0.zip) *Mining Perk now bundles sand, brass, and clay*
+  - [MiningPlus-v1.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-MiningPlus-v1.2.0.zip) *Mining Perk now bundles sand, brass, and clay*
 
   - [Mod988-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-Mod988-v2.0.1.zip) *You deserve it. 988 is Suicide Hotline Number. Nooses are now plain rope*
 
+  - [ModSlotsPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ModSlotsPlus-v3.0.1.zip) *Modified mod slots for convenience*
+
   - [NEW GAME ONLY QuickerQuestStart-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-NewGameOnly.QuickerQuestStart-v1.0.1.zip) *Quickly Redeem Intro Challenges*
 
-  - [PaintbrushPlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PaintbrushPlus-v2.0.0.zip) *No paint needed, hold to paint, short distance*
+  - [PaintbrushPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PaintbrushPlus-v2.1.0.zip) *No paint needed, hold to paint, short distance*
 
   - [PickupLanternsPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PickupLanternsPlus-v2.0.1.zip) *Pick up lanterns, flashlights, burning barrels*
 
   - [PlayerResetQuests-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PlayerResetQuests-v2.0.1.zip) *Reset your quest options!*
 
-  - [PumpkinsPlus-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.2.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
-
-        This is hell-o-ween.
-        This is hell-o-ween,    
-        Hell-o-ween, Hell-o-ween,
-        Hell-o-ween, Hell-o-ween.     
-        In this town, we call home,
-        Everyone burns when the pumpkin's thrown!
-        -Malgor_vt
+  - [PumpkinsPlus-v2.0.4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.4.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
+    - Throw pumpkins that explode like molotovs.
+    - Wear a pumpkin as an armor mod on your helmet!
+  
+          This is hell-o-ween.
+          This is hell-o-ween,    
+          Hell-o-ween, Hell-o-ween,
+          Hell-o-ween, Hell-o-ween.     
+          In this town, we call home,
+          Everyone burns when the pumpkin's thrown!
+          -Malgor_vt 
+    
+  - [RecipeRottingFlesh-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RecipeRottingFlesh-v1.0.0.zip) *Turn Meat into Raw Flesh*
 
   - [RenamesForAutoSort-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.2.zip) *Adds prefixs to similar items*
 
-  - [ScrapBatts4Acid-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.0.0.zip) 
+  - [ScrapBatts4Acid-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.1.0.zip) *Scrap Batteries for Acid instead of Lead*
 
-  - [SmeltingPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.0.1.zip) *3 slot forge, sand smelts equally with clay and stone*
+  - [SmeltingPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.2.0.zip)
+  	- Forges have 3 slots with text nicely centered.
+  	- Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
+  	- Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folks, lol!)
+  	- Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.
+	  	- 6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.
 
-  - [StacksBundlesAmmoPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.0.1.zip) *Caculated and simplified stack sizes, rebundle bundles, ammo disassembly*
+  - [StacksBundlesAmmoPlus-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.1.0.zip) *Caculated and simplified stack sizes, rebundle bundles, ammo disassembly*
 
   - [StayLongerAnimalCorpse-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerAnimalCorpse-v2.0.1.zip) *Animal Corpses disappear after 10 minutes instead of 5*
 
   - [StayLongerPlayerBackpack-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerPlayerBackpack-v2.0.1.zip) *Dropped Player Backpack disappears after 5 hours instead of 1*
 
   - [StayLongerZombieLoot-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerZombieLoot-v2.0.1.zip) *Stays for 1 hour instead of 20 minutes*
+ 
+  - [SurvivableImmersiveStorms-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SurvivableImmersiveStorms-v1.0.0.zip) *NEW!!!*
+   	- The Siren alert for storms is gone
+  	- Visually more noticeable when storm is incoming
+  	- Visibility feels impacted
+  	- Mobility is slightly affected
+  	- Safe from negative effects for first 10 seconds
+  	    - 30 seconds if you have the "badge"
+  	- Negative effects can give you a 20 second +10% xp gain
+  	- Smoothies: Every minute, give 10 second grace period from negative effects  	
+  	- Storm Effects:
+    	- Forest: Lightning Strikes (shocked)
+    	- Burnt: High Fire Risk (catch on fire)
+    	- Desert: Flying Sand and Dry Heat (abrassions and water deductions)
+    	- Snow: Slipping on Ice (Knockdowns with Concussions)
+    	- Wasteland: Radiation Illness (Fatigue, Puking, and small Bleeds)	 
 
-  - [TacticalRiflePlus-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.0.0.zip) *Auto instead of burst, slight magazine increase*
+  - [TacticalRiflePlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.1.0.zip) *Auto instead of burst, slight magazine increase*
 
-  - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon*
+  - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon, but can stay during*
 
   - [VehicleStorageSize-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehicleStorageSizes-v2.0.1.zip) *Vehciles have +1 row of storage*
 
@@ -526,185 +636,5 @@
  
     - Includes ALL doors in the game
 
-#### ***Now let's see what happens when version 2.0 comes out!***
-
-<p>&nbsp;</p>
-
-## BELOW HERE is ALPHA MODS.
-
-<p>&nbsp;</p>
-
-## **Entire Server Side Package** - [Download v5](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGFServerSideCompletePackage-v5.zip)
-
-You can select individually below what you would like OR trust AGF and just go straight for her full server-side-only-mods package. Includes the HUD, 84 slot backpack, and Vanilla Plus.
-
-<p>&nbsp;</p>
-
-## **A21 HUDPlus** - [Download v1.9.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus1.9.3.zip)
-
-A HUD overhaul that provides additional information while attempting to keep the minimalist appeal. Works Server Side, wider and more accurate compass, chatbox improvement, time and date and skulls seen on menus, simple container status colors, map page improvement, 5 crafting slots, removed location pop-up, and location name minimized.
-
-### ***Addons:***
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Health Bars - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-HealthBarsv1.0.0.zip) - See enemy health with an AGF Style
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Skulls on HUD - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-SkullsOnHudv1.0.0.zip) - See skulls on HUD with an AGF Style
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus Addon - [Download v1.5.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21HUDPlus-Addon1.5.1.zip) - *Not Server Side, EAC Must be Off*
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HUDPlus KH15 Compatibility Patch - [Download v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA21-z15SlotCompAGFHUD.zip) - Makes HUDPlus and Khaine's 15 slots toolbelt work together.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *If you use with addon, lower UI size to 96% in the game menus*
-
-<p>&nbsp;</p>
-
-## **A21 Backpack 72** - [Download v1.2.9](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack72Plus1.2.9.zip)
-
-(Updated for A21.2) 72 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
-  
-<p>&nbsp;</p>
-
-## **A21 Backpack 84** - [Download v1.2.9](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A21Backpack84Plus1.2.9.zip)
-
-(Updated for A21.2) 84 slot backpack mod and new type of storage with 168 slots! Inlcudes lockable slots, optimized encumbrance penalty, full language support, and is server side. Pack Mule does unlock all the encumberance slots.
-  
-<p>&nbsp;</p>
-
-## **A21 Vanilla Plus.** - [Download v15.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-VP-Package-v15.0.0.zip)
-This is packed with a TON of modlets, allowing you to remove any features you do not wish to have. Below is a full list of modlets.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Core - Crafting on one page, craft all doors, etc
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AmmoPlus - Allows you to scrap ammo to receive all of its ingredients and better stacks.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ArmorVisionPlus - Allows helmet light and nightvision to attach to armor.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AutomobilesRespawn - Vehicles that are salvaged, will respawn.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BattleAxeMod - An axe only attachment that improves its entity dmg, but reduces its block dmg.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BetterEggChance - Raises chance of eggs found in birdnests from 35% to 63%.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BookCollections - Allows you to combine books (not crafting magazines) for collections or selling for more dukes.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BundleMods - Bundle the in game mods to save on storage space.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CompactTrees - Take 5 tree seeds and craft them into a x5 seed. Single tree that acts like 5.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CosmeticMods - Make your armor appear like other clothing.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DeathPenalty10Percent - Max penalty of death is 10% instead of 50%.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DecorationBlock - READY (as of v12)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DewsPlus - Craft 5 Dew Collectors into a single one that acts like 5, and are now 2x2 instead of 3x3 (safe to update)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrawbridgeAnyAngle - Self Explanatory? 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DrinkableAcid - You can drink acid to go on a fun trip and likely die.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DyesPlus - Craft, bundle dyes. Added Invisible and Orange dye. Total of 28 new colors!
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElectricityPlus - More power from generators. Engines, Batteries, Solar cells stack. New "power core" item to power banks.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FarmingPlus - Plant birdnests and beehives for eggs, feathers, and honey. 3 crops for 1 seed at tier 3 living off the land.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FuelPlus - Craft stacks of wood or coal into an item that burns for 10 minutes, 60 minutes, or 600 minutes.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HPRunningSolesMod - High Performance Running Shoes, as a mod for your boots!
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JunkTurretPlus - Each skill point in robotics adds 50 magazine size, up to 250.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LanternPickupPlus - Pick up flashlights (all of them), lanterns (new and old), jack-o-lanterns, and burning barrels. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LargerHordes - Wandering Hordes are a lot larger than vanilla and hopefully not too large to hurt performance.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MasterTool - Schematic can only be found in the highest tier quests in their hardened chests.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MaxLevel500 - ... Why? just because. lol.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mod988 - 988 is Suicide Hotline. Turns all noose blocks into rope.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ModSlotsPlus - Improved slots that keeps with progression.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PaintbrushPlus - Paint for free, hold trigger, and shorter range.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PlayerResetQuests - You can now tell the trader to give you fresh quest options.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProgressiveBiomeSpawning - Forest is easiest, Wasteland is extra hard now.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PumpkinsPlus - "Molo-Jack-Ovs" and wear a jack-o-lantern as a helmet!
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; QuickStart - No tutorial quests but you start as if you have done them.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrapBattery2Acid - Self Explanatory?
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SimplifiedStackSizes - Simplified stack sizes, more convenient, and doesn't break the in game economy.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SmeltingPlus - 3 slot forges, sand is 1:5 ratio, and you can smelt/craft 1 unit of sand, stone, or clay.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StayLongerAnimalCorpses - Corpses stay for 10 minutes instead of 5.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StayLongerPlayerBackpack - Player's backpack stay for 5 hours instead of 1.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StayLongerZombieLoot - Zombie loot stays for 1 hour instead of 20 minutes.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StorageSizesPlus - Just a simple increase to basic storages.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TacticalRiflePlus - Removes 3 round burst and slight increase to magazine size.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tier6Crafting - Achieve Tier 4 in a pertaining skill and gain a +1 crafting level to those items.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tires2Wheels - New wheel recipe from tires you find in the world.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ToolImprovments - Better types of tools are slightly faster. Chainsaw can butcher 70% like an axe.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderAlwaysOpen - Traders are always open, never close.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TraderVendingMachine - Purchase a trader managed vending machine you can place anywhere.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleDissassembly - Recollect parts of your vehicle at a workstation.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehiclePerformance - Enhanced speeds, easier mountain climbing, double health
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSafeAircraftJumps - When exiting a vehicle, you have about 7 seconds to hit the ground to avoid fall damage.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleSeating - 2 seats for bicycle, minibike, and motorcycle. 5 for truck. 4 for gyro copter. Bwahahahaha!
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleStorageSizes - Adds one row of storage to each vehicle.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleUseLessGas - Vehicles consume gas at a slower rate for longer travels between refills.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZombieCorpseLeaveQuicker - For performance, zombie corpses leave after 10 seconds instead of 30.
-
-
-### ***Compatibility Patches:***
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bdubs Vehicles Compatibility Patch - [Download v1.0.A21](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zComp-AGF-Bdubs1.0.a21.zip) *needs updates, but still works*
-
-
-
-
-  
-<p>&nbsp;</p>
-
-## ***A20 Old Mods***
-
-## **A20 HUDPlus** - [Download v1.7.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.7.2.zip)
-
-<p>&nbsp;</p>
-
-### ***HUD Compatibility Patches:***
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Darkness Falls v4.1.1 Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20HUDPlus1.5.2DFPatch.zip)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Khaine's 15 Slot Toolbelt Patch - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/KHA20-z15SlotCompAGFHUD.zip) (do not use with Darkness Falls patch)
-
-<p>&nbsp;</p>
-
-## **A20 Vanilla Plus** - [Download v3.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/AGF-A20VanillaPlus3.2.1.zip)
-
-So many many many things. I am still working on how to explain this one even with pictures. Seriously awesome mod with TONS of hours and testing, data collecting, tweaking, etc etc. The overall goal is to simplify and enhance the vanilla experience.... and this is my iteration of that.
-
-<p>&nbsp;</p>
+#### ***Now let's see what happens when version 3.0 comes out!***
 
