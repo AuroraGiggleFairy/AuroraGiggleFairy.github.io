@@ -203,6 +203,7 @@
   - [DewsPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.2.0.zip) *Now 2x2 and can combine 5 into one*
 
   - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip) *For a good time!*
+
    	- Lose 30% water
   	- Bleeding, approximately 120hp damage over the duration
   	- Trippy screen effect
