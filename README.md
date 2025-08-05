@@ -44,13 +44,14 @@
 
 ## Download my [Giggle Pack! v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack.zip) *contains EVERYTHING*
 
-*Thanks for the name IAmMrFlare*
+*If your browser goes "potential virus detected", please know the file in question is the .dll made by known modder Laydor from his [github](https://github.com/s7092910) and is used in my enhanced hud patch.*
 
 - Now utilizes conditional formating.
   - Allows for mods to be installed standalone
   - Less yellow errors based on which mods you choose
   - A single Hud Compatibility mod that can incorporate patches for many other mods out there
 - You may still use what you wish or delete things you don't want!
+- *IAmMrFlare suggested the name "Giggle Pack"*
 
 <p>&nbsp;</p>
 
@@ -63,6 +64,8 @@
 </a>
 
 ### [AGF V2 HUDPlus Pack v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack.zip) - *contains all HUD mods*
+
+*If your browser goes "potential virus detected", please know the file in question is the .dll made by known modder Laydor from his [github](https://github.com/s7092910) and is used in my enhanced hud patch.*
 
 #### - OR - Pick and Choose Below
 
@@ -252,8 +255,9 @@
 
   - [PumpkinsPlus-v2.0.4](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PumpkinsPlus-v2.0.4.zip) *Molo-Jack-Ovs and wear a jack-o-lantern*
 
-    - Throw pumpkins that explode like molotovs.
-    - Wear a pumpkin as an armor mod on your helmet!
+    - Throw Jack-O-Lanterns that explode like molotovs.
+    - *ProfSeatbelt suggested the name "Molo-Jack-Ovs"*
+    - Wear a Jack-O-Lantern over your helmet as an armor mod!
   
           This is hell-o-ween.
           This is hell-o-ween,    
@@ -300,7 +304,8 @@
     	- Burnt: High Fire Risk (catch on fire)
     	- Desert: Flying Sand and Dry Heat (abrassions and water deductions)
     	- Snow: Slipping on Ice (Knockdowns with Concussions)
-    	- Wasteland: Radiation Illness (Fatigue, Puking, and small Bleeds)	 
+    	- Wasteland: Radiation Illness (Fatigue, Puking, and small Bleeds)
+        - *Thanks for suggestions:  Indy, DonBab, EtherealChaos, Zed, toxichollywood, SILENT, Morph3us, ZenIllustrations, Mr X, Insanity, Nyx, Tru2Chevy, supermurloc22, probably more!*
 
   - [TacticalRiflePlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.1.0.zip) *Auto instead of burst, slight magazine increase*
 
