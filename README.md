@@ -42,7 +42,7 @@
 
 # VERSION 2 MODS!!!
 
-## Download my [Giggle Pack! v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack.zip) *contains EVERYTHING*
+## Download my [Giggle Pack! v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v1.1.zip) *contains EVERYTHING*
 
 *If your browser goes "potential virus detected", please know the file in question is the .dll I use in my enhanced HUD patch made by known modder Laydor. He is the author of [Quartz](https://www.nexusmods.com/7daystodie/mods/2409) and the .dll I use is from his [github](https://github.com/s7092910).*
 
@@ -63,13 +63,13 @@
   <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
-### [AGF V2 HUDPlus Pack v1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack.zip) - *contains all HUD mods*
+### [AGF V2 HUDPlus Pack v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack-v1.1.zip) - *contains all HUD mods*
 
 *If your browser goes "potential virus detected", please know the file in question is the .dll I use in my enhanced HUD patch made by known modder Laydor. He is the author of [Quartz](https://www.nexusmods.com/7daystodie/mods/2409) and the .dll I use is from his [github](https://github.com/s7092910).*
 
 #### - OR - Pick and Choose Below
 
-- [HUDPlus-1Main-v5.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-v5.0.0.zip) *Works Standalone*
+- [HUDPlus-1Main-v5.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-v5.0.1.zip) *Works Standalone*
    - Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
 	- Lockable slots have easy visuals.
 	- Wider and accurate compass with a center mark.
