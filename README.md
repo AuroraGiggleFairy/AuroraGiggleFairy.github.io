@@ -305,7 +305,7 @@
     	- Desert: Flying Sand and Dry Heat (abrassions and water deductions)
     	- Snow: Slipping on Ice (Knockdowns with Concussions)
     	- Wasteland: Radiation Illness (Fatigue, Puking, and small Bleeds)
-        - *Thanks for suggestions:  Indy, DonBab, EtherealChaos, Zed, toxichollywood, SILENT, Morph3us, ZenIllustrations, Mr X, Insanity, Nyx, Tru2Chevy, supermurloc22, probably more!*
+        - *Thanks for suggestions:  Indy (aka. Rose), DonBab, EtherealChaos, Zed, toxichollywood, SILENT, Morph3us, ZenIllustrations, Mr X, Insanity, Nyx, Tru2Chevy, supermurloc22, probably more!*
 
   - [TacticalRiflePlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TacticalRiflePlus-v2.1.0.zip) *Auto instead of burst, slight magazine increase*
 
