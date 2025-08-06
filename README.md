@@ -10,7 +10,10 @@
   
 - Donations are IMMENSELY appreciated, not required. [DONATE HERE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
 
-- Looking for a server host? My preference is Pingperfect! If you are making a server there, you may also support me by using my [Referral Link](https://pingperfect.com/aff.php?aff=1834)!
+- Looking for a server host? I recommend Pingperfect!
+	- They have provided me with excellent support.
+	- I have found their costs affordable and worth the service as a whole.
+	- You may support me by signing up through my [Referral Link](https://pingperfect.com/aff.php?aff=1834)!
       
 <p>&nbsp;</p>
 
