@@ -330,7 +330,7 @@
 
 ## VERSION 1.4 MODS
 
-### AGF V1 HUDPlus and its optional Addons.- [Download v4.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20V1%20HUDPlus%20and%20Optional%20Addons.zip)
+### AGF V1 HUDPlus and its optional Addons.- [Download v4.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version1/AGF%20V1%20HUDPlus%20and%20Optional%20Addons.zip)
 
 - AGF-V1-HUDPlus-1Main-Full-v4.0.0 is the primary one. Includes all the display features PLUS the Purple Book!
 
@@ -350,7 +350,7 @@
    
 <p>&nbsp;</p>
 
-### Entire Server Side Package For V1.- [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/AGF%20V1%20Full%20Mod%20Package%20-%20Final%20before%20V2.zip)
+### Entire Server Side Package For V1.- [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version1/AGF%20V1%20Full%20Mod%20Package%20-%20Final%20before%20V2.zip)
 
 #### ***RECOMEND WHEN INSTALLING, DELETE EXISTING AGF MODS THEN ADD NEW PACKAGE***
 
