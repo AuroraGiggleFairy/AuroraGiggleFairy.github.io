@@ -64,8 +64,8 @@
 
 ## AGF V2 HUDPlus
 
-<a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg">
-  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg" alt="HUDPlus1" width="65%" height="65%">
+<a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true">
+  <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
 ### [AGF V2 HUDPlus Pack v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack-v1.1.zip) - *contains all HUD mods*
