@@ -89,6 +89,7 @@
 	- Read schematics / magazines / books have read book icon of slight transparency and green
 
 - [HUDPlus-HUDPlus-2EnhancedPatch-ClientSideNoEAC-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2EnhancedPatch-ClientSideNoEAC-v1.0.0.zip)
+- DOES NOT WORK WITH LATEST 7d2d v2.2+
 	- Requires HUDPlus-1Main installed, EAC off, and this Patch installed client side.
 	- Food and Water displays both amount and percentages.
 	- XP to Next Level and Lootstage is displayed.
