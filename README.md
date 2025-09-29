@@ -49,7 +49,9 @@
 
 ## Download my [Giggle Pack! v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v1.1.zip) *contains EVERYTHING*
 
-*If your browser goes "potential virus detected", please know the file in question is the .dll I use in my enhanced HUD patch made by known modder Laydor. He is the author of [Quartz](https://www.nexusmods.com/7daystodie/mods/2409) and the .dll I use is from his [github](https://github.com/s7092910).*
+*Does not have HUDPlus v5.0.2 or the new backpack option of 120-1... yet.*
+
+*The enhanced addon is no longer available at this time.*
 
 - Now utilizes conditional formating.
   - Allows for mods to be installed standalone
@@ -68,13 +70,13 @@
   <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
-### [AGF V2 HUDPlus Pack v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack-v1.1.zip) - *contains all HUD mods*
+### [AGF V2 HUDPlus Pack (2)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack%20(2).zip) - *contains all HUD mods*
 
-*If your browser goes "potential virus detected", please know the file in question is the .dll I use in my enhanced HUD patch made by known modder Laydor. He is the author of [Quartz](https://www.nexusmods.com/7daystodie/mods/2409) and the .dll I use is from his [github](https://github.com/s7092910).*
+*The enhanced addon is no longer available at this time.*
 
 #### - OR - Pick and Choose Below
 
-- [HUDPlus-1Main-v5.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-v5.0.1.zip) *Works Standalone*
+- [HUDPlus-1Main-v5.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-1Main-v5.0.2.zip) *Works Standalone*
    - Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
 	- Lockable slots have easy visuals.
 	- Wider and accurate compass with a center mark.
@@ -88,14 +90,7 @@
 	- 5 crafting slots positioned evenly.
 	- Read schematics / magazines / books have read book icon of slight transparency and green
 
-- [HUDPlus-HUDPlus-2EnhancedPatch-ClientSideNoEAC-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-2EnhancedPatch-ClientSideNoEAC-v1.0.0.zip)
-    - DOES NOT WORK WITH LATEST 7d2d v2.2+
-	- Requires HUDPlus-1Main installed, EAC off, and this Patch installed client side.
-	- Food and Water displays both amount and percentages.
-	- XP to Next Level and Lootstage is displayed.
-	- Can see current capacity of your inventory.
-
-- [HUDPlus-Compatibilities-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/zzzAGF-V2-HUDPlus-Compatibilities-v3.0.0.zip)
+- [HUDPlus-zzzCompatibilities-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/zzzAGF-V2-HUDPlus-Compatibilities-v3.0.0.zip)
   - Can detect if you have both my HUD and one of the mods for compatibility:
     - Dewtas' 18 slot toolbelt
     - Khaine's 15 slot toolbelt
@@ -151,11 +146,15 @@
 
 #### -[Download Backpack84 v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack84Plus-v3.0.0.zip)
 
+#### -[Download Backpack120-1 v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack120-1Plus-v1.0.0.zip)
+
   - ALL backpacks come with larger storage options and shapes!
     
   - The 60 slot version has the vanilla visual size of its inventory.
  
-  - The 72 slot and 84 slots visually are smaller allowing a larger storage option than the 60.
+  - The 72, 84, 120-1 slots visually are smaller allowing a larger storage option than the 60.
+
+  - 120-1, yes 119... *facepalm* depending on your screen's aspect ratio, may need to adjust UI zoom in game menu. Designed for 16:9.
 
 <p>&nbsp;</p>
 
