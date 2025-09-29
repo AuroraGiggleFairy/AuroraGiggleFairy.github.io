@@ -47,7 +47,7 @@
 
 # VERSION 2 MODS!!!
 
-## Download my [Giggle Pack! v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v1.1.zip) *contains EVERYTHING*
+## Download my [Giggle Pack! v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v1.1.zip) *contains EVERYTHING... almost.*
 
 *Does not have HUDPlus v5.0.2 or the new backpack option of 120-1... yet.*
 
