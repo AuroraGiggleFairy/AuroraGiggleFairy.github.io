@@ -132,7 +132,7 @@
   - Visually very small.
   
 - [HUDPlus-WeekDay-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-WeekDay-v2.0.0.zip) *Works Standalone*
-  - Adds next to the Day number, the day of the week.
+  - Shows the day of the week next to day counter.
 
 <p>&nbsp;</p>
 
