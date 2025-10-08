@@ -221,6 +221,7 @@
 	  - Danceoff Music Plays
   	- Celebration (on kill enemy turns to confetti)
 	  - Silly Sounds
+   - *Streamer Aspect_of_Tael first played 7d2d, asked if we can drink acid... I said yes.*
   
   - [DyesPlus-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.1.0.zip) *27 more dyes, craftable, simple naming scheme*
 
