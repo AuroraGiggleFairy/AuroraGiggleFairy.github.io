@@ -169,8 +169,15 @@
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
     
   - [AmmoDisassembly-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AmmoDisassembly-v1.0.0.zip)
+
+    - Scrap ammo, turns it into a bundle with the ammo's ingredients. Open to collect.
+      - If you have a lot, you can "combine" (by crafting) 100 or 1000 bundles to open more at once.
+      - *Wish: Have an open all button* 
    
   - [ArcheryFeathersChange-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ArcheryFeathersChange-v1.0.0.zip)
+
+    - All archery ammo requires feathers *(instead of plastic)*.
+    - Feathers can be crafted from plastic.
 
   - [ArmorHarvestMods-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ArmorHarvestMods-v1.1.0.zip)
 
@@ -187,6 +194,10 @@
   - [BetterEggChance-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.1.0.zip) *63% instead of 35%*
 
   - [BreakItGetIt-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BreakItGetIt-v1.0.0.zip)
+
+    - "Pick up" by breaking a station *(campfire, dew collector, forge, etc)*, wood sign, or storage crates.
+    - You also have a chance to pick them up if they fall.
+    - *Note: breaking a forge will return forge to inventory and drop all items that were in the forge in a backpack to pick up*
 
   - [BuyTraderVendingMachines-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BuyTraderVendingMachines-v2.0.2.zip) *High trader relations offers restocking vending machines*
 
@@ -238,8 +249,8 @@
   		- Take 5 seeds, click recipe, and craft them into a single x5 seed.
   		- Essentially 1 seed acts like 5 in one space.
   		- Seeds, except for mushrooms and birdnests, requires x5 farm plots as well.
-  		- Same proportions for x25 variants
-  	- Level 3 of Living Off the Land craft x70 faster at seed workbench.
+  		- Same proportions for x25 variants.
+  	- Level 3 of Living Off the Land craft x70% faster at seed workbench.
 
   - [FloraHarvester-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FloraHarvester-v2.1.0.zip) *Quickly harvest grass and crops*
 
@@ -275,19 +286,35 @@
           Everyone burns when the pumpkin's thrown!
           -Malgor_vt 
 	
-  - [QuickStart-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-QuickStart-v2.0.0.zip) 
+  - [QuickStart-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-QuickStart-v2.0.0.zip)
+
+    - You load into game, automatically redeems first row of challenges, equipment, rewards and find trader quest automatically occur.
+    - *(Now safe to load into existing games)*
 		
-  - [RebundleBundles-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RebundleBundles-v1.0.0.zip) 
+  - [RebundleBundles-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RebundleBundles-v1.0.0.zip)
+  
+    - Items that you can craft into bundles, can be crafted BACK into a bundle.
+    - Bundle Icons now tinted for visual differentation assistance.
 	
   - [RecipeRottingFlesh-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RecipeRottingFlesh-v1.0.0.zip) *Turn Meat into Raw Flesh*
 
   - [RenamesForAutoSort-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.2.zip) *Adds prefixs to similar items*
 
-  - [RestorePowerAnyTime-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RestorePowerAnyTime-v1.0.1.zip)
+  - [RestorePowerAnyTime-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RestorePowerAnyTime-v1.0.1.zip) *No Time Requirement for this quest!*
 
   - [ScrapBatts4Acid-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.1.0.zip) *Scrap Batteries for Acid instead of Lead*
 
-  - [SimplifiedStacks-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SimplifiedStacks-v1.0.0.zip) 
+  - [SimplifiedStacks-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SimplifiedStacks-v1.0.0.zip)
+
+    - Simplified stack sizes that is the closest to vanilla experience.
+    - Basic Stack size breakdown:
+      - Bundles and consumables stack at 50.
+      - Ammo stacks at 500.
+      - resources generally 500, 1,000, or 6,000.
+      - Gas, coins, and plant fibers stack to 30,000.
+      - Placeable blocks (like workstations) stack to 500.
+      - Farming and general blocks stack to 5,000.
+    - Existing bundle recipes and amounts modified to new stack sizes.
 
   - [SmeltingPlus-v2.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.2.1.zip)
 
@@ -327,11 +354,37 @@
 
   - [TreesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TreesPlus-v3.0.0.zip)
 
+    - Planting less trees helps performance *(at least it used to before 7d2d v2. May still?)*.
+    - May plant a x5 and/or x25 version of trees.
+    - Looking at planted trees shows its name and growth stage.
+    - *(If FarmingPlus is intalled, can craft tree see variants faster at a Seed Station)*
+
   - [VehiclesExtraSeating-v0.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehiclesExtraSeating-v0.0.1.zip)
+
+    - All 2 wheel vehicles can seat 3 people with/without extra seating mod.
+      - Extra seating mod provides better visuals
+    - Truck can now comfortably seat 8 people *(with the expanded seat mod)*.
 
   - [VehiclePerformance-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehiclesPerformance-v1.0.1.zip)
 
-  - [VehicleStorageSize-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehicleStorageSizes-v2.1.0.zip) 
+    - All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.
+    - Gyrocopter's reverse is smooth.
+    - Doubled vehicle hitpoints for durability.
+    - New vehicle speed and progression, near vanilla speeds for performance.
+      - Bicycle speed (normal, turbo) now 8, 10 instead of 6, 8.5.
+      - Minibike now 10, 12 instead of 7, 9.2.
+      - Motorcycle now 12, 16 instead of 9.8, 14
+      - Truck now 12, 16 instead of 10, 14
+      - Gyrocopter now 10, 16 instead of 9, 15.
+
+  - [VehicleStorageSize-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehicleStorageSizes-v2.1.0.zip)
+
+    - Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.
+      - Bicycle now has 4 rows instead of 1. Total of 36 slots instead of 9.
+  	  - Minibike now has 6 rows instead of 3. Total of 54 slots instead of 27.
+	  - Motorcycle now has 8 rows instead of 4. Total of 72 slots instead of 36.
+	  - Truck now has 10 rows instead of 9. Total of 90 slots instead of 81.
+	  - Gyrocopter now has 8 rows instead of 5. Total of 72 slots instead of 45.
 
   - [WriteStoryOnCrate-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-WriteStoryOnCrate-v1.0.0.zip) *Message-Crate, can write a long note on it.*
 
