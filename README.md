@@ -47,17 +47,9 @@
 
 # VERSION 2 MODS!!!
 
-## Download my [Giggle Pack! v1.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v1.1.zip) *contains EVERYTHING... almost.*
+## Download my [Giggle Pack! v2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v2.0.zip) *contains EVERYTHING*
 
-*Does not have HUDPlus v5.0.2 or the new backpack option of 120-1... yet.*
-
-*The enhanced addon is no longer available at this time.*
-
-- Now utilizes conditional formating.
-  - Allows for mods to be installed standalone
-  - Less yellow errors based on which mods you choose
-  - A single Hud Compatibility mod that can incorporate patches for many other mods out there
-- You may still use what you wish or delete things you don't want!
+- After opening, you can simple delete the ones you don't want. Look at the files and descriptions on this site to decide!
 - *IAmMrFlare suggested the name "Giggle Pack"*
 
 <p>&nbsp;</p>
@@ -70,9 +62,7 @@
   <img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/Images/7d2dMod-HudPlus1.jpeg?raw=true" alt="HUDPlus1" width="65%" height="65%">
 </a>
 
-### [AGF V2 HUDPlus Pack (2)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20HUDPlus%20Pack%20(2).zip) - *contains all HUD mods*
-
-*The enhanced addon is no longer available at this time.*
+### [AGF V2 HUDPlus Pack](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Options-HUD.zip) - *contains all HUD mods*
 
 #### - OR - Pick and Choose Below
 
