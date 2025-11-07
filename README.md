@@ -392,6 +392,19 @@
 
   - [ZombieLargerHordes-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ZombieLargerHordes-v2.0.1.zip) *A few more zombies in the wandering hordes*
 
+  - [NO EAC, SortingBox-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-NoEAC-VP-SortingBox-v1.0.0.zip)
+
+    - KillerBunny is the best. *(Asylum Mod)*
+    - Craft a sorting block *(washing machine at this time)* and place in base.
+    - Put items in said block, within a 25m radius, it will sort like items into nearby chests.
+    - If there aren't like items in nearby chests, recollect them from the sorting box.
+    - A few notes:
+      - "Server Side" but only with dedicated servers, not with another player hosting.
+      - EAC MUST be off.
+      - If sorting box is unlocked, will only sort into nearby unlocked boxes.
+      - If sorting box is locked, will only sort into nearby locked boxes
+        - *If passworded, will only sort into nearby same passworded locked boxes* 
+
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
