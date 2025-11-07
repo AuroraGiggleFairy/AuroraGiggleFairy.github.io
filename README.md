@@ -105,13 +105,13 @@
     - Unlocks from Schematics and Books
     - Armor Details
   
-- [HUDPlus-BMCounter-KeepDayCount-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-BMCounter-KeepDayCount-v2.0.0.zip) *Works Standalone*
+- [HUDPlus-BMCounter-KeepDayCount-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-BMCounter-KeepDayCount-v2.1.0.zip) *Works Standalone*
 	- This adds a blood moon countdown under the compass.
 	- Currently works with these Blood Moon fixed frequencies:
 		- 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30
 	- If the frequency or bloodmoon range is different than the above, the mod will not apply.
 
-- [HUDPlus-BMCounter-NoDayCount-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-BMCounter-NoDayCount-v2.0.0.zip) *Works Standalone*
+- [HUDPlus-BMCounter-NoDayCount-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-HUDPlus-BMCounter-NoDayCount-v2.1.0.zip) *Works Standalone*
 	- This replaces the day count with a blood moon countdown.
 	- Currently works with these Blood Moon fixed frequencies:
 		- 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30
@@ -140,13 +140,13 @@
 
 ## AGF 7d2d V2 Backpack Options - *Pick One*
 
-#### -[Download Backpack60 v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack60Plus-v3.0.0.zip)
+#### -[Download Backpack60 v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack60Plus-v3.1.0.zip)
 
-#### -[Download Backpack72 v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack72Plus-v3.0.0.zip)
+#### -[Download Backpack72 v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack72Plus-v3.1.0.zip)
 
-#### -[Download Backpack84 v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack84Plus-v3.0.0.zip)
+#### -[Download Backpack84 v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack84Plus-v3.1.0.zip)
 
-#### -[Download Backpack120-1 v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack120-1Plus-v1.0.0.zip)
+#### -[Download Backpack120-1 v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-Backpack120-1Plus-v1.1.0.zip)
 
   - ALL backpacks come with larger storage options and shapes!
     
@@ -167,6 +167,10 @@
   - [AdminModdingSupport-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AdminModdingSupport-v1.0.2.zip)
     
   - [Alternative Recipes-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AlternativeRecipes-v1.0.0.zip) *Use bandages directly for first aid crafting.*
+    
+  - [AmmoDisassembly-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-AmmoDisassembly-v1.0.0.zip)
+   
+  - [ArcheryFeathersChange-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ArcheryFeathersChange-v1.0.0.zip)
 
   - [ArmorHarvestMods-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ArmorHarvestMods-v1.1.0.zip)
 
@@ -182,9 +186,9 @@
 
   - [BetterEggChance-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BetterEggChance-v2.1.0.zip) *63% instead of 35%*
 
-  - [BuyTraderVendingMachines-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BuyTraderVendingMachines-v2.0.2.zip) *High trader relations offers restocking vending machines*
+  - [BreakItGetIt-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BreakItGetIt-v1.0.0.zip)
 
-  - [CompactTrees-v2.0.3](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CompactTrees-v2.0.3.zip) *Planting 5 trees as one*
+  - [BuyTraderVendingMachines-v2.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-BuyTraderVendingMachines-v2.0.2.zip) *High trader relations offers restocking vending machines*
 
   - [CraftStackEngBattCells-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-CraftStackEngBattCells-v3.1.0.zip) *Craft and stack enginges, batteries, solar cells, and solar banks*
 
@@ -208,7 +212,7 @@
 	- Doors also come in unbarricaded versions
 	- If the block says "campfire" you can use it as a campfire.
 
-  - [DewsPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.2.0.zip) *Now 2x2 and can combine 5 into one*
+  - [DewsPlus-v2.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DewsPlus-v2.2.1.zip) *Now 2x2 and can combine 5 into one*
 
   - [DrinkableAcid-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DrinkableAcid-v2.0.0.zip) *For a good time!*
 
@@ -225,7 +229,7 @@
   
   - [DyesPlus-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-DyesPlus-v3.1.0.zip) *27 more dyes, craftable, simple naming scheme*
 
-  - [FarmingPlus-v5.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.2.0.zip) *Birdnests, BeeHives, and five in one farming*
+  - [FarmingPlus-v5.3.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-FarmingPlus-v5.3.0.zip) *Birdnests, BeeHives, and five in one farming*
     
   	- Birdnest and Beehives now plantable for eggs, feathers, and honey.
   		- Naturally discovered through traders and loot.
@@ -251,8 +255,6 @@
 
   - [ModSlotsPlus-v3.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ModSlotsPlus-v3.0.1.zip) *Modified mod slots for convenience*
 
-  - [NEW GAME ONLY QuickerQuestStart-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-NewGameOnly.QuickerQuestStart-v1.0.1.zip) *Quickly Redeem Intro Challenges*
-
   - [PaintbrushPlus-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PaintbrushPlus-v2.1.0.zip) *No paint needed, hold to paint, short distance*
 
   - [PickupLanternsPlus-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-PickupLanternsPlus-v2.0.1.zip) *Pick up lanterns, flashlights, burning barrels*
@@ -272,22 +274,28 @@
           In this town, we call home,
           Everyone burns when the pumpkin's thrown!
           -Malgor_vt 
-    
+	
+  - [QuickStart-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-QuickStart-v2.0.0.zip) 
+		
+  - [RebundleBundles-v2.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RebundleBundles-v1.0.0.zip) 
+	
   - [RecipeRottingFlesh-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RecipeRottingFlesh-v1.0.0.zip) *Turn Meat into Raw Flesh*
 
   - [RenamesForAutoSort-v1.0.2](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RenamesForAutoSort-v1.0.2.zip) *Adds prefixs to similar items*
 
+  - [RestorePowerAnyTime-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-RestorePowerAnyTime-v1.0.1.zip)
+
   - [ScrapBatts4Acid-v1.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-ScrapBatts4Acid-v1.1.0.zip) *Scrap Batteries for Acid instead of Lead*
 
-  - [SmeltingPlus-v2.2.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.2.0.zip)
+  - [SimplifiedStacks-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SimplifiedStacks-v1.0.0.zip) 
+
+  - [SmeltingPlus-v2.2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-SmeltingPlus-v2.2.1.zip)
 
   	- Forges have 3 slots with text nicely centered.
   	- Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
   	- Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folks, lol!)
   	- Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.
 	  	- 6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.
-
-  - [StacksBundlesAmmoPlus-v3.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StacksBundlesAmmoPlus-v3.1.0.zip) *Caculated and simplified stack sizes, rebundle bundles, ammo disassembly*
 
   - [StayLongerAnimalCorpse-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-StayLongerAnimalCorpse-v2.0.1.zip) *Animal Corpses disappear after 10 minutes instead of 5*
 
@@ -317,7 +325,13 @@
 
   - [TradersAlwaysOpen-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TraderAlwaysOpen-v2.0.1.zip) *Can't enter during bloodmoon, but can stay during*
 
-  - [VehicleStorageSize-v2.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehicleStorageSizes-v2.0.1.zip) *Vehciles have +1 row of storage*
+  - [TreesPlus-v3.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-TreesPlus-v3.0.0.zip)
+
+  - [VehiclesExtraSeating-v0.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehiclesExtraSeating-v0.0.1.zip)
+
+  - [VehiclePerformance-v1.0.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehiclesPerformance-v1.0.1.zip)
+
+  - [VehicleStorageSize-v2.1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-VehicleStorageSizes-v2.1.0.zip) 
 
   - [WriteStoryOnCrate-v1.0.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF-V2-VP-WriteStoryOnCrate-v1.0.0.zip) *Message-Crate, can write a long note on it.*
 
