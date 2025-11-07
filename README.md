@@ -1,4 +1,6 @@
-# AGF Mods
+# AGF Mods 
+
+*last updated novermber 11, 2025*
 
 - My name is AuroraGiggleFairy (AGF).
   
