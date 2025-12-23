@@ -49,7 +49,7 @@
 
 # VERSION 2.5 MODS!!!
 
-## Download my [Giggle Pack! v2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version%202.5/Current%20For%207d2d%20v2.5%20(2).zip) *contains EVERYTHING*
+## Download my [Giggle Pack! v2.5](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version%202.5/Current%20For%207d2d%20v2.5%20(2).zip) *contains EVERYTHING*
 
 - After opening, you can simple delete the ones you don't want. Look at the files and descriptions on this site to decide!
 - *IAmMrFlare suggested the name "Giggle Pack"*
@@ -57,6 +57,10 @@
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
+
+## BELOW ARE MODS FOR BEFORE version 2.5. 
+
+- However, the mods in the 2.5 pack will work with previous versions due to new methods of coding I am using.
 
 ## AGF V2 HUDPlus
 
