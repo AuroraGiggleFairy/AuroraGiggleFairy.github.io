@@ -51,6 +51,7 @@
 
 ## Download my [Giggle Pack! v2.5](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version%202.5/Current%20For%207d2d%20v2.5%20(2).zip) *contains EVERYTHING*
 
+### Delete ALL previous AGF mods before installing the new ones.
 - After opening, you can simple delete the ones you don't want. Look at the files and descriptions on this site to decide!
 - *IAmMrFlare suggested the name "Giggle Pack"*
 
