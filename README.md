@@ -47,9 +47,9 @@
 
 <p>&nbsp;</p>
 
-# VERSION 2 MODS!!!
+# VERSION 2.5 MODS!!!
 
-## Download my [Giggle Pack! v2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version2/AGF%20V2%20Giggle%20Pack-v2.1.zip) *contains EVERYTHING*
+## Download my [Giggle Pack! v2.1](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Version%202.5/Current%20For%207d2d%20v2.5%20(2).zip) *contains EVERYTHING*
 
 - After opening, you can simple delete the ones you don't want. Look at the files and descriptions on this site to decide!
 - *IAmMrFlare suggested the name "Giggle Pack"*
