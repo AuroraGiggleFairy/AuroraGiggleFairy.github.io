@@ -47,7 +47,7 @@
 
 <p>&nbsp;</p>
 
-## Download my [Giggle Pack! v1.0](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/GigglePack-v1.0.zip) *contains EVERYTHING*
+## Download my [Giggle Pack!](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/GigglePack-v1.0.zip) *contains EVERYTHING*
 
 ### So far, all works for 7d2d version 2.6.
 
