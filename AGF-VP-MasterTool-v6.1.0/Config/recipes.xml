@@ -1,0 +1,47 @@
+<AGFVanillaPlus-MasterTool>
+
+
+
+		<!--Master Tool-->
+			<append xpath="/recipes">
+				<recipe name="meleeMasterTool" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="resourceLegendaryParts" count="10"/>
+					<ingredient name="resourceMasterToolElectricals" count="1"/>
+					<ingredient name="resourceMasterToolHarvesting" count="1"/>
+					<ingredient name="resourceMasterToolSalvaging" count="1"/>
+					<ingredient name="resourceMasterToolButchering" count="1"/>
+				</recipe>
+			</append>
+	
+	
+
+		<!--Master Tool Ingredients-->	
+			<append xpath="/recipes">			
+				<recipe name="resourceMasterToolElectricals" count="1" craft_time="250" craft_exp_gain="10000" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="resourceGoldNugget" count="10"/>
+					<ingredient name="resourceElectricParts" count="100"/>
+					<ingredient name="carBattery" count="20"/>
+					<ingredient name="solarCell" count="10"/>
+				</recipe>
+				<recipe name="resourceMasterToolHarvesting" count="1" craft_time="250" craft_exp_gain="10000" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="meleeToolAllSteelParts" count="20"/>
+					<ingredient name="resourceRawDiamond" count="10"/>
+					<ingredient name="resourceDuctTape" count="10"/>
+				</recipe>
+				<recipe name="resourceMasterToolSalvaging" count="1" craft_time="250" craft_exp_gain="10000" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="meleeToolAxeT3ChainsawParts" count="20"/>
+					<ingredient name="resourceForgedSteel" count="10"/>
+					<ingredient name="resourceMechanicalParts" count="100"/>
+				</recipe>
+				<recipe name="resourceMasterToolButchering" count="1" craft_time="250" craft_exp_gain="10000" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="meleeWpnBladeT3MacheteParts" count="20"/>
+					<ingredient name="resourceSilverNugget" count="10"/>
+					<ingredient name="drinkJarGrandpasMoonshine" count="3"/>
+				</recipe>			
+			</append>
+				
+			
+	
+</AGFVanillaPlus-MasterTool>
+
+

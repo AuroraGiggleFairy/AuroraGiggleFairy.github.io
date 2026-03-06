@@ -1,0 +1,14 @@
+<AGFVanillaPlus-ApiaryPlus>
+
+
+<!-- Checks if you also have purple book installed, and applies changes as necessary-->	
+<!-- And in this case, only the localization name was changed, so making sure purple book states the correct name, not the Destroy for 2x2-->	
+	<conditional>
+		<if cond="mod_loaded('AGF-V2-HUDPlus-PurpleBook')">
+			<!--For the PURPLE BOOK of my HUD-->
+			<set xpath="//sprite[@name='itemIcon' and @sprite='cntApiary']/@tooltip_key">cntApiaryAGF</set>
+		</if>
+	</conditional>
+	
+
+</AGFVanillaPlus-ApiaryPlus>

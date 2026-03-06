@@ -1,0 +1,771 @@
+<AGF-HUDPlus>
+
+
+	<!--LOCKABLE SLOTS CHANGES-->
+		<set xpath="/windows/window[@name='windowBackpack']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+
+	<!--LOCATION INDICATOR ADJUSTMENTS-->
+		<!--Removes the location / skulls-->
+		<remove xpath="/windows/window[@name='windowLocation']"/>
+		<remove xpath="/windows/window[@name='windowEntering']/rect/label[@name='MessageContent']"/>
+		
+		<!--Adding back in my version of the location/skulls and repositioned next to compass. DELETE THIS SECTION IF YOU WANT IT GONE-->
+		<append xpath="/windows/window[@name='windowCompass']">	
+			<rect name="Location" pos="521, -4" anchor="CenterTop" width="240" height="60" depth="-20" controller="Location">	
+				<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="46" width="250" type="sliced" />
+				<label depth="3" text="{locationname}" font_size="20" justify="center" pos="6,2" height="28" />
+				<sprite depth="2" pos="5, -20" name="windowicon" width="16" height="16" sprite="ui_game_loot_stage_bad" visible="{visible_loot_max}" />
+				<grid pos="125, -28" pivot="center" cols="8" cell_width="18" cell_height="16">
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor1}" visible="{visible1}" />
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor2}" visible="{visible2}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor3}" visible="{visible3}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor4}" visible="{visible4}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor5}" visible="{visible5}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor6}" visible="{visible6}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor7}" visible="{visible7}"/>
+					<rect width="16" height="16" visible="{visible_half}">
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" color="255,128,0"/>
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" fillinvert="true"  color="[lightGrey]"/>
+					</rect>
+				</grid>		
+
+
+
+					<conditional evaluator="client" >
+						<if cond="mod_loaded('AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC')"><!--shows the updated stuff if the .dll modlet is installed.-->
+							<rect name="extraStats2" controller="PlayerStats, EnhancedAGF" pos="0,-46" width="250" height="30"  pivot="center"><!--
+								<rect name="XPtoNextLVL" pos="0,0" rows="1" cols="1" width="150" side="right" controller="HUDStatBar" visible="{statvisible}">-->
+									<sprite depth="2" name="background"  color="0,0,0,210" type="sliced" sprite="ui_game_header_fill" foregroundlayer="true"/>
+									
+									<sprite depth="2" name="elevationIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_survival" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiElevation"/>
+									<label depth="15" name="elevation"  pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[00ff00]{mapelevation}" font_size="18" tooltip_key="xuiElevation" controller="MapStats"  />
+									
+									<sprite depth="2" name="lootStageIcon" pos="106,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_shopping_cart" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiLootstage"/>
+									<label depth="15"  name="lootStage" pos="136,-17" width="40" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerLootStage}"  font_size="18" tooltip_key="xuiLootstage"/>
+							
+									<sprite depth="2" name="inventorySlotsIcon" pos="181,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_backpack" color="201, 201, 201" foregroundlayer="true" tooltip_key="inpActInventoryName"/>
+									<label depth="15"  name="inventorySlots" pos="215,-17" width="56" height="20" pivot="center" justify="center" text="[ff8000]{PlayerBagUsedSlots}[-][DECEA3]/{PlayerBagSize}" font_size="18" tooltip_key="inpActInventoryName" controller="MapStats"/>
+							</rect>	
+							<label depth="3" name="MessageContent" pos="125,-131" font_size="28" color="[white]" style="outline" text="{messagename}" pivot="center" justify="center" width="250" height="98" controller="EnteringArea">
+								<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0" type="sliced" pivot="center"/>
+							</label>							
+						</if>	
+						<else>
+							<label depth="3" name="MessageContent" pos="125,-96" font_size="28" color="[white]" style="outline" text="{messagename}" pivot="center" justify="center" width="250" height="98" controller="EnteringArea">
+								<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0" type="sliced" pivot="center"/>
+							</label>						
+						</else>
+					</conditional>
+	
+					
+										
+					
+
+			</rect>			
+		</append>	
+	
+		<!--Added the location display onto every window. -->
+		<append xpath="/windows/window[@name='windowNonPagingHeader']">
+			<rect name="Location" pos="525, -4" anchor="CenterTop" width="240" height="60" depth="-20" controller="Location">	
+				<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="46" width="250" type="sliced" />
+				<label depth="3" text="{locationname}" font_size="20" justify="center" pos="6,2" height="28" />
+				<sprite depth="2" pos="5, -20" name="windowicon" width="16" height="16" sprite="ui_game_loot_stage_bad" visible="{visible_loot_max}" />
+				<grid pos="125, -28" pivot="center" cols="8" cell_width="18" cell_height="16">
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor1}" visible="{visible1}" />
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor2}" visible="{visible2}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor3}" visible="{visible3}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor4}" visible="{visible4}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor5}" visible="{visible5}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor6}" visible="{visible6}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor7}" visible="{visible7}"/>
+					<rect width="16" height="16" visible="{visible_half}">
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" color="255,128,0"/>
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" fillinvert="true"  color="[lightGrey]"/>
+					</rect>
+				</grid>						
+			</rect>	
+			
+		</append>
+		<append xpath="/windows/window[@name='windowPagingHeader']">
+			<rect name="Location" pos="725, -4" anchor="CenterTop" width="240" height="60" depth="-20" controller="Location">	
+				<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="46" width="250" type="sliced" />
+				<label depth="3" text="{locationname}" font_size="20" justify="center" pos="6,2" height="28" />
+				<sprite depth="2" pos="5, -20" name="windowicon" width="16" height="16" sprite="ui_game_loot_stage_bad" visible="{visible_loot_max}" />
+				<grid pos="125, -28" pivot="center" cols="8" cell_width="18" cell_height="16">
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor1}" visible="{visible1}" />
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor2}" visible="{visible2}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor3}" visible="{visible3}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor4}" visible="{visible4}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor5}" visible="{visible5}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor6}" visible="{visible6}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor7}" visible="{visible7}"/>
+					<rect width="16" height="16" visible="{visible_half}">
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" color="255,128,0"/>
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" fillinvert="true"  color="[lightGrey]"/>
+					</rect>
+				</grid>	
+			</rect>	
+		</append>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<!--CHATBOX IMPROVEMENT
+	Feature: 	1. Improved readability of the chat output when sending and receiving messages.
+				2. The background of the Chat Output fades when the text does, not immediately after sending a message.
+				3. Chat windows now appear behind other windows.
+	
+		Why:	1. My goal is for easier readability / accessability.
+				2. When the background faded before the text, I would have to reopen chat to read the messages!
+				3. Decided to have chat behind menus so they don't interrupt whatever you are doing in the menus.
+	
+	Default: 	You would have to read white text without any background to aid in visibility.
+				Chat window will get in the way of seeing menu items.
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete this windows section.
+
+	XML's: 		windows
+	
+	Code:		(windows.xml) Removed original chat windows.
+				(windows.xml) Appended new chat window placing the output background within the chat.
+-->
+				
+	<!--Removed original chat windows-->
+		<remove xpath="/windows/window[@name='chatoutput']"/>
+		<remove xpath="/windows/window[@name='chat']"/>
+	
+	<!--Appended new chat window placing the output background within the chat.-->
+		<append xpath="/windows">
+			<window name="chatoutput" pos="20, -250" depth="-1" width="500" height="250" anchor="LeftTop" controller="ChatOutput" fadeout_wait_time="5" fadeout_duration="2">
+				<textlist name="txtOutput" pos="8,-214" width="484" height="210" list_style="chat" pivot="bottomleft" depth="2" font_size="26" crispness="Never" effect="outline" effect_distance="1,1" effect_color="[black]" on_press="true" prefix_first_line="   " support_urls="Chat,DiscordMessageButton" gamepad_selectable="false">	
+					<sprite depth="-1" name="border" pos="-8,212" width="500" height="218" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="-2" color="[darkGrey]" pos="-8,212" width="500" height="218" type="sliced"   globalopacitymod=".95" />
+				</textlist>
+			</window>
+
+			<window name="chat" pos="20, -250" width="500" height="250" anchor="LeftTop" controller="Chat" cursor_area="true">
+				<rect name="frame" depth="0" createuiwidget="true">
+					<rect name="input" depth="2" pos="0,-218" height="32">
+						<combobox name="cbxTarget" type="ComboBoxList`1[XUiC_Chat+ChatTarget]" value_max="party" pos="108, -6" width="300" height="22" font_size="22" />
+						<textfield name="txtInput" backgroundcolor="[transparent]" depth="2" pos="6,-34" width="488" height="26" pivot="topleft" justify="left" effect="outline" overflow="resizeheight" character_limit="300" max_line_count="0" crispness="Never" focus_on_open="true" open_vk_on_open="false" ignore_up_down_keys="true" />
+						<sprite depth="8" name="border" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false" anchor_left="frame,0,0" anchor_right="frame,1,0" anchor_top="input,1,0" anchor_bottom="text,0,-6" />
+						<sprite color="[darkGrey]" type="sliced" globalopacitymod="0.95" anchor_left="frame,0,0" anchor_right="frame,1,0" anchor_top="frame,1,-218" anchor_bottom="text,0,-6" />
+					</rect>
+
+				</rect>
+			</window>
+		</append>
+
+
+
+
+<!--BOTTOM LEFT IMPROVEMENT
+	Feature: 	1. Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
+				2. Health bar above stamina.
+				3. XP bar now in a circle.
+				4. Food/water displayed with percentages.
+				5. Tooltip_keys used on added stat icons. 
+				   -When you move your cursor over an icon, a text label will tell you what it represents.
+		
+		Why: 	1. In my opinion, default HUD is way too simple without providing enough useful information.
+				2. Something about Health above Stamina seems the norm for me, so I did that.
+				3. XP bar in circle gives you a quicker idea of how far along you are in leveling up.
+				4. I wanted a more direct way to see hunger and thirst status.
+				5. Tooltip_keys help when someone doesn't know what an icon represents. Also, good for new players.
+	
+	Default: 	Level, elevation and temperatures are not displayed on the main HUD.
+				Xp, water, and food are attached to the toolbelt without indicators and are tiny.
+				
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete this windows section. Localization can be ignored.
+	
+	XML's: 		windows, Localization
+	
+	Code:		(windows.xml) Removed default lower left stats.
+				(windows.xml) Removed the display stats off of the toolbelt.				
+				(windows.xml) Appended new display with positioning and details.
+				(windows.xml) Adjusted surrounding windows to fit changes, such as God Mode / buff popups.
+				(windows.xml) For consistent distance between margins and stats, made positional adjustments to lower right display.
+				(Localization.txt) Created tooltip_key descriptions of stats not included in default localization.
+-->
+<conditional>
+	<!--Code for 7d2d versions 2.0 through 2.4 -->
+	<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+		<!--Removed default lower left stats--><remove xpath="/windows/window[@name='HUDLeftStatBars']"/><!--Removed the display stats off of the toolbelt.--><remove xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Water']" /><!--water display--><remove xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Food']" /><!--food display--><remove xpath="/windows/window[@name='windowToolbelt']/rect/sprite[@pos='0,6']" /><!--XP display--><!--Appended new display with positioning and details.--><append xpath="/windows"><window name="HUDLeftStatBars" anchor="LeftBottom"><rect name="hud" pos="9,145" rows="2" cols="1" width="168" side="right" ><!--Stealth Bar Adjustment--><rect pos="1,55" width="150" height="36" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}"><sprite depth="1" name="border" color="0,0,0,150" height="36" type="sliced" /><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" /><filledsprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fill="0" /><sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="2,-2" foregroundlayer="true"/><label depth="6" name="TextContent" pos="38,-5" font_size="28" color="[white]" justify="center" text="{statcurrent}" height="34" width="100"/><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="1" /><filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="1" /></rect><!--Health Bar Adjustment--><rect pos="1,15" width="150" height="36" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" ><sprite depth="1" name="border" color="0,0,0,235" type="sliced"/><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" width="149" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="5" name="BarContent" color="255,0,0,180" width="149" type="filled" fill="0" /><sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="28,28" pos="2,-4" foregroundlayer="true"/><label depth="7" name="TextContent" pos="46,-5" font_size="28" color="[white]" text="{statcurrentwithmax}" height="34"/><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" /></rect><!--Stamina Bar Adjustment--><rect pos="1,-25" width="150" height="36" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" ><sprite depth="1" name="border" color="0,0,0,235" type="sliced"/><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" width="149" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="5" name="BarContent" color="0,54,255,180" width="149" type="filled" fill="0" /><sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" size="32,32" pos="2,-2" foregroundlayer="true"/><label depth="7" name="TextContent" pos="46,-5" font_size="28" color="[white]" text="{statcurrentwithmax}" height="34"/><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><sprite depth="8" visible="{sprintactive}" name="sprint" atlas="{uiatlas}" sprite="server_z_always_run" size="36,36" pos="147,-19" pivot="left"/></rect><!--XP Bar Adjustments, Now Circle--><rect name="XPStuff" pos="76,-103" width="75" height="75" cursor_area="true" xp_fill_speed="2" controller="HUDStatBar" visible="{statvisible}"><sprite depth="8" height="77" width="77" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/><sprite depth="9" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/><sprite depth="10" height="69" width="69" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/><sprite depth="11" height="69" width="69" name="background" sprite="ui_game_filled_circle" color="{xpcolor}" pivot="center" globalopacity="false" type="filled" fill="{xp}" filldirection="radial360" controller="ToolbeltWindow"/><sprite depth="12" width="55" height="55" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/><label depth="15" pos="0,9" name="Level" width="45" height="42" pivot="center" justify="center" text="LEVEL" font_size="18"/><label depth="15" pos="0,-10" name="LevelNumber" width="45" height="42" pivot="center" justify="center" text="{cvar($LastPlayerLevel)}" font_size="20" controller="MapStats" /></rect><conditional evaluator="client" ><if cond="mod_loaded('AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC')"><!--shows the updated stuff if the .dll modlet is installed.--><rect controller="PlayerStats, EnhancedAGF" ><rect name="XPtoNextLVL" pos="164,-93" rows="1" cols="1" width="84" side="right" controller="HUDStatBar" visible="{statvisible}"><sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/><sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_block_upgrade" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiXPToNextLevel"/><label depth="15" name="LevelNumber" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{PlayerXPToNextLevel}" font_size="22" tooltip_key="xuiXPToNextLevel"/></rect><rect name="LootStage" pos="226,-93" rows="1" cols="1" width="84" side="right" controller="HUDStatBar" visible="{statvisible}"><sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/><sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_shopping_cart" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiLootstage"/><label depth="15" name="LevelNumber" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{PlayerLootStage}" font_size="22" tooltip_key="xuiLootstage"/></rect><rect name="Elevation" pos="288,-93" rows="1" cols="1" width="84" side="right" controller="HUDStatBar" visible="{statvisible}"><sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/><sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_survival" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiElevation"/><label depth="15" name="elevationStat" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{mapelevation}" font_size="22" tooltip_key="xuiElevation" controller="MapStats" /></rect><rect name="LootStage" pos="350,-93" rows="1" cols="1" width="84" side="right" controller="HUDStatBar" visible="{statvisible}"><sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/><sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_backpack" color="[iconColor]" foregroundlayer="true" tooltip_key="inpActInventoryName"/><label depth="15" name="LevelNumber" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{PlayerBagUsedSlots}[bfb088]/{PlayerBagSize}[-]" font_size="22" tooltip_key="inpActInventoryName"/></rect><!--Food Bar Adjustments--><rect name="food" pos="1,-64" width="75" height="77" controller="HUDStatBar" stat_type="Food" visible="{statvisible}"><sprite depth="1" name="border" color="0,0,0,235" type="sliced" /><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="5" name="BarContent" color="0,150,54,180" width="75" type="filled" fill="0" filldirection="vertical" /><label depth="7" name="TextContent" pos="0,-2" font_size="18" color="[white]" text="{PlayerFood}" height="34" width="42" justify="center" tooltip_key="xuiFoodAmount" /><sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_fork" size="22,28" pos="11,-47" foregroundlayer="true" tooltip_key="xuiFoodAmount"/><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/></rect><!--Water Bar Adjustments--><rect name="water" pos="76,-64" width="75" height="77" controller="HUDStatBar" stat_type="Water" visible="{statvisible}"><sprite depth="1" name="border" color="0,0,0,235" type="sliced"/><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}"/><filledsprite depth="5" name="BarContent" color="0,200,255,180" width="75" type="filled" fill="0" filldirection="vertical" globalopacity="false"/><label depth="7" name="TextContent" pos="34,-2" font_size="18" color="[white]" text="{PlayerWater}" height="34" width="42" justify="center" tooltip_key="xuiWaterAmount"/><sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water" size="30,30" pos="38,-45" foregroundlayer="true" tooltip_key="xuiWaterAmount"/><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" /></rect></rect></if><else><!--The server side only stuff--><!--Player Elevation--><rect name="Elevation" pos="160,-93" rows="1" cols="1" width="84" controller="HUDStatBar" visible="{statvisible}"><sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/><sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_survival" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiElevation"/><label depth="15" name="elevationStat" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{mapelevation}" font_size="22" tooltip_key="xuiElevation" controller="MapStats" /></rect><!--Food Bar Adjustments--><rect name="food" pos="1,-64" width="75" height="77" controller="HUDStatBar" stat_type="Food" visible="{statvisible}"><sprite depth="1" name="border" color="0,0,0,235" type="sliced" /><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="5" name="BarContent" color="0,150,54,180" width="75" type="filled" fill="0" filldirection="vertical" /><sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_fork" size="22,28" pos="11,-47" foregroundlayer="true" tooltip_key="xuiFoodPercentage"/><label depth="7" name="TextContent" pos="0,-2" font_size="18" color="[white]" text="{statcurrent}%" height="34" width="42" justify="center" tooltip_key="xuiFoodPercentage" /><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/></rect><!--Water Bar Adjustments--><rect name="water" pos="76,-64" width="75" height="77" controller="HUDStatBar" stat_type="Water" visible="{statvisible}"><sprite depth="1" name="border" color="0,0,0,235" type="sliced"/><sprite depth="2" name="background" color="0,0,0,140" type="sliced" /><filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}"/><filledsprite depth="5" name="BarContent" color="0,200,255,180" width="75" type="filled" fill="0" filldirection="vertical" globalopacity="false"/><sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water" size="30,30" pos="38,-45" foregroundlayer="true" tooltip_key="xuiWaterPercentage"/><label depth="7" name="TextContent" pos="34,-2" font_size="18" color="[white]" text="{statcurrent}%" height="34" width="42" justify="center" tooltip_key="xuiWaterPercentage"/><sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/><filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" /><filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" /></rect></else></conditional></rect><!--Adjusted surrounding windows to fit changes, such as God Mode / buff popups--><rect name="hud" pos="91,187" side="left" controller="BuffPopoutList" pivot="BottomLeft" ><panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" ><sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" /><sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/><label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/></panel></rect></window></append><!--For consistent distance between margins and stats, made positional adjustments to lower right display--><set xpath="/windows/window[@name='HUDRightStatBars']/grid[@pos='-194,55']/@pos">-194,50</set><set xpath="/windows/window[@name='HUDRightStatBars']/rect[@pos='-177,106']/@pos">-177,100</set>
+	</if>	
+	<!--Code for 7d2d versions 2.5 -->
+	<if cond="game_version() &gt;= version(1,2,5)">
+	<!--Removed default lower left stats-->
+		<remove xpath="/windows/window[@name='HUDLeftStatBars']"/>	
+		
+	<!--Removed the display stats off of the toolbelt.-->
+		<remove xpath="/windows/window[@name='windowToolbelt']/rect/sprite[@pos='0,8']" /><!--XP display-->
+		
+	<!--Appended new display with positioning and details.-->
+		<append xpath="/windows">
+			<window name="HUDLeftStatBars" anchor="LeftBottom">
+			<rect name="hud" pos="9,145" rows="2" cols="1" width="168" side="right" >
+
+				<!--Stealth Bar Adjustment-->
+				<rect pos="1,55" width="150" height="36" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,150" height="36" type="sliced" />						
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />					
+					<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />					
+					<filledsprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fill="{statfill}" />					
+					<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="2,-2"  foregroundlayer="true"/>
+					<label depth="6" name="TextContent" pos="38,-5" font_size="28" color="[white]" justify="center"  text="{statcurrent}" height="34" width="100"/>					
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="1" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="1" />
+				</rect>
+				
+				<!--Health Bar Adjustment-->					
+				<rect  pos="1,15" width="150" height="36" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" >
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>
+					<sprite depth="2"  name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="149" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="5"  name="BarContent" color="255,0,0,180" width="149" type="filled" fill="{statfill}" />
+					<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="28,28" pos="2,-4" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="46,-5" font_size="28" color="[white]" text="{statcurrentwithmax}" height="34"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8"  name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+				</rect>
+			
+				<!--Stamina Bar Adjustment-->
+				<rect pos="1,-25" width="150" height="36"  controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" >
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>						
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="149" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="5" name="BarContent" color="0,54,255,180" width="149" type="filled" fill="{statfill}" />
+					<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" size="32,32" pos="2,-2" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="46,-5" font_size="28" color="[white]" text="{statcurrentwithmax}" height="34"/>
+					<sprite depth="8"  name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<sprite depth="8" visible="{sprintactive}" name="sprint" atlas="{uiatlas}" sprite="server_z_always_run" size="36,36" pos="147,-19" pivot="left"/>
+				</rect>
+				
+				<!--XP Bar Adjustments, Now Circle-->
+				<rect name="XPStuff" pos="76,-103" width="75" height="75" cursor_area="true" xp_fill_speed="2" controller="HUDStatBar" visible="{statvisible}">
+					<sprite depth="8" height="77" width="77"  name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>			
+					<sprite depth="9" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/>
+					<sprite depth="10" height="69" width="69"  name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>				
+					<sprite depth="11" height="69" width="69" name="background" sprite="ui_game_filled_circle" color="{xpcolor}" pivot="center" globalopacity="false" type="filled" fill="{xp}" filldirection="radial360" controller="ToolbeltWindow"/>
+					<sprite depth="12" width="55" height="55" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/>
+					<label depth="15" pos="0,9" name="Level" width="45" height="42" pivot="center" justify="center" text="LEVEL" font_size="18"/>						
+					<label depth="15" pos="0,-10" name="LevelNumber" width="45" height="42" pivot="center" justify="center" text="{cvar($LastPlayerLevel)}" font_size="20" controller="MapStats" />						
+				</rect>	
+										
+				<!--Food Bar Adjustments-->			
+				<rect name="food" pos="1,-64" width="75" height="77"  controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced" />									
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="5" name="BarContent" color="0,150,54,180" width="75" type="filled" fill="{statfill}" filldirection="vertical" />
+					<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_fork" size="22,28" pos="11,-47" foregroundlayer="true" tooltip_key="xuiFoodPercentage"/>
+					<label depth="7" name="TextContent" pos="0,-2" font_size="30" color="[white]" text="{statcurrentwithmax}" height="34" width="46" justify="center" tooltip_key="xuiFoodPercentage" />
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				</rect>
+						
+				<!--Water Bar Adjustments-->	
+				<rect name="water" pos="76,-64" width="75" height="77" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />									
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="5" name="BarContent" color="0,200,255,180" width="75" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false"/>
+					<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water" size="30,30" pos="38,-45" foregroundlayer="true" tooltip_key="xuiWaterPercentage"/>
+					<label depth="7" name="TextContent" pos="28,-2" font_size="30" color="[white]" text="{statcurrentwithmax}"  height="34" width="46" justify="center" tooltip_key="xuiWaterPercentage"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"  />
+				</rect>	
+								
+				
+				<conditional evaluator="client" >
+					<if cond="mod_loaded('AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC')"><!--shows the updated stuff if the .dll modlet is installed.-->
+						<rect name="extraStatsHUD1" controller="HUDStatBar" visible="{statvisible}">
+						
+						<rect controller="PlayerStats, EnhancedAGF" pos="160,-70" >
+						
+								<sprite depth="2" name="background" pos="-5,5" width="160" height="77" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/>
+						
+								<sprite depth="2" name="armorIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_light_armor2" color="201, 201, 201" foregroundlayer="true" tooltip_key="statPhysicalDamageResist"/>
+								<label depth="15" name="armorRating"  pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerArmor}" font_size="18" tooltip_key="statPhysicalDamageResist" />
+									
+								<sprite depth="2" name="explosionIcon" pos="15,-35" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_explosion" color="201, 201, 201" foregroundlayer="true" tooltip_key="statExplosionResistance"/>
+								<label depth="15" name="explosionResist"  pos="45,-37" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerExplosionResist}" font_size="18" tooltip_key="statExplosionResistance" />
+									
+								<sprite depth="2" name="critIcon" pos="15,-55" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_map_cursor" color="201, 201, 201" foregroundlayer="true" tooltip_key="statBuffResistance"/>
+								<label depth="15" name="critResist"  pos="45,-57" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerCritResist}" font_size="18" tooltip_key="statBuffResistance" />
+									
+																		
+								<sprite depth="2" name="entityDamageIcon" pos="95,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_stunned" color="201, 201, 201" foregroundlayer="true" tooltip_key="statEntityDamage"/>
+								<label depth="15" name="entityDamage"  pos="125,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerDamage}" font_size="18" tooltip_key="statEntityDamage" />
+												
+								<sprite depth="2" name="blockDamageIcon" pos="95,-35" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_mining" color="201, 201, 201" foregroundlayer="true" tooltip_key="statBlockDamage"/>
+								<label depth="15" name="blockDamage"  pos="125,-37" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerBlockDamage}" font_size="18" tooltip_key="statBlockDamage" />
+									
+								<sprite depth="2" name="mobilityIcon" pos="95,-55" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_agility" color="201, 201, 201" foregroundlayer="true" tooltip_key="statMobility"/>
+								<label depth="15" name="mobility"  pos="125,-57" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerMobility}" font_size="18" tooltip_key="statMobility" />
+									
+						</rect>			
+					</rect>
+
+					</if>
+					<else><!--The server side only stuff-->
+					<!--Player Elevation-->
+						<rect name="Elevation" pos="160,-93" rows="1" cols="1" width="84" controller="HUDStatBar" visible="{statvisible}">
+							<sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/>
+							<sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_survival" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiElevation"/>
+							<label depth="15"  name="elevationStat" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{mapelevation}" font_size="22" tooltip_key="xuiElevation" controller="MapStats"  />
+						</rect>				
+					</else>	
+				</conditional>
+			</rect>		
+	<!--Adjusted surrounding windows to fit changes, such as God Mode / buff popups-->
+			<rect name="hud" pos="91,187" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+				<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" >
+					<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
+					<sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/>
+					<label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/>
+				</panel>
+			</rect>					
+			
+			</window>
+		</append>
+
+	<!--For consistent distance between margins and stats, made positional adjustments to lower right display-->
+		<set xpath="/windows/window[@name='HUDRightStatBars']/grid[@pos='-194,55']/@pos">-194,50</set>
+		<set xpath="/windows/window[@name='HUDRightStatBars']/rect[@pos='-177,106']/@pos">-177,100</set>
+	</if>
+
+</conditional>
+
+<!--MAP IMPROVEMENTS
+	Feature: 	Map information moved to its own section next to the map with labels.
+	
+		Why: 	Many stats and buttons are crammed together and most don't realize they exist.
+				Some of the map stats cover up the map.
+
+	Default: 	Subheader of the map is crammed with data and buttons that are hard to identify.
+				Map stats are covering the bottom left corner of the map view.
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete the sections under windows and styles. Localization can be ignored.
+		
+	XML's: 		windows, styles, Localization
+
+	Code:		(Localization.txt) Created tooltip_key descriptions of stats not included in default localization.
+				(styles.xml) Created an icon style that defaults to red for remove quick waypoint button.
+				(windows.xml) Removed the map stats data that is shown ON the bottom left of the map.
+				(windows.xml) Removed the subheader that is above the map and below the main header.
+				(windows.xml) Created the new panel next to the map of the stats and buttons.
+				(windows.xml) Adjusted Map header width to include the new panel.
+				(windows.xml) Adjusted position of debug map overlay buttons to account for new header width.
+				(windows.xml) Adjusted map view positioning to go where subheader used to be.
+-->
+
+		<!--Removed the map stats data that is shown ON the bottom left of the map.-->
+			<remove xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/rect"/>
+			
+		<!--Removed the subheader that is above the map and below the main header-->
+			<remove xpath="/windows/window[@name='mapArea']/panel[@name='content']/rect[@name='toolbar']"/>
+			
+		<!--Created the new panel next to the map of the stats and buttons.-->	
+			<append xpath="/windows/window[@name='mapArea']/panel[@name='content']">
+				<rect depth="1" name="toolbar" width="260" height="712" pos="721,-5">
+					<sprite color="[lightGrey]" type="sliced" />
+					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,2" width="266" height="716" color="[black]" type="sliced" fillcenter="false" />
+					
+					<label depth="1" name="title" pos="6,-12" width="248" height="28" text_key="lblCenterOnPlayer" font_size="26"/>
+					<button depth="1" name="playerIcon" style="icon32px, press, hover" pivot="center" pos="25,-55" sprite="ui_game_symbol_map_player_arrow" tooltip="Center on Player" tooltip_key="lblCenterOnPlayer" sound="[paging_click]" />
+					<label depth="1" name="playerPos" pos="50,-46" width="150" height="28" text="110 S 769 W" font_size="26"/>
+
+
+					<label depth="1" name="title" pos="6,-125" width="248" height="28" text_key="lblCenterOnSleepingBag" font_size="26"/>
+					<button depth="1" name="bedrollIcon" style="icon32px, press, hover" pivot="center" pos="25,-168" sprite="ui_game_symbol_map_bed" tooltip="Center on Sleeping Bag" tooltip_key="lblCenterOnSleepingBag" sound="[paging_click]" />
+					<label depth="1" name="bedrollPos" pos="50,-159" width="150" height="28" text="300 N 832 W" font_size="26"/>
+
+					<label depth="1" name="title" pos="6,-238" width="248" height="28" text_key="lblCursorPosition" font_size="26"/>
+					<sprite depth="1" name="cursorIcon" style="icon32px, press, hover" pos="9,-265" sprite="ui_game_symbol_map_cursor" tooltip="Cursor Position" tooltip_key="lblCursorPosition" sound="[paging_click]"/>
+					<label depth="1" name="cursorPos" pos="50,-272" width="130" height="28" text="300 N 832 W" font_size="26"/>
+
+
+					<label depth="1" name="title" pos="6,-351" width="248" height="28" text_key="lblRemoveQuickWaypoint" font_size="26"/>
+					<button depth="1" name="waypointIcon" style="icon32pxRed, hover" pivot="center" on_press="true" pos="25,-394" sprite="ui_game_symbol_map_waypoint_remove" tooltip="Remove Quick Waypoint" tooltip_key="lblRemoveQuickWaypoint" />
+					<label depth="1" name="waypointDistance" pos="50,-385" width="122" height="28" text="0.2 KILOMETERS" font_size="26"/>
+				
+					<rect name="content" depth="5" pos="-4,-464" height="239" controller="MapStats">					
+						<sprite depth="2" name="elevIcon" width="24" height="24" pos="10,0" sprite="ui_game_symbol_climb" color="[iconColor]" foregroundlayer="true"/>
+						<label depth="2" name="elevLabel" pos="40,0" width="250" height="28" text="{mapelevationtitle}: [DECEA3]{mapelevation} M[-]" font_size="26"/>
+					</rect>				
+				</rect>
+			</append>			
+			
+		<!--Adjusted Map header width to include the new panel.-->		
+			<set xpath="/windows/window[@name='mapArea']/@width">981</set>
+			
+		<!--Adjusted position of debug map overlay buttons to account for new header width.-->		
+			<set xpath="/windows/window[@name='mapArea']/panel[@name='header']/button[@name='switchStaticMap']/@pos">953,-21</set>
+			<set xpath="/windows/window[@name='mapArea']/panel[@name='header']/combobox[@name='cbxStaticMapType']/@pos">723,-6</set>
+			
+		<!--Adjusted map view positioning to go where subheader used to be.-->		
+			<set xpath="/windows/window[@name='mapArea']/panel[@name='content']/panel[@name='mapView']/@pos">6,-6</set>
+			<set xpath="/windows/window[@name='mapArea']/panel[@name='content']/sprite[@name='backgroundMain']/@height">716</set>	
+			
+		<!--adusted share waypoints to meet map edges.-->
+			<!--<set xpath="/windows/window[@name='mapInvites']/rect[@name='content']/grid/@rows">3</set>-->
+			<set xpath="/windows/window[@name='mapInvites']/panel[@name='header']/@pos">3,10</set>
+			<set xpath="/windows/window[@name='mapInvites']/rect[@name='toolbar']/@pos">6,-36</set>
+			<set xpath="/windows/window[@name='mapInvites']/rect[@name='content']/@pos">0,-30</set>
+			<set xpath="/windows/window[@name='mapInvites']/rect[@name='content']/grid[@name='invitesList']/@cell_height">40</set>
+			
+			
+			
+	
+	
+<!--CRAFTING IMPROVEMENT
+	Feature: 	Crafting and burning times adjusted for easier viewing.
+	
+		Why: 	I like readability and sometimes find it hard to differentiate the crafting time and whats behind it.
+	
+	Default: 	Burn time is  a bright red that for some, is difficult to read.
+				Craft time in crafting queue is white with minimal differentiation of what is behind it.
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete the sections under windows and controls.
+				
+	XML's: 		windows, contols
+	
+	Code:		(windows.xml) Added a line of code of the burning time to adjust the color.
+				(controls.xml) Removed original crafting timer set-up.
+				(controls.xml) Appended a new timer setting that changes the color and adds a background.
+-->	
+	
+		<!--Added a line of code of the burning time to adjust the color.-->
+			<setattribute xpath="/windows/window[@name='windowFuel']/panel[@style='header.panel']/label[@style='header.timer']" name="color">[white]</setattribute>
+
+		<!--5th Crafting Slot-->
+			<set xpath="/windows/window[@name='windowCraftingQueue']/rect/grid/@cols">5</set>
+			<set xpath="/windows/window[@name='windowCraftingQueue']/rect/@pos">9,0</set>
+
+
+
+
+
+<!--COMPASS IMPROVEMENTS
+	Feature: 	1. Wider and accurate compass with a center mark.
+				2. Date and time separated and given a background for easier readability.
+				3. Date and time now shown on all menus.
+	
+		Why: 	1. I like being able to walk in a straight line directly to my targeted location.
+				2. I like readability and found them scrunhced together difficult. And in the way.
+				3. Sometimes I spend a lot of time in the menus; its good to know the date and time.
+
+	Default: 	Smaller compass that does not directly pinpoint the markers you are walking towards.
+				Date and time under compass, close together in one color.
+				Date and time is NOT shown on menus.
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete this section under windows.
+	
+	XML's: 		windows
+	
+	Code:		(windows.xml) Widened and centered the compass area.
+				(windows.xml) Adjusted colors of the compass backgrounds.
+				(windows.xml) Adjusted the actual compass and its rotational stats.
+				(windows.xml) Added a center mark on the compass.
+				(windows.xml) Removed original Day and Time set-up.
+				(windows.xml) Recreated Day and Time seperately with backgrounds.
+				(windows.xml) Added the Day and Time onto every window.
+-->	
+				
+		<!--Widened and centered the compass area.-->
+			<set xpath="/windows/window[@name='windowCompass']/@pos">-260,-9</set>
+			<set xpath="/windows/window[@name='windowCompass']/@width">520</set>
+		
+		<!--Adjusted colors of the compass backgrounds.-->
+			<set xpath="/windows/window[@name='windowCompass']/sprite[@depth='0']/@color">0,0,0,255</set>	
+			<set xpath="/windows/window[@name='windowCompass']/sprite[@depth='0']/@width">456</set>
+			<set xpath="/windows/window[@name='windowCompass']/sprite[@depth='0']/@pos">32,0</set>
+			<set xpath="/windows/window[@name='windowCompass']/sprite[@depth='1']/@color">120,120,120,255</set>	
+			<set xpath="/windows/window[@name='windowCompass']/sprite[@depth='1']/@width">450</set>	
+			<set xpath="/windows/window[@name='windowCompass']/sprite[@depth='1']/@pos">35,-3</set>	
+
+		<!--Adjusted the actual compass and its rotational stats.-->
+			<set xpath="/windows/window[@name='windowCompass']/texture/@width">450</set>
+			<set xpath="/windows/window[@name='windowCompass']/texture/@rect_size">0.35,1</set>
+			<set xpath="/windows/window[@name='windowCompass']/texture/@rect_offset">{#compass_rotation / 360 + 0.067 - 0.18},0</set>
+			<set xpath="/windows/window[@name='windowCompass']/texture/@pos">35,-12</set>			
+		
+		<!--Added a center mark on the compass.-->
+			<append xpath="/windows/window[@name='windowCompass']">
+				<label depth="20" name="TextContent" pos="69,5" width="380" height="60" text="I" font_size="60" color="22,22,22,235" justify="center"/>
+			</append>
+	
+		<!--Removed original Day and Time set-up.-->
+			<remove xpath="/windows/window[@name='windowCompass']/sprite[@pos='240,-60']"/>
+			
+<conditional>
+	<!--Code for 7d2d versions 2.0 through 2.4 -->
+	<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+		<!--Recreated Day and Time seperately with backgrounds.-->
+			<append xpath="/windows/window[@name='windowCompass']">
+				<!--Day and Time-->		
+				<rect name="hud" pos="-250,-4" rows="1" cols="1" width="250">
+						<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="46" width="250" type="sliced" />
+						<label depth="3" text="{daytitle}" width="140" font_size="20" justify="center" pos="6,2" height="28" visible="{showtime}"/>
+						<label depth="3" name="daycounter" text="[{daycolor}]{day}" width="140" font_size="20" justify="center" pos="6,-20" height="28" visible="{showtime}"/>
+						
+						<label depth="3" text="{# localization('agfTime')}" width="170" font_size="20" justify="center" pos="86,2" height="28" visible="{showtime}"/>
+						<label depth="3" text="[DECEA3]{time}" width="170" font_size="20" justify="center" pos="86,-20" height="28" visible="{showtime}"/>
+				</rect>	
+			</append>	
+	
+	</if>	
+	<if cond="game_version() &gt;= version(1,2,5)">	
+			<append xpath="/windows/window[@name='windowCompass']">
+				<!--Day and Time-->		
+				<rect name="dayTimeTemp" pos="-250,-4" rows="1" cols="1" width="250">
+						<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,210" foregroundlayer="true" height="46" width="250" type="sliced" />
+						
+						<label depth="3" pos="40,-8" 	height="28" width="80"  text="{daytitle}" font_size="20" justify="center" pivot="center" visible="{showtime}"/>
+						<label depth="3" pos="40,-28" 	height="28" width="80"  text="[{daycolor}]{day}" font_size="20" justify="center"  pivot="center"   visible="{showtime}"/>
+						
+						<label depth="3" pos="120,-8" 	height="28" width="80"  text="{# localization('agfTime')}" font_size="20" justify="center" pivot="center"  visible="{showtime}"/>
+						<label depth="3" pos="120,-28" 	height="28" width="80"  text="[DECEA3]{time}" font_size="20" justify="center" pivot="center"   visible="{showtime}"/>
+						
+						<label depth="3" pos="200,-8" 	height="28" width="80"  text="{# localization('xuifOutdoor')}" font_size="20" justify="center"  pivot="center" visible="{showtime}"/>
+						<label depth="2" pos="200,-28"  height="28" width="80"  text=" [{outsidetempcolor}]{outsidetemp}[-]" font_size="20"  upper_case="true"  pivot="center"  justify="center" visible="{showtime}"/>
+				
+					<conditional evaluator="client" >
+						<if cond="mod_loaded('AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC')"><!--shows the updated stuff if the .dll modlet is installed.-->
+							<rect name="extraStats1" controller="PlayerStats, EnhancedAGF" pos="0,-46" width="250" height="30"  pivot="center">
+									<sprite depth="2" name="background"  color="0,0,0,180" type="sliced" sprite="ui_game_header_fill" foregroundlayer="true"/>
+									
+									<sprite depth="2" name="coldIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_cold" color="201, 201, 201" foregroundlayer="true" tooltip_key="statHypothermalResist"/>
+									<label depth="15" name="coldResist"  pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[00ffff]{PlayerColdResist}" font_size="18" tooltip_key="statHypothermalResist"/>
+									
+									<sprite depth="2" name="tempIcon" pos="106,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_temperature" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiBuffStatCoreTemp"/>
+									<label depth="15"  name="coreTemp" pos="136,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerCoreTemp}"  font_size="18" tooltip_key="xuiBuffStatCoreTemp"/>
+							
+									<sprite depth="2" name="hotIcon" pos="197,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_hot" color="201, 201, 201" foregroundlayer="true" tooltip_key="statHyperthermalResist"/>
+									<label depth="15"  name="hotResist" pos="227,-17" width="56" height="20" pivot="center" justify="center" text="[ff8000]{PlayerHeatResist}" font_size="18" tooltip_key="statHyperthermalResist"  />
+
+							</rect>			
+						</if>
+						
+					</conditional>
+					<conditional evaluator="client" >
+						<if cond="mod_loaded('ScreamerAlert')">
+							<rect name="ScreamerAlertRect" controller="ScreamerAlerts, ScreamerAlert" >
+								<sprite depth="2" name="Background" pos="125,-131" width="250" height="98" sprite="ui_game_header_fill" color="0,0,0,180" type="sliced" pivot="center"/>
+								<label depth="3" name="ScreamerAlert" pos="125,-113" font_size="28" color="[white]" style="outline" text="{screameralert}" pivot="center" justify="center" width="250" height="38"/>									
+								<label depth="3" name="ScreamerHordeAlert" pos="125,-149" font_size="28" color="[white]" style="outline" text="{screamerhordealert}" pivot="center" justify="center" width="250" height="38"/>
+							</rect>														
+						</if>		
+					</conditional>
+				</rect>	
+
+			</append>
+			
+			
+			
+	</if>
+</conditional>	
+		<!--Added the Day and Time onto every window.-->
+			<append xpath="/windows/window[@name='windowPagingHeader']">
+				<sprite depth="1" name="timeBackground" sprite="ui_game_header_fill" width="230" height="34" pos="-345,-5" color="[black]"/>
+				<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-330,-10" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>
+				<label depth="2" name="dayTimeLabel" pos="-300,-12" width="230" height="28" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>
+			</append>
+			
+			<append xpath="/windows/window[@name='windowNonPagingHeader']">
+				<sprite depth="1" name="timeBackground"  sprite="ui_game_header_fill"  width="230" height="34" pos="-345,-5" color="[black]"/>
+				<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-330,-10" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>	
+				<label depth="2" name="dayTimeLabel" pos="-300,-12" width="230" height="28" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>	
+			</append>
+
+
+
+
+
+<!--TOOLBELT IMPROVEMENTS
+	Feature: 	Lowered toolbelt for backpack mod compatibility and added slot numbers.
+	
+		Why: 	I like compatibility of backpack mods.
+				I sometimes mix up which slot is which in a quick moment.
+
+	Default: 	Toolbelt often blocked a bit of larger backpack mods and without slot numbers.
+
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete this section under windows.
+
+	XML's: 		windows
+	
+	Code:		(windows.xml) Lowered the toolbelt.
+				(windows.xml) Created slot numbers for each slot.
+-->
+
+		<!--Lowered the toolbelt.-->
+			<set xpath="/windows/window[@name='windowToolbelt']/@pos">-377,82</set>
+			
+		<!--Created slot numbers for each slot.-->
+			<append xpath="/windows/window[@name='windowToolbelt']">
+				<rect name="agf10slots">
+					<sprite depth="19" pos="32,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill" />		
+					<label depth="20" name="slot#" pos="32,10" width="14" height="12" text="[DECEA3]1" font_size="12" color="" justify="center"/>
+						
+					<sprite depth="19" pos="107,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="107,10" width="14" height="12" text="[DECEA3]2" font_size="12" color="" justify="center"/>	
+
+					<sprite depth="19" pos="182,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="182,10" width="14" height="12" text="[DECEA3]3" font_size="12" color="" justify="center"/>	
+
+					<sprite depth="19" pos="257,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="257,10" width="14" height="12" text="[DECEA3]4" font_size="12" color="" justify="center"/>		
+
+					<sprite depth="19" pos="332,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="332,10" width="14" height="12" text="[DECEA3]5" font_size="12" color="" justify="center"/>	
+
+					<sprite depth="19" pos="407,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="407,10" width="14" height="12" text="[DECEA3]6" font_size="12" color="" justify="center"/>	
+
+					<sprite depth="19" pos="482,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="482,10" width="14" height="12" text="[DECEA3]7" font_size="12" color="" justify="center"/>	
+
+					<sprite depth="19" pos="557,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="557,10" width="14" height="12" text="[DECEA3]8" font_size="12" color="" justify="center"/>
+					
+					<sprite depth="19" pos="632,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="632,10" width="14" height="12" text="[DECEA3]9" font_size="12" color="" justify="center"/>
+
+					<sprite depth="19" pos="707,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true" sprite="ui_game_header_fill"/>		
+					<label depth="20" name="slot#" pos="707,10" width="14" height="12" text="[DECEA3]10" font_size="12" color="" justify="center"/>
+				</rect>
+			</append>
+	
+
+
+
+
+<!--QUEST SELECTION IMPROVEMENTS
+	Feature: 	Viewing quest selections made easier with improved background, color, and poi_names.
+				Added Time/Date to be viewable while looking at options.
+				
+	Why: 		Sometimes found it difficult to read the the selection with the transparent background.
+				I prefer to know the POI from the quest options list.
+				
+	Default: 	The background of the quest selections is see-through (transparent).
+				There are NO names of the POI when looking at the quest options until you select one.
+				Colors are mostly white with the ingames yellowish/peach color only.	
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete this section under windows.
+					Within Localization, delete lines that start with "quest_".
+	
+	XML's: 		windows, Localization
+	
+	Code:		(Localization.txt) Added the POI names into the quest selection text.
+				(Localization.txt) Arranged quest details in consistent order and with a color scheme.
+				(windows.xml) Removed existing quest selection window.
+				(windows.xml) Created new quest selection window with wider and solid background.
+-->			
+	
+		<!--Removed existing quest selection window.-->
+			<remove xpath="/windows/window[@name='windowResponses']"/>
+
+			
+		<!--Created new quest selection window with wider and solid background.-->
+			<conditional>
+				<!--Manages what to add for 7d2d version 2.2+ if without one of my backpacks-->
+				<if cond="game_version() &gt;= version(1,2,2) and game_version() &lt; version(1,2,5)">
+					<append xpath="/windows">
+						<window name="windowResponses" pos="-825,60" width="800" height="400" anchor="RightCenter" cursor_area="true" controller="DialogResponseList">
+							<sprite depth="0" name="background" pos="-25,25" width="740" height="402" type="sliced" color="96,96,96,255" globalopacity="false"/>
+							<sprite depth="1" name="background" pos="-20,20" width="730" height="392" type="sliced" color="0,0,0,255" globalopacity="false"/>
+							<label name="lblName" style="subtitle" text="{respondentname}" color="[selectedColor]" justify="left" depth="2" pos="12,-6"/>
+							<grid name="items" pos="3,-46" rows="8" cols="1" width="800" height="200" cell_width="800" cell_height="40" repeat_content="true" arrangement="vertical">
+								<response_entry id="0"/>
+							</grid>
+							<rect pos="535,20">
+								<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-30,-10" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>
+								<label depth="2" name="dayTimeLabel" width="230" height="28" pos="0,-12" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>
+							</rect>
+						</window>
+					</append>
+				</if>
+				<if cond="game_version() &gt;= version(1,2,5)">
+					<append xpath="/windows">
+						<window name="windowResponses" pos="-825,60" width="800" height="480" anchor="RightCenter" cursor_area="true" controller="DialogResponseList">
+							<sprite depth="0" name="background" pos="-25,25" width="740" height="482" type="sliced" color="96,96,96,255" globalopacity="false"/>
+							<sprite depth="1" name="background" pos="-20,20" width="730" height="472" type="sliced" color="0,0,0,255" globalopacity="false"/>
+							<label name="lblName" style="subtitle" text="{respondentname}" color="[selectedColor]" justify="left" depth="2" pos="12,-6"/>
+							<grid name="items" pos="3,-46" rows="10" cols="1" width="800" height="400" cell_width="800" cell_height="40" repeat_content="true" arrangement="vertical">
+								<response_entry id="0"/>
+							</grid>
+							<rect pos="535,20">
+								<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-30,-10" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>
+								<label depth="2" name="dayTimeLabel" width="230" height="28" pos="0,-12" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>
+							</rect>
+						</window>
+					</append>
+				</if>
+			</conditional>
+
+
+<!--conditionals for version changes-->		
+	<conditional><!--Manages what to add for 7d2d version 2.2+ if without one of my backpacks-->
+		<if cond="game_version() &gt;= version(1,2,2) and game_version() &lt; version(1,2,5) and mod_loaded('AGF-V2-Backpack60Plus') == false and mod_loaded('AGF-V2-Backpack72Plus') == false and mod_loaded('AGF-V2-Backpack84Plus') == false and mod_loaded('AGF-V2-Backpack120-1Plus') == false">
+				<set xpath="/windows/window[@name='windowLooting']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+				<set xpath="/windows/window[@name='windowVehicleStorage']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+				<remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"></remove>
+				<append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']">
+				   <item_stackAGF name="0"/>
+				</append>	
+				<remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/item_stack"></remove>
+				<append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']">
+				   <item_stackAGF name="0"/>
+				</append>
+		</if>	
+		<if cond="game_version() &gt;= version(1,2,5) and mod_loaded('AGF-V2-Backpack60Plus') == false and mod_loaded('AGF-V2-Backpack72Plus') == false and mod_loaded('AGF-V2-Backpack84Plus') == false and mod_loaded('AGF-V2-Backpack120-1Plus') == false">
+				<set xpath="/windows/window[@name='windowLooting']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+				<set xpath="/windows/window[@name='windowVehicleStorage']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+				<remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"></remove>
+				<append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']">
+				   <item_stackAGF name="0"/>
+				</append>	
+				<remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/vehicle_item_stack"></remove>
+				<append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']">
+				   <vehicle_item_stackAGF name="0"/>
+				</append>
+		</if>		
+	</conditional>	
+
+	<conditional><!--A HUD only change for 7d2d version 2.2+-->
+		<if cond="game_version() &gt;= version(1,2,2)">
+			<remove xpath="//sprite[@sprite='ui_game_loot_stage_bad']"/>
+		</if>		
+	</conditional>		
+
+	
+</AGF-HUDPlus>
+
+

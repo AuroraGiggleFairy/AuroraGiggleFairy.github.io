@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-V2-HUDPlus-RemoveEnteringPopUp"/>
+	<DisplayName value="AGF HUD Plus - Removes Entering Popups"/>
+	<Version value="1.0.0"/>
+	<Description value="Removes the Entering Popups of poi's."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

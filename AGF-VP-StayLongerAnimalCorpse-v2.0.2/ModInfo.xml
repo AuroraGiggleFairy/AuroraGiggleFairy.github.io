@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-V2-VP-StayLongerAnimalCorpse"/>
+	<DisplayName value="AGF Stay Longer Animal Corpse"/>
+	<Version value="2.0.2"/>
+	<Description value="Animal Corpses disappear after 10 minutes instead of 5."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

@@ -1,0 +1,125 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build CosmeticLockIcon mod",
+			"type": "shell",
+			"command": "msbuild CosmeticLockIcon.csproj /p:Configuration=Release",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		}
+	]
+}

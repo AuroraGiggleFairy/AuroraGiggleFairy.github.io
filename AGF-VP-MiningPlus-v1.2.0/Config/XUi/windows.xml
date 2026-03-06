@@ -1,0 +1,37 @@
+<AGFVanillaPlus-MiningPlus>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-V2-HUDPlus-PurpleBook')">
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/grid/entry[@name='resourceOilShaleBundle']">
+
+				<entry name="item">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="8,-8" width="64" height="64" size="64,64" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceClayLump" color="147, 12, 248" tooltip_key="resourceClayLumpBundle"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="8,-8" width="64" height="64" fillcenter="true" type="filled" fill="{cvar(AGFperkArtOfMiningPallets)}"/>
+					<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_bundle" pos="9,-9" foregroundlayer="true" color=""/>
+				</entry>
+				<entry name="item">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="8,-8" width="64" height="64" size="64,64" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceCrushedSand" color="147, 12, 248" tooltip_key="resourceCrushedSandBundle"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="8,-8" width="64" height="64" fillcenter="true" type="filled" fill="{cvar(AGFperkArtOfMiningPallets)}"/>
+					<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_bundle" pos="9,-9" foregroundlayer="true" color=""/>
+				</entry>
+				<entry name="item">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="8,-8" width="64" height="64" size="64,64" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceScrapBrass" color="147, 12, 248" tooltip_key="resourceScrapBrassBundle"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="8,-8" width="64" height="64" fillcenter="true" type="filled" fill="{cvar(AGFperkArtOfMiningPallets)}"/>
+					<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_bundle" pos="9,-9" foregroundlayer="true" color=""/>
+				</entry>
+
+
+			</insertafter>
+
+						
+		</if>
+	</conditional>
+
+</AGFVanillaPlus-MiningPlus>
+

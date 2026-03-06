@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-V2-VP-MedicallyTreatOthers"/>
+	<DisplayName value="AGF Medically Treat Others"/>
+	<Version value="1.0.0"/>
+	<Description value="Now can treat others with drugs like vitamins, etc."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

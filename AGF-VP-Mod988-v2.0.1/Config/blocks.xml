@@ -1,0 +1,11 @@
+<AGFVanillaPlus-988>
+
+
+<set xpath="/blocks/block[@name='modularRopeNoose']/property[@name='Model']/@value">@:Entities/OutdoorDecor/modularRopeTopTiedPrefab.prefab</set>
+
+<append xpath="/blocks/block[@name='modularRopeNoose']">
+	<property name="CustomIcon" value="modularRopeTiled"/>
+</append>
+
+
+</AGFVanillaPlus-988>

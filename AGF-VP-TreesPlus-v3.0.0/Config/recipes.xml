@@ -1,0 +1,76 @@
+<AGFVanillaPlus-TreesPlus>
+
+	<!--Recipes for x5 and x25 trees, from inventory.-->
+		<append xpath="/recipes">
+			<recipe name="treePlantedOak1mx5" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedOak1m" count="5"/>
+			</recipe>
+			<recipe name="treePlantedMountainPine1mx5" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedMountainPine1m" count="5"/>
+			</recipe>
+			<recipe name="treePlantedWinterPine1mx5" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedWinterPine1m" count="5"/>
+			</recipe>		
+					
+			<recipe name="treePlantedOak1mx25" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedOak1m" count="25"/>
+			</recipe>
+			<recipe name="treePlantedMountainPine1mx25" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedMountainPine1m" count="25"/>
+			</recipe>
+			<recipe name="treePlantedWinterPine1mx25" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedWinterPine1m" count="25"/>
+			</recipe>				
+			
+			<recipe name="treePlantedOak1mx25" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedOak1mx5" count="5"/>
+			</recipe>
+			<recipe name="treePlantedMountainPine1mx25" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedMountainPine1mx5" count="5"/>
+			</recipe>
+			<recipe name="treePlantedWinterPine1mx25" count="1" craft_time="1"  craft_exp_gain="0">
+				<ingredient name="treePlantedWinterPine1mx5" count="5"/>
+			</recipe>
+		</append>
+
+
+	<!--CONDITIONAL, To allow creating these seeds at the Seed Station from FarmingPlus-->
+		<conditional>		
+			<if cond="mod_loaded('AGF-V2-VP-FarmingPlus') == true">
+				<append xpath="/recipes">
+					<recipe name="treePlantedOak1mx5" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedOak1m" count="5"/>
+					</recipe>
+					<recipe name="treePlantedMountainPine1mx5" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedMountainPine1m" count="5"/>
+					</recipe>
+					<recipe name="treePlantedWinterPine1mx5" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedWinterPine1m" count="5"/>
+					</recipe>					
+					
+					<recipe name="treePlantedOak1mx25" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedOak1m" count="25"/>
+					</recipe>
+					<recipe name="treePlantedMountainPine1mx25" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedMountainPine1m" count="25"/>
+					</recipe>
+					<recipe name="treePlantedWinterPine1mx25" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedWinterPine1m" count="25"/>
+					</recipe>					
+					
+					<recipe name="treePlantedOak1mx25" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedOak1mx5" count="5"/>
+					</recipe>
+					<recipe name="treePlantedMountainPine1mx25" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedMountainPine1mx5" count="5"/>
+					</recipe>
+					<recipe name="treePlantedWinterPine1mx25" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
+						<ingredient name="treePlantedWinterPine1mx5" count="5"/>
+					</recipe>
+				</append>			
+			</if>
+		</conditional>
+
+
+
+</AGFVanillaPlus-TreesPlus>

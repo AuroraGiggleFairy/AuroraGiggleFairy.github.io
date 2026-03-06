@@ -1,0 +1,16 @@
+using System;
+
+namespace Discord.Rest;
+
+internal abstract class RestEntity<T> : IEntity<T> where T : IEquatable<T>
+{
+	internal BaseDiscordClient Discord { get; }
+
+	public T Id { get; }
+
+	internal RestEntity(BaseDiscordClient discord, T id)
+	{
+		Discord = discord;
+		Id = id;
+	}
+}

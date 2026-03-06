@@ -1,0 +1,25 @@
+<config>
+
+
+	<conditional>
+		<if cond="mod_loaded('AGF-V2-Backpack72Plus') == false and mod_loaded('AGF-V2-Backpack84Plus') == false and mod_loaded('AGF-V2-Backpack120-1Plus') == false">
+			<append xpath="/lootcontainers">
+				<!-- PLAYER cntRoboticInbox-->
+				<lootcontainer name="playerRoboticInbox" count="0" size="10,10" sound_open="UseActions/crate_iron_open" sound_close="UseActions/crate_iron_close" loot_quality_template="qualBaseTemplate">
+					<item name="cobweb" count="0" />
+				</lootcontainer>
+			</append>	
+		</if>
+		<if cond="mod_loaded('AGF-V2-Backpack72Plus') == true or mod_loaded('AGF-V2-Backpack84Plus') == true or mod_loaded('AGF-V2-Backpack120-1Plus') == true">
+			<append xpath="/lootcontainers">
+				<!-- PLAYER cntRoboticInbox-->
+				<lootcontainer name="playerRoboticInbox" count="0" size="12,14" sound_open="UseActions/crate_iron_open" sound_close="UseActions/crate_iron_close" loot_quality_template="qualBaseTemplate">
+					<item name="cobweb" count="0" />
+				</lootcontainer>
+			</append>	
+		</if>
+	</conditional>
+
+		
+	
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-V2-HUDPlus-BMCounter-KeepDayCount"/>
+	<DisplayName value="AGF HUD Plus - Adds BM countdown"/>
+	<Version value="2.1.2"/>
+	<Description value="Adds BM countdown for non-varied BM frequency."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

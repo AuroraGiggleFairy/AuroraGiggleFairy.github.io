@@ -1,0 +1,201 @@
+<AGFVanillaPlus-SimplifiedStacks>
+
+
+
+<!--BUNDLE INGREDIENT counts to represent stack size improvements-->		
+		<set xpath="/recipes/recipe[@name='ammoGasCanBundle']/ingredient[@name='resourceOilShale']/@count">12000</set>
+			<!--AMMO GAS CAN MATH NOTES for NEW BUNDLE RECIPE
+			Vanilla
+			1 resourceOilShale makes 2 ammoGasCan;   			1 to 2, 	Example: 100 resourceOilShale makes 200 ammoGasCan
+
+			2000 resourceOilShale makes 1 ammoGasCanBundle; 	2 to 5, 	Example: 100 resourceOilShale makes 250 ammoGasCan, creates 20% more ammoGasCan when made in a bundle.
+			1 ammoGasCanBundle creates 5000 ammoGasCan
+
+			For My Stack Size of 30,000 ammoGasCan, Bundle recipe changes
+
+			1 ammoGasCanBundle creates 30,000 is x6 more than original.
+			12000 resourceOilShale makes 1 ammoGasCanBundle(30000)
+			-->	
+	
+		<set xpath="/recipes/recipe[@name='resourceGunPowderBundle']/ingredient[@name='resourceCoal']/@count">4800</set>
+		<set xpath="/recipes/recipe[@name='resourceGunPowderBundle']/ingredient[@name='resourcePotassiumNitratePowder']/@count">4800</set>
+
+			
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall']/ingredient[@name='resourceBulletTip']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall']/ingredient[@name='resourceGunPowder']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP']/ingredient[@name='resourceGunPowder']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP']/ingredient[@name='resourceGunPowder']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']/ingredient[@name='resourceBulletTip']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']/ingredient[@name='resourceGunPowder']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']/ingredient[@name='resourceGunPowder']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']/ingredient[@name='resourceBulletTip']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']/ingredient[@name='resourceGunPowder']/@count">2000</set>
+		<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell']/ingredient[@name='resourceBuckshot']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell']/ingredient[@name='resourceGunPowder']/@count">1600</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell']/ingredient[@name='resourcePaper']/@count">400</set>	
+
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug']/ingredient[@name='resourceBulletTip']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug']/ingredient[@name='resourceGunPowder']/@count">2000</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug']/ingredient[@name='resourceScrapPolymers']/@count">400</set>	
+
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']/ingredient[@name='resourceForgedSteel']/@count">1200</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']/ingredient[@name='resourceClayLump']/@count">800</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']/ingredient[@name='resourceGunPowder']/@count">1600</set>	
+		<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']/ingredient[@name='resourceScrapPolymers']/@count">400</set>	
+		
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowIron']/ingredient[@name='resourceArrowHeadIron']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowIron']/ingredient[@name='resourceWood']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowIron']/ingredient[@name='resourceFeather']/@count">400</set>	
+		
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowStone']/ingredient[@name='resourceRockSmall']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowStone']/ingredient[@name='resourceWood']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowStone']/ingredient[@name='resourceFeather']/@count">400</set>
+		
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltIron']/ingredient[@name='resourceArrowHeadIron']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltIron']/ingredient[@name='resourceWood']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltIron']/ingredient[@name='resourceFeather']/@count">400</set>	
+
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltStone']/ingredient[@name='resourceRockSmall']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltStone']/ingredient[@name='resourceWood']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltStone']/ingredient[@name='resourceFeather']/@count">400</set>
+
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceGunPowder']/@count">800</set>	
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceCloth']/@count">2000</set>	
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceAnimalFat']/@count">400</set>	
+
+
+				
+		<set xpath="/recipes/recipe[@name='ammoBundleArrowSteelAP']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+			
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='resourceGunPowder']/@count">800</set>	
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='resourceCloth']/@count">2000</set>	
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='resourceAnimalFat']/@count">400</set>	
+
+		
+
+		<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltSteelAP']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+		
+		<conditional>
+			<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceGunPowder']/@count">2400</set>	
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceDuctTape']/@count">400</set>				
+					
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceGunPowder']/@count">3200</set>	
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceDuctTape']/@count">400</set>	
+				
+			</if>
+			<if cond="game_version() &gt;= version(1,2,5)">
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+				<!--Scrap Polymer changes are applied below accounting for archery change mod of mine.-->	
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceGunPowder']/@count">2400</set>	
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourcePaper']/@count">400</set>	
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceYuccaFibers']/@count">400</set>	
+			
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceArrowHeadSteelAP']/@count">400</set>
+				<!--Scrap Polymer changes are applied below accounting for archery change mod of mine.-->	
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceGunPowder']/@count">3200</set>	
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourcePaper']/@count">400</set>	
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceYuccaFibers']/@count">400</set>
+
+
+				<append xpath="/recipes">
+					<recipe name="foodRawMeatBundleAGF" count="1" craft_time="5">
+						<ingredient name="foodRawMeat" count="500"/>
+						<ingredient name="resourcePaper" count="100"/>
+						<ingredient name="resourceYuccaFibers" count="100"/>
+					</recipe>				
+				</append>
+
+
+				
+			</if>			
+		</conditional>
+		
+		
+
+<!--CONDITIONAL, to account for archery feather change.-->	
+	<conditional>		
+		<if cond="mod_loaded('AGF-V2-VP-ArcheryFeathersChange') == true and game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">	
+			<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceFeather']/@count">400</set>	
+			<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceFeather']/@count">400</set>		
+			<set xpath="/recipes/recipe[@name='ammoBundleArrowSteelAP']/ingredient[@name='resourceFeather']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='resourceFeather']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceFeather']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltSteelAP']/ingredient[@name='resourceFeather']/@count">400</set>				
+		</if>
+		<if cond="mod_loaded('AGF-V2-VP-ArcheryFeathersChange') == false and game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">	
+			<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceScrapPolymers']/@count">800</set>	
+			<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceScrapPolymers']/@count">800</set>		
+			<set xpath="/recipes/recipe[@name='ammoBundleArrowSteelAP']/ingredient[@name='resourceScrapPolymers']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='resourceScrapPolymers']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceScrapPolymers']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltSteelAP']/ingredient[@name='resourceScrapPolymers']/@count">800</set>	
+		</if>		
+	</conditional>
+
+<!--CONDITIONAL, to account for Rebundle Bundles-->
+	<conditional>
+		<if cond="mod_loaded('AGF-V2-VP-RebundleBundles') == true">
+			<!--RebundleBundles-->
+				<set xpath="/recipes/recipe[@name='ammoGasCanBundle']/ingredient[@name='ammoGasCan']/@count">30000</set>
+				<set xpath="/recipes/recipe[@name='resourceGunPowderBundle']/ingredient[@name='resourceGunPowder']/@count">6000</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall']/ingredient[@name='ammo9mmBulletBall']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP']/ingredient[@name='ammo9mmBulletHP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP']/ingredient[@name='ammo9mmBulletAP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']/ingredient[@name='ammo44MagnumBulletBall']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']/ingredient[@name='ammo44MagnumBulletHP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']/ingredient[@name='ammo44MagnumBulletAP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']/ingredient[@name='ammo762mmBulletBall']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']/ingredient[@name='ammo762mmBulletHP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']/ingredient[@name='ammo762mmBulletAP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell']/ingredient[@name='ammoShotgunShell']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug']/ingredient[@name='ammoShotgunSlug']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']/ingredient[@name='ammoShotgunBreachingSlug']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='ammoArrowFlaming']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='ammoArrowExploding']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowIron']/ingredient[@name='ammoArrowIron']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowSteelAP']/ingredient[@name='ammoArrowSteelAP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleArrowStone']/ingredient[@name='ammoArrowStone']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltFlaming']/ingredient[@name='ammoCrossbowBoltFlaming']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='ammoCrossbowBoltExploding']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltIron']/ingredient[@name='ammoCrossbowBoltIron']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltSteelAP']/ingredient[@name='ammoCrossbowBoltSteelAP']/@count">500</set>
+				<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltStone']/ingredient[@name='ammoCrossbowBoltStone']/@count">500</set>
+		</if>
+	</conditional>
+		
+
+</AGFVanillaPlus-SimplifiedStacks>
+
+

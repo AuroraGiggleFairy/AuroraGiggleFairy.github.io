@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build PlayerStatController Release",
+			"type": "shell",
+			"command": "msbuild",
+			"args": [
+				"EnhancedAGFSource/EnhancedAGF.sln",
+				"/p:Configuration=Release"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build and Deploy EnhancedAGF.dll",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"EnhancedAGF.csproj",
+				"-c",
+				"Release",
+				"&&",
+				"Copy-Item",
+				".\\Release\\EnhancedAGF.dll",
+				"'C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die - Copy\\Mods\\zzz-FranticDansHUDbyAGF\\EnhancedAGF.dll'",
+				"-Force"
+			],
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		}
+	]
+}

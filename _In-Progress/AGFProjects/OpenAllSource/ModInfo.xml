@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="OpenAll" />
+  <DisplayName value="Open All Standalone" />
+  <Description value="Adds an Open All action for eligible bundles with safety checks and toggle-stop behavior." />
+  <Author value="AGF" />
+  <Version value="1.0.0" />
+</xml>

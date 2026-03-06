@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="ScreamerAlert" />
+	<DisplayName value="Screamer Alert" />
+	<Version value="1.0.0" />
+	<Description value="Screamer Alert Messages, best with AGF HUD." />
+	<Author value="AuroraGiggleFairy (AGF)" /> 
+	<Website value="https://discord.gg/Vm5eyW6N4r"/>
+	<SkipWithAntiCheat value="true" />
+</xml>

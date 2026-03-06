@@ -1,0 +1,216 @@
+Key,Context,English
+esc_headerTitle,UI,"Twilight Realm"
+esc_headerMotto,UI,"An AuroraGiggleFairy 7d2d Server"
+esc_footer_discord_label,UI,"AGF's Discord"
+
+xuiSpawn,,"Enter the Realm!"
+xuiLeave,,"Run Away!"
+tabButtonTitle1,,"Welcome"
+tabTitle1,,"Welcome!!!"
+tabBody1,,"[ddcdfa]My name is [-][ffffff]AuroraGiggleFairy[-][ddcdfa] and welcome to my server!\n\nI created this server to have a fun space to play 7d2d and expand my abilities as a modder:\n  - making new mods, making mods work together, improving my mods... modding is life.\n\nBy joining my server you have essentially become my guinea pig! [-][ffffff]*Evil Laugh*[-][ddcdfa]\n\nMy biggest goal is to create an enjoyable 7d2d experience that is ever expanding!\n\nFeedback and suggestions are both [-][ffffff]WELCOMED[-][ddcdfa] and [-][ffffff]PIVOTAL[-][ddcdfa] for success!\n\nThis [-][ffffff]Server Information Window[-][ddcdfa] is available in game by pushing [-][ffffff]ESC[-][ddcdfa]. Hopefully you can find ALL The details you may need.\n\nPlease join my [-][ffffff]Discord[-][ddcdfa] as information and updates are shared there. [-][ffffff](Discord Link Above)[-]\n\n[ddcdfa]Again, welcome to my [-][8db580]Twilight Realm[-][ddcdfa]!\n\nHappy modding... erm... HUNTING... and Enjoy!\n\n     - [-][ffffff]AGF[-]"
+tabButtonTitle2,,"Rules"
+tabTitle2,,"Rules"
+tabBody2,,"[8db580]1.[-][ddcdfa] PvE ONLY, which means please respect people's builds, homes, and things.[-]\n\n[8db580]2.[-][ddcdfa] You ARE allowed to take over a POI as a base.\n\n[8db580]3.[-][ddcdfa] You may play with Twitch Integration, but please keep away from other people's things just in case.\n\n[8db580]4.[-][ddcdfa] Use the ally system with only people in your crew, and use passwords on all storages and doors.\n\n[8db580]5.[-][ddcdfa] Use your 5 landclaims and only use them on your territories.\n\n[8db580]6.[-][ddcdfa] RESIST giving things away for free! Make outsiders pay!!!\n\n[8db580]7.[-][ddcdfa] Any issues, please report to [-][ffffff]AuroraGiggleFairy[-][ddcdfa] directly in discord.[-][ffffff] (Discord Link Above)[-]"
+tabButtonTitle3,,"Etiquette"
+tabTitle3,,"Etiquette"
+tabBody3,,"[8db580]VISITING A TRADER?[-]\n [ddcdfa]- PLEASE keep the trader gates closed!!! Help keep trader areas safe.[-]\n\n [8db580]QUESTING WITH OTHERS?[-]\n [ddcdfa]- Unless quest owner states otherwise, owners get loot room and reading material.[-]\n\n [8db580]WANT TO AVOID BLOODMOON?[-]\n [ddcdfa]- If you are the only one online, please log off by noon before blood moon.[-]\n\n [8db580]USING SOMEONE'S BLOODMOON BASE?[-]\n [ddcdfa]- Unless base owner states otherwise, help repair and/or provide resources.[-]\n\n [8db580]FINISHED BLOODMOON WITH OTHERS?[-]\n [ddcdfa]- Unless player states otherwise, try sharing the loot bags evenly.[-]"
+tabButtonTitle4,,"Commands"
+tabTitle4,,"Commands"
+tabBody4,,"[8db580]/report[-][ddcdfa] an optional way to report a bug to AGF.\n[8db580]/loc[-][ddcdfa] to share your coordinates in chat.\n\nWant your name in a different color? Let AGF know!\n\nMore will become available soon."
+tabButtonTitle5,,"Game Settings"
+tabTitle5,,"Game Settings"
+tabBody5a,,"[8db580]BASICS:[-]\n[ddcdfa]Max Players at Once =[-] 30\n[ddcdfa]Game World =[-] Zenasa Valley\n[ddcdfa]Game Difficulty =[-] 3 (Warrior)\n\n[8db580]TIME:[-]\n[ddcdfa]24 Hour Cycle =[-] 120 Minutes\n[ddcdfa]Daylight Length =[-] 18 Hours\n[ddcdfa]Blood Moon Frequency =[-] 14 Days\n[ddcdfa]Loot Respawn Days =[-] 5\n[ddcdfa]Air Drops =[-] Daily (Map Marks On)\n\n[8db580]PLAYER:[-]\n[ddcdfa]Party Shared XP Kill Range =[-] 1,000M\n[ddcdfa]Camera Mode =[-] Any\n[ddcdfa]Player Killing =[-] No Killing\n[ddcdfa]Drop on Death =[-] Backpack Only\n[ddcdfa]Land Claim Count =[-] 5\n[ddcdfa]Land Claim Size =[-] 41 Blocks\n[ddcdfa]Land Claim Decay =[-] Only by Admin"
+tabBody5b,,"[8db580]WORLD:[-]\n[ddcdfa]Biome Progression =[-] On\n[ddcdfa]Storm Frequency =[-] 100%\n[ddcdfa]Daily Quest Limit =[-] Unlimited\n[ddcdfa]Jar Refund =[-] 80%\n[ddcdfa]Zombie Feral Sense =[-] OFF\n[ddcdfa]AI Smell Mode =[-] OFF\n[ddcdfa]Zombie Day Speed =[-] 0 (Walk)\n[ddcdfa]Zombie Night Speed =[-] 1 (Jog)\n[ddcdfa]Zombie Feral Speed =[-] 2 (Run)\n[ddcdfa]Zombie Blood Moon Speed =[-] 4 (Nightmare)\n\n[8db580]DEFAULTS:[-]\n[ddcdfa]XP Multipler =[-] 100%\n[ddcdfa]Player Block Damage =[-] 100%\n[ddcdfa]AI Block Damage =[-] 100%\n[ddcdfa]AI Blood Moon Block Damage =[-] 100%\n[ddcdfa]Loot Abundance =[-] 100%"
+tabButtonTitle6,,"Changes Log"
+tabTitle6,,"Changes Log"
+tabBody6,,"[8db580]02/08/2026[-]\n[ddcdfa]- Fixed the mod issue on the Thompson T3.\n- Other fixes.\n\n[8db580]02/06/2026[-]\n[ddcdfa]- FarmingPlus update: Replantable Seeds!\n\n[8db580]02/03/2026[-]\n[ddcdfa]- Added Server UI windows.\n- Foods from mod now stack to 50 instead of 25."
+tabButtonTitle7,,"Things to Know"
+tabTitle7,,"Things to Know"
+tabBody7,,"[8DB580]STABILITY LENS[-]\n[ddcdfa]- You can see the stability of your builds by checking [-][ffffff]'Show Stability'[-][ddcdfa].\n- The toggle button is on this page to the right of the title.[-]\n\n[8DB580]VEHICLE NOTES[-]\n[ddcdfa]- While on a vehicle, [-][ffffff]honking[-][ddcdfa] opens and closes doors and gates! ([-][ffffff]X[-][ddcdfa] on keyboard, [-][ffffff]LB[-][ddcdfa] on xbox controller)\n- Vanilla Vehicles have extra seating. (Up to 3 on the bikes, without seating expansion installed.)[-]\n\n[8DB580]TIME INFORMATION[-]\n[ddcdfa]- A full 24 hour day in game is 2 Real Life Hours.\n- 1 in game hour is approximately 5 Real Life Minutes.\n- Morning starts at 4.\n- Night starts at 22.\n\n[8DB580]OTHER[-]\n[ddcdfa]- Air Drops will spawn zombies... heeeheeeheee.\n[ddcdfa]- Can you get the [-][ffffff]Master Tool? [-][ddcdfa]*hint hint*\n- [-][ffffff]Purple Book[-][ddcdfa] will show you lots of information, including stuff from installed mods.\n     - Button is located on inventory screen at the top center, next to the crafting button\n- Trees, Crops, Farmplots, and Dew Collectors have a [-][ffffff]x5[-][ddcdfa] and [-][ffffff]x25[-][ddcdfa] version. (Not yet for the Apiary.)\n- Trader selling prices are REALLY high!\n- Use the [ffffff]Foundation Block[-][ddcdfa] to make a block flushed to terrain.[-]"
+tabButtonTitle8,,"Mod List"
+tabTitle8,,"Summarized Mod List"
+tabBody8a,,"[8db580]AGF -[-][ddcdfa] Giggle Pack[-]\n[8db580]Alter -[-][ddcdfa] Override Sounds[-]\n[8db580]Area88 -[-][ddcdfa] Honking Opens Gates/Doors[-]\n[8db580]BDub -[-][ddcdfa] Vehicles[-]\n[8db580]Closer_Ex -[-][ddcdfa] Custom FPV[-]\n[8db580]Closer_Ex -[-][ddcdfa] Custom Particle Loader[-]\n[8db580]Closer_Ex -[-][ddcdfa] Custom Player Action Manager[-]\n[8db580]Closer_Ex -[-][ddcdfa] FPV Legs[-]\n[8db580]Closer_Ex -[-][ddcdfa] Full Auto Launcher[-]\n[8db580]Closer_Ex -[-][ddcdfa] Keep Reloading[-]\n[8db580]DoubleG -[-][ddcdfa] Zombies[-]\n[8db580]Gazorper -[-][ddcdfa] Beyond Storage 2[-]\n[8db580]Ghostwalker71 -[-][ddcdfa] Foundation Block[-]\n[8db580]GrayedSilence -[-][ddcdfa] Cook Book[-]\n[8db580]Izayo -[-][ddcdfa] Weapon Mod Pack[-]\n[8db580]Little Red Sonja -[-][ddcdfa] Zombie Pack[-]"
+tabBody8b,,"[8db580]MPLogue -[-][ddcdfa] Better Biomes[-]\n[8db580]MPLogue -[-][ddcdfa] Urban Decay[-]\n[8db580]OCB -[-][ddcdfa] Server Tools[-]\n[8db580]OCB -[-][ddcdfa] Stop Fuel Waste[-]\n[8db580]Oakraven -[-][ddcdfa] Ammo Press[-]\n[8db580]Phys1csGamez -[-][ddcdfa] Massive Cities[-]\n[8db580]RedBeardt -[-][ddcdfa] Path Smoothing[-]\n[8db580]Westwud -[-][ddcdfa] Quick Stacks[-]\n[8db580]Wookie -[-][ddcdfa] 12 Slot Toolbelt[-]\n[8db580]Wookie -[-][ddcdfa] Airdrop Zombie Spawn[-]\n[8db580]Wookie -[-][ddcdfa] Gamestage Share Fix[-]\n[8db580]Wookie -[-][ddcdfa] Loot Respawn Indicator[-]\n[8db580]Wookie -[-][ddcdfa] Stop Bikes Falling Over[-]\n[8db580]Wookie -[-][ddcdfa] Vehicle Cruise Control[-]\n[8db580]Wookie -[-][ddcdfa] Vehicles Trigger Pressure Plates[-]\n[8db580]Wookie -[-][ddcdfa] Workstation Material Timer"
+
+
+esc_headerTitleHC,UI,"Twilight Realm"
+esc_headerMottoHC,UI,"An AuroraGiggleFairy 7d2d Server"
+esc_footer_discord_labelHC,UI,"AGF's Discord"
+tabButtonTitle1HC,,"Welcome"
+tabTitle1HC,,"Welcome!!!"
+tabBody1HC,,"[a8a8a8]My name is [-][ffffff]AuroraGiggleFairy[-][a8a8a8] and welcome to my server!\n\nI created this server to have a fun space to play 7d2d and expand my abilities as a modder:\n  - making new mods, making mods work together, improving my mods... modding is life.\n\nBy joining my server you have essentially become my guinea pig! [-][ffffff]*Evil Laugh*[-][a8a8a8]\n\nMy biggest goal is to create an enjoyable 7d2d experience that is ever expanding!\n\nFeedback and suggestions are both [-][ffffff]WELCOMED[-][a8a8a8] and [-][ffffff]PIVOTAL[-][a8a8a8] for success!\n\nThis [-][ffffff]Server Information Window[-][a8a8a8] is available in game by pushing [-][ffffff]ESC[-][a8a8a8]. Hopefully you can find ALL The details you may need.\n\nPlease join my [-][ffffff]Discord[-][a8a8a8] as information and updates are shared there. [-][ffffff](Discord Link Above)[-]\n\n[a8a8a8]Again, welcome to my [-][f0f0f0]Twilight Realm[-][a8a8a8]!\n\nHappy modding... erm... HUNTING... and Enjoy!\n\n     - [-][ffffff]AGF[-]"
+tabButtonTitle2HC,,"Rules"
+tabTitle2HC,,"Rules"
+tabBody2HC,,"[f0f0f0]1.[-][a8a8a8] PvE ONLY, which means please respect people's builds, homes, and things.[-]\n\n[f0f0f0]2.[-][a8a8a8] You ARE allowed to take over a POI as a base.\n\n[f0f0f0]3.[-][a8a8a8] You may play with Twitch Integration, but please keep away from other people's things just in case.\n\n[f0f0f0]4.[-][a8a8a8] Use the ally system with only people in your crew, and use passwords on all storages and doors.\n\n[f0f0f0]5.[-][a8a8a8] Use your 5 landclaims and only use them on your territories.\n\n[f0f0f0]6.[-][a8a8a8] RESIST giving things away for free! Make outsiders pay!!!\n\n[f0f0f0]7.[-][a8a8a8] Any issues, please report to [-][ffffff]AuroraGiggleFairy[-][a8a8a8] directly in discord.[-][ffffff] (Discord Link Above)[-]"
+tabButtonTitle3HC,,"Etiquette"
+tabTitle3HC,,"Etiquette"
+tabBody3HC,,"[f0f0f0]VISITING A TRADER?[-]\n [a8a8a8]- PLEASE keep the trader gates closed!!! Help keep trader areas safe.[-]\n\n [f0f0f0]QUESTING WITH OTHERS?[-]\n [a8a8a8]- Unless quest owner states otherwise, owners get loot room and reading material.[-]\n\n [f0f0f0]WANT TO AVOID BLOODMOON?[-]\n [a8a8a8]- If you are the only one online, please log off by noon before blood moon.[-]\n\n [f0f0f0]USING SOMEONE'S BLOODMOON BASE?[-]\n [a8a8a8]- Unless base owner states otherwise, help repair and/or provide resources.[-]\n\n [f0f0f0]FINISHED BLOODMOON WITH OTHERS?[-]\n [a8a8a8]- Unless player states otherwise, try sharing the loot bags evenly.[-]"
+tabButtonTitle4HC,,"Commands"
+tabTitle4HC,,"Commands"
+tabBody4HC,,"[f0f0f0]/report[-][a8a8a8] an optional way to report a bug to AGF.\n[f0f0f0]/loc[-][a8a8a8] to share your coordinates in chat.\n\nWant your name in a different color? Let AGF know!\n\nMore will become available soon."
+tabButtonTitle5HC,,"Game Settings"
+tabTitle5HC,,"Game Settings"
+tabBody5aHC,,"[f0f0f0]BASICS:[-]\n[a8a8a8]Max Players at Once =[-] 30\n[a8a8a8]Game World =[-] Zenasa Valley\n[a8a8a8]Game Difficulty =[-] 3 (Warrior)\n\n[f0f0f0]TIME:[-]\n[a8a8a8]24 Hour Cycle =[-] 120 Minutes\n[a8a8a8]Daylight Length =[-] 18 Hours\n[a8a8a8]Blood Moon Frequency =[-] 14 Days\n[a8a8a8]Loot Respawn Days =[-] 5\n[a8a8a8]Air Drops =[-] Daily (Map Marks On)\n\n[f0f0f0]PLAYER:[-]\n[a8a8a8]Party Shared XP Kill Range =[-] 1,000M\n[a8a8a8]Camera Mode =[-] Any\n[a8a8a8]Player Killing =[-] No Killing\n[a8a8a8]Drop on Death =[-] Backpack Only\n[a8a8a8]Land Claim Count =[-] 5\n[a8a8a8]Land Claim Size =[-] 41 Blocks\n[a8a8a8]Land Claim Decay =[-] Only by Admin"
+tabBody5bHC,,"[f0f0f0]WORLD:[-]\n[a8a8a8]Biome Progression =[-] On\n[a8a8a8]Storm Frequency =[-] 100%\n[a8a8a8]Daily Quest Limit =[-] Unlimited\n[a8a8a8]Jar Refund =[-] 80%\n[a8a8a8]Zombie Feral Sense =[-] OFF\n[a8a8a8]AI Smell Mode =[-] OFF\n[a8a8a8]Zombie Day Speed =[-] 0 (Walk)\n[a8a8a8]Zombie Night Speed =[-] 1 (Jog)\n[a8a8a8]Zombie Feral Speed =[-] 2 (Run)\n[a8a8a8]Zombie Blood Moon Speed =[-] 4 (Nightmare)\n\n[f0f0f0]DEFAULTS:[-]\n[a8a8a8]XP Multipler =[-] 100%\n[a8a8a8]Player Block Damage =[-] 100%\n[a8a8a8]AI Block Damage =[-] 100%\n[a8a8a8]AI Blood Moon Block Damage =[-] 100%\n[a8a8a8]Loot Abundance =[-] 100%"
+tabButtonTitle6HC,,"Changes Log"
+tabTitle6HC,,"Changes Log"
+tabBody6HC,,"[f0f0f0]02/03/2026[-]\n[a8a8a8]- Added Server UI windows.\n- Foods from mod now stack to 50 instead of 25."
+tabButtonTitle7HC,,"Things to Know"
+tabTitle7HC,,"Things to Know"
+tabBody7HC,,"[f0f0f0]STABILITY LENS[-]\n[a8a8a8]- You can see the stability of your builds by checking [-][ffffff]'Show Stability'[-][a8a8a8].\n- The toggle button is on this page to the right of the title.[-]\n\n[f0f0f0]VEHICLE NOTES[-]\n[a8a8a8]- While on a vehicle, [-][ffffff]honking[-][a8a8a8] opens and closes doors and gates! ([-][ffffff]X[-][a8a8a8] on keyboard, [-][ffffff]LB[-][a8a8a8] on xbox controller)\n- Vanilla Vehicles have extra seating. (Up to 3 on the bikes, without seating expansion installed.)[-]\n\n[f0f0f0]TIME INFORMATION[-]\n[a8a8a8]- A full 24 hour day in game is 2 Real Life Hours.\n- 1 in game hour is approximately 5 Real Life Minutes.\n- Morning starts at 4.\n- Night starts at 22.\n\n[f0f0f0]OTHER[-]\n[a8a8a8]- Air Drops will spawn zombies... heeeheeeheee.\n[a8a8a8]- Can you get the [-][ffffff]Master Tool? [-][a8a8a8]*hint hint*\n- [-][ffffff]Purple Book[-][a8a8a8] will show you lots of information, including stuff from installed mods.\n     - Button is located on inventory screen at the top center, next to the crafting button\n- Trees, Crops, Farmplots, and Dew Collectors have a [-][ffffff]x5[-][a8a8a8] and [-][ffffff]x25[-][a8a8a8] version. (Not yet for the Apiary.)\n- Trader selling prices are REALLY high!\n- Use the [ffffff]Foundation Block[-][a8a8a8] to make a block flushed to terrain.[-]"
+tabButtonTitle8HC,,"Mod List"
+tabTitle8HC,,"Summarized Mod List"
+tabBody8aHC,,"[f0f0f0]AGF -[-][a8a8a8] Giggle Pack[-]\n[f0f0f0]Alter -[-][a8a8a8] Override Sounds[-]\n[f0f0f0]Area88 -[-][a8a8a8] Honking Opens Gates/Doors[-]\n[f0f0f0]BDub -[-][a8a8a8] Vehicles[-]\n[f0f0f0]Closer_Ex -[-][a8a8a8] Custom FPV[-]\n[f0f0f0]Closer_Ex -[-][a8a8a8] Custom Particle Loader[-]\n[f0f0f0]Closer_Ex -[-][a8a8a8] Custom Player Action Manager[-]\n[f0f0f0]Closer_Ex -[-][a8a8a8] FPV Legs[-]\n[f0f0f0]Closer_Ex -[-][a8a8a8] Full Auto Launcher[-]\n[f0f0f0]Closer_Ex -[-][a8a8a8] Keep Reloading[-]\n[f0f0f0]DoubleG -[-][a8a8a8] Zombies[-]\n[f0f0f0]Gazorper -[-][a8a8a8] Beyond Storage 2[-]\n[f0f0f0]Ghostwalker71 -[-][a8a8a8] Foundation Block[-]\n[f0f0f0]GrayedSilence -[-][a8a8a8] Cook Book[-]\n[f0f0f0]Izayo -[-][a8a8a8] Weapon Mod Pack[-]\n[f0f0f0]Little Red Sonja -[-][a8a8a8] Zombie Pack[-]"
+tabBody8bHC,,"[f0f0f0]MPLogue -[-][a8a8a8] Better Biomes[-]\n[f0f0f0]MPLogue -[-][a8a8a8] Urban Decay[-]\n[f0f0f0]OCB -[-][a8a8a8] Server Tools[-]\n[f0f0f0]OCB -[-][a8a8a8] Stop Fuel Waste[-]\n[f0f0f0]Oakraven -[-][a8a8a8] Ammo Press[-]\n[f0f0f0]Phys1csGamez -[-][a8a8a8] Massive Cities[-]\n[f0f0f0]RedBeardt -[-][a8a8a8] Path Smoothing[-]\n[f0f0f0]Westwud -[-][a8a8a8] Quick Stacks[-]\n[f0f0f0]Wookie -[-][a8a8a8] 12 Slot Toolbelt[-]\n[f0f0f0]Wookie -[-][a8a8a8] Airdrop Zombie Spawn[-]\n[f0f0f0]Wookie -[-][a8a8a8] Gamestage Share Fix[-]\n[f0f0f0]Wookie -[-][a8a8a8] Loot Respawn Indicator[-]\n[f0f0f0]Wookie -[-][a8a8a8] Stop Bikes Falling Over[-]\n[f0f0f0]Wookie -[-][a8a8a8] Vehicle Cruise Control[-]\n[f0f0f0]Wookie -[-][a8a8a8] Vehicles Trigger Pressure Plates[-]\n[f0f0f0]Wookie -[-][a8a8a8] Workstation Material Timer"
+
+
+
+
+
+
+
+[8db580]BASICS:[-]\n
+[ddcdfa]Max Players at Once =[-] 30\n
+[ddcdfa]Game World =[-] Zenasa Valley\n
+[ddcdfa]Game Difficulty =[-] 3 (Warrior)\n\n
+
+[8db580]TIME:[-]\n
+[ddcdfa]24 Hour Cycle =[-] 120 Minutes\n
+[ddcdfa]Daylight Length =[-] 18 Hours\n
+[ddcdfa]Blood Moon Frequency =[-] 14 Days\n
+[ddcdfa]Loot Respawn Days =[-] 5\n
+[ddcdfa]Air Drops =[-] Daily (Map Marks On)\n\n
+
+[8db580]PLAYER:[-]\n
+[ddcdfa]Party Shared XP Kill Range =[-] 1,000M\n
+[ddcdfa]Camera Mode =[-] Any\n
+[ddcdfa]Player Killing =[-] No Killing\n
+[ddcdfa]Drop on Death =[-] Backpack Only\n
+[ddcdfa]Land Claim Count =[-] 5\n
+[ddcdfa]Land Claim Size =[-] 41 Blocks\n
+[ddcdfa]Land Claim Decay =[-] Only by Admin\n\n
+
+[8db580]WORLD:[-]\n
+[ddcdfa]Biome Progression =[-] On\n
+[ddcdfa]Storm Frequency =[-] 100%\n
+[ddcdfa]Daily Quest Limit =[-] Unlimited\n
+[ddcdfa]Jar Refund =[-] 80%\n
+[ddcdfa]Zombie Feral Sense =[-] OFF\n
+[ddcdfa]AI Smell Mode =[-] OFF\n
+[ddcdfa]Zombie Day Speed =[-] 0 (Walk)\n
+[ddcdfa]Zombie Night Speed =[-] 1 (Jog)\n
+[ddcdfa]Zombie Feral Speed =[-] 2 (Run)\n
+[ddcdfa]Zombie Blood Moon Speed =[-] 4 (Nightmare)\n\n
+
+[8db580]DEFAULTS:[-]\n
+[ddcdfa]XP Multipler =[-] 100%\n
+[ddcdfa]Player Block Damage =[-] 100%\n
+[ddcdfa]AI Block Damage =[-] 100%\n
+[ddcdfa]AI Blood Moon Block Damage =[-] 100%\n
+[ddcdfa]Loot Abundance =[-] 100%\n
+
+
+
+
+[8db580]VISITING A TRADER?[-]\n
+[ddcdfa]- PLEASE keep the trader gates closed!!! Help keep trader areas safe.[-]\n\n
+
+[8db580]QUESTING WITH OTHERS?[-]\n
+[ddcdfa]- Unless quest owner states otherwise, owners get loot room and reading material.[-]\n\n
+
+[8db580]WANT TO AVOID BLOODMOON?[-]\n
+[ddcdfa]- If you are the only one on, please log off by noon before blood moon.[-]\n\n
+
+[8db580]USING SOMEONE'S BLOODMOON BASE?[-]\n
+[ddcdfa]- Unless base owner states otherwise, help repair and/or provide resources.[-]\n\n
+
+[8db580]FINISHED BLOODMOON WITH OTHERS?[-]\n
+[ddcdfa]- Unless player states otherwise, try sharing the loot bags evenly.[-]
+
+[8db580]VISITING A TRADER?[-]\n [ddcdfa]- PLEASE keep the trader gates closed!!! Help keep trader areas safe.[-]\n\n [8db580]QUESTING WITH OTHERS?[-]\n [ddcdfa]- Unless quest owner states otherwise, owners get loot room and reading material.[-]\n\n [8db580]WANT TO AVOID BLOODMOON?[-]\n [ddcdfa]- If you are the only one on, please log off by noon before blood moon.[-]\n\n [8db580]USING SOMEONE'S BLOODMOON BASE?[-]\n [ddcdfa]- Unless base owner states otherwise, help repair and/or provide resources.[-]\n\n [8db580]FINISHED BLOODMOON WITH OTHERS?[-]\n [ddcdfa]- Unless player states otherwise, try sharing the loot bags evenly.[-]
+
+
+
+
+
+
+[8db580]AGF -[-][ddcdfa] Giggle Pack[-]\n
+[8db580]Alter -[-][ddcdfa] Override Sounds[-]\n
+[8db580]Area88 -[-][ddcdfa] Honking Opens Gates/Doors[-]\n
+[8db580]BDub -[-][ddcdfa] Vehicles[-]\n
+[8db580]Closer_Ex -[-][ddcdfa] Custom FPV[-]\n
+[8db580]Closer_Ex -[-][ddcdfa] Custom Particle Loader[-]\n
+[8db580]Closer_Ex -[-][ddcdfa] Custom Player Action Manager[-]\n
+[8db580]Closer_Ex -[-][ddcdfa] FPV Legs[-]\n
+[8db580]Closer_Ex -[-][ddcdfa] Full Auto Launcher[-]\n
+[8db580]Closer_Ex -[-][ddcdfa] Keep Reloading[-]\n
+[8db580]DoubleG -[-][ddcdfa] Zombies[-]\n
+[8db580]Gazorper -[-][ddcdfa] Beyond Storage 2[-]\n
+[8db580]Ghostwalker71 -[-][ddcdfa] Foundation Block[-]\n
+[8db580]GrayedSilence -[-][ddcdfa] Cook Book[-]\n
+[8db580]Izayo -[-][ddcdfa] Weapon Mod Pack[-]\n
+[8db580]Izayo -[-][ddcdfa] Weapon Mod Pack[-]\n
+[8db580]Izayo -[-][ddcdfa] Weapon Mod Pack[-]\n
+[8db580]Little Red Sonja -[-][ddcdfa] Zombie Pack[-]
+
+
+[8db580]MPLogue -[-][ddcdfa] Better Biomes[-]\n
+[8db580]MPLogue -[-][ddcdfa] Urban Decay[-]\n
+[8db580]OCB -[-][ddcdfa] Server Tools[-]\n
+[8db580]OCB -[-][ddcdfa] Stop Fuel Waste[-]\n
+[8db580]Oakraven -[-][ddcdfa] Ammo Press[-]\n
+[8db580]Phys1csGamez -[-][ddcdfa] Massive Cities[-]\n
+[8db580]RedBeardt -[-][ddcdfa] Path Smoothing[-]\n
+[8db580]Westwud -[-][ddcdfa] Quick Stacks[-]\n
+[8db580]Wookie -[-][ddcdfa] 12 Slot Toolbelt[-]\n
+[8db580]Wookie -[-][ddcdfa] Airdrop Zombie Spawn[-]\n
+[8db580]Wookie -[-][ddcdfa] Gamestage Share Fix[-]\n
+[8db580]Wookie -[-][ddcdfa] Loot Respawn Indicator[-]\n
+[8db580]Wookie -[-][ddcdfa] Stop Bikes Falling Over[-]\n
+[8db580]Wookie -[-][ddcdfa] Vehicle Cruise Control[-]\n
+[8db580]Wookie -[-][ddcdfa] Vehicles Trigger Pressure Plates[-]\n
+[8db580]Wookie -[-][ddcdfa] Workstation Material Timer
+
+
+[8db580]AGF -[-][ddcdfa] Giggle Pack[-]\n[8db580]Alter -[-][ddcdfa] Override Sounds[-]\n[8db580]Area88 -[-][ddcdfa] Honking Opens Gates/Doors[-]\n[8db580]BDub -[-][ddcdfa] Vehicles[-]\n[8db580]Closer_Ex -[-][ddcdfa] Custom FPV[-]\n[8db580]Closer_Ex -[-][ddcdfa] Custom Particle Loader[-]\n[8db580]Closer_Ex -[-][ddcdfa] Custom Player Action Manager[-]\n[8db580]Closer_Ex -[-][ddcdfa] FPV Legs[-]\n[8db580]Closer_Ex -[-][ddcdfa] Full Auto Launcher[-]\n[8db580]Closer_Ex -[-][ddcdfa] Keep Reloading[-]\n[8db580]DoubleG -[-][ddcdfa] Zombies[-]\n[8db580]Gazorper -[-][ddcdfa] Beyond Storage 2[-]\n[8db580]Ghostwalker71 -[-][ddcdfa] Foundation Block[-]\n[8db580]GrayedSilence -[-][ddcdfa] Cook Book[-]\n[8db580]Izayo -[-][ddcdfa] Weapon Mod Pack[-]\n[8db580]Little Red Sonja -[-][ddcdfa] Zombie Pack[-]\n
+[8db580]MPLogue -[-][ddcdfa] Better Biomes[-]\n[8db580]MPLogue -[-][ddcdfa] Urban Decay[-]\n[8db580]OCB -[-][ddcdfa] Server Tools[-]\n[8db580]OCB -[-][ddcdfa] Stop Fuel Waste[-]\n[8db580]Oakraven -[-][ddcdfa] Ammo Press[-]\n[8db580]Phys1csGamez -[-][ddcdfa] Massive Cities[-]\n[8db580]RedBeardt -[-][ddcdfa] Path Smoothing[-]\n[8db580]Westwud -[-][ddcdfa] Quick Stacks[-]\n[8db580]Wookie -[-][ddcdfa] 12 Slot Toolbelt[-]\n[8db580]Wookie -[-][ddcdfa] Airdrop Zombie Spawn[-]\n[8db580]Wookie -[-][ddcdfa] Gamestage Share Fix[-]\n[8db580]Wookie -[-][ddcdfa] Loot Respawn Indicator[-]\n[8db580]Wookie -[-][ddcdfa] Stop Bikes Falling Over[-]\n[8db580]Wookie -[-][ddcdfa] Vehicle Cruise Control[-]\n[8db580]Wookie -[-][ddcdfa] Vehicles Trigger Pressure Plates[-]\n[8db580]Wookie -[-][ddcdfa] Workstation Material Timer
+
+
+
+
+
+
+Things to Know:
+
+
+[8DB580]STABILITY LENS[-]\n
+[ddcdfa]You can see the stability of your builds by checking [-][8DB580]'Show Stability'[-][ddcdfa].\n
+The toggle button is on this page to the right of the title.[-]\n\n
+
+[8DB580]VEHICLE NOTES[-]\n
+[ddcdfa]While on a vehicle, [-][8DB580]honking[-][ddcdfa] opens and closes doors and gates! ([-][8DB580]X[-][ddcdfa] on keyboard, [-][8DB580]LB[-][ddcdfa] on xbox controller)\n
+Vanilla Vehicles have extra seating. (Up to 3 on the bikes, without seating expansion installed.)[-]\n\n
+
+[8DB580]TIME INFORMATION[-]\n
+[ddcdfa]A full 24 hour day in game is 2 Real Life Hours.\n
+1 in game hour is approximately 5 Real Life Minutes.\n
+Morning starts at 4.\n
+Night starts at 22.\n\n
+
+[8DB580]OTHER[-]\n
+[ddcdfa]Air Drops will spawn zombies... [-][8DB580]heeeheeeheee.[-]\n
+[ddcdfa]Can you get the Master Tool? [-][8DB580]*hint hint*[-]\n
+[8DB580]Purple Book[-][ddcdfa] will show you lots of information, including for stuff from installed mods.\n
+-(Button is located on inventory screen at the top center, next to the crafting button)\n
+Trees, Crops, Farmplants, and Drew Collectors have a x5 and x25 version. (Not yet for the Apiary.)\n
+Trader's selling prices are REALLY high!\n
+Use the [8DB580]Foundation Block[-][ddcdfa] to make a block flushed to terrain.
+
+
+
+[8DB580]STABILITY LENS[-]\n[ddcdfa]You can see the stability of your builds by checking [-][8DB580]'Show Stability'[-][ddcdfa].\nThe toggle button is on this page to the right of the title.[-]\n\n[8DB580]VEHICLE NOTES[-]\n[ddcdfa]While on a vehicle, [-][8DB580]honking[-][ddcdfa] opens and closes doors and gates! ([-][8DB580]X[-][ddcdfa] on keyboard, [-][8DB580]LB[-][ddcdfa] on xbox controller)\nVanilla Vehicles have extra seating. (Up to 3 on the bikes, without seating expansion installed.)[-]\n\n[8DB580]TIME INFORMATION[-]\n[ddcdfa]A full 24 hour day in game is 2 Real Life Hours.\n1 in game hour is approximately 5 Real Life Minutes.\nMorning starts at 4.\nNight starts at 22.\n\n[8DB580]OTHER[-]\n[ddcdfa]Air Drops will spawn zombies... [-][8DB580]heeeheeeheee.[-]\n[ddcdfa]Can you get the Master Tool? [-][8DB580]*hint hint*[-]\n[8DB580]Purple Book[-][ddcdfa] will show you lots of information, including for stuff from installed mods.\n-(Button is located on inventory screen at the top center, next to the crafting button)\nTrees, Crops, Farmplants, and Drew Collectors have a x5 and x25 version. (Not yet for the Apiary.)\nTrader's selling prices are REALLY high!
+
+xuiScreamerAlertsToggle,,"Screamer Alerts"
+
+
+

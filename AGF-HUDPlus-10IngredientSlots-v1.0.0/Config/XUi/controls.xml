@@ -1,0 +1,48 @@
+<AGF-V2-HUDPlus-10IngredientSlots>
+
+	<set xpath="/controls/ingredient_header/rect/@height">33</set>
+	<set xpath="/controls/ingredient_header/rect/rect/@height">32</set>
+	<setattribute xpath="/controls/ingredient_header/rect/rect[@width='65']" name="pos">0,7</setattribute>
+	<set xpath="/controls/ingredient_header/rect/rect[@width='140']/@width">142</set>
+	<set xpath="/controls/ingredient_header/rect/rect/sprite[@name='backgroundMain']/@height">37</set>
+	<set xpath="/controls/ingredient_header/rect/rect/label/@height">32</set>
+	<set xpath="/controls/ingredient_header/rect/rect/label[@text='ITEM']/@pos">32,-16</set>
+	<set xpath="/controls/ingredient_header/rect/rect/label[@text='NAME']/@pos">117,-16</set>
+	<set xpath="/controls/ingredient_header/rect/rect/label[@text='COUNT']/@pos">70,-16</set>
+	
+	
+	<set xpath="/controls/ingredient_row/rect/@height">25</set>
+	<set xpath="/controls/ingredient_row/rect/rect/@height">24</set>
+	<set xpath="/controls/ingredient_row/rect/rect/sprite[@name='backgroundMain']/@height">29</set>
+	<set xpath="/controls/ingredient_row/rect/rect/sprite[@name='icon']/@height">20</set>
+	<set xpath="/controls/ingredient_row/rect/rect/sprite[@name='icon']/@width">20</set>
+	<set xpath="/controls/ingredient_row/rect/rect/sprite[@name='icon']/@pos">30,-13</set>
+	<set xpath="/controls/ingredient_row/rect/rect/label[@name='name']/@pos">117,-14</set>
+	<set xpath="/controls/ingredient_row/rect/rect/label[@name='needCount']/@pos">70,-14</set>
+	<set xpath="/controls/ingredient_row/rect/rect/label/@height">24</set>
+	
+		
+	
+	
+<conditional>
+	<if cond="mod_loaded('AGF-V2-Backpack60Plus') == 'true' or mod_loaded('AGF-V2-Backpack72Plus') == 'true' or mod_loaded('AGF-V2-Backpack84Plus') == 'true'">
+		<set xpath="/controls/ingredient_header/rect/rect[@width='308']/@pos">68,7</set>
+		<set xpath="/controls/ingredient_header/rect/rect[@pos='379,0']/@pos">379,7</set>		
+		<set xpath="/controls/ingredient_header/rect/rect/label[@text='NAME']/@pos">154,-16</set>
+		<set xpath="/controls/ingredient_row/rect/rect/label[@name='name']/@pos">154,-14</set>
+	</if>
+	<else>
+		<set xpath="/controls/ingredient_header/rect/rect[@width='236']/@pos">68,7</set>
+		<set xpath="/controls/ingredient_header/rect/rect[@pos='307,0']/@pos">307,7</set>		
+		<set xpath="/controls/ingredient_header/rect/rect/label[@text='NAME']/@pos">117,-16</set>
+		<set xpath="/controls/ingredient_row/rect/rect/label[@name='name']/@pos">117,-14</set>
+	</else>
+
+</conditional>	
+	
+	
+	
+	
+	
+	
+</AGF-V2-HUDPlus-10IngredientSlots>

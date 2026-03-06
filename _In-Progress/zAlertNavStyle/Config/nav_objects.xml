@@ -1,0 +1,147 @@
+<configs>
+	<append xpath="/nav_object_classes">
+		<nav_object_class name="ZAzombie">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAbandit">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_run_and_gun"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="20"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAbear">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_bear"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAchicken">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_chicken"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAdeer">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_deer"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZArabbit">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_rabbit"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAwolf">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAcoyote">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAmountainlion">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_mountain_lion"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAvulture">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_bat"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAdog">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAsnake">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_snake"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+		<nav_object_class name="ZAboar">
+			<property name="requirement_type" value="Tracking" />
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_tracking_pig"/>
+				<property name="min_distance" value="2"/>
+				<property name="max_distance" value="25"/>
+				<property name="color" value="255,0,0,255"/>
+				<property name="has_pulse" value="true"/>
+				<property name="icon_clamped" value="false"/>
+			</compass_settings>
+		</nav_object_class>
+	</append>
+</configs>

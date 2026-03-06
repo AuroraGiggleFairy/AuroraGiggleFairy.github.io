@@ -1,0 +1,25 @@
+<AGFVanillaPlus-MedicallyTreatOthers>
+
+<!--The code already has methods of removing previously treated injuries?! But is blocked by the requirement under the action1 section?!
+Oh, but not if an injury was splinted.... just casted.
+
+I see the requirement issue here. Hmm...-->
+<!--
+
+	<remove xpath="/items/item[@name='medicalPlasterCast']/property[@class='Action1']/requirement"/>
+
+	<append xpath="/items/item[@name='medicalPlasterCast']/property[@class='Action1']">
+		<requirements compare_type="or">
+			<requirement name="HasBuff" buff="buffLegSprained"/>
+			<requirement name="HasBuff" buff="buffLegBroken"/>
+			<requirement name="HasBuff" buff="buffLegSplinted"/>
+			<requirement name="HasBuff" buff="buffLegCast"/>
+			<requirement name="HasBuff" buff="buffArmSprained"/>
+			<requirement name="HasBuff" buff="buffArmBroken"/>
+			<requirement name="HasBuff" buff="buffArmSplinted"/>
+			<requirement name="HasBuff" buff="buffArmCast"/>
+		</requirements>	
+	</append>
+-->
+
+</AGFVanillaPlus-MedicallyTreatOthers>

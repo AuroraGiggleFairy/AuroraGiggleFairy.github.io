@@ -1,0 +1,19 @@
+<AGF-WriteStoryOnCrate>
+
+
+	<set xpath="/windows/window[@name='windowSignEditMultiline']/@height">266</set>
+	<set xpath="/windows/window[@name='windowSignEditMultiline']/rect[@name='content']/sprite[@name='backgroundMain']/@height">217</set>
+	<set xpath="/windows/window[@name='windowSignEditMultiline']/rect[@name='content']/@height">217</set>
+	<set xpath="/windows/window[@name='windowSignEditMultiline']/rect[@name='content']/textfield/@character_limit">307</set>
+	<set xpath="/windows/window[@name='windowSignEditMultiline']/rect[@name='content']/textfield/@height">205</set>
+	
+	
+	
+	<set xpath="/windows/window[@name='windowSignEditMultiline']/rect[@name='btnClose']/@pos">0,-261</set>
+
+
+
+	
+</AGF-WriteStoryOnCrate>
+
+

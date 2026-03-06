@@ -1,0 +1,3 @@
+namespace Platform;
+
+public delegate void MappedAccountReverseQueryCallback(MappedAccountQueryResult _result, PlatformUserIdentifierAbs _platformId);

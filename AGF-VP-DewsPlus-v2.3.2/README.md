@@ -1,0 +1,125 @@
+VanillaPlus - DewsPlus
+7d2d Version 2 - v2.4.0
+
+______________________________________________________________________________________________________________________
+README TABLE OF CONTENTS
+1. About Author
+2. Mod Philosophy
+3. Installation and Removal Notes
+4. Features
+5. Change Log
+
+_____________________________________________________________________________________________________________________
+1.  ABOUT AUTHOR
+	-My name is AuroraGiggleFairy (AGF), previously known as RilesPlus
+	-Started playing 7d2d during Alpha 12
+	-Started attempting to mod in Alpha 17
+	-First published a mod during Alpha 18
+	-Where to find:
+		https://discord.gg/Vm5eyW6N4r
+		https://auroragigglefairy.github.io/
+		https://www.twitch.tv/AuroraGiggleFairy
+		https://7daystodiemods.com/
+		https://www.nexusmods.com/7daystodie
+
+______________________________________________________________________________________________________________________
+2.  MOD PHILOSOPHY
+	-Preferably easy installation and use!
+	-Goal: Enhance Vanilla Gameplay!
+	-Feedback and Testing is Beneficial!
+	-Detailed Notes for Individual Preference and Mod Learning!
+	-Full Language Support (best I can.)
+		
+	"The best mods rely on community involvement."
+
+______________________________________________________________________________________________________________________
+3.  INSTALLATION and REMOVAL NOTES
+	*First, if you run into any conflicts, you may contact AuroraGiggleFairy via discord: https://discord.gg/Vm5eyW6N4r
+		-All questions welcome from newcombers to seasoned 7d2d people.
+
+	-This is a server-side mod, meaning this mod can be installed on JUST the server and will work automatically for joining players.
+	-Works with EAC on or off.
+	-All 14 languages supported
+	
+	-DewsPlus is SAFE to install on new game or existing game.
+	-DewsPlus is DANGEROUS to remove from an existing game.
+
+______________________________________________________________________________________________________________________
+4.  FEATURES
+
+- Compile 5 dew collectors into 1 that acts like 5 (or 25).
+- Dew Collectors are now sized 2x2 instead of 3x3
+- Heat production is removed.
+- Safe for existing games and easy conversion of original 3x3 to 2x2.
+  - Place down any old 3x3.
+  - Break them and you will get the new 2x2.
+  - This method prevents invisible and untouchable blocks around old dew collectors.
+- If you have 500 jugs, you can open all of them in the crafting menu.
+
+______________________________________________________________________________________________________________________
+5.  CHANGELOG
+v2.4.0
+- Updated for 7d2d version 2.6.
+- Now has x5 and x25 versions of the tools that go into the dew collector.
+- Naming scheme update.
+- Updated README format
+
+v2.3.2
+- A bulk crafting and open was missing a digit. Only gaining 250 water instead of 2,500.
+
+v2.3.1
+-updated for 2.5
+-dew collectors craft at workbench.
+
+v2.3.0
+-Removed HEAT production on all dew collectors.
+-Added a x25 version!
+-Increased the bundle stack sizes of the larger water bundles from 50 to 500.
+
+v2.2.1
+-Breaking a x5 dew collector returns it to your hands, just like the regular one.
+
+v2.2.0
+-Will now only apply purple book edits if you have my purple book installed.
+
+v2.1.0
+-If you have 50 jugs, you can open all of them in the crafting menu.
+
+v2.0.3
+-updated for 7d2d Version 2
+
+v2.0.2
+-changed the bulk murky water icon to be consistent
+-gave this icon a murky water color-ish
+
+v2.0.1
+-corrected the Challenge of placing a dew collector.
+
+v2.0.0
+-Updated for V1.0
+-New method of x5 due to tools for dews
+
+v1.1.4
+-Added in windows.xml to make sure the dew collector is the correct name on the schematic list.
+-Fixed the sorting of the dew collector types.
+-Made the x5 dew collector unlock with the regular one.
+
+v1.1.3
+-Corrected the name of what gets unlocked for Dew Collector's under progression.xml.
+-Removed the "third" recipe for a dew collector that was unintentionally there.
+
+V1.1.2
+-Added the number "5" to the icon type.
+
+v1.1.1
+-Fixed the recipe to the correct x5 dew collector.
+
+v1.1.0
+-Dew collectors now 2x2, except the old ones, which if you destroy, you get the 2x2 version.
+-changed mod name to DewsPlus
+
+v1.0.0
+-Created the mod.
+
+
+	

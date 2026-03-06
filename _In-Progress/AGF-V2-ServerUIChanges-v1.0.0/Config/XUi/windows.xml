@@ -1,0 +1,28 @@
+<AGF-ServerUIChanges>
+
+	<remove xpath="/windows/window[@name='serverjoinrulesdialog']"/>
+	<append xpath="/windows">
+		<window name="serverjoinrulesdialog" anchor="CenterCenter" depth="400" pos="-450,300" width="900" height="600" controller="ServerJoinRulesDialog" cursor_area="true">
+			<panel name="header" pos="0,0" height="43" depth="1" disableautobackground="true" >
+				<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" height="43" color="[black]" type="sliced" fillcenter="true" globalopacity="false" />
+				<label style="header.name" pos="6,-6" text_key="xuiServerJoinRulesDialog" />
+			</panel>
+			<panel name="content" pos="0,-46" height="500" depth="1" pivot="center" disableautobackground="true" >
+				<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="false" />
+				<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="496" width="896" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="false"/>
+
+				<label name="labelConfirmationText" pos="10,-10" width="880" height="480" depth="2" />
+			</panel>
+
+			<grid depth="2" rows="1" cols="2" pos="590, -550" height="32" cell_width="160" cell_height="32" repeat_content="false" arrangement="horizontal">
+				<simplebutton name="btnLeave" depth="3" width="150" height="32" caption_key="xuiLeave" />
+				<simplebutton name="btnSpawn" depth="3" width="150" height="32" caption_key="xuiSpawn" />
+			</grid>
+		</window>		
+	</append>
+	
+
+
+</AGF-ServerUIChanges>
+
+

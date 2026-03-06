@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="ConsoleOpacityMod"/>
+	<DisplayName value="AGF Configurable console background opacity"/>
+	<Version value="1.0.0"/>
+	<Description value="In the configs folder, you can change F1 opacity.."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

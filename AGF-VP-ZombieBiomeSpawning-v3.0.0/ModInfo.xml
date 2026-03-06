@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-V2-VP-ZombieBiomeSpawning"/>
+	<DisplayName value="AGF Zombie Biome Spawning"/>
+	<Version value="3.0.0"/>
+	<Description value="For newcomers and pros, in a progressive fashion, biomes go from easy to nightmarish, especially at night."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

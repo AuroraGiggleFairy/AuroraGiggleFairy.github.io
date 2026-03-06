@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-V2-VP-StayLongerPlayerBackpack"/>
+	<DisplayName value="AGF Stay Longer Player Backpack"/>
+	<Version value="2.0.1"/>
+	<Description value="Player's Backpack disappear after 5 hours instead of 1."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

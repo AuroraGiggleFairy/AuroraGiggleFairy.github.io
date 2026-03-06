@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+    <Name value="AGF-V2-XPDeathPenaltyReduction" /> 
+    <DisplayName value="AGF XP Death Penalty Reduction." /> 
+    <Version value="2.0.0" /> 
+    <Description value="XP Death Penalty 10 instead of 25." /> 
+    <Author value="AuroraGiggleFairy (AGF)" /> 
+   	<Website value="https://discord.gg/Vm5eyW6N4r"/>
+</xml>

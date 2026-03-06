@@ -1,0 +1,20 @@
+name: Update Mod List
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Run Update Script
+        run: python update_mods.py
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add README.md
+          git commit -m "Auto-update mod list" || echo "No changes to commit"
+          git push

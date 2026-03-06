@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\bin\Release\net48\StormTracker.dll
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\bin\Release\net48\StormTracker.pdb
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\obj\Release\net48\StormTracker.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\obj\Release\net48\StormTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\obj\Release\net48\StormTracker.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\obj\Release\net48\StormTracker.dll
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\StormTracker\obj\Release\net48\StormTracker.pdb

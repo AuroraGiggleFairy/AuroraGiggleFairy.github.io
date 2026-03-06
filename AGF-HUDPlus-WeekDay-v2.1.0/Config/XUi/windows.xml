@@ -1,0 +1,46 @@
+<AGF-HUDPlus-Weekday>
+	<!--Thanks to DragonTander, we now can easily add days of the week!-->
+	<conditional>
+		<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+			<conditional>
+				<if cond="mod_loaded('AGF-V2-HUDPlus-1Main') and mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == false">
+					<!--Uses my HUD and IS NOT using the NoDayCount-->
+					<set xpath="/windows/window[@name='windowCompass']/rect[@name='hud']/label[@name='daycounter']/@text">[{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]</set>
+				</if>
+				<if cond="mod_loaded('AGF-V2-HUDPlus-1Main') and mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == true and mod_loaded('AGF-V2-HUDPlus-BMCounter-KeepDayCount') == true">
+					<set xpath="/windows/window[@name='windowCompass']/rect[@name='hud']/label[@name='daycounter']/@text">[{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]</set>
+				</if>
+				<if cond="mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == true and mod_loaded('AGF-V2-HUDPlus-BMCounter-KeepDayCount') == true">
+					<!--In case someone installs both, KeepDayCount is default-->
+					<set xpath="/windows/window[@name='windowCompass']/sprite/label[@text='{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}']/@text">{daytitle}: [{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]     {timetitle}: {time}[-]</set>
+				</if>
+				<if cond="mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == false">
+					<!--Using Vanilla Settings, also allows for KeepDayCount-->
+					<set xpath="/windows/window[@name='windowCompass']/sprite/label[@text='{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}']/@text">{daytitle}: [{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]     {timetitle}: {time}[-]</set>
+				</if>
+			</conditional>
+		</if>
+		
+		<if cond="game_version() &gt;= version(1,2,5)">
+		<conditional>
+			<if cond="mod_loaded('AGF-V2-HUDPlus-1Main') and mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == false">
+				<!--Uses my HUD and IS NOT using the NoDayCount-->
+				<set xpath="/windows/window[@name='windowCompass']/rect[@name='hud']/label[@text='[{daycolor}]{day}']/@text">[{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]</set>
+			</if>
+			<if cond="mod_loaded('AGF-V2-HUDPlus-1Main') and mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == true and mod_loaded('AGF-V2-HUDPlus-BMCounter-KeepDayCount') == true">
+				<!--Uses my HUD and accidently have both KeepDay and NoDayCount-->
+				<set xpath="/windows/window[@name='windowCompass']/rect[@name='hud']/label[@text='[{daycolor}]{day}']/@text">[{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]</set>
+			</if>
+			<if cond="mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == true and mod_loaded('AGF-V2-HUDPlus-BMCounter-KeepDayCount') == true">
+				<!--In case someone installs both, KeepDayCount is default-->
+				<set xpath="/windows/window[@name='windowCompass']/sprite/label[@text='{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]']/@text">{daytitle}: [{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]</set>
+			</if>
+			<if cond="mod_loaded('AGF-V2-HUDPlus-BMCounter-NoDayCount') == false">
+				<!--Using Vanilla Settings, also allows for KeepDayCount-->
+				<set xpath="/windows/window[@name='windowCompass']/sprite/label[@text='{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]']/@text">{daytitle}: [{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]</set>
+			</if>
+			</conditional>
+		</if>
+		
+	</conditional>
+</AGF-HUDPlus-Weekday>

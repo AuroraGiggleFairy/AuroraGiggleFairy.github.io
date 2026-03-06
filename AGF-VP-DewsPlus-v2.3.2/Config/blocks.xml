@@ -1,0 +1,140 @@
+<AGFVanillaPlus-DewsPlus>
+
+
+	<!--Did NOT change the original dew collector size.
+		Created a new one to replace the existing one.
+		This makes applying this mod to an existing save safe.-->
+	<remove xpath="/blocks/block[@name='cntDewCollector']/property[@name='HeatMapStrength']"/>
+	<remove xpath="/blocks/block[@name='cntDewCollector']/property[@name='HeatMapTime']"/>
+	<remove xpath="/blocks/block[@name='cntDewCollector']/property[@name='HeatMapFrequency']"/>
+		
+		
+		
+	<append xpath="/blocks">
+		<block name="cntDewCollectorAGF">
+			<property name="Extends" value="cntDewCollector"/>	
+			<property name="CustomIcon" value="cntDewCollector"/>		
+			<property name="MultiBlockDim" value="2,3,2"/><!--Changes the size-->
+		</block>
+	</append>
+
+
+
+
+
+	<conditional>
+		<if cond="game_version() &lt; version(2,6,0)">		
+			<!--The x5 version-->
+			<append xpath="/blocks">
+				<block name="cntDewCollectorAGFx5">	
+					<property name="Extends" value="cntDewCollectorAGF"/>	
+					<property name="CustomIcon" value="cntDewCollector"/>
+					<property name="CustomIconTint" value="fc8403"/>
+					<property name="TintColor" value="fc8403"/>		
+					<property name="ConvertToItem" value="drinkJarRiverWaterx5"/>
+					<property name="ModdedConvertToItem" value="drinkJarBoiledWaterx5"/>		
+					<property name="EconomicValue" value="25"/><!--x5-->		
+					<property name="NoScrapping" value="true"/><!--I added this.-->		
+					<property name="MaxDamage" value="1000"/><!--x5-->
+					<property class="RepairItems">
+						<property name="resourceScrapPolymers" value="250"/><!--x5-->
+					</property>
+					<dropextendsoff/>
+					<drop event="Destroy" name="cntDewCollectorAGFx5" count="1"/>
+					<drop event="Fall" name="cntDewCollectorAGFx5" count="1" prob="0.9" stick_chance="1"/>		
+					<property name="SortOrder1" value="B281"/>
+					<property name="SortOrder2" value="0102"/>	
+					<property name="RequiredMods" value="toolDewGathererx5,toolDewTarpx5,toolDewFilterx5"/>
+					<property name="FuelTypes" value="5,5,drinkJarEmpty"/>
+				</block>
+			</append>
+			<!--The x25 version-->
+			<append xpath="/blocks">
+				<block name="cntDewCollectorAGFx25">	
+					<property name="Extends" value="cntDewCollectorAGF"/>	
+					<property name="CustomIcon" value="cntDewCollector"/>
+					<property name="CustomIconTint" value="a502db"/>
+					<property name="TintColor" value="a502db"/>		
+					<property name="ConvertToItem" value="drinkJarRiverWaterx25"/>
+					<property name="ModdedConvertToItem" value="drinkJarBoiledWaterx25"/>		
+					<property name="EconomicValue" value="25"/><!--x5-->		
+					<property name="NoScrapping" value="true"/><!--I added this.-->		
+					<property name="MaxDamage" value="5000"/><!--x5-->
+					<property class="RepairItems">
+						<property name="resourceScrapPolymers" value="1250"/><!--x5-->
+					</property>
+					<dropextendsoff/>
+					<drop event="Destroy" name="cntDewCollectorAGFx25" count="1"/>
+					<drop event="Fall" name="cntDewCollectorAGFx25" count="1" prob="0.9" stick_chance="1"/>		
+					<property name="SortOrder1" value="B281"/>
+					<property name="SortOrder2" value="0103"/>
+					<property name="RequiredMods" value="toolDewGathererx25,toolDewTarpx25,toolDewFilterx25"/>
+					<property name="FuelTypes" value="25,25,drinkJarEmpty"/>
+				</block>
+			</append>
+
+			<!--Makes older version destroyable into the new one!
+				Removes existing harvesting potential as well.-->	
+			<remove xpath="/blocks/block[@name='cntDewCollector']/drop"/>
+			<append xpath="/blocks/block[@name='cntDewCollector']">
+				<drop event="Destroy" name="cntDewCollectorAGF" count="1"/>
+				<drop event="Fall" name="cntDewCollectorAGF" count="1" prob="0.9" stick_chance="1"/>
+			</append>
+		</if>
+		<if cond="game_version() &lt; version(2,6,0)">
+		<!--The x5 version-->
+			<append xpath="/blocks">
+				<block name="cntDewCollectorAGFx5">	
+					<property name="Extends" value="cntDewCollectorAGF"/>	
+					<property name="CustomIcon" value="cntDewCollector"/>
+					<property name="CustomIconTint" value="fc8403"/>
+					<property name="TintColor" value="fc8403"/>		
+					<property name="ConvertToItem" value="drinkJarRiverWaterx5"/>
+					<property name="ModdedConvertToItem" value="drinkJarBoiledWaterx5"/>		
+					<property name="EconomicValue" value="25"/><!--x5-->		
+					<property name="NoScrapping" value="true"/><!--I added this.-->		
+					<property name="MaxDamage" value="1000"/><!--x5-->
+					<property class="RepairItems">
+						<property name="resourceScrapPolymers" value="250"/><!--x5-->
+					</property>
+					<dropextendsoff/>
+					<drop event="Destroy" name="cntDewCollectorAGFx5" count="1"/>
+					<drop event="Fall" name="cntDewCollectorAGFx5" count="1" prob="0.9" stick_chance="1"/>		
+					<property name="SortOrder1" value="B281"/>
+					<property name="SortOrder2" value="0102"/>
+				</block>
+			</append>
+			<!--The x25 version-->
+			<append xpath="/blocks">
+				<block name="cntDewCollectorAGFx25">	
+					<property name="Extends" value="cntDewCollectorAGF"/>	
+					<property name="CustomIcon" value="cntDewCollector"/>
+					<property name="CustomIconTint" value="a502db"/>
+					<property name="TintColor" value="a502db"/>		
+					<property name="ConvertToItem" value="drinkJarRiverWaterx25"/>
+					<property name="ModdedConvertToItem" value="drinkJarBoiledWaterx25"/>		
+					<property name="EconomicValue" value="25"/><!--x5-->		
+					<property name="NoScrapping" value="true"/><!--I added this.-->		
+					<property name="MaxDamage" value="5000"/><!--x5-->
+					<property class="RepairItems">
+						<property name="resourceScrapPolymers" value="1250"/><!--x5-->
+					</property>
+					<dropextendsoff/>
+					<drop event="Destroy" name="cntDewCollectorAGFx25" count="1"/>
+					<drop event="Fall" name="cntDewCollectorAGFx25" count="1" prob="0.9" stick_chance="1"/>		
+					<property name="SortOrder1" value="B281"/>
+					<property name="SortOrder2" value="0103"/>
+				</block>
+			</append>	
+	
+	
+	
+	
+	
+	
+	
+	
+		</if>
+	</conditional>
+
+</AGFVanillaPlus-DewsPlus>
