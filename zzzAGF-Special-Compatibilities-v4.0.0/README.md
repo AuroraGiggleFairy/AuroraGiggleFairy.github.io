@@ -1,6 +1,6 @@
-# AGF Pickup Lanterns Plus
+# AGF Compatibilities
 7d2d Version 2  
-**Version:** 2.0.1
+**Version:** 4.0.0
 
 ---
 
@@ -85,26 +85,53 @@
 
 ## 7. Features
 <!-- FEATURES START -->
-- Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
-  - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
-  - Lanterns are removed from loot and trader lists as you can just pick them up.
+- This is a compatibility patch for mods that affect any of AGF's, most commonly:
+  - HUDPlus
+  - PurpleBook
+  - RenamesforAlphabeticalSort
+  - SimplifiedStackSizes
+  - AmmoDisassembly
+  - RebundleBundles
+- This mod determines if you have the conflicting ones installed before applying changes.
+- More can be added as requested.
+- Language support was added to:
+  - BDub's Vehicles
+  - IZY's Weapons
+  - GS Vanilla Cook Book
+- Current Compatibility List:
+  - Dewtas' 18 slot toolbelt
+  - Khaine's 15 slot toolbelt
+  - Wookie's 12 slot toolbelt
+  - RecipeStatsTab
+  - BDub's Vehicles
+  - IZY's Weapons
+  - MoreQuests
+  - Oakraven Ammo PRess
+  - GSVanillaCookBook
 <!-- FEATURES END -->
 
 ---
 
 ## 8. Changelog
 <!-- CHANGELOG START -->
-v2.0.1
-- Updated for 7d2d V2
+v4.0.0
+- Renamed to be AGF V2 Compatibilities, as it encompasses more than my HUD.
+- Updated README and Coding organization.
+- Added RecipeStatsTab compatibility.
+- Added BDubs and Izayo's weapons compatibility.
+- Had to add 2 z's to folder and mod name.
+- Compatibility with MoreQuests mod.
+- Gave full language support localization for BDUBs.
+- Gave significant language support to Izy's Weapons.
+- Compatibility with Oakraven Ammo PRess
+- Compatibility between Oakraven Ammo PRess and Izy
+
+v.3.0.0
+- Set up conditionals so this single patch can account for multiple other hud mods out there.
 
 v2.0.0
-- Updated for V1.0
-- Adjusted for the new "player" owned old lanterns
-- Removed extra recipe
-- Removed lanterns from loot and trader lists
+- Updated for 7d2d Version 2.
 
-v1.2.0
-- Updated readme to my new format.
-- Made the flashlights and lanterns the same block variant.
-- Updated the lantern varient block localization to include "flashlights" in all languages.
+v1.0.0
+- Made the mod.
 <!-- CHANGELOG END -->

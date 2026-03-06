@@ -1,6 +1,6 @@
-# AGF Pickup Lanterns Plus
+# {{MOD_NAME}}
 7d2d Version 2  
-**Version:** 2.0.1
+**Version:** {{MOD_VERSION}}
 
 ---
 
@@ -85,26 +85,12 @@
 
 ## 7. Features
 <!-- FEATURES START -->
-- Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
-  - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
-  - Lanterns are removed from loot and trader lists as you can just pick them up.
+[Add or keep features here. Automation should preserve this section.]
 <!-- FEATURES END -->
 
 ---
 
 ## 8. Changelog
 <!-- CHANGELOG START -->
-v2.0.1
-- Updated for 7d2d V2
-
-v2.0.0
-- Updated for V1.0
-- Adjusted for the new "player" owned old lanterns
-- Removed extra recipe
-- Removed lanterns from loot and trader lists
-
-v1.2.0
-- Updated readme to my new format.
-- Made the flashlights and lanterns the same block variant.
-- Updated the lantern varient block localization to include "flashlights" in all languages.
+[Add or keep changelog entries here. Automation should preserve this section.]
 <!-- CHANGELOG END -->

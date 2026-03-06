@@ -1,75 +1,96 @@
-AGF Modified - SortingBox
-7d2d Version 2 - v1.0.4
+# AGF Sorting Box
+7d2d Version 2  
+**Version:** 1.0.4
 
-AGF Renamed to SortingBox
-Permission is Granted, credits below.
+---
 
-AGF Changelog:
-v1.0.4
-- The sort of storages respects locked slots.
+## README TABLE OF CONTENTS
+1. About Author
+2. Mod Philosophy
+3. Need Help?
+4. Compatibility
+5. Installation
+6. Removal
+7. Features
+8. Changelog
 
-v1.0.3
-- Added to ignore it when EAC is loaded.
+---
 
-v1.0.2
-- Thanks to Asylum for the .dll update.
-- Increased size of the sorting box's storage depending on using one of my backpacks or not.
+## 1. About Author
+- My name is AuroraGiggleFairy (AGF), previously known as RilesPlus
+- Started playing 7d2d during Alpha 8
+- Started attempting to mod in Alpha 17
+- First published a mod during Alpha 18
+- Where to find:
+  - https://discord.gg/Vm5eyW6N4r
+  - https://auroragigglefairy.github.io/
+  - https://www.twitch.tv/AuroraGiggleFairy
+  - https://7daystodiemods.com/
+  - https://www.nexusmods.com/7daystodie
 
-v1.0.1
--Fix for sorting boxes ignoring the locked slots of storages.
+---
 
-===============================================================================
-                           ASYLUM ROBOTIC INBOX MOD
-===============================================================================
+## 2. Mod Philosophy
+- Preferably easy installation and use!
+- Goal: Enhance Vanilla Gameplay!
+- Feedback and Testing is Beneficial!
+- Detailed Notes for Individual Preference and Mod Learning!
+- Accessibility is Required
+- All 13 Languages Supported (best I can.)
 
-WHAT IT DOES:
-The Asylum Robotic Inbox is a special container that automatically sorts and 
-distributes items to other nearby storage containers. Simply place items in 
-the Robotic Inbox and it will automatically move them to containers that 
-already contain similar items.
+> "The best mods rely on community involvement."
 
-MAIN FEATURES:
-- Automatic item sorting to nearby containers (25-meter radius by default)
-- Respects lock states and passwords
-- Follows land claim boundaries
-- Multiple color variants available
-- Repairable locks if broken
-- Works with all player-placed storage containers
+---
 
-HOW TO GET A ROBOTIC INBOX:
-1. Craft one with Forged Iron
+## 3. Need Help?
+- AuroraGiggleFairy is available via Discord: https://discord.gg/Vm5eyW6N4r
+- All questions welcome from newcomers and seasoned players alike.
 
-HOW TO USE:
-1. Place a Robotic Inbox near your storage containers
-2. Put items in the Robotic Inbox
-3. Items automatically move to containers that already contain the same type
-4. Items that can't be sorted stay in the inbox for manual placement
-5. Hold Action Key to lock/unlock or set password
+---
 
-SECURITY RULES:
-- Locked inboxes only distribute to locked containers with same password
-- Unlocked inboxes only distribute to unlocked containers
-- Won't move items outside your land claim area
-- Ignores backpacks, vehicles, and non-player storage
+## 4. Compatibility
+- EAC Friendly: 
+- Server Side: 
+- Client Required for Multiplayer: 
 
-ADMIN CONFIGURATION COMMANDS:
-- ri horizontal-range <number> - Set scanning width (default: 5, max: 128)
-- ri vertical-range <number> - Set scanning height (default: 5, max: 253)
-- ri success-notice-time <seconds> - Success message duration (default: 2.0)
-- ri blocked-notice-time <seconds> - Blocked message duration (default: 3.0)
-- ri base-siphoning-protection true/false - Land claim protection (default: true)
-- ri debug true/false - Toggle debug logging
-- help roboticinbox - Show all available commands
+---
 
-COMPATIBILITY:
-- Works on Dedicated Servers (EAC can stay enabled)
-- Works on Single Player and P2P (host must disable EAC)
-- Can be added to existing maps without issues
+## 5. Installation
 
-CREDITS:
-Original mod by Jonathan Robertson (Kanaverum)
-Updated for Asylum Mods v2.0 with permission from original author
-Maintained by Asylum Mods
-Modified by AuroraGiggleFairy
+### Safe to install on existing games: 
 
-===============================================================================
+### Client
+- Open "Run" (press Windows key + R)
+- Type %appdata% and click OK
+- Open the "Roaming" folder
+- Open "7DaysToDie"
+- Open or create the "Mods" folder
+- Extract the mod here
+- Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+### Server
+- Use your server host’s file manager or a program like FileZilla
+- Find the main server folder and open the "Mods" folder
+- Extract the mod here
+- Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+---
+
+## 6. Removal
+
+### Safe to remove from an existing game: 
+- Simply locate the mod folder and delete it.
+
+---
+
+## 7. Features
+<!-- FEATURES START -->
+
+<!-- FEATURES END -->
+
+---
+
+## 8. Changelog
+<!-- CHANGELOG START -->
+
+<!-- CHANGELOG END -->

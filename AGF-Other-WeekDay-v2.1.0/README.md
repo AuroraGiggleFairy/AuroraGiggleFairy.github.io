@@ -1,6 +1,6 @@
-# AGF Pickup Lanterns Plus
+# AGF HUD Plus - Weekday
 7d2d Version 2  
-**Version:** 2.0.1
+**Version:** 2.1.0
 
 ---
 
@@ -85,26 +85,26 @@
 
 ## 7. Features
 <!-- FEATURES START -->
-- Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
-  - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
-  - Lanterns are removed from loot and trader lists as you can just pick them up.
+- DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
+  - DragonTander gave me permission to use this freely.
+  - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
+  - Works Standalone
 <!-- FEATURES END -->
 
 ---
 
 ## 8. Changelog
 <!-- CHANGELOG START -->
-v2.0.1
-- Updated for 7d2d V2
+v2.1.0
+- Updated for 7d2d version 2.5 (still works with previous versions)
 
 v2.0.0
-- Updated for V1.0
-- Adjusted for the new "player" owned old lanterns
-- Removed extra recipe
-- Removed lanterns from loot and trader lists
+- restructured to account for working standalone or with my HUD.
+- Utilizes conditional operations for other HUDPlus features.
 
-v1.2.0
-- Updated readme to my new format.
-- Made the flashlights and lanterns the same block variant.
-- Updated the lantern varient block localization to include "flashlights" in all languages.
+v1.1.0
+- renamed from Calendar to Weekday
+
+v1.0.0
+- Just made it... Thanks DragonTander!!!
 <!-- CHANGELOG END -->

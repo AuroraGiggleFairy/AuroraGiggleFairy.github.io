@@ -30,4 +30,9 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ### **Where do I install the mods?**
 > Details I don't have yet.
 
+# UNDER CONSTRUCTION but EVERYTHING IS THERE.
+> *refinning of descriptions incoming
+> *This is all due to new automation features
+
+
 <!-- MOD_LIST_START -->

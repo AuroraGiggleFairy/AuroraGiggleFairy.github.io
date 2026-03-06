@@ -1,6 +1,6 @@
-# AGF Pickup Lanterns Plus
+# AGF 60 Slot Backpack
 7d2d Version 2  
-**Version:** 2.0.1
+**Version:** 3.2.0
 
 ---
 
@@ -85,26 +85,50 @@
 
 ## 7. Features
 <!-- FEATURES START -->
-- Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
-  - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
-  - Lanterns are removed from loot and trader lists as you can just pick them up.
+- Visual size of inventory is the same as vanilla - as in no shrinking required.
+  - 60 Slot Backpack, with 3 rows of encumbrance slots (30 slots).
+  - Accounts for packmule, buffs, twitch integration, and mobility.
+  - PackMule does free up all 30 slots.
+  - Lockable slots that is EASY to tell what is locked and what isn't.
+  - Adds a craftable larger storage of wood/iron/steel, slots of 60/80/100.
+  - Large storages are variant blocks with multiple shapes to choose from.
+  - Breaking a larger storage returns it to your inventory.
 <!-- FEATURES END -->
 
 ---
 
 ## 8. Changelog
 <!-- CHANGELOG START -->
-v2.0.1
-- Updated for 7d2d V2
+v3.2.0
+- Updated to work with version 2.5.
 
-v2.0.0
-- Updated for V1.0
-- Adjusted for the new "player" owned old lanterns
-- Removed extra recipe
-- Removed lanterns from loot and trader lists
+v3.1.0
+- When you break an insecure large storage, the block itself (not items inside) return to your inventory.
+- Added several more block shape options.
+- Updated Localization
 
-v1.2.0
-- Updated readme to my new format.
-- Made the flashlights and lanterns the same block variant.
-- Updated the lantern varient block localization to include "flashlights" in all languages.
+v3.0.0
+- Now utilizing conditionals in coding for this mod to work with both versions 2.1 and 2.2+.
+- DO NOT ROLLBACK VERSIONS though, that will cause errors.
+
+v2.4.0
+- Updated for 7d2d version 2.2
+- Lockable slots share same style across backpack, storages, and vehicles.
+
+v2.3.2
+- updated packmule localization again for value changes.
+
+v2.3.1
+- Updated PackMule Localization
+
+v2.3.0
+- Updated to V2.
+- Updated the path to access block shapes with V2 version.
+- Skipped all the other versions to match current.
+
+v1.0.1
+- Fixed inventory border height.
+
+v1.0.0
+- created the mod based on my v1 mods for backpack84 slots.
 <!-- CHANGELOG END -->
