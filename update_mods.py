@@ -121,9 +121,11 @@ def get_mod_summary(folder):
     summary = f"---\n### **{name}**\n"
     if description:
         summary += f"*{description}*\n"
+    # Markdown table for version and download link (no 'Direct')
+    summary += f"\n| Version: {version} | [Download]({download_link}) |\n|---|---|\n"
     # Ensure a true blank line after the features list
     formatted_features = formatted_features.rstrip() + "\n<br>\n<br>\n"
-    summary += f"\n**Version:** {version}  \n[**Download**]({download_link})\n\n{formatted_features}"
+    summary += f"\n{formatted_features}"
     return summary
 
 with open('MOD_README_TEMPLATE.md', 'r', encoding='utf-8') as f:
