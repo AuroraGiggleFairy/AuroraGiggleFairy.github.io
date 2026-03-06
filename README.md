@@ -30,182 +30,11 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ### **Where do I install the mods?**
 > Details I don't have yet.
 
-<!-- MOD_LIST_START -->
----
+# UNDER CONSTRUCTION but EVERYTHING IS THERE.
+> *refinning of descriptions incoming
+> *This is all due to new automation features
 
-### **AGF-HUDPlus-10IngredientSlots-v1.0.0**
 
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-10IngredientSlots-v1.0.0.zip)
-
--Increases the ingredients list from 5 to 10 slots.
-	-Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
-
----
-
-### **AGF-HUDPlus-1Main-v5.3.2**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-1Main-v5.3.2.zip)
-
--Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
-	-Lockable slots have easy visuals.
-	-Wider and accurate compass with a center mark.
-	-Lowered toolbelt for backpack mod compatibility and added slot numbers.
-	-Improved readability of the chat output when sending and receiving messages.
-	-Map information moved to its own section next to the map with labels.
-		-Added in Map information Outdoor Temperature
-		-Used the Coat icon to represent Feels Like Temp
-		-Used the temperature icon for Outdoor Temp
-	-Crafting and burning times adjusted for easier viewing.
-	-Date, Time and Skulls displayed on all menus.
-	-Viewing quest selections made easier with improved background, color, and poi_names.
-	-Simple color coordination of interactive blocks or npcs.
-	-5 crafting slots positioned evenly.
-	-Read schematics / magazines / books have read book icon of slight transparency and green
-	
-	-Now checks from a server point of view if someone has the client side installed, they get those benefits as well
-
----
-
-### **AGF-HUDPlus-BMCounter-v2.1.2**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-BMCounter-v2.1.2.zip)
-
--This adds a blood moon countdown under the compass.
-	-Currently works with these Blood Moon fixed frequencies:
-		-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30, 60
-	-If the frequency or bloodmoon range is different than the above, the mod will not apply.
-
----
-
-### **AGF-HUDPlus-Backpack119-v1.2.1**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-Backpack119-v1.2.1.zip)
-
--119 Slot Backpack, with 3 rows of encumbrance  slots (68 slots)
-	-Updated encumbrance slots, buffs, twith interaction and perks. 
-	-PackMule does free up all 68 slots.
-	-Mobility is in sync with vanilla.
-	-Lockable slots that is EASY to tell what is locked and what isn't.
-	-Adds a craftable larger storage of wood/iron/steel, slots of 120/144/168.
-	-Large storages are variant blocks with multiple shapes to choose from.
-	-Breaking a larger storage returns it to your inventory.
-	
-	*Some overlap of UI may occur as this is a LARGE backpack. You can modify UI zoom in game menu if you wish.*
-
----
-
-### **AGF-HUDPlus-Backpack60-v3.2.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-Backpack60-v3.2.0.zip)
-
--Visual size of inventory is the same as vanilla - as in no shrinking required.
-	-60 Slot Backpack, with 3 rows of encumbrance slots (30 slots).
-	-Accounts for packmule, buffs, twitch integration, and mobility.
-	-PackMule does free up all 30 slots.
-	-Lockable slots that is EASY to tell what is locked and what isn't.
-	-Adds a craftable larger storage of wood/iron/steel, slots of 60/80/100.
-	-Large storages are variant blocks with multiple shapes to choose from.
-	-Breaking a larger storage returns it to your inventory.
-
----
-
-### **AGF-HUDPlus-Backpack72-v3.2.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-Backpack72-v3.2.0.zip)
-
--72 Slot Backpack, with 3 rows of encumbrance  slots (36 slots)
-	-Updated encumbrance slots, buffs, twith interaction and perks. 
-	-PackMule does free up all 36 slots.
-	-Mobility is in sync with vanilla.
-	-Lockable slots that is EASY to tell what is locked and what isn't.
-	-Adds a craftable larger storage of wood/iron/steel, slots of 120/144/168.
-	-Large storages are variant blocks with multiple shapes to choose from.
-	-Breaking a larger storage returns it to your inventory.
-
----
-
-### **AGF-HUDPlus-Backpack84-v3.2.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-Backpack84-v3.2.0.zip)
-
--84 Slot Backpack, with 3 rows of encumbrance  slots (36 slots)
-	-Updated encumbrance slots, buffs, twith interaction and perks. 
-	-PackMule does free up all 36 slots.
-	-Mobility is in sync with vanilla.
-	-Lockable slots that is EASY to tell what is locked and what isn't.
-	-Adds a craftable larger storage of wood/iron/steel, slots of 120/144/168.
-	-Large storages are variant blocks with multiple shapes to choose from.
-	-Breaking a larger storage returns it to your inventory.
-
----
-
-### **AGF-HUDPlus-HealthBars-v4.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-HealthBars-v4.0.0.zip)
-
--Adds enemy health bars with an AGF style.
-
----
-
-### **AGF-HUDPlus-PurpleBook-v2.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-PurpleBook-v2.0.0.zip)
-
-- Works standalone from HUDPlus-1Main
-- A purple book icon that opens up Details on one page (With Zooming Option)!
-	- Magazine unlocks
-	- Books
-	- Unlocks from Schematics/Books
-	- Armor Details
-
----
-
-### **AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-RemoveEnteringPopUp-v1.0.0.zip)
-
--Removes the pop-ups of poi names when you enter new areas.
-
----
-
-### **AGF-HUDPlus-RemoveWrittenStormAlerts-v1.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-RemoveWrittenStormAlerts-v1.0.0.zip)
-
--Removes the written weather alerts that pop-up when a storm is coming.
-
----
-
-### **AGF-HUDPlus-SmallerInteractionPrompt-v1.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-SmallerInteractionPrompt-v1.0.0.zip)
-
-- Just configurable font size for interaction prompts
-
----
-
-### **AGF-HUDPlus-TinyBuffsPopUp-v1.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-TinyBuffsPopUp-v1.0.0.zip)
-
--Shrinks the buff pop ups by half.
-
----
-
-### **AGF-HUDPlus-WeekDay-v2.1.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-HUDPlus-WeekDay-v2.1.0.zip)
-
--DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
-		-DragonTander gave me permission to use this freely.
-	-Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
-	-Works Standalone
-
----
-
-### **AGF-NoEAC-ConsoleOpacityMod-v1.0.0**
-
-**Version:** v0.0.0 | [**Direct Download**](https://github.comAGF-NoEAC-ConsoleOpacityMod-v1.0.0.zip)
 
 
 # Mod List
@@ -396,7 +225,29 @@ Download all Special mods in one ZIP (contains all mods):
 **Version:** 4.0.0  
 [**Download**](https://github.com/AuroraGiggleFairy/zzzAGF-Special-Compatibilities-v4.0.0/archive/refs/heads/main.zip)
 
-- _No features listed._
+- This is a compatibility patch for mods that affect any of AGF's, most commonly:
+- HUDPlus
+- PurpleBook
+- RenamesforAlphabeticalSort
+- SimplifiedStackSizes
+- AmmoDisassembly
+- RebundleBundles
+- This mod determines if you have the conflicting ones installed before applying changes.
+- More can be added as requested.
+- Language support was added to:
+- BDub's Vehicles
+- IZY's Weapons
+- GS Vanilla Cook Book
+- Current Compatibility List:
+- Dewtas' 18 slot toolbelt
+- Khaine's 15 slot toolbelt
+- Wookie's 12 slot toolbelt
+- RecipeStatsTab
+- BDub's Vehicles
+- IZY's Weapons
+- MoreQuests
+- Oakraven Ammo PRess
+- GSVanillaCookBook
 <br>
 <br>
 
