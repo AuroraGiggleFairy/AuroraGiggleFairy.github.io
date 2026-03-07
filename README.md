@@ -41,18 +41,18 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 
 ## Giggle Pack
 Download all mods in one ZIP:
-[**Download All Mods (Giggle Pack)**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All Mods (Giggle Pack)**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)
 
 
 ## HUDPlus Mods
 Download all HUDPlus mods in one ZIP (contains all mods):
-[**Download All HUDPlus Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All HUDPlus Mods**](https://AuroraGiggleFairy.github.io/zips/HUDPlus_All.zip)
 
 ---
 ### **AGF HUD Plus - Main**
 *QOL HUD with lots of features.*
 
-| Version: 5.3.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-HUDPlus-1Main-v5.3.2/archive/refs/heads/main.zip) |
+| Version: 5.3.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-1Main-v5.3.2.zip) |
 |---|---|
 
 - Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
@@ -79,7 +79,7 @@ Download all HUDPlus mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - Adds BM countdown**
 *Adds BM countdown for non-varied BM frequency.*
 
-| Version: 2.1.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-HUDPlus-BMCounter-v2.1.2/archive/refs/heads/main.zip) |
+| Version: 2.1.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-BMCounter-v2.1.2.zip) |
 |---|---|
 
 - This adds a blood moon countdown under the compass.
@@ -94,7 +94,7 @@ Download all HUDPlus mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - Health Bars**
 *Shows enemy health bars.*
 
-| Version: 4.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-HUDPlus-HealthBars-v4.0.0/archive/refs/heads/main.zip) |
+| Version: 4.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-HealthBars-v4.0.0.zip) |
 |---|---|
 
 - Adds enemy health bars with an AGF style.
@@ -106,7 +106,7 @@ Download all HUDPlus mods in one ZIP (contains all mods):
 ### **AGF HUDPlus Purple Book**
 *Purple Book for easier visuals of crafting info.*
 
-| Version: 1.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-HUDPlus-PurpleBook-v2.0.0/archive/refs/heads/main.zip) |
+| Version: 1.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-PurpleBook-v2.0.0.zip) |
 |---|---|
 
 - Works standalone from HUDPlus-1Main
@@ -123,7 +123,7 @@ Download all HUDPlus mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - Removes Entering Popups**
 *Removes the Entering Popups of poi's.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0.zip) |
 |---|---|
 
 - Removes the pop-ups of poi names when you enter new areas.
@@ -134,13 +134,13 @@ Download all HUDPlus mods in one ZIP (contains all mods):
 
 ## BackpackPlus Mods
 Download all BackpackPlus mods in one ZIP (contains all mods):
-[**Download All BackpackPlus Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All BackpackPlus Mods**](https://AuroraGiggleFairy.github.io/zips/BackpackPlus_All.zip)
 
 ---
 ### **AGF 120-1 (119) Slot Backpack**
 *120-1 (119) slot backpack and extra large storage options.*
 
-| Version: 1.2.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-BackpackPlus-119Slots-v1.2.1/archive/refs/heads/main.zip) |
+| Version: 1.2.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-119Slots-v1.2.1.zip) |
 |---|---|
 
 - 119 Slot Backpack, with 3 rows of encumbrance  slots (68 slots)
@@ -160,7 +160,7 @@ Download all BackpackPlus mods in one ZIP (contains all mods):
 ### **AGF 60 Slot Backpack**
 *60 slot backpack and extra large storage options.*
 
-| Version: 3.2.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-BackpackPlus-60Slots-v3.2.0/archive/refs/heads/main.zip) |
+| Version: 3.2.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-60Slots-v3.2.0.zip) |
 |---|---|
 
 - Visual size of inventory is the same as vanilla - as in no shrinking required.
@@ -179,7 +179,7 @@ Download all BackpackPlus mods in one ZIP (contains all mods):
 ### **AGF 72 Slot Backpack**
 *72 slot backpack and extra large storage options.*
 
-| Version: 3.2.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-BackpackPlus-72Slots-v3.2.0/archive/refs/heads/main.zip) |
+| Version: 3.2.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-72Slots-v3.2.0.zip) |
 |---|---|
 
 - 72 Slot Backpack, with 3 rows of encumbrance  slots (36 slots)
@@ -198,7 +198,7 @@ Download all BackpackPlus mods in one ZIP (contains all mods):
 ### **AGF 84 Slot Backpack**
 *84 slot backpack and extra large storage options.*
 
-| Version: 3.2.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-BackpackPlus-84Slots-v3.2.0/archive/refs/heads/main.zip) |
+| Version: 3.2.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-84Slots-v3.2.0.zip) |
 |---|---|
 
 - 84 Slot Backpack, with 3 rows of encumbrance  slots (36 slots)
@@ -216,13 +216,13 @@ Download all BackpackPlus mods in one ZIP (contains all mods):
 
 ## Special Mods
 Download all Special mods in one ZIP (contains all mods):
-[**Download All Special Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All Special Mods**](https://AuroraGiggleFairy.github.io/zips/Special_All.zip)
 
 ---
 ### **AGF Compatibilities**
 *Compatibility Patch Collection.*
 
-| Version: 4.0.0 | [Download](https://github.com/AuroraGiggleFairy/zzzAGF-Special-Compatibilities-v4.0.0/archive/refs/heads/main.zip) |
+| Version: 4.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/zzzAGF-Special-Compatibilities-v4.0.0.zip) |
 |---|---|
 
 - This is a compatibility patch for mods that affect any of AGF's, most commonly:
@@ -255,13 +255,13 @@ Download all Special mods in one ZIP (contains all mods):
 
 ## VP Mods
 Download all VP mods in one ZIP (contains all mods):
-[**Download All VP Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All VP Mods**](https://AuroraGiggleFairy.github.io/zips/VP_All.zip)
 
 ---
 ### **AGF Admin and Modding Support**
 *Some adjustments and additions for admin / mod testing harvesting.*
 
-| Version: 1.0.3 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-AdminModdingSupport-v1.0.3/archive/refs/heads/main.zip) |
+| Version: 1.0.3 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AdminModdingSupport-v1.0.3.zip) |
 |---|---|
 
 - The "Block Replace Tool" can now replace blocks quickly.
@@ -275,7 +275,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Alternative Recipes**
 *Cobblestone Blocks, First Aid Kits/Bandages now have vanilla alternative recipes.*
 
-| Version: 1.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-AlternativeRecipes-v1.0.1/archive/refs/heads/main.zip) |
+| Version: 1.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AlternativeRecipes-v1.0.1.zip) |
 |---|---|
 
 - Cobblestone Blocks can now be crafted directly from stone and clay (in addition to original)
@@ -289,7 +289,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Ammo Disassembly**
 *Scrap your ammo into bundles that contain the ingredients.*
 
-| Version: 1.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-AmmoDisassembly-v1.0.1/archive/refs/heads/main.zip) |
+| Version: 1.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AmmoDisassembly-v1.0.1.zip) |
 |---|---|
 
 - Scrap Ammo into bundles that contain the ammo's ingredients, open to collect.
@@ -302,7 +302,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Apiary Plus**
 *Apiary size is 2x2 and produces NO heat.*
 
-| Version: 1.0.3 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ApiaryPlus-v1.0.3/archive/refs/heads/main.zip) |
+| Version: 1.0.3 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ApiaryPlus-v1.0.3.zip) |
 |---|---|
 
 - Apiary now 2 blocks wide instead of 3.
@@ -316,7 +316,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Archery Ammo only use feathers.**
 *All archery ammo uses feathers, can craft feathers from plastic.*
 
-| Version: 1.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ArcheryFeathersChange-v1.0.2/archive/refs/heads/main.zip) |
+| Version: 1.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ArcheryFeathersChange-v1.0.2.zip) |
 |---|---|
 
 - All archery ammo requires Feathers.
@@ -329,7 +329,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Armor Harvest Mods**
 *Craft armors with harvesting bonuses as armor mods.*
 
-| Version: 2.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ArmorHarvestMods-v2.1.0/archive/refs/heads/main.zip) |
+| Version: 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ArmorHarvestMods-v2.1.0.zip) |
 |---|---|
 
 - At Armor Crafting Level 11, you can now make the following:
@@ -349,7 +349,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Automobiles Respawn**
 *Vehicles will respawn after 10 real life hours. Editable.*
 
-| Version: 3.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-AutomobilesRespawn-v3.0.1/archive/refs/heads/main.zip) |
+| Version: 3.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AutomobilesRespawn-v3.0.1.zip) |
 |---|---|
 
 - Vehicles that are salvaged leaves a hubcap.
@@ -362,7 +362,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Bedrolls that include other beds**
 *Sleeping Bags also come in many bed variants.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-BedrollPlus-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BedrollPlus-v1.0.0.zip) |
 |---|---|
 
 - Added to vanilla, is "bedroll +" which contains more spawn point bed options AND more hit points.
@@ -374,7 +374,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Better Egg Chance**
 *Birdnests now have a 63% chance to have an egg instead of 35%.*
 
-| Version: 2.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-BetterEggChance-v2.1.0/archive/refs/heads/main.zip) |
+| Version: 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BetterEggChance-v2.1.0.zip) |
 |---|---|
 
 - Chance to find eggs in birdnest increased from 35% to 63%.
@@ -386,7 +386,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Break It, Get It**
 *Break a station or storage, it goes into your inventory.*
 
-| Version: 1.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-BreakItGetIt-v1.0.2/archive/refs/heads/main.zip) |
+| Version: 1.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BreakItGetIt-v1.0.2.zip) |
 |---|---|
 
 - Break a station, wood sign, or writable crate and it returns to your inventory.
@@ -411,7 +411,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Buy Trader Vending Machines**
 *With high trader stage you can purchase working vending machines from traders.*
 
-| Version: 3.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-BuyTraderVendingMachines-v3.0.2/archive/refs/heads/main.zip) |
+| Version: 3.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BuyTraderVendingMachines-v3.0.2.zip) |
 |---|---|
 
 - High trader stage unlocks option to purchase trader managed vending machines.
@@ -425,7 +425,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Craft Sewing Kits**
 *Craft sewing kits with Wasteland Treasures 6.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-CraftSewingKits-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-CraftSewingKits-v1.0.0.zip) |
 |---|---|
 
 - Craft Sewing Kits; unlocked with Wasteland Treasures 6: learn to weave fibers into cloth.
@@ -437,7 +437,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Craft and Stack Engine/Battery/Cells**
 *Engines, Batteries, and Solar Cells are craftable and stack!*
 
-| Version: 3.3.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-CraftStackEngBattCells-v3.3.0/archive/refs/heads/main.zip) |
+| Version: 3.3.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-CraftStackEngBattCells-v3.3.0.zip) |
 |---|---|
 
 - Engines, Batteries and Solar Cells now stack.
@@ -453,7 +453,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Craft Vitamins**
 *Craft vitamins when you unlock herbal antibiotics.*
 
-| Version: 1.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-CraftVitamins-v1.1.0/archive/refs/heads/main.zip) |
+| Version: 1.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-CraftVitamins-v1.1.0.zip) |
 |---|---|
 
 - Craft Vitamins, unlocked at same time as herbal antibiotics.
@@ -465,7 +465,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Decoration Block**
 *One block to decorate them all.*
 
-| Version: 3.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-DecorationBlock-v3.0.2/archive/refs/heads/main.zip) |
+| Version: 3.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DecorationBlock-v3.0.2.zip) |
 |---|---|
 
 - Over 5,700 in game models all within one block!
@@ -492,7 +492,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Dews Plus**
 *Dews: No Heat, 2x2, a x5 and x25 variants.*
 
-| Version: 2.4.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-DewsPlus-v2.3.2/archive/refs/heads/main.zip) |
+| Version: 2.4.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DewsPlus-v2.3.2.zip) |
 |---|---|
 
 - Compile 5 dew collectors into 1 that acts like 5 (or 25).
@@ -511,7 +511,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Doors Plus**
 *All game doors in variants for simplicity and building!*
 
-| Version: 3.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-DoorsPlus-v3.0.0/archive/refs/heads/main.zip) |
+| Version: 3.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DoorsPlus-v3.0.0.zip) |
 |---|---|
 
 - Variant Helper "All Doors" in wood, iron, steel, and powered.
@@ -526,7 +526,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Drinkable Acid**
 *You can now drink acid! But why?...I don't know. Do it.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-DrinkableAcid-v2.0.0/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DrinkableAcid-v2.0.0.zip) |
 |---|---|
 
 - Drink ACID for some interesting effects.
@@ -548,7 +548,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Dyes Plus**
 *Scrap a dye then craft a different one. Adds 27 colors.*
 
-| Version: 3.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-DyesPlus-v3.1.0/archive/refs/heads/main.zip) |
+| Version: 3.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DyesPlus-v3.1.0.zip) |
 |---|---|
 
 - Easily interchange dye colors:
@@ -564,7 +564,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Farming Plus**
 *Like other seeds, Birdnest for eggs and feathers. ALSO, x5/x25/Replants variants.*
 
-| Version: 5.6.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-FarmingPlus-v5.6.0/archive/refs/heads/main.zip) |
+| Version: 5.6.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-FarmingPlus-v5.6.0.zip) |
 |---|---|
 
 - Birdnest and Beehives now plantable for eggs, feathers, and honey.
@@ -589,7 +589,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Flora Harvester**
 *Special tool to quickly cut grass and crops.*
 
-| Version: 2.3.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-FloraHarvester-v2.3.0/archive/refs/heads/main.zip) |
+| Version: 2.3.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-FloraHarvester-v2.3.0.zip) |
 |---|---|
 
 - A tool to more quickly harvest flora. (plants and crops, etc)
@@ -602,7 +602,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Fuel Burn Plus**
 *Combine wood or coal to create a single item with longer burn times.*
 
-| Version: 2.3.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-FuelBurnPlus-v2.3.0/archive/refs/heads/main.zip) |
+| Version: 2.3.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-FuelBurnPlus-v2.3.0.zip) |
 |---|---|
 
 - Combine wood or coal into single items with longer burn times:10m, 60m, 600m, or 6,000m.
@@ -614,7 +614,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Master Tool**
 *Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.*
 
-| Version: 6.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-MasterTool-v6.1.0/archive/refs/heads/main.zip) |
+| Version: 6.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MasterTool-v6.1.0.zip) |
 |---|---|
 
 - The Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.
@@ -635,7 +635,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Max Level 500**
 *Paises the max level from 300 to 500, because why not?*
 
-| Version: 2.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-MaxLevel500-v2.0.2/archive/refs/heads/main.zip) |
+| Version: 2.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MaxLevel500-v2.0.2.zip) |
 |---|---|
 
 - Simply just raises the max level cap from 300 to 500... For funsies.
@@ -647,7 +647,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Medication No Slow from Insects**
 *Bee Gone Cream that remove and prevent slow effects from insects.*
 
-| Version: 1.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-MedicationNoInsectSlow-v1.1.0/archive/refs/heads/main.zip) |
+| Version: 1.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MedicationNoInsectSlow-v1.1.0.zip) |
 |---|---|
 
 - Bee Gone Cream can be crafted with 10 levels in medical crafting at a campfire with a cooking pot.
@@ -666,7 +666,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Mining Plus**
 *Mining Perk now allows bundling clay, brass, and sand.*
 
-| Version: 1.2.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-MiningPlus-v1.2.0/archive/refs/heads/main.zip) |
+| Version: 1.2.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MiningPlus-v1.2.0.zip) |
 |---|---|
 
 - Mining Perk now allows you to bundle clay, sand, and brass.
@@ -679,7 +679,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Mod 988**
 *Replaces noose with regular rope. Worth it for those who may need it.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-Mod988-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-Mod988-v2.0.1.zip) |
 |---|---|
 
 - Simply replaces the noose with plain rope, both the block AND the icon.
@@ -694,7 +694,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Mod Bundling**
 *Are you a mod hoarder? Now you can bundle them to save on space.*
 
-| Version: 1.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ModBundling-v1.0.1/archive/refs/heads/main.zip) |
+| Version: 1.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ModBundling-v1.0.1.zip) |
 |---|---|
 
 - Are you a mod hoarder? Now you can bundle them to save on space.
@@ -706,7 +706,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Mod Slots Plus**
 *Quality of Life Mod Slot numbers that keeps progression.*
 
-| Version: 3.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ModSlotsPlus-v3.0.1/archive/refs/heads/main.zip) |
+| Version: 3.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ModSlotsPlus-v3.0.1.zip) |
 |---|---|
 
 - The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.
@@ -722,7 +722,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Paintbrush Plus**
 *Paint without paint, hold trigger to keep painting, limited distance reach.*
 
-| Version: 2.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-PaintbrushPlus-v2.1.0/archive/refs/heads/main.zip) |
+| Version: 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PaintbrushPlus-v2.1.0.zip) |
 |---|---|
 
 - Painting costs ZERO paint.
@@ -736,7 +736,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Pickup Lanterns Plus**
 *Pickup lanterns, flashlights, jack-o-lanterns, and burning barrels.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-PickupLanternsPlus-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PickupLanternsPlus-v2.0.1.zip) |
 |---|---|
 
 - Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
@@ -750,7 +750,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Player Reset Quests**
 *When talking to a trader, you can tell them to reset the quest options.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-PlayerResetQuests-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PlayerResetQuests-v2.0.1.zip) |
 |---|---|
 
 - When speaking with a trader, players can choose for the quest list to regenerate
@@ -762,7 +762,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Player Vending Plus**
 *Craft Player Vending Machines and buy cheaper!*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-PlayerVendingMachinesPlus-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PlayerVendingMachinesPlus-v1.0.0.zip) |
 |---|---|
 
 - You can craft player vending machine easily (10 forged iron).
@@ -776,7 +776,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Pumpkins Plus**
 *Wear a jack-o-lanter over your head or throw Molo-Jack-Ovs.*
 
-| Version: 2.0.4 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-PumpkinsPlus-v2.0.4/archive/refs/heads/main.zip) |
+| Version: 2.0.4 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PumpkinsPlus-v2.0.4.zip) |
 |---|---|
 
 - Throw pumpkins that explode like molotovs.
@@ -794,7 +794,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Quick Start**
 *Load in, initial challenges redeemed, recieve all items, xp, and points, Done!*
 
-| Version: 2.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-QuickStart-v2.0.0/archive/refs/heads/main.zip) |
+| Version: 2.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-QuickStart-v2.0.0.zip) |
 |---|---|
 
 - You load into game, automatically redeem initial challenges AND get equipment/rewards.
@@ -806,7 +806,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Rebundle Bundles**
 *Now you can rebundle bundles.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-RebundleBundles-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RebundleBundles-v1.0.0.zip) |
 |---|---|
 
 - Rebundle Bundles after opening.
@@ -819,7 +819,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Recipe for Rotting Flesh**
 *Recipe for Rotting Flesh from Raw Meat and Murky Water.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-RecipeRottingFlesh-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RecipeRottingFlesh-v1.0.0.zip) |
 |---|---|
 
 - Adds a recipe for raw flesh, from raw meat and murky water.
@@ -831,7 +831,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Renames Alphabetical Sort**
 *Better sorting in inventories of like items.*
 
-| Version: 2.0.4 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-RenamesAlphabeticalSort-v2.0.3/archive/refs/heads/main.zip) |
+| Version: 2.0.4 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RenamesAlphabeticalSort-v2.0.3.zip) |
 |---|---|
 
 - Naming Scheme for better sorting when pressing Auto Sort.
@@ -845,7 +845,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Restore Power Quests at Any Time**
 *Restore Power Quests can be done at any time.*
 
-| Version: 1.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-RestorePowerAnyTime-v1.0.2/archive/refs/heads/main.zip) |
+| Version: 1.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RestorePowerAnyTime-v1.0.2.zip) |
 |---|---|
 
 - Restore Power quests can be done at any time of the day.
@@ -857,7 +857,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Scrap Batteries for Acid**
 *Scrap a battery and get acid, instead of lead.*
 
-| Version: 1.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ScrapBatts4Acid-v1.1.0/archive/refs/heads/main.zip) |
+| Version: 1.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ScrapBatts4Acid-v1.1.0.zip) |
 |---|---|
 
 - Scrap batteries for Acid. No longer gives Lead.
@@ -869,7 +869,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Scrap Equipment Faster.**
 *Scrapping equipment takes 4 seconds instead of 10.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ScrapEquipmentFaster-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ScrapEquipmentFaster-v1.0.0.zip) |
 |---|---|
 
 - Equipment scrapping reduced to 4 seconds instead of 10.
@@ -881,7 +881,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Simplified Stacks**
 *Stack sizes are simplified!*
 
-| Version: 1.2.3 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-SimplifiedStacks-v1.2.3/archive/refs/heads/main.zip) |
+| Version: 1.2.3 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-SimplifiedStacks-v1.2.3.zip) |
 |---|---|
 
 - Simplified stack sizes that keeps close to vanilla experience.
@@ -901,7 +901,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Smelting Plus**
 *3 forge slots, sand smelts 1:5 ratio, smelt or craft clay/rock/stone in single units.*
 
-| Version: 2.4.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-SmeltingPlus-v2.4.0/archive/refs/heads/main.zip) |
+| Version: 2.4.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-SmeltingPlus-v2.4.0.zip) |
 |---|---|
 
 - Forges have 3 slots with text nicely centered.
@@ -917,7 +917,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Stay Longer Animal Corpse**
 *Animal Corpses disappear after 10 minutes instead of 5.*
 
-| Version: 2.0.2 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-StayLongerAnimalCorpse-v2.0.2/archive/refs/heads/main.zip) |
+| Version: 2.0.2 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-StayLongerAnimalCorpse-v2.0.2.zip) |
 |---|---|
 
 - Animal Corpses disappear after 10 minutes instead of 5.
@@ -929,7 +929,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Stay Longer Player Backpack**
 *Player's Backpack disappear after 5 hours instead of 1.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-StayLongerPlayerBackpack-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-StayLongerPlayerBackpack-v2.0.1.zip) |
 |---|---|
 
 - Player's Backpack disappear after 5 hours instead of 1.
@@ -941,7 +941,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Stay Longer Zombie Loot**
 *Zombie loot disappears after 1 hour instead of 20 minutes.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-StayLongerZombieLoot-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-StayLongerZombieLoot-v2.0.1.zip) |
 |---|---|
 
 - Zombie loot disappears after 1 hour instead of 20 minutes.
@@ -953,7 +953,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Tactical Rifle Plus**
 *Removed 3 round burst, magazine size up to 36 from 30.*
 
-| Version: 2.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-TacticalRiflePlus-v2.1.0/archive/refs/heads/main.zip) |
+| Version: 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TacticalRiflePlus-v2.1.0.zip) |
 |---|---|
 
 - Tactical Rifle no longer defaults with 3 round burst.
@@ -966,7 +966,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Trader Always Open**
 *Traders are always open... but possibly not during bloodmoon?*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-TraderAlwaysOpen-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TraderAlwaysOpen-v2.0.1.zip) |
 |---|---|
 
 - Traders are always open. (They might be closed during bloodmoon.)
@@ -978,7 +978,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Trader Costlier Prices**
 *Higher trader prices, harder to buy stuff.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-TraderCostlierPrices-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TraderCostlierPrices-v1.0.0.zip) |
 |---|---|
 
 - Buying stuff from traders more difficult.
@@ -990,7 +990,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Traders restock every 2 days**
 *Traders restock every 2 days, easier to remember.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-TraderRestockEvery2Days-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TraderRestockEvery2Days-v1.0.0.zip) |
 |---|---|
 
 - Traders restock every 2 days, easier to remember and good for games with longer daily time.
@@ -1002,7 +1002,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Trader Sells More Books**
 *Per magazine, traders sell between 3 and 8 instead of 1 and 3.*
 
-| Version: 3.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-TraderSellsMoreBooks-v2.0.0/archive/refs/heads/main.zip) |
+| Version: 3.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TraderSellsMoreBooks-v2.0.0.zip) |
 |---|---|
 
 - Magazines at traders, a specific magazine can come in counts of 1-8 instead of 1-3.
@@ -1015,7 +1015,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Trees Plus**
 *Craft x5 and x25 versions of trees with helpful naming of growth stages.*
 
-| Version: 3.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-TreesPlus-v3.0.0/archive/refs/heads/main.zip) |
+| Version: 3.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TreesPlus-v3.0.0.zip) |
 |---|---|
 
 - Planting less trees helps performance.
@@ -1030,7 +1030,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Vehicle Storage Plus**
 *Vehicles have more storage than default.*
 
-| Version: 2.1.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-VehicleStorageSizes-v2.1.1/archive/refs/heads/main.zip) |
+| Version: 2.1.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-VehicleStorageSizes-v2.1.1.zip) |
 |---|---|
 
 - Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.
@@ -1043,7 +1043,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Vehicle Extra Seating.**
 *Extra seating on vehicles!*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-VehiclesExtraSeating-v0.0.1/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-VehiclesExtraSeating-v0.0.1.zip) |
 |---|---|
 
 - 3 seats on bikes (bicycle, minibike, and motorcycle)
@@ -1057,7 +1057,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Vehicle Performance**
 *Vehicles are Harder, Better, Faster, Stronger.*
 
-| Version: 1.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-VehiclesPerformance-v1.0.1/archive/refs/heads/main.zip) |
+| Version: 1.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-VehiclesPerformance-v1.0.1.zip) |
 |---|---|
 
 - All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.
@@ -1077,7 +1077,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **Write a Story on a Crate**
 *Write a lot of notes on this one crate.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-WriteStoryOnCrate-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-WriteStoryOnCrate-v1.0.0.zip) |
 |---|---|
 
 - Iron Writeable Storage Crate but can write a LOT on it.
@@ -1089,7 +1089,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF XP Death Penalty Reduction.**
 *XP Death Penalty 10 instead of 25.*
 
-| Version: 2.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-XPDeathPenaltyReduction-v2.0.0/archive/refs/heads/main.zip) |
+| Version: 2.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-XPDeathPenaltyReduction-v2.0.0.zip) |
 |---|---|
 
 - Each death penalty is 10% up to a max of 30%, instead of 25% up to 50%.
@@ -1101,7 +1101,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Zombie Biome Spawning**
 *For newcomers and pros, in a progressive fashion, biomes go from easy to nightmarish, especially at night.*
 
-| Version: 3.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ZombieBiomeSpawning-v3.0.0/archive/refs/heads/main.zip) |
+| Version: 3.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ZombieBiomeSpawning-v3.0.0.zip) |
 |---|---|
 
 - Biome Spawning Increase in a Progressive Fashion,
@@ -1115,7 +1115,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Zombie Corpse Leave Quicker**
 *Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ZombieCorpseLeaveQuicker-v2.0.0/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ZombieCorpseLeaveQuicker-v2.0.0.zip) |
 |---|---|
 
 - Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.
@@ -1127,7 +1127,7 @@ Download all VP mods in one ZIP (contains all mods):
 ### **AGF Larger Hordes**
 *I like big hordes and I cannot lie... But like performance too.*
 
-| Version: 2.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-VP-ZombieLargerHordes-v2.0.1/archive/refs/heads/main.zip) |
+| Version: 2.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ZombieLargerHordes-v2.0.1.zip) |
 |---|---|
 
 - I enjoy being visited upon by larger hordes.
@@ -1139,13 +1139,13 @@ Download all VP mods in one ZIP (contains all mods):
 
 ## NoEAC Mods
 Download all NoEAC mods in one ZIP (contains all mods):
-[**Download All NoEAC Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All NoEAC Mods**](https://AuroraGiggleFairy.github.io/zips/NoEAC_All.zip)
 
 ---
 ### **AGF Configurable console background opacity**
 *In the configs folder, you can change F1 opacity..*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-ConsoleOpacityMod-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-ConsoleOpacityMod-v1.0.0.zip) |
 |---|---|
 
 - _No features listed._
@@ -1157,7 +1157,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **Armor Cosmetic Locked Icon**
 *Armors have a scrap icon if you have not unlocked it for cosmetics.*
 
-| Version: 1.0.1 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-CosmeticLockIcon-v1.0.1/archive/refs/heads/main.zip) |
+| Version: 1.0.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-CosmeticLockIcon-v1.0.1.zip) |
 |---|---|
 
 - Simply adds a "scrap" icon over armors you have not unlocked for cosmetics.
@@ -1169,7 +1169,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC**
 *Adds extra info that is only available from non-EAC friendly places.*
 
-| Version: 2.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-EnhancedPatch-v3.0.0/archive/refs/heads/main.zip) |
+| Version: 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-EnhancedPatch-v3.0.0.zip) |
 |---|---|
 
 - With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus
@@ -1181,7 +1181,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **Global Storm Tracker**
 *Chat based Storm Alert of when a storm will end.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-GlobalStormTracker-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-GlobalStormTracker-v1.0.0.zip) |
 |---|---|
 
 - Sends a chat message to players regardless of location of a storm warning and when it ends.
@@ -1193,7 +1193,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **Add Color to Item Type Icons**
 *This adds color function to ItemTypeIcons used in xml.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-ItemTypeIconColor-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-ItemTypeIconColor-v1.0.0.zip) |
 |---|---|
 
 - For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".
@@ -1227,7 +1227,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **Open All Bundles**
 *A button to open all bundles in rapid fire. Stops before dropping items.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-OpenAll-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-OpenAll-v1.0.0.zip) |
 |---|---|
 
 - Simply adds an "Open All" button for bundled items.
@@ -1242,7 +1242,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **Screamer Alert**
 *Screamer Alert Messages, best with AGF HUD.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-ScreamerAlert-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-ScreamerAlert-v1.0.0.zip) |
 |---|---|
 
 - When a player is within 120m of a screamer, Screamer Alert message appears.
@@ -1258,7 +1258,7 @@ Download all NoEAC mods in one ZIP (contains all mods):
 ### **AGF Sorting Box**
 *With permissions, integrated from Kanaverum's original mod and Asylum.*
 
-| Version: 1.0.4 | [Download](https://github.com/AuroraGiggleFairy/AGF-NoEAC-SortingBox-v1.0.4/archive/refs/heads/main.zip) |
+| Version: 1.0.4 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-SortingBox-v1.0.4.zip) |
 |---|---|
 
 - _No features listed._
@@ -1269,13 +1269,13 @@ Download all NoEAC mods in one ZIP (contains all mods):
 
 ## Other Mods
 Download all Other mods in one ZIP (contains all mods):
-[**Download All Other Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)
+[**Download All Other Mods**](https://AuroraGiggleFairy.github.io/zips/Other_All.zip)
 
 ---
 ### **AGF's 10 Ingredient Slots**
 *Some people and mods need double ingredient visuals.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-Other-10IngredientSlots-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-10IngredientSlots-v1.0.0.zip) |
 |---|---|
 
 - Increases the ingredients list from 5 to 10 slots.
@@ -1288,7 +1288,7 @@ Download all Other mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - Removes Written Storm Alerts**
 *Removes the written messages of incoming storms.*
 
-| Version: 2.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-Other-RemoveWrittenStormAlerts-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 2.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-RemoveWrittenStormAlerts-v1.0.0.zip) |
 |---|---|
 
 - Removes the written weather alerts that pop-up when a storm is coming.
@@ -1300,7 +1300,7 @@ Download all Other mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - SmallerInteractionPrompt**
 *Smaller Interaction Prompt*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-Other-SmallerInteractionPrompt-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-SmallerInteractionPrompt-v1.0.0.zip) |
 |---|---|
 
 - Just configurable font size for interaction prompts
@@ -1312,7 +1312,7 @@ Download all Other mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - Tiny Buffs Pop Up**
 *Shrinks the buffs pop up by half.*
 
-| Version: 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-Other-TinyBuffsPopUp-v1.0.0/archive/refs/heads/main.zip) |
+| Version: 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-TinyBuffsPopUp-v1.0.0.zip) |
 |---|---|
 
 - Shrinks the buff pop ups by half.
@@ -1324,7 +1324,7 @@ Download all Other mods in one ZIP (contains all mods):
 ### **AGF HUD Plus - Weekday**
 *Adds the days of the week to the day, thanks DragonTander!*
 
-| Version: 2.1.0 | [Download](https://github.com/AuroraGiggleFairy/AGF-Other-WeekDay-v2.1.0/archive/refs/heads/main.zip) |
+| Version: 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-WeekDay-v2.1.0.zip) |
 |---|---|
 
 - DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!

@@ -1,5 +1,8 @@
+
 import re
 import xml.etree.ElementTree as ET
+import zipfile
+from pathlib import Path
 
 # Function to update each mod's README.md using the template
 def update_readme(folder, template):
@@ -84,8 +87,8 @@ def get_mod_summary(folder):
         name = folder
         version = "0.0.0"
 
-    # Download link (assuming GitHub zip link)
-    download_link = f'https://github.com/AuroraGiggleFairy/{folder}/archive/refs/heads/main.zip'
+    # Download link (full GitHub Pages URL)
+    download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
 
     # Description/summary from ModInfo.xml
     description = ''
@@ -131,9 +134,51 @@ def get_mod_summary(folder):
 with open('MOD_README_TEMPLATE.md', 'r', encoding='utf-8') as f:
     template = f.read()
 
+
+# --- Zipping logic ---
+def zip_folder(folder, zip_path):
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for root, _, files in os.walk(folder):
+            for file in files:
+                file_path = Path(root) / file
+                arcname = file_path.relative_to(folder.parent)
+                zipf.write(file_path, arcname)
+
+# Get all mod folders
 folders = sorted([f for f in os.listdir('.') if os.path.isdir(f) and (f.startswith('AGF-') or f.startswith('zzzAGF'))])
+
+# Update all individual readmes
 for folder in folders:
     update_readme(folder, template)
+
+# --- Zipping individual mods ---
+ZIPS_DIR = Path('zips')
+ZIPS_DIR.mkdir(exist_ok=True)
+for mod in folders:
+    zip_path = ZIPS_DIR / f'{mod}.zip'
+    print(f'Zipping {mod} -> {zip_path}')
+    zip_folder(Path(mod), zip_path)
+
+# --- Zipping mod packs ---
+MOD_PACKS = {
+    'HUDPlus_All': [d for d in folders if 'HUDPlus' in d],
+    'BackpackPlus_All': [d for d in folders if 'BackpackPlus' in d],
+    'VP_All': [d for d in folders if d.startswith('AGF-VP-')],
+    'NoEAC_All': [d for d in folders if d.startswith('AGF-NoEAC-')],
+    'Other_All': [d for d in folders if d.startswith('AGF-Other-')],
+}
+for pack_name, pack_folders in MOD_PACKS.items():
+    if not pack_folders:
+        continue
+    zip_path = ZIPS_DIR / f'{pack_name}.zip'
+    print(f'Zipping pack {pack_name} -> {zip_path}')
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for folder in pack_folders:
+            for root, _, files in os.walk(folder):
+                for file in files:
+                    file_path = Path(root) / file
+                    arcname = Path(folder) / file_path.relative_to(folder)
+                    zipf.write(file_path, arcname)
 
 # After updating all individual readmes, generate the mod summary list
 mod_summaries = []
@@ -209,9 +254,9 @@ category_headers = {
 def get_category_download_link(category, folders):
     if not folders:
         return ''
-    # Create a zip link for all folders in the category using GitHub's tree download (not natively supported for subfolders, so instruct user to download from repo or provide a script)
-    # For now, provide a message and fallback to main repo zip
-    return f'[**Download All {category} Mods**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)'
+    # Create a zip link for all folders in the category using the local zips directory
+    zip_name = f'{category}_All.zip' if not category.endswith('_All') else f'{category}.zip'
+    return f'[**Download All {category} Mods**](https://AuroraGiggleFairy.github.io/zips/{zip_name})'
 
 # Update all individual readmes
 for folder in folders:
@@ -219,7 +264,7 @@ for folder in folders:
 
 
 # Build mod summaries by category, with Giggle Pack at the top
-giggle_pack_link = '[**Download All Mods (Giggle Pack)**](https://github.com/AuroraGiggleFairy/7D2D-Mods/archive/refs/heads/main.zip)'
+giggle_pack_link = '[**Download All Mods (Giggle Pack)**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)'
 mod_list_block = '\n\n# Mod List\n\n## Giggle Pack\nDownload all mods in one ZIP:\n' + giggle_pack_link + '\n'
 for cat in category_order:
     if categories[cat]:
