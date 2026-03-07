@@ -1,6 +1,7 @@
 # AGF Better Egg Chance
 7d2d Version 2  
-**Version:** 2.1.0
+**Version:** 2.1.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BetterEggChance-v2.1.0.zip)
 
 > 
 ---

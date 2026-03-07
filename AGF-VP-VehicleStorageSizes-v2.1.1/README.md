@@ -1,6 +1,7 @@
 # AGF Vehicle Storage Plus
 7d2d Version 2  
-**Version:** 2.1.1
+**Version:** 2.1.1  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-VehicleStorageSizes-v2.1.1.zip)
 
 > 
 ---

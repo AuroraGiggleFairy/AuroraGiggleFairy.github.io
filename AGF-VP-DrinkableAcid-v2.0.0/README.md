@@ -1,6 +1,7 @@
 # AGF Drinkable Acid
 7d2d Version 2  
-**Version:** 2.0.1
+**Version:** 2.0.1  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DrinkableAcid-v2.0.0.zip)
 
 > 
 ---

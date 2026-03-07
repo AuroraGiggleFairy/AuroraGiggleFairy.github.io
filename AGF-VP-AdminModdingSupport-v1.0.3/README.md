@@ -1,6 +1,7 @@
 # AGF Admin and Modding Support
 7d2d Version 2  
-**Version:** 1.0.3
+**Version:** 1.0.3  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AdminModdingSupport-v1.0.3.zip)
 
 > 
 ---

@@ -1,6 +1,7 @@
 # AGF Scrap Batteries for Acid
 7d2d Version 2  
-**Version:** 1.1.0
+**Version:** 1.1.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ScrapBatts4Acid-v1.1.0.zip)
 
 > 
 ---

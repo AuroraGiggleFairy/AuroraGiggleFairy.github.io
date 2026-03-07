@@ -1,6 +1,7 @@
 # AGF Mod Slots Plus
 7d2d Version 2  
-**Version:** 3.0.1
+**Version:** 3.0.1  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ModSlotsPlus-v3.0.1.zip)
 
 > 
 ---

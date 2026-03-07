@@ -1,6 +1,7 @@
 # AGF HUD Plus - Tiny Buffs Pop Up
 7d2d Version 2  
-**Version:** 1.0.0
+**Version:** 1.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-TinyBuffsPopUp-v1.0.0.zip)
 
 > 
 ---

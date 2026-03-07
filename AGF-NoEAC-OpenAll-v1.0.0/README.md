@@ -1,6 +1,7 @@
 # Open All Bundles
 7d2d Version 2  
-**Version:** 1.0.0
+**Version:** 1.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-OpenAll-v1.0.0.zip)
 
 > 
 ---

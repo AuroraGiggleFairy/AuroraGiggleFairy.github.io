@@ -1,6 +1,7 @@
 # AGF XP Death Penalty Reduction.
 7d2d Version 2  
-**Version:** 2.0.0
+**Version:** 2.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-XPDeathPenaltyReduction-v2.0.0.zip)
 
 > 
 ---

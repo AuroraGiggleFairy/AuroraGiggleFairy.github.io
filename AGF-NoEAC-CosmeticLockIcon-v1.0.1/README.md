@@ -1,6 +1,7 @@
 # Armor Cosmetic Locked Icon
 7d2d Version 2  
-**Version:** 1.0.1
+**Version:** 1.0.1  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-CosmeticLockIcon-v1.0.1.zip)
 
 > 
 ---

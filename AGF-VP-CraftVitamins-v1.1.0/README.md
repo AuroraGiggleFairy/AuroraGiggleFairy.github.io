@@ -1,6 +1,7 @@
 # Craft Vitamins
 7d2d Version 2  
-**Version:** 1.1.0
+**Version:** 1.1.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-CraftVitamins-v1.1.0.zip)
 
 > 
 ---

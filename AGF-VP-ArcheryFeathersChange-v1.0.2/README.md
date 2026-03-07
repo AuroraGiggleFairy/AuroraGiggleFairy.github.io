@@ -1,6 +1,7 @@
 # Archery Ammo only use feathers.
 7d2d Version 2  
-**Version:** 1.0.2
+**Version:** 1.0.2  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ArcheryFeathersChange-v1.0.2.zip)
 
 > 
 ---

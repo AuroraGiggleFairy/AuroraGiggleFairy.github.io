@@ -1,6 +1,7 @@
 # AGF Quick Start
 7d2d Version 2  
-**Version:** 2.0.0
+**Version:** 2.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-QuickStart-v2.0.0.zip)
 
 > 
 ---

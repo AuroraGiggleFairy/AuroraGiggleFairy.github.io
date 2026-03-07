@@ -1,6 +1,7 @@
 # AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC
 7d2d Version 2  
-**Version:** 2.1.0
+**Version:** 2.1.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-NoEAC-EnhancedPatch-v3.0.0.zip)
 
 > 
 ---

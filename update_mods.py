@@ -128,9 +128,11 @@ def update_readme(folder, template):
             quote = f'*{quote.strip('* ')}*'
 
     # Fill template
+    download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
     readme = template
     readme = readme.replace('{{MOD_NAME}}', name)
     readme = readme.replace('{{MOD_VERSION}}', version)
+    readme = readme.replace('{{DOWNLOAD_LINK}}', download_link)
     readme = readme.replace('{{EAC_FRIENDLY}}', eac_friendly)
     readme = readme.replace('{{SERVER_SIDE}}', server_side)
     readme = readme.replace('{{CLIENT_REQUIRED}}', client_required)
@@ -206,9 +208,8 @@ def get_mod_summary(folder):
             summary += f"**{special_desc}**\n\n---\n---"
         else:
             summary += '---\n---'
-        summary += f"\n| Version: {version} | [Download]({download_link}) |\n|---|---|\n"
-        formatted_features = formatted_features.rstrip() + "\n<br>\n<br>\n"
-        summary += f"\n{formatted_features}"
+        summary += f"\n**Version:** {version}  \n[Download]({download_link})\n"
+        summary += f"\n{formatted_features.rstrip()}\n---"
         return summary
     # Default for all other mods
     summary = f"---\n### **{name}**\n"
@@ -233,7 +234,7 @@ def get_mod_summary(folder):
                     break
     if mod_quote_lines:
         summary += '\n'.join(mod_quote_lines) + '\n'
-    summary += f"\n| Version: {version} | [Download]({download_link}) |\n|---|---|\n"
+    summary += f"\n**Version:** {version}  \n[Download]({download_link})\n"
     summary += f"\n{formatted_features.rstrip()}\n---"
     return summary
 

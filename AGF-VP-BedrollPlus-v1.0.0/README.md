@@ -1,6 +1,7 @@
 # Bedrolls that include other beds
 7d2d Version 2  
-**Version:** 1.0.0
+**Version:** 1.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BedrollPlus-v1.0.0.zip)
 
 > 
 ---

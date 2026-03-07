@@ -1,6 +1,7 @@
 # Ammo Disassembly
 7d2d Version 2  
-**Version:** 1.0.1
+**Version:** 1.0.1  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AmmoDisassembly-v1.0.1.zip)
 
 > 
 ---

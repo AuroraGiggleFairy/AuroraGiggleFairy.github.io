@@ -1,6 +1,7 @@
 # AGF Mining Plus
 7d2d Version 2  
-**Version:** 1.2.0
+**Version:** 1.2.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MiningPlus-v1.2.0.zip)
 
 > 
 ---

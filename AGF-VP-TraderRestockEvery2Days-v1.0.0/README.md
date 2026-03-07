@@ -1,6 +1,7 @@
 # AGF Traders restock every 2 days
 7d2d Version 2  
-**Version:** 1.0.0
+**Version:** 1.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TraderRestockEvery2Days-v1.0.0.zip)
 
 > 
 ---

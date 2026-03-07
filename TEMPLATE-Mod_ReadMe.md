@@ -1,6 +1,7 @@
 # {{MOD_NAME}}
 7d2d Version 2  
-**Version:** {{MOD_VERSION}}
+**Version:** {{MOD_VERSION}}  
+[Download]({{DOWNLOAD_LINK}})
 
 > {{QUOTE}}
 ---

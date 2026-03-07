@@ -1,6 +1,7 @@
 # AGF 120-1 (119) Slot Backpack
 7d2d Version 2  
-**Version:** 1.2.1
+**Version:** 1.2.1  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-119Slots-v1.2.1.zip)
 
 > 
 ---

@@ -1,6 +1,7 @@
 # AGF Trader Sells More Books
 7d2d Version 2  
-**Version:** 3.0.0
+**Version:** 3.0.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TraderSellsMoreBooks-v2.0.0.zip)
 
 > 
 ---

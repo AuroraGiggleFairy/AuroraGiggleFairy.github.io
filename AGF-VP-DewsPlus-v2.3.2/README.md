@@ -1,6 +1,7 @@
 # AGF Dews Plus
 7d2d Version 2  
-**Version:** 2.4.0
+**Version:** 2.4.0  
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DewsPlus-v2.3.2.zip)
 
 > 
 ---
