@@ -235,7 +235,9 @@ def get_mod_summary(folder):
     if mod_quote_lines:
         summary += '\n'.join(mod_quote_lines) + '\n'
     summary += f"\n**Version:** {version}  \n[Download]({download_link})\n"
-    summary += f"\n{formatted_features.rstrip()}\n---"
+    summary += f"\n{formatted_features.rstrip()}\n\n---"
+    # Ensure exactly one blank line above ---
+    summary = re.sub(r'\n{3,}---', '\n\n---', summary)
     return summary
 
 with open('TEMPLATE-Mod_ReadMe.md', 'r', encoding='utf-8') as f:
@@ -446,8 +448,8 @@ for cat in category_order:
                     except Exception as e:
                         print(f"Skipping {folder} for summary: {e}")
                 # HUDPLUSOTHER sub-section with required formatting
-                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks**'
-                mod_list_block += '\n| Display Name | Version | Download | Description |\n|---|---|---|---|'
+                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks**\n\n'
+                mod_list_block += '| Display Name | Version | Download | Description |\n|---|---|---|---|'
                 for folder in OTHER_MODS:
                     try:
                         import xml.etree.ElementTree as ET
