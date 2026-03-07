@@ -39,15 +39,16 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 
 # Mod List
 
-## Giggle Pack
-Download all mods in one ZIP:
-[**Download All Mods (Giggle Pack)**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)
+## **GIGGLE PACK**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)
+**All AGF mods in one convenient download.**
 
+## **HUDPLUS MODS**
+[**⬇️ DOWNLOAD ALL HUDPLUS MODS**](https://AuroraGiggleFairy.github.io/zips/HUDPLUS_All.zip)
 
-## HUDPlus Mods
-Download all HUDPlus mods in one ZIP (contains all mods):
-[**Download All HUDPlus Mods**](https://AuroraGiggleFairy.github.io/zips/HUDPlus_All.zip)
+***Quality-of-life HUD enhancements and visual tweaks.***
 
+---
 ---
 ### **AGF HUD Plus - Main**
 *QOL HUD with lots of features.*
@@ -131,31 +132,22 @@ Download all HUDPlus mods in one ZIP (contains all mods):
 <br>
 
 
+### **Optional HUDPlus Tweaks**
+| Display Name | Version | Download | Description |
+|---|---|---|---|
+| AGF's 10 Ingredient Slots | 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-10IngredientSlots-v1.0.0.zip) | Some people and mods need double ingredient visuals. |
+| AGF HUD Plus - Removes Written Storm Alerts | 2.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-RemoveWrittenStormAlerts-v1.0.0.zip) | Removes the written messages of incoming storms. |
+| AGF HUD Plus - SmallerInteractionPrompt | 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-SmallerInteractionPrompt-v1.0.0.zip) | Smaller Interaction Prompt |
+| AGF HUD Plus - Tiny Buffs Pop Up | 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-TinyBuffsPopUp-v1.0.0.zip) | Shrinks the buffs pop up by half. |
+| AGF HUD Plus - Weekday | 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-Other-WeekDay-v2.1.0.zip) | Adds the days of the week to the day, thanks DragonTander! |
 
-## BackpackPlus Mods
-Download all BackpackPlus mods in one ZIP (contains all mods):
-[**Download All BackpackPlus Mods**](https://AuroraGiggleFairy.github.io/zips/BackpackPlus_All.zip)
+
+## **BACKPACKPLUS MODS**
+[**⬇️ DOWNLOAD ALL BACKPACKPLUS MODS**](https://AuroraGiggleFairy.github.io/zips/BACKPACKPLUS_All.zip)
+
+***Download all above or select one below.***
 
 ---
-### **AGF 120-1 (119) Slot Backpack**
-*120-1 (119) slot backpack and extra large storage options.*
-
-| Version: 1.2.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-119Slots-v1.2.1.zip) |
-|---|---|
-
-- 119 Slot Backpack, with 3 rows of encumbrance  slots (68 slots)
-- Updated encumbrance slots, buffs, twith interaction and perks.
-- PackMule does free up all 68 slots.
-- Mobility is in sync with vanilla.
-- Lockable slots that is EASY to tell what is locked and what isn't.
-- Adds a craftable larger storage of wood/iron/steel, slots of 120/144/168.
-- Large storages are variant blocks with multiple shapes to choose from.
-- Breaking a larger storage returns it to your inventory.
-- *Some overlap of UI may occur as this is a LARGE backpack. You can modify UI zoom in game menu if you wish.*
-<br>
-<br>
-
-
 ---
 ### **AGF 60 Slot Backpack**
 *60 slot backpack and extra large storage options.*
@@ -213,15 +205,33 @@ Download all BackpackPlus mods in one ZIP (contains all mods):
 <br>
 
 
+---
+### **AGF 120-1 (119) Slot Backpack**
+*120-1 (119) slot backpack and extra large storage options.*
 
-## Special Mods
-Download all Special mods in one ZIP (contains all mods):
-[**Download All Special Mods**](https://AuroraGiggleFairy.github.io/zips/Special_All.zip)
+| Version: 1.2.1 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-119Slots-v1.2.1.zip) |
+|---|---|
+
+- 119 Slot Backpack, with 3 rows of encumbrance  slots (68 slots)
+- Updated encumbrance slots, buffs, twith interaction and perks.
+- PackMule does free up all 68 slots.
+- Mobility is in sync with vanilla.
+- Lockable slots that is EASY to tell what is locked and what isn't.
+- Adds a craftable larger storage of wood/iron/steel, slots of 120/144/168.
+- Large storages are variant blocks with multiple shapes to choose from.
+- Breaking a larger storage returns it to your inventory.
+- *Some overlap of UI may occur as this is a LARGE backpack. You can modify UI zoom in game menu if you wish.*
+<br>
+<br>
+
+
+
+## **AGF Compatibility Mod**
+
+***A single mod for compatibilities between AGF and mods listed below. Requests are welcome in discord.***
 
 ---
-### **AGF Compatibilities**
-*Compatibility Patch Collection.*
-
+---
 | Version: 4.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/zzzAGF-Special-Compatibilities-v4.0.0.zip) |
 |---|---|
 
@@ -253,10 +263,12 @@ Download all Special mods in one ZIP (contains all mods):
 
 
 
-## VP Mods
-Download all VP mods in one ZIP (contains all mods):
-[**Download All VP Mods**](https://AuroraGiggleFairy.github.io/zips/VP_All.zip)
+## **VANILLA PLUS MODS**
+[**⬇️ DOWNLOAD ALL VP MODS**](https://AuroraGiggleFairy.github.io/zips/VP_All.zip)
 
+***Vanilla Plus: gameplay tweaks and new features.***
+
+---
 ---
 ### **AGF Admin and Modding Support**
 *Some adjustments and additions for admin / mod testing harvesting.*
@@ -1137,10 +1149,12 @@ Download all VP mods in one ZIP (contains all mods):
 
 
 
-## NoEAC Mods
-Download all NoEAC mods in one ZIP (contains all mods):
-[**Download All NoEAC Mods**](https://AuroraGiggleFairy.github.io/zips/NoEAC_All.zip)
+## **NOEAC MODS**
+[**⬇️ DOWNLOAD ALL NOEAC MODS**](https://AuroraGiggleFairy.github.io/zips/NOEAC_All.zip)
 
+***Mods that require EAC to be off, some require client download.***
+
+---
 ---
 ### **AGF Configurable console background opacity**
 *In the configs folder, you can change F1 opacity..*
@@ -1267,10 +1281,12 @@ Download all NoEAC mods in one ZIP (contains all mods):
 
 
 
-## Other Mods
-Download all Other mods in one ZIP (contains all mods):
-[**Download All Other Mods**](https://AuroraGiggleFairy.github.io/zips/Other_All.zip)
+## **OTHER MODS**
+[**⬇️ DOWNLOAD ALL OTHER MODS**](https://AuroraGiggleFairy.github.io/zips/OTHER_All.zip)
 
+***Additional requested HUD options and tweaks.***
+
+---
 ---
 ### **AGF's 10 Ingredient Slots**
 *Some people and mods need double ingredient visuals.*
@@ -1334,3 +1350,5 @@ Download all Other mods in one ZIP (contains all mods):
 <br>
 <br>
 
+
+<!-- The mod list will be inserted here by the automation script. -->
