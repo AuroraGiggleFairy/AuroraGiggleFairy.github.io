@@ -14,7 +14,7 @@ MOD_PACKS = {
     'BackpackPlus_All': [d for d in MOD_FOLDERS if 'BackpackPlus' in d],
     'VP_All': [d for d in MOD_FOLDERS if d.startswith('AGF-VP-')],
     'NoEAC_All': [d for d in MOD_FOLDERS if d.startswith('AGF-NoEAC-')],
-    'Other_All': [d for d in MOD_FOLDERS if d.startswith('AGF-Other-')],
+    # 'Other_All': [d for d in MOD_FOLDERS if d.startswith('AGF-HUDPlusOther-')],
 }
 
 ZIPS_DIR = Path('zips')

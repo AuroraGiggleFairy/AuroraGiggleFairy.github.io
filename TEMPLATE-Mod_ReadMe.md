@@ -2,6 +2,7 @@
 7d2d Version 2  
 **Version:** {{MOD_VERSION}}
 
+> {{QUOTE}}
 ---
 
 ## README TABLE OF CONTENTS
@@ -49,15 +50,15 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: 
-- Server Side: 
-- Client Required for Multiplayer: 
+- EAC Friendly: {{EAC_FRIENDLY}}
+- Server Side: {{SERVER_SIDE}}
+- Client Required for Multiplayer: {{CLIENT_REQUIRED}}
 
 ---
 
 ## 5. Installation
 
-### Safe to install on existing games: 
+### Safe to install on existing games: {{SAFE_INSTALL}}
 
 ### Client
 - Open "Run" (press Windows key + R)
@@ -78,7 +79,7 @@
 
 ## 6. Removal
 
-### Safe to remove from an existing game: 
+### Safe to remove from an existing game: {{SAFE_REMOVE}}
 - Simply locate the mod folder and delete it.
 
 ---

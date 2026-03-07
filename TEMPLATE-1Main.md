@@ -32,7 +32,14 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 
 # UNDER CONSTRUCTION but EVERYTHING IS THERE.
 > *refinning of descriptions incoming
-> *This is all due to new automation features
-
+> *This is all due to new automation features*
 
 <!-- MOD_LIST_START -->
+
+<!-- MOD_LIST_END -->
+
+<br>
+<br>
+
+---
+# When will Version 3.0 come out?

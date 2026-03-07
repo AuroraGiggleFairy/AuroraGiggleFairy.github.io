@@ -2,6 +2,7 @@
 7d2d Version 2  
 **Version:** 1.2.1
 
+> 
 ---
 
 ## README TABLE OF CONTENTS
@@ -85,33 +86,12 @@
 
 ## 7. Features
 <!-- FEATURES START -->
-- 119 Slot Backpack, with 3 rows of encumbrance  slots (68 slots)
-  - Updated encumbrance slots, buffs, twith interaction and perks. 
-  - PackMule does free up all 68 slots.
-  - Mobility is in sync with vanilla.
-  - Lockable slots that is EASY to tell what is locked and what isn't.
-  - Adds a craftable larger storage of wood/iron/steel, slots of 120/144/168.
-  - Large storages are variant blocks with multiple shapes to choose from.
-  - Breaking a larger storage returns it to your inventory.
 
-*Some overlap of UI may occur as this is a LARGE backpack. You can modify UI zoom in game menu if you wish.*
 <!-- FEATURES END -->
 
 ---
 
 ## 8. Changelog
 <!-- CHANGELOG START -->
-v1.2.1
-- Fixed a controls missing conditional that made the vehicle storage not show.
 
-v1.2.0
-- Updated to work with version 2.5.
-
-v1.1.0
-- When you break an insecure large storage, the block itself (not items inside) return to your inventory.
-- Added several more block shape options.
-- Updated Localization
-
-v1.0.0
-- Made the mod
 <!-- CHANGELOG END -->

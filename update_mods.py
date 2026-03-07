@@ -1,6 +1,34 @@
+# --- Quotes Loader ---
+def load_quotes(path='TEMPLATE-Quotes.md'):
+    if not os.path.exists(path):
+        return {}, {}
+    with open(path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    section_quotes = {}
+    mod_quotes = {}
+    in_mod_section = False
+    import re
+    for line in lines:
+        line = line.strip()
+        if line.startswith('# Mod Quotes'):
+            in_mod_section = True
+            continue
+        def extract_bracketed(text):
+            match = re.search(r'\[(.*?)\]', text)
+            return match.group(1).strip() if match else ''
+        if not in_mod_section:
+            if ':' in line and not line.startswith('#') and line.split(':',1)[0].isupper():
+                key, val = line.split(':', 1)
+                section_quotes[key.strip().upper()] = extract_bracketed(val)
+        else:
+            if ':' in line and not line.startswith('#'):
+                key, val = line.split(':', 1)
+                mod_quotes[key.strip()] = extract_bracketed(val)
+    return section_quotes, mod_quotes
 # Add missing import
 import os
 # --- Category Descriptions ---
+# --- Section Quotes ---
 def load_category_descriptions(path='TEMPLATE-CategoryDescriptions.md'):
     descriptions = {}
     if not os.path.exists(path):
@@ -49,14 +77,29 @@ def update_readme(folder, template):
     if os.path.exists(readme_path):
         with open(readme_path, 'r', encoding='utf-8') as f:
             existing = f.read()
+
     # Helper to get value after colon for a label
     def get_field(label):
-        pattern = re.compile(rf'{re.escape(label)}:? ?(.*)')
+        pattern = re.compile(rf'^{re.escape(label)}:? ?(.*)$', re.MULTILINE)
         match = pattern.search(existing)
         if match:
             return match.group(1).strip()
         return ''
-    # Always define these variables, even if README is missing
+
+    # Extract the quote line (the first blockquote after version)
+    def extract_quote(existing):
+        lines = existing.splitlines()
+        for i, line in enumerate(lines):
+            if line.strip().startswith('**Version:**'):
+                # Look for the next non-empty line that starts with '>'
+                for j in range(i+1, min(i+4, len(lines))):
+                    l = lines[j].strip()
+                    if l.startswith('>'):
+                        # Remove leading '>' and whitespace
+                        quote = l[1:].strip()
+                        return quote
+                break
+        return ''
 
     # Features and Changelog sections
     def extract_section(content, start_marker, end_marker):
@@ -69,10 +112,31 @@ def update_readme(folder, template):
     features = extract_section(existing, '<!-- FEATURES START -->', '<!-- FEATURES END -->')
     changelog = extract_section(existing, '<!-- CHANGELOG START -->', '<!-- CHANGELOG END -->')
 
+    # Preserve or leave blank the values after the relevant labels
+    eac_friendly = get_field('EAC Friendly')
+    server_side = get_field('Server Side')
+    client_required = get_field('Client Required for Multiplayer')
+    safe_install = get_field('Safe to install on existing games')
+    safe_remove = get_field('Safe to remove from an existing game')
+
+
+    # Extract or blank the quote
+    quote = extract_quote(existing)
+    # If quote is not blank, ensure it is wrapped in single * at both ends
+    if quote:
+        if not (quote.startswith('*') and quote.endswith('*')):
+            quote = f'*{quote.strip('* ')}*'
+
     # Fill template
     readme = template
     readme = readme.replace('{{MOD_NAME}}', name)
     readme = readme.replace('{{MOD_VERSION}}', version)
+    readme = readme.replace('{{EAC_FRIENDLY}}', eac_friendly)
+    readme = readme.replace('{{SERVER_SIDE}}', server_side)
+    readme = readme.replace('{{CLIENT_REQUIRED}}', client_required)
+    readme = readme.replace('{{SAFE_INSTALL}}', safe_install)
+    readme = readme.replace('{{SAFE_REMOVE}}', safe_remove)
+    readme = readme.replace('{{QUOTE}}', quote)
 
     readme = re.sub(r'<!-- FEATURES START -->.*?<!-- FEATURES END -->', f'<!-- FEATURES START -->\n{features}\n<!-- FEATURES END -->', readme, flags=re.DOTALL)
     readme = re.sub(r'<!-- CHANGELOG START -->.*?<!-- CHANGELOG END -->', f'<!-- CHANGELOG START -->\n{changelog}\n<!-- CHANGELOG END -->', readme, flags=re.DOTALL)
@@ -150,9 +214,27 @@ def get_mod_summary(folder):
     summary = f"---\n### **{name}**\n"
     if description:
         summary += f"*{description}*\n"
+    # Insert mod quote after description, before version/download
+    # Extract multi-line blockquote from mod's README.md
+    mod_quote_lines = []
+    if os.path.exists(readme_path):
+        with open(readme_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+        found_version = False
+        for i, line in enumerate(lines):
+            if not found_version and line.strip().startswith('**Version:**'):
+                found_version = True
+                continue
+            if found_version:
+                if line.strip().startswith('>'):
+                    mod_quote_lines.append(line.rstrip())
+                elif mod_quote_lines:
+                    # Stop at first non-quote after starting quote block
+                    break
+    if mod_quote_lines:
+        summary += '\n'.join(mod_quote_lines) + '\n'
     summary += f"\n| Version: {version} | [Download]({download_link}) |\n|---|---|\n"
-    formatted_features = formatted_features.rstrip() + "\n<br>\n<br>\n"
-    summary += f"\n{formatted_features}"
+    summary += f"\n{formatted_features.rstrip()}\n---"
     return summary
 
 with open('TEMPLATE-Mod_ReadMe.md', 'r', encoding='utf-8') as f:
@@ -192,21 +274,23 @@ for mod in folders:
 
 # Custom logic for HUDPlus_All and GigglePack_All
 HUDPLUS_MODS = [d for d in folders if 'HUDPlus' in d]
-OTHER_MODS = [d for d in folders if d.startswith('AGF-Other-')]
+OTHER_MODS = [d for d in folders if d.startswith('AGF-HUDPlusOther-')]
 
 
 # Separate BackpackPlus 84 slot from others
 BACKPACKPLUS_84 = 'AGF-BackpackPlus-84Slots-v3.2.0'
 BACKPACKPLUS_MODS = [d for d in folders if 'BackpackPlus' in d and d != BACKPACKPLUS_84]
 
+
+# Pack definitions
 PACKS = {
     'HUDPlus_All': (HUDPLUS_MODS, OTHER_MODS, '.Optionals - Other'),
     'BackpackPlus_All': (BACKPACKPLUS_MODS + [BACKPACKPLUS_84], [], None),
     'VP_All': ([d for d in folders if d.startswith('AGF-VP-')], [], None),
     'NoEAC_All': (NOEAC_MODS, [], None),
-    'Other_All': (OTHER_MODS, [], None),
+    # 'Other_All': (OTHER_MODS, [], None),
     'GigglePack_All': (
-        [d for d in folders if not d.startswith('AGF-Other-') and (d not in BACKPACKPLUS_MODS) and (d not in NOEAC_MODS)],
+        [d for d in folders if not d.startswith('AGF-HUDPlusOther-') and (d not in BACKPACKPLUS_MODS) and (d not in NOEAC_MODS)],
         OTHER_MODS + BACKPACKPLUS_MODS + [BACKPACKPLUS_84] + NOEAC_MODS,
         None  # We'll handle optionals below
     ),
@@ -280,14 +364,14 @@ for folder in folders:
         else:
             categories['OTHER'].append(folder)
 
-category_order = ['HUDPLUS', 'BACKPACKPLUS', 'SPECIAL', 'VP', 'NOEAC', 'OTHER']
+category_order = ['HUDPLUS', 'BACKPACKPLUS', 'SPECIAL', 'VP', 'NOEAC']
 category_headers = {
     'HUDPLUS': '## **HUDPLUS MODS**',
     'BACKPACKPLUS': '## **BACKPACKPLUS MODS**',
     'SPECIAL': '## **SPECIAL MODS**',
     'VP': '## **VANILLA PLUS MODS**',
     'NOEAC': '## **NOEAC MODS**',
-    'OTHER': '## **OTHER MODS**',
+    # 'OTHER': '## **OTHER MODS**',
 }
 def get_category_download_link(category, folders):
     if not folders:
@@ -295,19 +379,36 @@ def get_category_download_link(category, folders):
     zip_name = f'{category}_All.zip' if not category.endswith('_All') else f'{category}.zip'
     return f'[**\u2B07\uFE0F DOWNLOAD ALL {category.upper()} MODS**](https://AuroraGiggleFairy.github.io/zips/{zip_name})'
 
+
+
+
+
+# Load quotes for use in README generation
+import sys
+section_quotes, mod_quotes = load_quotes('TEMPLATE-Quotes.md')
+print(f"[DEBUG] section_quotes['GIGGLE PACK']: {section_quotes.get('GIGGLE PACK')}")
+sys.stdout.flush()
+
 # Update all individual readmes
 for folder in folders:
     update_readme(folder, template)
 
-mod_list_block = '\n\n# Mod List\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)'
-if 'GIGGLE PACK' in category_descriptions:
-    mod_list_block += f"\n*{category_descriptions['GIGGLE PACK']}*"
+mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)'
+if 'GIGGLE PACK' in section_quotes:
+    quote = section_quotes['GIGGLE PACK']
+    if quote:
+        mod_list_block += f"\n\n> {quote}\n\n---"
+    else:
+        mod_list_block += "\n\n---"
+else:
+    mod_list_block += "\n\n---"
+
 
 for cat in category_order:
     if cat in categories and categories[cat]:
         if cat == 'SPECIAL':
             # Custom header, no download all, no description, just the mod details
-            mod_list_block += "\n\n## **AGF Compatibility Mod**\n"
+            mod_list_block += "\n---\n\n<br>\n\n## **AGF Compatibility Mod**\n"
             for folder in categories[cat]:
                 try:
                     mod_list_block += '\n' + get_mod_summary(folder) + '\n'
@@ -315,57 +416,104 @@ for cat in category_order:
                     print(f"Skipping {folder} for summary: {e}")
             continue
         else:
-            mod_list_block += f"\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n"
-            if cat in category_descriptions:
-                mod_list_block += f"**{category_descriptions[cat]}**\n\n---"
-            else:
-                mod_list_block += "---"
-            cat_folders = categories[cat]
-            # For BackpackPlus, move 119Slots mod to the end
-            if cat == 'BACKPACKPLUS':
-                backpack119 = [f for f in cat_folders if '119Slots' in f]
-                others = [f for f in cat_folders if '119Slots' not in f]
-                cat_folders = others + backpack119
-            # For HUDPLUS, list HUDPlus mods, then a subsection for 'Other' mods
-            if cat == 'HUDPLUS':
-                hudplus_mods = [f for f in cat_folders if 'HUDPlus' in f]
-                other_mods = [f for f in categories['OTHER']]
-                for folder in hudplus_mods:
+            # HUDPLUSOTHER logic: insert after HUDPLUS
+            if cat == 'HUDPLUS' and 'OTHER_MODS' in globals() and OTHER_MODS:
+                # Insert HUDPLUS mods, then HUDPLUSOTHER as a sub-section
+                mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n"
+                if cat in category_descriptions:
+                    mod_list_block += f"\n**{category_descriptions[cat]}**\n"
+                quote = ''
+                header_key = category_headers[cat].replace('## **','').replace(' MODS**','').upper().strip()
+                fallback_key = cat.replace('_',' ') + ' MODS'
+                fallback_key2 = cat.replace('_',' ')
+                # Normalize keys for section_quotes
+                def norm_key(k):
+                    return k.upper().replace('_', ' ').strip()
+                quote = (
+                    section_quotes.get(norm_key(header_key), '') or
+                    section_quotes.get(norm_key(fallback_key), '') or
+                    section_quotes.get(norm_key(fallback_key2), '') or
+                    section_quotes.get(norm_key(cat), '') or
+                    section_quotes.get(cat, '')
+                )
+                if quote:
+                    mod_list_block += f"> {quote}\n"
+                # Main HUDPLUS mods
+                for folder in categories[cat]:
                     try:
                         mod_list_block += '\n' + get_mod_summary(folder) + '\n'
                     except Exception as e:
                         print(f"Skipping {folder} for summary: {e}")
-                if other_mods:
-                    mod_list_block += '\n### **Optional HUDPlus Tweaks**'
-                    mod_list_block += '\n| Display Name | Version | Download | Description |\n|---|---|---|---|'
-                    for folder in other_mods:
-                        try:
-                            import xml.etree.ElementTree as ET
-                            xml_path = os.path.join(folder, 'ModInfo.xml')
-                            name = folder
-                            version = ''
-                            description = ''
-                            if os.path.exists(xml_path):
-                                tree = ET.parse(xml_path)
-                                root = tree.getroot()
-                                name_tag = root.find('DisplayName')
-                                if name_tag is None:
-                                    name_tag = root.find('Name')
-                                if name_tag is not None and 'value' in name_tag.attrib:
-                                    name = name_tag.attrib['value']
-                                version_tag = root.find('Version')
-                                if version_tag is not None and 'value' in version_tag.attrib:
-                                    version = version_tag.attrib['value']
-                                desc_tag = root.find('Description')
-                                if desc_tag is not None and 'value' in desc_tag.attrib:
-                                    description = desc_tag.attrib['value']
-                            download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
-                            mod_list_block += f"\n| {name} | {version} | [Download]({download_link}) | {description} |"
-                        except Exception as e:
-                            print(f"Skipping {folder} for condensed optionals: {e}")
-                    mod_list_block += '\n'
+                # HUDPLUSOTHER sub-section with required formatting
+                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks**'
+                mod_list_block += '\n| Display Name | Version | Download | Description |\n|---|---|---|---|'
+                for folder in OTHER_MODS:
+                    try:
+                        import xml.etree.ElementTree as ET
+                        xml_path = os.path.join(folder, 'ModInfo.xml')
+                        name = folder
+                        version = ''
+                        description = ''
+                        if os.path.exists(xml_path):
+                            tree = ET.parse(xml_path)
+                            root = tree.getroot()
+                            name_tag = root.find('DisplayName')
+                            if name_tag is None:
+                                name_tag = root.find('Name')
+                            if name_tag is not None and 'value' in name_tag.attrib:
+                                name = name_tag.attrib['value']
+                            version_tag = root.find('Version')
+                            if version_tag is not None and 'value' in version_tag.attrib:
+                                version = version_tag.attrib['value']
+                            desc_tag = root.find('Description')
+                            if desc_tag is not None and 'value' in desc_tag.attrib:
+                                description = desc_tag.attrib['value']
+                        download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
+                        mod_list_block += f"\n| {name} | {version} | [Download]({download_link}) | {description} |"
+                    except Exception as e:
+                        print(f"Skipping {folder} for condensed optionals: {e}")
+                mod_list_block += '\n'
                 continue
-            for folder in cat_folders:
+            # BackpackPlus custom sort: 119 slot last
+            if cat == 'BACKPACKPLUS':
+                sorted_folders = [f for f in categories[cat] if '119' not in f]
+                sorted_folders += [f for f in categories[cat] if '119' in f]
+            else:
+                sorted_folders = categories[cat]
+            mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n"
+            if cat in category_descriptions:
+                mod_list_block += f"\n**{category_descriptions[cat]}**\n"
+            quote = ''
+            header_key = category_headers[cat].replace('## **','').replace(' MODS**','').upper().strip()
+            fallback_key = cat.replace('_',' ') + ' MODS'
+            fallback_key2 = cat.replace('_',' ')
+            quote = (
+                section_quotes.get(header_key, '') or
+                section_quotes.get(fallback_key.upper(), '') or
+                section_quotes.get(fallback_key2.upper(), '') or
+                section_quotes.get(cat.upper(), '') or
+                section_quotes.get(cat, '')
+            )
+            if cat == 'GIGGLE PACK':
+                # Insert triple-star line, then blockquote, then dashes
+                mod_list_block += "\n***All AGF mods in one convenient download.***\n"
+                # Normalize keys for section_quotes
+                def norm_key(k):
+                    return k.upper().replace('_', ' ').strip()
+                gpack_quote = (
+                    section_quotes.get(norm_key(header_key), '') or
+                    section_quotes.get(norm_key(fallback_key), '') or
+                    section_quotes.get(norm_key(fallback_key2), '') or
+                    section_quotes.get(norm_key(cat), '') or
+                    section_quotes.get(cat, '')
+                )
+                if gpack_quote:
+                    mod_list_block += f"> {gpack_quote}\n"
+                mod_list_block += "\n---\n---\n"
+                continue
+            if quote:
+                mod_list_block += f"> {quote}\n"
+            for folder in sorted_folders:
                 try:
                     mod_list_block += '\n' + get_mod_summary(folder) + '\n'
                 except Exception as e:
@@ -378,11 +526,73 @@ print("\n--- DEBUG: TEMPLATE-1Main.md CONTENT ---\n")
 print(main_readme_content[:500])  # Print first 500 chars for brevity
 print("\n--- END DEBUG ---\n")
 
+
 if '<!-- MOD_LIST_START -->' in main_readme_content:
-    new_content = main_readme_content.replace('<!-- MOD_LIST_START -->', mod_list_block)
+    new_content = main_readme_content.replace('<!-- MOD_LIST_START -->', mod_list_block + '\n<!-- MOD_LIST_END -->')
 else:
-    # Fallback: append at the end
-    new_content = main_readme_content.rstrip() + mod_list_block
+    new_content = main_readme_content.rstrip() + mod_list_block + '\n<!-- MOD_LIST_END -->'
 
 with open(main_readme_path, 'w', encoding='utf-8') as f:
     f.write(new_content)
+
+# --- Ensure TEMPLATE-Quotes.md is up to date with all mod names ---
+def sync_mod_quotes_template(quotes_path='TEMPLATE-Quotes.md', folders=None):
+    if folders is None:
+        return
+    # Read existing quotes file
+    if not os.path.exists(quotes_path):
+        lines = []
+    else:
+        with open(quotes_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+    # Find the start of the mod quotes section
+    mod_quotes_start = None
+    for i, line in enumerate(lines):
+        if line.strip().startswith('# Mod Quotes'):
+            mod_quotes_start = i
+            break
+    if mod_quotes_start is None:
+        # Add section if missing
+        lines.append('\n---\n\n# Mod Quotes\n# (Use the exact mod name as it appears in the README header)\n')
+        mod_quotes_start = len(lines) - 1
+    # Build a dict of existing mod quotes (ignore '# ...add more mods as needed' and comments)
+    mod_quotes = {}
+    for line in lines[mod_quotes_start+1:]:
+        if ':' in line and not line.strip().startswith('#'):
+            key, val = line.split(':', 1)
+            mod_quotes[key.strip()] = val.rstrip('\n')
+    # Get all mod display names
+    import xml.etree.ElementTree as ET
+    mod_names = []
+    for folder in folders:
+        xml_path = os.path.join(folder, 'ModInfo.xml')
+        try:
+            tree = ET.parse(xml_path)
+            root = tree.getroot()
+            name_tag = root.find('DisplayName')
+            if name_tag is None:
+                name_tag = root.find('Name')
+            name = name_tag.attrib['value'] if name_tag is not None and 'value' in name_tag.attrib else folder
+            mod_names.append(name.strip())
+        except Exception:
+            mod_names.append(folder.strip())
+    # Update mod_quotes with any new mods
+    updated = False
+    for name in mod_names:
+        if name not in mod_quotes:
+            mod_quotes[name] = ''
+            updated = True
+    # Rebuild the mod quotes section (remove any trailing comments or old lines)
+    new_mod_quotes_lines = []
+    for name in sorted(mod_names):
+        # Preserve existing quote if present
+        quote = mod_quotes.get(name, '')
+        new_mod_quotes_lines.append(f'{name}: {quote}\n')
+    # Write back the updated file if needed
+    before = lines[:mod_quotes_start+1]
+    with open(quotes_path, 'w', encoding='utf-8') as f:
+        f.writelines(before)
+        f.write(''.join(new_mod_quotes_lines))
+    print("[DEBUG] Mod names parsed for quotes:")
+    for name in mod_names:
+        print(f"  - {name}")
