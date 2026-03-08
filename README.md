@@ -35,6 +35,25 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 > *This is all due to new automation features*
 
 
+### Client
+> - Open "Run" (press Windows key + R)
+> - Type %appdata% and click OK
+> - Open the "Roaming" folder
+> - Open "7DaysToDie"
+> - Open or create the "Mods" folder
+> - Extract the mod here
+> - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+### Server
+> - Use your server host’s file manager or a program like FileZilla
+> - Find the main server folder and open the "Mods" folder
+> - Extract the mod here
+> - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+---
+
+
+
 
 # Mod List
 
@@ -169,7 +188,7 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ---
 ### **AGF 60 Slot Backpack**
 *60 slot backpack and extra large storage options.*
-> *Only test*
+>
 
 **Version:** 3.2.0  
 [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-60Slots-v3.2.0.zip)
