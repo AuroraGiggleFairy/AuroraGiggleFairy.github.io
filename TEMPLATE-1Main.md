@@ -34,6 +34,25 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 > *refinning of descriptions incoming
 > *This is all due to new automation features*
 
+
+### Client
+> - Open "Run" (press Windows key + R)
+> - Type %appdata% and click OK
+> - Open the "Roaming" folder
+> - Open "7DaysToDie"
+> - Open or create the "Mods" folder
+> - Extract the mod here
+> - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+### Server
+> - Use your server host’s file manager or a program like FileZilla
+> - Find the main server folder and open the "Mods" folder
+> - Extract the mod here
+> - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+---
+
+
 <!-- MOD_LIST_START -->
 
 <!-- MOD_LIST_END -->

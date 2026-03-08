@@ -422,7 +422,7 @@ for cat in category_order:
             # HUDPLUSOTHER logic: insert after HUDPLUS
             if cat == 'HUDPLUS' and 'OTHER_MODS' in globals() and OTHER_MODS:
                 # Insert HUDPLUS mods, then HUDPLUSOTHER as a sub-section
-                mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n"
+                mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
                 if cat in category_descriptions:
                     mod_list_block += f"\n**{category_descriptions[cat]}**\n"
                 quote = ''
@@ -483,7 +483,7 @@ for cat in category_order:
                 sorted_folders += [f for f in categories[cat] if '119' in f]
             else:
                 sorted_folders = categories[cat]
-            mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n"
+            mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
             if cat in category_descriptions:
                 mod_list_block += f"\n**{category_descriptions[cat]}**\n"
             quote = ''

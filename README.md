@@ -53,6 +53,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ## **HUDPLUS MODS**
 [**⬇️ DOWNLOAD ALL HUDPLUS MODS**](https://AuroraGiggleFairy.github.io/zips/HUDPLUS_All.zip)
 
+---
+
 ***Quality-of-life HUD enhancements and visual tweaks.***
 > goodies
 
@@ -158,6 +160,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 
 ## **BACKPACKPLUS MODS**
 [**⬇️ DOWNLOAD ALL BACKPACKPLUS MODS**](https://AuroraGiggleFairy.github.io/zips/BACKPACKPLUS_All.zip)
+
+---
 
 ***Download all above or select one below.***
 > more testing
@@ -275,6 +279,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 
 ## **VANILLA PLUS MODS**
 [**⬇️ DOWNLOAD ALL VP MODS**](https://AuroraGiggleFairy.github.io/zips/VP_All.zip)
+
+---
 
 ***Vanilla Plus: gameplay tweaks and new features.***
 
@@ -1163,6 +1169,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 
 ## **NOEAC MODS**
 [**⬇️ DOWNLOAD ALL NOEAC MODS**](https://AuroraGiggleFairy.github.io/zips/NOEAC_All.zip)
+
+---
 
 ***Mods that require EAC to be off, some require client download.***
 

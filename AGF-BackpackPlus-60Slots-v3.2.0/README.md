@@ -3,7 +3,7 @@
 **Version:** 3.2.0  
 [Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-60Slots-v3.2.0.zip)
 
-> *Only test*
+> 
 ---
 
 ## README TABLE OF CONTENTS
@@ -51,15 +51,15 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: 
-- Server Side: 
-- Client Required for Multiplayer: 
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
 
 ---
 
 ## 5. Installation
 
-### Safe to install on existing games: 
+### Safe to install on existing games: Yes
 
 ### Client
 - Open "Run" (press Windows key + R)
@@ -80,7 +80,7 @@
 
 ## 6. Removal
 
-### Safe to remove from an existing game: 
+### Safe to remove from an existing game: No
 - Simply locate the mod folder and delete it.
 
 ---
@@ -88,13 +88,13 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Visual size of inventory is the same as vanilla - as in no shrinking required.
-  - 60 Slot Backpack, with 3 rows of encumbrance slots (30 slots).
-  - Accounts for packmule, buffs, twitch integration, and mobility.
-  - PackMule does free up all 30 slots.
-  - Lockable slots that is EASY to tell what is locked and what isn't.
-  - Adds a craftable larger storage of wood/iron/steel, slots of 60/80/100.
-  - Large storages are variant blocks with multiple shapes to choose from.
-  - Breaking a larger storage returns it to your inventory.
+    - 60 Slot Backpack, with 3 rows of encumbrance slots (30 slots).
+    - Accounts for packmule, buffs, twitch integration, and mobility.
+    - PackMule does free up all 30 slots.
+    - Lockable slots that is EASY to tell what is locked and what isn't.
+    - Adds a craftable larger storage of wood/iron/steel, slots of 60/80/100.
+    - Large storages are variant blocks with multiple shapes to choose from.
+    - Breaking a larger storage returns it to your inventory.
 <!-- FEATURES END -->
 
 ---
