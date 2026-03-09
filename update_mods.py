@@ -272,46 +272,29 @@ def get_mod_summary(folder):
     for line in features_lines:
         formatted_features += f"{line}\n"
 
-    # Special handling for AGF Compatibility Mod (SPECIAL category)
-    if folder.startswith('zzzAGF-'):
-        # Use only the category description for SPECIAL section, formatted to match other categories
-        special_desc = category_descriptions.get('SPECIAL', '')
-        summary = ''
-        if special_desc:
-            summary += f"**{special_desc}**\n\n---\n---"
-        else:
-            summary += '---\n---'
-        summary += f"\n**Version:** {version}  \n[Download]({download_link})\n"
-        summary += f"\n{formatted_features.rstrip()}\n---"
-        return summary
-    # Default for all other mods
-    summary = f"---\n### **{name}**\n"
-    if description:
-        summary += f"*{description}*\n"
-    # Insert mod quote after description, before version/download
-    # Extract multi-line blockquote from mod's README.md
-    mod_quote_lines = []
-    if os.path.exists(readme_path):
-        with open(readme_path, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-        found_version = False
-        for i, line in enumerate(lines):
-            if not found_version and line.strip().startswith('**Version:**'):
-                found_version = True
-                continue
-            if found_version:
-                if line.strip().startswith('>'):
-                    mod_quote_lines.append(line.rstrip())
-                elif mod_quote_lines:
-                    # Stop at first non-quote after starting quote block
-                    break
-    if mod_quote_lines:
-        summary += '\n'.join(mod_quote_lines) + '\n'
-    summary += f"\n**Version:** {version}  \n[Download]({download_link})\n"
-    summary += f"\n{formatted_features.rstrip()}\n\n---"
-    # Ensure exactly one blank line above ---
-    summary = re.sub(r'\n{3,}---', '\n\n---', summary)
-    return summary
+    # Use TEMPLATE-ModListEntry.md (lines 3-8) for each mod entry
+    modlistentry_template = ''
+    with open('TEMPLATE-ModListEntry.md', 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+        # Lines 3-8 (1-based) = lines[2:8] (0-based)
+        modlistentry_template = ''.join(lines[2:8])
+
+    # Prepare replacements
+    entry = modlistentry_template
+    entry = entry.replace('{{MOD_NAME}}', name)
+    entry = entry.replace('{{MOD_VERSION}}', version)
+    entry = entry.replace('{{DOWNLOAD_LINK}}', download_link)
+    entry = entry.replace('{{DESCRIPTION}}', description if description else '_No description available._')
+    # Format features so only the first line is unquoted, rest are prefixed with '> '
+    features_lines = formatted_features.rstrip().split('\n')
+    if features_lines:
+        quoted_features = features_lines[0] + '\n'
+        if len(features_lines) > 1:
+            quoted_features += '\n'.join('> ' + line if line.strip() else '>' for line in features_lines[1:])
+    else:
+        quoted_features = '_No features listed._'
+    entry = entry.replace('{{FEATURES}}', quoted_features)
+    return entry + '\n---'
 
 with open('TEMPLATE-Mod_ReadMe.md', 'r', encoding='utf-8') as f:
     template = f.read()
