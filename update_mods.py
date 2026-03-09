@@ -450,12 +450,16 @@ for cat in category_order:
     if cat in categories and categories[cat]:
         if cat == 'SPECIAL':
             # Custom header, no download all, no description, just the mod details
-            mod_list_block += "\n---\n\n<br>\n\n## **AGF Compatibility Mod**\n"
+            mod_list_block += "\n\n---\n\n<br>\n\n## **AGF Compatibility Mod**\n"
             for folder in categories[cat]:
                 try:
                     mod_list_block += '\n' + get_mod_summary(folder) + '\n'
                 except Exception as e:
                     print(f"Skipping {folder} for summary: {e}")
+            # Ensure a single blank line before the ending --- (no extra ---)
+            # Remove any trailing whitespace and --- lines, then add exactly one blank line and one ---
+            mod_list_block = re.sub(r'(\n*---\n*)+$', '', mod_list_block)
+            mod_list_block = mod_list_block.rstrip() + '\n\n---\n'
             continue
         else:
             # HUDPLUSOTHER logic: insert after HUDPLUS
