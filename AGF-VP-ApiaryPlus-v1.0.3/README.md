@@ -1,7 +1,7 @@
 # AGF Apiary Plus
 7d2d Version 2  
 **Version:** 1.0.3  
-[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-ApiaryPlus.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-ApiaryPlus.zip)
 
 > 
 ---

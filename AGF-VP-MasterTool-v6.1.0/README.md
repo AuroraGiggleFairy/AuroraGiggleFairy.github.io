@@ -1,7 +1,7 @@
 # AGF Master Tool
 7d2d Version 2  
 **Version:** 6.1.0  
-[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-MasterTool.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-MasterTool.zip)
 
 > 
 ---

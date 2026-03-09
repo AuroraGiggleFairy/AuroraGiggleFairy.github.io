@@ -129,7 +129,7 @@ def update_readme(folder, template):
 
     # Fill template
     base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
-    download_link = f'https://AuroraGiggleFairy.github.io/_zip/{base_zip_name}.zip'
+    download_link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{base_zip_name}.zip'
     readme = template
     readme = readme.replace('{{MOD_NAME}}', name)
     readme = readme.replace('{{MOD_VERSION}}', version)
@@ -168,7 +168,7 @@ def get_mod_summary(folder):
 
     # Download link (full GitHub Pages URL)
     base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
-    download_link = f'https://AuroraGiggleFairy.github.io/_zip/{base_zip_name}.zip'
+    download_link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{base_zip_name}.zip'
 
     # Description/summary from ModInfo.xml
     description = ''
@@ -414,7 +414,7 @@ def get_category_download_link(category, folders):
     if not folders:
         return ''
     zip_name = f'{category}_All.zip' if not category.endswith('_All') else f'{category}.zip'
-    return f'[**\u2B07\uFE0F DOWNLOAD ALL {category.upper()} MODS**](https://AuroraGiggleFairy.github.io/_zip/{zip_name})'
+    return f'[**\u2B07\uFE0F DOWNLOAD ALL {category.upper()} MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{zip_name})'
 
 
 
@@ -431,7 +431,7 @@ for folder in folders:
     update_readme(folder, template)
 
 
-mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/_zip/GigglePack_All.zip)'
+mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/GigglePack_All.zip)'
 # Add category description for Giggle Pack if present
 if 'GIGGLE PACK' in category_descriptions:
     mod_list_block += f"\n\n**{category_descriptions['GIGGLE PACK']}**"

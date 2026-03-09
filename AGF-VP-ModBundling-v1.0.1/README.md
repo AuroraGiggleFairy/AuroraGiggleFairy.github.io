@@ -1,7 +1,7 @@
 # AGF Mod Bundling
 7d2d Version 2  
 **Version:** 1.0.1  
-[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-ModBundling.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-ModBundling.zip)
 
 > 
 ---
