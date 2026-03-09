@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Apiary now 2 blocks wide instead of 3.
-  - Apiary heatmap is removed.
-  - To keep mod safe, pre-existing apiaries can be destroyed to get the new 2 wide version.
+    - Apiary heatmap is removed.
+    - To keep mod safe, pre-existing apiaries can be destroyed to get the new 2 wide version.
 <!-- FEATURES END -->
 
 ---

@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - High trader stage unlocks option to purchase trader managed vending machines.
-  - Can pick them back up by breaking it (separate from ones found in the world.)
+    - Can pick them back up by breaking it (separate from ones found in the world.)
 *Trader managed vending machines are the ones that come with food and drinks that reset daily.
 <!-- FEATURES END -->
 

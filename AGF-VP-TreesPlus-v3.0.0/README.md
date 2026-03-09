@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Planting less trees helps performance.
-  - Can plant a x5 and a x25 version of trees.
-  - Tree Naming on planting trees, like crops, to see stages.
+    - Can plant a x5 and a x25 version of trees.
+    - Tree Naming on planting trees, like crops, to see stages.
 *If FarmingPlus is installed, can craft seeds faster at its seed station.*
 <!-- FEATURES END -->
 

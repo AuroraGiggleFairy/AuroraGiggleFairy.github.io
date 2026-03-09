@@ -89,10 +89,10 @@
 <!-- FEATURES START -->
 - Works standalone from HUDPlus-1Main
 - A purple book icon that opens up Details on one page (With Zooming Option)!
-  - Magazine unlocks
-  - Books
-  - Unlocks from Schematics/Books
-  - Armor Details
+    - Magazine unlocks
+    - Books
+    - Unlocks from Schematics/Books
+    - Armor Details
 <!-- FEATURES END -->
 
 ---

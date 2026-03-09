@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Painting costs ZERO paint.
-  - You can hold down the trigger to continue painting.
-  - Painting distance is reduced to prevent accidental long distance painting.
+    - You can hold down the trigger to continue painting.
+    - Painting distance is reduced to prevent accidental long distance painting.
 <!-- FEATURES END -->
 
 ---

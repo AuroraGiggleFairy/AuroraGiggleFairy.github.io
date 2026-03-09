@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Mining Perk now allows you to bundle clay, sand, and brass.
-  - The sand you get from mining very slightly increased.
+    - The sand you get from mining very slightly increased.
 <!-- FEATURES END -->
 
 ---

@@ -88,15 +88,15 @@
 ## 7. Features
 <!-- FEATURES START -->
 - All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.
-  - Gyrocopter's reverse is smooth and no longer pausing haults.
-  - Doubled Vehicle HitPoints for durability.
-  - New Vehicle Speed and Progression, near vanilla speeds for performance.
+    - Gyrocopter's reverse is smooth and no longer pausing haults.
+    - Doubled Vehicle HitPoints for durability.
+    - New Vehicle Speed and Progression, near vanilla speeds for performance.
 
-  - Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5
-  - Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2
-  - Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14
-  - Truck Speed (normal, turbo) now 12, 16 instead of 10, 14
-  - Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15
+    - Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5
+    - Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2
+    - Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14
+    - Truck Speed (normal, turbo) now 12, 16 instead of 10, 14
+    - Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15
 <!-- FEATURES END -->
 
 ---

@@ -88,22 +88,22 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Over 5,700 in game models all within one block!
-  - Craft at a workbench.
-  - Levels in perkAdvancedEngineering slightly reduces ingredient costs.
-  - If the block is normally a container, it is secured in its deco version size (10 x 10)
-  - Strong as Wood Blocks (500hp), but high explosive resistance.
-  - When a player breaks one, it returns to their inventory.
-  - When blocks break to falls, zombies, or explosions, high chance of picking it up shortly after.
-  - HIGH COMPATIBILITY as it only adds its own code and NOT dependent on existing ones.
-  - If it is a light, it can be powered with electricity.
-  - If the block says, "upgrade" you can upgrade it with 10 forged steel to hitpoints of 5,000
-  - Doors also come in unbarricaded versions
-  - If the block says, "campfire" you can use it as a campfire.
+    - Craft at a workbench.
+    - Levels in perkAdvancedEngineering slightly reduces ingredient costs.
+    - If the block is normally a container, it is secured in its deco version size (10 x 10)
+    - Strong as Wood Blocks (500hp), but high explosive resistance.
+    - When a player breaks one, it returns to their inventory.
+    - When blocks break to falls, zombies, or explosions, high chance of picking it up shortly after.
+    - HIGH COMPATIBILITY as it only adds its own code and NOT dependent on existing ones.
+    - If it is a light, it can be powered with electricity.
+    - If the block says, "upgrade" you can upgrade it with 10 forged steel to hitpoints of 5,000
+    - Doors also come in unbarricaded versions
+    - If the block says, "campfire" you can use it as a campfire.
 
 NOTE
-  - Some localization is ONLY in English at the moment. MOST are in all 13 languages
-  - Some localizations are missing the color of the blocks. (This is on the Fun Pimps, but I will work on later.)
-  - Some localizations do not distinguish between themselves. (This is on the Fun Pimps, but I will work on later.)
+    - Some localization is ONLY in English at the moment. MOST are in all 13 languages
+    - Some localizations are missing the color of the blocks. (This is on the Fun Pimps, but I will work on later.)
+    - Some localizations do not distinguish between themselves. (This is on the Fun Pimps, but I will work on later.)
 <!-- FEATURES END -->
 
 ---

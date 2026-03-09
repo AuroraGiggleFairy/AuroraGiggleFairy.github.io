@@ -88,9 +88,9 @@
 ## 7. Features
 <!-- FEATURES START -->
 - This adds a blood moon countdown under the compass.
-  - Currently works with these Blood Moon fixed frequencies:
-  - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30, 60
-  - If the frequency or bloodmoon range is different than the above, the mod will not apply.
+    - Currently works with these Blood Moon fixed frequencies:
+    - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30, 60
+    - If the frequency or bloodmoon range is different than the above, the mod will not apply.
 <!-- FEATURES END -->
 
 ---

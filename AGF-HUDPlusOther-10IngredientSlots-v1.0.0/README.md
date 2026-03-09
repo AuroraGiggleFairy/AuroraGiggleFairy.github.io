@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Increases the ingredients list from 5 to 10 slots.
-  - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
+    - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
 <!-- FEATURES END -->
 
 ---

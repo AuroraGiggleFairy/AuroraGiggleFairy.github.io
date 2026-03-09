@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - I enjoy being visited upon by larger hordes.
-  - I increased the animal hordes only by a little.
+    - I increased the animal hordes only by a little.
 <!-- FEATURES END -->
 
 ---

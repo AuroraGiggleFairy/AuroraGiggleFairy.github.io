@@ -88,15 +88,15 @@
 ## 7. Features
 <!-- FEATURES START -->
 - The Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.
-  - Miner69r increases the block damage of the tool.
-  - Mother Lode, Salvage Operations, and Living Off the Land increases the appropriate harvest amount.
-  - The harvesting amount of the master tool ties with other tools.
+    - Miner69r increases the block damage of the tool.
+    - Mother Lode, Salvage Operations, and Living Off the Land increases the appropriate harvest amount.
+    - The harvesting amount of the master tool ties with other tools.
 
-  - To unlock, recommended to use a team.
-  - Master Tool has 4 ingredients only craftable after maxing out related crafting perks.
-  - Master Tool Quest becomes available at a trader only after you complete Tier 6 of quests.
-  - Master Tool Buried Supplies quest is very difficult, but this is how you get the schematic.
-  - Is this confusing? probably. Hopefully it will make more sense when you see it in game.
+    - To unlock, recommended to use a team.
+    - Master Tool has 4 ingredients only craftable after maxing out related crafting perks.
+    - Master Tool Quest becomes available at a trader only after you complete Tier 6 of quests.
+    - Master Tool Buried Supplies quest is very difficult, but this is how you get the schematic.
+    - Is this confusing? probably. Hopefully it will make more sense when you see it in game.
 
 Find a translation error? Please let me know!
 <!-- FEATURES END -->

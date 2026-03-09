@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Rebundle Bundles after opening.
-  - Bundles icon now tinted for a visual differentation assistance.
+    - Bundles icon now tinted for a visual differentation assistance.
 <!-- FEATURES END -->
 
 ---

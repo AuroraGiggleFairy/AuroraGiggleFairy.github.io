@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Break a station, wood sign, or writable crate and it returns to your inventory.
-  - These same blocks also have a chance to obtain if they fall.
-  - Any items within these will drop in a backpack (including forge materials).
+    - These same blocks also have a chance to obtain if they fall.
+    - Any items within these will drop in a backpack (including forge materials).
 
 campfire
 dew collector

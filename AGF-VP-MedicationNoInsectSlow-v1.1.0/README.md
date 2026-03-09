@@ -88,10 +88,10 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Bee Gone Cream can be crafted with 10 levels in medical crafting at a campfire with a cooking pot.
-  - The cream removes and prevents slows from Bee Swarms and Insect Swarms.
-  - The cream can also be applied to other players as a secondary action.
-  - Also findable in loot and traders, similarly to aloe cream.
-  - Steroids now ALSO have this benefit, and indicates it in descriptions and stat displays.
+    - The cream removes and prevents slows from Bee Swarms and Insect Swarms.
+    - The cream can also be applied to other players as a secondary action.
+    - Also findable in loot and traders, similarly to aloe cream.
+    - Steroids now ALSO have this benefit, and indicates it in descriptions and stat displays.
 
 *Thanks to "Go-go, Godzilla" for the name idea.
 *Thanks to "Go-go, Godzilla", B19JAY, mandy_tj, 13ubblegum_ and Asher_Gamess for brainstorming support.

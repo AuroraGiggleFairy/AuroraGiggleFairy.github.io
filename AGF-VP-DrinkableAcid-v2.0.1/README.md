@@ -88,16 +88,16 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Drink ACID for some interesting effects.
-  - Specifics:
-  - Lose 30% water
-  - Bleeding, approximately 120hp damage over the duration
-  - Trippy screen effect
-  - Painting screen effect
-  - Fast buff
-  - Jump buff
-  - Danceoff Music Plays
-  - Celebration (on kill enemy turns to confetti)
-  - Silly Sounds
+    - Specifics:
+    - Lose 30% water
+    - Bleeding, approximately 120hp damage over the duration
+    - Trippy screen effect
+    - Painting screen effect
+    - Fast buff
+    - Jump buff
+    - Danceoff Music Plays
+    - Celebration (on kill enemy turns to confetti)
+    - Silly Sounds
 <!-- FEATURES END -->
 
 ---

@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
-  - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
-  - Lanterns are removed from loot and trader lists as you can just pick them up.
+    - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
+    - Lanterns are removed from loot and trader lists as you can just pick them up.
 <!-- FEATURES END -->
 
 ---

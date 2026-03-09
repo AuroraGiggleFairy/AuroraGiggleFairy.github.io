@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - All archery ammo requires Feathers.
-  - Feathers can be crafted from plastic.
+    - Feathers can be crafted from plastic.
 <!-- FEATURES END -->
 
 ---

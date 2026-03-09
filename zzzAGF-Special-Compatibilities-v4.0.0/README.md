@@ -88,28 +88,28 @@
 ## 7. Features
 <!-- FEATURES START -->
 - This is a compatibility patch for mods that affect any of AGF's, most commonly:
-  - HUDPlus
-  - PurpleBook
-  - RenamesforAlphabeticalSort
-  - SimplifiedStackSizes
-  - AmmoDisassembly
-  - RebundleBundles
+    - HUDPlus
+    - PurpleBook
+    - RenamesforAlphabeticalSort
+    - SimplifiedStackSizes
+    - AmmoDisassembly
+    - RebundleBundles
 - This mod determines if you have the conflicting ones installed before applying changes.
 - More can be added as requested.
 - Language support was added to:
-  - BDub's Vehicles
-  - IZY's Weapons
-  - GS Vanilla Cook Book
+    - BDub's Vehicles
+    - IZY's Weapons
+    - GS Vanilla Cook Book
 - Current Compatibility List:
-  - Dewtas' 18 slot toolbelt
-  - Khaine's 15 slot toolbelt
-  - Wookie's 12 slot toolbelt
-  - RecipeStatsTab
-  - BDub's Vehicles
-  - IZY's Weapons
-  - MoreQuests
-  - Oakraven Ammo PRess
-  - GSVanillaCookBook
+    - Dewtas' 18 slot toolbelt
+    - Khaine's 15 slot toolbelt
+    - Wookie's 12 slot toolbelt
+    - RecipeStatsTab
+    - BDub's Vehicles
+    - IZY's Weapons
+    - MoreQuests
+    - Oakraven Ammo PRess
+    - GSVanillaCookBook
 <!-- FEATURES END -->
 
 ---

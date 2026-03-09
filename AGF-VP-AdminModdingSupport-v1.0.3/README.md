@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - The "Block Replace Tool" can now replace blocks quickly.
-  - Admin books that give a set amount of xp to a player.
-  - Harvesting Test Blocks with set harvest amounts, better for testing.
+    - Admin books that give a set amount of xp to a player.
+    - Harvesting Test Blocks with set harvest amounts, better for testing.
 <!-- FEATURES END -->
 
 ---

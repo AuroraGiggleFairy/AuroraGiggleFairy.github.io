@@ -88,14 +88,14 @@
 ## 7. Features
 <!-- FEATURES START -->
 - At Armor Crafting Level 11, you can now make the following:
-  - modArmorFarmer
-  - modArmorMiner
-  - modArmorScavenger
-  - modArmorLumberjack
-  - Their stats match the quality level.
-  - These are built with the same ingredients as a full set of armor.
-  - The mods take the harvesting aspects and you can attach them to the armor of choice.
-  - Similar harvesting bonuses do not stack with each other and cannot be placed on the armors of the same name.
+    - modArmorFarmer
+    - modArmorMiner
+    - modArmorScavenger
+    - modArmorLumberjack
+    - Their stats match the quality level.
+    - These are built with the same ingredients as a full set of armor.
+    - The mods take the harvesting aspects and you can attach them to the armor of choice.
+    - Similar harvesting bonuses do not stack with each other and cannot be placed on the armors of the same name.
 <!-- FEATURES END -->
 
 ---

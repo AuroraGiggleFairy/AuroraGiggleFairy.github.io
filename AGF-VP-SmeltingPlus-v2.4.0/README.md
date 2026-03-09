@@ -88,10 +88,10 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Forges have 3 slots with text nicely centered.
-  - Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
-  - Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)
-  - Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.
-  - 6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.
+    - Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
+    - Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)
+    - Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.
+    - 6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.
 <!-- FEATURES END -->
 
 ---

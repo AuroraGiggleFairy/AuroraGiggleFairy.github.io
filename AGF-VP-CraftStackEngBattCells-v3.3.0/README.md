@@ -88,10 +88,10 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Engines, Batteries and Solar Cells now stack.
-  - In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.
-  - Craft Engines with electrician level 40 at a workbench.
-  - Craft solar banks with electrician level 80 at a workbench.
-  - Craft solar cells with electrician level 100 at a workbench.
+    - In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.
+    - Craft Engines with electrician level 40 at a workbench.
+    - Craft solar banks with electrician level 80 at a workbench.
+    - Craft solar cells with electrician level 100 at a workbench.
 <!-- FEATURES END -->
 
 ---

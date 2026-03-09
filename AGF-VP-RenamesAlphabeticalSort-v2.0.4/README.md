@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Naming Scheme for better sorting when pressing Auto Sort.
-  - Food and Water have values in titles.
-  - Food items that are also ingredients are indicated in title.
+    - Food and Water have values in titles.
+    - Food items that are also ingredients are indicated in title.
 <!-- FEATURES END -->
 
 ---

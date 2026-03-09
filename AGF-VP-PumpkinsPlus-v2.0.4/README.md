@@ -88,9 +88,9 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Throw pumpkins that explode like molotovs.
-  - Wear a pumpkin as a cosmetic mod on your helmet!
-  - You can also bundle the pumpkin head mod.
-  - The helmet mod scraps the same way a jack-o-lantern does... into plant fibers.
+    - Wear a pumpkin as a cosmetic mod on your helmet!
+    - You can also bundle the pumpkin head mod.
+    - The helmet mod scraps the same way a jack-o-lantern does... into plant fibers.
 
 
 This mod idea came from a collection of friends/twitch viewers/discord peeps, and other insane people like AGF.

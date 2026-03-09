@@ -88,9 +88,9 @@
 ## 7. Features
 <!-- FEATURES START -->
 - DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
-  - DragonTander gave me permission to use this freely.
-  - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
-  - Works Standalone
+    - DragonTander gave me permission to use this freely.
+    - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
+    - Works Standalone
 <!-- FEATURES END -->
 
 ---

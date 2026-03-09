@@ -88,9 +88,9 @@
 ## 7. Features
 <!-- FEATURES START -->
 - The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.
-  - The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.
-  - There is a general increase on mod slots on the minimum side and maximum side.
-  - The highest mod slots is 6.
+    - The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.
+    - There is a general increase on mod slots on the minimum side and maximum side.
+    - The highest mod slots is 6.
 
 *Note, only applies these changes to items you find/craft going forward from installation.*
 <!-- FEATURES END -->

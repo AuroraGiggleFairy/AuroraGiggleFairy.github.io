@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Simply replaces the noose with plain rope, both the block AND the icon.
-  - This is done for mental health purposes... 
-  - For some, this really matters, and they are worth it.
+    - This is done for mental health purposes... 
+    - For some, this really matters, and they are worth it.
 
 ***Suicide Hotline is 988***
 <!-- FEATURES END -->

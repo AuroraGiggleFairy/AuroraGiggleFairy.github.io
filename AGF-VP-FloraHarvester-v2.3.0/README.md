@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - A tool to more quickly harvest flora. (plants and crops, etc)
-  - Levels in LivingOfftheLand reduces stamina use.
+    - Levels in LivingOfftheLand reduces stamina use.
 <!-- FEATURES END -->
 
 ---

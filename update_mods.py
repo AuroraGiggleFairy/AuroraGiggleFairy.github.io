@@ -190,16 +190,11 @@ def get_mod_summary(folder):
     if not features:
         features = '_No features listed._'
 
-    # Format features as a bulleted list with proper indentation
+    # Preserve the original indentation of each line in the features section
     features_lines = features.splitlines()
     formatted_features = ''
     for line in features_lines:
-        if line.strip().startswith('- '):
-            formatted_features += f"{line.strip()}\n"
-        elif line.strip().startswith('  - '):
-            formatted_features += f"  {line.strip()}\n"
-        elif line.strip():
-            formatted_features += f"- {line.strip()}\n"
+        formatted_features += f"{line}\n"
 
     # Special handling for AGF Compatibility Mod (SPECIAL category)
     if folder.startswith('zzzAGF-'):

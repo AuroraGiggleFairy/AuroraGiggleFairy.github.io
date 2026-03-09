@@ -88,22 +88,22 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
-  - Lockable slots have easy visuals.
-  - Wider and accurate compass with a center mark.
-  - Lowered toolbelt for backpack mod compatibility and added slot numbers.
-  - Improved readability of the chat output when sending and receiving messages.
-  - Map information moved to its own section next to the map with labels.
-  - Added in Map information Outdoor Temperature
-  - Used the Coat icon to represent Feels Like Temp
-  - Used the temperature icon for Outdoor Temp
-  - Crafting and burning times adjusted for easier viewing.
-  - Date, Time and Skulls displayed on all menus.
-  - Viewing quest selections made easier with improved background, color, and poi_names.
-  - Simple color coordination of interactive blocks or npcs.
-  - 5 crafting slots positioned evenly.
-  - Read schematics / magazines / books have read book icon of slight transparency and green
+    - Lockable slots have easy visuals.
+    - Wider and accurate compass with a center mark.
+    - Lowered toolbelt for backpack mod compatibility and added slot numbers.
+    - Improved readability of the chat output when sending and receiving messages.
+    - Map information moved to its own section next to the map with labels.
+    - Added in Map information Outdoor Temperature
+    - Used the Coat icon to represent Feels Like Temp
+    - Used the temperature icon for Outdoor Temp
+    - Crafting and burning times adjusted for easier viewing.
+    - Date, Time and Skulls displayed on all menus.
+    - Viewing quest selections made easier with improved background, color, and poi_names.
+    - Simple color coordination of interactive blocks or npcs.
+    - 5 crafting slots positioned evenly.
+    - Read schematics / magazines / books have read book icon of slight transparency and green
 
-  - Now checks from a server point of view if someone has the client side installed, they get those benefits as well
+    - Now checks from a server point of view if someone has the client side installed, they get those benefits as well
 <!-- FEATURES END -->
 
 ---

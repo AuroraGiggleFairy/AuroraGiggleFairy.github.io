@@ -88,14 +88,14 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Simplified stack sizes that keeps close to vanilla experience.
-  - Simplified Stack Sizes:
-  - Bundles and consumables stack to 50
-  - Ammo stacks to 500
-  - Resources are generally 500, 1000, or 6000
-  - Gas, Coins, and plant fibers stack to 30000
-  - Placeable blocks (like workstations) to 500
-  - Farming and General blocks to 5000
-  - Existing Bundles modified to new stack sizes
+    - Simplified Stack Sizes:
+    - Bundles and consumables stack to 50
+    - Ammo stacks to 500
+    - Resources are generally 500, 1000, or 6000
+    - Gas, Coins, and plant fibers stack to 30000
+    - Placeable blocks (like workstations) to 500
+    - Farming and General blocks to 5000
+    - Existing Bundles modified to new stack sizes
 <!-- FEATURES END -->
 
 ---

@@ -88,8 +88,8 @@
 ## 7. Features
 <!-- FEATURES START -->
 - 3 seats on bikes (bicycle, minibike, and motorcycle)
-  - For the bikes, expanded seating mod is only cosmetic, not required.
-  - Truck can now seat 8 players (with the expanded seat mod).
+    - For the bikes, expanded seating mod is only cosmetic, not required.
+    - Truck can now seat 8 players (with the expanded seat mod).
 <!-- FEATURES END -->
 
 ---

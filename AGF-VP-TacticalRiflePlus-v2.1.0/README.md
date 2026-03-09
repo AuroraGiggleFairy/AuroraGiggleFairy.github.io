@@ -88,7 +88,7 @@
 ## 7. Features
 <!-- FEATURES START -->
 - Tactical Rifle no longer defaults with 3 round burst.
-  - Tactical Rifle magazine increased from 30 to 36.
+    - Tactical Rifle magazine increased from 30 to 36.
 <!-- FEATURES END -->
 
 ---
