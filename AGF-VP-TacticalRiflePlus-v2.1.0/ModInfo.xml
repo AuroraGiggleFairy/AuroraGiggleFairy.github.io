@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-TacticalRiflePlus"/>
+	<Name value="AGF-VP-TacticalRiflePlus"/>
 	<DisplayName value="AGF Tactical Rifle Plus"/>
 	<Version value="2.1.0"/>
 	<Description value="Removed 3 round burst, magazine size up to 36 from 30."/>

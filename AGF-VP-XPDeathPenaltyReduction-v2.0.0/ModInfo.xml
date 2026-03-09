@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <xml>
-    <Name value="AGF-V2-XPDeathPenaltyReduction" /> 
+    <Name value="AGF-XPDeathPenaltyReduction" /> 
     <DisplayName value="AGF XP Death Penalty Reduction." /> 
     <Version value="2.0.0" /> 
     <Description value="XP Death Penalty 10 instead of 25." /> 

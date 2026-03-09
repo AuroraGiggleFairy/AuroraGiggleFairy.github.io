@@ -77,30 +77,28 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ***Quality-of-life HUD enhancements and visual tweaks.***
 
 ---
-### **AGF HUD Plus - Main**
-*QOL HUD with lots of features.*
+### **AGF HUDPlus - Main**
+*Refined HUD with clear stats, menus, and visual cues for easier gameplay.*
 >
 
-**Version:** 5.3.2  
+**Version:** 5.4.0  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlus-1Main.zip)
 
-- Compact and readable display of health, stamina, food, water, level, xp, elevation, and temperature.
-    - Lockable slots have easy visuals.
-    - Wider and accurate compass with a center mark.
-    - Lowered toolbelt for backpack mod compatibility and added slot numbers.
-    - Improved readability of the chat output when sending and receiving messages.
-    - Map information moved to its own section next to the map with labels.
-    - Added in Map information Outdoor Temperature
-    - Used the Coat icon to represent Feels Like Temp
-    - Used the temperature icon for Outdoor Temp
-    - Crafting and burning times adjusted for easier viewing.
-    - Date, Time and Skulls displayed on all menus.
-    - Viewing quest selections made easier with improved background, color, and poi_names.
-    - Simple color coordination of interactive blocks or npcs.
-    - 5 crafting slots positioned evenly.
-    - Read schematics / magazines / books have read book icon of slight transparency and green
-
-    - Now checks from a server point of view if someone has the client side installed, they get those benefits as well
+- Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.
+- Lockable inventory slots are clearly marked for quick identification.
+- Compass is wider and features a visible center mark.
+- Toolbelt is lowered for better backpack mod compatibility, with numbered slots for convenience.
+- Chat messages are easier to read with updated backgrounds.
+- Map details are displayed in a dedicated section beside the map, with clear labels.
+- Crafting and burning timers are visually clearer and easier to read.
+- Date, time, outdoor temperature, and the location display are visible on all menus.
+- Storm visual alerts now appear below the location display, freeing space for other mods.
+- Trader dialogue, including quest selection, is easier to read with updated backgrounds.
+- Simple color-coding for interactive prompts (the text that appears when looking at loot, workstations, etc.) for quick recognition.
+- You now have 5 centered crafting slots instead of 4.
+- Schematics, magazines, and books are color-coded to show whether they’ve been read.
+- The NoEAC-EnhancedPatch provides even more visual features if also installed.
+- Compatible with all 7 Days to Die versions since 2.5. (For new game updates, check for the latest HUDPlus version if needed.)
 
 ---
 
@@ -185,8 +183,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ***Download all above or select one below.***
 
 ---
-### **AGF 60 Slot Backpack**
-*60 slot backpack and extra large storage options.*
+### **AGF BackpackPlus 60 Slots**
+*Expands your inventory with a 60-slot backpack and adds craftable, extra-large storage options.*
 >
 
 **Version:** 3.2.1  
@@ -204,8 +202,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ---
 
 ---
-### **AGF 72 Slot Backpack**
-*72 slot backpack and extra large storage options.*
+### **AGF BackpackPlus 72 Slots**
+*Expands your inventory with a 72-slot backpack and adds craftable, extra-large storage options.*
 >
 
 **Version:** 3.2.1  
@@ -223,8 +221,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ---
 
 ---
-### **AGF 84 Slot Backpack**
-*84 slot backpack and extra large storage options.*
+### **AGF BackpackPlus 84 Slots**
+*Expands your inventory with an 84-slot backpack and adds craftable, extra-large storage options.*
 >
 
 **Version:** 3.2.1  
@@ -242,8 +240,8 @@ All mods are **EAC-Friendly** unless specifically noted otherwise.
 ---
 
 ---
-### **AGF 119 Slot Backpack**
-*119 slot backpack and extra large storage options.*
+### **AGF BackpackPlus 119 Slots**
+*Expands your inventory with a 119-slot backpack and adds craftable, extra-large storage options.*
 >
 
 **Version:** 1.2.2  
@@ -1237,7 +1235,7 @@ _No features listed._
 ---
 
 ---
-### **AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC**
+### **AGF-HUDPlus-EnhancedPatch-ClientSideNoEAC**
 *Adds extra info that is only available from non-EAC friendly places.*
 >
 

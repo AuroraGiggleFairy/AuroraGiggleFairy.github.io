@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-TreesPlus"/>
+	<Name value="AGF-VP-TreesPlus"/>
 	<DisplayName value="AGF Trees Plus"/>
 	<Version value="3.0.0"/>
 	<Description value="Craft x5 and x25 versions of trees with helpful naming of growth stages."/>

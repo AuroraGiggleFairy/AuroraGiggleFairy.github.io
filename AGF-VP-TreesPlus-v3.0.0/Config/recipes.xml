@@ -36,7 +36,7 @@
 
 	<!--CONDITIONAL, To allow creating these seeds at the Seed Station from FarmingPlus-->
 		<conditional>		
-			<if cond="mod_loaded('AGF-V2-VP-FarmingPlus') == true">
+			<if cond="mod_loaded('AGF-VP-FarmingPlus') == true">
 				<append xpath="/recipes">
 					<recipe name="treePlantedOak1mx5" count="1" craft_time="1" craft_area="seedStation" tags="agfSeedCrafting" craft_exp_gain="0">
 						<ingredient name="treePlantedOak1m" count="5"/>

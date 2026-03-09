@@ -1,7 +1,7 @@
 <AGFVanillaPlus-CraftVitamins>
 
 	<conditional>
-		<if cond="mod_loaded('AGF-V2-HUDPlus-PurpleBook')">
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
 		
 			<!--Adding resourceSewingKit-->
 			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/grid[@name='unlocks']/entry[@name='resourceCloth']">

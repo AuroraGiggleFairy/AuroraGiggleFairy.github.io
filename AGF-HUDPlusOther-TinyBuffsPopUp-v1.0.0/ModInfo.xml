@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-HUDPlus-2Addon-TinyBuffsPopUp"/>
+	<Name value="AGF-HUDPlus-2Addon-TinyBuffsPopUp"/>
 	<DisplayName value="AGF HUD Plus - Tiny Buffs Pop Up"/>
 	<Version value="1.0.0"/>
 	<Description value="Shrinks the buffs pop up by half."/>

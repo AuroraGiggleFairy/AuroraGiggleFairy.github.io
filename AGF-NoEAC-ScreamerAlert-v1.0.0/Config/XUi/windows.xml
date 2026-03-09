@@ -2,7 +2,7 @@
 
 
 	<conditional>
-		<if cond="mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
 		</if>
 		<else>
 		

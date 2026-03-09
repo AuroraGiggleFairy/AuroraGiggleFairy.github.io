@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-MedicalTreatOthersTreatedInjuries"/>
+	<Name value="AGF-VP-MedicalTreatOthersTreatedInjuries"/>
 	<DisplayName value="You are a physician that can removed already treated injuries."/>
 	<Version value="1.0.0"/>
 	<Description value="If you have perks in physician, you can remove someone else's treated sprain."/>

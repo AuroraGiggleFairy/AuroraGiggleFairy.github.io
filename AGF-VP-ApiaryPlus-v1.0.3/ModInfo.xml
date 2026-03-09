@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-ApiaryPlus"/>
+	<Name value="AGF-VP-ApiaryPlus"/>
 	<DisplayName value="AGF Apiary Plus"/>
 	<Version value="1.0.3"/>
 	<Description value="Apiary size is 2x2 and produces NO heat."/>

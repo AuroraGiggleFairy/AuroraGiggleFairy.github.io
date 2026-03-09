@@ -18,7 +18,7 @@
 </conditional>
 <!--Izy's .45 ammo and SimplifiedStacks-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_45ACP')">
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_45ACP')">
 		<set xpath="/items/item[@name='ammo45ACPBulletBall']/property[@name='Stacknumber']/@value">500</set>
 		<set xpath="/items/item[@name='ammo45ACPHighpower']/property[@name='Stacknumber']/@value">500</set>
 		<set xpath="/items/item[@name='ammo45ACPArmorpiecing']/property[@name='Stacknumber']/@value">500</set>
@@ -43,7 +43,7 @@
 </conditional>
 <!-- Izy's .45 ammo and Disassembly-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
 		<!-- Modifications to the Ammo-->
 		<append xpath="/items/item[@name='ammo45ACPBulletBall']">
 			<property name="Material" value="Mammo45ACPBulletBall"/>
@@ -234,7 +234,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_loaded('AGF-V2-VP-SimplifiedStacks')">
+	<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_loaded('AGF-VP-SimplifiedStacks')">
 		<set xpath="/items/item[@name='ammoCrossbowLightBoltStone']/property[@name='Stacknumber']/@value">500</set>
 		<set xpath="/items/item[@name='ammoCrossbowLightBoltIron']/property[@name='Stacknumber']/@value">500</set>
 		<set xpath="/items/item[@name='ammoCrossbowLightBoltSteelAP']/property[@name='Stacknumber']/@value">500</set>
@@ -248,7 +248,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-V2-VP-SimplifiedStacks') == false">
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks') == false">
 		<append xpath="/items">
 			<item name="ammoShotgunShellPremiumBundle">
 				<property name="Extends" value="ammoBundleMaster"/>
@@ -264,7 +264,7 @@
 			</item>
 		</append>
 	</if>
-	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-V2-VP-SimplifiedStacks')">
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks')">
 		<append xpath="/items">
 			<item name="ammoShotgunShellPremiumBundle">
 				<property name="Extends" value="ammoBundleMaster"/>
@@ -298,7 +298,7 @@
 </conditional>
 <!-- Izy's Shotgun ammo and Disassembly-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_SG')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_SG')">
 		<!-- Modifications to the Ammo-->
 		<append xpath="/items/item[@name='ammoShotgunShellPremium']">
 			<property name="Material" value="MammoShotgunShellPremium"/>
@@ -360,7 +360,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_556pack')">
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_556pack')">
 		<set xpath="/items/item[@name='ammo556mmBulletBall']/property[@name='Stacknumber']/@value">500</set>
 		<set xpath="/items/item[@name='ammo556mmHIpower']/property[@name='Stacknumber']/@value">500</set>
 		<set xpath="/items/item[@name='ammo556mmArmorPiercing']/property[@name='Stacknumber']/@value">500</set>
@@ -398,7 +398,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
 		<!-- Modifications to the Ammo-->
 		<append xpath="/items/item[@name='ammo556mmBulletBall']">
 			<property name="Material" value="Mammo556mmBulletBall"/>
@@ -516,14 +516,14 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('IZY_RMP_Demopack') and mod_loaded('AGF-V2-VP-SimplifiedStacks')">
+	<if cond="mod_loaded('IZY_RMP_Demopack') and mod_loaded('AGF-VP-SimplifiedStacks')">
 		<set xpath="/items/item[@name='ammoRocketRPGTraning']/property[@name='Stacknumber']/@value">50</set>
 		<set xpath="/items/item[@name='ammoRocketRPGHE']/property[@name='Stacknumber']/@value">50</set>
 		<set xpath="/items/item[@name='ammoRocketRPGIncendiary']/property[@name='Stacknumber']/@value">50</set>
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_Demopack')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_Demopack')">
 		<!-- Modifications to the Ammo-->
 		<append xpath="/items/item[@name='ammoRocketRPGTraning']">
 			<property name="Material" value="MammoRocketRPGTraning"/>
@@ -746,7 +746,7 @@
 	</if>
 </conditional>	
 <conditional>
-	<if cond="mod_loaded('VanillaExtended') and mod_loaded('AGF-V2-VP-SimplifiedStacks')">		
+	<if cond="mod_loaded('VanillaExtended') and mod_loaded('AGF-VP-SimplifiedStacks')">		
 		<set xpath="/items/item[@name='MashedPotatoes']/property[@name='Stacknumber']/@value">50</set>
 		<set xpath="/items/item[@name='ScrambledMelody']/property[@name='Stacknumber']/@value">50</set>	
 		<set xpath="/items/item[@name='FrenchFries']/property[@name='Stacknumber']/@value">50</set>

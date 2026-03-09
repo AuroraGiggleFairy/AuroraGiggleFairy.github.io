@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-CraftStackEngBattCells"/>
+	<Name value="AGF-VP-CraftStackEngBattCells"/>
 	<DisplayName value="AGF Craft and Stack Engine/Battery/Cells"/>
 	<Version value="3.3.0"/>
 	<Description value="Engines, Batteries, and Solar Cells are craftable and stack!"/>

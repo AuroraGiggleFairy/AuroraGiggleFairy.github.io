@@ -1,7 +1,7 @@
 <AGF-HUDPlus-BMCounter-KeepDayCount>
 
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 1 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 1 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -9,7 +9,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 1 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 1 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('01daycountdown_0')}[-]" width="300"  style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -19,7 +19,7 @@
 	</conditional>	
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 2 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 2 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -27,7 +27,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 2 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 2 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('02daycountdown_' + day%2)}[-]" width="300"  style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>	
@@ -37,7 +37,7 @@
 	</conditional>	
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 3 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 3 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -45,7 +45,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 3 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 3 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('03daycountdown_' + day%3)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>	
@@ -55,7 +55,7 @@
 	</conditional>	
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 4 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 4 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -63,7 +63,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 4 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 4 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('04daycountdown_' + day%4)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -73,7 +73,7 @@
 	</conditional>		
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 5 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 5 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -81,7 +81,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 5 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 5 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('05daycountdown_' + day%5)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -91,7 +91,7 @@
 	</conditional>		
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 6 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 6 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -99,7 +99,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 6 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 6 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('06daycountdown_' + day%6)}[-]" width="300"  style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -109,7 +109,7 @@
 	</conditional>		
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 7 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 7 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 				
@@ -117,7 +117,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 7 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 7 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('07daycountdown_' + day%7)}[-]" style="outline" width="300" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>	
@@ -127,7 +127,7 @@
 	</conditional>		
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 8 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 8 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -135,7 +135,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 8 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 8 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('08daycountdown_' + day%8)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -145,7 +145,7 @@
 	</conditional>			
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 9 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 9 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -153,7 +153,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 9 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 9 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('09daycountdown_' + day%9)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>	
@@ -163,7 +163,7 @@
 	</conditional>		
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 10 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 10 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -171,7 +171,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 10 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 10 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('10daycountdown_' + day%10)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -181,7 +181,7 @@
 	</conditional>	
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 14 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 14 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -189,7 +189,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 14 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 14 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('14daycountdown_' + day%14)}[-]" width="300"  style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -199,7 +199,7 @@
 	</conditional>	
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 15 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 15 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -207,7 +207,7 @@
 				</rect>	
 			</append>
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 15 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 15 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('15daycountdown_' + day%15)}[-]" width="300"  style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -217,7 +217,7 @@
 	</conditional>	
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 20 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 20 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -225,7 +225,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 20 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 20 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('20daycountdown_' + day%20)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -235,7 +235,7 @@
 	</conditional>
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 28 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 28 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -243,7 +243,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 28 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 28 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('28daycountdown_' + day%28)}[-]" width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -253,7 +253,7 @@
 	</conditional>
 	
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 30 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 30 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -261,7 +261,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 30 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 30 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('30daycountdown_' + day%30)}[-]"  width="300" style="outline"  font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		
@@ -271,7 +271,7 @@
 	</conditional>
 
 	<conditional>
-		<if cond="gamepref('BloodMoonFrequency') == 60 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-1Main')">
+		<if cond="gamepref('BloodMoonFrequency') == 60 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
 			<append xpath="/windows/window[@name='windowCompass']">
 				<rect name="counterBM" pos="70,-53" width="380">
 					<!--<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="30" width="380" type="sliced" />-->
@@ -279,7 +279,7 @@
 				</rect>	
 			</append>	
 		</if>
-		<if cond="gamepref('BloodMoonFrequency') == 60 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-V2-HUDPlus-HealthBars') == false">
+		<if cond="gamepref('BloodMoonFrequency') == 60 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-HealthBars') == false">
 			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">						
 				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# localization('60daycountdown_' + day%60)}[-]"  width="300"  style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
 			</insertAfter>		

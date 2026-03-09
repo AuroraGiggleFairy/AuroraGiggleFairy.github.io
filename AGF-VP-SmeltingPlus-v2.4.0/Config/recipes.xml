@@ -40,7 +40,7 @@
 		<ingredient name="casinoCoin" count="30000"/>
 	</recipe>
 	<conditional><!--Only adds this recipe if player has Mining Plus installed.-->
-		<if cond="mod_loaded('AGF-V2-VP-MiningPlus')">	
+		<if cond="mod_loaded('AGF-VP-MiningPlus')">	
 			<recipe name="resourceScrapBrassAdvSmelt" count="6000" craft_time="4" craft_area="workbench" craft_exp_gain="0" tags="learnable,workbenchCrafting">
 				<ingredient name="resourceScrapBrassBundle" count="5"/>
 			</recipe>	

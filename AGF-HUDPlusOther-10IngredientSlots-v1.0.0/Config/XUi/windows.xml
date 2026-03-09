@@ -1,4 +1,4 @@
-<AGF-V2-HUDPlus-10IngredientSlots>
+<AGF-HUDPlus-10IngredientSlots>
 
 	<append xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid">
 			<ingredient_row name="6"/>
@@ -13,6 +13,6 @@
 
 	
 	
-</AGF-V2-HUDPlus-10IngredientSlots>
+</AGF-HUDPlus-10IngredientSlots>
 
 

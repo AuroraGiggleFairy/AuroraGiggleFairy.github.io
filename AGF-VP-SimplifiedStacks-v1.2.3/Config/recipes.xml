@@ -146,7 +146,7 @@
 
 <!--CONDITIONAL, to account for archery feather change.-->	
 	<conditional>		
-		<if cond="mod_loaded('AGF-V2-VP-ArcheryFeathersChange') == true and game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">	
+		<if cond="mod_loaded('AGF-VP-ArcheryFeathersChange') == true and game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">	
 			<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceFeather']/@count">400</set>	
 			<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceFeather']/@count">400</set>		
 			<set xpath="/recipes/recipe[@name='ammoBundleArrowSteelAP']/ingredient[@name='resourceFeather']/@count">400</set>
@@ -154,7 +154,7 @@
 			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltExploding']/ingredient[@name='resourceFeather']/@count">400</set>
 			<set xpath="/recipes/recipe[@name='ammoBundleCrossbowBoltSteelAP']/ingredient[@name='resourceFeather']/@count">400</set>				
 		</if>
-		<if cond="mod_loaded('AGF-V2-VP-ArcheryFeathersChange') == false and game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">	
+		<if cond="mod_loaded('AGF-VP-ArcheryFeathersChange') == false and game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">	
 			<set xpath="/recipes/recipe[@name='ammoBundleArrowFlaming']/ingredient[@name='resourceScrapPolymers']/@count">800</set>	
 			<set xpath="/recipes/recipe[@name='ammoBundleArrowExploding']/ingredient[@name='resourceScrapPolymers']/@count">800</set>		
 			<set xpath="/recipes/recipe[@name='ammoBundleArrowSteelAP']/ingredient[@name='resourceScrapPolymers']/@count">800</set>
@@ -166,7 +166,7 @@
 
 <!--CONDITIONAL, to account for Rebundle Bundles-->
 	<conditional>
-		<if cond="mod_loaded('AGF-V2-VP-RebundleBundles') == true">
+		<if cond="mod_loaded('AGF-VP-RebundleBundles') == true">
 			<!--RebundleBundles-->
 				<set xpath="/recipes/recipe[@name='ammoGasCanBundle']/ingredient[@name='ammoGasCan']/@count">30000</set>
 				<set xpath="/recipes/recipe[@name='resourceGunPowderBundle']/ingredient[@name='resourceGunPowder']/@count">6000</set>

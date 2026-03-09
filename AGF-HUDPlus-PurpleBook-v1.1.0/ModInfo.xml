@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-HUDPlus-PurpleBook"/>
+	<Name value="AGF-HUDPlus-PurpleBook"/>
 	<DisplayName value="AGF HUDPlus Purple Book"/>
 	<Version value="1.1.0"/>
 	<Description value="Purple Book for easier visuals of crafting info."/>

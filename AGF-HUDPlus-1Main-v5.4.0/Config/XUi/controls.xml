@@ -63,7 +63,7 @@
 
 
 	<conditional>
-		<if cond="game_version() &gt;= version(1,2,2) and game_version() &lt; version(1,2,5) and mod_loaded('AGF-V2-Backpack60Plus') == false and mod_loaded('AGF-V2-Backpack72Plus') == false and mod_loaded('AGF-V2-Backpack84Plus') == false and mod_loaded('AGF-V2-Backpack120-1Plus') == false">
+		<if cond="game_version() &gt;= version(1,2,2) and game_version() &lt; version(1,2,5) and mod_loaded('AGF-BackpackPlus-60Slots') == false and mod_loaded('AGF-BackpackPlus-72Slots') == false and mod_loaded('AGF-BackpackPlus-84Slots') == false and mod_loaded('AGF-BackpackPlus-119Slots') == false">
 				<append xpath="/controls">
 						<item_stackAGF controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
 							<rect controller="${controller}" style="itemStack, hover" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }" >
@@ -110,7 +110,7 @@
 							</rect>
 						</item_stackAGF>						
 				</append>
-		</if><if cond="game_version() &gt;= version(1,2,5) and mod_loaded('AGF-V2-Backpack60Plus') == false and mod_loaded('AGF-V2-Backpack72Plus') == false and mod_loaded('AGF-V2-Backpack84Plus') == false and mod_loaded('AGF-V2-Backpack120-1Plus') == false">
+		</if><if cond="game_version() &gt;= version(1,2,5) and mod_loaded('AGF-BackpackPlus-60Slots') == false and mod_loaded('AGF-BackpackPlus-72Slots') == false and mod_loaded('AGF-BackpackPlus-84Slots') == false and mod_loaded('AGF-BackpackPlus-119Slots') == false">
 				<append xpath="/controls">
 						<item_stackAGF controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
 							<rect controller="${controller}" style="itemStack, hover" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }" >

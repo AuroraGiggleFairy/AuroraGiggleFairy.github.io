@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-RebundleBundles"/>
+	<Name value="AGF-VP-RebundleBundles"/>
 	<DisplayName value="Rebundle Bundles"/>
 	<Version value="1.0.0"/>
 	<Description value="Now you can rebundle bundles."/>

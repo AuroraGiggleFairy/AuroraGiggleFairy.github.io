@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-AdminModdingSupport"/>
+	<Name value="AGF-AdminModdingSupport"/>
 	<DisplayName value="AGF Admin and Modding Support"/>
 	<Version value="1.0.3"/>
 	<Description value="Some adjustments and additions for admin / mod testing harvesting."/>

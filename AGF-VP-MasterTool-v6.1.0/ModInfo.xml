@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-MasterTool"/>
+	<Name value="AGF-VP-MasterTool"/>
 	<DisplayName value="AGF Master Tool"/>
 	<Version value="6.1.0"/>
 	<Description value="Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output."/>

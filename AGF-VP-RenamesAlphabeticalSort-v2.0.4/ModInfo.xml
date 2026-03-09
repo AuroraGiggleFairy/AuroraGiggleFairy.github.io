@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-RenamesAlphabeticalSort"/>
+	<Name value="AGF-VP-RenamesAlphabeticalSort"/>
 	<DisplayName value="AGF Renames Alphabetical Sort"/>
 	<Version value="2.0.4"/>
 	<Description value="Better sorting in inventories of like items."/>

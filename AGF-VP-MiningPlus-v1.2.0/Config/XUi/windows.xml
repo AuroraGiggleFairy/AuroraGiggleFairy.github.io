@@ -1,7 +1,7 @@
 <AGFVanillaPlus-MiningPlus>
 
 	<conditional>
-		<if cond="mod_loaded('AGF-V2-HUDPlus-PurpleBook')">
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
 			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/grid/entry[@name='resourceOilShaleBundle']">
 
 				<entry name="item">

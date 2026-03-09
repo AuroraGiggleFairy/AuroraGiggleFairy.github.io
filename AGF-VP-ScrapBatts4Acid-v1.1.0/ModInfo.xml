@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-ScrapBatts4Acid"/>
+	<Name value="AGF-VP-ScrapBatts4Acid"/>
 	<DisplayName value="AGF Scrap Batteries for Acid"/>
 	<Version value="1.1.0"/>
 	<Description value="Scrap a battery and get acid, instead of lead."/>

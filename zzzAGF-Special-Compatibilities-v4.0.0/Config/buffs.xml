@@ -3,7 +3,7 @@
 
 <!--Oakraven Ammo Press and PurpleBook, it creates their own "crafting level unlock"-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-HUDPlus-PurpleBook') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('DishongTowerChallenge') == false">
+	<if cond="mod_loaded('AGF-HUDPlus-PurpleBook') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('DishongTowerChallenge') == false">
 	
 		<insertafter xpath="/buffs/buff[@name='agfRecalculate']/effect_group[@name='recaculateChecklistPorgression']/triggered_effect[@cvar='craftingWorkstationsCheck34' and @value='0']">
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="0"/>		
@@ -20,7 +20,7 @@
 </conditional>
 
 <conditional>
-	<if cond="mod_loaded('AGF-V2-HUDPlus-PurpleBook') and mod_loaded('DishongTowerChallenge')">	
+	<if cond="mod_loaded('AGF-HUDPlus-PurpleBook') and mod_loaded('DishongTowerChallenge')">	
 		<remove xpath="/buffs/buff//triggered_effect[starts-with(@cvar,'craftingVehiclesCheck')]"/>
 		
 		<insertafter xpath="/buffs/buff[@name='agfRecalculate']/effect_group[@name='recaculateChecklistPorgression']/triggered_effect[@cvar='craftingTrapsCheck75']">
@@ -594,7 +594,7 @@
 </conditional>
 
 <conditional>
-	<if cond="mod_loaded('AGF-V2-HUDPlus-1Main') and mod_loaded('DishongTowerChallenge')">
+	<if cond="mod_loaded('AGF-HUDPlus-1Main') and mod_loaded('DishongTowerChallenge')">
 	
 
 <append xpath="/buffs/buff[@name='buffStatusCheck02']">

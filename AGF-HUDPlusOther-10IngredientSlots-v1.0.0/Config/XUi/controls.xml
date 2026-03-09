@@ -1,4 +1,4 @@
-<AGF-V2-HUDPlus-10IngredientSlots>
+<AGF-HUDPlus-10IngredientSlots>
 
 	<set xpath="/controls/ingredient_header/rect/@height">33</set>
 	<set xpath="/controls/ingredient_header/rect/rect/@height">32</set>
@@ -25,7 +25,7 @@
 	
 	
 <conditional>
-	<if cond="mod_loaded('AGF-V2-Backpack60Plus') == 'true' or mod_loaded('AGF-V2-Backpack72Plus') == 'true' or mod_loaded('AGF-V2-Backpack84Plus') == 'true'">
+	<if cond="mod_loaded('AGF-BackpackPlus-60Slots') == 'true' or mod_loaded('AGF-BackpackPlus-72Slots') == 'true' or mod_loaded('AGF-BackpackPlus-84Slots') == 'true'">
 		<set xpath="/controls/ingredient_header/rect/rect[@width='308']/@pos">68,7</set>
 		<set xpath="/controls/ingredient_header/rect/rect[@pos='379,0']/@pos">379,7</set>		
 		<set xpath="/controls/ingredient_header/rect/rect/label[@text='NAME']/@pos">154,-16</set>
@@ -45,4 +45,4 @@
 	
 	
 	
-</AGF-V2-HUDPlus-10IngredientSlots>
+</AGF-HUDPlus-10IngredientSlots>

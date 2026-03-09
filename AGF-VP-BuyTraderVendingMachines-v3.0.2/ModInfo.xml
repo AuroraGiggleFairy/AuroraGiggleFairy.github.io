@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-BuyTraderVendingMachines"/>
+	<Name value="AGF-VP-BuyTraderVendingMachines"/>
 	<DisplayName value="AGF Buy Trader Vending Machines"/>
 	<Version value="3.0.2"/>
 	<Description value="With high trader stage you can purchase working vending machines from traders."/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-HUDPlus-SmallerInteractionPrompt"/>
+	<Name value="AGF-HUDPlus-SmallerInteractionPrompt"/>
 	<DisplayName value="AGF HUD Plus - SmallerInteractionPrompt"/>
 	<Version value="1.0.0"/>
 	<Description value="Smaller Interaction Prompt"/>

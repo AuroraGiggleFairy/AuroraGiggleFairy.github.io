@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-Backpack60Plus"/>
-	<DisplayName value="AGF 60 Slot Backpack"/>
+	<Name value="AGF-BackpackPlus-60Slots"/>
+	<DisplayName value="AGF BackpackPlus 60 Slots"/>
 	<Version value="3.2.1"/>
-	<Description value="60 slot backpack and extra large storage options."/>
+	<Description value="Expands your inventory with a 60-slot backpack and adds craftable, extra-large storage options."/>
 	<Author value="AuroraGiggleFairy (AGF)"/>
 	<Website value="https://auroragigglefairy.github.io/"/>
 </xml>

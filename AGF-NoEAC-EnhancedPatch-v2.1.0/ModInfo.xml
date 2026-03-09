@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <xml>
-    <Name value="AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC" /> 
-    <DisplayName value="AGF-V2-HUDPlus-EnhancedPatch-ClientSideNoEAC" /> 
+    <Name value="AGF-HUDPlus-EnhancedPatch-ClientSideNoEAC" /> 
+    <DisplayName value="AGF-HUDPlus-EnhancedPatch-ClientSideNoEAC" /> 
     <Version value="2.1.0" /> 
     <Description value="Adds extra info that is only available from non-EAC friendly places." /> 
     <Author value="AuroraGiggleFairy (AGF)" /> 

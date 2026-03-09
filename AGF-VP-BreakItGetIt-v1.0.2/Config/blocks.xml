@@ -24,7 +24,7 @@ wood sign (1x1, 1x3, 2x5)
 
 	<!--Dew Collector, if my mod DewsPlus isn't loaded-->	
 		<conditional>
-			<if cond="mod_loaded('AGF-V2-VP-DewsPlus') == false"> 
+			<if cond="mod_loaded('AGF-VP-DewsPlus') == false"> 
 				<remove xpath="/blocks/block[@name='cntDewCollector']/drop"/>
 				<append xpath="/blocks/block[@name='cntDewCollector']">
 					<drop event="Destroy" name="cntDewCollector" count="1"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-AmmoDisassembly"/>
+	<Name value="AGF-VP-AmmoDisassembly"/>
 	<DisplayName value="Ammo Disassembly"/>
 	<Version value="1.0.1"/>
 	<Description value="Scrap your ammo into bundles that contain the ingredients."/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-TraderAlwaysOpen"/>
+	<Name value="AGF-VP-TraderAlwaysOpen"/>
 	<DisplayName value="AGF Trader Always Open"/>
 	<Version value="2.0.1"/>
 	<Description value="Traders are always open... but possibly not during bloodmoon?"/>

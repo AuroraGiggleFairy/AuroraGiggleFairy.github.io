@@ -24,7 +24,7 @@
 </conditional>
 <!--Izy's .45 ammo with SimplifiedStacks-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_45ACP')">
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_45ACP')">
 		<!--The bundled ammo now hold 500 bullets. Changing the amount of ingredients to make them.-->
 		<set xpath="/recipes/recipe[@name='ammoBundle45ACPBulletBall']/ingredient[@name='resourceBulletTip']/@count">400</set>
 		<set xpath="/recipes/recipe[@name='ammoBundle45ACPBulletBall']/ingredient[@name='resourceScrapIron']/@count">400</set>
@@ -46,7 +46,7 @@
 </conditional>
 <!--IZY's .45 ammo and RebundleBundles (with and without SimplifiedStacks) -->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-RebundleBundles') and mod_loaded('IZY_RMP_45ACP') and mod_loaded('AGF-V2-VP-SimplifiedStacks') == false">
+	<if cond="mod_loaded('AGF-VP-RebundleBundles') and mod_loaded('IZY_RMP_45ACP') and mod_loaded('AGF-VP-SimplifiedStacks') == false">
 		<append xpath="/recipes">
 			<recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
 				<ingredient name="ammo45ACPBulletBall" count="100"/>
@@ -62,7 +62,7 @@
 			</recipe>
 		</append>
 	</if>
-	<if cond="mod_loaded('AGF-V2-VP-RebundleBundles') and mod_loaded('IZY_RMP_45ACP') and mod_loaded('AGF-V2-VP-SimplifiedStacks')">
+	<if cond="mod_loaded('AGF-VP-RebundleBundles') and mod_loaded('IZY_RMP_45ACP') and mod_loaded('AGF-VP-SimplifiedStacks')">
 		<append xpath="/recipes">
 			<recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
 				<ingredient name="ammo45ACPBulletBall" count="500"/>
@@ -81,7 +81,7 @@
 </conditional>
 <!-- Izy's .45 ammo and Disassembly-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
 		<append xpath="/recipes">
 			<recipe name="disa45ACPBulletBall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
 				<wildcard_forge_category/>
@@ -142,7 +142,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-V2-VP-SimplifiedStacks') == false and mod_loaded('AGF-V2-VP-RebundleBundles') == false">
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('AGF-VP-RebundleBundles') == false">
 		<append xpath="/recipes">
 			<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420"  craft_area="workbench" tags="learnable,workbenchCrafting">
 				<ingredient name="resourceBuckshot" count="80"/>
@@ -151,7 +151,7 @@
 			</recipe>
 		</append>
 	</if>
-	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('AGF-V2-VP-RebundleBundles') == false">
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('AGF-VP-RebundleBundles') == false">
 		<append xpath="/recipes">
 			<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420"  craft_area="workbench" tags="learnable,workbenchCrafting">
 				<ingredient name="resourceBuckshot" count="400"/>
@@ -160,7 +160,7 @@
 			</recipe>
 		</append>
 	</if>
-	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-V2-VP-SimplifiedStacks') == false and mod_loaded('AGF-V2-VP-RebundleBundles')">
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('AGF-VP-RebundleBundles')">
 		<append xpath="/recipes">
 			<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420"  craft_area="workbench" tags="learnable,workbenchCrafting">
 				<ingredient name="resourceBuckshot" count="80"/>
@@ -172,7 +172,7 @@
 			</recipe>
 		</append>
 	</if>
-	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('AGF-V2-VP-RebundleBundles')">
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('AGF-VP-RebundleBundles')">
 		<append xpath="/recipes">
 			<recipe name="ammoShotgunShellPremiumBundle" count="1"  craft_time="420" craft_area="workbench" tags="learnable,workbenchCrafting">
 				<ingredient name="resourceBuckshot" count="400"/>
@@ -187,7 +187,7 @@
 </conditional>
 <!-- Izy's .45 shotgun and Disassembly-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_SG')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_SG')">
 		<append xpath="/recipes">
 			<recipe name="disaShotgunShellPremium" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
 				<wildcard_forge_category/>
@@ -217,7 +217,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_556pack')">
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_556pack')">
 		<!--A correction, I assume, for the 5.56AP bundle-->	
 		<set xpath="/recipes/recipe[@name='ammo556mmArmorPiercingBundle']/ingredient[@name='resourceForgedSteel']/@name">resourceScrapIron</set>	
 		<!--The bundled ammo now hold 500 bullets. Changing the amount of ingredients to make them.-->
@@ -236,7 +236,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-RebundleBundles') and mod_loaded('IZY_RMP_556pack') and mod_loaded('AGF-V2-VP-SimplifiedStacks') == false">
+	<if cond="mod_loaded('AGF-VP-RebundleBundles') and mod_loaded('IZY_RMP_556pack') and mod_loaded('AGF-VP-SimplifiedStacks') == false">
 		<append xpath="/recipes">
 			<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
 				<ingredient name="ammo556mmBulletBall" count="100"/>
@@ -249,7 +249,7 @@
 			</recipe>
 		</append>
 	</if>
-	<if cond="mod_loaded('AGF-V2-VP-RebundleBundles') and mod_loaded('IZY_RMP_556pack') and mod_loaded('AGF-V2-VP-SimplifiedStacks')">
+	<if cond="mod_loaded('AGF-VP-RebundleBundles') and mod_loaded('IZY_RMP_556pack') and mod_loaded('AGF-VP-SimplifiedStacks')">
 		<append xpath="/recipes">
 			<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
 				<ingredient name="ammo556mmBulletBall" count="500"/>
@@ -264,7 +264,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_556pack')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_556pack')">
 		<append xpath="/recipes">
 			<recipe name="disa556mmBulletBall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
 				<wildcard_forge_category/>
@@ -308,7 +308,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('IZY_RMP_Demopack') and mod_loaded('AGF-V2-VP-AmmoDisassembly')">
+	<if cond="mod_loaded('IZY_RMP_Demopack') and mod_loaded('AGF-VP-AmmoDisassembly')">
 		<!-- Removing the other rocket recipes that take vanilla rockets. And keeping the base ones-->
 		<remove xpath="/recipes/recipe[@name='ammoRocketRPGHE']"/>
 		<remove xpath="/recipes/recipe[@name='ammoRocketRPGIncendiary']"/>
@@ -337,7 +337,7 @@
 	</if>
 </conditional>
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_Demopack')">
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_Demopack')">
 		<append xpath="/recipes">
 			<recipe name="disaRocketRPGTraning" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
 				<wildcard_forge_category/>
@@ -401,7 +401,7 @@
 
 <!--	Oakraven Ammo Press-->
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress')">	
 		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">400</set>
 		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">400</set>
 		<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
@@ -458,7 +458,7 @@
 <!--	Oakraven Ammo Press & Izy's 5.56 Mod-->
 
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') == false and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_556pack')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_556pack')">	
 	<append xpath="/recipes">	
 
 		<recipe name="ammo556mmBulletBall" count="1" craft_area="ammopress" tags="workbenchCrafting">
@@ -501,7 +501,7 @@
 	</append>	
 	</if>
 
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_556pack')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_556pack')">	
 	<append xpath="/recipes">	
 
 		<recipe name="ammo556mmBulletBall" count="1" craft_area="ammopress" tags="workbenchCrafting">
@@ -555,7 +555,7 @@
 <!--	Oakraven Ammo Press & Izy's 45 Mod-->
 
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') == false and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_45ACP')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_45ACP')">	
 	<append xpath="/recipes">	
 
 		<recipe name="ammo45ACPBulletBall" count="1" craft_area="ammopress" tags="workbenchCrafting">
@@ -610,7 +610,7 @@
 	</append>	
 	</if>
 
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_45ACP')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_45ACP')">	
 	<append xpath="/recipes">
 		<recipe name="ammo45ACPBulletBall" count="1" craft_area="ammopress" tags="workbenchCrafting">
 			<ingredient name="resourceBulletTip" count="1"/>
@@ -669,7 +669,7 @@
 <!--	Oakraven Ammo Press & Izy's shotgun Mod-->
 
 <conditional>
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') == false and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_SG')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_SG')">	
 	<append xpath="/recipes">	
 
 		
@@ -686,7 +686,7 @@
 	</append>	
 	</if>
 
-	<if cond="mod_loaded('AGF-V2-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_SG')">	
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_SG')">	
 	<append xpath="/recipes">
 		
 		

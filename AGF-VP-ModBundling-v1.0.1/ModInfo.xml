@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-ModBundling"/>
+	<Name value="AGF-VP-ModBundling"/>
 	<DisplayName value="AGF Mod Bundling"/>
 	<Version value="1.0.1"/>
 	<Description value="Are you a mod hoarder? Now you can bundle them to save on space."/>

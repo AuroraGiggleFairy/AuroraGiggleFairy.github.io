@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-ArcheryFeathersChange"/>
+	<Name value="AGF-VP-ArcheryFeathersChange"/>
 	<DisplayName value="Archery Ammo only use feathers."/>
 	<Version value="1.0.2"/>
 	<Description value="All archery ammo uses feathers, can craft feathers from plastic."/>

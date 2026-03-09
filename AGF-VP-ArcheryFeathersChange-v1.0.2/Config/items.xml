@@ -4,7 +4,7 @@
 	<!--To account for if someone is also using my AmmoDisassembly mod-->	
 	<!--This conditional works with version 2.5.-->
 	<conditional>
-		<if cond="mod_loaded('AGF-V2-VP-AmmoDisassembly') == true">
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly') == true">
 				
 			<!--Adjusting the disassembly to create a feather instead of plastic-->
 				<set xpath="/items/item[@name='disaArrowSteelAP']/property/property[@name='Create_item']/@value">resourceFeather,resourceArrowHeadSteelAP</set>

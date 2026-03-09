@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="AGF-V2-VP-TradersRestockEvery2Days"/>
+	<Name value="AGF-VP-TradersRestockEvery2Days"/>
 	<DisplayName value="AGF Traders restock every 2 days"/>
 	<Version value="1.0.0"/>
 	<Description value="Traders restock every 2 days, easier to remember."/>

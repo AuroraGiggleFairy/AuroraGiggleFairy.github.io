@@ -1,4 +1,0 @@
-// Backup of PlayerCurrentAmmo.cs after fixing double-counting for chainsaw and flamethrower
-// Timestamp: 2026-02-13
-// Both chainsaw and flamethrower now use the same ammo counting logic.
-
