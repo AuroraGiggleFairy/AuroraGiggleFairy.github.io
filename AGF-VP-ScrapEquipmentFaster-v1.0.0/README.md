@@ -1,7 +1,7 @@
 # Scrap Equipment Faster.
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ScrapEquipmentFaster.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-ScrapEquipmentFaster.zip)
 
 > 
 ---

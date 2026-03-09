@@ -1,7 +1,7 @@
 # AGF Renames Alphabetical Sort
 7d2d Version 2  
 **Version:** 2.0.4  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RenamesAlphabeticalSort.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-RenamesAlphabeticalSort.zip)
 
 > 
 ---

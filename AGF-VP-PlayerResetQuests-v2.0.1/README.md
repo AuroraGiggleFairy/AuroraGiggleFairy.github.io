@@ -1,7 +1,7 @@
 # AGF Player Reset Quests
 7d2d Version 2  
 **Version:** 2.0.1  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PlayerResetQuests.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-PlayerResetQuests.zip)
 
 > 
 ---

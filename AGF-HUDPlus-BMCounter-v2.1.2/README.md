@@ -1,7 +1,7 @@
 # AGF HUD Plus - Adds BM countdown
 7d2d Version 2  
 **Version:** 2.1.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-BMCounter.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-HUDPlus-BMCounter.zip)
 
 > 
 ---

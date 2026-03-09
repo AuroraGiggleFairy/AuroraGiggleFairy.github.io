@@ -1,7 +1,7 @@
 # AGF Mod 988
 7d2d Version 2  
 **Version:** 2.0.1  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-Mod988.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-Mod988.zip)
 
 > 
 ---

@@ -1,7 +1,7 @@
 # AGF Dyes Plus
 7d2d Version 2  
 **Version:** 3.1.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DyesPlus.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-DyesPlus.zip)
 
 > 
 ---

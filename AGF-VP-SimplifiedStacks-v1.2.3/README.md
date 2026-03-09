@@ -1,7 +1,7 @@
 # Simplified Stacks
 7d2d Version 2  
 **Version:** 1.2.3  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-SimplifiedStacks.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-SimplifiedStacks.zip)
 
 > 
 ---

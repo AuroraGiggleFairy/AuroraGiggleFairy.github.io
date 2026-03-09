@@ -1,7 +1,7 @@
 # AGF Automobiles Respawn
 7d2d Version 2  
 **Version:** 3.0.1  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-AutomobilesRespawn.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-AutomobilesRespawn.zip)
 
 > 
 ---

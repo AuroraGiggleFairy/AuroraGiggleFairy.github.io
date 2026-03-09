@@ -1,7 +1,7 @@
 # Break It, Get It
 7d2d Version 2  
 **Version:** 1.0.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BreakItGetIt.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-BreakItGetIt.zip)
 
 > 
 ---

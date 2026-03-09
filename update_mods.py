@@ -129,7 +129,7 @@ def update_readme(folder, template):
 
     # Fill template
     base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
-    download_link = f'https://AuroraGiggleFairy.github.io/zips/{base_zip_name}.zip'
+    download_link = f'https://AuroraGiggleFairy.github.io/_zip/{base_zip_name}.zip'
     readme = template
     readme = readme.replace('{{MOD_NAME}}', name)
     readme = readme.replace('{{MOD_VERSION}}', version)
@@ -168,7 +168,7 @@ def get_mod_summary(folder):
 
     # Download link (full GitHub Pages URL)
     base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
-    download_link = f'https://AuroraGiggleFairy.github.io/zips/{base_zip_name}.zip'
+    download_link = f'https://AuroraGiggleFairy.github.io/_zip/{base_zip_name}.zip'
 
     # Description/summary from ModInfo.xml
     description = ''
@@ -267,7 +267,7 @@ for folder in folders:
     update_readme(folder, template)
 
 # --- Zipping individual mods ---
-ZIPS_DIR = Path('zips')
+ZIPS_DIR = Path('_zip')
 ZIPS_DIR.mkdir(exist_ok=True)
 def get_versioned_folder_name(folder):
     xml_path = os.path.join(folder, 'ModInfo.xml')
@@ -378,7 +378,7 @@ for pack_name, (main_mods, optional_mods, optional_folder) in PACKS.items():
                         zipf.write(file_path, arcname)
 
 
-giggle_pack_link = '[**⬇️ DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)'
+giggle_pack_link = '[**⬇️ DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/_zip/GigglePack_All.zip)'
 
 # Main Logic
 with open('TEMPLATE-Mod_ReadMe.md', 'r', encoding='utf-8') as f:
@@ -414,7 +414,7 @@ def get_category_download_link(category, folders):
     if not folders:
         return ''
     zip_name = f'{category}_All.zip' if not category.endswith('_All') else f'{category}.zip'
-    return f'[**\u2B07\uFE0F DOWNLOAD ALL {category.upper()} MODS**](https://AuroraGiggleFairy.github.io/zips/{zip_name})'
+    return f'[**\u2B07\uFE0F DOWNLOAD ALL {category.upper()} MODS**](https://AuroraGiggleFairy.github.io/_zip/{zip_name})'
 
 
 
@@ -430,7 +430,12 @@ sys.stdout.flush()
 for folder in folders:
     update_readme(folder, template)
 
-mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/zips/GigglePack_All.zip)'
+
+mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/_zip/GigglePack_All.zip)'
+# Add category description for Giggle Pack if present
+if 'GIGGLE PACK' in category_descriptions:
+    mod_list_block += f"\n\n**{category_descriptions['GIGGLE PACK']}**"
+# Add quote for Giggle Pack if present
 if 'GIGGLE PACK' in section_quotes:
     quote = section_quotes['GIGGLE PACK']
     if quote:

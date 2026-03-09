@@ -1,7 +1,7 @@
 # AGF 72 Slot Backpack
 7d2d Version 2  
 **Version:** 3.2.1  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-BackpackPlus-72Slots.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-BackpackPlus-72Slots.zip)
 
 > 
 ---

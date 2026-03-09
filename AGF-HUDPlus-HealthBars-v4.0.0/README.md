@@ -1,7 +1,7 @@
 # AGF HUD Plus - Health Bars
 7d2d Version 2  
 **Version:** 4.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-HealthBars.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-HUDPlus-HealthBars.zip)
 
 > 
 ---

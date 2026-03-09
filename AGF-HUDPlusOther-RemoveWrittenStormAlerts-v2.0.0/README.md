@@ -1,7 +1,7 @@
 # AGF HUD Plus - Removes Written Storm Alerts
 7d2d Version 2  
 **Version:** 2.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-RemoveWrittenStormAlerts.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-HUDPlusOther-RemoveWrittenStormAlerts.zip)
 
 > 
 ---

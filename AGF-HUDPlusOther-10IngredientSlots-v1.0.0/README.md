@@ -1,7 +1,7 @@
 # AGF's 10 Ingredient Slots
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-10IngredientSlots.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-HUDPlusOther-10IngredientSlots.zip)
 
 > 
 ---

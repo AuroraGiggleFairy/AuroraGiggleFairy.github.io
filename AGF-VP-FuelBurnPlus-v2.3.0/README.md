@@ -1,7 +1,7 @@
 # AGF Fuel Burn Plus
 7d2d Version 2  
 **Version:** 2.3.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-FuelBurnPlus.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-VP-FuelBurnPlus.zip)
 
 > 
 ---

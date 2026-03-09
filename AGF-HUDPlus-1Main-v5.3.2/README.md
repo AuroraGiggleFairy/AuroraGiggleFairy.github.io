@@ -1,7 +1,7 @@
 # AGF HUD Plus - Main
 7d2d Version 2  
 **Version:** 5.3.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlus-1Main.zip)
+[Download](https://AuroraGiggleFairy.github.io/_zip/AGF-HUDPlus-1Main.zip)
 
 > 
 ---
