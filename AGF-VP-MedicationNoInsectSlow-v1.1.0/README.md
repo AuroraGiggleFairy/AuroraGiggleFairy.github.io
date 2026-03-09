@@ -1,7 +1,7 @@
 # AGF Medication No Slow from Insects
 7d2d Version 2  
 **Version:** 1.1.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MedicationNoInsectSlow-v1.1.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MedicationNoInsectSlow.zip)
 
 > 
 ---

@@ -1,7 +1,7 @@
 # AGF Stay Longer Zombie Loot
 7d2d Version 2  
 **Version:** 2.0.1  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-StayLongerZombieLoot-v2.0.1.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-StayLongerZombieLoot.zip)
 
 > 
 ---

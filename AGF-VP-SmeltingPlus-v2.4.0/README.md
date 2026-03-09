@@ -1,7 +1,7 @@
 # AGF Smelting Plus
 7d2d Version 2  
 **Version:** 2.4.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-SmeltingPlus-v2.4.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-SmeltingPlus.zip)
 
 > 
 ---

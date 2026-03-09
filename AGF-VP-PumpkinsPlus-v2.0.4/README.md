@@ -1,7 +1,7 @@
 # AGF Pumpkins Plus
 7d2d Version 2  
 **Version:** 2.0.4  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PumpkinsPlus-v2.0.4.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PumpkinsPlus.zip)
 
 > 
 ---

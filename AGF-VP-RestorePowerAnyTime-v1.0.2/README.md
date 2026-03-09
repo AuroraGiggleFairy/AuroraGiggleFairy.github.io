@@ -1,7 +1,7 @@
 # Restore Power Quests at Any Time
 7d2d Version 2  
 **Version:** 1.0.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RestorePowerAnyTime-v1.0.2.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-RestorePowerAnyTime.zip)
 
 > 
 ---

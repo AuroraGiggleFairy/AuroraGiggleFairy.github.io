@@ -128,7 +128,8 @@ def update_readme(folder, template):
             quote = f'*{quote.strip('* ')}*'
 
     # Fill template
-    download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
+    base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
+    download_link = f'https://AuroraGiggleFairy.github.io/zips/{base_zip_name}.zip'
     readme = template
     readme = readme.replace('{{MOD_NAME}}', name)
     readme = readme.replace('{{MOD_VERSION}}', version)
@@ -166,7 +167,8 @@ def get_mod_summary(folder):
         version = "0.0.0"
 
     # Download link (full GitHub Pages URL)
-    download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
+    base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
+    download_link = f'https://AuroraGiggleFairy.github.io/zips/{base_zip_name}.zip'
 
     # Description/summary from ModInfo.xml
     description = ''
@@ -267,8 +269,40 @@ for folder in folders:
 # --- Zipping individual mods ---
 ZIPS_DIR = Path('zips')
 ZIPS_DIR.mkdir(exist_ok=True)
+def get_versioned_folder_name(folder):
+    xml_path = os.path.join(folder, 'ModInfo.xml')
+    try:
+        tree = ET.parse(xml_path)
+        root = tree.getroot()
+        name_tag = root.find('DisplayName')
+        if name_tag is None:
+            name_tag = root.find('Name')
+        version_tag = root.find('Version')
+        name = name_tag.attrib['value'] if name_tag is not None and 'value' in name_tag.attrib else folder
+        version = version_tag.attrib['value'] if version_tag is not None and 'value' in version_tag.attrib else "0.0.0"
+    except Exception:
+        name = folder
+        version = "0.0.0"
+    # Remove any existing version suffix from folder name
+    base = re.sub(r'-v[0-9.]+$', '', folder)
+    return f"{base}-v{version}"
+
 for mod in folders:
-    zip_path = ZIPS_DIR / f'{mod}.zip'
+    versioned_folder = get_versioned_folder_name(mod)
+    # Always rename to the correct versioned folder if needed
+    if mod != versioned_folder:
+        # Remove any existing folder with the correct version (old version cleanup)
+        if os.path.exists(versioned_folder):
+            print(f"[INFO] Removing old versioned folder: {versioned_folder}")
+            import shutil
+            shutil.rmtree(versioned_folder)
+        print(f"[INFO] Renaming {mod} -> {versioned_folder}")
+        os.rename(mod, versioned_folder)
+        # Update folders list so future pack zipping uses the new name
+        folders[folders.index(mod)] = versioned_folder
+        mod = versioned_folder
+    zip_name = re.sub(r'-v[0-9.]+$', '', mod)  # Remove version for zip name
+    zip_path = ZIPS_DIR / f'{zip_name}.zip'
     print(f'Zipping {mod} -> {zip_path}')
     zip_folder(Path(mod), zip_path)
 

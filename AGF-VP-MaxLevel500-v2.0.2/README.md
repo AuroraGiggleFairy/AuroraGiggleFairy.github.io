@@ -1,7 +1,7 @@
 # AGF Max Level 500
 7d2d Version 2  
 **Version:** 2.0.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MaxLevel500-v2.0.2.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-MaxLevel500.zip)
 
 > 
 ---

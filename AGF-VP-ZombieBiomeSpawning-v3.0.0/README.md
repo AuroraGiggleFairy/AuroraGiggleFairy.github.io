@@ -1,7 +1,7 @@
 # AGF Zombie Biome Spawning
 7d2d Version 2  
 **Version:** 3.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ZombieBiomeSpawning-v3.0.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-ZombieBiomeSpawning.zip)
 
 > 
 ---

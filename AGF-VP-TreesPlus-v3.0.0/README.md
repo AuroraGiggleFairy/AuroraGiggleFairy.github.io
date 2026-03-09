@@ -1,7 +1,7 @@
 # AGF Trees Plus
 7d2d Version 2  
 **Version:** 3.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TreesPlus-v3.0.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-TreesPlus.zip)
 
 > 
 ---

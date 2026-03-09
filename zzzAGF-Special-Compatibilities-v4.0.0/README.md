@@ -1,7 +1,7 @@
 # AGF Compatibilities
 7d2d Version 2  
 **Version:** 4.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/zzzAGF-Special-Compatibilities-v4.0.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/zzzAGF-Special-Compatibilities.zip)
 
 > 
 ---

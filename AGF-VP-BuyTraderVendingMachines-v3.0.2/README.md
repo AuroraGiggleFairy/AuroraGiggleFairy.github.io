@@ -1,7 +1,7 @@
 # AGF Buy Trader Vending Machines
 7d2d Version 2  
 **Version:** 3.0.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BuyTraderVendingMachines-v3.0.2.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-BuyTraderVendingMachines.zip)
 
 > 
 ---

@@ -1,7 +1,7 @@
 # AGF Paintbrush Plus
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PaintbrushPlus-v2.1.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-PaintbrushPlus.zip)
 
 > 
 ---

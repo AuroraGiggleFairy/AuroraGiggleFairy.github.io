@@ -1,7 +1,7 @@
 # AGF HUD Plus - Weekday
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-WeekDay-v2.1.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-WeekDay.zip)
 
 > 
 ---

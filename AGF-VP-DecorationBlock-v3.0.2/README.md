@@ -1,7 +1,7 @@
 # AGF Decoration Block
 7d2d Version 2  
 **Version:** 3.0.2  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DecorationBlock-v3.0.2.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-DecorationBlock.zip)
 
 > 
 ---

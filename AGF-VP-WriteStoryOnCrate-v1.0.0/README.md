@@ -1,7 +1,7 @@
 # Write a Story on a Crate
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-WriteStoryOnCrate-v1.0.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-WriteStoryOnCrate.zip)
 
 > 
 ---

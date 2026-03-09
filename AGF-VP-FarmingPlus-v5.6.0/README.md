@@ -1,7 +1,7 @@
 # AGF Farming Plus
 7d2d Version 2  
 **Version:** 5.6.0  
-[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-FarmingPlus-v5.6.0.zip)
+[Download](https://AuroraGiggleFairy.github.io/zips/AGF-VP-FarmingPlus.zip)
 
 > 
 ---
