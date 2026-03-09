@@ -42,6 +42,13 @@
 
 > "The best mods rely on community involvement."
 
+### **Language Support**
+
+#### What languages do AGF mods support?
+> - 7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Koreana, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.  
+> - *AGF mods add support for all 13 languages.*
+> - *If you find a translation error, please let AGF know on [DISCORD](https://discord.gg/Vm5eyW6N4r).*
+
 ---
 
 ## 3. Need Help?
@@ -51,15 +58,52 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: 
-- Server Side: 
-- Client Required for Multiplayer: 
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "Simplified Stacks" is SAFE to install on an existing game.
+- "Simplified Stacks" is DANGEROUS to remove from an existing game.
+- Unique Details: None
+
+---
+
+### What are 🖧 Server-Side 🖧 Mods? 
+> - *Mods that can be installed on **JUST** the server and will automatically work for joining players.*
+> - *Don’t let the word “server” confuse you—these mods also work in singleplayer if you install them on your own device.*
+
+---
+
+### What are 🖥️ Client-Side 🖥️ Mods? 
+> - *For multiplayer, both the **HOST** and **PLAYER** must have these mods installed.*
+> - *For singleplayer, just install them on your own device.*
+
+---
+
+### What are 🛡️ EAC-Friendly 🛡️ Mods? 
+> - *EAC stands for Easy-Anti-Cheat.*
+> - *EAC-Friendly means the mod will work with it enabled or disabled.* 
+> - *If a mod is not EAC-Friendly, EAC must be turned off for it to work.*
+>    - *Non-EAC-Friendly mods often have custom code.*
+
+#### What are the risks of disabling EAC?
+> - *Players may use hacks or cheats to gain unfair advantages.*
+> - *Servers may be at higher risk for exploits, griefing, or disruptive behavior.*
+
+#### Why disable EAC?
+> - *Non-EAC-Friendly mods add amazing features and enhancements to the game.*
+
+#### What are the best practices when running multiplayer without EAC on?
+> - *Require a password and be conservative in distributing it.*
+> - *There are tools available such as ALOC and Server Tools to add extra protections.*
+> - *Optionally, require the whitelist system for the strictest limitation on who can join.*
+> - *Seek out other server hosts and discuss what they do.*
+>    - *You can do this on AGF's Discord as well: [DISCORD](https://discord.gg/Vm5eyW6N4r)*
 
 ---
 
 ## 5. Installation
 
-### Safe to install on existing games: 
+> **All AGF mods are safe to install on existing games.**
 
 ### Singleplayer, Player-to-Player Multiplayer, or Client-Side Requirement
 > - Open "Run" (press Windows key + R)
@@ -86,10 +130,13 @@
 
 ---
 
-## 6. Removal
+### 6. Removal
+> - The safest approach is to only remove mods when starting a new game.
+>     - If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.
+>     - If you are unsure, check the mod's readme for specific removal notes or ask in AGF's [DISCORD](https://discord.gg/Vm5eyW6N4r).
+> - To remove, simply locate the mod folder and delete it. All done!
 
-### Safe to remove from an existing game: 
-- Simply locate the mod folder and delete it.
+---
 
 ---
 

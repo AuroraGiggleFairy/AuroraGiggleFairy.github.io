@@ -98,10 +98,29 @@ def load_category_descriptions(path='TEMPLATE-CategoryDescriptions.md'):
 category_descriptions = load_category_descriptions()
 
 import re
+
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
 import os
+import csv
+
+def load_compatibility_csv(csv_path='mod_compatibility.csv'):
+    """
+    Loads the compatibility CSV into a dictionary keyed by MOD_NAME (folder name).
+    """
+    compat = {}
+    if not os.path.exists(csv_path):
+        return compat
+    with open(csv_path, newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            name = row.get('MOD_NAME', '').strip()
+            if name:
+                compat[name] = row
+    return compat
+
+compat_data = load_compatibility_csv()
 
 # Function to update each mod's README.md using the template
 def update_readme(folder, template):
@@ -161,14 +180,20 @@ def update_readme(folder, template):
     features = extract_section(existing, '<!-- FEATURES START -->', '<!-- FEATURES END -->')
     changelog = extract_section(existing, '<!-- CHANGELOG START -->', '<!-- CHANGELOG END -->')
 
-    # Preserve or leave blank the values after the relevant labels
-    eac_friendly = get_field('EAC Friendly')
-    server_side = get_field('Server Side')
-    client_required = get_field('Client Required for Multiplayer')
-    safe_install = get_field('Safe to install on existing games')
-    safe_remove = get_field('Safe to remove from an existing game')
+    # Use CSV compatibility data if available, fallback to existing or 'UPDATE'
+    compat_row = compat_data.get(folder, {})
+    def get_csv_or_existing(key, label, fallback='MISSINGDATA'):
+        val = compat_row.get(key, '').strip()
+        if val:
+            return val
+        return get_field(label) or fallback
 
-
+    eac_friendly = get_csv_or_existing('EAC_FRIENDLY', 'EAC Friendly')
+    server_side = get_csv_or_existing('SERVER_SIDE', 'Server Side')
+    client_required = get_csv_or_existing('CLIENT_REQUIRED', 'Client Required for Multiplayer')
+    safe_install = get_csv_or_existing('SAFE_TO_INSTALL', 'Safe to install on existing games')
+    safe_remove = get_csv_or_existing('SAFE_TO_REMOVE', 'Safe to remove from an existing game')
+    unique = get_csv_or_existing('UNIQUE', 'Unique Details', '')
     # Extract or blank the quote
     quote = extract_quote(existing)
     # If quote is not blank, ensure it is wrapped in single * at both ends
@@ -183,11 +208,13 @@ def update_readme(folder, template):
     readme = readme.replace('{{MOD_NAME}}', name)
     readme = readme.replace('{{MOD_VERSION}}', version)
     readme = readme.replace('{{DOWNLOAD_LINK}}', download_link)
+
     readme = readme.replace('{{EAC_FRIENDLY}}', eac_friendly)
     readme = readme.replace('{{SERVER_SIDE}}', server_side)
     readme = readme.replace('{{CLIENT_REQUIRED}}', client_required)
-    readme = readme.replace('{{SAFE_INSTALL}}', safe_install)
-    readme = readme.replace('{{SAFE_REMOVE}}', safe_remove)
+    readme = readme.replace('{{SAFE_TO_INSTALL}}', safe_install)
+    readme = readme.replace('{{SAFE_TO_REMOVE}}', safe_remove)
+    readme = readme.replace('{{UNIQUE}}', unique)
     readme = readme.replace('{{QUOTE}}', quote)
 
     readme = re.sub(r'<!-- FEATURES START -->.*?<!-- FEATURES END -->', f'<!-- FEATURES START -->\n{features}\n<!-- FEATURES END -->', readme, flags=re.DOTALL)
@@ -447,11 +474,11 @@ for folder in folders:
 
 category_order = ['HUDPLUS', 'BACKPACKPLUS', 'SPECIAL', 'VP', 'NOEAC']
 category_headers = {
-    'HUDPLUS': '## **HUDPLUS MODS**',
-    'BACKPACKPLUS': '## **BACKPACKPLUS MODS**',
-    'SPECIAL': '## **SPECIAL MODS**',
-    'VP': '## **VANILLA PLUS MODS**',
-    'NOEAC': '## **NOEAC MODS**',
+    'HUDPLUS': '## **B. HUD PLUS MODS**',
+    'BACKPACKPLUS': '## **C. BACKPACK PLUS MODS**',
+    'SPECIAL': '## **D. SPECIAL COMPATIBILITY MOD**',
+    'VP': '## **E. VANILLA PLUS MODS**',
+    'NOEAC': '## **F. NO EAC MODS**',
     # 'OTHER': '## **OTHER MODS**',
 }
 def get_category_download_link(category, folders):
@@ -475,7 +502,7 @@ for folder in folders:
     update_readme(folder, template)
 
 
-mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/GigglePack_All.zip)'
+mod_list_block = '\n\n## **A. GIGGLE PACK**\n\n*[(Back to Top)](#agf-7-days-to-die-mods)*\n\n---\n\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/GigglePack_All.zip)'
 # Add category description for Giggle Pack if present
 if 'GIGGLE PACK' in category_descriptions:
     mod_list_block += f"\n\n{category_descriptions['GIGGLE PACK']}"
@@ -494,7 +521,7 @@ for cat in category_order:
     if cat in categories and categories[cat]:
         if cat == 'SPECIAL':
             # Custom header, no download all, no description, just the mod details
-            mod_list_block += "\n\n---\n\n<br>\n\n## **AGF Compatibility Mod**\n"
+            mod_list_block += "\n\n---\n\n<br>\n\n## **D. SPECIAL COMPATIBILITY MOD**\n\n*[(Back to Top)](#agf-7-days-to-die-mods)*\n\n---\n\n"
             for folder in categories[cat]:
                 try:
                     mod_list_block += '\n' + get_mod_summary(folder) + '\n'
@@ -509,7 +536,7 @@ for cat in category_order:
             # HUDPLUSOTHER logic: insert after HUDPLUS
             if cat == 'HUDPLUS' and 'OTHER_MODS' in globals() and OTHER_MODS:
                 # Insert HUDPLUS mods, then HUDPLUSOTHER as a sub-section
-                mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
+                mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n\n*[(Back to Top)](#agf-7-days-to-die-mods)*\n\n---\n\n{get_category_download_link(cat, categories[cat])}\n\n---\n\n"
                 if cat in category_descriptions:
                     mod_list_block += f"\n{category_descriptions[cat]}\n"
                 quote = ''
@@ -570,7 +597,7 @@ for cat in category_order:
                 sorted_folders += [f for f in categories[cat] if '119' in f]
             else:
                 sorted_folders = categories[cat]
-            mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
+            mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n\n*[(Back to Top)](#agf-7-days-to-die-mods)*\n\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
             if cat in category_descriptions:
                 mod_list_block += f"\n{category_descriptions[cat]}\n"
             quote = ''
