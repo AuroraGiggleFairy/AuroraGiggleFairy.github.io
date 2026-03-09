@@ -8072,7 +8072,7 @@
 
 <!-- and mod_loaded('DishongTowerChallenge')-->
 <conditional>
-	<if cond="mod_loaded('AGF-HUDPlus-1Main') and mod_loaded('DishongTowerChallenge') and mod_loaded('AGF-HUDPlus-BMCounter-KeepDayCount')">
+	<if cond="mod_loaded('AGF-HUDPlus-1Main') and mod_loaded('DishongTowerChallenge') and mod_loaded('AGF-HUDPlus-BMCounter')">
 
 		<append xpath="/windows/window[@name='windowCompass']">
 		

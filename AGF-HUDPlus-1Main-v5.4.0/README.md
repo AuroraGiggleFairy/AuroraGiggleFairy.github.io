@@ -1,4 +1,4 @@
-# AGF HUDPlus - Main
+# AGF HUDPlus 1Main
 7d2d Version 2  
 **Version:** 5.4.0  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlus-1Main.zip)
@@ -61,20 +61,28 @@
 
 ### Safe to install on existing games: 
 
-### Client
-- Open "Run" (press Windows key + R)
-- Type %appdata% and click OK
-- Open the "Roaming" folder
-- Open "7DaysToDie"
-- Open or create the "Mods" folder
-- Extract the mod here
-- Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+### Singleplayer, Player-to-Player Multiplayer, or Client-Side Requirement
+> - Open "Run" (press Windows key + R)
+> - Type %appdata% and click OK
+> - Open the "Roaming" folder
+> - Open "7DaysToDie"
+> - Open or create the "Mods" folder
+> - Extract the mod here
+> - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
-### Server
-- Use your server host’s file manager or a program like FileZilla
-- Find the main server folder and open the "Mods" folder
-- Extract the mod here
-- Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+### Multiplayer Dedicated Server *(hosted sites or player-run)*
+> - Find the main server folder and open the "Mods" folder
+>    - *If using a hosted site, use their file manager or a program like FileZilla*
+> - Extract the mod here
+> - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
+
+### Special Note
+> - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - In Steam, right click on 7 Days to Die
+>    - Select "Properties"
+>    - Select "Installed Files"
+>    - Click on "Verify integrity of game files" and wait for completion.
 
 ---
 

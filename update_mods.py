@@ -1,4 +1,36 @@
+import datetime
+import re
 # --- Quotes Loader ---
+def update_last_updated(files, date_str=None):
+    """
+    Replace the *{{LAST_UPDATED}}* placeholder with today's date in the same italic style.
+    """
+    if date_str is None:
+        # Format: Month D, YYYY (e.g., March 9, 2026)
+        try:
+            date_str = datetime.date.today().strftime('%B %-d, %Y')
+        except:
+            date_str = datetime.date.today().strftime('%B %#d, %Y')
+        # Windows compatibility for day formatting
+        if re.match(r'.*%[-#]d.*', date_str) is not None:
+            date_str = datetime.date.today().strftime('%B %d, %Y').replace(' 0', ' ')
+    replacement = f'*Last Updated {date_str}*'
+    for file in files:
+        try:
+            with open(file, 'r', encoding='utf-8') as f:
+                content = f.read()
+            # Only replace the placeholder (with or without italics); do nothing if not found
+            new_content, n = re.subn(r'\*\{\{LAST_UPDATED\}\}\*', replacement, content, flags=re.IGNORECASE)
+            if n > 0:
+                with open(file, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                print(f"[INFO] Updated *{{LAST_UPDATED}}* in {file}")
+            else:
+                print(f"[INFO] No *{{LAST_UPDATED}}* placeholder found in {file}; no changes made.")
+        except Exception as e:
+            print(f"[WARN] Could not update *{{LAST_UPDATED}}* in {file}: {e}")
+
+
 def load_quotes(path='TEMPLATE-Quotes.md'):
     if not os.path.exists(path):
         return {}, {}
@@ -36,14 +68,31 @@ def load_category_descriptions(path='TEMPLATE-CategoryDescriptions.md'):
     with open(path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
     in_section = False
+    current_key = None
+    current_lines = []
     for line in lines:
-        line = line.strip()
-        if line.startswith('[category_descriptions]'):
+        line = line.rstrip('\n')
+        if line.strip().startswith('[category_descriptions]'):
             in_section = True
             continue
-        if in_section and '=' in line:
-            key, val = line.split('=', 1)
-            descriptions[key.strip().upper()] = val.strip()
+        if in_section:
+            cat_match = re.match(r'^\[(.+)\]$', line.strip())
+            if cat_match:
+                if current_key and current_lines:
+                    descriptions[current_key] = '\n'.join(current_lines).strip()
+                current_key = cat_match.group(1).strip().upper()
+                current_lines = []
+            elif current_key is not None:
+                if line.strip() == '' and current_lines:
+                    # Blank line signals end of current category
+                    descriptions[current_key] = '\n'.join(current_lines).strip()
+                    current_key = None
+                    current_lines = []
+                else:
+                    current_lines.append(line)
+    # Add last category if file doesn't end with blank line
+    if current_key and current_lines:
+        descriptions[current_key] = '\n'.join(current_lines).strip()
     return descriptions
 
 category_descriptions = load_category_descriptions()
@@ -429,7 +478,7 @@ for folder in folders:
 mod_list_block = '\n\n# Mod List\n\n---\n\n## **GIGGLE PACK**\n[**\u2B07\uFE0F DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/GigglePack_All.zip)'
 # Add category description for Giggle Pack if present
 if 'GIGGLE PACK' in category_descriptions:
-    mod_list_block += f"\n\n**{category_descriptions['GIGGLE PACK']}**"
+    mod_list_block += f"\n\n{category_descriptions['GIGGLE PACK']}"
 # Add quote for Giggle Pack if present
 if 'GIGGLE PACK' in section_quotes:
     quote = section_quotes['GIGGLE PACK']
@@ -462,7 +511,7 @@ for cat in category_order:
                 # Insert HUDPLUS mods, then HUDPLUSOTHER as a sub-section
                 mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
                 if cat in category_descriptions:
-                    mod_list_block += f"\n**{category_descriptions[cat]}**\n"
+                    mod_list_block += f"\n{category_descriptions[cat]}\n"
                 quote = ''
                 header_key = category_headers[cat].replace('## **','').replace(' MODS**','').upper().strip()
                 fallback_key = cat.replace('_',' ') + ' MODS'
@@ -523,7 +572,7 @@ for cat in category_order:
                 sorted_folders = categories[cat]
             mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n{get_category_download_link(cat, categories[cat])}\n\n---\n"
             if cat in category_descriptions:
-                mod_list_block += f"\n**{category_descriptions[cat]}**\n"
+                mod_list_block += f"\n{category_descriptions[cat]}\n"
             quote = ''
             header_key = category_headers[cat].replace('## **','').replace(' MODS**','').upper().strip()
             fallback_key = cat.replace('_',' ') + ' MODS'
@@ -560,13 +609,26 @@ for cat in category_order:
                 except Exception as e:
                     print(f"Skipping {folder} for summary: {e}")
 
+
+# --- Generate README.md from template, replacing the date placeholder ---
 main_readme_path = 'README.md'
 with open('TEMPLATE-1Main.md', 'r', encoding='utf-8') as f:
     main_readme_content = f.read()
-print("\n--- DEBUG: TEMPLATE-1Main.md CONTENT ---\n")
-print(main_readme_content[:500])  # Print first 500 chars for brevity
-print("\n--- END DEBUG ---\n")
 
+
+# Replace the placeholder with today's date and time in EST (Month D, YYYY, HH:MM AM/PM EST)
+import pytz
+from datetime import datetime
+est = pytz.timezone('US/Eastern')
+now_est = datetime.now(est)
+# Always format as 'Month D, YYYY, HH:MM AM/PM EST' (remove leading zero from day)
+month = now_est.strftime('%B')
+day = str(now_est.day)
+year = now_est.strftime('%Y')
+time_str = now_est.strftime('%I:%M %p').lstrip('0')
+date_str = f"{month} {day}, {year}, {time_str} EST"
+date_line = f'*Last Updated {date_str}*'
+main_readme_content = re.sub(r'\*\{\{LAST_UPDATED\}\}\*', date_line, main_readme_content, flags=re.IGNORECASE)
 
 if '<!-- MOD_LIST_START -->' in main_readme_content:
     new_content = main_readme_content.replace('<!-- MOD_LIST_START -->', mod_list_block + '\n<!-- MOD_LIST_END -->')

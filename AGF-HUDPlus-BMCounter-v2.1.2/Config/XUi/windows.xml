@@ -1,4 +1,4 @@
-<AGF-HUDPlus-BMCounter-KeepDayCount>
+<AGF-HUDPlus-BMCounter>
 
 	<conditional>
 		<if cond="gamepref('BloodMoonFrequency') == 1 and gamepref('BloodMoonRange') == 0 and mod_loaded('AGF-HUDPlus-1Main')">
@@ -289,4 +289,4 @@
 	</conditional>
 
 
-</AGF-HUDPlus-BMCounter-KeepDayCount>
+</AGF-HUDPlus-BMCounter>
