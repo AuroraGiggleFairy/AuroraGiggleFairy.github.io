@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*Last Updated March 9, 2026, 9:45 AM EST*
+*Last Updated March 9, 2026, 3:52 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -353,7 +353,7 @@
 
 ---
 
-> ### **AGF HUDPlus Purple Book** *-v1.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlus-PurpleBook.zip)
+> ### **AGF HUDPlus Purple Book** *-v2.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlus-PurpleBook.zip)
 > *Purple Book for easier visuals of crafting info.*
 > <details> <summary>*Show detailed features*</summary>
 >
