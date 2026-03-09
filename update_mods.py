@@ -1,3 +1,31 @@
+def markdown_features_to_html(features_text):
+    """
+    Convert a Markdown-style feature list (with indented sub-bullets) to nested HTML <ul><li>...</li></ul>.
+    """
+    lines = [line.rstrip() for line in features_text.strip().splitlines() if line.strip()]
+    if not lines:
+        return ''
+    html = ''
+    stack = []  # Stack of (indent_level, is_ul_open)
+    prev_indent = 0
+    for line in lines:
+        # Count leading spaces (or tabs as 4 spaces)
+        indent = len(line) - len(line.lstrip(' '))
+        indent = indent + 4 * (len(line) - len(line.lstrip('\t')))
+        content = line.lstrip('-* ').strip()
+        # Open new <ul> if indent increases
+        while stack and indent < stack[-1]:
+            html += '</ul>'
+            stack.pop()
+        if not stack or indent > (stack[-1] if stack else 0):
+            html += '<ul>'
+            stack.append(indent)
+        html += f'<li>{content}</li>'
+    # Close any remaining open <ul>
+    while stack:
+        html += '</ul>'
+        stack.pop()
+    return html
 import datetime
 import re
 # --- Quotes Loader ---
@@ -285,15 +313,9 @@ def get_mod_summary(folder):
     entry = entry.replace('{{MOD_VERSION}}', version)
     entry = entry.replace('{{DOWNLOAD_LINK}}', download_link)
     entry = entry.replace('{{DESCRIPTION}}', description if description else '_No description available._')
-    # Format features so only the first line is unquoted, rest are prefixed with '> '
-    features_lines = formatted_features.rstrip().split('\n')
-    if features_lines:
-        quoted_features = features_lines[0] + '\n'
-        if len(features_lines) > 1:
-            quoted_features += '\n'.join('> ' + line if line.strip() else '>' for line in features_lines[1:])
-    else:
-        quoted_features = '_No features listed._'
-    entry = entry.replace('{{FEATURES}}', quoted_features)
+    # Convert features to nested HTML list
+    features_html = markdown_features_to_html(formatted_features)
+    entry = entry.replace('{{FEATURES}}', features_html if features_html else '<li>No features listed.</li>')
     return entry + '\n---'
 
 with open('TEMPLATE-Mod_ReadMe.md', 'r', encoding='utf-8') as f:
