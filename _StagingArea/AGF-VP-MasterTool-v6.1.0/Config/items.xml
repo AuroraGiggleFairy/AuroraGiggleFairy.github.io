@@ -1,0 +1,262 @@
+<AGFVanillaPlus-MasterTool>
+
+	
+		
+		<!--Master Tool Ingredients-->
+			<append xpath="/items">			
+				<item name="resourceMasterToolElectricals">
+					<property name="CustomIcon" value="resourceElectricParts"/>
+					<property name="CustomIconTint" value="930CF8"/>
+					<property name="ItemTypeIcon" value="challenge"/>
+					<property name="DescriptionKey" value="resourceMasterToolElectricalsDesc"/>
+					<property name="HoldType" value="45"/>
+					<property name="Tags" value="junk"/>
+					<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+					<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+					<property name="Material" value="Msteel"/>
+					<property name="Weight" value="1"/>
+					<property name="Stacknumber" value="50"/> <!-- STK resource -->
+					<property name="EconomicValue" value="7500"/>
+					<property name="Group" value="Resources"/>
+					<property name="CraftingIngredientTime" value=".2"/>
+					<property name="SoundPickup" value="parts_grab"/>
+					<property name="SoundPlace" value="parts_place"/>
+					<property name="SellableToTrader" value="false"/>
+					<property name="UnlockedBy" value="craftingElectrician"/>						
+				</item>		
+				<item name="resourceMasterToolHarvesting">
+					<property name="CustomIcon" value="meleeToolAllSteelParts"/>
+					<property name="CustomIconTint" value="930CF8"/>
+					<property name="ItemTypeIcon" value="challenge"/>
+					<property name="DescriptionKey" value="resourceMasterToolHarvestingDesc"/>
+					<property name="HoldType" value="45"/>
+					<property name="Tags" value="junk"/>
+					<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+					<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+					<property name="Material" value="Msteel"/>
+					<property name="Weight" value="1"/>
+					<property name="Stacknumber" value="50"/> <!-- STK resource -->
+					<property name="EconomicValue" value="7500"/>
+					<property name="Group" value="Resources"/>
+					<property name="CraftingIngredientTime" value=".2"/>
+					<property name="SoundPickup" value="parts_grab"/>
+					<property name="SoundPlace" value="parts_place"/>
+					<property name="SellableToTrader" value="false"/>	
+					<property name="UnlockedBy" value="craftingHarvestingTools"/>					
+				</item>			
+				<item name="resourceMasterToolSalvaging">
+					<property name="CustomIcon" value="meleeToolAxeT3ChainsawParts"/>
+					<property name="CustomIconTint" value="930CF8"/>
+					<property name="ItemTypeIcon" value="challenge"/>
+					<property name="DescriptionKey" value="resourceMasterToolSalvagingDesc"/>
+					<property name="HoldType" value="45"/>
+					<property name="Tags" value="junk"/>
+					<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+					<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+					<property name="Material" value="Msteel"/>
+					<property name="Weight" value="1"/>
+					<property name="Stacknumber" value="50"/> <!-- STK resource -->
+					<property name="EconomicValue" value="7500"/>
+					<property name="Group" value="Resources"/>
+					<property name="CraftingIngredientTime" value=".2"/>
+					<property name="SoundPickup" value="parts_grab"/>
+					<property name="SoundPlace" value="parts_place"/>
+					<property name="SellableToTrader" value="false"/>	
+					<property name="UnlockedBy" value="craftingSalvageTools"/>					
+				</item>		
+				<item name="resourceMasterToolButchering">
+					<property name="CustomIcon" value="meleeWpnBladeT3MacheteParts"/>
+					<property name="CustomIconTint" value="930CF8"/>
+					<property name="ItemTypeIcon" value="challenge"/>
+					<property name="DescriptionKey" value="resourceMasterToolButcheringDesc"/>
+					<property name="HoldType" value="45"/>
+					<property name="Tags" value="junk"/>
+					<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+					<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+					<property name="Material" value="Msteel"/>
+					<property name="Weight" value="1"/>
+					<property name="Stacknumber" value="50"/> <!-- STK resource -->
+					<property name="EconomicValue" value="7500"/>
+					<property name="Group" value="Resources"/>
+					<property name="CraftingIngredientTime" value=".2"/>
+					<property name="SoundPickup" value="parts_grab"/>
+					<property name="SoundPlace" value="parts_place"/>
+					<property name="SellableToTrader" value="false"/>	
+					<property name="UnlockedBy" value="craftingBlades"/>					
+				</item>				
+			</append>
+			
+	
+		<!--MASTER TOOL-->
+			<append xpath="/items">	
+				<item name="meleeMasterTool">
+					<property name="CustomIcon" value="meleeToolRepairT3Nailgun"/><property name="CustomIconTint" value="930CF8"/>
+					<property name="DisplayType" value="motorTool"/>
+					<property name="ItemTypeIcon" value="challenge"/>
+					<property name="Tags" value="tool,melee,nailgun,motorTool,repairTool,miningTool,salvageTool,masterTool,perkMiner69r,perkMotherLode,perkSalvageOperations,perkTheHuntsman,corpseRemoval,canHaveCosmetic"/>
+						<!--tags account for armor bonuses to apply-->
+					<property name="HoldType" value="37"/>
+					<property name="Meshfile" value="@:Other/Items/Tools/nailgunPrefab.prefab"/>
+					<property name="SellableToTrader" value="false"/>	
+					<property name="TintColor" value="204, 160, 0"/>
+					<property name="RepairTools" value="resourceRepairKit"/>
+					<property name="DegradationBreaksAfter" value="false"/>
+					<property name="CrosshairUpAfterShot" value="true"/>
+					<property name="Stacknumber" value="1"/>
+					<property name="DescriptionKey" value="meleeMasterTooldesc"/>
+					<property name="UnlockedBy" value="meleeMasterToolSchematic"/>
+					<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="10"/>
+					<property name="ShowQuality" value="true"/>
+					<property name="RepairExpMultiplier" value="10.8"/>
+					<property name="EconomicValue" value="4000"/>					
+					<!--<property name="UsableUnderwater" value="true"/>-->
+					<property class="Action0">
+						<property name="Class" value="Ranged"/>
+						<property name="Hitmask_override" value="Melee"/>
+						<property name="UseMeleeCrosshair" value="true"/>
+						<property name="Single_magazine_usage" value="false"/>
+						<property name="Infinite_ammo" value="true"/><!--Might change this to special batteries-->
+						<property name="bullet_material" value="metal"/>
+						<property name="Sound_start" value="nailgun_fire"/>
+						
+					
+						<property name="Magazine_items" value="ammoGasCan"/>
+							<!--I only added this line because it is required for underwater use without throwing red errors.
+								I am surprised this caused errors because the Junk Sledge turret has similar coding and doesn't require this.
+								However, the sledge itself has other codes specific to itself, so maybe it can overlook the magazine type.
+								I also had tried  <property name="UsableUnderwater" value="true"/> (above the action0)
+								...and <requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1.01"/> to trick it.
+								Only adding a magazine type fixed it.
+								Good news is because it is infinite ammo, it gives zero indications that you need ammoGasCan.
+							-->
+						
+						<property name="Sound_repeat" value=""/>
+						<property name="Sound_end" value=""/>
+						<property name="Sound_empty" value="dryfire"/>
+						<property name="Sound_reload" value=""/>
+						<property name="Particles_muzzle_fire" value="nailgunfire"/>
+						<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+						<property name="SupportHarvesting" value="true"/>
+						<property name="ToolCategory.harvestingTools" value="1" param1="2"/>
+						<property name="ToolCategory.Disassemble" value="1" param1=".5"/>
+						<property name="ToolCategory.Butcher" value="0" param1="50"/>
+						
+						<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1.01"/>						
+						<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+						<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+						<property name="triggerEffectTriggerShootDualsense" value="PistolShoot"/>
+						<property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+					</property>
+					<property class="Action1"> <!-- UseAction -->
+						<property name="Class" value="Repair"/>
+						<property name="Delay" value=".33"/> <!--This means 180 repairs/upgrades per second (Nailgun is 120/second)-->
+						<property name="Repair_amount" value="1000"/><!--Same amount as nailgun, because it repairs a LOT faster, and want the number of repair items used to be the same-->
+						<property name="Upgrade_hit_offset" value="-5"/>
+						<property name="Repair_action_sound" value="nailgun_fire"/>
+						<property name="Upgrade_action_sound" value="nailgun_fire"/>
+						<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoorBlockVariantHelper,ironDoorDoubleBlockVariantHelper,vaultDoor01,vaultDoor01Double,ironHatchBlockVariantHelper,vaultHatch01,cellarDoorDoubleIron,cellarDoorDoubleSteel,shuttersIronBlockVariantHelper,shuttersSteelBlockVariantHelper,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceNail,glassBulletproofBlockVariantHelper"/>
+						<!--<property name="Restricted_upgrade_items" value="concrete"/>-->
+					</property>
+					<property name="Group" value="Tools/Traps"/>
+					<effect_group name="meleeToolWrench" tiered="false">
+						<passive_effect name="HarvestCount" operation="base_set" value="0" tags="salvageHarvest"/>
+					</effect_group>
+					<effect_group name="meleeMasterTool" tiered="false"> <!-- meleeToolRepairT3Nailgun -->
+						<passive_effect name="DamageFalloffRange" operation="base_set" value="4" />
+						<passive_effect name="MaxRange" operation="base_set" value="4"/>
+
+						<display_value name="dBlockRepairAmount" value="1000"/>
+						
+						<passive_effect name="RoundsPerMinute" operation="base_set" value="300" /><!--Same as auger and chainsaw-->
+												
+						<passive_effect name="EntityDamage" operation="base_set" value="1" />
+						<passive_effect name="BlockDamage" operation="base_set" value="50" tags="miningTool,salvageTool"/><!--Much higher than auger or chainsaw-->
+						<passive_effect name="DegradationMax" operation="base_set" value="6000" /><!--takes 20 minutes of straight on harvesting to break-->
+						<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+						<passive_effect name="BlockRange" operation="base_set" value="4" />
+						<passive_effect name="ModSlots" operation="base_set" value="6" />
+					<!--<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="BlockDamage"/>
+						<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>-->
+						<passive_effect name="BlockDamage" operation="perc_add" value="2" tags="safes"/><!--Is this really necessary? Or item modifier option-->
+						
+						<passive_effect name="PlayerExpGain" operation="perc_add" value="-.5" tags="Harvesting"/>
+						
+						<passive_effect name="BurstRoundCount" operation="base_set" value="1000" />
+
+						<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".2" />
+						<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value=".2" />
+						<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.15" />
+						<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".15" />
+						<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.15" />
+						<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".15" />
+
+						<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1" />
+						<passive_effect name="WeaponHandling" operation="base_set" value="8" />	
+						
+						<passive_effect name="HarvestCount" operation="base_add" value="1" tags="allHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="1" tags="allToolsHarvest"/>				
+						<passive_effect name="HarvestCount" operation="base_add" value="1" tags="oreWoodHarvest"/>
+						<passive_effect name="HarvestCount" operation="base_add" value="1" tags="butcherHarvest"/>	
+						<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest"/>				
+					</effect_group>
+				</item>
+			</append>
+			
+			
+		<!--Master tool Schematic-->
+			<append xpath="/items">	
+				<item name="meleeMasterToolSchematic">
+					<property name="Extends" value="schematicMaster"/>
+					<property name="CreativeMode" value="Player"/>					
+					<property name="DescriptionKey" value="meleeMasterToolSchematicDesc"/>
+					<property name="CustomIcon" value="meleeToolRepairT3Nailgun"/>
+					<property name="CustomIconTint" value="930CF8"/>
+					<property name="Unlocks" value="meleeMasterTool"/>
+					<effect_group tiered="false">
+						<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeMasterTool" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+					</effect_group>
+				</item>			
+			</append>
+			
+			
+			<!--For ADMIN purposes to be able to unlock Master Tool Mission, normally completing tier 6 missions will do this-->
+			<append xpath="/items">
+				<item name="treasureMapMasterTool">
+					<property name="Extends" value="schematicMaster"/>
+					<property name="DescriptionKey" value="treasureMapMasterToolDesc"/>
+					<property name="CustomIconTint" value="930CF8"/>
+					<effect_group tiered="false">
+						<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="MTJobUnlocked" operation="set" value="1"/>
+					</effect_group>
+				</item>	
+			</append>
+
+
+
+		<!--Only leaving these here to not break player's games that have this mod with these items already.-->
+					
+
+			<append xpath="/items">	
+				<item name="noteAGFMasterTool">
+					<property name="Extends" value="blankNoteMaster"/>
+					<property name="DescriptionKey" value="noteAGFMasterToolDesc"/>
+					<property name="CustomIcon" value="challengeQuestMaster"/>
+					<property name="CustomIconTint" value="930CF8"/>
+				</item>									
+			</append>		
+			
+				
+			<append xpath="/items">	
+				<item name="treasureMapMasterToolSchematic">
+					<property name="Extends" value="schematicMaster"/>
+					<property name="CreativeMode" value="Player"/>					
+					<property name="DescriptionKey" value="treasureMapMasterToolSchematicDesc"/>
+					<property name="CustomIcon" value="questMaster"/>
+					<property name="CustomIconTint" value="930CF8"/>
+				</item>	
+			</append>
+
+
+
+</AGFVanillaPlus-MasterTool>

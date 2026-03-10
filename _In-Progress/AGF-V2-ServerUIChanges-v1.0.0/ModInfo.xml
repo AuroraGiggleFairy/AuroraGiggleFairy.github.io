@@ -2,7 +2,7 @@
 <xml>
 	<Name value="AGF-ServerUIChanges"/>
 	<DisplayName value="AGF Server UI Changes"/>
-	<Version value="1.0.0"/>
+	<Version value="0.0.1"/>
 	<Description value="Server UI stuff, like player joining modification."/>
 	<Author value="AuroraGiggleFairy (AGF)"/>
 	<Website value="https://auroragigglefairy.github.io/"/>

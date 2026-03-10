@@ -1,0 +1,3 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+cntApiary,,,,,"[ff0000]-Destroy for 2x2-[-]",,"[ff0000]-Zerstöre für 2x2-[-]","[ff0000]-Destruye por 2x2-[-]","[ff0000]-Détruire pour 2x2-[-]","[ff0000]-Distruggi per 2x2-[-]","[ff0000]-2x2で破壊する-[-]","[ff0000]-2x2를 위해 파괴하세요-[-]","[ff0000]-Zniszcz dla 2x2-[-]","[ff0000]-Destruir por 2x2-[-]","[ff0000]-Уничтожить за 2x2-[-]","[ff0000]-2x2 için yok et-[-]","[ff0000]-摧毁 2x2-[-]","[ff0000]-摧毀 2x2-[-]"
+cntApiaryAGF,,,,,"Apiary",,"Bienenhaus","Colmenar","Rucher","Apiario","養蜂箱","양봉장","Pasieka","Apiário","Пасека","Kovanlık","蜂房","養蜂箱"

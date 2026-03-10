@@ -1,0 +1,98 @@
+<AGFVanillaPlus-DewsPlus>
+
+
+	<!--this replaces the existing dew collector recipe to the 2x3x2-->
+	<set xpath="/recipes/recipe[@name='cntDewCollector']/@name">cntDewCollectorAGF</set>
+
+
+	<!--to be able to combine 5 into 1
+		It is math appropriate to make the tools take 4, not 5...
+		...because you still need one of each into the x5 version
+		...which equals five.-->
+	<append xpath="/recipes">
+		<recipe name="cntDewCollectorAGFx5" count="1" craft_time="5" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="cntDewCollectorAGF" count="5"/>
+		</recipe>
+	</append>
+	<append xpath="/recipes">
+		<recipe name="cntDewCollectorAGFx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="cntDewCollectorAGF" count="25"/>
+		</recipe>
+		<recipe name="cntDewCollectorAGFx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="cntDewCollectorAGFx5" count="5"/>
+		</recipe>
+	</append>
+	
+
+<conditional>
+	<if cond="game_version() &lt; version(2,6,0)">
+		
+		<append xpath="/recipes">
+			<recipe name="toolDewGathererx5" count="1" craft_time="5" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewGatherer" count="5"/>
+			</recipe>
+		</append>
+		<append xpath="/recipes">
+			<recipe name="toolDewGathererx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewGatherer" count="25"/>
+			</recipe>
+			<recipe name="toolDewGathererx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewGathererx5" count="5"/>
+			</recipe>
+		</append>
+
+
+		<append xpath="/recipes">
+			<recipe name="toolDewTarpx5" count="1" craft_time="5" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewTarp" count="5"/>
+			</recipe>
+		</append>
+		<append xpath="/recipes">
+			<recipe name="toolDewTarpx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewTarp" count="25"/>
+			</recipe>
+			<recipe name="toolDewTarpx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewTarpx5" count="5"/>
+			</recipe>
+		</append>
+
+
+		<append xpath="/recipes">
+			<recipe name="toolDewFilterx5" count="1" craft_time="5" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewFilter" count="5"/>
+			</recipe>
+		</append>
+		<append xpath="/recipes">
+			<recipe name="toolDewFilterx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewFilter" count="25"/>
+			</recipe>
+			<recipe name="toolDewFilterx25" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="toolDewFilterx5" count="5"/>
+			</recipe>
+		</append>
+
+	</if>
+</conditional>
+
+
+
+
+	<!--Quick way to open 500 of these larger jugs at once-->
+	<append xpath="/recipes">
+		<recipe name="drinkJarRiverWater" count="2500" craft_time="3">
+			<ingredient name="drinkJarRiverWaterx5" count="500"/>
+		</recipe>
+		<recipe name="drinkJarBoiledWater" count="2500" craft_time="3">
+			<ingredient name="drinkJarBoiledWaterx5" count="500"/>
+		</recipe>	
+		<recipe name="drinkJarRiverWater" count="12500" craft_time="3">
+			<ingredient name="drinkJarRiverWaterx25" count="500"/>
+		</recipe>
+		<recipe name="drinkJarBoiledWater" count="12500" craft_time="3">
+			<ingredient name="drinkJarBoiledWaterx25" count="500"/>
+		</recipe>
+	</append>
+
+
+</AGFVanillaPlus-DewsPlus>
+

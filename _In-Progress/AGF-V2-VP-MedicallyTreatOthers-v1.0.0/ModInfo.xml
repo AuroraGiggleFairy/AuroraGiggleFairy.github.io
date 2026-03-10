@@ -2,7 +2,7 @@
 <xml>
 	<Name value="AGF-VP-MedicallyTreatOthers"/>
 	<DisplayName value="AGF Medically Treat Others"/>
-	<Version value="1.0.0"/>
+	<Version value="0.0.1"/>
 	<Description value="Now can treat others with drugs like vitamins, etc."/>
 	<Author value="AuroraGiggleFairy (AGF)"/>
 	<Website value="https://auroragigglefairy.github.io/"/>

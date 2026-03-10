@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-ScrapEquipmentFaster"/>
+	<DisplayName value="Scrap Equipment Faster."/>
+	<Version value="1.0.0"/>
+	<Description value="Scrapping equipment takes 4 seconds instead of 10."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

@@ -1,0 +1,329 @@
+<AGFVanillaPlus-AutomobilesRespawn>
+
+
+<!--vehicle respawning utilizing the farming system from past alphas.
+	break the car down, it becomes a seed that will grow into a vehicle.
+	You can control here how long growing respawn takes.
+	You can also control how much damage the "seed" can take before breaking
+-->
+
+	<append xpath="/blocks">
+	
+		<!--The master growing block, to set the respawn rate and health of the stand in-->
+		<block name="vehicleGrowingMaster">
+			<property name="CustomIcon" value="hubcapNoMine" />
+			<property name="CustomIconTint" value="8c5600"/>
+			<property name="ItemTypeIcon" value="computer"/>	
+			<property name="CreativeMode" value="Dev"/>	
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="282"/>
+			<drop event="Destroy" count="0"/>			
+			<property name="Model" value="@:Entities/Traps/hubcapPrefab.prefab"/>			
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="MultiBlockDim" value="3,2,6"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Fall" name="plantedCar" count="1" prob="0.3" stick_chance=".8"/>	
+			<property name="PlantGrowing.Next" value="carsRandomHelper" />
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="true" />
+			
+<!--EDITABLE-->			
+			<property name="PlantGrowing.GrowthRate" value="600" />	<!--Real Life Minutes. So a value of 60 would be 60 minutes 1hour.-->
+			<property name="MaxDamage" value="2500"/> <!--just strong enough to deter unfamiliar players from breaking it-->
+		</block>
+		
+<!--Old Blocks, necessary to make safe to upgrade mod on existing games, linearized to stay out of the way--><block name="plantedCar"><property name="CreativeMode" value="None"/><property name="Extends" value="vehicleGrowingMaster"/><property name="PlantGrowing.Next" value="carsRandomHelper"/></block><block name="plantedSchoolBus"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntBusSchool"/></block><block name="plantedShortSchoolBus"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntBusSchoolShort"/></block><block name="plantedShuttleBus"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntBusShuttle"/></block><block name="plantedCityBus"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntBusCity"/></block><block name="plantedAmbulance"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntAmbulanceTruck01"/></block><block name="plantedMoPower"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntServiceTruckMoPower"/></block><block name="plantedWorkingStiff"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntServiceTruckWorkingStiffTools"/></block><block name="plantedArmyOpen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntArmyTruckRandomLootHelper"/></block><block name="plantedArmyClosed"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntArmyTruckRandomLootHelper"/></block><block name="plantedVan"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntMinivan01RandomHelper"/></block><block name="plantedWideVan"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntMinivan3Wide01RandomHelper"/></block><block name="plantedSUV"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntSUV01RandomHelper"/></block><block name="plantedWideSUV"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntSUV3Wide01RandomHelper"/></block><block name="plantedTruck"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntPickupTruck01RandomHelper"/></block><block name="plantedWideTruck"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntPickupTruck3Wide01RandomHelper"/></block><block name="plantedSemi"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntSemiTruck01RandomHelper"/></block><block name="plantedFireTruck"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntFireTruck01RandomHelper"/></block><block name="plantedFarmTruckClosed"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntFarmTruckRandomLootHelper"/></block><block name="plantedFarmTruckOpen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntFarmTruckRandomLootHelper"/></block><block name="plantedTractorWhite"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="tractorWhite"/></block><block name="plantedTractorRed"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="tractorRed"/></block><block name="plantedTractorGreen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="tractorGreen"/></block><block name="plantedTractorBlue"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="tractorBlue"/></block><block name="plantedExcavatorWhite"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorWhite"/></block><block name="plantedExcavatorRed"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorRed"/></block><block name="plantedExcavatorOrange"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorOrange"/></block><block name="plantedExcavatorYellow"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorYellow"/></block><block name="plantedExcavatorGreen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorGreen"/></block><block name="plantedExcavatorBlue"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorBlue"/></block><block name="plantedExcavatorGrey"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorGrey"/></block><block name="plantedExcavatorClawWhite"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawWhite"/></block><block name="plantedExcavatorClawRed"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawRed"/></block><block name="plantedExcavatorClawOrange"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawOrange"/></block><block name="plantedExcavatorClawYellow"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawYellow"/></block><block name="plantedExcavatorClawGreen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawBlue"/></block><block name="plantedExcavatorClawBlue"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawRed"/></block><block name="plantedExcavatorClawGrey"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="excavatorClawGrey"/></block><block name="plantedbackhoeWhite"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="backhoeWhite"/></block><block name="plantedbackhoeYellow"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="backhoeYellow"/></block><block name="plantedbackhoeGreen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="backhoeGreen"/></block><block name="plantedbackhoeBlue"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="backhoeBlue"/></block><block name="plantedbackhoeGrey"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="backhoeGrey"/></block><block name="plantedForkLiftWhite"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forkliftWhite"/></block><block name="plantedForkLiftRed"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forkliftRed"/></block><block name="plantedForkLiftOrange"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forkliftOrange"/></block><block name="plantedForkLiftYellow"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forkliftYellow"/></block><block name="plantedForkLiftGreen"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forkliftGreen"/></block><block name="plantedForkLiftBlue"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forkliftBlue"/></block><block name="plantedforklift2White"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forklift2White"/></block><block name="plantedforklift2Red"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forklift2Red"/></block><block name="plantedforklift2Orange"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forklift2Orange"/></block><block name="plantedforklift2Yellow"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forklift2Yellow"/></block><block name="plantedforklift2Green"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forklift2Green"/></block><block name="plantedforklift2Blue"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="forklift2Blue"/></block><block name="plantedcntCar03SedanDamage1Master"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntCar03SedanDamage1RandomHelper"/></block><block name="plantedcntSedan01RandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntSedan01RandomHelper"/></block><block name="plantedcntFrontCrumpledSedan01RandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntFrontCrumpledSedan01RandomHelper"/></block><block name="plantedcntPoliceCar01"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="cntPoliceCar01"/></block><block name="plantedburntSedan01"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="burntSedan01"/></block><block name="plantedburntSedan3Wide01"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="burntSedan3Wide01"/></block><block name="plantedabandonedSUV01RandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedSUV01RandomHelper"/></block><block name="plantedabandonedSUV01DoorsRandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedSUV01DoorsRandomHelper"/></block><block name="plantedabandonedPickupTruck01RandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedPickupTruck01RandomHelper"/></block><block name="plantedabandonedPickupTruck01DoorRandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedPickupTruck01DoorRandomHelper"/></block><block name="plantedabandonedSUV3Wide01RandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedSUV3Wide01RandomHelper"/></block><block name="plantedabandonedSUV3Wide01DoorsRandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedSUV3Wide01DoorsRandomHelper"/></block><block name="plantedabandonedPickupTruck3Wide01RandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedPickupTruck3Wide01RandomHelper"/></block><block name="plantedabandonedPickupTruck3Wide01DoorRandomHelper"><property name="CreativeMode" value="None"/><property name="Extends" value="plantedCar"/><property name="PlantGrowing.Next" value="abandonedPickupTruck3Wide01DoorRandomHelper"/></block>	
+		
+		<!--What the blocks 'grow' into-->
+		<block name="carAGFwideSedanHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>
+		</block>		
+		<block name="carAGFsedansHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>
+		</block>		
+		<block name="carAGFwide6LongHelper">	
+			<property name="Extends" value="cntSedan3Wide01White"/>
+		</block>		
+		<block name="carAGF6LongHelper">	
+			<property name="Extends" value="cntSedan3Wide01White"/>
+		</block>		
+		<block name="carAGFforkLiftHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>
+		</block>		
+		<block name="carAGFtractorHelper">	
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>		
+		<block name="carAGFfireTruckHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>		
+		<block name="carAGFarmyTruckHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>		
+		<block name="carAGFfarmTruckHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>		
+		<block name="carAGFboxTrucksHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>
+		</block>		
+		<block name="carAGFbackHoeHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>		
+		<block name="carAGFexcavatorHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>			
+		<block name="carAGFexcavatorClawHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>			
+		<block name="carAGFsemiTruckHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>				
+		<block name="carAGFsemiTruck01ModularHelper">
+			<property name="Extends" value="cntSedan3Wide01White"/>	
+		</block>		
+		
+		
+		<block name="carAGFwideSedanPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,2,5"/>		
+			<property name="PlantGrowing.Next" value="carAGFwideSedanHelper" />
+		</block>
+		<block name="carAGFsedansPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="2,2,5"/>	
+			<property name="PlantGrowing.Next" value="carAGFsedansHelper" />	
+		</block>		
+
+		
+		<block name="carAGFwide6LongPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,2,6"/>	
+			<property name="PlantGrowing.Next" value="carAGFwide6LongHelper" />	
+		</block>	
+		<block name="carAGF6LongPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="2,2,6"/>	
+			<property name="PlantGrowing.Next" value="carAGF6LongHelper" />	
+		</block>		
+		
+		
+		<block name="carAGFforkLiftPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="1,2,2"/>	
+			<property name="PlantGrowing.Next" value="carAGFforkLiftHelper" />	
+		</block>	
+		<block name="carAGFtractorPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="2,2,4"/>	
+			<property name="PlantGrowing.Next" value="carAGFtractorHelper" />	
+		</block>		
+		<block name="carAGFfireTruckPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,10"/>	
+			<property name="PlantGrowing.Next" value="carAGFfireTruckHelper" />	
+		</block>	
+		<block name="carAGFarmyTruckPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,7"/>	
+			<property name="PlantGrowing.Next" value="carAGFarmyTruckHelper" />	
+		</block>
+		<block name="carAGFfarmTruckPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,7"/>	
+			<property name="PlantGrowing.Next" value="carAGFfarmTruckHelper" />	
+		</block>					
+		<block name="carAGFboxTrucksPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,7"/>	
+			<property name="PlantGrowing.Next" value="carAGFboxTrucksHelper" />	
+		</block>		
+		<block name="carAGFbackHoePlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="4,3,3"/>	
+			<property name="PlantGrowing.Next" value="carAGFbackHoeHelper" />	
+		</block>		
+		<block name="carAGFexcavatorPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="7,4,5"/>	
+			<property name="PlantGrowing.Next" value="carAGFexcavatorHelper" />	
+		</block>	
+		<block name="carAGFexcavatorClawPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="11,4,5"/>	
+			<property name="PlantGrowing.Next" value="carAGFexcavatorClawHelper" />	
+		</block>				
+		<block name="carAGFsemiTruckPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,4,8"/>	
+			<property name="PlantGrowing.Next" value="carAGFsemiTruckHelper" />	
+		</block>				
+		<block name="carAGFsemiTruck01ModularPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,4,6"/>	
+			<property name="PlantGrowing.Next" value="carAGFsemiTruck01ModularHelper" />	
+		</block>
+		
+		<block name="carAGFpolicePlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="2,2,5"/>	
+			<property name="PlantGrowing.Next" value="cntPoliceCar01" />	
+		</block>				
+		<block name="carAGFambulancePlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,7"/>	
+			<property name="PlantGrowing.Next" value="cntAmbulanceTruck01" />	
+		</block>				
+		<block name="carAGFtruckWorkingStiffPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,7"/>	
+			<property name="PlantGrowing.Next" value="cntServiceTruckWorkingStiffTools" />	
+		</block>				
+		<block name="carAGFbusCityPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,3,9"/>	
+			<property name="PlantGrowing.Next" value="cntBusCity" />	
+		</block>				
+		<block name="carAGFbusSchoolPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,4,12"/>	
+			<property name="PlantGrowing.Next" value="cntBusSchool" />	
+		</block>				
+		<block name="carAGFbusSchoolShortPlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,4,7"/>	
+			<property name="PlantGrowing.Next" value="cntBusSchoolShort" />	
+		</block>				
+		<block name="carAGFbusShuttlePlanted">
+			<property name="Extends" value="vehicleGrowingMaster"/>
+			<property name="MultiBlockDim" value="3,4,7"/>	
+			<property name="PlantGrowing.Next" value="cntBusShuttle" />	
+		</block>
+	</append>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<append xpath="/blocks/block[not (@name='airConditioner') and not (@name='decoCarRadiatorFlat') and not (@name='radiatorHouse01')]/property[@name='Tags' and contains(@value,'challenge_cars')]/@value">,carSeed</append>
+
+
+	<!--to make vehicles downgrade upon being destroyed to its planted type-->
+
+	<append xpath="/blocks/block[contains(@name,'Sedan3Wide01') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFwideSedanPlanted"/>
+	</append>	
+	<append xpath="/blocks/block[contains(@name,'Sedan01') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFsedansPlanted"/>
+	</append>
+	
+	
+	<append xpath="/blocks/block[contains(@name,'PickupTruck3Wide') or contains(@name,'SUV3Wide') or contains(@name,'03Sedan3Wide') or contains(@name,'Minivan3Wide') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFwide6LongPlanted"/>
+	</append>	
+	<append xpath="/blocks/block[contains(@name,'PickupTruck01') or contains(@name,'SUV01') or contains(@name,'03SedanDamage') or contains(@name,'Minivan01') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGF6LongPlanted"/>
+	</append>
+
+	
+	<append xpath="/blocks/block[contains(@name,'forklift') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFforkLiftPlanted"/>
+	</append>	
+	
+	
+	<append xpath="/blocks/block[contains(@name,'tractor') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFtractorPlanted"/>
+	</append>	
+	
+	
+	<append xpath="/blocks/block[contains(@name,'FireTruck01') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFfireTruckPlanted"/>
+	</append>
+	<!--<set xpath="/blocks/block[contains(@name,'FireTruck01')]/property[@name='PassThroughDamage']/@value">false</set>-->
+	
+	
+	<append xpath="/blocks/block[contains(@name,'ArmyTruck') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFarmyTruckPlanted"/>
+	</append>
+	
+	
+	<append xpath="/blocks/block[contains(@name,'FarmTruck') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFfarmTruckPlanted"/>
+	</append>
+	
+	
+	<append xpath="/blocks/block[contains(@name,'BoxTruck') or contains(@name,'ServiceTruck') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFboxTrucksPlanted"/>
+	</append>	
+	
+	
+	<append xpath="/blocks/block[contains(@name,'backhoe') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFbackHoePlanted"/>
+	</append>	
+	
+	
+	<!-- ORDER HERE IS IMPORTANT-->
+	<append xpath="/blocks/block[contains(@name,'excavator') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFexcavatorPlanted"/>
+	</append>	
+	<set xpath="/blocks/block[contains(@name,'excavatorClaw')]/property[@name='DowngradeBlock']/@value">carAGFexcavatorClawPlanted</set>
+	
+	<!-- ORDER HERE IS IMPORTANT-->
+	<append xpath="/blocks/block[contains(@name,'SemiTruck01') and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFsemiTruckPlanted"/>
+	</append>	
+	<set xpath="/blocks/block[contains(@name,'SemiTruck01Modular')]/property[@name='DowngradeBlock']/@value">carAGFsemiTruck01ModularPlanted</set>
+	
+	<!--Individual Vehicles-->
+	<append xpath="/blocks/block[@name='cntPoliceCar01PickedLockBonus' or @name='cntPoliceCar01AlarmUnlocked' and not (contains(@name,'carAGF'))]">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFpolicePlanted"/>	
+	</append>	
+	<append xpath="/blocks/block[@name='cntAmbulanceTruck01']">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFambulancePlanted"/>	
+	</append>	
+	<append xpath="/blocks/block[@name='cntServiceTruckWorkingStiffTools']">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFtruckWorkingStiffPlanted"/>	
+	</append>
+	<append xpath="/blocks/block[@name='cntBusCity']">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFbusCityPlanted"/>	
+	</append>
+	<append xpath="/blocks/block[@name='cntBusSchool']">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFbusSchoolPlanted"/>	
+	</append>
+	<append xpath="/blocks/block[@name='cntBusSchoolShort']">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFbusSchoolShortPlanted"/>	
+	</append>
+	<append xpath="/blocks/block[@name='cntBusShuttle']">
+		<property name="Tags" value="carSeed"/>
+		<property name="DowngradeBlock" value="carAGFbusShuttlePlanted"/>	
+	</append>
+	
+	
+	
+</AGFVanillaPlus-AutomobilesRespawn>

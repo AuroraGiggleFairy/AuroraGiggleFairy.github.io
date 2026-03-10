@@ -1,0 +1,9 @@
+<AGFVanillaPlus-LanternPickupPlus>
+
+<!--Not removing the block from the game, just removing the recipe to make them... as they are now in one variant helper.-->
+	<remove xpath="/recipes/recipe[@name='lanternOldBlockVariantHelper']"/>
+
+	
+</AGFVanillaPlus-LanternPickupPlus>
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-SmeltingPlus"/>
+	<DisplayName value="AGF Smelting Plus"/>
+	<Version value="2.4.0"/>
+	<Description value="3 forge slots, sand smelts 1:5 ratio, smelt or craft clay/rock/stone in single units."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

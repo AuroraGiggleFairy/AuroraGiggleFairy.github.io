@@ -1,3 +1,6 @@
+# At the end of the script, run the readable script to update all ReadableReadMe.txt files
+import subprocess
+subprocess.run(['python', 'convert_readme_to_txt.py'], check=True)
 def markdown_features_to_html(features_text):
     """
     Convert a Markdown-style feature list (with indented sub-bullets) to nested HTML <ul><li>...</li></ul>.
@@ -133,6 +136,9 @@ from pathlib import Path
 import os
 import csv
 
+# Track mods with missing compatibility data
+missingdata_mods = set()
+
 def load_compatibility_csv(csv_path='mod_compatibility.csv'):
     """
     Loads the compatibility CSV into a dictionary keyed by MOD_NAME (folder name).
@@ -158,14 +164,14 @@ def update_readme(folder, template):
     try:
         tree = ET.parse(xml_path)
         root = tree.getroot()
-        name_tag = root.find('DisplayName')
-        if name_tag is None:
-            name_tag = root.find('Name')
-        version_tag = root.find('Version')
+        name_tag = root.find('Name')
         name = name_tag.attrib['value'] if name_tag is not None and 'value' in name_tag.attrib else folder
+        # Sanitize for filesystem safety
+        canonical_name = re.sub(r'[\\/:*?"<>|]', '_', name)
+        version_tag = root.find('Version')
         version = version_tag.attrib['value'] if version_tag is not None and 'value' in version_tag.attrib else "0.0.0"
     except Exception:
-        name = folder
+        canonical_name = folder
         version = "0.0.0"
 
     # Read existing README.md if present
@@ -209,7 +215,7 @@ def update_readme(folder, template):
     changelog = extract_section(existing, '<!-- CHANGELOG START -->', '<!-- CHANGELOG END -->')
 
     # Use CSV compatibility data if available, fallback to existing or 'UPDATE'
-    compat_row = compat_data.get(folder, {})
+    compat_row = compat_data.get(canonical_name, {})
     def get_csv_or_existing(key, label, fallback='MISSINGDATA'):
         val = compat_row.get(key, '').strip()
         if val:
@@ -222,6 +228,11 @@ def update_readme(folder, template):
     safe_install = get_csv_or_existing('SAFE_TO_INSTALL', 'Safe to install on existing games')
     safe_remove = get_csv_or_existing('SAFE_TO_REMOVE', 'Safe to remove from an existing game')
     unique = get_csv_or_existing('UNIQUE', 'Unique Details', '')
+
+    # Track mods with any MISSINGDATA
+    if any(x == 'MISSINGDATA' for x in [eac_friendly, server_side, client_required, safe_install, safe_remove]):
+        global missingdata_mods
+        missingdata_mods.add(canonical_name)
     # Extract or blank the quote
     quote = extract_quote(existing)
     # If quote is not blank, ensure it is wrapped in single * at both ends
@@ -338,98 +349,103 @@ import os
 # Identify NoEAC mods (must be after folders is defined)
 NOEAC_MODS = [d for d in folders if d.startswith('AGF-NoEAC-')]
 
-# Update all individual readmes
+
+# --- Canonical mod names set ---
+canonical_mod_names = set()
+
+
+import glob
+# --- Find all mod folders (exclude special/system folders) ---
+folders = [f for f in os.listdir('.') if os.path.isdir(f) and not f.startswith('.') and not f.startswith('_') and f not in ['.git', '.github', '_zip', '_In-Progress', '_StagingArea']]
+
+# --- Rename folders to canonical format if needed ---
+for folder in folders:
+    try:
+        import xml.etree.ElementTree as ET
+        import re
+        xml_path = os.path.join(folder, 'ModInfo.xml')
+        tree = ET.parse(xml_path)
+        root = tree.getroot()
+        name_tag = root.find('Name')
+        modinfo_name = name_tag.attrib['value'] if name_tag is not None and 'value' in name_tag.attrib else folder
+        # Sanitize for filesystem safety
+        modinfo_name = re.sub(r'[\\/:*?"<>|]', '_', modinfo_name)
+        version_tag = root.find('Version')
+        version = version_tag.attrib['value'] if version_tag is not None and 'value' in version_tag.attrib else "0.0.0"
+    except Exception:
+        modinfo_name = folder
+        version = "0.0.0"
+    canonical_name = f"{modinfo_name}-v{version}"
+    canonical_mod_names.add(modinfo_name)
+    if folder != canonical_name:
+        # Only rename if not already canonical
+        if not os.path.exists(canonical_name):
+            print(f"[INFO] Renaming folder '{folder}' -> '{canonical_name}'")
+            os.rename(folder, canonical_name)
+        else:
+            print(f"[WARN] Target folder '{canonical_name}' already exists. Skipping rename for '{folder}'.")
+
+# Update all individual readmes (now using canonical folder names)
+folders = sorted([f for f in os.listdir('.') if os.path.isdir(f) and (f.startswith('AGF-') or f.startswith('zzzAGF'))])
 for folder in folders:
     update_readme(folder, template)
 
-# --- Zipping individual mods ---
+# --- Zipping individual AGF-/zzzAGF- mods ---
+# --- Clear _zip directory before zipping ---
 ZIPS_DIR = Path('_zip')
+if ZIPS_DIR.exists():
+    for f in ZIPS_DIR.iterdir():
+        if f.is_file():
+            f.unlink()
+        elif f.is_dir():
+            shutil.rmtree(f)
 ZIPS_DIR.mkdir(exist_ok=True)
-def get_versioned_folder_name(folder):
-    xml_path = os.path.join(folder, 'ModInfo.xml')
-    try:
-        tree = ET.parse(xml_path)
-        root = tree.getroot()
-        name_tag = root.find('DisplayName')
-        if name_tag is None:
-            name_tag = root.find('Name')
-        version_tag = root.find('Version')
-        name = name_tag.attrib['value'] if name_tag is not None and 'value' in name_tag.attrib else folder
-        version = version_tag.attrib['value'] if version_tag is not None and 'value' in version_tag.attrib else "0.0.0"
-    except Exception:
-        name = folder
-        version = "0.0.0"
-    # Remove any existing version suffix from folder name
-    base = re.sub(r'-v[0-9.]+$', '', folder)
-    return f"{base}-v{version}"
 
-for mod in folders:
-    versioned_folder = get_versioned_folder_name(mod)
-    # Always rename to the correct versioned folder if needed
-    if mod != versioned_folder:
-        # Remove any existing folder with the correct version (old version cleanup)
-        if os.path.exists(versioned_folder):
-            print(f"[INFO] Removing old versioned folder: {versioned_folder}")
-            import shutil
-            shutil.rmtree(versioned_folder)
-        print(f"[INFO] Renaming {mod} -> {versioned_folder}")
-        os.rename(mod, versioned_folder)
-        # Update folders list so future pack zipping uses the new name
-        folders[folders.index(mod)] = versioned_folder
-        mod = versioned_folder
-    zip_name = re.sub(r'-v[0-9.]+$', '', mod)  # Remove version for zip name
-    zip_path = ZIPS_DIR / f'{zip_name}.zip'
-    print(f'Zipping {mod} -> {zip_path}')
-    zip_folder(Path(mod), zip_path)
+folders = sorted([f for f in os.listdir('.') if os.path.isdir(f) and (f.startswith('AGF-') or f.startswith('zzzAGF-'))])
+for folder in folders:
+    zip_path = ZIPS_DIR / f"{folder.split('-v')[0]}.zip"
+    zip_folder(Path(folder), zip_path)
 
-# --- Zipping mod packs ---
-
-
-# Custom logic for HUDPlus_All and GigglePack_All
-HUDPLUS_MODS = [d for d in folders if 'HUDPlus' in d]
+# --- Define mod groupings for pack zips (must be here, after folders is defined) ---
+SPECIAL_MODS = [d for d in folders if d.startswith('zzzAGF-') or 'Special' in d]
+HUDPLUS_MODS = [d for d in folders if 'HUDPlus' in d and not d.startswith('AGF-HUDPlusOther-')]
 OTHER_MODS = [d for d in folders if d.startswith('AGF-HUDPlusOther-')]
+BACKPACKPLUS_MODS = [d for d in folders if d.startswith('AGF-BackpackPlus-') and not d.startswith('AGF-BackpackPlus-84Slots')]
+BACKPACKPLUS_84 = next((d for d in folders if d.startswith('AGF-BackpackPlus-84Slots')), None)
+VP_MODS = [d for d in folders if d.startswith('AGF-VP-')]
+NOEAC_MODS = [d for d in folders if d.startswith('AGF-NoEAC-')]
 
-
-# Separate BackpackPlus 84 slot from others
-BACKPACKPLUS_84 = 'AGF-BackpackPlus-84Slots-v3.2.0'
-BACKPACKPLUS_MODS = [d for d in folders if 'BackpackPlus' in d and d != BACKPACKPLUS_84]
-
-
-# Pack definitions
+# --- Zipping main mod packs ---
 PACKS = {
-    'HUDPlus_All': (HUDPLUS_MODS, OTHER_MODS, '.Optionals - Other'),
-    'BackpackPlus_All': (BACKPACKPLUS_MODS + [BACKPACKPLUS_84], [], None),
-    'VP_All': ([d for d in folders if d.startswith('AGF-VP-')], [], None),
+    'HUDPlus_All': (HUDPLUS_MODS + SPECIAL_MODS, OTHER_MODS, '.Optionals - Other'),
+    'BackpackPlus_All': (BACKPACKPLUS_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []), [], None),
+    'VP_All': (VP_MODS + SPECIAL_MODS, [], None),
     'NoEAC_All': (NOEAC_MODS, [], None),
-    # 'Other_All': (OTHER_MODS, [], None),
     'GigglePack_All': (
-        [d for d in folders if not d.startswith('AGF-HUDPlusOther-') and (d not in BACKPACKPLUS_MODS) and (d not in NOEAC_MODS)],
-        OTHER_MODS + BACKPACKPLUS_MODS + [BACKPACKPLUS_84] + NOEAC_MODS,
-        None  # We'll handle optionals below
+        [d for d in folders if not d.startswith('AGF-HUDPlusOther-') and (d not in BACKPACKPLUS_MODS) and (d != BACKPACKPLUS_84) and (d not in NOEAC_MODS)] + SPECIAL_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []),
+        OTHER_MODS + BACKPACKPLUS_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []) + NOEAC_MODS,
+        None
     ),
 }
 for pack_name, (main_mods, optional_mods, optional_folder) in PACKS.items():
-    if not main_mods and not optional_mods:
-        continue
-    zip_path = ZIPS_DIR / f'{pack_name}.zip'
+    zip_path = ZIPS_DIR / f"{pack_name}.zip"
     print(f'Zipping pack {pack_name} -> {zip_path}')
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        # Add main mods at root
         for folder in main_mods:
             for root, _, files in os.walk(folder):
                 for file in files:
                     file_path = Path(root) / file
                     arcname = Path(folder) / file_path.relative_to(folder)
                     zipf.write(file_path, arcname)
-        # Add optional mods in the specified subfolder (for HUDPlus_All)
-        if optional_mods and optional_folder:
+        # Optionals
+        if optional_folder and optional_mods:
             for folder in optional_mods:
                 for root, _, files in os.walk(folder):
                     for file in files:
                         file_path = Path(root) / file
                         arcname = Path(optional_folder) / Path(folder) / file_path.relative_to(folder)
                         zipf.write(file_path, arcname)
-        # Special handling for GigglePack_All: two optionals
+        # Special handling for GigglePack_All
         if pack_name == 'GigglePack_All':
             # Add HUDPlus mods and 'Other' mods in '.Optionals - HUDPlus'
             for folder in HUDPLUS_MODS + OTHER_MODS:
@@ -439,7 +455,7 @@ for pack_name, (main_mods, optional_mods, optional_folder) in PACKS.items():
                         arcname = Path('.Optionals - HUDPlus') / Path(folder) / file_path.relative_to(folder)
                         zipf.write(file_path, arcname)
             # Add BackpackPlus mods (including 84 slot) in '.Optionals - BackpackPlus'
-            for folder in BACKPACKPLUS_MODS + [BACKPACKPLUS_84]:
+            for folder in BACKPACKPLUS_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []):
                 for root, _, files in os.walk(folder):
                     for file in files:
                         file_path = Path(root) / file

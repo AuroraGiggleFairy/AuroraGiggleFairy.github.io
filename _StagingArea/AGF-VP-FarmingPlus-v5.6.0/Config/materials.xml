@@ -1,0 +1,702 @@
+<AGFVanillaPlus-FarmingPlus>
+
+<append xpath="/materials">
+	<material id="Mfarmlandx5">
+		<property name="damage_category" value="earth"/>
+		<property name="surface_category" value="earth"/>
+		<property name="Hardness" type="float" value="1"/>
+		<property name="stepsound" value="dirt"/>
+		<property name="fertile_level" value="20"/>
+		<property name="stability_glue" value="20"/>
+		<property name="Mass" type="int" value="10"/>
+		<property name="MaxDamage" value="1000"/>
+		<property name="Experience" value="2"/>
+	</material>
+	<material id="Mfarmlandx25">
+		<property name="damage_category" value="earth"/>
+		<property name="surface_category" value="earth"/>
+		<property name="Hardness" type="float" value="1"/>
+		<property name="stepsound" value="dirt"/>
+		<property name="fertile_level" value="30"/>
+		<property name="stability_glue" value="20"/>
+		<property name="Mass" type="int" value="10"/>
+		<property name="MaxDamage" value="2500"/>
+		<property name="Experience" value="2"/>
+	</material>
+	
+<material id="MbirdsNestEmpty">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="birdsNestEmpty"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MbirdsNestEmptyx25">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="birdsNestEmptyx25"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MbirdsNestEmptyx5">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="birdsNestEmptyx5"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+
+<material id="MplantedAloe1">
+	<property name="forge_category" value="plantedAloe1"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedAloe1x25">
+	<property name="forge_category" value="plantedAloe1x25"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedAloe1x5">
+	<property name="forge_category" value="plantedAloe1x5"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedBlueberry1">
+	<property name="forge_category" value="plantedBlueberry1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedBlueberry1x25">
+	<property name="forge_category" value="plantedBlueberry1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedBlueberry1x5">
+	<property name="forge_category" value="plantedBlueberry1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedChrysanthemum1">
+	<property name="forge_category" value="plantedChrysanthemum1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedChrysanthemum1x25">
+	<property name="forge_category" value="plantedChrysanthemum1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedChrysanthemum1x5">
+	<property name="forge_category" value="plantedChrysanthemum1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCoffee1">
+	<property name="forge_category" value="plantedCoffee1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCoffee1x25">
+	<property name="forge_category" value="plantedCoffee1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCoffee1x5">
+	<property name="forge_category" value="plantedCoffee1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCorn1">
+	<property name="forge_category" value="plantedCorn1"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCorn1x25">
+	<property name="forge_category" value="plantedCorn1x25"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCorn1x5">
+	<property name="forge_category" value="plantedCorn1x5"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCotton1">
+	<property name="forge_category" value="plantedCotton1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCotton1x25">
+	<property name="forge_category" value="plantedCotton1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedCotton1x5">
+	<property name="forge_category" value="plantedCotton1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedGoldenrod1">
+	<property name="forge_category" value="plantedGoldenrod1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedGoldenrod1x25">
+	<property name="forge_category" value="plantedGoldenrod1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedGoldenrod1x5">
+	<property name="forge_category" value="plantedGoldenrod1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedGraceCorn1">
+	<property name="forge_category" value="plantedGraceCorn1"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedGraceCorn1x25">
+	<property name="forge_category" value="plantedGraceCorn1x25"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedGraceCorn1x5">
+	<property name="forge_category" value="plantedGraceCorn1x5"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedHop1">
+	<property name="forge_category" value="plantedHop1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedHop1x25">
+	<property name="forge_category" value="plantedHop1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedHop1x5">
+	<property name="forge_category" value="plantedHop1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedMushroom1">
+	<property name="forge_category" value="plantedMushroom1"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_destroy_category" value="xt_leaves2"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tree"/>
+	<property name="lightopacity" value="5"/>
+	<property name="stability_glue" value="1"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedMushroom1x25">
+	<property name="forge_category" value="plantedMushroom1x25"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_destroy_category" value="xt_leaves2"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tree"/>
+	<property name="lightopacity" value="5"/>
+	<property name="stability_glue" value="1"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedMushroom1x5">
+	<property name="forge_category" value="plantedMushroom1x5"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_destroy_category" value="xt_leaves2"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tree"/>
+	<property name="lightopacity" value="5"/>
+	<property name="stability_glue" value="1"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedPotato1">
+	<property name="forge_category" value="plantedPotato1"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedPotato1x25">
+	<property name="forge_category" value="plantedPotato1x25"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedPotato1x5">
+	<property name="forge_category" value="plantedPotato1x5"/>
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="plant"/>
+	<property name="forge_category" value="plants"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="tallgrass"/>
+	<property name="lightopacity" value="1"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="plant" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedPumpkin1">
+	<property name="forge_category" value="plantedPumpkin1"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedPumpkin1x25">
+	<property name="forge_category" value="plantedPumpkin1x25"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedPumpkin1x5">
+	<property name="forge_category" value="plantedPumpkin1x5"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedYucca1">
+	<property name="forge_category" value="plantedYucca1"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedYucca1x25">
+	<property name="forge_category" value="plantedYucca1x25"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+<material id="MplantedYucca1x5">
+	<property name="forge_category" value="plantedYucca1x5"/>
+	<property name="damage_category" value="earth"/>
+	<property name="surface_category" value="plant"/>
+	<property name="particle_category" value="xt_tallgrass"/>
+	<property name="particle_destroy_category" value="xt_tallgrass"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="bush"/>
+	<property name="lightopacity" value="0"/>
+	<property name="plant" value="true"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+	
+	
+	
+	
+	
+</append>
+
+
+
+
+</AGFVanillaPlus-FarmingPlus>
+

@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*Last Updated March 9, 2026, 3:52 PM EST*
+*Last Updated March 10, 2026, 7:34 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -326,7 +326,7 @@
 
 *Quality-of-life HUD enhancements and visual tweaks.*
 
-> ### **AGF HUDPlus 1Main** *-v5.4.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlus-1Main.zip)
+> ### **AGF HUDPlus 1Main** *-v5.4.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlus-1Main.zip)
 > *Refined HUD with clear stats, menus, and visual cues for easier gameplay.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -379,10 +379,10 @@
 | Display Name | Version | Download | Description |
 |---|---|---|---|
 | AGF's 10 Ingredient Slots | 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-10IngredientSlots-v1.0.0.zip) | Some people and mods need double ingredient visuals. |
-| AGF HUD Plus - Removes Written Storm Alerts | 2.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-RemoveWrittenStormAlerts-v2.0.0.zip) | Removes the written messages of incoming storms. |
+| AGF HUD Plus - Removes Written Storm Alerts | 2.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-RemoveWrittentormAlerts-v2.0.0.zip) | Removes the written messages of incoming storms. |
 | AGF HUD Plus - SmallerInteractionPrompt | 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-SmallerInteractionPrompt-v1.0.0.zip) | Smaller Interaction Prompt |
 | AGF HUD Plus - Tiny Buffs Pop Up | 1.0.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-TinyBuffsPopUp-v1.0.0.zip) | Shrinks the buffs pop up by half. |
-| AGF HUD Plus - Weekday | 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-WeekDay-v2.1.0.zip) | Adds the days of the week to the day, thanks DragonTander! |
+| AGF HUD Plus - Weekday | 2.1.0 | [Download](https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-Weekday-v2.1.0.zip) | Adds the days of the week to the day, thanks DragonTander! |
 
 ---
 
@@ -910,20 +910,20 @@
 
 ---
 
-> ### **AGF Traders restock every 2 days** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-TraderRestockEvery2Days.zip)
-> *Traders restock every 2 days, easier to remember.*
-> <details> <summary>*Show detailed features*</summary>
->
-> <ul><li>Traders restock every 2 days, easier to remember and good for games with longer daily time.</li></ul>
-> 
-
----
-
 > ### **AGF Trader Sells More Books** *-v3.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-TraderSellsMoreBooks.zip)
 > *Per magazine, traders sell between 3 and 8 instead of 1 and 3.*
 > <details> <summary>*Show detailed features*</summary>
 >
 > <ul><li>Magazines at traders, a specific magazine can come in counts of 1-8 instead of 1-3.</li><li>The number of magazines a trader will carry is between 7-13 instead of just 7</li></ul>
+> 
+
+---
+
+> ### **AGF Traders restock every 2 days** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-TradersRestockEvery2Days.zip)
+> *Traders restock every 2 days, easier to remember.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Traders restock every 2 days, easier to remember and good for games with longer daily time.</li></ul>
 > 
 
 ---
@@ -937,7 +937,16 @@
 
 ---
 
-> ### **AGF Vehicle Storage Plus** *-v2.1.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-VehicleStorageSizes.zip)
+> ### **AGF Vehicle Performance** *-v1.0.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-VehiclePerformance.zip)
+> *Vehicles are Harder, Better, Faster, Stronger.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.</li><ul><li>Gyrocopter's reverse is smooth and no longer pausing haults.</li><li>Doubled Vehicle HitPoints for durability.</li><li>New Vehicle Speed and Progression, near vanilla speeds for performance.</li><li>Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5</li><li>Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2</li><li>Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14</li><li>Truck Speed (normal, turbo) now 12, 16 instead of 10, 14</li><li>Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15</li></ul></ul>
+> 
+
+---
+
+> ### **AGF Vehicle Storage Plus** *-v2.1.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-VehicleStoragePlus.zip)
 > *Vehicles have more storage than default.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -951,15 +960,6 @@
 > <details> <summary>*Show detailed features*</summary>
 >
 > <ul><li>3 seats on bikes (bicycle, minibike, and motorcycle)</li><ul><li>For the bikes, expanded seating mod is only cosmetic, not required.</li><li>Truck can now seat 8 players (with the expanded seat mod).</li></ul></ul>
-> 
-
----
-
-> ### **AGF Vehicle Performance** *-v1.0.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-VehiclesPerformance.zip)
-> *Vehicles are Harder, Better, Faster, Stronger.*
-> <details> <summary>*Show detailed features*</summary>
->
-> <ul><li>All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.</li><ul><li>Gyrocopter's reverse is smooth and no longer pausing haults.</li><li>Doubled Vehicle HitPoints for durability.</li><li>New Vehicle Speed and Progression, near vanilla speeds for performance.</li><li>Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5</li><li>Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2</li><li>Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14</li><li>Truck Speed (normal, turbo) now 12, 16 instead of 10, 14</li><li>Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15</li></ul></ul>
 > 
 
 ---
@@ -1023,6 +1023,15 @@
 
 *Mods that require EAC to be off, some require client download.*
 
+> ### **AGF Configure Window Entering Duration** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ConfigureWindowEnteringDuration.zip)
+> *Adds a xml file to modify the duration of the location popups, vanilla is 3 seconds.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Simply adds a config xml file with the ability of changing the location entering popup duration.</li></ul>
+> 
+
+---
+
 > ### **AGF Configurable console background opacity** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ConsoleOpacityMod.zip)
 > *In the configs folder, you can change F1 opacity..*
 > <details> <summary>*Show detailed features*</summary>
@@ -1041,7 +1050,7 @@
 
 ---
 
-> ### **AGF-HUDPlus-EnhancedPatch-ClientSideNoEAC** *-v2.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-EnhancedPatch.zip)
+> ### **AGF Enhanced Patch** *-v2.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-EnhancedPatch.zip)
 > *Adds extra info that is only available from non-EAC friendly places.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1068,7 +1077,7 @@
 
 ---
 
-> ### **Open All Bundles** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-OpenAll.zip)
+> ### **Open All Bundles** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-OpenAllButton.zip)
 > *A button to open all bundles in rapid fire. Stops before dropping items.*
 > <details> <summary>*Show detailed features*</summary>
 >

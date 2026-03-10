@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-NoEAC-ConfigureWindowEnteringDuration" />
+	<DisplayName value="AGF Configure Window Entering Duration" />
+	<Version value="1.0.0" />
+	<Description value="Adds a xml file to modify the duration of the location popups, vanilla is 3 seconds." />
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

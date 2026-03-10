@@ -1,0 +1,14 @@
+<AGFVanillaPlus-PumpkinsPlus>
+
+<append xpath="/materials">
+	<material id="Mjackolantern">
+		<property name="damage_category" value="organic"/>
+		<property name="surface_category" value="organic"/>
+		<property name="forge_category" value="foodCropPumpkin"/>
+		<property name="Experience" value="2"/>
+	</material>
+</append>
+
+
+
+</AGFVanillaPlus-PumpkinsPlus>

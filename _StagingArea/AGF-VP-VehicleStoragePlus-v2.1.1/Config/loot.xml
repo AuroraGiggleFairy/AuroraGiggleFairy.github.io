@@ -1,0 +1,26 @@
+<AGFVanillaPlus-VehicleStorage>
+
+
+	<conditional>
+		<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+		<!--Plus 1 row of storage in vehicles (DO NOT MAKE BIGGER THAN 9,10!!!!)-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">9,4</set>  <!--bicycle, Default = 9,1-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">9,6</set>  <!--minibike, Default = 9,3-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">9,8</set>  <!--motorcycle, Default = 9,4-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">9,10</set> <!--Truck, Default = 9,9-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">9,8</set>  <!--Gyro, Default = 9,5-->
+		</if>
+
+
+		<if cond="game_version() &gt;= version(1,2,5)">		
+		<!--More Storage Size! (DO NOT MAKE BIGGER THAN 9,10!!!!)-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,3</set>  <!--bicycle, Default = 10,1-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,5</set>  <!--minibike, Default = 10,3-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,7</set>  <!--motorcycle, Default = 10,4-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,9</set> <!--Truck, Default = 10,9-->
+			<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,7</set>  <!--Gyro, Default = 10,5-->
+		</if>	
+	</conditional>	
+	
+		
+</AGFVanillaPlus-VehicleStorage>
