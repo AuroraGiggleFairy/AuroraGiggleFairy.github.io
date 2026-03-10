@@ -58,6 +58,18 @@ def copy_mod(src, dst):
 
 def main():
     mods = list_mods(INPROGRESS_DIR)
+    # Only allow AGF-HUDPlusOther-* mods if they already exist in the game Mods folder
+    game_mods = list_mods(GAME_MODS_PATH)
+    filtered_mods = []
+    for mod in mods:
+        if mod.startswith('AGF-HUDPlusOther-'):
+            # Only include if a matching mod exists in the game folder (by base name)
+            mod_base = re.sub(r'-v[\d.]+$', '', mod)
+            if any(g.startswith(mod_base) for g in game_mods):
+                filtered_mods.append(mod)
+        else:
+            filtered_mods.append(mod)
+    mods = filtered_mods
     if not mods:
         print("No in-progress mods found.")
         return
