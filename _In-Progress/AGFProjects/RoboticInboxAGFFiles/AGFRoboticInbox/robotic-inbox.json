@@ -1,7 +1,0 @@
-{
-  "InboxHorizontalRange": 20,
-  "InboxVerticalRange": 20,
-  "DistributionSuccessNoticeTime": 2.0,
-  "DistributionBlockedNoticeTime": 3.0,
-  "BaseSiphoningProtection": true
-}

@@ -1,7 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.GeneratedMSBuildEditorConfig.editorconfig
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\bin\Release\net48\ConsoleOpacityMod.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\bin\Release\net48\ConsoleOpacityMod.pdb
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.pdb

@@ -1,8 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\EnhancedAGFSource\obj\Release\EnhancedAGF.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\EnhancedAGFSource\obj\Release\EnhancedAGF.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\EnhancedAGFSource\obj\Release\EnhancedAGF.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\EnhancedAGFSource\Release\EnhancedAGF.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\EnhancedAGFSource\Release\EnhancedAGF.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\EnhancedAGFSource\obj\Release\EnhancedAGF.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\EnhancedAGFSource\obj\Release\EnhancedAGF.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\EnhancedAGFSource\obj\Release\EnhancedAGF.dll

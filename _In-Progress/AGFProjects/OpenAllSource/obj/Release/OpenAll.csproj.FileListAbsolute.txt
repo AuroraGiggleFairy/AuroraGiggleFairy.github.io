@@ -1,8 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\OpenAllSource\obj\Release\OpenAll.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\OpenAllSource\obj\Release\OpenAll.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\OpenAllSource\obj\Release\OpenAll.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PlayerStatControllerSource\OpenAllSource\Release\OpenAll.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\OpenAllSource\Release\OpenAll.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\OpenAllSource\obj\Release\OpenAll.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\OpenAllSource\obj\Release\OpenAll.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\OpenAllSource\obj\Release\OpenAll.dll

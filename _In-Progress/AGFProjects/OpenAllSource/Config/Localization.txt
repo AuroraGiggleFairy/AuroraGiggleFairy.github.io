@@ -1,3 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-lblContextActionOpenAll,items,UI,,,Open All,,,,,,,,,,,,,
-lblContextActionOpenAllStop,items,UI,,,Stop,,,,,,,,,,,,,

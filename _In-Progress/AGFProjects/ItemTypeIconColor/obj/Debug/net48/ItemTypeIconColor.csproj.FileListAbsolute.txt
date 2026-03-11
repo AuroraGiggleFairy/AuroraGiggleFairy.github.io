@@ -1,9 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\bin\Debug\net48\ItemTypeIconColor.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\bin\Debug\net48\ItemTypeIconColor.pdb
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.GeneratedMSBuildEditorConfig.editorconfig
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.AssemblyInfoInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.AssemblyInfo.cs
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.dll
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGFProjects\ItemTypeIconColor\obj\Debug\net48\ItemTypeIconColor.pdb
