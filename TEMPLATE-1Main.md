@@ -314,8 +314,7 @@
   <li>Move your backup folder back into "Saves"</li>
 </ol>
 <br>
-</details>
-</details>
+ </details>
 
 <br>
 <br>

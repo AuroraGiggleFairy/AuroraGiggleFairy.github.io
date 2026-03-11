@@ -520,8 +520,19 @@ category_headers = {
 def get_category_download_link(category, folders):
     if not folders:
         return ''
-    zip_name = f'{category}_All.zip' if not category.endswith('_All') else f'{category}.zip'
-    return f'[**\u2B07\uFE0F DOWNLOAD ALL {category.upper()} MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{zip_name})'
+    # Map category to correct mixed-case pack name
+    pack_name_map = {
+        'HUDPLUS': 'HUDPlus_All',
+        'BACKPACKPLUS': 'BackpackPlus_All',
+        'VP': 'VP_All',
+        'NOEAC': 'NoEAC_All',
+        'GIGGLEPACK': 'GigglePack_All',
+    }
+    pack_name = pack_name_map.get(category.upper(), f'{category}_All')
+    zip_name = f'{pack_name}.zip'
+    # Use title case for the link text
+    link_text = pack_name.replace('_All','').replace('Plus',' Plus').replace('NoEAC','No EAC').replace('GigglePack','Giggle Pack').replace('VP','VP').replace('_',' ').strip()
+    return f'[**\u2B07\uFE0F Download All {link_text} Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{zip_name})'
 
 
 

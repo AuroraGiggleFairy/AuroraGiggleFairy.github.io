@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*Last Updated March 11, 2026, 11:00 AM EST*
+*Last Updated March 11, 2026, 11:08 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -314,8 +314,7 @@
   <li>Move your backup folder back into "Saves"</li>
 </ol>
 <br>
-</details>
-</details>
+ </details>
 
 <br>
 <br>
@@ -359,7 +358,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL HUDPLUS MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/HUDPLUS_All.zip)
+[**⬇️ Download All HUD Plus Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/HUDPlus_All.zip)
 
 ---
 
@@ -432,7 +431,7 @@
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
-[**⬇️ DOWNLOAD ALL BACKPACKPLUS MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/BACKPACKPLUS_All.zip)
+[**⬇️ Download All Backpack Plus Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/BackpackPlus_All.zip)
 
 ---
 
@@ -503,7 +502,7 @@
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
-[**⬇️ DOWNLOAD ALL VP MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/VP_All.zip)
+[**⬇️ Download All VP Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/VP_All.zip)
 
 ---
 
@@ -1057,7 +1056,7 @@
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
-[**⬇️ DOWNLOAD ALL NOEAC MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/NOEAC_All.zip)
+[**⬇️ Download All No EAC Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/NoEAC_All.zip)
 
 ---
 
