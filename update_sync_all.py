@@ -66,7 +66,7 @@ UPDATE_MODS_SCRIPT = os.path.join(WORKSPACE_ROOT, 'update_mods.py')
 
 AGF_PREFIXES = ('AGF-', 'zzzAGF-')
 BACKPACKPLUS_PREFIX = 'AGF-BackpackPlus-'
-HUDPLUSOTHER_PREFIX = 'AGF-HUDPlusOther-'
+HUDPLUSOTHER_PREFIX = 'AGF-HUDPluszOther-'
 
 # Helper functions
 def get_mod_version_from_foldername(foldername):
@@ -146,8 +146,8 @@ def sync_staging_to_game():
     for modinfo_name, (staging_path, staging_version) in staging_index.items():
         game_entry = game_index.get(modinfo_name)
         push = False
-        # Only push AGF-HUDPlusOther-* if it already exists in the game folder
-        if os.path.basename(staging_path).startswith('AGF-HUDPlusOther-'):
+        # Only push AGF-HUDPluszOther-* if it already exists in the game folder
+        if os.path.basename(staging_path).startswith('AGF-HUDPluszOther-'):
             if not game_entry:
                 continue  # skip if not present in game
         if not game_entry:

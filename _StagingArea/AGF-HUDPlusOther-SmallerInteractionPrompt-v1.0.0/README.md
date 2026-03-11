@@ -1,7 +1,7 @@
-# AGF-HUDPlusOther-SmallerInteractionPrompt
+# AGF-HUDPluszOther-SmallerInteractionPrompt
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlusOther-SmallerInteractionPrompt.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPluszOther-SmallerInteractionPrompt.zip)
 
 > 
 
@@ -70,8 +70,8 @@
 - EAC Friendly: Yes
 - Server Side: Yes
 - Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-SmallerInteractionPrompt" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-SmallerInteractionPrompt" is SAFE to remove from an existing game.
+- "AGF-HUDPluszOther-SmallerInteractionPrompt" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-SmallerInteractionPrompt" is SAFE to remove from an existing game.
 - Unique Details: None
 
 ---

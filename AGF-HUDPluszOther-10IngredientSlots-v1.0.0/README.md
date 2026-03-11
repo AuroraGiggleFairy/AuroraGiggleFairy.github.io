@@ -1,7 +1,7 @@
-# AGF-HUDPlusOther-RemoveWrittentormAlerts
+# AGF-HUDPluszOther-10IngredientSlots
 7d2d Version 2  
-**Version:** 2.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlusOther-RemoveWrittentormAlerts.zip)
+**Version:** 1.0.0  
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPluszOther-10IngredientSlots.zip)
 
 > 
 
@@ -70,8 +70,8 @@
 - EAC Friendly: Yes
 - Server Side: Yes
 - Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-RemoveWrittentormAlerts" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-RemoveWrittentormAlerts" is SAFE to remove from an existing game.
+- "AGF-HUDPluszOther-10IngredientSlots" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-10IngredientSlots" is SAFE to remove from an existing game.
 - Unique Details: None
 
 ---
@@ -79,7 +79,8 @@
 
 ## 5. Features
 <!-- FEATURES START -->
-- Removes the written weather alerts that pop-up when a storm is coming.
+- Increases the ingredients list from 5 to 10 slots.
+    - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
 <!-- FEATURES END -->
 
 ---
@@ -87,12 +88,8 @@
 
 ## 6. Changelog
 <!-- CHANGELOG START -->
-v2.0.0
-- Name Change and updates associated with text and conditionals.
-- Changed to removal to help maintain standalone and other potential mix match issues.
-
 v1.0.0
-- Just made it.
+- Created the mod for 7d2d version 2, with conditionals.
 <!-- CHANGELOG END -->
 
 ---

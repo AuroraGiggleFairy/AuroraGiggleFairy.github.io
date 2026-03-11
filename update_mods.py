@@ -408,8 +408,8 @@ for folder in folders:
 
 # --- Define mod groupings for pack zips (must be here, after folders is defined) ---
 SPECIAL_MODS = [d for d in folders if d.startswith('zzzAGF-') or 'Special' in d]
-HUDPLUS_MODS = [d for d in folders if 'HUDPlus' in d and not d.startswith('AGF-HUDPlusOther-')]
-OTHER_MODS = [d for d in folders if d.startswith('AGF-HUDPlusOther-')]
+HUDPLUS_MODS = [d for d in folders if 'HUDPlus' in d and not d.startswith('AGF-HUDPluszOther-')]
+OTHER_MODS = [d for d in folders if d.startswith('AGF-HUDPluszOther-')]
 BACKPACKPLUS_MODS = [d for d in folders if d.startswith('AGF-BackpackPlus-') and not d.startswith('AGF-BackpackPlus-84Slots')]
 BACKPACKPLUS_84 = next((d for d in folders if d.startswith('AGF-BackpackPlus-84Slots')), None)
 VP_MODS = [d for d in folders if d.startswith('AGF-VP-')]
@@ -422,7 +422,7 @@ PACKS = {
     'VP_All': (VP_MODS + SPECIAL_MODS, [], None),
     'NoEAC_All': (NOEAC_MODS, [], None),
     'GigglePack_All': (
-        [d for d in folders if not d.startswith('AGF-HUDPlusOther-') and (d not in BACKPACKPLUS_MODS) and (d != BACKPACKPLUS_84) and (d not in NOEAC_MODS)] + SPECIAL_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []),
+        [d for d in folders if not d.startswith('AGF-HUDPluszOther-') and (d not in BACKPACKPLUS_MODS) and (d != BACKPACKPLUS_84) and (d not in NOEAC_MODS)] + SPECIAL_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []),
         OTHER_MODS + BACKPACKPLUS_MODS + ([BACKPACKPLUS_84] if BACKPACKPLUS_84 else []) + NOEAC_MODS,
         None
     ),
@@ -470,12 +470,12 @@ for pack_name, (main_mods, optional_mods, optional_folder) in PACKS.items():
                         arcname = Path('.Optionals - BackpackPlus') / Path(folder) / file_path.relative_to(folder)
                         zipf.write(file_path, arcname)
 
-# --- Zipping HUDPlusOther_All.zip (standalone, only AGF-HUDPlusOther- mods) ---
-HUDPLUSOTHER_ALL_NAME = 'HUDPlusOther_All.zip'
+ # --- Zipping HUDPluszOther_All.zip (standalone, only AGF-HUDPluszOther- mods) ---
+HUDPLUSOTHER_ALL_NAME = 'HUDPluszOther_All.zip'
 hudplusother_zip_path = ZIPS_DIR / HUDPLUSOTHER_ALL_NAME
-print(f'Zipping pack HUDPlusOther_All -> {hudplusother_zip_path}')
-# Only include folders that start with AGF-HUDPlusOther-
-hudplusother_folders = [f for f in folders if f.startswith("AGF-HUDPlusOther-")]
+print(f'Zipping pack HUDPluszOther_All -> {hudplusother_zip_path}')
+# Only include folders that start with AGF-HUDPluszOther-
+hudplusother_folders = [f for f in folders if f.startswith("AGF-HUDPluszOther-")]
 with zipfile.ZipFile(hudplusother_zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
     for folder in hudplusother_folders:
         for root, _, files in os.walk(folder):
@@ -580,9 +580,9 @@ for cat in category_order:
             mod_list_block = mod_list_block.rstrip() + '\n\n---\n'
             continue
         else:
-            # HUDPLUSOTHER logic: insert after HUDPLUS
+            # HUDPLUSzOTHER logic: insert after HUDPLUS
             if cat == 'HUDPLUS' and 'OTHER_MODS' in globals() and OTHER_MODS:
-                # Insert HUDPLUS mods, then HUDPLUSOTHER as a sub-section
+                # Insert HUDPLUS mods, then HUDPLUSzOTHER as a sub-section
                 mod_list_block += f"\n---\n\n<br>\n\n{category_headers[cat]}\n\n*[(Back to Top)](#agf-7-days-to-die-mods)*\n\n---\n\n{get_category_download_link(cat, categories[cat])}\n\n---\n\n"
                 if cat in category_descriptions:
                     mod_list_block += f"\n{category_descriptions[cat]}\n"
@@ -608,8 +608,8 @@ for cat in category_order:
                         mod_list_block += '\n' + get_mod_summary(folder) + '\n'
                     except Exception as e:
                         print(f"Skipping {folder} for summary: {e}")
-                # HUDPLUSOTHER sub-section with required formatting
-                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks** – [Download All](https://AuroraGiggleFairy.github.io/zips/HUDPlusOther_All.zip)\n\n'
+                # HUDPLUSzOTHER sub-section with required formatting
+                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks** – [Download All](https://AuroraGiggleFairy.github.io/zips/HUDPluszOther_All.zip)\n\n'
                 mod_list_block += '| Display Name | Version | Download | Description |\n|---|---|---|---|'
                 for folder in OTHER_MODS:
                     try:

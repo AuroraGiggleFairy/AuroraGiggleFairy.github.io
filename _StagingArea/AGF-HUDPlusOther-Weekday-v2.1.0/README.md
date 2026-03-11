@@ -1,7 +1,7 @@
-# AGF-HUDPlusOther-Weekday
+# AGF-HUDPluszOther-Weekday
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlusOther-Weekday.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPluszOther-Weekday.zip)
 
 > 
 
@@ -70,8 +70,8 @@
 - EAC Friendly: Yes
 - Server Side: Yes
 - Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-Weekday" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-Weekday" is SAFE to remove from an existing game.
+- "AGF-HUDPluszOther-Weekday" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-Weekday" is SAFE to remove from an existing game.
 - Unique Details: None
 
 ---

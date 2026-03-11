@@ -1,7 +1,7 @@
-AGF-HUDPlusOther-Weekday
+AGF-HUDPluszOther-TinyBuffsPopUp
 7d2d Version 2  
-Version: 2.1.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-HUDPlusOther-Weekday.zip
+Version: 1.0.0  
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-HUDPluszOther-TinyBuffsPopUp.zip
 
 ========================================
 ========================================
@@ -65,40 +65,27 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-Weekday" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-Weekday" is SAFE to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-HUDPluszOther-TinyBuffsPopUp" is MISSINGDATA to install on an existing game.
+- "AGF-HUDPluszOther-TinyBuffsPopUp" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ========================================
 ========================================
 
 5. Features
 
-- DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
-    - DragonTander gave me permission to use this freely.
-    - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
-    - Works Standalone
+- Shrinks the buff pop ups by half.
 
 ========================================
 ========================================
 
 6. Changelog
 
-v2.1.0
-- Updated for 7d2d version 2.5 (still works with previous versions)
-
-v2.0.0
-- restructured to account for working standalone or with my HUD.
-- Utilizes conditional operations for other HUDPlus features.
-
-v1.1.0
-- renamed from Calendar to Weekday
-
 v1.0.0
-- Just made it... Thanks DragonTander!!!
+- Just made it.
 
 ========================================
 ========================================

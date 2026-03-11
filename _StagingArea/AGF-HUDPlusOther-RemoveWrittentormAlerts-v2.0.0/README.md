@@ -1,7 +1,7 @@
-# AGF-HUDPlusOther-RemoveWrittentormAlerts
+# AGF-HUDPluszOther-RemoveWrittentormAlerts
 7d2d Version 2  
 **Version:** 2.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlusOther-RemoveWrittentormAlerts.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip)
 
 > 
 
@@ -70,8 +70,8 @@
 - EAC Friendly: Yes
 - Server Side: Yes
 - Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-RemoveWrittentormAlerts" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-RemoveWrittentormAlerts" is SAFE to remove from an existing game.
+- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is SAFE to remove from an existing game.
 - Unique Details: None
 
 ---

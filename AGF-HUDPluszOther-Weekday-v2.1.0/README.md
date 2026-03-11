@@ -1,7 +1,7 @@
-# AGF-HUDPlusOther-10IngredientSlots
+# AGF-HUDPluszOther-Weekday
 7d2d Version 2  
-**Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlusOther-10IngredientSlots.zip)
+**Version:** 2.1.0  
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPluszOther-Weekday.zip)
 
 > 
 
@@ -70,8 +70,8 @@
 - EAC Friendly: Yes
 - Server Side: Yes
 - Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-10IngredientSlots" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-10IngredientSlots" is SAFE to remove from an existing game.
+- "AGF-HUDPluszOther-Weekday" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-Weekday" is SAFE to remove from an existing game.
 - Unique Details: None
 
 ---
@@ -79,8 +79,10 @@
 
 ## 5. Features
 <!-- FEATURES START -->
-- Increases the ingredients list from 5 to 10 slots.
-    - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
+- DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
+    - DragonTander gave me permission to use this freely.
+    - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
+    - Works Standalone
 <!-- FEATURES END -->
 
 ---
@@ -88,8 +90,18 @@
 
 ## 6. Changelog
 <!-- CHANGELOG START -->
+v2.1.0
+- Updated for 7d2d version 2.5 (still works with previous versions)
+
+v2.0.0
+- restructured to account for working standalone or with my HUD.
+- Utilizes conditional operations for other HUDPlus features.
+
+v1.1.0
+- renamed from Calendar to Weekday
+
 v1.0.0
-- Created the mod for 7d2d version 2, with conditionals.
+- Just made it... Thanks DragonTander!!!
 <!-- CHANGELOG END -->
 
 ---

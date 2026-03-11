@@ -14,8 +14,8 @@ GAME_MODS_DIR = r'C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mo
 
 # Only copy this BackpackPlus mod
 INCLUDE_BACKPACK = 'AGF-BackpackPlus-84Slots-v3.2.1'
-# Exclude all HUDPlusOther mods
-EXCLUDE_PREFIXES = ('AGF-HUDPlusOther-',)
+ # Exclude all HUDPluszOther mods
+EXCLUDE_PREFIXES = ('AGF-HUDPluszOther-',)
 
 # Only include AGF- and zzzAGF- mods
 MOD_PREFIXES = ('AGF-', 'zzzAGF-')

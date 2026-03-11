@@ -1,6 +1,6 @@
 AGF 7 Days to Die Mods
 
-Last Updated March 11, 2026, 11:00 AM EST
+Last Updated March 11, 2026, 11:23 AM EST
 
 - My name is AuroraGiggleFairy (AGF).
 - Below are the latest versions of my mods.
@@ -266,6 +266,8 @@ C. To Restore a Backup
   Delete the current Game Name folder (in "Saves")
   Move your backup folder back into "Saves"
 
+ 
+
 UNDER CONSTRUCTION but EVERYTHING IS THERE.
 AGF is developing automation for easier distribution.
 As of now all links should be working, but formatting of this page is not finalized.
@@ -295,9 +297,7 @@ B. HUD PLUS MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-========================================
-
-⬇️ DOWNLOAD ALL HUDPLUS MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/HUDPLUSAll.zip
+⬇️ Download All HUD Plus Mods: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/HUDPlusAll.zip
 
 ========================================
 
@@ -339,23 +339,11 @@ Removes the pop-ups of poi names when you enter new areas.
 ========================================
 ========================================
 
-Optional HUDPlus Tweaks – Download All: https://AuroraGiggleFairy.github.io/zips/HUDPlusOtherAll.zip
-
-| Display Name | Version | Download | Description |
-|---|---|---|---|
-| AGF's 10 Ingredient Slots | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-10IngredientSlots-v1.0.0.zip | Some people and mods need double ingredient visuals. |
-| AGF HUD Plus - Removes Written Storm Alerts | 2.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-RemoveWrittentormAlerts-v2.0.0.zip | Removes the written messages of incoming storms. |
-| AGF HUD Plus - SmallerInteractionPrompt | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-SmallerInteractionPrompt-v1.0.0.zip | Smaller Interaction Prompt |
-| AGF HUD Plus - Tiny Buffs Pop Up | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-TinyBuffsPopUp-v1.0.0.zip | Shrinks the buffs pop up by half. |
-| AGF HUD Plus - Weekday | 2.1.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPlusOther-Weekday-v2.1.0.zip | Adds the days of the week to the day, thanks DragonTander! |
-
-========================================
-
 C. BACKPACK PLUS MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-⬇️ DOWNLOAD ALL BACKPACKPLUS MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/BACKPACKPLUSAll.zip
+⬇️ Download All Backpack Plus Mods: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/BackpackPlusAll.zip
 
 ========================================
 
@@ -408,7 +396,7 @@ E. VANILLA PLUS MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-⬇️ DOWNLOAD ALL VP MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/VPAll.zip
+⬇️ Download All VP Mods: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/VPAll.zip
 
 ========================================
 
@@ -839,7 +827,7 @@ F. NO EAC MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-⬇️ DOWNLOAD ALL NOEAC MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/NOEACAll.zip
+⬇️ Download All No EAC Mods: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/NoEACAll.zip
 
 ========================================
 

@@ -1,7 +1,7 @@
-AGF-HUDPlusOther-TinyBuffsPopUp
+AGF-HUDPluszOther-10IngredientSlots
 7d2d Version 2  
 Version: 1.0.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-HUDPlusOther-TinyBuffsPopUp.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-HUDPluszOther-10IngredientSlots.zip
 
 ========================================
 ========================================
@@ -65,19 +65,20 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-TinyBuffsPopUp" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-TinyBuffsPopUp" is SAFE to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-HUDPluszOther-10IngredientSlots" is MISSINGDATA to install on an existing game.
+- "AGF-HUDPluszOther-10IngredientSlots" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ========================================
 ========================================
 
 5. Features
 
-- Shrinks the buff pop ups by half.
+- Increases the ingredients list from 5 to 10 slots.
+    - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
 
 ========================================
 ========================================
@@ -85,7 +86,7 @@ Language Support
 6. Changelog
 
 v1.0.0
-- Just made it.
+- Created the mod for 7d2d version 2, with conditionals.
 
 ========================================
 ========================================

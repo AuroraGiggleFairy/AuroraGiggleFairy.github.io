@@ -8,11 +8,11 @@ AGF-HUDPlus-BMCounter,Yes,Yes,No,SAFE,SAFE,None
 AGF-HUDPlus-HealthBars,Yes,Yes,No,SAFE,SAFE,None
 AGF-HUDPlus-PurpleBook,Yes,Yes,No,SAFE,SAFE,None
 AGF-HUDPlus-RemoveEnteringPopUp,Yes,Yes,No,SAFE,SAFE,None
-AGF-HUDPlusOther-10IngredientSlots,Yes,Yes,No,SAFE,SAFE,None
-AGF-HUDPlusOther-RemoveWrittentormAlerts,Yes,Yes,No,SAFE,SAFE,None
-AGF-HUDPlusOther-SmallerInteractionPrompt,Yes,Yes,No,SAFE,SAFE,None
-AGF-HUDPlusOther-TinyBuffsPopUp,Yes,Yes,No,SAFE,SAFE,None
-AGF-HUDPlusOther-Weekday,Yes,Yes,No,SAFE,SAFE,None
+AGF-HUDPluszOther-10IngredientSlots,Yes,Yes,No,SAFE,SAFE,None
+AGF-HUDPluszOther-RemoveWrittentormAlerts,Yes,Yes,No,SAFE,SAFE,None
+AGF-HUDPluszOther-SmallerInteractionPrompt,Yes,Yes,No,SAFE,SAFE,None
+AGF-HUDPluszOther-TinyBuffsPopUp,Yes,Yes,No,SAFE,SAFE,None
+AGF-HUDPluszOther-Weekday,Yes,Yes,No,SAFE,SAFE,None
 AGF-NoEAC-ConfigureWindowEnteringDuration,No,Unknown,Unknown,SAFE,Unknown,None
 AGF-NoEAC-ConsoleOpacityMod,No,Unknown,Unknown,SAFE,UNKNOWN,None
 AGF-NoEAC-CosmeticLockIcon,No,No,Yes,SAFE,UNKNOWN,None

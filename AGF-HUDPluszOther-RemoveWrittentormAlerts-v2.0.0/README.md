@@ -1,7 +1,7 @@
-# AGF-HUDPlusOther-TinyBuffsPopUp
+# AGF-HUDPluszOther-RemoveWrittentormAlerts
 7d2d Version 2  
-**Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPlusOther-TinyBuffsPopUp.zip)
+**Version:** 2.0.0  
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip)
 
 > 
 
@@ -70,8 +70,8 @@
 - EAC Friendly: Yes
 - Server Side: Yes
 - Client Required for Multiplayer: No
-- "AGF-HUDPlusOther-TinyBuffsPopUp" is SAFE to install on an existing game.
-- "AGF-HUDPlusOther-TinyBuffsPopUp" is SAFE to remove from an existing game.
+- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is SAFE to remove from an existing game.
 - Unique Details: None
 
 ---
@@ -79,7 +79,7 @@
 
 ## 5. Features
 <!-- FEATURES START -->
-- Shrinks the buff pop ups by half.
+- Removes the written weather alerts that pop-up when a storm is coming.
 <!-- FEATURES END -->
 
 ---
@@ -87,6 +87,10 @@
 
 ## 6. Changelog
 <!-- CHANGELOG START -->
+v2.0.0
+- Name Change and updates associated with text and conditionals.
+- Changed to removal to help maintain standalone and other potential mix match issues.
+
 v1.0.0
 - Just made it.
 <!-- CHANGELOG END -->
