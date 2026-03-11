@@ -302,7 +302,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/GigglePack_All.zip)
+[# **⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/GIGGLEPACK_ALL.zip)
 
 > - *All AGF mods in one convenient download.*
 > - *Direct set-up is AGF preference and only server side mods*
@@ -319,7 +319,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL HUDPLUS MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/HUDPLUS_All.zip)
+[**⬇️ DOWNLOAD ALL HUDPLUS MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/HUDPLUS_ALL.zip)
 
 ---
 
@@ -392,7 +392,7 @@
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
-[**⬇️ DOWNLOAD ALL BACKPACKPLUS MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/BACKPACKPLUS_All.zip)
+[**⬇️ DOWNLOAD ALL BACKPACKPLUS MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/BACKPACKPLUS_ALL.zip)
 
 ---
 
@@ -463,7 +463,7 @@
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
-[**⬇️ DOWNLOAD ALL VP MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/VP_All.zip)
+[**⬇️ DOWNLOAD ALL VP MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/VP_ALL.zip)
 
 ---
 
@@ -1017,7 +1017,7 @@
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
-[**⬇️ DOWNLOAD ALL NOEAC MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/NOEAC_All.zip)
+[**⬇️ DOWNLOAD ALL NOEAC MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/NOEAC_ALL.zip)
 
 ---
 
