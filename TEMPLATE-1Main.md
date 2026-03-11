@@ -14,28 +14,14 @@
 
 ---
 
+
 ## Table of Contents
 - [1. Important Mod Details](#1-important-mod-details)
-  - [A. What are Server-Side Mods?](#a-what-are-server-side-mods)
-  - [B. What are Client-Side Mods?](#b-what-are-client-side-mods)
-  - [C. What are EAC-Friendly Mods?](#c-what-are-eac-friendly-mods)
 - [2. Language Support](#2-language-support)
-  - [A. What languages do AGF mods support?](#a-what-languages-do-agf-mods-support)
 - [3. Installation Guide](#3-installation-guide)
-  - [A. Special Note](#a-special-note)
-  - [B. Singleplayer, Player-to-Player Multiplayer, or Client-Side Requirement](#b-singleplayer-player-to-player-multiplayer-or-client-side-requirement)
-  - [C. Multiplayer Dedicated Server](#c-multiplayer-dedicated-server)
 - [4. Removal Guide](#4-removal-guide)
-  - [A. Special Note](#a-special-note-1)
-  - [B. How do I remove mods?](#b-how-do-i-remove-mods)
 - [5. Update Guide](#5-update-guide)
-  - [A. Special Note](#a-special-note-2)
-  - [B. Updating individual AGF Mods](#b-updating-individual-agf-mods)
-  - [C. Updating entire AGF Pack](#c-updating-entire-agf-pack)
 - [6. Backup Guide](#6-backup-guide)
-  - [A. Backing Up Your Singleplayer or Local Game](#a-backing-up-your-singleplayer-or-local-game)
-  - [B. Dedicated Server Game](#b-dedicated-server-game)
-  - [C. To Restore a Backup](#c-to-restore-a-backup)
 - [7. Mod List](#7-mod-list)
   - [A. GIGGLE PACK](#a-giggle-pack)
   - [B. HUD PLUS MODS](#b-hud-plus-mods)
@@ -48,7 +34,12 @@
 
 ---
 
+
+
 ## **1. Important Mod Details**
+
+<details>
+<summary>Show Important Mod Details</summary>
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
@@ -93,8 +84,14 @@
 <br>
 
 ---
+</details>
+
+
 
 ## **2. Language Support**
+
+<details>
+<summary>Show Language Support</summary>
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
@@ -108,8 +105,14 @@
 <br>
 
 ---
+</details>
+
+
 
 ## **3. Installation Guide**
+
+<details>
+<summary>Show Installation Guide</summary>
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
@@ -123,7 +126,7 @@
 
 ---
 
-### A. Special Note
+### A. Special Note - *Verify Files Guide*
 > - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
 > - If it is missing, you can restore it by verifying your installation:
 >    - *In Steam, right click on 7 Days to Die*
@@ -158,8 +161,14 @@
 <br>
 
 ---
+</details>
+
+
 
 ## **4. Removal Guide**
+
+<details>
+<summary>Show Removal Guide</summary>
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
@@ -171,7 +180,7 @@
 
 ---
 
-### A. Special Note
+### A. Special Note - *Verify Files Guide*
 > - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
 > - If it is missing, you can restore it by verifying your installation:
 >    - *In Steam, right click on 7 Days to Die*
@@ -193,8 +202,14 @@
 <br>
 
 ---
+</details>
+
+
 
 ## **5. Update Guide**
+
+<details>
+<summary>Show Update Guide</summary>
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
@@ -202,7 +217,7 @@
 
 > ⚠️ **IMPORTANT** ⚠️ Make a BACKUP First!
 
-### A. Special Note
+### A. Special Note - *Verify Files Guide*
 > - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
 > - If it is missing, you can restore it by verifying your installation:
 >    - *In Steam, right click on 7 Days to Die*
@@ -236,8 +251,14 @@
 <br>
 
 ---
+</details>
+
+
 
 ## **6. Backup Guide**
+
+<details>
+<summary>Show Backup Guide</summary>
 
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
@@ -276,6 +297,8 @@
 > 3. **Move your backup folder back into "Saves"**
 
 ---
+</details>
+</details>
 
 <br>
 <br>

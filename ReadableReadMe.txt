@@ -1,6 +1,6 @@
 AGF 7 Days to Die Mods
 
-Last Updated March 10, 2026, 7:42 PM EST
+Last Updated March 11, 2026, 9:26 AM EST
 
 - My name is AuroraGiggleFairy (AGF).
 - Below are the latest versions of my mods.
@@ -279,7 +279,7 @@ A. GIGGLE PACK
 
 ========================================
 
-⬇️ DOWNLOAD ALL AGF MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/GIGGLEPACKALL.zip
+⬇️ DOWNLOAD ALL AGF MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/GigglePackAll.zip
 
 - All AGF mods in one convenient download.
 - Direct set-up is AGF preference and only server side mods
@@ -294,7 +294,7 @@ B. HUD PLUS MODS
 
 ========================================
 
-⬇️ DOWNLOAD ALL HUDPLUS MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/HUDPLUSALL.zip
+⬇️ DOWNLOAD ALL HUDPLUS MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/HUDPLUSAll.zip
 
 ========================================
 
@@ -352,7 +352,7 @@ C. BACKPACK PLUS MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-⬇️ DOWNLOAD ALL BACKPACKPLUS MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/BACKPACKPLUSALL.zip
+⬇️ DOWNLOAD ALL BACKPACKPLUS MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/BACKPACKPLUSAll.zip
 
 ========================================
 
@@ -405,7 +405,7 @@ E. VANILLA PLUS MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-⬇️ DOWNLOAD ALL VP MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/VPALL.zip
+⬇️ DOWNLOAD ALL VP MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/VPAll.zip
 
 ========================================
 
@@ -836,7 +836,7 @@ F. NO EAC MODS
 
 (Back to Top): #agf-7-days-to-die-mods
 
-⬇️ DOWNLOAD ALL NOEAC MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/NOEACALL.zip
+⬇️ DOWNLOAD ALL NOEAC MODS: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/NOEACAll.zip
 
 ========================================
 
