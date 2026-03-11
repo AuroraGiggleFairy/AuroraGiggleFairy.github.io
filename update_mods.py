@@ -445,6 +445,14 @@ for pack_name, (main_mods, optional_mods, optional_folder) in PACKS.items():
                         file_path = Path(root) / file
                         arcname = Path(optional_folder) / Path(folder) / file_path.relative_to(folder)
                         zipf.write(file_path, arcname)
+        # Add NoEAC mods in .Optionals - NoEAC for specific packs
+        if pack_name in ['GigglePack_All', 'HUDPlus_All', 'VP_All']:
+            for folder in NOEAC_MODS:
+                for root, _, files in os.walk(folder):
+                    for file in files:
+                        file_path = Path(root) / file
+                        arcname = Path('.Optionals - NoEAC') / Path(folder) / file_path.relative_to(folder)
+                        zipf.write(file_path, arcname)
         # Special handling for GigglePack_All
         if pack_name == 'GigglePack_All':
             # Add HUDPlus mods and 'Other' mods in '.Optionals - HUDPlus'
@@ -461,13 +469,20 @@ for pack_name, (main_mods, optional_mods, optional_folder) in PACKS.items():
                         file_path = Path(root) / file
                         arcname = Path('.Optionals - BackpackPlus') / Path(folder) / file_path.relative_to(folder)
                         zipf.write(file_path, arcname)
-            # Add NoEAC mods in '.Optionals - NoEAC'
-            for folder in NOEAC_MODS:
-                for root, _, files in os.walk(folder):
-                    for file in files:
-                        file_path = Path(root) / file
-                        arcname = Path('.Optionals - NoEAC') / Path(folder) / file_path.relative_to(folder)
-                        zipf.write(file_path, arcname)
+
+# --- Zipping HUDPlusOther_All.zip (standalone, only AGF-HUDPlusOther- mods) ---
+HUDPLUSOTHER_ALL_NAME = 'HUDPlusOther_All.zip'
+hudplusother_zip_path = ZIPS_DIR / HUDPLUSOTHER_ALL_NAME
+print(f'Zipping pack HUDPlusOther_All -> {hudplusother_zip_path}')
+# Only include folders that start with AGF-HUDPlusOther-
+hudplusother_folders = [f for f in folders if f.startswith("AGF-HUDPlusOther-")]
+with zipfile.ZipFile(hudplusother_zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+    for folder in hudplusother_folders:
+        for root, _, files in os.walk(folder):
+            for file in files:
+                file_path = Path(root) / file
+                arcname = Path(folder) / file_path.relative_to(folder)
+                zipf.write(file_path, arcname)
 
 
 giggle_pack_link = '[**⬇️ DOWNLOAD ALL AGF MODS**](https://AuroraGiggleFairy.github.io/_zip/GigglePack_All.zip)'
@@ -583,7 +598,7 @@ for cat in category_order:
                     except Exception as e:
                         print(f"Skipping {folder} for summary: {e}")
                 # HUDPLUSOTHER sub-section with required formatting
-                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks**\n\n'
+                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks** – [Download All](https://AuroraGiggleFairy.github.io/zips/HUDPlusOther_All.zip)\n\n'
                 mod_list_block += '| Display Name | Version | Download | Description |\n|---|---|---|---|'
                 for folder in OTHER_MODS:
                     try:
