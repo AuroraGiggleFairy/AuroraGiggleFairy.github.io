@@ -345,11 +345,11 @@ Optional HUDPlus Tweaks – Download All: https://AuroraGiggleFairy.github.io/zi
 
 | Display Name | Version | Download | Description |
 |---|---|---|---|
-| AGF's 10 Ingredient Slots | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-10IngredientSlots-v1.0.0.zip | Some people and mods need double ingredient visuals. |
-| AGF HUD Plus - Removes Written Storm Alerts | 2.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0.zip | Removes the written messages of incoming storms. |
-| AGF HUD Plus - SmallerInteractionPrompt | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0.zip | Smaller Interaction Prompt |
-| AGF HUD Plus - Tiny Buffs Pop Up | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0.zip | Shrinks the buffs pop up by half. |
-| AGF HUD Plus - Weekday | 2.1.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-Weekday-v2.1.0.zip | Adds the days of the week to the day, thanks DragonTander! |
+| AGF's 10 Ingredient Slots | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-10IngredientSlots.zip | Some people and mods need double ingredient visuals. |
+| AGF HUD Plus - Removes Written Storm Alerts | 2.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip | Removes the written messages of incoming storms. |
+| AGF HUD Plus - SmallerInteractionPrompt | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-SmallerInteractionPrompt.zip | Smaller Interaction Prompt |
+| AGF HUD Plus - Tiny Buffs Pop Up | 1.0.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-TinyBuffsPopUp.zip | Shrinks the buffs pop up by half. |
+| AGF HUD Plus - Weekday | 2.1.0 | Download: https://AuroraGiggleFairy.github.io/zips/AGF-HUDPluszOther-Weekday.zip | Adds the days of the week to the day, thanks DragonTander! |
 
 ========================================
 

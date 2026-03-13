@@ -609,7 +609,7 @@ for cat in category_order:
                     except Exception as e:
                         print(f"Skipping {folder} for summary: {e}")
                 # HUDPLUSzOTHER sub-section with required formatting
-                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks** – [Download All](https://AuroraGiggleFairy.github.io/zips/HUDPluszOther_All.zip)\n\n'
+                mod_list_block += '\n---\n<br>\n\n### **Optional HUDPlus Tweaks** – [Download All](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/HUDPluszOther_All.zip)\n\n'
                 mod_list_block += '| Display Name | Version | Download | Description |\n|---|---|---|---|'
                 for folder in OTHER_MODS:
                     try:
@@ -635,7 +635,7 @@ for cat in category_order:
                                 description = desc_tag.attrib['value']
                         # Match the other categories: strip -v<version> from folder for zip name
                         base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
-                        download_link = f'https://AuroraGiggleFairy.github.io/zips/{base_zip_name}.zip'
+                        download_link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{base_zip_name}.zip'
                         mod_list_block += f"\n| {name} | {version} | [Download]({download_link}) | {description} |"
                     except Exception as e:
                         print(f"Skipping {folder} for condensed optionals: {e}")
