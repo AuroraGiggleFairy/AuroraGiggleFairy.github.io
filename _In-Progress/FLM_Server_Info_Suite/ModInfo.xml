@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-	<Name value="FLM_Info_Suite"/>
-	<DisplayName value="FloridaMan's Info Suite"/>
-	<Version value="2.0.0"/>
-	<Description value="Adds a custom ESC menu information panel, server join rules integration, and admin-facing debug panels for Withered Wasteland."/>
-	<Author value="FloridaMan"/>
-	<Website value="https://discord.gg/5zUwnTT78a"/>
-</xml>

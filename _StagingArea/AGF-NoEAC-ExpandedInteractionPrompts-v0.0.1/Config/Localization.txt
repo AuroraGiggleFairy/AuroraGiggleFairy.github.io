@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+xuiEmpty,UI,HUD,,,Empty,,Leer,Vacío,Vide,Vuoto,空,비어 있음,Pusty,Vazio,Пусто,Boş,空,空

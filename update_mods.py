@@ -614,6 +614,7 @@ for cat in category_order:
                 for folder in OTHER_MODS:
                     try:
                         import xml.etree.ElementTree as ET
+                        import re
                         xml_path = os.path.join(folder, 'ModInfo.xml')
                         name = folder
                         version = ''
@@ -632,7 +633,9 @@ for cat in category_order:
                             desc_tag = root.find('Description')
                             if desc_tag is not None and 'value' in desc_tag.attrib:
                                 description = desc_tag.attrib['value']
-                        download_link = f'https://AuroraGiggleFairy.github.io/zips/{folder}.zip'
+                        # Match the other categories: strip -v<version> from folder for zip name
+                        base_zip_name = re.sub(r'-v[0-9.]+$', '', folder)
+                        download_link = f'https://AuroraGiggleFairy.github.io/zips/{base_zip_name}.zip'
                         mod_list_block += f"\n| {name} | {version} | [Download]({download_link}) | {description} |"
                     except Exception as e:
                         print(f"Skipping {folder} for condensed optionals: {e}")

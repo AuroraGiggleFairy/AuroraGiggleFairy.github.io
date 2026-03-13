@@ -83,6 +83,15 @@ def main():
         mod_base = re.sub(r'-v[\d.]+$', '', mod)
         inprog_version = get_mod_version_from_foldername(mod)
         inprog_modinfo_version = get_modinfo_version(src)
+        # Determine major version (prefer ModInfo.xml, fallback to folder)
+        version_str = inprog_modinfo_version or inprog_version or '0.0.0'
+        try:
+            major_version = int(version_str.split('.')[0])
+        except Exception:
+            major_version = 0
+        if major_version < 1:
+            print(f"Skipping {mod}: major version is {major_version} (must be at least 1 to copy out of _In-Progress)")
+            continue
         # Find matching mod in game folder
         gmod = next((g for g in game_mods if re.sub(r'-v[\d.]+$', '', g) == mod_base), None)
         if gmod:

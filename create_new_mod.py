@@ -13,11 +13,6 @@ TEMPLATE_README_PATH = os.path.join(WORKSPACE_ROOT, "TEMPLATE-Mod_ReadMe.md")
 TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name value=\"{mod_name}\"/>\n    <DisplayName value=\"{display_name}\"/>\n    <Version value=\"{version}\"/>\n    <Description value=\"\"/>\n    <Author value=\"AuroraGiggleFairy (AGF)\"/>\n    <Website value=\"https://auroragigglefairy.github.io/\"/>\n</xml>\n'''
 
 def main():
-        # Add entry to mod_compatibility.csv
-        csv_path = os.path.join(WORKSPACE_ROOT, "mod_compatibility.csv")
-        if os.path.exists(csv_path):
-            with open(csv_path, "a", encoding="utf-8") as csvfile:
-                csvfile.write(f"\n{mod_name},MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA")
     mod_name = input("Enter new mod name (e.g., AGF-BackpackPlus-84Slots): ").strip()
     import re
     version = "0.0.1"
@@ -33,6 +28,11 @@ def main():
         print(f"Folder {folder_name} already exists in _In-Progress!")
         return
     os.makedirs(mod_path)
+    # Add entry to mod_compatibility.csv
+    csv_path = os.path.join(WORKSPACE_ROOT, "mod_compatibility.csv")
+    if os.path.exists(csv_path):
+        with open(csv_path, "a", encoding="utf-8") as csvfile:
+            csvfile.write(f"\n{mod_name},MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA")
     # Create ModInfo.xml
     with open(os.path.join(mod_path, "ModInfo.xml"), "w", encoding="utf-8") as f:
         f.write(TEMPLATE_MODINFO.format(mod_name=mod_name, display_name=display_name, version=version))

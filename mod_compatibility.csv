@@ -83,3 +83,5 @@ AGF-VP-ZombieBiomeSpawning,Yes,Yes,No,SAFE,SAFE,None
 AGF-VP-ZombieCorpseLeaveQuicker,Yes,Yes,No,SAFE,SAFE,None
 AGF-VP-ZombieLargerHordes,Yes,Yes,No,SAFE,SAFE,None
 zzzAGF-Special-Compatibilities,Yes,Yes,No,SAFE,DANGEROUS,None
+
+AGF-NoEAC-ExpandedInteractionPrompts,No,No,Yes,Safe,Safe,None
