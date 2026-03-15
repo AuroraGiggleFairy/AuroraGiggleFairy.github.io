@@ -3,7 +3,7 @@
 **Version:** 1.0.0  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ConfigureWindowEnteringDuration.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,19 +67,19 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: No
-- Server Side: Unknown
-- Client Required for Multiplayer: Unknown
-- "AGF-NoEAC-ConfigureWindowEnteringDuration" is SAFE to install on an existing game.
-- "AGF-NoEAC-ConfigureWindowEnteringDuration" is Unknown to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-NoEAC-ConfigureWindowEnteringDuration" is MISSINGDATA to install on an existing game.
+- "AGF-NoEAC-ConfigureWindowEnteringDuration" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---
 
 ## 5. Features
 <!-- FEATURES START -->
-- Simply adds a config xml file with the ability of changing the location entering popup duration.
+
 <!-- FEATURES END -->
 
 ---
@@ -87,8 +87,7 @@
 
 ## 6. Changelog
 <!-- CHANGELOG START -->
-v1.0.0
-- Made the mod.
+
 <!-- CHANGELOG END -->
 
 ---

@@ -1,7 +1,7 @@
 AGF-NoEAC-ExpandedInteractionPrompts
 7d2d Version 2  
-Version: 0.0.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-ExpandedInteractionPrompts.zip
+Version: 1.0.0 
+Download: [Add link later]
 
 [Add quote later]
 
@@ -67,22 +67,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: No
-- Server Side: No
-- Client Required for Multiplayer: Yes
-- "AGF-NoEAC-ExpandedInteractionPrompts" is Safe to install on an existing game.
-- "AGF-NoEAC-ExpandedInteractionPrompts" is Safe to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-NoEAC-ExpandedInteractionPrompts" is MISSINGDATA to install on an existing game.
+- "AGF-NoEAC-ExpandedInteractionPrompts" is MISSINGDATA to remove from an existing game.
+- Unique Details: MISSINGDATA
 
 ========================================
 ========================================
 
 5. Features
 
+- When looking at a workstation, the UI shows its status (e.g., Crafting, Needs Fuel, Start Fire) and output slots used.
+
 ========================================
 ========================================
 
 6. Changelog
+
+v1.0.0
+- Workstation prompts detect number of output slots used.
+- Workstation prompts detect if crafting, needs fuel or to be turned on.
+- Ready for publish.
 
 v0.0.1
 - Mod first created.

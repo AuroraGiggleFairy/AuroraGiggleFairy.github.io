@@ -3,7 +3,7 @@
 **Version:** 2.0.1  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-PickupLanternsPlus.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-PickupLanternsPlus" is SAFE to install on an existing game.
-- "AGF-VP-PickupLanternsPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-VP-PickupLanternsPlus" is MISSINGDATA to install on an existing game.
+- "AGF-VP-PickupLanternsPlus" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---

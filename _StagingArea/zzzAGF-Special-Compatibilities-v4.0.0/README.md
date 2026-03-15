@@ -3,7 +3,7 @@
 **Version:** 4.0.0  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/zzzAGF-Special-Compatibilities.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "zzzAGF-Special-Compatibilities" is SAFE to install on an existing game.
-- "zzzAGF-Special-Compatibilities" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "zzzAGF-Special-Compatibilities" is MISSINGDATA to install on an existing game.
+- "zzzAGF-Special-Compatibilities" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---

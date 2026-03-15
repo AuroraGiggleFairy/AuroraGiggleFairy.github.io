@@ -3,7 +3,7 @@
 **Version:** 1.2.2  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-BackpackPlus-119Slots.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-BackpackPlus-119Slots" is SAFE to install on an existing game.
-- "AGF-BackpackPlus-119Slots" is DANGEROUS to remove from an existing game.
-- Unique Details: You may swap with 84 or 72.
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-BackpackPlus-119Slots" is MISSINGDATA to install on an existing game.
+- "AGF-BackpackPlus-119Slots" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---

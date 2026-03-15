@@ -3,7 +3,7 @@
 **Version:** {{MOD_VERSION}}  
 [Download]({{DOWNLOAD_LINK}})
 
-> {{QUOTE}}
+ {{QUOTE}}
 
 ---
 ---

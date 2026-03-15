@@ -3,7 +3,7 @@
 **Version:** 2.0.0  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-VP-XPDeathPenaltyReduction.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-XPDeathPenaltyReduction" is SAFE to install on an existing game.
-- "AGF-VP-XPDeathPenaltyReduction" is SAFE to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-VP-XPDeathPenaltyReduction" is MISSINGDATA to install on an existing game.
+- "AGF-VP-XPDeathPenaltyReduction" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---

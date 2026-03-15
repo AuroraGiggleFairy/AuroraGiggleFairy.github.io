@@ -1,8 +1,0 @@
-<AGF-HUDPlus-RemoveWrittentormAlerts>
-
-
-	<!--All this does, is remove the storm WRITTEN alerts into the HUD.-->	
-	<remove xpath="/windows/window[@name='windowEntering']/rect/label[@name='MessageContent']"/>
-	
-
-</AGF-HUDPlus-RemoveWrittentormAlerts>

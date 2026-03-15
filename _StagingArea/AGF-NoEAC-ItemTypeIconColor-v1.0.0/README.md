@@ -3,7 +3,7 @@
 **Version:** 1.0.0  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ItemTypeIconColor.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: No
-- Server Side: No
-- Client Required for Multiplayer: Yes
-- "AGF-NoEAC-ItemTypeIconColor" is SAFE to install on an existing game.
-- "AGF-NoEAC-ItemTypeIconColor" is UNKNOWN to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-NoEAC-ItemTypeIconColor" is MISSINGDATA to install on an existing game.
+- "AGF-NoEAC-ItemTypeIconColor" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---

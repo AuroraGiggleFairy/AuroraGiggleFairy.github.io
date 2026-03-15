@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Config>
-
-  <!--This number represents how long the Location Pop-up will last before disappearing.-->
-  <EnteringAreaDuration>10.0</EnteringAreaDuration><!--Default 3 seconds-->
-
-
-</Config>

@@ -3,7 +3,7 @@
 **Version:** 1.0.4  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-SortingBox.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: No
-- Server Side: UNIQUE
-- Client Required for Multiplayer: UNIQUE
-- "AGF-NoEAC-SortingBox" is SAFE to install on an existing game.
-- "AGF-NoEAC-SortingBox" is DANGEROUS to remove from an existing game.
-- Unique Details: Server side if dedicated server - otherwise client side.
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-NoEAC-SortingBox" is MISSINGDATA to install on an existing game.
+- "AGF-NoEAC-SortingBox" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---

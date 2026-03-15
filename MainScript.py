@@ -26,7 +26,14 @@ def build_modinfo_index(path):
                 prop_tag = next((p for p in root.findall('.//property') if p.get('name') == 'Version'), None)
                 modinfo_version = prop_tag.get('value') if prop_tag is not None else None
             if modinfo_name and modinfo_name.startswith(AGF_PREFIXES):
-                index[modinfo_name] = (folder_path, modinfo_version)
+                # Always keep the folder with the highest ModInfo.xml version for each mod name
+                if modinfo_name in index:
+                    _, existing_version = index[modinfo_name]
+                    cmp = compare_versions(modinfo_version, existing_version)
+                    if cmp > 0:
+                        index[modinfo_name] = (folder_path, modinfo_version)
+                else:
+                    index[modinfo_name] = (folder_path, modinfo_version)
         except Exception:
             continue
     return index
@@ -173,23 +180,50 @@ def sync_game_to_workspace():
     # Pull newer mods from game folder if ModInfo.xml version is higher
     game_index = build_modinfo_index(GAME_MODS_PATH)
     ws_index = build_modinfo_index(WORKSPACE_ROOT)
+    inprog_index = build_modinfo_index(INPROGRESS_DIR)
     for modinfo_name, (game_path, game_version) in game_index.items():
+        # Update workspace root
         ws_entry = ws_index.get(modinfo_name)
-        pull = False
+        pull_ws = False
         if not ws_entry:
-            pull = True
+            pull_ws = True
         else:
             _, ws_version = ws_entry
             cmp = compare_versions(game_version, ws_version)
             if cmp > 0:
-                pull = True
-        if pull:
+                pull_ws = True
+        if pull_ws:
             # Remove all workspace mods with this modinfo_name
             for folder, (wname, _) in [(f, build_modinfo_index(WORKSPACE_ROOT)[f]) for f in build_modinfo_index(WORKSPACE_ROOT) if f == modinfo_name]:
                 remove_mod(wname)
             dest = os.path.join(WORKSPACE_ROOT, os.path.basename(game_path))
             copy_mod(game_path, dest)
+
+        # Update _In-Progress: always copy if game version is higher or not present
+        inprog_entry = inprog_index.get(modinfo_name)
+        pull_inprog = False
+        if not inprog_entry:
+            pull_inprog = True
+        else:
+            _, inprog_version = inprog_entry
+            cmp = compare_versions(game_version, inprog_version)
+            if cmp > 0:
+                pull_inprog = True
+        if pull_inprog:
+            # Always remove the folder in _In-Progress with the same name as the game mod, regardless of version
+            folder_name = os.path.basename(game_path)
+            folder_path = os.path.join(INPROGRESS_DIR, folder_name)
+            if os.path.exists(folder_path):
+                remove_mod(folder_path)
+            # Remove all _In-Progress mods with this modinfo_name (if any, even if folder name differs)
+            for folder, (iname, _) in [(f, build_modinfo_index(INPROGRESS_DIR)[f]) for f in build_modinfo_index(INPROGRESS_DIR) if f == modinfo_name]:
+                if os.path.abspath(iname) != os.path.abspath(folder_path):
+                    remove_mod(iname)
+            dest = os.path.join(INPROGRESS_DIR, folder_name)
+            copy_mod(game_path, dest)
     run_update_mods()
+    # After updating _In-Progress, move any publish-ready mods to workspace root
+    move_inprogress_to_publish_ready()
 
 def run_update_mods():
     if os.path.exists(UPDATE_MODS_SCRIPT):

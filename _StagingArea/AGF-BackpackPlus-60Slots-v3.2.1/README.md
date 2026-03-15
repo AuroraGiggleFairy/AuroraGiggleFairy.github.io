@@ -3,7 +3,7 @@
 **Version:** 3.2.1  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-BackpackPlus-60Slots.zip)
 
-> 
+ 
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-BackpackPlus-60Slots" is SAFE to install on an existing game.
-- "AGF-BackpackPlus-60Slots" is DANGEROUS to remove from an existing game.
-- Unique Details: You may upgrade to the others.
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-BackpackPlus-60Slots" is MISSINGDATA to install on an existing game.
+- "AGF-BackpackPlus-60Slots" is MISSINGDATA to remove from an existing game.
+- Unique Details: 
 
 ---
 ---
