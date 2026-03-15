@@ -1,6 +1,6 @@
 AGF 7 Days to Die Mods
 
-March 15, 2026, 4:04 AM EST
+March 15, 2026, 4:10 AM EST
 
 - My name is AuroraGiggleFairy (AGF).
 - Below are the latest versions of my mods.
@@ -350,11 +350,11 @@ Optional HUDPlus Tweaks – Download All: https://github.com/AuroraGiggleFairy/A
 
 | Display Name | Version | Download | Description |
 |---|---|---|---|
-| AGF-HUDPluszOther-10IngredientSlots | 1.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-10IngredientSlots.zip | None |
-| AGF-HUDPluszOther-RemoveWrittentormAlerts | 2.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip | None |
-| AGF-HUDPluszOther-SmallerInteractionPrompt | 1.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-SmallerInteractionPrompt.zip | None |
-| AGF-HUDPluszOther-TinyBuffsPopUp | 1.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-TinyBuffsPopUp.zip | None |
-| AGF-HUDPluszOther-Weekday | 2.1.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-Weekday.zip | None |
+| AGF-HUDPluszOther-10IngredientSlots | 1.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-10IngredientSlots.zip | Some people and mods need double ingredient visuals. |
+| AGF-HUDPluszOther-RemoveWrittentormAlerts | 2.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip | Removes the written messages of incoming storms. |
+| AGF-HUDPluszOther-SmallerInteractionPrompt | 1.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-SmallerInteractionPrompt.zip | Smaller Interaction Prompt |
+| AGF-HUDPluszOther-TinyBuffsPopUp | 1.0.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-TinyBuffsPopUp.zip | Shrinks the buffs pop up by half. |
+| AGF-HUDPluszOther-Weekday | 2.1.0 | Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-Weekday.zip | Adds the days of the week to the day, thanks DragonTander! |
 
 ========================================
 
@@ -371,28 +371,28 @@ C. BACKPACK PLUS MODS
 Download all above or select one below.
 
 ### AGF-BackpackPlus-119Slots -v1.2.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-BackpackPlus-119Slots.zip
-You may swap with 84 or 72.
+Expands your inventory with a 119-slot backpack and adds craftable, extra-large storage options.
  Show detailed features
 >Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)119-slot backpack with 3 rows (68 encumbrance slots)Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if neededPackMule skill unlocks all encumbrance slotsCompatible with PackMule, buffs, Twitch integration, and mobility perksCraftable large storage (wood, iron, steel) with 120/144/168 slots:Easy-to-see lockable slotsMultiple storage block shapesBreaking storage returns it to your inventory
 
 ========================================
 
 ### AGF-BackpackPlus-60Slots -v3.2.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-BackpackPlus-60Slots.zip
-You may upgrade to the others.
+Expands your inventory with a 60-slot backpack and adds craftable, extra-large storage options.
  Show detailed features
 >Inventory size matches vanilla (no shrinking).60-slot backpack with 3 rows (30 encumbrance slots).PackMule skill unlocks all encumbrance slots.Compatible with PackMule, buffs, Twitch integration, and mobility perks.Craftable large storage (wood, iron, steel) with 60/80/100 slots:Easy-to-see lockable slotsMultiple storage block shapesBreaking storage returns it to your inventory
 
 ========================================
 
 ### AGF-BackpackPlus-72Slots -v3.2.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-BackpackPlus-72Slots.zip
-You may swap with 84 or 119.
+Expands your inventory with a 72-slot backpack and adds craftable, extra-large storage options.
  Show detailed features
 >Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)72-slot backpack with 3 rows (36 encumbrance slots)PackMule skill unlocks all encumbrance slotsCompatible with PackMule, buffs, Twitch integration, and mobility perksCraftable large storage (wood, iron, steel) with 120/144/168 slots:Easy-to-see lockable slotsMultiple storage block shapesBreaking storage returns it to your inventory
 
 ========================================
 
 ### AGF-BackpackPlus-84Slots -v3.2.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-BackpackPlus-84Slots.zip
-You may swap with 72 or 119.
+Expands your inventory with an 84-slot backpack and adds craftable, extra-large storage options.
  Show detailed features
 >Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)84-slot backpack with 3 rows (36 encumbrance slots)PackMule skill unlocks all encumbrance slotsCompatible with PackMule, buffs, Twitch integration, and mobility perksCraftable large storage (wood, iron, steel) with 120/144/168 slots:Easy-to-see lockable slotsMultiple storage block shapesBreaking storage returns it to your inventory
 
@@ -406,7 +406,7 @@ D. SPECIAL COMPATIBILITY MOD
 ========================================
 
 ### zzzAGF-Special-Compatibilities -v4.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/zzzAGF-Special-Compatibilities.zip
-"The best mods rely on community involvement."
+Compatibility Patch Collection.
  Show detailed features
 >This is a compatibility patch for mods that affect any of AGF's, most commonly:HUDPlusPurpleBookRenamesforAlphabeticalSortSimplifiedStackSizesAmmoDisassemblyRebundleBundlesThis mod determines if you have the conflicting ones installed before applying changes.More can be added as requested.Language support was added to:BDub's VehiclesIZY's WeaponsGS Vanilla Cook BookCurrent Compatibility List:Dewtas' 18 slot toolbeltKhaine's 15 slot toolbeltWookie's 12 slot toolbeltRecipeStatsTabBDub's VehiclesIZY's WeaponsMoreQuestsOakraven Ammo PRessGSVanillaCookBook
 
@@ -424,420 +424,420 @@ E. VANILLA PLUS MODS
 Vanilla Plus: gameplay tweaks and new features.
 
 ### AGF-VP-AdminModdingSupport -v1.0.3 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-AdminModdingSupport.zip
-"The best mods rely on community involvement."
+Some adjustments and additions for admin / mod testing harvesting.
  Show detailed features
 >The "Block Replace Tool" can now replace blocks quickly.Admin books that give a set amount of xp to a player.Harvesting Test Blocks with set harvest amounts, better for testing.
 
 ========================================
 
 ### AGF-VP-AlternativeRecipes -v1.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-AlternativeRecipes.zip
-"The best mods rely on community involvement."
+Cobblestone Blocks, First Aid Kits/Bandages now have vanilla alternative recipes.
  Show detailed features
 >Cobblestone Blocks can now be crafted directly from stone and clay (in addition to original)First Aid Kits can now be crafted directly from cloth (in addition to original)First Aid Bandages can now be crafted from cloth (in addition to original)
 
 ========================================
 
 ### AGF-VP-AmmoDisassembly -v1.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-AmmoDisassembly.zip
-"The best mods rely on community involvement."
+Scrap your ammo into bundles that contain the ingredients.
  Show detailed features
 >Scrap Ammo into bundles that contain the ammo's ingredients, open to collect.Server side cannot have "open all" button, but you can craft 100 or 1,000 of disassembled bundles into 1 bundle.
 
 ========================================
 
 ### AGF-VP-ApiaryPlus -v1.0.3 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ApiaryPlus.zip
-"The best mods rely on community involvement."
+Apiary size is 2x2 and produces NO heat.
  Show detailed features
 >Apiary now 2 blocks wide instead of 3.Apiary heatmap is removed.To keep mod safe, pre-existing apiaries can be destroyed to get the new 2 wide version.
 
 ========================================
 
 ### AGF-VP-ArcheryFeathersChange -v1.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ArcheryFeathersChange.zip
-"The best mods rely on community involvement."
+All archery ammo uses feathers, can craft feathers from plastic.
  Show detailed features
 >All archery ammo requires Feathers.Feathers can be crafted from plastic.
 
 ========================================
 
 ### AGF-VP-ArmorHarvestMods -v2.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ArmorHarvestMods.zip
-"The best mods rely on community involvement."
+Craft armors with harvesting bonuses as armor mods.
  Show detailed features
 >At Armor Crafting Level 11, you can now make the following:modArmorFarmermodArmorMinermodArmorScavengermodArmorLumberjackTheir stats match the quality level.These are built with the same ingredients as a full set of armor.The mods take the harvesting aspects and you can attach them to the armor of choice.Similar harvesting bonuses do not stack with each other and cannot be placed on the armors of the same name.
 
 ========================================
 
 ### AGF-VP-AutomobilesRespawn -v3.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-AutomobilesRespawn.zip
-"The best mods rely on community involvement."
+Vehicles will respawn after 10 real life hours. Editable.
  Show detailed features
 >Vehicles that are salvaged leaves a hubcap.The hubcap has 2,500 hit points and prevents blocks being built over respawn location.
 
 ========================================
 
 ### AGF-VP-BedrollPlus -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-BedrollPlus.zip
-"The best mods rely on community involvement."
+Sleeping Bags also come in many bed variants.
  Show detailed features
 >Added to vanilla, is "bedroll +" which contains more spawn point bed options AND more hit points.
 
 ========================================
 
 ### AGF-VP-BetterEggChance -v2.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-BetterEggChance.zip
-"The best mods rely on community involvement."
+Birdnests now have a 63% chance to have an egg instead of 35%.
  Show detailed features
 >Chance to find eggs in birdnest increased from 35% to 63%.
 
 ========================================
 
 ### AGF-VP-BreakItGetIt -v1.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-BreakItGetIt.zip
-"The best mods rely on community involvement."
+Break a station or storage, it goes into your inventory.
  Show detailed features
 >Break a station, wood sign, or writable crate and it returns to your inventory.These same blocks also have a chance to obtain if they fall.Any items within these will drop in a backpack (including forge materials).campfiredew collectorforgeworkstationcement mixerchemistry stationwriteable crates (wood, iron, steel)wood sign (1x1, 1x3, 2x5)generator bank (breaking also returns remaining gas)battery banksolar bank
 
 ========================================
 
 ### AGF-VP-BuyTraderVendingMachines -v3.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-BuyTraderVendingMachines.zip
-"The best mods rely on community involvement."
+With high trader stage you can purchase working vending machines from traders.
  Show detailed features
 >High trader stage unlocks option to purchase trader managed vending machines.Can pick them back up by breaking it (separate from ones found in the world.)Trader managed vending machines are the ones that come with food and drinks that reset daily.
 
 ========================================
 
 ### AGF-VP-CraftSewingKits -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-CraftSewingKits.zip
-"The best mods rely on community involvement."
+Craft sewing kits with Wasteland Treasures 6.
  Show detailed features
 >Craft Sewing Kits; unlocked with Wasteland Treasures 6: learn to weave fibers into cloth.
 
 ========================================
 
 ### AGF-VP-CraftStackEngBattCells -v3.3.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-CraftStackEngBattCells.zip
-"The best mods rely on community involvement."
+Engines, Batteries, and Solar Cells are craftable and stack!
  Show detailed features
 >Engines, Batteries and Solar Cells now stack.In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.Craft Engines with electrician level 40 at a workbench.Craft solar banks with electrician level 80 at a workbench.Craft solar cells with electrician level 100 at a workbench.
 
 ========================================
 
 ### AGF-VP-CraftVitamins -v1.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-CraftVitamins.zip
-"The best mods rely on community involvement."
+Craft vitamins when you unlock herbal antibiotics.
  Show detailed features
 >Craft Vitamins, unlocked at same time as herbal antibiotics.
 
 ========================================
 
 ### AGF-VP-DecorationBlock -v3.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DecorationBlock.zip
-"The best mods rely on community involvement."
+One block to decorate them all.
  Show detailed features
 >Over 5,700 in game models all within one block!Craft at a workbench.Levels in perkAdvancedEngineering slightly reduces ingredient costs.If the block is normally a container, it is secured in its deco version size (10 x 10)Strong as Wood Blocks (500hp), but high explosive resistance.When a player breaks one, it returns to their inventory.When blocks break to falls, zombies, or explosions, high chance of picking it up shortly after.HIGH COMPATIBILITY as it only adds its own code and NOT dependent on existing ones.If it is a light, it can be powered with electricity.If the block says, "upgrade" you can upgrade it with 10 forged steel to hitpoints of 5,000Doors also come in unbarricaded versionsIf the block says, "campfire" you can use it as a campfire.NOTESome localization is ONLY in English at the moment. MOST are in all 13 languagesSome localizations are missing the color of the blocks. (This is on the Fun Pimps, but I will work on later.)Some localizations do not distinguish between themselves. (This is on the Fun Pimps, but I will work on later.)
 
 ========================================
 
 ### AGF-VP-DewsPlus -v2.4.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DewsPlus.zip
-"The best mods rely on community involvement."
+Dews: No Heat, 2x2, a x5 and x25 variants.
  Show detailed features
 >Compile 5 dew collectors into 1 that acts like 5 (or 25).Dew Collectors are now sized 2x2 instead of 3x3Heat production is removed.Safe for existing games and easy conversion of original 3x3 to 2x2.Place down any old 3x3.Break them and you will get the new 2x2.This method prevents invisible and untouchable blocks around old dew collectors.If you have 500 jugs, you can open all of them in the crafting menu.
 
 ========================================
 
 ### AGF-VP-DoorsPlus -v3.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DoorsPlus.zip
-"The best mods rely on community involvement."
+All game doors in variants for simplicity and building!
  Show detailed features
 >Variant Helper "All Doors" in wood, iron, steel, and powered.Search All Doors in crafting menu.Doors with barricades also have a "plain" version available.Entirely standalone and server side.
 
 ========================================
 
 ### AGF-VP-DrinkableAcid -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DrinkableAcid.zip
-"The best mods rely on community involvement."
+You can now drink acid! But why?...I don't know. Do it.
  Show detailed features
 >Drink ACID for some interesting effects.Specifics:Lose 30% waterBleeding, approximately 120hp damage over the durationTrippy screen effectPainting screen effectFast buffJump buffDanceoff Music PlaysCelebration (on kill enemy turns to confetti)Silly Sounds
 
 ========================================
 
 ### AGF-VP-DyesPlus -v3.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DyesPlus.zip
-"The best mods rely on community involvement."
+Scrap a dye then craft a different one. Adds 27 colors.
  Show detailed features
 >Easily interchange dye colors:A.SCRAP any dye to get 15 paint.B.CRAFT any dye with 15 paint.Added 27 Colors with simple naming scheme.Added Invisible Dye that can hide a worn item.
 
 ========================================
 
 ### AGF-VP-FarmingPlus -v5.6.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FarmingPlus.zip
-"The best mods rely on community involvement."
+Like other seeds, Birdnest for eggs and feathers. ALSO, x5/x25/Replants variants.
  Show detailed features
 >Birdnest and Beehives now plantable for eggs, feathers, and honey.Naturally discovered through traders and loot.Unlocks at seed crafting level 20.A new "Seed Station" that offers faster seed crafting and organization.x5 Farming, level 20 Seed Crafting:Take 5 seeds, click recipe, and craft them into a single x5 seed.Essentially 1 seed acts like 5 in one space.Seeds, except for mushrooms and birdnests, requires x5 farm plots as well.Level 3 of Living Off the Land craft x70 faster at seed workbench.x25 Variants are available as well.Can now craft a variant of each seed that:replants itself,harvest zero extra seeds,and can scrap to revert to its original, near 1:1.
 
 ========================================
 
 ### AGF-VP-FloraHarvester -v2.3.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FloraHarvester.zip
-"The best mods rely on community involvement."
+Special tool to quickly cut grass and crops.
  Show detailed features
 >A tool to more quickly harvest flora. (plants and crops, etc)Levels in LivingOfftheLand reduces stamina use.
 
 ========================================
 
 ### AGF-VP-FuelBurnPlus -v2.3.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FuelBurnPlus.zip
-"The best mods rely on community involvement."
+Combine wood or coal to create a single item with longer burn times.
  Show detailed features
 >Combine wood or coal into single items with longer burn times:10m, 60m, 600m, or 6,000m.
 
 ========================================
 
 ### AGF-VP-MasterTool -v6.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MasterTool.zip
-"The best mods rely on community involvement."
+Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.
  Show detailed features
 >The Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.Miner69r increases the block damage of the tool.Mother Lode, Salvage Operations, and Living Off the Land increases the appropriate harvest amount.The harvesting amount of the master tool ties with other tools.To unlock, recommended to use a team.Master Tool has 4 ingredients only craftable after maxing out related crafting perks.Master Tool Quest becomes available at a trader only after you complete Tier 6 of quests.Master Tool Buried Supplies quest is very difficult, but this is how you get the schematic.Is this confusing? probably. Hopefully it will make more sense when you see it in game.Find a translation error? Please let me know!
 
 ========================================
 
 ### AGF-VP-MaxLevel500 -v2.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MaxLevel500.zip
-"The best mods rely on community involvement."
+Paises the max level from 300 to 500, because why not?
  Show detailed features
 >Simply just raises the max level cap from 300 to 500... For funsies.
 
 ========================================
 
 ### AGF-VP-MedicationNoInsectSlow -v1.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MedicationNoInsectSlow.zip
-"The best mods rely on community involvement."
+Bee Gone Cream that remove and prevent slow effects from insects.
  Show detailed features
 >Bee Gone Cream can be crafted with 10 levels in medical crafting at a campfire with a cooking pot.The cream removes and prevents slows from Bee Swarms and Insect Swarms.The cream can also be applied to other players as a secondary action.Also findable in loot and traders, similarly to aloe cream.Steroids now ALSO have this benefit, and indicates it in descriptions and stat displays.Thanks to "Go-go, Godzilla" for the name idea.Thanks to "Go-go, Godzilla", B19JAY, mandytj, 13ubblegum and AsherGamess for brainstorming support.You can check out B19JAY and his crew here: https://www.twitch.tv/b19jay
 
 ========================================
 
 ### AGF-VP-MiningPlus -v1.2.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MiningPlus.zip
-"The best mods rely on community involvement."
+Mining Perk now allows bundling clay, brass, and sand.
  Show detailed features
 >Mining Perk now allows you to bundle clay, sand, and brass.The sand you get from mining very slightly increased.
 
 ========================================
 
 ### AGF-VP-Mod988 -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-Mod988.zip
-"The best mods rely on community involvement."
+Replaces noose with regular rope. Worth it for those who may need it.
  Show detailed features
 >Simply replaces the noose with plain rope, both the block AND the icon.This is done for mental health purposes...For some, this really matters, and they are worth it.Suicide Hotline is 988
 
 ========================================
 
 ### AGF-VP-ModBundling -v1.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ModBundling.zip
-"The best mods rely on community involvement."
+Are you a mod hoarder? Now you can bundle them to save on space.
  Show detailed features
 >Are you a mod hoarder? Now you can bundle them to save on space.
 
 ========================================
 
 ### AGF-VP-ModSlotsPlus -v3.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ModSlotsPlus.zip
-"The best mods rely on community involvement."
+Quality of Life Mod Slot numbers that keeps progression.
  Show detailed features
 >The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.There is a general increase on mod slots on the minimum side and maximum side.The highest mod slots is 6.Note, only applies these changes to items you find/craft going forward from installation.
 
 ========================================
 
 ### AGF-VP-PaintbrushPlus -v2.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PaintbrushPlus.zip
-"The best mods rely on community involvement."
+Paint without paint, hold trigger to keep painting, limited distance reach.
  Show detailed features
 >Painting costs ZERO paint.You can hold down the trigger to continue painting.Painting distance is reduced to prevent accidental long distance painting.
 
 ========================================
 
 ### AGF-VP-PickupLanternsPlus -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PickupLanternsPlus.zip
-"The best mods rely on community involvement."
+Pickup lanterns, flashlights, jack-o-lanterns, and burning barrels.
  Show detailed features
 >Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.Lanterns are removed from loot and trader lists as you can just pick them up.
 
 ========================================
 
 ### AGF-VP-PlayerResetQuests -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PlayerResetQuests.zip
-"The best mods rely on community involvement."
+When talking to a trader, you can tell them to reset the quest options.
  Show detailed features
 >When speaking with a trader, players can choose for the quest list to regenerate
 
 ========================================
 
 ### AGF-VP-PlayerVendingMachinesPlus -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PlayerVendingMachinesPlus.zip
-"The best mods rely on community involvement."
+Craft Player Vending Machines and buy cheaper!
  Show detailed features
 >You can craft player vending machine easily (10 forged iron).They cost the same as magazines (economic value="100")Traders sell between 1-4 instead of just 1.
 
 ========================================
 
 ### AGF-VP-PumpkinsPlus -v2.0.4 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PumpkinsPlus.zip
-Molo-Jack-Ovs -ProfSeatbelt
+Wear a jack-o-lanter over your head or throw Molo-Jack-Ovs.
  Show detailed features
 >Throw pumpkins that explode like molotovs.Wear a pumpkin as a cosmetic mod on your helmet!You can also bundle the pumpkin head mod.The helmet mod scraps the same way a jack-o-lantern does... into plant fibers.This mod idea came from a collection of friends/twitch viewers/discord peeps, and other insane people like AGF.(Lots of mechanics ideas came from IceRogue)(Molo-Jack-Ovs' name came from ProfSeatbelt)
 
 ========================================
 
 ### AGF-VP-QuickStart -v2.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-QuickStart.zip
-"The best mods rely on community involvement."
+Load in, initial challenges redeemed, recieve all items, xp, and points, Done!
  Show detailed features
 >You load into game, automatically redeem initial challenges AND get equipment/rewards.
 
 ========================================
 
 ### AGF-VP-RebundleBundles -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-RebundleBundles.zip
-"The best mods rely on community involvement."
+Now you can rebundle bundles.
  Show detailed features
 >Rebundle Bundles after opening.Bundles icon now tinted for a visual differentation assistance.
 
 ========================================
 
 ### AGF-VP-RecipeRottingFlesh -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-RecipeRottingFlesh.zip
-"The best mods rely on community involvement."
+Recipe for Rotting Flesh from Raw Meat and Murky Water.
  Show detailed features
 >Adds a recipe for raw flesh, from raw meat and murky water.
 
 ========================================
 
 ### AGF-VP-RenamesAlphabeticalSort -v2.0.4 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-RenamesAlphabeticalSort.zip
-"The best mods rely on community involvement."
+Better sorting in inventories of like items.
  Show detailed features
 >Naming Scheme for better sorting when pressing Auto Sort.Food and Water have values in titles.Food items that are also ingredients are indicated in title.
 
 ========================================
 
 ### AGF-VP-RestorePowerAnyTime -v1.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-RestorePowerAnyTime.zip
-"The best mods rely on community involvement."
+Restore Power Quests can be done at any time.
  Show detailed features
 >Restore Power quests can be done at any time of the day.
 
 ========================================
 
 ### AGF-VP-ScrapBatts4Acid -v1.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ScrapBatts4Acid.zip
-"The best mods rely on community involvement."
+Scrap a battery and get acid, instead of lead.
  Show detailed features
 >Scrap batteries for Acid. No longer gives Lead.
 
 ========================================
 
 ### AGF-VP-ScrapEquipmentFaster -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ScrapEquipmentFaster.zip
-"The best mods rely on community involvement."
+Scrapping equipment takes 4 seconds instead of 10.
  Show detailed features
 >Equipment scrapping reduced to 4 seconds instead of 10.
 
 ========================================
 
 ### AGF-VP-SimplifiedStacks -v1.2.3 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-SimplifiedStacks.zip
-"The best mods rely on community involvement."
+Stack sizes are simplified!
  Show detailed features
 >Simplified stack sizes that keeps close to vanilla experience.Simplified Stack Sizes:Bundles and consumables stack to 50Ammo stacks to 500Resources are generally 500, 1000, or 6000Gas, Coins, and plant fibers stack to 30000Placeable blocks (like workstations) to 500Farming and General blocks to 5000Existing Bundles modified to new stack sizes
 
 ========================================
 
 ### AGF-VP-SmeltingPlus -v2.4.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-SmeltingPlus.zip
-"The best mods rely on community involvement."
+3 forge slots, sand smelts 1:5 ratio, smelt or craft clay/rock/stone in single units.
  Show detailed features
 >Forges have 3 slots with text nicely centered.Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.
 
 ========================================
 
 ### AGF-VP-StayLongerAnimalCorpse -v2.0.2 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-StayLongerAnimalCorpse.zip
-"The best mods rely on community involvement."
+Animal Corpses disappear after 10 minutes instead of 5.
  Show detailed features
 >Animal Corpses disappear after 10 minutes instead of 5.
 
 ========================================
 
 ### AGF-VP-StayLongerPlayerBackpack -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-StayLongerPlayerBackpack.zip
-"The best mods rely on community involvement."
+Player's Backpack disappear after 5 hours instead of 1.
  Show detailed features
 >Player's Backpack disappear after 5 hours instead of 1.
 
 ========================================
 
 ### AGF-VP-StayLongerZombieLoot -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-StayLongerZombieLoot.zip
-"The best mods rely on community involvement."
+Zombie loot disappears after 1 hour instead of 20 minutes.
  Show detailed features
 >Zombie loot disappears after 1 hour instead of 20 minutes.
 
 ========================================
 
 ### AGF-VP-TacticalRiflePlus -v2.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TacticalRiflePlus.zip
-"The best mods rely on community involvement."
+Removed 3 round burst, magazine size up to 36 from 30.
  Show detailed features
 >Tactical Rifle no longer defaults with 3 round burst.Tactical Rifle magazine increased from 30 to 36.
 
 ========================================
 
 ### AGF-VP-TraderAlwaysOpen -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TraderAlwaysOpen.zip
-"The best mods rely on community involvement."
+Traders are always open... but possibly not during bloodmoon?
  Show detailed features
 >Traders are always open. (They might be closed during bloodmoon.)
 
 ========================================
 
 ### AGF-VP-TraderCostlierPrices -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TraderCostlierPrices.zip
-"The best mods rely on community involvement."
+Higher trader prices, harder to buy stuff.
  Show detailed features
 >Buying stuff from traders more difficult.
 
 ========================================
 
 ### AGF-VP-TraderSellsMoreBooks -v3.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TraderSellsMoreBooks.zip
-"The best mods rely on community involvement."
+Per magazine, traders sell between 3 and 8 instead of 1 and 3.
  Show detailed features
 >Magazines at traders, a specific magazine can come in counts of 1-8 instead of 1-3.The number of magazines a trader will carry is between 7-13 instead of just 7
 
 ========================================
 
 ### AGF-VP-TradersRestockEvery2Days -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TradersRestockEvery2Days.zip
-"The best mods rely on community involvement."
+Traders restock every 2 days, easier to remember.
  Show detailed features
 >Traders restock every 2 days, easier to remember and good for games with longer daily time.
 
 ========================================
 
 ### AGF-VP-TreesPlus -v3.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TreesPlus.zip
-"The best mods rely on community involvement."
+Craft x5 and x25 versions of trees with helpful naming of growth stages.
  Show detailed features
 >Planting less trees helps performance.Can plant a x5 and a x25 version of trees.Tree Naming on planting trees, like crops, to see stages.If FarmingPlus is installed, can craft seeds faster at its seed station.
 
 ========================================
 
 ### AGF-VP-VehiclePerformance -v1.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-VehiclePerformance.zip
-"The best mods rely on community involvement."
+Vehicles are Harder, Better, Faster, Stronger.
  Show detailed features
 >All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.Gyrocopter's reverse is smooth and no longer pausing haults.Doubled Vehicle HitPoints for durability.New Vehicle Speed and Progression, near vanilla speeds for performance.Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14Truck Speed (normal, turbo) now 12, 16 instead of 10, 14Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15
 
 ========================================
 
 ### AGF-VP-VehiclesExtraSeating -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-VehiclesExtraSeating.zip
-"The best mods rely on community involvement."
+Extra seating on vehicles!
  Show detailed features
 >3 seats on bikes (bicycle, minibike, and motorcycle)For the bikes, expanded seating mod is only cosmetic, not required.Truck can now seat 8 players (with the expanded seat mod).
 
 ========================================
 
 ### AGF-VP-VehicleStoragePlus -v2.1.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-VehicleStoragePlus.zip
-"The best mods rely on community involvement."
+Vehicles have more storage than default.
  Show detailed features
 >Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.Vehicles progressively have larger storages than default.
 
 ========================================
 
 ### AGF-VP-WriteStoryOnCrate -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-WriteStoryOnCrate.zip
-"The best mods rely on community involvement."
+Write a lot of notes on this one crate.
  Show detailed features
 >Iron Writeable Storage Crate but can write a LOT on it.
 
 ========================================
 
 ### AGF-VP-XPDeathPenaltyReduction -v2.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-XPDeathPenaltyReduction.zip
-"The best mods rely on community involvement."
+XP Death Penalty 10 instead of 25.
  Show detailed features
 >Each death penalty is 10% up to a max of 30%, instead of 25% up to 50%.
 
 ========================================
 
 ### AGF-VP-ZombieBiomeSpawning -v3.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ZombieBiomeSpawning.zip
-"The best mods rely on community involvement."
+For newcomers and pros, in a progressive fashion, biomes go from easy to nightmarish, especially at night.
  Show detailed features
 >Biome Spawning Increase in a Progressive Fashion,The point? Gives a server something for newcomers and pros alike.Essentially a x5 spawn, but different with the animals.
 
 ========================================
 
 ### AGF-VP-ZombieCorpseLeaveQuicker -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ZombieCorpseLeaveQuicker.zip
-"The best mods rely on community involvement."
+Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.
  Show detailed features
 >Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.
 
 ========================================
 
 ### AGF-VP-ZombieLargerHordes -v2.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ZombieLargerHordes.zip
-"The best mods rely on community involvement."
+I like big hordes and I cannot lie... But like performance too.
  Show detailed features
 >I enjoy being visited upon by larger hordes.I increased the animal hordes only by a little.
 
@@ -855,70 +855,70 @@ F. NO EAC MODS
 Mods that require EAC to be off or are client-side only.
 
 ### AGF-NoEAC-ConfigureWindowEnteringDuration -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-ConfigureWindowEnteringDuration.zip
-None
+Adds a xml file to modify the duration of the location popups, vanilla is 3 seconds.
  Show detailed features
 >
 
 ========================================
 
 ### AGF-NoEAC-ConsoleOpacityMod -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-ConsoleOpacityMod.zip
-None
+In the configs folder, you can change F1 opacity..
  Show detailed features
 >
 
 ========================================
 
 ### AGF-NoEAC-CosmeticLockIcon -v1.0.1 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-CosmeticLockIcon.zip
-None
+Armors have a scrap icon if you have not unlocked it for cosmetics.
  Show detailed features
 >Simply adds a "scrap" icon over armors you have not unlocked for cosmetics.
 
 ========================================
 
 ### AGF-NoEAC-EnhancedPatch -v2.1.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-EnhancedPatch.zip
-None
+Adds extra info that is only available from non-EAC friendly places.
  Show detailed features
 >With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus
 
 ========================================
 
 ### AGF-NoEAC-ExpandedInteractionPrompts -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-ExpandedInteractionPrompts.zip
-"The best mods rely on community involvement."
+Displays status and output slots for workstations
  Show detailed features
 >When looking at a workstation, the UI shows its status (e.g., Crafting, Needs Fuel, Start Fire) and output slots used.
 
 ========================================
 
 ### AGF-NoEAC-GlobalStormTracker -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-GlobalStormTracker.zip
-None
+Chat based Storm Alert of when a storm will end.
  Show detailed features
 >Sends a chat message to players regardless of location of a storm warning and when it ends.
 
 ========================================
 
 ### AGF-NoEAC-ItemTypeIconColor -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-ItemTypeIconColor.zip
-"The best mods rely on community involvement."
+This adds color function to ItemTypeIcons used in xml.
  Show detailed features
 >For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".Vanilla, you could only adjust the color of the ALTERNATE icon color (like after reading a book), with "AltItemTypeIconColor".
 
 ========================================
 
 ### AGF-NoEAC-OpenAllButton -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-OpenAllButton.zip
-"The best mods rely on community involvement."
+A button to open all bundles in rapid fire. Stops before dropping items.
  Show detailed features
 >Simply adds an "Open All" button for bundled items.It opens one at a time rapid fire until all are opened or if you run out of inventory space.It can be stopped by either closing the window or pushing the stop opening button.Again, if there isn't room for more, it will stop and not allow you to open more.
 
 ========================================
 
 ### AGF-NoEAC-ScreamerAlert -v1.0.0 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-ScreamerAlert.zip
-"The best mods rely on community involvement."
+Screamer Alert Messages, best with AGF HUD.
  Show detailed features
 >When a player is within 120m of a screamer, Screamer Alert message appears.Disappears if you kill all screamers.Will also disappear if you leave the range.If the screamer spawns a horde, a Horde Incoming Alert appears.Disappears after 10 seconds.
 
 ========================================
 
 ### AGF-NoEAC-SortingBox -v1.0.4 - Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/zip/AGF-NoEAC-SortingBox.zip
-"The best mods rely on community involvement."
+With permissions, integrated from Kanaverum's original mod and Asylum.
  Show detailed features
 >
 

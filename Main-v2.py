@@ -348,14 +348,20 @@ if __name__ == '__main__':
             features_block = content[start+21:end].strip('\n')
             return features_block
         return ''
-    def extract_mod_description(readme_path):
-        if not os.path.exists(readme_path):
+
+    # Always use the <Description> value from ModInfo.xml for the main README description
+    def extract_mod_description_from_modinfo(modinfo_path):
+        if not os.path.exists(modinfo_path):
             return ''
-        with open(readme_path, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-        for i, line in enumerate(lines):
-            if line.strip().startswith('>') and i > 2:
-                return line.strip('> ').strip()
+        try:
+            import xml.etree.ElementTree as ET
+            tree = ET.parse(modinfo_path)
+            root = tree.getroot()
+            desc_tag = root.find('Description')
+            if desc_tag is not None and 'value' in desc_tag.attrib:
+                return desc_tag.attrib['value']
+        except Exception:
+            pass
         return ''
     def extract_mod_details_block(readme_path):
         if not os.path.exists(readme_path):
@@ -436,16 +442,7 @@ if __name__ == '__main__':
             pretty_name = name.replace('-', ' ').replace('AGF ', 'AGF-').replace('  ', ' ').replace('AGF-', 'AGF ')
             link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/{mod.split("-v")[0]}.zip'
             # Use modinfo.xml description for summary
-            desc = ''
-            try:
-                import xml.etree.ElementTree as ET
-                tree = ET.parse(modinfo_path)
-                root = tree.getroot()
-                desc_tag = root.find('Description')
-                if desc_tag is not None and 'value' in desc_tag.attrib:
-                    desc = desc_tag.attrib['value']
-            except Exception:
-                desc = ''
+            desc = extract_mod_description_from_modinfo(modinfo_path)
             features = extract_mod_features(readme_path)
             # Compose blockquote with details if features exist
             modlist_md.append(f'> ### **{pretty_name}** *-v{version}* - [Download]({link})\n> *{desc}*')
@@ -494,7 +491,7 @@ if __name__ == '__main__':
                 readme_path = os.path.join(mod_path, 'README.md')
                 name, version = parse_modinfo(modinfo_path, mod)
                 link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/{mod.split("-v")[0]}.zip'
-                desc = extract_mod_description(readme_path)
+                desc = extract_mod_description_from_modinfo(modinfo_path)
                 modlist_md.append(f'| {name} | {version} | [Download]({link}) | {desc} |')
             # Add a blank line after the table
             modlist_md.append('')
@@ -520,7 +517,7 @@ if __name__ == '__main__':
             readme_path = os.path.join(mod_path, 'README.md')
             name, version = parse_modinfo(modinfo_path, mod)
             link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{mod.split("-v")[0]}.zip'
-            desc = extract_mod_description(readme_path)
+            desc = extract_mod_description_from_modinfo(modinfo_path)
             features = extract_mod_features(readme_path)
             modlist_md.append(f'> ### **{name}** *-v{version}* - [Download]({link})\n> *{desc}*')
             if features:
@@ -568,7 +565,7 @@ if __name__ == '__main__':
                 readme_path = os.path.join(mod_path, 'README.md')
                 name, version = parse_modinfo(modinfo_path, mod)
                 link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{mod.split("-v")[0]}.zip'
-                desc = extract_mod_description(readme_path)
+                desc = extract_mod_description_from_modinfo(modinfo_path)
                 features = extract_mod_features(readme_path)
                 modlist_md.append(f'> ### **{name}** *-v{version}* - [Download]({link})\n> *{desc}*')
                 if features:
@@ -619,7 +616,7 @@ if __name__ == '__main__':
             readme_path = os.path.join(mod_path, 'README.md')
             name, version = parse_modinfo(modinfo_path, mod)
             link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/{mod.split("-v")[0]}.zip'
-            desc = extract_mod_description(readme_path)
+            desc = extract_mod_description_from_modinfo(modinfo_path)
             features = extract_mod_features(readme_path)
             modlist_md.append(f'> ### **{name}** *-v{version}* - [Download]({link})\n> *{desc}*')
             if features:
@@ -671,7 +668,7 @@ if __name__ == '__main__':
                 readme_path = os.path.join(mod_path, 'README.md')
                 name, version = parse_modinfo(modinfo_path, mod)
                 link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/{mod.split("-v")[0]}.zip'
-                desc = extract_mod_description(readme_path)
+                desc = extract_mod_description_from_modinfo(modinfo_path)
                 features = extract_mod_features(readme_path)
                 modlist_md.append(f'> ### **{name}** *-v{version}* - [Download]({link})\n> *{desc}*')
                 if features:
