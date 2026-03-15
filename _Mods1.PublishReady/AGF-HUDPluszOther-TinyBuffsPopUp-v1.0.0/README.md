@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Shrinks the buff pop ups by half.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v1.0.0
 - Just made it.
 <!-- CHANGELOG END -->

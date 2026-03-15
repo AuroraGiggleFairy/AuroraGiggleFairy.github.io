@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - I enjoy being visited upon by larger hordes.
     - I increased the animal hordes only by a little.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v2.0.1
 - Updated for 7d2d Version 2
 

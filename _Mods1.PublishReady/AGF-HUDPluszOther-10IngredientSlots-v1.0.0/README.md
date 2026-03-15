@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Increases the ingredients list from 5 to 10 slots.
     - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v1.0.0
 - Created the mod for 7d2d version 2, with conditionals.
 <!-- CHANGELOG END -->

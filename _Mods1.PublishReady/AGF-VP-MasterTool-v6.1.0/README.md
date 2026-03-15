@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - The Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.
     - Miner69r increases the block damage of the tool.
     - Mother Lode, Salvage Operations, and Living Off the Land increases the appropriate harvest amount.
@@ -97,7 +97,7 @@ Find a translation error? Please let me know!
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v6.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

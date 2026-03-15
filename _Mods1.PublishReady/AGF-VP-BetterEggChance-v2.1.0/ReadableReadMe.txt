@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Chance to find eggs in birdnest increased from 35% to 63%.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.1.0
 - Updated for 7d2d version 2
 

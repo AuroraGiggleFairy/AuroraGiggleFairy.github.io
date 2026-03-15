@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Planting less trees helps performance.
     - Can plant a x5 and a x25 version of trees.
     - Tree Naming on planting trees, like crops, to see stages.
@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v3.0.0
 - Added x25 versions.
 - Modified seeds naming and icons to match FarmingPlus scheme.

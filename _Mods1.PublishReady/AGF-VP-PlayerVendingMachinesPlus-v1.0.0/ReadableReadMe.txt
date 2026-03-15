@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - You can craft player vending machine easily (10 forged iron).
 - They cost the same as magazines (economic value="100")
 - Traders sell between 1-4 instead of just 1.
@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v1.0.0
 - Just made the mod.
 

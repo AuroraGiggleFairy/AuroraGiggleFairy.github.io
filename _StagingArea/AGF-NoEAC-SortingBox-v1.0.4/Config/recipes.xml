@@ -1,7 +1,0 @@
-<config>
-    <append xpath="/recipes">
-        <recipe name="cntRoboticInboxVariantHelper" count="1" >
-            <ingredient name="resourceForgedIron" count="10" />
-        </recipe>
-    </append>
-</config>

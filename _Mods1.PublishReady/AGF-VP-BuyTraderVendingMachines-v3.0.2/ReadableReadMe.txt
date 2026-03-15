@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - High trader stage unlocks option to purchase trader managed vending machines.
     - Can pick them back up by breaking it (separate from ones found in the world.)
 Trader managed vending machines are the ones that come with food and drinks that reset daily.
@@ -94,7 +94,7 @@ Trader managed vending machines are the ones that come with food and drinks that
 ========================================
 
 6. Changelog
--->-->-->
+>
 v3.0.2
 - NOW traer sells the snack one in addition to the variant helper drinks one.
 

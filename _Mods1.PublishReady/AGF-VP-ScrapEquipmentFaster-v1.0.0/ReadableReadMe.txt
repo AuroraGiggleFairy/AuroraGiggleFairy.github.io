@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Equipment scrapping reduced to 4 seconds instead of 10.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v1.0.0
 - Just made the mod, starting for 7d2d v2.5. (Includes updated README and Code Notes formatting.)
 

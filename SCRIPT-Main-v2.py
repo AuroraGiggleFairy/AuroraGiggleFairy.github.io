@@ -350,12 +350,12 @@ def main():
                     f_start = old_content.find('<!-- FEATURES START -->')
                     f_end = old_content.find('<!-- FEATURES END -->')
                     if f_start != -1 and f_end != -1:
-                        features_block = old_content[f_start+21:f_end]
+                        features_block = old_content[f_start+23:f_end]
                     # Extract changelog
                     c_start = old_content.find('<!-- CHANGELOG START -->')
                     c_end = old_content.find('<!-- CHANGELOG END -->')
                     if c_start != -1 and c_end != -1:
-                        changelog_block = old_content[c_start+21:c_end]
+                        changelog_block = old_content[c_start+23:c_end]
                 # Replace in new content
                 if features_block:
                     readme_content = re.sub(r'(<!-- FEATURES START -->)([\s\S]*?)(<!-- FEATURES END -->)', r'\1' + features_block + r'\3', readme_content, flags=re.MULTILINE)
@@ -503,7 +503,7 @@ if __name__ == '__main__':
         start = content.find('<!-- FEATURES START -->')
         end = content.find('<!-- FEATURES END -->')
         if start != -1 and end != -1:
-            features_block = content[start+21:end].strip('\n')
+            features_block = content[start+23:end].strip('\n')
             return features_block
         return ''
 

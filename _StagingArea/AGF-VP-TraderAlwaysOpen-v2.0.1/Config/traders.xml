@@ -1,9 +1,0 @@
-<AGFVanillaPlus-TraderAlwaysOpen>
-
-
-<!--Removing the closing and opening time. Open 24/7! But bloodmoon might still keep you out.-->
-	<removeattribute xpath="/traders/trader_info/@close_time"/>
-	<removeattribute xpath="/traders/trader_info/@open_time"/>
-	
-	
-</AGFVanillaPlus-TraderAlwaysOpen>

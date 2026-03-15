@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Added to vanilla, is "bedroll +" which contains more spawn point bed options AND more hit points.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v1.0.0
 - Just made it.
 

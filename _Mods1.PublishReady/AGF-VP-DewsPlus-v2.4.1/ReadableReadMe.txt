@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Compile 5 dew collectors into 1 that acts like 5 (or 25).
 - Dew Collectors are now sized 2x2 instead of 3x3
 - Heat production is removed.
@@ -99,7 +99,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.4.1
 - Corrected a conditional error that prevented games from loading.
 

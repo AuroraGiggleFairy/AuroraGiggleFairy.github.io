@@ -1,9 +1,0 @@
-<AGFVanillaPlus-DecorationBlock>
-
-		
-<!--This allows the larger containers to work properly.-->
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
-    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>		
-		
-
-</AGFVanillaPlus-DecorationBlock>

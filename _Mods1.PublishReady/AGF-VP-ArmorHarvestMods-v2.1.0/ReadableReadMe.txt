@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - At Armor Crafting Level 11, you can now make the following:
     - modArmorFarmer
     - modArmorMiner
@@ -100,7 +100,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

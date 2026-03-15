@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Craft Vitamins, unlocked at same time as herbal antibiotics.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v1.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

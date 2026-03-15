@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - All archery ammo requires Feathers.
     - Feathers can be crafted from plastic.
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v1.0.2
 - Updated README and code organization.
 - Corrected the cloths amounts given back from the 100's and 1000's for flaming arrows/bolts.

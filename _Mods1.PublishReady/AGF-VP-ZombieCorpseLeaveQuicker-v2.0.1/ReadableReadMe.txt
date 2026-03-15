@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.0.1
 - Updated text to represent for 7d2d v2
 

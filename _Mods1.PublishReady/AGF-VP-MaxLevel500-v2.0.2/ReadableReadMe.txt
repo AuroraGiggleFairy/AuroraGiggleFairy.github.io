@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Simply just raises the max level cap from 300 to 500... For funsies.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.0.2
 - updated for 7d2d Version 2.
 

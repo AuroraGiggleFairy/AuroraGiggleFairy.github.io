@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Throw pumpkins that explode like molotovs.
     - Wear a pumpkin as a cosmetic mod on your helmet!
     - You can also bundle the pumpkin head mod.
@@ -94,7 +94,7 @@ This mod idea came from a collection of friends/twitch viewers/discord peeps, an
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v2.0.4
 - updated to put helmet cosmetic mod as a MOD instead of a dye color due to 7d2d changes.
 

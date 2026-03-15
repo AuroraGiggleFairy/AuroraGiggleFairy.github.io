@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - When speaking with a trader, players can choose for the quest list to regenerate
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.0.1
 - Updated to 7d2d Version 2
 

@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Each death penalty is 10% up to a max of 30%, instead of 25% up to 50%.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v2.0.0
 - Updated for 7d2d Version 2.
 - Renamed to XPDeathPenaltyReduction.

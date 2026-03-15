@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Adds enemy health bars with an AGF style.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v4.0.0
 - Corrected that "isBoss" is at the same height
 - Added functionality to ensure it is standalone and works conditionally with my other HUD features.

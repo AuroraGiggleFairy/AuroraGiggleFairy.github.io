@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Cobblestone Blocks can now be crafted directly from stone and clay (in addition to original)
     - First Aid Kits can now be crafted directly from cloth (in addition to original)
     - First Aid Bandages can now be crafted from cloth (in addition to original)
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v1.0.1
 - Updated README and Code Notes.
 

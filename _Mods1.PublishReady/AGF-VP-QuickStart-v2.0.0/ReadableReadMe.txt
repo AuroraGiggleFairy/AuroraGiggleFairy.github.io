@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - You load into game, automatically redeem initial challenges AND get equipment/rewards.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.0.0
 - Used the new gameevents to auto complete redeeming the initial challenges as well.
 - Renamed from QuickerQuestStart to QuickStart.

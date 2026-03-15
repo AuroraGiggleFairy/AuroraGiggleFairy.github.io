@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Works standalone from HUDPlus-1Main
 - A purple book icon that opens up Details on one page (With Zooming Option)!
     - Magazine unlocks
@@ -91,7 +91,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v2.0.0
 - Revamped the UI code to be easier to create compatibilities with other mods. (Still more to do.)
 - Updated Readme to some format changes AGF is making.

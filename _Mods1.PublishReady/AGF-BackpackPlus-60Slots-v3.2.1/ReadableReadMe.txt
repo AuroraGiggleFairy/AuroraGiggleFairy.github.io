@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Inventory size matches vanilla (no shrinking).
 - 60-slot backpack with 3 rows (30 encumbrance slots).
 - PackMule skill unlocks all encumbrance slots.
@@ -99,7 +99,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v3.2.1
 - Updated for consistency and automation.
 

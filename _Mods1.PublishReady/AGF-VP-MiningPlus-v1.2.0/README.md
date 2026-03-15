@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Mining Perk now allows you to bundle clay, sand, and brass.
     - The sand you get from mining very slightly increased.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v1.2.0
 - Will now only apply purple book edits if you have my purple book installed.
 

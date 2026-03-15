@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v3.0.0
 - This ONLY provides a .dll that will enhance other AGF mods if they are installed.
 

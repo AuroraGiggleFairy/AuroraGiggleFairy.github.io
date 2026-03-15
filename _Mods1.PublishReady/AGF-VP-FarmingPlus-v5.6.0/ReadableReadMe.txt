@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Birdnest and Beehives now plantable for eggs, feathers, and honey.
 - Naturally discovered through traders and loot.
 - Unlocks at seed crafting level 20.
@@ -105,7 +105,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v5.6.0
 - Now you can craft seeds that replant themselves.
 - Updated README format.

@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Animal Corpses disappear after 10 minutes instead of 5.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.0.2
 - Made sure the swarm of insects "corpse" was not included!
 

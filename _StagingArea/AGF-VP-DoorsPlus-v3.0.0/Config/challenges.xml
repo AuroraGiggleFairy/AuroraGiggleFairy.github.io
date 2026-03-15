@@ -1,6 +1,0 @@
-<AGFVanillaPlus-Core>
-
-	<set xpath="/challenges/challenge[@name='placeDoor']/objective/@block">miscwoodDoorVariantHelperAGF</set>
-
-</AGFVanillaPlus-Core>
-	

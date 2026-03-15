@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Engines, Batteries and Solar Cells now stack.
     - In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.
     - Craft Engines with electrician level 40 at a workbench.
@@ -96,7 +96,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v3.3.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

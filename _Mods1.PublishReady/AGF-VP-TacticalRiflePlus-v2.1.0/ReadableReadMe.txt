@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Tactical Rifle no longer defaults with 3 round burst.
     - Tactical Rifle magazine increased from 30 to 36.
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.1.0
 - Updated for 7d2d version 2.
 

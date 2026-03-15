@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - I enjoy being visited upon by larger hordes.
     - I increased the animal hordes only by a little.
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.0.1
 - Updated for 7d2d Version 2
 

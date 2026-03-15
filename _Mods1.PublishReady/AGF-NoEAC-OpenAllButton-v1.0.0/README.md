@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->->
+<!-- FEATURES START -->
 - Simply adds an "Open All" button for bundled items.
 - It opens one at a time rapid fire until all are opened or if you run out of inventory space.
 - It can be stopped by either closing the window or pushing the stop opening button.
@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->-->
+<!-- CHANGELOG START -->>
 v1.0.0
 - Made the mod.
 <!-- CHANGELOG END -->

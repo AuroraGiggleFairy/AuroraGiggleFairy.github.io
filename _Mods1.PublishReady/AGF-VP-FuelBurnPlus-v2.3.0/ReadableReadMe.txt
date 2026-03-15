@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Combine wood or coal into single items with longer burn times:10m, 60m, 600m, or 6,000m.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v2.3.0
 - Added a 6,000m burn time item.
 - Removed the xp gain from crafting these.... exploitative.

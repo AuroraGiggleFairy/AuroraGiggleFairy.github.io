@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->->
+
 - Simply adds an "Open All" button for bundled items.
 - It opens one at a time rapid fire until all are opened or if you run out of inventory space.
 - It can be stopped by either closing the window or pushing the stop opening button.
@@ -95,7 +95,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->-->
+>
 v1.0.0
 - Made the mod.
 
