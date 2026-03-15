@@ -312,7 +312,7 @@ if __name__ == '__main__':
     # Step 7: Update Main README.md and ReadableReadMe.txt
     # (All code for updating main README.md and ReadableReadMe.txt must be done here, after all other steps)
     import datetime
-    MAIN_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, 'TEMPLATE-1Main.md')
+    MAIN_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, 'TEMPLATE-MainReadMe.md')
     MAIN_README_PATH = os.path.join(VS_CODE_ROOT, 'README.md')
     MAIN_README_TXT_PATH = os.path.join(VS_CODE_ROOT, 'ReadableReadMe.txt')
     CATEGORY_DESC_PATH = os.path.join(VS_CODE_ROOT, 'TEMPLATE-CategoryDescriptions.md')
@@ -374,7 +374,7 @@ if __name__ == '__main__':
         return content[start:]
     # Load template
     if not os.path.exists(MAIN_TEMPLATE_PATH):
-        print('[MAIN README] TEMPLATE-1Main.md not found, skipping main README generation.')
+        print('[MAIN README] TEMPLATE-MainReadMe.md not found, skipping main README generation.')
     else:
         with open(MAIN_TEMPLATE_PATH, 'r', encoding='utf-8') as f:
             main_template = f.read()
@@ -723,8 +723,5 @@ if __name__ == '__main__':
         with open(MAIN_README_PATH, 'w', encoding='utf-8') as f:
             f.write(content)
         print('[MAIN README] Main README.md generated and cleaned of <li>></li>.')
-        # Write ReadableReadMe.txt
-        txt = markdown_to_text(main_content)
-        with open(MAIN_README_TXT_PATH, 'w', encoding='utf-8') as f:
-            f.write(txt)
-        print('[MAIN README] ReadableReadMe.txt generated.')
+        # Do NOT generate ReadableReadMe.txt for the main README
+        # (If you want to generate ReadableReadMe.txt for individual mods, that logic should be elsewhere)

@@ -9,7 +9,7 @@ Script to automate creation of a new mod folder with correct naming and initial 
 import os
 WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
 INPROGRESS_DIR = os.path.join(WORKSPACE_ROOT, "_In-Progress")
-TEMPLATE_README_PATH = os.path.join(WORKSPACE_ROOT, "TEMPLATE-Mod_ReadMe.md")
+TEMPLATE_README_PATH = os.path.join(WORKSPACE_ROOT, "TEMPLATE-ModReadMe.md")
 TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name value=\"{mod_name}\"/>\n    <DisplayName value=\"{display_name}\"/>\n    <Version value=\"{version}\"/>\n    <Description value=\"\"/>\n    <Author value=\"AuroraGiggleFairy (AGF)\"/>\n    <Website value=\"https://auroragigglefairy.github.io/\"/>\n</xml>\n'''
 
 def main():
@@ -28,8 +28,8 @@ def main():
         print(f"Folder {folder_name} already exists in _In-Progress!")
         return
     os.makedirs(mod_path)
-    # Add entry to mod_compatibility.csv
-    csv_path = os.path.join(WORKSPACE_ROOT, "mod_compatibility.csv")
+    # Add entry to HELPER_ModCompatibility.csv
+    csv_path = os.path.join(WORKSPACE_ROOT, "HELPER_ModCompatibility.csv")
     if os.path.exists(csv_path):
         with open(csv_path, "a", encoding="utf-8") as csvfile:
             csvfile.write(f"\n{mod_name},MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA")
