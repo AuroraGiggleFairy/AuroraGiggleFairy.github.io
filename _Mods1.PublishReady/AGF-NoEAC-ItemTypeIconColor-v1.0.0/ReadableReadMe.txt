@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".
 - Vanilla, you could only adjust the color of the ALTERNATE icon color (like after reading a book), with "AltItemTypeIconColor".
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 
 ========================================
 

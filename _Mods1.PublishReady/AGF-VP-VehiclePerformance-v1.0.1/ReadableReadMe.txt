@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.
     - Gyrocopter's reverse is smooth and no longer pausing haults.
     - Doubled Vehicle HitPoints for durability.
@@ -101,7 +101,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.1
 - Had the wrong files in this mod! facepalm
 

@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Scrap batteries for Acid. No longer gives Lead.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.1.0
 - Updated for 7d2d Version 2.
 

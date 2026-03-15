@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)
 - 119-slot backpack with 3 rows (68 encumbrance slots)
 - Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed
@@ -100,7 +100,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.2.2
 - Updated for consistency and automation.
 

@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Traders restock every 2 days, easier to remember and good for games with longer daily time.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.0
 - Created this mod
 

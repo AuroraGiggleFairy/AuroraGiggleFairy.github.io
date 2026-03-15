@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Iron Writeable Storage Crate but can write a LOT on it.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.0.0
 - Made this mod.
 <!-- CHANGELOG END -->

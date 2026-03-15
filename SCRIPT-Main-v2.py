@@ -255,6 +255,8 @@ def main():
         for fn in csv_fieldnames:
             if not row.get(fn):
                 row[fn] = 'MISSINGDATA'
+    # Sort rows alphabetically by MOD_NAME before writing
+    csv_rows.sort(key=lambda row: row.get('MOD_NAME', '').lower())
     # Write back to CSV
     with open(COMPAT_CSV, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=csv_fieldnames)

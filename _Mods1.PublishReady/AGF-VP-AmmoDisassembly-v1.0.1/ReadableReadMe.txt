@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Scrap Ammo into bundles that contain the ammo's ingredients, open to collect.
     - Server side cannot have "open all" button, but you can craft 100 or 1,000 of disassembled bundles into 1 bundle.
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.1
 - Updated README and notes in code
 - Fixed ingredient change for flaming arrows/bolts for v2.5+.

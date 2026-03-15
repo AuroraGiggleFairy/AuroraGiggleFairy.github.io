@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Simply adds a "scrap" icon over armors you have not unlocked for cosmetics.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.0.1
 - The Crafting Window was not showing the appropriate itemtypeicon/altitemtypeicon.
 

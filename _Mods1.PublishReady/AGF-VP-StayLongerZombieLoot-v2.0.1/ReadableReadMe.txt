@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Zombie loot disappears after 1 hour instead of 20 minutes.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.0.1
 - updated text to version 2.0
 

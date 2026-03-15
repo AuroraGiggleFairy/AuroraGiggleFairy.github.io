@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Over 5,700 in game models all within one block!
     - Craft at a workbench.
     - Levels in perkAdvancedEngineering slightly reduces ingredient costs.
@@ -108,7 +108,7 @@ NOTE
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v3.0.2
 - Updated to run on V2, only edited to make it run well. (still could be other errors).
 

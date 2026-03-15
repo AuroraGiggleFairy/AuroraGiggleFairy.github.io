@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Magazines at traders, a specific magazine can come in counts of 1-8 instead of 1-3.
 - The number of magazines a trader will carry is between 7-13 instead of just 7
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v3.0.0
 - Updated to version 2.5.
 - Made new settings.

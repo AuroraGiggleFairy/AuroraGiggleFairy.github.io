@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Painting costs ZERO paint.
     - You can hold down the trigger to continue painting.
     - Painting distance is reduced to prevent accidental long distance painting.
@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.1.0
 - Updated for 7d2d version 2
 

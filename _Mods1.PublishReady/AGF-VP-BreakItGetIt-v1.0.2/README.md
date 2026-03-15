@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Break a station, wood sign, or writable crate and it returns to your inventory.
     - These same blocks also have a chance to obtain if they fall.
     - Any items within these will drop in a backpack (including forge materials).
@@ -100,7 +100,7 @@ solar bank
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.0.2
 - Destroying a table saw will no longer give you a cement mixer. LOL!
 

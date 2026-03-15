@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Biome Spawning Increase in a Progressive Fashion,
 - The point? Gives a server something for newcomers and pros alike.
 - Essentially a x5 spawn, but different with the animals.
@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v3.0.0
 - Updated for 7d2d version 2.5.
 

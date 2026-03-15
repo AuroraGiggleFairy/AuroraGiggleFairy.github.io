@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Equipment scrapping reduced to 4 seconds instead of 10.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.0.0
 - Just made the mod, starting for 7d2d v2.5. (Includes updated README and Code Notes formatting.)
 <!-- CHANGELOG END -->

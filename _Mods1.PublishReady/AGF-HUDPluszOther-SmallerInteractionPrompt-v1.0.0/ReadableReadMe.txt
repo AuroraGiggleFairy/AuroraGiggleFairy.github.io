@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Just configurable font size for interaction prompts
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.0
 - Just made it.
 

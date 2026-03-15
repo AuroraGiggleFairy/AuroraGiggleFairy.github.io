@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Works standalone from HUDPlus-1Main
 - A purple book icon that opens up Details on one page (With Zooming Option)!
     - Magazine unlocks
@@ -97,7 +97,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.0.0
 - Revamped the UI code to be easier to create compatibilities with other mods. (Still more to do.)
 - Updated Readme to some format changes AGF is making.

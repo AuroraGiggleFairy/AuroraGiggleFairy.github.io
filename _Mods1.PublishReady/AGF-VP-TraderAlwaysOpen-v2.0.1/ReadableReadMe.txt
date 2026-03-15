@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Traders are always open. (They might be closed during bloodmoon.)
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.0.1
 - Updated to V2.0
 

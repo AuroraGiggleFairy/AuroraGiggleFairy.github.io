@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v3.0.0
 - This ONLY provides a .dll that will enhance other AGF mods if they are installed.
 

@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.
     - Vehicles progressively have larger storages than default.
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.1.1
 - Works with 2.5 (continues to work with older 2.0 versions as well.)
 

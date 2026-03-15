@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Forges have 3 slots with text nicely centered.
     - Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
     - Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)
@@ -96,7 +96,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.4.0
 - Removed as the purple book conditional within windows.xml as it is now within the purple book mod.
 

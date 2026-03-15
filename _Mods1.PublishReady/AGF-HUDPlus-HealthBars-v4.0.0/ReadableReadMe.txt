@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Adds enemy health bars with an AGF style.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v4.0.0
 - Corrected that "isBoss" is at the same height
 - Added functionality to ensure it is standalone and works conditionally with my other HUD features.

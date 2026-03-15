@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - 3 seats on bikes (bicycle, minibike, and motorcycle)
     - For the bikes, expanded seating mod is only cosmetic, not required.
     - Truck can now seat 8 players (with the expanded seat mod).
@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.0
 - Revamped from Version 1 VehiclesPerformance Mod, now for 7d2d version 2.
 

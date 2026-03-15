@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Are you a mod hoarder? Now you can bundle them to save on space.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.1
 - Updated language to show 7d2d version 2.
 - Removed the bundling of the mods that were removed between 7d2d version 1 and 2.

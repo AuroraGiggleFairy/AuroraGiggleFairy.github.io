@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - This is a compatibility patch for mods that affect any of AGF's, most commonly:
     - HUDPlus
     - PurpleBook
@@ -114,7 +114,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v4.0.0
 - Renamed to be AGF V2 Compatibilities, as it encompasses more than my HUD.
 - Updated README and Coding organization.

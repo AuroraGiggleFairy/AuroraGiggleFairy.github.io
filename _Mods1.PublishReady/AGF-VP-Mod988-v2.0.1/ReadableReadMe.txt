@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Simply replaces the noose with plain rope, both the block AND the icon.
     - This is done for mental health purposes... 
     - For some, this really matters, and they are worth it.
@@ -96,7 +96,7 @@ Suicide Hotline is 988
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.0.1
 - Updated to 7d2d Version 2.
 

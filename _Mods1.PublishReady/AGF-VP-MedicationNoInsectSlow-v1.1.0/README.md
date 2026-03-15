@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Bee Gone Cream can be crafted with 10 levels in medical crafting at a campfire with a cooking pot.
     - The cream removes and prevents slows from Bee Swarms and Insect Swarms.
     - The cream can also be applied to other players as a secondary action.
@@ -94,7 +94,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

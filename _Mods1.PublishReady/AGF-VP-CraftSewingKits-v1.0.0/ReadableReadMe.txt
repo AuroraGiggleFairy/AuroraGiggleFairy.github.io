@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Craft Sewing Kits; unlocked with Wasteland Treasures 6: learn to weave fibers into cloth.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.0
 - Just made it.
 

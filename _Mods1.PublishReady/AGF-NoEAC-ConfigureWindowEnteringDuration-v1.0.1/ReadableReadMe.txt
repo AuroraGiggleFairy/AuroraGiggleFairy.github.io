@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Provides an XML file that allows modders to configure the duration of the Location Pop-Up window as needed.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.1
 - Updated ReadMe information. 
 

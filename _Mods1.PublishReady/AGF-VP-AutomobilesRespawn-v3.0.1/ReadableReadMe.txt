@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Vehicles that are salvaged leaves a hubcap.
 - The hubcap has 2,500 hit points and prevents blocks being built over respawn location.
 
@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v3.0.1
 - Implemented necessary code to ensure safe update on existing games using previous version of mod.
 

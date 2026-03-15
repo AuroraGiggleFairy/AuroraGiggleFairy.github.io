@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Variant Helper "All Doors" in wood, iron, steel, and powered.
 - Search All Doors in crafting menu.    
 - Doors with barricades also have a "plain" version available.
@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v3.0.
 - Completely revamped and redone.
 - Modified original doorsplus to ensure safe updating.

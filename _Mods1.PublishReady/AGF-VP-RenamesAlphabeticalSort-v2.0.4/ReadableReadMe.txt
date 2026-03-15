@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Naming Scheme for better sorting when pressing Auto Sort.
     - Food and Water have values in titles.
     - Food items that are also ingredients are indicated in title.
@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v2.0.4
 - Raw Meat Bundle takes 5 meat per, not 50!
 

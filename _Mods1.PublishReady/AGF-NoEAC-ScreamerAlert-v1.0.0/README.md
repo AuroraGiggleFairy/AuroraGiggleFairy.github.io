@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - When a player is within 120m of a screamer, Screamer Alert message appears.
 - Disappears if you kill all screamers.
 - Will also disappear if you leave the range.
@@ -90,7 +90,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v1.0.0
 - Made the mod.
 <!-- CHANGELOG END -->

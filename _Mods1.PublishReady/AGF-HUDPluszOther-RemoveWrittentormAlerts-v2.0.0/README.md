@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Removes the written weather alerts that pop-up when a storm is coming.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v2.0.0
 - Name Change and updates associated with text and conditionals.
 - Changed to removal to help maintain standalone and other potential mix match issues.

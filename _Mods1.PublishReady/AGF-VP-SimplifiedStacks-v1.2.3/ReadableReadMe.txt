@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Simplified stack sizes that keeps close to vanilla experience.
     - Simplified Stack Sizes:
     - Bundles and consumables stack to 50
@@ -100,7 +100,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.2.3
 - Included Honey Tea, stacks to 50.
 

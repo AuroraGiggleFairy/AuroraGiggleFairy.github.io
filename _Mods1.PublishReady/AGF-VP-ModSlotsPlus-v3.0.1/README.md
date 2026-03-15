@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.
     - The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.
     - There is a general increase on mod slots on the minimum side and maximum side.
@@ -91,7 +91,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v3.0.1
 - updated to V2
 - removed the modification for stone and pipe weapons/tools.

@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Simply adds a "scrap" icon over armors you have not unlocked for cosmetics.
 
 ========================================
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v1.0.1
 - The Crafting Window was not showing the appropriate itemtypeicon/altitemtypeicon.
 

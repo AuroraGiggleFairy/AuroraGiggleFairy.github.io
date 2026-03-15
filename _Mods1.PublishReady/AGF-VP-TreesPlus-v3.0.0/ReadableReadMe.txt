@@ -84,7 +84,7 @@ Language Support
 ========================================
 
 5. Features
-->->
+->->->
 - Planting less trees helps performance.
     - Can plant a x5 and a x25 version of trees.
     - Tree Naming on planting trees, like crops, to see stages.
@@ -95,7 +95,7 @@ If FarmingPlus is installed, can craft seeds faster at its seed station.
 ========================================
 
 6. Changelog
--->-->
+-->-->-->
 v3.0.0
 - Added x25 versions.
 - Modified seeds naming and icons to match FarmingPlus scheme.

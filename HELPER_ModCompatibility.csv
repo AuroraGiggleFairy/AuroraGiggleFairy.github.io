@@ -13,6 +13,7 @@ AGF-HUDPluszOther-RemoveWrittentormAlerts,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPlusz
 AGF-HUDPluszOther-SmallerInteractionPrompt,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-SmallerInteractionPrompt.txt
 AGF-HUDPluszOther-TinyBuffsPopUp,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-TinyBuffsPopUp.txt
 AGF-HUDPluszOther-Weekday,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-Weekday.txt
+AGF-NoEAC-ConfigureWindowEnteringDuration,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-NoEAC-ConfigureWindowEnteringDuration.txt
 AGF-NoEAC-ConsoleOpacityMod,No,Unknown,Unknown,SAFE,UNKNOWN,None,AGF-NoEAC-ConsoleOpacityMod.txt
 AGF-NoEAC-CosmeticLockIcon,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-CosmeticLockIcon.txt
 AGF-NoEAC-EnhancedPatch,No,No,Yes,SAFE,SAFE,None,AGF-NoEAC-EnhancedPatch.txt
@@ -48,8 +49,8 @@ AGF-VP-FloraHarvester,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-FloraHarvester.txt
 AGF-VP-FuelBurnPlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-FuelBurnPlus.txt
 AGF-VP-MasterTool,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MasterTool.txt
 AGF-VP-MaxLevel500,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MaxLevel500.txt
-AGF-VP-MedicalTreatOthersTreatedInjuries,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-VP-MedicalTreatOthersTreatedInjuries.txt
 AGF-VP-MedicallyTreatOthers,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-VP-MedicallyTreatOthers.txt
+AGF-VP-MedicalTreatOthersTreatedInjuries,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-VP-MedicalTreatOthersTreatedInjuries.txt
 AGF-VP-MedicationNoInsectSlow,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MedicationNoInsectSlow.txt
 AGF-VP-MiningPlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MiningPlus.txt
 AGF-VP-Mod988,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-Mod988.txt
@@ -79,12 +80,11 @@ AGF-VP-TraderSellsMoreBooks,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-TraderSellsMoreBook
 AGF-VP-TradersRestockEvery2Days,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-TradersRestockEvery2Days.txt
 AGF-VP-TreesPlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-TreesPlus.txt
 AGF-VP-VehiclePerformance,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-VehiclePerformance.txt
-AGF-VP-VehicleStoragePlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-VehicleStoragePlus.txt
 AGF-VP-VehiclesExtraSeating,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-VehiclesExtraSeating.txt
+AGF-VP-VehicleStoragePlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-VehicleStoragePlus.txt
 AGF-VP-WriteStoryOnCrate,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-WriteStoryOnCrate.txt
 AGF-VP-XPDeathPenaltyReduction,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-XPDeathPenaltyReduction.txt
 AGF-VP-ZombieBiomeSpawning,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-ZombieBiomeSpawning.txt
 AGF-VP-ZombieCorpseLeaveQuicker,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-ZombieCorpseLeaveQuicker.txt
 AGF-VP-ZombieLargerHordes,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-ZombieLargerHordes.txt
 zzzAGF-Special-Compatibilities,Yes,Yes,No,SAFE,DANGEROUS,None,zzzAGF-Special-Compatibilities.txt
-AGF-NoEAC-ConfigureWindowEnteringDuration,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-NoEAC-ConfigureWindowEnteringDuration.txt

@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.
 - Lockable inventory slots are clearly marked for quick identification.
 - Compass is wider and features a visible center mark.
@@ -100,7 +100,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v5.4.1
 - Updated references to new naming scheme for enhanced patch.
 

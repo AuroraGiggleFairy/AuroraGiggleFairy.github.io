@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->->->
+<!-- FEATURES START -->->->->
 - DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
     - DragonTander gave me permission to use this freely.
     - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->-->-->
+<!-- CHANGELOG START -->-->-->-->
 v2.1.0
 - Updated for 7d2d version 2.5 (still works with previous versions)
 
