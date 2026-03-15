@@ -1,7 +1,7 @@
 # AGF-VP-VehiclePerformance
 7d2d Version 2  
 **Version:** 1.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-VehiclePerformance-v1.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-VehiclePerformance.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.
     - Gyrocopter's reverse is smooth and no longer pausing haults.
     - Doubled Vehicle HitPoints for durability.
@@ -95,7 +95,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.1
 - Had the wrong files in this mod! *facepalm*
 

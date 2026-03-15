@@ -1,7 +1,7 @@
 # AGF-VP-AlternativeRecipes
 7d2d Version 2  
 **Version:** 1.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AlternativeRecipes-v1.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AlternativeRecipes.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Cobblestone Blocks can now be crafted directly from stone and clay (in addition to original)
     - First Aid Kits can now be crafted directly from cloth (in addition to original)
     - First Aid Bandages can now be crafted from cloth (in addition to original)
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.1
 - Updated README and Code Notes.
 

@@ -1,7 +1,7 @@
 # AGF-VP-FarmingPlus
 7d2d Version 2  
 **Version:** 5.6.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-FarmingPlus-v5.6.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-FarmingPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Birdnest and Beehives now plantable for eggs, feathers, and honey.
 - Naturally discovered through traders and loot.
 - Unlocks at seed crafting level 20.
@@ -99,7 +99,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v5.6.0
 - Now you can craft seeds that replant themselves.
 - Updated README format.

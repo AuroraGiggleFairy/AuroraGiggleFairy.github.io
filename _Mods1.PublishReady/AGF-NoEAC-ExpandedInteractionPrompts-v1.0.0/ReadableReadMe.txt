@@ -72,24 +72,34 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-ExpandedInteractionPrompts" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-ExpandedInteractionPrompts" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-ExpandedInteractionPrompts" is Safe to install on an existing game.
+- "AGF-NoEAC-ExpandedInteractionPrompts" is Safe to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- When looking at a workstation, the UI shows its status (e.g., Crafting, Needs Fuel, Start Fire) and output slots used.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Workstation prompts detect number of output slots used.
+- Workstation prompts detect if crafting, needs fuel or to be turned on.
+- Ready for publish.
+
+v0.0.1
+- Mod first created.
 
 ========================================
 

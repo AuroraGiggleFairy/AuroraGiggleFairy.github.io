@@ -1,7 +1,7 @@
 # AGF-VP-DecorationBlock
 7d2d Version 2  
 **Version:** 3.0.2  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-DecorationBlock-v3.0.2.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-DecorationBlock.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Over 5,700 in game models all within one block!
     - Craft at a workbench.
     - Levels in perkAdvancedEngineering slightly reduces ingredient costs.
@@ -102,7 +102,7 @@ NOTE
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.0.2
 - Updated to run on V2, only edited to make it run well. (still could be other errors).
 

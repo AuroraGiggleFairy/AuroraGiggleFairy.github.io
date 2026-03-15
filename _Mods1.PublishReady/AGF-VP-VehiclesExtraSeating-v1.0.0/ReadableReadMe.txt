@@ -72,24 +72,31 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-VehiclesExtraSeating" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-VehiclesExtraSeating" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-VehiclesExtraSeating" is SAFE to install on an existing game.
+- "AGF-VP-VehiclesExtraSeating" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- 3 seats on bikes (bicycle, minibike, and motorcycle)
+    - For the bikes, expanded seating mod is only cosmetic, not required.
+    - Truck can now seat 8 players (with the expanded seat mod).
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Revamped from Version 1 VehiclesPerformance Mod, now for 7d2d version 2.
 
 ========================================
 

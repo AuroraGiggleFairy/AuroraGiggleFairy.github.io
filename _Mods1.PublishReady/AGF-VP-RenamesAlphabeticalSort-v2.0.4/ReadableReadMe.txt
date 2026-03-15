@@ -72,24 +72,60 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-RenamesAlphabeticalSort" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-RenamesAlphabeticalSort" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-RenamesAlphabeticalSort" is SAFE to install on an existing game.
+- "AGF-VP-RenamesAlphabeticalSort" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Naming Scheme for better sorting when pressing Auto Sort.
+    - Food and Water have values in titles.
+    - Food items that are also ingredients are indicated in title.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.4
+- Raw Meat Bundle takes 5 meat per, not 50!
+
+v2.0.3
+- Added the three tiered insulating armor mod.
+- Added clothing names.
+- Added empty jar to sort with drinks.
+
+v2.0.2
+- Added the missing Honey Tea.
+- Found an error in one of the translations.
+
+v2.0.1
+- Fun Pimps added full localization for new items, added it to affected items.
+
+v2.0.0
+- Renamed mod from RenamesForAutoSort to RenamesAlphabeticalSort.
+- Updated to include new things for 7d2d version 2.5.
+
+v1.0.2
+- Corrected name changes for a few of the mod items and their schematics
+- Added the prefix to the SledgeHammer Saga
+
+v1.0.1
+- Updated text to represent 7d2d Version 2.
+- Corrected the Candy Health Bar stuff.
+
+v1.0.0
+- Transfered out of 1Core for standalone modlet
+- Added more organization to naming conventions
+- Values of food/water added to appropriate items
 
 ========================================
 

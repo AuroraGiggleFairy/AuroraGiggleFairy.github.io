@@ -72,24 +72,32 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-CraftVitamins" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-CraftVitamins" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-CraftVitamins" is SAFE to install on an existing game.
+- "AGF-VP-CraftVitamins" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Craft Vitamins, unlocked at same time as herbal antibiotics.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.1.0
+- Removed windows.xml as the purple book conditional is now within the purple book mod.
+
+v1.0.0
+- Just made it.
 
 ========================================
 

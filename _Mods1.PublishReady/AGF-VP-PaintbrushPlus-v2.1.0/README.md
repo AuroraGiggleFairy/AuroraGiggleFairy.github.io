@@ -1,7 +1,7 @@
 # AGF-VP-PaintbrushPlus
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PaintbrushPlus-v2.1.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PaintbrushPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Painting costs ZERO paint.
     - You can hold down the trigger to continue painting.
     - Painting distance is reduced to prevent accidental long distance painting.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.1.0
 - Updated for 7d2d version 2
 

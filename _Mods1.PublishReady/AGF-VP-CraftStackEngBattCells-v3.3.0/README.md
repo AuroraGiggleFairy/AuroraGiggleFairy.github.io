@@ -1,7 +1,7 @@
 # AGF-VP-CraftStackEngBattCells
 7d2d Version 2  
 **Version:** 3.3.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-CraftStackEngBattCells-v3.3.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-CraftStackEngBattCells.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Engines, Batteries and Solar Cells now stack.
     - In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.
     - Craft Engines with electrician level 40 at a workbench.
@@ -90,7 +90,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.3.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

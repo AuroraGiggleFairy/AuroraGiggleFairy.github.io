@@ -72,24 +72,34 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-AlternativeRecipes" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-AlternativeRecipes" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-AlternativeRecipes" is SAFE to install on an existing game.
+- "AGF-VP-AlternativeRecipes" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Cobblestone Blocks can now be crafted directly from stone and clay (in addition to original)
+    - First Aid Kits can now be crafted directly from cloth (in addition to original)
+    - First Aid Bandages can now be crafted from cloth (in addition to original)
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.1
+- Updated README and Code Notes.
+
+v1.0.0
+- Transported from 1Core, in goal to remove the 1Core requirement.
 
 ========================================
 

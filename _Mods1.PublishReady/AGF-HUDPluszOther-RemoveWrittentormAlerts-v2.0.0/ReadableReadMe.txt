@@ -3,7 +3,7 @@ AGF-HUDPluszOther-RemoveWrittentormAlerts
 Version: 2.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,33 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-RemoveWrittentormAlerts" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Removes the written weather alerts that pop-up when a storm is coming.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.0
+- Name Change and updates associated with text and conditionals.
+- Changed to removal to help maintain standalone and other potential mix match issues.
+
+v1.0.0
+- Just made it.
 
 ========================================
 

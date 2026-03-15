@@ -1,7 +1,7 @@
 # AGF-VP-PlayerResetQuests
 7d2d Version 2  
 **Version:** 2.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PlayerResetQuests-v2.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PlayerResetQuests.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - When speaking with a trader, players can choose for the quest list to regenerate
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.0.1
 - Updated to 7d2d Version 2
 

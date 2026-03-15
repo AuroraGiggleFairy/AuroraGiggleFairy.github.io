@@ -72,24 +72,49 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ZombieBiomeSpawning" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ZombieBiomeSpawning" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ZombieBiomeSpawning" is SAFE to install on an existing game.
+- "AGF-VP-ZombieBiomeSpawning" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Biome Spawning Increase in a Progressive Fashion,
+- The point? Gives a server something for newcomers and pros alike.
+- Essentially a x5 spawn, but different with the animals.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v3.0.0
+- Updated for 7d2d version 2.5.
+
+v2.1.0
+- revisted the number boosts
+- Forest is now vanilla except more timid animals
+- Number progression of zombies more appropriate based on location within biomes
+- Slight reduction in some areas for performance purposes
+
+v2.0.2
+- Fixed version type on the mod info file that caused an error.
+
+v2.0.1
+- Updated for V1.2 (added an attribute of ID to each spawning line)
+
+v2.0.0
+- Updated to V1.0
+
+v1.0.0
+- Created this mod
 
 ========================================
 

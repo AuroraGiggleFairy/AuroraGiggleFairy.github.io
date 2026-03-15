@@ -1,7 +1,7 @@
 # AGF-VP-BuyTraderVendingMachines
 7d2d Version 2  
 **Version:** 3.0.2  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-BuyTraderVendingMachines-v3.0.2.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-BuyTraderVendingMachines.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - High trader stage unlocks option to purchase trader managed vending machines.
     - Can pick them back up by breaking it (separate from ones found in the world.)
 *Trader managed vending machines are the ones that come with food and drinks that reset daily.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.0.2
 - NOW traer sells the snack one in addition to the variant helper drinks one.
 

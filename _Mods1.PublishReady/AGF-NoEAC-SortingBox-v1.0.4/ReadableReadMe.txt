@@ -72,24 +72,26 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-SortingBox" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-SortingBox" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: UNIQUE
+- Client Required for Multiplayer: UNIQUE
+- "AGF-NoEAC-SortingBox" is SAFE to install on an existing game.
+- "AGF-NoEAC-SortingBox" is DANGEROUS to remove from an existing game.
+- Unique Details: Server side if dedicated server - otherwise client side.
 
 ========================================
 
 ========================================
 
 5. Features
+->->
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
 
 ========================================
 

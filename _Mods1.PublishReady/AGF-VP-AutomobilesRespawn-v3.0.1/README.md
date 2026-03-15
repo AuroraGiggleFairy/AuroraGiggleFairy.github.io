@@ -1,7 +1,7 @@
 # AGF-VP-AutomobilesRespawn
 7d2d Version 2  
 **Version:** 3.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AutomobilesRespawn-v3.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AutomobilesRespawn.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Vehicles that are salvaged leaves a hubcap.
 - The hubcap has 2,500 hit points and prevents blocks being built over respawn location.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.0.1
 - Implemented necessary code to ensure safe update on existing games using previous version of mod.
 

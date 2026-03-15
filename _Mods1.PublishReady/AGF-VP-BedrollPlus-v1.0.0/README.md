@@ -1,7 +1,7 @@
 # AGF-VP-BedrollPlus
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-BedrollPlus-v1.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-BedrollPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Added to vanilla, is "bedroll +" which contains more spawn point bed options AND more hit points.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.0
 - Just made it.
 <!-- CHANGELOG END -->

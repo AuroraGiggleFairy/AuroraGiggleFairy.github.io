@@ -1,7 +1,7 @@
 # AGF-VP-AmmoDisassembly
 7d2d Version 2  
 **Version:** 1.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AmmoDisassembly-v1.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AmmoDisassembly.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Scrap Ammo into bundles that contain the ammo's ingredients, open to collect.
     - Server side cannot have "open all" button, but you can craft 100 or 1,000 of disassembled bundles into 1 bundle.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.1
 - Updated README and notes in code
 - Fixed ingredient change for flaming arrows/bolts for v2.5+.

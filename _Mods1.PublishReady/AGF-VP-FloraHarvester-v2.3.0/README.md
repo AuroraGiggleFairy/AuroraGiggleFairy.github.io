@@ -1,7 +1,7 @@
 # AGF-VP-FloraHarvester
 7d2d Version 2  
 **Version:** 2.3.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-FloraHarvester-v2.3.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-FloraHarvester.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - A tool to more quickly harvest flora. (plants and crops, etc)
     - Levels in LivingOfftheLand reduces stamina use.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.3.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 - Attempted to remove durability for this item.

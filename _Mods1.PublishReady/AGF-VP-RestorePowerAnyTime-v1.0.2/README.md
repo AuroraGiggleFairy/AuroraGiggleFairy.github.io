@@ -1,7 +1,7 @@
 # AGF-VP-RestorePowerAnyTime
 7d2d Version 2  
 **Version:** 1.0.2  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-RestorePowerAnyTime-v1.0.2.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-RestorePowerAnyTime.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Restore Power quests can be done at any time of the day.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.2
 - The confirmation text no longer tells you to do the quest at night.
 

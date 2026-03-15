@@ -72,24 +72,41 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-VehiclePerformance" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-VehiclePerformance" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-VehiclePerformance" is SAFE to install on an existing game.
+- "AGF-VP-VehiclePerformance" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.
+    - Gyrocopter's reverse is smooth and no longer pausing haults.
+    - Doubled Vehicle HitPoints for durability.
+    - New Vehicle Speed and Progression, near vanilla speeds for performance.
+
+    - Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5
+    - Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2
+    - Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14
+    - Truck Speed (normal, turbo) now 12, 16 instead of 10, 14
+    - Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.1
+- Had the wrong files in this mod! facepalm
+
+v1.0.0
+- Revamped for 7d2d version 2.
 
 ========================================
 

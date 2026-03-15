@@ -72,24 +72,28 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-TerrainLeveler" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-TerrainLeveler" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-NoEAC-TerrainLeveler" is MISSINGDATA to install on an existing game.
+- "AGF-NoEAC-TerrainLeveler" is MISSINGDATA to remove from an existing game.
+- Unique Details: MISSINGDATA
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Just testing this shit.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+Is this really working yet?
 
 ========================================
 

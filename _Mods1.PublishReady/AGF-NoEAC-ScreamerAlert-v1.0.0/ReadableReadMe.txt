@@ -72,24 +72,33 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-ScreamerAlert" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-ScreamerAlert" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-ScreamerAlert" is SAFE to install on an existing game.
+- "AGF-NoEAC-ScreamerAlert" is UNKNOWN to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- When a player is within 120m of a screamer, Screamer Alert message appears.
+- Disappears if you kill all screamers.
+- Will also disappear if you leave the range.
+- If the screamer spawns a horde, a Horde Incoming Alert appears.
+- Disappears after 10 seconds.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Made the mod.
 
 ========================================
 

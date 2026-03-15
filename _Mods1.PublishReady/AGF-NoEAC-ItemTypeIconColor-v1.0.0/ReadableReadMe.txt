@@ -72,24 +72,28 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-ItemTypeIconColor" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-ItemTypeIconColor" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-ItemTypeIconColor" is SAFE to install on an existing game.
+- "AGF-NoEAC-ItemTypeIconColor" is UNKNOWN to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".
+- Vanilla, you could only adjust the color of the ALTERNATE icon color (like after reading a book), with "AltItemTypeIconColor".
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
 
 ========================================
 

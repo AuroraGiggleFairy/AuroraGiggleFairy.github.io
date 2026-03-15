@@ -72,24 +72,42 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ModSlotsPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ModSlotsPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ModSlotsPlus" is SAFE to install on an existing game.
+- "AGF-VP-ModSlotsPlus" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.
+    - The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.
+    - There is a general increase on mod slots on the minimum side and maximum side.
+    - The highest mod slots is 6.
+
+Note, only applies these changes to items you find/craft going forward from installation.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v3.0.1
+- updated to V2
+- removed the modification for stone and pipe weapons/tools.
+
+v3.0.0
+- updated to V1.0
+
+v2.0.2
+- Updated ReadMe to my new format
+- Corrected mod slot intentions, had to reorder the code
 
 ========================================
 

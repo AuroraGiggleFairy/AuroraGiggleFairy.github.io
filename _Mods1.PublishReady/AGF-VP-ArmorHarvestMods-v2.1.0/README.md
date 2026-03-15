@@ -1,7 +1,7 @@
 # AGF-VP-ArmorHarvestMods
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ArmorHarvestMods-v2.1.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ArmorHarvestMods.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - At Armor Crafting Level 11, you can now make the following:
     - modArmorFarmer
     - modArmorMiner
@@ -94,7 +94,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

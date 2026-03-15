@@ -1,7 +1,7 @@
 # AGF-VP-ArcheryFeathersChange
 7d2d Version 2  
 **Version:** 1.0.2  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ArcheryFeathersChange-v1.0.2.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ArcheryFeathersChange.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - All archery ammo requires Feathers.
     - Feathers can be crafted from plastic.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.2
 - Updated README and code organization.
 - Corrected the cloths amounts given back from the 100's and 1000's for flaming arrows/bolts.

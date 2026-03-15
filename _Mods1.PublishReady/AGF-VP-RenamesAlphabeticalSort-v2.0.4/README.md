@@ -1,7 +1,7 @@
 # AGF-VP-RenamesAlphabeticalSort
 7d2d Version 2  
 **Version:** 2.0.4  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-RenamesAlphabeticalSort-v2.0.4.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-RenamesAlphabeticalSort.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Naming Scheme for better sorting when pressing Auto Sort.
     - Food and Water have values in titles.
     - Food items that are also ingredients are indicated in title.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.0.4
 - Raw Meat Bundle takes 5 meat per, not 50!
 

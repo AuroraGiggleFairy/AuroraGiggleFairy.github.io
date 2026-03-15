@@ -1,7 +1,7 @@
 # AGF-VP-AdminModdingSupport
 7d2d Version 2  
 **Version:** 1.0.3  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AdminModdingSupport-v1.0.3.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-AdminModdingSupport.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - The "Block Replace Tool" can now replace blocks quickly.
     - Admin books that give a set amount of xp to a player.
     - Harvesting Test Blocks with set harvest amounts, better for testing.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.3
 - Updated Readme and Code Notes.
 

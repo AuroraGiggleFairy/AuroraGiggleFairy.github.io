@@ -1,7 +1,7 @@
 # AGF-VP-StayLongerAnimalCorpse
 7d2d Version 2  
 **Version:** 2.0.2  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-StayLongerAnimalCorpse-v2.0.2.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-StayLongerAnimalCorpse.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Animal Corpses disappear after 10 minutes instead of 5.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.0.2
 - Made sure the swarm of insects "corpse" was not included!
 

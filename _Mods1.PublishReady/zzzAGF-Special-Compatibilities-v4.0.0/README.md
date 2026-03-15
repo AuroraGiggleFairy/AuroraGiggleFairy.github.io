@@ -1,7 +1,7 @@
 # zzzAGF-Special-Compatibilities
 7d2d Version 2  
 **Version:** 4.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/zzzAGF-Special-Compatibilities-v4.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/zzzAGF-Special-Compatibilities.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - This is a compatibility patch for mods that affect any of AGF's, most commonly:
     - HUDPlus
     - PurpleBook
@@ -108,7 +108,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v4.0.0
 - Renamed to be AGF V2 Compatibilities, as it encompasses more than my HUD.
 - Updated README and Coding organization.

@@ -72,24 +72,35 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-PlayerResetQuests" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-PlayerResetQuests" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-PlayerResetQuests" is SAFE to install on an existing game.
+- "AGF-VP-PlayerResetQuests" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- When speaking with a trader, players can choose for the quest list to regenerate
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- Updated to 7d2d Version 2
+
+v2.0.0
+- Updated to version 1.0
+
+v1.0.0
+- Created the Mod
 
 ========================================
 

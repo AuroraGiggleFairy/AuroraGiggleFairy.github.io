@@ -72,24 +72,34 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-PaintbrushPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-PaintbrushPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-PaintbrushPlus" is SAFE to install on an existing game.
+- "AGF-VP-PaintbrushPlus" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Painting costs ZERO paint.
+    - You can hold down the trigger to continue painting.
+    - Painting distance is reduced to prevent accidental long distance painting.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.1.0
+- Updated for 7d2d version 2
+
+v2.0.0
+- Updated to V1.0
 
 ========================================
 

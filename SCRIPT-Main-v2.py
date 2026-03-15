@@ -286,7 +286,7 @@ def main():
 
     # --- 4.4 README.md and ReadableReadMe.txt ---
     # For each mod, create README.md from template and ReadableReadMe.txt
-    MOD_README_TEMPLATE = os.path.join(VS_CODE_ROOT, 'TEMPLATE-ModReadMe.md')
+    MOD_README_TEMPLATE = os.path.join(VS_CODE_ROOT, 'TEMPLATE-ModReadMes.md')
     # --- Load compatibility data from CSV for all mods ---
     compat_data = {}
     if os.path.exists(COMPAT_CSV):
@@ -314,10 +314,12 @@ def main():
             safe_to_install = compat.get('SAFE_TO_INSTALL', 'MISSINGDATA')
             safe_to_remove = compat.get('SAFE_TO_REMOVE', 'MISSINGDATA')
             unique = compat.get('UNIQUE', 'MISSINGDATA')
-            quote_file = os.path.join(QUOTES_DIR, f'{base_name}.txt')
+            # Use QUOTE_FILE from CSV if present, else fallback to base_name.txt
+            quote_file_name = compat.get('QUOTE_FILE', f'{base_name}.txt')
+            quote_file_path = os.path.join(QUOTES_DIR, quote_file_name)
             quote_md = ''
-            if os.path.exists(quote_file):
-                with open(quote_file, 'r', encoding='utf-8') as f:
+            if os.path.exists(quote_file_path):
+                with open(quote_file_path, 'r', encoding='utf-8') as f:
                     quote_text = f.read().strip()
                 if quote_text:
                     quote_md = format_blockquote(quote_text)

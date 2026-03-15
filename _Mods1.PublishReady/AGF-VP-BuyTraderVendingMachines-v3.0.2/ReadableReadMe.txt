@@ -72,24 +72,56 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-BuyTraderVendingMachines" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-BuyTraderVendingMachines" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-BuyTraderVendingMachines" is SAFE to install on an existing game.
+- "AGF-VP-BuyTraderVendingMachines" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- High trader stage unlocks option to purchase trader managed vending machines.
+    - Can pick them back up by breaking it (separate from ones found in the world.)
+Trader managed vending machines are the ones that come with food and drinks that reset daily.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v3.0.2
+- NOW traer sells the snack one in addition to the variant helper drinks one.
+
+v3.0.1
+- Updated names of each vending machine to better state that trader restocks them.
+- Made the 3 drink vending machines into a variant block and updated the trader sell list.
+
+v3.0.0
+- Updated so that your vending machines will be picked up when destroyed.
+- Corrected localization.
+- Added description of how to use it.
+
+v2.0.2
+- Updated for 7d2d Version 2.
+
+v2.0.1
+- name change
+
+v2.0.0
+- updated to V1
+- updated the trader stage requirement
+
+v1.0.1
+- Changed the tier stage of the vending machines to match rare tools (100).
+- Added the "energy" and "water" vending machine.
+- Lowered the "trader stage" requirement to access the vending machines.
+- Updated the ReadMe file to new format.
 
 ========================================
 

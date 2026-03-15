@@ -72,24 +72,45 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-BackpackPlus-119Slots" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-BackpackPlus-119Slots" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-BackpackPlus-119Slots" is SAFE to install on an existing game.
+- "AGF-BackpackPlus-119Slots" is DANGEROUS to remove from an existing game.
+- Unique Details: You may swap with 84 or 72.
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)
+- 119-slot backpack with 3 rows (68 encumbrance slots)
+- Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed
+- PackMule skill unlocks all encumbrance slots
+- Compatible with PackMule, buffs, Twitch integration, and mobility perks
+- Craftable large storage (wood, iron, steel) with 120/144/168 slots:
+    - Easy-to-see lockable slots
+    - Multiple storage block shapes
+    - Breaking storage returns it to your inventory
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.2.2
+- Updated for consistency and automation.
+
+v1.1.0
+- When you break an insecure large storage, the block itself (not items inside) return to your inventory.
+- Added several more block shape options.
+- Updated Localization
+
+v1.0.0
+- Made the mod
 
 ========================================
 

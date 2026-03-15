@@ -72,24 +72,81 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-MasterTool" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-MasterTool" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-MasterTool" is SAFE to install on an existing game.
+- "AGF-VP-MasterTool" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- The Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.
+    - Miner69r increases the block damage of the tool.
+    - Mother Lode, Salvage Operations, and Living Off the Land increases the appropriate harvest amount.
+    - The harvesting amount of the master tool ties with other tools.
+
+    - To unlock, recommended to use a team.
+    - Master Tool has 4 ingredients only craftable after maxing out related crafting perks.
+    - Master Tool Quest becomes available at a trader only after you complete Tier 6 of quests.
+    - Master Tool Buried Supplies quest is very difficult, but this is how you get the schematic.
+    - Is this confusing? probably. Hopefully it will make more sense when you see it in game.
+
+Find a translation error? Please let me know!
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v6.1.0
+- Removed windows.xml as the purple book conditional is now within the purple book mod.
+
+v6.0.1
+- Updated for 2.5 (only changes to purple book).
+- Still works with previous versions.
+
+v6.0.0
+- Improved and fixed method of doing the final quest (works on dedicated servers)
+- Will now only apply purple book edits if you have my purple book installed.
+
+v5.0.1
+- The MAP now requires you to read its schematic first. facepalm
+
+v5.0.0
+- New method of aquiring master tool. Takes a team now.
+
+v4.0.1
+- Updated to work with 7d2d Version 2.
+
+v4.0.0
+- Updated to work with updated HUD.
+
+v3.0.1
+- Now useable underwater without causing red errors. (Coding details on the fix under mastertool in items.xml)
+
+v3.0.0
+- New method of claiming the master tool, a bit more difficult.
+- A few visual improvements
+- Now compatible with HUD's checklist
+
+v2.1.0
+- updated the recipe for Master Tool
+- 2nd option of getting schamtic is using 50 notes
+
+v2.0.0
+- updated to V1
+- Changed how you can find the schematic
+- Changed recipe
+
+v1.1.1
+- Master tool with maxed out mother lode was making you lose XP! Now it doesn't.
+- Updated Readme to new format.
 
 ========================================
 

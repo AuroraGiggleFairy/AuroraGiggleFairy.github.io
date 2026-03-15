@@ -1,7 +1,7 @@
 # AGF-VP-ZombieBiomeSpawning
 7d2d Version 2  
 **Version:** 3.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ZombieBiomeSpawning-v3.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ZombieBiomeSpawning.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Biome Spawning Increase in a Progressive Fashion,
 - The point? Gives a server something for newcomers and pros alike.
 - Essentially a x5 spawn, but different with the animals.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.0.0
 - Updated for 7d2d version 2.5.
 

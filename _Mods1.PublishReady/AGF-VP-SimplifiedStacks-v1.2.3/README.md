@@ -1,7 +1,7 @@
 # AGF-VP-SimplifiedStacks
 7d2d Version 2  
 **Version:** 1.2.3  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-SimplifiedStacks-v1.2.3.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-SimplifiedStacks.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Simplified stack sizes that keeps close to vanilla experience.
     - Simplified Stack Sizes:
     - Bundles and consumables stack to 50
@@ -94,7 +94,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.2.3
 - Included Honey Tea, stacks to 50.
 

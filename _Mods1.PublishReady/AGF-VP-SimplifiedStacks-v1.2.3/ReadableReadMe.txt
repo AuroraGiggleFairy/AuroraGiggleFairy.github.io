@@ -72,24 +72,64 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-SimplifiedStacks" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-SimplifiedStacks" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-SimplifiedStacks" is SAFE to install on an existing game.
+- "AGF-VP-SimplifiedStacks" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Simplified stack sizes that keeps close to vanilla experience.
+    - Simplified Stack Sizes:
+    - Bundles and consumables stack to 50
+    - Ammo stacks to 500
+    - Resources are generally 500, 1000, or 6000
+    - Gas, Coins, and plant fibers stack to 30000
+    - Placeable blocks (like workstations) to 500
+    - Farming and General blocks to 5000
+    - Existing Bundles modified to new stack sizes
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.2.3
+- Included Honey Tea, stacks to 50.
+
+v1.2.2
+- Fun Pimps added full localization for new items, added it to affected items.
+
+v1.2.1
+- The larger raw meat bundle was missing its description. Corrected.
+
+v1.2.0
+- updated for 7d2d version 2.5.
+- added stack sizes to new apiary tools.
+- updated recipes for bundled exploding arrows/bolts.
+- End table lamp now stacks to 500 correctly.
+- New items have updated stack sizes.
+- beeswax is updated to 50 instead of 10, however needs to be monitored for breaking duke economy.
+- Raw meat bundle stacks at 50.
+- Added a LARGER raw meat bundle that accounts for all 500 of raw meat stack size.
+
+v1.1.1
+- Resources to make gun powder bundles now correctly modified.
+
+v1.1.0
+- Re-evaluated 7d2d version 2's use of resources and modified stack sizes for a variety of items.
+- Increased gun powder stacks to 6000 and updated bundle functioning/localization.
+- Majority of ammo ingredients now stack to 6,000.
+
+v1.0.0
+- Separated from StacksBundlesAmmoPlus now that I understand conditionals.
 
 ========================================
 

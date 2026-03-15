@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 15, 2026, 6:28 AM EST*
+*March 15, 2026, 8:20 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -373,7 +373,7 @@
 > *Refined HUD with clear stats, menus, and visual cues for easier gameplay.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.</li><li>Lockable inventory slots are clearly marked for quick identification.</li><li>Compass is wider and features a visible center mark.</li><li>Toolbelt is lowered for better backpack mod compatibility, with numbered slots for convenience.</li><li>Chat messages are easier to read with updated backgrounds.</li><li>Map details are displayed in a dedicated section beside the map, with clear labels.</li><li>Crafting and burning timers are visually clearer and easier to read.</li><li>Date, time, outdoor temperature, and the location display are visible on all menus.</li><li>Storm visual alerts now appear below the location display, freeing space for other mods.</li><li>Trader dialogue, including quest selection, is easier to read with updated backgrounds.</li><li>Simple color-coding for interactive prompts (the text that appears when looking at loot, workstations, etc.) for quick recognition.</li><li>You now have 5 centered crafting slots instead of 4.</li><li>Schematics, magazines, and books are color-coded to show whether they’ve been read.</li><li>The NoEAC-EnhancedPatch provides even more visual features if also installed.</li><li>Compatible with all 7 Days to Die versions since 2.5. (For new game updates, check for the latest HUDPlus version if needed.)</li></ul>
 > 
 > </details>
 > 
@@ -385,7 +385,7 @@
 > *Adds BM countdown for non-varied BM frequency.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>This adds a blood moon countdown under the compass.</li><ul><li>Currently works with these Blood Moon fixed frequencies:</li><li>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30, 60</li><li>If the frequency or bloodmoon range is different than the above, the mod will not apply.</li></ul></ul>
 > 
 > </details>
 > 
@@ -397,7 +397,7 @@
 > *Shows enemy health bars.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Adds enemy health bars with an AGF style.</li></ul>
 > 
 > </details>
 > 
@@ -409,7 +409,7 @@
 > *Purple Book for easier visuals of crafting info.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Works standalone from HUDPlus-1Main</li><li>A purple book icon that opens up Details on one page (With Zooming Option)!</li><ul><li>Magazine unlocks</li><li>Books</li><li>Unlocks from Schematics/Books</li><li>Armor Details</li></ul></ul>
 > 
 > </details>
 > 
@@ -421,7 +421,7 @@
 > *Removes the Entering Popups of poi's.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Removes the pop-ups of poi names when you enter new areas.</li></ul>
 > 
 > </details>
 > 
@@ -463,7 +463,7 @@
 > *Expands your inventory with a 119-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)</li><li>119-slot backpack with 3 rows (68 encumbrance slots)</li><li>Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed</li><li>PackMule skill unlocks all encumbrance slots</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks</li><li>Craftable large storage (wood, iron, steel) with 120/144/168 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
 > 
 > </details>
 > 
@@ -474,7 +474,7 @@
 > *Expands your inventory with a 60-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Inventory size matches vanilla (no shrinking).</li><li>60-slot backpack with 3 rows (30 encumbrance slots).</li><li>PackMule skill unlocks all encumbrance slots.</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks.</li><li>Craftable large storage (wood, iron, steel) with 60/80/100 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
 > 
 > </details>
 > 
@@ -485,7 +485,7 @@
 > *Expands your inventory with a 72-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)</li><li>72-slot backpack with 3 rows (36 encumbrance slots)</li><li>PackMule skill unlocks all encumbrance slots</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks</li><li>Craftable large storage (wood, iron, steel) with 120/144/168 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
 > 
 > </details>
 > 
@@ -496,7 +496,7 @@
 > *Expands your inventory with an 84-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)</li><li>84-slot backpack with 3 rows (36 encumbrance slots)</li><li>PackMule skill unlocks all encumbrance slots</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks</li><li>Craftable large storage (wood, iron, steel) with 120/144/168 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
 > 
 > </details>
 > 
@@ -516,7 +516,7 @@
 > *Compatibility Patch Collection.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>This is a compatibility patch for mods that affect any of AGF's, most commonly:</li><ul><li>HUDPlus</li><li>PurpleBook</li><li>RenamesforAlphabeticalSort</li><li>SimplifiedStackSizes</li><li>AmmoDisassembly</li><li>RebundleBundles</li></ul><li>This mod determines if you have the conflicting ones installed before applying changes.</li><li>More can be added as requested.</li><li>Language support was added to:</li><ul><li>BDub's Vehicles</li><li>IZY's Weapons</li><li>GS Vanilla Cook Book</li></ul><li>Current Compatibility List:</li><ul><li>Dewtas' 18 slot toolbelt</li><li>Khaine's 15 slot toolbelt</li><li>Wookie's 12 slot toolbelt</li><li>RecipeStatsTab</li><li>BDub's Vehicles</li><li>IZY's Weapons</li><li>MoreQuests</li><li>Oakraven Ammo PRess</li><li>GSVanillaCookBook</li></ul></ul>
 > 
 > </details>
 > 
@@ -540,7 +540,7 @@
 > *Some adjustments and additions for admin / mod testing harvesting.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>The "Block Replace Tool" can now replace blocks quickly.</li><ul><li>Admin books that give a set amount of xp to a player.</li><li>Harvesting Test Blocks with set harvest amounts, better for testing.</li></ul></ul>
 > 
 > </details>
 > 
@@ -551,7 +551,7 @@
 > *Cobblestone Blocks, First Aid Kits/Bandages now have vanilla alternative recipes.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Cobblestone Blocks can now be crafted directly from stone and clay (in addition to original)</li><ul><li>First Aid Kits can now be crafted directly from cloth (in addition to original)</li><li>First Aid Bandages can now be crafted from cloth (in addition to original)</li></ul></ul>
 > 
 > </details>
 > 
@@ -562,7 +562,7 @@
 > *Scrap your ammo into bundles that contain the ingredients.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Scrap Ammo into bundles that contain the ammo's ingredients, open to collect.</li><ul><li>Server side cannot have "open all" button, but you can craft 100 or 1,000 of disassembled bundles into 1 bundle.</li></ul></ul>
 > 
 > </details>
 > 
@@ -573,7 +573,7 @@
 > *Apiary size is 2x2 and produces NO heat.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Apiary now 2 blocks wide instead of 3.</li><ul><li>Apiary heatmap is removed.</li><li>To keep mod safe, pre-existing apiaries can be destroyed to get the new 2 wide version.</li></ul></ul>
 > 
 > </details>
 > 
@@ -584,7 +584,7 @@
 > *All archery ammo uses feathers, can craft feathers from plastic.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>All archery ammo requires Feathers.</li><ul><li>Feathers can be crafted from plastic.</li></ul></ul>
 > 
 > </details>
 > 
@@ -595,7 +595,7 @@
 > *Craft armors with harvesting bonuses as armor mods.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>At Armor Crafting Level 11, you can now make the following:</li><ul><li>modArmorFarmer</li><li>modArmorMiner</li><li>modArmorScavenger</li><li>modArmorLumberjack</li><li>Their stats match the quality level.</li><li>These are built with the same ingredients as a full set of armor.</li><li>The mods take the harvesting aspects and you can attach them to the armor of choice.</li><li>Similar harvesting bonuses do not stack with each other and cannot be placed on the armors of the same name.</li></ul></ul>
 > 
 > </details>
 > 
@@ -606,7 +606,7 @@
 > *Vehicles will respawn after 10 real life hours. Editable.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Vehicles that are salvaged leaves a hubcap.</li><li>The hubcap has 2,500 hit points and prevents blocks being built over respawn location.</li></ul>
 > 
 > </details>
 > 
@@ -617,7 +617,7 @@
 > *Sleeping Bags also come in many bed variants.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Added to vanilla, is "bedroll +" which contains more spawn point bed options AND more hit points.</li></ul>
 > 
 > </details>
 > 
@@ -628,7 +628,7 @@
 > *Birdnests now have a 63% chance to have an egg instead of 35%.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Chance to find eggs in birdnest increased from 35% to 63%.</li></ul>
 > 
 > </details>
 > 
@@ -639,7 +639,7 @@
 > *Break a station or storage, it goes into your inventory.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Break a station, wood sign, or writable crate and it returns to your inventory.</li><ul><li>These same blocks also have a chance to obtain if they fall.</li><li>Any items within these will drop in a backpack (including forge materials).</li></ul><li>campfire</li><li>dew collector</li><li>forge</li><li>workstation</li><li>cement mixer</li><li>chemistry station</li><li>writeable crates (wood, iron, steel)</li><li>wood sign (1x1, 1x3, 2x5)</li><li>generator bank (breaking also returns remaining gas)</li><li>battery bank</li><li>solar bank</li></ul>
 > 
 > </details>
 > 
@@ -650,7 +650,7 @@
 > *With high trader stage you can purchase working vending machines from traders.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>High trader stage unlocks option to purchase trader managed vending machines.</li><ul><li>Can pick them back up by breaking it (separate from ones found in the world.)</li></ul><li>Trader managed vending machines are the ones that come with food and drinks that reset daily.</li></ul>
 > 
 > </details>
 > 
@@ -661,7 +661,7 @@
 > *Craft sewing kits with Wasteland Treasures 6.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Craft Sewing Kits; unlocked with Wasteland Treasures 6: learn to weave fibers into cloth.</li></ul>
 > 
 > </details>
 > 
@@ -672,7 +672,7 @@
 > *Engines, Batteries, and Solar Cells are craftable and stack!*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Engines, Batteries and Solar Cells now stack.</li><ul><li>In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.</li><li>Craft Engines with electrician level 40 at a workbench.</li><li>Craft solar banks with electrician level 80 at a workbench.</li><li>Craft solar cells with electrician level 100 at a workbench.</li></ul></ul>
 > 
 > </details>
 > 
@@ -683,7 +683,7 @@
 > *Craft vitamins when you unlock herbal antibiotics.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Craft Vitamins, unlocked at same time as herbal antibiotics.</li></ul>
 > 
 > </details>
 > 
@@ -694,7 +694,7 @@
 > *One block to decorate them all.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Over 5,700 in game models all within one block!</li><ul><li>Craft at a workbench.</li><li>Levels in perkAdvancedEngineering slightly reduces ingredient costs.</li><li>If the block is normally a container, it is secured in its deco version size (10 x 10)</li><li>Strong as Wood Blocks (500hp), but high explosive resistance.</li><li>When a player breaks one, it returns to their inventory.</li><li>When blocks break to falls, zombies, or explosions, high chance of picking it up shortly after.</li><li>HIGH COMPATIBILITY as it only adds its own code and NOT dependent on existing ones.</li><li>If it is a light, it can be powered with electricity.</li><li>If the block says, "upgrade" you can upgrade it with 10 forged steel to hitpoints of 5,000</li><li>Doors also come in unbarricaded versions</li><li>If the block says, "campfire" you can use it as a campfire.</li></ul><li>NOTE</li><ul><li>Some localization is ONLY in English at the moment. MOST are in all 13 languages</li><li>Some localizations are missing the color of the blocks. (This is on the Fun Pimps, but I will work on later.)</li><li>Some localizations do not distinguish between themselves. (This is on the Fun Pimps, but I will work on later.)</li></ul></ul>
 > 
 > </details>
 > 
@@ -705,7 +705,7 @@
 > *Dews: No Heat, 2x2, a x5 and x25 variants.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Compile 5 dew collectors into 1 that acts like 5 (or 25).</li><li>Dew Collectors are now sized 2x2 instead of 3x3</li><li>Heat production is removed.</li><li>Safe for existing games and easy conversion of original 3x3 to 2x2.</li><li>Place down any old 3x3.</li><li>Break them and you will get the new 2x2.</li><li>This method prevents invisible and untouchable blocks around old dew collectors.</li><li>If you have 500 jugs, you can open all of them in the crafting menu.</li></ul>
 > 
 > </details>
 > 
@@ -716,7 +716,7 @@
 > *All game doors in variants for simplicity and building!*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Variant Helper "All Doors" in wood, iron, steel, and powered.</li><li>Search All Doors in crafting menu.</li><li>Doors with barricades also have a "plain" version available.</li><li>Entirely standalone and server side.</li></ul>
 > 
 > </details>
 > 
@@ -727,7 +727,7 @@
 > *You can now drink acid! But why?...I don't know. Do it.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Drink ACID for some interesting effects.</li><ul><li>Specifics:</li><li>Lose 30% water</li><li>Bleeding, approximately 120hp damage over the duration</li><li>Trippy screen effect</li><li>Painting screen effect</li><li>Fast buff</li><li>Jump buff</li><li>Danceoff Music Plays</li><li>Celebration (on kill enemy turns to confetti)</li><li>Silly Sounds</li></ul></ul>
 > 
 > </details>
 > 
@@ -738,7 +738,7 @@
 > *Scrap a dye then craft a different one. Adds 27 colors.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Easily interchange dye colors:</li><li>A.SCRAP any dye to get 15 paint.</li><li>B.CRAFT any dye with 15 paint.</li><ul><li>Added 27 Colors with simple naming scheme.</li><li>Added Invisible Dye that can hide a worn item.</li></ul></ul>
 > 
 > </details>
 > 
@@ -749,7 +749,7 @@
 > *Like other seeds, Birdnest for eggs and feathers. ALSO, x5/x25/Replants variants.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Birdnest and Beehives now plantable for eggs, feathers, and honey.</li><li>Naturally discovered through traders and loot.</li><li>Unlocks at seed crafting level 20.</li><li>A new "Seed Station" that offers faster seed crafting and organization.</li><li>x5 Farming, level 20 Seed Crafting:</li><li>Take 5 seeds, click recipe, and craft them into a single x5 seed.</li><li>Essentially 1 seed acts like 5 in one space.</li><li>Seeds, except for mushrooms and birdnests, requires x5 farm plots as well.</li><li>Level 3 of Living Off the Land craft x70 faster at seed workbench.</li><li>x25 Variants are available as well.</li><li>Can now craft a variant of each seed that:</li><li>replants itself,</li><li>harvest zero extra seeds,</li><li>and can scrap to revert to its original, near 1:1.</li></ul>
 > 
 > </details>
 > 
@@ -760,7 +760,7 @@
 > *Special tool to quickly cut grass and crops.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>A tool to more quickly harvest flora. (plants and crops, etc)</li><ul><li>Levels in LivingOfftheLand reduces stamina use.</li></ul></ul>
 > 
 > </details>
 > 
@@ -771,7 +771,7 @@
 > *Combine wood or coal to create a single item with longer burn times.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Combine wood or coal into single items with longer burn times:10m, 60m, 600m, or 6,000m.</li></ul>
 > 
 > </details>
 > 
@@ -782,7 +782,7 @@
 > *Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>The Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.</li><ul><li>Miner69r increases the block damage of the tool.</li><li>Mother Lode, Salvage Operations, and Living Off the Land increases the appropriate harvest amount.</li><li>The harvesting amount of the master tool ties with other tools.</li><li>To unlock, recommended to use a team.</li><li>Master Tool has 4 ingredients only craftable after maxing out related crafting perks.</li><li>Master Tool Quest becomes available at a trader only after you complete Tier 6 of quests.</li><li>Master Tool Buried Supplies quest is very difficult, but this is how you get the schematic.</li><li>Is this confusing? probably. Hopefully it will make more sense when you see it in game.</li></ul><li>Find a translation error? Please let me know!</li></ul>
 > 
 > </details>
 > 
@@ -793,7 +793,7 @@
 > *Paises the max level from 300 to 500, because why not?*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Simply just raises the max level cap from 300 to 500... For funsies.</li></ul>
 > 
 > </details>
 > 
@@ -804,7 +804,7 @@
 > *Bee Gone Cream that remove and prevent slow effects from insects.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Bee Gone Cream can be crafted with 10 levels in medical crafting at a campfire with a cooking pot.</li><ul><li>The cream removes and prevents slows from Bee Swarms and Insect Swarms.</li><li>The cream can also be applied to other players as a secondary action.</li><li>Also findable in loot and traders, similarly to aloe cream.</li><li>Steroids now ALSO have this benefit, and indicates it in descriptions and stat displays.</li></ul><li>Thanks to "Go-go, Godzilla" for the name idea.</li><li>Thanks to "Go-go, Godzilla", B19JAY, mandy_tj, 13ubblegum_ and Asher_Gamess for brainstorming support.</li><li>You can check out B19JAY and his crew here: https://www.twitch.tv/b19jay</li></ul>
 > 
 > </details>
 > 
@@ -815,7 +815,7 @@
 > *Mining Perk now allows bundling clay, brass, and sand.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Mining Perk now allows you to bundle clay, sand, and brass.</li><ul><li>The sand you get from mining very slightly increased.</li></ul></ul>
 > 
 > </details>
 > 
@@ -826,7 +826,7 @@
 > *Replaces noose with regular rope. Worth it for those who may need it.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Simply replaces the noose with plain rope, both the block AND the icon.</li><ul><li>This is done for mental health purposes...</li><li>For some, this really matters, and they are worth it.</li></ul><li>Suicide Hotline is 988***</li></ul>
 > 
 > </details>
 > 
@@ -837,7 +837,7 @@
 > *Are you a mod hoarder? Now you can bundle them to save on space.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Are you a mod hoarder? Now you can bundle them to save on space.</li></ul>
 > 
 > </details>
 > 
@@ -848,7 +848,7 @@
 > *Quality of Life Mod Slot numbers that keeps progression.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.</li><ul><li>The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.</li><li>There is a general increase on mod slots on the minimum side and maximum side.</li><li>The highest mod slots is 6.</li></ul><li>Note, only applies these changes to items you find/craft going forward from installation.*</li></ul>
 > 
 > </details>
 > 
@@ -859,7 +859,7 @@
 > *Paint without paint, hold trigger to keep painting, limited distance reach.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Painting costs ZERO paint.</li><ul><li>You can hold down the trigger to continue painting.</li><li>Painting distance is reduced to prevent accidental long distance painting.</li></ul></ul>
 > 
 > </details>
 > 
@@ -870,7 +870,7 @@
 > *Pickup lanterns, flashlights, jack-o-lanterns, and burning barrels.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.</li><ul><li>Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.</li><li>Lanterns are removed from loot and trader lists as you can just pick them up.</li></ul></ul>
 > 
 > </details>
 > 
@@ -881,7 +881,7 @@
 > *When talking to a trader, you can tell them to reset the quest options.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>When speaking with a trader, players can choose for the quest list to regenerate</li></ul>
 > 
 > </details>
 > 
@@ -892,7 +892,7 @@
 > *Craft Player Vending Machines and buy cheaper!*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>You can craft player vending machine easily (10 forged iron).</li><li>They cost the same as magazines (economic value="100")</li><li>Traders sell between 1-4 instead of just 1.</li></ul>
 > 
 > </details>
 > 
@@ -903,7 +903,7 @@
 > *Wear a jack-o-lanter over your head or throw Molo-Jack-Ovs.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Throw pumpkins that explode like molotovs.</li><ul><li>Wear a pumpkin as a cosmetic mod on your helmet!</li><li>You can also bundle the pumpkin head mod.</li><li>The helmet mod scraps the same way a jack-o-lantern does... into plant fibers.</li></ul><li>This mod idea came from a collection of friends/twitch viewers/discord peeps, and other insane people like AGF.</li><li>(Lots of mechanics ideas came from IceRogue)</li><li>(Molo-Jack-Ovs' name came from ProfSeatbelt)</li></ul>
 > 
 > </details>
 > 
@@ -914,7 +914,7 @@
 > *Load in, initial challenges redeemed, recieve all items, xp, and points, Done!*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>You load into game, automatically redeem initial challenges AND get equipment/rewards.</li></ul>
 > 
 > </details>
 > 
@@ -925,7 +925,7 @@
 > *Now you can rebundle bundles.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Rebundle Bundles after opening.</li><ul><li>Bundles icon now tinted for a visual differentation assistance.</li></ul></ul>
 > 
 > </details>
 > 
@@ -936,7 +936,7 @@
 > *Recipe for Rotting Flesh from Raw Meat and Murky Water.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Adds a recipe for raw flesh, from raw meat and murky water.</li></ul>
 > 
 > </details>
 > 
@@ -947,7 +947,7 @@
 > *Better sorting in inventories of like items.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Naming Scheme for better sorting when pressing Auto Sort.</li><ul><li>Food and Water have values in titles.</li><li>Food items that are also ingredients are indicated in title.</li></ul></ul>
 > 
 > </details>
 > 
@@ -958,7 +958,7 @@
 > *Restore Power Quests can be done at any time.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Restore Power quests can be done at any time of the day.</li></ul>
 > 
 > </details>
 > 
@@ -969,7 +969,7 @@
 > *Scrap a battery and get acid, instead of lead.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Scrap batteries for Acid. No longer gives Lead.</li></ul>
 > 
 > </details>
 > 
@@ -980,7 +980,7 @@
 > *Scrapping equipment takes 4 seconds instead of 10.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Equipment scrapping reduced to 4 seconds instead of 10.</li></ul>
 > 
 > </details>
 > 
@@ -991,7 +991,7 @@
 > *Stack sizes are simplified!*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Simplified stack sizes that keeps close to vanilla experience.</li><ul><li>Simplified Stack Sizes:</li><li>Bundles and consumables stack to 50</li><li>Ammo stacks to 500</li><li>Resources are generally 500, 1000, or 6000</li><li>Gas, Coins, and plant fibers stack to 30000</li><li>Placeable blocks (like workstations) to 500</li><li>Farming and General blocks to 5000</li><li>Existing Bundles modified to new stack sizes</li></ul></ul>
 > 
 > </details>
 > 
@@ -1002,7 +1002,7 @@
 > *3 forge slots, sand smelts 1:5 ratio, smelt or craft clay/rock/stone in single units.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Forges have 3 slots with text nicely centered.</li><ul><li>Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).</li><li>Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)</li><li>Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.</li><li>6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.</li></ul></ul>
 > 
 > </details>
 > 
@@ -1013,7 +1013,7 @@
 > *Animal Corpses disappear after 10 minutes instead of 5.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Animal Corpses disappear after 10 minutes instead of 5.</li></ul>
 > 
 > </details>
 > 
@@ -1024,7 +1024,7 @@
 > *Player's Backpack disappear after 5 hours instead of 1.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Player's Backpack disappear after 5 hours instead of 1.</li></ul>
 > 
 > </details>
 > 
@@ -1035,7 +1035,7 @@
 > *Zombie loot disappears after 1 hour instead of 20 minutes.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Zombie loot disappears after 1 hour instead of 20 minutes.</li></ul>
 > 
 > </details>
 > 
@@ -1046,7 +1046,7 @@
 > *Removed 3 round burst, magazine size up to 36 from 30.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Tactical Rifle no longer defaults with 3 round burst.</li><ul><li>Tactical Rifle magazine increased from 30 to 36.</li></ul></ul>
 > 
 > </details>
 > 
@@ -1057,7 +1057,7 @@
 > *Traders are always open... but possibly not during bloodmoon?*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Traders are always open. (They might be closed during bloodmoon.)</li></ul>
 > 
 > </details>
 > 
@@ -1068,7 +1068,7 @@
 > *Higher trader prices, harder to buy stuff.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Buying stuff from traders more difficult.</li></ul>
 > 
 > </details>
 > 
@@ -1079,7 +1079,7 @@
 > *Per magazine, traders sell between 3 and 8 instead of 1 and 3.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Magazines at traders, a specific magazine can come in counts of 1-8 instead of 1-3.</li><li>The number of magazines a trader will carry is between 7-13 instead of just 7</li></ul>
 > 
 > </details>
 > 
@@ -1090,7 +1090,7 @@
 > *Traders restock every 2 days, easier to remember.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Traders restock every 2 days, easier to remember and good for games with longer daily time.</li></ul>
 > 
 > </details>
 > 
@@ -1101,7 +1101,7 @@
 > *Craft x5 and x25 versions of trees with helpful naming of growth stages.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Planting less trees helps performance.</li><ul><li>Can plant a x5 and a x25 version of trees.</li><li>Tree Naming on planting trees, like crops, to see stages.</li></ul><li>If FarmingPlus is installed, can craft seeds faster at its seed station.*</li></ul>
 > 
 > </details>
 > 
@@ -1112,7 +1112,7 @@
 > *Vehicles are Harder, Better, Faster, Stronger.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>All vehicles have increased acceleration, breaking power, handling, and uphill manuverability.</li><ul><li>Gyrocopter's reverse is smooth and no longer pausing haults.</li><li>Doubled Vehicle HitPoints for durability.</li><li>New Vehicle Speed and Progression, near vanilla speeds for performance.</li><li>Bicycle Speed (normal, turbo) now 8, 10 instead of 6, 8.5</li><li>Minibike Speed (normal, turbo) now 10, 12 instead of 7, 9.2</li><li>Motorcycle Speed (normal, turbo) now 12, 16 instead of 9.8, 14</li><li>Truck Speed (normal, turbo) now 12, 16 instead of 10, 14</li><li>Gyrocopter Speed in air (normal, turbo) 10, 16 instead of 9, 15</li></ul></ul>
 > 
 > </details>
 > 
@@ -1123,7 +1123,7 @@
 > *Extra seating on vehicles!*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>3 seats on bikes (bicycle, minibike, and motorcycle)</li><ul><li>For the bikes, expanded seating mod is only cosmetic, not required.</li><li>Truck can now seat 8 players (with the expanded seat mod).</li></ul></ul>
 > 
 > </details>
 > 
@@ -1134,7 +1134,7 @@
 > *Vehicles have more storage than default.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.</li><ul><li>Vehicles progressively have larger storages than default.</li></ul></ul>
 > 
 > </details>
 > 
@@ -1145,7 +1145,7 @@
 > *Write a lot of notes on this one crate.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Iron Writeable Storage Crate but can write a LOT on it.</li></ul>
 > 
 > </details>
 > 
@@ -1156,7 +1156,7 @@
 > *XP Death Penalty 10 instead of 25.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Each death penalty is 10% up to a max of 30%, instead of 25% up to 50%.</li></ul>
 > 
 > </details>
 > 
@@ -1167,7 +1167,7 @@
 > *For newcomers and pros, in a progressive fashion, biomes go from easy to nightmarish, especially at night.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Biome Spawning Increase in a Progressive Fashion,</li><li>The point? Gives a server something for newcomers and pros alike.</li><li>Essentially a x5 spawn, but different with the animals.</li></ul>
 > 
 > </details>
 > 
@@ -1178,7 +1178,7 @@
 > *Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.</li></ul>
 > 
 > </details>
 > 
@@ -1189,7 +1189,7 @@
 > *I like big hordes and I cannot lie... But like performance too.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>I enjoy being visited upon by larger hordes.</li><ul><li>I increased the animal hordes only by a little.</li></ul></ul>
 > 
 > </details>
 > 
@@ -1213,7 +1213,7 @@
 > *Adds a xml file to modify the duration of the location popups, vanilla is 3 seconds.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Provides an XML file that allows modders to configure the duration of the Location Pop-Up window as needed.</li></ul>
 > 
 > </details>
 > 
@@ -1224,7 +1224,7 @@
 > *In the configs folder, you can change F1 opacity..*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li></ul>
 > 
 > </details>
 > 
@@ -1235,7 +1235,7 @@
 > *Armors have a scrap icon if you have not unlocked it for cosmetics.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Simply adds a "scrap" icon over armors you have not unlocked for cosmetics.</li></ul>
 > 
 > </details>
 > 
@@ -1246,7 +1246,7 @@
 > *Adds extra info that is only available from non-EAC friendly places.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus</li></ul>
 > 
 > </details>
 > 
@@ -1257,7 +1257,7 @@
 > *Displays status and output slots for workstations*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>When looking at a workstation, the UI shows its status (e.g., Crafting, Needs Fuel, Start Fire) and output slots used.</li></ul>
 > 
 > </details>
 > 
@@ -1268,7 +1268,7 @@
 > *Chat based Storm Alert of when a storm will end.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Sends a chat message to players regardless of location of a storm warning and when it ends.</li></ul>
 > 
 > </details>
 > 
@@ -1279,7 +1279,7 @@
 > *This adds color function to ItemTypeIcons used in xml.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".</li><li>Vanilla, you could only adjust the color of the ALTERNATE icon color (like after reading a book), with "AltItemTypeIconColor".</li></ul>
 > 
 > </details>
 > 
@@ -1290,7 +1290,7 @@
 > *A button to open all bundles in rapid fire. Stops before dropping items.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>Simply adds an "Open All" button for bundled items.</li><li>It opens one at a time rapid fire until all are opened or if you run out of inventory space.</li><li>It can be stopped by either closing the window or pushing the stop opening button.</li><li>Again, if there isn't room for more, it will stop and not allow you to open more.</li></ul>
 > 
 > </details>
 > 
@@ -1301,7 +1301,7 @@
 > *Screamer Alert Messages, best with AGF HUD.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li><li>When a player is within 120m of a screamer, Screamer Alert message appears.</li><li>Disappears if you kill all screamers.</li><li>Will also disappear if you leave the range.</li><li>If the screamer spawns a horde, a Horde Incoming Alert appears.</li><li>Disappears after 10 seconds.</li></ul>
 > 
 > </details>
 > 
@@ -1312,7 +1312,7 @@
 > *With permissions, integrated from Kanaverum's original mod and Asylum.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul></ul>
+> <ul><li>>->-></li></ul>
 > 
 > </details>
 > 

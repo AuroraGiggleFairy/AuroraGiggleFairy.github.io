@@ -3,7 +3,7 @@ AGF-NoEAC-EnhancedPatch
 Version: 2.1.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-EnhancedPatch.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,41 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-EnhancedPatch" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-EnhancedPatch" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-EnhancedPatch" is SAFE to install on an existing game.
+- "AGF-NoEAC-EnhancedPatch" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v3.0.0
+- This ONLY provides a .dll that will enhance other AGF mods if they are installed.
+
+v2.1.0
+- New bindings for Dishong Tower Challenge
+- New bindings.
+
+v2.0.0
+- Updated for 7d2d version 2.5+.
+- Actual xml changes are within AGF HUDPlus-1Main.
+- This allows a server using my HUD with EAC turned off, can have enhanced patch installed locally and WORK.
+
+v1.0.0
+- Pulled from old Alpha 21 version and updated with newest systems for 7d2d version 2+
 
 ========================================
 

@@ -72,24 +72,47 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-DrinkableAcid" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-DrinkableAcid" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-DrinkableAcid" is SAFE to install on an existing game.
+- "AGF-VP-DrinkableAcid" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Drink ACID for some interesting effects.
+    - Specifics:
+    - Lose 30% water
+    - Bleeding, approximately 120hp damage over the duration
+    - Trippy screen effect
+    - Painting screen effect
+    - Fast buff
+    - Jump buff
+    - Danceoff Music Plays
+    - Celebration (on kill enemy turns to confetti)
+    - Silly Sounds
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- updated for 7d2d Version 2.0
+
+v2.0.0
+- Updated and fixed for V1.0
+- Got a more accurate description of what happens
+- Accounted for god mode
+
+v1.0.0
+- Made the Mod.
 
 ========================================
 

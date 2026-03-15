@@ -72,24 +72,26 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-ServerUIChanges" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-ServerUIChanges" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-ServerUIChanges" is MISSINGDATA to install on an existing game.
+- "AGF-ServerUIChanges" is MISSINGDATA to remove from an existing game.
+- Unique Details: MISSINGDATA
 
 ========================================
 
 ========================================
 
 5. Features
+->->
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
 
 ========================================
 

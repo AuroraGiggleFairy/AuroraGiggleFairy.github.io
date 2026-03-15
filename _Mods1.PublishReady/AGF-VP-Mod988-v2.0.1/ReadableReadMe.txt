@@ -72,24 +72,36 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-Mod988" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-Mod988" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-Mod988" is SAFE to install on an existing game.
+- "AGF-VP-Mod988" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Simply replaces the noose with plain rope, both the block AND the icon.
+    - This is done for mental health purposes... 
+    - For some, this really matters, and they are worth it.
+
+Suicide Hotline is 988
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- Updated to 7d2d Version 2.
+
+v2.0.0
+- Updated to V1.0
 
 ========================================
 

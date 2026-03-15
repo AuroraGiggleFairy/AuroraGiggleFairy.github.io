@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-TradersRestockEvery2Days" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-TradersRestockEvery2Days" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-TradersRestockEvery2Days" is SAFE to install on an existing game.
+- "AGF-VP-TradersRestockEvery2Days" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Traders restock every 2 days, easier to remember and good for games with longer daily time.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Created this mod
 
 ========================================
 

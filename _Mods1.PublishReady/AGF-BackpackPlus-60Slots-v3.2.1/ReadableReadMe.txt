@@ -72,24 +72,69 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-BackpackPlus-60Slots" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-BackpackPlus-60Slots" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-BackpackPlus-60Slots" is SAFE to install on an existing game.
+- "AGF-BackpackPlus-60Slots" is DANGEROUS to remove from an existing game.
+- Unique Details: You may upgrade to the others.
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Inventory size matches vanilla (no shrinking).
+- 60-slot backpack with 3 rows (30 encumbrance slots).
+- PackMule skill unlocks all encumbrance slots.
+- Compatible with PackMule, buffs, Twitch integration, and mobility perks.
+- Craftable large storage (wood, iron, steel) with 60/80/100 slots:
+    - Easy-to-see lockable slots
+    - Multiple storage block shapes
+    - Breaking storage returns it to your inventory
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v3.2.1
+- Updated for consistency and automation.
+
+v3.2.0
+- Updated to work with version 2.5.
+
+v3.1.0
+- When you break an insecure large storage, the block itself (not items inside) return to your inventory.
+- Added several more block shape options.
+- Updated Localization
+
+v3.0.0
+- Now utilizing conditionals in coding for this mod to work with both versions 2.1 and 2.2+.
+- DO NOT ROLLBACK VERSIONS though, that will cause errors.
+
+v2.4.0
+- Updated for 7d2d version 2.2
+- Lockable slots share same style across backpack, storages, and vehicles.
+
+v2.3.2
+- updated packmule localization again for value changes.
+
+v2.3.1
+- Updated PackMule Localization
+
+v2.3.0
+- Updated to V2.
+- Updated the path to access block shapes with V2 version.
+- Skipped all the other versions to match current.
+
+v1.0.1
+- Fixed inventory border height.
+
+v1.0.0
+- created the mod based on my v1 mods for backpack84 slots.
 
 ========================================
 

@@ -1,7 +1,7 @@
 # AGF-VP-ZombieLargerHordes
 7d2d Version 2  
 **Version:** 2.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ZombieLargerHordes-v2.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-ZombieLargerHordes.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - I enjoy being visited upon by larger hordes.
     - I increased the animal hordes only by a little.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.0.1
 - Updated for 7d2d Version 2
 

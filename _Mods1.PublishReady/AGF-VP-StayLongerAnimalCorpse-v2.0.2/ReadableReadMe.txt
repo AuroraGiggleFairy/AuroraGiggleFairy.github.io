@@ -72,24 +72,38 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-StayLongerAnimalCorpse" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-StayLongerAnimalCorpse" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-StayLongerAnimalCorpse" is SAFE to install on an existing game.
+- "AGF-VP-StayLongerAnimalCorpse" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Animal Corpses disappear after 10 minutes instead of 5.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.2
+- Made sure the swarm of insects "corpse" was not included!
+
+v2.0.1
+- Updated to 7d2d Version 2
+
+v2.0.0
+- Updated to version 1.0
+
+v1.0.0
+- Created the Mod
 
 ========================================
 

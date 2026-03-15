@@ -3,7 +3,7 @@ AGF-HUDPlus-BMCounter
 Version: 2.1.2  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPlus-BMCounter.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,46 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPlus-BMCounter" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPlus-BMCounter" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPlus-BMCounter" is SAFE to install on an existing game.
+- "AGF-HUDPlus-BMCounter" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- This adds a blood moon countdown under the compass.
+    - Currently works with these Blood Moon fixed frequencies:
+    - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 20, 28, 30, 60
+    - If the frequency or bloodmoon range is different than the above, the mod will not apply.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.1.2
+- Just a change in code naming for better compatibility and modding.
+
+v2.1.1
+- Made the words have a small black outline for easier readability.
+
+v2.1.0
+- Corrected an error on the 30 day countdown.
+- Added every 60 days as an option.
+
+v2.0.0
+- Made a single one that accounts for multiple blood moon fixed frequencies in one.
+- Adjusted to handle other HUDPlus features conditionally.
+
+v1.0.0
+- Just made it.
 
 ========================================
 

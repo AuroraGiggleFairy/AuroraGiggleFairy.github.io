@@ -72,24 +72,38 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-MaxLevel500" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-MaxLevel500" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-MaxLevel500" is SAFE to install on an existing game.
+- "AGF-VP-MaxLevel500" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Simply just raises the max level cap from 300 to 500... For funsies.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.2
+- updated for 7d2d Version 2.
+
+v2.0.1
+- added the max level into entityclasses.xml as well
+
+v2.0.0
+- updated to V1.0
+
+v1.0.0
+- Created this mod
 
 ========================================
 

@@ -72,24 +72,37 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ArcheryFeathersChange" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ArcheryFeathersChange" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ArcheryFeathersChange" is SAFE to install on an existing game.
+- "AGF-VP-ArcheryFeathersChange" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- All archery ammo requires Feathers.
+    - Feathers can be crafted from plastic.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.2
+- Updated README and code organization.
+- Corrected the cloths amounts given back from the 100's and 1000's for flaming arrows/bolts.
+
+v1.0.1
+- Corrected a change to flaming arrows / bolts for 7d2d v2.5+.
+
+v1.0.0
+- Separated from StacksBundlesAmmoPlus now that I understand conditionals.
 
 ========================================
 

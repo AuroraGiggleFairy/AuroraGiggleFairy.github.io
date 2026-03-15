@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-RecipeRottingFlesh" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-RecipeRottingFlesh" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-RecipeRottingFlesh" is SAFE to install on an existing game.
+- "AGF-VP-RecipeRottingFlesh" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Adds a recipe for raw flesh, from raw meat and murky water.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Made the Mod.
 
 ========================================
 

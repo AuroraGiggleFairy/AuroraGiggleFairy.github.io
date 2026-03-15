@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-BedrollPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-BedrollPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-BedrollPlus" is SAFE to install on an existing game.
+- "AGF-VP-BedrollPlus" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Added to vanilla, is "bedroll +" which contains more spawn point bed options AND more hit points.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Just made it.
 
 ========================================
 

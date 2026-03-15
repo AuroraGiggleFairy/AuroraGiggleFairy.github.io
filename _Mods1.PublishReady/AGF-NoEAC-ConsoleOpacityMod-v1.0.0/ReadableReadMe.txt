@@ -3,7 +3,7 @@ AGF-NoEAC-ConsoleOpacityMod
 Version: 1.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-ConsoleOpacityMod.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,26 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-ConsoleOpacityMod" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-ConsoleOpacityMod" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: Unknown
+- Client Required for Multiplayer: Unknown
+- "AGF-NoEAC-ConsoleOpacityMod" is SAFE to install on an existing game.
+- "AGF-NoEAC-ConsoleOpacityMod" is UNKNOWN to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
 
 ========================================
 

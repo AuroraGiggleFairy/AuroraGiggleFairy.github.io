@@ -72,24 +72,31 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-PlayerVendingMachinesPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-PlayerVendingMachinesPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-PlayerVendingMachinesPlus" is SAFE to install on an existing game.
+- "AGF-VP-PlayerVendingMachinesPlus" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- You can craft player vending machine easily (10 forged iron).
+- They cost the same as magazines (economic value="100")
+- Traders sell between 1-4 instead of just 1.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Just made the mod.
 
 ========================================
 

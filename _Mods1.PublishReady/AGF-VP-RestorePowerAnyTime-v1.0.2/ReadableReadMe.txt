@@ -72,24 +72,35 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-RestorePowerAnyTime" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-RestorePowerAnyTime" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-RestorePowerAnyTime" is SAFE to install on an existing game.
+- "AGF-VP-RestorePowerAnyTime" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Restore Power quests can be done at any time of the day.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.2
+- The confirmation text no longer tells you to do the quest at night.
+
+v1.0.1
+- Fixed a thing (I don't remember what!)
+
+v1.0.0
+- Created this mod
 
 ========================================
 

@@ -1,7 +1,7 @@
 # AGF-HUDPlus-1Main
 7d2d Version 2  
 **Version:** 5.4.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPlus-1Main-v5.4.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPlus-1Main.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.
 - Lockable inventory slots are clearly marked for quick identification.
 - Compass is wider and features a visible center mark.
@@ -100,7 +100,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v5.4.1
 - Updated references to new naming scheme for enhanced patch.
 

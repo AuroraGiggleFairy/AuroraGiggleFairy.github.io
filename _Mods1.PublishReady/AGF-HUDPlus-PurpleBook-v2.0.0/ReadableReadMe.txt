@@ -3,7 +3,7 @@ AGF-HUDPlus-PurpleBook
 Version: 2.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPlus-PurpleBook.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,54 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPlus-PurpleBook" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPlus-PurpleBook" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPlus-PurpleBook" is SAFE to install on an existing game.
+- "AGF-HUDPlus-PurpleBook" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Works standalone from HUDPlus-1Main
+- A purple book icon that opens up Details on one page (With Zooming Option)!
+    - Magazine unlocks
+    - Books
+    - Unlocks from Schematics/Books
+    - Armor Details
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.0
+- Revamped the UI code to be easier to create compatibilities with other mods. (Still more to do.)
+- Updated Readme to some format changes AGF is making.
+- Changed the green fill in color a litte.
+- Sucessfuly prevented the grey division lines from appearing in the green.
+
+v1.1.0
+- updated changes of the workstation for 2.5 and positioning.
+- updated changes to the foods tabs.
+- checks 7d2d game version of 2.5 and before.
+- if mod user updates game from 2.4 to 2.5, will remove the unused cvars.
+- Added the new schematic for vehicle storages under the unlocks tab.
+
+v1.0.1
+- some name changes for working with new AGF mods.
+- corrections on a few icons and their names.
+- Under zoomed in harvesting tools, added all the tools.
+- cleaning up the presentation of the code in windows.xml.
+- Added some code to account for new mods.
+
+v1.0.0
+- Separated feature from HUDPlus 1Main
 
 ========================================
 

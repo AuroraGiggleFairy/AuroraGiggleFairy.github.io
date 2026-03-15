@@ -1,9 +1,9 @@
 # AGF-NoEAC-EnhancedPatch
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-NoEAC-EnhancedPatch-v2.1.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-NoEAC-EnhancedPatch.zip)
 
- > None
+ 
 
 ---
 ---
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - With this mod, it will activate enhanced features on other AGF mods, most notably, the HUDPlus
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.0.0
 - This ONLY provides a .dll that will enhance other AGF mods if they are installed.
 

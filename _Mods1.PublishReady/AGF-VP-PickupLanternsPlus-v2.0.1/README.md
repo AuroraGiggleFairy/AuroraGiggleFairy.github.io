@@ -1,7 +1,7 @@
 # AGF-VP-PickupLanternsPlus
 7d2d Version 2  
 **Version:** 2.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PickupLanternsPlus-v2.0.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PickupLanternsPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
     - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
     - Lanterns are removed from loot and trader lists as you can just pick them up.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.0.1
 - Updated for 7d2d V2
 

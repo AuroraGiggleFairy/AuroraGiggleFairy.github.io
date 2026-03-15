@@ -1,7 +1,7 @@
 # AGF-BackpackPlus-119Slots
 7d2d Version 2  
 **Version:** 1.2.2  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-BackpackPlus-119Slots-v1.2.2.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-BackpackPlus-119Slots.zip)
 
  > You may swap with 84 or 72.
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)
 - 119-slot backpack with 3 rows (68 encumbrance slots)
 - Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed
@@ -94,7 +94,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.2.2
 - Updated for consistency and automation.
 

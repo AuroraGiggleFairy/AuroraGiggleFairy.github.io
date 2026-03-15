@@ -1,7 +1,7 @@
 # AGF-VP-TraderSellsMoreBooks
 7d2d Version 2  
 **Version:** 3.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-TraderSellsMoreBooks-v3.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-TraderSellsMoreBooks.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Magazines at traders, a specific magazine can come in counts of 1-8 instead of 1-3.
 - The number of magazines a trader will carry is between 7-13 instead of just 7
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.0.0
 - Updated to version 2.5.
 - Made new settings.

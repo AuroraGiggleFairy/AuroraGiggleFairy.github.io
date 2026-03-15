@@ -1,7 +1,7 @@
 # AGF-NoEAC-ItemTypeIconColor
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-NoEAC-ItemTypeIconColor-v1.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-NoEAC-ItemTypeIconColor.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".
 - Vanilla, you could only adjust the color of the ALTERNATE icon color (like after reading a book), with "AltItemTypeIconColor".
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 
 <!-- CHANGELOG END -->
 

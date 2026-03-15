@@ -1,7 +1,7 @@
 # AGF-BackpackPlus-84Slots
 7d2d Version 2  
 **Version:** 3.2.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-BackpackPlus-84Slots-v3.2.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-BackpackPlus-84Slots.zip)
 
  > You may swap with 72 or 119.
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)
 - 84-slot backpack with 3 rows (36 encumbrance slots)
 - PackMule skill unlocks all encumbrance slots
@@ -93,7 +93,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.2.1
 - Updated for consistency and automation.
 

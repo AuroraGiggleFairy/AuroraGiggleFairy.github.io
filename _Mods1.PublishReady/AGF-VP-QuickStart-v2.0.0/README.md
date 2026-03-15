@@ -1,7 +1,7 @@
 # AGF-VP-QuickStart
 7d2d Version 2  
 **Version:** 2.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-QuickStart-v2.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-QuickStart.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - You load into game, automatically redeem initial challenges AND get equipment/rewards.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.0.0
 - Used the new gameevents to auto complete redeeming the initial challenges as well.
 - Renamed from QuickerQuestStart to QuickStart.

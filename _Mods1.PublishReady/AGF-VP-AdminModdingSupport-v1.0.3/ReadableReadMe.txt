@@ -72,24 +72,40 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-AdminModdingSupport" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-AdminModdingSupport" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-AdminModdingSupport" is SAFE to install on an existing game.
+- "AGF-VP-AdminModdingSupport" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- The "Block Replace Tool" can now replace blocks quickly.
+    - Admin books that give a set amount of xp to a player.
+    - Harvesting Test Blocks with set harvest amounts, better for testing.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.3
+- Updated Readme and Code Notes.
+
+v1.0.2
+- Added a few more test blocks.
+
+v1.0.1
+- Updated to 7d2d Version 2
+
+v1.0.0
+- Transferred out of previous 1Core mod to this standalone modlet.
 
 ========================================
 

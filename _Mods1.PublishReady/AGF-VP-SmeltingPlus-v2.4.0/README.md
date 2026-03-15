@@ -1,7 +1,7 @@
 # AGF-VP-SmeltingPlus
 7d2d Version 2  
 **Version:** 2.4.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-SmeltingPlus-v2.4.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-SmeltingPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Forges have 3 slots with text nicely centered.
     - Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
     - Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)
@@ -90,7 +90,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.4.0
 - Removed as the purple book conditional within windows.xml as it is now within the purple book mod.
 

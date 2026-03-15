@@ -3,7 +3,7 @@ AGF-NoEAC-CosmeticLockIcon
 Version: 1.0.1  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-CosmeticLockIcon.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,32 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-CosmeticLockIcon" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-CosmeticLockIcon" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-CosmeticLockIcon" is SAFE to install on an existing game.
+- "AGF-NoEAC-CosmeticLockIcon" is UNKNOWN to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Simply adds a "scrap" icon over armors you have not unlocked for cosmetics.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.1
+- The Crafting Window was not showing the appropriate itemtypeicon/altitemtypeicon.
+
+v1.0.0
+- Made the mod.
 
 ========================================
 

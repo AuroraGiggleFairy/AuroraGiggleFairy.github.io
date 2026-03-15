@@ -72,24 +72,35 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-StayLongerZombieLoot" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-StayLongerZombieLoot" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-StayLongerZombieLoot" is SAFE to install on an existing game.
+- "AGF-VP-StayLongerZombieLoot" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Zombie loot disappears after 1 hour instead of 20 minutes.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- updated text to version 2.0
+
+v2.0.0
+- Updated to version 1.0
+
+v1.0.0
+- Created the Mod
 
 ========================================
 

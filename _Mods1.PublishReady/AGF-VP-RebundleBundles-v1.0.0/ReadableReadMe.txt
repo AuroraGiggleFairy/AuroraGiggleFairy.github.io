@@ -72,24 +72,33 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-RebundleBundles" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-RebundleBundles" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-RebundleBundles" is SAFE to install on an existing game.
+- "AGF-VP-RebundleBundles" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Rebundle Bundles after opening.
+    - Bundles icon now tinted for a visual differentation assistance.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.1
+- Updated to account for stack size changes made to some ammo production resources.
+
+v1.0.0
+- Separated from StacksBundlesAmmoPlus now that I understand conditionals.
 
 ========================================
 

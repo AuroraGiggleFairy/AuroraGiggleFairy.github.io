@@ -1,7 +1,7 @@
 # AGF-VP-PlayerVendingMachinesPlus
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PlayerVendingMachinesPlus-v1.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-PlayerVendingMachinesPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - You can craft player vending machine easily (10 forged iron).
 - They cost the same as magazines (economic value="100")
 - Traders sell between 1-4 instead of just 1.
@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.0
 - Just made the mod.
 <!-- CHANGELOG END -->

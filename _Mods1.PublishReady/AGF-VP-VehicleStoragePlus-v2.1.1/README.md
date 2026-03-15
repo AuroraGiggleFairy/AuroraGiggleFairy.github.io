@@ -1,7 +1,7 @@
 # AGF-VP-VehicleStoragePlus
 7d2d Version 2  
 **Version:** 2.1.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-VehicleStoragePlus-v2.1.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-VehicleStoragePlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.
     - Vehicles progressively have larger storages than default.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.1.1
 - Works with 2.5 (continues to work with older 2.0 versions as well.)
 

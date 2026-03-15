@@ -1,7 +1,7 @@
 # AGF-VP-TacticalRiflePlus
 7d2d Version 2  
 **Version:** 2.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-TacticalRiflePlus-v2.1.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-TacticalRiflePlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Tactical Rifle no longer defaults with 3 round burst.
     - Tactical Rifle magazine increased from 30 to 36.
 <!-- FEATURES END -->
@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.1.0
 - Updated for 7d2d version 2.
 

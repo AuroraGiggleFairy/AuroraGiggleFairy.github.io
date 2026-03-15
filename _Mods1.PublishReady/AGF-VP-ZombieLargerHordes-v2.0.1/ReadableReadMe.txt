@@ -72,24 +72,36 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ZombieLargerHordes" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ZombieLargerHordes" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ZombieLargerHordes" is SAFE to install on an existing game.
+- "AGF-VP-ZombieLargerHordes" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- I enjoy being visited upon by larger hordes.
+    - I increased the animal hordes only by a little.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- Updated for 7d2d Version 2
+
+v2.0.0
+- Updated to V1.0
+
+v1.0.0
+- Created this mod
 
 ========================================
 

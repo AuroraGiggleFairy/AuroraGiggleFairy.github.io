@@ -3,7 +3,7 @@
 **Version:** 1.0.1  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-NoEAC-ConfigureWindowEnteringDuration.zip)
 
- 
+ > This was requested by Frantic_Dan for his Doom Survival Mod.
 
 ---
 ---
@@ -67,18 +67,18 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: {{EAC_FRIENDLY}}
-- Server Side: {{SERVER_SIDE}}
-- Client Required for Multiplayer: {{CLIENT_REQUIRED}}
-- "AGF-NoEAC-ConfigureWindowEnteringDuration" is {{SAFE_TO_INSTALL}} to install on an existing game.
-- "AGF-NoEAC-ConfigureWindowEnteringDuration" is {{SAFE_TO_REMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: MISSINGDATA
+- Server Side: MISSINGDATA
+- Client Required for Multiplayer: MISSINGDATA
+- "AGF-NoEAC-ConfigureWindowEnteringDuration" is MISSINGDATA to install on an existing game.
+- "AGF-NoEAC-ConfigureWindowEnteringDuration" is MISSINGDATA to remove from an existing game.
+- Unique Details: MISSINGDATA
 
 ---
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Provides an XML file that allows modders to configure the duration of the Location Pop-Up window as needed.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.1
 - Updated ReadMe information. 
 

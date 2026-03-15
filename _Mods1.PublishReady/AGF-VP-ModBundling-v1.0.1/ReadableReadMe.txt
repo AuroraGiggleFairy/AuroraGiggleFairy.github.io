@@ -72,24 +72,34 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ModBundling" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ModBundling" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ModBundling" is SAFE to install on an existing game.
+- "AGF-VP-ModBundling" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Are you a mod hoarder? Now you can bundle them to save on space.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.1
+- Updated language to show 7d2d version 2.
+- Removed the bundling of the mods that were removed between 7d2d version 1 and 2.
+
+v1.0.0
+- Took out of 1Core and made standalone
+- Also updated contents for v1.0.
 
 ========================================
 

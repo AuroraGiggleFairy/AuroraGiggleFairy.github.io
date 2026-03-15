@@ -1,7 +1,7 @@
 # AGF-VP-DyesPlus
 7d2d Version 2  
 **Version:** 3.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-DyesPlus-v3.1.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-DyesPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Easily interchange dye colors:  
 A.SCRAP any dye to get 15 paint.  
 B.CRAFT any dye with 15 paint.
@@ -90,7 +90,7 @@ B.CRAFT any dye with 15 paint.
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.1.0
 - Updated for 7d2d version 2.
 

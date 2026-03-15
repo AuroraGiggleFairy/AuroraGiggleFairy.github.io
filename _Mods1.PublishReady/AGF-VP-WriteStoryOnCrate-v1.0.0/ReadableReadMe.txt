@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-WriteStoryOnCrate" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-WriteStoryOnCrate" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-WriteStoryOnCrate" is SAFE to install on an existing game.
+- "AGF-VP-WriteStoryOnCrate" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Iron Writeable Storage Crate but can write a LOT on it.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Made this mod.
 
 ========================================
 

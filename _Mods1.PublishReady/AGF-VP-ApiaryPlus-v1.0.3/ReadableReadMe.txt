@@ -72,24 +72,42 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ApiaryPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ApiaryPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ApiaryPlus" is SAFE to install on an existing game.
+- "AGF-VP-ApiaryPlus" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Apiary now 2 blocks wide instead of 3.
+    - Apiary heatmap is removed.
+    - To keep mod safe, pre-existing apiaries can be destroyed to get the new 2 wide version.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.3
+- Updated readme and code notes.
+
+v1.0.2
+- Fun Pimps added full localization for new items, added it to affected items.
+
+v1.0.1
+- Corrected how it displays under the vanilla crafting workstations section.
+- And actually updated the modinfo.xml. facepalm
+- Other readme updates... more facepalm
+
+v1.0.0
+- Created the mod.
 
 ========================================
 

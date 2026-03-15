@@ -72,24 +72,42 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-VehicleStoragePlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-VehicleStoragePlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-VehicleStoragePlus" is SAFE to install on an existing game.
+- "AGF-VP-VehicleStoragePlus" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Progression wise, each vehicle gains +2 rows of storage, with the truck having a max of 90 slots.
+    - Vehicles progressively have larger storages than default.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.1.1
+- Works with 2.5 (continues to work with older 2.0 versions as well.)
+
+v2.1.0
+- Modified how storage progression per vehicle is +2 rows of storage.
+
+v2.0.1
+- Updated for 7d2d Version 2
+
+v2.0.0
+- Updated for V1.0
+
+v1.0.0
+- Created this mod
 
 ========================================
 

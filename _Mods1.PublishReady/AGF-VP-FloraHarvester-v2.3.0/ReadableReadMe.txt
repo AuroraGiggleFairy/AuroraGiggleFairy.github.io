@@ -72,24 +72,58 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-FloraHarvester" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-FloraHarvester" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-FloraHarvester" is SAFE to install on an existing game.
+- "AGF-VP-FloraHarvester" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- A tool to more quickly harvest flora. (plants and crops, etc)
+    - Levels in LivingOfftheLand reduces stamina use.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.3.0
+- Removed windows.xml as the purple book conditional is now within the purple book mod.
+- Attempted to remove durability for this item.
+
+v2.2.1
+- Updated for 2.5 (only changes to purple book).
+
+v2.2.0
+- Levels in living off the land now reduces stamina use.
+- Repairing no longer takes a long time.
+
+v2.1.0
+- Will now only apply purple book edits if you have my purple book installed.
+
+v2.0.1
+- Updated for 7d2d Version 2.
+- Created a new material for the item to remove particle errors.
+
+v2.0.0
+- Updated for zoom in feature of HUD
+
+v1.0.2
+- updated the window display for the HUD Checklist, if mod is used with the HUD
+
+v1.0.1
+- removed the upgrading block feature as I forgot it allows quick upgrading of blocks.
+- Updated the localization to remove "repairing" information.
+
+v1.0.0
+- Made the mod
 
 ========================================
 

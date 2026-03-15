@@ -1,9 +1,9 @@
 # AGF-HUDPluszOther-TinyBuffsPopUp
 7d2d Version 2  
 **Version:** 1.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPluszOther-TinyBuffsPopUp.zip)
 
- > None
+ 
 
 ---
 ---
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Shrinks the buff pop ups by half.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.0.0
 - Just made it.
 <!-- CHANGELOG END -->

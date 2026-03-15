@@ -72,24 +72,32 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ScrapBatts4Acid" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ScrapBatts4Acid" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ScrapBatts4Acid" is SAFE to install on an existing game.
+- "AGF-VP-ScrapBatts4Acid" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Scrap batteries for Acid. No longer gives Lead.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.1.0
+- Updated for 7d2d Version 2.
+
+v1.0.0
+- Separated from 1Core mod to its own modlet again.
 
 ========================================
 

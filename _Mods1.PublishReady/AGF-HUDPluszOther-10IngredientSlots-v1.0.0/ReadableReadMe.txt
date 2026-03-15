@@ -3,7 +3,7 @@ AGF-HUDPluszOther-10IngredientSlots
 Version: 1.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-10IngredientSlots.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,30 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPluszOther-10IngredientSlots" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPluszOther-10IngredientSlots" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPluszOther-10IngredientSlots" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-10IngredientSlots" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Increases the ingredients list from 5 to 10 slots.
+    - Compatible with Vanilla, AGF HUDPlus 1Main, and AGF Backpacks
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Created the mod for 7d2d version 2, with conditionals.
 
 ========================================
 

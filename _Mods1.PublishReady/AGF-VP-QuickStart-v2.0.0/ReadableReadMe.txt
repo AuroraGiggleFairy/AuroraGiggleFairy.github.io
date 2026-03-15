@@ -72,24 +72,37 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-QuickStart" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-QuickStart" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-QuickStart" is SAFE to install on an existing game.
+- "AGF-VP-QuickStart" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- You load into game, automatically redeem initial challenges AND get equipment/rewards.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.0
+- Used the new gameevents to auto complete redeeming the initial challenges as well.
+- Renamed from QuickerQuestStart to QuickStart.
+
+v1.0.1
+- Updated for 7d2d version 2
+- updated folder name, it is not safe to install on existing game
+
+v1.0.0
+- Created this mod
 
 ========================================
 

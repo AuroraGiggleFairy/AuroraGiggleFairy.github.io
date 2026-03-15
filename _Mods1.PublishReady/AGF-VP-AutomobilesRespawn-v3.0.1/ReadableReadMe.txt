@@ -72,24 +72,51 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-AutomobilesRespawn" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-AutomobilesRespawn" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-AutomobilesRespawn" is SAFE to install on an existing game.
+- "AGF-VP-AutomobilesRespawn" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Vehicles that are salvaged leaves a hubcap.
+- The hubcap has 2,500 hit points and prevents blocks being built over respawn location.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v3.0.1
+- Implemented necessary code to ensure safe update on existing games using previous version of mod.
+
+v3.0.0
+- A rework for better coding and additional features.
+- Randomness is applied where appropriate.
+- The "plant" is a hubcap, drive over able AND will take up space to prevent building in its respawn.
+- Removed the tip for now. I like having it to inform new players on my server, but it isn't working as intended.
+- Updated localization.
+
+v2.0.3
+- Removed airConditioner, decoCarRadiatorFlat and radiatorHouse01 from activating the message alert.
+- Significantly reduce the frequency of the message alert.
+
+v2.0.2
+- Updated the tags situation as the game updated.
+
+v2.0.1
+- had to fix tags for existing vehicles so challenges would work
+
+v2.0.0
+- Updated and fixed for V1.0
+- Had to make several fixes!
 
 ========================================
 

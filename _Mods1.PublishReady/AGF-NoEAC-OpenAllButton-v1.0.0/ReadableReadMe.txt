@@ -72,24 +72,32 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-NoEAC-OpenAllButton" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-NoEAC-OpenAllButton" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-OpenAllButton" is Yes to install on an existing game.
+- "AGF-NoEAC-OpenAllButton" is UNKNOWN to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Simply adds an "Open All" button for bundled items.
+- It opens one at a time rapid fire until all are opened or if you run out of inventory space.
+- It can be stopped by either closing the window or pushing the stop opening button.
+- Again, if there isn't room for more, it will stop and not allow you to open more.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Made the mod.
 
 ========================================
 

@@ -1,7 +1,7 @@
 # AGF-VP-DewsPlus
 7d2d Version 2  
 **Version:** 2.4.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-DewsPlus-v2.4.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-DewsPlus.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Compile 5 dew collectors into 1 that acts like 5 (or 25).
 - Dew Collectors are now sized 2x2 instead of 3x3
 - Heat production is removed.
@@ -93,7 +93,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v2.4.1
 - Corrected a conditional error that prevented games from loading.
 

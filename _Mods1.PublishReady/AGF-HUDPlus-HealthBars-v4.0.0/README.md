@@ -1,9 +1,9 @@
 # AGF-HUDPlus-HealthBars
 7d2d Version 2  
 **Version:** 4.0.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPlus-HealthBars-v4.0.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPlus-HealthBars.zip)
 
- > None
+ 
 
 ---
 ---
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Adds enemy health bars with an AGF style.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v4.0.0
 - Corrected that "isBoss" is at the same height
 - Added functionality to ensure it is standalone and works conditionally with my other HUD features.

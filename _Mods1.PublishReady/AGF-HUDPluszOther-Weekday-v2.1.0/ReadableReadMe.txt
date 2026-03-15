@@ -3,7 +3,7 @@ AGF-HUDPluszOther-Weekday
 Version: 2.1.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-Weekday.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,42 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPluszOther-Weekday" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPluszOther-Weekday" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPluszOther-Weekday" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-Weekday" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
+    - DragonTander gave me permission to use this freely.
+    - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
+    - Works Standalone
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.1.0
+- Updated for 7d2d version 2.5 (still works with previous versions)
+
+v2.0.0
+- restructured to account for working standalone or with my HUD.
+- Utilizes conditional operations for other HUDPlus features.
+
+v1.1.0
+- renamed from Calendar to Weekday
+
+v1.0.0
+- Just made it... Thanks DragonTander!!!
 
 ========================================
 

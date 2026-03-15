@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-CraftSewingKits" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-CraftSewingKits" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-CraftSewingKits" is SAFE to install on an existing game.
+- "AGF-VP-CraftSewingKits" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Craft Sewing Kits; unlocked with Wasteland Treasures 6: learn to weave fibers into cloth.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Just made it.
 
 ========================================
 

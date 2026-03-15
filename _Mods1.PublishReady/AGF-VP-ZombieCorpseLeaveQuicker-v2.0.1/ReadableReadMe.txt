@@ -72,24 +72,35 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ZombieCorpseLeaveQuicker" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ZombieCorpseLeaveQuicker" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ZombieCorpseLeaveQuicker" is SAFE to install on an existing game.
+- "AGF-VP-ZombieCorpseLeaveQuicker" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Zombie Corpses disappear after 10 seconds instead of 30, for performance purposes.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- Updated text to represent for 7d2d v2
+
+v2.0.0
+- Updated to version 1.0
+
+v1.0.0
+- Created the Mod
 
 ========================================
 

@@ -72,24 +72,42 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-PickupLanternsPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-PickupLanternsPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-PickupLanternsPlus" is SAFE to install on an existing game.
+- "AGF-VP-PickupLanternsPlus" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Lanterns, Burning Barrels, Flashlight, and Jack-o-Lanterns can be picked up.
+    - Lanterns (old and new) and Flashlights are in a single block that you can select different variants from.
+    - Lanterns are removed from loot and trader lists as you can just pick them up.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.0.1
+- Updated for 7d2d V2
+
+v2.0.0
+- Updated for V1.0
+- Adjusted for the new "player" owned old lanterns
+- Removed extra recipe
+- Removed lanterns from loot and trader lists
+
+v1.2.0
+- Updated readme to my new format.
+- Made the flashlights and lanterns the same block variant.
+- Updated the lantern varient block localization to include "flashlights" in all languages.
 
 ========================================
 

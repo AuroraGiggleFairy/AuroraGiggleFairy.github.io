@@ -3,7 +3,7 @@ AGF-HUDPlus-RemoveEnteringPopUp
 Version: 1.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPlus-RemoveEnteringPopUp.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPlus-RemoveEnteringPopUp" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPlus-RemoveEnteringPopUp" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPlus-RemoveEnteringPopUp" is SAFE to install on an existing game.
+- "AGF-HUDPlus-RemoveEnteringPopUp" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Removes the pop-ups of poi names when you enter new areas.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Just made it.
 
 ========================================
 

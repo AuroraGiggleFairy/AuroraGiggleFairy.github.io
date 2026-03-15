@@ -3,7 +3,7 @@ AGF-HUDPluszOther-TinyBuffsPopUp
 Version: 1.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-TinyBuffsPopUp.zip
 
- > None
+ 
 
 ========================================
 
@@ -72,24 +72,29 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-HUDPluszOther-TinyBuffsPopUp" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-HUDPluszOther-TinyBuffsPopUp" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-HUDPluszOther-TinyBuffsPopUp" is SAFE to install on an existing game.
+- "AGF-HUDPluszOther-TinyBuffsPopUp" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Shrinks the buff pop ups by half.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.0
+- Just made it.
 
 ========================================
 

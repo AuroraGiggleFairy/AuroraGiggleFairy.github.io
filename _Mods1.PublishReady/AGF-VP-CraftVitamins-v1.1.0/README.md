@@ -1,7 +1,7 @@
 # AGF-VP-CraftVitamins
 7d2d Version 2  
 **Version:** 1.1.0  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-CraftVitamins-v1.1.0.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-CraftVitamins.zip)
 
  
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Craft Vitamins, unlocked at same time as herbal antibiotics.
 <!-- FEATURES END -->
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v1.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

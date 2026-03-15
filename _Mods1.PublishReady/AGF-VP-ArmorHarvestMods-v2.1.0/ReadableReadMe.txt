@@ -72,24 +72,63 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-ArmorHarvestMods" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-ArmorHarvestMods" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-ArmorHarvestMods" is SAFE to install on an existing game.
+- "AGF-VP-ArmorHarvestMods" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- At Armor Crafting Level 11, you can now make the following:
+    - modArmorFarmer
+    - modArmorMiner
+    - modArmorScavenger
+    - modArmorLumberjack
+    - Their stats match the quality level.
+    - These are built with the same ingredients as a full set of armor.
+    - The mods take the harvesting aspects and you can attach them to the armor of choice.
+    - Similar harvesting bonuses do not stack with each other and cannot be placed on the armors of the same name.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v2.1.0
+- Removed windows.xml as the purple book conditional is now within the purple book mod.
+
+v2.0.4
+- Updated the README and code organization / notes.
+- Harvest mods scrap into 3 armor kits.
+
+v2.0.3
+- Added the word "Harvest" in the mod item's title for easier finding and sorting.
+- Corrected the lumberjack UI display stat on stamina use of axe.
+- Removed extra space in one localization title.
+
+v2.0.2
+- Corrected that the filled in area (purple book) for crafting tier 6 armors is full.
+
+v2.0.1
+- Correct a UI thingy
+
+v2.0.0
+- Localization Updates.
+- UI display updates.
+- Now have tiers following bonuses accordingly.
+
+v1.1.0
+- Will now only apply purple book edits if you have my purple book installed.
+
+v1.0.0
+- Made the mod
 
 ========================================
 

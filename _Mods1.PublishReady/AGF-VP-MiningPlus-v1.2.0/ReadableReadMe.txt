@@ -72,24 +72,36 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-MiningPlus" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-MiningPlus" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-MiningPlus" is SAFE to install on an existing game.
+- "AGF-VP-MiningPlus" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Mining Perk now allows you to bundle clay, sand, and brass.
+    - The sand you get from mining very slightly increased.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.2.0
+- Will now only apply purple book edits if you have my purple book installed.
+
+v1.1.0
+- Updated for Version 2, mostly to connect with AGF HUD V2 updates.
+
+v1.0.0
+- Made the mod.
 
 ========================================
 

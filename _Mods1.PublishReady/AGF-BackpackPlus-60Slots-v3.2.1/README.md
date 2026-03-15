@@ -1,7 +1,7 @@
 # AGF-BackpackPlus-60Slots
 7d2d Version 2  
 **Version:** 3.2.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-BackpackPlus-60Slots-v3.2.1.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-BackpackPlus-60Slots.zip)
 
  > You may upgrade to the others.
 
@@ -78,7 +78,7 @@
 ---
 
 ## 5. Features
-<!-- FEATURES START -->
+<!-- FEATURES START -->->->
 - Inventory size matches vanilla (no shrinking).
 - 60-slot backpack with 3 rows (30 encumbrance slots).
 - PackMule skill unlocks all encumbrance slots.
@@ -93,7 +93,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->
+<!-- CHANGELOG START -->-->-->
 v3.2.1
 - Updated for consistency and automation.
 

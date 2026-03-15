@@ -72,24 +72,35 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: {{EACFRIENDLY}}
-- Server Side: {{SERVERSIDE}}
-- Client Required for Multiplayer: {{CLIENTREQUIRED}}
-- "AGF-VP-AmmoDisassembly" is {{SAFETOINSTALL}} to install on an existing game.
-- "AGF-VP-AmmoDisassembly" is {{SAFETOREMOVE}} to remove from an existing game.
-- Unique Details: {{UNIQUE}}
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-AmmoDisassembly" is SAFE to install on an existing game.
+- "AGF-VP-AmmoDisassembly" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ========================================
 
 ========================================
 
 5. Features
+->->
+- Scrap Ammo into bundles that contain the ammo's ingredients, open to collect.
+    - Server side cannot have "open all" button, but you can craft 100 or 1,000 of disassembled bundles into 1 bundle.
 
 ========================================
 
 ========================================
 
 6. Changelog
+-->-->
+v1.0.1
+- Updated README and notes in code
+- Fixed ingredient change for flaming arrows/bolts for v2.5+.
+- Updated Localization.
+
+v1.0.0
+- Separated from StacksBundlesAmmoPlus now that I understand conditionals.
 
 ========================================
 
