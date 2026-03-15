@@ -90,7 +90,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v1.0.1
 - Updated the name.
 

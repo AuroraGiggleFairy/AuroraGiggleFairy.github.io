@@ -90,7 +90,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v2.0.1
 - Updated to 7d2d Version 2.
 

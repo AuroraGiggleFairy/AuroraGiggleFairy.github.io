@@ -96,7 +96,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v2.4.0
 - Removed as the purple book conditional within windows.xml as it is now within the purple book mod.
 

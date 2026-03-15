@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v1.0.0
 - Revamped from Version 1 VehiclesPerformance Mod, now for 7d2d version 2.
 

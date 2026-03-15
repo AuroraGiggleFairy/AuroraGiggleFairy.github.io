@@ -26,12 +26,15 @@ This outline is the **master reference** for both humans and AI. The main script
 **Why:** To ensure you always work with the latest version of each mod, and avoid losing changes.
 
 1. For each mod with the same folder name:
-   - If the version in both places is the same: **Do nothing.**
-   - If the version in the game mods folder is **higher**:
-     - Copy the whole mod folder from the game mods folder to `_Mods1.PublishReady` or `_Mods2.In-Progress` (whichever it belongs in).
-     - Delete the copied mod from the game mods folder (just that one, not others).
-     - Don’t try to merge files—just copy everything over.
-   - If the version in `_Mods1.PublishReady` or `_Mods2.In-Progress` is higher: **This should not happen.** Log a warning if it does.
+    - If the version in both places is the same: **Do nothing.**
+    - If the version in the game mods folder is **higher**:
+       - Copy the whole mod folder from the game mods folder to `_Mods1.PublishReady` or `_Mods2.In-Progress` (whichever it belongs in).
+       - Delete the copied mod from the game mods folder (just that one, not others).
+       - Don’t try to merge files—just copy everything over.
+    - If the version in `_Mods1.PublishReady` or `_Mods2.In-Progress` is **higher**:
+       - Delete the mod from the game mods folder.
+       - Copy the whole mod folder from `_Mods1.PublishReady` or `_Mods2.In-Progress` to the game mods folder.
+       - Don’t try to merge files—just copy everything over.
 2. Note:
    - If you change the Name in ModInfo.xml but not the folder name, the script still matches by folder name.
    - Folder renaming is handled later (see Step 4).

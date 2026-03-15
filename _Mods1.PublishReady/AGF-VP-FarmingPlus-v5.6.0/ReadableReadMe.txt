@@ -105,7 +105,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v5.6.0
 - Now you can craft seeds that replant themselves.
 - Updated README format.

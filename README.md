@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 15, 2026, 12:17 PM EST*
+*March 15, 2026, 12:37 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -1237,7 +1237,7 @@
 
 ---
 
-> ### **AGF-NoEAC-EnhancedPatch** *-v2.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-EnhancedPatch.zip)
+> ### **AGF-NoEAC-EnhancedPatch** *-v3.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-EnhancedPatch.zip)
 > *Adds extra info that is only available from non-EAC friendly places.*
 > <details> <summary>*Show detailed features*</summary>
 >

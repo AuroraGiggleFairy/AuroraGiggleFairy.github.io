@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v2.0.1
 - Updated to V2.0
 

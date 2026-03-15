@@ -3,7 +3,7 @@
 <xml>
     <Name value="AGF-NoEAC-EnhancedPatch" /> 
     <DisplayName value="AGF Enhanced Patch" /> 
-    <Version value="2.1.0" /> 
+    <Version value="3.0.0" /> 
     <Description value="Adds extra info that is only available from non-EAC friendly places." /> 
     <Author value="AuroraGiggleFairy (AGF)" /> 
    	<Website value="https://discord.gg/Vm5eyW6N4r"/>

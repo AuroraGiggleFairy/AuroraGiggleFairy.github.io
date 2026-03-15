@@ -108,7 +108,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v4.0.1
 - Updated mod references to new naming scheme.
 

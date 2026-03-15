@@ -95,7 +95,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v3.0.
 - Completely revamped and redone.
 - Modified original doorsplus to ensure safe updating.

@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v2.0.1
 - updated text to version 2.0
 

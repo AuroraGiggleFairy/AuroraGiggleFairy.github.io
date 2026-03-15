@@ -96,7 +96,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v1.0.1
 - Updated the name.
 

@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v1.0.3
 - Updated readme and code notes.
 

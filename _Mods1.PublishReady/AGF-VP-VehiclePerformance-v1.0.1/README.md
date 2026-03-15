@@ -95,7 +95,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v1.0.1
 - Had the wrong files in this mod! *facepalm*
 

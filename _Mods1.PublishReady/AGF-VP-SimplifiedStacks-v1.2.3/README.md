@@ -94,7 +94,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v1.2.3
 - Included Honey Tea, stacks to 50.
 

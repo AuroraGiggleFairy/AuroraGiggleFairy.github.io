@@ -94,7 +94,7 @@ Trader managed vending machines are the ones that come with food and drinks that
 ========================================
 
 6. Changelog
->
+>>>>>
 v3.0.2
 - NOW traer sells the snack one in addition to the variant helper drinks one.
 

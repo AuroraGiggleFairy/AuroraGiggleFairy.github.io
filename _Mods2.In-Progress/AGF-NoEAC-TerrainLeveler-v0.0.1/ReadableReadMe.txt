@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 Is this really working yet?
 
 ========================================

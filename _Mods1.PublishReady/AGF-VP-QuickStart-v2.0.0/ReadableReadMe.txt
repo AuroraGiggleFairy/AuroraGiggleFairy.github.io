@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v2.0.0
 - Used the new gameevents to auto complete redeeming the initial challenges as well.
 - Renamed from QuickerQuestStart to QuickStart.

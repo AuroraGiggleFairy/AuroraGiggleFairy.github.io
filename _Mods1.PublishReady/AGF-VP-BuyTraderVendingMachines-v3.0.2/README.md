@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v3.0.2
 - NOW traer sells the snack one in addition to the variant helper drinks one.
 

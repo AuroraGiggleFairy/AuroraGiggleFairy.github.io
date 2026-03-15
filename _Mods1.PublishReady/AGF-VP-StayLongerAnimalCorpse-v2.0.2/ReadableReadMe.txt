@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v2.0.2
 - Made sure the swarm of insects "corpse" was not included!
 

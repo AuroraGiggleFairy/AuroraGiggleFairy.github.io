@@ -123,40 +123,57 @@ def main():
     game_folders = {f: os.path.join(GAME_MODS, f) for f in os.listdir(GAME_MODS) if os.path.isdir(os.path.join(GAME_MODS, f)) and is_agf_mod(f)}
     mods_pulled_from_game = []
 
-    # Step 2: Sync Mods by Version Number
-    
-    for folder_name, game_path in game_folders.items():
-        pub_path = pub_folders.get(folder_name)
-        inprog_path = inprog_folders.get(folder_name)
-        game_ver = get_modinfo_version(game_path)
-        pub_ver = get_modinfo_version(pub_path) if pub_path else None
-        inprog_ver = get_modinfo_version(inprog_path) if inprog_path else None
-        try:
-            cmp_pub = compare_versions(game_ver, pub_ver) if pub_path and game_ver and pub_ver else None
-        except Exception:
-            cmp_pub = None
-        try:
-            cmp_inprog = compare_versions(game_ver, inprog_ver) if inprog_path and game_ver and inprog_ver else None
-        except Exception:
-            cmp_inprog = None
-        if cmp_pub is not None and cmp_pub > 0:
-            print(f"[SYNC] Game mod {folder_name} (v{game_ver}) is newer than PublishReady (v{pub_ver}). Overwriting PublishReady version.")
-            copy_mod(game_path, pub_path)
-            mods_pulled_from_game.append((folder_name, pub_path))
+    # Step 2: Sync Mods by Version Number (with base name matching for game mods)
+    def get_base_mod_name(name):
+        return re.sub(r'-v\d+\.\d+(\.\d+)?$', '', name)
+
+    # Build base name maps for workspace and game mods
+    ws_mods = {}
+    for d in [pub_folders, inprog_folders]:
+        for folder_name, path in d.items():
+            base = get_base_mod_name(folder_name)
+            ws_mods[base] = (folder_name, path)
+    game_mods_by_base = {}
+    for folder_name, path in game_folders.items():
+        base = get_base_mod_name(folder_name)
+        game_mods_by_base[base] = (folder_name, path)
+
+    # For each mod present in both workspace and game mods, compare versions and sync
+    for base_name, (ws_folder, ws_path) in ws_mods.items():
+        if base_name in game_mods_by_base:
+            game_folder, game_path = game_mods_by_base[base_name]
+            ws_ver = get_modinfo_version(ws_path)
+            game_ver = get_modinfo_version(game_path)
             try:
-                shutil.rmtree(game_path)
-                print(f"[CLEANUP] Removed {folder_name} from game mods folder after sync.")
-            except Exception as e:
-                print(f"[ERROR] Failed to remove {folder_name} from game mods folder: {e}")
-        if cmp_inprog is not None and cmp_inprog > 0:
-            print(f"[SYNC] Game mod {folder_name} (v{game_ver}) is newer than _In-Progress (v{inprog_ver}). Overwriting _In-Progress version.")
-            copy_mod(game_path, inprog_path)
-            mods_pulled_from_game.append((folder_name, inprog_path))
-            try:
-                shutil.rmtree(game_path)
-                print(f"[CLEANUP] Removed {folder_name} from game mods folder after sync.")
-            except Exception as e:
-                print(f"[ERROR] Failed to remove {folder_name} from game mods folder: {e}")
+                cmp = compare_versions(ws_ver, game_ver) if ws_ver and game_ver else None
+            except Exception:
+                cmp = None
+            # If game version is newer, pull it into workspace (only if folder names match)
+            if cmp is not None and cmp < 0:
+                # Game is newer
+                if ws_folder in pub_folders:
+                    print(f"[SYNC] Game mod {game_folder} (v{game_ver}) is newer than PublishReady {ws_folder} (v{ws_ver}). Overwriting PublishReady version.")
+                    copy_mod(game_path, ws_path)
+                    mods_pulled_from_game.append((ws_folder, ws_path))
+                elif ws_folder in inprog_folders:
+                    print(f"[SYNC] Game mod {game_folder} (v{game_ver}) is newer than In-Progress {ws_folder} (v{ws_ver}). Overwriting In-Progress version.")
+                    copy_mod(game_path, ws_path)
+                    mods_pulled_from_game.append((ws_folder, ws_path))
+                try:
+                    shutil.rmtree(game_path)
+                    print(f"[CLEANUP] Removed {game_folder} from game mods folder after sync.")
+                except Exception as e:
+                    print(f"[ERROR] Failed to remove {game_folder} from game mods folder: {e}")
+            # If workspace version is newer, push it to game mods folder (even if folder names differ)
+            elif cmp is not None and cmp > 0:
+                print(f"[SYNC] Workspace mod {ws_folder} (v{ws_ver}) is newer than Game {game_folder} (v{game_ver}). Updating game mods folder.")
+                try:
+                    shutil.rmtree(game_path)
+                except Exception as e:
+                    print(f"[ERROR] Failed to remove old game mod {game_folder}: {e}")
+                copy_mod(ws_path, os.path.join(os.path.dirname(game_path), ws_folder))
+                print(f"[SYNC] Copied {ws_folder} to game mods folder.")
+        # If not in game mods, do nothing (per user requirement)
 
     # Step 3: Move Mods Based on Major Version
     pub_folders = {f: os.path.join(PUBLISH_READY, f) for f in os.listdir(PUBLISH_READY) if os.path.isdir(os.path.join(PUBLISH_READY, f)) and is_agf_mod(f)}

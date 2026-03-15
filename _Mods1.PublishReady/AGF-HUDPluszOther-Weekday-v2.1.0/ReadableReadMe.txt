@@ -95,7 +95,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v2.1.0
 - Updated for 7d2d version 2.5 (still works with previous versions)
 

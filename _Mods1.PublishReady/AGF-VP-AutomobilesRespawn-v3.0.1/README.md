@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v3.0.1
 - Implemented necessary code to ensure safe update on existing games using previous version of mod.
 

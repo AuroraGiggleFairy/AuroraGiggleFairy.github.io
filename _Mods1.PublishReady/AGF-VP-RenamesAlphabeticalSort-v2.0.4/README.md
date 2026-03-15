@@ -88,7 +88,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v2.0.4
 - Raw Meat Bundle takes 5 meat per, not 50!
 

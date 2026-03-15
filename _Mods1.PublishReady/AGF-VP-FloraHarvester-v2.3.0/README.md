@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v2.3.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 - Attempted to remove durability for this item.

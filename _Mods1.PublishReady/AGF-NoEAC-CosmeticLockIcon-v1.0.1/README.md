@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v1.0.1
 - The Crafting Window was not showing the appropriate itemtypeicon/altitemtypeicon.
 

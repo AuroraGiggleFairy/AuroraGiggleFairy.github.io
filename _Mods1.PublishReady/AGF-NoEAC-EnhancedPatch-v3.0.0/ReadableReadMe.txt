@@ -1,6 +1,6 @@
 AGF-NoEAC-EnhancedPatch
 7d2d Version 2  
-Version: 2.1.0  
+Version: 3.0.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-EnhancedPatch.zip
 
  
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->
+>>>>>
 v3.0.0
 - This ONLY provides a .dll that will enhance other AGF mods if they are installed.
 

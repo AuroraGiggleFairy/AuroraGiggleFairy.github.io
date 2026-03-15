@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>
+<!-- CHANGELOG START -->>>>>>
 v2.0.0
 - Updated for 7d2d Version 2.
 - Renamed to XPDeathPenaltyReduction.
