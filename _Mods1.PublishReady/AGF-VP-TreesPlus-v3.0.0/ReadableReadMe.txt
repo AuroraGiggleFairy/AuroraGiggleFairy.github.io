@@ -1,11 +1,12 @@
 AGF-VP-TreesPlus
 7d2d Version 2  
 Version: 3.0.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TreesPlus-v3.0.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-TreesPlus.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,57 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-TreesPlus" is SAFE to install on an existing game.
-- "AGF-VP-TreesPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-TreesPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-TreesPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Planting less trees helps performance.
-    - Can plant a x5 and a x25 version of trees.
-    - Tree Naming on planting trees, like crops, to see stages.
-If FarmingPlus is installed, can craft seeds faster at its seed station.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v3.0.0
-- Added x25 versions.
-- Modified seeds naming and icons to match FarmingPlus scheme.
-- Added a recipe version for the seedstation IF FarmingPlus is installed.
-- Renamed to TreesPlus
-- Names and stages of planted trees now show like crops.
-
-v2.0.3
-- updated localization for a naming scheme.
-
-v2.0.2
-- Updated to work with 7d2d Version 2.
-- added code required to lumberjack benefits.
-
-v2.0.1
-- Sometimes you would get the wrong tree side type. Now fixed.
-
-v2.0.0
-- Updated for V1.0
-- Updated block models
-- Reduced crafting time of x5 seeds
-
-v1.0.0
-- Created this mod (As CompactTrees)
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -154,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -195,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -223,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -261,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -306,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

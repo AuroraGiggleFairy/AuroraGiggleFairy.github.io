@@ -1,11 +1,12 @@
 AGF-HUDPluszOther-Weekday
 7d2d Version 2  
 Version: 2.1.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-Weekday-v2.1.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPluszOther-Weekday.zip
 
  > None
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,45 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-HUDPluszOther-Weekday" is SAFE to install on an existing game.
-- "AGF-HUDPluszOther-Weekday" is SAFE to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-HUDPluszOther-Weekday" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-HUDPluszOther-Weekday" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- DragonTander is responsible for the little code that made this possible! Thanks @DragonTander!
-    - DragonTander gave me permission to use this freely.
-    - Next to the day number, adds the day of the week. Bloomoon is Sunday night. Day of rest? nope.
-    - Works Standalone
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.1.0
-- Updated for 7d2d version 2.5 (still works with previous versions)
-
-v2.0.0
-- restructured to account for working standalone or with my HUD.
-- Utilizes conditional operations for other HUDPlus features.
-
-v1.1.0
-- renamed from Calendar to Weekday
-
-v1.0.0
-- Just made it... Thanks DragonTander!!!
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -142,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -183,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -211,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -249,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -294,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

@@ -1,11 +1,12 @@
 zzzAGF-Special-Compatibilities
 7d2d Version 2  
 Version: 4.0.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/zzzAGF-Special-Compatibilities-v4.0.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/zzzAGF-Special-Compatibilities.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,72 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "zzzAGF-Special-Compatibilities" is SAFE to install on an existing game.
-- "zzzAGF-Special-Compatibilities" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "zzzAGF-Special-Compatibilities" is {{SAFETOINSTALL}} to install on an existing game.
+- "zzzAGF-Special-Compatibilities" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- This is a compatibility patch for mods that affect any of AGF's, most commonly:
-    - HUDPlus
-    - PurpleBook
-    - RenamesforAlphabeticalSort
-    - SimplifiedStackSizes
-    - AmmoDisassembly
-    - RebundleBundles
-- This mod determines if you have the conflicting ones installed before applying changes.
-- More can be added as requested.
-- Language support was added to:
-    - BDub's Vehicles
-    - IZY's Weapons
-    - GS Vanilla Cook Book
-- Current Compatibility List:
-    - Dewtas' 18 slot toolbelt
-    - Khaine's 15 slot toolbelt
-    - Wookie's 12 slot toolbelt
-    - RecipeStatsTab
-    - BDub's Vehicles
-    - IZY's Weapons
-    - MoreQuests
-    - Oakraven Ammo PRess
-    - GSVanillaCookBook
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v4.0.0
-- Renamed to be AGF V2 Compatibilities, as it encompasses more than my HUD.
-- Updated README and Coding organization.
-- Added RecipeStatsTab compatibility.
-- Added BDubs and Izayo's weapons compatibility.
-- Had to add 2 z's to folder and mod name.
-- Compatibility with MoreQuests mod.
-- Gave full language support localization for BDUBs.
-- Gave significant language support to Izy's Weapons.
-- Compatibility with Oakraven Ammo PRess
-- Compatibility between Oakraven Ammo PRess and Izy
-
-v.3.0.0
-- Set up conditionals so this single patch can account for multiple other hud mods out there.
-
-v2.0.0
-- Updated for 7d2d Version 2.
-
-v1.0.0
-- Made the mod.
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -169,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -210,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -238,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -276,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -321,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

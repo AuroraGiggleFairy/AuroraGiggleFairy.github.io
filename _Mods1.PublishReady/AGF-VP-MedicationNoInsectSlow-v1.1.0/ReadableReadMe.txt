@@ -1,11 +1,12 @@
 AGF-VP-MedicationNoInsectSlow
 7d2d Version 2  
 Version: 1.1.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MedicationNoInsectSlow-v1.1.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MedicationNoInsectSlow.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,43 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-MedicationNoInsectSlow" is SAFE to install on an existing game.
-- "AGF-VP-MedicationNoInsectSlow" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-MedicationNoInsectSlow" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-MedicationNoInsectSlow" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Bee Gone Cream can be crafted with 10 levels in medical crafting at a campfire with a cooking pot.
-    - The cream removes and prevents slows from Bee Swarms and Insect Swarms.
-    - The cream can also be applied to other players as a secondary action.
-    - Also findable in loot and traders, similarly to aloe cream.
-    - Steroids now ALSO have this benefit, and indicates it in descriptions and stat displays.
-
-Thanks to "Go-go, Godzilla" for the name idea.
-Thanks to "Go-go, Godzilla", B19JAY, mandytj, 13ubblegum and AsherGamess for brainstorming support.
-You can check out B19JAY and his crew here: https://www.twitch.tv/b19jay
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v1.1.0
-- Removed windows.xml as the purple book conditional is now within the purple book mod.
-
-v1.0.0
-- Made the mod (beginning with 7d2d v2.5)
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -140,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -181,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -209,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -247,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -292,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

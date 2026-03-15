@@ -1,11 +1,12 @@
 AGF-BackpackPlus-119Slots
 7d2d Version 2  
 Version: 1.2.2  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-BackpackPlus-119Slots-v1.2.2.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-BackpackPlus-119Slots.zip
 
  > You may swap with 84 or 72.
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,48 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-BackpackPlus-119Slots" is SAFE to install on an existing game.
-- "AGF-BackpackPlus-119Slots" is DANGEROUS to remove from an existing game.
-- Unique Details: You may swap with 84 or 72.
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-BackpackPlus-119Slots" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-BackpackPlus-119Slots" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)
-- 119-slot backpack with 3 rows (68 encumbrance slots)
-- Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed
-- PackMule skill unlocks all encumbrance slots
-- Compatible with PackMule, buffs, Twitch integration, and mobility perks
-- Craftable large storage (wood, iron, steel) with 120/144/168 slots:
-    - Easy-to-see lockable slots
-    - Multiple storage block shapes
-    - Breaking storage returns it to your inventory
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v1.2.2
-- Updated for consistency and automation.
-
-v1.1.0
-- When you break an insecure large storage, the block itself (not items inside) return to your inventory.
-- Added several more block shape options.
-- Updated Localization
-
-v1.0.0
-- Made the mod
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -145,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -186,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -214,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -252,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -297,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

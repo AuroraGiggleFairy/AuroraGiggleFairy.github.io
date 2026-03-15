@@ -1,11 +1,12 @@
 AGF-VP-SmeltingPlus
 7d2d Version 2  
 Version: 2.4.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-SmeltingPlus-v2.4.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-SmeltingPlus.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,64 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-SmeltingPlus" is SAFE to install on an existing game.
-- "AGF-VP-SmeltingPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-SmeltingPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-SmeltingPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Forges have 3 slots with text nicely centered.
-    - Sand smelts at same ratio as rocks and clay, 1 to 5 (default was 1 to 4).
-    - Manage your sand, rock, and clay by crafting/smelting a single nugget (for us OCD folk, lol!)
-    - Workstation level 75 unlocks recipe to craft advanced smelting metals at a workbench.
-    - 6,000 stack of advance smelting Iron, Brass, and Lead smelts at 1:5 ratio, like stones.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.4.0
-- Removed as the purple book conditional within windows.xml as it is now within the purple book mod.
-
-v2.3.0
-- Now works appropriately with version 2.5 (and previous game versions).
-- Updated progression.xml and windows.xml.
-
-v2.2.2
-- Added hopefully a clearer description of what the 1:5 metals are.
-
-v2.2.1
-- Added conditional for if someone has Mining Plus installed or not.
-
-v2.2.0
-- Will now only apply purple book edits if you have my purple book installed.
-
-v2.1.2
-- expanded possible ways of crafting the adv smelt stacks, like from radiators and bundled stacks.
-
-v2.1.1
-- Had the ratio numbers written in reverse.... facepalm
-
-v2.1.0
-- added advanced smelting metals
-
-v2.0.1
-- Removed the tint color on the "units"
-
-v2.0.0
-- Updated to V1.0
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -161,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -202,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -230,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -268,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -313,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

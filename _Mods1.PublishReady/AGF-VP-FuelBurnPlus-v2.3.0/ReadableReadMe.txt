@@ -1,11 +1,12 @@
 AGF-VP-FuelBurnPlus
 7d2d Version 2  
 Version: 2.3.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FuelBurnPlus-v2.3.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FuelBurnPlus.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,50 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-FuelBurnPlus" is SAFE to install on an existing game.
-- "AGF-VP-FuelBurnPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-FuelBurnPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-FuelBurnPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Combine wood or coal into single items with longer burn times:10m, 60m, 600m, or 6,000m.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.3.0
-- Added a 6,000m burn time item.
-- Removed the xp gain from crafting these.... exploitative.
-- Did special hidden localization naming thing to sort these appropriately.
-- Added description for fuel items.
-
-v2.2.0
-- Updated for 7d2d Version 2.
-
-v2.1.0
-- combined coal and wood items to craft into the same items.
-- made two ways to craft into the 10m, 60m, or 600m
-
-v2.0.0
-- Updated to V1.0
-- Added scrapping to coal
-- Added scrapping mathmatics to get equal resources back
-- Updated Localization
-- renamed from FuelPlus to FuelBurnPlus
-- Added the type icon campfire to the fuel.
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -147,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -188,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -216,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -254,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -299,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

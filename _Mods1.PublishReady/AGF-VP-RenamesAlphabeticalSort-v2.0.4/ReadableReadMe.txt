@@ -1,11 +1,12 @@
 AGF-VP-RenamesAlphabeticalSort
 7d2d Version 2  
 Version: 2.0.4  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-RenamesAlphabeticalSort-v2.0.4.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-RenamesAlphabeticalSort.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,63 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-RenamesAlphabeticalSort" is SAFE to install on an existing game.
-- "AGF-VP-RenamesAlphabeticalSort" is SAFE to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-RenamesAlphabeticalSort" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-RenamesAlphabeticalSort" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Naming Scheme for better sorting when pressing Auto Sort.
-    - Food and Water have values in titles.
-    - Food items that are also ingredients are indicated in title.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.0.4
-- Raw Meat Bundle takes 5 meat per, not 50!
-
-v2.0.3
-- Added the three tiered insulating armor mod.
-- Added clothing names.
-- Added empty jar to sort with drinks.
-
-v2.0.2
-- Added the missing Honey Tea.
-- Found an error in one of the translations.
-
-v2.0.1
-- Fun Pimps added full localization for new items, added it to affected items.
-
-v2.0.0
-- Renamed mod from RenamesForAutoSort to RenamesAlphabeticalSort.
-- Updated to include new things for 7d2d version 2.5.
-
-v1.0.2
-- Corrected name changes for a few of the mod items and their schematics
-- Added the prefix to the SledgeHammer Saga
-
-v1.0.1
-- Updated text to represent 7d2d Version 2.
-- Corrected the Candy Health Bar stuff.
-
-v1.0.0
-- Transfered out of 1Core for standalone modlet
-- Added more organization to naming conventions
-- Values of food/water added to appropriate items
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -160,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -201,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -229,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -267,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -312,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

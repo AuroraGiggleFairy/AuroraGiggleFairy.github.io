@@ -1,11 +1,12 @@
 AGF-VP-ModSlotsPlus
 7d2d Version 2  
 Version: 3.0.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ModSlotsPlus-v3.0.1.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-ModSlotsPlus.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,45 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-ModSlotsPlus" is SAFE to install on an existing game.
-- "AGF-VP-ModSlotsPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-ModSlotsPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-ModSlotsPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- The goal is for when you upgrade to a new tier of item, you don't "lose" mod slots.
-    - The other goal is that tier 6 equipment may have an extra slot no matter what tier of item it is.
-    - There is a general increase on mod slots on the minimum side and maximum side.
-    - The highest mod slots is 6.
-
-Note, only applies these changes to items you find/craft going forward from installation.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v3.0.1
-- updated to V2
-- removed the modification for stone and pipe weapons/tools.
-
-v3.0.0
-- updated to V1.0
-
-v2.0.2
-- Updated ReadMe to my new format
-- Corrected mod slot intentions, had to reorder the code
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -142,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -183,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -211,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -249,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -294,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

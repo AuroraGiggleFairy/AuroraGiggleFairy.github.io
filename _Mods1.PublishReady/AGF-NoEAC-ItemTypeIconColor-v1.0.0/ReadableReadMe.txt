@@ -1,11 +1,12 @@
 AGF-NoEAC-ItemTypeIconColor
 7d2d Version 2  
 Version: 1.0.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-ItemTypeIconColor-v1.0.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-ItemTypeIconColor.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,40 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: No
-- Server Side: No
-- Client Required for Multiplayer: Yes
-- "AGF-NoEAC-ItemTypeIconColor" is SAFE to install on an existing game.
-- "AGF-NoEAC-ItemTypeIconColor" is UNKNOWN to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-NoEAC-ItemTypeIconColor" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-NoEAC-ItemTypeIconColor" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- For modders, in xml, at least for items.xml and blocks.xml, you can use the property "ItemTypeIconColor".
-- Vanilla, you could only adjust the color of the ALTERNATE icon color (like after reading a book), with "AltItemTypeIconColor".
-
-5.  EXAMPLE
-
-I pulled this from my HUD Mod
-
-    
-
-6.  CHANGELOG
-v1.0.0
-- Made the mod.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -137,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -178,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -206,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -244,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -289,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

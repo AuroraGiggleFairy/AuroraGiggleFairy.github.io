@@ -1,11 +1,12 @@
 AGF-VP-FloraHarvester
 7d2d Version 2  
 Version: 2.3.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FloraHarvester-v2.3.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-FloraHarvester.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,61 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-FloraHarvester" is SAFE to install on an existing game.
-- "AGF-VP-FloraHarvester" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-FloraHarvester" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-FloraHarvester" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- A tool to more quickly harvest flora. (plants and crops, etc)
-    - Levels in LivingOfftheLand reduces stamina use.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.3.0
-- Removed windows.xml as the purple book conditional is now within the purple book mod.
-- Attempted to remove durability for this item.
-
-v2.2.1
-- Updated for 2.5 (only changes to purple book).
-
-v2.2.0
-- Levels in living off the land now reduces stamina use.
-- Repairing no longer takes a long time.
-
-v2.1.0
-- Will now only apply purple book edits if you have my purple book installed.
-
-v2.0.1
-- Updated for 7d2d Version 2.
-- Created a new material for the item to remove particle errors.
-
-v2.0.0
-- Updated for zoom in feature of HUD
-
-v1.0.2
-- updated the window display for the HUD Checklist, if mod is used with the HUD
-
-v1.0.1
-- removed the upgrading block feature as I forgot it allows quick upgrading of blocks.
-- Updated the localization to remove "repairing" information.
-
-v1.0.0
-- Made the mod
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -158,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -199,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -227,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -265,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -310,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

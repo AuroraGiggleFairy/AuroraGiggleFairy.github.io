@@ -1,11 +1,12 @@
 AGF-VP-PumpkinsPlus
 7d2d Version 2  
 Version: 2.0.4  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PumpkinsPlus-v2.0.4.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-PumpkinsPlus.zip
 
  > Molo-Jack-Ovs -ProfSeatbelt
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,56 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-PumpkinsPlus" is SAFE to install on an existing game.
-- "AGF-VP-PumpkinsPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-PumpkinsPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-PumpkinsPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Throw pumpkins that explode like molotovs.
-    - Wear a pumpkin as a cosmetic mod on your helmet!
-    - You can also bundle the pumpkin head mod.
-    - The helmet mod scraps the same way a jack-o-lantern does... into plant fibers.
-
-This mod idea came from a collection of friends/twitch viewers/discord peeps, and other insane people like AGF.
-(Lots of mechanics ideas came from IceRogue)
-(Molo-Jack-Ovs' name came from ProfSeatbelt)
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.0.4
-- updated to put helmet cosmetic mod as a MOD instead of a dye color due to 7d2d changes.
-
-v2.0.3
-- updated for 7d2d Version 2
-
-v2.0.2
-- updated localization and colors to fit with other VP theme
-
-v2.0.1
-- Drop mesh of the pumpkin helmet is now a jack-o-lantern. LOL
-
-v2.0.0
-- Updated to work with V1
-- Change the hold type of molo-jack-ovs (not in your hand directly, but shows throwing animation)
-
-v1.2.0
-- Added bundle version of mod
-- Updated ReadMe to my new format.
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -153,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -194,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -222,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -260,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -305,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

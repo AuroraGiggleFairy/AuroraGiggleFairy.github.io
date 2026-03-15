@@ -1,11 +1,12 @@
 AGF-VP-AutomobilesRespawn
 7d2d Version 2  
 Version: 3.0.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-AutomobilesRespawn-v3.0.1.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-AutomobilesRespawn.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,54 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-AutomobilesRespawn" is SAFE to install on an existing game.
-- "AGF-VP-AutomobilesRespawn" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-AutomobilesRespawn" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-AutomobilesRespawn" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Vehicles that are salvaged leaves a hubcap.
-- The hubcap has 2,500 hit points and prevents blocks being built over respawn location.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v3.0.1
-- Implemented necessary code to ensure safe update on existing games using previous version of mod.
-
-v3.0.0
-- A rework for better coding and additional features.
-- Randomness is applied where appropriate.
-- The "plant" is a hubcap, drive over able AND will take up space to prevent building in its respawn.
-- Removed the tip for now. I like having it to inform new players on my server, but it isn't working as intended.
-- Updated localization.
-
-v2.0.3
-- Removed airConditioner, decoCarRadiatorFlat and radiatorHouse01 from activating the message alert.
-- Significantly reduce the frequency of the message alert.
-
-v2.0.2
-- Updated the tags situation as the game updated.
-
-v2.0.1
-- had to fix tags for existing vehicles so challenges would work
-
-v2.0.0
-- Updated and fixed for V1.0
-- Had to make several fixes!
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -151,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -192,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -220,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -258,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -303,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

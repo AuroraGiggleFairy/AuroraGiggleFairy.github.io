@@ -1,11 +1,12 @@
 AGF-HUDPlus-PurpleBook
 7d2d Version 2  
 Version: 2.0.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPlus-PurpleBook-v2.0.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-HUDPlus-PurpleBook.zip
 
  > None
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,57 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-HUDPlus-PurpleBook" is SAFE to install on an existing game.
-- "AGF-HUDPlus-PurpleBook" is SAFE to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-HUDPlus-PurpleBook" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-HUDPlus-PurpleBook" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Works standalone from HUDPlus-1Main
-- A purple book icon that opens up Details on one page (With Zooming Option)!
-    - Magazine unlocks
-    - Books
-    - Unlocks from Schematics/Books
-    - Armor Details
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.0.0
-- Revamped the UI code to be easier to create compatibilities with other mods. (Still more to do.)
-- Updated Readme to some format changes AGF is making.
-- Changed the green fill in color a litte.
-- Sucessfuly prevented the grey division lines from appearing in the green.
-
-v1.1.0
-- updated changes of the workstation for 2.5 and positioning.
-- updated changes to the foods tabs.
-- checks 7d2d game version of 2.5 and before.
-- if mod user updates game from 2.4 to 2.5, will remove the unused cvars.
-- Added the new schematic for vehicle storages under the unlocks tab.
-
-v1.0.1
-- some name changes for working with new AGF mods.
-- corrections on a few icons and their names.
-- Under zoomed in harvesting tools, added all the tools.
-- cleaning up the presentation of the code in windows.xml.
-- Added some code to account for new mods.
-
-v1.0.0
-- Separated feature from HUDPlus 1Main
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -154,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -195,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -223,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -261,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -306,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

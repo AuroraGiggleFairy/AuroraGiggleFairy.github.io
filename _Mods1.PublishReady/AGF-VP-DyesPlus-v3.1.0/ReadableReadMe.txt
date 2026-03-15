@@ -1,11 +1,12 @@
 AGF-VP-DyesPlus
 7d2d Version 2  
 Version: 3.1.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DyesPlus-v3.1.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DyesPlus.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,49 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-DyesPlus" is SAFE to install on an existing game.
-- "AGF-VP-DyesPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-DyesPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-DyesPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Easily interchange dye colors:  
-A.SCRAP any dye to get 15 paint.  
-B.CRAFT any dye with 15 paint.
-    - Added 27 Colors with simple naming scheme.
-    - Added Invisible Dye that can hide a worn item.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v3.1.0
-- Updated for 7d2d version 2.
-
-v3.0.0
-- Turned my original version of orange into the bright orange.
-- Updated the modifier tags to represent V1.0 method.
-- Removed item overides specific to clothing as that is not used any longer.
-- Fully removed the bundling code, as the code was only kept to prevent errors with installing the update
-
-v2.0.2
-- DISCOVERED BUG: IF you apply the invisible dye, do it from within the inventory and not while wearing, so that buffs from mods apply correct.
-- Updated ReadMe File to my new format.
-- removed an accidental pasted in line.
-- Newer dyes were changing skin color instead of clothes for a few items, now fixed.
-- All dyes show up under "science" crafting category.
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -146,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -187,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -215,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -253,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -298,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

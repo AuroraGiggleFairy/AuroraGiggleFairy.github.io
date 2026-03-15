@@ -49,29 +49,30 @@ Welcome! This guide will help you use the AGF mod management script for 7 Days t
 ### Folder Renaming
 - If the folder name does not match the `Name` in `ModInfo.xml`, rename the folder to match (if the name is valid).
 
-### Update `mod_compatibility.csv`
-- If a folder was renamed, update the `MOD_NAME` in the CSV.
-- Add new mods to the CSV. For any missing info, put `MISSINGDATA`.
+### Update `HELPER_ModCompatibility.csv`
+- All lookups, updates, and file names use the **base mod name** (folder name with version removed), not the versioned folder name.
+- If a folder was renamed, update the `MOD_NAME` in the CSV to the new base mod name.
+- Add new mods to the CSV using the base mod name. For any missing info, put `MISSINGDATA`.
 - If any fields are empty, fill them with `MISSINGDATA`.
 - Remove CSV entries for mods that no longer exist.
 
 ### Quote Files
-- For every mod in the CSV, make sure there is a quote file in `_Quotes/` (named `MOD_NAME.txt`).
-- If a mod is renamed, rename its quote file too.
+- For every mod in the CSV, make sure there is a quote file in `_Quotes/` (named with the **base mod name**: `MOD_NAME.txt`).
+- If a mod is renamed, rename its quote file to match the new base mod name.
 - Never delete quote files—only create or rename them.
-- The `QUOTE_FILE` column in the CSV must always match the actual quote file name.
+- The `QUOTE_FILE` column in the CSV must always match the actual quote file name (using the base mod name).
 
 ### README.md and ReadableReadMe.txt
 - For each mod, create a `README.md` from the template:
-  - Fill in `MOD_NAME`, `MOD_VERSION`, and `DOWNLOAD_LINK`.
-  - Insert the contents of the quote file as a Markdown blockquote for `{{QUOTE}}`.
+  - Fill in **all fields** (`MOD_NAME`, `MOD_VERSION`, `DOWNLOAD_LINK`, and all compatibility/metadata fields such as EAC_FRIENDLY, SERVER_SIDE, CLIENT_REQUIRED, SAFE_TO_INSTALL, SAFE_TO_REMOVE, UNIQUE, etc.) **from `HELPER_ModCompatibility.csv` using the base mod name**.
+  - Insert the contents of the quote file (looked up by base mod name) as a Markdown blockquote for `{{QUOTE}}`.
 - After updating `README.md`, create `ReadableReadMe.txt` in the same folder by converting the Markdown to plain text (remove formatting, links, blockquotes, and convert dividers).
 - Do this for both `_Mods1.PublishReady` and `_Mods2.In-Progress`.
 
 ### Preserve Important Info
 - Keep the `Version` in `ModInfo.xml` from the game mods folder (if it’s higher).
 - Keep the changelog/features section in `README.md` from the game mods folder (if it’s newer or changed).
-- All other info should be managed in VS Code and only overwritten when a new version is published.
+- All other info (compatibility, metadata, quote references) is managed in VS Code and only overwritten when a new version is published, using the base mod name for all lookups.
 
 ---
 

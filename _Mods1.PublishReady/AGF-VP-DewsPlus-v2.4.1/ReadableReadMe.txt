@@ -1,11 +1,12 @@
 AGF-VP-DewsPlus
 7d2d Version 2  
 Version: 2.4.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DewsPlus-v2.4.1.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-DewsPlus.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,102 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-DewsPlus" is SAFE to install on an existing game.
-- "AGF-VP-DewsPlus" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-DewsPlus" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-DewsPlus" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Compile 5 dew collectors into 1 that acts like 5 (or 25).
-- Dew Collectors are now sized 2x2 instead of 3x3
-- Heat production is removed.
-- Safe for existing games and easy conversion of original 3x3 to 2x2.
-- Place down any old 3x3.
-- Break them and you will get the new 2x2.
-- This method prevents invisible and untouchable blocks around old dew collectors.
-- If you have 500 jugs, you can open all of them in the crafting menu.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v2.4.1
-- Corrected a conditional error that prevented games from loading.
-
-v2.4.0
-- Updated for 7d2d version 2.6.
-- Now has x5 and x25 versions of the tools that go into the dew collector.
-- Naming scheme update.
-- Updated README format
-
-v2.3.2
-- A bulk crafting and open was missing a digit. Only gaining 250 water instead of 2,500.
-
-v2.3.1
-- updated for 2.5
-- dew collectors craft at workbench.
-
-v2.3.0
-- Removed HEAT production on all dew collectors.
-- Added a x25 version!
-- Increased the bundle stack sizes of the larger water bundles from 50 to 500.
-
-v2.2.1
-- Breaking a x5 dew collector returns it to your hands, just like the regular one.
-
-v2.2.0
-- Will now only apply purple book edits if you have my purple book installed.
-
-v2.1.0
-- If you have 50 jugs, you can open all of them in the crafting menu.
-
-v2.0.3
-- updated for 7d2d Version 2
-
-v2.0.2
-- changed the bulk murky water icon to be consistent
-- gave this icon a murky water color-ish
-
-v2.0.1
-- corrected the Challenge of placing a dew collector.
-
-v2.0.0
-- Updated for V1.0
-- New method of x5 due to tools for dews
-
-v1.1.4
-- Added in windows.xml to make sure the dew collector is the correct name on the schematic list.
-- Fixed the sorting of the dew collector types.
-- Made the x5 dew collector unlock with the regular one.
-
-v1.1.3
-- Corrected the name of what gets unlocked for Dew Collector's under progression.xml.
-- Removed the "third" recipe for a dew collector that was unintentionally there.
-
-V1.1.2
-- Added the number "5" to the icon type.
-
-v1.1.1
-- Fixed the recipe to the correct x5 dew collector.
-
-v1.1.0
-- Dew collectors now 2x2, except the old ones, which if you destroy, you get the 2x2 version.
-- changed mod name to DewsPlus
-
-v1.0.0
-- Created the mod.
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -199,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -240,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -268,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -306,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -351,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

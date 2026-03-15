@@ -1,11 +1,12 @@
 AGF-VP-CraftStackEngBattCells
 7d2d Version 2  
 Version: 3.3.0  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-CraftStackEngBattCells-v3.3.0.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-CraftStackEngBattCells.zip
 
  
 
 ========================================
+
 ========================================
 
 README TABLE OF CONTENTS
@@ -22,6 +23,7 @@ README TABLE OF CONTENTS
 11. Backup Guide
 
 ========================================
+
 ========================================
 
 1. About Author
@@ -37,6 +39,7 @@ README TABLE OF CONTENTS
   - https://www.nexusmods.com/7daystodie
 
 ========================================
+
 ========================================
 
 2. Mod Philosophy
@@ -57,6 +60,7 @@ Language Support
 - If you find a translation error, please let AGF know on DISCORD: https://discord.gg/Vm5eyW6N4r.
 
 ========================================
+
 ========================================
 
 3. Need Help?
@@ -64,60 +68,31 @@ Language Support
 - All questions welcome from newcomers and seasoned players alike.
 
 ========================================
+
 ========================================
 
 4. Compatibility
-- EAC Friendly: Yes
-- Server Side: Yes
-- Client Required for Multiplayer: No
-- "AGF-VP-CraftStackEngBattCells" is SAFE to install on an existing game.
-- "AGF-VP-CraftStackEngBattCells" is DANGEROUS to remove from an existing game.
-- Unique Details: None
+- EAC Friendly: {{EACFRIENDLY}}
+- Server Side: {{SERVERSIDE}}
+- Client Required for Multiplayer: {{CLIENTREQUIRED}}
+- "AGF-VP-CraftStackEngBattCells" is {{SAFETOINSTALL}} to install on an existing game.
+- "AGF-VP-CraftStackEngBattCells" is {{SAFETOREMOVE}} to remove from an existing game.
+- Unique Details: {{UNIQUE}}
 
 ========================================
+
 ========================================
 
 5. Features
 
-- Engines, Batteries and Solar Cells now stack.
-    - In Battery Banks, will need to replace the batteries with new item Rechargeable-Battery.
-    - Craft Engines with electrician level 40 at a workbench.
-    - Craft solar banks with electrician level 80 at a workbench.
-    - Craft solar cells with electrician level 100 at a workbench.
-
 ========================================
+
 ========================================
 
 6. Changelog
 
-v3.3.0
-- Removed windows.xml as the purple book conditional is now within the purple book mod.
-
-v3.2.0
-- Updated for 7d2d version 2.5 (still works with previous versions).
-- Update was specifically how it modifies the purple book mod if you use it.
-
-v3.1.1
-- added missing tooltips for the purple book.
-
-v3.1.0
-- Will now only apply purple book edits if you have my purple book installed.
-
-v3.0.1
-- Updated to work with 7d2d Version 2.
-
-v3.0.0
-- Renamed to CraftStackEngBattCells.
-- Updated HUD Checklist to incorporate changes with both checklist and zoomed.
-- Craft solarbanks and solar cells at appropriate levels of progression.
-
-v2.0.0
-- Made it compatible with zoom in features of the HUDPlus.
-
-v1.0.0
-- Transferred code out of 1Core to this standalone modlet.
-
 ========================================
+
 ========================================
 
 7. Important Mod Details
@@ -157,6 +132,7 @@ C. What are 🛡️ EAC-Friendly 🛡️ Mods?
    - You can do this on AGF's Discord as well: DISCORD: https://discord.gg/Vm5eyW6N4r
 
 ========================================
+
 ========================================
 
 8. Installation Guide
@@ -198,6 +174,7 @@ C. Multiplayer Dedicated Server (hosted sites or player-run)
    - Make sure the mod folder is not inside another folder with the same name (move it up if needed)
 
 ========================================
+
 ========================================
 
 9. Removal Guide
@@ -226,6 +203,7 @@ B. How do I remove mods?
 - To remove, simply locate the mod folder and delete it. All done!
 
 ========================================
+
 ========================================
 
 10. Update Guide
@@ -264,6 +242,7 @@ C. Updating entire AGF Pack
 5. THEN you may turn the game back on.
 
 ========================================
+
 ========================================
 
 11. Backup Guide
@@ -309,4 +288,5 @@ C. To Restore a Backup
 3. Move your backup folder back into "Saves"
 
 ========================================
+
 ========================================

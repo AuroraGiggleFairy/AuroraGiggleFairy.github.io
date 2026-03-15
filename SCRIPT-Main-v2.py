@@ -191,7 +191,11 @@ def main():
                     shutil.rmtree(dest)
                 shutil.move(inprog_path, dest)
 
+    # =============================
     # Step 4: Special Handling (Renaming, Compatibility, Quotes, README)
+    # =============================
+
+    # --- 4.1 Folder Renaming ---
     folder_renames = []
     for mod_dir in [PUBLISH_READY, IN_PROGRESS]:
         for folder_name in os.listdir(mod_dir):
@@ -212,6 +216,156 @@ def main():
                     for i, (old_name, ws_path) in enumerate(mods_pulled_from_game):
                         if old_name == folder_name:
                             mods_pulled_from_game[i] = (target_name, new_path)
+
+    # --- 4.2 Update mod_compatibility.csv (or HELPER_ModCompatibility.csv) ---
+    # NOTE: This assumes HELPER_ModCompatibility.csv is used, as per your current workflow.
+    import csv
+    COMPAT_CSV = os.path.join(VS_CODE_ROOT, 'HELPER_ModCompatibility.csv')
+    def get_base_mod_name(name):
+        return re.sub(r'-v\d+\.\d+(\.\d+)?$', '', name)
+
+    mods_now = set()
+    folder_name_to_base = {}
+    for mod_dir in [PUBLISH_READY, IN_PROGRESS]:
+        for folder_name in os.listdir(mod_dir):
+            if is_agf_mod(folder_name):
+                base_name = get_base_mod_name(folder_name)
+                mods_now.add(base_name)
+                folder_name_to_base[folder_name] = base_name
+    csv_rows = []
+    csv_fieldnames = ['MOD_NAME', 'QUOTE_FILE']
+    if os.path.exists(COMPAT_CSV):
+        with open(COMPAT_CSV, 'r', encoding='utf-8', newline='') as f:
+            reader = csv.DictReader(f)
+            csv_fieldnames = reader.fieldnames if reader.fieldnames else csv_fieldnames
+            for row in reader:
+                csv_rows.append(row)
+    # Remove entries for mods that no longer exist
+    csv_rows = [row for row in csv_rows if row.get('MOD_NAME') in mods_now]
+    # Add new mods and update renamed mods
+    existing_mods = {row['MOD_NAME'] for row in csv_rows}
+    for mod in mods_now:
+        if mod not in existing_mods:
+            csv_rows.append({fn: 'MISSINGDATA' for fn in csv_fieldnames})
+            csv_rows[-1]['MOD_NAME'] = mod
+            csv_rows[-1]['QUOTE_FILE'] = f'{mod}.txt'
+    # Update QUOTE_FILE for renamed mods
+    for row in csv_rows:
+        row['QUOTE_FILE'] = f"{row['MOD_NAME']}.txt"
+        for fn in csv_fieldnames:
+            if not row.get(fn):
+                row[fn] = 'MISSINGDATA'
+    # Write back to CSV
+    with open(COMPAT_CSV, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=csv_fieldnames)
+        writer.writeheader()
+        writer.writerows(csv_rows)
+
+    # --- 4.3 Quote Files ---
+    QUOTES_DIR = os.path.join(VS_CODE_ROOT, '_Quotes')
+    os.makedirs(QUOTES_DIR, exist_ok=True)
+    # Ensure quote file exists and is named correctly for every mod in the CSV
+    for row in csv_rows:
+        mod_name = row['MOD_NAME']
+        quote_file = row['QUOTE_FILE']
+        quote_path = os.path.join(QUOTES_DIR, quote_file)
+        # If mod was renamed, rename quote file if old one exists (using base names)
+        for old_name, new_name, mod_dir in folder_renames:
+            old_base = get_base_mod_name(old_name)
+            new_base = get_base_mod_name(new_name)
+            old_quote = os.path.join(QUOTES_DIR, f'{old_base}.txt')
+            new_quote = os.path.join(QUOTES_DIR, f'{new_base}.txt')
+            if os.path.exists(old_quote) and not os.path.exists(new_quote):
+                os.rename(old_quote, new_quote)
+                print(f"[QUOTE] Renamed quote file: {old_base}.txt -> {new_base}.txt")
+        # Always overwrite with latest quote (if you have a source, here just ensure file exists)
+        if not os.path.exists(quote_path):
+            with open(quote_path, 'w', encoding='utf-8') as f:
+                f.write("")
+            print(f"[QUOTE] Created missing quote file: {quote_file}")
+
+    # --- 4.4 README.md and ReadableReadMe.txt ---
+    # For each mod, create README.md from template and ReadableReadMe.txt
+    MOD_README_TEMPLATE = os.path.join(VS_CODE_ROOT, 'TEMPLATE-ModReadMe.md')
+    # --- Load compatibility data from CSV for all mods ---
+    compat_data = {}
+    if os.path.exists(COMPAT_CSV):
+        with open(COMPAT_CSV, 'r', encoding='utf-8', newline='') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                compat_data[row['MOD_NAME']] = row
+
+    for mod_dir in [PUBLISH_READY, IN_PROGRESS]:
+        for folder_name in os.listdir(mod_dir):
+            if not is_agf_mod(folder_name):
+                continue
+            mod_path = os.path.join(mod_dir, folder_name)
+            modinfo_path = os.path.join(mod_path, 'ModInfo.xml')
+            if not os.path.exists(modinfo_path):
+                continue
+            mod_name, mod_version = parse_modinfo(modinfo_path, folder_name)
+            base_name = get_base_mod_name(folder_name)
+            download_link = f'https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/{base_name}.zip'
+            # Get compatibility fields from CSV
+            compat = compat_data.get(base_name, {})
+            eac_friendly = compat.get('EAC_FRIENDLY', 'MISSINGDATA')
+            server_side = compat.get('SERVER_SIDE', 'MISSINGDATA')
+            client_required = compat.get('CLIENT_REQUIRED', 'MISSINGDATA')
+            safe_to_install = compat.get('SAFE_TO_INSTALL', 'MISSINGDATA')
+            safe_to_remove = compat.get('SAFE_TO_REMOVE', 'MISSINGDATA')
+            unique = compat.get('UNIQUE', 'MISSINGDATA')
+            quote_file = os.path.join(QUOTES_DIR, f'{base_name}.txt')
+            quote_md = ''
+            if os.path.exists(quote_file):
+                with open(quote_file, 'r', encoding='utf-8') as f:
+                    quote_text = f.read().strip()
+                if quote_text:
+                    quote_md = format_blockquote(quote_text)
+            # Fill template, but preserve existing Features and Changelog blocks if present
+            if os.path.exists(MOD_README_TEMPLATE):
+                with open(MOD_README_TEMPLATE, 'r', encoding='utf-8') as f:
+                    template = f.read()
+                readme_content = template.replace('{{MOD_NAME}}', mod_name)
+                readme_content = readme_content.replace('{{MOD_VERSION}}', mod_version)
+                readme_content = readme_content.replace('{{DOWNLOAD_LINK}}', download_link)
+                readme_content = readme_content.replace('{{QUOTE}}', quote_md)
+                readme_content = readme_content.replace('{{EAC_FRIENDLY}}', eac_friendly)
+                readme_content = readme_content.replace('{{SERVER_SIDE}}', server_side)
+                readme_content = readme_content.replace('{{CLIENT_REQUIRED}}', client_required)
+                readme_content = readme_content.replace('{{SAFE_TO_INSTALL}}', safe_to_install)
+                readme_content = readme_content.replace('{{SAFE_TO_REMOVE}}', safe_to_remove)
+                readme_content = readme_content.replace('{{UNIQUE}}', unique)
+                readme_path = os.path.join(mod_path, 'README.md')
+                # --- PRESERVE FEATURES/CHANGELOG ---
+                features_block = ''
+                changelog_block = ''
+                if os.path.exists(readme_path):
+                    with open(readme_path, 'r', encoding='utf-8') as f:
+                        old_content = f.read()
+                    # Extract features
+                    f_start = old_content.find('<!-- FEATURES START -->')
+                    f_end = old_content.find('<!-- FEATURES END -->')
+                    if f_start != -1 and f_end != -1:
+                        features_block = old_content[f_start+21:f_end]
+                    # Extract changelog
+                    c_start = old_content.find('<!-- CHANGELOG START -->')
+                    c_end = old_content.find('<!-- CHANGELOG END -->')
+                    if c_start != -1 and c_end != -1:
+                        changelog_block = old_content[c_start+21:c_end]
+                # Replace in new content
+                if features_block:
+                    readme_content = re.sub(r'(<!-- FEATURES START -->)([\s\S]*?)(<!-- FEATURES END -->)', r'\1' + features_block + r'\3', readme_content, flags=re.MULTILINE)
+                if changelog_block:
+                    readme_content = re.sub(r'(<!-- CHANGELOG START -->)([\s\S]*?)(<!-- CHANGELOG END -->)', r'\1' + changelog_block + r'\3', readme_content, flags=re.MULTILINE)
+                with open(readme_path, 'w', encoding='utf-8') as f:
+                    f.write(readme_content)
+                # Create ReadableReadMe.txt
+                txt_path = os.path.join(mod_path, 'ReadableReadMe.txt')
+                txt_content = markdown_to_text(readme_content)
+                with open(txt_path, 'w', encoding='utf-8') as f:
+                    f.write(txt_content)
+    # --- 4.5 Preserve Important Info ---
+    # (Handled in earlier steps: version/changelog from game mods folder is preserved if newer)
 
     # Step 5: Push Updated Mods Back to the Game Mods Folder (If Pulled Earlier)
     for mod_name, ws_path in mods_pulled_from_game:
