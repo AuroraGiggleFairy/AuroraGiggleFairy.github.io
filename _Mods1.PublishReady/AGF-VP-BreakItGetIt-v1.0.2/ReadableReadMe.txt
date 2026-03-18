@@ -106,7 +106,7 @@ solar bank
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v1.0.2
 - Destroying a table saw will no longer give you a cement mixer. LOL!
 

@@ -108,7 +108,7 @@ NOTE
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v3.0.2
 - Updated to run on V2, only edited to make it run well. (still could be other errors).
 

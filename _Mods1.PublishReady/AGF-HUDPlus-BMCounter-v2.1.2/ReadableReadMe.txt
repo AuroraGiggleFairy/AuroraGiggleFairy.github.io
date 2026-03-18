@@ -95,7 +95,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v2.1.2
 - Just a change in code naming for better compatibility and modding.
 

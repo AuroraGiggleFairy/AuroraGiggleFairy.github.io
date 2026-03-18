@@ -100,7 +100,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v1.2.2
 - Updated for consistency and automation.
 

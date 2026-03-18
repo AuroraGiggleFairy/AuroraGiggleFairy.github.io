@@ -102,7 +102,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v2.0.1
 - updated for 7d2d Version 2.0
 

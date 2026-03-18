@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v3.0.
 - Completely revamped and redone.
 - Modified original doorsplus to ensure safe updating.

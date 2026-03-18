@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v1.0.0
 - Made the mod.
 <!-- CHANGELOG END -->

@@ -165,6 +165,8 @@ This outline is the **master reference** for both humans and AI. The main script
 3. The script enforces consistent formatting for all category headers and special sections in README.md, including a single divider (`---`), blank line, `<br>`, blank line, and the section header. This applies to all main categories and the HUDPluszOther table section, ensuring a clean and professional appearance.
 4. If updating the README fails, log a warning and continue.
 
+5. The script always lists the AGF-BackpackPlus-119Slots mod last in the Backpack Plus Mods section, regardless of folder order, to ensure consistent presentation.
+
 ---
 
 ## Step 8: What If Something Goes Wrong?

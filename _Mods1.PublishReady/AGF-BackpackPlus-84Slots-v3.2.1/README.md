@@ -93,7 +93,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v3.2.1
 - Updated for consistency and automation.
 

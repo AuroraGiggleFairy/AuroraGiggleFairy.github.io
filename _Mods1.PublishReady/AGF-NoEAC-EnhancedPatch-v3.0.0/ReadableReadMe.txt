@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v3.0.0
 - This ONLY provides a .dll that will enhance other AGF mods if they are installed.
 

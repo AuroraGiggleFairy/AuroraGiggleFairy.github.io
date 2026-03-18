@@ -97,7 +97,7 @@ Find a translation error? Please let me know!
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v6.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

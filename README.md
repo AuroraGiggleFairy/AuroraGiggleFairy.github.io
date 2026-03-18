@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 15, 2026, 12:37 PM EST*
+*March 18, 2026, 3:26 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -459,17 +459,6 @@
 
 *Download all above or select one below.*
 
-> ### **AGF-BackpackPlus-119Slots** *-v1.2.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-BackpackPlus-119Slots.zip)
-> *Expands your inventory with a 119-slot backpack and adds craftable, extra-large storage options.*
-> <details> <summary>*Show detailed features*</summary>
->
-> <ul><li>Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)</li><li>119-slot backpack with 3 rows (68 encumbrance slots)</li><li>Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed</li><li>PackMule skill unlocks all encumbrance slots</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks</li><li>Craftable large storage (wood, iron, steel) with 120/144/168 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
-> 
-> </details>
-> 
-
----
-
 > ### **AGF-BackpackPlus-60Slots** *-v3.2.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-BackpackPlus-60Slots.zip)
 > *Expands your inventory with a 60-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
@@ -497,6 +486,17 @@
 > <details> <summary>*Show detailed features*</summary>
 >
 > <ul><li>Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)</li><li>84-slot backpack with 3 rows (36 encumbrance slots)</li><li>PackMule skill unlocks all encumbrance slots</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks</li><li>Craftable large storage (wood, iron, steel) with 120/144/168 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
+> 
+> </details>
+> 
+
+---
+
+> ### **AGF-BackpackPlus-119Slots** *-v1.2.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-BackpackPlus-119Slots.zip)
+> *Expands your inventory with a 119-slot backpack and adds craftable, extra-large storage options.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Inventory cell size is 16% smaller than vanilla (56×56 vs 67×67 px)</li><li>119-slot backpack with 3 rows (68 encumbrance slots)</li><li>Some UI overlap may occur due to the large backpack size; adjust UI zoom in the game menu if needed</li><li>PackMule skill unlocks all encumbrance slots</li><li>Compatible with PackMule, buffs, Twitch integration, and mobility perks</li><li>Craftable large storage (wood, iron, steel) with 120/144/168 slots:</li><ul><li>Easy-to-see lockable slots</li><li>Multiple storage block shapes</li><li>Breaking storage returns it to your inventory</li></ul></ul>
 > 
 > </details>
 > 
@@ -1292,11 +1292,11 @@
 
 ---
 
-> ### **AGF-NoEAC-ScreamerAlert** *-v1.0.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ScreamerAlert.zip)
-> *Screamer Alert Messages, best with AGF HUD.*
+> ### **AGF-NoEAC-ScreamerAlert** *-v1.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ScreamerAlert.zip)
+> *A visual Screamer Alert appears when the player is near a screamer or its horde.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul><li>When a player is within 120m of a screamer, Screamer Alert message appears.</li><li>Disappears if you kill all screamers.</li><li>Will also disappear if you leave the range.</li><li>If the screamer spawns a horde, a Horde Incoming Alert appears.</li><li>Disappears after 10 seconds.</li></ul>
+> <ul><li>An alert appears when you are within 120 meters of any live screamer or any zombie spawned by a screamer horde.</li><li>The alert shows how many of these zombies are in range.</li><li>The alert disappears if none are close or alive.</li></ul>
 > 
 > </details>
 > 

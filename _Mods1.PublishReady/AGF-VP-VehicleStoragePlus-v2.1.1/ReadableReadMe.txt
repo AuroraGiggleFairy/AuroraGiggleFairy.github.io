@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v2.1.1
 - Works with 2.5 (continues to work with older 2.0 versions as well.)
 

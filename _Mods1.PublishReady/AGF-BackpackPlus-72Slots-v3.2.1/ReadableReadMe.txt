@@ -99,7 +99,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v3.2.1
 - Updated for consistency and automation.
 

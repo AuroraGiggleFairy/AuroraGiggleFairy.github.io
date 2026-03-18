@@ -101,7 +101,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v1.0.1
 - Had the wrong files in this mod! facepalm
 

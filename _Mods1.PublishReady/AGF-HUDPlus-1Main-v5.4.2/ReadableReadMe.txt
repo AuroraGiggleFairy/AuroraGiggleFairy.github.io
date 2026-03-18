@@ -106,7 +106,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v5.4.2
 - Updated the references to new naming scheme CORRECTLY.
 

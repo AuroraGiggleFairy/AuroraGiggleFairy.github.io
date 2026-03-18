@@ -93,7 +93,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v2.4.1
 - Corrected a conditional error that prevented games from loading.
 

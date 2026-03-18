@@ -97,7 +97,7 @@ Note, only applies these changes to items you find/craft going forward from inst
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v3.0.1
 - updated to V2
 - removed the modification for stone and pipe weapons/tools.

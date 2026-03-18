@@ -96,7 +96,7 @@ Suicide Hotline is 988
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v2.0.1
 - Updated to 7d2d Version 2.
 

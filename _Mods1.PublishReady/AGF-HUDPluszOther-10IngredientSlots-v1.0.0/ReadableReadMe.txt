@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v1.0.0
 - Created the mod for 7d2d version 2, with conditionals.
 

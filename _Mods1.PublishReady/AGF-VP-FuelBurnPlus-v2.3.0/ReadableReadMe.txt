@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v2.3.0
 - Added a 6,000m burn time item.
 - Removed the xp gain from crafting these.... exploitative.

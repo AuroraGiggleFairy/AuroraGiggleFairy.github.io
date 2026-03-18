@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v1.0.1
 - Updated to account for stack size changes made to some ammo production resources.
 

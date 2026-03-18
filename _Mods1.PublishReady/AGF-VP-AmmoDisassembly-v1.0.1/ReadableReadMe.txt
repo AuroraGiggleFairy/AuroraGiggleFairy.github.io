@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v1.0.1
 - Updated README and notes in code
 - Fixed ingredient change for flaming arrows/bolts for v2.5+.

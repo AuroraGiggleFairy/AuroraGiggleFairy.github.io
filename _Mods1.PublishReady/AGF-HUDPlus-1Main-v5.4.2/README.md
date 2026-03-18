@@ -100,7 +100,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v5.4.2
 - Updated the references to new naming scheme CORRECTLY.
 

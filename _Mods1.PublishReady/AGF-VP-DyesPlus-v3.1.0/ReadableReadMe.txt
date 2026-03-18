@@ -96,7 +96,7 @@ B.CRAFT any dye with 15 paint.
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v3.1.0
 - Updated for 7d2d version 2.
 

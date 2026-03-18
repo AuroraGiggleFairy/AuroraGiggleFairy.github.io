@@ -1,6 +1,6 @@
 AGF-NoEAC-ScreamerAlert
 7d2d Version 2  
-Version: 1.0.1  
+Version: 1.1.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-ScreamerAlert.zip
 
  
@@ -85,18 +85,20 @@ Language Support
 
 5. Features
 
-- When a player is within 120m of a screamer, Screamer Alert message appears.
-- Disappears if you kill all screamers.
-- Will also disappear if you leave the range.
-- If the screamer spawns a horde, a Horde Incoming Alert appears.
-- Disappears after 10 seconds.
+- An alert appears when you are within 120 meters of any live screamer or any zombie spawned by a screamer horde.
+- The alert shows how many of these zombies are in range.
+- The alert disappears if none are close or alive.
 
 ========================================
 
 ========================================
 
 6. Changelog
->>>>>
+>>
+v1.1.0
+- Major update to logic for single and multi player.
+- CURRENTLY also shows the number of zombies present.
+
 v1.0.1
 - Updated the name.
 

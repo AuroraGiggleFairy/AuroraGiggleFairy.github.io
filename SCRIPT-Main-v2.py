@@ -686,7 +686,12 @@ if __name__ == '__main__':
         modlist_md.append('')
         modlist_md.append('*Download all above or select one below.*')
         modlist_md.append('')
-        for mod in backpackplus_mods:
+        # Ensure 119Slots is always last
+        backpackplus_mods_sorted = sorted(
+            backpackplus_mods,
+            key=lambda x: (x == 'AGF-BackpackPlus-119Slots-v1.2.2', x)
+        )
+        for mod in backpackplus_mods_sorted:
             mod_path = os.path.join(PUBLISH_READY, mod)
             modinfo_path = os.path.join(mod_path, 'ModInfo.xml')
             readme_path = os.path.join(mod_path, 'README.md')

@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v1.0.1
 - The Crafting Window was not showing the appropriate itemtypeicon/altitemtypeicon.
 

@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>
+>>>>>>>
 v3.0.0
 - Updated to version 2.5.
 - Made new settings.

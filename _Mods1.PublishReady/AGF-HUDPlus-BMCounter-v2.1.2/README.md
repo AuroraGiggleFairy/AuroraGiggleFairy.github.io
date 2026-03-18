@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>
+<!-- CHANGELOG START -->>>>>>>>
 v2.1.2
 - Just a change in code naming for better compatibility and modding.
 
