@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v1.0.2
 - The confirmation text no longer tells you to do the quest at night.
 

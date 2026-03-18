@@ -93,7 +93,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v1.0.1
 - Updated to account for stack size changes made to some ammo production resources.
 

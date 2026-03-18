@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v1.0.3
 - Updated readme and code notes.
 

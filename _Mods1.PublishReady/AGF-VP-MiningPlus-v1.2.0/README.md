@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v1.2.0
 - Will now only apply purple book edits if you have my purple book installed.
 

@@ -95,7 +95,7 @@ If FarmingPlus is installed, can craft seeds faster at its seed station.
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v3.0.0
 - Added x25 versions.
 - Modified seeds naming and icons to match FarmingPlus scheme.

@@ -87,7 +87,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 
 <!-- CHANGELOG END -->
 

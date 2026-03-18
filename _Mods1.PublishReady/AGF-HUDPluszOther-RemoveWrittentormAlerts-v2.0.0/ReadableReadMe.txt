@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v2.0.0
 - Name Change and updates associated with text and conditionals.
 - Changed to removal to help maintain standalone and other potential mix match issues.

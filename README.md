@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 18, 2026, 3:26 PM EST*
+*March 18, 2026, 6:23 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -369,7 +369,7 @@
 
 *Quality-of-life HUD enhancements and visual tweaks.*
 
-> ### **AGF HUDPlus 1Main** *-v5.4.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPlus-1Main.zip)
+> ### **AGF HUDPlus 1Main** *-v5.4.3* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-HUDPlus-1Main.zip)
 > *Refined HUD with clear stats, menus, and visual cues for easier gameplay.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1286,17 +1286,6 @@
 > <details> <summary>*Show detailed features*</summary>
 >
 > <ul><li>Simply adds an "Open All" button for bundled items.</li><li>It opens one at a time rapid fire until all are opened or if you run out of inventory space.</li><li>It can be stopped by either closing the window or pushing the stop opening button.</li><li>Again, if there isn't room for more, it will stop and not allow you to open more.</li></ul>
-> 
-> </details>
-> 
-
----
-
-> ### **AGF-NoEAC-ScreamerAlert** *-v1.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_zip/AGF-NoEAC-ScreamerAlert.zip)
-> *A visual Screamer Alert appears when the player is near a screamer or its horde.*
-> <details> <summary>*Show detailed features*</summary>
->
-> <ul><li>An alert appears when you are within 120 meters of any live screamer or any zombie spawned by a screamer horde.</li><li>The alert shows how many of these zombies are in range.</li><li>The alert disappears if none are close or alive.</li></ul>
 > 
 > </details>
 > 

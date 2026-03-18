@@ -94,7 +94,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v1.2.2
 - Updated for consistency and automation.
 

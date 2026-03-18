@@ -94,7 +94,7 @@ This mod idea came from a collection of friends/twitch viewers/discord peeps, an
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v2.0.4
 - updated to put helmet cosmetic mod as a MOD instead of a dye color due to 7d2d changes.
 

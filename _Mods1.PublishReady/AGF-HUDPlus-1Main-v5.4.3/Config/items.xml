@@ -5,7 +5,7 @@
 
 <!--Adding color and opacity settings to the un-read closed book icon and read open book icon.-->
 <conditional>
-	<if cond="mod_loaded('ItemTypeIconColor')">	
+	<if cond="mod_loaded('AGF-NoEAC-ItemTypeIconColor')">	
 		<!--WITH ItemTypeIconColor Mod-->
 		<insertafter xpath="/items/item/property[@name='AltItemTypeIcon' and @value='book_read']">
 			<property name="AltItemTypeIconColor" value="255,255,255,220" />

@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v3.0.0
 - This ONLY provides a .dll that will enhance other AGF mods if they are installed.
 

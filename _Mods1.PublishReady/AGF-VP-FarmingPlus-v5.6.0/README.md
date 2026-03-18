@@ -99,7 +99,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v5.6.0
 - Now you can craft seeds that replant themselves.
 - Updated README format.

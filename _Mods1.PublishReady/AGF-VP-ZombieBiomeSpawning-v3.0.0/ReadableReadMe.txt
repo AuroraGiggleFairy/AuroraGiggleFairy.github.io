@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v3.0.0
 - Updated for 7d2d version 2.5.
 

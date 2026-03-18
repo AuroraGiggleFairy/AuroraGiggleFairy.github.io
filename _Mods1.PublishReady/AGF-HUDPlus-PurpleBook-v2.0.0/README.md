@@ -91,7 +91,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v2.0.0
 - Revamped the UI code to be easier to create compatibilities with other mods. (Still more to do.)
 - Updated Readme to some format changes AGF is making.

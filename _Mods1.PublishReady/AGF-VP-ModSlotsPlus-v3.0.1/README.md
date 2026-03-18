@@ -91,7 +91,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v3.0.1
 - updated to V2
 - removed the modification for stone and pipe weapons/tools.

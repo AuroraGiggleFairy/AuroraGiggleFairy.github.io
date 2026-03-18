@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v1.0.0
 - Just made the mod.
 

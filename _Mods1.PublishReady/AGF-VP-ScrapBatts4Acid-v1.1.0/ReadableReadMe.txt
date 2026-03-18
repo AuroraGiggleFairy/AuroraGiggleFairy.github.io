@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v1.1.0
 - Updated for 7d2d Version 2.
 

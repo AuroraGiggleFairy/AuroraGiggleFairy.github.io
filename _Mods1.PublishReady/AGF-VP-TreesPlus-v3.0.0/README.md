@@ -89,7 +89,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>
+<!-- CHANGELOG START -->>>>>>>>>>>>
 v3.0.0
 - Added x25 versions.
 - Modified seeds naming and icons to match FarmingPlus scheme.

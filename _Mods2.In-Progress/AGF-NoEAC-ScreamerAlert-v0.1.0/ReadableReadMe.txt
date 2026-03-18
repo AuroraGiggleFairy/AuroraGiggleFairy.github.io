@@ -1,6 +1,6 @@
 AGF-NoEAC-ScreamerAlert
 7d2d Version 2  
-Version: 1.1.0  
+Version: 0.1.0  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-ScreamerAlert.zip
 
  
@@ -94,7 +94,7 @@ Language Support
 ========================================
 
 6. Changelog
->>
+>>>>
 v1.1.0
 - Major update to logic for single and multi player.
 - CURRENTLY also shows the number of zombies present.

@@ -100,7 +100,7 @@ You can check out B19JAY and his crew here: https://www.twitch.tv/b19jay
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v1.1.0
 - Removed windows.xml as the purple book conditional is now within the purple book mod.
 

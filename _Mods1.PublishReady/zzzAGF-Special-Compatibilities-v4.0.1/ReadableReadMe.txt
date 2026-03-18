@@ -114,7 +114,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>
+>>>>>>>>>>>
 v4.0.1
 - Updated mod references to new naming scheme.
 
