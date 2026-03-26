@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-BreakItGetIt"/>
+	<DisplayName value="Break It, Get It"/>
+	<Version value="1.0.2"/>
+	<Description value="Break a station or storage, it goes into your inventory."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

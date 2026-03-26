@@ -1,0 +1,8 @@
+﻿Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+daycount_1,,,,,"Monday",,"Montag","Lunes","Lundi","Lunedi","月曜日","월요일","Poniedziałek","Segunda-feira","Понедельник","Pazartesi","周一","週一"
+daycount_2,,,,,"Tuesday",,"Dienstag","Martes","Mardi","Martedì","火曜日","화요일","Wtorek","Terça-feira","Вторник","Salı","周二","週二"
+daycount_3,,,,,"Wednesday",,"Mittwoch","Miércoles","Mercredi","Mercoledì","水曜日","수요일","Środa","Quarta-feira","Среда","Çarşamba","周三","週三"
+daycount_4,,,,,"Thursday",,"Donnerstag","Jueves","Jeudi","Giovedì","木曜日","목요일","Czwartek","Quinta-feira","Четверг","Perşembe","周四","週四"
+daycount_5,,,,,"Friday",,"Freitag","Viernes","Vendredi","Venerdì","金曜日","금요일","Piątek","Sexta-feira","Пятница","Cuma","星期五","星期五"
+daycount_6,,,,,"Saturday",,"Samstag","Sábado","Samedi","Sabato","土曜日","토요일","Sobota","Sábado","Суббота","Cumartesi","周六","週六"
+daycount_0,,,,,"Sunday",,"Sonntag","Domingo","Dimanche","Domenica","日曜日","일요일","Niedziela","Domingo","Воскресенье","Pazar","星期日","星期日"

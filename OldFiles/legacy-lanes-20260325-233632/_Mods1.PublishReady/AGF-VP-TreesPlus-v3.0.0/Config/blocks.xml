@@ -1,0 +1,425 @@
+<AGFVanillaPlus-TreesPlus>
+
+<!--Icons I use for my farming plus mod to represent regular seed, x5, and x25-->
+		<append xpath="/blocks/block[@name='treePlantedOak1m']">
+			<property name="ItemTypeIcon" value="crops"/>
+		</append>
+		<append xpath="/blocks/block[@name='treePlantedMountainPine1m']">
+			<property name="ItemTypeIcon" value="crops"/>
+		</append>
+		<append xpath="/blocks/block[@name='treePlantedWinterPine1m']">
+			<property name="ItemTypeIcon" value="crops"/>
+		</append>
+
+
+<!--Tree Group to match farming plus scheme-->
+	<append xpath="/blocks/block[@name='treePlantedOak1m']/property[@name='Group']/@value">,agfSeeds</append>
+	<append xpath="/blocks/block[@name='treePlantedMountainPine1m']/property[@name='Group']/@value">,agfSeeds</append>
+	<!--It's extended into this. <append xpath="/blocks/block[@name='treePlantedWinterPine1m']/property[@name='Group']/@value">,agfSeeds</append>	-->
+
+
+<!--Shows Tree Name and Stage-->
+	<!--Note that it does not work on the initial planted stage, because that block is weird-->
+	<append xpath="/blocks/block[@name='treeMasterGrowing']">		
+		<property name="DisplayInfo" value="Name"/>	
+	</append>
+	<append xpath="/blocks/block[@name='treePlantedOak41m']">		
+		<property name="DisplayInfo" value="Name"/>	
+	</append>
+	<append xpath="/blocks/block[@name='treePlantedMountainPine41m']">		
+		<property name="DisplayInfo" value="Name"/>	
+	</append>
+	<append xpath="/blocks/block[@name='treePlantedWinterPine28m']">		
+		<property name="DisplayInfo" value="Name"/>	
+	</append>
+
+	
+<!--x5 Trees-->
+	<!--Oak Tree-->
+		<append xpath="/blocks">
+				<!-- *** SEEDS_OAK_TREE --> 
+			<block name="treePlantedOak1mx5">
+				<property name="Extends" value="treePlantedOak1m" />
+				<property name="CustomIcon" value="treePlantedOak1m"/>
+				<property name="CustomIconTint" value="fc8403"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="Group" value="agfSeedsx5"/>
+				<property name="EconomicValue" value="60"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak08mx5"/>
+				<dropextendsoff/>
+				<drop event="Destroy" name="treePlantedOak1mx5" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_1st_Growth_Stage -->
+			<block name="treePlantedOak08mx5">
+				<property name="Extends" value="treePlantedOak08m"/>
+				<property name="CustomIcon" value="treeOakSml01"/>
+				<property name="ItemTypeIcon" value="foliage"/>			
+				<property name="EconomicValue" value="120"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak16mx5"/>
+				<property name="MaxDamage" value="1500"/><!--default 300 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 30-->
+				<drop event="Destroy" name="treePlantedOak1mx5" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_2nd_Growth_Stage -->
+			<block name="treePlantedOak16mx5">
+				<property name="Extends" value="treePlantedOak16m"/>
+				<property name="CustomIcon" value="treeOakMed01"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak27mx5"/>
+				<property name="MaxDamage" value="3000"/><!--default 600 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="350" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 70-->
+				<drop event="Destroy" name="treePlantedOak1mx5" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_3rd_Growth_Stage -->
+			<block name="treePlantedOak27mx5">
+				<property name="Extends" value="treePlantedOak27m"/>
+				<property name="CustomIcon" value="treeOakMed02"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak41mx5"/>
+				<property name="MaxDamage" value="4500"/><!--default 900 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="550" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 110-->
+				<drop event="Destroy" name="treePlantedOak1mx5" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_Final_Growth_Stage -->
+			<block name="treePlantedOak41mx5">
+				<property name="Extends" value="treePlantedOak41m"/>	
+				<property name="DisplayInfo" value="Name"/>	
+				<property name="CustomIcon" value="treeOakLrg01"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="MaxDamage" value="6000"/><!--default 1200 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 150-->
+				<drop event="Destroy" name="treePlantedOak1mx5" count="1"/>
+			</block>
+
+		</append>
+
+	<!--Mountain Pines-->
+		<append xpath="/blocks">
+				<!-- *** SEEDS_MOUNTAIN_PINE -->
+			<block name="treePlantedMountainPine1mx5">
+				<property name="Extends" value="treePlantedMountainPine1m" />
+				<property name="CustomIcon" value="treePlantedMountainPine1m"/>
+				<property name="CustomIconTint" value="fc8403"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="Group" value="agfSeedsx5"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine12mx5"/>
+				<property name="EconomicValue" value="60"/>
+				<dropextendsoff/>
+				<drop event="Destroy" name="treePlantedMountainPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine12mx5">
+				<property name="Extends" value="treePlantedMountainPine12m"/>
+				<property name="CustomIcon" value="treeMountainPine12m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine19mx5"/>
+				<property name="MaxDamage" value="1500"/><!--default 300 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 30-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine19mx5">
+				<property name="Extends" value="treePlantedMountainPine19m"/>
+				<property name="CustomIcon" value="treeMountainPine19m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine27mx5"/>
+				<property name="MaxDamage" value="3000"/><!--default 600 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="350" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 70-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine27mx5">
+				<property name="Extends" value="treePlantedMountainPine27m"/>
+				<property name="CustomIcon" value="treeMountainPine27m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine41mx5"/>
+				<property name="MaxDamage" value="4500"/><!--default 900 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="550" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 110-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine41mx5">
+				<property name="Extends" value="treePlantedMountainPine41m"/>
+				<property name="DisplayInfo" value="Name"/>	
+				<property name="CustomIcon" value="treeMountainPine41m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="MaxDamage" value="6000"/><!--default 1200 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 150-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx5" count="1"/>
+			</block>
+
+		</append>
+
+	<!--Winter Pines-->
+		<append xpath="/blocks">
+				<!-- *** SEEDS_WINTER_PINE -->
+			<block name="treePlantedWinterPine1mx5">
+				<property name="Extends" value="treePlantedWinterPine1m"/>
+				<property name="CustomIcon" value="treePlantedMountainPine1m"/>
+				<property name="CustomIconTint" value="fc8403"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="Group" value="agfSeedsx5"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine6mx5"/>
+				<property name="EconomicValue" value="60"/>
+				<dropextendsoff/>
+				<drop event="Destroy" name="treePlantedWinterPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine6mx5">
+				<property name="Extends" value="treePlantedWinterPine6m"/>
+				<property name="CustomIcon" value="treeWinterEverGreen"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine13mx5"/>
+				<property name="MaxDamage" value="1500"/><!--default 300 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="150" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 30-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine13mx5">
+				<property name="Extends" value="treePlantedWinterPine13m"/>
+				<property name="CustomIcon" value="treeWinterPine13m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine19mx5"/>
+				<property name="MaxDamage" value="3000"/><!--default 600 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="350" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 70-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine19mx5">
+				<property name="Extends" value="treePlantedWinterPine19m"/>
+				<property name="CustomIcon" value="treeWinterPine19m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine28mx5"/>
+				<property name="MaxDamage" value="4500"/><!--default 900 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="550" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 110-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx5" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine28mx5">
+				<property name="Extends" value="treePlantedWinterPine28m"/>
+				<property name="DisplayInfo" value="Name"/>	
+				<property name="CustomIcon" value="treeWinterPine28m"/>
+				<property name="ItemTypeIcon" value="foliage"/>
+				<property name="MaxDamage" value="6000"/><!--default 1200 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 150-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx5" count="1"/>
+			</block>
+		</append>
+
+
+<!--x25 Trees-->
+	<!--Oak Tree-->
+		<append xpath="/blocks">
+				<!-- *** SEEDS_OAK_TREE --> 
+			<block name="treePlantedOak1mx25">
+				<property name="Extends" value="treePlantedOak1m" />
+				<property name="CustomIcon" value="treePlantedOak1m"/>
+				<property name="CustomIconTint" value="a502db"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="EconomicValue" value="300"/>
+				<property name="Group" value="agfSeedsx25"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak08mx25"/>
+				<dropextendsoff/>
+				<drop event="Destroy" name="treePlantedOak1mx25" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_1st_Growth_Stage -->
+			<block name="treePlantedOak08mx25">
+				<property name="Extends" value="treePlantedOak08m"/>
+				<property name="CustomIcon" value="treeOakSml01"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak16mx25"/>
+				<property name="MaxDamage" value="7500"/><!--default 300 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 30-->
+				<drop event="Destroy" name="treePlantedOak1mx25" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_2nd_Growth_Stage -->
+			<block name="treePlantedOak16mx25">
+				<property name="Extends" value="treePlantedOak16m"/>
+				<property name="CustomIcon" value="treeOakMed01"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak27mx25"/>
+				<property name="MaxDamage" value="15000"/><!--default 600 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="1750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 70-->
+				<drop event="Destroy" name="treePlantedOak1mx25" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_3rd_Growth_Stage -->
+			<block name="treePlantedOak27mx25">
+				<property name="Extends" value="treePlantedOak27m"/>
+				<property name="CustomIcon" value="treeOakMed02"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedOak41mx25"/>
+				<property name="MaxDamage" value="22500"/><!--default 900 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="2750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 110-->
+				<drop event="Destroy" name="treePlantedOak1mx25" count="1"/>
+			</block>
+
+			<!-- Oak_Tree_Final_Growth_Stage -->
+			<block name="treePlantedOak41mx25">
+				<property name="Extends" value="treePlantedOak41m"/>
+				<property name="DisplayInfo" value="Name"/>	
+				<property name="CustomIcon" value="treeOakLrg01"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="MaxDamage" value="30000"/><!--default 1200 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="3750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 150-->
+				<drop event="Destroy" name="treePlantedOak1mx25" count="1"/>
+			</block>
+
+		</append>
+
+	<!--Mountain Pines-->
+		<append xpath="/blocks">
+				<!-- *** SEEDS_MOUNTAIN_PINE -->
+			<block name="treePlantedMountainPine1mx25">
+				<property name="Extends" value="treePlantedMountainPine1m" />
+				<property name="CustomIcon" value="treePlantedMountainPine1m"/>
+				<property name="CustomIconTint" value="a502db"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="Group" value="agfSeedsx25"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine12mx25"/>
+				<property name="EconomicValue" value="300"/>
+				<dropextendsoff/>
+				<drop event="Destroy" name="treePlantedMountainPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine12mx25">
+				<property name="Extends" value="treePlantedMountainPine12m"/>
+				<property name="CustomIcon" value="treeMountainPine12m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine19mx25"/>
+				<property name="MaxDamage" value="7500"/><!--default 300 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 30-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine19mx25">
+				<property name="Extends" value="treePlantedMountainPine19m"/>
+				<property name="CustomIcon" value="treeMountainPine19m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine27mx25"/>
+				<property name="MaxDamage" value="15000"/><!--default 600 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="1750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 70-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine27mx25">
+				<property name="Extends" value="treePlantedMountainPine27m"/>
+				<property name="CustomIcon" value="treeMountainPine27m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedMountainPine41mx25"/>
+				<property name="MaxDamage" value="22500"/><!--default 900 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="2750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 110-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedMountainPine41mx25">
+				<property name="Extends" value="treePlantedMountainPine41m"/>
+				<property name="DisplayInfo" value="Name"/>	
+				<property name="CustomIcon" value="treeMountainPine41m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="MaxDamage" value="30000"/><!--default 1200 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="3750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 150-->
+				<drop event="Destroy" name="treePlantedMountainPine1mx25" count="1"/>
+			</block>
+
+		</append>
+
+	<!--Winter Pines-->
+		<append xpath="/blocks">
+				<!-- *** SEEDS_WINTER_PINE -->
+			<block name="treePlantedWinterPine1mx25">
+				<property name="Extends" value="treePlantedWinterPine1m"/>
+				<property name="CustomIcon" value="treePlantedMountainPine1m"/>
+				<property name="CustomIconTint" value="a502db"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="Group" value="agfSeedsx25"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine6mx25"/>
+				<property name="EconomicValue" value="300"/>
+				<dropextendsoff/>
+				<drop event="Destroy" name="treePlantedWinterPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine6mx25">
+				<property name="Extends" value="treePlantedWinterPine6m"/>
+				<property name="CustomIcon" value="treeWinterEverGreen"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine13mx25"/>
+				<property name="MaxDamage" value="7500"/><!--default 300 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 30-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine13mx25">
+				<property name="Extends" value="treePlantedWinterPine13m"/>
+				<property name="CustomIcon" value="treeWinterPine13m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine19mx25"/>
+				<property name="MaxDamage" value="15000"/><!--default 600 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="1750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 70-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine19mx25">
+				<property name="Extends" value="treePlantedWinterPine19m"/>
+				<property name="CustomIcon" value="treeWinterPine19m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="PlantGrowing.Next" value="treePlantedWinterPine28mx25"/>
+				<property name="MaxDamage" value="22500"/><!--default 900 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="2750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 110-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx25" count="1"/>
+			</block>
+
+			<block name="treePlantedWinterPine28mx25">
+				<property name="Extends" value="treePlantedWinterPine28m"/>
+				<property name="DisplayInfo" value="Name"/>	
+				<property name="CustomIcon" value="treeWinterPine28m"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="MaxDamage" value="30000"/><!--default 1200 by material-->
+				<dropextendsoff/>
+				<drop event="Harvest" name="resourceWood" count="3750" tag="oreWoodHarvest,lumberjackHarvest"/><!--default 150-->
+				<drop event="Destroy" name="treePlantedWinterPine1mx25" count="1"/>
+			</block>
+		</append>
+
+
+
+
+
+
+
+
+
+
+
+
+</AGFVanillaPlus-TreesPlus>
+

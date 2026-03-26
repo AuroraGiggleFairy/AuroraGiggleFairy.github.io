@@ -1,0 +1,21 @@
+<AGFVanillaPlus-FarmingPlus>
+
+	
+	<!--When you unlock super corn seeds, you will now also unlock it's x5 version-->
+	<append xpath="/items/item[@name='plantedGraceCorn1Schematic']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedGraceCorn1x5" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedGraceCorn1x25" operation="set" value="1"/>
+	</append>
+	
+	
+	<!--Just a placeholder for displaying under the vanilla crafting progression section.-->
+	<append xpath="/items">	
+		<item name="advancedFarmingKey">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="plantHydroponicAloe"/>
+			<property name="Extends" value="meleeToolRepairT0StoneAxe"/>
+		</item>
+	</append>
+	
+
+</AGFVanillaPlus-FarmingPlus>

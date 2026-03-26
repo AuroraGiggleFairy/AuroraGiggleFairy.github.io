@@ -1,0 +1,69 @@
+<AGFVanillaPlus-MedicationNoInsectSlow>
+
+
+	<!--Bee Gone Cream Buff-->
+		<append xpath="/buffs">
+			<buff name="buffInsectCream" name_key="medicalInsectCream" description_key="medicalInsectCreamDesc" icon="ui_game_symbol_coffee">
+				<stack_type value="replace"/>
+				<duration value="0"/>
+				<display_value value=".buffInsectCreamDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInsectCreamDuration" operation="subtract" value="@$MetabolismDuration"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffInsectCreamDisplay" operation="set" value="@$buffInsectCreamDuration"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffInsectCreamDisplay" operation="divide" value="@$MetabolismDuration"/>
+				</effect_group>
+
+				<effect_group>
+					<requirement name="HasBuff" buff="buffInjurySlow"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjurySlow"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInsectCream">
+						<requirement name="CVarCompare" cvar="$buffInsectCreamDuration" operation="LTE" value="0"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".buffInsectCreamDisplay,$buffInsectCreamDuration"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffInsectCreamDuration" operation="add" value="@$buffInsectCreamBSDuration"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffInsectCreamDuration" operation="set" value="543">
+						<requirement name="CVarCompare" cvar="$buffInsectCreamDuration" operation="GT" value="543"/>
+					</triggered_effect>
+
+				</effect_group>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="noSlowAGF" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="noSlowAGF" operation="set" value="0">
+						<requirement name="!HasBuff" buff="buffDrugSteroids"/></triggered_effect>
+				</effect_group>
+			</buff>
+		</append>
+
+
+	<!--Added the feature to Steroids-->
+		<append xpath="/buffs/buff[@name='buffDrugSteroids']">
+				<effect_group>
+					<requirement name="HasBuff" buff="buffInjurySlow"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjurySlow"/>
+				</effect_group>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="noSlowAGF" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="noSlowAGF" operation="set" value="0">
+						<requirement name="!HasBuff" buff="buffInsectCream"/></triggered_effect>
+				</effect_group>
+		</append>
+
+
+	<!--Making sure God Mode continues to remove any buffs when activated-->
+		<append xpath="/buffs/buff[@name='god']/effect_group">
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar="$buffInsectCreamDuration"/>
+		</append>
+
+
+
+</AGFVanillaPlus-MedicationNoInsectSlow>

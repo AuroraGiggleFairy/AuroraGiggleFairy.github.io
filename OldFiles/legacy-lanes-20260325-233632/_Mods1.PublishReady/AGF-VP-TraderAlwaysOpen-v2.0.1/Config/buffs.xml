@@ -1,0 +1,21 @@
+<AGFVanillaPlus-TraderOpenExceptBM>
+
+
+<!--this doesn't work in multiplayer at the time of A21.1.-->
+
+	
+<!--	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group>	
+			<requirement name="IsBloodMoon" operation="GTE" value="1"/>		
+				<passive_effect name="NoTrader" operation="base_set" value="1"/>
+		</effect_group>
+		<effect_group>	
+			<requirement name="IsBloodMoon" operation="LTE" value="0"/>		
+				<passive_effect name="NoTrader" operation="base_set" value="0"/>
+		</effect_group>
+	</append>
+-->
+
+
+
+</AGFVanillaPlus-TraderOpenExceptBM>

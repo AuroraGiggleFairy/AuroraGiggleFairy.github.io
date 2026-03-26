@@ -2,7 +2,74 @@
 
 ## How to Use This Outline
 
-This outline is the **master reference** for both humans and AI. The main script (SCRIPT-Main-v2.py) must follow this outline exactly. If the script and this outline ever diverge, **this outline is the source of truth**. Every step is written for beginners, with clear instructions, conditions, and references to files and templates. If you are an AI, use this outline to repair or regenerate the script as needed.
+This outline is the **master reference** for both humans and AI. The main script (SCRIPT-Main.py) must follow this outline exactly. If the script and this outline ever diverge, **this outline is the source of truth**. Every step is written for beginners, with clear instructions, conditions, and references to files and templates. If you are an AI, use this outline to repair or regenerate the script as needed.
+
+---
+
+## Section A: Lane Model and Script Modes
+
+**Why:** To keep drafting, testing, and publishing separate so nothing is accidentally released.
+
+### Lane Model (Folder Roles)
+
+1. `01_Draft` = **Draft Lane**
+   - Work-in-progress ideas and unfinished edits.
+   - Not automatically synced to the game.
+2. `02_ActiveBuild` = **Test Lane**
+   - Mods currently being tested.
+   - This lane syncs with your game mods folder.
+3. `Game Mods Folder` = **Runtime Lane**
+   - The copy currently used by the game.
+   - Sync target for active testing.
+4. `03_ReleaseSource` = **Release Lane**
+   - Release-ready versions only.
+   - Source for final zips and website downloads.
+5. `04_DownloadZips` = **Final Artifact Lane**
+   - Generated zip files for public downloads.
+
+### Legacy Name Compatibility
+
+- The script still supports older lane folder names while transitioning:
+  - `_Mods2.In-Progress` -> `01_Draft`
+  - `_Mods0.Staging` -> `02_ActiveBuild`
+  - `_Mods1.PublishReady` -> `03_ReleaseSource`
+  - `_Mods3.zip` -> `04_DownloadZips`
+
+### What End Users Download
+
+- End users download **zip files only**.
+- Zips are generated in `04_DownloadZips`.
+- Public links should point to those generated zip files.
+
+### Script Modes (Single Script Entry Point)
+
+Use only `SCRIPT-Main.py` with one of these modes:
+
+1. `--mode sync-work`
+   - Syncs `02_ActiveBuild` and game Mods by version.
+   - Keeps only one active BackpackPlus in game root (defaults to `084Slots` when present).
+   - Mirrors all BackpackPlus variants to `.Optionals-Backpack`.
+   - Mirrors all HUDPlus/HUDPluszOther to `.Optionals-HUDPlus` (HUDPluszOther root placement is user-managed/manual).
+   - Does not touch `03_ReleaseSource`.
+2. `--mode promote`
+   - First refreshes folder names and per-mod README files in `02_ActiveBuild`.
+   - Promotes from `02_ActiveBuild` to `03_ReleaseSource`.
+   - Promotion is version-gated (deliberate bump behavior).
+3. `--mode package`
+   - First refreshes folder names and per-mod README files in `03_ReleaseSource`.
+   - Builds zip outputs and updates the main README download list.
+   - Uses release lane data.
+4. `--mode full`
+   - Runs the legacy full pipeline end-to-end.
+
+### Recommended Day-to-Day Workflow
+
+1. Build in `01_Draft`.
+2. Move/copy to `02_ActiveBuild` when ready to test.
+3. Run `SCRIPT-Main.py --mode sync-work`.
+4. Test in game.
+5. When ready to release, bump version in `ModInfo.xml` and run `SCRIPT-Main.py --mode promote`.
+6. Run `SCRIPT-Main.py --mode package`.
 
 ---
 
@@ -57,6 +124,14 @@ This outline is the **master reference** for both humans and AI. The main script
 ---
 
 ## Step 4: Special Handling (Renaming, Compatibility, Quotes, README)
+
+### Individual README Data Contract
+
+- Identity and version come from each mod's `ModInfo.xml` (`Name` and `Version`).
+- Compatibility fields come from `HELPER_ModCompatibility.csv` by `MOD_NAME` (base mod name, no version suffix).
+- Quotes come from `_Quotes/<MOD_NAME>.txt` (or `QUOTE_FILE` in CSV when provided).
+- If a mod exists but has no CSV row yet, README generation still runs with `MISSINGDATA` defaults and logs a warning.
+- Existing `FEATURES` and `CHANGELOG` blocks are preserved when regenerating README files.
 
 **Why:** To ensure all metadata, compatibility, and documentation is correct, version-independent, and easy to maintain.
 

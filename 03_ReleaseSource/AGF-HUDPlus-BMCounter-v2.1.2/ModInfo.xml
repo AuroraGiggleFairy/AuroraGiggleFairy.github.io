@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-HUDPlus-BMCounter"/>
+	<DisplayName value="AGF HUDPlus BM Counter"/>
+	<Version value="2.1.2"/>
+	<Description value="Adds BM countdown for non-varied BM frequency."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>
