@@ -229,6 +229,32 @@ Use only `SCRIPT-Main.py` with one of these modes:
 4. All zips are created in `_Mods3.zip` and are ready to upload or share.
 - If zipping fails for any mod or pack, log a warning and continue.
 
+### Step 6.5: Auto-Versioned GigglePack Release Notes
+
+**Why:** To create a pack-level release version and a ready-to-post update summary for Discord (and later website use).
+
+1. After pack zips are created, treat `00_GigglePack_All.zip` as the canonical build source.
+2. Track pack release state in `04_DownloadZips/.release/gigglepack-release-state.json`.
+3. Compare current GigglePack mod versions against the previous state to determine what changed since the last GigglePack release.
+4. Assign a GigglePack release version automatically:
+   - First release state: `1.0.0`
+   - `X` (major) increases only when you intentionally trigger a major cycle bump:
+     - Create `04_DownloadZips/.release/gigglepack-major-bump.txt` before packaging.
+     - The script consumes/removes that marker after a successful release-state write.
+   - `Y` (minor) increases when **new mods are added** to GigglePack.
+   - `Z` (patch) increases when **existing GigglePack mods are updated** (or removed).
+   - If nothing changed, keep the same version.
+5. Produce these outputs automatically:
+   - `04_DownloadZips/AGF-GigglePack-vX.Y.Z.zip` (versioned zip)
+   - `04_DownloadZips/AGF-GigglePack-latest.zip` (always latest pointer)
+   - `04_DownloadZips/.release/latest-gigglepack-discord.txt` (Discord-ready update text)
+   - `04_DownloadZips/.release/latest-gigglepack-release.md` (Markdown release note)
+6. The release notes must explicitly separate:
+   - New mods (with their first released version)
+   - Updated existing mods (showing previous version -> latest version)
+   - Removed mods (if any)
+   and include links to versioned and latest GigglePack zips.
+
 ---
 
 ## Step 7: Update Main README.md
@@ -241,6 +267,10 @@ Use only `SCRIPT-Main.py` with one of these modes:
 4. If updating the README fails, log a warning and continue.
 
 5. The script always lists the AGF-BackpackPlus-119Slots mod last in the Backpack Plus Mods section, regardless of folder order, to ensure consistent presentation.
+6. If GigglePack release metadata exists in `04_DownloadZips/.release/gigglepack-release-state.json`, the script also injects into the Giggle Pack section:
+   - GigglePack version inline next to the main Giggle download link
+   - A collapsible changelog summary that shows previous GigglePack version and latest GigglePack version
+   - Separate New Mods and Updated Existing Mods lists with explicit version transitions
 
 ---
 

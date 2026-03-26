@@ -1,0 +1,14 @@
+- GigglePack v1.0.0
+  - Released: 2026-03-26 00:14:17
+  - Download (versioned): https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-GigglePack-v1.0.0.zip
+  - Download (latest): https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-GigglePack-latest.zip
+  - Change summary: +2 new, ~0 updated, -0 removed
+
+Version rules:
+- X increases for major game-cycle updates (manual marker trigger).
+- Y increases when NEW mods are added to GigglePack.
+- Z increases when existing GigglePack mods are updated.
+
+  - New mods:
+    - AGF-NoEAC-ExpandedInteractionPrompts (new: v1.0.1)
+    - AGF-NoEAC-ScreamerAlert (new: v1.1.1)

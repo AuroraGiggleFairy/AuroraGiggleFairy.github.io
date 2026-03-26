@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 25, 2026, 11:30 PM EST*
+*March 26, 2026, 12:14 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -345,11 +345,24 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.0.0)**
 
 > - *All AGF mods in one convenient download.*
 > - *Direct set-up is AGF preference and only server side mods*
 > - *Client Side enhancements are in the NoEAC folder*
+
+---
+
+>
+> <details><summary><i>Changelog</i></summary>
+>
+>  - GigglePack v1.0.0 - *March 26, 2026 12:14am*
+>     - Change summary: +2 new, ~0 updated, -0 removed
+>     - New mods:
+>         - AGF-NoEAC-ExpandedInteractionPrompts (new: v1.0.1)
+>         - AGF-NoEAC-ScreamerAlert (new: v1.1.1)
+>
+> </details>
 
 ---
 
