@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 26, 2026, 1:28 AM EST*
+*March 26, 2026, 1:46 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -355,7 +355,7 @@
 
 > <details> <summary><i>Changelog</i></summary>
 >
-> <ul><li>GigglePack v1.0.0 - March 26, 2026 12:49am<ul><li>Change summary: +2 new, ~0 updated, -0 removed</li><li>New mods:<ul><li>AGF-NoEAC-ExpandedInteractionPrompts (new: v1.0.1)</li><li>AGF-NoEAC-ScreamerAlert (new: v1.1.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v1.0.0 - March 26, 2026 1:14am<ul><li>Change summary: +2 new, ~0 updated, -0 removed</li><li>New mods:<ul><li>AGF-NoEAC-ExpandedInteractionPrompts (new: v1.0.1)</li><li>AGF-NoEAC-ScreamerAlert (new: v1.1.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 

@@ -1,13 +1,13 @@
 """
 sync_inprogress_to_game.py
 
-Interactive script to copy selected in-progress mods to the game Mods folder for testing.
-- Lists all mods in _In-Progress/
+Interactive script to copy selected draft mods to the game Mods folder for testing.
+- Lists all mods in the draft lane (prefers 01_Draft/)
 - Prompts user to select which mods to copy to the game Mods folder
 - If a mod with the same base name exists in the game folder, compares ModInfo.xml version and folder version
-- Only copies if the in-progress version is newer or not present
+- Only copies if the draft version is newer or not present
 - Optionally, can remove selected mods from the game Mods folder
-- Updates README and ModInfo.xml in the game folder to match the in-progress version if copied
+- Updates README and ModInfo.xml in the game folder to match the draft version if copied
 """
 import os
 import shutil
@@ -15,12 +15,39 @@ import xml.etree.ElementTree as ET
 import re
 
 WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
-INPROGRESS_DIR = os.path.join(WORKSPACE_ROOT, "_In-Progress")
+
+
+def resolve_lane_path(*candidates):
+    for path in candidates:
+        if os.path.isdir(path):
+            return path
+    return candidates[0]
+
+
+INPROGRESS_DIR = resolve_lane_path(
+    os.path.join(WORKSPACE_ROOT, "01_Draft"),
+    os.path.join(WORKSPACE_ROOT, "_Mods2.In-Progress"),
+    os.path.join(WORKSPACE_ROOT, "_In-Progress"),
+)
 GAME_MODS_PATH = r'C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods'
 
 def get_mod_version_from_foldername(foldername):
     match = re.search(r'-v([\d.]+)$', foldername)
     return match.group(1) if match else None
+
+
+def version_key(version_text):
+    if not version_text:
+        return tuple()
+    parts = [p for p in str(version_text).strip().split('.') if p != '']
+    key = []
+    for part in parts:
+        if part.isdigit():
+            key.append(int(part))
+        else:
+            numeric = re.match(r'^(\d+)', part)
+            key.append(int(numeric.group(1)) if numeric else 0)
+    return tuple(key)
 
 def get_modinfo_version(mod_folder):
     modinfo_path = os.path.join(mod_folder, 'ModInfo.xml')
@@ -71,7 +98,7 @@ def main():
             filtered_mods.append(mod)
     mods = filtered_mods
     if not mods:
-        print("No in-progress mods found.")
+        print(f"No in-progress mods found in: {INPROGRESS_DIR}")
         return
     selected = prompt_select_mods(mods)
     if not selected:
@@ -90,8 +117,10 @@ def main():
         except Exception:
             major_version = 0
         if major_version < 1:
-            print(f"Skipping {mod}: major version is {major_version} (must be at least 1 to copy out of _In-Progress)")
-            continue
+            print(
+                f"Warning: {mod} has major version {major_version}. "
+                "Continuing copy because this tool is for draft testing."
+            )
         # Find matching mod in game folder
         gmod = next((g for g in game_mods if re.sub(r'-v[\d.]+$', '', g) == mod_base), None)
         if gmod:
@@ -101,10 +130,10 @@ def main():
             # Compare versions (prefer ModInfo.xml, fallback to folder)
             inprog_v = inprog_modinfo_version or inprog_version
             game_v = game_modinfo_version or game_version
-            if inprog_v and game_v and inprog_v > game_v:
+            if inprog_v and game_v and version_key(inprog_v) > version_key(game_v):
                 print(f"Updating {gmod} in game folder with newer in-progress version {inprog_v}...")
                 copy_mod(src, os.path.join(GAME_MODS_PATH, mod))
-            elif inprog_v and game_v and inprog_v == game_v:
+            elif inprog_v and game_v and version_key(inprog_v) == version_key(game_v):
                 print(f"{gmod} in game folder is up to date. Skipping.")
             else:
                 print(f"Game folder has newer or same version for {gmod}. Skipping.")

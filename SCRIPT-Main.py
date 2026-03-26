@@ -47,6 +47,7 @@ GAME_MODS = r"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods"
 ZIP_OUTPUT = resolve_lane_path(LANE_DOWNLOAD_ZIPS_PREFERRED, LANE_DOWNLOAD_ZIPS_LEGACY)
 QUOTES_DIR = os.path.join(VS_CODE_ROOT, "_Quotes")
 LOGS_DIR = os.path.join(VS_CODE_ROOT, "Logs")
+MAIN_LOG_MAX_FILES = 10
 
 COMPAT_CSV = os.path.join(VS_CODE_ROOT, "HELPER_ModCompatibility.csv")
 MOD_README_TEMPLATE = os.path.join(VS_CODE_ROOT, "TEMPLATE-ModReadMes.md")
@@ -148,6 +149,23 @@ class Logger:
                 f.write("\n=== SUMMARY ===\n")
                 for key, value in self.stats.__dict__.items():
                     f.write(f"{key}: {value}\n")
+
+            # Keep only the newest main-script logs to avoid unbounded growth.
+            log_candidates: List[Tuple[float, str]] = []
+            for name in os.listdir(LOGS_DIR):
+                if not (name.startswith("main-script-") and name.endswith(".log")):
+                    continue
+                full_path = os.path.join(LOGS_DIR, name)
+                if os.path.isfile(full_path):
+                    log_candidates.append((os.path.getmtime(full_path), full_path))
+
+            log_candidates.sort(key=lambda item: item[0], reverse=True)
+            for _, old_path in log_candidates[MAIN_LOG_MAX_FILES:]:
+                try:
+                    os.remove(old_path)
+                except Exception:
+                    pass
+
             return path
         except Exception:
             return None
@@ -821,9 +839,10 @@ def normalize_quote_files(csv_rows: List[Dict[str, str]], folder_renames: List[T
         try:
             with open(quote_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            if content.strip().lower() == "none":
+            normalized = content.strip().lower()
+            if normalized in {"none", "missingdata"}:
                 if dry_run:
-                    log.info(f"[DRYRUN] Would blank quote file containing 'None': {quote_path}")
+                    log.info(f"[DRYRUN] Would blank quote file containing placeholder text: {quote_path}")
                 else:
                     with open(quote_path, "w", encoding="utf-8") as f:
                         f.write("")

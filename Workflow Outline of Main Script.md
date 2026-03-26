@@ -254,6 +254,34 @@ Use only `SCRIPT-Main.py` with one of these modes:
    - Removed mods (if any)
    and include a link to the versioned GigglePack zip.
 
+### Step 6.6: Discord Auto-Post (Update-Only)
+
+**Why:** To automatically publish a Discord announcement only when GigglePack actually changes.
+
+1. The Discord message is rendered from template:
+   - `05_GigglePackReleaseData/TEMPLATE-DiscordUpdate.md`
+   - Parsed block is only the text between:
+     - `<!-- DISCORD_TEMPLATE_START -->`
+     - `<!-- DISCORD_TEMPLATE_END -->`
+2. The generated post output is written to:
+   - `05_GigglePackReleaseData/latest-gigglepack-discord.txt`
+3. Webhook configuration:
+   - Preferred: user environment variable `AGF_DISCORD_WEBHOOK_URL`
+   - Optional override: CLI argument `--discord-webhook-url`
+4. Posting behavior:
+   - In `package` and `full` modes, webhook posting is attempted only when GigglePack has an update.
+   - No update means no post (`skip auto-post`).
+   - Update is true when any of these occur:
+     - baseline release
+     - major bump marker used
+     - new mods added
+     - existing mods updated
+     - mods removed
+5. Message size safety:
+   - If Discord content exceeds message limits, the script posts in chunks.
+6. First-time seeding note:
+   - If you need an initial post while there are no detected changes, do a one-time manual webhook send using `latest-gigglepack-discord.txt`.
+
 ---
 
 ## Step 7: Update Main README.md

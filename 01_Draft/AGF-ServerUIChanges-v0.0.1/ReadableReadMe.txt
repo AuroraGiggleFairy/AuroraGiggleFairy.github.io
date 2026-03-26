@@ -1,7 +1,7 @@
 AGF-ServerUIChanges
 7d2d Version 2  
 Version: 0.0.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-ServerUIChanges.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-ServerUIChanges.zip
 
  
 
@@ -90,7 +90,6 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>>>>>>>
 
 ========================================
 

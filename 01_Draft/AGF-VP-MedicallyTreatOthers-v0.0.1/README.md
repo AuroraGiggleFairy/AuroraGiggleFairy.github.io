@@ -1,7 +1,7 @@
 # AGF-VP-MedicallyTreatOthers
 7d2d Version 2  
 **Version:** 0.0.1  
-[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/_Mods3.zip/AGF-VP-MedicallyTreatOthers.zip)
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MedicallyTreatOthers.zip)
 
  
 
@@ -86,7 +86,7 @@
 ---
 
 ## 6. Changelog
-<!-- CHANGELOG START -->>>>>>>>>>>>>>
+<!-- CHANGELOG START -->
 
 <!-- CHANGELOG END -->
 

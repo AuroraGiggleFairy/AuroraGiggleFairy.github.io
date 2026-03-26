@@ -1,7 +1,7 @@
 AGF-NoEAC-TerrainLeveler
 7d2d Version 2  
 Version: 0.0.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-NoEAC-TerrainLeveler.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-NoEAC-TerrainLeveler.zip
 
  
 
@@ -92,7 +92,7 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>>>>>>>
+
 Is this really working yet?
 
 ========================================

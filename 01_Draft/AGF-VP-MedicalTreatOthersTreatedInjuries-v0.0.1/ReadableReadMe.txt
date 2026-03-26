@@ -1,7 +1,7 @@
 AGF-VP-MedicalTreatOthersTreatedInjuries
 7d2d Version 2  
 Version: 0.0.1  
-Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/Mods3.zip/AGF-VP-MedicalTreatOthersTreatedInjuries.zip
+Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-VP-MedicalTreatOthersTreatedInjuries.zip
 
  
 
@@ -90,7 +90,6 @@ Language Support
 ========================================
 
 6. Changelog
->>>>>>>>>>>>>
 
 ========================================
 
