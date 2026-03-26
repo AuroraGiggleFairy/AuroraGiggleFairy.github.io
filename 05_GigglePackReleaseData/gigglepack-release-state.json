@@ -1,19 +1,19 @@
 {
-  "gigglepack_version": "1.0.0",
+  "gigglepack_version": "1.1.0",
   "previous_gigglepack_version": "1.0.0",
   "is_baseline_release": false,
-  "released_at": "2026-03-26 01:14:46",
+  "released_at": "2026-03-26 04:17:40",
   "mods": {
-    "AGF-BackpackPlus-060Slots": "3.2.1",
-    "AGF-BackpackPlus-072Slots": "3.2.1",
-    "AGF-BackpackPlus-084Slots": "3.2.1",
+    "AGF-BackpackPlus-060Slots": "3.2.2",
+    "AGF-BackpackPlus-072Slots": "3.2.2",
+    "AGF-BackpackPlus-084Slots": "3.2.2",
     "AGF-BackpackPlus-119Slots": "1.2.2",
-    "AGF-HUDPlus-1Main": "5.4.3",
+    "AGF-HUDPlus-1Main": "5.4.4",
     "AGF-HUDPlus-BMCounter": "2.1.2",
     "AGF-HUDPlus-HealthBars": "4.0.0",
     "AGF-HUDPlus-PurpleBook": "2.0.0",
     "AGF-HUDPlus-RemoveEnteringPopUp": "1.0.0",
-    "AGF-HUDPluszOther-10IngredientSlots": "1.0.0",
+    "AGF-HUDPluszOther-10IngredientSlots": "1.0.1",
     "AGF-HUDPluszOther-RemoveWrittentormAlerts": "2.0.0",
     "AGF-HUDPluszOther-SmallerInteractionPrompt": "1.0.0",
     "AGF-HUDPluszOther-TinyBuffsPopUp": "1.0.0",
@@ -27,7 +27,8 @@
     "AGF-NoEAC-ItemTypeIconColor": "1.0.0",
     "AGF-NoEAC-OpenAllButton": "1.0.0",
     "AGF-NoEAC-ScreamerAlert": "1.1.1",
-    "AGF-NoEAC-SortingBox": "1.0.4",
+    "AGF-NoEAC-SortingBox": "1.0.5",
+    "AGF-NoEAC-Toolbelt12Slots": "1.0.0",
     "AGF-VP-AdminModdingSupport": "1.0.3",
     "AGF-VP-AlternativeRecipes": "1.0.1",
     "AGF-VP-AmmoDisassembly": "1.0.1",
@@ -88,24 +89,56 @@
     "AGF-VP-ZombieBiomeSpawning": "3.0.0",
     "AGF-VP-ZombieCorpseLeaveQuicker": "2.0.1",
     "AGF-VP-ZombieLargerHordes": "2.0.1",
-    "zzzAGF-Special-Compatibilities": "4.0.2"
+    "zzzAGF-Special-Compatibilities": "4.0.3"
   },
-  "updated_mods": [],
-  "new_mods": [
+  "updated_mods": [
     {
-      "mod": "AGF-NoEAC-ExpandedInteractionPrompts",
+      "mod": "AGF-BackpackPlus-060Slots",
+      "from": "3.2.1",
+      "to": "3.2.2"
+    },
+    {
+      "mod": "AGF-BackpackPlus-072Slots",
+      "from": "3.2.1",
+      "to": "3.2.2"
+    },
+    {
+      "mod": "AGF-BackpackPlus-084Slots",
+      "from": "3.2.1",
+      "to": "3.2.2"
+    },
+    {
+      "mod": "AGF-HUDPlus-1Main",
+      "from": "5.4.3",
+      "to": "5.4.4"
+    },
+    {
+      "mod": "AGF-HUDPluszOther-10IngredientSlots",
+      "from": "1.0.0",
       "to": "1.0.1"
     },
     {
-      "mod": "AGF-NoEAC-ScreamerAlert",
-      "to": "1.1.1"
+      "mod": "AGF-NoEAC-SortingBox",
+      "from": "1.0.4",
+      "to": "1.0.5"
+    },
+    {
+      "mod": "zzzAGF-Special-Compatibilities",
+      "from": "4.0.2",
+      "to": "4.0.3"
+    }
+  ],
+  "new_mods": [
+    {
+      "mod": "AGF-NoEAC-Toolbelt12Slots",
+      "to": "1.0.0"
     }
   ],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v1.0.0.zip",
+  "versioned_zip": "AGF-GigglePack-v1.1.0.zip",
   "change_counts": {
-    "new_mods": 2,
-    "updated_existing_mods": 0,
+    "new_mods": 1,
+    "updated_existing_mods": 7,
     "removed_mods": 0
   }
 }

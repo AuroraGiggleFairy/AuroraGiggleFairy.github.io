@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 26, 2026, 1:46 AM EST*
+*March 26, 2026, 4:35 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -345,7 +345,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.0.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.1.0)**
 
 > - *All AGF mods in one convenient download.*
 > - *Direct set-up is AGF preference and only server side mods*
@@ -353,9 +353,9 @@
 
 ---
 
-> <details> <summary><i>Changelog</i></summary>
+> <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v1.0.0 - March 26, 2026 1:14am<ul><li>Change summary: +2 new, ~0 updated, -0 removed</li><li>New mods:<ul><li>AGF-NoEAC-ExpandedInteractionPrompts (new: v1.0.1)</li><li>AGF-NoEAC-ScreamerAlert (new: v1.1.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v1.1.0 - March 26, 2026 4:17am<ul><li>Change summary: +1 new, ~7 updated, -0 removed</li><li>New mods:<ul><li>AGF-NoEAC-Toolbelt12Slots (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li>AGF-BackpackPlus-060Slots (v3.2.1 -&gt; v3.2.2)</li><li>AGF-BackpackPlus-072Slots (v3.2.1 -&gt; v3.2.2)</li><li>AGF-BackpackPlus-084Slots (v3.2.1 -&gt; v3.2.2)</li><li>AGF-HUDPlus-1Main (v5.4.3 -&gt; v5.4.4)</li><li>AGF-HUDPluszOther-10IngredientSlots (v1.0.0 -&gt; v1.0.1)</li><li>AGF-NoEAC-SortingBox (v1.0.4 -&gt; v1.0.5)</li><li>zzzAGF-Special-Compatibilities (v4.0.2 -&gt; v4.0.3)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.0.0 - March 26, 2026 1:14am<ul><li>Change summary: +2 new, ~0 updated, -0 removed</li><li>New mods:<ul><li>AGF-NoEAC-ExpandedInteractionPrompts (new: v1.0.1)</li><li>AGF-NoEAC-ScreamerAlert (new: v1.1.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -377,7 +377,7 @@
 
 *Quality-of-life HUD enhancements and visual tweaks.*
 
-> ### **AGF-HUDPlus-1Main** *-v5.4.3* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip)
+> ### **AGF-HUDPlus-1Main** *-v5.4.4* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip)
 > *Refined HUD with clear stats, menus, and visual cues for easier gameplay.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -440,7 +440,7 @@
 
 | Display Name | Version | Download | Description |
 |---|---|---|---|
-| AGF-HUDPluszOther-10IngredientSlots | 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-10IngredientSlots.zip) | Some people and mods need double ingredient visuals. |
+| AGF-HUDPluszOther-10IngredientSlots | 1.0.1 | [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-10IngredientSlots.zip) | Some people and mods need double ingredient visuals. |
 | AGF-HUDPluszOther-RemoveWrittentormAlerts | 2.0.0 | [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-RemoveWrittentormAlerts.zip) | Removes the written messages of incoming storms. |
 | AGF-HUDPluszOther-SmallerInteractionPrompt | 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-SmallerInteractionPrompt.zip) | Smaller Interaction Prompt |
 | AGF-HUDPluszOther-TinyBuffsPopUp | 1.0.0 | [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-TinyBuffsPopUp.zip) | Shrinks the buffs pop up by half. |
@@ -462,7 +462,7 @@
 
 *Download all above or select one below.*
 
-> ### **AGF-BackpackPlus-060Slots** *-v3.2.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip)
+> ### **AGF-BackpackPlus-060Slots** *-v3.2.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip)
 > *Expands your inventory with a 60-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -473,7 +473,7 @@
 
 ---
 
-> ### **AGF-BackpackPlus-072Slots** *-v3.2.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip)
+> ### **AGF-BackpackPlus-072Slots** *-v3.2.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip)
 > *Expands your inventory with a 72-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -484,7 +484,7 @@
 
 ---
 
-> ### **AGF-BackpackPlus-084Slots** *-v3.2.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip)
+> ### **AGF-BackpackPlus-084Slots** *-v3.2.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip)
 > *Expands your inventory with an 84-slot backpack and adds craftable, extra-large storage options.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -516,7 +516,7 @@
 
 ---
 
-> ### **zzzAGF-Special-Compatibilities** *-v4.0.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip)
+> ### **zzzAGF-Special-Compatibilities** *-v4.0.3* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip)
 > *Compatibility Patch Collection.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1309,8 +1309,19 @@
 
 ---
 
-> ### **AGF-NoEAC-SortingBox** *-v1.0.4* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SortingBox.zip)
+> ### **AGF-NoEAC-SortingBox** *-v1.0.5* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SortingBox.zip)
 > *With permissions, integrated from Kanaverum's original mod and Asylum.*
+> 
+
+---
+
+> ### **AGF-NoEAC-Toolbelt12Slots** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip)
+> *Simply expands toolbelt from 10 to 12 slots.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Expands the toolbelt from 10 slots to 12.</li><li>Toolbelt hotkeys run from 1 through = on the keyboard.</li><li>Fixes a mod compatibility issue where holding Shift could block toolbelt hotkey selection.</li><li>In Edit Mode, when the toolbelt is shown in two rows, holding Shift correctly selects slots in the second row.</li></ul>
+>
+> </details>
 > 
 
 ---

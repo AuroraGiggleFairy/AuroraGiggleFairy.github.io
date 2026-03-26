@@ -673,6 +673,71 @@ def move_mods_by_major_version(dry_run: bool, log: Logger) -> None:
                 log.info(f"Moved to PublishReady: {folder_name} (v{version})")
 
 
+def sync_publishready_to_staging_latest(dry_run: bool, log: Logger) -> None:
+    """Ensure ActiveBuild has the latest released versions by base mod name.
+
+    Rules:
+    - If a release mod is missing in ActiveBuild, copy it in.
+    - If release version is higher than ActiveBuild version, replace ActiveBuild copy.
+    - If ActiveBuild is higher, keep ActiveBuild and warn.
+    - If versions tie and content differs, keep ActiveBuild and warn.
+    """
+    log.info("Step 3.5: Ensure latest ReleaseSource mods are in ActiveBuild")
+
+    publish_folders = scan_mod_folders(PUBLISH_READY)
+    staging_folders = scan_mod_folders(STAGING)
+
+    publish_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in publish_folders.items()
+    }
+    staging_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in staging_folders.items()
+    }
+
+    for base_name in sorted(publish_by_base.keys()):
+        pub_folder, pub_path = publish_by_base[base_name]
+        pub_ver = get_modinfo_version(pub_path)
+        if pub_ver is None:
+            log.warn(f"ActiveBuild sync skipped for {pub_folder}: unreadable release ModInfo.xml")
+            continue
+
+        if base_name not in staging_by_base:
+            dest = os.path.join(STAGING, pub_folder)
+            if maybe_copytree(pub_path, dest, dry_run, log):
+                log.info(f"ActiveBuild sync add: {pub_folder} v{pub_ver}")
+            continue
+
+        st_folder, st_path = staging_by_base[base_name]
+        st_ver = get_modinfo_version(st_path)
+        if st_ver is None:
+            log.warn(f"ActiveBuild sync skipped for {st_folder}: unreadable active ModInfo.xml")
+            continue
+
+        cmp_value = compare_versions(pub_ver, st_ver)
+        if cmp_value > 0:
+            dest = os.path.join(STAGING, pub_folder)
+            if maybe_remove_dir(st_path, dry_run, log) and maybe_copytree(pub_path, dest, dry_run, log):
+                log.info(f"ActiveBuild sync update: {st_folder} v{st_ver} -> {pub_folder} v{pub_ver}")
+        elif cmp_value < 0:
+            log.warn(
+                f"ActiveBuild sync kept newer active mod for {base_name}: "
+                f"active v{st_ver} > release v{pub_ver}"
+            )
+        else:
+            try:
+                pub_hash = hash_directory(pub_path)
+                st_hash = hash_directory(st_path)
+                if pub_hash != st_hash:
+                    log.warn(
+                        f"ActiveBuild sync conflict for {base_name}: both v{pub_ver} but content differs. "
+                        "Keeping ActiveBuild copy."
+                    )
+            except Exception as ex:
+                log.warn(f"Could not hash compare release/active tie for {base_name}: {ex}")
+
+
 # =============================================================
 # STEP 4: RENAME + CSV + QUOTES + MOD README
 # =============================================================
@@ -1498,6 +1563,23 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
 
     has_update = bool(is_baseline_release or major_bump_requested or added_mods or updated_existing_mods or removed_mods)
 
+    if not has_update:
+        existing_discord_text = ""
+        if os.path.isfile(discord_path):
+            try:
+                with open(discord_path, "r", encoding="utf-8") as f:
+                    existing_discord_text = f.read().strip()
+            except Exception:
+                existing_discord_text = ""
+
+        # Do not rewrite latest files/state on no-change runs.
+        return {
+            "has_update": False,
+            "release_version": prev_version,
+            "discord_text": existing_discord_text,
+            "discord_path": discord_path,
+        }
+
     previous_release_version = prev_version
 
     versioned_zip_name = f"{GIGGLEPACK_VERSIONED_ZIP_PREFIX}{release_version}.zip"
@@ -1750,99 +1832,210 @@ def load_gigglepack_release_state() -> Dict[str, object]:
     return load_json_file(state_path)
 
 
-def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]:
-    if not state:
+def load_recent_gigglepack_release_entries(limit: int = 3) -> List[Dict[str, object]]:
+    if limit <= 0:
         return []
 
-    release_version = str(state.get("gigglepack_version", "")).strip() or "unknown"
-    previous_release_version = str(state.get("previous_gigglepack_version", "")).strip()
-    is_baseline_release = bool(state.get("is_baseline_release", False))
-    released_at = str(state.get("released_at", "")).strip()
-    new_mods = state.get("new_mods", [])
-    updated_mods = state.get("updated_mods", [])
-    removed_mods = state.get("removed_mods", [])
-    change_counts = state.get("change_counts", {}) if isinstance(state.get("change_counts", {}), dict) else {}
+    markdown_path = os.path.join(get_gigglepack_release_dir_for_read(), "latest-gigglepack-release.md")
+    if not os.path.isfile(markdown_path):
+        return []
 
-    def format_release_stamp(raw: str) -> str:
-        if not raw:
-            return ""
-        try:
-            parsed = dt.datetime.strptime(raw, "%Y-%m-%d %H:%M:%S")
-            stamp = parsed.strftime("%B %d, %Y %I:%M%p")
-            stamp = stamp.lstrip("0").replace(" 0", " ")
-            return stamp.replace("AM", "am").replace("PM", "pm")
-        except Exception:
-            return raw
+    try:
+        with open(markdown_path, "r", encoding="utf-8") as f:
+            lines = f.read().splitlines()
+    except Exception:
+        return []
+
+    entries: List[Dict[str, object]] = []
+    current: Optional[Dict[str, object]] = None
+    section: Optional[str] = None
+
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            continue
+
+        if line in {"# GigglePack Release Changelog", "Newest entries appear at the top.", "---"}:
+            continue
+
+        header_match = re.match(r"^##\s+GigglePack\s+v([0-9]+\.[0-9]+\.[0-9]+)\s+\((.+)\)$", line)
+        if header_match:
+            if current:
+                entries.append(current)
+            current = {
+                "version": header_match.group(1).strip(),
+                "stamp": header_match.group(2).strip(),
+                "new": [],
+                "updated": [],
+                "removed": [],
+                "new_count": 0,
+                "updated_count": 0,
+                "removed_count": 0,
+            }
+            section = None
+            continue
+
+        if not current:
+            continue
+
+        summary_match = re.match(r"^###\s+Summary:\s*\+(\d+)\s+new,\s*~(\d+)\s+updated,\s*-(\d+)\s+removed$", line)
+        if summary_match:
+            current["new_count"] = int(summary_match.group(1))
+            current["updated_count"] = int(summary_match.group(2))
+            current["removed_count"] = int(summary_match.group(3))
+            continue
+
+        if line == "- **New Mods**":
+            section = "new"
+            continue
+        if line == "- **Updated Existing Mods**":
+            section = "updated"
+            continue
+        if line == "- **Removed Mods**":
+            section = "removed"
+            continue
+
+        if section and line.startswith("- "):
+            item_text = line[2:].strip()
+            current_list = current.get(section)
+            if isinstance(current_list, list):
+                current_list.append(item_text)
+
+    if current:
+        entries.append(current)
+
+    return entries[:limit]
+
+
+def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]:
+    history_entries = load_recent_gigglepack_release_entries(limit=3)
+    if not history_entries and not state:
+        return []
 
     def escape_html(text: str) -> str:
-        return (
-            text.replace("&", "&amp;")
-            .replace("<", "&lt;")
-            .replace(">", "&gt;")
-        )
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    parsed_entries: List[Dict[str, object]] = []
+    if history_entries:
+        for entry in history_entries:
+            version = str(entry.get("version", "")).strip() or "unknown"
+            stamp = str(entry.get("stamp", "")).strip()
+            new_items = [escape_html(str(item).strip()) for item in entry.get("new", []) if str(item).strip()]
+            updated_items = [escape_html(str(item).strip()) for item in entry.get("updated", []) if str(item).strip()]
+            removed_items = [escape_html(str(item).strip()) for item in entry.get("removed", []) if str(item).strip()]
+            parsed_entries.append({
+                "header": f"GigglePack v{escape_html(version)}" + (f" - {escape_html(stamp)}" if stamp else ""),
+                "new_count": int(entry.get("new_count", len(new_items))),
+                "updated_count": int(entry.get("updated_count", len(updated_items))),
+                "removed_count": int(entry.get("removed_count", len(removed_items))),
+                "new_items": new_items,
+                "updated_items": updated_items,
+                "removed_items": removed_items,
+            })
+    else:
+        release_version = str(state.get("gigglepack_version", "")).strip() or "unknown"
+        previous_release_version = str(state.get("previous_gigglepack_version", "")).strip()
+        released_at = str(state.get("released_at", "")).strip()
+        new_mods = state.get("new_mods", [])
+        updated_mods = state.get("updated_mods", [])
+        removed_mods = state.get("removed_mods", [])
+        change_counts = state.get("change_counts", {}) if isinstance(state.get("change_counts", {}), dict) else {}
+
+        def format_release_stamp(raw: str) -> str:
+            if not raw:
+                return ""
+            try:
+                parsed = dt.datetime.strptime(raw, "%Y-%m-%d %H:%M:%S")
+                stamp = parsed.strftime("%B %d, %Y %I:%M%p")
+                stamp = stamp.lstrip("0").replace(" 0", " ")
+                return stamp.replace("AM", "am").replace("PM", "pm")
+            except Exception:
+                return raw
+
+        new_items: List[str] = []
+        if isinstance(new_mods, list):
+            for entry in new_mods:
+                if isinstance(entry, dict):
+                    mod_name = str(entry.get("mod", "")).strip()
+                    to_ver = str(entry.get("to", "")).strip()
+                    if mod_name:
+                        new_items.append(f"{escape_html(mod_name)} (new: v{escape_html(to_ver)})")
+
+        updated_items: List[str] = []
+        if isinstance(updated_mods, list):
+            for entry in updated_mods:
+                if isinstance(entry, dict):
+                    mod_name = str(entry.get("mod", "")).strip()
+                    from_ver = str(entry.get("from", "")).strip()
+                    to_ver = str(entry.get("to", "")).strip()
+                    if mod_name:
+                        updated_items.append(
+                            f"{escape_html(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
+                        )
+
+        removed_items: List[str] = []
+        if isinstance(removed_mods, list):
+            for entry in removed_mods:
+                if isinstance(entry, dict):
+                    mod_name = str(entry.get("mod", "")).strip()
+                    from_ver = str(entry.get("from", "")).strip()
+                    if mod_name:
+                        removed_items.append(f"{escape_html(mod_name)} (was v{escape_html(from_ver)})")
+
+        header = f"GigglePack v{escape_html(release_version)}"
+        release_stamp = format_release_stamp(released_at)
+        if release_stamp:
+            header += f" - {escape_html(release_stamp)}"
+
+        parsed_entries.append({
+            "header": header,
+            "new_count": int(change_counts.get("new_mods", len(new_items))),
+            "updated_count": int(change_counts.get("updated_existing_mods", len(updated_items))),
+            "removed_count": int(change_counts.get("removed_mods", len(removed_items))),
+            "new_items": new_items,
+            "updated_items": updated_items,
+            "removed_items": removed_items,
+            "previous_release_version": previous_release_version,
+        })
 
     lines: List[str] = []
-    release_stamp = format_release_stamp(released_at)
-    header_line = f"GigglePack v{escape_html(release_version)}"
-    if release_stamp:
-        header_line += f" - {escape_html(release_stamp)}"
-
-    new_count = int(change_counts.get("new_mods", len(new_mods)))
-    updated_count = int(change_counts.get("updated_existing_mods", len(updated_mods)))
-    removed_count = int(change_counts.get("removed_mods", len(removed_mods)))
 
     def build_inner_list(items: List[str]) -> str:
         if not items:
             return "<ul><li>None</li></ul>"
         return "<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
 
-    new_items: List[str] = []
-    if isinstance(new_mods, list):
-        for entry in new_mods:
-            if isinstance(entry, dict):
-                mod_name = str(entry.get("mod", "")).strip()
-                to_ver = str(entry.get("to", "")).strip()
-                if mod_name:
-                    new_items.append(f"{escape_html(mod_name)} (new: v{escape_html(to_ver)})")
+    detail_bits: List[str] = ["<ul>"]
+    for idx, entry in enumerate(parsed_entries):
+        header_line = str(entry.get("header", "")).strip() or "GigglePack"
+        new_count = int(entry.get("new_count", 0))
+        updated_count = int(entry.get("updated_count", 0))
+        removed_count = int(entry.get("removed_count", 0))
+        new_items = entry.get("new_items", []) if isinstance(entry.get("new_items", []), list) else []
+        updated_items = entry.get("updated_items", []) if isinstance(entry.get("updated_items", []), list) else []
+        removed_items = entry.get("removed_items", []) if isinstance(entry.get("removed_items", []), list) else []
 
-    updated_items: List[str] = []
-    if isinstance(updated_mods, list):
-        for entry in updated_mods:
-            if isinstance(entry, dict):
-                mod_name = str(entry.get("mod", "")).strip()
-                from_ver = str(entry.get("from", "")).strip()
-                to_ver = str(entry.get("to", "")).strip()
-                if mod_name:
-                    updated_items.append(
-                        f"{escape_html(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
-                    )
+        detail_bits.extend([
+            f"<li>{header_line}",
+            "<ul>",
+            f"<li>Change summary: +{new_count} new, ~{updated_count} updated, -{removed_count} removed</li>",
+        ])
+        previous_release_version = str(entry.get("previous_release_version", "")).strip()
+        entry_version_match = re.search(r"v([0-9]+\.[0-9]+\.[0-9]+)", header_line)
+        entry_version = entry_version_match.group(1) if entry_version_match else ""
+        if previous_release_version and previous_release_version != entry_version:
+            detail_bits.append(f"<li>Previous GigglePack version: v{escape_html(previous_release_version)}</li>")
 
-    removed_items: List[str] = []
-    if isinstance(removed_mods, list):
-        for entry in removed_mods:
-            if isinstance(entry, dict):
-                mod_name = str(entry.get("mod", "")).strip()
-                from_ver = str(entry.get("from", "")).strip()
-                if mod_name:
-                    removed_items.append(f"{escape_html(mod_name)} (was v{escape_html(from_ver)})")
+        detail_bits.append(f"<li>New mods:{build_inner_list(new_items)}</li>")
+        detail_bits.append(f"<li>Updated existing mods:{build_inner_list(updated_items)}</li>")
+        detail_bits.append(f"<li>Removed mods:{build_inner_list(removed_items)}</li>")
+        detail_bits.extend(["</ul>", "</li>"])
 
-    detail_bits: List[str] = [
-        "<ul>",
-        f"<li>{header_line}",
-        "<ul>",
-        f"<li>Change summary: +{new_count} new, ~{updated_count} updated, -{removed_count} removed</li>",
-    ]
-    if previous_release_version and previous_release_version != release_version:
-        detail_bits.append(f"<li>Previous GigglePack version: v{escape_html(previous_release_version)}</li>")
-
-    detail_bits.append(f"<li>New mods:{build_inner_list(new_items)}</li>")
-    detail_bits.append(f"<li>Updated existing mods:{build_inner_list(updated_items)}</li>")
-    detail_bits.append(f"<li>Removed mods:{build_inner_list(removed_items)}</li>")
-    detail_bits.extend(["</ul>", "</li>", "</ul>"])
+    detail_bits.append("</ul>")
     changelog_html = "".join(detail_bits)
 
     lines.extend([
-        "> <details> <summary><i>Changelog</i></summary>",
+        "> <details> <summary><i>Changelog (latest 3 releases)</i></summary>",
         ">",
         f"> {changelog_html}",
         ">",
@@ -2064,6 +2257,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
         else:
             mods_pulled = sync_workspace_and_game(args.dry_run, log)
             move_mods_by_major_version(args.dry_run, log)
+            sync_publishready_to_staging_latest(args.dry_run, log)
 
             folder_renames = rename_mod_folders_to_modinfo(args.dry_run, log)
             csv_rows = normalize_compat_csv(folder_renames, args.dry_run, log)
