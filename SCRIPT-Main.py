@@ -8,6 +8,8 @@ import re
 import shutil
 import sys
 import threading
+import urllib.error
+import urllib.request
 import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
@@ -49,6 +51,7 @@ LOGS_DIR = os.path.join(VS_CODE_ROOT, "Logs")
 COMPAT_CSV = os.path.join(VS_CODE_ROOT, "HELPER_ModCompatibility.csv")
 MOD_README_TEMPLATE = os.path.join(VS_CODE_ROOT, "TEMPLATE-ModReadMes.md")
 MAIN_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-MainReadMe.md")
+DISCORD_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "TEMPLATE-DiscordUpdate.md")
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
 
 AGF_PREFIXES = ("AGF-", "zzzAGF-")
@@ -57,10 +60,12 @@ BACKPACK_DEFAULT_ACTIVE_TOKEN = "084Slots"
 GAME_OPTIONALS_BACKPACK_DIR = ".Optionals-Backpack"
 GAME_OPTIONALS_HUDPLUS_DIR = ".Optionals-HUDPlus"
 RELEASE_META_DIR_NAME = ".release"
+GIGGLEPACK_RELEASE_DATA_DIR = "GigglePack"
+GIGGLEPACK_RELEASE_ROOT_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
 GIGGLEPACK_CANONICAL_ZIP = "00_GigglePack_All.zip"
-GIGGLEPACK_LATEST_ZIP = "AGF-GigglePack-latest.zip"
 GIGGLEPACK_VERSIONED_ZIP_PREFIX = "AGF-GigglePack-v"
 GIGGLEPACK_MAJOR_BUMP_MARKER = "gigglepack-major-bump.txt"
+DISCORD_WEBHOOK_ENV_VAR = "AGF_DISCORD_WEBHOOK_URL"
 GIGGLEPACK_V100_FOCUS_MODS = (
     "AGF-NoEAC-ExpandedInteractionPrompts",
     "AGF-NoEAC-ScreamerAlert",
@@ -365,6 +370,126 @@ def extract_mod_description_from_modinfo(modinfo_path: str) -> str:
 
 def zip_download_link(zip_name: str) -> str:
     return f"{BASE_DOWNLOAD_URL}/{zip_name}"
+
+
+def extract_markdown_section(markdown_text: str, heading: str, next_heading: Optional[str] = None) -> str:
+    start_match = re.search(rf"^##\s*{re.escape(heading)}\s*$", markdown_text, re.MULTILINE)
+    if not start_match:
+        return markdown_text.strip()
+
+    body_start = start_match.end()
+    if not next_heading:
+        return markdown_text[body_start:].strip()
+
+    end_match = re.search(
+        rf"^##\s*{re.escape(next_heading)}\s*$",
+        markdown_text[body_start:],
+        re.MULTILINE,
+    )
+    if not end_match:
+        return markdown_text[body_start:].strip()
+
+    body_end = body_start + end_match.start()
+    return markdown_text[body_start:body_end].strip()
+
+
+def render_discord_post_from_template(
+    release_version: str,
+    now_iso: str,
+    versioned_zip_name: str,
+    previous_release_version: Optional[str],
+    new_mod_entries: List[Dict[str, str]],
+    updated_mod_entries: List[Dict[str, str]],
+    removed_mod_entries: List[Dict[str, str]],
+    log: Logger,
+) -> str:
+    if not os.path.exists(DISCORD_TEMPLATE_PATH):
+        log.warn(f"Discord template missing: {DISCORD_TEMPLATE_PATH}. Using fallback format.")
+        return ""
+
+    try:
+        with open(DISCORD_TEMPLATE_PATH, "r", encoding="utf-8") as f:
+            template_text = f.read()
+    except Exception as ex:
+        log.warn(f"Could not read Discord template {DISCORD_TEMPLATE_PATH}: {ex}. Using fallback format.")
+        return ""
+
+    template_start_marker = "<!-- DISCORD_TEMPLATE_START -->"
+    template_end_marker = "<!-- DISCORD_TEMPLATE_END -->"
+    if template_start_marker in template_text and template_end_marker in template_text:
+        body = template_text.split(template_start_marker, 1)[1].split(template_end_marker, 1)[0].strip()
+    else:
+        body = extract_markdown_section(template_text, "Copy/Paste Format", "Notes")
+    canonical_download_url = zip_download_link(GIGGLEPACK_CANONICAL_ZIP)
+    release_file_label = f"GigglePack-v{release_version}.zip"
+    static_map = {
+        "GIGGLEPACK_VERSION": release_version,
+        "RELEASE_STAMP": now_iso,
+        "VERSIONED_ZIP_URL": canonical_download_url,
+        # Compatibility aliases for older/custom templates.
+        # latest zip is deprecated, so map these to the canonical download URL.
+        "LATEST_ZIP_URL": canonical_download_url,
+        "DOWNLOAD_URL": canonical_download_url,
+        "DOWNLOAD_FILE_LABEL": release_file_label,
+        "NEW_COUNT": str(len(new_mod_entries)),
+        "UPDATED_COUNT": str(len(updated_mod_entries)),
+        "REMOVED_COUNT": str(len(removed_mod_entries)),
+        "PREVIOUS_GIGGLEPACK_VERSION": previous_release_version or "None",
+        "NEW_MOD_LINES": "\n".join(f"  - {e['mod']} (new: v{e['to']})" for e in new_mod_entries) or "  - None",
+        "UPDATED_MOD_LINES": "\n".join(
+            f"  - {e['mod']} (v{e['from']} -> v{e['to']})" for e in updated_mod_entries
+        )
+        or "  - None",
+        "REMOVED_MOD_LINES": "\n".join(f"  - {e['mod']} (was v{e['from']})" for e in removed_mod_entries) or "  - None",
+    }
+
+    def token_value(token: str) -> str:
+        if token in static_map:
+            return static_map[token]
+
+        new_mod_match = re.fullmatch(r"NEW_MOD_(\d+)", token)
+        if new_mod_match:
+            idx = int(new_mod_match.group(1)) - 1
+            return new_mod_entries[idx]["mod"] if 0 <= idx < len(new_mod_entries) else "None"
+
+        new_mod_ver_match = re.fullmatch(r"NEW_MOD_(\d+)_VERSION", token)
+        if new_mod_ver_match:
+            idx = int(new_mod_ver_match.group(1)) - 1
+            return new_mod_entries[idx]["to"] if 0 <= idx < len(new_mod_entries) else "None"
+
+        updated_mod_match = re.fullmatch(r"UPDATED_MOD_(\d+)", token)
+        if updated_mod_match:
+            idx = int(updated_mod_match.group(1)) - 1
+            return updated_mod_entries[idx]["mod"] if 0 <= idx < len(updated_mod_entries) else "None"
+
+        updated_old_match = re.fullmatch(r"UPDATED_MOD_(\d+)_OLD", token)
+        if updated_old_match:
+            idx = int(updated_old_match.group(1)) - 1
+            return updated_mod_entries[idx]["from"] if 0 <= idx < len(updated_mod_entries) else "None"
+
+        updated_new_match = re.fullmatch(r"UPDATED_MOD_(\d+)_NEW", token)
+        if updated_new_match:
+            idx = int(updated_new_match.group(1)) - 1
+            return updated_mod_entries[idx]["to"] if 0 <= idx < len(updated_mod_entries) else "None"
+
+        removed_mod_match = re.fullmatch(r"REMOVED_MOD_(\d+)", token)
+        if removed_mod_match:
+            idx = int(removed_mod_match.group(1)) - 1
+            return removed_mod_entries[idx]["mod"] if 0 <= idx < len(removed_mod_entries) else "None"
+
+        removed_ver_match = re.fullmatch(r"REMOVED_MOD_(\d+)_VERSION", token)
+        if removed_ver_match:
+            idx = int(removed_ver_match.group(1)) - 1
+            return removed_mod_entries[idx]["from"] if 0 <= idx < len(removed_mod_entries) else "None"
+
+        return "None"
+
+    rendered = re.sub(r"\{\{([A-Z0-9_]+)\}\}", lambda m: token_value(m.group(1)), body)
+    rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(new:\s*vNone\)\s*$", r"\1None", rendered)
+    rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(vNone\s*->\s*vNone\)\s*$", r"\1None", rendered)
+    rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(was\s*vNone\)\s*$", r"\1None", rendered)
+    rendered = re.sub(r"\n{3,}", "\n\n", rendered).strip()
+    return rendered + "\n"
 
 
 def get_mod_bases_for_dirs(mod_dirs: Tuple[str, ...]) -> set[str]:
@@ -1151,6 +1276,12 @@ def format_three_part_version(major: int, minor: int, patch: int) -> str:
     return f"{major}.{minor}.{patch}"
 
 
+def format_release_stamp(dt_value: dt.datetime) -> str:
+    stamp = dt_value.strftime("%B %d, %Y %I:%M%p")
+    stamp = stamp.lstrip("0").replace(" 0", " ")
+    return stamp.replace("AM", "am").replace("PM", "pm")
+
+
 def load_json_file(path: str) -> Dict[str, object]:
     if not os.path.isfile(path):
         return {}
@@ -1162,6 +1293,20 @@ def load_json_file(path: str) -> Dict[str, object]:
         return {}
 
 
+def get_gigglepack_release_dir_for_write() -> str:
+    return GIGGLEPACK_RELEASE_ROOT_DIR
+
+
+def get_gigglepack_release_dir_for_read() -> str:
+    preferred = GIGGLEPACK_RELEASE_ROOT_DIR
+    legacy = os.path.join(ZIP_OUTPUT, RELEASE_META_DIR_NAME, GIGGLEPACK_RELEASE_DATA_DIR)
+    if os.path.isdir(preferred):
+        return preferred
+    if os.path.isdir(legacy):
+        return legacy
+    return preferred
+
+
 def write_text_file(path: str, content: str, dry_run: bool, log: Logger) -> None:
     if dry_run:
         log.info(f"[DRYRUN] Would write file: {path}")
@@ -1171,16 +1316,102 @@ def write_text_file(path: str, content: str, dry_run: bool, log: Logger) -> None
         f.write(content)
 
 
-def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> None:
-    """Create versioned/latest GigglePack zips and release notes for Discord/GitHub usage."""
+def split_discord_message(content: str, max_len: int = 2000) -> List[str]:
+    if len(content) <= max_len:
+        return [content]
+
+    lines = content.splitlines(keepends=True)
+    chunks: List[str] = []
+    current = ""
+    for line in lines:
+        if len(current) + len(line) <= max_len:
+            current += line
+            continue
+
+        if current:
+            chunks.append(current.rstrip("\n"))
+            current = ""
+
+        while len(line) > max_len:
+            chunks.append(line[:max_len])
+            line = line[max_len:]
+        current = line
+
+    if current:
+        chunks.append(current.rstrip("\n"))
+    return chunks
+
+
+def post_discord_webhook_message(webhook_url: str, content: str, dry_run: bool, log: Logger) -> bool:
+    parts = split_discord_message(content)
+    if dry_run:
+        log.info(f"[DRYRUN] Would post Discord message in {len(parts)} part(s)")
+        return True
+
+    for idx, part in enumerate(parts, start=1):
+        payload = json.dumps({"content": part}).encode("utf-8")
+        request = urllib.request.Request(
+            webhook_url,
+            data=payload,
+            headers={"Content-Type": "application/json", "User-Agent": "AGF-GigglePack-Automation"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                status = response.getcode()
+                if status not in (200, 204):
+                    log.warn(f"Discord webhook returned HTTP {status} on part {idx}/{len(parts)}")
+                    return False
+        except urllib.error.URLError as ex:
+            log.warn(f"Failed to post Discord webhook part {idx}/{len(parts)}: {ex}")
+            return False
+        except Exception as ex:
+            log.warn(f"Unexpected Discord webhook error on part {idx}/{len(parts)}: {ex}")
+            return False
+
+    return True
+
+
+def maybe_post_discord_release_update(
+    release_result: Dict[str, object],
+    webhook_url: str,
+    dry_run: bool,
+    log: Logger,
+) -> None:
+    if not release_result:
+        return
+
+    has_update = bool(release_result.get("has_update", False))
+    if not has_update:
+        log.info("GigglePack update not detected; skipping Discord auto-post")
+        return
+
+    webhook = webhook_url.strip()
+    if not webhook:
+        log.info(
+            f"Discord auto-post skipped: set --discord-webhook-url or env {DISCORD_WEBHOOK_ENV_VAR} to enable"
+        )
+        return
+
+    discord_text = str(release_result.get("discord_text", "")).strip()
+    if not discord_text:
+        log.warn("Discord auto-post skipped: generated Discord text is empty")
+        return
+
+    if post_discord_webhook_message(webhook, discord_text, dry_run, log):
+        log.info("Discord webhook post completed")
+
+
+def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[str, object]:
+    """Create versioned GigglePack zips and release notes for Discord/GitHub usage."""
     log.info("Step 6.5: Generate GigglePack release metadata + changelog outputs")
 
     canonical_zip_path = os.path.join(ZIP_OUTPUT, GIGGLEPACK_CANONICAL_ZIP)
     if not os.path.isfile(canonical_zip_path) and not dry_run:
         log.warn(f"GigglePack release metadata skipped: missing {canonical_zip_path}")
-        return
+        return {"has_update": False, "discord_text": ""}
 
-    release_meta_dir = os.path.join(ZIP_OUTPUT, RELEASE_META_DIR_NAME)
+    release_meta_dir = get_gigglepack_release_dir_for_write()
     state_path = os.path.join(release_meta_dir, "gigglepack-release-state.json")
     discord_path = os.path.join(release_meta_dir, "latest-gigglepack-discord.txt")
     markdown_path = os.path.join(release_meta_dir, "latest-gigglepack-release.md")
@@ -1199,7 +1430,7 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> None:
     giggle_pack = next((pack for pack in packs if pack[0] == "00_GigglePack_All"), None)
     if not giggle_pack:
         log.warn("GigglePack release metadata skipped: could not resolve pack definition")
-        return
+        return {"has_update": False, "discord_text": ""}
 
     _, giggle_root, giggle_optionals = giggle_pack
     giggle_mod_folder_names = set(giggle_root)
@@ -1246,16 +1477,17 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> None:
     else:
         release_version = prev_version
 
+    has_update = bool(is_baseline_release or major_bump_requested or added_mods or updated_existing_mods or removed_mods)
+
+    previous_release_version = prev_version
+
     versioned_zip_name = f"{GIGGLEPACK_VERSIONED_ZIP_PREFIX}{release_version}.zip"
     versioned_zip_path = os.path.join(ZIP_OUTPUT, versioned_zip_name)
-    latest_zip_path = os.path.join(ZIP_OUTPUT, GIGGLEPACK_LATEST_ZIP)
 
     if dry_run:
         log.info(f"[DRYRUN] Would copy {GIGGLEPACK_CANONICAL_ZIP} -> {versioned_zip_name}")
-        log.info(f"[DRYRUN] Would copy {GIGGLEPACK_CANONICAL_ZIP} -> {GIGGLEPACK_LATEST_ZIP}")
     else:
         shutil.copy2(canonical_zip_path, versioned_zip_path)
-        shutil.copy2(canonical_zip_path, latest_zip_path)
 
     new_mod_entries: List[Dict[str, str]] = [
         {"mod": mod_name, "to": new_ver}
@@ -1287,105 +1519,96 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> None:
         for entry in updated_mod_entries
     ]
     removed_lines = [f"- {entry['mod']} (was v{entry['from']})" for entry in removed_mod_entries]
-    now_iso = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    def capped(lines: List[str], cap: int) -> List[str]:
-        if len(lines) <= cap:
-            return lines
-        return lines[:cap] + [f"- ... and {len(lines) - cap} more"]
-
-    new_mod_lines_short = capped(new_mod_lines, 15)
-    updated_existing_lines_short = capped(updated_existing_lines, 20)
-    removed_lines_short = capped(removed_lines, 10)
-
-    discord_chunks: List[str] = [
-        f"- GigglePack v{release_version}",
-        f"  - Released: {now_iso}",
-        f"  - Download (versioned): {zip_download_link(versioned_zip_name)}",
-        f"  - Download (latest): {zip_download_link(GIGGLEPACK_LATEST_ZIP)}",
-        f"  - Change summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, -{len(removed_lines)} removed",
-        "",
-        "Version rules:",
-        "- X increases for major game-cycle updates (manual marker trigger).",
-        "- Y increases when NEW mods are added to GigglePack.",
-        "- Z increases when existing GigglePack mods are updated.",
-        "",
-    ]
-    if release_version == "1.0.0":
-        discord_chunks.append("  - New mods:")
-        for line in new_mod_lines_short:
-            discord_chunks.append(f"    {line}")
-    elif is_baseline_release:
-        discord_chunks.append(
-            f"Baseline release snapshot created with {len(giggle_mod_versions)} mods. "
-            "Detailed per-mod baseline list omitted for readability."
-        )
+    if has_update:
+        now_dt = dt.datetime.now()
     else:
-        if new_mod_lines_short:
-            discord_chunks.append("New mods since previous GigglePack release:")
-            discord_chunks.extend(new_mod_lines_short)
-            discord_chunks.append("")
+        previous_release_stamp = str(prev_state.get("released_at", "")).strip()
+        try:
+            now_dt = dt.datetime.strptime(previous_release_stamp, "%Y-%m-%d %H:%M:%S")
+        except Exception:
+            now_dt = dt.datetime.now()
+    now_iso = now_dt.strftime("%Y-%m-%d %H:%M:%S")
+    now_display = format_release_stamp(now_dt)
 
-        if updated_existing_lines_short:
-            discord_chunks.append("Updated existing mods since previous GigglePack release:")
-            discord_chunks.extend(updated_existing_lines_short)
-            discord_chunks.append("")
+    discord_text = render_discord_post_from_template(
+        release_version=release_version,
+        now_iso=now_display,
+        versioned_zip_name=versioned_zip_name,
+        previous_release_version=previous_release_version,
+        new_mod_entries=new_mod_entries,
+        updated_mod_entries=updated_mod_entries,
+        removed_mod_entries=removed_mod_entries,
+        log=log,
+    )
 
-        if removed_lines_short:
-            discord_chunks.append("Removed from GigglePack since previous release:")
-            discord_chunks.extend(removed_lines_short)
-
-        if not (new_mod_lines_short or updated_existing_lines_short or removed_lines_short):
-            discord_chunks.append("No mod changes since previous GigglePack release.")
-
-    discord_text = "\n".join(discord_chunks).strip() + "\n"
+    if not discord_text:
+        fallback_chunks: List[str] = [
+            f"GigglePack v{release_version} - {now_display}",
+            f"Download: {zip_download_link(GIGGLEPACK_CANONICAL_ZIP)}",
+            f"Change summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, -{len(removed_lines)} removed",
+            "",
+            "**New mods:**",
+        ]
+        fallback_chunks.extend(new_mod_lines or ["- None"])
+        fallback_chunks.extend(["", "**Updated existing mods:**"])
+        fallback_chunks.extend(updated_existing_lines or ["- None"])
+        fallback_chunks.extend(["", "**Removed mods:**"])
+        fallback_chunks.extend(removed_lines or ["- None"])
+        discord_text = "\n".join(fallback_chunks).strip() + "\n"
 
     markdown_lines: List[str] = [
-        f"# GigglePack v{release_version}",
-        "",
-        f"- Released: {now_iso}",
-        f"- Versioned: {zip_download_link(versioned_zip_name)}",
-        f"- Latest: {zip_download_link(GIGGLEPACK_LATEST_ZIP)}",
-        "",
-        "## Version Rules",
-        "- X increases for major game-cycle updates (manual marker trigger).",
-        "- Y increases when NEW mods are added to GigglePack.",
-        "- Z increases when existing GigglePack mods are updated.",
-        "",
-        "## Change Summary",
-        f"- New mods: {len(new_mod_lines)}",
-        f"- Updated existing mods: {len(updated_existing_lines)}",
-        f"- Removed mods: {len(removed_lines)}",
-        "",
-        "## New Mods",
+        f"## GigglePack v{release_version} ({now_display})",
+        f"### Summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, -{len(removed_lines)} removed",
+        "- **New Mods**",
     ]
-    if release_version == "1.0.0":
-        markdown_lines.extend(new_mod_lines_short)
-    elif is_baseline_release:
-        markdown_lines.append(
-            f"- Baseline release snapshot with {len(giggle_mod_versions)} mods. "
-            "Detailed per-mod baseline list intentionally omitted."
-        )
-    elif new_mod_lines_short:
-        markdown_lines.extend(new_mod_lines_short)
+    if new_mod_lines:
+        markdown_lines.extend([re.sub(r"^-\s", "  - ", line) for line in new_mod_lines])
     else:
-        markdown_lines.append("- No new mods in this release.")
+        markdown_lines.append("  - None")
 
-    markdown_lines.append("")
-    markdown_lines.append("## Updated Existing Mods")
-    if is_baseline_release:
-        markdown_lines.append("- Baseline release (no previous release to compare existing updates).")
-    elif updated_existing_lines_short:
-        markdown_lines.extend(updated_existing_lines_short)
+    markdown_lines.append("- **Updated Existing Mods**")
+    if updated_existing_lines:
+        markdown_lines.extend([re.sub(r"^-\s", "  - ", line) for line in updated_existing_lines])
     else:
-        markdown_lines.append("- No existing mod version increases in this release.")
+        markdown_lines.append("  - None")
 
+    markdown_lines.append("- **Removed Mods**")
     if removed_lines:
-        markdown_lines.append("")
-        markdown_lines.append("## Removed Mods")
-        markdown_lines.extend(removed_lines_short)
+        markdown_lines.extend([re.sub(r"^-\s", "  - ", line) for line in removed_lines])
+    else:
+        markdown_lines.append("  - None")
 
-    markdown_text = "\n".join(markdown_lines).strip() + "\n"
+    new_markdown_entry = "\n".join(markdown_lines).strip()
+
+    existing_entries: List[str] = []
+    if os.path.isfile(markdown_path):
+        try:
+            with open(markdown_path, "r", encoding="utf-8") as f:
+                existing_content = f.read().strip()
+            if existing_content:
+                if existing_content.startswith("# GigglePack Release Changelog"):
+                    existing_body = existing_content.split("\n", 1)[1].strip() if "\n" in existing_content else ""
+                else:
+                    existing_body = existing_content
+                if existing_body:
+                    existing_entries = [
+                        chunk.strip() for chunk in re.split(r"\n\n---\n\n", existing_body) if chunk.strip()
+                    ]
+        except Exception:
+            existing_entries = []
+
+    def entry_version(entry_text: str) -> str:
+        match = re.search(r"^#{1,2}\s*GigglePack\s+v([0-9]+\.[0-9]+\.[0-9]+)", entry_text, re.MULTILINE)
+        return match.group(1) if match else ""
+
+    filtered_entries = [entry for entry in existing_entries if entry_version(entry) != release_version]
+    all_entries = [new_markdown_entry] + filtered_entries
+    markdown_text = (
+        "# GigglePack Release Changelog\n"
+        "Newest entries appear at the top.\n\n"
+        + "\n\n---\n\n".join(all_entries).strip()
+        + "\n"
+    )
 
     write_text_file(discord_path, discord_text, dry_run, log)
     write_text_file(markdown_path, markdown_text, dry_run, log)
@@ -1400,7 +1623,6 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> None:
         "new_mods": new_mod_entries,
         "removed_mods": removed_mod_entries,
         "versioned_zip": versioned_zip_name,
-        "latest_zip": GIGGLEPACK_LATEST_ZIP,
         "change_counts": {
             "new_mods": len(new_mod_entries),
             "updated_existing_mods": len(updated_mod_entries),
@@ -1420,6 +1642,13 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> None:
                 log.info(f"Consumed major bump marker: {marker_path}")
             except Exception as ex:
                 log.warn(f"Could not remove major bump marker {marker_path}: {ex}")
+
+    return {
+        "has_update": has_update,
+        "release_version": release_version,
+        "discord_text": discord_text,
+        "discord_path": discord_path,
+    }
 
     log.info(
         f"GigglePack release v{release_version}: {len(updated_existing_lines)} updated existing mods, "
@@ -1498,7 +1727,7 @@ def build_mod_entry(folder_name: str) -> str:
 
 
 def load_gigglepack_release_state() -> Dict[str, object]:
-    state_path = os.path.join(ZIP_OUTPUT, RELEASE_META_DIR_NAME, "gigglepack-release-state.json")
+    state_path = os.path.join(get_gigglepack_release_dir_for_read(), "gigglepack-release-state.json")
     return load_json_file(state_path)
 
 
@@ -1526,83 +1755,80 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
         except Exception:
             return raw
 
+    def escape_html(text: str) -> str:
+        return (
+            text.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+        )
+
     lines: List[str] = []
     release_stamp = format_release_stamp(released_at)
-    header_line = f">  - GigglePack v{release_version}"
+    header_line = f"GigglePack v{escape_html(release_version)}"
     if release_stamp:
-        header_line += f" - *{release_stamp}*"
-
-    lines.extend([
-        ">",
-        "> <details><summary><i>Changelog</i></summary>",
-        ">",
-        header_line,
-    ])
+        header_line += f" - {escape_html(release_stamp)}"
 
     new_count = int(change_counts.get("new_mods", len(new_mods)))
     updated_count = int(change_counts.get("updated_existing_mods", len(updated_mods)))
     removed_count = int(change_counts.get("removed_mods", len(removed_mods)))
-    lines.append(f">     - Change summary: +{new_count} new, ~{updated_count} updated, -{removed_count} removed")
 
-    if release_version == "1.0.0":
-        lines.append(">     - New mods:")
-        if isinstance(new_mods, list):
-            for entry in new_mods[:10]:
-                if isinstance(entry, dict):
-                    mod_name = str(entry.get("mod", "")).strip()
-                    to_ver = str(entry.get("to", "")).strip()
-                    if mod_name:
-                        lines.append(f">         - {mod_name} (new: v{to_ver})")
-        lines.extend([">", "> </details>"])
-        return lines
+    def build_inner_list(items: List[str]) -> str:
+        if not items:
+            return "<ul><li>None</li></ul>"
+        return "<ul>" + "".join(f"<li>{item}</li>" for item in items) + "</ul>"
 
-    if is_baseline_release:
-        lines.append(">     - Baseline release snapshot: detailed per-mod list hidden for readability.")
-        lines.extend([">", "> </details>"])
-        return lines
-
-    if previous_release_version:
-        lines.append(f">     - Previous GigglePack version: v{previous_release_version}")
-
-    if isinstance(new_mods, list) and new_mods:
-        lines.append(">     - New mods since previous GigglePack release:")
-        for entry in new_mods[:12]:
+    new_items: List[str] = []
+    if isinstance(new_mods, list):
+        for entry in new_mods:
             if isinstance(entry, dict):
                 mod_name = str(entry.get("mod", "")).strip()
                 to_ver = str(entry.get("to", "")).strip()
                 if mod_name:
-                    lines.append(f">         - {mod_name} (new: v{to_ver})")
-        if len(new_mods) > 12:
-            lines.append(f">         - ... and {len(new_mods) - 12} more")
+                    new_items.append(f"{escape_html(mod_name)} (new: v{escape_html(to_ver)})")
 
-    if isinstance(updated_mods, list) and updated_mods:
-        lines.append(">     - Updated existing mods since previous GigglePack release:")
-        for entry in updated_mods[:15]:
+    updated_items: List[str] = []
+    if isinstance(updated_mods, list):
+        for entry in updated_mods:
             if isinstance(entry, dict):
                 mod_name = str(entry.get("mod", "")).strip()
                 from_ver = str(entry.get("from", "")).strip()
                 to_ver = str(entry.get("to", "")).strip()
-                if not mod_name:
-                    continue
-                lines.append(f">         - {mod_name} (v{from_ver} -> v{to_ver})")
-        if len(updated_mods) > 15:
-            lines.append(f">         - ... and {len(updated_mods) - 15} more")
-    else:
-        lines.append(">     - No existing mod version increases since previous GigglePack release.")
+                if mod_name:
+                    updated_items.append(
+                        f"{escape_html(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
+                    )
 
-    if isinstance(removed_mods, list) and removed_mods:
-        lines.append(">")
-        lines.append(">     - Removed from GigglePack:")
-        for entry in removed_mods[:10]:
+    removed_items: List[str] = []
+    if isinstance(removed_mods, list):
+        for entry in removed_mods:
             if isinstance(entry, dict):
                 mod_name = str(entry.get("mod", "")).strip()
                 from_ver = str(entry.get("from", "")).strip()
                 if mod_name:
-                    lines.append(f">         - {mod_name} (was v{from_ver})")
-        if len(removed_mods) > 10:
-            lines.append(f">         - ... and {len(removed_mods) - 10} more")
+                    removed_items.append(f"{escape_html(mod_name)} (was v{escape_html(from_ver)})")
 
-    lines.extend([">", "> </details>"])
+    detail_bits: List[str] = [
+        "<ul>",
+        f"<li>{header_line}",
+        "<ul>",
+        f"<li>Change summary: +{new_count} new, ~{updated_count} updated, -{removed_count} removed</li>",
+    ]
+    if previous_release_version and previous_release_version != release_version:
+        detail_bits.append(f"<li>Previous GigglePack version: v{escape_html(previous_release_version)}</li>")
+
+    detail_bits.append(f"<li>New mods:{build_inner_list(new_items)}</li>")
+    detail_bits.append(f"<li>Updated existing mods:{build_inner_list(updated_items)}</li>")
+    detail_bits.append(f"<li>Removed mods:{build_inner_list(removed_items)}</li>")
+    detail_bits.extend(["</ul>", "</li>", "</ul>"])
+    changelog_html = "".join(detail_bits)
+
+    lines.extend([
+        "> <details> <summary><i>Changelog</i></summary>",
+        ">",
+        f"> {changelog_html}",
+        ">",
+        "> </details>",
+    ])
 
     return lines
 
@@ -1802,6 +2028,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
         return 1
 
     try:
+        webhook_url = (args.discord_webhook_url or os.getenv(DISCORD_WEBHOOK_ENV_VAR, "")).strip()
         if args.mode == "sync-work":
             sync_staging_and_game(args.dry_run, log)
         elif args.mode == "prep-work":
@@ -1812,7 +2039,8 @@ def run_pipeline(args: argparse.Namespace) -> int:
         elif args.mode == "package":
             prep_names_and_readmes_for_dirs((PUBLISH_READY,), args.dry_run, log)
             create_all_zips(args.dry_run, args.workers, log)
-            generate_gigglepack_release_artifacts(args.dry_run, log)
+            release_result = generate_gigglepack_release_artifacts(args.dry_run, log)
+            maybe_post_discord_release_update(release_result, webhook_url, args.dry_run, log)
             generate_main_readme(args.dry_run, log)
         else:
             mods_pulled = sync_workspace_and_game(args.dry_run, log)
@@ -1826,7 +2054,8 @@ def run_pipeline(args: argparse.Namespace) -> int:
             push_back_pulled_mods(mods_pulled, args.dry_run, log)
 
             create_all_zips(args.dry_run, args.workers, log)
-            generate_gigglepack_release_artifacts(args.dry_run, log)
+            release_result = generate_gigglepack_release_artifacts(args.dry_run, log)
+            maybe_post_discord_release_update(release_result, webhook_url, args.dry_run, log)
             generate_main_readme(args.dry_run, log)
 
     except Exception as ex:
@@ -1863,6 +2092,14 @@ def build_arg_parser() -> argparse.ArgumentParser:
         type=int,
         default=max(2, min(8, os.cpu_count() or 2)),
         help="Worker count for parallel mod zip creation",
+    )
+    parser.add_argument(
+        "--discord-webhook-url",
+        default="",
+        help=(
+            "Discord webhook URL for auto-posting release updates. "
+            f"If omitted, uses environment variable {DISCORD_WEBHOOK_ENV_VAR}."
+        ),
     )
     return parser
 

@@ -2,7 +2,7 @@
   "gigglepack_version": "1.0.0",
   "previous_gigglepack_version": "1.0.0",
   "is_baseline_release": false,
-  "released_at": "2026-03-26 00:14:17",
+  "released_at": "2026-03-26 01:14:46",
   "mods": {
     "AGF-BackpackPlus-060Slots": "3.2.1",
     "AGF-BackpackPlus-072Slots": "3.2.1",
@@ -103,7 +103,6 @@
   ],
   "removed_mods": [],
   "versioned_zip": "AGF-GigglePack-v1.0.0.zip",
-  "latest_zip": "AGF-GigglePack-latest.zip",
   "change_counts": {
     "new_mods": 2,
     "updated_existing_mods": 0,

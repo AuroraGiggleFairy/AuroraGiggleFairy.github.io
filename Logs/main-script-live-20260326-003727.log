@@ -1,0 +1,33 @@
+[2026-03-26 00:37:26] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-03-26 00:37:26] [INFO] Selected mode: package
+[2026-03-26 00:37:26] [INFO] Pre-release prep: refresh folder names + README files
+[2026-03-26 00:37:26] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-03-26 00:37:26] [INFO] Step 4.3: Normalize quote files
+[2026-03-26 00:37:26] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-03-26 00:37:26] [INFO] Step 6: Create all mod and category zip files
+[2026-03-26 00:37:27] [INFO] Step 6.5: Generate GigglePack release metadata + changelog outputs
+[2026-03-26 00:37:27] [INFO] GigglePack release v1.0.0: 0 updated existing mods, 2 new mods, 0 removed mods
+[2026-03-26 00:37:27] [INFO] Step 7: Generate main README.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 0
+scanned_game_mods: 0
+synced_pull_from_game: 0
+synced_push_to_game: 0
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 85
+readable_txt_written: 85
+pushed_back_to_game: 0
+mod_zips_created: 85
+pack_zips_created: 6
+promoted_to_publish_ready: 0
+warnings: 0
+errors: 0
