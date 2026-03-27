@@ -4,15 +4,15 @@ Newest entries appear at the top.
 ## GigglePack v1.2.0 (March 26, 2026 7:55pm)
 ### Summary: +1 new, ~3 updated, =3 renamed, -0 removed
 - **New Mods**
-  - AGF-NoEAC-LockableWorkstations (new: v1.0.0)
+  - [AGF-NoEAC-LockableWorkstations](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip) (new: v1.0.0)
 - **Updated Existing Mods**
-  - AGF-NoEAC-EnhancedPatch (v3.0.0 -> v3.1.0)
-  - AGF-NoEAC-ExpandedInteractionPrompts (v1.0.1 -> v1.1.0)
-  - AGF-NoEAC-OpenAllButton (v1.0.0 -> v1.0.1)
+  - [AGF-NoEAC-EnhancedPatch](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip) (v3.0.0 -> v3.1.0)
+  - [AGF-NoEAC-ExpandedInteractionPrompts](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ExpandedInteractionPrompts.zip) (v1.0.1 -> v1.1.0)
+  - [AGF-NoEAC-OpenAllButton](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip) (v1.0.0 -> v1.0.1)
 - **Renamed Mods**
-  - AGF-4Modders-10IngredientSlots (renamed from AGF-HUDPluszOther-10IngredientSlots, v1.0.1)
-  - AGF-4Modders-ConfigureWindowEnteringDuration (renamed from AGF-NoEAC-ConfigureWindowEnteringDuration, v1.0.1)
-  - AGF-4Modders-ConsoleOpacityMod (renamed from AGF-NoEAC-ConsoleOpacityMod, v1.0.0)
+  - [AGF-4Modders-10IngredientSlots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-10IngredientSlots.zip) (renamed from AGF-HUDPluszOther-10IngredientSlots, v1.0.1)
+  - [AGF-4Modders-ConfigureWindowEnteringDuration](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-ConfigureWindowEnteringDuration.zip) (renamed from AGF-NoEAC-ConfigureWindowEnteringDuration, v1.0.1)
+  - [AGF-4Modders-ConsoleOpacityMod](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-ConsoleOpacityMod.zip) (renamed from AGF-NoEAC-ConsoleOpacityMod, v1.0.0)
 - **Removed Mods**
   - None
 

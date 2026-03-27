@@ -396,6 +396,11 @@ def zip_download_link(zip_name: str) -> str:
     return f"{BASE_DOWNLOAD_URL}/{zip_name}"
 
 
+def mod_download_markdown_link(mod_name: str) -> str:
+    base_name = get_base_mod_name(mod_name)
+    return f"[{mod_name}]({zip_download_link(base_name + '.zip')})"
+
+
 def extract_markdown_section(markdown_text: str, heading: str, next_heading: Optional[str] = None) -> str:
     start_match = re.search(rf"^##\s*{re.escape(heading)}\s*$", markdown_text, re.MULTILINE)
     if not start_match:
@@ -461,13 +466,17 @@ def render_discord_post_from_template(
         "RENAMED_COUNT": str(len(renamed_mod_entries)),
         "REMOVED_COUNT": str(len(removed_mod_entries)),
         "PREVIOUS_GIGGLEPACK_VERSION": previous_release_version or "None",
-        "NEW_MOD_LINES": "\n".join(f"  - {e['mod']} (new: v{e['to']})" for e in new_mod_entries) or "  - None",
+        "NEW_MOD_LINES": "\n".join(
+            f"  - {mod_download_markdown_link(e['mod'])} (new: v{e['to']})" for e in new_mod_entries
+        )
+        or "  - None",
         "UPDATED_MOD_LINES": "\n".join(
-            f"  - {e['mod']} (v{e['from']} -> v{e['to']})" for e in updated_mod_entries
+            f"  - {mod_download_markdown_link(e['mod'])} (v{e['from']} -> v{e['to']})"
+            for e in updated_mod_entries
         )
         or "  - None",
         "RENAMED_MOD_LINES": "\n".join(
-            f"  - {e['to_mod']} (renamed from {e['from_mod']}, v{e['version']})"
+            f"  - {mod_download_markdown_link(e['to_mod'])} (renamed from {e['from_mod']}, v{e['version']})"
             for e in renamed_mod_entries
         )
         or "  - None",
@@ -1898,13 +1907,16 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
             renamed_mod_entries = []
             removed_mod_entries = []
 
-    new_mod_lines = [f"- {entry['mod']} (new: v{entry['to']})" for entry in new_mod_entries]
+    new_mod_lines = [
+        f"- {mod_download_markdown_link(entry['mod'])} (new: v{entry['to']})"
+        for entry in new_mod_entries
+    ]
     updated_existing_lines = [
-        f"- {entry['mod']} (v{entry['from']} -> v{entry['to']})"
+        f"- {mod_download_markdown_link(entry['mod'])} (v{entry['from']} -> v{entry['to']})"
         for entry in updated_mod_entries
     ]
     renamed_lines = [
-        f"- {entry['to_mod']} (renamed from {entry['from_mod']}, v{entry['version']})"
+        f"- {mod_download_markdown_link(entry['to_mod'])} (renamed from {entry['from_mod']}, v{entry['version']})"
         for entry in renamed_mod_entries
     ]
     removed_lines = [f"- {entry['mod']} (was v{entry['from']})" for entry in removed_mod_entries]
@@ -2240,15 +2252,57 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
     def escape_html(text: str) -> str:
         return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
+    def mod_download_html_link(mod_name: str) -> str:
+        href = escape_html(zip_download_link(f"{get_base_mod_name(mod_name)}.zip"))
+        return f"<a href=\"{href}\">{escape_html(mod_name)}</a>"
+
+    def markdown_links_to_html(text: str) -> str:
+        parts: List[str] = []
+        last_idx = 0
+        for match in re.finditer(r"\[([^\]]+)\]\(([^\)]+)\)", text):
+            parts.append(escape_html(text[last_idx:match.start()]))
+            label = escape_html(match.group(1).strip())
+            href = escape_html(match.group(2).strip())
+            parts.append(f"<a href=\"{href}\">{label}</a>")
+            last_idx = match.end()
+        parts.append(escape_html(text[last_idx:]))
+        return "".join(parts)
+
+    def render_release_item_html(item_text: str, section_name: str) -> str:
+        if section_name == "removed":
+            plain_text = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"\1", item_text)
+            return escape_html(plain_text)
+
+        if "[" in item_text and "](" in item_text:
+            return markdown_links_to_html(item_text)
+
+        if section_name in ("new", "updated"):
+            match = re.match(r"^([A-Za-z0-9\-]+)(\s*\(.+\))$", item_text)
+            if match:
+                mod_name = match.group(1).strip()
+                suffix = match.group(2)
+                if is_agf_mod(mod_name):
+                    return f"{mod_download_html_link(mod_name)}{escape_html(suffix)}"
+
+        if section_name == "renamed":
+            match = re.match(r"^([A-Za-z0-9\-]+)(\s*\(renamed from .+\))$", item_text)
+            if match:
+                mod_name = match.group(1).strip()
+                suffix = match.group(2)
+                if is_agf_mod(mod_name):
+                    return f"{mod_download_html_link(mod_name)}{escape_html(suffix)}"
+
+        return escape_html(item_text)
+
     parsed_entries: List[Dict[str, object]] = []
     if history_entries:
         for entry in history_entries:
             version = str(entry.get("version", "")).strip() or "unknown"
             stamp = str(entry.get("stamp", "")).strip()
-            new_items = [escape_html(str(item).strip()) for item in entry.get("new", []) if str(item).strip()]
-            updated_items = [escape_html(str(item).strip()) for item in entry.get("updated", []) if str(item).strip()]
-            renamed_items = [escape_html(str(item).strip()) for item in entry.get("renamed", []) if str(item).strip()]
-            removed_items = [escape_html(str(item).strip()) for item in entry.get("removed", []) if str(item).strip()]
+            new_items = [render_release_item_html(str(item).strip(), "new") for item in entry.get("new", []) if str(item).strip()]
+            updated_items = [render_release_item_html(str(item).strip(), "updated") for item in entry.get("updated", []) if str(item).strip()]
+            renamed_items = [render_release_item_html(str(item).strip(), "renamed") for item in entry.get("renamed", []) if str(item).strip()]
+            removed_items = [render_release_item_html(str(item).strip(), "removed") for item in entry.get("removed", []) if str(item).strip()]
             parsed_entries.append({
                 "header": f"GigglePack v{escape_html(version)}" + (f" - {escape_html(stamp)}" if stamp else ""),
                 "new_count": int(entry.get("new_count", len(new_items))),
@@ -2288,7 +2342,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
                     mod_name = str(entry.get("mod", "")).strip()
                     to_ver = str(entry.get("to", "")).strip()
                     if mod_name:
-                        new_items.append(f"{escape_html(mod_name)} (new: v{escape_html(to_ver)})")
+                        new_items.append(f"{mod_download_html_link(mod_name)} (new: v{escape_html(to_ver)})")
 
         updated_items: List[str] = []
         if isinstance(updated_mods, list):
@@ -2299,7 +2353,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
                     to_ver = str(entry.get("to", "")).strip()
                     if mod_name:
                         updated_items.append(
-                            f"{escape_html(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
+                            f"{mod_download_html_link(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
                         )
 
         renamed_items: List[str] = []
@@ -2311,7 +2365,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
                     version = str(entry.get("version", "")).strip()
                     if from_mod and to_mod:
                         renamed_items.append(
-                            f"{escape_html(to_mod)} (renamed from {escape_html(from_mod)}, v{escape_html(version)})"
+                            f"{mod_download_html_link(to_mod)} (renamed from {escape_html(from_mod)}, v{escape_html(version)})"
                         )
 
         removed_items: List[str] = []

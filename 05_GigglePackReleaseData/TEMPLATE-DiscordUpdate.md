@@ -6,7 +6,8 @@ Use this template for release posts in Discord.
 
 <!-- DISCORD_TEMPLATE_START -->
 #   GigglePack v{{GIGGLEPACK_VERSION}} - *{{RELEASE_STAMP}}*
-## [Click Here to Download]({{LATEST_ZIP_URL}})
+## [Download GigglePack (All Mods)]({{LATEST_ZIP_URL}})
+## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
 ###  **Change summary: +{{NEW_COUNT}} new, ~{{UPDATED_COUNT}} updated, ={{RENAMED_COUNT}} renamed, -{{REMOVED_COUNT}} removed**
 - **New mods:**
