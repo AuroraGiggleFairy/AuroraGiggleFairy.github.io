@@ -1,6 +1,6 @@
 AGF-NoEAC-SortingBox
 7d2d Version 2  
-Version: 1.0.4  
+Version: 1.0.5  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-NoEAC-SortingBox.zip
 
  
@@ -90,6 +90,9 @@ Language Support
 ========================================
 
 6. Changelog
+
+v1.0.5
+- Updated backpack references due to name change.
 
 ========================================
 

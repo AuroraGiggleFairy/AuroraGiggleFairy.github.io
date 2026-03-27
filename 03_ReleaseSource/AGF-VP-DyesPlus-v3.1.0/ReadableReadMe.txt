@@ -86,8 +86,8 @@ Language Support
 5. Features
 
 - Easily interchange dye colors:  
-A.SCRAP any dye to get 15 paint.  
-B.CRAFT any dye with 15 paint.
+A. SCRAP any dye to get 15 paint.  
+B. CRAFT any dye with 15 paint.
     - Added 27 Colors with simple naming scheme.
     - Added Invisible Dye that can hide a worn item.
 

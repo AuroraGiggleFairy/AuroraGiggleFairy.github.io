@@ -1,6 +1,6 @@
 # AGF-BackpackPlus-060Slots
 7d2d Version 2  
-**Version:** 3.2.2
+**Version:** 3.2.2  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip)
 
  > You may upgrade to the others.

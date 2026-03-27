@@ -1,4 +1,7 @@
 MOD_NAME,EAC_FRIENDLY,SERVER_SIDE,CLIENT_REQUIRED,SAFE_TO_INSTALL,SAFE_TO_REMOVE,UNIQUE,QUOTE_FILE
+AGF-4Modders-10IngredientSlots,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-4Modders-10IngredientSlots.txt
+AGF-4Modders-ConfigureWindowEnteringDuration,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-4Modders-ConfigureWindowEnteringDuration.txt
+AGF-4Modders-ConsoleOpacityMod,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-4Modders-ConsoleOpacityMod.txt
 AGF-BackpackPlus-060Slots,Yes,Yes,No,SAFE,DANGEROUS,You may upgrade to the others.,AGF-BackpackPlus-060Slots.txt
 AGF-BackpackPlus-072Slots,Yes,Yes,No,SAFE,DANGEROUS,You may swap with 84 or 119.,AGF-BackpackPlus-072Slots.txt
 AGF-BackpackPlus-084Slots,Yes,Yes,No,SAFE,DANGEROUS,You may swap with 72 or 119.,AGF-BackpackPlus-084Slots.txt
@@ -8,18 +11,16 @@ AGF-HUDPlus-BMCounter,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPlus-BMCounter.txt
 AGF-HUDPlus-HealthBars,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPlus-HealthBars.txt
 AGF-HUDPlus-PurpleBook,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPlus-PurpleBook.txt
 AGF-HUDPlus-RemoveEnteringPopUp,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPlus-RemoveEnteringPopUp.txt
-AGF-HUDPluszOther-10IngredientSlots,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-10IngredientSlots.txt
 AGF-HUDPluszOther-RemoveWrittentormAlerts,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-RemoveWrittentormAlerts.txt
 AGF-HUDPluszOther-SmallerInteractionPrompt,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-SmallerInteractionPrompt.txt
 AGF-HUDPluszOther-TinyBuffsPopUp,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-TinyBuffsPopUp.txt
 AGF-HUDPluszOther-Weekday,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-Weekday.txt
-AGF-NoEAC-ConfigureWindowEnteringDuration,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-NoEAC-ConfigureWindowEnteringDuration.txt
-AGF-NoEAC-ConsoleOpacityMod,No,Unknown,Unknown,SAFE,UNKNOWN,None,AGF-NoEAC-ConsoleOpacityMod.txt
 AGF-NoEAC-CosmeticLockIcon,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-CosmeticLockIcon.txt
 AGF-NoEAC-EnhancedPatch,No,No,Yes,SAFE,SAFE,None,AGF-NoEAC-EnhancedPatch.txt
 AGF-NoEAC-ExpandedInteractionPrompts,No,No,Yes,Safe,Safe,None,AGF-NoEAC-ExpandedInteractionPrompts.txt
 AGF-NoEAC-GlobalStormTracker,No,Yes,No,SAFE,UNKNOWN,None,AGF-NoEAC-GlobalStormTracker.txt
 AGF-NoEAC-ItemTypeIconColor,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-ItemTypeIconColor.txt
+AGF-NoEAC-LockableWorkstations,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-LockableWorkstations.txt
 AGF-NoEAC-OpenAllButton,No,No,Yes,Yes,UNKNOWN,None,AGF-NoEAC-OpenAllButton.txt
 AGF-NoEAC-ScreamerAlert,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-ScreamerAlert.txt
 AGF-NoEAC-SortingBox,No,UNIQUE,UNIQUE,SAFE,DANGEROUS,Server side if dedicated server - otherwise client side.,AGF-NoEAC-SortingBox.txt

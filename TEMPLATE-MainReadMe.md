@@ -29,6 +29,7 @@
   - [D. SPECIAL COMPATIBILITY MOD](#d-special-compatibility-mod)
   - [E. VANILLA PLUS MODS](#e-vanilla-plus-mods)
   - [F. NO EAC MODS](#f-no-eac-mods)
+  - [G. 4MODDERS MODS](#g-4modders-mods)
 
 <br>
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-    <Name value="AGF-NoEAC-ExpandedInteractionPrompts"/>
-    <DisplayName value="AGF No EAC Expanded Interaction Prompts"/>
-    <Version value="1.0.1"/>
-    <Description value="Displays status on prompts for workstations, storages, and vehicles."/>
-    <Author value="AuroraGiggleFairy (AGF)"/>
-    <Website value="https://auroragigglefairy.github.io/"/>
-</xml>

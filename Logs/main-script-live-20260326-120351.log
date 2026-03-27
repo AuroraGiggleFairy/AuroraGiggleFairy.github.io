@@ -1,0 +1,50 @@
+[2026-03-26 12:03:49] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-03-26 12:03:49] [INFO] Selected mode: full
+[2026-03-26 12:03:49] [INFO] Step 1/2: Scan mod folders and sync by version
+[2026-03-26 12:03:49] [INFO] Version tie resolved for AGF-BackpackPlus-084Slots: both v3.2.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 12:03:49] [INFO] Version tie resolved for AGF-HUDPlus-1Main: both v5.4.4 but content differed. Pushed workspace copy to game.
+[2026-03-26 12:03:50] [INFO] Version tie resolved for AGF-NoEAC-SortingBox: both v1.0.5 but content differed. Pushed workspace copy to game.
+[2026-03-26 12:03:50] [INFO] Version tie resolved for AGF-VP-DyesPlus: both v3.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 12:03:50] [INFO] Version tie resolved for zzzAGF-Special-Compatibilities: both v4.0.3 but content differed. Pushed workspace copy to game.
+[2026-03-26 12:03:50] [INFO] Step 3: Move mods between In-Progress and PublishReady by major version
+[2026-03-26 12:03:50] [INFO] Step 3.5: Ensure latest ReleaseSource mods are in ActiveBuild
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-060Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-072Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-084Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-HUDPlus-1Main: both v5.4.4 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-HUDPluszOther-10IngredientSlots: both v1.0.1 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-NoEAC-SortingBox: both v1.0.5 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for AGF-VP-DyesPlus: both v3.1.0 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [WARN] ActiveBuild sync conflict for zzzAGF-Special-Compatibilities: both v4.0.3 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 12:03:50] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-03-26 12:03:50] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-03-26 12:03:50] [INFO] Step 4.3: Normalize quote files
+[2026-03-26 12:03:50] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-03-26 12:03:50] [INFO] Step 5: Push updated pulled mods back to game folder
+[2026-03-26 12:03:50] [INFO] Step 6: Create all mod and category zip files
+[2026-03-26 12:03:51] [INFO] Step 6.5: Generate GigglePack release metadata + changelog outputs
+[2026-03-26 12:03:51] [INFO] GigglePack update not detected; skipping Discord auto-post
+[2026-03-26 12:03:51] [INFO] Step 7: Generate main README.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 91
+scanned_game_mods: 78
+synced_pull_from_game: 0
+synced_push_to_game: 5
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 91
+readable_txt_written: 91
+pushed_back_to_game: 0
+mod_zips_created: 86
+pack_zips_created: 6
+promoted_to_publish_ready: 0
+warnings: 8
+errors: 0

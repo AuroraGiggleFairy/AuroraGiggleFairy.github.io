@@ -1,6 +1,7 @@
 import argparse
 import csv
 import datetime as dt
+import difflib
 import hashlib
 import json
 import os
@@ -60,6 +61,7 @@ BASE_DOWNLOAD_URL = "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.gith
 BACKPACK_DEFAULT_ACTIVE_TOKEN = "084Slots"
 GAME_OPTIONALS_BACKPACK_DIR = ".Optionals-Backpack"
 GAME_OPTIONALS_HUDPLUS_DIR = ".Optionals-HUDPlus"
+GAME_OPTIONALS_4MODDERS_DIR = ".Optionals-4Modders"
 RELEASE_META_DIR_NAME = ".release"
 GIGGLEPACK_RELEASE_DATA_DIR = "GigglePack"
 GIGGLEPACK_RELEASE_ROOT_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
@@ -188,6 +190,10 @@ def is_hudplus_mod(folder: str) -> bool:
 
 def is_hudpluszother_mod(folder: str) -> bool:
     return folder.startswith("AGF-HUDPluszOther-")
+
+
+def is_4modders_mod(folder: str) -> bool:
+    return folder.startswith("AGF-4Modders-")
 
 
 def get_base_mod_name(name: str) -> str:
@@ -418,6 +424,7 @@ def render_discord_post_from_template(
     previous_release_version: Optional[str],
     new_mod_entries: List[Dict[str, str]],
     updated_mod_entries: List[Dict[str, str]],
+    renamed_mod_entries: List[Dict[str, str]],
     removed_mod_entries: List[Dict[str, str]],
     log: Logger,
 ) -> str:
@@ -451,11 +458,17 @@ def render_discord_post_from_template(
         "DOWNLOAD_FILE_LABEL": release_file_label,
         "NEW_COUNT": str(len(new_mod_entries)),
         "UPDATED_COUNT": str(len(updated_mod_entries)),
+        "RENAMED_COUNT": str(len(renamed_mod_entries)),
         "REMOVED_COUNT": str(len(removed_mod_entries)),
         "PREVIOUS_GIGGLEPACK_VERSION": previous_release_version or "None",
         "NEW_MOD_LINES": "\n".join(f"  - {e['mod']} (new: v{e['to']})" for e in new_mod_entries) or "  - None",
         "UPDATED_MOD_LINES": "\n".join(
             f"  - {e['mod']} (v{e['from']} -> v{e['to']})" for e in updated_mod_entries
+        )
+        or "  - None",
+        "RENAMED_MOD_LINES": "\n".join(
+            f"  - {e['to_mod']} (renamed from {e['from_mod']}, v{e['version']})"
+            for e in renamed_mod_entries
         )
         or "  - None",
         "REMOVED_MOD_LINES": "\n".join(f"  - {e['mod']} (was v{e['from']})" for e in removed_mod_entries) or "  - None",
@@ -505,6 +518,7 @@ def render_discord_post_from_template(
     rendered = re.sub(r"\{\{([A-Z0-9_]+)\}\}", lambda m: token_value(m.group(1)), body)
     rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(new:\s*vNone\)\s*$", r"\1None", rendered)
     rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(vNone\s*->\s*vNone\)\s*$", r"\1None", rendered)
+    rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(renamed from None,\s*vNone\)\s*$", r"\1None", rendered)
     rendered = re.sub(r"(?m)^(\s*-\s*)None\s*\(was\s*vNone\)\s*$", r"\1None", rendered)
     rendered = re.sub(r"\n{3,}", "\n\n", rendered).strip()
     return rendered + "\n"
@@ -584,6 +598,12 @@ def sync_workspace_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]
             continue
 
         game_folder, game_path = game_by_base[base_name]
+        if is_4modders_mod(ws_folder) or is_4modders_mod(game_folder):
+            log.info(
+                f"Skipping game-root auto-sync for optional 4Modders mod: {ws_folder} / {game_folder}"
+            )
+            continue
+
         ws_ver = get_modinfo_version(ws_path)
         game_ver = get_modinfo_version(game_path)
 
@@ -621,13 +641,36 @@ def sync_workspace_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]
                 ws_hash = hash_directory(ws_path)
                 game_hash = hash_directory(game_path)
                 if ws_hash != game_hash:
-                    log.stats.sync_conflicts += 1
-                    log.warn(
-                        f"Version tie conflict for {base_name}: both v{ws_ver} but content differs. "
-                        "No overwrite performed."
-                    )
+                    # Same version but different bytes: keep game folder aligned to workspace source-of-truth.
+                    new_game_dest = os.path.join(GAME_MODS, ws_folder)
+                    if maybe_remove_dir(game_path, dry_run, log) and maybe_copytree(ws_path, new_game_dest, dry_run, log):
+                        log.stats.synced_push_to_game += 1
+                        log.info(
+                            f"Version tie resolved for {base_name}: both v{ws_ver} but content differed. "
+                            "Pushed workspace copy to game."
+                        )
+                    else:
+                        log.stats.sync_conflicts += 1
+                        log.warn(
+                            f"Version tie conflict for {base_name}: both v{ws_ver} but content differs. "
+                            "Auto-push to game failed."
+                        )
             except Exception as ex:
                 log.warn(f"Could not hash compare tied versions for {base_name}: {ex}")
+
+    # Mirror 4Modders mods into game optionals folder in full mode as non-root installs.
+    optionals_4modders_path = os.path.join(GAME_MODS, GAME_OPTIONALS_4MODDERS_DIR)
+    if dry_run:
+        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_4modders_path}")
+    else:
+        os.makedirs(optionals_4modders_path, exist_ok=True)
+
+    workspace_sources = {**pub_folders, **inprog_folders}
+    for folder, ws_path in workspace_sources.items():
+        if not is_4modders_mod(folder):
+            continue
+        if maybe_copytree(ws_path, os.path.join(optionals_4modders_path, folder), dry_run, log):
+            log.info(f"sync mirror: 4Modders optional updated: {folder}")
 
     return mods_pulled_from_game
 
@@ -818,7 +861,13 @@ def save_compat_csv(fieldnames: List[str], rows: List[Dict[str, str]], dry_run: 
         writer.writerows(rows)
 
 
-def normalize_compat_csv(folder_renames: List[Tuple[str, str, str]], dry_run: bool, log: Logger) -> List[Dict[str, str]]:
+def normalize_compat_csv(
+    folder_renames: List[Tuple[str, str, str]],
+    dry_run: bool,
+    log: Logger,
+    mod_dirs: Optional[Tuple[str, ...]] = None,
+    prune_to_mods_now: bool = True,
+) -> List[Dict[str, str]]:
     log.info("Step 4.2: Normalize HELPER_ModCompatibility.csv")
 
     fieldnames, rows = load_compat_csv()
@@ -832,8 +881,9 @@ def normalize_compat_csv(folder_renames: List[Tuple[str, str, str]], dry_run: bo
         for old, new, _ in folder_renames
     }
 
+    scan_dirs = mod_dirs if mod_dirs is not None else (PUBLISH_READY, IN_PROGRESS)
     mods_now: set[str] = set()
-    for mod_dir in (PUBLISH_READY, IN_PROGRESS):
+    for mod_dir in scan_dirs:
         for folder_name in scan_mod_folders(mod_dir):
             mods_now.add(get_base_mod_name(folder_name))
 
@@ -842,10 +892,12 @@ def normalize_compat_csv(folder_renames: List[Tuple[str, str, str]], dry_run: bo
         if old in rename_base_map:
             row["MOD_NAME"] = rename_base_map[old]
 
-    before = len(rows)
-    rows = [row for row in rows if row.get("MOD_NAME") in mods_now]
-    removed = before - len(rows)
-    log.stats.csv_removed_rows += removed
+    removed = 0
+    if prune_to_mods_now:
+        before = len(rows)
+        rows = [row for row in rows if row.get("MOD_NAME") in mods_now]
+        removed = before - len(rows)
+        log.stats.csv_removed_rows += removed
 
     existing = {row.get("MOD_NAME") for row in rows}
     for mod in sorted(mods_now):
@@ -1030,7 +1082,13 @@ def prep_names_and_readmes_for_dirs(mod_dirs: Tuple[str, ...], dry_run: bool, lo
     log.info("Pre-release prep: refresh folder names + README files")
 
     folder_renames = rename_mod_folders_to_modinfo(dry_run, log, mod_dirs=mod_dirs)
-    _, csv_rows = load_compat_csv()
+    csv_rows = normalize_compat_csv(
+        folder_renames,
+        dry_run,
+        log,
+        mod_dirs=mod_dirs,
+        prune_to_mods_now=False,
+    )
     if not csv_rows:
         log.warn("Compatibility CSV has no rows; README generation will use fallback values.")
 
@@ -1049,13 +1107,24 @@ def prep_names_and_readmes_for_dirs(mod_dirs: Tuple[str, ...], dry_run: bool, lo
 def push_back_pulled_mods(mods_pulled_from_game: List[Tuple[str, str]], dry_run: bool, log: Logger) -> None:
     log.info("Step 5: Push updated pulled mods back to game folder")
 
+    workspace_by_base: Dict[str, str] = {}
+    for folder, path in scan_mod_folders(PUBLISH_READY).items():
+        workspace_by_base[get_base_mod_name(folder)] = path
+    for folder, path in scan_mod_folders(IN_PROGRESS).items():
+        workspace_by_base[get_base_mod_name(folder)] = path
+
     for mod_name, ws_path in mods_pulled_from_game:
-        if not os.path.exists(ws_path) and not dry_run:
+        resolved_ws_path = ws_path
+        if not os.path.exists(resolved_ws_path):
+            base_name = get_base_mod_name(mod_name)
+            resolved_ws_path = workspace_by_base.get(base_name, "")
+
+        if (not resolved_ws_path or not os.path.exists(resolved_ws_path)) and not dry_run:
             log.warn(f"Pushback skipped for {mod_name}: workspace path missing {ws_path}")
             continue
 
-        dest_path = os.path.join(GAME_MODS, os.path.basename(ws_path))
-        if maybe_remove_dir(dest_path, dry_run, log) and maybe_copytree(ws_path, dest_path, dry_run, log):
+        dest_path = os.path.join(GAME_MODS, os.path.basename(resolved_ws_path))
+        if maybe_remove_dir(dest_path, dry_run, log) and maybe_copytree(resolved_ws_path, dest_path, dry_run, log):
             log.stats.pushed_back_to_game += 1
             log.info(f"Pushback complete: {mod_name}")
 
@@ -1068,7 +1137,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
     log.info("Mode sync-work: Sync Staging <-> Game by version")
     log.info(
         "Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, "
-        "and mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus (without forcing HUDPluszOther root removal)."
+        "mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus (without forcing HUDPluszOther root removal), "
+        "and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root."
     )
 
     staging_folders = scan_mod_folders(STAGING)
@@ -1099,6 +1169,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
     allowed_staging_root: Dict[str, str] = {}
     for folder, path in staging_folders.items():
         if is_backpack_mod(folder) and active_backpack and folder != active_backpack:
+            continue
+        if is_4modders_mod(folder):
             continue
         allowed_staging_root[folder] = path
 
@@ -1141,11 +1213,20 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
                 st_hash = hash_directory(st_path)
                 game_hash = hash_directory(game_path)
                 if st_hash != game_hash:
-                    log.stats.sync_conflicts += 1
-                    log.warn(
-                        f"sync-work conflict for {base_name}: both v{st_ver} but content differs. "
-                        "No overwrite performed."
-                    )
+                    # In sync-work mode, staging is authoritative for game copies on tied versions.
+                    target = os.path.join(GAME_MODS, st_folder)
+                    if maybe_remove_dir(game_path, dry_run, log) and maybe_copytree(st_path, target, dry_run, log):
+                        log.stats.synced_push_to_game += 1
+                        log.info(
+                            f"sync-work tie resolved for {base_name}: both v{st_ver} but content differed. "
+                            "Pushed staging copy to game."
+                        )
+                    else:
+                        log.stats.sync_conflicts += 1
+                        log.warn(
+                            f"sync-work conflict for {base_name}: both v{st_ver} but content differs. "
+                            "Auto-push to game failed."
+                        )
             except Exception as ex:
                 log.warn(f"Could not hash compare tied versions for {base_name}: {ex}")
 
@@ -1161,12 +1242,15 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
     # Mirror optionals folders in game space.
     optionals_backpack_path = os.path.join(GAME_MODS, GAME_OPTIONALS_BACKPACK_DIR)
     optionals_hudplus_path = os.path.join(GAME_MODS, GAME_OPTIONALS_HUDPLUS_DIR)
+    optionals_4modders_path = os.path.join(GAME_MODS, GAME_OPTIONALS_4MODDERS_DIR)
     if dry_run:
         log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_backpack_path}")
         log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_hudplus_path}")
+        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_4modders_path}")
     else:
         os.makedirs(optionals_backpack_path, exist_ok=True)
         os.makedirs(optionals_hudplus_path, exist_ok=True)
+        os.makedirs(optionals_4modders_path, exist_ok=True)
 
     for folder, st_path in staging_folders.items():
         if is_backpack_mod(folder):
@@ -1176,6 +1260,10 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
         if is_hudplus_mod(folder) or is_hudpluszother_mod(folder):
             if maybe_copytree(st_path, os.path.join(optionals_hudplus_path, folder), dry_run, log):
                 log.info(f"sync-work mirror: HUD optional updated: {folder}")
+            continue
+        if is_4modders_mod(folder):
+            if maybe_copytree(st_path, os.path.join(optionals_4modders_path, folder), dry_run, log):
+                log.info(f"sync-work mirror: 4Modders optional updated: {folder}")
 
     # Normalize active-build folder names after pulls so names track ModInfo versions.
     rename_mod_folders_to_modinfo(dry_run, log, mod_dirs=(STAGING,))
@@ -1224,11 +1312,110 @@ def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
                 log.stats.promoted_to_publish_ready += 1
                 log.info(f"Promoted update: {st_folder} v{st_ver} (was {pub_folder} v{pub_ver})")
         elif cmp_value == 0:
-            log.info(f"Promote skipped for {st_folder}: same version as publish-ready ({st_ver})")
+            try:
+                st_hash = hash_directory(st_path)
+                pub_hash = hash_directory(pub_path)
+                if st_hash == pub_hash:
+                    log.info(f"Promote skipped for {st_folder}: same version/content as publish-ready ({st_ver})")
+                else:
+                    dest = os.path.join(PUBLISH_READY, st_folder)
+                    if pub_folder != st_folder:
+                        if not maybe_remove_dir(pub_path, dry_run, log):
+                            log.warn(
+                                f"Promote skipped for {st_folder}: could not remove old publish folder {pub_folder}"
+                            )
+                            continue
+                    if maybe_copytree(st_path, dest, dry_run, log):
+                        log.stats.promoted_to_publish_ready += 1
+                        log.info(
+                            f"Promoted refresh: {st_folder} v{st_ver} (same version, content/name changed from {pub_folder})"
+                        )
+            except Exception as ex:
+                log.warn(f"Promote hash compare failed for {st_folder}: {ex}")
         else:
             log.warn(
                 f"Promote skipped for {st_folder}: staging version {st_ver} is lower than publish-ready {pub_ver}"
             )
+
+
+def cleanup_release_legacy_4modders_renames(dry_run: bool, log: Logger) -> None:
+    """Remove legacy ReleaseSource folders that were renamed into AGF-4Modders equivalents."""
+    log.info("Cleanup: Remove legacy ReleaseSource folders replaced by AGF-4Modders renames")
+
+    publish_folders = scan_mod_folders(PUBLISH_READY)
+    for folder_name in sorted(publish_folders.keys()):
+        if not folder_name.startswith("AGF-4Modders-"):
+            continue
+
+        match = re.match(r"^AGF-4Modders-(.+)-v([0-9][0-9a-zA-Z\.-]*)$", folder_name)
+        if not match:
+            continue
+
+        suffix = match.group(1)
+        version = match.group(2)
+        for legacy_prefix in ("AGF-NoEAC-", "AGF-HUDPluszOther-"):
+            legacy_folder = f"{legacy_prefix}{suffix}-v{version}"
+            legacy_path = os.path.join(PUBLISH_READY, legacy_folder)
+            if os.path.isdir(legacy_path):
+                if maybe_remove_dir(legacy_path, dry_run, log):
+                    log.info(
+                        f"Removed legacy release folder after 4Modders rename: {legacy_folder} -> {folder_name}"
+                    )
+
+
+def cleanup_legacy_4modders_renames_in_dir(base_dir: str, dry_run: bool, log: Logger) -> None:
+    """Remove legacy NoEAC/HUDPluszOther folders that were replaced by AGF-4Modders in a lane."""
+    lane_name = os.path.basename(base_dir.rstrip("\\/"))
+    log.info(f"Cleanup: Remove legacy 4Modders-replaced folders in {lane_name}")
+
+    folders = scan_mod_folders(base_dir)
+    for folder_name in sorted(folders.keys()):
+        if not folder_name.startswith("AGF-4Modders-"):
+            continue
+
+        match = re.match(r"^AGF-4Modders-(.+)-v([0-9][0-9a-zA-Z\.-]*)$", folder_name)
+        if not match:
+            continue
+
+        suffix = match.group(1)
+        for legacy_prefix in ("AGF-NoEAC-", "AGF-HUDPluszOther-"):
+            legacy_pattern = re.compile(rf"^{re.escape(legacy_prefix + suffix)}-v.+$")
+            for candidate_name, candidate_path in list(folders.items()):
+                if candidate_name == folder_name:
+                    continue
+                if not legacy_pattern.match(candidate_name):
+                    continue
+                if maybe_remove_dir(candidate_path, dry_run, log):
+                    log.info(f"Removed legacy folder in {lane_name}: {candidate_name} -> replaced by {folder_name}")
+
+
+def cleanup_older_versions_in_dir(base_dir: str, dry_run: bool, log: Logger) -> None:
+    """Keep only the newest folder per base mod name in a lane."""
+    lane_name = os.path.basename(base_dir.rstrip("\\/"))
+    log.info(f"Cleanup: Remove older duplicate versions in {lane_name}")
+
+    folders = scan_mod_folders(base_dir)
+    by_base: Dict[str, List[Tuple[str, str, str]]] = {}
+    for folder_name, folder_path in folders.items():
+        base_name = get_base_mod_name(folder_name)
+        version = get_modinfo_version(folder_path)
+        if not version:
+            version_match = re.search(r"-v([0-9][0-9a-zA-Z\.-]*)$", folder_name)
+            version = version_match.group(1) if version_match else "0.0.0"
+        by_base.setdefault(base_name, []).append((folder_name, folder_path, version))
+
+    for base_name, entries in by_base.items():
+        if len(entries) <= 1:
+            continue
+
+        sorted_entries = sorted(entries, key=lambda x: (tuple(int(p) for p in re.findall(r"\d+", x[2]) or [0]), x[0]))
+        keep_name, keep_path, keep_ver = sorted_entries[-1]
+        for folder_name, folder_path, version in sorted_entries[:-1]:
+            if maybe_remove_dir(folder_path, dry_run, log):
+                log.info(
+                    f"Removed older duplicate in {lane_name}: {folder_name} v{version} "
+                    f"(kept {keep_name} v{keep_ver})"
+                )
 
 
 # =============================================================
@@ -1300,6 +1487,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     hudplus_mods = [f for f in all_folders if f.startswith("AGF-HUDPlus-")]
     hudpluszother_mods = [f for f in all_folders if f.startswith("AGF-HUDPluszOther-")]
     noeac_mods = [f for f in all_folders if f.startswith("AGF-NoEAC-")]
+    modders_mods = [f for f in all_folders if f.startswith("AGF-4Modders-")]
     vp_mods = [f for f in all_folders if f.startswith("AGF-VP-")]
     special_mods = [f for f in all_folders if f.startswith("zzzAGF-Special")]
 
@@ -1313,6 +1501,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
         ".Optionals-BackpackPlus": backpackplus_mods,
         ".Optionals-HUDPlus": hudplus_mods + hudpluszother_mods,
         ".Optionals-NoEAC": noeac_mods,
+        ".Optionals-4Modders": modders_mods,
     }
     packs.append(("00_GigglePack_All", giggle_root, giggle_optionals))
 
@@ -1324,6 +1513,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     packs.append(("00_HUDPlus_All", hudplus_all_root, hudplus_all_optionals))
     packs.append(("00_HUDPluszOther_All", hudpluszother_mods, None))
     packs.append(("00_NoEAC_All", noeac_mods, None))
+    packs.append(("00_4Modders_All", modders_mods, None))
 
     vp_all_root = vp_mods + special_mods
     vp_all_optionals = {".Optionals-NoEAC": noeac_mods}
@@ -1364,6 +1554,86 @@ def format_release_stamp(dt_value: dt.datetime) -> str:
     stamp = dt_value.strftime("%B %d, %Y %I:%M%p")
     stamp = stamp.lstrip("0").replace(" 0", " ")
     return stamp.replace("AM", "am").replace("PM", "pm")
+
+
+def extract_mod_suffix_for_rename(mod_name: str) -> str:
+    """Return the mod-name tail after AGF category for rename matching heuristics."""
+    if mod_name.startswith("AGF-"):
+        rest = mod_name[len("AGF-"):]
+        if "-" in rest:
+            return rest.split("-", 1)[1]
+    return mod_name
+
+
+def detect_renamed_mods(
+    added_mods: List[Tuple[str, str]],
+    removed_mods: List[Tuple[str, str]],
+) -> Tuple[List[Tuple[str, str, str]], List[Tuple[str, str]], List[Tuple[str, str]]]:
+    """Detect renamed mods and remove them from added/removed buckets.
+
+    Primary match: same version and same mod suffix (category changed).
+    Secondary match: same version and best similarity score.
+    """
+    remaining_added = list(added_mods)
+    remaining_removed = list(removed_mods)
+    renamed_mods: List[Tuple[str, str, str]] = []
+
+    removed_by_key: Dict[Tuple[str, str], List[Tuple[str, str]]] = {}
+    for old_name, old_ver in remaining_removed:
+        key = (old_ver, extract_mod_suffix_for_rename(old_name).lower())
+        removed_by_key.setdefault(key, []).append((old_name, old_ver))
+
+    unmatched_added: List[Tuple[str, str]] = []
+    for new_name, new_ver in remaining_added:
+        key = (new_ver, extract_mod_suffix_for_rename(new_name).lower())
+        matches = removed_by_key.get(key, [])
+        if matches:
+            old_name, old_ver = matches.pop(0)
+            renamed_mods.append((old_name, new_name, old_ver))
+        else:
+            unmatched_added.append((new_name, new_ver))
+
+    remaining_added = unmatched_added
+    remaining_removed = []
+    for entries in removed_by_key.values():
+        remaining_removed.extend(entries)
+
+    if remaining_added and remaining_removed:
+        unmatched_removed = list(remaining_removed)
+        final_added: List[Tuple[str, str]] = []
+        for new_name, new_ver in remaining_added:
+            candidates = [(old_name, old_ver) for old_name, old_ver in unmatched_removed if old_ver == new_ver]
+            if not candidates:
+                final_added.append((new_name, new_ver))
+                continue
+
+            best = max(
+                candidates,
+                key=lambda item: difflib.SequenceMatcher(
+                    None,
+                    extract_mod_suffix_for_rename(item[0]).lower(),
+                    extract_mod_suffix_for_rename(new_name).lower(),
+                ).ratio(),
+            )
+            best_ratio = difflib.SequenceMatcher(
+                None,
+                extract_mod_suffix_for_rename(best[0]).lower(),
+                extract_mod_suffix_for_rename(new_name).lower(),
+            ).ratio()
+
+            if best_ratio >= 0.8:
+                renamed_mods.append((best[0], new_name, best[1]))
+                unmatched_removed.remove(best)
+            else:
+                final_added.append((new_name, new_ver))
+
+        remaining_added = final_added
+        remaining_removed = unmatched_removed
+
+    renamed_mods.sort(key=lambda item: (item[0].lower(), item[1].lower()))
+    remaining_added.sort(key=lambda item: item[0].lower())
+    remaining_removed.sort(key=lambda item: item[0].lower())
+    return renamed_mods, remaining_added, remaining_removed
 
 
 def load_json_file(path: str) -> Dict[str, object]:
@@ -1545,6 +1815,8 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         if mod_name not in giggle_mod_versions:
             removed_mods.append((mod_name, str(prev_mods.get(mod_name, ""))))
 
+    renamed_mods, added_mods, removed_mods = detect_renamed_mods(added_mods, removed_mods)
+
     is_baseline_release = not prev_state
 
     if is_baseline_release:
@@ -1555,13 +1827,20 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
     elif added_mods:
         prev_major, prev_minor, _ = parse_three_part_version(prev_version)
         release_version = format_three_part_version(prev_major, prev_minor + 1, 0)
-    elif updated_existing_mods or removed_mods:
+    elif updated_existing_mods or renamed_mods or removed_mods:
         prev_major, prev_minor, prev_patch = parse_three_part_version(prev_version)
         release_version = format_three_part_version(prev_major, prev_minor, prev_patch + 1)
     else:
         release_version = prev_version
 
-    has_update = bool(is_baseline_release or major_bump_requested or added_mods or updated_existing_mods or removed_mods)
+    has_update = bool(
+        is_baseline_release
+        or major_bump_requested
+        or added_mods
+        or updated_existing_mods
+        or renamed_mods
+        or removed_mods
+    )
 
     if not has_update:
         existing_discord_text = ""
@@ -1598,6 +1877,10 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         {"mod": mod_name, "from": old_ver, "to": new_ver}
         for mod_name, old_ver, new_ver in updated_existing_mods
     ]
+    renamed_mod_entries: List[Dict[str, str]] = [
+        {"from_mod": old_mod_name, "to_mod": new_mod_name, "version": ver}
+        for old_mod_name, new_mod_name, ver in renamed_mods
+    ]
     removed_mod_entries: List[Dict[str, str]] = [
         {"mod": mod_name, "from": old_ver}
         for mod_name, old_ver in removed_mods
@@ -1612,12 +1895,17 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         if focused_entries:
             new_mod_entries = focused_entries
             updated_mod_entries = []
+            renamed_mod_entries = []
             removed_mod_entries = []
 
     new_mod_lines = [f"- {entry['mod']} (new: v{entry['to']})" for entry in new_mod_entries]
     updated_existing_lines = [
         f"- {entry['mod']} (v{entry['from']} -> v{entry['to']})"
         for entry in updated_mod_entries
+    ]
+    renamed_lines = [
+        f"- {entry['to_mod']} (renamed from {entry['from_mod']}, v{entry['version']})"
+        for entry in renamed_mod_entries
     ]
     removed_lines = [f"- {entry['mod']} (was v{entry['from']})" for entry in removed_mod_entries]
     if has_update:
@@ -1638,6 +1926,7 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         previous_release_version=previous_release_version,
         new_mod_entries=new_mod_entries,
         updated_mod_entries=updated_mod_entries,
+        renamed_mod_entries=renamed_mod_entries,
         removed_mod_entries=removed_mod_entries,
         log=log,
     )
@@ -1646,20 +1935,28 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         fallback_chunks: List[str] = [
             f"GigglePack v{release_version} - {now_display}",
             f"Download: {zip_download_link(GIGGLEPACK_CANONICAL_ZIP)}",
-            f"Change summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, -{len(removed_lines)} removed",
+            (
+                f"Change summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, "
+                f"={len(renamed_lines)} renamed, -{len(removed_lines)} removed"
+            ),
             "",
             "**New mods:**",
         ]
         fallback_chunks.extend(new_mod_lines or ["- None"])
         fallback_chunks.extend(["", "**Updated existing mods:**"])
         fallback_chunks.extend(updated_existing_lines or ["- None"])
+        fallback_chunks.extend(["", "**Renamed mods:**"])
+        fallback_chunks.extend(renamed_lines or ["- None"])
         fallback_chunks.extend(["", "**Removed mods:**"])
         fallback_chunks.extend(removed_lines or ["- None"])
         discord_text = "\n".join(fallback_chunks).strip() + "\n"
 
     markdown_lines: List[str] = [
         f"## GigglePack v{release_version} ({now_display})",
-        f"### Summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, -{len(removed_lines)} removed",
+        (
+            f"### Summary: +{len(new_mod_lines)} new, ~{len(updated_existing_lines)} updated, "
+            f"={len(renamed_lines)} renamed, -{len(removed_lines)} removed"
+        ),
         "- **New Mods**",
     ]
     if new_mod_lines:
@@ -1670,6 +1967,12 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
     markdown_lines.append("- **Updated Existing Mods**")
     if updated_existing_lines:
         markdown_lines.extend([re.sub(r"^-\s", "  - ", line) for line in updated_existing_lines])
+    else:
+        markdown_lines.append("  - None")
+
+    markdown_lines.append("- **Renamed Mods**")
+    if renamed_lines:
+        markdown_lines.extend([re.sub(r"^-\s", "  - ", line) for line in renamed_lines])
     else:
         markdown_lines.append("  - None")
 
@@ -1722,11 +2025,13 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         "mods": giggle_mod_versions,
         "updated_mods": updated_mod_entries,
         "new_mods": new_mod_entries,
+        "renamed_mods": renamed_mod_entries,
         "removed_mods": removed_mod_entries,
         "versioned_zip": versioned_zip_name,
         "change_counts": {
             "new_mods": len(new_mod_entries),
             "updated_existing_mods": len(updated_mod_entries),
+            "renamed_mods": len(renamed_mod_entries),
             "removed_mods": len(removed_mod_entries),
         },
     }
@@ -1867,9 +2172,11 @@ def load_recent_gigglepack_release_entries(limit: int = 3) -> List[Dict[str, obj
                 "stamp": header_match.group(2).strip(),
                 "new": [],
                 "updated": [],
+                "renamed": [],
                 "removed": [],
                 "new_count": 0,
                 "updated_count": 0,
+                "renamed_count": 0,
                 "removed_count": 0,
             }
             section = None
@@ -1878,11 +2185,26 @@ def load_recent_gigglepack_release_entries(limit: int = 3) -> List[Dict[str, obj
         if not current:
             continue
 
-        summary_match = re.match(r"^###\s+Summary:\s*\+(\d+)\s+new,\s*~(\d+)\s+updated,\s*-(\d+)\s+removed$", line)
+        summary_match = re.match(
+            r"^###\s+Summary:\s*\+(\d+)\s+new,\s*~(\d+)\s+updated,\s*=(\d+)\s+renamed,\s*-(\d+)\s+removed$",
+            line,
+        )
         if summary_match:
             current["new_count"] = int(summary_match.group(1))
             current["updated_count"] = int(summary_match.group(2))
-            current["removed_count"] = int(summary_match.group(3))
+            current["renamed_count"] = int(summary_match.group(3))
+            current["removed_count"] = int(summary_match.group(4))
+            continue
+
+        old_summary_match = re.match(
+            r"^###\s+Summary:\s*\+(\d+)\s+new,\s*~(\d+)\s+updated,\s*-(\d+)\s+removed$",
+            line,
+        )
+        if old_summary_match:
+            current["new_count"] = int(old_summary_match.group(1))
+            current["updated_count"] = int(old_summary_match.group(2))
+            current["renamed_count"] = 0
+            current["removed_count"] = int(old_summary_match.group(3))
             continue
 
         if line == "- **New Mods**":
@@ -1890,6 +2212,9 @@ def load_recent_gigglepack_release_entries(limit: int = 3) -> List[Dict[str, obj
             continue
         if line == "- **Updated Existing Mods**":
             section = "updated"
+            continue
+        if line == "- **Renamed Mods**":
+            section = "renamed"
             continue
         if line == "- **Removed Mods**":
             section = "removed"
@@ -1922,14 +2247,17 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
             stamp = str(entry.get("stamp", "")).strip()
             new_items = [escape_html(str(item).strip()) for item in entry.get("new", []) if str(item).strip()]
             updated_items = [escape_html(str(item).strip()) for item in entry.get("updated", []) if str(item).strip()]
+            renamed_items = [escape_html(str(item).strip()) for item in entry.get("renamed", []) if str(item).strip()]
             removed_items = [escape_html(str(item).strip()) for item in entry.get("removed", []) if str(item).strip()]
             parsed_entries.append({
                 "header": f"GigglePack v{escape_html(version)}" + (f" - {escape_html(stamp)}" if stamp else ""),
                 "new_count": int(entry.get("new_count", len(new_items))),
                 "updated_count": int(entry.get("updated_count", len(updated_items))),
+                "renamed_count": int(entry.get("renamed_count", len(renamed_items))),
                 "removed_count": int(entry.get("removed_count", len(removed_items))),
                 "new_items": new_items,
                 "updated_items": updated_items,
+                "renamed_items": renamed_items,
                 "removed_items": removed_items,
             })
     else:
@@ -1938,6 +2266,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
         released_at = str(state.get("released_at", "")).strip()
         new_mods = state.get("new_mods", [])
         updated_mods = state.get("updated_mods", [])
+        renamed_mods = state.get("renamed_mods", [])
         removed_mods = state.get("removed_mods", [])
         change_counts = state.get("change_counts", {}) if isinstance(state.get("change_counts", {}), dict) else {}
 
@@ -1973,6 +2302,18 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
                             f"{escape_html(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
                         )
 
+        renamed_items: List[str] = []
+        if isinstance(renamed_mods, list):
+            for entry in renamed_mods:
+                if isinstance(entry, dict):
+                    from_mod = str(entry.get("from_mod", "")).strip()
+                    to_mod = str(entry.get("to_mod", "")).strip()
+                    version = str(entry.get("version", "")).strip()
+                    if from_mod and to_mod:
+                        renamed_items.append(
+                            f"{escape_html(to_mod)} (renamed from {escape_html(from_mod)}, v{escape_html(version)})"
+                        )
+
         removed_items: List[str] = []
         if isinstance(removed_mods, list):
             for entry in removed_mods:
@@ -1991,9 +2332,11 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
             "header": header,
             "new_count": int(change_counts.get("new_mods", len(new_items))),
             "updated_count": int(change_counts.get("updated_existing_mods", len(updated_items))),
+            "renamed_count": int(change_counts.get("renamed_mods", len(renamed_items))),
             "removed_count": int(change_counts.get("removed_mods", len(removed_items))),
             "new_items": new_items,
             "updated_items": updated_items,
+            "renamed_items": renamed_items,
             "removed_items": removed_items,
             "previous_release_version": previous_release_version,
         })
@@ -2010,15 +2353,20 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
         header_line = str(entry.get("header", "")).strip() or "GigglePack"
         new_count = int(entry.get("new_count", 0))
         updated_count = int(entry.get("updated_count", 0))
+        renamed_count = int(entry.get("renamed_count", 0))
         removed_count = int(entry.get("removed_count", 0))
         new_items = entry.get("new_items", []) if isinstance(entry.get("new_items", []), list) else []
         updated_items = entry.get("updated_items", []) if isinstance(entry.get("updated_items", []), list) else []
+        renamed_items = entry.get("renamed_items", []) if isinstance(entry.get("renamed_items", []), list) else []
         removed_items = entry.get("removed_items", []) if isinstance(entry.get("removed_items", []), list) else []
 
         detail_bits.extend([
             f"<li>{header_line}",
             "<ul>",
-            f"<li>Change summary: +{new_count} new, ~{updated_count} updated, -{removed_count} removed</li>",
+            (
+                f"<li>Change summary: +{new_count} new, ~{updated_count} updated, "
+                f"={renamed_count} renamed, -{removed_count} removed</li>"
+            ),
         ])
         previous_release_version = str(entry.get("previous_release_version", "")).strip()
         entry_version_match = re.search(r"v([0-9]+\.[0-9]+\.[0-9]+)", header_line)
@@ -2028,6 +2376,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
 
         detail_bits.append(f"<li>New mods:{build_inner_list(new_items)}</li>")
         detail_bits.append(f"<li>Updated existing mods:{build_inner_list(updated_items)}</li>")
+        detail_bits.append(f"<li>Renamed mods:{build_inner_list(renamed_items)}</li>")
         detail_bits.append(f"<li>Removed mods:{build_inner_list(removed_items)}</li>")
         detail_bits.extend(["</ul>", "</li>"])
 
@@ -2063,6 +2412,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     hudplus_mods = [f for f in all_mods if f.startswith("AGF-HUDPlus-")]
     hudpluszother_mods = [f for f in all_mods if f.startswith("AGF-HUDPluszOther-")]
     noeac_mods = [f for f in all_mods if f.startswith("AGF-NoEAC-")]
+    modders_mods = [f for f in all_mods if f.startswith("AGF-4Modders-")]
     vp_mods = [f for f in all_mods if f.startswith("AGF-VP-")]
     special_mods = [f for f in all_mods if f.startswith("zzzAGF-Special")]
 
@@ -2151,6 +2501,18 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         for mod in noeac_mods:
             md.append(build_mod_entry(mod))
 
+    md.extend([
+        "---", "", "<br>", "", "## **G. 4MODDERS MODS**", "",
+        "*[(Back to Top)](#agf-7-days-to-die-mods)*", "",
+        f"[**⬇️ Download All 4Modders Mods**]({zip_download_link('00_4Modders_All.zip')})", "", "---", "",
+        "*Optional modder-focused tools and helpers. Not auto-pushed to game root.*", "",
+    ])
+    if modders_mods:
+        for mod in modders_mods:
+            md.append(build_mod_entry(mod))
+    else:
+        md.append("*No AGF-4Modders mods are currently published.*")
+
     modlist_str = "\n".join(md)
     main_content = re.sub(
         r"<!-- MOD_LIST_START -->(.*?)<!-- MOD_LIST_END -->",
@@ -2198,7 +2560,7 @@ def validate_required_paths(strict: bool, log: Logger, mode: str) -> bool:
         required_dirs = [PUBLISH_READY]
         required_files = [MOD_README_TEMPLATE, MAIN_TEMPLATE_PATH]
     else:
-        required_dirs = [PUBLISH_READY, IN_PROGRESS, GAME_MODS]
+        required_dirs = [STAGING, PUBLISH_READY, IN_PROGRESS, GAME_MODS]
         required_files = [MOD_README_TEMPLATE, MAIN_TEMPLATE_PATH]
 
     for path in required_dirs:
@@ -2240,7 +2602,6 @@ def run_pipeline(args: argparse.Namespace) -> int:
         return 1
 
     try:
-        webhook_url = (args.discord_webhook_url or os.getenv(DISCORD_WEBHOOK_ENV_VAR, "")).strip()
         if args.mode == "sync-work":
             sync_staging_and_game(args.dry_run, log)
         elif args.mode == "prep-work":
@@ -2251,24 +2612,48 @@ def run_pipeline(args: argparse.Namespace) -> int:
         elif args.mode == "package":
             prep_names_and_readmes_for_dirs((PUBLISH_READY,), args.dry_run, log)
             create_all_zips(args.dry_run, args.workers, log)
-            release_result = generate_gigglepack_release_artifacts(args.dry_run, log)
-            maybe_post_discord_release_update(release_result, webhook_url, args.dry_run, log)
+            generate_gigglepack_release_artifacts(args.dry_run, log)
             generate_main_readme(args.dry_run, log)
         else:
-            mods_pulled = sync_workspace_and_game(args.dry_run, log)
-            move_mods_by_major_version(args.dry_run, log)
-            sync_publishready_to_staging_latest(args.dry_run, log)
+            log.info(
+                "Mode full: ActiveBuild<->Game sync first, then finalize ActiveBuild, "
+                "push finalized changes to Game, promote to ReleaseSource, then package/readmes."
+            )
 
-            folder_renames = rename_mod_folders_to_modinfo(args.dry_run, log)
-            csv_rows = normalize_compat_csv(folder_renames, args.dry_run, log)
-            normalize_quote_files(csv_rows, folder_renames, args.dry_run, log)
-            generate_mod_readmes(csv_rows, args.dry_run, log)
+            # 1) Keep ActiveBuild and Game synchronized first.
+            sync_staging_and_game(args.dry_run, log)
 
-            push_back_pulled_mods(mods_pulled, args.dry_run, log)
+            # 2) Apply naming/readme updates in ActiveBuild.
+            prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
+            cleanup_legacy_4modders_renames_in_dir(STAGING, args.dry_run, log)
+            cleanup_older_versions_in_dir(STAGING, args.dry_run, log)
 
+            # 3) Push finalized ActiveBuild changes back to game (version/hash aware).
+            sync_staging_and_game(args.dry_run, log)
+
+            # 4) Promote finalized ActiveBuild content to ReleaseSource.
+            promote_staging_to_publish_ready(args.dry_run, log)
+
+            # 4.5) Remove stale legacy folder names replaced by AGF-4Modders naming.
+            cleanup_release_legacy_4modders_renames(args.dry_run, log)
+            cleanup_legacy_4modders_renames_in_dir(PUBLISH_READY, args.dry_run, log)
+            cleanup_older_versions_in_dir(PUBLISH_READY, args.dry_run, log)
+
+            # 5) Ensure ReleaseSource metadata/quotes/readmes are normalized before packaging.
+            release_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(PUBLISH_READY,))
+            csv_rows = normalize_compat_csv(
+                release_renames,
+                args.dry_run,
+                log,
+                mod_dirs=(PUBLISH_READY, IN_PROGRESS),
+                prune_to_mods_now=True,
+            )
+            normalize_quote_files(csv_rows, release_renames, args.dry_run, log)
+            generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(PUBLISH_READY,))
+
+            # 6) Package and regenerate main README.
             create_all_zips(args.dry_run, args.workers, log)
-            release_result = generate_gigglepack_release_artifacts(args.dry_run, log)
-            maybe_post_discord_release_update(release_result, webhook_url, args.dry_run, log)
+            generate_gigglepack_release_artifacts(args.dry_run, log)
             generate_main_readme(args.dry_run, log)
 
     except Exception as ex:
@@ -2305,14 +2690,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
         type=int,
         default=max(2, min(8, os.cpu_count() or 2)),
         help="Worker count for parallel mod zip creation",
-    )
-    parser.add_argument(
-        "--discord-webhook-url",
-        default="",
-        help=(
-            "Discord webhook URL for auto-posting release updates. "
-            f"If omitted, uses environment variable {DISCORD_WEBHOOK_ENV_VAR}."
-        ),
     )
     return parser
 

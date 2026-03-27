@@ -1,6 +1,6 @@
 zzzAGF-Special-Compatibilities
 7d2d Version 2  
-Version: 4.0.2  
+Version: 4.0.3  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/zzzAGF-Special-Compatibilities.zip
 
  
@@ -114,6 +114,9 @@ Language Support
 ========================================
 
 6. Changelog
+
+v4.0.3
+- Updated backpack references due to name change.
 
 v4.0.2
 - Updated references that were missed last update.

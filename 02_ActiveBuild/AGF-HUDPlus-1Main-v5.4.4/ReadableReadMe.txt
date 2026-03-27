@@ -1,6 +1,6 @@
 AGF-HUDPlus-1Main
 7d2d Version 2  
-Version: 5.4.3  
+Version: 5.4.4  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-HUDPlus-1Main.zip
 
  
@@ -106,6 +106,9 @@ Language Support
 ========================================
 
 6. Changelog
+
+v5.4.4
+- Updated backpack references due to name change.
 
 v5.4.3
 - Updated conditional for my ItemTypeIconColor mod.

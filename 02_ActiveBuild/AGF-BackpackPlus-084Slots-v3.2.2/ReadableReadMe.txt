@@ -1,6 +1,6 @@
 AGF-BackpackPlus-084Slots
 7d2d Version 2  
-Version: 3.2.1  
+Version: 3.2.2  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-BackpackPlus-084Slots.zip
 
  > You may swap with 72 or 119.
@@ -99,6 +99,9 @@ Language Support
 ========================================
 
 6. Changelog
+
+v3.2.2
+- Updated name for consistency.
 
 v3.2.1
 - Updated for consistency and automation.

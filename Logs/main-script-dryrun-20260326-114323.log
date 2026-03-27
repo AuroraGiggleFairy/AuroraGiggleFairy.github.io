@@ -1,0 +1,552 @@
+[2026-03-26 11:43:22] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-03-26 11:43:22] [INFO] Selected mode: full
+[2026-03-26 11:43:22] [INFO] Dry-run mode enabled: no file system changes will be written
+[2026-03-26 11:43:22] [INFO] Step 1/2: Scan mod folders and sync by version
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-BackpackPlus-084Slots-v3.2.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-BackpackPlus-084Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-BackpackPlus-084Slots-v3.2.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-BackpackPlus-084Slots: both v3.2.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-1Main-v5.4.4
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-HUDPlus-1Main-v5.4.4 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-1Main-v5.4.4
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-HUDPlus-1Main: both v5.4.4 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-BMCounter-v2.1.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-HUDPlus-BMCounter-v2.1.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-BMCounter-v2.1.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-HUDPlus-BMCounter: both v2.1.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-HealthBars-v4.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-HUDPlus-HealthBars-v4.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-HealthBars-v4.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-HUDPlus-HealthBars: both v4.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-HUDPlus-PurpleBook-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-HUDPlus-PurpleBook: both v2.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-HUDPlus-RemoveEnteringPopUp: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-ConfigureWindowEnteringDuration: both v1.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConsoleOpacityMod-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-ConsoleOpacityMod-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConsoleOpacityMod-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-ConsoleOpacityMod: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-CosmeticLockIcon-v1.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-CosmeticLockIcon-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-CosmeticLockIcon-v1.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-CosmeticLockIcon: both v1.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-EnhancedPatch-v2.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-EnhancedPatch-v3.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-EnhancedPatch-v3.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-EnhancedPatch: both v3.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-GlobalStormTracker-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-GlobalStormTracker-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-GlobalStormTracker-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-GlobalStormTracker: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ItemTypeIconColor-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-ItemTypeIconColor-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ItemTypeIconColor-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-ItemTypeIconColor: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-OpenAllButton-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-OpenAllButton-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-OpenAllButton-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-OpenAllButton: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ScreamerAlert-v1.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-ScreamerAlert-v1.1.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ScreamerAlert-v1.1.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-ScreamerAlert: both v1.1.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-SortingBox-v1.0.5
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-SortingBox-v1.0.5 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-SortingBox-v1.0.5
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-NoEAC-SortingBox: both v1.0.5 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AdminModdingSupport-v1.0.3
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-AdminModdingSupport-v1.0.3 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AdminModdingSupport-v1.0.3
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-AdminModdingSupport: both v1.0.3 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AlternativeRecipes-v1.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-AlternativeRecipes-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AlternativeRecipes-v1.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-AlternativeRecipes: both v1.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AmmoDisassembly-v1.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-AmmoDisassembly-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AmmoDisassembly-v1.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-AmmoDisassembly: both v1.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ApiaryPlus-v1.0.3
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ApiaryPlus-v1.0.3 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ApiaryPlus-v1.0.3
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ApiaryPlus: both v1.0.3 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ArcheryFeathersChange-v1.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ArcheryFeathersChange-v1.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ArcheryFeathersChange-v1.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ArcheryFeathersChange: both v1.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ArmorHarvestMods-v2.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ArmorHarvestMods-v2.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ArmorHarvestMods-v2.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ArmorHarvestMods: both v2.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AutomobilesRespawn-v3.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-AutomobilesRespawn-v3.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-AutomobilesRespawn-v3.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-AutomobilesRespawn: both v3.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BedrollPlus-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-BedrollPlus-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BedrollPlus-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-BedrollPlus: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BetterEggChance-v2.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-BetterEggChance-v2.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BetterEggChance-v2.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-BetterEggChance: both v2.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BreakItGetIt-v1.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-BreakItGetIt-v1.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BreakItGetIt-v1.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-BreakItGetIt: both v1.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BuyTraderVendingMachines-v3.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-BuyTraderVendingMachines-v3.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-BuyTraderVendingMachines-v3.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-BuyTraderVendingMachines: both v3.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-CraftSewingKits-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-CraftSewingKits-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-CraftSewingKits-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-CraftSewingKits: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-CraftStackEngBattCells-v3.3.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-CraftStackEngBattCells-v3.3.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-CraftStackEngBattCells-v3.3.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-CraftStackEngBattCells: both v3.3.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-CraftVitamins-v1.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-CraftVitamins-v1.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-CraftVitamins-v1.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-CraftVitamins: both v1.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DecorationBlock-v3.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-DecorationBlock-v3.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DecorationBlock-v3.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-DecorationBlock: both v3.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DewsPlus-v2.4.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-DewsPlus-v2.4.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DewsPlus-v2.4.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-DewsPlus: both v2.4.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DoorsPlus-v3.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-DoorsPlus-v3.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DoorsPlus-v3.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-DoorsPlus: both v3.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DrinkableAcid-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-DrinkableAcid-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DrinkableAcid-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-DrinkableAcid: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DyesPlus-v3.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-DyesPlus-v3.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-DyesPlus-v3.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-DyesPlus: both v3.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-FarmingPlus-v5.6.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-FarmingPlus-v5.6.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-FarmingPlus-v5.6.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-FarmingPlus: both v5.6.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-FloraHarvester-v2.3.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-FloraHarvester-v2.3.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-FloraHarvester-v2.3.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-FloraHarvester: both v2.3.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-FuelBurnPlus-v2.3.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-FuelBurnPlus-v2.3.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-FuelBurnPlus-v2.3.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-FuelBurnPlus: both v2.3.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MasterTool-v6.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-MasterTool-v6.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MasterTool-v6.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-MasterTool: both v6.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MaxLevel500-v2.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-MaxLevel500-v2.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MaxLevel500-v2.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-MaxLevel500: both v2.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MedicationNoInsectSlow-v1.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-MedicationNoInsectSlow-v1.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MedicationNoInsectSlow-v1.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-MedicationNoInsectSlow: both v1.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MiningPlus-v1.2.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-MiningPlus-v1.2.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-MiningPlus-v1.2.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-MiningPlus: both v1.2.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-Mod988-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-Mod988-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-Mod988-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-Mod988: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ModBundling-v1.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ModBundling-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ModBundling-v1.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ModBundling: both v1.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ModSlotsPlus-v3.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ModSlotsPlus-v3.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ModSlotsPlus-v3.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ModSlotsPlus: both v3.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PaintbrushPlus-v2.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-PaintbrushPlus-v2.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PaintbrushPlus-v2.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-PaintbrushPlus: both v2.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PickupLanternsPlus-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-PickupLanternsPlus-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PickupLanternsPlus-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-PickupLanternsPlus: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PlayerResetQuests-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-PlayerResetQuests-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PlayerResetQuests-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-PlayerResetQuests: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PlayerVendingMachinesPlus-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-PlayerVendingMachinesPlus-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PlayerVendingMachinesPlus-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-PlayerVendingMachinesPlus: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PumpkinsPlus-v2.0.4
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-PumpkinsPlus-v2.0.4 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-PumpkinsPlus-v2.0.4
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-PumpkinsPlus: both v2.0.4 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-QuickStart-v2.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-QuickStart-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-QuickStart-v2.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-QuickStart: both v2.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RebundleBundles-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-RebundleBundles-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RebundleBundles-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-RebundleBundles: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RecipeRottingFlesh-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-RecipeRottingFlesh-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RecipeRottingFlesh-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-RecipeRottingFlesh: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RenamesAlphabeticalSort-v2.0.4
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-RenamesAlphabeticalSort-v2.0.4 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RenamesAlphabeticalSort-v2.0.4
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-RenamesAlphabeticalSort: both v2.0.4 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RestorePowerAnyTime-v1.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-RestorePowerAnyTime-v1.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-RestorePowerAnyTime-v1.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-RestorePowerAnyTime: both v1.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ScrapBatts4Acid-v1.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ScrapBatts4Acid-v1.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ScrapBatts4Acid-v1.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ScrapBatts4Acid: both v1.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ScrapEquipmentFaster-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ScrapEquipmentFaster-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ScrapEquipmentFaster-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ScrapEquipmentFaster: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-SimplifiedStacks-v1.2.3
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-SimplifiedStacks-v1.2.3 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-SimplifiedStacks-v1.2.3
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-SimplifiedStacks: both v1.2.3 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-SmeltingPlus-v2.4.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-SmeltingPlus-v2.4.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-SmeltingPlus-v2.4.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-SmeltingPlus: both v2.4.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-StayLongerAnimalCorpse-v2.0.2
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-StayLongerAnimalCorpse-v2.0.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-StayLongerAnimalCorpse-v2.0.2
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-StayLongerAnimalCorpse: both v2.0.2 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-StayLongerPlayerBackpack-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-StayLongerPlayerBackpack-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-StayLongerPlayerBackpack-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-StayLongerPlayerBackpack: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-StayLongerZombieLoot-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-StayLongerZombieLoot-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-StayLongerZombieLoot-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-StayLongerZombieLoot: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TacticalRiflePlus-v2.1.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-TacticalRiflePlus-v2.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TacticalRiflePlus-v2.1.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-TacticalRiflePlus: both v2.1.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TraderAlwaysOpen-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-TraderAlwaysOpen-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TraderAlwaysOpen-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-TraderAlwaysOpen: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TraderCostlierPrices-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-TraderCostlierPrices-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TraderCostlierPrices-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-TraderCostlierPrices: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TraderSellsMoreBooks-v3.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-TraderSellsMoreBooks-v3.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TraderSellsMoreBooks-v3.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-TraderSellsMoreBooks: both v3.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TradersRestockEvery2Days-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-TradersRestockEvery2Days-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TradersRestockEvery2Days-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-TradersRestockEvery2Days: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TreesPlus-v3.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-TreesPlus-v3.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TreesPlus-v3.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-TreesPlus: both v3.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-VehiclePerformance-v1.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-VehiclePerformance-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-VehiclePerformance-v1.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-VehiclePerformance: both v1.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-VehiclesExtraSeating-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-VehiclesExtraSeating-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-VehiclesExtraSeating-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-VehiclesExtraSeating: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-VehicleStoragePlus-v2.1.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-VehicleStoragePlus-v2.1.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-VehicleStoragePlus-v2.1.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-VehicleStoragePlus: both v2.1.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-WriteStoryOnCrate-v1.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-WriteStoryOnCrate-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-WriteStoryOnCrate-v1.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-WriteStoryOnCrate: both v1.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-XPDeathPenaltyReduction-v2.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-XPDeathPenaltyReduction-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-XPDeathPenaltyReduction-v2.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-XPDeathPenaltyReduction: both v2.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ZombieBiomeSpawning-v3.0.0
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ZombieBiomeSpawning-v3.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ZombieBiomeSpawning-v3.0.0
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ZombieBiomeSpawning: both v3.0.0 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ZombieCorpseLeaveQuicker: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ZombieLargerHordes-v2.0.1
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-VP-ZombieLargerHordes-v2.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-ZombieLargerHordes-v2.0.1
+[2026-03-26 11:43:22] [INFO] Version tie resolved for AGF-VP-ZombieLargerHordes: both v2.0.1 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would remove directory: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\zzzAGF-Special-Compatibilities-v4.0.3
+[2026-03-26 11:43:22] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\03_ReleaseSource\zzzAGF-Special-Compatibilities-v4.0.3 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\zzzAGF-Special-Compatibilities-v4.0.3
+[2026-03-26 11:43:22] [INFO] Version tie resolved for zzzAGF-Special-Compatibilities: both v4.0.3 but content differed. Pushed workspace copy to game.
+[2026-03-26 11:43:22] [INFO] Step 3: Move mods between In-Progress and PublishReady by major version
+[2026-03-26 11:43:22] [INFO] Step 3.5: Ensure latest ReleaseSource mods are in ActiveBuild
+[2026-03-26 11:43:22] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-060Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:22] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-072Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:22] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-084Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:22] [WARN] ActiveBuild sync conflict for AGF-HUDPlus-1Main: both v5.4.4 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:22] [WARN] ActiveBuild sync conflict for AGF-HUDPluszOther-10IngredientSlots: both v1.0.1 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:22] [WARN] ActiveBuild sync conflict for AGF-NoEAC-SortingBox: both v1.0.5 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:23] [WARN] ActiveBuild sync conflict for AGF-VP-DyesPlus: both v3.1.0 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:23] [WARN] ActiveBuild sync conflict for zzzAGF-Special-Compatibilities: both v4.0.3 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 11:43:23] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-03-26 11:43:23] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write compatibility CSV: C:\GitHub\7D2D-Mods\HELPER_ModCompatibility.csv (90 rows)
+[2026-03-26 11:43:23] [INFO] Step 4.3: Normalize quote files
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would ensure quote directory exists: C:\GitHub\7D2D-Mods\_Quotes
+[2026-03-26 11:43:23] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-060Slots-v3.2.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-072Slots-v3.2.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-084Slots-v3.2.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-119Slots-v1.2.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-1Main-v5.4.4
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-BMCounter-v2.1.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-HealthBars-v4.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-10IngredientSlots-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ConsoleOpacityMod-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-CosmeticLockIcon-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-EnhancedPatch-v3.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-GlobalStormTracker-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ItemTypeIconColor-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-OpenAllButton-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ScreamerAlert-v1.1.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-SortingBox-v1.0.5
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-Toolbelt12Slots-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AdminModdingSupport-v1.0.3
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AlternativeRecipes-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AmmoDisassembly-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ApiaryPlus-v1.0.3
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ArcheryFeathersChange-v1.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ArmorHarvestMods-v2.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AutomobilesRespawn-v3.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BedrollPlus-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BetterEggChance-v2.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BreakItGetIt-v1.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BuyTraderVendingMachines-v3.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftSewingKits-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftStackEngBattCells-v3.3.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftVitamins-v1.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DecorationBlock-v3.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DewsPlus-v2.4.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DoorsPlus-v3.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DrinkableAcid-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DyesPlus-v3.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FarmingPlus-v5.6.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FloraHarvester-v2.3.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FuelBurnPlus-v2.3.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MasterTool-v6.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MaxLevel500-v2.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicationNoInsectSlow-v1.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MiningPlus-v1.2.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-Mod988-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ModBundling-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ModSlotsPlus-v3.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PaintbrushPlus-v2.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PickupLanternsPlus-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PlayerResetQuests-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PlayerVendingMachinesPlus-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PumpkinsPlus-v2.0.4
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-QuickStart-v2.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RebundleBundles-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RecipeRottingFlesh-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RenamesAlphabeticalSort-v2.0.4
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RestorePowerAnyTime-v1.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ScrapBatts4Acid-v1.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ScrapEquipmentFaster-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-SimplifiedStacks-v1.2.3
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-SmeltingPlus-v2.4.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerAnimalCorpse-v2.0.2
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerPlayerBackpack-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerZombieLoot-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TacticalRiflePlus-v2.1.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderAlwaysOpen-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderCostlierPrices-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderSellsMoreBooks-v3.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TradersRestockEvery2Days-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TreesPlus-v3.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehiclePerformance-v1.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehiclesExtraSeating-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehicleStoragePlus-v2.1.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-WriteStoryOnCrate-v1.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-XPDeathPenaltyReduction-v2.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieBiomeSpawning-v3.0.0
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieLargerHordes-v2.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for zzzAGF-Special-Compatibilities-v4.0.3
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-TerrainLeveler-v0.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-ServerUIChanges-v0.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicallyTreatOthers-v0.0.1
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.1
+[2026-03-26 11:43:23] [INFO] Step 5: Push updated pulled mods back to game folder
+[2026-03-26 11:43:23] [INFO] Step 6: Create all mod and category zip files
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would ensure zip output directory exists: C:\GitHub\7D2D-Mods\04_DownloadZips
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: 00_BackpackPlus_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: 00_GigglePack_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: 00_HUDPluszOther_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: 00_HUDPlus_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: 00_NoEAC_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: 00_VP_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-060Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-072Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-084Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-119Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-1Main.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-BMCounter.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-HealthBars.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-PurpleBook.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-RemoveEnteringPopUp.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-10IngredientSlots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-RemoveWrittentormAlerts.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-SmallerInteractionPrompt.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-TinyBuffsPopUp.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-Weekday.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ConfigureWindowEnteringDuration.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ConsoleOpacityMod.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-CosmeticLockIcon.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-EnhancedPatch.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ExpandedInteractionPrompts.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-GlobalStormTracker.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ItemTypeIconColor.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-OpenAllButton.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ScreamerAlert.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-SortingBox.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-Toolbelt12Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AdminModdingSupport.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AlternativeRecipes.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AmmoDisassembly.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ApiaryPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ArcheryFeathersChange.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ArmorHarvestMods.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AutomobilesRespawn.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BedrollPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BetterEggChance.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BreakItGetIt.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BuyTraderVendingMachines.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-CraftSewingKits.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-CraftStackEngBattCells.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-CraftVitamins.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DecorationBlock.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DewsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DoorsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DrinkableAcid.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DyesPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-FarmingPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-FloraHarvester.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-FuelBurnPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MasterTool.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MaxLevel500.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MedicationNoInsectSlow.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MiningPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-Mod988.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ModBundling.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ModSlotsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PaintbrushPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PickupLanternsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PlayerResetQuests.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PlayerVendingMachinesPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PumpkinsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-QuickStart.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RebundleBundles.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RecipeRottingFlesh.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RenamesAlphabeticalSort.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RestorePowerAnyTime.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ScrapBatts4Acid.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ScrapEquipmentFaster.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-SimplifiedStacks.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-SmeltingPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-StayLongerAnimalCorpse.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-StayLongerPlayerBackpack.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-StayLongerZombieLoot.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TacticalRiflePlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TraderAlwaysOpen.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TraderCostlierPrices.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TraderSellsMoreBooks.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TradersRestockEvery2Days.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TreesPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-VehiclePerformance.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-VehiclesExtraSeating.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-VehicleStoragePlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-WriteStoryOnCrate.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-XPDeathPenaltyReduction.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ZombieBiomeSpawning.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ZombieCorpseLeaveQuicker.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ZombieLargerHordes.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would delete old zip: zzzAGF-Special-Compatibilities.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-060Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-072Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-084Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-119Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-BMCounter.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-1Main.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-HealthBars.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-10IngredientSlots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-PurpleBook.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-RemoveEnteringPopUp.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-RemoveWrittentormAlerts.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ConfigureWindowEnteringDuration.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-SmallerInteractionPrompt.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-TinyBuffsPopUp.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-Weekday.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ConsoleOpacityMod.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ItemTypeIconColor.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-CosmeticLockIcon.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-GlobalStormTracker.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ExpandedInteractionPrompts.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-EnhancedPatch.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-OpenAllButton.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AmmoDisassembly.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ScreamerAlert.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-SortingBox.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-Toolbelt12Slots.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AdminModdingSupport.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AlternativeRecipes.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ApiaryPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BuyTraderVendingMachines.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ArcheryFeathersChange.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ArmorHarvestMods.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AutomobilesRespawn.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BedrollPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BetterEggChance.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BreakItGetIt.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-CraftSewingKits.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-FarmingPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-FloraHarvester.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-FuelBurnPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MasterTool.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MaxLevel500.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MedicationNoInsectSlow.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MiningPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-Mod988.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ModBundling.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ModSlotsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PaintbrushPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PickupLanternsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PlayerResetQuests.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PlayerVendingMachinesPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PumpkinsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-QuickStart.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RebundleBundles.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RecipeRottingFlesh.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RenamesAlphabeticalSort.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RestorePowerAnyTime.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ScrapBatts4Acid.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ScrapEquipmentFaster.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-SimplifiedStacks.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-SmeltingPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-StayLongerAnimalCorpse.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-StayLongerPlayerBackpack.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-StayLongerZombieLoot.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TacticalRiflePlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TraderAlwaysOpen.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TraderCostlierPrices.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TraderSellsMoreBooks.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TradersRestockEvery2Days.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TreesPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-VehiclePerformance.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-VehicleStoragePlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-VehiclesExtraSeating.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-WriteStoryOnCrate.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-XPDeathPenaltyReduction.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ZombieBiomeSpawning.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ZombieCorpseLeaveQuicker.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ZombieLargerHordes.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: zzzAGF-Special-Compatibilities.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-CraftStackEngBattCells.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-CraftVitamins.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DecorationBlock.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DewsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DoorsPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DrinkableAcid.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DyesPlus.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create pack zip: 00_BackpackPlus_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create pack zip: 00_GigglePack_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create pack zip: 00_HUDPlus_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create pack zip: 00_HUDPluszOther_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create pack zip: 00_NoEAC_All.zip
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would create pack zip: 00_VP_All.zip
+[2026-03-26 11:43:23] [INFO] Step 6.5: Generate GigglePack release metadata + changelog outputs
+[2026-03-26 11:43:23] [INFO] GigglePack update not detected; skipping Discord auto-post
+[2026-03-26 11:43:23] [INFO] Step 7: Generate main README.md
+[2026-03-26 11:43:23] [INFO] [DRYRUN] Would write main README: C:\GitHub\7D2D-Mods\README.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 90
+scanned_game_mods: 78
+synced_pull_from_game: 0
+synced_push_to_game: 76
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 90
+readable_txt_written: 90
+pushed_back_to_game: 0
+mod_zips_created: 86
+pack_zips_created: 6
+promoted_to_publish_ready: 0
+warnings: 8
+errors: 0

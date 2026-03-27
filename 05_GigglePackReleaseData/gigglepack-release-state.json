@@ -1,9 +1,12 @@
 {
-  "gigglepack_version": "1.1.0",
-  "previous_gigglepack_version": "1.0.0",
+  "gigglepack_version": "1.2.0",
+  "previous_gigglepack_version": "1.1.0",
   "is_baseline_release": false,
-  "released_at": "2026-03-26 04:17:40",
+  "released_at": "2026-03-26 20:07:08",
   "mods": {
+    "AGF-4Modders-10IngredientSlots": "1.0.1",
+    "AGF-4Modders-ConfigureWindowEnteringDuration": "1.0.1",
+    "AGF-4Modders-ConsoleOpacityMod": "1.0.0",
     "AGF-BackpackPlus-060Slots": "3.2.2",
     "AGF-BackpackPlus-072Slots": "3.2.2",
     "AGF-BackpackPlus-084Slots": "3.2.2",
@@ -13,19 +16,17 @@
     "AGF-HUDPlus-HealthBars": "4.0.0",
     "AGF-HUDPlus-PurpleBook": "2.0.0",
     "AGF-HUDPlus-RemoveEnteringPopUp": "1.0.0",
-    "AGF-HUDPluszOther-10IngredientSlots": "1.0.1",
     "AGF-HUDPluszOther-RemoveWrittentormAlerts": "2.0.0",
     "AGF-HUDPluszOther-SmallerInteractionPrompt": "1.0.0",
     "AGF-HUDPluszOther-TinyBuffsPopUp": "1.0.0",
     "AGF-HUDPluszOther-Weekday": "2.1.0",
-    "AGF-NoEAC-ConfigureWindowEnteringDuration": "1.0.1",
-    "AGF-NoEAC-ConsoleOpacityMod": "1.0.0",
     "AGF-NoEAC-CosmeticLockIcon": "1.0.1",
-    "AGF-NoEAC-EnhancedPatch": "3.0.0",
-    "AGF-NoEAC-ExpandedInteractionPrompts": "1.0.1",
+    "AGF-NoEAC-EnhancedPatch": "3.1.0",
+    "AGF-NoEAC-ExpandedInteractionPrompts": "1.1.0",
     "AGF-NoEAC-GlobalStormTracker": "1.0.0",
     "AGF-NoEAC-ItemTypeIconColor": "1.0.0",
-    "AGF-NoEAC-OpenAllButton": "1.0.0",
+    "AGF-NoEAC-LockableWorkstations": "1.0.0",
+    "AGF-NoEAC-OpenAllButton": "1.0.1",
     "AGF-NoEAC-ScreamerAlert": "1.1.1",
     "AGF-NoEAC-SortingBox": "1.0.5",
     "AGF-NoEAC-Toolbelt12Slots": "1.0.0",
@@ -93,52 +94,51 @@
   },
   "updated_mods": [
     {
-      "mod": "AGF-BackpackPlus-060Slots",
-      "from": "3.2.1",
-      "to": "3.2.2"
+      "mod": "AGF-NoEAC-EnhancedPatch",
+      "from": "3.0.0",
+      "to": "3.1.0"
     },
     {
-      "mod": "AGF-BackpackPlus-072Slots",
-      "from": "3.2.1",
-      "to": "3.2.2"
+      "mod": "AGF-NoEAC-ExpandedInteractionPrompts",
+      "from": "1.0.1",
+      "to": "1.1.0"
     },
     {
-      "mod": "AGF-BackpackPlus-084Slots",
-      "from": "3.2.1",
-      "to": "3.2.2"
-    },
-    {
-      "mod": "AGF-HUDPlus-1Main",
-      "from": "5.4.3",
-      "to": "5.4.4"
-    },
-    {
-      "mod": "AGF-HUDPluszOther-10IngredientSlots",
+      "mod": "AGF-NoEAC-OpenAllButton",
       "from": "1.0.0",
       "to": "1.0.1"
-    },
-    {
-      "mod": "AGF-NoEAC-SortingBox",
-      "from": "1.0.4",
-      "to": "1.0.5"
-    },
-    {
-      "mod": "zzzAGF-Special-Compatibilities",
-      "from": "4.0.2",
-      "to": "4.0.3"
     }
   ],
   "new_mods": [
     {
-      "mod": "AGF-NoEAC-Toolbelt12Slots",
+      "mod": "AGF-NoEAC-LockableWorkstations",
       "to": "1.0.0"
     }
   ],
-  "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v1.1.0.zip",
+  "renamed_mods": [
+    {
+      "from_mod": "AGF-HUDPluszOther-10IngredientSlots",
+      "to_mod": "AGF-4Modders-10IngredientSlots",
+      "version": "1.0.1"
+    },
+    {
+      "from_mod": "AGF-NoEAC-ConfigureWindowEnteringDuration",
+      "to_mod": "AGF-4Modders-ConfigureWindowEnteringDuration",
+      "version": "1.0.1"
+    },
+    {
+      "from_mod": "AGF-NoEAC-ConsoleOpacityMod",
+      "to_mod": "AGF-4Modders-ConsoleOpacityMod",
+      "version": "1.0.0"
+    }
+  ],
+  "removed_mods": [
+  ],
+  "versioned_zip": "AGF-GigglePack-v1.2.0.zip",
   "change_counts": {
     "new_mods": 1,
-    "updated_existing_mods": 7,
+    "updated_existing_mods": 3,
+    "renamed_mods": 3,
     "removed_mods": 0
   }
 }

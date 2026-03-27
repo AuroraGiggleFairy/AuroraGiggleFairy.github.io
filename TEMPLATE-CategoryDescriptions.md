@@ -25,5 +25,8 @@
 [NOEAC]
 *Mods that require EAC to be off, some require client download.*
 
+[4MODDERS]
+*Optional modder-focused helpers and tooling that stay in an optionals folder by default.*
+
 [OTHER]
 *Additional requested HUD options and tweaks.*

@@ -1,0 +1,68 @@
+[2026-03-26 19:55:38] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-03-26 19:55:38] [INFO] Selected mode: full
+[2026-03-26 19:55:38] [INFO] Step 1/2: Scan mod folders and sync by version
+[2026-03-26 19:55:38] [INFO] Game is newer for AGF-NoEAC-EnhancedPatch: game=AGF-NoEAC-EnhancedPatch-v3.0.0 v3.1.0, workspace=AGF-NoEAC-EnhancedPatch-v3.0.0 v3.0.0. Pulling from game.
+[2026-03-26 19:55:38] [ERROR] Failed to remove directory C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-EnhancedPatch-v3.0.0: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\7 Days To Die\\Mods\\AGF-NoEAC-EnhancedPatch-v3.0.0'
+[2026-03-26 19:55:38] [INFO] Game is newer for AGF-NoEAC-ExpandedInteractionPrompts: game=AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1 v1.1.0, workspace=AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1 v1.0.1. Pulling from game.
+[2026-03-26 19:55:39] [INFO] Removed game mod after pull: AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1
+[2026-03-26 19:55:39] [INFO] Game is newer for AGF-NoEAC-OpenAllButton: game=AGF-NoEAC-OpenAllButton-v1.0.0 v1.0.1, workspace=AGF-NoEAC-OpenAllButton-v1.0.0 v1.0.0. Pulling from game.
+[2026-03-26 19:55:39] [INFO] Removed game mod after pull: AGF-NoEAC-OpenAllButton-v1.0.0
+[2026-03-26 19:55:41] [INFO] Game is newer for AGF-NoEAC-LockableWorkstations: game=AGF-NoEAC-LockableWorkstations-v0.0.1 v1.0.0, workspace=AGF-NoEAC-LockableWorkstations-v0.0.1 v0.0.1. Pulling from game.
+[2026-03-26 19:55:41] [INFO] Removed game mod after pull: AGF-NoEAC-LockableWorkstations-v0.0.1
+[2026-03-26 19:55:41] [INFO] Step 3: Move mods between In-Progress and PublishReady by major version
+[2026-03-26 19:55:41] [INFO] Moved to PublishReady: AGF-NoEAC-LockableWorkstations-v0.0.1 (v1.0.0)
+[2026-03-26 19:55:41] [INFO] Step 3.5: Ensure latest ReleaseSource mods are in ActiveBuild
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-060Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-072Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-BackpackPlus-084Slots: both v3.2.2 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-HUDPlus-1Main: both v5.4.4 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-HUDPluszOther-10IngredientSlots: both v1.0.1 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-NoEAC-ConfigureWindowEnteringDuration: both v1.0.1 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-NoEAC-ConsoleOpacityMod: both v1.0.0 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [INFO] ActiveBuild sync update: AGF-NoEAC-EnhancedPatch-v3.0.0 v3.0.0 -> AGF-NoEAC-EnhancedPatch-v3.0.0 v3.1.0
+[2026-03-26 19:55:41] [INFO] ActiveBuild sync update: AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1 v1.0.1 -> AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1 v1.1.0
+[2026-03-26 19:55:41] [INFO] ActiveBuild sync add: AGF-NoEAC-LockableWorkstations-v0.0.1 v1.0.0
+[2026-03-26 19:55:41] [INFO] ActiveBuild sync update: AGF-NoEAC-OpenAllButton-v1.0.0 v1.0.0 -> AGF-NoEAC-OpenAllButton-v1.0.0 v1.0.1
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-NoEAC-SortingBox: both v1.0.5 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:41] [WARN] ActiveBuild sync conflict for AGF-VP-DyesPlus: both v3.1.0 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:42] [WARN] ActiveBuild sync conflict for zzzAGF-Special-Compatibilities: both v4.0.3 but content differs. Keeping ActiveBuild copy.
+[2026-03-26 19:55:42] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-03-26 19:55:42] [INFO] Renamed folder: AGF-NoEAC-EnhancedPatch-v3.0.0 -> AGF-NoEAC-EnhancedPatch-v3.1.0
+[2026-03-26 19:55:42] [INFO] Renamed folder: AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1 -> AGF-NoEAC-ExpandedInteractionPrompts-v1.1.0
+[2026-03-26 19:55:42] [INFO] Renamed folder: AGF-NoEAC-LockableWorkstations-v0.0.1 -> AGF-NoEAC-LockableWorkstations-v1.0.0
+[2026-03-26 19:55:42] [INFO] Renamed folder: AGF-NoEAC-OpenAllButton-v1.0.0 -> AGF-NoEAC-OpenAllButton-v1.0.1
+[2026-03-26 19:55:42] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-03-26 19:55:42] [INFO] Step 4.3: Normalize quote files
+[2026-03-26 19:55:42] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-03-26 19:55:42] [INFO] Step 5: Push updated pulled mods back to game folder
+[2026-03-26 19:55:42] [WARN] Pushback skipped for AGF-NoEAC-EnhancedPatch-v3.0.0: workspace path missing C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-EnhancedPatch-v3.0.0
+[2026-03-26 19:55:42] [WARN] Pushback skipped for AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1: workspace path missing C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-ExpandedInteractionPrompts-v1.0.1
+[2026-03-26 19:55:42] [WARN] Pushback skipped for AGF-NoEAC-OpenAllButton-v1.0.0: workspace path missing C:\GitHub\7D2D-Mods\03_ReleaseSource\AGF-NoEAC-OpenAllButton-v1.0.0
+[2026-03-26 19:55:42] [WARN] Pushback skipped for AGF-NoEAC-LockableWorkstations-v0.0.1: workspace path missing C:\GitHub\7D2D-Mods\01_Draft\AGF-NoEAC-LockableWorkstations-v0.0.1
+[2026-03-26 19:55:42] [INFO] Step 6: Create all mod and category zip files
+[2026-03-26 19:55:43] [INFO] Step 6.5: Generate GigglePack release metadata + changelog outputs
+[2026-03-26 19:55:43] [INFO] Discord webhook post completed
+[2026-03-26 19:55:43] [INFO] Step 7: Generate main README.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 91
+scanned_game_mods: 79
+synced_pull_from_game: 4
+synced_push_to_game: 0
+sync_conflicts: 0
+moved_to_publish_ready: 1
+moved_to_in_progress: 0
+renamed_folders: 4
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 91
+readable_txt_written: 91
+pushed_back_to_game: 0
+mod_zips_created: 87
+pack_zips_created: 7
+promoted_to_publish_ready: 0
+warnings: 14
+errors: 1
