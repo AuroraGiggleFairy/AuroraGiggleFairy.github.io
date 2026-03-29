@@ -1,0 +1,13 @@
+<configs>
+
+	<append xpath="/xui/ruleset">
+		<window_group name="serverinfowindow">
+			<window name="windowESC"/>
+		</window_group>
+	</append>
+	
+<!--	<append xpath="/xui/ruleset/window_group[@name='ingameDebugMenu']">
+		<window name="windowESCAdmin"/>
+	</append>-->
+	
+</configs>

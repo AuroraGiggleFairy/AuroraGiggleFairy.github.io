@@ -1,0 +1,20 @@
+Generated: 2026-03-28T03:13:30.563085
+Source: ESCMenu.source.json
+Mod Folder Token: @AGF-4Modders-ESCWindowPlus-v0.0.1:
+Localization: Config\Generated\Localization.ESC.Generated.txt
+XUi Tabs Snippet: Config\Generated\XUi.Tabs.Generated.xml
+News Files:
+- Config\Generated\News\discord.xml
+- Config\Generated\News\agf_s_mods.xml
+
+NewsWindow Sources (copy/paste):
+- discord => @AGF-4Modders-ESCWindowPlus-v0.0.1:Config/Generated/News/discord.xml
+- agf_s_mods => @AGF-4Modders-ESCWindowPlus-v0.0.1:Config/Generated/News/agf_s_mods.xml
+
+Localization Merge:
+- Not run (use --merge-localization to apply).
+
+Next Step:
+- If you want dynamic tab count/layout, paste XUi.Tabs.Generated.xml snippets into windows.xml tab sections.
+- Point NewsWindow sources in XUi to the mapping lines above.
+- Optionally run with --merge-localization to update your main localization file.

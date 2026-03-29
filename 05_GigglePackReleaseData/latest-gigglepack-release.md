@@ -1,6 +1,22 @@
 # GigglePack Release Changelog
 Newest entries appear at the top.
 
+## GigglePack v1.2.1 (March 28, 2026 8:39pm)
+### Summary: +0 new, ~2 updated, =1 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-NoEAC-EnhancedPatch](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-NoEAC-LockableWorkstations](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip) (v1.0.0 -> v1.1.0)
+- **Renamed Mods**
+  - [AGF-NoEAC-ConsoleOpacityMod](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip) (renamed from AGF-4Modders-ConsoleOpacityMod, v1.0.0)
+- **Removed Mods**
+  - None
+
+---
+
+Newest entries appear at the top.
+
 ## GigglePack v1.2.0 (March 26, 2026 7:55pm)
 ### Summary: +1 new, ~3 updated, =3 renamed, -0 removed
 - **New Mods**

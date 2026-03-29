@@ -1,0 +1,52 @@
+[2026-03-26 20:48:06] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-03-26 20:48:06] [INFO] Selected mode: sync-work
+[2026-03-26 20:48:06] [INFO] Mode sync-work: Sync Staging <-> Game by version
+[2026-03-26 20:48:06] [INFO] Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus (without forcing HUDPluszOther root removal), and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root.
+[2026-03-26 20:48:06] [INFO] sync-work repair: replaced malformed game copy for AGF-NoEAC-EnhancedPatch with staging v3.1.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0 v2.0.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0 v1.0.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0 v1.0.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-HUDPluszOther-Weekday-v2.1.0 v2.1.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-NoEAC-ExpandedInteractionPrompts-v1.1.0 v1.1.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-NoEAC-LockableWorkstations-v1.0.0 v1.0.0
+[2026-03-26 20:48:06] [INFO] sync-work push: added missing game mod AGF-NoEAC-OpenAllButton-v1.0.1 v1.0.1
+[2026-03-26 20:48:06] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-03-26 20:48:06] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-ConfigureWindowEnteringDuration-v1.0.1
+[2026-03-26 20:48:06] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-ConsoleOpacityMod-v1.0.0
+[2026-03-26 20:48:06] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-060Slots-v3.2.2
+[2026-03-26 20:48:06] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-072Slots-v3.2.2
+[2026-03-26 20:48:06] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-084Slots-v3.2.2
+[2026-03-26 20:48:06] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-119Slots-v1.2.2
+[2026-03-26 20:48:06] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-1Main-v5.4.4
+[2026-03-26 20:48:06] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-BMCounter-v2.1.2
+[2026-03-26 20:48:06] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-HealthBars-v4.0.0
+[2026-03-26 20:48:07] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-03-26 20:48:07] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-03-26 20:48:07] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-03-26 20:48:07] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-03-26 20:48:07] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-03-26 20:48:07] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-03-26 20:48:07] [INFO] Rename folders to match ModInfo Name+Version when safe
+
+=== SUMMARY ===
+scanned_workspace_mods: 87
+scanned_game_mods: 76
+synced_pull_from_game: 0
+synced_push_to_game: 8
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 0
+readable_txt_written: 0
+pushed_back_to_game: 0
+mod_zips_created: 0
+pack_zips_created: 0
+promoted_to_publish_ready: 0
+warnings: 0
+errors: 0

@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "name": "AGF-4Modders-ESCWindowPlus",
+    "modFolder": "AGF-4Modders-ESCWindowPlus-v0.0.1",
+    "version": "0.1",
+    "description": "Single-source content for ESC menu localization and link feeds"
+  },
+  "labels": {
+    "headerTitle": "Twilight Realm",
+    "headerMotto": "An AuroraGiggleFairy 7d2d Server",
+    "linkLabel": "AGF's Discord",
+    "optionsTitle": "Options"
+  },
+  "links": [
+    {
+      "id": "discord",
+      "enabled": true,
+      "title": "Join Discord",
+      "url": "https://discord.gg/Vm5eyW6N4r"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "welcome",
+      "button": "Welcome",
+      "title": "Welcome!!!",
+      "body": "Welcome to the server.\\n\\nUse this tab for high-level server information."
+    },
+    {
+      "id": "rules",
+      "button": "Rules",
+      "title": "Rules",
+      "body": "1. Respect builds.\\n2. Be kind.\\n3. Report issues on Discord."
+    },
+    {
+      "id": "changes_log",
+      "button": "Changes Log",
+      "title": "Changes Log",
+      "body": "v0.0.1 - Initial ESC menu setup."
+    }
+  ],
+  "themes": {
+    "color": {
+      "headerBackground": "95,89,128",
+      "pageBackground": "95,89,128",
+      "headerTitleColor": "141,181,128",
+      "headerMottoColor": "221,205,250",
+      "tabButtonSelectedColor": "74,33,150",
+      "pageTitleColor": "141,181,128",
+      "pageBodyColor": "221,205,250",
+      "textBoldingColor": "141,181,128",
+      "textHighlightColor": "255,255,255"
+    }
+  },
+  "ui": {
+    "layout": {
+      "contentWidth": 1100,
+      "contentPadding": 20,
+      "buttonCellWidth": 130,
+      "buttonHeight": 42,
+      "buttonPosY": -20,
+      "maxLinks": 5,
+      "maxTabs": 8
+    }
+  },
+  "dev": {
+    "highContrastPreview": {
+      "headerBackground": "64,64,64",
+      "pageBackground": "48,48,48",
+      "headerTitleColor": "255,255,255",
+      "headerMottoColor": "255,255,255",
+      "tabButtonSelectedColor": "220,220,220",
+      "pageTitleColor": "0,0,0",
+      "pageBodyColor": "255,255,255",
+      "textBoldingColor": "255,255,255",
+      "textHighlightColor": "255,255,255"
+    }
+  }
+}

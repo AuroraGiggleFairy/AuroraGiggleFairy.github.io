@@ -139,6 +139,61 @@ class Logger:
         self.stats.errors += 1
         self._emit("ERROR", message)
 
+    def _extract_mod_changes(self) -> List[Tuple[str, str]]:
+        """Build a deduplicated list of mod changes detected in this run's log messages."""
+        action_by_mod: Dict[str, List[str]] = {}
+
+        action_map: List[Tuple[re.Pattern[str], str]] = [
+            (re.compile(r"sync-work repair:"), "repaired in game"),
+            (re.compile(r"sync-work push:"), "pushed to game"),
+            (re.compile(r"sync-work pull:"), "pulled from game"),
+            (re.compile(r"sync-work tie resolved"), "tie resolved (game updated)"),
+            (re.compile(r"Promoted new mod:"), "promoted (new)"),
+            (re.compile(r"Promoted update:"), "promoted (updated)"),
+            (re.compile(r"Promoted refresh:"), "promoted (refresh)"),
+            (re.compile(r"Moved to PublishReady:"), "moved to publish-ready"),
+            (re.compile(r"Moved to In-Progress:"), "moved to in-progress"),
+            (re.compile(r"Workspace is newer for"), "workspace newer (pushed to game)"),
+            (re.compile(r"Game is newer for"), "game newer (pulled to workspace)"),
+            (re.compile(r"Version tie resolved for"), "version tie resolved"),
+        ]
+
+        mod_pattern = re.compile(r"\b(AGF-[A-Za-z0-9-]+-v[0-9][0-9A-Za-z\.-]*)\b")
+
+        for line in self._messages:
+            message_match = re.search(r"\[[^\]]+\]\s\[[^\]]+\]\s(.+)$", line)
+            message = message_match.group(1) if message_match else line
+
+            action = None
+            for pattern, label in action_map:
+                if pattern.search(message):
+                    action = label
+                    break
+            if not action:
+                continue
+
+            mod_match = mod_pattern.search(message)
+            if not mod_match:
+                continue
+
+            mod_name = mod_match.group(1)
+            if mod_name not in action_by_mod:
+                action_by_mod[mod_name] = []
+            if action not in action_by_mod[mod_name]:
+                action_by_mod[mod_name].append(action)
+
+        changes: List[Tuple[str, str]] = []
+        for mod_name in sorted(action_by_mod.keys(), key=lambda name: name.lower()):
+            actions = ", ".join(action_by_mod[mod_name])
+            changes.append((mod_name, actions))
+        return changes
+
+    def get_mod_change_summary_lines(self) -> List[str]:
+        changes = self._extract_mod_changes()
+        if not changes:
+            return ["none"]
+        return [f"{mod_name} | {actions}" for mod_name, actions in changes]
+
     def write_log_file(self) -> Optional[str]:
         try:
             os.makedirs(LOGS_DIR, exist_ok=True)
@@ -151,6 +206,10 @@ class Logger:
                 f.write("\n=== SUMMARY ===\n")
                 for key, value in self.stats.__dict__.items():
                     f.write(f"{key}: {value}\n")
+
+                f.write("\n=== MOD CHANGES ===\n")
+                for line in self.get_mod_change_summary_lines():
+                    f.write(f"{line}\n")
 
             # Keep only the newest main-script logs to avoid unbounded growth.
             log_candidates: List[Tuple[float, str]] = []
@@ -1146,12 +1205,17 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
     log.info("Mode sync-work: Sync Staging <-> Game by version")
     log.info(
         "Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, "
-        "mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus (without forcing HUDPluszOther root removal), "
+        "mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, "
         "and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root."
     )
 
     staging_folders = scan_mod_folders(STAGING)
     game_folders = scan_mod_folders(GAME_MODS)
+    renamed_suffixes: set[str] = set()
+    for folder_name in staging_folders:
+        match = re.match(r"^AGF-4Modders-(.+)-v([0-9][0-9a-zA-Z\.-]*)$", folder_name)
+        if match:
+            renamed_suffixes.add(match.group(1))
 
     log.stats.scanned_workspace_mods = len(staging_folders)
     log.stats.scanned_game_mods = len(game_folders)
@@ -1165,11 +1229,23 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
             f"Using '{active_backpack}' as active backpack."
         )
 
-    # Keep game root clean for backpack policy only.
+    # Keep game root clean for root-policy-only mods.
     for game_folder, game_path in game_folders.items():
         if is_backpack_mod(game_folder) and active_backpack and game_folder != active_backpack:
             if maybe_remove_dir(game_path, dry_run, log):
                 log.info(f"sync-work cleanup: removed non-active backpack from game root: {game_folder}")
+            continue
+        if is_hudpluszother_mod(game_folder):
+            if maybe_remove_dir(game_path, dry_run, log):
+                log.info(f"sync-work cleanup: removed HUDPluszOther optional from game root: {game_folder}")
+
+    cleanup_legacy_4modders_replacements_with_suffixes(
+        GAME_MODS,
+        renamed_suffixes,
+        dry_run,
+        log,
+        "game root",
+    )
 
     # Re-scan after cleanup decisions for consistent sync maps.
     game_folders = scan_mod_folders(GAME_MODS)
@@ -1178,6 +1254,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
     allowed_staging_root: Dict[str, str] = {}
     for folder, path in staging_folders.items():
         if is_backpack_mod(folder) and active_backpack and folder != active_backpack:
+            continue
+        if is_hudpluszother_mod(folder):
             continue
         if is_4modders_mod(folder):
             continue
@@ -1199,11 +1277,21 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
         st_ver = get_modinfo_version(st_path)
         game_ver = get_modinfo_version(game_path)
 
-        if st_ver is None or game_ver is None:
+        if st_ver is None:
             log.warn(
                 f"Skipping sync-work for {base_name}: missing/unreadable ModInfo.xml "
                 f"(staging={st_ver}, game={game_ver})"
             )
+            continue
+
+        if game_ver is None:
+            target = os.path.join(GAME_MODS, st_folder)
+            if maybe_remove_dir(game_path, dry_run, log) and maybe_copytree(st_path, target, dry_run, log):
+                log.stats.synced_push_to_game += 1
+                log.info(
+                    f"sync-work repair: replaced malformed game copy for {base_name} "
+                    f"with staging v{st_ver}"
+                )
             continue
 
         cmp_value = compare_versions(st_ver, game_ver)
@@ -1248,6 +1336,19 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
                 log.stats.synced_push_to_game += 1
                 log.info(f"sync-work push: ensured active backpack in game root: {active_backpack}")
 
+    # Push all other allowed staging mods that are missing from game root by base name.
+    missing_in_game = sorted(set(staging_by_base.keys()) - set(game_by_base.keys()))
+    for base_name in missing_in_game:
+        st_folder, st_path = staging_by_base[base_name]
+        st_ver = get_modinfo_version(st_path)
+        if st_ver is None:
+            log.warn(f"sync-work missing push skipped for {base_name}: staging ModInfo.xml unreadable")
+            continue
+        target = os.path.join(GAME_MODS, st_folder)
+        if maybe_copytree(st_path, target, dry_run, log):
+            log.stats.synced_push_to_game += 1
+            log.info(f"sync-work push: added missing game mod {st_folder} v{st_ver}")
+
     # Mirror optionals folders in game space.
     optionals_backpack_path = os.path.join(GAME_MODS, GAME_OPTIONALS_BACKPACK_DIR)
     optionals_hudplus_path = os.path.join(GAME_MODS, GAME_OPTIONALS_HUDPLUS_DIR)
@@ -1260,6 +1361,14 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
         os.makedirs(optionals_backpack_path, exist_ok=True)
         os.makedirs(optionals_hudplus_path, exist_ok=True)
         os.makedirs(optionals_4modders_path, exist_ok=True)
+
+    cleanup_legacy_4modders_replacements_with_suffixes(
+        optionals_hudplus_path,
+        renamed_suffixes,
+        dry_run,
+        log,
+        GAME_OPTIONALS_HUDPLUS_DIR,
+    )
 
     for folder, st_path in staging_folders.items():
         if is_backpack_mod(folder):
@@ -1298,6 +1407,21 @@ def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
             continue
 
         if base_name not in publish_by_base:
+            legacy_replacement = re.match(
+                r"^(AGF-NoEAC-|AGF-HUDPluszOther-)(.+)-v([0-9][0-9a-zA-Z\.-]*)$",
+                st_folder,
+            )
+            if legacy_replacement:
+                suffix = legacy_replacement.group(2)
+                version = legacy_replacement.group(3)
+                old_4modders_name = f"AGF-4Modders-{suffix}-v{version}"
+                old_4modders_path = publish_folders.get(old_4modders_name)
+                if old_4modders_path and maybe_remove_dir(old_4modders_path, dry_run, log):
+                    log.info(
+                        "Promote rename replacement: removed stale 4Modders release folder "
+                        f"{old_4modders_name} before promoting {st_folder}"
+                    )
+
             dest = os.path.join(PUBLISH_READY, st_folder)
             if maybe_copytree(st_path, dest, dry_run, log):
                 log.stats.promoted_to_publish_ready += 1
@@ -1352,6 +1476,7 @@ def cleanup_release_legacy_4modders_renames(dry_run: bool, log: Logger) -> None:
     log.info("Cleanup: Remove legacy ReleaseSource folders replaced by AGF-4Modders renames")
 
     publish_folders = scan_mod_folders(PUBLISH_READY)
+    staging_folders = scan_mod_folders(STAGING)
     for folder_name in sorted(publish_folders.keys()):
         if not folder_name.startswith("AGF-4Modders-"):
             continue
@@ -1366,6 +1491,14 @@ def cleanup_release_legacy_4modders_renames(dry_run: bool, log: Logger) -> None:
             legacy_folder = f"{legacy_prefix}{suffix}-v{version}"
             legacy_path = os.path.join(PUBLISH_READY, legacy_folder)
             if os.path.isdir(legacy_path):
+                if legacy_folder in staging_folders:
+                    # ActiveBuild is the source-of-truth. Keep the legacy-named release folder
+                    # when that naming still exists in ActiveBuild.
+                    log.info(
+                        "Skipped legacy release cleanup because ActiveBuild still has: "
+                        f"{legacy_folder}"
+                    )
+                    continue
                 if maybe_remove_dir(legacy_path, dry_run, log):
                     log.info(
                         f"Removed legacy release folder after 4Modders rename: {legacy_folder} -> {folder_name}"
@@ -1396,6 +1529,32 @@ def cleanup_legacy_4modders_renames_in_dir(base_dir: str, dry_run: bool, log: Lo
                     continue
                 if maybe_remove_dir(candidate_path, dry_run, log):
                     log.info(f"Removed legacy folder in {lane_name}: {candidate_name} -> replaced by {folder_name}")
+
+
+def cleanup_legacy_4modders_replacements_with_suffixes(
+    base_dir: str,
+    renamed_suffixes: set[str],
+    dry_run: bool,
+    log: Logger,
+    lane_label: str,
+) -> None:
+    """Remove legacy NoEAC/HUDPluszOther folders whose suffix now exists as AGF-4Modders."""
+    if not os.path.isdir(base_dir) or not renamed_suffixes:
+        return
+
+    folders = scan_mod_folders(base_dir)
+    for folder_name, folder_path in list(folders.items()):
+        match = re.match(r"^(AGF-NoEAC-|AGF-HUDPluszOther-)(.+)-v([0-9][0-9a-zA-Z\.-]*)$", folder_name)
+        if not match:
+            continue
+
+        suffix = match.group(2)
+        if suffix not in renamed_suffixes:
+            continue
+
+        replacement_name = f"AGF-4Modders-{suffix}"
+        if maybe_remove_dir(folder_path, dry_run, log):
+            log.info(f"Removed legacy folder in {lane_label}: {folder_name} -> replaced by {replacement_name}")
 
 
 def cleanup_older_versions_in_dir(base_dir: str, dry_run: bool, log: Logger) -> None:
@@ -2720,6 +2879,10 @@ def run_pipeline(args: argparse.Namespace) -> int:
     print("\n=== RUN SUMMARY ===")
     for key, value in log.stats.__dict__.items():
         print(f"{key}: {value}")
+
+    print("\n=== MOD CHANGES ===")
+    for line in log.get_mod_change_summary_lines():
+        print(line)
 
     log_path = log.write_log_file()
     if log_path:

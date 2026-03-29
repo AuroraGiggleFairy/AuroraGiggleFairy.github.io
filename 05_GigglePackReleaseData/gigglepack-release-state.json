@@ -1,12 +1,11 @@
 {
-  "gigglepack_version": "1.2.0",
-  "previous_gigglepack_version": "1.1.0",
+  "gigglepack_version": "1.2.1",
+  "previous_gigglepack_version": "1.2.0",
   "is_baseline_release": false,
-  "released_at": "2026-03-26 20:07:08",
+  "released_at": "2026-03-28 20:39:55",
   "mods": {
     "AGF-4Modders-10IngredientSlots": "1.0.1",
     "AGF-4Modders-ConfigureWindowEnteringDuration": "1.0.1",
-    "AGF-4Modders-ConsoleOpacityMod": "1.0.0",
     "AGF-BackpackPlus-060Slots": "3.2.2",
     "AGF-BackpackPlus-072Slots": "3.2.2",
     "AGF-BackpackPlus-084Slots": "3.2.2",
@@ -20,12 +19,13 @@
     "AGF-HUDPluszOther-SmallerInteractionPrompt": "1.0.0",
     "AGF-HUDPluszOther-TinyBuffsPopUp": "1.0.0",
     "AGF-HUDPluszOther-Weekday": "2.1.0",
+    "AGF-NoEAC-ConsoleOpacityMod": "1.0.0",
     "AGF-NoEAC-CosmeticLockIcon": "1.0.1",
-    "AGF-NoEAC-EnhancedPatch": "3.1.0",
+    "AGF-NoEAC-EnhancedPatch": "3.1.1",
     "AGF-NoEAC-ExpandedInteractionPrompts": "1.1.0",
     "AGF-NoEAC-GlobalStormTracker": "1.0.0",
     "AGF-NoEAC-ItemTypeIconColor": "1.0.0",
-    "AGF-NoEAC-LockableWorkstations": "1.0.0",
+    "AGF-NoEAC-LockableWorkstations": "1.1.0",
     "AGF-NoEAC-OpenAllButton": "1.0.1",
     "AGF-NoEAC-ScreamerAlert": "1.1.1",
     "AGF-NoEAC-SortingBox": "1.0.5",
@@ -95,50 +95,29 @@
   "updated_mods": [
     {
       "mod": "AGF-NoEAC-EnhancedPatch",
-      "from": "3.0.0",
-      "to": "3.1.0"
+      "from": "3.1.0",
+      "to": "3.1.1"
     },
-    {
-      "mod": "AGF-NoEAC-ExpandedInteractionPrompts",
-      "from": "1.0.1",
-      "to": "1.1.0"
-    },
-    {
-      "mod": "AGF-NoEAC-OpenAllButton",
-      "from": "1.0.0",
-      "to": "1.0.1"
-    }
-  ],
-  "new_mods": [
     {
       "mod": "AGF-NoEAC-LockableWorkstations",
-      "to": "1.0.0"
+      "from": "1.0.0",
+      "to": "1.1.0"
     }
   ],
+  "new_mods": [],
   "renamed_mods": [
     {
-      "from_mod": "AGF-HUDPluszOther-10IngredientSlots",
-      "to_mod": "AGF-4Modders-10IngredientSlots",
-      "version": "1.0.1"
-    },
-    {
-      "from_mod": "AGF-NoEAC-ConfigureWindowEnteringDuration",
-      "to_mod": "AGF-4Modders-ConfigureWindowEnteringDuration",
-      "version": "1.0.1"
-    },
-    {
-      "from_mod": "AGF-NoEAC-ConsoleOpacityMod",
-      "to_mod": "AGF-4Modders-ConsoleOpacityMod",
+      "from_mod": "AGF-4Modders-ConsoleOpacityMod",
+      "to_mod": "AGF-NoEAC-ConsoleOpacityMod",
       "version": "1.0.0"
     }
   ],
-  "removed_mods": [
-  ],
-  "versioned_zip": "AGF-GigglePack-v1.2.0.zip",
+  "removed_mods": [],
+  "versioned_zip": "AGF-GigglePack-v1.2.1.zip",
   "change_counts": {
-    "new_mods": 1,
-    "updated_existing_mods": 3,
-    "renamed_mods": 3,
+    "new_mods": 0,
+    "updated_existing_mods": 2,
+    "renamed_mods": 1,
     "removed_mods": 0
   }
 }

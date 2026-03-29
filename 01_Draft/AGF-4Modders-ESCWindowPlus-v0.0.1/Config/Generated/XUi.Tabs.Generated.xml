@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generatedTabs>
+<!-- Generated tab layout snippet -->
+<!-- tab_count=8, max_tabs=8, max_fit_tabs=8 -->
+
+<!-- Color: tabsHeader -->
+<rect name="tabsHeader">
+	<grid name="tabButtons" pos="30,-20" depth="3" rows="1" cols="8" cell_width="130" cell_height="42" repeat_content="true" arrangement="horizontal">
+		<rect controller="TabSelectorButton">
+			<simplebutton name="tabButton" depth="8" pos="5,0" width="126" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="74,33,150" foregroundlayer="false" caption="{tab_name_localized}"/>
+		</rect>
+	</grid>
+</rect>
+
+<!-- Color: tabsContents -->
+<rect name="tabsContents">
+		<rect name="page_1" controller="TabSelectorTab" tab_key="windowESC_color_page_1_button">
+			<label name="page_1_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_1_title" foregroundlayer="true"/>
+			<label name="page_1_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_1_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_2" controller="TabSelectorTab" tab_key="windowESC_color_page_2_button">
+			<label name="page_2_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_2_title" foregroundlayer="true"/>
+			<label name="page_2_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_2_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_3" controller="TabSelectorTab" tab_key="windowESC_color_page_3_button">
+			<label name="page_3_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_3_title" foregroundlayer="true"/>
+			<label name="page_3_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_3_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_4" controller="TabSelectorTab" tab_key="windowESC_color_page_4_button">
+			<label name="page_4_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_4_title" foregroundlayer="true"/>
+			<label name="page_4_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_4_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_5" controller="TabSelectorTab" tab_key="windowESC_color_page_5_button">
+			<label name="page_5_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_5_title" foregroundlayer="true"/>
+			<label name="page_5_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_5_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_6" controller="TabSelectorTab" tab_key="windowESC_color_page_6_button">
+			<label name="page_6_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_6_title" foregroundlayer="true"/>
+			<label name="page_6_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_6_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_7" controller="TabSelectorTab" tab_key="windowESC_color_page_7_button">
+			<label name="page_7_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_7_title" foregroundlayer="true"/>
+			<label name="page_7_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_7_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_8" controller="TabSelectorTab" tab_key="windowESC_color_page_8_button">
+			<label name="page_8_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_8_title" foregroundlayer="true"/>
+			<label name="page_8_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_8_body" foregroundlayer="true"/>
+		</rect>
+</rect>
+
+<!-- HighContrast: tabsHeader -->
+<rect name="tabsHeader">
+	<grid name="tabButtons" pos="30,-20" depth="3" rows="1" cols="8" cell_width="130" cell_height="42" repeat_content="true" arrangement="horizontal">
+		<rect controller="TabSelectorButton">
+			<simplebutton name="tabButton" depth="8" pos="5,0" width="126" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="220, 220, 220" foregroundlayer="false" caption="{tab_name_localized}"/>
+		</rect>
+	</grid>
+</rect>
+
+<!-- HighContrast: tabsContents -->
+<rect name="tabsContents">
+		<rect name="page_1_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_1_button">
+			<label name="page_1_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_1_title" foregroundlayer="true"/>
+			<label name="page_1_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_1_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_2_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_2_button">
+			<label name="page_2_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_2_title" foregroundlayer="true"/>
+			<label name="page_2_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_2_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_3_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_3_button">
+			<label name="page_3_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_3_title" foregroundlayer="true"/>
+			<label name="page_3_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_3_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_4_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_4_button">
+			<label name="page_4_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_4_title" foregroundlayer="true"/>
+			<label name="page_4_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_4_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_5_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_5_button">
+			<label name="page_5_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_5_title" foregroundlayer="true"/>
+			<label name="page_5_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_5_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_6_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_6_button">
+			<label name="page_6_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_6_title" foregroundlayer="true"/>
+			<label name="page_6_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_6_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_7_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_7_button">
+			<label name="page_7_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_7_title" foregroundlayer="true"/>
+			<label name="page_7_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_7_body" foregroundlayer="true"/>
+		</rect>
+		<rect name="page_8_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_8_button">
+			<label name="page_8_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_8_title" foregroundlayer="true"/>
+			<label name="page_8_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_8_body" foregroundlayer="true"/>
+		</rect>
+</rect>
+</generatedTabs>
