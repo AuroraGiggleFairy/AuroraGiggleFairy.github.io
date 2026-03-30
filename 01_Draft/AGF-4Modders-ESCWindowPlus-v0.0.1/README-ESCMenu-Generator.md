@@ -1,4 +1,4 @@
-# ESCWindowPlus Single-Source Workflow (v1.1)
+﻿# ESCWindowPlus Single-Source Workflow (v1.1)
 
 This adds a simple one-source editing model for content.
 
@@ -9,7 +9,7 @@ This adds a simple one-source editing model for content.
 
 ## What gets generated
 - Config/Generated/Localization.ESC.Generated.txt
-- Config/Generated/News/*.xml
+- Links/*.xml
 - Config/Generated/XUi.Tabs.Generated.xml
 - Config/Generated/ESC.Generated.Manifest.txt
 
@@ -158,10 +158,10 @@ Generator will produce canonical keys like:
 Header and link keys are also generated in the same namespace:
 - `windowESC_color_header_title`
 - `windowESC_color_header_motto`
-- `windowESC_color_link_1`
+- `windowESC_color_link_1_label`
 - `windowESC_highcontrast_header_title`
 - `windowESC_highcontrast_header_motto`
-- `windowESC_highcontrast_link_1`
+- `windowESC_highcontrast_link_1_label`
 
 ## Tab count and max fit
 Use `ui.layout` in ESCMenu.source.json to keep tab count easy but bounded by what fits.
@@ -212,7 +212,7 @@ High Contrast is now automatic and is not user-configurable. The generator deriv
 		"pageBackground": "95,89,128",
 		"headerTitleColor": "141,181,128",
 		"headerMottoColor": "221,205,250",
-		"tabButtonSelectedColor": "74,33,150",
+		"pageTabButtonSelectedColor": "74,33,150",
 		"pageTitleColor": "141,181,128",
 		"pageBodyColor": "221,205,250",
 		"textBoldingColor": "141,181,128",
@@ -226,7 +226,7 @@ Meaning:
 - `pageBackground`: main content area background fill
 - `headerTitle`: header title color and your standout title color base
 - `headerMotto`: header motto and generic body-text base
-- `tabButtonSelected`: selected tab button color
+- `pageTabButtonSelected`: selected page tab button color
 - `pageTitle`: tab page title color
 - `pageBody`: tab body text color
 - `textBolding`: optional standout color for emphasis in your text
@@ -250,7 +250,7 @@ Example:
 		"pageBackground": "48,48,48",
 		"headerTitleColor": "255,255,255",
 		"headerMottoColor": "255,255,255",
-		"tabButtonSelectedColor": "220,220,220",
+		"pageTabButtonSelectedColor": "220,220,220",
 		"pageTitleColor": "0,0,0",
 		"pageBodyColor": "255,255,255",
 		"textBoldingColor": "255,255,255",
@@ -352,7 +352,7 @@ Tip: set `"enabled": false` on any link you want to keep in JSON but disable for
 
 Example source string format:
 
-@AGF-4Modders-ESCWindowPlus-v0.0.1:Config/Generated/News/discord.xml
+@AGF-4Modders-ESCWindowPlus-v0.0.1:Links/discord.xml
 
 To use generated text, either:
 - run with --merge-localization, or
@@ -361,3 +361,5 @@ To use generated text, either:
 ## Next step ideas
 - Add optional generation of TabSelector blocks based on tab count.
 - Add theme token replacement for color tags in long body text.
+
+

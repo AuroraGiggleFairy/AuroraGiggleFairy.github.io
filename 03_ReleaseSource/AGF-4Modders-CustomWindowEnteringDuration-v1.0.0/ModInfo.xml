@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-4Modders-CustomWindowEnteringDuration"/>
+    <DisplayName value="BETA - AGF Custom Window Entering Duration"/>
+    <Version value="1.0.0"/>
+    <Description value="Sets how long the Window Entering pop-up stays on screen."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+    <SkipWithAntiCheat value="true"/>
+</xml>

@@ -3,7 +3,7 @@ Generate ESC menu support files from one editable source JSON.
 
 Outputs:
 - Config/Generated/Localization.ESC.Generated.txt
-- Config/Generated/News/*.xml
+- Links/*.xml
 
 This script does NOT overwrite your main Localization.txt by default.
 You can manually merge generated keys when you are ready.
@@ -26,25 +26,45 @@ from xml.sax.saxutils import escape
 DEFAULT_THEME_COLORS: dict[str, str] = {
     "headerBackground": "95, 89, 128",
     "pageBackground": "95, 89, 128",
+    "linkBackground": "95, 89, 128",
+    "optionsBackground": "95, 89, 128",
+    "panelBorder": "0, 0, 0",
     "headerTitle": "141, 181, 128",
     "headerMotto": "221, 205, 250",
-    "tabButtonSelected": "74, 33, 150",
+    "pageTabButtonBackground": "32, 32, 32",
+    "pageTabButtonSelected": "74, 33, 150",
+    "pageTabButtonText": "141, 181, 128",
+    "pageTabButtonBorder": "0, 0, 0",
     "pageTitle": "141, 181, 128",
     "pageBody": "221, 205, 250",
     "textBolding": "141, 181, 128",
     "textHighlight": "255, 255, 255",
+    "linkButtonBackground": "64, 64, 64",
+    "linkButtonText": "255, 255, 255",
+    "linkButtonHover": "50, 50, 50",
+    "linkButtonBorder": "0, 0, 0",
 }
 
 DEFAULT_AUTO_HIGH_CONTRAST_COLORS: dict[str, str] = {
-    "headerBackground": "64, 64, 64",
-    "pageBackground": "64, 64, 64",
+    "headerBackground": "40, 40, 40",
+    "pageBackground": "40, 40, 40",
+    "linkBackground": "40, 40, 40",
+    "optionsBackground": "40, 40, 40",
+    "panelBorder": "0, 0, 0",
     "headerTitle": "255, 255, 255",
-    "headerMotto": "255, 255, 255",
-    "tabButtonSelected": "200, 200, 200",
+    "headerMotto": "200, 200, 200",
+    "pageTabButtonBackground": "20, 20, 20",
+    "pageTabButtonSelected": "100, 100, 100",
+    "pageTabButtonText": "255, 255, 255",
+    "pageTabButtonBorder": "0, 0, 0",
     "pageTitle": "255, 255, 255",
-    "pageBody": "255, 255, 255",
+    "pageBody": "200, 200, 200",
     "textBolding": "255, 255, 255",
-    "textHighlight": "255, 255, 255",
+    "textHighlight": "225, 225, 225",
+    "linkButtonBackground": "20, 20, 20",
+    "linkButtonText": "255, 255, 255",
+    "linkButtonHover": "70, 70, 70",
+    "linkButtonBorder": "0, 0, 0",
 }
 
 DEFAULT_TAB_LAYOUT: dict[str, int] = {
@@ -55,9 +75,28 @@ DEFAULT_TAB_LAYOUT: dict[str, int] = {
     "buttonPosY": -20,
 }
 
+TAB_BUTTON_X_NUDGE = 2
+TAB_BUTTON_INNER_POS = "0,0"
+TAB_BUTTON_SELECTED_SPRITE = "menu_empty3px"
+PAGE_TITLE_POS = "0,-82"
+PAGE_BODY_POS = "26,-144"
+PAGE_BODY_WIDTH = 1048
+PAGE_BODY_HEIGHT = 544
+
+DEFAULT_LINK_LAYOUT: dict[str, int] = {
+    "containerWidth": 1100,
+    "maxLinks": 5,
+    "cellWidth": 210,
+    "buttonWidth": 200,
+    "buttonHeight": 36,
+    "buttonPosY": -12,
+    "buttonDepth": 10,
+    "posXForMaxLinks": 30,
+}
+
 DEFAULT_PAGE_TITLE_FONT_SIZE = 36
 DEFAULT_PAGE_BODY_FONT_SIZE = 28
-DEFAULT_MAX_LINKS = 4
+DEFAULT_MAX_LINKS = 5
 
 
 RGB_TRIPLET_RE = re.compile(r"^\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*$")
@@ -81,12 +120,31 @@ def _validate_rgb_theme_block(block: dict, block_name: str) -> None:
         "headerBackgroundColor",
         "pageBackground",
         "pageBackgroundColor",
+        "linkBackground",
+        "linkBackgroundColor",
+        "optionsBackground",
+        "optionsBackgroundColor",
+        "panelBorder",
+        "panelBorderColor",
+        "borderColor",
         "headerTitle",
         "headerTitleColor",
         "headerMotto",
         "headerMottoColor",
+        "pageTabButtonBackground",
+        "pageTabButtonBackgroundColor",
+        "pageTabButtonBorder",
+        "pageTabButtonBorderColor",
+        "sectionButtonBorder",
+        "sectionButtonBorderColor",
+        "pageTabButtonSelected",
+        "pageTabButtonSelectedColor",
+        "pageTabButtonText",
+        "pageTabButtonTextColor",
         "tabButtonSelected",
         "tabButtonSelectedColor",
+        "pageButtonText",
+        "pageButtonTextColor",
         "pageTitle",
         "pageTitleColor",
         "pageBody",
@@ -95,6 +153,14 @@ def _validate_rgb_theme_block(block: dict, block_name: str) -> None:
         "textBoldingColor",
         "textHighlight",
         "textHighlightColor",
+        "linkButtonBackground",
+        "linkButtonBackgroundColor",
+        "linkButtonBorder",
+        "linkButtonBorderColor",
+        "linkButtonText",
+        "linkButtonTextColor",
+        "linkButtonHover",
+        "linkButtonHoverColor",
     }
     allowed_list = ", ".join(sorted(rgb_keys))
     for key, raw_value in block.items():
@@ -142,14 +208,31 @@ def parse_args() -> argparse.Namespace:
         help="Output directory for generated files (default: Config/Generated)",
     )
     parser.add_argument(
+        "--links-dir",
+        default="Links",
+        help="Output directory for generated link XML files (default: Links)",
+    )
+    parser.add_argument(
         "--merge-localization",
         action="store_true",
-        help="Merge generated keys into Config/Localization.txt (adds missing keys and updates existing).",
+        help=(
+            "Merge generated keys into existing localization file instead of rewriting it."
+        ),
+    )
+    parser.add_argument(
+        "--no-merge-localization",
+        action="store_true",
+        help="Skip updating the main localization file.",
+    )
+    parser.add_argument(
+        "--write-generated-localization",
+        action="store_true",
+        help="Also write Config/Generated/Localization.ESC.Generated.txt sidecar file.",
     )
     parser.add_argument(
         "--localization-file",
         default="Config/Localization.txt",
-        help="Localization file to merge into when --merge-localization is used.",
+        help="Localization file to merge generated keys into (default: Config/Localization.txt).",
     )
     parser.add_argument(
         "--update-windows-sources",
@@ -170,6 +253,14 @@ def parse_args() -> argparse.Namespace:
         "--windows-update-all-links",
         action="store_true",
         help="Update sources for all link ids in source JSON instead of only --windows-link-id.",
+    )
+    parser.add_argument(
+        "--update-windows-links-layout",
+        action="store_true",
+        help=(
+            "Regenerate active linkButtons/linkButtons_hc grids in windows.xml using current links, "
+            "with auto-centering when active links are fewer than 5."
+        ),
     )
     parser.add_argument(
         "--use-hc-dev-overrides",
@@ -321,7 +412,32 @@ def get_link_layout_limit(source: dict) -> int:
         value = int(layout.get("maxLinks", DEFAULT_MAX_LINKS))
     except (TypeError, ValueError):
         value = DEFAULT_MAX_LINKS
-    return max(1, min(16, value))
+    return max(1, min(5, value))
+
+
+def get_active_links(source: dict) -> list[dict]:
+    links = source.get("links", [])
+    if not isinstance(links, list):
+        return []
+
+    active_links: list[dict] = []
+    for link in links:
+        if not isinstance(link, dict):
+            continue
+        if link.get("enabled", True) is False:
+            continue
+        if not str(link.get("url") or "").strip():
+            continue
+        active_links.append(link)
+
+    max_links = get_link_layout_limit(source)
+    if len(active_links) > max_links:
+        raise ValueError(
+            f"Too many active links for configured layout: links={len(active_links)}, allowed={max_links}. "
+            "Reduce source links or lower enabled links."
+        )
+
+    return active_links
 
 
 def build_texts_payload(source: dict) -> dict:
@@ -379,21 +495,51 @@ def build_texts_payload(source: dict) -> dict:
     source_themes = source.get("themes", {}) if isinstance(source.get("themes", {}), dict) else {}
     theme_color = source_themes.get("color", {}) if isinstance(source_themes.get("color", {}), dict) else {}
 
-    color_keys = [
-        "headerBackgroundColor",
-        "pageBackgroundColor",
-        "headerTitleColor",
-        "headerMottoColor",
-        "tabButtonSelectedColor",
-        "pageTitleColor",
-        "pageBodyColor",
-        "textBoldingColor",
-        "textHighlightColor",
-    ]
+    color_aliases = {
+        "headerBackgroundColor": ["headerBackgroundColor", "headerBackground"],
+        "pageBackgroundColor": ["pageBackgroundColor", "pageBackground"],
+        "linkBackgroundColor": ["linkBackgroundColor", "linkBackground"],
+        "optionsBackgroundColor": ["optionsBackgroundColor", "optionsBackground"],
+        "panelBorderColor": ["panelBorderColor", "panelBorder", "borderColor"],
+        "headerTitleColor": ["headerTitleColor", "headerTitle"],
+        "headerMottoColor": ["headerMottoColor", "headerMotto"],
+        "pageTabButtonBackgroundColor": [
+            "pageTabButtonBackgroundColor",
+            "pageTabButtonBackground",
+        ],
+        "pageTabButtonBorderColor": [
+            "pageTabButtonBorderColor",
+            "pageTabButtonBorder",
+            "sectionButtonBorderColor",
+            "sectionButtonBorder",
+        ],
+        "pageTabButtonSelectedColor": [
+            "pageTabButtonSelectedColor",
+            "pageTabButtonSelected",
+            "tabButtonSelectedColor",
+            "tabButtonSelected",
+        ],
+        "pageTabButtonTextColor": [
+            "pageTabButtonTextColor",
+            "pageTabButtonText",
+            "pageButtonTextColor",
+            "pageButtonText",
+        ],
+        "pageTitleColor": ["pageTitleColor", "pageTitle"],
+        "pageBodyColor": ["pageBodyColor", "pageBody"],
+        "textBoldingColor": ["textBoldingColor", "textBolding"],
+        "textHighlightColor": ["textHighlightColor", "textHighlight"],
+        "linkButtonBackgroundColor": ["linkButtonBackgroundColor", "linkButtonBackground"],
+        "linkButtonBorderColor": ["linkButtonBorderColor", "linkButtonBorder"],
+        "linkButtonTextColor": ["linkButtonTextColor", "linkButtonText"],
+        "linkButtonHoverColor": ["linkButtonHoverColor", "linkButtonHover"],
+    }
     payload_colors: dict[str, str] = {}
-    for key in color_keys:
-        if key in theme_color:
-            payload_colors[key] = str(theme_color.get(key) or "")
+    for out_key, aliases in color_aliases.items():
+        for key in aliases:
+            if key in theme_color:
+                payload_colors[out_key] = str(theme_color.get(key) or "")
+                break
 
     return {
         "_comment": "Edit text values here. Generator maps these into localized output automatically.",
@@ -683,13 +829,27 @@ def apply_text_overrides(source: dict, texts_path: Path) -> tuple[dict, int]:
             if key in {
                 "headerBackgroundColor",
                 "pageBackgroundColor",
+                "linkBackgroundColor",
+                "optionsBackgroundColor",
+                "panelBorderColor",
+                "borderColor",
                 "headerTitleColor",
                 "headerMottoColor",
+                "pageTabButtonBackgroundColor",
+                "pageTabButtonBorderColor",
+                "sectionButtonBorderColor",
+                "pageTabButtonSelectedColor",
+                "pageTabButtonTextColor",
                 "tabButtonSelectedColor",
+                "pageButtonTextColor",
                 "pageTitleColor",
                 "pageBodyColor",
                 "textBoldingColor",
                 "textHighlightColor",
+                "linkButtonBackgroundColor",
+                "linkButtonBorderColor",
+                "linkButtonTextColor",
+                "linkButtonHoverColor",
             }:
                 theme_color[key] = str(value)
                 applied += 1
@@ -945,19 +1105,30 @@ def derive_auto_high_contrast_colors(theme_color: dict[str, str]) -> dict[str, s
         theme_color.get("pageBackground", hc["pageBackground"]),
         fallback=hc["pageBackground"],
     )
+    hc["linkBackground"] = hc["pageBackground"]
+    hc["optionsBackground"] = hc["pageBackground"]
 
     header_text = _bw_rgb_for_readability(hc["headerBackground"], fallback="255, 255, 255")
     body_text = _bw_rgb_for_readability(hc["pageBackground"], fallback="255, 255, 255")
 
     hc["headerTitle"] = header_text
     hc["headerMotto"] = header_text
+    hc["pageTabButtonBackground"] = hc["pageBackground"]
+    hc["pageTabButtonBorder"] = hc["panelBorder"]
+    hc["pageTabButtonText"] = body_text
     hc["pageTitle"] = body_text
     hc["pageBody"] = body_text
     hc["textBolding"] = body_text
     hc["textHighlight"] = "0, 0, 0" if body_text == "255, 255, 255" else "255, 255, 255"
 
     # Keep selected tab fill in grayscale and opposite of page title text color for stronger contrast.
-    hc["tabButtonSelected"] = "35, 35, 35" if hc["pageTitle"] == "0, 0, 0" else "220, 220, 220"
+    hc["pageTabButtonSelected"] = "35, 35, 35" if hc["pageTitle"] == "0, 0, 0" else "220, 220, 220"
+    hc["linkButtonBackground"] = hc["pageBackground"]
+    hc["linkButtonBorder"] = hc["panelBorder"]
+    hc["linkButtonText"] = _bw_rgb_for_readability(hc["linkButtonBackground"], fallback="255, 255, 255")
+    hc["linkButtonHover"] = (
+        "120, 120, 120" if hc["linkButtonText"] == "255, 255, 255" else "190, 190, 190"
+    )
     return hc
 
 
@@ -981,13 +1152,41 @@ def get_theme_colors(
         aliases = {
             "headerBackground": ["headerBackground", "headerBackgroundColor"],
             "pageBackground": ["pageBackground", "pageBackgroundColor"],
+            "linkBackground": ["linkBackground", "linkBackgroundColor"],
+            "optionsBackground": ["optionsBackground", "optionsBackgroundColor"],
+            "panelBorder": ["panelBorder", "panelBorderColor", "borderColor"],
             "headerTitle": ["headerTitle", "headerTitleColor"],
             "headerMotto": ["headerMotto", "headerMottoColor"],
-            "tabButtonSelected": ["tabButtonSelected", "tabButtonSelectedColor"],
+            "pageTabButtonBackground": [
+                "pageTabButtonBackground",
+                "pageTabButtonBackgroundColor",
+            ],
+            "pageTabButtonBorder": [
+                "pageTabButtonBorder",
+                "pageTabButtonBorderColor",
+                "sectionButtonBorder",
+                "sectionButtonBorderColor",
+            ],
+            "pageTabButtonSelected": [
+                "pageTabButtonSelected",
+                "pageTabButtonSelectedColor",
+                "tabButtonSelected",
+                "tabButtonSelectedColor",
+            ],
+            "pageTabButtonText": [
+                "pageTabButtonText",
+                "pageTabButtonTextColor",
+                "pageButtonText",
+                "pageButtonTextColor",
+            ],
             "pageTitle": ["pageTitle", "pageTitleColor"],
             "pageBody": ["pageBody", "pageBodyColor"],
             "textBolding": ["textBolding", "textBoldingColor"],
             "textHighlight": ["textHighlight", "textHighlightColor"],
+            "linkButtonBackground": ["linkButtonBackground", "linkButtonBackgroundColor"],
+            "linkButtonBorder": ["linkButtonBorder", "linkButtonBorderColor"],
+            "linkButtonText": ["linkButtonText", "linkButtonTextColor"],
+            "linkButtonHover": ["linkButtonHover", "linkButtonHoverColor"],
         }
 
         merged = dict(derived)
@@ -1006,13 +1205,41 @@ def get_theme_colors(
     aliases = {
         "headerBackground": ["headerBackground", "headerBackgroundColor"],
         "pageBackground": ["pageBackground", "pageBackgroundColor"],
+        "linkBackground": ["linkBackground", "linkBackgroundColor"],
+        "optionsBackground": ["optionsBackground", "optionsBackgroundColor"],
+        "panelBorder": ["panelBorder", "panelBorderColor", "borderColor"],
         "headerTitle": ["headerTitle", "headerTitleColor"],
         "headerMotto": ["headerMotto", "headerMottoColor"],
-        "tabButtonSelected": ["tabButtonSelected", "tabButtonSelectedColor"],
+        "pageTabButtonBackground": [
+            "pageTabButtonBackground",
+            "pageTabButtonBackgroundColor",
+        ],
+        "pageTabButtonBorder": [
+            "pageTabButtonBorder",
+            "pageTabButtonBorderColor",
+            "sectionButtonBorder",
+            "sectionButtonBorderColor",
+        ],
+        "pageTabButtonSelected": [
+            "pageTabButtonSelected",
+            "pageTabButtonSelectedColor",
+            "tabButtonSelected",
+            "tabButtonSelectedColor",
+        ],
+        "pageTabButtonText": [
+            "pageTabButtonText",
+            "pageTabButtonTextColor",
+            "pageButtonText",
+            "pageButtonTextColor",
+        ],
         "pageTitle": ["pageTitle", "pageTitleColor"],
         "pageBody": ["pageBody", "pageBodyColor"],
         "textBolding": ["textBolding", "textBoldingColor"],
         "textHighlight": ["textHighlight", "textHighlightColor"],
+        "linkButtonBackground": ["linkButtonBackground", "linkButtonBackgroundColor"],
+        "linkButtonBorder": ["linkButtonBorder", "linkButtonBorderColor"],
+        "linkButtonText": ["linkButtonText", "linkButtonTextColor"],
+        "linkButtonHover": ["linkButtonHover", "linkButtonHoverColor"],
     }
 
     for canonical, names in aliases.items():
@@ -1064,36 +1291,25 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
     header_title = labels.get("headerTitle", "")
     header_motto = labels.get("headerMotto", "")
     options_title = labels.get("optionsTitle", "Options")
+    mode_color_label = labels.get("modeColorTab", "Full Color")
+    mode_hc_label = labels.get("modeHighContrastTab", "High Visibility")
     # HC text mirrors Color text; only colors differ.
     header_title_hc = header_title
     header_motto_hc = header_motto
     options_title_hc = options_title
 
-    active_links: list[dict] = []
-    for link in source.get("links", []):
-        if not isinstance(link, dict):
-            continue
-        if link.get("enabled", True) is False:
-            continue
-        if not str(link.get("url") or "").strip():
-            continue
-        active_links.append(link)
-
-    header_title_colored = _colorize_text(header_title, theme_color["headerTitle"])
-    header_motto_colored = _colorize_text(header_motto, theme_color["headerMotto"])
-    header_title_hc_colored = _colorize_text(header_title_hc, theme_hc["headerTitle"])
-    header_motto_hc_colored = _colorize_text(header_motto_hc, theme_hc["headerMotto"])
-    options_title_colored = _colorize_text(options_title, theme_color["textBolding"])
-    options_title_hc_colored = _colorize_text(options_title_hc, theme_hc["textBolding"])
+    active_links = get_active_links(source)
 
     rows: list[list[str]] = [
         ["Key", "Context", "English"],
-        ["windowESC_color_header_title", "UI", header_title_colored],
-        ["windowESC_color_header_motto", "UI", header_motto_colored],
-        ["windowESC_color_options_title", "UI", options_title_colored],
-        ["windowESC_highcontrast_header_title", "UI", header_title_hc_colored],
-        ["windowESC_highcontrast_header_motto", "UI", header_motto_hc_colored],
-        ["windowESC_highcontrast_options_title", "UI", options_title_hc_colored],
+        ["windowESC_color_header_title", "UI", header_title],
+        ["windowESC_color_header_motto", "UI", header_motto],
+        ["windowESC_color_options_title", "UI", options_title],
+        ["windowESC_mode_color_tab", "UI", mode_color_label],
+        ["windowESC_mode_highcontrast_tab", "UI", mode_hc_label],
+        ["windowESC_highcontrast_header_title", "UI", header_title_hc],
+        ["windowESC_highcontrast_header_motto", "UI", header_motto_hc],
+        ["windowESC_highcontrast_options_title", "UI", options_title_hc],
     ]
 
     if active_links:
@@ -1103,16 +1319,16 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
             link_label_hc = link_label
             rows.append(
                 [
-                    f"windowESC_color_link_{link_idx}",
+                    f"windowESC_color_link_{link_idx}_label",
                     "UI",
-                    _colorize_text(link_label, theme_color["textHighlight"]),
+                    _colorize_text(link_label, theme_color["linkButtonText"]),
                 ]
             )
             rows.append(
                 [
-                    f"windowESC_highcontrast_link_{link_idx}",
+                    f"windowESC_highcontrast_link_{link_idx}_label",
                     "UI",
-                    _colorize_text(link_label_hc, theme_hc["textHighlight"]),
+                    _colorize_text(link_label_hc, theme_hc["linkButtonText"]),
                 ]
             )
     else:
@@ -1121,16 +1337,16 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
         fallback_label_hc = fallback_label
         rows.append(
             [
-                "windowESC_color_link_1",
+                "windowESC_color_link_1_label",
                 "UI",
-                _colorize_text(fallback_label, theme_color["textHighlight"]),
+                _colorize_text(fallback_label, theme_color["linkButtonText"]),
             ]
         )
         rows.append(
             [
-                "windowESC_highcontrast_link_1",
+                "windowESC_highcontrast_link_1_label",
                 "UI",
-                _colorize_text(fallback_label_hc, theme_hc["textHighlight"]),
+                _colorize_text(fallback_label_hc, theme_hc["linkButtonText"]),
             ]
         )
 
@@ -1156,14 +1372,14 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
             [
                 f"windowESC_color_page_{idx}_button",
                 "UI",
-                _colorize_text(tab["button"], theme_color["textBolding"]),
+                _colorize_text(tab["button"], theme_color["pageTabButtonText"]),
             ]
         )
         rows.append(
             [
                 f"windowESC_color_page_{idx}_title",
                 "UI",
-                _colorize_text(tab["title"], theme_color["pageTitle"]),
+                tab["title"],
             ]
         )
         rows.append([f"windowESC_color_page_{idx}_body", "UI", body_color])
@@ -1171,14 +1387,14 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
             [
                 f"windowESC_highcontrast_page_{idx}_button",
                 "UI",
-                _colorize_text(tab["button"], theme_hc["textBolding"]),
+                _colorize_text(tab["button"], theme_hc["pageTabButtonText"]),
             ]
         )
         rows.append(
             [
                 f"windowESC_highcontrast_page_{idx}_title",
                 "UI",
-                _colorize_text(tab["title"], theme_hc["pageTitle"]),
+                tab["title"],
             ]
         )
         rows.append([f"windowESC_highcontrast_page_{idx}_body", "UI", body_hc])
@@ -1199,10 +1415,11 @@ def build_tabs_ui_snippet(source: dict, use_hc_dev_overrides: bool = False) -> s
     start_x = max(
         tab_layout["contentPadding"],
         (tab_layout["contentWidth"] - total_width) // 2,
-    )
+    ) + TAB_BUTTON_X_NUDGE
 
     def build_pages(is_hc: bool) -> str:
         pages: list[str] = []
+        theme = theme_hc if is_hc else theme_color
         for tab in tab_models:
             idx = tab["idx"]
             mode_prefix = "windowESC_highcontrast" if is_hc else "windowESC_color"
@@ -1215,8 +1432,8 @@ def build_tabs_ui_snippet(source: dict, use_hc_dev_overrides: bool = False) -> s
             pages.extend(
                 [
                     f'\t\t<rect name="{page_name}" controller="TabSelectorTab" tab_key="{button_key}">',
-                    f'\t\t\t<label name="{title_name}" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="{tab["title_font_size"]}" text_key="{title_key}" foregroundlayer="true"/>',
-                    f'\t\t\t<label name="{body_name}" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="{tab["body_font_size"]}" text_key="{body_key}" foregroundlayer="true"/>',
+                    f'\t\t\t<label name="{title_name}" depth="10" pos="{PAGE_TITLE_POS}" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="{theme["pageTitle"]}" font_size="{tab["title_font_size"]}" text_key="{title_key}" foregroundlayer="true"/>',
+                    f'\t\t\t<label name="{body_name}" depth="10" pos="{PAGE_BODY_POS}" width="{PAGE_BODY_WIDTH}" height="{PAGE_BODY_HEIGHT}" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="{theme["pageBody"]}" font_size="{tab["body_font_size"]}" text_key="{body_key}" foregroundlayer="true"/>',
                     "\t\t</rect>",
                 ]
             )
@@ -1233,7 +1450,7 @@ def build_tabs_ui_snippet(source: dict, use_hc_dev_overrides: bool = False) -> s
         "<rect name=\"tabsHeader\">",
         f'\t<grid name="tabButtons" pos="{start_x},{tab_layout["buttonPosY"]}" depth="3" rows="1" cols="{tab_count}" cell_width="{tab_layout["buttonCellWidth"]}" cell_height="{tab_layout["buttonHeight"]}" repeat_content="true" arrangement="horizontal">',
         "\t\t<rect controller=\"TabSelectorButton\">",
-        f'\t\t\t<simplebutton name="tabButton" depth="8" pos="5,0" width="{button_width}" height="{tab_layout["buttonHeight"]}" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="{theme_color["tabButtonSelected"]}" foregroundlayer="false" caption="{{tab_name_localized}}"/>',
+        f'\t\t\t<simplebutton name="tabButton" depth="8" pos="{TAB_BUTTON_INNER_POS}" width="{button_width}" height="{tab_layout["buttonHeight"]}" font_size="20" sprite="ui_game_header_fill" bordercolor="{theme_color["pageTabButtonBorder"]}" defaultcolor="{theme_color["pageTabButtonBackground"]}" selectedsprite="{TAB_BUTTON_SELECTED_SPRITE}" selectedcolor="{theme_color["pageTabButtonSelected"]}" foregroundlayer="false" caption="{{tab_name_localized}}"/>',
         "\t\t</rect>",
         "\t</grid>",
         "</rect>",
@@ -1247,7 +1464,7 @@ def build_tabs_ui_snippet(source: dict, use_hc_dev_overrides: bool = False) -> s
         "<rect name=\"tabsHeader\">",
         f'\t<grid name="tabButtons" pos="{start_x},{tab_layout["buttonPosY"]}" depth="3" rows="1" cols="{tab_count}" cell_width="{tab_layout["buttonCellWidth"]}" cell_height="{tab_layout["buttonHeight"]}" repeat_content="true" arrangement="horizontal">',
         "\t\t<rect controller=\"TabSelectorButton\">",
-        f'\t\t\t<simplebutton name="tabButton" depth="8" pos="5,0" width="{button_width}" height="{tab_layout["buttonHeight"]}" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="{theme_hc["tabButtonSelected"]}" foregroundlayer="false" caption="{{tab_name_localized}}"/>',
+        f'\t\t\t<simplebutton name="tabButton" depth="8" pos="{TAB_BUTTON_INNER_POS}" width="{button_width}" height="{tab_layout["buttonHeight"]}" font_size="20" sprite="ui_game_header_fill" bordercolor="{theme_hc["pageTabButtonBorder"]}" defaultcolor="{theme_hc["pageTabButtonBackground"]}" selectedsprite="{TAB_BUTTON_SELECTED_SPRITE}" selectedcolor="{theme_hc["pageTabButtonSelected"]}" foregroundlayer="false" caption="{{tab_name_localized}}"/>',
         "\t\t</rect>",
         "\t</grid>",
         "</rect>",
@@ -1270,9 +1487,257 @@ def write_tabs_ui_snippet(source: dict, out_dir: Path, use_hc_dev_overrides: boo
     return snippet_path
 
 
-def write_localization(rows: list[list[str]], out_dir: Path) -> Path:
-    out_file = out_dir / "Localization.ESC.Generated.txt"
-    out_dir.mkdir(parents=True, exist_ok=True)
+def _build_tab_buttons_grid_xml(source: dict, is_hc: bool, use_hc_dev_overrides: bool = False) -> str:
+    tab_models = build_tab_models(source)
+    tab_layout = get_tab_layout(source)
+    validate_tab_count(len(tab_models), tab_layout)
+    theme = get_theme_colors(
+        source,
+        "highContrast" if is_hc else "color",
+        use_hc_dev_overrides=use_hc_dev_overrides,
+    )
+
+    tab_count = max(1, len(tab_models))
+    cell_width = tab_layout["buttonCellWidth"]
+    total_width = tab_count * cell_width
+    start_x = max(
+        tab_layout["contentPadding"],
+        (tab_layout["contentWidth"] - total_width) // 2,
+    ) + TAB_BUTTON_X_NUDGE
+    button_width = max(1, tab_layout["buttonCellWidth"] - 4)
+
+    lines = [
+        (
+            f'<grid name="tabButtons" pos="{start_x},{tab_layout["buttonPosY"]}" depth="3" rows="1" '
+            f'cols="{tab_count}" cell_width="{tab_layout["buttonCellWidth"]}" '
+            f'cell_height="{tab_layout["buttonHeight"]}" repeat_content="true" arrangement="horizontal">'
+        ),
+        '\t<rect controller="TabSelectorButton">',
+        (
+            f'\t\t<simplebutton name="tabButton" depth="8" pos="{TAB_BUTTON_INNER_POS}" '
+            f'width="{button_width}" height="{tab_layout["buttonHeight"]}" font_size="20" '
+            f'sprite="ui_game_header_fill" bordercolor="{theme["pageTabButtonBorder"]}" '
+            f'defaultcolor="{theme["pageTabButtonBackground"]}" '
+            f'selectedsprite="{TAB_BUTTON_SELECTED_SPRITE}" '
+            f'selectedcolor="{theme["pageTabButtonSelected"]}" '
+            'foregroundlayer="false" caption="{tab_name_localized}"/>'
+        ),
+        "\t</rect>",
+        "</grid>",
+    ]
+    return "\n".join(lines)
+
+
+def _build_tabs_contents_xml(
+    source: dict,
+    is_hc: bool,
+    name_prefix: str = "",
+    use_hc_dev_overrides: bool = False,
+) -> str:
+    tab_models = build_tab_models(source)
+    theme = get_theme_colors(
+        source,
+        "highContrast" if is_hc else "color",
+        use_hc_dev_overrides=use_hc_dev_overrides,
+    )
+
+    lines = ['<rect name="tabsContents">']
+    for tab in tab_models:
+        idx = tab["idx"]
+        mode_prefix = "windowESC_highcontrast" if is_hc else "windowESC_color"
+        title_key = f"{mode_prefix}_page_{idx}_title"
+        body_key = f"{mode_prefix}_page_{idx}_body"
+        button_key = f"{mode_prefix}_page_{idx}_button"
+
+        page_name = f"{name_prefix}page_{idx}_hc" if is_hc else f"{name_prefix}page_{idx}"
+        title_name = f"{name_prefix}page_{idx}_hc_title" if is_hc else f"{name_prefix}page_{idx}_title"
+        body_name = f"{name_prefix}page_{idx}_hc_body" if is_hc else f"{name_prefix}page_{idx}_body"
+
+        lines.extend(
+            [
+                f'\t<rect name="{page_name}" controller="TabSelectorTab" tab_key="{button_key}">',
+                (
+                    f'\t\t<label name="{title_name}" depth="10" pos="{PAGE_TITLE_POS}" justify="center" '
+                    'effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" '
+                    f'color="{theme["pageTitle"]}" font_size="{tab["title_font_size"]}" '
+                    f'text_key="{title_key}" foregroundlayer="true"/>'
+                ),
+                (
+                    f'\t\t<label name="{body_name}" depth="10" pos="{PAGE_BODY_POS}" width="{PAGE_BODY_WIDTH}" height="{PAGE_BODY_HEIGHT}" justify="left" '
+                    'effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" '
+                    f'color="{theme["pageBody"]}" font_size="{tab["body_font_size"]}" '
+                    f'text_key="{body_key}" foregroundlayer="true"/>'
+                ),
+                "\t</rect>",
+            ]
+        )
+
+    lines.append("</rect>")
+    return "\n".join(lines)
+
+
+def update_windows_tab_layout(
+    windows_file: Path,
+    source: dict,
+    use_hc_dev_overrides: bool = False,
+) -> dict[str, int]:
+    """Replace tabsHeader tabButtons and tabsContents page blocks with generated dynamic layout."""
+    if not windows_file.exists():
+        raise FileNotFoundError(f"Windows file not found: {windows_file}")
+
+    text = windows_file.read_text(encoding="utf-8")
+    updates: dict[str, int] = {}
+
+    def _is_in_highcontrast_block(xml_text: str, pos: int) -> bool:
+        color_idx = xml_text.rfind('<rect name="Color"', 0, pos)
+        hc_idx = xml_text.rfind('<rect name="HighContrast"', 0, pos)
+        if color_idx == -1 and hc_idx == -1:
+            return False
+        return hc_idx > color_idx
+
+    # Update nested tabs sections only inside BODY blocks to avoid touching outer selectors.
+    body_pattern = re.compile(
+        r'(?P<indent>^[ \t]*)<rect name="body"(?P<attrs>[^>]*)>\s*\n(?P<inner>.*?)(?=^\1</rect>\s*$)^\1</rect>',
+        re.MULTILINE | re.DOTALL,
+    )
+    tabs_pattern = re.compile(
+        r'(?P<indent>^[ \t]*)<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">\s*\n'
+        r'(?P<body>.*?)(?=^\1</rect>\s*$)^\1</rect>',
+        re.MULTILINE | re.DOTALL,
+    )
+
+    section_updates = 0
+
+    def _replace_body(match: re.Match[str]) -> str:
+        nonlocal section_updates
+        body_inner = match.group("inner")
+        body_indent = match.group("indent")
+        body_attrs = match.group("attrs")
+        is_hc = _is_in_highcontrast_block(text, match.start())
+
+        def _replace_tabs(tabs_match: re.Match[str]) -> str:
+            nonlocal section_updates
+            tabs_body = tabs_match.group("body")
+
+            has_modern_keys = 'tab_key="windowESC_' in tabs_body
+            has_legacy_keys = 'tab_key="tabButtonTitle1"' in tabs_body
+            if not has_modern_keys and not has_legacy_keys:
+                return tabs_match.group(0)
+
+            name_prefix = "join_" if 'name="join_page_1' in tabs_body else ""
+            indent = tabs_match.group("indent")
+
+            tabs_header_block = "\n".join(
+                [
+                    '<rect name="tabsHeader">',
+                    _indent_block(
+                        _build_tab_buttons_grid_xml(
+                            source,
+                            is_hc=is_hc,
+                            use_hc_dev_overrides=use_hc_dev_overrides,
+                        ),
+                        "\t",
+                    ),
+                    "</rect>",
+                ]
+            )
+            tabs_contents_block = _build_tabs_contents_xml(
+                source,
+                is_hc=is_hc,
+                name_prefix=name_prefix,
+                use_hc_dev_overrides=use_hc_dev_overrides,
+            )
+
+            replacement = _indent_block(
+                "\n".join(
+                    [
+                        '<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">',
+                        _indent_block(tabs_header_block, "\t"),
+                        _indent_block(tabs_contents_block, "\t"),
+                        "</rect>",
+                    ]
+                ),
+                indent,
+            )
+
+            if tabs_match.group(0) == replacement:
+                return tabs_match.group(0)
+
+            section_updates += 1
+            return replacement
+
+        new_inner = tabs_pattern.sub(_replace_tabs, body_inner)
+        if new_inner == body_inner:
+            return match.group(0)
+        return f"{body_indent}<rect name=\"body\"{body_attrs}>\n{new_inner}{body_indent}</rect>"
+
+    text = body_pattern.sub(_replace_body, text)
+
+    if section_updates > 0:
+        updates["tabButtons"] = section_updates
+        updates["tabsContents"] = section_updates
+
+    if updates:
+        windows_file.write_text(text, encoding="utf-8")
+
+    return updates
+
+
+def _write_localization_full_csv(rows: list[list[str]], out_file: Path) -> Path:
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+
+    full_header = [
+        "Key",
+        "File",
+        "Type",
+        "UsedInMainMenu",
+        "NoTranslate",
+        "english",
+        "Context / Alternate Text",
+        "german",
+        "spanish",
+        "french",
+        "italian",
+        "japanese",
+        "koreana",
+        "polish",
+        "brazilian",
+        "russian",
+        "turkish",
+        "schinese",
+        "tchinese",
+    ]
+
+    mode_tab_translations = {
+        "windowESC_mode_color_tab": {
+            "german": "Vollfarbe",
+            "spanish": "Color completo",
+            "french": "Couleur complete",
+            "italian": "Colore completo",
+            "japanese": "フルカラー",
+            "koreana": "풀 컬러",
+            "polish": "Pelny kolor",
+            "brazilian": "Cor completa",
+            "russian": "Polnyy tsvet",
+            "turkish": "Tam Renk",
+            "schinese": "全彩色",
+            "tchinese": "全彩色",
+        },
+        "windowESC_mode_highcontrast_tab": {
+            "german": "Hoher Kontrast",
+            "spanish": "Alto contraste",
+            "french": "Contraste eleve",
+            "italian": "Alto contrasto",
+            "japanese": "ハイコントラスト",
+            "koreana": "고대비",
+            "polish": "Wysoki kontrast",
+            "brazilian": "Alto contraste",
+            "russian": "Vysokaya kontrastnost",
+            "turkish": "Yuksek Kontrast",
+            "schinese": "高对比度",
+            "tchinese": "高對比度",
+        },
+    }
 
     ordered_rows = rows
     if rows:
@@ -1282,23 +1747,41 @@ def write_localization(rows: list[list[str]], out_dir: Path) -> Path:
         ordered_rows = [header, *body_sorted]
 
     with out_file.open("w", encoding="utf-8", newline="") as f:
-        for idx, row in enumerate(ordered_rows):
-            key = row[0] if len(row) > 0 else ""
-            context = row[1] if len(row) > 1 else ""
-            english = row[2] if len(row) > 2 else ""
-            key = str(key).replace("\n", " ")
-            context = str(context).replace("\n", " ")
-            english = str(english)
+        writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(full_header)
 
+        for idx, row in enumerate(ordered_rows):
             if idx == 0:
-                # Keep header plain: Key,Context,English
-                f.write(f"{key},{context},{english}\n")
                 continue
 
-            english = english.replace('"', '""')
-            f.write(f"{key},{context},\"{english}\"\n")
+            key = str(row[0] if len(row) > 0 else "").replace("\n", " ")
+            context = str(row[1] if len(row) > 1 else "").replace("\n", " ")
+            english = str(row[2] if len(row) > 2 else "")
+
+            full_row = [""] * len(full_header)
+            full_row[0] = key
+            full_row[2] = "UI"
+            full_row[5] = english
+            full_row[6] = context
+
+            if key in mode_tab_translations:
+                lang_map = mode_tab_translations[key]
+                for col_name, translated in lang_map.items():
+                    if col_name in full_header:
+                        full_row[full_header.index(col_name)] = translated
+
+            writer.writerow(full_row)
 
     return out_file
+
+
+def write_localization(rows: list[list[str]], out_dir: Path) -> Path:
+    out_file = out_dir / "Localization.ESC.Generated.txt"
+    return _write_localization_full_csv(rows, out_file)
+
+
+def write_localization_target(rows: list[list[str]], target_file: Path) -> Path:
+    return _write_localization_full_csv(rows, target_file)
 
 
 def _is_esc_generated_managed_key(key: str) -> bool:
@@ -1438,17 +1921,13 @@ def news_xml_content(title: str, url: str, timestamp: str) -> str:
     )
 
 
-def write_news_files(source: dict, out_dir: Path) -> list[Path]:
+def write_news_files(source: dict, links_dir: Path) -> list[Path]:
     created: list[Path] = []
-    news_dir = out_dir / "News"
-    news_dir.mkdir(parents=True, exist_ok=True)
+    links_dir.mkdir(parents=True, exist_ok=True)
 
     now_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%SZ")
 
-    for link in source.get("links", []):
-        if link.get("enabled", True) is False:
-            continue
-
+    for link in get_active_links(source):
         link_id = (link.get("id") or "link").strip()
         title = (link.get("title") or "Open Link").strip()
         url = (link.get("url") or "").strip()
@@ -1456,7 +1935,7 @@ def write_news_files(source: dict, out_dir: Path) -> list[Path]:
             continue
 
         safe_id = "".join(ch for ch in link_id if ch.isalnum() or ch in ("-", "_")) or "link"
-        out_file = news_dir / f"{safe_id}.xml"
+        out_file = links_dir / f"{safe_id}.xml"
         out_file.write_text(news_xml_content(title, url, now_utc), encoding="utf-8")
         created.append(out_file)
 
@@ -1489,19 +1968,367 @@ def resolve_mod_folder_name(source: dict, config_path: Path) -> str:
 
 def build_local_news_source_map(source: dict, mod_folder_name: str) -> dict[str, str]:
     source_map: dict[str, str] = {}
-    for link in source.get("links", []):
-        if link.get("enabled", True) is False:
-            continue
-
+    for link in get_active_links(source):
         link_id = (link.get("id") or "").strip()
         if not link_id:
             continue
-        url = (link.get("url") or "").strip()
-        if not url:
-            # Do not map links that are not currently active/generated.
-            continue
-        source_map[link_id] = f"@{mod_folder_name}:Config/Generated/News/{_safe_link_id(link_id)}.xml"
+        source_map[link_id] = f"@modfolder:Links/{_safe_link_id(link_id)}.xml"
     return source_map
+
+
+def _indent_block(text: str, indent: str) -> str:
+    return "\n".join(f"{indent}{line}" if line else line for line in text.splitlines())
+
+
+def _build_links_grid_xml(
+    source: dict,
+    is_hc: bool,
+    use_hc_dev_overrides: bool = False,
+) -> str:
+    active_links = get_active_links(source)
+    link_count = len(active_links)
+    theme = get_theme_colors(
+        source,
+        "highContrast" if is_hc else "color",
+        use_hc_dev_overrides=use_hc_dev_overrides,
+    )
+
+    max_links = DEFAULT_LINK_LAYOUT["maxLinks"]
+    cell_width = DEFAULT_LINK_LAYOUT["cellWidth"]
+    button_width = DEFAULT_LINK_LAYOUT["buttonWidth"]
+    button_height = DEFAULT_LINK_LAYOUT["buttonHeight"]
+    button_pos_y = DEFAULT_LINK_LAYOUT["buttonPosY"]
+    button_depth = DEFAULT_LINK_LAYOUT["buttonDepth"]
+    container_width = DEFAULT_LINK_LAYOUT["containerWidth"]
+    max_pos_x = DEFAULT_LINK_LAYOUT["posXForMaxLinks"]
+
+    if link_count > 0 and link_count < max_links:
+        pos_x = max(0, (container_width - (link_count * cell_width)) // 2)
+    else:
+        pos_x = max_pos_x
+
+    grid_name = "linkButtons_hc" if is_hc else "linkButtons"
+    caption_prefix = "windowESC_highcontrast" if is_hc else "windowESC_color"
+
+    lines: list[str] = [
+        (
+            f'<grid name="{grid_name}" pos="{pos_x},{button_pos_y}" depth="{button_depth}" rows="1" '
+            f'cols="{max_links}" cell_width="{cell_width}" cell_height="{button_height}" arrangement="horizontal">'
+        )
+    ]
+
+    for idx, link in enumerate(active_links, start=1):
+        link_id = _safe_link_id(str(link.get("id") or f"link_{idx}"))
+        source_path = f"@modfolder:Links/{link_id}.xml"
+        caption_key = f"{caption_prefix}_link_{idx}_label"
+        lines.append(f'\t<rect controller="NewsWindow" sources="{source_path}">')
+        lines.append(
+            '\t\t<simplebutton name="btnLink" '
+            f'width="{button_width}" height="{button_height}" font_size="24" '
+            f'sprite="menu_empty3px" bordercolor="{theme["linkButtonBorder"]}" '
+            f'defaultcolor="{theme["linkButtonBackground"]}" hovercolor="{theme["linkButtonHover"]},255" '
+            'selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" '
+            f'foregroundlayer="false" caption_key="{caption_key}" '
+            'enabled="{has_link}" gamepad_selectable="{has_news}"/>'
+        )
+        lines.append("\t</rect>")
+
+    lines.append("</grid>")
+    return "\n".join(lines)
+
+
+def build_links_ui_snippet(source: dict, use_hc_dev_overrides: bool = False) -> str:
+    active_links = get_active_links(source)
+    lines = [
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "<generatedLinks>",
+        "<!-- Generated links layout snippet -->",
+        f"<!-- active_links={len(active_links)}, max_links={DEFAULT_LINK_LAYOUT['maxLinks']} -->",
+        "",
+        "<!-- Color: replace grid name=\"linkButtons\" -->",
+        _build_links_grid_xml(source, is_hc=False, use_hc_dev_overrides=use_hc_dev_overrides),
+        "",
+        "<!-- HighContrast: replace grid name=\"linkButtons_hc\" -->",
+        _build_links_grid_xml(source, is_hc=True, use_hc_dev_overrides=use_hc_dev_overrides),
+        "</generatedLinks>",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def write_links_ui_snippet(source: dict, out_dir: Path, use_hc_dev_overrides: bool = False) -> Path:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / "XUi.Links.Generated.xml"
+    out_file.write_text(
+        build_links_ui_snippet(source, use_hc_dev_overrides=use_hc_dev_overrides),
+        encoding="utf-8",
+    )
+    return out_file
+
+
+def update_windows_link_grids(
+    windows_file: Path,
+    source: dict,
+    use_hc_dev_overrides: bool = False,
+) -> dict[str, int]:
+    """Replace active linkButtons/linkButtons_hc grid blocks with generated centered layout."""
+    if not windows_file.exists():
+        raise FileNotFoundError(f"Windows file not found: {windows_file}")
+
+    text = windows_file.read_text(encoding="utf-8")
+    changed_by_grid: dict[str, int] = {}
+    theme_color = get_theme_colors(source, "color")
+    theme_hc = get_theme_colors(
+        source,
+        "highContrast",
+        use_hc_dev_overrides=use_hc_dev_overrides,
+    )
+
+    def _is_in_highcontrast_block(xml_text: str, pos: int) -> bool:
+        # Choose the most recent tab-section marker before this position.
+        # This is robust even after colors are normalized to numeric RGB values.
+        color_idx = xml_text.rfind('<rect name="Color"', 0, pos)
+        hc_idx = xml_text.rfind('<rect name="HighContrast"', 0, pos)
+        if color_idx == -1 and hc_idx == -1:
+            return False
+        return hc_idx > color_idx
+
+    def _strip_xml_comments(value: str) -> str:
+        return re.sub(r"<!--.*?-->", "", value, flags=re.DOTALL)
+
+    def _section_has_active_grid(xml_text: str, grid_name: str, is_hc: bool) -> bool:
+        section_marker = '<rect name="HighContrast"' if is_hc else '<rect name="Color"'
+        start = xml_text.find(section_marker)
+        if start == -1:
+            return False
+
+        if is_hc:
+            end = len(xml_text)
+        else:
+            next_marker = xml_text.find('<rect name="HighContrast"', start + len(section_marker))
+            end = next_marker if next_marker != -1 else len(xml_text)
+
+        section_text = _strip_xml_comments(xml_text[start:end])
+        return f'name="{grid_name}"' in section_text
+
+    def _insert_grid_when_missing(xml_text: str, grid_name: str, is_hc: bool, block: str) -> tuple[str, int]:
+        """Insert generated link grid in the section links panel when the grid no longer exists."""
+        section_marker = '<rect name="HighContrast"' if is_hc else '<rect name="Color"'
+        section_start = xml_text.find(section_marker)
+        if section_start == -1:
+            return xml_text, 0
+
+        links_open = re.search(
+            r'(?m)^(?P<indent>[ \t]*)<rect name="links"[^>]*>',
+            xml_text[section_start:],
+        )
+        if not links_open:
+            return xml_text, 0
+        links_start = section_start + links_open.start()
+        links_indent = links_open.group("indent")
+        links_open_end = section_start + links_open.end()
+
+        close_re = re.compile(rf'(?m)^{re.escape(links_indent)}</rect>\s*$')
+        close_match = close_re.search(xml_text, links_open_end)
+        if not close_match:
+            return xml_text, 0
+        links_end = close_match.end()
+
+        links_block = xml_text[links_start:links_end]
+        if f'name="{grid_name}"' in _strip_xml_comments(links_block):
+            return xml_text, 0
+
+        border_match = re.search(r'(?m)^(?P<indent>[ \t]*)<sprite name="linksBorder"[^>]*/>\s*$', links_block)
+        if border_match:
+            child_indent = f"{border_match.group('indent')}\t"
+            indented_block = _indent_block(block, child_indent)
+            insert_at = border_match.end()
+            new_links_block = f"{links_block[:insert_at]}\n\n{indented_block}{links_block[insert_at:]}"
+        else:
+            closing_indent_match = re.search(r"\n([ \t]*)</rect>\s*$", links_block)
+            if not closing_indent_match:
+                return xml_text, 0
+            child_indent = f"{closing_indent_match.group(1)}\t"
+            indented_block = _indent_block(block, child_indent)
+            new_links_block = re.sub(
+                r"\n([ \t]*)</rect>\s*$",
+                lambda m: f"\n\n{indented_block}\n{m.group(1)}</rect>",
+                links_block,
+                count=1,
+            )
+        new_text = f"{xml_text[:links_start]}{new_links_block}{xml_text[links_end:]}"
+        return new_text, 1
+
+    for grid_name, is_hc in (("linkButtons", False), ("linkButtons_hc", True)):
+        block = _build_links_grid_xml(
+            source,
+            is_hc=is_hc,
+            use_hc_dev_overrides=use_hc_dev_overrides,
+        )
+        pattern = re.compile(
+            rf'(?P<indent>^[ \t]*)<grid name="{re.escape(grid_name)}"[^>]*>.*?</grid>',
+            re.MULTILINE | re.DOTALL,
+        )
+
+        def _replace(match: re.Match[str]) -> str:
+            indent = match.group("indent")
+            return _indent_block(block, indent)
+
+        text, count = pattern.subn(_replace, text)
+        if count > 0:
+            changed_by_grid[grid_name] = count
+        if not _section_has_active_grid(text, grid_name, is_hc):
+            text, inserted = _insert_grid_when_missing(text, grid_name, is_hc, block)
+            if inserted > 0:
+                changed_by_grid[grid_name] = changed_by_grid.get(grid_name, 0) + inserted
+
+    # Also keep surrounding panel backgrounds in sync with theme colors.
+    sprite_patterns = {
+        "headerBackground": (
+            "headerBackground",
+            re.compile(r'(<sprite name="headerBackground"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "headerBorder": (
+            "panelBorder",
+            re.compile(r'(<sprite name="headerBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "bodyBg": (
+            "pageBackground",
+            re.compile(r'(<sprite name="bodyBg"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "bodyBorder": (
+            "panelBorder",
+            re.compile(r'(<sprite name="bodyBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "linksBackground": (
+            "linkBackground",
+            re.compile(r'(<sprite name="linksBackground"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "linksBorder": (
+            "panelBorder",
+            re.compile(r'(<sprite name="linksBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "optionsBackground": (
+            "optionsBackground",
+            re.compile(r'(<sprite name="optionsBackground"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "optionsBorder": (
+            "panelBorder",
+            re.compile(r'(<sprite name="optionsBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+    }
+
+    for sprite_name, (theme_key, pattern) in sprite_patterns.items():
+        updates = 0
+
+        def _replace_sprite(match: re.Match[str]) -> str:
+            nonlocal updates
+            current = match.group(2).strip()
+            use_hc = _is_in_highcontrast_block(text, match.start())
+            replacement = theme_hc[theme_key] if use_hc else theme_color[theme_key]
+            if current == replacement:
+                return match.group(0)
+            updates += 1
+            return f"{match.group(1)}{replacement}{match.group(3)}"
+
+        text = pattern.sub(_replace_sprite, text)
+        if updates > 0:
+            changed_by_grid[sprite_name] = updates
+
+    # Keep key labels synced to theme colors while leaving localization text plain.
+    label_tag_pattern = re.compile(r"<label\b[^>]*>")
+    label_updates = 0
+
+    def _replace_label_tag(match: re.Match[str]) -> str:
+        nonlocal label_updates
+        tag = match.group(0)
+
+        key_match = re.search(r'\btext_key="([^"]+)"', tag)
+        if not key_match:
+            return tag
+        text_key = key_match.group(1)
+
+        theme_key: str | None = None
+        if re.match(r"windowESC_(?:color|highcontrast)_header_title$", text_key):
+            theme_key = "headerTitle"
+        elif re.match(r"windowESC_(?:color|highcontrast)_header_motto$", text_key):
+            theme_key = "headerMotto"
+        elif re.match(r"windowESC_(?:color|highcontrast)_options_title$", text_key):
+            theme_key = "textBolding"
+        elif re.match(r"windowESC_(?:color|highcontrast)_page_\d+_title$", text_key):
+            theme_key = "pageTitle"
+        elif re.match(r"windowESC_(?:color|highcontrast)_page_\d+_body$", text_key):
+            theme_key = "pageBody"
+
+        if theme_key is None:
+            return tag
+
+        use_hc = text_key.startswith("windowESC_highcontrast_")
+        replacement = theme_hc[theme_key] if use_hc else theme_color[theme_key]
+
+        color_match = re.search(r'\bcolor="([^"]*)"', tag)
+        if color_match:
+            current = color_match.group(1).strip()
+            if current == replacement:
+                return tag
+            label_updates += 1
+            return re.sub(r'(\bcolor=")([^"]*)(")', rf'\g<1>{replacement}\g<3>', tag, count=1)
+
+        label_updates += 1
+        return tag.replace("/>", f' color="{replacement}"/>')
+
+    text = label_tag_pattern.sub(_replace_label_tag, text)
+    if label_updates > 0:
+        changed_by_grid["textLabels"] = label_updates
+
+    # Keep button outlines and panel borders synced even when a section is not fully rebuilt.
+    border_patterns = {
+        "tabButtonBorders": (
+            "pageTabButtonBorder",
+            re.compile(r'(<simplebutton name="tabButton"[^>]*\bbordercolor=")([^"]+)(")'),
+        ),
+        "linkButtonBorders": (
+            "linkButtonBorder",
+            re.compile(r'(<simplebutton name="btnLink"[^>]*\bbordercolor=")([^"]+)(")'),
+        ),
+        "headerBorderSprites": (
+            "panelBorder",
+            re.compile(r'(<sprite name="headerBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "bodyBorderSprites": (
+            "panelBorder",
+            re.compile(r'(<sprite name="bodyBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "linksBorderSprites": (
+            "panelBorder",
+            re.compile(r'(<sprite name="linksBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+        "optionsBorderSprites": (
+            "panelBorder",
+            re.compile(r'(<sprite name="optionsBorder"[^>]*\bcolor=")([^"]+)(")'),
+        ),
+    }
+
+    for metric_key, (theme_key, pattern) in border_patterns.items():
+        updates = 0
+
+        def _replace_border(match: re.Match[str]) -> str:
+            nonlocal updates
+            current = match.group(2).strip()
+            use_hc = _is_in_highcontrast_block(text, match.start())
+            replacement = theme_hc[theme_key] if use_hc else theme_color[theme_key]
+            if current == replacement:
+                return match.group(0)
+            updates += 1
+            return f"{match.group(1)}{replacement}{match.group(3)}"
+
+        text = pattern.sub(_replace_border, text)
+        if updates > 0:
+            changed_by_grid[metric_key] = updates
+
+    if changed_by_grid:
+        windows_file.write_text(text, encoding="utf-8")
+
+    return changed_by_grid
 
 
 def build_legacy_sources_by_id(source: dict) -> dict[str, list[str]]:
@@ -1559,7 +2386,7 @@ def update_windows_news_sources(
 
         # Normalize any existing local mapping for this link id to the latest mod name/path.
         local_pattern = re.compile(
-            r'(controller="NewsWindow"\s+sources=")(@[^\"]+:Config/Generated/News/'
+            r'(sources=")(@[^\"]+:(?:Config/Generated/News|Links)/'
             + re.escape(safe_id)
             + r'\.xml)(")'
         )
@@ -1593,7 +2420,7 @@ def build_news_source_mappings(news_paths: list[Path], mod_folder_name: str) -> 
     for p in news_paths:
         link_id = p.stem
         rel = p.as_posix()
-        mappings.append(f"{link_id} => @{mod_folder_name}:{rel}")
+        mappings.append(f"{link_id} => @modfolder:{rel}")
     return mappings
 
 
@@ -1603,6 +2430,7 @@ def write_manifest(
     localization_path: Path,
     news_paths: list[Path],
     tabs_ui_snippet_path: Path,
+    links_ui_snippet_path: Path,
     mod_folder_name: str,
     merge_target: Path | None,
     merge_result: tuple[int, int, int] | None,
@@ -1613,9 +2441,10 @@ def write_manifest(
     lines = [
         f"Generated: {dt.datetime.now().isoformat()}",
         f"Source: {source_path}",
-        f"Mod Folder Token: @{mod_folder_name}:",
+        "Mod Folder Token: @modfolder:",
         f"Localization: {localization_path}",
         f"XUi Tabs Snippet: {tabs_ui_snippet_path}",
+        f"XUi Links Snippet: {links_ui_snippet_path}",
         "News Files:",
     ]
     if news_paths:
@@ -1646,8 +2475,9 @@ def write_manifest(
             "",
             "Next Step:",
             "- If you want dynamic tab count/layout, paste XUi.Tabs.Generated.xml snippets into windows.xml tab sections.",
+            "- If you want dynamic link count/centering (1-5), paste XUi.Links.Generated.xml grids into windows.xml links sections.",
             "- Point NewsWindow sources in XUi to the mapping lines above.",
-            "- Optionally run with --merge-localization to update your main localization file.",
+            "- Main localization merge runs by default (use --no-merge-localization to skip).",
         ]
     )
 
@@ -1660,6 +2490,7 @@ def main() -> None:
 
     config_path = Path(args.config)
     out_dir = Path(args.out_dir)
+    links_dir = Path(args.links_dir)
     texts_path = Path(args.texts_file)
 
     source = load_source(config_path)
@@ -1677,28 +2508,47 @@ def main() -> None:
     mod_folder_name = resolve_mod_folder_name(source, config_path)
 
     rows = build_localization_rows(source, use_hc_dev_overrides=args.use_hc_dev_overrides)
-    localization_path = write_localization(rows, out_dir)
-    news_paths = write_news_files(source, out_dir)
-    tabs_ui_snippet_path = write_tabs_ui_snippet(
-        source,
-        out_dir,
-        use_hc_dev_overrides=args.use_hc_dev_overrides,
-    )
 
     merge_target: Path | None = None
     merge_result: tuple[int, int, int] | None = None
-    if args.merge_localization:
+    localization_target = Path(args.localization_file)
+
+    if args.no_merge_localization:
+        localization_path = localization_target
+    elif args.merge_localization:
         merge_target = Path(args.localization_file)
         merge_result = merge_localization(
             rows,
             merge_target,
             remove_obsolete_generated_keys=not args.keep_obsolete_generated_keys,
         )
+        localization_path = merge_target
+    else:
+        localization_path = write_localization_target(rows, localization_target)
+
+    if args.write_generated_localization:
+        write_localization(rows, out_dir)
+
+    news_paths = write_news_files(source, links_dir)
+    tabs_ui_snippet_path = write_tabs_ui_snippet(
+        source,
+        out_dir,
+        use_hc_dev_overrides=args.use_hc_dev_overrides,
+    )
+    links_ui_snippet_path = write_links_ui_snippet(
+        source,
+        out_dir,
+        use_hc_dev_overrides=args.use_hc_dev_overrides,
+    )
 
     windows_file: Path | None = None
     windows_update_by_id: dict[str, int] = {}
-    if args.update_windows_sources:
+    windows_tab_updates: dict[str, int] = {}
+    windows_grid_updates: dict[str, int] = {}
+    if args.update_windows_sources or args.update_windows_links_layout:
         windows_file = Path(args.windows_file)
+
+    if args.update_windows_sources and windows_file is not None:
         local_sources_by_id = build_local_news_source_map(source, mod_folder_name)
         legacy_sources_by_id = build_legacy_sources_by_id(source)
 
@@ -1714,19 +2564,35 @@ def main() -> None:
             link_ids,
         )
 
+    if args.update_windows_links_layout and windows_file is not None:
+        windows_tab_updates = update_windows_tab_layout(
+            windows_file,
+            source,
+            use_hc_dev_overrides=args.use_hc_dev_overrides,
+        )
+        windows_grid_updates = update_windows_link_grids(
+            windows_file,
+            source,
+            use_hc_dev_overrides=args.use_hc_dev_overrides,
+        )
+
     manifest_path = write_manifest(
         config_path,
         out_dir,
         localization_path,
         news_paths,
         tabs_ui_snippet_path,
+        links_ui_snippet_path,
         mod_folder_name,
         merge_target,
         merge_result,
     )
 
-    print(f"Generated localization: {localization_path}")
+    print(f"Updated localization: {localization_path}")
+    if args.write_generated_localization:
+        print(f"Generated localization sidecar: {out_dir / 'Localization.ESC.Generated.txt'}")
     print(f"Generated tabs snippet: {tabs_ui_snippet_path}")
+    print(f"Generated links snippet: {links_ui_snippet_path}")
     print(f"Generated news files: {len(news_paths)}")
     if text_override_count > 0:
         print(f"Applied text overrides: {text_override_count} from {texts_path}")
@@ -1738,10 +2604,20 @@ def main() -> None:
         )
     if windows_file is not None:
         total_windows_updates = sum(windows_update_by_id.values())
-        print(f"Updated windows sources: {total_windows_updates} in {windows_file}")
+        total_grid_updates = sum(windows_tab_updates.values()) + sum(windows_grid_updates.values())
+        print(
+            "Updated windows changes: "
+            f"sources={total_windows_updates}, grids={total_grid_updates} in {windows_file}"
+        )
         if windows_update_by_id:
             details = ", ".join(f"{k}={v}" for k, v in sorted(windows_update_by_id.items()))
             print(f"Windows source updates by link: {details}")
+        if windows_tab_updates:
+            details = ", ".join(f"{k}={v}" for k, v in sorted(windows_tab_updates.items()))
+            print(f"Windows tab updates: {details}")
+        if windows_grid_updates:
+            details = ", ".join(f"{k}={v}" for k, v in sorted(windows_grid_updates.items()))
+            print(f"Windows grid updates: {details}")
     print(f"Generated manifest: {manifest_path}")
 
 

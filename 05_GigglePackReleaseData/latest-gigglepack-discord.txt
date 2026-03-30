@@ -1,15 +1,16 @@
-#   GigglePack v1.2.1 - *March 28, 2026 8:39pm*
+#   GigglePack v1.3.0 - *March 29, 2026 10:25pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +0 new, ~2 updated, =1 renamed, -0 removed**
+###  **Change summary: +3 new, ~0 updated, =1 renamed, -0 removed**
 - **New mods:**
-  - None
+  - [AGF-4Modders-SkillPointCap](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip) (new: v1.0.0-BETA)
+  - [AGF-4Modders-Fix4DestroyBiomeBadge](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip) (new: v1.0.0-BETA)
+  - [AGF-4Modders-Fix4RemoveItems](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip) (new: v1.0.0-BETA)
 - **Updated existing mods:**
-  - [AGF-NoEAC-EnhancedPatch](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip) (v3.1.0 -> v3.1.1)
-  - [AGF-NoEAC-LockableWorkstations](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip) (v1.0.0 -> v1.1.0)
+  - None
 - **Renamed mods:**
-  - [AGF-NoEAC-ConsoleOpacityMod](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip) (renamed from AGF-4Modders-ConsoleOpacityMod, v1.0.0)
+  - [AGF-4Modders-CustomWindowEnteringDuration](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip) (renamed from AGF-4Modders-ConfigureWindowEnteringDuration, v1.0.0-BETA)
 - **Removed mods:**
   - None
 --------------------------------------------------------------------

@@ -1,6 +1,6 @@
 AGF-NoEAC-LockableWorkstations
 7d2d Version 2  
-Version: 1.1.0  
+Version: 1.1.0-BETA  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-NoEAC-LockableWorkstations.zip
 
  

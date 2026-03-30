@@ -72,12 +72,12 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-4Modders-ConfigureWindowEnteringDuration" is MISSINGDATA to install on an existing game.
-- "AGF-4Modders-ConfigureWindowEnteringDuration" is MISSINGDATA to remove from an existing game.
-- Unique Details: MISSINGDATA
+- EAC Friendly: No
+- Server Side: Unknown
+- Client Required for Multiplayer: Unknown
+- "AGF-4Modders-ConfigureWindowEnteringDuration" is SAFE to install on an existing game.
+- "AGF-4Modders-ConfigureWindowEnteringDuration" is Unknown to remove from an existing game.
+- Unique Details: None
 
 ========================================
 

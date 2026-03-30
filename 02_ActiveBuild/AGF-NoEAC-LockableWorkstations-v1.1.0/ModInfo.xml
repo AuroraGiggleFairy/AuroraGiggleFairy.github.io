@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
     <Name value="AGF-NoEAC-LockableWorkstations"/>
-    <DisplayName value="AGF Lockable Workstations"/>
+    <DisplayName value="BETA - AGF Lockable Workstations"/>
     <Version value="1.1.0"/>
     <Description value="Workstations and collectors can now be locked or unlocked to control access."/>
     <Author value="AuroraGiggleFairy (AGF)"/>

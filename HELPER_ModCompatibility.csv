@@ -1,8 +1,14 @@
 MOD_NAME,EAC_FRIENDLY,SERVER_SIDE,CLIENT_REQUIRED,SAFE_TO_INSTALL,SAFE_TO_REMOVE,UNIQUE,QUOTE_FILE
-AGF-4Modders-10IngredientSlots,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-4Modders-10IngredientSlots.txt
+AGF-VP-MedicallyTreatOthers,Yes,Yes,No,SAFE,MISSINGDATA,MISSINGDATA,AGF-VP-MedicallyTreatOthers.txt
+AGF-VP-MedicalTreatOthersTreatedInjuries,Yes,Yes,No,SAFE,MISSINGDATA,MISSINGDATA,AGF-VP-MedicalTreatOthersTreatedInjuries.txt
+AGF-4Modders-10IngredientSlots,Yes,Yes,No,SAFE,SAFE,None,AGF-4Modders-10IngredientSlots.txt
 AGF-4Modders-AntiCM,No,Unknown,Unknown,SAFE,SAFE,None,AGF-4Modders-AntiCM.txt
-AGF-4Modders-ConfigureWindowEnteringDuration,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-4Modders-ConfigureWindowEnteringDuration.txt
-AGF-4Modders-ESCWindowPlus,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-4Modders-ESCWindowPlus.txt
+AGF-4Modders-ConfigureWindowEnteringDuration,No,Unknown,Unknown,SAFE,Unknown,None,AGF-4Modders-ConfigureWindowEnteringDuration.txt
+AGF-4Modders-CustomWindowEnteringDuration,No,Unknown,Unknown,SAFE,SAFE,None,AGF-4Modders-CustomWindowEnteringDuration.txt
+AGF-4Modders-ESCWindowPlus,Yes,Yes,No,SAFE,Unknown,None,AGF-4Modders-ESCWindowPlus.txt
+AGF-4Modders-Fix4DestroyBiomeBadge,No,Unknown,Unknown,SAFE,Unknown,None,AGF-4Modders-Fix4DestroyBiomeBadge.txt
+AGF-4Modders-Fix4RemoveItems,No,Unknown,Unknown,SAFE,Unknown,None,AGF-4Modders-Fix4RemoveItems.txt
+AGF-4Modders-SkillPointCap,No,No,Yes,SAFE,DANGEROUS,None,AGF-4Modders-SkillPointCap.txt
 AGF-BackpackPlus-060Slots,Yes,Yes,No,SAFE,DANGEROUS,You may upgrade to the others.,AGF-BackpackPlus-060Slots.txt
 AGF-BackpackPlus-072Slots,Yes,Yes,No,SAFE,DANGEROUS,You may swap with 84 or 119.,AGF-BackpackPlus-072Slots.txt
 AGF-BackpackPlus-084Slots,Yes,Yes,No,SAFE,DANGEROUS,You may swap with 72 or 119.,AGF-BackpackPlus-084Slots.txt
@@ -16,7 +22,7 @@ AGF-HUDPluszOther-RemoveWrittentormAlerts,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPlusz
 AGF-HUDPluszOther-SmallerInteractionPrompt,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-SmallerInteractionPrompt.txt
 AGF-HUDPluszOther-TinyBuffsPopUp,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-TinyBuffsPopUp.txt
 AGF-HUDPluszOther-Weekday,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-Weekday.txt
-AGF-NoEAC-ConsoleOpacityMod,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-NoEAC-ConsoleOpacityMod.txt
+AGF-NoEAC-ConsoleOpacityMod,No,Unknown,Unknown,SAFE,Unknown,None,AGF-NoEAC-ConsoleOpacityMod.txt
 AGF-NoEAC-CosmeticLockIcon,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-CosmeticLockIcon.txt
 AGF-NoEAC-EnhancedPatch,No,No,Yes,SAFE,SAFE,None,AGF-NoEAC-EnhancedPatch.txt
 AGF-NoEAC-ExpandedInteractionPrompts,No,No,Yes,Safe,Safe,None,AGF-NoEAC-ExpandedInteractionPrompts.txt
@@ -26,9 +32,8 @@ AGF-NoEAC-LockableWorkstations,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-LockableW
 AGF-NoEAC-OpenAllButton,No,No,Yes,Yes,UNKNOWN,None,AGF-NoEAC-OpenAllButton.txt
 AGF-NoEAC-ScreamerAlert,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-ScreamerAlert.txt
 AGF-NoEAC-SortingBox,No,UNIQUE,UNIQUE,SAFE,DANGEROUS,Server side if dedicated server - otherwise client side.,AGF-NoEAC-SortingBox.txt
-AGF-NoEAC-TerrainLeveler,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-NoEAC-TerrainLeveler.txt
+AGF-NoEAC-TerrainLeveler,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt
 AGF-NoEAC-Toolbelt12Slots,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-Toolbelt12Slots.txt
-AGF-ServerUIChanges,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-ServerUIChanges.txt
 AGF-VP-AdminModdingSupport,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-AdminModdingSupport.txt
 AGF-VP-AlternativeRecipes,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-AlternativeRecipes.txt
 AGF-VP-AmmoDisassembly,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-AmmoDisassembly.txt
@@ -53,8 +58,6 @@ AGF-VP-FloraHarvester,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-FloraHarvester.txt
 AGF-VP-FuelBurnPlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-FuelBurnPlus.txt
 AGF-VP-MasterTool,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MasterTool.txt
 AGF-VP-MaxLevel500,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MaxLevel500.txt
-AGF-VP-MedicallyTreatOthers,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-VP-MedicallyTreatOthers.txt
-AGF-VP-MedicalTreatOthersTreatedInjuries,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-VP-MedicalTreatOthersTreatedInjuries.txt
 AGF-VP-MedicationNoInsectSlow,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MedicationNoInsectSlow.txt
 AGF-VP-MiningPlus,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-MiningPlus.txt
 AGF-VP-Mod988,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-Mod988.txt

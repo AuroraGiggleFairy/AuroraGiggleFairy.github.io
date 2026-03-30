@@ -100,7 +100,7 @@ def append_compatibility_row(mod_name: str) -> None:
         new_row[quote_idx] = f"{mod_name}.txt"
 
     with open(COMPAT_CSV_PATH, "a", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
         writer.writerow(new_row)
 
 

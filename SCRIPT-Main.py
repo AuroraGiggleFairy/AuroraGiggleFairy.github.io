@@ -272,6 +272,27 @@ def parse_modinfo(modinfo_path: str, fallback_name: str) -> Tuple[str, str]:
         return fallback_name, "0.0.0"
 
 
+def get_modinfo_display_name(modinfo_path: str, fallback_name: str) -> str:
+    try:
+        tree = ET.parse(modinfo_path)
+        root = tree.getroot()
+        display_tag = root.find("DisplayName")
+        if display_tag is not None:
+            display_name = display_tag.attrib.get("value", "").strip()
+            if display_name:
+                return display_name
+    except Exception:
+        pass
+    return fallback_name
+
+
+def format_version_for_display(version: str, display_name: str) -> str:
+    version_text = (version or "0.0.0").strip()
+    if "BETA" in (display_name or "") and not version_text.endswith("-BETA"):
+        return f"{version_text}-BETA"
+    return version_text
+
+
 def get_modinfo_version(folder_path: str) -> Optional[str]:
     modinfo_path = os.path.join(folder_path, "ModInfo.xml")
     if not os.path.exists(modinfo_path):
@@ -526,20 +547,26 @@ def render_discord_post_from_template(
         "REMOVED_COUNT": str(len(removed_mod_entries)),
         "PREVIOUS_GIGGLEPACK_VERSION": previous_release_version or "None",
         "NEW_MOD_LINES": "\n".join(
-            f"  - {mod_download_markdown_link(e['mod'])} (new: v{e['to']})" for e in new_mod_entries
+            f"  - {mod_download_markdown_link(e['mod'])} (new: v{e.get('to_display', e['to'])})"
+            for e in new_mod_entries
         )
         or "  - None",
         "UPDATED_MOD_LINES": "\n".join(
-            f"  - {mod_download_markdown_link(e['mod'])} (v{e['from']} -> v{e['to']})"
+            f"  - {mod_download_markdown_link(e['mod'])} "
+            f"(v{e.get('from_display', e['from'])} -> v{e.get('to_display', e['to'])})"
             for e in updated_mod_entries
         )
         or "  - None",
         "RENAMED_MOD_LINES": "\n".join(
-            f"  - {mod_download_markdown_link(e['to_mod'])} (renamed from {e['from_mod']}, v{e['version']})"
+            f"  - {mod_download_markdown_link(e['to_mod'])} "
+            f"(renamed from {e['from_mod']}, v{e.get('version_display', e['version'])})"
             for e in renamed_mod_entries
         )
         or "  - None",
-        "REMOVED_MOD_LINES": "\n".join(f"  - {e['mod']} (was v{e['from']})" for e in removed_mod_entries) or "  - None",
+        "REMOVED_MOD_LINES": "\n".join(
+            f"  - {e['mod']} (was v{e.get('from_display', e['from'])})" for e in removed_mod_entries
+        )
+        or "  - None",
     }
 
     def token_value(token: str) -> str:
@@ -554,7 +581,11 @@ def render_discord_post_from_template(
         new_mod_ver_match = re.fullmatch(r"NEW_MOD_(\d+)_VERSION", token)
         if new_mod_ver_match:
             idx = int(new_mod_ver_match.group(1)) - 1
-            return new_mod_entries[idx]["to"] if 0 <= idx < len(new_mod_entries) else "None"
+            return (
+                new_mod_entries[idx].get("to_display", new_mod_entries[idx]["to"])
+                if 0 <= idx < len(new_mod_entries)
+                else "None"
+            )
 
         updated_mod_match = re.fullmatch(r"UPDATED_MOD_(\d+)", token)
         if updated_mod_match:
@@ -564,12 +595,20 @@ def render_discord_post_from_template(
         updated_old_match = re.fullmatch(r"UPDATED_MOD_(\d+)_OLD", token)
         if updated_old_match:
             idx = int(updated_old_match.group(1)) - 1
-            return updated_mod_entries[idx]["from"] if 0 <= idx < len(updated_mod_entries) else "None"
+            return (
+                updated_mod_entries[idx].get("from_display", updated_mod_entries[idx]["from"])
+                if 0 <= idx < len(updated_mod_entries)
+                else "None"
+            )
 
         updated_new_match = re.fullmatch(r"UPDATED_MOD_(\d+)_NEW", token)
         if updated_new_match:
             idx = int(updated_new_match.group(1)) - 1
-            return updated_mod_entries[idx]["to"] if 0 <= idx < len(updated_mod_entries) else "None"
+            return (
+                updated_mod_entries[idx].get("to_display", updated_mod_entries[idx]["to"])
+                if 0 <= idx < len(updated_mod_entries)
+                else "None"
+            )
 
         removed_mod_match = re.fullmatch(r"REMOVED_MOD_(\d+)", token)
         if removed_mod_match:
@@ -579,7 +618,11 @@ def render_discord_post_from_template(
         removed_ver_match = re.fullmatch(r"REMOVED_MOD_(\d+)_VERSION", token)
         if removed_ver_match:
             idx = int(removed_ver_match.group(1)) - 1
-            return removed_mod_entries[idx]["from"] if 0 <= idx < len(removed_mod_entries) else "None"
+            return (
+                removed_mod_entries[idx].get("from_display", removed_mod_entries[idx]["from"])
+                if 0 <= idx < len(removed_mod_entries)
+                else "None"
+            )
 
         return "None"
 
@@ -849,6 +892,232 @@ def sync_publishready_to_staging_latest(dry_run: bool, log: Logger) -> None:
                 log.warn(f"Could not hash compare release/active tie for {base_name}: {ex}")
 
 
+def sync_game_and_draft(dry_run: bool, log: Logger) -> None:
+    """Sync updates from Game into Draft for AGF mods present in both lanes.
+
+    This keeps Draft current when a mod was originally tracked in Draft but got
+    updated while testing in the game Mods folder.
+    """
+    log.info("Step 0.25: Compare Game <-> Draft and pull newer game updates into Draft")
+
+    draft_folders = scan_mod_folders(IN_PROGRESS)
+    game_folders = scan_mod_folders(GAME_MODS)
+
+    draft_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in draft_folders.items()
+    }
+    game_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in game_folders.items()
+    }
+
+    overlap = sorted(set(draft_by_base.keys()) & set(game_by_base.keys()))
+    for base_name in overlap:
+        draft_folder, draft_path = draft_by_base[base_name]
+        game_folder, game_path = game_by_base[base_name]
+
+        draft_ver = get_modinfo_version(draft_path)
+        game_ver = get_modinfo_version(game_path)
+
+        if draft_ver is None or game_ver is None:
+            log.warn(
+                f"Draft/game sync skipped for {base_name}: missing/unreadable ModInfo.xml "
+                f"(draft={draft_ver}, game={game_ver})"
+            )
+            continue
+
+        cmp_value = compare_versions(game_ver, draft_ver)
+        if cmp_value > 0:
+            if maybe_copytree(game_path, draft_path, dry_run, log):
+                log.stats.synced_pull_from_game += 1
+                log.info(
+                    f"Draft/game pull: {game_folder} v{game_ver} -> {draft_folder} v{draft_ver}"
+                )
+        elif cmp_value == 0:
+            try:
+                draft_hash = hash_directory(draft_path)
+                game_hash = hash_directory(game_path)
+                if draft_hash != game_hash:
+                    if maybe_copytree(game_path, draft_path, dry_run, log):
+                        log.stats.synced_pull_from_game += 1
+                        log.info(
+                            f"Draft/game tie refresh for {base_name}: both v{game_ver} but content differed. "
+                            "Pulled game copy into Draft."
+                        )
+            except Exception as ex:
+                log.warn(f"Could not hash compare game/draft tie for {base_name}: {ex}")
+
+
+def enforce_staging_major_policy(dry_run: bool, log: Logger) -> None:
+    """Ensure ActiveBuild only contains major-version >= 1 mods.
+
+    Any ActiveBuild mod on major 0 is moved back to Draft. If Draft already has
+    that base mod, keep whichever version is newer there and remove the other copy.
+    """
+    log.info("Lane policy: keep major v0.x mods in Draft, not ActiveBuild")
+
+    staging_folders = scan_mod_folders(STAGING)
+    draft_folders = scan_mod_folders(IN_PROGRESS)
+    draft_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in draft_folders.items()
+    }
+
+    for st_folder, st_path in staging_folders.items():
+        st_ver = get_modinfo_version(st_path)
+        if st_ver is None:
+            log.warn(f"Lane policy skipped for {st_folder}: unreadable active ModInfo.xml")
+            continue
+
+        try:
+            st_major = int((st_ver or "0.0.0").split(".", 1)[0])
+        except Exception:
+            st_major = 0
+
+        if st_major >= 1:
+            continue
+
+        base_name = get_base_mod_name(st_folder)
+        draft_match = draft_by_base.get(base_name)
+
+        if not draft_match:
+            dest = os.path.join(IN_PROGRESS, st_folder)
+            if maybe_move(st_path, dest, dry_run, log):
+                log.info(f"Lane policy move: {st_folder} v{st_ver} moved ActiveBuild -> Draft")
+            continue
+
+        draft_folder, draft_path = draft_match
+        draft_ver = get_modinfo_version(draft_path)
+        if draft_ver is None:
+            log.warn(f"Lane policy skipped merge for {st_folder}: unreadable draft ModInfo.xml")
+            continue
+
+        cmp_value = compare_versions(st_ver, draft_ver)
+        if cmp_value > 0:
+            replacement_dest = os.path.join(IN_PROGRESS, st_folder)
+            if maybe_remove_dir(draft_path, dry_run, log) and maybe_move(st_path, replacement_dest, dry_run, log):
+                log.info(
+                    f"Lane policy replace: kept newer v0 draft copy from ActiveBuild "
+                    f"({st_folder} v{st_ver} > {draft_folder} v{draft_ver})"
+                )
+        elif cmp_value < 0:
+            if maybe_remove_dir(st_path, dry_run, log):
+                log.info(
+                    f"Lane policy cleanup: removed ActiveBuild v0 copy {st_folder} v{st_ver}; "
+                    f"Draft already newer ({draft_folder} v{draft_ver})"
+                )
+        else:
+            try:
+                st_hash = hash_directory(st_path)
+                draft_hash = hash_directory(draft_path)
+                if st_hash != draft_hash:
+                    replacement_dest = os.path.join(IN_PROGRESS, st_folder)
+                    if maybe_remove_dir(draft_path, dry_run, log) and maybe_move(st_path, replacement_dest, dry_run, log):
+                        log.info(
+                            f"Lane policy tie refresh: replaced Draft copy with ActiveBuild copy for {base_name} "
+                            f"at v{st_ver}, then removed ActiveBuild copy"
+                        )
+                else:
+                    if maybe_remove_dir(st_path, dry_run, log):
+                        log.info(
+                            f"Lane policy cleanup: removed duplicate ActiveBuild v0 copy {st_folder} "
+                            f"(matching Draft v{draft_ver})"
+                        )
+            except Exception as ex:
+                log.warn(f"Could not hash compare lane-policy tie for {base_name}: {ex}")
+
+
+def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
+    """Ensure ActiveBuild contains the latest Draft copy for each base mod name.
+
+    Rules:
+    - If a draft mod is missing in ActiveBuild, copy it in.
+    - If draft version is higher than ActiveBuild version, replace ActiveBuild copy.
+    - If versions tie but content differs, replace ActiveBuild with Draft copy.
+    - If ActiveBuild version is higher, keep ActiveBuild and warn.
+    """
+    log.info("Step 0.5: Ensure latest Draft mods are in ActiveBuild")
+
+    draft_folders = scan_mod_folders(IN_PROGRESS)
+    staging_folders = scan_mod_folders(STAGING)
+
+    draft_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in draft_folders.items()
+    }
+    staging_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in staging_folders.items()
+    }
+
+    for base_name in sorted(draft_by_base.keys()):
+        draft_folder, draft_path = draft_by_base[base_name]
+        draft_ver = get_modinfo_version(draft_path)
+        if draft_ver is None:
+            log.warn(f"Draft sync skipped for {draft_folder}: unreadable draft ModInfo.xml")
+            continue
+
+        try:
+            draft_major = int((draft_ver or "0.0.0").split(".", 1)[0])
+        except Exception:
+            draft_major = 0
+        if draft_major < 1:
+            log.info(
+                f"Draft sync skipped for {draft_folder}: version {draft_ver} is draft-only (major < 1)"
+            )
+            continue
+
+        remove_draft_after_sync = False
+
+        if base_name not in staging_by_base:
+            dest = os.path.join(STAGING, draft_folder)
+            if maybe_copytree(draft_path, dest, dry_run, log):
+                log.info(f"Draft sync add: {draft_folder} v{draft_ver}")
+                remove_draft_after_sync = True
+        else:
+            st_folder, st_path = staging_by_base[base_name]
+            st_ver = get_modinfo_version(st_path)
+            if st_ver is None:
+                log.warn(f"Draft sync skipped for {st_folder}: unreadable active ModInfo.xml")
+                continue
+
+            cmp_value = compare_versions(draft_ver, st_ver)
+            if cmp_value > 0:
+                dest = os.path.join(STAGING, draft_folder)
+                if maybe_remove_dir(st_path, dry_run, log) and maybe_copytree(draft_path, dest, dry_run, log):
+                    log.info(f"Draft sync update: {st_folder} v{st_ver} -> {draft_folder} v{draft_ver}")
+                    remove_draft_after_sync = True
+            elif cmp_value < 0:
+                log.warn(
+                    f"Draft sync kept newer ActiveBuild mod for {base_name}: "
+                    f"active v{st_ver} > draft v{draft_ver}"
+                )
+                remove_draft_after_sync = True
+            else:
+                try:
+                    draft_hash = hash_directory(draft_path)
+                    st_hash = hash_directory(st_path)
+                    if draft_hash != st_hash:
+                        dest = os.path.join(STAGING, draft_folder)
+                        if maybe_remove_dir(st_path, dry_run, log) and maybe_copytree(draft_path, dest, dry_run, log):
+                            log.info(
+                                f"Draft sync refresh: {st_folder} and {draft_folder} are both v{draft_ver} "
+                                "but content differed. Replaced ActiveBuild with Draft copy."
+                            )
+                            remove_draft_after_sync = True
+                    else:
+                        remove_draft_after_sync = True
+                except Exception as ex:
+                    log.warn(f"Could not hash compare draft/active tie for {base_name}: {ex}")
+
+        if remove_draft_after_sync and maybe_remove_dir(draft_path, dry_run, log):
+            log.info(
+                f"Draft promotion cleanup: removed {draft_folder} v{draft_ver} from Draft "
+                "after syncing to ActiveBuild"
+            )
+
+
 # =============================================================
 # STEP 4: RENAME + CSV + QUOTES + MOD README
 # =============================================================
@@ -918,7 +1187,14 @@ def load_compat_csv() -> Tuple[List[str], List[Dict[str, str]]]:
 
 
 def save_compat_csv(fieldnames: List[str], rows: List[Dict[str, str]], dry_run: bool, log: Logger) -> None:
-    rows.sort(key=lambda r: r.get("MOD_NAME", "").lower())
+    def row_has_missingdata(row: Dict[str, str]) -> bool:
+        for fn in fieldnames:
+            value = str(row.get(fn, ""))
+            if "missingdata" in value.lower():
+                return True
+        return False
+
+    rows.sort(key=lambda r: (0 if row_has_missingdata(r) else 1, r.get("MOD_NAME", "").lower()))
     if dry_run:
         log.info(f"[DRYRUN] Would write compatibility CSV: {COMPAT_CSV} ({len(rows)} rows)")
         return
@@ -1064,6 +1340,8 @@ def generate_mod_readmes(
                 continue
 
             mod_name, mod_version = parse_modinfo(modinfo_path, folder_name)
+            mod_display_name = get_modinfo_display_name(modinfo_path, mod_name)
+            mod_version_display = format_version_for_display(mod_version, mod_display_name)
             base_name = get_base_mod_name(folder_name)
             zip_name = f"{base_name}.zip"
             download_link = zip_download_link(zip_name)
@@ -1094,7 +1372,7 @@ def generate_mod_readmes(
 
             readme_content = template
             readme_content = readme_content.replace("{{MOD_NAME}}", mod_name)
-            readme_content = readme_content.replace("{{MOD_VERSION}}", mod_version)
+            readme_content = readme_content.replace("{{MOD_VERSION}}", mod_version_display)
             readme_content = readme_content.replace("{{DOWNLOAD_LINK}}", download_link)
             readme_content = readme_content.replace("{{QUOTE}}", quote_md)
             readme_content = readme_content.replace("{{EAC_FRIENDLY}}", eac_friendly)
@@ -1404,6 +1682,16 @@ def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
 
         if st_ver is None:
             log.warn(f"Promote skipped for {st_folder}: missing/unreadable ModInfo.xml")
+            continue
+
+        try:
+            st_major = int((st_ver or "0.0.0").split(".", 1)[0])
+        except Exception:
+            st_major = 0
+        if st_major < 1:
+            log.info(
+                f"Promote skipped for {st_folder}: staging version {st_ver} is draft-only (major < 1)"
+            )
             continue
 
         if base_name not in publish_by_base:
@@ -2054,6 +2342,54 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         for mod_name, old_ver in removed_mods
     ]
 
+    beta_display_by_base: Dict[str, bool] = {}
+    for folder_name, folder_path in scan_mod_folders(PUBLISH_READY).items():
+        modinfo_path = os.path.join(folder_path, "ModInfo.xml")
+        mod_name, _ = parse_modinfo(modinfo_path, folder_name)
+        display_name = get_modinfo_display_name(modinfo_path, mod_name)
+        beta_display_by_base[get_base_mod_name(folder_name)] = "BETA" in display_name
+
+    def maybe_beta_display(mod_name: str, version_value: str) -> str:
+        if beta_display_by_base.get(mod_name, False) and not str(version_value).endswith("-BETA"):
+            return f"{version_value}-BETA"
+        return version_value
+
+    new_mod_entries_display: List[Dict[str, str]] = [
+        {
+            "mod": entry["mod"],
+            "to": entry["to"],
+            "to_display": maybe_beta_display(entry["mod"], entry["to"]),
+        }
+        for entry in new_mod_entries
+    ]
+    updated_mod_entries_display: List[Dict[str, str]] = [
+        {
+            "mod": entry["mod"],
+            "from": entry["from"],
+            "to": entry["to"],
+            "from_display": maybe_beta_display(entry["mod"], entry["from"]),
+            "to_display": maybe_beta_display(entry["mod"], entry["to"]),
+        }
+        for entry in updated_mod_entries
+    ]
+    renamed_mod_entries_display: List[Dict[str, str]] = [
+        {
+            "from_mod": entry["from_mod"],
+            "to_mod": entry["to_mod"],
+            "version": entry["version"],
+            "version_display": maybe_beta_display(entry["to_mod"], entry["version"]),
+        }
+        for entry in renamed_mod_entries
+    ]
+    removed_mod_entries_display: List[Dict[str, str]] = [
+        {
+            "mod": entry["mod"],
+            "from": entry["from"],
+            "from_display": maybe_beta_display(entry["mod"], entry["from"]),
+        }
+        for entry in removed_mod_entries
+    ]
+
     # v1.0.0 special baseline: keep changelog intentionally focused and readable.
     if release_version == "1.0.0":
         focused_entries: List[Dict[str, str]] = []
@@ -2062,23 +2398,39 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
                 focused_entries.append({"mod": mod_name, "to": giggle_mod_versions[mod_name]})
         if focused_entries:
             new_mod_entries = focused_entries
+            new_mod_entries_display = [
+                {
+                    "mod": entry["mod"],
+                    "to": entry["to"],
+                    "to_display": maybe_beta_display(entry["mod"], entry["to"]),
+                }
+                for entry in focused_entries
+            ]
             updated_mod_entries = []
+            updated_mod_entries_display = []
             renamed_mod_entries = []
+            renamed_mod_entries_display = []
             removed_mod_entries = []
+            removed_mod_entries_display = []
 
     new_mod_lines = [
-        f"- {mod_download_markdown_link(entry['mod'])} (new: v{entry['to']})"
-        for entry in new_mod_entries
+        f"- {mod_download_markdown_link(entry['mod'])} (new: v{entry.get('to_display', entry['to'])})"
+        for entry in new_mod_entries_display
     ]
     updated_existing_lines = [
-        f"- {mod_download_markdown_link(entry['mod'])} (v{entry['from']} -> v{entry['to']})"
-        for entry in updated_mod_entries
+        f"- {mod_download_markdown_link(entry['mod'])} "
+        f"(v{entry.get('from_display', entry['from'])} -> v{entry.get('to_display', entry['to'])})"
+        for entry in updated_mod_entries_display
     ]
     renamed_lines = [
-        f"- {mod_download_markdown_link(entry['to_mod'])} (renamed from {entry['from_mod']}, v{entry['version']})"
-        for entry in renamed_mod_entries
+        f"- {mod_download_markdown_link(entry['to_mod'])} "
+        f"(renamed from {entry['from_mod']}, v{entry.get('version_display', entry['version'])})"
+        for entry in renamed_mod_entries_display
     ]
-    removed_lines = [f"- {entry['mod']} (was v{entry['from']})" for entry in removed_mod_entries]
+    removed_lines = [
+        f"- {entry['mod']} (was v{entry.get('from_display', entry['from'])})"
+        for entry in removed_mod_entries_display
+    ]
     if has_update:
         now_dt = dt.datetime.now()
     else:
@@ -2095,10 +2447,10 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         now_iso=now_display,
         versioned_zip_name=versioned_zip_name,
         previous_release_version=previous_release_version,
-        new_mod_entries=new_mod_entries,
-        updated_mod_entries=updated_mod_entries,
-        renamed_mod_entries=renamed_mod_entries,
-        removed_mod_entries=removed_mod_entries,
+        new_mod_entries=new_mod_entries_display,
+        updated_mod_entries=updated_mod_entries_display,
+        renamed_mod_entries=renamed_mod_entries_display,
+        removed_mod_entries=removed_mod_entries_display,
         log=log,
     )
 
@@ -2287,12 +2639,14 @@ def build_mod_entry(folder_name: str) -> str:
     readme_path = os.path.join(mod_path, "README.md")
 
     name, version = parse_modinfo(modinfo_path, folder_name)
+    display_name = get_modinfo_display_name(modinfo_path, name)
+    version_display = format_version_for_display(version, display_name)
     desc = extract_mod_description_from_modinfo(modinfo_path)
     link = zip_download_link(f"{get_base_mod_name(folder_name)}.zip")
 
     features = extract_readme_block(readme_path, "<!-- FEATURES START -->", "<!-- FEATURES END -->").strip("\n")
 
-    block = [f"> ### **{name}** *-v{version}* - [Download]({link})", f"> *{desc}*"]
+    block = [f"> ### **{name}** *-v{version_display}* - [Download]({link})", f"> *{desc}*"]
     if features:
         features_html = markdown_features_to_html(features)
         block.append(
@@ -2670,9 +3024,11 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
             mod_path = os.path.join(PUBLISH_READY, mod)
             modinfo_path = os.path.join(mod_path, "ModInfo.xml")
             name, version = parse_modinfo(modinfo_path, mod)
+            display_name = get_modinfo_display_name(modinfo_path, name)
+            version_display = format_version_for_display(version, display_name)
             desc = extract_mod_description_from_modinfo(modinfo_path)
             link = zip_download_link(f"{get_base_mod_name(mod)}.zip")
-            md.append(f"| {name} | {version} | [Download]({link}) | {desc} |")
+            md.append(f"| {name} | {version_display} | [Download]({link}) | {desc} |")
         md.extend(["", "---"])
 
     md.extend([
@@ -2816,10 +3172,12 @@ def run_pipeline(args: argparse.Namespace) -> int:
 
     try:
         if args.mode == "sync-work":
+            enforce_staging_major_policy(args.dry_run, log)
             sync_staging_and_game(args.dry_run, log)
         elif args.mode == "prep-work":
             prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
         elif args.mode == "promote":
+            enforce_staging_major_policy(args.dry_run, log)
             prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
             promote_staging_to_publish_ready(args.dry_run, log)
         elif args.mode == "package":
@@ -2829,9 +3187,18 @@ def run_pipeline(args: argparse.Namespace) -> int:
             generate_main_readme(args.dry_run, log)
         else:
             log.info(
-                "Mode full: ActiveBuild<->Game sync first, then finalize ActiveBuild, "
-                "push finalized changes to Game, promote to ReleaseSource, then package/readmes."
+                "Mode full: sync Game<->Draft for tracked draft mods, ingest Draft->ActiveBuild, "
+                "sync ActiveBuild<->Game, then finalize/promote/package."
             )
+
+            # 0.25) Pull newer game updates into Draft for overlapping AGF mods.
+            sync_game_and_draft(args.dry_run, log)
+
+            # 0.5) Ensure ActiveBuild includes latest Draft copies before game sync.
+            sync_draft_to_staging_latest(args.dry_run, log)
+
+            # 0.75) Enforce lane policy after ingest so v0.x stays in Draft.
+            enforce_staging_major_policy(args.dry_run, log)
 
             # 1) Keep ActiveBuild and Game synchronized first.
             sync_staging_and_game(args.dry_run, log)

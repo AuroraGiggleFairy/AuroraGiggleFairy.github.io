@@ -1,6 +1,6 @@
 # AGF-NoEAC-ScreamerAlert
 7d2d Version 2  
-**Version:** 1.1.1  
+**Version:** 1.1.1-BETA  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip)
 
  

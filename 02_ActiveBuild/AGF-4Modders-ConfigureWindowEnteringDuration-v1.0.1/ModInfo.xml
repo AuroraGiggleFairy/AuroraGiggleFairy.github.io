@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-4Modders-ConfigureWindowEnteringDuration" />
-	<DisplayName value="AGF Configure Location Popup Duration" />
-	<Version value="1.0.1" />
-	<Description value="Adds a xml file to modify the duration of the location popups, vanilla is 3 seconds." />
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

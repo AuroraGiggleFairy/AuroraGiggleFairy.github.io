@@ -1,24 +1,24 @@
-<AGF-ESCWindowPlus>
+﻿<AGF-ESCWindowPlus>
 	<append xpath="/windows">
 		<window name="windowESC" depth="10" width="1240" height="1080" anchor="CenterCenter" cursor_area="true">
 			<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">
 				<rect name="tabsHeader">
 					<grid name="tabButtons" pos="-525,438" depth="12" rows="2" cols="1" cell_width="170" cell_height="46" repeat_content="true" arrangement="horizontal">
 						<rect controller="TabSelectorButton">
-							<simplebutton name="tabButton" depth="12" pos="0,0" width="170" height="36" font_size="30" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[mediumGrey]" selectedsprite="ui_game_header_fill" selectedcolor="[lightGrey]" foregroundlayer="false" caption="{tab_name_localized}"/>
+							<simplebutton name="tabButton" depth="12" pos="0,0" width="170" height="36" font_size="30" sprite="ui_game_header_fill" bordercolor="0,0,0" defaultcolor="[mediumGrey]" selectedsprite="menu_empty3px" selectedcolor="[lightGrey]" foregroundlayer="false" caption="{tab_name_localized}"/>
 						</rect>
 					</grid>
 				</rect>
 				<rect name="tabsContents">
-					<rect name="Color" controller="TabSelectorTab" tab_key="Color">
+					<rect name="Color" controller="TabSelectorTab" tab_key="windowESC_mode_color_tab">
 						<!-- centered-ish; keep your "down a bit" so it doesn't live in the compass lane -->
 						<panel name="core" depth="10" pos="-550,460" disableautobackground="true">
 							<!-- HEADER -->
 							<rect name="header" width="1100" height="126" globalopacity="true" globalopacitymod="1.3">
 								<sprite name="headerBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="116" type="sliced"/>
 								<sprite name="headerBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="126" type="sliced"/>
-								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141, 181, 128" font_size="48" text_key="windowESC_color_header_title" foregroundlayer="true"/>
-								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221, 205, 250" font_size="26" text_key="windowESC_color_header_motto" foregroundlayer="true"/>
+								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="48" text_key="windowESC_color_header_title" foregroundlayer="true"/>
+								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="26" text_key="windowESC_color_header_motto" foregroundlayer="true"/>
 							</rect>
 						
 							<!-- BODY -->
@@ -27,52 +27,71 @@
 								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="714" type="sliced"/>
 								<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">
 									<rect name="tabsHeader">
-										<!--Buttons-->
-										<grid name="tabButtons" pos="325,-20" depth="3" rows="1" cols="3" cell_width="150" cell_height="42" repeat_content="true" arrangement="horizontal">
+										<grid name="tabButtons" pos="32,-20" depth="3" rows="1" cols="8" cell_width="130" cell_height="42" repeat_content="true" arrangement="horizontal">
 											<rect controller="TabSelectorButton">
-												<simplebutton name="tabButton" depth="8" pos="5,0" width="146" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="74, 33, 150" foregroundlayer="false" caption="{tab_name_localized}">
-											
-												</simplebutton>
+												<simplebutton name="tabButton" depth="8" pos="0,0" width="126" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="0,0,0" defaultcolor="32,32,32" selectedsprite="menu_empty3px" selectedcolor="74,33,150" foregroundlayer="false" caption="{tab_name_localized}"/>
 											</rect>
 										</grid>
 									</rect>
 									<rect name="tabsContents">
 										<rect name="page_1" controller="TabSelectorTab" tab_key="windowESC_color_page_1_button">
-											<label name="page_1_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_1_title" foregroundlayer="true"/>
-											<label name="page_1_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_1_body" foregroundlayer="true"/>
+											<label name="page_1_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_1_title" foregroundlayer="true"/>
+											<label name="page_1_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_1_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="page_2" controller="TabSelectorTab" tab_key="windowESC_color_page_2_button">
-											<label name="page_2_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_2_title" foregroundlayer="true"/>
-											<label name="page_2_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_2_body" foregroundlayer="true"/>
+											<label name="page_2_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_2_title" foregroundlayer="true"/>
+											<label name="page_2_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_2_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="page_3" controller="TabSelectorTab" tab_key="windowESC_color_page_3_button">
-											<label name="page_3_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_3_title" foregroundlayer="true"/>
-											<label name="page_3_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_3_body" foregroundlayer="true"/>
+											<label name="page_3_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_3_title" foregroundlayer="true"/>
+											<label name="page_3_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_3_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_4" controller="TabSelectorTab" tab_key="windowESC_color_page_4_button">
+											<label name="page_4_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_4_title" foregroundlayer="true"/>
+											<label name="page_4_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_4_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_5" controller="TabSelectorTab" tab_key="windowESC_color_page_5_button">
+											<label name="page_5_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_5_title" foregroundlayer="true"/>
+											<label name="page_5_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_5_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_6" controller="TabSelectorTab" tab_key="windowESC_color_page_6_button">
+											<label name="page_6_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_6_title" foregroundlayer="true"/>
+											<label name="page_6_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_6_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_7" controller="TabSelectorTab" tab_key="windowESC_color_page_7_button">
+											<label name="page_7_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_7_title" foregroundlayer="true"/>
+											<label name="page_7_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_7_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_8" controller="TabSelectorTab" tab_key="windowESC_color_page_8_button">
+											<label name="page_8_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_8_title" foregroundlayer="true"/>
+											<label name="page_8_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_8_body" foregroundlayer="true"/>
 										</rect>
 									</rect>
 								</rect>
 							</rect>
 					
-
+							<!-- LINKS -->
 							<rect name="links" pos="0,-860" width="1100" height="60" globalopacity="true" globalopacitymod="1.75">
 								<sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="50" type="sliced"/>
 								<sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="60" type="sliced"/>
-
-<!--							<rect name="linkDiscord" depth="10" pos="860,-44" width="170" height="36">
-									<rect controller="NewsWindow" sources="@AGF-4Modders-ESCWindowPlus:Config/Generated/News/discord.xml">
-										<button name="btnLink" width="170" height="36" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="[darkGrey]" hovercolor="50,50,50,255" selectedcolor="74, 33, 150" enabled="{has_link}" gamepad_selectable="{has_news}">
-											<sprite name="icon" pos="22,-18" size="24,24" sprite="ui_game_symbol_add_discord_friend" depth="70" pivot="center" color="[white]"/>
-											<label depth="71" pos="44,-9" justify="left" text_key="windowESC_color_link_1" width="166" height="22" font_size="30" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
-										</button>
+								<grid name="linkButtons" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+									<rect controller="NewsWindow" sources="@modfolder:Links/discord.xml">
+										<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
 									</rect>
-								</rect>
--->
+									<rect controller="NewsWindow" sources="@modfolder:Links/agf_s_mods.xml">
+										<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+									</rect>
+									<rect controller="NewsWindow" sources="@modfolder:Links/donate_to_server.xml">
+										<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+									</rect>
+								</grid>
 							</rect>
 							
+							<!-- OPTIONS -->
 							<rect name="options" pos="-330,-280" width="320" height="570" globalopacity="true" globalopacitymod="1.75">
 								<sprite name="optionsBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="310" height="560" type="sliced"/>
 								<sprite name="optionsBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="320" height="570" type="sliced"/>
-								<label name="options_title" depth="10" pos="160,-40" height="40" width="180" justify="center" pivot="center"  effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_options_title" foregroundlayer="true"/>
+								<label name="options_title" depth="10" pos="160,-40" height="40" width="180" justify="center" pivot="center"  effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_options_title" foregroundlayer="true"/>
 											
 								<rect name="stabilityPublic" depth="200" pos="20,-68" controller="InGameDebugMenu" disableautobackground="true">
 									<togglebutton depth="210" name="toggleDebugShaders" pos="0,0" width="200" height="36" caption_key="xuiDebugMenuShowStability" visible="true"/>
@@ -82,76 +101,89 @@
 
 					</panel>
 					</rect>
-					<rect name="HighContrast" controller="TabSelectorTab" tab_key="High Contrast">
+					<rect name="HighContrast" controller="TabSelectorTab" tab_key="windowESC_mode_highcontrast_tab">
 						<!-- centered-ish; keep your "down a bit" so it doesn't live in the compass lane -->
 						<panel name="core" depth="10" pos="-550,460" disableautobackground="true">
 							<!-- HEADER -->
-							<rect name="header" width="1100" height="126" globalopacity="true" globalopacitymod="1.3">
-								<sprite name="headerBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="1090" height="116" type="sliced"/>
-								<sprite name="headerBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="1100" height="126" type="sliced"/>
-								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="[white]" font_size="48" text_key="windowESC_highcontrast_header_title" foregroundlayer="true"/>
-								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="200,200,200" font_size="26" text_key="windowESC_highcontrast_header_motto" foregroundlayer="true"/>
+							<rect name="header" width="1100" height="126">
+								<sprite name="headerBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="116" type="sliced" globalopacity="false"/>
+								<sprite name="headerBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="126" type="sliced" globalopacity="false"/>
+								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="48" text_key="windowESC_highcontrast_header_title" foregroundlayer="true"/>
+								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="176,176,176" font_size="26" text_key="windowESC_highcontrast_header_motto" foregroundlayer="true"/>
 							</rect>
-	<!--						<rect name="linkDiscord" depth="10" pos="860,-44" width="170" height="36">
-								<rect controller="NewsWindow" sources="@AGF-4Modders-ESCWindowPlus:Config/Generated/News/discord.xml">
-									<button name="btnLink" width="170" height="36" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="[mediumGrey]" hovercolor="50,50,50,255" selectedcolor="74, 33, 150" enabled="{has_link}" gamepad_selectable="{has_news}">
-										<sprite name="icon" pos="22,-18" size="24,24" sprite="ui_game_symbol_add_discord_friend" depth="70" pivot="center" color="[white]"/>
-										<label depth="71" pos="44,-9" justify="left" text_key="windowESC_highcontrast_link_1" width="166" height="22" font_size="30" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
-									</button>
-								</rect>
-							</rect>-->
+
 
 							<!-- BODY -->
-							<rect name="body" pos="0,-136" width="1100" height="714" globalopacity="true" globalopacitymod="1.75">
-								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="1090" height="704" type="sliced"/>
-								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="1100" height="714" type="sliced"/>
+							<rect name="body" pos="0,-136" width="1100" height="714">
+								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="26,26,26" width="1090" height="704" type="sliced" globalopacity="false"/>
+								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="714" type="sliced" globalopacity="false"/>
 								<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">
 									<rect name="tabsHeader">
-										<!--Buttons-->
-										<grid name="tabButtons" pos="325,-20" depth="3" rows="1" cols="3" cell_width="150" cell_height="42" repeat_content="true" arrangement="horizontal">
+										<grid name="tabButtons" pos="32,-20" depth="3" rows="1" cols="8" cell_width="130" cell_height="42" repeat_content="true" arrangement="horizontal">
 											<rect controller="TabSelectorButton">
-												<simplebutton name="tabButton" depth="8" pos="5,0" width="146" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="[lightGrey]" foregroundlayer="false" caption="{tab_name_localized}">
-											
-										</simplebutton>
+												<simplebutton name="tabButton" depth="8" pos="0,0" width="126" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="102,102,102" defaultcolor="24,24,24" selectedsprite="menu_empty3px" selectedcolor="42,42,42" foregroundlayer="false" caption="{tab_name_localized}"/>
 											</rect>
 										</grid>
 									</rect>
 									<rect name="tabsContents">
 										<rect name="page_1_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_1_button">
-											<label name="page_1_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_1_title" foregroundlayer="true"/>
-											<label name="page_1_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_1_body" foregroundlayer="true"/>
+											<label name="page_1_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_1_title" foregroundlayer="true"/>
+											<label name="page_1_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_1_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="page_2_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_2_button">
-											<label name="page_2_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_2_title" foregroundlayer="true"/>
-											<label name="page_2_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_2_body" foregroundlayer="true"/>
+											<label name="page_2_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_2_title" foregroundlayer="true"/>
+											<label name="page_2_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_2_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="page_3_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_3_button">
-											<label name="page_3_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_3_title" foregroundlayer="true"/>
-											<label name="page_3_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_3_body" foregroundlayer="true"/>
+											<label name="page_3_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_3_title" foregroundlayer="true"/>
+											<label name="page_3_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_3_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_4_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_4_button">
+											<label name="page_4_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_4_title" foregroundlayer="true"/>
+											<label name="page_4_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_4_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_5_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_5_button">
+											<label name="page_5_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_5_title" foregroundlayer="true"/>
+											<label name="page_5_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_5_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_6_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_6_button">
+											<label name="page_6_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_6_title" foregroundlayer="true"/>
+											<label name="page_6_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_6_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_7_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_7_button">
+											<label name="page_7_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_7_title" foregroundlayer="true"/>
+											<label name="page_7_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_7_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="page_8_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_8_button">
+											<label name="page_8_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_8_title" foregroundlayer="true"/>
+											<label name="page_8_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_8_body" foregroundlayer="true"/>
 										</rect>
 									</rect>
 								</rect>
 							</rect>
 
-							<rect name="links" pos="0,-860" width="1100" height="60" globalopacity="true" globalopacitymod="1.75">
-								<sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="1090" height="50" type="sliced"/>
-								<sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="1100" height="60" type="sliced"/>
+							<rect name="links" pos="0,-860" width="1100" height="60">
+								<sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="50" type="sliced" globalopacity="false"/>
+								<sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="60" type="sliced" globalopacity="false"/>
 
-<!--								<rect name="linkDiscord" depth="10" pos="860,-44" width="170" height="36">
-									<rect controller="NewsWindow" sources="@AGF-4Modders-ESCWindowPlus:Config/Generated/News/discord.xml">
-										<button name="btnLink" width="170" height="36" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="[mediumGrey]" hovercolor="50,50,50,255" selectedcolor="74, 33, 150" enabled="{has_link}" gamepad_selectable="{has_news}">
-											<sprite name="icon" pos="22,-18" size="24,24" sprite="ui_game_symbol_add_discord_friend" depth="70" pivot="center" color="[white]"/>
-											<label depth="71" pos="44,-9" justify="left" text_key="windowESC_highcontrast_link_1" width="166" height="22" font_size="30" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
-										</button>
-									</rect>
-								</rect>
--->
+
+									<grid name="linkButtons_hc" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+										<rect controller="NewsWindow" sources="@modfolder:Links/discord.xml">
+											<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highcontrast_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+										</rect>
+										<rect controller="NewsWindow" sources="@modfolder:Links/agf_s_mods.xml">
+											<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highcontrast_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+										</rect>
+										<rect controller="NewsWindow" sources="@modfolder:Links/donate_to_server.xml">
+											<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highcontrast_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+										</rect>
+									</grid>
 							</rect>
 
-							<rect name="options" pos="-330,-280" width="320" height="570" globalopacity="true" globalopacitymod="1.75">
-								<sprite name="optionsBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="310" height="560" type="sliced"/>
-								<sprite name="optionsBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="320" height="570" type="sliced"/>
-								<label name="options_title" depth="10" pos="160,-40" height="40" width="180" justify="center" pivot="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_options_title" foregroundlayer="true"/>
+							<rect name="options" pos="-330,-280" width="320" height="570">
+								<sprite name="optionsBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="26,26,26" width="310" height="560" type="sliced" globalopacity="false"/>
+								<sprite name="optionsBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="320" height="570" type="sliced" globalopacity="false"/>
+								<label name="options_title" depth="10" pos="160,-40" height="40" width="180" justify="center" pivot="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_options_title" foregroundlayer="true"/>
 
 								<rect name="stabilityPublic" depth="200" pos="20,-68" controller="InGameDebugMenu" disableautobackground="true">
 									<togglebutton depth="210" name="toggleDebugShaders" pos="0,0" width="200" height="36" caption_key="xuiDebugMenuShowStability" visible="true"/>
@@ -181,12 +213,12 @@
 				<rect name="tabsHeader">
 					<grid name="tabButtons" pos="-620,428" depth="12" rows="2" cols="1" cell_width="170" cell_height="46" repeat_content="true" arrangement="horizontal">
 						<rect controller="TabSelectorButton">
-							<simplebutton name="tabButton" depth="12" pos="0,0" width="170" height="36" font_size="30" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[mediumGrey]" selectedsprite="ui_game_header_fill" selectedcolor="[lightGrey]" foregroundlayer="false" caption="{tab_name_localized}"/>
+							<simplebutton name="tabButton" depth="12" pos="0,0" width="170" height="36" font_size="30" sprite="ui_game_header_fill" bordercolor="102,102,102" defaultcolor="[mediumGrey]" selectedsprite="menu_empty3px" selectedcolor="[lightGrey]" foregroundlayer="false" caption="{tab_name_localized}"/>
 						</rect>
 					</grid>
 				</rect>
 				<rect name="tabsContents">
-					<rect name="Color" controller="TabSelectorTab" tab_key="Color">
+					<rect name="Color" controller="TabSelectorTab" tab_key="windowESC_mode_color_tab">
 						<!-- centered-ish; keep your "down a bit" so it doesn't live in the compass lane -->
 						<rect name="joining" pos="630,120" width="210" height="320" >
 								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="200" height="310" type="sliced"/>
@@ -197,11 +229,11 @@
 							<rect name="header" width="1100" height="126" globalopacity="false" >
 								<sprite name="headerBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="116" type="sliced"/>
 								<sprite name="headerBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="126" type="sliced"/>
-								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141, 181, 128" font_size="48" text_key="windowESC_color_header_title" foregroundlayer="true"/>
-								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221, 205, 250" font_size="26" text_key="windowESC_color_header_motto" foregroundlayer="true"/>
+								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="48" text_key="windowESC_color_header_title" foregroundlayer="true"/>
+								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="26" text_key="windowESC_color_header_motto" foregroundlayer="true"/>
 							</rect>
 <!--							<rect name="linkDiscord" depth="10" pos="860,-44" width="170" height="36">
-								<rect controller="NewsWindow" sources="@AGF-4Modders-ESCWindowPlus:Config/Generated/News/discord.xml">
+								<rect controller="NewsWindow" sources="@modfolder:Links/discord.xml">
 									<button name="btnLink" width="170" height="36" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="[darkGrey]" hovercolor="50,50,50,255" selectedcolor="74, 33, 150" enabled="{has_link}" gamepad_selectable="{has_news}">
 										<sprite name="icon" pos="22,-18" size="24,24" sprite="ui_game_symbol_add_discord_friend" depth="70" pivot="center" color="[white]"/>
 										<label depth="71" pos="44,-9" justify="left" text_key="windowESC_color_link_1" width="166" height="22" font_size="30" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
@@ -217,51 +249,68 @@
 								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="804" type="sliced"/>
 								<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">
 									<rect name="tabsHeader">
-										<!--Buttons-->
-										<grid name="tabButtons" pos="325,-20" depth="3" rows="1" cols="3" cell_width="150" cell_height="42" repeat_content="true" arrangement="horizontal">
+										<grid name="tabButtons" pos="32,-20" depth="3" rows="1" cols="8" cell_width="130" cell_height="42" repeat_content="true" arrangement="horizontal">
 											<rect controller="TabSelectorButton">
-												<simplebutton name="tabButton" depth="8" pos="5,0" width="146" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="74, 33, 150" foregroundlayer="false" caption="{tab_name_localized}">
-											
-												</simplebutton>
+												<simplebutton name="tabButton" depth="8" pos="0,0" width="126" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="0,0,0" defaultcolor="32,32,32" selectedsprite="menu_empty3px" selectedcolor="74,33,150" foregroundlayer="false" caption="{tab_name_localized}"/>
 											</rect>
 										</grid>
 									</rect>
 									<rect name="tabsContents">
 										<rect name="join_page_1" controller="TabSelectorTab" tab_key="windowESC_color_page_1_button">
-											<label name="join_page_1_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_1_title" foregroundlayer="true"/>
-											<label name="join_page_1_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_1_body" foregroundlayer="true"/>
+											<label name="join_page_1_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_1_title" foregroundlayer="true"/>
+											<label name="join_page_1_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_1_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="join_page_2" controller="TabSelectorTab" tab_key="windowESC_color_page_2_button">
-											<label name="join_page_2_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_2_title" foregroundlayer="true"/>
-											<label name="join_page_2_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_2_body" foregroundlayer="true"/>
+											<label name="join_page_2_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_2_title" foregroundlayer="true"/>
+											<label name="join_page_2_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_2_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="join_page_3" controller="TabSelectorTab" tab_key="windowESC_color_page_3_button">
-											<label name="join_page_3_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_color_page_3_title" foregroundlayer="true"/>
-											<label name="join_page_3_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_color_page_3_body" foregroundlayer="true"/>
+											<label name="join_page_3_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_3_title" foregroundlayer="true"/>
+											<label name="join_page_3_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_3_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_4" controller="TabSelectorTab" tab_key="windowESC_color_page_4_button">
+											<label name="join_page_4_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_4_title" foregroundlayer="true"/>
+											<label name="join_page_4_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_4_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_5" controller="TabSelectorTab" tab_key="windowESC_color_page_5_button">
+											<label name="join_page_5_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_5_title" foregroundlayer="true"/>
+											<label name="join_page_5_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_5_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_6" controller="TabSelectorTab" tab_key="windowESC_color_page_6_button">
+											<label name="join_page_6_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_6_title" foregroundlayer="true"/>
+											<label name="join_page_6_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_6_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_7" controller="TabSelectorTab" tab_key="windowESC_color_page_7_button">
+											<label name="join_page_7_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_7_title" foregroundlayer="true"/>
+											<label name="join_page_7_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_7_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_8" controller="TabSelectorTab" tab_key="windowESC_color_page_8_button">
+											<label name="join_page_8_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="141,181,128" font_size="36" text_key="windowESC_color_page_8_title" foregroundlayer="true"/>
+											<label name="join_page_8_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="221,205,250" font_size="28" text_key="windowESC_color_page_8_body" foregroundlayer="true"/>
 										</rect>
 									</rect>
 								</rect>
 							</rect>
 						</panel>
 					</rect>
-					<rect name="HighContrast" controller="TabSelectorTab" tab_key="High Contrast">
+					<rect name="HighContrast" controller="TabSelectorTab" tab_key="windowESC_mode_highcontrast_tab">
 					
 						<rect name="joining" pos="630,120" width="210" height="320" >
-								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="200" height="310" type="sliced"/>
-								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="210" height="320" type="sliced"/>
+								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="26,26,26" width="200" height="310" type="sliced"/>
+								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="210" height="320" type="sliced"/>
 						</rect>	
 						<!-- centered-ish; keep your "down a bit" so it doesn't live in the compass lane -->
 						<panel name="core" depth="10" pos="-550,450" disableautobackground="true">
 							<!-- HEADER -->
-							<rect name="header" width="1100" height="126" globalopacity="false" >
-								<sprite name="headerBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="1090" height="116" type="sliced"/>
-								<sprite name="headerBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="1100" height="126" type="sliced"/>
-								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="[white]" font_size="48" text_key="windowESC_highcontrast_header_title" foregroundlayer="true"/>
-								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="200,200,200" font_size="26" text_key="windowESC_highcontrast_header_motto" foregroundlayer="true"/>
+							<rect name="header" width="1100" height="126" >
+								<sprite name="headerBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="116" type="sliced" globalopacity="false"/>
+								<sprite name="headerBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="126" type="sliced" globalopacity="false"/>
+								<label name="headerTitle" depth="10" pos="0,-24" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="48" text_key="windowESC_highcontrast_header_title" foregroundlayer="true"/>
+								<label name="headerMotto" depth="10" pos="0,-78" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="176,176,176" font_size="26" text_key="windowESC_highcontrast_header_motto" foregroundlayer="true"/>
 							</rect>
 							
 <!--							<rect name="linkDiscord" depth="10" pos="860,-44" width="170" height="36">
-								<rect controller="NewsWindow" sources="@AGF-4Modders-ESCWindowPlus:Config/Generated/News/discord.xml">
+								<rect controller="NewsWindow" sources="@modfolder:Links/discord.xml">
 									<button name="btnLink" width="170" height="36" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="[mediumGrey]" hovercolor="50,50,50,255" selectedcolor="74, 33, 150" enabled="{has_link}" gamepad_selectable="{has_news}">
 										<sprite name="icon" pos="22,-18" size="24,24" sprite="ui_game_symbol_add_discord_friend" depth="70" pivot="center" color="[white]"/>
 										<label depth="71" pos="44,-9" justify="left" text_key="windowESC_highcontrast_link_1" width="166" height="22" font_size="30" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
@@ -272,32 +321,49 @@
 								<togglebutton depth="210" name="toggleDebugShaders" pos="0,0" width="170" height="36" caption_key="xuiDebugMenuShowStability" visible="true"/>
 							</rect>
 							<!-- BODY -->
-							<rect name="body" pos="0,-136" width="1100" height="804" globalopacity="false" >
-								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="[darkGrey]" width="1090" height="794" type="sliced"/>
-								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="[black]" width="1100" height="804" type="sliced"/>
+							<rect name="body" pos="0,-136" width="1100" height="804" >
+								<sprite name="bodyBg" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="26,26,26" width="1090" height="794" type="sliced" globalopacity="false"/>
+								<sprite name="bodyBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="804" type="sliced" globalopacity="false"/>
 								<rect name="tabs" controller="TabSelector" select_tab_contents_on_open="true">
 									<rect name="tabsHeader">
-										<!--Buttons-->
-										<grid name="tabButtons" pos="325,-20" depth="3" rows="1" cols="3" cell_width="150" cell_height="42" repeat_content="true" arrangement="horizontal">
+										<grid name="tabButtons" pos="32,-20" depth="3" rows="1" cols="8" cell_width="130" cell_height="42" repeat_content="true" arrangement="horizontal">
 											<rect controller="TabSelectorButton">
-												<simplebutton name="tabButton" depth="8" pos="5,0" width="146" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="[black]" defaultcolor="[darkestGrey]" selectedsprite="ui_game_header_fill" selectedcolor="[lightGrey]" foregroundlayer="false" caption="{tab_name_localized}">
-											
-										</simplebutton>
+												<simplebutton name="tabButton" depth="8" pos="0,0" width="126" height="42" font_size="20" sprite="ui_game_header_fill" bordercolor="102,102,102" defaultcolor="24,24,24" selectedsprite="menu_empty3px" selectedcolor="42,42,42" foregroundlayer="false" caption="{tab_name_localized}"/>
 											</rect>
 										</grid>
 									</rect>
 									<rect name="tabsContents">
 										<rect name="join_page_1_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_1_button">
-											<label name="join_page_1_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_1_title" foregroundlayer="true"/>
-											<label name="join_page_1_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_1_body" foregroundlayer="true"/>
+											<label name="join_page_1_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_1_title" foregroundlayer="true"/>
+											<label name="join_page_1_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_1_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="join_page_2_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_2_button">
-											<label name="join_page_2_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_2_title" foregroundlayer="true"/>
-											<label name="join_page_2_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_2_body" foregroundlayer="true"/>
+											<label name="join_page_2_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_2_title" foregroundlayer="true"/>
+											<label name="join_page_2_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_2_body" foregroundlayer="true"/>
 										</rect>
 										<rect name="join_page_3_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_3_button">
-											<label name="join_page_3_hc_title" depth="10" pos="0,-102" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="36" text_key="windowESC_highcontrast_page_3_title" foregroundlayer="true"/>
-											<label name="join_page_3_hc_body" depth="10" pos="20,-164" width="1060" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="" font_size="28" text_key="windowESC_highcontrast_page_3_body" foregroundlayer="true"/>
+											<label name="join_page_3_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_3_title" foregroundlayer="true"/>
+											<label name="join_page_3_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_3_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_4_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_4_button">
+											<label name="join_page_4_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_4_title" foregroundlayer="true"/>
+											<label name="join_page_4_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_4_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_5_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_5_button">
+											<label name="join_page_5_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_5_title" foregroundlayer="true"/>
+											<label name="join_page_5_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_5_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_6_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_6_button">
+											<label name="join_page_6_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_6_title" foregroundlayer="true"/>
+											<label name="join_page_6_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_6_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_7_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_7_button">
+											<label name="join_page_7_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_7_title" foregroundlayer="true"/>
+											<label name="join_page_7_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_7_body" foregroundlayer="true"/>
+										</rect>
+										<rect name="join_page_8_hc" controller="TabSelectorTab" tab_key="windowESC_highcontrast_page_8_button">
+											<label name="join_page_8_hc_title" depth="10" pos="0,-82" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="210,178,108" font_size="36" text_key="windowESC_highcontrast_page_8_title" foregroundlayer="true"/>
+											<label name="join_page_8_hc_body" depth="10" pos="26,-144" width="1048" height="544" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="220,220,220" font_size="28" text_key="windowESC_highcontrast_page_8_body" foregroundlayer="true"/>
 										</rect>
 									</rect>
 								</rect>
@@ -316,15 +382,15 @@
 			<panel name="core" depth="10" pos="-647,425" disableautobackground="true">
 				<!{1}** HEADER **{1}>
 				<rect name="header" width="1240" height="96">
-					<sprite name="headerBackground" depth="1" color="20,18,18" width="1240" height="96" type="sliced" globalopacity="true" globalopacitymod="1.2"/>
-					<sprite name="headerBorder" depth="2" sprite="menu_empty2px" color="194,124,14,110" width="1240" height="96" type="sliced" fillcenter="false"/>
-					<label name="headerTitle" depth="10" pos="0,-18" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" font_size="48" text_key="windowESC_color_header_title"/>
-					<label name="headerMotto" depth="10" pos="0,-60" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" font_size="26" text_key="windowESC_color_header_motto"/>
+					<sprite name="headerBackground" depth="1" color="20,20,20" width="1240" height="96" type="sliced" globalopacity="true" globalopacitymod="1.2"/>
+					<sprite name="headerBorder" depth="2" sprite="menu_empty2px" color="102,102,102" width="1240" height="96" type="sliced" fillcenter="false"/>
+					<label name="headerTitle" depth="10" pos="0,-18" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" font_size="48" text_key="windowESC_color_header_title" color="141,181,128"/>
+					<label name="headerMotto" depth="10" pos="0,-60" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" font_size="26" text_key="windowESC_color_header_motto" color="221,205,250"/>
 				</rect>
 				<!{1}** BODY **{1}>
 				<rect name="body" pos="0,-96" width="1240" height="804">
-					<sprite name="bodyBg" depth="1" color="20,18,18" width="1240" height="804" type="sliced" globalopacity="true" globalopacitymod="1.75"/>
-					<sprite name="bodyBorder" depth="2" sprite="menu_empty3px" color="194,124,14,90" width="1240" height="804" type="sliced" fillcenter="false"/>
+					<sprite name="bodyBg" depth="1" color="26,26,26" width="1240" height="804" type="sliced" globalopacity="true" globalopacitymod="1.75"/>
+					<sprite name="bodyBorder" depth="2" sprite="menu_empty3px" color="102,102,102" width="1240" height="804" type="sliced" fillcenter="false"/>
 					<!{1}** MAIN TAB SELECTOR (SINGLE HEADER CONTAINER FOR ALL 16 BUTTONS) **{1}>
 					<rect name="sections" controller="TabSelector" depth="20" pos="0,0" width="1240" height="736" select_tab_contents_on_open="true">
 						<!{1}** HEADER CONTAINER HOLDING BOTH BUTTON STRIPS **{1}>
@@ -524,7 +590,7 @@
 						<sprite name="gfBorder" depth="2" sprite="menu_empty2px" color="194,124,14,80" width="1220" height="52" type="sliced" fillcenter="false"/>
 						<!{1}** Discord **{1}>
 						<rect name="linkDiscord" pos="110,-8" width="220" height="36">
-							<rect controller="NewsWindow" sources="@AGF-4Modders-ESCWindowPlus:Config/Generated/News/discord.xml">
+							<rect controller="NewsWindow" sources="@modfolder:Links/discord.xml">
 								<button name="btnLink" width="220" height="36" sprite="menu_empty3px" bordercolor="[black_half_alpha]" defaultcolor="[darkGrey]" hovercolor="88,101,242,255" selectedcolor="[white]" enabled="{has_link}" gamepad_selectable="{has_news}">
 									<sprite name="icon" pos="22,-18" size="24,24" sprite="ui_game_symbol_add_discord_friend" depth="70" pivot="center" color="[white]"/>
 											<label depth="71" pos="44,-9" justify="left" text_key="windowESC_color_link_1" width="166" height="22" font_size="30" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>

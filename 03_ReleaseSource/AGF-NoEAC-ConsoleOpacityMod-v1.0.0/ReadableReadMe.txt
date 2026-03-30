@@ -1,6 +1,6 @@
 AGF-NoEAC-ConsoleOpacityMod
 7d2d Version 2  
-Version: 1.0.0  
+Version: 1.0.0-BETA  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip
 
  
@@ -72,12 +72,12 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-NoEAC-ConsoleOpacityMod" is MISSINGDATA to install on an existing game.
-- "AGF-NoEAC-ConsoleOpacityMod" is MISSINGDATA to remove from an existing game.
-- Unique Details: MISSINGDATA
+- EAC Friendly: No
+- Server Side: Unknown
+- Client Required for Multiplayer: Unknown
+- "AGF-NoEAC-ConsoleOpacityMod" is SAFE to install on an existing game.
+- "AGF-NoEAC-ConsoleOpacityMod" is Unknown to remove from an existing game.
+- Unique Details: None
 
 ========================================
 

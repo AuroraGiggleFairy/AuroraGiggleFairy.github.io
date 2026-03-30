@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*March 28, 2026, 8:43 PM EST*
+*March 29, 2026, 10:54 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -346,7 +346,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.2.1)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.3.0)**
 
 > - *All AGF mods in one convenient download.*
 > - *Direct set-up is AGF preference and only server side mods*
@@ -356,7 +356,7 @@
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v1.2.1 - March 28, 2026 8:39pm<ul><li>Change summary: +0 new, ~2 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip">AGF-NoEAC-EnhancedPatch</a> (v3.1.0 -&gt; v3.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.0.0 -&gt; v1.1.0)</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip">AGF-NoEAC-ConsoleOpacityMod</a> (renamed from AGF-4Modders-ConsoleOpacityMod, v1.0.0)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.2.0 - March 26, 2026 7:55pm<ul><li>Change summary: +1 new, ~3 updated, =3 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip">AGF-NoEAC-EnhancedPatch</a> (v3.0.0 -&gt; v3.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ExpandedInteractionPrompts.zip">AGF-NoEAC-ExpandedInteractionPrompts</a> (v1.0.1 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">AGF-NoEAC-OpenAllButton</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-10IngredientSlots.zip">AGF-4Modders-10IngredientSlots</a> (renamed from AGF-HUDPluszOther-10IngredientSlots, v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-ConfigureWindowEnteringDuration.zip">AGF-4Modders-ConfigureWindowEnteringDuration</a> (renamed from AGF-NoEAC-ConfigureWindowEnteringDuration, v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-ConsoleOpacityMod.zip">AGF-4Modders-ConsoleOpacityMod</a> (renamed from AGF-NoEAC-ConsoleOpacityMod, v1.0.0)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.1.0 - March 26, 2026 4:17am<ul><li>Change summary: +1 new, ~7 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">AGF-BackpackPlus-060Slots</a> (v3.2.1 -&gt; v3.2.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip">AGF-BackpackPlus-072Slots</a> (v3.2.1 -&gt; v3.2.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip">AGF-BackpackPlus-084Slots</a> (v3.2.1 -&gt; v3.2.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v5.4.3 -&gt; v5.4.4)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-10IngredientSlots.zip">AGF-HUDPluszOther-10IngredientSlots</a> (v1.0.0 -&gt; v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SortingBox.zip">AGF-NoEAC-SortingBox</a> (v1.0.4 -&gt; v1.0.5)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">zzzAGF-Special-Compatibilities</a> (v4.0.2 -&gt; v4.0.3)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v1.3.0 - March 29, 2026 10:25pm<ul><li>Change summary: +3 new, ~0 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip">AGF-4Modders-SkillPointCap</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">AGF-4Modders-Fix4DestroyBiomeBadge</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip">AGF-4Modders-Fix4RemoveItems</a> (new: v1.0.0-BETA)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip">AGF-4Modders-CustomWindowEnteringDuration</a> (renamed from AGF-4Modders-ConfigureWindowEnteringDuration, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.2.1 - March 28, 2026 8:39pm<ul><li>Change summary: +0 new, ~2 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip">AGF-NoEAC-EnhancedPatch</a> (v3.1.0 -&gt; v3.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.0.0-BETA -&gt; v1.1.0-BETA)</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip">AGF-NoEAC-ConsoleOpacityMod</a> (renamed from AGF-4Modders-ConsoleOpacityMod, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.2.0 - March 26, 2026 7:55pm<ul><li>Change summary: +1 new, ~3 updated, =3 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (new: v1.0.0-BETA)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip">AGF-NoEAC-EnhancedPatch</a> (v3.0.0 -&gt; v3.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ExpandedInteractionPrompts.zip">AGF-NoEAC-ExpandedInteractionPrompts</a> (v1.0.1 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">AGF-NoEAC-OpenAllButton</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-10IngredientSlots.zip">AGF-4Modders-10IngredientSlots</a> (renamed from AGF-HUDPluszOther-10IngredientSlots, v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-ConfigureWindowEnteringDuration.zip">AGF-4Modders-ConfigureWindowEnteringDuration</a> (renamed from AGF-NoEAC-ConfigureWindowEnteringDuration, v1.0.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-ConsoleOpacityMod.zip">AGF-4Modders-ConsoleOpacityMod</a> (renamed from AGF-NoEAC-ConsoleOpacityMod, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -1215,7 +1215,7 @@
 
 *Mods that require EAC to be off or are client-side only.*
 
-> ### **AGF-NoEAC-ConsoleOpacityMod** *-v1.0.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip)
+> ### **AGF-NoEAC-ConsoleOpacityMod** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip)
 > *In the configs folder, you can change F1 opacity..*
 > 
 
@@ -1276,7 +1276,7 @@
 
 ---
 
-> ### **AGF-NoEAC-LockableWorkstations** *-v1.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
+> ### **AGF-NoEAC-LockableWorkstations** *-v1.1.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
 > *Workstations and collectors can now be locked or unlocked to control access.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1298,7 +1298,7 @@
 
 ---
 
-> ### **AGF-NoEAC-ScreamerAlert** *-v1.1.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip)
+> ### **AGF-NoEAC-ScreamerAlert** *-v1.1.1-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip)
 > *A visual Screamer Alert appears when the player is near a screamer or its horde.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1356,6 +1356,50 @@
 > <details> <summary>*Show detailed features*</summary>
 >
 > <ul><li>Provides an XML file that allows modders to configure the duration of the Location Pop-Up window as needed.</li></ul>
+>
+> </details>
+> 
+
+---
+
+> ### **AGF-4Modders-CustomWindowEnteringDuration** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip)
+> *Sets how long the Window Entering pop-up stays on screen.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Set how long the Window Entering pop-up stays on screen in the config file.</li></ul>
+>
+> </details>
+> 
+
+---
+
+> ### **AGF-4Modders-Fix4DestroyBiomeBadge** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip)
+> *DestroyBiomeBadge no longer destroys clothing.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Ensures the DestroyBiomeBadge game event only destroys biome equipment, not clothing.</li></ul>
+>
+> </details>
+> 
+
+---
+
+> ### **AGF-4Modders-Fix4RemoveItems** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip)
+> *Allows repeated use of the RemoveItems game event in multiplayer.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Allows the RemoveItems game event to be used repeatedly in multiplayer.</li></ul>
+>
+> </details>
+> 
+
+---
+
+> ### **AGF-4Modders-SkillPointCap** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip)
+> *Allows making a cap for when leveling up grants skill points.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Adds a dedicated progression.xml attribute that lets you set a separate level cap for earning skill points.</li></ul>
 >
 > </details>
 > 

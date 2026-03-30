@@ -2,7 +2,7 @@
 
 <xml>
 	<Name value="AGF-NoEAC-ScreamerAlert" />
-	<DisplayName value="AGF - Screamer Alert" />
+	<DisplayName value="BETA - AGF Screamer Alert" />
 	<Version value="1.1.1" />
 	<Description value="A visual Screamer Alert appears when the player is near a screamer or its horde." />
 	<Author value="AuroraGiggleFairy (AGF)" /> 

@@ -1,20 +1,24 @@
-Generated: 2026-03-28T03:13:30.563085
+Generated: 2026-03-29T03:23:40.084010
 Source: ESCMenu.source.json
-Mod Folder Token: @AGF-4Modders-ESCWindowPlus-v0.0.1:
-Localization: Config\Generated\Localization.ESC.Generated.txt
+Mod Folder Token: @modfolder:
+Localization: Config\Localization.txt
 XUi Tabs Snippet: Config\Generated\XUi.Tabs.Generated.xml
+XUi Links Snippet: Config\Generated\XUi.Links.Generated.xml
 News Files:
-- Config\Generated\News\discord.xml
-- Config\Generated\News\agf_s_mods.xml
+- Links\discord.xml
+- Links\agf_s_mods.xml
+- Links\donate_to_server.xml
 
 NewsWindow Sources (copy/paste):
-- discord => @AGF-4Modders-ESCWindowPlus-v0.0.1:Config/Generated/News/discord.xml
-- agf_s_mods => @AGF-4Modders-ESCWindowPlus-v0.0.1:Config/Generated/News/agf_s_mods.xml
+- discord => @modfolder:Links/discord.xml
+- agf_s_mods => @modfolder:Links/agf_s_mods.xml
+- donate_to_server => @modfolder:Links/donate_to_server.xml
 
 Localization Merge:
 - Not run (use --merge-localization to apply).
 
 Next Step:
 - If you want dynamic tab count/layout, paste XUi.Tabs.Generated.xml snippets into windows.xml tab sections.
+- If you want dynamic link count/centering (1-5), paste XUi.Links.Generated.xml grids into windows.xml links sections.
 - Point NewsWindow sources in XUi to the mapping lines above.
-- Optionally run with --merge-localization to update your main localization file.
+- Main localization merge runs by default (use --no-merge-localization to skip).

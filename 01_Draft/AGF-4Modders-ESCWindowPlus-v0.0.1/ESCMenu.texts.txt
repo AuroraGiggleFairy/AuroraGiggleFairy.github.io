@@ -1,16 +1,47 @@
+// ===============================
+// START HERE (SIMPLE EDIT GUIDE)
+// ===============================
+// 1) Colors section: edit values after ':' only.
+// 2) Headers section: edit values after ':' only.
+// 3) Links section: one link per line: id | label | full_url
+// 4) Pages section: edit title on '## id: title' and edit body between
+//    <--Body Starts below this line--> and <--Body Ends here-->
+// 5) Styling in body text:
+//    - Bold color: **text**
+//    - Highlight color: ==text==
+// 6) After editing, run: SCRIPT-GenerateESCMenu.py
+
 ===============================================
 COLOR SCHEME
 ===============================================
 # Colors
+// Panel Backgrounds
 headerBackgroundColor: 95,89,128
 pageBackgroundColor: 95,89,128
+linkBackgroundColor: 95,89,128
+optionsBackgroundColor: 95,89,128
+
+// Header Text Colors
 headerTitleColor: 141,181,128
 headerMottoColor: 221,205,250
-tabButtonSelectedColor: 74,33,150
+
+// Page tab button colors (tab row at top of page content)
+pageTabButtonBackgroundColor: 32,32,32
+pageTabButtonSelectedColor: 74,33,150
+pageTabButtonTextColor: 255,255,255
+
+// Page title and body text colors
 pageTitleColor: 141,181,128
 pageBodyColor: 221,205,250
+
+// Inline emphasis colors used in page body (**bold / ==highlight==)
 textBoldingColor: 141,181,128
 textHighlightColor: 255,255,255
+
+// Link button colors (buttons inside LINKS box)
+linkButtonBackgroundColor: 64,64,64
+linkButtonTextColor: 255,255,255
+linkButtonHoverColor: 50,50,50
 
 
 ===============================================
@@ -32,6 +63,7 @@ LINKS
 -----------------------------------------------
 1 | AGF's Discord | https://discord.gg/Vm5eyW6N4r
 2 | AGF's Mods | https://auroragigglefairy.github.io/
+3 | Donate to Server | https://pingperfect.com/index.php?m=public_pay&hash_id=MWxlNPA7zkP6
 
 
 ===============================================
@@ -48,7 +80,7 @@ PAGE 1
 -----------------------------------------------
 @titleFontSize: 36
 @bodyFontSize: 28
-## 1: Welcome!!!
+## 1: Welcome
 // Page title is edited on the ## line above.
 // Below is the body of the page.
 <--Body Starts below this line-->

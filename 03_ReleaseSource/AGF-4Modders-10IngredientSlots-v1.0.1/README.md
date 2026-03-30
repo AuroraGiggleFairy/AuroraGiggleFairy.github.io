@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-4Modders-10IngredientSlots" is MISSINGDATA to install on an existing game.
-- "AGF-4Modders-10IngredientSlots" is MISSINGDATA to remove from an existing game.
-- Unique Details: MISSINGDATA
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-4Modders-10IngredientSlots" is SAFE to install on an existing game.
+- "AGF-4Modders-10IngredientSlots" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ---
 ---
