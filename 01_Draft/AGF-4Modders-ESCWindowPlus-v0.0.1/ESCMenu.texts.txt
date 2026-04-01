@@ -1,15 +1,30 @@
-// ===============================
+﻿// ===============================
 // START HERE (SIMPLE EDIT GUIDE)
 // ===============================
 // 1) Colors section: edit values after ':' only.
 // 2) Headers section: edit values after ':' only.
-// 3) Links section: one link per line: id | label | full_url
-// 4) Pages section: edit title on '## id: title' and edit body between
-//    <--Body Starts below this line--> and <--Body Ends here-->
+//    - showOptionsSection: true|false (show/hide OPTIONS panel)
+// 2b) Toggles section: choose what sections are enabled/visible.
+// 3) Links section: one link per line: id | label | target_url
+//    - target_url is where the player ends up when opening the link
+// 4) Pages section: edit title on 'titleLabel:' and edit body between
+//    <!-- Body Column 1 starts below this line --> and <!-- Body 1 ends -->
+// 4b) Optional body layout controls per page:
+//     bodyAlign/body2Align/body3Align: left|center|right
+//     bodyBoxCentered/body2BoxCentered/body3BoxCentered: true|false
 // 5) Styling in body text:
 //    - Bold color: **text**
 //    - Highlight color: ==text==
 // 6) After editing, run: SCRIPT-GenerateESCMenu.py
+
+===============================================
+FEATURE TOGGLES
+===============================================
+# Toggles
+showOptionsSection: true
+showServerJoinSection: true
+showAdminVersion: true
+
 
 ===============================================
 COLOR SCHEME
@@ -56,34 +71,57 @@ headerMotto: An AuroraGiggleFairy 7d2d Server
 LINKS
 ===============================================
 # Links
+@enabledLinks: 3
+@linksClientOrServer: client
+@linksXMLWebBaseUrl: 
 
-// You can have up to 5 links with current UI settings.
-// The format example is: 1 | LABEL | Full Link
+// Max Links is 5, beyond that it will be ignored.
+// linksClientOrServer options:
+// - client: uses @modfolder:Links/<id>.xml sources
+// - server: auto-builds from @linksXMLWebBaseUrl + /<id>.xml
+// The format example is: 1 | LABEL | target_url
 
 -----------------------------------------------
 1 | AGF's Discord | https://discord.gg/Vm5eyW6N4r
 2 | AGF's Mods | https://auroragigglefairy.github.io/
 3 | Donate to Server | https://pingperfect.com/index.php?m=public_pay&hash_id=MWxlNPA7zkP6
+4 |  | 
+5 |  | 
 
 
 ===============================================
 PAGES
 ===============================================
 # Pages
+@enabledPages: 8
 
+// Max Pages is 8. Beyond 8, it will be ignored.
 // Body text color uses pageBodyColor from the Colors section above.
 // Bold color: wrap text with ** on both sides. Example: **Important rule**
 // Highlight color: wrap text with == on both sides. Example: ==Read this==
+// Preferred page fields: titleFontSize, bodyFontSize, titleLabel, bodyColumns (1-3).
+// Alignment fields per page:
+//   bodyAlign, body2Align, body3Align: left|center|right
+//   bodyBoxCentered, body2BoxCentered, body3BoxCentered: true|false
+// Body sections use comment markers: Body Column X starts... / Body X ends.
+// Optional URL sources: bodySourceUrl / body2SourceUrl / body3SourceUrl.
 
 -----------------------------------------------
 PAGE 1
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 1: Welcome
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Welcome!!!
+bodyColumns: 1
+autoSplitColumns: false
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 My name is ==AuroraGiggleFairy== and welcome to my server!
 
 I created this server to have a fun space to play 7d2d and expand my abilities as a modder:
@@ -104,17 +142,27 @@ Again, welcome to my **Twilight Realm**!
 Happy modding... erm... HUNTING... and Enjoy!
 
 - ==AGF==
-<--Body Ends here-->
-
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 -----------------------------------------------
 PAGE 2
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 2: Rules
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Rules
+bodyColumns: 1
+autoSplitColumns: false
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **1.** PvE ONLY, which means please respect people's builds, homes, and things.
 
 **2.** You ARE allowed to take over a POI as a base.
@@ -128,17 +176,28 @@ PAGE 2
 **6.** RESIST giving things away for free! Make outsiders pay!!!
 
 **7.** Any issues, please report to ==AuroraGiggleFairy== directly in discord. ==(Discord Link Above)==
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 -----------------------------------------------
 PAGE 3
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 3: Etiquette
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Etiquette
+bodyColumns: 1
+autoSplitColumns: false
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **VISITING A TRADER?**
  - PLEASE keep the trader gates closed!!! Help keep trader areas safe.
 
@@ -153,34 +212,56 @@ PAGE 3
 
 **FINISHED BLOODMOON WITH OTHERS?**
  - Unless player states otherwise, try sharing the loot bags evenly.
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 -----------------------------------------------
 PAGE 4
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 4: Commands
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Commands
+bodyColumns: 1
+autoSplitColumns: false
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **/report** an optional way to report a bug to AGF.
 **/loc** to share your coordinates in chat.
 
 Want your name in a different color? Let AGF know!
 
 More will become available soon.
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 -----------------------------------------------
 PAGE 5
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 5: Game Settings
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Game Settings
+bodyColumns: 2
+autoSplitColumns: true
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **BASICS:**
 Max Players at Once = 30
 Game World = Zenasa Valley
@@ -220,17 +301,28 @@ Player Block Damage = 100%
 AI Block Damage = 100%
 AI Blood Moon Block Damage = 100%
 Loot Abundance = 100%
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 -----------------------------------------------
 PAGE 6
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 6: Changes Log
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Changes Log
+bodyColumns: 1
+autoSplitColumns: false
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **02/08/2026**
 - Fixed the mod issue on the Thompson T3.
 - Other fixes.
@@ -241,17 +333,28 @@ PAGE 6
 **02/03/2026**
 - Added Server UI windows.
 - Foods from mod now stack to 50 instead of 25.
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 -----------------------------------------------
 PAGE 7
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 7: Things to Know
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Things to Know
+bodyColumns: 1
+autoSplitColumns: false
+bodyAlign: left
+bodyBoxCentered: false
+body2Align: left
+body2BoxCentered: false
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **STABILITY LENS**
 - You can see the stability of your builds by checking =='Show Stability'==.
 - The toggle button is on this page to the right of the title.
@@ -274,17 +377,28 @@ PAGE 7
 - Trees, Crops, Farmplots, and Dew Collectors have a ==x5== and ==x25== version. (Not yet for the Apiary.)
 - Trader selling prices are REALLY high!
 - Use the ==Foundation Block== to make a block flushed to terrain.
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 -----------------------------------------------
 PAGE 8
 -----------------------------------------------
-@titleFontSize: 36
-@bodyFontSize: 28
-## 8: Summarized Mod List
-// Page title is edited on the ## line above.
-// Below is the body of the page.
-<--Body Starts below this line-->
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Summarized Mod List
+bodyColumns: 2
+autoSplitColumns: true
+bodyAlign: left
+bodyBoxCentered: true
+body2Align: left
+body2BoxCentered: true
+body3Align: left
+body3BoxCentered: false
+
+<!-- Body Column 1 starts below this line -->
 **AGF -** Giggle Pack
 **Alter -** Override Sounds
 **Area88 -** Honking Opens Gates/Doors
@@ -301,7 +415,6 @@ PAGE 8
 **GrayedSilence -** Cook Book
 **Izayo -** Weapon Mod Pack
 **Little Red Sonja -** Zombie Pack
-
 **MPLogue -** Better Biomes
 **MPLogue -** Urban Decay
 **OCB -** Server Tools
@@ -318,8 +431,15 @@ PAGE 8
 **Wookie -** Vehicle Cruise Control
 **Wookie -** Vehicles Trigger Pressure Plates
 **Wookie -** Workstation Material Timer
-<--Body Ends here-->
+<!-- Body Column 1 ends -->
+<!-- Body Column 2, if Enabled, starts below this line -->
+<!-- Body Column 2 ends -->
+<!-- Body Column 3, if Enabled, starts below this line -->
+<!-- Body Column 3 ends -->
 
 <!-- Optional online source for a page body:
 @bodySourceUrl: https://example.com/esc/rules.txt
 -->
+
+
+

@@ -1,5 +1,11 @@
-Generated: 2026-03-29T03:23:40.084010
+Generated: 2026-04-01T03:37:06.287438
 Source: ESCMenu.source.json
+Link Source Mode: client
+Links Web XML Base URL: (none)
+Show Options Section: true
+Show Admin Version: true
+Show Links Section: true
+Show Server Join Section: true
 Mod Folder Token: @modfolder:
 Localization: Config\Localization.txt
 XUi Tabs Snippet: Config\Generated\XUi.Tabs.Generated.xml
@@ -10,12 +16,15 @@ News Files:
 - Links\donate_to_server.xml
 
 NewsWindow Sources (copy/paste):
-- discord => @modfolder:Links/discord.xml
 - agf_s_mods => @modfolder:Links/agf_s_mods.xml
+- discord => @modfolder:Links/discord.xml
 - donate_to_server => @modfolder:Links/donate_to_server.xml
 
 Localization Merge:
-- Not run (use --merge-localization to apply).
+- Target: Config\Localization.txt
+- Updated Keys: 0
+- Added Keys: 0
+- Removed Obsolete Generated Keys: 0
 
 Next Step:
 - If you want dynamic tab count/layout, paste XUi.Tabs.Generated.xml snippets into windows.xml tab sections.

@@ -1,16 +1,14 @@
-#   GigglePack v1.3.0 - *March 29, 2026 10:25pm*
+#   GigglePack v1.3.1 - *April 1, 2026 5:29pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +3 new, ~0 updated, =1 renamed, -0 removed**
+###  **Change summary: +0 new, ~1 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - [AGF-4Modders-SkillPointCap](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip) (new: v1.0.0-BETA)
-  - [AGF-4Modders-Fix4DestroyBiomeBadge](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip) (new: v1.0.0-BETA)
-  - [AGF-4Modders-Fix4RemoveItems](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip) (new: v1.0.0-BETA)
-- **Updated existing mods:**
   - None
+- **Updated existing mods:**
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v1.0.0 -> v1.0.1)
 - **Renamed mods:**
-  - [AGF-4Modders-CustomWindowEnteringDuration](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip) (renamed from AGF-4Modders-ConfigureWindowEnteringDuration, v1.0.0-BETA)
+  - None
 - **Removed mods:**
   - None
 --------------------------------------------------------------------

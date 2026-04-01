@@ -3,7 +3,7 @@
 **Version:** 1.1.0-BETA  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
 
- 
+ > Couldn't have done this without a lot of test helping from nikapaka00!
 
 ---
 ---

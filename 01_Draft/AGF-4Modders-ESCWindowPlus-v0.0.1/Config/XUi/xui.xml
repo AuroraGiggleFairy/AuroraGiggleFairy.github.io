@@ -1,13 +1,10 @@
-<configs>
-
-	<append xpath="/xui/ruleset">
-		<window_group name="serverinfowindow">
-			<window name="windowESC"/>
-		</window_group>
+<AGF-ESCWindowPlus>
+	<!-- Main ESC Window-->
+	<append xpath="/xui/ruleset/window_group[@name='serverinfowindow']">
+		<window name="windowESC"/>
 	</append>
-	
-<!--	<append xpath="/xui/ruleset/window_group[@name='ingameDebugMenu']">
+	<!-- If ADMIN option is enabled -->
+	<append xpath="/xui/ruleset/window_group[@name='ingameDebugMenu']">
 		<window name="windowESCAdmin"/>
-	</append>-->
-	
-</configs>
+	</append>
+</AGF-ESCWindowPlus>

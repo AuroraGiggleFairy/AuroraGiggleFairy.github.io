@@ -1,4 +1,4 @@
-﻿# ESCWindowPlus Single-Source Workflow (v1.1)
+# ESCWindowPlus Single-Source Workflow (v1.1)
 
 This adds a simple one-source editing model for content.
 
@@ -17,6 +17,26 @@ This adds a simple one-source editing model for content.
 From this mod folder:
 
 python SCRIPT-GenerateESCMenu.py
+
+## Non-Technical Quick Start
+This is the simplest workflow for people who do not want to use command flags.
+
+1) Open this folder and double-click:
+- RUN-Easy-GenerateESCWindow.bat
+
+2) First run behavior:
+- If ESCMenu.texts.txt does not exist yet, the script creates it and stops.
+- Edit ESCMenu.texts.txt with your own title/motto/pages/links.
+
+3) Generate your window:
+- Double-click RUN-Easy-GenerateESCWindow.bat again.
+- This automatically runs full generation with:
+	- localization merge
+	- windows.xml source update for all links
+	- windows.xml tab/link layout update
+
+Optional helper:
+- RUN-CreateESCTextTemplate.bat only creates the starter ESCMenu.texts.txt file.
 
 Optional custom paths:
 
@@ -52,6 +72,10 @@ Run full multi-link flow:
 
 python SCRIPT-GenerateESCMenu.py --merge-localization --update-windows-sources --windows-update-all-links
 
+Run non-technical full flow in one command:
+
+python SCRIPT-GenerateESCMenu.py --easy
+
 ## Easy text editing workflow
 Users can edit localization copy in one text-only file and let the generator handle key placement, color tags, HC variants, and output formatting.
 
@@ -75,6 +99,46 @@ Use RGB values like `141,181,128`.
 - `bodyLines` (recommended): list of lines, no `\\n` typing needed
 - `body` (legacy): plain string if you still prefer it
 - `bodySourceUrl` (optional): pull body text from an online plain-text source
+- `@enabledPages: N` controls how many pages are active (1-8), while keeping all 8 page slots editable
+
+Optional body columns in a page (up to 3):
+- Set `bodyColumns: 1`, `bodyColumns: 2`, or `bodyColumns: 3` inside each page block
+- `autoSplitColumns: true|false` (default false)
+  - When true and `bodyColumns` is 2 or 3, generator auto-splits Column 1 body text across selected columns using a fit-based heuristic.
+  - This lets you author only one body block and still render multi-column pages.
+- `scrollableBody: true|false` (default false)
+	- When true, generated page bodies are wrapped in `on_scroll="true"` panels.
+	- Works for both single-column and multi-column pages.
+	- If you need longer or shorter scroll range, tune `PAGE_BODY_SCROLL_CONTENT_HEIGHT` in the generator script.
+- Use explicit body sections with comment markers:
+	- `<!-- Body Column 1 starts below this line -->` ... `<!-- Body Column 1 ends -->`
+	- `<!-- Body Column 2 starts below this line -->` ... `<!-- Body Column 2 ends -->`
+	- `<!-- Body Column 3 starts below this line -->` ... `<!-- Body Column 3 ends -->`
+- Also supported (legacy shorthand): `@columns`, `@body1`, `@body2`, `@body3`
+- Optional source URLs:
+	- `bodySourceUrl: https://...` (column 1)
+	- `body2SourceUrl: https://...` (column 2)
+	- `body3SourceUrl: https://...` (column 3)
+
+Suggested page block shape:
+
+```text
+titleFontSize: 36
+bodyFontSize: 28
+titleLabel: Welcome
+bodyColumns: 3
+autoSplitColumns: false
+scrollableBody: false
+<!-- Body Column 1 starts below this line -->
+Column 1 text...
+<!-- Body Column 1 ends -->
+<!-- Body Column 2 starts below this line -->
+Column 2 text...
+<!-- Body Column 2 ends -->
+<!-- Body Column 3 starts below this line -->
+Column 3 text...
+<!-- Body Column 3 ends -->
+```
 
 Tabs can be added/removed directly by adding/removing page blocks in your texts file.
 Generator enforces the max tab count that fits your current layout.
@@ -82,14 +146,38 @@ Generator enforces the max tab count that fits your current layout.
 `links` format mirrors page-style indexing:
 - `id`: link number (1-based, contiguous)
 - `label`
-- `url`
+- `url` (final destination opened in browser)
+- `@enabledLinks: N` controls how many links are active (0-5), while still keeping all 5 slots editable.
+- `@linksClientOrServer: client|server`
+- `@linksXMLWebBaseUrl: https://...` (required helper base for server mode)
+
+Global UI toggles in `# Toggles`:
+- `showOptionsSection: true|false`
+- `showAdminVersion: true|false`
+- `showServerJoinSection: true|false`
+
+Toggle behavior:
+- `showOptionsSection`: controls visibility of OPTIONS panel.
+- `showAdminVersion`: controls visibility of `windowESCAdmin` if present.
+- `@enabledLinks`: controls LINKS behavior. `0` disables links (no links panel + no link XML files). `1-5` enables links.
+- `showServerJoinSection`: controls visibility of the dedicated JOIN section (`joining` + `Join`/`Decline` buttons).
+	When enabled, server-join options-style controls are hidden so this area stays join/decline focused.
 
 Links can be added/removed directly by adding/removing lines in `# Links`.
 Generator enforces a links fit limit (`ui.layout.maxLinks`, default 4).
 
 Links format:
+- `@enabledLinks: 3`
+- `@linksClientOrServer: client`
+- `@linksXMLWebBaseUrl: https://example.com/7d2d-links`
 - `id | label | url`
-- Example: `1 | Join Discord | https://discord.gg/yourInvite`
+- Example (client mode): `1 | Join Discord | https://discord.gg/yourInvite`
+- Example (server mode): `1 | Join Discord | https://discord.gg/yourInvite`
+
+Source mode behavior:
+- `client`: generator writes NewsWindow sources as `@modfolder:Links/<id>.xml`.
+- `server`: generator auto-builds NewsWindow sources as `<@linksXMLWebBaseUrl>/<id>.xml`.
+- `server` with blank `@linksXMLWebBaseUrl`: generator writes `sources=""` (buttons remain visible but disabled / non-clickable).
 
 Body text convenience features:
 - Line breaks without escapes: use `bodyLines` array (one entry per line).
@@ -151,17 +239,17 @@ Generator will produce canonical keys like:
 - `windowESC_color_page_1_button`
 - `windowESC_color_page_1_title`
 - `windowESC_color_page_1_body`
-- `windowESC_highcontrast_page_1_button`
-- `windowESC_highcontrast_page_1_title`
-- `windowESC_highcontrast_page_1_body`
+- `windowESC_highvisibility_page_1_button`
+- `windowESC_highvisibility_page_1_title`
+- `windowESC_highvisibility_page_1_body`
 
 Header and link keys are also generated in the same namespace:
 - `windowESC_color_header_title`
 - `windowESC_color_header_motto`
 - `windowESC_color_link_1_label`
-- `windowESC_highcontrast_header_title`
-- `windowESC_highcontrast_header_motto`
-- `windowESC_highcontrast_link_1_label`
+- `windowESC_highvisibility_header_title`
+- `windowESC_highvisibility_header_motto`
+- `windowESC_highvisibility_link_1_label`
 
 ## Tab count and max fit
 Use `ui.layout` in ESCMenu.source.json to keep tab count easy but bounded by what fits.

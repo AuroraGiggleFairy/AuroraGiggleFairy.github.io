@@ -16,10 +16,13 @@ import copy
 import csv
 import datetime as dt
 import json
+import math
 import re
+import shutil
 import urllib.error
 import urllib.request
 from pathlib import Path
+from xml.dom import minidom
 from xml.sax.saxutils import escape
 
 
@@ -82,6 +85,14 @@ PAGE_TITLE_POS = "0,-82"
 PAGE_BODY_POS = "26,-144"
 PAGE_BODY_WIDTH = 1048
 PAGE_BODY_HEIGHT = 544
+PAGE_BODY_MAX_COLUMNS = 3
+PAGE_BODY_COLUMN_GAP = 24
+PAGE_BODY_SCROLL_CONTENT_HEIGHT = 4096
+DEFAULT_BODY_WIDTH_PERCENT = 100
+DEFAULT_BODY_ALIGN = "left"
+TEMP_BODY_LABEL_BG_ENABLED = False
+TEMP_BODY_LABEL_BG_SPRITE = "menu_empty"
+TEMP_BODY_LABEL_BG_COLOR = "0,0,0,255"
 
 DEFAULT_LINK_LAYOUT: dict[str, int] = {
     "containerWidth": 1100,
@@ -97,13 +108,23 @@ DEFAULT_LINK_LAYOUT: dict[str, int] = {
 DEFAULT_PAGE_TITLE_FONT_SIZE = 36
 DEFAULT_PAGE_BODY_FONT_SIZE = 28
 DEFAULT_MAX_LINKS = 5
+DEFAULT_MAX_PAGES = 8
+DEFAULT_LINK_SOURCE_MODE = "client"
 
 
 RGB_TRIPLET_RE = re.compile(r"^\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*$")
 BODY_BOLD_TOKEN_RE = re.compile(r"\{\{b:(.*?)\}\}|\*\*(.+?)\*\*", re.DOTALL)
 BODY_HIGHLIGHT_TOKEN_RE = re.compile(r"\{\{h:(.*?)\}\}|==(.+?)==", re.DOTALL)
 BODY_BOUNDARY_MARKER_RE = re.compile(r"^\s*<\!?--\s*body\b.*?(start|end).*?-->\s*$", re.IGNORECASE)
-PAGE_BANNER_RE = re.compile(r"^\s*PAGE\s+\d+\s*$", re.IGNORECASE)
+BODY_COLUMN_START_MARKER_RE = re.compile(
+    r"^\s*<!--\s*Body\s*(?:Column\s*)?(?P<col>[123])\s*(?:,\s*if\s*Enabled,?)?\s*starts\s*below\s*this\s*line\s*-->\s*$",
+    re.IGNORECASE,
+)
+BODY_COLUMN_END_MARKER_RE = re.compile(
+    r"^\s*<!--\s*Body\s*(?:Column\s*)?(?P<col>[123])\s*ends\s*-->\s*$",
+    re.IGNORECASE,
+)
+PAGE_BANNER_RE = re.compile(r"^\s*PAGE\s+(?P<num>\d+)\s*$", re.IGNORECASE)
 SEPARATOR_LINE_RE = re.compile(r"^\s*[-=]{5,}\s*$")
 
 
@@ -198,6 +219,15 @@ def parse_args() -> argparse.Namespace:
         description="Generate ESC localization + news files from one source config."
     )
     parser.add_argument(
+        "--easy",
+        action="store_true",
+        help=(
+            "Run the non-technical full flow. If texts file is missing, create it and exit. "
+            "If texts exists, auto-runs merge-localization + windows source updates for all links "
+            "+ windows tabs/links layout updates."
+        ),
+    )
+    parser.add_argument(
         "--config",
         default="ESCMenu.source.json",
         help="Path to source JSON (default: ESCMenu.source.json)",
@@ -245,6 +275,11 @@ def parse_args() -> argparse.Namespace:
         help="XUi windows file to update when --update-windows-sources is used.",
     )
     parser.add_argument(
+        "--xui-file",
+        default="Config/XUi/xui.xml",
+        help="XUi root file used for admin window registration (default: Config/XUi/xui.xml).",
+    )
+    parser.add_argument(
         "--windows-link-id",
         default="discord",
         help="Link id from source JSON used for NewsWindow source replacement (default: discord).",
@@ -268,6 +303,14 @@ def parse_args() -> argparse.Namespace:
         help=(
             "Use dev.highContrastPreview overrides from source JSON for temporary HC tuning. "
             "Default behavior keeps HC automatic."
+        ),
+    )
+    parser.add_argument(
+        "--dev-body-label-bg",
+        action="store_true",
+        help=(
+            "Enable temporary body label background sprites for layout/dev testing. "
+            "Default keeps these disabled in generated output."
         ),
     )
     parser.add_argument(
@@ -397,12 +440,299 @@ def _resolve_page_body_text(row: dict) -> str | None:
     return None
 
 
+def _resolve_page_column_text(
+    row: dict,
+    lines_key: str,
+    text_key: str,
+    source_url_key: str | None = None,
+) -> str | None:
+    if source_url_key and source_url_key in row:
+        url = str(row.get(source_url_key) or "").strip()
+        if url:
+            fetched = _fetch_body_text_from_url(url)
+            if fetched is not None:
+                return fetched
+
+    if lines_key in row:
+        body_lines = row.get(lines_key)
+        if body_lines is None:
+            return ""
+        if not isinstance(body_lines, list):
+            raise ValueError(f"Texts page '{lines_key}' must be a list when provided.")
+        text = "\n".join(str(line) for line in body_lines)
+        return text.replace("\\n", "\n")
+
+    if text_key in row:
+        return str(row.get(text_key) or "").replace("\\n", "\n")
+
+    return None
+
+
+def _trim_page_columns_trailing_blanks(page: dict[str, str | int | list[str]] | None) -> None:
+    if page is None:
+        return
+    for key in ("bodyLines", "bodyColumn2Lines", "bodyColumn3Lines"):
+        lines = page.get(key)
+        if not isinstance(lines, list):
+            continue
+        while lines and not str(lines[0]).strip():
+            lines.pop(0)
+        while lines and not str(lines[-1]).strip():
+            lines.pop()
+
+
 def _safe_font_size(value: object, default: int) -> int:
     try:
         size = int(str(value).strip())
     except (ValueError, TypeError, AttributeError):
         return default
     return max(12, min(72, size))
+
+
+def _safe_bool(value: object, default: bool = False) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return default
+    token = str(value).strip().lower()
+    if token in {"1", "true", "yes", "y", "on"}:
+        return True
+    if token in {"0", "false", "no", "n", "off"}:
+        return False
+    return default
+
+
+def _safe_link_source_mode(value: object, default: str = DEFAULT_LINK_SOURCE_MODE) -> str:
+    token = str(value or "").strip().lower()
+    if token in {"client", "server"}:
+        return token
+    return default
+
+
+def _normalize_web_base_url(value: object) -> str:
+    text = str(value or "").strip()
+    return text.rstrip("/")
+
+
+def get_link_source_settings(source: dict) -> tuple[str, str]:
+    meta = source.get("meta", {}) if isinstance(source.get("meta", {}), dict) else {}
+    mode = _safe_link_source_mode(
+        source.get("linksClientOrServer", meta.get("linksClientOrServer", DEFAULT_LINK_SOURCE_MODE)),
+        DEFAULT_LINK_SOURCE_MODE,
+    )
+    web_base_url = _normalize_web_base_url(
+        source.get("linksXMLWebBaseUrl", meta.get("linksXMLWebBaseUrl", ""))
+    )
+    return mode, web_base_url
+
+
+def _resolve_link_source_xml_url(link: dict, mode: str, web_base_url: str) -> str:
+    link_id = _safe_link_id(str(link.get("id") or "link"))
+    if mode == "server":
+        if web_base_url:
+            return f"{web_base_url}/{link_id}.xml"
+        # Pre-setup server mode: keep button visible but non-clickable until web XML hosting is configured.
+        return ""
+
+    return f"@modfolder:Links/{link_id}.xml"
+
+
+def _safe_body_width_percent(value: object, default: int = DEFAULT_BODY_WIDTH_PERCENT) -> int:
+    try:
+        parsed = int(str(value).strip())
+    except (ValueError, TypeError, AttributeError):
+        return default
+    return max(40, min(100, parsed))
+
+
+def _safe_align(value: object, default: str = DEFAULT_BODY_ALIGN) -> str:
+    token = str(value or "").strip().lower()
+    if token in {"left", "center", "right"}:
+        return token
+    return default
+
+
+def _estimate_text_box_width(text: str, font_size: int, max_width: int) -> int:
+    lines = str(text or "").replace("\r\n", "\n").split("\n")
+    # Remove lightweight authoring markers that do not consume visible width.
+    normalized_lines = [
+        re.sub(r"\[[^\]]+\]|\*\*|==|\{\{b:|\{\{h:|\}\}", "", ln).strip()
+        for ln in lines
+    ]
+
+    # Box-centering is based on the longest visible line in the column.
+    longest = max((len(ln) for ln in normalized_lines), default=0)
+    # Relaxed estimate so long lines keep a safer non-wrapping margin in-game.
+    avg_char_px = max(5.2, font_size * 0.34)
+    horizontal_padding = 36
+    estimated = int(longest * avg_char_px) + horizontal_padding
+    min_width = min(max_width, 220)
+    return max(min_width, min(max_width, estimated))
+
+
+def _resolve_body_block_layout(
+    pos_value: str,
+    width_value: int,
+    text: str,
+    font_size: int,
+    box_centered: bool,
+) -> tuple[str, int]:
+    if not box_centered:
+        return pos_value, width_value
+
+    parts = [p.strip() for p in str(pos_value).split(",", 1)]
+    try:
+        base_x = int(parts[0])
+    except (ValueError, TypeError, IndexError):
+        base_x = 26
+    base_y = parts[1] if len(parts) > 1 else "-144"
+
+    inner_width = _estimate_text_box_width(text, font_size, width_value)
+    # Keep very small side breathing room inside the column bounds.
+    inner_width = min(inner_width, max(220, width_value - 6))
+    x_shift = (width_value - inner_width) // 2
+    return f"{base_x + x_shift},{base_y}", inner_width
+
+
+def _build_body_label_xml(
+    *,
+    indent: str,
+    name: str,
+    depth: int,
+    pos: str,
+    width: int,
+    height: int,
+    justify: str,
+    color: str,
+    font_size: int,
+    text_key: str,
+) -> str:
+    attrs = (
+        f'name="{name}" depth="{depth}" pos="{pos}" width="{width}" height="{height}" '
+        f'justify="{justify}" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" '
+        f'color="{color}" font_size="{font_size}" text_key="{text_key}" foregroundlayer="true"'
+    )
+    if not TEMP_BODY_LABEL_BG_ENABLED:
+        return f"{indent}<label {attrs}/>"
+
+    return "\n".join(
+        [
+            f"{indent}<label {attrs}>",
+            (
+                f'{indent}\t<sprite depth="0" name="{name}_bg" sprite="{TEMP_BODY_LABEL_BG_SPRITE}" '
+                f'color="{TEMP_BODY_LABEL_BG_COLOR}" type="sliced" fillcenter="false" globalopacity="false"/>'
+            ),
+            f"{indent}</label>",
+        ]
+    )
+
+
+def _single_body_layout(tab_model: dict, body_text: str) -> tuple[str, int]:
+    width_percent = _safe_body_width_percent(
+        tab_model.get("body_width_percent", DEFAULT_BODY_WIDTH_PERCENT),
+        DEFAULT_BODY_WIDTH_PERCENT,
+    )
+    width_value = max(1, int(PAGE_BODY_WIDTH * width_percent / 100))
+    width_value = min(PAGE_BODY_WIDTH, width_value)
+    x_offset = (PAGE_BODY_WIDTH - width_value) // 2
+    base_pos = f"{26 + x_offset},-144"
+    box_centered = _safe_bool(tab_model.get("body_box_centered"), default=False)
+    return _resolve_body_block_layout(
+        base_pos,
+        width_value,
+        body_text,
+        _safe_font_size(tab_model.get("body_font_size"), DEFAULT_PAGE_BODY_FONT_SIZE),
+        box_centered,
+    )
+
+
+def _split_body_text_by_fit(text: str, columns_count: int, font_size: int) -> list[str]:
+    """Split one body text into N columns using a simple fit-aware heuristic.
+
+    This is an approximation because exact in-game wrapping depends on runtime font metrics.
+    """
+    count = max(1, min(PAGE_BODY_MAX_COLUMNS, columns_count))
+    normalized = str(text or "").replace("\r\n", "\n").strip("\n")
+    if count <= 1 or not normalized:
+        return [normalized] + [""] * (PAGE_BODY_MAX_COLUMNS - 1)
+
+    paragraphs = [p.strip("\n") for p in normalized.split("\n\n")]
+    paragraphs = [p for p in paragraphs if p.strip()]
+    if not paragraphs:
+        return [normalized] + [""] * (PAGE_BODY_MAX_COLUMNS - 1)
+
+    total_gap = PAGE_BODY_COLUMN_GAP * (count - 1)
+    available_width = max(1, PAGE_BODY_WIDTH - total_gap)
+    column_width = max(1, available_width // count)
+
+    # Rough estimate for average glyph width / line-height in the in-game UI label.
+    avg_char_px = max(6.5, font_size * 0.55)
+    line_height_px = max(12.0, font_size * 1.35)
+    est_chars_per_line = max(18, int(column_width / avg_char_px))
+    est_lines_per_col = max(8, int(PAGE_BODY_HEIGHT / line_height_px))
+    est_capacity_per_col = max(200, est_chars_per_line * est_lines_per_col)
+
+    para_sizes = [len(p) + 2 for p in paragraphs]
+    total_size = sum(para_sizes)
+
+    columns: list[list[str]] = [[] for _ in range(count)]
+    idx = 0
+    remaining_size = total_size
+
+    for col in range(count):
+        remaining_cols = count - col
+        if idx >= len(paragraphs):
+            break
+
+        target_size = int(remaining_size / max(1, remaining_cols))
+        target_size = min(target_size, est_capacity_per_col)
+        if col == count - 1:
+            target_size = max(target_size, remaining_size)
+
+        used = 0
+        while idx < len(paragraphs):
+            remaining_paragraphs = len(paragraphs) - idx
+            must_leave = max(0, remaining_cols - 1)
+            if remaining_paragraphs <= must_leave:
+                break
+
+            para = paragraphs[idx]
+            para_size = para_sizes[idx]
+            will_exceed = used > 0 and (used + para_size) > target_size
+            if will_exceed:
+                break
+
+            columns[col].append(para)
+            used += para_size
+            idx += 1
+
+        remaining_size = max(0, remaining_size - used)
+
+    # Put any remainder into the last column.
+    while idx < len(paragraphs):
+        columns[-1].append(paragraphs[idx])
+        idx += 1
+
+    column_texts = ["\n\n".join(col).strip("\n") for col in columns]
+
+    # Fallback: when the content has no blank-paragraph boundaries, the fit pass can keep
+    # everything in column 1. In that case, split by lines so auto columns still populate.
+    non_empty_columns = [c for c in column_texts if c.strip()]
+    if count > 1 and len(non_empty_columns) <= 1:
+        lines = [ln for ln in normalized.split("\n")]
+        chunks: list[list[str]] = [[] for _ in range(count)]
+        if lines:
+            per_col = max(1, math.ceil(len(lines) / count))
+            start = 0
+            for col_idx in range(count):
+                end = min(len(lines), start + per_col)
+                chunks[col_idx] = lines[start:end]
+                start = end
+        column_texts = ["\n".join(chunk).strip("\n") for chunk in chunks]
+
+    while len(column_texts) < PAGE_BODY_MAX_COLUMNS:
+        column_texts.append("")
+    return column_texts[:PAGE_BODY_MAX_COLUMNS]
 
 
 def get_link_layout_limit(source: dict) -> int:
@@ -440,10 +770,59 @@ def get_active_links(source: dict) -> list[dict]:
     return active_links
 
 
+def get_enabled_links_count(source: dict) -> int:
+    links = source.get("links", [])
+    if not isinstance(links, list):
+        return 0
+
+    enabled_count = 0
+    for link in links:
+        if not isinstance(link, dict):
+            continue
+        if link.get("enabled", True) is False:
+            continue
+        enabled_count += 1
+
+    max_links = get_link_layout_limit(source)
+    return max(0, min(max_links, enabled_count))
+
+
+def get_active_tabs(source: dict) -> list[dict]:
+    tabs = source.get("tabs", [])
+    if not isinstance(tabs, list):
+        return []
+
+    active_tabs: list[dict] = []
+    for tab in tabs:
+        if not isinstance(tab, dict):
+            continue
+        if tab.get("enabled", True) is False:
+            continue
+        active_tabs.append(tab)
+
+    return active_tabs
+
+
+def get_show_options_section(source: dict) -> bool:
+    ui = source.get("ui", {}) if isinstance(source.get("ui", {}), dict) else {}
+    return _safe_bool(ui.get("showOptionsSection", True), default=True)
+
+
+def get_ui_feature_toggles(source: dict) -> dict[str, bool]:
+    ui = source.get("ui", {}) if isinstance(source.get("ui", {}), dict) else {}
+    links_enabled = get_enabled_links_count(source) > 0
+    return {
+        "showOptionsSection": _safe_bool(ui.get("showOptionsSection", True), default=True),
+        "showAdminVersion": _safe_bool(ui.get("showAdminVersion", True), default=True),
+        "showLinksSection": links_enabled,
+        "showServerJoinSection": _safe_bool(ui.get("showServerJoinSection", True), default=True),
+    }
+
+
 def build_texts_payload(source: dict) -> dict:
     """Create a user-editable payload containing only text content fields."""
     labels = source.get("labels", {}) if isinstance(source.get("labels", {}), dict) else {}
-    tabs = source.get("tabs", []) if isinstance(source.get("tabs", []), list) else []
+    source_tabs = source.get("tabs", []) if isinstance(source.get("tabs", []), list) else []
 
     label_keys = [
         "headerTitle",
@@ -458,15 +837,40 @@ def build_texts_payload(source: dict) -> dict:
             payload_headers[key] = str(labels.get(key) or "")
 
     payload_pages: list[dict[str, str | int]] = []
-    for idx, tab in enumerate(tabs, start=1):
-        if not isinstance(tab, dict):
-            continue
+    for idx in range(1, DEFAULT_MAX_PAGES + 1):
+        tab = source_tabs[idx - 1] if idx - 1 < len(source_tabs) and isinstance(source_tabs[idx - 1], dict) else {}
         body_text = str(tab.get("body") or "").replace("\r\n", "\n")
         body_text = body_text.replace("\\n", "\n")
-        row: dict[str, str | int] = {
+        body_col2_text = str(tab.get("bodyColumn2") or "").replace("\r\n", "\n")
+        body_col2_text = body_col2_text.replace("\\n", "\n")
+        body_col3_text = str(tab.get("bodyColumn3") or "").replace("\r\n", "\n")
+        body_col3_text = body_col3_text.replace("\\n", "\n")
+        page_columns = tab.get("bodyColumns", 1)
+        try:
+            page_columns = int(str(page_columns).strip())
+        except (ValueError, TypeError, AttributeError):
+            page_columns = 1
+        page_columns = max(1, min(PAGE_BODY_MAX_COLUMNS, page_columns))
+
+        row: dict[str, str | int | bool] = {
             "id": idx,
-            "title": str(tab.get("title") or ""),
+            "title": str(tab.get("title") or f"Page {idx}"),
+            "columns": page_columns,
             "bodyLines": body_text.split("\n"),
+            "bodyColumn2Lines": body_col2_text.split("\n") if body_col2_text else [],
+            "bodyColumn3Lines": body_col3_text.split("\n") if body_col3_text else [],
+            "autoSplitColumns": _safe_bool(tab.get("autoSplitColumns"), default=False),
+            "scrollableBody": _safe_bool(tab.get("scrollableBody"), default=False),
+            "bodyWidthPercent": _safe_body_width_percent(
+                tab.get("bodyWidthPercent", DEFAULT_BODY_WIDTH_PERCENT),
+                DEFAULT_BODY_WIDTH_PERCENT,
+            ),
+            "bodyAlign": _safe_align(tab.get("bodyAlign", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN),
+            "bodyBoxCentered": _safe_bool(tab.get("bodyBoxCentered"), default=False),
+            "bodyColumn2Align": _safe_align(tab.get("bodyColumn2Align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN),
+            "bodyColumn2BoxCentered": _safe_bool(tab.get("bodyColumn2BoxCentered"), default=False),
+            "bodyColumn3Align": _safe_align(tab.get("bodyColumn3Align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN),
+            "bodyColumn3BoxCentered": _safe_bool(tab.get("bodyColumn3BoxCentered"), default=False),
             "titleFontSize": _safe_font_size(
                 tab.get("titleFontSize", DEFAULT_PAGE_TITLE_FONT_SIZE),
                 DEFAULT_PAGE_TITLE_FONT_SIZE,
@@ -480,17 +884,16 @@ def build_texts_payload(source: dict) -> dict:
 
     source_links = source.get("links", []) if isinstance(source.get("links", []), list) else []
     payload_links: list[dict[str, str | int]] = []
-    for link in source_links:
-        if not isinstance(link, dict):
-            continue
-        if link.get("enabled", True) is False:
-            continue
-        url = str(link.get("url") or "").strip()
-        if not url:
-            continue
-        idx = len(payload_links) + 1
-        label = str(link.get("label") or link.get("title") or f"Link {idx}")
+    for idx in range(1, DEFAULT_MAX_LINKS + 1):
+        source_link = source_links[idx - 1] if idx - 1 < len(source_links) and isinstance(source_links[idx - 1], dict) else {}
+        label = str(source_link.get("label") or source_link.get("title") or f"Link {idx}")
+        url = str(source_link.get("url") or "").strip()
         payload_links.append({"id": idx, "label": label, "url": url})
+
+    enabled_links = get_enabled_links_count(source)
+    enabled_pages = len(get_active_tabs(source))
+    link_source_mode, links_web_xml_base_url = get_link_source_settings(source)
+    feature_toggles = get_ui_feature_toggles(source)
 
     source_themes = source.get("themes", {}) if isinstance(source.get("themes", {}), dict) else {}
     theme_color = source_themes.get("color", {}) if isinstance(source_themes.get("color", {}), dict) else {}
@@ -547,6 +950,14 @@ def build_texts_payload(source: dict) -> dict:
         "headers": payload_headers,
         "pages": payload_pages,
         "links": payload_links,
+        "enabledLinks": enabled_links,
+        "enabledPages": enabled_pages,
+        "linksClientOrServer": link_source_mode,
+        "linksXMLWebBaseUrl": links_web_xml_base_url,
+        "showOptionsSection": feature_toggles["showOptionsSection"],
+        "showAdminVersion": feature_toggles["showAdminVersion"],
+        "showLinksSection": feature_toggles["showLinksSection"],
+        "showServerJoinSection": feature_toggles["showServerJoinSection"],
     }
 
 
@@ -555,8 +966,30 @@ def _build_texts_markdown(payload: dict) -> str:
     headers = payload.get("headers", {}) if isinstance(payload.get("headers", {}), dict) else {}
     pages = payload.get("pages", []) if isinstance(payload.get("pages", []), list) else []
     links = payload.get("links", []) if isinstance(payload.get("links", []), list) else []
+    enabled_pages = payload.get("enabledPages", len([row for row in pages if isinstance(row, dict)]))
+    try:
+        enabled_pages = int(str(enabled_pages).strip())
+    except (ValueError, TypeError, AttributeError):
+        enabled_pages = len([row for row in pages if isinstance(row, dict)])
+    enabled_pages = max(1, min(DEFAULT_MAX_PAGES, enabled_pages))
+    enabled_links = payload.get("enabledLinks", len([row for row in links if isinstance(row, dict) and str(row.get("url") or "").strip()]))
+    try:
+        enabled_links = int(str(enabled_links).strip())
+    except (ValueError, TypeError, AttributeError):
+        enabled_links = len([row for row in links if isinstance(row, dict) and str(row.get("url") or "").strip()])
+    enabled_links = max(0, min(DEFAULT_MAX_LINKS, enabled_links))
+    link_source_mode = _safe_link_source_mode(payload.get("linksClientOrServer", DEFAULT_LINK_SOURCE_MODE))
+    links_web_xml_base_url = _normalize_web_base_url(payload.get("linksXMLWebBaseUrl", ""))
+    show_options_section = _safe_bool(payload.get("showOptionsSection", True), default=True)
+    show_admin_version = _safe_bool(payload.get("showAdminVersion", True), default=True)
+    show_server_join_section = _safe_bool(payload.get("showServerJoinSection", True), default=True)
 
     lines: list[str] = [
+        "# Toggles",
+        f"showOptionsSection: {'true' if show_options_section else 'false'}",
+        f"showAdminVersion: {'true' if show_admin_version else 'false'}",
+        f"showServerJoinSection: {'true' if show_server_join_section else 'false'}",
+        "",
         "# Colors",
     ]
     for key, value in colors.items():
@@ -570,6 +1003,9 @@ def _build_texts_markdown(payload: dict) -> str:
 
     lines.append("")
     lines.append("# Links")
+    lines.append(f"@enabledLinks: {enabled_links}")
+    lines.append(f"@linksClientOrServer: {link_source_mode}")
+    lines.append(f"@linksXMLWebBaseUrl: {links_web_xml_base_url}")
     for row in links:
         if not isinstance(row, dict):
             continue
@@ -580,6 +1016,7 @@ def _build_texts_markdown(payload: dict) -> str:
 
     lines.append("")
     lines.append("# Pages")
+    lines.append(f"@enabledPages: {enabled_pages}")
     for row in pages:
         if not isinstance(row, dict):
             continue
@@ -591,12 +1028,51 @@ def _build_texts_markdown(payload: dict) -> str:
             lines.append(f"@titleFontSize: {row.get('titleFontSize')}")
         if "bodyFontSize" in row:
             lines.append(f"@bodyFontSize: {row.get('bodyFontSize')}")
+        page_columns = row.get("columns", 1)
+        try:
+            page_columns = int(str(page_columns).strip())
+        except (ValueError, TypeError, AttributeError):
+            page_columns = 1
+        page_columns = max(1, min(PAGE_BODY_MAX_COLUMNS, page_columns))
+        lines.append(f"titleFontSize: {row.get('titleFontSize', DEFAULT_PAGE_TITLE_FONT_SIZE)}")
+        lines.append(f"bodyFontSize: {row.get('bodyFontSize', DEFAULT_PAGE_BODY_FONT_SIZE)}")
+        lines.append(f"titleLabel: {title}")
+        lines.append(f"bodyColumns: {page_columns}")
+        lines.append(
+            f"bodyWidthPercent: { _safe_body_width_percent(row.get('bodyWidthPercent', DEFAULT_BODY_WIDTH_PERCENT), DEFAULT_BODY_WIDTH_PERCENT) }"
+        )
+        lines.append(f"bodyAlign: {_safe_align(row.get('bodyAlign', DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)}")
+        lines.append(f"bodyBoxCentered: {'true' if _safe_bool(row.get('bodyBoxCentered')) else 'false'}")
+        if page_columns >= 2:
+            lines.append(f"body2Align: {_safe_align(row.get('bodyColumn2Align', DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)}")
+            lines.append(f"body2BoxCentered: {'true' if _safe_bool(row.get('bodyColumn2BoxCentered')) else 'false'}")
+        if page_columns >= 3:
+            lines.append(f"body3Align: {_safe_align(row.get('bodyColumn3Align', DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)}")
+            lines.append(f"body3BoxCentered: {'true' if _safe_bool(row.get('bodyColumn3BoxCentered')) else 'false'}")
+        lines.append(f"autoSplitColumns: {'true' if _safe_bool(row.get('autoSplitColumns')) else 'false'}")
+        lines.append(f"scrollableBody: {'true' if _safe_bool(row.get('scrollableBody')) else 'false'}")
+        lines.append("<!-- Body Column 1 starts below this line -->")
         body_lines = row.get("bodyLines")
         if isinstance(body_lines, list):
             for body_line in body_lines:
                 lines.append(str(body_line))
         else:
             lines.append(str(row.get("body") or ""))
+        lines.append("<!-- Body 1 ends -->")
+
+        body_col2_lines = row.get("bodyColumn2Lines")
+        lines.append("<!-- Body Column 2 starts below this line -->")
+        if isinstance(body_col2_lines, list):
+            for body_line in body_col2_lines:
+                lines.append(str(body_line))
+        lines.append("<!-- Body 2 ends -->")
+
+        body_col3_lines = row.get("bodyColumn3Lines")
+        lines.append("<!-- Body Column 3 starts below this line -->")
+        if isinstance(body_col3_lines, list):
+            for body_line in body_col3_lines:
+                lines.append(str(body_line))
+        lines.append("<!-- Body 3 ends -->")
 
     lines.append("")
     return "\n".join(lines)
@@ -606,26 +1082,44 @@ def _parse_texts_markdown(text: str) -> dict:
     colors: dict[str, str] = {}
     headers: dict[str, str] = {}
     links: list[dict[str, str | int]] = []
-    pages: list[dict[str, str | int | list[str]]] = []
+    enabled_links: int | None = None
+    link_source_mode: str | None = None
+    links_web_xml_base_url: str | None = None
+    show_options_section: bool | None = None
+    show_admin_version: bool | None = None
+    show_links_section: bool | None = None
+    show_server_join_section: bool | None = None
+    enabled_pages: int | None = None
+    pages: list[dict[str, str | int | bool | list[str]]] = []
 
     section: str | None = None
-    current_page: dict[str, str | int | list[str]] | None = None
+    current_page: dict[str, str | int | bool | list[str]] | None = None
     in_comment_block = False
-    pending_page_settings: dict[str, int] = {}
+    pending_page_settings: dict[str, int | bool] = {}
     expecting_page_header = False
-
-    def _trim_page_body_trailing_blanks(page: dict[str, str | int | list[str]] | None) -> None:
-        if page is None:
-            return
-        body_lines = page.get("bodyLines")
-        if not isinstance(body_lines, list):
-            return
-        while body_lines and not str(body_lines[-1]).strip():
-            body_lines.pop()
+    current_page_body_key = "bodyLines"
 
     for raw_line in text.splitlines():
         line = raw_line.rstrip("\r")
         stripped = line.strip()
+
+        if section == "pages" and current_page is not None:
+            start_match = BODY_COLUMN_START_MARKER_RE.match(stripped)
+            if start_match:
+                col_num = int(start_match.group("col"))
+                if col_num == 1:
+                    current_page_body_key = "bodyLines"
+                elif col_num == 2:
+                    current_page_body_key = "bodyColumn2Lines"
+                else:
+                    current_page_body_key = "bodyColumn3Lines"
+                if current_page_body_key not in current_page:
+                    current_page[current_page_body_key] = []
+                continue
+            end_match = BODY_COLUMN_END_MARKER_RE.match(stripped)
+            if end_match:
+                current_page_body_key = "bodyLines"
+                continue
 
         if stripped.startswith("<!--"):
             in_comment_block = True
@@ -636,7 +1130,7 @@ def _parse_texts_markdown(text: str) -> dict:
 
         if stripped.startswith("# "):
             if current_page is not None:
-                _trim_page_body_trailing_blanks(current_page)
+                _trim_page_columns_trailing_blanks(current_page)
                 pages.append(current_page)
                 current_page = None
             heading = stripped[2:].strip().lower()
@@ -646,16 +1140,93 @@ def _parse_texts_markdown(text: str) -> dict:
                 section = "headers"
             elif heading == "links":
                 section = "links"
+            elif heading == "toggles":
+                section = "toggles"
             elif heading == "pages":
                 section = "pages"
             else:
                 section = None
             continue
 
-        if section == "pages" and stripped.startswith("## "):
+        if section == "toggles":
+            if not stripped or stripped.startswith("//"):
+                continue
+            key, sep, value = line.partition(":")
+            if not sep:
+                continue
+            token = key.strip().lower()
+            if token == "showoptionssection":
+                show_options_section = _safe_bool(value.strip(), default=True)
+                continue
+            if token == "showadminversion":
+                show_admin_version = _safe_bool(value.strip(), default=True)
+                continue
+            if token == "showlinkssection":
+                show_links_section = _safe_bool(value.strip(), default=True)
+                continue
+            if token == "showserverjoinsection":
+                show_server_join_section = _safe_bool(value.strip(), default=True)
+                continue
+            continue
+
+        if section == "pages" and (stripped.startswith("@enabledPages:") or stripped.startswith("enabledPages:")):
+            _, _, value = stripped.partition(":")
+            try:
+                parsed = int(value.strip())
+            except ValueError:
+                parsed = 1
+            enabled_pages = max(1, min(DEFAULT_MAX_PAGES, parsed))
+            continue
+
+        page_banner_match = PAGE_BANNER_RE.match(stripped) if section == "pages" else None
+        if section == "pages" and page_banner_match:
             if current_page is not None:
-                _trim_page_body_trailing_blanks(current_page)
+                _trim_page_columns_trailing_blanks(current_page)
                 pages.append(current_page)
+            page_id = int(page_banner_match.group("num"))
+            current_page = {
+                "id": page_id,
+                "title": f"Page {page_id}",
+                "columns": 1,
+                "bodyWidthPercent": DEFAULT_BODY_WIDTH_PERCENT,
+                "bodyAlign": DEFAULT_BODY_ALIGN,
+                "bodyBoxCentered": False,
+                "bodyColumn2Align": DEFAULT_BODY_ALIGN,
+                "bodyColumn2BoxCentered": False,
+                "bodyColumn3Align": DEFAULT_BODY_ALIGN,
+                "bodyColumn3BoxCentered": False,
+                "autoSplitColumns": False,
+                "scrollableBody": False,
+                "bodyLines": [],
+            }
+            current_page_body_key = "bodyLines"
+            if "titleFontSize" in pending_page_settings:
+                current_page["titleFontSize"] = pending_page_settings["titleFontSize"]
+            if "bodyFontSize" in pending_page_settings:
+                current_page["bodyFontSize"] = pending_page_settings["bodyFontSize"]
+            if "autoSplitColumns" in pending_page_settings:
+                current_page["autoSplitColumns"] = pending_page_settings["autoSplitColumns"]
+            if "scrollableBody" in pending_page_settings:
+                current_page["scrollableBody"] = pending_page_settings["scrollableBody"]
+            if "bodyWidthPercent" in pending_page_settings:
+                current_page["bodyWidthPercent"] = pending_page_settings["bodyWidthPercent"]
+            if "bodyAlign" in pending_page_settings:
+                current_page["bodyAlign"] = pending_page_settings["bodyAlign"]
+            if "bodyBoxCentered" in pending_page_settings:
+                current_page["bodyBoxCentered"] = pending_page_settings["bodyBoxCentered"]
+            if "bodyColumn2Align" in pending_page_settings:
+                current_page["bodyColumn2Align"] = pending_page_settings["bodyColumn2Align"]
+            if "bodyColumn2BoxCentered" in pending_page_settings:
+                current_page["bodyColumn2BoxCentered"] = pending_page_settings["bodyColumn2BoxCentered"]
+            if "bodyColumn3Align" in pending_page_settings:
+                current_page["bodyColumn3Align"] = pending_page_settings["bodyColumn3Align"]
+            if "bodyColumn3BoxCentered" in pending_page_settings:
+                current_page["bodyColumn3BoxCentered"] = pending_page_settings["bodyColumn3BoxCentered"]
+            pending_page_settings = {}
+            expecting_page_header = False
+            continue
+
+        if section == "pages" and stripped.startswith("## "):
             page_header = stripped[3:].strip()
             page_id_text, _, page_title = page_header.partition(":")
             page_id_text = page_id_text.strip()
@@ -663,14 +1234,55 @@ def _parse_texts_markdown(text: str) -> dict:
             try:
                 page_id = int(page_id_text)
             except ValueError:
+                page_id = None
+
+            if current_page is None:
+                if page_id is None:
+                    continue
+                current_page = {
+                    "id": page_id,
+                    "title": page_title or f"Page {page_id}",
+                    "columns": 1,
+                    "bodyWidthPercent": DEFAULT_BODY_WIDTH_PERCENT,
+                    "bodyAlign": DEFAULT_BODY_ALIGN,
+                    "bodyBoxCentered": False,
+                    "bodyColumn2Align": DEFAULT_BODY_ALIGN,
+                    "bodyColumn2BoxCentered": False,
+                    "bodyColumn3Align": DEFAULT_BODY_ALIGN,
+                    "bodyColumn3BoxCentered": False,
+                    "autoSplitColumns": False,
+                    "scrollableBody": False,
+                    "bodyLines": [],
+                }
+                current_page_body_key = "bodyLines"
+                if "titleFontSize" in pending_page_settings:
+                    current_page["titleFontSize"] = pending_page_settings["titleFontSize"]
+                if "bodyFontSize" in pending_page_settings:
+                    current_page["bodyFontSize"] = pending_page_settings["bodyFontSize"]
+                if "autoSplitColumns" in pending_page_settings:
+                    current_page["autoSplitColumns"] = pending_page_settings["autoSplitColumns"]
+                if "scrollableBody" in pending_page_settings:
+                    current_page["scrollableBody"] = pending_page_settings["scrollableBody"]
+                if "bodyWidthPercent" in pending_page_settings:
+                    current_page["bodyWidthPercent"] = pending_page_settings["bodyWidthPercent"]
+                if "bodyAlign" in pending_page_settings:
+                    current_page["bodyAlign"] = pending_page_settings["bodyAlign"]
+                if "bodyBoxCentered" in pending_page_settings:
+                    current_page["bodyBoxCentered"] = pending_page_settings["bodyBoxCentered"]
+                if "bodyColumn2Align" in pending_page_settings:
+                    current_page["bodyColumn2Align"] = pending_page_settings["bodyColumn2Align"]
+                if "bodyColumn2BoxCentered" in pending_page_settings:
+                    current_page["bodyColumn2BoxCentered"] = pending_page_settings["bodyColumn2BoxCentered"]
+                if "bodyColumn3Align" in pending_page_settings:
+                    current_page["bodyColumn3Align"] = pending_page_settings["bodyColumn3Align"]
+                if "bodyColumn3BoxCentered" in pending_page_settings:
+                    current_page["bodyColumn3BoxCentered"] = pending_page_settings["bodyColumn3BoxCentered"]
+                pending_page_settings = {}
+                expecting_page_header = False
                 continue
-            current_page = {"id": page_id, "title": page_title, "bodyLines": []}
-            if "titleFontSize" in pending_page_settings:
-                current_page["titleFontSize"] = pending_page_settings["titleFontSize"]
-            if "bodyFontSize" in pending_page_settings:
-                current_page["bodyFontSize"] = pending_page_settings["bodyFontSize"]
-            pending_page_settings = {}
-            expecting_page_header = False
+
+            if page_title:
+                current_page["title"] = page_title
             continue
 
         if section == "colors":
@@ -693,6 +1305,25 @@ def _parse_texts_markdown(text: str) -> dict:
 
         if section == "links":
             if not stripped or stripped.startswith("//"):
+                continue
+
+            if stripped.startswith("@enabledLinks:"):
+                _, _, value = stripped.partition(":")
+                try:
+                    parsed = int(value.strip())
+                except ValueError:
+                    parsed = 0
+                enabled_links = max(0, min(DEFAULT_MAX_LINKS, parsed))
+                continue
+
+            if stripped.lower().startswith("@linksclientorserver:"):
+                _, _, value = stripped.partition(":")
+                link_source_mode = _safe_link_source_mode(value, DEFAULT_LINK_SOURCE_MODE)
+                continue
+
+            if stripped.lower().startswith("@linksxmlwebbaseurl:"):
+                _, _, value = stripped.partition(":")
+                links_web_xml_base_url = _normalize_web_base_url(value)
                 continue
 
             if "|" in line:
@@ -722,8 +1353,106 @@ def _parse_texts_markdown(text: str) -> dict:
         if section == "pages" and current_page is not None:
             if stripped.startswith("//") or BODY_BOUNDARY_MARKER_RE.match(stripped):
                 continue
-            if PAGE_BANNER_RE.match(stripped) or SEPARATOR_LINE_RE.match(stripped):
+            if stripped.lower().startswith("@columns:") or stripped.lower().startswith("bodycolumns:"):
+                _, _, value = stripped.partition(":")
+                try:
+                    parsed_columns = int(value.strip())
+                except ValueError:
+                    parsed_columns = 1
+                current_page["columns"] = max(1, min(PAGE_BODY_MAX_COLUMNS, parsed_columns))
+                continue
+            if stripped.lower().startswith("@autosplitcolumns:") or stripped.lower().startswith("autosplitcolumns:"):
+                _, _, value = stripped.partition(":")
+                parsed_bool = _safe_bool(value, default=False)
+                if expecting_page_header:
+                    pending_page_settings["autoSplitColumns"] = parsed_bool
+                else:
+                    current_page["autoSplitColumns"] = parsed_bool
+                continue
+            if stripped.lower().startswith("@bodywidthpercent:") or stripped.lower().startswith("bodywidthpercent:"):
+                _, _, value = stripped.partition(":")
+                parsed_percent = _safe_body_width_percent(value, DEFAULT_BODY_WIDTH_PERCENT)
+                if expecting_page_header:
+                    pending_page_settings["bodyWidthPercent"] = parsed_percent
+                else:
+                    current_page["bodyWidthPercent"] = parsed_percent
+                continue
+            if stripped.lower().startswith("@bodyalign:") or stripped.lower().startswith("bodyalign:"):
+                _, _, value = stripped.partition(":")
+                parsed_align = _safe_align(value, DEFAULT_BODY_ALIGN)
+                if expecting_page_header:
+                    pending_page_settings["bodyAlign"] = parsed_align
+                else:
+                    current_page["bodyAlign"] = parsed_align
+                continue
+            if stripped.lower().startswith("@bodyboxcentered:") or stripped.lower().startswith("bodyboxcentered:"):
+                _, _, value = stripped.partition(":")
+                parsed_bool = _safe_bool(value, default=False)
+                if expecting_page_header:
+                    pending_page_settings["bodyBoxCentered"] = parsed_bool
+                else:
+                    current_page["bodyBoxCentered"] = parsed_bool
+                continue
+            if stripped.lower().startswith("@body2align:") or stripped.lower().startswith("body2align:") or stripped.lower().startswith("@bodycolumn2align:") or stripped.lower().startswith("bodycolumn2align:"):
+                _, _, value = stripped.partition(":")
+                parsed_align = _safe_align(value, DEFAULT_BODY_ALIGN)
+                if expecting_page_header:
+                    pending_page_settings["bodyColumn2Align"] = parsed_align
+                else:
+                    current_page["bodyColumn2Align"] = parsed_align
+                continue
+            if stripped.lower().startswith("@body2boxcentered:") or stripped.lower().startswith("body2boxcentered:") or stripped.lower().startswith("@bodycolumn2boxcentered:") or stripped.lower().startswith("bodycolumn2boxcentered:"):
+                _, _, value = stripped.partition(":")
+                parsed_bool = _safe_bool(value, default=False)
+                if expecting_page_header:
+                    pending_page_settings["bodyColumn2BoxCentered"] = parsed_bool
+                else:
+                    current_page["bodyColumn2BoxCentered"] = parsed_bool
+                continue
+            if stripped.lower().startswith("@body3align:") or stripped.lower().startswith("body3align:") or stripped.lower().startswith("@bodycolumn3align:") or stripped.lower().startswith("bodycolumn3align:"):
+                _, _, value = stripped.partition(":")
+                parsed_align = _safe_align(value, DEFAULT_BODY_ALIGN)
+                if expecting_page_header:
+                    pending_page_settings["bodyColumn3Align"] = parsed_align
+                else:
+                    current_page["bodyColumn3Align"] = parsed_align
+                continue
+            if stripped.lower().startswith("@body3boxcentered:") or stripped.lower().startswith("body3boxcentered:") or stripped.lower().startswith("@bodycolumn3boxcentered:") or stripped.lower().startswith("bodycolumn3boxcentered:"):
+                _, _, value = stripped.partition(":")
+                parsed_bool = _safe_bool(value, default=False)
+                if expecting_page_header:
+                    pending_page_settings["bodyColumn3BoxCentered"] = parsed_bool
+                else:
+                    current_page["bodyColumn3BoxCentered"] = parsed_bool
+                continue
+            if stripped.lower().startswith("@scrollablebody:") or stripped.lower().startswith("scrollablebody:"):
+                _, _, value = stripped.partition(":")
+                parsed_bool = _safe_bool(value, default=False)
+                if expecting_page_header:
+                    pending_page_settings["scrollableBody"] = parsed_bool
+                else:
+                    current_page["scrollableBody"] = parsed_bool
+                continue
+            if stripped.lower() == "@body1" or stripped.lower() == "@column1":
+                current_page_body_key = "bodyLines"
+                if "bodyLines" not in current_page:
+                    current_page["bodyLines"] = []
+                continue
+            if stripped.lower() == "@body2" or stripped.lower() == "@column2":
+                current_page_body_key = "bodyColumn2Lines"
+                if "bodyColumn2Lines" not in current_page:
+                    current_page["bodyColumn2Lines"] = []
+                continue
+            if stripped.lower() == "@body3" or stripped.lower() == "@column3":
+                current_page_body_key = "bodyColumn3Lines"
+                if "bodyColumn3Lines" not in current_page:
+                    current_page["bodyColumn3Lines"] = []
+                continue
+            if PAGE_BANNER_RE.match(stripped):
                 expecting_page_header = True
+                continue
+            if SEPARATOR_LINE_RE.match(stripped):
+                # Decorative separator lines are ignored within a page block.
                 continue
             if stripped.startswith("@bodySourceUrl:"):
                 _, _, value = stripped.partition(":")
@@ -731,7 +1460,45 @@ def _parse_texts_markdown(text: str) -> dict:
                     continue
                 current_page["bodySourceUrl"] = value.strip()
                 continue
+            if stripped.startswith("bodySourceUrl:"):
+                _, _, value = stripped.partition(":")
+                if expecting_page_header:
+                    continue
+                current_page["bodySourceUrl"] = value.strip()
+                continue
+            if stripped.startswith("@body2SourceUrl:"):
+                _, _, value = stripped.partition(":")
+                if expecting_page_header:
+                    continue
+                current_page["bodyColumn2SourceUrl"] = value.strip()
+                continue
+            if stripped.startswith("body2SourceUrl:"):
+                _, _, value = stripped.partition(":")
+                if expecting_page_header:
+                    continue
+                current_page["bodyColumn2SourceUrl"] = value.strip()
+                continue
+            if stripped.startswith("@body3SourceUrl:"):
+                _, _, value = stripped.partition(":")
+                if expecting_page_header:
+                    continue
+                current_page["bodyColumn3SourceUrl"] = value.strip()
+                continue
+            if stripped.startswith("body3SourceUrl:"):
+                _, _, value = stripped.partition(":")
+                if expecting_page_header:
+                    continue
+                current_page["bodyColumn3SourceUrl"] = value.strip()
+                continue
             if stripped.startswith("@titleFontSize:"):
+                _, _, value = stripped.partition(":")
+                parsed_size = _safe_font_size(value.strip(), DEFAULT_PAGE_TITLE_FONT_SIZE)
+                if expecting_page_header:
+                    pending_page_settings["titleFontSize"] = parsed_size
+                else:
+                    current_page["titleFontSize"] = parsed_size
+                continue
+            if stripped.startswith("titleFontSize:"):
                 _, _, value = stripped.partition(":")
                 parsed_size = _safe_font_size(value.strip(), DEFAULT_PAGE_TITLE_FONT_SIZE)
                 if expecting_page_header:
@@ -747,7 +1514,21 @@ def _parse_texts_markdown(text: str) -> dict:
                 else:
                     current_page["bodyFontSize"] = parsed_size
                 continue
+            if stripped.startswith("bodyFontSize:"):
+                _, _, value = stripped.partition(":")
+                parsed_size = _safe_font_size(value.strip(), DEFAULT_PAGE_BODY_FONT_SIZE)
+                if expecting_page_header:
+                    pending_page_settings["bodyFontSize"] = parsed_size
+                else:
+                    current_page["bodyFontSize"] = parsed_size
+                continue
+            if stripped.startswith("titleLabel:"):
+                _, _, value = stripped.partition(":")
+                current_page["title"] = value.strip()
+                continue
             body_lines = current_page.get("bodyLines")
+            if current_page_body_key != "bodyLines":
+                body_lines = current_page.get(current_page_body_key)
             if isinstance(body_lines, list):
                 body_lines.append(line)
 
@@ -766,6 +1547,78 @@ def _parse_texts_markdown(text: str) -> dict:
                     DEFAULT_PAGE_BODY_FONT_SIZE,
                 )
                 continue
+            if stripped.lower().startswith("@autosplitcolumns:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["autoSplitColumns"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("@bodywidthpercent:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyWidthPercent"] = _safe_body_width_percent(value, DEFAULT_BODY_WIDTH_PERCENT)
+                continue
+            if stripped.lower().startswith("@bodyalign:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyAlign"] = _safe_align(value, DEFAULT_BODY_ALIGN)
+                continue
+            if stripped.lower().startswith("@bodyboxcentered:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyBoxCentered"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("@body2align:") or stripped.lower().startswith("@bodycolumn2align:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn2Align"] = _safe_align(value, DEFAULT_BODY_ALIGN)
+                continue
+            if stripped.lower().startswith("@body2boxcentered:") or stripped.lower().startswith("@bodycolumn2boxcentered:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn2BoxCentered"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("@body3align:") or stripped.lower().startswith("@bodycolumn3align:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn3Align"] = _safe_align(value, DEFAULT_BODY_ALIGN)
+                continue
+            if stripped.lower().startswith("@body3boxcentered:") or stripped.lower().startswith("@bodycolumn3boxcentered:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn3BoxCentered"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("@scrollablebody:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["scrollableBody"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("autosplitcolumns:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["autoSplitColumns"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("bodywidthpercent:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyWidthPercent"] = _safe_body_width_percent(value, DEFAULT_BODY_WIDTH_PERCENT)
+                continue
+            if stripped.lower().startswith("bodyalign:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyAlign"] = _safe_align(value, DEFAULT_BODY_ALIGN)
+                continue
+            if stripped.lower().startswith("bodyboxcentered:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyBoxCentered"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("body2align:") or stripped.lower().startswith("bodycolumn2align:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn2Align"] = _safe_align(value, DEFAULT_BODY_ALIGN)
+                continue
+            if stripped.lower().startswith("body2boxcentered:") or stripped.lower().startswith("bodycolumn2boxcentered:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn2BoxCentered"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("body3align:") or stripped.lower().startswith("bodycolumn3align:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn3Align"] = _safe_align(value, DEFAULT_BODY_ALIGN)
+                continue
+            if stripped.lower().startswith("body3boxcentered:") or stripped.lower().startswith("bodycolumn3boxcentered:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["bodyColumn3BoxCentered"] = _safe_bool(value, default=False)
+                continue
+            if stripped.lower().startswith("scrollablebody:"):
+                _, _, value = stripped.partition(":")
+                pending_page_settings["scrollableBody"] = _safe_bool(value, default=False)
+                continue
             if stripped.startswith("//") or BODY_BOUNDARY_MARKER_RE.match(stripped):
                 continue
             if PAGE_BANNER_RE.match(stripped) or SEPARATOR_LINE_RE.match(stripped):
@@ -773,7 +1626,7 @@ def _parse_texts_markdown(text: str) -> dict:
                 continue
 
     if current_page is not None:
-        _trim_page_body_trailing_blanks(current_page)
+        _trim_page_columns_trailing_blanks(current_page)
         pages.append(current_page)
 
     return {
@@ -781,6 +1634,14 @@ def _parse_texts_markdown(text: str) -> dict:
         "headers": headers,
         "pages": pages,
         "links": links,
+        "enabledLinks": enabled_links,
+        "linksClientOrServer": link_source_mode,
+        "linksXMLWebBaseUrl": links_web_xml_base_url,
+        "showOptionsSection": show_options_section,
+        "showAdminVersion": show_admin_version,
+        "showLinksSection": show_links_section,
+        "showServerJoinSection": show_server_join_section,
+        "enabledPages": enabled_pages,
     }
 
 
@@ -867,6 +1728,7 @@ def apply_text_overrides(source: dict, texts_path: Path) -> tuple[dict, int]:
         applied += 1
 
     pages_overrides_raw = payload.get("pages")
+    enabled_pages_raw = payload.get("enabledPages")
     if pages_overrides_raw is not None and not isinstance(pages_overrides_raw, list):
         raise ValueError(f"Texts file 'pages' must be a list: {texts_path}")
 
@@ -875,7 +1737,29 @@ def apply_text_overrides(source: dict, texts_path: Path) -> tuple[dict, int]:
         if not pages_overrides_raw:
             raise ValueError("Texts file must include at least one page in 'pages'.")
 
-        new_tabs: list[dict] = []
+        if enabled_pages_raw is None:
+            enabled_page_count = len([
+                tab
+                for tab in existing_tabs
+                if isinstance(tab, dict) and tab.get("enabled", True) is not False
+            ])
+            enabled_page_count = max(1, min(DEFAULT_MAX_PAGES, enabled_page_count or 1))
+        else:
+            try:
+                enabled_page_count = int(str(enabled_pages_raw).strip())
+            except (ValueError, TypeError, AttributeError):
+                enabled_page_count = 1
+            enabled_page_count = max(1, min(DEFAULT_MAX_PAGES, enabled_page_count))
+
+        tab_layout = get_tab_layout(updated)
+        allowed_tabs = min(DEFAULT_MAX_PAGES, tab_layout["maxTabs"])
+        if enabled_page_count > allowed_tabs:
+            raise ValueError(
+                f"Too many enabled pages for current tab layout: enabledPages={enabled_page_count}, allowed={allowed_tabs}. "
+                "Lower @enabledPages or adjust ui.layout settings in source JSON."
+            )
+
+        rows_by_pos: dict[int, dict] = {}
         for i, row in enumerate(pages_overrides_raw):
             if not isinstance(row, dict):
                 continue
@@ -893,39 +1777,158 @@ def apply_text_overrides(source: dict, texts_path: Path) -> tuple[dict, int]:
             if target_idx is None:
                 target_idx = i
 
-            source_tab: dict = {}
-            if 0 <= target_idx < len(existing_tabs) and isinstance(existing_tabs[target_idx], dict):
-                source_tab = existing_tabs[target_idx]
+            if 0 <= target_idx < DEFAULT_MAX_PAGES:
+                rows_by_pos[target_idx] = row
 
-            page_num = len(new_tabs) + 1
+        new_tabs: list[dict] = []
+        for slot in range(DEFAULT_MAX_PAGES):
+            row = rows_by_pos.get(slot, {})
+            source_tab: dict = {}
+            if 0 <= slot < len(existing_tabs) and isinstance(existing_tabs[slot], dict):
+                source_tab = existing_tabs[slot]
+
+            page_num = slot + 1
             title_value = str(row.get("title") or source_tab.get("title") or source_tab.get("button") or f"Page {page_num}")
-            resolved_body = _resolve_page_body_text(row)
+            resolved_body = _resolve_page_column_text(row, "bodyLines", "body", "bodySourceUrl")
             body_value = resolved_body if resolved_body is not None else str(source_tab.get("body") or "")
+            resolved_body_col2 = _resolve_page_column_text(row, "bodyColumn2Lines", "bodyColumn2", "bodyColumn2SourceUrl")
+            body_col2_value = (
+                resolved_body_col2 if resolved_body_col2 is not None else str(source_tab.get("bodyColumn2") or "")
+            )
+            resolved_body_col3 = _resolve_page_column_text(row, "bodyColumn3Lines", "bodyColumn3", "bodyColumn3SourceUrl")
+            body_col3_value = (
+                resolved_body_col3 if resolved_body_col3 is not None else str(source_tab.get("bodyColumn3") or "")
+            )
+
+            page_columns_raw = row.get("columns", source_tab.get("bodyColumns", 1))
+            try:
+                page_columns = int(str(page_columns_raw).strip())
+            except (ValueError, TypeError, AttributeError):
+                page_columns = 1
+            page_columns = max(1, min(PAGE_BODY_MAX_COLUMNS, page_columns))
+
+            body_font_size = _safe_font_size(
+                row.get("bodyFontSize", source_tab.get("bodyFontSize", DEFAULT_PAGE_BODY_FONT_SIZE)),
+                DEFAULT_PAGE_BODY_FONT_SIZE,
+            )
+            title_font_size = _safe_font_size(
+                row.get("titleFontSize", source_tab.get("titleFontSize", DEFAULT_PAGE_TITLE_FONT_SIZE)),
+                DEFAULT_PAGE_TITLE_FONT_SIZE,
+            )
+            auto_split_columns = _safe_bool(
+                row.get("autoSplitColumns", source_tab.get("autoSplitColumns", False)),
+                default=False,
+            )
+            scrollable_body = _safe_bool(
+                row.get("scrollableBody", source_tab.get("scrollableBody", False)),
+                default=False,
+            )
+            body_width_percent = _safe_body_width_percent(
+                row.get("bodyWidthPercent", source_tab.get("bodyWidthPercent", DEFAULT_BODY_WIDTH_PERCENT)),
+                DEFAULT_BODY_WIDTH_PERCENT,
+            )
+            body_align = _safe_align(
+                row.get("bodyAlign", source_tab.get("bodyAlign", DEFAULT_BODY_ALIGN)),
+                DEFAULT_BODY_ALIGN,
+            )
+            body_box_centered = _safe_bool(
+                row.get("bodyBoxCentered", source_tab.get("bodyBoxCentered", False)),
+                default=False,
+            )
+            body_col2_align = _safe_align(
+                row.get("bodyColumn2Align", source_tab.get("bodyColumn2Align", DEFAULT_BODY_ALIGN)),
+                DEFAULT_BODY_ALIGN,
+            )
+            body_col2_box_centered = _safe_bool(
+                row.get("bodyColumn2BoxCentered", source_tab.get("bodyColumn2BoxCentered", False)),
+                default=False,
+            )
+            body_col3_align = _safe_align(
+                row.get("bodyColumn3Align", source_tab.get("bodyColumn3Align", DEFAULT_BODY_ALIGN)),
+                DEFAULT_BODY_ALIGN,
+            )
+            body_col3_box_centered = _safe_bool(
+                row.get("bodyColumn3BoxCentered", source_tab.get("bodyColumn3BoxCentered", False)),
+                default=False,
+            )
+
+            if auto_split_columns and page_columns > 1:
+                split_columns = _split_body_text_by_fit(body_value, page_columns, body_font_size)
+                body_value = split_columns[0]
+                body_col2_value = split_columns[1] if page_columns >= 2 else ""
+                body_col3_value = split_columns[2] if page_columns >= 3 else ""
+
+            if page_columns < 2:
+                body_col2_value = ""
+            if page_columns < 3:
+                body_col3_value = ""
 
             new_tab = {
                 "id": str(source_tab.get("id") or f"page_{page_num}"),
+                "enabled": page_num <= enabled_page_count,
                 "button": title_value,
                 "title": title_value,
                 "body": body_value,
-                "titleFontSize": _safe_font_size(
-                    row.get("titleFontSize", source_tab.get("titleFontSize", DEFAULT_PAGE_TITLE_FONT_SIZE)),
-                    DEFAULT_PAGE_TITLE_FONT_SIZE,
-                ),
-                "bodyFontSize": _safe_font_size(
-                    row.get("bodyFontSize", source_tab.get("bodyFontSize", DEFAULT_PAGE_BODY_FONT_SIZE)),
-                    DEFAULT_PAGE_BODY_FONT_SIZE,
-                ),
+                "bodyColumns": page_columns,
+                "bodyColumn2": body_col2_value,
+                "bodyColumn3": body_col3_value,
+                "titleFontSize": title_font_size,
+                "bodyFontSize": body_font_size,
+                "autoSplitColumns": auto_split_columns,
+                "scrollableBody": scrollable_body,
+                "bodyWidthPercent": body_width_percent,
+                "bodyAlign": body_align,
+                "bodyBoxCentered": body_box_centered,
+                "bodyColumn2Align": body_col2_align,
+                "bodyColumn2BoxCentered": body_col2_box_centered,
+                "bodyColumn3Align": body_col3_align,
+                "bodyColumn3BoxCentered": body_col3_box_centered,
             }
+            if row.get("bodySourceUrl"):
+                new_tab["bodySourceUrl"] = str(row.get("bodySourceUrl"))
+            if row.get("bodyColumn2SourceUrl"):
+                new_tab["bodyColumn2SourceUrl"] = str(row.get("bodyColumn2SourceUrl"))
+            if row.get("bodyColumn3SourceUrl"):
+                new_tab["bodyColumn3SourceUrl"] = str(row.get("bodyColumn3SourceUrl"))
             new_tabs.append(new_tab)
-            applied += 5
+            applied += 10
 
-        tab_layout = get_tab_layout(updated)
-        validate_tab_count(len(new_tabs), tab_layout)
         updated["tabs"] = new_tabs
 
     links_overrides = payload.get("links", [])
     if links_overrides and not isinstance(links_overrides, list):
         raise ValueError(f"Texts file 'links' must be a list: {texts_path}")
+
+    enabled_links_raw = payload.get("enabledLinks")
+    link_source_mode_raw = payload.get("linksClientOrServer")
+    links_web_xml_base_url_raw = payload.get("linksXMLWebBaseUrl")
+    show_options_section_raw = payload.get("showOptionsSection")
+    show_admin_version_raw = payload.get("showAdminVersion")
+    show_server_join_section_raw = payload.get("showServerJoinSection")
+
+    meta = updated.setdefault("meta", {}) if isinstance(updated.get("meta", {}), dict) else {}
+    if link_source_mode_raw is not None:
+        mode = _safe_link_source_mode(link_source_mode_raw, DEFAULT_LINK_SOURCE_MODE)
+        meta["linksClientOrServer"] = mode
+        applied += 1
+    if links_web_xml_base_url_raw is not None:
+        base_url = _normalize_web_base_url(links_web_xml_base_url_raw)
+        meta["linksXMLWebBaseUrl"] = base_url
+        applied += 1
+    if show_options_section_raw is not None:
+        ui = updated.setdefault("ui", {}) if isinstance(updated.get("ui", {}), dict) else {}
+        ui["showOptionsSection"] = _safe_bool(show_options_section_raw, default=True)
+        applied += 1
+    if show_admin_version_raw is not None:
+        ui = updated.setdefault("ui", {}) if isinstance(updated.get("ui", {}), dict) else {}
+        ui["showAdminVersion"] = _safe_bool(show_admin_version_raw, default=True)
+        applied += 1
+    # showLinksSection is intentionally ignored for behavior.
+    # Links visibility/generation is driven by @enabledLinks (0 disables, 1-5 enables).
+    if show_server_join_section_raw is not None:
+        ui = updated.setdefault("ui", {}) if isinstance(updated.get("ui", {}), dict) else {}
+        ui["showServerJoinSection"] = _safe_bool(show_server_join_section_raw, default=True)
+        applied += 1
 
     existing_links = updated.get("links", []) if isinstance(updated.get("links", []), list) else []
     active_existing_links: list[dict] = []
@@ -946,11 +1949,26 @@ def apply_text_overrides(source: dict, texts_path: Path) -> tuple[dict, int]:
                 "Reduce links in texts file or increase ui.layout.maxLinks."
             )
 
-        new_links: list[dict] = []
+        if enabled_links_raw is None:
+            enabled_count = min(
+                max_links,
+                len([
+                    link
+                    for link in active_existing_links[:max_links]
+                    if isinstance(link, dict) and str(link.get("url") or "").strip()
+                ]),
+            )
+        else:
+            try:
+                enabled_count = int(str(enabled_links_raw).strip())
+            except (ValueError, TypeError, AttributeError):
+                enabled_count = 0
+            enabled_count = max(0, min(max_links, enabled_count))
+
+        rows_by_pos: dict[int, dict] = {}
         for i, row in enumerate(links_overrides):
             if not isinstance(row, dict):
                 continue
-
             target_pos: int | None = None
             row_id = row.get("id")
             try:
@@ -962,22 +1980,28 @@ def apply_text_overrides(source: dict, texts_path: Path) -> tuple[dict, int]:
                 target_pos = None
             if target_pos is None:
                 target_pos = i
+            if 0 <= target_pos < max_links:
+                rows_by_pos[target_pos] = row
 
-            source_link: dict = {}
-            if 0 <= target_pos < len(active_existing_links):
-                source_link = active_existing_links[target_pos]
+        new_links: list[dict] = []
+        existing_all_links = [link for link in existing_links if isinstance(link, dict)]
+        for slot in range(max_links):
+            row = rows_by_pos.get(slot, {})
+            source_link: dict = existing_all_links[slot] if slot < len(existing_all_links) else {}
 
-            link_num = len(new_links) + 1
-            label = str(row.get("label") or source_link.get("label") or source_link.get("title") or f"Link {link_num}")
+            link_num = slot + 1
+            label = str(
+                row.get("label")
+                or source_link.get("label")
+                or source_link.get("title")
+                or f"Link {link_num}"
+            )
             url = str(row.get("url") or source_link.get("url") or "").strip()
-            if not url:
-                continue
-
             stable_id = str(source_link.get("id") or slugify_token(label) or f"link_{link_num}")
             new_links.append(
                 {
                     "id": stable_id,
-                    "enabled": True,
+                    "enabled": link_num <= enabled_count,
                     "title": str(source_link.get("title") or label),
                     "label": label,
                     "url": url,
@@ -997,7 +2021,7 @@ def slugify_token(value: str) -> str:
 
 
 def build_tab_models(source: dict) -> list[dict]:
-    tabs = source.get("tabs", [])
+    tabs = get_active_tabs(source)
     models: list[dict] = []
     used_ids: set[str] = set()
 
@@ -1014,6 +2038,14 @@ def build_tab_models(source: dict) -> list[dict]:
         button = str(tab.get("button") or f"Tab {idx}")
         title = str(tab.get("title") or button)
         body = str(tab.get("body") or "")
+        body_columns_raw = tab.get("bodyColumns", 1)
+        try:
+            body_columns = int(str(body_columns_raw).strip())
+        except (ValueError, TypeError, AttributeError):
+            body_columns = 1
+        body_columns = max(1, min(PAGE_BODY_MAX_COLUMNS, body_columns))
+        body_column_2 = str(tab.get("bodyColumn2") or "")
+        body_column_3 = str(tab.get("bodyColumn3") or "")
         title_font_size = _safe_font_size(
             tab.get("titleFontSize", DEFAULT_PAGE_TITLE_FONT_SIZE),
             DEFAULT_PAGE_TITLE_FONT_SIZE,
@@ -1026,6 +2058,19 @@ def build_tab_models(source: dict) -> list[dict]:
         button_hc = str(tab.get("buttonHC") or button)
         title_hc = str(tab.get("titleHC") or title)
         body_hc = str(tab.get("bodyHC") or tab.get("body") or "")
+        body_column_2_hc = str(tab.get("bodyColumn2HC") or tab.get("bodyColumn2") or "")
+        body_column_3_hc = str(tab.get("bodyColumn3HC") or tab.get("bodyColumn3") or "")
+        scrollable_body = _safe_bool(tab.get("scrollableBody"), default=False)
+        body_width_percent = _safe_body_width_percent(
+            tab.get("bodyWidthPercent", DEFAULT_BODY_WIDTH_PERCENT),
+            DEFAULT_BODY_WIDTH_PERCENT,
+        )
+        body_align = _safe_align(tab.get("bodyAlign", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)
+        body_box_centered = _safe_bool(tab.get("bodyBoxCentered"), default=False)
+        body_column_2_align = _safe_align(tab.get("bodyColumn2Align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)
+        body_column_2_box_centered = _safe_bool(tab.get("bodyColumn2BoxCentered"), default=False)
+        body_column_3_align = _safe_align(tab.get("bodyColumn3Align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)
+        body_column_3_box_centered = _safe_bool(tab.get("bodyColumn3BoxCentered"), default=False)
 
         models.append(
             {
@@ -1034,11 +2079,24 @@ def build_tab_models(source: dict) -> list[dict]:
                 "button": button,
                 "title": title,
                 "body": body,
+                "body_columns": body_columns,
+                "body_column_2": body_column_2,
+                "body_column_3": body_column_3,
                 "title_font_size": title_font_size,
                 "body_font_size": body_font_size,
                 "button_hc": button_hc,
                 "title_hc": title_hc,
                 "body_hc": body_hc,
+                "body_column_2_hc": body_column_2_hc,
+                "body_column_3_hc": body_column_3_hc,
+                "scrollable_body": scrollable_body,
+                "body_width_percent": body_width_percent,
+                "body_align": body_align,
+                "body_box_centered": body_box_centered,
+                "body_column_2_align": body_column_2_align,
+                "body_column_2_box_centered": body_column_2_box_centered,
+                "body_column_3_align": body_column_3_align,
+                "body_column_3_box_centered": body_column_3_box_centered,
             }
         )
 
@@ -1138,15 +2196,18 @@ def get_theme_colors(
     use_hc_dev_overrides: bool = False,
 ) -> dict[str, str]:
     if theme_name == "highContrast":
-        # High Contrast is automatic and intentionally not user-configurable.
+        # High Visibility defaults to auto-derived values, but if dev.highContrastPreview
+        # is present we treat it as the authoritative standards palette.
         derived = derive_auto_high_contrast_colors(get_theme_colors(source, "color"))
-
-        if not use_hc_dev_overrides:
-            return derived
 
         dev = source.get("dev", {})
         preview = dev.get("highContrastPreview", {}) if isinstance(dev, dict) else {}
         if not isinstance(preview, dict):
+            return derived
+
+        # Backward compatibility: if preview block is empty and caller did not request
+        # temporary override mode, keep pure auto-derived colors.
+        if not preview and not use_hc_dev_overrides:
             return derived
 
         aliases = {
@@ -1282,6 +2343,58 @@ def validate_tab_count(tab_count: int, tab_layout: dict[str, int]) -> None:
         )
 
 
+def _get_tab_body_columns(tab: dict, is_hc: bool) -> list[str]:
+    base = str(tab.get("body_hc") if is_hc else tab.get("body") or "")
+    col2 = str(tab.get("body_column_2_hc") if is_hc else tab.get("body_column_2") or "")
+    col3 = str(tab.get("body_column_3_hc") if is_hc else tab.get("body_column_3") or "")
+    columns_raw = tab.get("body_columns", 1)
+    try:
+        columns_count = int(str(columns_raw).strip())
+    except (ValueError, TypeError, AttributeError):
+        columns_count = 1
+    columns_count = max(1, min(PAGE_BODY_MAX_COLUMNS, columns_count))
+
+    return [base, col2, col3][:columns_count]
+
+
+def _get_body_column_layout(column_count: int) -> list[tuple[str, str]]:
+    count = max(1, min(PAGE_BODY_MAX_COLUMNS, column_count))
+
+    pos_parts = [p.strip() for p in PAGE_BODY_POS.split(",", 1)]
+    start_x = int(pos_parts[0]) if pos_parts else 26
+    pos_y = pos_parts[1] if len(pos_parts) > 1 else "-144"
+
+    total_gap = PAGE_BODY_COLUMN_GAP * (count - 1)
+    available_width = max(1, PAGE_BODY_WIDTH - total_gap)
+    base_width = available_width // count
+    remainder = available_width - (base_width * count)
+
+    layout: list[tuple[str, str]] = []
+    cursor_x = start_x
+    for idx in range(count):
+        width = base_width + (1 if idx < remainder else 0)
+        layout.append((f"{cursor_x},{pos_y}", str(width)))
+        cursor_x += width + PAGE_BODY_COLUMN_GAP
+
+    return layout
+
+
+def _get_column_align(tab: dict, column_idx: int) -> str:
+    if column_idx <= 1:
+        return _safe_align(tab.get("body_align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)
+    if column_idx == 2:
+        return _safe_align(tab.get("body_column_2_align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)
+    return _safe_align(tab.get("body_column_3_align", DEFAULT_BODY_ALIGN), DEFAULT_BODY_ALIGN)
+
+
+def _get_column_box_centered(tab: dict, column_idx: int) -> bool:
+    if column_idx <= 1:
+        return _safe_bool(tab.get("body_box_centered"), default=False)
+    if column_idx == 2:
+        return _safe_bool(tab.get("body_column_2_box_centered"), default=False)
+    return _safe_bool(tab.get("body_column_3_box_centered"), default=False)
+
+
 def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) -> list[list[str]]:
     labels = source["labels"]
     tab_models = build_tab_models(source)
@@ -1292,7 +2405,7 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
     header_motto = labels.get("headerMotto", "")
     options_title = labels.get("optionsTitle", "Options")
     mode_color_label = labels.get("modeColorTab", "Full Color")
-    mode_hc_label = labels.get("modeHighContrastTab", "High Visibility")
+    mode_hc_label = labels.get("modeHighVisibilityTab", labels.get("modeHighContrastTab", "High Visibility"))
     # HC text mirrors Color text; only colors differ.
     header_title_hc = header_title
     header_motto_hc = header_motto
@@ -1302,14 +2415,19 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
 
     rows: list[list[str]] = [
         ["Key", "Context", "English"],
+        ["windowESC_mode_color_tab", "UI", mode_color_label],
+        ["windowESC_mode_highvisibility_tab", "UI", mode_hc_label],
+    ]
+
+    color_rows: list[list[str]] = [
         ["windowESC_color_header_title", "UI", header_title],
         ["windowESC_color_header_motto", "UI", header_motto],
         ["windowESC_color_options_title", "UI", options_title],
-        ["windowESC_mode_color_tab", "UI", mode_color_label],
-        ["windowESC_mode_highcontrast_tab", "UI", mode_hc_label],
-        ["windowESC_highcontrast_header_title", "UI", header_title_hc],
-        ["windowESC_highcontrast_header_motto", "UI", header_motto_hc],
-        ["windowESC_highcontrast_options_title", "UI", options_title_hc],
+    ]
+    high_rows: list[list[str]] = [
+        ["windowESC_highvisibility_header_title", "UI", header_title_hc],
+        ["windowESC_highvisibility_header_motto", "UI", header_motto_hc],
+        ["windowESC_highvisibility_options_title", "UI", options_title_hc],
     ]
 
     if active_links:
@@ -1317,16 +2435,16 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
             fallback_label = str(link.get("title") or f"Link {link_idx}")
             link_label = str(link.get("label") or link.get("title") or fallback_label)
             link_label_hc = link_label
-            rows.append(
+            color_rows.append(
                 [
                     f"windowESC_color_link_{link_idx}_label",
                     "UI",
                     _colorize_text(link_label, theme_color["linkButtonText"]),
                 ]
             )
-            rows.append(
+            high_rows.append(
                 [
-                    f"windowESC_highcontrast_link_{link_idx}_label",
+                    f"windowESC_highvisibility_link_{link_idx}_label",
                     "UI",
                     _colorize_text(link_label_hc, theme_hc["linkButtonText"]),
                 ]
@@ -1335,16 +2453,16 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
         # Keep link_1 keys present even when no active links are configured.
         fallback_label = labels.get("linkLabel", "")
         fallback_label_hc = fallback_label
-        rows.append(
+        color_rows.append(
             [
                 "windowESC_color_link_1_label",
                 "UI",
                 _colorize_text(fallback_label, theme_color["linkButtonText"]),
             ]
         )
-        rows.append(
+        high_rows.append(
             [
-                "windowESC_highcontrast_link_1_label",
+                "windowESC_highvisibility_link_1_label",
                 "UI",
                 _colorize_text(fallback_label_hc, theme_hc["linkButtonText"]),
             ]
@@ -1352,52 +2470,80 @@ def build_localization_rows(source: dict, use_hc_dev_overrides: bool = False) ->
 
     for tab in tab_models:
         idx = tab["idx"]
-        body_color = normalize_text(
-            _apply_inline_body_styles(
-                tab["body"],
-                theme_color["textBolding"],
-                theme_color["textHighlight"],
+        body_columns_color = [
+            normalize_text(
+                _apply_inline_body_styles(
+                    column_text,
+                    theme_color["textBolding"],
+                    theme_color["textHighlight"],
+                )
             )
-        )
-        body_hc = normalize_text(
-            _apply_inline_body_styles(
-                tab["body"],
-                theme_hc["textBolding"],
-                theme_hc["textHighlight"],
+            for column_text in _get_tab_body_columns(tab, is_hc=False)
+        ]
+        body_columns_hc = [
+            normalize_text(
+                _apply_inline_body_styles(
+                    column_text,
+                    theme_hc["textBolding"],
+                    theme_hc["textHighlight"],
+                )
             )
-        )
+            for column_text in _get_tab_body_columns(tab, is_hc=True)
+        ]
 
         # Canonical window-scoped keys for readability in XUi and localization.
-        rows.append(
+        color_rows.append(
             [
                 f"windowESC_color_page_{idx}_button",
                 "UI",
                 _colorize_text(tab["button"], theme_color["pageTabButtonText"]),
             ]
         )
-        rows.append(
+        color_rows.append(
             [
                 f"windowESC_color_page_{idx}_title",
                 "UI",
                 tab["title"],
             ]
         )
-        rows.append([f"windowESC_color_page_{idx}_body", "UI", body_color])
-        rows.append(
+        color_rows.append([f"windowESC_color_page_{idx}_body", "UI", body_columns_color[0]])
+        if len(body_columns_color) > 1:
+            for column_idx, column_text in enumerate(body_columns_color, start=1):
+                color_rows.append(
+                    [
+                        f"windowESC_color_page_{idx}_body_column_{column_idx}",
+                        "UI",
+                        column_text,
+                    ]
+                )
+        high_rows.append(
             [
-                f"windowESC_highcontrast_page_{idx}_button",
+                f"windowESC_highvisibility_page_{idx}_button",
                 "UI",
                 _colorize_text(tab["button"], theme_hc["pageTabButtonText"]),
             ]
         )
-        rows.append(
+        high_rows.append(
             [
-                f"windowESC_highcontrast_page_{idx}_title",
+                f"windowESC_highvisibility_page_{idx}_title",
                 "UI",
                 tab["title"],
             ]
         )
-        rows.append([f"windowESC_highcontrast_page_{idx}_body", "UI", body_hc])
+        high_rows.append([f"windowESC_highvisibility_page_{idx}_body", "UI", body_columns_hc[0]])
+        if len(body_columns_hc) > 1:
+            for column_idx, column_text in enumerate(body_columns_hc, start=1):
+                high_rows.append(
+                    [
+                        f"windowESC_highvisibility_page_{idx}_body_column_{column_idx}",
+                        "UI",
+                        column_text,
+                    ]
+                )
+
+    # Custom order: mode keys first, then color block, then high visibility block.
+    rows.extend(sorted(color_rows, key=lambda r: str(r[0] if len(r) > 0 else "").lower()))
+    rows.extend(sorted(high_rows, key=lambda r: str(r[0] if len(r) > 0 else "").lower()))
 
     return rows
 
@@ -1422,21 +2568,109 @@ def build_tabs_ui_snippet(source: dict, use_hc_dev_overrides: bool = False) -> s
         theme = theme_hc if is_hc else theme_color
         for tab in tab_models:
             idx = tab["idx"]
-            mode_prefix = "windowESC_highcontrast" if is_hc else "windowESC_color"
+            mode_prefix = "windowESC_highvisibility" if is_hc else "windowESC_color"
             title_key = f"{mode_prefix}_page_{idx}_title"
             body_key = f"{mode_prefix}_page_{idx}_body"
             button_key = f"{mode_prefix}_page_{idx}_button"
             page_name = f"page_{idx}_hc" if is_hc else f"page_{idx}"
             title_name = f"page_{idx}_hc_title" if is_hc else f"page_{idx}_title"
             body_name = f"page_{idx}_hc_body" if is_hc else f"page_{idx}_body"
+            scrollable_body = _safe_bool(tab.get("scrollable_body"), default=False)
+            body_columns = _get_tab_body_columns(tab, is_hc=is_hc)
+            body_layout = _get_body_column_layout(len(body_columns))
+            single_body_text = body_columns[0] if body_columns else ""
+            single_body_pos, single_body_width = _single_body_layout(tab, single_body_text)
+            single_body_align = _get_column_align(tab, 1)
             pages.extend(
                 [
                     f'\t\t<rect name="{page_name}" controller="TabSelectorTab" tab_key="{button_key}">',
                     f'\t\t\t<label name="{title_name}" depth="10" pos="{PAGE_TITLE_POS}" justify="center" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="{theme["pageTitle"]}" font_size="{tab["title_font_size"]}" text_key="{title_key}" foregroundlayer="true"/>',
-                    f'\t\t\t<label name="{body_name}" depth="10" pos="{PAGE_BODY_POS}" width="{PAGE_BODY_WIDTH}" height="{PAGE_BODY_HEIGHT}" justify="left" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" color="{theme["pageBody"]}" font_size="{tab["body_font_size"]}" text_key="{body_key}" foregroundlayer="true"/>',
-                    "\t\t</rect>",
                 ]
             )
+            if len(body_columns) <= 1:
+                if scrollable_body:
+                    pages.extend(
+                        [
+                            f'\t\t\t<panel name="{body_name}_scroll" depth="10" pos="{single_body_pos}" width="{single_body_width}" height="{PAGE_BODY_HEIGHT}" on_scroll="true" disableautobackground="true" createuipanel="true" clipping="SoftClip" clippingsoftness="4,4" clippingsize="{single_body_width},{PAGE_BODY_HEIGHT}" clippingcenter="{single_body_width // 2},-{PAGE_BODY_HEIGHT // 2}">',
+                            _build_body_label_xml(
+                                indent="\t\t\t\t",
+                                name=body_name,
+                                depth=11,
+                                pos="0,0",
+                                width=single_body_width,
+                                height=PAGE_BODY_SCROLL_CONTENT_HEIGHT,
+                                justify=single_body_align,
+                                color=theme["pageBody"],
+                                font_size=tab["body_font_size"],
+                                text_key=body_key,
+                            ),
+                            "\t\t\t</panel>",
+                        ]
+                    )
+                else:
+                    pages.append(
+                        _build_body_label_xml(
+                            indent="\t\t\t",
+                            name=body_name,
+                            depth=10,
+                            pos=single_body_pos,
+                            width=single_body_width,
+                            height=PAGE_BODY_HEIGHT,
+                            justify=single_body_align,
+                            color=theme["pageBody"],
+                            font_size=tab["body_font_size"],
+                            text_key=body_key,
+                        )
+                    )
+            else:
+                for column_idx, (pos_value, width_value) in enumerate(body_layout, start=1):
+                    body_key_column = f"{mode_prefix}_page_{idx}_body_column_{column_idx}"
+                    body_name_column = f"{body_name}_column_{column_idx}"
+                    column_align = _get_column_align(tab, column_idx)
+                    column_box_centered = _get_column_box_centered(tab, column_idx)
+                    column_text = body_columns[column_idx - 1] if (column_idx - 1) < len(body_columns) else ""
+                    body_col_pos, body_col_width = _resolve_body_block_layout(
+                        pos_value,
+                        int(str(width_value)),
+                        column_text,
+                        _safe_font_size(tab.get("body_font_size"), DEFAULT_PAGE_BODY_FONT_SIZE),
+                        column_box_centered,
+                    )
+                    if scrollable_body:
+                        pages.extend(
+                            [
+                                f'\t\t\t<panel name="{body_name_column}_scroll" depth="10" pos="{body_col_pos}" width="{body_col_width}" height="{PAGE_BODY_HEIGHT}" on_scroll="true" disableautobackground="true" createuipanel="true" clipping="SoftClip" clippingsoftness="4,4" clippingsize="{body_col_width},{PAGE_BODY_HEIGHT}" clippingcenter="{body_col_width // 2},-{PAGE_BODY_HEIGHT // 2}">',
+                                _build_body_label_xml(
+                                    indent="\t\t\t\t",
+                                    name=body_name_column,
+                                    depth=11,
+                                    pos="0,0",
+                                    width=body_col_width,
+                                    height=PAGE_BODY_SCROLL_CONTENT_HEIGHT,
+                                    justify=column_align,
+                                    color=theme["pageBody"],
+                                    font_size=tab["body_font_size"],
+                                    text_key=body_key_column,
+                                ),
+                                "\t\t\t</panel>",
+                            ]
+                        )
+                    else:
+                        pages.append(
+                            _build_body_label_xml(
+                                indent="\t\t\t",
+                                name=body_name_column,
+                                depth=10,
+                                pos=body_col_pos,
+                                width=body_col_width,
+                                height=PAGE_BODY_HEIGHT,
+                                justify=column_align,
+                                color=theme["pageBody"],
+                                font_size=tab["body_font_size"],
+                                text_key=body_key_column,
+                            )
+                        )
+            pages.append("\t\t</rect>")
         return "\n".join(pages)
 
     button_width = max(1, tab_layout["buttonCellWidth"] - 4)
@@ -1544,7 +2778,7 @@ def _build_tabs_contents_xml(
     lines = ['<rect name="tabsContents">']
     for tab in tab_models:
         idx = tab["idx"]
-        mode_prefix = "windowESC_highcontrast" if is_hc else "windowESC_color"
+        mode_prefix = "windowESC_highvisibility" if is_hc else "windowESC_color"
         title_key = f"{mode_prefix}_page_{idx}_title"
         body_key = f"{mode_prefix}_page_{idx}_body"
         button_key = f"{mode_prefix}_page_{idx}_button"
@@ -1552,6 +2786,12 @@ def _build_tabs_contents_xml(
         page_name = f"{name_prefix}page_{idx}_hc" if is_hc else f"{name_prefix}page_{idx}"
         title_name = f"{name_prefix}page_{idx}_hc_title" if is_hc else f"{name_prefix}page_{idx}_title"
         body_name = f"{name_prefix}page_{idx}_hc_body" if is_hc else f"{name_prefix}page_{idx}_body"
+        scrollable_body = _safe_bool(tab.get("scrollable_body"), default=False)
+        body_columns = _get_tab_body_columns(tab, is_hc=is_hc)
+        body_layout = _get_body_column_layout(len(body_columns))
+        single_body_text = body_columns[0] if body_columns else ""
+        single_body_pos, single_body_width = _single_body_layout(tab, single_body_text)
+        single_body_align = _get_column_align(tab, 1)
 
         lines.extend(
             [
@@ -1562,15 +2802,100 @@ def _build_tabs_contents_xml(
                     f'color="{theme["pageTitle"]}" font_size="{tab["title_font_size"]}" '
                     f'text_key="{title_key}" foregroundlayer="true"/>'
                 ),
-                (
-                    f'\t\t<label name="{body_name}" depth="10" pos="{PAGE_BODY_POS}" width="{PAGE_BODY_WIDTH}" height="{PAGE_BODY_HEIGHT}" justify="left" '
-                    'effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1" '
-                    f'color="{theme["pageBody"]}" font_size="{tab["body_font_size"]}" '
-                    f'text_key="{body_key}" foregroundlayer="true"/>'
-                ),
-                "\t</rect>",
             ]
         )
+
+        if len(body_columns) <= 1:
+            if scrollable_body:
+                lines.extend(
+                    [
+                        (
+                            f'\t\t<panel name="{body_name}_scroll" depth="10" pos="{single_body_pos}" width="{single_body_width}" '
+                            f'height="{PAGE_BODY_HEIGHT}" on_scroll="true" disableautobackground="true" createuipanel="true" clipping="SoftClip" clippingsoftness="4,4" clippingsize="{single_body_width},{PAGE_BODY_HEIGHT}" clippingcenter="{single_body_width // 2},-{PAGE_BODY_HEIGHT // 2}">'
+                        ),
+                        _build_body_label_xml(
+                            indent="\t\t\t",
+                            name=body_name,
+                            depth=11,
+                            pos="0,0",
+                            width=single_body_width,
+                            height=PAGE_BODY_SCROLL_CONTENT_HEIGHT,
+                            justify=single_body_align,
+                            color=theme["pageBody"],
+                            font_size=tab["body_font_size"],
+                            text_key=body_key,
+                        ),
+                        "\t\t</panel>",
+                    ]
+                )
+            else:
+                lines.append(
+                    _build_body_label_xml(
+                        indent="\t\t",
+                        name=body_name,
+                        depth=10,
+                        pos=single_body_pos,
+                        width=single_body_width,
+                        height=PAGE_BODY_HEIGHT,
+                        justify=single_body_align,
+                        color=theme["pageBody"],
+                        font_size=tab["body_font_size"],
+                        text_key=body_key,
+                    )
+                )
+        else:
+            for column_idx, (pos_value, width_value) in enumerate(body_layout, start=1):
+                body_key_column = f"{mode_prefix}_page_{idx}_body_column_{column_idx}"
+                body_name_column = f"{body_name}_column_{column_idx}"
+                column_align = _get_column_align(tab, column_idx)
+                column_box_centered = _get_column_box_centered(tab, column_idx)
+                column_text = body_columns[column_idx - 1] if (column_idx - 1) < len(body_columns) else ""
+                body_col_pos, body_col_width = _resolve_body_block_layout(
+                    pos_value,
+                    int(str(width_value)),
+                    column_text,
+                    _safe_font_size(tab.get("body_font_size"), DEFAULT_PAGE_BODY_FONT_SIZE),
+                    column_box_centered,
+                )
+                if scrollable_body:
+                    lines.extend(
+                        [
+                            (
+                                f'\t\t<panel name="{body_name_column}_scroll" depth="10" pos="{body_col_pos}" width="{body_col_width}" '
+                                f'height="{PAGE_BODY_HEIGHT}" on_scroll="true" disableautobackground="true" createuipanel="true" clipping="SoftClip" clippingsoftness="4,4" clippingsize="{body_col_width},{PAGE_BODY_HEIGHT}" clippingcenter="{body_col_width // 2},-{PAGE_BODY_HEIGHT // 2}">'
+                            ),
+                            _build_body_label_xml(
+                                indent="\t\t\t",
+                                name=body_name_column,
+                                depth=11,
+                                pos="0,0",
+                                width=body_col_width,
+                                height=PAGE_BODY_SCROLL_CONTENT_HEIGHT,
+                                justify=column_align,
+                                color=theme["pageBody"],
+                                font_size=tab["body_font_size"],
+                                text_key=body_key_column,
+                            ),
+                            "\t\t</panel>",
+                        ]
+                    )
+                else:
+                    lines.append(
+                        _build_body_label_xml(
+                            indent="\t\t",
+                            name=body_name_column,
+                            depth=10,
+                            pos=body_col_pos,
+                            width=body_col_width,
+                            height=PAGE_BODY_HEIGHT,
+                            justify=column_align,
+                            color=theme["pageBody"],
+                            font_size=tab["body_font_size"],
+                            text_key=body_key_column,
+                        )
+                    )
+
+        lines.append("\t</rect>")
 
     lines.append("</rect>")
     return "\n".join(lines)
@@ -1590,7 +2915,7 @@ def update_windows_tab_layout(
 
     def _is_in_highcontrast_block(xml_text: str, pos: int) -> bool:
         color_idx = xml_text.rfind('<rect name="Color"', 0, pos)
-        hc_idx = xml_text.rfind('<rect name="HighContrast"', 0, pos)
+        hc_idx = xml_text.rfind('<rect name="HighVisibility"', 0, pos)
         if color_idx == -1 and hc_idx == -1:
             return False
         return hc_idx > color_idx
@@ -1683,6 +3008,21 @@ def update_windows_tab_layout(
     return updates
 
 
+def _esc_localization_order_key(key: str) -> tuple[int, str]:
+    token = str(key or "")
+    if token == "windowESC_mode_color_tab":
+        return (0, token)
+    if token == "windowESC_mode_highvisibility_tab":
+        return (1, token)
+    if token.startswith("windowESC_color_"):
+        return (2, token)
+    if token.startswith("windowESC_highvisibility_"):
+        return (3, token)
+    if token.startswith("windowESC_"):
+        return (4, token)
+    return (5, token)
+
+
 def _write_localization_full_csv(rows: list[list[str]], out_file: Path) -> Path:
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
@@ -1723,7 +3063,7 @@ def _write_localization_full_csv(rows: list[list[str]], out_file: Path) -> Path:
             "schinese": "全彩色",
             "tchinese": "全彩色",
         },
-        "windowESC_mode_highcontrast_tab": {
+        "windowESC_mode_highvisibility_tab": {
             "german": "Hoher Kontrast",
             "spanish": "Alto contraste",
             "french": "Contraste eleve",
@@ -1743,7 +3083,7 @@ def _write_localization_full_csv(rows: list[list[str]], out_file: Path) -> Path:
     if rows:
         header = rows[0]
         body = rows[1:]
-        body_sorted = sorted(body, key=lambda r: str(r[0] if len(r) > 0 else "").lower())
+        body_sorted = sorted(body, key=lambda r: _esc_localization_order_key(str(r[0] if len(r) > 0 else "")))
         ordered_rows = [header, *body_sorted]
 
     with out_file.open("w", encoding="utf-8", newline="") as f:
@@ -1828,15 +3168,94 @@ def merge_localization(
             existing_rows = [row for row in csv.reader(f) if row]
 
     if not existing_rows:
-        existing_rows = [["Key", "Context", "English"]]
+        existing_rows = [[
+            "Key",
+            "File",
+            "Type",
+            "UsedInMainMenu",
+            "NoTranslate",
+            "english",
+            "Context / Alternate Text",
+            "german",
+            "spanish",
+            "french",
+            "italian",
+            "japanese",
+            "koreana",
+            "polish",
+            "brazilian",
+            "russian",
+            "turkish",
+            "schinese",
+            "tchinese",
+        ]]
 
     header = existing_rows[0]
-    generated_header = rows[0]
     generated_body = rows[1:]
 
-    key_col = 0
-    context_col = 1
-    english_col = 2
+    header_lookup = {str(name).strip().lower(): idx for idx, name in enumerate(header)}
+    key_col = header_lookup.get("key", 0)
+    context_col = header_lookup.get("context / alternate text", 1)
+    english_col = header_lookup.get("english", 2)
+    type_col = header_lookup.get("type")
+
+    has_full_localization_header = (
+        "key" in header_lookup
+        and "english" in header_lookup
+        and "context / alternate text" in header_lookup
+        and "type" in header_lookup
+    )
+
+    mode_tab_translations = {
+        "windowESC_mode_color_tab": {
+            "german": "Vollfarbe",
+            "spanish": "Color completo",
+            "french": "Couleur complete",
+            "italian": "Colore completo",
+            "japanese": "フルカラー",
+            "koreana": "풀 컬러",
+            "polish": "Pelny kolor",
+            "brazilian": "Cor completa",
+            "russian": "Polnyy tsvet",
+            "turkish": "Tam Renk",
+            "schinese": "全彩色",
+            "tchinese": "全彩色",
+        },
+        "windowESC_mode_highvisibility_tab": {
+            "german": "Hoher Kontrast",
+            "spanish": "Alto contraste",
+            "french": "Contraste eleve",
+            "italian": "Alto contrasto",
+            "japanese": "ハイコントラスト",
+            "koreana": "고대비",
+            "polish": "Wysoki kontrast",
+            "brazilian": "Alto contraste",
+            "russian": "Vysokaya kontrastnost",
+            "turkish": "Yuksek Kontrast",
+            "schinese": "高对比度",
+            "tchinese": "高對比度",
+        },
+    }
+
+    def _build_target_row(key: str, context: str, english: str) -> list[str]:
+        if not has_full_localization_header:
+            return [key, context, english]
+
+        row = [""] * len(header)
+        row[key_col] = key
+        row[context_col] = context
+        row[english_col] = english
+        if type_col is not None:
+            row[type_col] = "UI"
+
+        translations = mode_tab_translations.get(key)
+        if translations:
+            for lang_key, text_value in translations.items():
+                lang_col = header_lookup.get(lang_key)
+                if lang_col is not None:
+                    row[lang_col] = text_value
+
+        return row
 
     index_by_key: dict[str, int] = {}
     for i in range(1, len(existing_rows)):
@@ -1849,34 +3268,25 @@ def merge_localization(
     removed = 0
 
     for grow in generated_body:
-        key = grow[key_col] if len(grow) > key_col else ""
+        key = grow[0] if len(grow) > 0 else ""
         if not key:
             continue
+
+        new_context = grow[1] if len(grow) > 1 else ""
+        new_english = grow[2] if len(grow) > 2 else ""
+        desired_row = _build_target_row(key, new_context, new_english)
 
         if key in index_by_key:
             idx = index_by_key[key]
             row = existing_rows[idx]
-            while len(row) < len(header):
+            while len(row) < len(desired_row):
                 row.append("")
-
-            new_context = grow[context_col] if len(grow) > context_col else ""
-            new_english = grow[english_col] if len(grow) > english_col else ""
-
-            changed = False
-            if row[context_col] != new_context:
-                row[context_col] = new_context
-                changed = True
-            if row[english_col] != new_english:
-                row[english_col] = new_english
-                changed = True
-            if changed:
+            current_trimmed = row[: len(desired_row)]
+            if current_trimmed != desired_row:
+                existing_rows[idx] = desired_row
                 updated += 1
         else:
-            new_row = [""] * len(header)
-            new_row[key_col] = key
-            new_row[context_col] = grow[context_col] if len(grow) > context_col else ""
-            new_row[english_col] = grow[english_col] if len(grow) > english_col else ""
-            existing_rows.append(new_row)
+            existing_rows.append(desired_row)
             index_by_key[key] = len(existing_rows) - 1
             added += 1
 
@@ -1895,6 +3305,31 @@ def merge_localization(
                 continue
             filtered_rows.append(row)
         existing_rows = filtered_rows
+
+    # Keep ESC-managed keys in generator-defined order for stable, readable output.
+    generated_order_keys = [
+        grow[key_col]
+        for grow in generated_body
+        if len(grow) > key_col and grow[key_col]
+    ]
+    generated_order_set = set(generated_order_keys)
+
+    row_by_key_after_merge: dict[str, list[str]] = {}
+    unmanaged_rows_in_order: list[list[str]] = []
+    for row in existing_rows[1:]:
+        key = row[key_col] if len(row) > key_col else ""
+        if key and key in generated_order_set:
+            row_by_key_after_merge[key] = row
+            continue
+        unmanaged_rows_in_order.append(row)
+
+    ordered_generated_rows: list[list[str]] = []
+    for key in generated_order_keys:
+        row = row_by_key_after_merge.get(key)
+        if row is not None:
+            ordered_generated_rows.append(row)
+
+    existing_rows = [existing_rows[0]] + ordered_generated_rows + unmanaged_rows_in_order
 
     with target_file.open("w", encoding="utf-8", newline="") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
@@ -1921,9 +3356,44 @@ def news_xml_content(title: str, url: str, timestamp: str) -> str:
     )
 
 
-def write_news_files(source: dict, links_dir: Path) -> list[Path]:
+def empty_news_xml_content() -> str:
+    return (
+        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+        "<news>\n"
+        "</news>\n"
+    )
+
+
+def write_news_files(source: dict, links_dir: Path, links_enabled: bool = True) -> list[Path]:
     created: list[Path] = []
     links_dir.mkdir(parents=True, exist_ok=True)
+    expected_names: set[str] = set()
+
+    def _cleanup_stale_link_xml() -> None:
+        expected_names_lower = {name.lower() for name in expected_names}
+        for existing_file in links_dir.glob("*.xml"):
+            if existing_file.name.lower() in expected_names_lower:
+                continue
+            try:
+                existing_file.unlink()
+            except OSError:
+                # Non-fatal cleanup miss; generation output still remains valid.
+                continue
+
+    def _cleanup_all_link_files() -> None:
+        for existing_path in links_dir.iterdir():
+            try:
+                if existing_path.is_dir():
+                    shutil.rmtree(existing_path)
+                else:
+                    existing_path.unlink()
+            except OSError:
+                # Non-fatal cleanup miss; generation output still remains valid.
+                continue
+
+    if not links_enabled:
+        _cleanup_all_link_files()
+        return created
 
     now_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%SZ")
 
@@ -1935,9 +3405,13 @@ def write_news_files(source: dict, links_dir: Path) -> list[Path]:
             continue
 
         safe_id = "".join(ch for ch in link_id if ch.isalnum() or ch in ("-", "_")) or "link"
-        out_file = links_dir / f"{safe_id}.xml"
+        out_name = f"{safe_id}.xml"
+        expected_names.add(out_name)
+        out_file = links_dir / out_name
         out_file.write_text(news_xml_content(title, url, now_utc), encoding="utf-8")
         created.append(out_file)
+
+    _cleanup_stale_link_xml()
 
     return created
 
@@ -1968,11 +3442,12 @@ def resolve_mod_folder_name(source: dict, config_path: Path) -> str:
 
 def build_local_news_source_map(source: dict, mod_folder_name: str) -> dict[str, str]:
     source_map: dict[str, str] = {}
+    mode, web_base_url = get_link_source_settings(source)
     for link in get_active_links(source):
         link_id = (link.get("id") or "").strip()
         if not link_id:
             continue
-        source_map[link_id] = f"@modfolder:Links/{_safe_link_id(link_id)}.xml"
+        source_map[link_id] = _resolve_link_source_xml_url(link, mode, web_base_url)
     return source_map
 
 
@@ -2008,7 +3483,7 @@ def _build_links_grid_xml(
         pos_x = max_pos_x
 
     grid_name = "linkButtons_hc" if is_hc else "linkButtons"
-    caption_prefix = "windowESC_highcontrast" if is_hc else "windowESC_color"
+    caption_prefix = "windowESC_highvisibility" if is_hc else "windowESC_color"
 
     lines: list[str] = [
         (
@@ -2017,9 +3492,10 @@ def _build_links_grid_xml(
         )
     ]
 
+    mode, web_base_url = get_link_source_settings(source)
+
     for idx, link in enumerate(active_links, start=1):
-        link_id = _safe_link_id(str(link.get("id") or f"link_{idx}"))
-        source_path = f"@modfolder:Links/{link_id}.xml"
+        source_path = _resolve_link_source_xml_url(link, mode, web_base_url)
         caption_key = f"{caption_prefix}_link_{idx}_label"
         lines.append(f'\t<rect controller="NewsWindow" sources="{source_path}">')
         lines.append(
@@ -2087,7 +3563,7 @@ def update_windows_link_grids(
         # Choose the most recent tab-section marker before this position.
         # This is robust even after colors are normalized to numeric RGB values.
         color_idx = xml_text.rfind('<rect name="Color"', 0, pos)
-        hc_idx = xml_text.rfind('<rect name="HighContrast"', 0, pos)
+        hc_idx = xml_text.rfind('<rect name="HighVisibility"', 0, pos)
         if color_idx == -1 and hc_idx == -1:
             return False
         return hc_idx > color_idx
@@ -2096,7 +3572,7 @@ def update_windows_link_grids(
         return re.sub(r"<!--.*?-->", "", value, flags=re.DOTALL)
 
     def _section_has_active_grid(xml_text: str, grid_name: str, is_hc: bool) -> bool:
-        section_marker = '<rect name="HighContrast"' if is_hc else '<rect name="Color"'
+        section_marker = '<rect name="HighVisibility"' if is_hc else '<rect name="Color"'
         start = xml_text.find(section_marker)
         if start == -1:
             return False
@@ -2104,7 +3580,7 @@ def update_windows_link_grids(
         if is_hc:
             end = len(xml_text)
         else:
-            next_marker = xml_text.find('<rect name="HighContrast"', start + len(section_marker))
+            next_marker = xml_text.find('<rect name="HighVisibility"', start + len(section_marker))
             end = next_marker if next_marker != -1 else len(xml_text)
 
         section_text = _strip_xml_comments(xml_text[start:end])
@@ -2112,7 +3588,7 @@ def update_windows_link_grids(
 
     def _insert_grid_when_missing(xml_text: str, grid_name: str, is_hc: bool, block: str) -> tuple[str, int]:
         """Insert generated link grid in the section links panel when the grid no longer exists."""
-        section_marker = '<rect name="HighContrast"' if is_hc else '<rect name="Color"'
+        section_marker = '<rect name="HighVisibility"' if is_hc else '<rect name="Color"'
         section_start = xml_text.find(section_marker)
         if section_start == -1:
             return xml_text, 0
@@ -2248,21 +3724,21 @@ def update_windows_link_grids(
         text_key = key_match.group(1)
 
         theme_key: str | None = None
-        if re.match(r"windowESC_(?:color|highcontrast)_header_title$", text_key):
+        if re.match(r"windowESC_(?:color|highvisibility)_header_title$", text_key):
             theme_key = "headerTitle"
-        elif re.match(r"windowESC_(?:color|highcontrast)_header_motto$", text_key):
+        elif re.match(r"windowESC_(?:color|highvisibility)_header_motto$", text_key):
             theme_key = "headerMotto"
-        elif re.match(r"windowESC_(?:color|highcontrast)_options_title$", text_key):
+        elif re.match(r"windowESC_(?:color|highvisibility)_options_title$", text_key):
             theme_key = "textBolding"
-        elif re.match(r"windowESC_(?:color|highcontrast)_page_\d+_title$", text_key):
+        elif re.match(r"windowESC_(?:color|highvisibility)_page_\d+_title$", text_key):
             theme_key = "pageTitle"
-        elif re.match(r"windowESC_(?:color|highcontrast)_page_\d+_body$", text_key):
+        elif re.match(r"windowESC_(?:color|highvisibility)_page_\d+_body(?:_column_\d+)?$", text_key):
             theme_key = "pageBody"
 
         if theme_key is None:
             return tag
 
-        use_hc = text_key.startswith("windowESC_highcontrast_")
+        use_hc = text_key.startswith("windowESC_highvisibility_")
         replacement = theme_hc[theme_key] if use_hc else theme_color[theme_key]
 
         color_match = re.search(r'\bcolor="([^"]*)"', tag)
@@ -2329,6 +3805,828 @@ def update_windows_link_grids(
         windows_file.write_text(text, encoding="utf-8")
 
     return changed_by_grid
+
+
+def update_windows_options_visibility(windows_file: Path, source: dict) -> dict[str, int]:
+    """Toggle visibility of user-selected UI sections in windows.xml."""
+    if not windows_file.exists():
+        raise FileNotFoundError(f"Windows file not found: {windows_file}")
+
+    text = windows_file.read_text(encoding="utf-8")
+    toggles = get_ui_feature_toggles(source)
+    updates_by_key: dict[str, int] = {}
+    theme_color = get_theme_colors(source, "color")
+    theme_hc = get_theme_colors(source, "highContrast")
+
+    def _normalize_rgb(value: str, fallback: str) -> str:
+        rgb = str(value or fallback).strip()
+        if not rgb:
+            rgb = fallback
+        return re.sub(r"\s+", "", rgb)
+
+    def _set_visible_attrs_in_fragment(
+        xml_text: str,
+        tag_name: str,
+        element_name: str,
+        enabled: bool,
+    ) -> tuple[str, int]:
+        desired = "true" if enabled else "false"
+        updates = 0
+        pattern = re.compile(
+            rf'(?P<prefix><{tag_name}\b)(?P<attrs>[^>]*)(?P<suffix>>)',
+            re.IGNORECASE | re.MULTILINE,
+        )
+
+        def _replace(match: re.Match[str]) -> str:
+            nonlocal updates
+            attrs = match.group("attrs")
+            attrs_original = attrs
+            # Normalize malformed self-closing attrs like '/ visible="true"' -> ' visible="true" /'.
+            attrs = re.sub(r'/\s*(visible="[^"]*")', r' \1 /', attrs, flags=re.IGNORECASE)
+            name_match = re.search(r'\bname="([^"]*)"', attrs, re.IGNORECASE)
+            if not name_match or name_match.group(1).strip() != element_name:
+                return match.group(0)
+            current_match = re.search(r'\bvisible="([^"]*)"', attrs)
+            if current_match:
+                current_visible = current_match.group(1).strip().lower()
+                if current_visible == desired:
+                    if attrs != attrs_original:
+                        updates += 1
+                        return f"{match.group('prefix')}{attrs}{match.group('suffix')}"
+                    return match.group(0)
+                new_attrs = re.sub(r'\bvisible="[^"]*"', f'visible="{desired}"', attrs, count=1)
+                updates += 1
+                return f"{match.group('prefix')}{new_attrs}{match.group('suffix')}"
+
+            updates += 1
+            if re.search(r'/\s*$', attrs):
+                attrs_no_slash = re.sub(r'/\s*$', '', attrs)
+                return f"{match.group('prefix')}{attrs_no_slash} visible=\"{desired}\" /{match.group('suffix')}"
+
+            return f"{match.group('prefix')}{attrs} visible=\"{desired}\"{match.group('suffix')}"
+
+        updated_xml = pattern.sub(_replace, xml_text)
+        return updated_xml, updates
+
+    def _set_visible_attrs(
+        xml_text: str,
+        metric_key: str,
+        tag_name: str,
+        element_name: str,
+        enabled: bool,
+        window_name: str | None = None,
+    ) -> str:
+        if not window_name:
+            updated_xml, updates = _set_visible_attrs_in_fragment(xml_text, tag_name, element_name, enabled)
+            if updates > 0:
+                updates_by_key[metric_key] = updates
+            return updated_xml
+
+        updates_total = 0
+        window_pattern = re.compile(
+            rf'(?P<window><window\b[^>]*\bname="{re.escape(window_name)}"[^>]*>.*?</window>)',
+            re.IGNORECASE | re.DOTALL,
+        )
+
+        def _replace_window(match: re.Match[str]) -> str:
+            nonlocal updates_total
+            block = match.group("window")
+            updated_block, updates = _set_visible_attrs_in_fragment(block, tag_name, element_name, enabled)
+            updates_total += updates
+            return updated_block
+
+        updated_xml = window_pattern.sub(_replace_window, xml_text)
+        if updates_total > 0:
+            updates_by_key[metric_key] = updates_total
+        return updated_xml
+
+    def _remove_named_rect_blocks(xml_text: str, section_name: str) -> tuple[str, int]:
+        tag_pattern = re.compile(r'<(/?)rect\b([^>]*)>', re.IGNORECASE)
+        name_pattern = re.compile(r'\bname="([^"]+)"', re.IGNORECASE)
+
+        stack: list[tuple[str, int]] = []
+        spans: list[tuple[int, int]] = []
+
+        for match in tag_pattern.finditer(xml_text):
+            is_close = match.group(1) == "/"
+            tag_text = match.group(0)
+
+            if not is_close:
+                attrs = match.group(2)
+                name_match = name_pattern.search(attrs)
+                rect_name = name_match.group(1).strip() if name_match else ""
+                if tag_text.rstrip().endswith("/>"):
+                    if rect_name == section_name:
+                        spans.append((match.start(), match.end()))
+                    continue
+                stack.append((rect_name, match.start()))
+                continue
+
+            if not stack:
+                continue
+
+            rect_name, start_idx = stack.pop()
+            if rect_name == section_name:
+                remove_start = start_idx
+                comment_match = re.search(
+                    rf'(^|\n)[ \t]*<!--\s*{re.escape(section_name.upper())}\s*-->[ \t]*\r?\n[ \t]*$',
+                    xml_text[:start_idx],
+                )
+                if comment_match:
+                    remove_start = comment_match.start()
+                spans.append((remove_start, match.end()))
+
+        if not spans:
+            return xml_text, 0
+
+        updated = xml_text
+        for start_idx, end_idx in sorted(spans, reverse=True):
+            updated = updated[:start_idx] + updated[end_idx:]
+        return updated, len(spans)
+
+    def _ensure_links_rect_blocks(xml_text: str) -> tuple[str, int]:
+        panel_tag_pattern = re.compile(r'<(/?)panel\b([^>]*)>', re.IGNORECASE)
+        name_pattern = re.compile(r'\bname="([^"]+)"', re.IGNORECASE)
+
+        stack: list[tuple[str, int]] = []
+        spans: list[tuple[int, int]] = []
+
+        for match in panel_tag_pattern.finditer(xml_text):
+            is_close = match.group(1) == "/"
+            tag_text = match.group(0)
+
+            if not is_close:
+                attrs = match.group(2)
+                name_match = name_pattern.search(attrs)
+                panel_name = name_match.group(1).strip() if name_match else ""
+                if tag_text.rstrip().endswith("/>"):
+                    continue
+                stack.append((panel_name, match.start()))
+                continue
+
+            if not stack:
+                continue
+
+            panel_name, start_idx = stack.pop()
+            if panel_name == "core":
+                spans.append((start_idx, match.end()))
+
+        if not spans:
+            return xml_text, 0
+
+        updated = xml_text
+        additions = 0
+
+        def _is_hc_panel(full_text: str, pos: int) -> bool:
+            color_idx = full_text.rfind('<rect name="Color"', 0, pos)
+            hc_idx = full_text.rfind('<rect name="HighVisibility"', 0, pos)
+            if color_idx == -1 and hc_idx == -1:
+                return False
+            return hc_idx > color_idx
+
+        for start_idx, end_idx in sorted(spans, reverse=True):
+            block = updated[start_idx:end_idx]
+            if 'name="links"' in block:
+                continue
+
+            panel_line_match = re.search(r'(?m)^(?P<indent>[ \t]*)<panel\b', block)
+            panel_indent = panel_line_match.group("indent") if panel_line_match else ""
+            child_indent = panel_indent + "\t"
+            grid_indent = child_indent + "\t"
+
+            is_hc = _is_hc_panel(updated, start_idx)
+            if is_hc:
+                bg_color = _normalize_rgb(theme_hc.get("linkBackground", "20,20,20"), "20,20,20")
+                border_color = _normalize_rgb(theme_hc.get("panelBorder", "102,102,102"), "102,102,102")
+                rect_open = f'{child_indent}<rect name="links" pos="0,-860" width="1100" height="60" visible="true">'
+                bg_line = (
+                    f'{grid_indent}<sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" '
+                    f'color="{bg_color}" width="1090" height="50" type="sliced" globalopacity="false"/>'
+                )
+                border_line = (
+                    f'{grid_indent}<sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" '
+                    f'color="{border_color}" width="1100" height="60" type="sliced" globalopacity="false"/>'
+                )
+            else:
+                bg_color = _normalize_rgb(theme_color.get("linkBackground", "95,89,128"), "95,89,128")
+                border_color = _normalize_rgb(theme_color.get("panelBorder", "0,0,0"), "0,0,0")
+                rect_open = (
+                    f'{child_indent}<rect name="links" pos="0,-860" width="1100" height="60" '
+                    'globalopacity="true" globalopacitymod="1.75" visible="true">'
+                )
+                bg_line = (
+                    f'{grid_indent}<sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" '
+                    f'color="{bg_color}" width="1090" height="50" type="sliced"/>'
+                )
+                border_line = (
+                    f'{grid_indent}<sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" '
+                    f'color="{border_color}" width="1100" height="60" type="sliced"/>'
+                )
+
+            generated_grid = _build_links_grid_xml(source, is_hc=is_hc, use_hc_dev_overrides=False)
+            links_block = "\n".join(
+                [
+                    f"{child_indent}<!-- LINKS -->",
+                    rect_open,
+                    bg_line,
+                    border_line,
+                    _indent_block(generated_grid, grid_indent),
+                    f"{child_indent}</rect>",
+                    "",
+                ]
+            )
+
+            options_match = re.search(r'(?m)^[ \t]*<rect name="options"\b', block)
+            if options_match:
+                insert_at = options_match.start()
+            else:
+                panel_close_match = re.search(r'(?m)^[ \t]*</panel>\s*$', block)
+                if not panel_close_match:
+                    continue
+                insert_at = panel_close_match.start()
+
+            new_block = block[:insert_at] + links_block + block[insert_at:]
+            updated = updated[:start_idx] + new_block + updated[end_idx:]
+            additions += 1
+
+        return updated, additions
+
+    updated_text = text
+
+    # Main ESC windows: apply user options toggle only to base/admin windows.
+    updated_text = _set_visible_attrs(
+        updated_text,
+        "optionsVisibilityMain",
+        "rect",
+        "options",
+        toggles["showOptionsSection"],
+        window_name="windowESC",
+    )
+    updated_text = _set_visible_attrs(
+        updated_text,
+        "optionsVisibilityAdmin",
+        "rect",
+        "options",
+        toggles["showOptionsSection"],
+        window_name="windowESCAdmin",
+    )
+    updated_text = _set_visible_attrs(
+        updated_text,
+        "linksVisibility",
+        "rect",
+        "links",
+        toggles["showLinksSection"],
+    )
+    if toggles["showLinksSection"]:
+        updated_text, links_added = _ensure_links_rect_blocks(updated_text)
+        if links_added > 0:
+            updates_by_key["linksAdded"] = links_added
+    if not toggles["showLinksSection"]:
+        updated_text, links_removed = _remove_named_rect_blocks(updated_text, "links")
+        if links_removed > 0:
+            updates_by_key["linksRemoved"] = links_removed
+    updated_text = _set_visible_attrs(
+        updated_text,
+        "adminVersionVisibility",
+        "window",
+        "windowESCAdmin",
+        toggles["showAdminVersion"],
+    )
+
+    # Server join visibility is generation-driven (present when enabled, absent when disabled)
+    # and is handled by sync_windows_copied_variants().
+
+    if updates_by_key:
+        windows_file.write_text(updated_text, encoding="utf-8")
+
+    return updates_by_key
+
+
+def sync_windows_copied_variants(
+    windows_file: Path,
+    include_admin: bool = True,
+    include_server_join: bool = True,
+) -> dict[str, int]:
+    """Sync server/admin window variants as copies of windowESC.
+
+        - serverjoinrulesdialog: copy of windowESC with ServerJoinRulesDialog controller,
+            with dedicated serverJoinActions panel and includes btnLeave/btnSpawn.
+    - windowESCAdmin: direct copy of windowESC with window name override.
+    """
+    if not windows_file.exists():
+        raise FileNotFoundError(f"Windows file not found: {windows_file}")
+
+    text = windows_file.read_text(encoding="utf-8")
+    text = re.sub(
+        r'^\s*<!--\s*centered-ish; keep your "down a bit" so it doesn\'t live in the compass lane\s*-->\s*\r?\n?',
+        "",
+        text,
+        flags=re.IGNORECASE | re.MULTILINE,
+    )
+    original_text = text
+    updates_by_key: dict[str, int] = {}
+
+    windowesc_pattern = re.compile(
+        r'(?mi)^[ \t]*<window\b[^>]*\bname="windowESC"[^>]*>.*?^[ \t]*</window>',
+        re.IGNORECASE | re.DOTALL,
+    )
+    source_match = windowesc_pattern.search(text)
+    if not source_match:
+        return updates_by_key
+
+    source_window = source_match.group(0)
+
+    def _set_window_name(block: str, new_name: str) -> str:
+        return re.sub(r'\bname="[^"]*"', f'name="{new_name}"', block, count=1)
+
+    def _ensure_window_attr(block: str, attr_name: str, attr_value: str) -> str:
+        open_tag_match = re.search(r'<window\b[^>]*>', block, re.IGNORECASE)
+        if not open_tag_match:
+            return block
+        open_tag = open_tag_match.group(0)
+        if re.search(rf'\b{re.escape(attr_name)}="[^"]*"', open_tag, re.IGNORECASE):
+            new_open_tag = re.sub(
+                rf'\b{re.escape(attr_name)}="[^"]*"',
+                f'{attr_name}="{attr_value}"',
+                open_tag,
+                count=1,
+                flags=re.IGNORECASE,
+            )
+        else:
+            new_open_tag = open_tag[:-1] + f' {attr_name}="{attr_value}">'
+        return block.replace(open_tag, new_open_tag, 1)
+
+    def _set_section_visible(block: str, tag_name: str, section_name: str, enabled: bool) -> str:
+        desired = "true" if enabled else "false"
+        pattern = re.compile(
+            rf'(?P<prefix><{tag_name}\b)(?P<attrs>[^>]*)(?P<suffix>>)',
+            re.IGNORECASE | re.MULTILINE,
+        )
+
+        def _replace(match: re.Match[str]) -> str:
+            attrs = match.group("attrs")
+            name_match = re.search(r'\bname="([^"]*)"', attrs, re.IGNORECASE)
+            if not name_match or name_match.group(1).strip() != section_name:
+                return match.group(0)
+
+            current = re.search(r'\bvisible="([^"]*)"', attrs, re.IGNORECASE)
+            if current:
+                new_attrs = re.sub(r'\bvisible="[^"]*"', f'visible="{desired}"', attrs, count=1, flags=re.IGNORECASE)
+            else:
+                if re.search(r'/\s*$', attrs):
+                    attrs_no_slash = re.sub(r'/\s*$', '', attrs)
+                    new_attrs = f"{attrs_no_slash} visible=\"{desired}\" /"
+                else:
+                    new_attrs = f"{attrs} visible=\"{desired}\""
+            return f"{match.group('prefix')}{new_attrs}{match.group('suffix')}"
+
+        return pattern.sub(_replace, block)
+
+    def _place_server_join_buttons_in_options(block: str) -> str:
+        updated = re.sub(
+            r'\n[ \t]*<simplebutton\b[^>]*\bname="(?:btnLeave|btnSpawn)"[^>]*/>\s*',
+            "\n",
+            block,
+            flags=re.IGNORECASE,
+        )
+        window_open = re.search(r'<window\b[^>]*\bname="serverjoinrulesdialog"[^>]*>', updated, re.IGNORECASE)
+        if not window_open:
+            return updated
+
+        insertion = (
+            "\n\t\t\t<simplebutton name=\"btnLeave\" depth=\"30\" pos=\"650,100\" width=\"170\" height=\"80\" caption_key=\"xuiLeave\"/>"
+            "\n\t\t\t<simplebutton name=\"btnSpawn\" depth=\"30\" pos=\"650,-100\" width=\"170\" height=\"80\" caption_key=\"xuiSpawn\"/>"
+        )
+        insert_pos = window_open.end()
+        return updated[:insert_pos] + insertion + updated[insert_pos:]
+
+    def _remove_named_rect_block(block: str, rect_name: str) -> str:
+        escaped = re.escape(rect_name)
+        pattern = re.compile(
+            rf'(?is)\n[ \t]*<rect\b[^>]*\bname="{escaped}"[^>]*>.*?\n[ \t]*</rect>\s*'
+        )
+        return pattern.sub("\n", block)
+
+    def _convert_options_to_server_join_actions(block: str) -> str:
+        updated = block
+        updated = re.sub(
+            r'\n[ \t]*<!--\s*SERVER JOIN ACTIONS\s*-->\s*\n?',
+            "\n",
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = re.sub(
+            r'\n[ \t]*<rect\b[^>]*\bname="serverJoinActions"[^>]*>.*?\n[ \t]*</rect>\s*',
+            "\n",
+            updated,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        updated = re.sub(
+            r'\n[ \t]*<rect\b[^>]*\bname="joining"[^>]*>.*?\n[ \t]*</rect>\s*',
+            "\n",
+            updated,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        updated = re.sub(
+            r'(<rect\b[^>]*\bname=")options(")',
+            r'\1joining\2',
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = re.sub(
+            r'\bname="optionsBackground"',
+            'name="joiningBackground"',
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = re.sub(
+            r'\bname="optionsBorder"',
+            'name="joiningBorder"',
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = re.sub(
+            r'\bname="options_title"',
+            'name="joining_title"',
+            updated,
+            flags=re.IGNORECASE,
+        )
+        def _set_joining_panel_pos(match: re.Match[str]) -> str:
+            open_tag = match.group(0)
+            if re.search(r'\bpos="[^"]*"', open_tag, re.IGNORECASE):
+                open_tag = re.sub(
+                    r'\bpos="[^"]*"',
+                    'pos="630,120"',
+                    open_tag,
+                    count=1,
+                    flags=re.IGNORECASE,
+                )
+            else:
+                open_tag = open_tag[:-1] + ' pos="630,120">'
+
+            if re.search(r'\bwidth="[^"]*"', open_tag, re.IGNORECASE):
+                open_tag = re.sub(r'\bwidth="[^"]*"', 'width="210"', open_tag, count=1, flags=re.IGNORECASE)
+            else:
+                open_tag = open_tag[:-1] + ' width="210">'
+
+            if re.search(r'\bheight="[^"]*"', open_tag, re.IGNORECASE):
+                open_tag = re.sub(r'\bheight="[^"]*"', 'height="320"', open_tag, count=1, flags=re.IGNORECASE)
+            else:
+                open_tag = open_tag[:-1] + ' height="320">'
+
+            return open_tag
+
+        updated = re.sub(
+            r'<rect\b[^>]*\bname="joining"[^>]*>',
+            _set_joining_panel_pos,
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = re.sub(
+            r'(?m)^([ \t]*)(<rect\b[^>]*\bname="joining"[^>]*>)',
+            r'\1<!-- JOINING -->\n\1\2',
+            updated,
+        )
+        updated = re.sub(
+            r'(<rect\b[^>]*\bname="joining"[^>]*?)\s+visible="(?:true|false)"',
+            r'\1',
+            updated,
+            flags=re.IGNORECASE,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*OPTIONS\s*-->\s*</rect>\s*$',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*OPTIONS\s*-->\s*$',
+            "",
+            updated,
+        )
+        updated = _remove_named_rect_block(updated, "stabilityPublic")
+        return updated
+
+    def _strip_mode_comment(block: str) -> str:
+        return block.replace(
+            "<!-- Section that allows switching between Full Color mode and High Visibility mode -->\n",
+            "",
+        )
+
+    def _normalize_windows_section_comments(full_text: str) -> str:
+        updated = full_text
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*The ESC Menu used while in game\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*Admin Section\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*Server Join Rules Section\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*Vanilla buttons preserved, relocated\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*(?:WINDOW ESC SECTION|SERVER JOIN SECTION|ADMIN WINDOW ESC SECTION)\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*HIGH VISIBILITY MAIN WINDOW\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(
+            r'(?mi)^\s*<!--\s*OPTIONS\s*-->\s*\r?\n',
+            "",
+            updated,
+        )
+        updated = re.sub(r'<!--\s*The Main Window\s*-->', "<!-- MAIN WINDOW -->", updated, flags=re.IGNORECASE)
+        updated = re.sub(r'<!--\s*Full Color Main Window\s*-->', "<!-- FULL COLOR MAIN WINDOW -->", updated, flags=re.IGNORECASE)
+        updated = re.sub(r'<!--\s*HighContrast:\s*tabsHeader\s*-->', "<!-- HIGH VISIBILITY: TABS HEADER -->", updated, flags=re.IGNORECASE)
+        updated = re.sub(r'<!--\s*HighContrast:\s*tabsContents\s*-->', "<!-- HIGH VISIBILITY: TABS CONTENTS -->", updated, flags=re.IGNORECASE)
+        updated = re.sub(
+            r'(?m)^([ \t]*)(<rect\s+name="HighVisibility"[^>]*>)',
+            r'\1<!-- HIGH VISIBILITY MAIN WINDOW -->\n\1\2',
+            updated,
+        )
+        updated = re.sub(
+            r'(?m)^([ \t]*)(<rect\s+name="options"[^>]*>)',
+            r'\1<!-- OPTIONS -->\n\1\2',
+            updated,
+        )
+        updated = re.sub(
+            r'(?is)(<append\s+xpath="/windows"\s*>\s*\n\s*<window\b[^>]*\bname="windowESC"[^>]*>)',
+            r'\t<!-- WINDOW ESC SECTION -->\n\1',
+            updated,
+            count=1,
+        )
+        updated = re.sub(
+            r'(?is)(<remove\s+xpath="/windows/window\[@name=[\'\"]serverjoinrulesdialog[\'\"]\]"\s*/>\s*\n\s*<append\s+xpath="/windows"\s*>\s*\n\s*<window\b[^>]*\bname="serverjoinrulesdialog"[^>]*>)',
+            r'\t<!-- SERVER JOIN SECTION -->\n\1',
+            updated,
+            count=1,
+        )
+        updated = re.sub(
+            r'(?is)(<append\s+xpath="/windows"\s*>\s*\n\s*<window\b[^>]*\bname="windowESCAdmin"[^>]*>)',
+            r'\t<!-- ADMIN WINDOW ESC SECTION -->\n\1',
+            updated,
+            count=1,
+        )
+        return updated
+
+    def _reorder_named_window_append_blocks(full_text: str) -> str:
+        append_pattern = re.compile(
+            r'(?is)<append\s+xpath="/windows"\s*>[\s\S]*?</append>\s*'
+        )
+
+        window_names = ("windowESC", "serverjoinrulesdialog", "windowESCAdmin")
+        targets: dict[str, str] = {}
+        for window_name in window_names:
+            window_pattern = re.compile(
+                rf'(?mi)^[ \t]*<window\b[^>]*\bname="{re.escape(window_name)}"[^>]*>.*?^[ \t]*</window>'
+            )
+            window_match = window_pattern.search(full_text)
+            if window_match:
+                targets[window_name] = window_match.group(0).strip() + "\n"
+
+        if not targets:
+            return full_text
+
+        updated = full_text
+        spans: list[tuple[int, int]] = []
+        for match in append_pattern.finditer(full_text):
+            block = match.group(0)
+            if any(re.search(rf'<window\b[^>]*\bname="{re.escape(name)}"', block, re.IGNORECASE) for name in window_names):
+                spans.append((match.start(), match.end()))
+
+        for start_idx, end_idx in sorted(spans, reverse=True):
+            updated = updated[:start_idx] + updated[end_idx:]
+
+        ordered_blocks: list[tuple[str, str, bool]] = [
+            ("windowESC", "WINDOW ESC SECTION", True),
+            ("serverjoinrulesdialog", "SERVER JOIN SECTION", include_server_join),
+            ("windowESCAdmin", "ADMIN WINDOW ESC SECTION", include_admin),
+        ]
+
+        assembled = ""
+        for window_name, section_title, should_include in ordered_blocks:
+            if not should_include:
+                continue
+            block = targets.get(window_name)
+            if not block:
+                continue
+            assembled += f"\n\t<!-- {section_title} -->\n\t<append xpath=\"/windows\">\n{block}\t</append>\n"
+
+        if not assembled:
+            return updated
+
+        insert_before = re.search(r'(?i)</AGF-ESCWindowPlus>\s*$', updated)
+        if insert_before:
+            return updated[: insert_before.start()] + assembled + updated[insert_before.start() :]
+        return updated + assembled
+
+    server_block = _set_window_name(source_window, "serverjoinrulesdialog")
+    server_block = _ensure_window_attr(server_block, "depth", "400")
+    server_block = _ensure_window_attr(server_block, "controller", "ServerJoinRulesDialog")
+    server_block = _ensure_window_attr(server_block, "globalopacity", "false")
+    server_block = _strip_mode_comment(server_block)
+    server_block = _set_section_visible(server_block, "rect", "options", True)
+    server_block = _convert_options_to_server_join_actions(server_block)
+    server_block = _place_server_join_buttons_in_options(server_block)
+
+    admin_block = _set_window_name(source_window, "windowESCAdmin")
+    admin_block = _strip_mode_comment(admin_block)
+
+    server_pattern = re.compile(
+        r'(?mi)^[ \t]*<window\b[^>]*\bname="serverjoinrulesdialog"[^>]*>.*?^[ \t]*</window>',
+        re.IGNORECASE | re.DOTALL,
+    )
+    admin_pattern = re.compile(
+        r'(?mi)^[ \t]*<window\b[^>]*\bname="windowESCAdmin"[^>]*>.*?^[ \t]*</window>',
+        re.IGNORECASE | re.DOTALL,
+    )
+
+    server_replaced = 0
+    server_removed = 0
+    if include_server_join:
+        text, removed_windows = server_pattern.subn("", text)
+        server_removed += removed_windows
+        text = re.sub(
+            r'\n[ \t]*<remove\s+xpath="/windows/window\[@name=[\'\"]serverjoinrulesdialog[\'\"]\]"\s*/>\s*\n?',
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+        remove_line = '\n\t<remove xpath="/windows/window[@name=\'serverjoinrulesdialog\']"/>\n'
+        append_block = (
+            "\n\t<!-- SERVER JOIN SECTION -->\n"
+            f"{remove_line}"
+            f"\t<append xpath=\"/windows\">\n{server_block}\n\t</append>\n"
+        )
+        insert_before = re.search(r'(?i)</AGF-ESCWindowPlus>\s*$', text)
+        if insert_before:
+            text = text[: insert_before.start()] + append_block + text[insert_before.start() :]
+        else:
+            text += append_block
+        server_replaced = 1
+    else:
+        text, removed_windows = server_pattern.subn("", text)
+        server_removed += removed_windows
+        text, removed_xpath = re.subn(
+            r'\n[ \t]*<remove\s+xpath="/windows/window\[@name=[\'\"]serverjoinrulesdialog[\'\"]\]"\s*/>\s*\n?',
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+        server_removed += removed_xpath
+        text = re.sub(
+            r'\n[ \t]*<!--\s*Server Join Rules Section\s*-->[ \t]*\n',
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+        text = re.sub(
+            r'\n[ \t]*<!--\s*Vanilla buttons preserved, relocated\s*-->[ \t]*\n',
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+        text = re.sub(
+            r'\n[ \t]*<append\s+xpath="/windows"\s*>\s*</append>\s*\n',
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+    admin_replaced = 0
+    admin_removed = 0
+    if include_admin:
+        text, removed_admin = admin_pattern.subn("", text)
+        admin_removed += removed_admin
+        append_block = f"\n\t<!-- ADMIN WINDOW ESC SECTION -->\n\t<append xpath=\"/windows\">\n{admin_block}\n\t</append>\n"
+        insert_before = re.search(r'(?i)</AGF-ESCWindowPlus>\s*$', text)
+        if insert_before:
+            text = text[: insert_before.start()] + append_block + text[insert_before.start() :]
+        else:
+            text += append_block
+        admin_replaced = 1
+    else:
+        text, admin_removed = admin_pattern.subn("", text)
+        # Cleanup trailing admin-only comment line if present.
+        text = re.sub(
+            r'\n[ \t]*<!--\s*(?:If Enabled, this is the ESC menu version for Admins|Admin Section)\s*-->[ \t]*\n',
+            "\n",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+    text = re.sub(
+        r'\n[ \t]*<append\s+xpath="/windows"\s*>\s*</append>\s*\n',
+        "\n",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    text = _normalize_windows_section_comments(text)
+
+    if server_replaced > 0:
+        updates_by_key["serverJoinWindowSync"] = server_replaced
+    if server_removed > 0:
+        updates_by_key["serverJoinWindowRemoved"] = server_removed
+    if admin_replaced > 0:
+        updates_by_key["adminWindowSync"] = admin_replaced
+    if admin_removed > 0:
+        updates_by_key["adminWindowRemoved"] = admin_removed
+    if text != original_text:
+        updates_by_key["windowSectionOrderAndComments"] = 1
+
+    if updates_by_key:
+        windows_file.write_text(text, encoding="utf-8")
+
+    return updates_by_key
+
+
+def update_xui_admin_window_binding(xui_file: Path, enabled: bool) -> int:
+    """Ensure xui.xml includes admin window registration only when enabled."""
+    if not xui_file.exists():
+        raise FileNotFoundError(f"XUi file not found: {xui_file}")
+
+    text = xui_file.read_text(encoding="utf-8")
+    updates = 0
+
+    block_pattern = re.compile(
+        r'(?mi)^[ \t]*(?P<open><append\s+xpath="/xui/ruleset/window_group\[@name=[\'\"]ingameDebugMenu[\'\"]\]"\s*>)(?P<body>.*?)(?P<close>^[ \t]*</append>)',
+        re.IGNORECASE | re.DOTALL,
+    )
+    admin_line_pattern = re.compile(r'^[ \t]*<window\s+name="windowESCAdmin"\s*/>\s*\r?\n?', re.IGNORECASE | re.MULTILINE)
+    active_admin_line_pattern = re.compile(r'(?mi)^[ \t]*<window\s+name="windowESCAdmin"\s*/>\s*$')
+
+    def _is_empty_append_body(body_text: str) -> bool:
+        stripped = re.sub(r'<!--.*?-->', '', body_text, flags=re.DOTALL)
+        stripped = re.sub(r'\s+', '', stripped)
+        return stripped == ""
+
+    text_without_comments = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
+
+    block_match = block_pattern.search(text_without_comments)
+    if block_match:
+        body = block_match.group("body")
+        has_admin = bool(admin_line_pattern.search(body))
+        should_remove_empty_block = (not enabled) and _is_empty_append_body(body)
+
+        if enabled and not has_admin:
+            indent = "\n\t\t"
+            if "\n" in body:
+                indent_match = re.search(r'\n([ \t]*)<', body)
+                if indent_match:
+                    indent = f"\n{indent_match.group(1)}"
+            body = body.rstrip() + f"{indent}<window name=\"windowESCAdmin\"/>\n\t"
+            updates += 1
+        elif (not enabled) and has_admin:
+            body, removed = admin_line_pattern.subn("", body)
+            updates += removed
+
+        if updates > 0 or should_remove_empty_block:
+            real_block_match = block_pattern.search(text)
+            if real_block_match:
+                if should_remove_empty_block or ((not enabled) and _is_empty_append_body(body)):
+                    text = text[: real_block_match.start()] + text[real_block_match.end() :]
+                    if should_remove_empty_block and updates == 0:
+                        updates += 1
+                else:
+                    text = (
+                        text[: real_block_match.start()]
+                        + real_block_match.group("open")
+                        + body
+                        + real_block_match.group("close")
+                        + text[real_block_match.end() :]
+                    )
+    elif enabled and not active_admin_line_pattern.search(text_without_comments):
+        block = (
+            "\n\t<append xpath=\"/xui/ruleset/window_group[@name='ingameDebugMenu']\">\n"
+            "\t\t<window name=\"windowESCAdmin\"/>\n"
+            "\t</append>\n"
+        )
+        close_root = re.search(r'</(?:configs|AGF-ESCWindowPlus)>\s*$', text, re.IGNORECASE)
+        if close_root:
+            text = text[: close_root.start()] + block + text[close_root.start() :]
+        else:
+            text = text.rstrip() + block
+        updates += 1
+
+    if updates > 0:
+        xui_file.write_text(text, encoding="utf-8")
+
+    return updates
 
 
 def build_legacy_sources_by_id(source: dict) -> dict[str, list[str]]:
@@ -2425,6 +4723,7 @@ def build_news_source_mappings(news_paths: list[Path], mod_folder_name: str) -> 
 
 
 def write_manifest(
+    source: dict,
     source_path: Path,
     out_dir: Path,
     localization_path: Path,
@@ -2436,11 +4735,19 @@ def write_manifest(
     merge_result: tuple[int, int, int] | None,
 ) -> Path:
     manifest_path = out_dir / "ESC.Generated.Manifest.txt"
-    mappings = build_news_source_mappings(news_paths, mod_folder_name)
+    mappings = [f"{k} => {v}" for k, v in sorted(build_local_news_source_map(source, mod_folder_name).items())]
+    link_source_mode, links_web_xml_base_url = get_link_source_settings(source)
+    feature_toggles = get_ui_feature_toggles(source)
 
     lines = [
         f"Generated: {dt.datetime.now().isoformat()}",
         f"Source: {source_path}",
+        f"Link Source Mode: {link_source_mode}",
+        f"Links Web XML Base URL: {links_web_xml_base_url or '(none)'}",
+        f"Show Options Section: {'true' if feature_toggles['showOptionsSection'] else 'false'}",
+        f"Show Admin Version: {'true' if feature_toggles['showAdminVersion'] else 'false'}",
+        f"Show Links Section: {'true' if feature_toggles['showLinksSection'] else 'false'}",
+        f"Show Server Join Section: {'true' if feature_toggles['showServerJoinSection'] else 'false'}",
         "Mod Folder Token: @modfolder:",
         f"Localization: {localization_path}",
         f"XUi Tabs Snippet: {tabs_ui_snippet_path}",
@@ -2485,8 +4792,55 @@ def write_manifest(
     return manifest_path
 
 
+def _pretty_print_xml_text(xml_text: str) -> str:
+    """Pretty print XML while preserving comments and removing blank spacer lines."""
+    stripped = xml_text.strip()
+    if not stripped:
+        return xml_text
+
+    dom = minidom.parseString(stripped.encode("utf-8"))
+    pretty = dom.toprettyxml(indent="\t", newl="\n")
+
+    lines = [line for line in pretty.splitlines() if line.strip()]
+    if lines and lines[0].startswith("<?xml"):
+        lines = lines[1:]
+
+    if not lines:
+        return ""
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def pretty_print_xml_file(xml_file: Path) -> int:
+    """Apply pretty-print formatting to an XML file. Returns 1 when file changed."""
+    if not xml_file.exists():
+        return 0
+
+    original = xml_file.read_text(encoding="utf-8")
+    try:
+        formatted = _pretty_print_xml_text(original)
+    except Exception:
+        # If parsing fails, leave file untouched instead of risking destructive rewrites.
+        return 0
+
+    if formatted != original:
+        xml_file.write_text(formatted, encoding="utf-8")
+        return 1
+    return 0
+
+
 def main() -> None:
     args = parse_args()
+    global TEMP_BODY_LABEL_BG_ENABLED
+
+    if args.easy:
+        args.merge_localization = True
+        args.no_merge_localization = False
+        args.update_windows_sources = True
+        args.windows_update_all_links = True
+        args.update_windows_links_layout = True
+        args.use_hc_dev_overrides = True
+
+    TEMP_BODY_LABEL_BG_ENABLED = args.dev_body_label_bg
 
     config_path = Path(args.config)
     out_dir = Path(args.out_dir)
@@ -2494,6 +4848,13 @@ def main() -> None:
     texts_path = Path(args.texts_file)
 
     source = load_source(config_path)
+
+    if args.easy and not texts_path.exists() and not args.init_texts_file:
+        write_texts_file(texts_path, source)
+        print(f"Created texts file: {texts_path}")
+        print("Easy mode paused so you can edit your text file.")
+        print("Next run: re-run the same command with --easy after editing text.")
+        return
 
     if args.init_texts_file:
         if texts_path.exists():
@@ -2529,7 +4890,8 @@ def main() -> None:
     if args.write_generated_localization:
         write_localization(rows, out_dir)
 
-    news_paths = write_news_files(source, links_dir)
+    feature_toggles = get_ui_feature_toggles(source)
+    news_paths = write_news_files(source, links_dir, links_enabled=feature_toggles["showLinksSection"])
     tabs_ui_snippet_path = write_tabs_ui_snippet(
         source,
         out_dir,
@@ -2542,11 +4904,18 @@ def main() -> None:
     )
 
     windows_file: Path | None = None
+    xui_file: Path | None = None
     windows_update_by_id: dict[str, int] = {}
     windows_tab_updates: dict[str, int] = {}
     windows_grid_updates: dict[str, int] = {}
+    windows_copy_updates: dict[str, int] = {}
+    windows_options_updates: dict[str, int] = {}
+    xui_admin_updates = 0
+    windows_pretty_updates = 0
+    xui_pretty_updates = 0
     if args.update_windows_sources or args.update_windows_links_layout:
         windows_file = Path(args.windows_file)
+        xui_file = Path(args.xui_file)
 
     if args.update_windows_sources and windows_file is not None:
         local_sources_by_id = build_local_news_source_map(source, mod_folder_name)
@@ -2576,7 +4945,28 @@ def main() -> None:
             use_hc_dev_overrides=args.use_hc_dev_overrides,
         )
 
+    if windows_file is not None and (args.update_windows_links_layout or args.update_windows_sources):
+        windows_copy_updates = sync_windows_copied_variants(
+            windows_file,
+            include_admin=feature_toggles["showAdminVersion"],
+            include_server_join=feature_toggles["showServerJoinSection"],
+        )
+
+    if windows_file is not None and (args.update_windows_links_layout or args.update_windows_sources):
+        windows_options_updates = update_windows_options_visibility(windows_file, source)
+        if xui_file is not None:
+            xui_admin_updates = update_xui_admin_window_binding(
+                xui_file,
+                feature_toggles["showAdminVersion"],
+            )
+
+    if windows_file is not None and (args.update_windows_links_layout or args.update_windows_sources):
+        windows_pretty_updates = pretty_print_xml_file(windows_file)
+        if xui_file is not None:
+            xui_pretty_updates = pretty_print_xml_file(xui_file)
+
     manifest_path = write_manifest(
+        source,
         config_path,
         out_dir,
         localization_path,
@@ -2604,7 +4994,12 @@ def main() -> None:
         )
     if windows_file is not None:
         total_windows_updates = sum(windows_update_by_id.values())
-        total_grid_updates = sum(windows_tab_updates.values()) + sum(windows_grid_updates.values())
+        total_grid_updates = (
+            sum(windows_tab_updates.values())
+            + sum(windows_grid_updates.values())
+            + sum(windows_copy_updates.values())
+            + sum(windows_options_updates.values())
+        )
         print(
             "Updated windows changes: "
             f"sources={total_windows_updates}, grids={total_grid_updates} in {windows_file}"
@@ -2618,6 +5013,20 @@ def main() -> None:
         if windows_grid_updates:
             details = ", ".join(f"{k}={v}" for k, v in sorted(windows_grid_updates.items()))
             print(f"Windows grid updates: {details}")
+        if windows_copy_updates:
+            details = ", ".join(f"{k}={v}" for k, v in sorted(windows_copy_updates.items()))
+            print(f"Windows copy updates: {details}")
+        if windows_options_updates:
+            details = ", ".join(f"{k}={v}" for k, v in sorted(windows_options_updates.items()))
+            print(f"Windows options updates: {details}")
+        if xui_file is not None and xui_admin_updates > 0:
+            print(f"XUi admin registration updates: {xui_admin_updates} in {xui_file}")
+        if windows_pretty_updates > 0:
+            print(f"XML pretty print applied: {windows_file}")
+        if xui_file is not None and xui_pretty_updates > 0:
+            print(f"XML pretty print applied: {xui_file}")
+    if any(_safe_bool(tab.get("scrollableBody"), default=False) for tab in source.get("tabs", []) if isinstance(tab, dict)):
+        print("Note: scrollableBody=true wraps page body labels in clipped on_scroll panels. Mouse-wheel behavior is controller-dependent in 7DTD XUi; tune PAGE_BODY_SCROLL_CONTENT_HEIGHT as needed.")
     print(f"Generated manifest: {manifest_path}")
 
 

@@ -19,13 +19,13 @@
 <!-- HighContrast: replace grid name="linkButtons_hc" -->
 <grid name="linkButtons_hc" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
 	<rect controller="NewsWindow" sources="@modfolder:Links/discord.xml">
-		<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highcontrast_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+		<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
 	</rect>
 	<rect controller="NewsWindow" sources="@modfolder:Links/agf_s_mods.xml">
-		<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highcontrast_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+		<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
 	</rect>
 	<rect controller="NewsWindow" sources="@modfolder:Links/donate_to_server.xml">
-		<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highcontrast_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+		<simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
 	</rect>
 </grid>
 </generatedLinks>

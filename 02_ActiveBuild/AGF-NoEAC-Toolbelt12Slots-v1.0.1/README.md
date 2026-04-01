@@ -1,6 +1,6 @@
 # AGF-NoEAC-Toolbelt12Slots
 7d2d Version 2  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip)
 
  
@@ -90,6 +90,9 @@
 
 ## 6. Changelog
 <!-- CHANGELOG START -->
+v1.0.1
+- Updated for a performance fix.
+
 v1.0.0
 - Applied and tested basic features.
 
