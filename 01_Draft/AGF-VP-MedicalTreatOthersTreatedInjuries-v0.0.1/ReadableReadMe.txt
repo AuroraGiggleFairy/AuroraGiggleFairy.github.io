@@ -72,10 +72,10 @@ Language Support
 ========================================
 
 4. Compatibility
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-VP-MedicalTreatOthersTreatedInjuries" is MISSINGDATA to install on an existing game.
+- EAC Friendly: Yes
+- Server Side: Yes
+- Client Required for Multiplayer: No
+- "AGF-VP-MedicalTreatOthersTreatedInjuries" is SAFE to install on an existing game.
 - "AGF-VP-MedicalTreatOthersTreatedInjuries" is MISSINGDATA to remove from an existing game.
 - Unique Details: MISSINGDATA
 

@@ -1,0 +1,622 @@
+[2026-04-03 04:36:42] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-04-03 04:36:42] [INFO] Selected mode: full
+[2026-04-03 04:36:42] [INFO] Dry-run mode enabled: no file system changes will be written
+[2026-04-03 04:36:42] [INFO] Mode full: sync Game<->Draft for tracked draft mods, ingest Draft->ActiveBuild, sync ActiveBuild<->Game, then finalize/promote/package.
+[2026-04-03 04:36:42] [INFO] Step 0.25: Compare Game <-> Draft and pull newer game updates into Draft
+[2026-04-03 04:36:42] [INFO] Step 0.5: Ensure latest Draft mods are in ActiveBuild
+[2026-04-03 04:36:42] [INFO] Draft sync skipped for AGF-4Modders-AntiCM-v0.0.1: version 0.0.1 is draft-only (major < 1)
+[2026-04-03 04:36:42] [INFO] Draft sync skipped for AGF-4Modders-ESCWindowPlus-v0.0.1: version 0.1.0 is draft-only (major < 1)
+[2026-04-03 04:36:42] [INFO] Draft sync skipped for AGF-NoEAC-TerrainLeveler-v0.0.1: version 0.0.1 is draft-only (major < 1)
+[2026-04-03 04:36:42] [INFO] Draft sync skipped for AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.1: version 0.0.1 is draft-only (major < 1)
+[2026-04-03 04:36:42] [INFO] Draft sync skipped for AGF-VP-MedicallyTreatOthers-v0.0.1: version 0.0.1 is draft-only (major < 1)
+[2026-04-03 04:36:42] [INFO] Lane policy: keep major v0.x mods in Draft, not ActiveBuild
+[2026-04-03 04:36:42] [INFO] Mode sync-work: Sync Staging <-> Game by version
+[2026-04-03 04:36:42] [INFO] Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root.
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-10IngredientSlots-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-CustomWindowEnteringDuration-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-CustomWindowEnteringDuration-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-CustomWindowEnteringDuration-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-Fix4RemoveItems-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-Fix4RemoveItems-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-Fix4RemoveItems-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-SkillPointCap-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-SkillPointCap-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-SkillPointCap-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-060Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-060Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-060Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-072Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-072Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-072Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-084Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-084Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-084Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-119Slots-v1.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-119Slots-v1.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-119Slots-v1.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-1Main-v5.4.4 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-1Main-v5.4.4
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-1Main-v5.4.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-BMCounter-v2.1.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-BMCounter-v2.1.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-BMCounter-v2.1.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-HealthBars-v4.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-HealthBars-v4.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-HealthBars-v4.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-PurpleBook-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-Weekday-v2.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-04-03 04:36:42] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-03 04:36:42] [INFO] Pre-release prep: refresh folder names + README files
+[2026-04-03 04:36:42] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-03 04:36:42] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write compatibility CSV: C:\GitHub\7D2D-Mods\HELPER_ModCompatibility.csv (96 rows)
+[2026-04-03 04:36:42] [INFO] Step 4.3: Normalize quote files
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure quote directory exists: C:\GitHub\7D2D-Mods\_Quotes
+[2026-04-03 04:36:42] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-CustomWindowEnteringDuration-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-Fix4RemoveItems-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-SkillPointCap-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-060Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-072Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-084Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-119Slots-v1.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-1Main-v5.4.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-BMCounter-v2.1.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-HealthBars-v4.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ConsoleOpacityMod-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-CosmeticLockIcon-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-EnhancedPatch-v3.1.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ExpandedInteractionPrompts-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-GlobalStormTracker-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ItemTypeIconColor-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-LockableWorkstations-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-OpenAllButton-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ScreamerAlert-v1.1.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-SortingBox-v1.0.5
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-Toolbelt12Slots-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AdminModdingSupport-v1.0.3
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AlternativeRecipes-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AmmoDisassembly-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ApiaryPlus-v1.0.3
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ArcheryFeathersChange-v1.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ArmorHarvestMods-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AutomobilesRespawn-v3.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BedrollPlus-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BetterEggChance-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BreakItGetIt-v1.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BuyTraderVendingMachines-v3.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftSewingKits-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftStackEngBattCells-v3.3.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftVitamins-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DecorationBlock-v3.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DewsPlus-v2.4.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DoorsPlus-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DrinkableAcid-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DyesPlus-v3.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FarmingPlus-v5.6.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FloraHarvester-v2.3.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FuelBurnPlus-v2.3.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MasterTool-v6.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MaxLevel500-v2.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicationNoInsectSlow-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MiningPlus-v1.2.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-Mod988-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ModBundling-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ModSlotsPlus-v3.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PaintbrushPlus-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PickupLanternsPlus-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PlayerResetQuests-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PlayerVendingMachinesPlus-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PumpkinsPlus-v2.0.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-QuickStart-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RebundleBundles-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RecipeRottingFlesh-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RenamesAlphabeticalSort-v2.0.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RestorePowerAnyTime-v1.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ScrapBatts4Acid-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ScrapEquipmentFaster-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-SimplifiedStacks-v1.2.3
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-SmeltingPlus-v2.4.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerAnimalCorpse-v2.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerPlayerBackpack-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerZombieLoot-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TacticalRiflePlus-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderAlwaysOpen-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderCostlierPrices-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderSellsMoreBooks-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TradersRestockEvery2Days-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TreesPlus-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehiclePerformance-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehiclesExtraSeating-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehicleStoragePlus-v2.1.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-WriteStoryOnCrate-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-XPDeathPenaltyReduction-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieBiomeSpawning-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieLargerHordes-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for zzzAGF-Special-Compatibilities-v4.0.3
+[2026-04-03 04:36:42] [INFO] Cleanup: Remove legacy 4Modders-replaced folders in 02_ActiveBuild
+[2026-04-03 04:36:42] [INFO] Cleanup: Remove older duplicate versions in 02_ActiveBuild
+[2026-04-03 04:36:42] [INFO] Mode sync-work: Sync Staging <-> Game by version
+[2026-04-03 04:36:42] [INFO] Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root.
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-10IngredientSlots-v1.0.1 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-CustomWindowEnteringDuration-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-CustomWindowEnteringDuration-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-CustomWindowEnteringDuration-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-Fix4RemoveItems-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-Fix4RemoveItems-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-Fix4RemoveItems-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-4Modders-SkillPointCap-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders\AGF-4Modders-SkillPointCap-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-SkillPointCap-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-060Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-060Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-060Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-072Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-072Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-072Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-084Slots-v3.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-084Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-084Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-BackpackPlus-119Slots-v1.2.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack\AGF-BackpackPlus-119Slots-v1.2.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-119Slots-v1.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-1Main-v5.4.4 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-1Main-v5.4.4
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-1Main-v5.4.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-BMCounter-v2.1.2 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-BMCounter-v2.1.2
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-BMCounter-v2.1.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-HealthBars-v4.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-HealthBars-v4.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-HealthBars-v4.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-PurpleBook-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would copy directory: C:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-HUDPluszOther-Weekday-v2.1.0 -> C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus\AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-04-03 04:36:42] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-04-03 04:36:42] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-03 04:36:42] [INFO] Mode promote: Promote Staging -> PublishReady (version-gated)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-4Modders-10IngredientSlots-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-4Modders-CustomWindowEnteringDuration-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-4Modders-Fix4RemoveItems-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-4Modders-SkillPointCap-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-BackpackPlus-060Slots-v3.2.2: same version/content as publish-ready (3.2.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-BackpackPlus-072Slots-v3.2.2: same version/content as publish-ready (3.2.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-BackpackPlus-084Slots-v3.2.2: same version/content as publish-ready (3.2.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-BackpackPlus-119Slots-v1.2.2: same version/content as publish-ready (1.2.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPlus-1Main-v5.4.4: same version/content as publish-ready (5.4.4)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPlus-BMCounter-v2.1.2: same version/content as publish-ready (2.1.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPlus-HealthBars-v4.0.0: same version/content as publish-ready (4.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPlus-PurpleBook-v2.0.0: same version/content as publish-ready (2.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0: same version/content as publish-ready (2.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-HUDPluszOther-Weekday-v2.1.0: same version/content as publish-ready (2.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-ConsoleOpacityMod-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-CosmeticLockIcon-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-EnhancedPatch-v3.1.1: same version/content as publish-ready (3.1.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-ExpandedInteractionPrompts-v1.1.0: same version/content as publish-ready (1.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-GlobalStormTracker-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-ItemTypeIconColor-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-LockableWorkstations-v1.1.0: same version/content as publish-ready (1.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-OpenAllButton-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-ScreamerAlert-v1.1.1: same version/content as publish-ready (1.1.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-SortingBox-v1.0.5: same version/content as publish-ready (1.0.5)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-NoEAC-Toolbelt12Slots-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-AdminModdingSupport-v1.0.3: same version/content as publish-ready (1.0.3)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-AlternativeRecipes-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-AmmoDisassembly-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ApiaryPlus-v1.0.3: same version/content as publish-ready (1.0.3)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ArcheryFeathersChange-v1.0.2: same version/content as publish-ready (1.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ArmorHarvestMods-v2.1.0: same version/content as publish-ready (2.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-AutomobilesRespawn-v3.0.1: same version/content as publish-ready (3.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-BedrollPlus-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-BetterEggChance-v2.1.0: same version/content as publish-ready (2.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-BreakItGetIt-v1.0.2: same version/content as publish-ready (1.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-BuyTraderVendingMachines-v3.0.2: same version/content as publish-ready (3.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-CraftSewingKits-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-CraftStackEngBattCells-v3.3.0: same version/content as publish-ready (3.3.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-CraftVitamins-v1.1.0: same version/content as publish-ready (1.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-DecorationBlock-v3.0.2: same version/content as publish-ready (3.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-DewsPlus-v2.4.2: same version/content as publish-ready (2.4.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-DoorsPlus-v3.0.0: same version/content as publish-ready (3.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-DrinkableAcid-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-DyesPlus-v3.1.0: same version/content as publish-ready (3.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-FarmingPlus-v5.6.1: same version/content as publish-ready (5.6.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-FloraHarvester-v2.3.0: same version/content as publish-ready (2.3.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-FuelBurnPlus-v2.3.0: same version/content as publish-ready (2.3.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-MasterTool-v6.1.0: same version/content as publish-ready (6.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-MaxLevel500-v2.0.2: same version/content as publish-ready (2.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-MedicationNoInsectSlow-v1.1.0: same version/content as publish-ready (1.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-MiningPlus-v1.2.0: same version/content as publish-ready (1.2.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-Mod988-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ModBundling-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ModSlotsPlus-v3.0.1: same version/content as publish-ready (3.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-PaintbrushPlus-v2.1.0: same version/content as publish-ready (2.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-PickupLanternsPlus-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-PlayerResetQuests-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-PlayerVendingMachinesPlus-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-PumpkinsPlus-v2.0.4: same version/content as publish-ready (2.0.4)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-QuickStart-v2.0.0: same version/content as publish-ready (2.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-RebundleBundles-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-RecipeRottingFlesh-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-RenamesAlphabeticalSort-v2.0.4: same version/content as publish-ready (2.0.4)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-RestorePowerAnyTime-v1.0.2: same version/content as publish-ready (1.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ScrapBatts4Acid-v1.1.0: same version/content as publish-ready (1.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ScrapEquipmentFaster-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-SimplifiedStacks-v1.2.3: same version/content as publish-ready (1.2.3)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-SmeltingPlus-v2.4.0: same version/content as publish-ready (2.4.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-StayLongerAnimalCorpse-v2.0.2: same version/content as publish-ready (2.0.2)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-StayLongerPlayerBackpack-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-StayLongerZombieLoot-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-TacticalRiflePlus-v2.1.0: same version/content as publish-ready (2.1.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-TraderAlwaysOpen-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-TraderCostlierPrices-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-TraderSellsMoreBooks-v3.0.0: same version/content as publish-ready (3.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-TradersRestockEvery2Days-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-TreesPlus-v3.0.0: same version/content as publish-ready (3.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-VehiclePerformance-v1.0.1: same version/content as publish-ready (1.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-VehiclesExtraSeating-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-VehicleStoragePlus-v2.1.1: same version/content as publish-ready (2.1.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-WriteStoryOnCrate-v1.0.0: same version/content as publish-ready (1.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-XPDeathPenaltyReduction-v2.0.0: same version/content as publish-ready (2.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ZombieBiomeSpawning-v3.0.0: same version/content as publish-ready (3.0.0)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for AGF-VP-ZombieLargerHordes-v2.0.1: same version/content as publish-ready (2.0.1)
+[2026-04-03 04:36:42] [INFO] Promote skipped for zzzAGF-Special-Compatibilities-v4.0.3: same version/content as publish-ready (4.0.3)
+[2026-04-03 04:36:42] [INFO] Cleanup: Remove legacy ReleaseSource folders replaced by AGF-4Modders renames
+[2026-04-03 04:36:42] [INFO] Cleanup: Remove legacy 4Modders-replaced folders in 03_ReleaseSource
+[2026-04-03 04:36:42] [INFO] Cleanup: Remove older duplicate versions in 03_ReleaseSource
+[2026-04-03 04:36:42] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-03 04:36:42] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would move directory: C:\GitHub\7D2D-Mods\01_Draft\AGF-4Modders-ESCWindowPlus-v0.0.1 -> C:\GitHub\7D2D-Mods\01_Draft\AGF-4Modders-ESCWindowPlus-v0.1.0
+[2026-04-03 04:36:42] [INFO] Renamed folder: AGF-4Modders-ESCWindowPlus-v0.0.1 -> AGF-4Modders-ESCWindowPlus-v0.1.0
+[2026-04-03 04:36:42] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write compatibility CSV: C:\GitHub\7D2D-Mods\HELPER_ModCompatibility.csv (96 rows)
+[2026-04-03 04:36:42] [INFO] Step 4.3: Normalize quote files
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure quote directory exists: C:\GitHub\7D2D-Mods\_Quotes
+[2026-04-03 04:36:42] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-10IngredientSlots-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-ConfigureWindowEnteringDuration-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-CustomWindowEnteringDuration-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-Fix4RemoveItems-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-SkillPointCap-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-060Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-072Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-084Slots-v3.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-BackpackPlus-119Slots-v1.2.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-1Main-v5.4.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-BMCounter-v2.1.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-HealthBars-v4.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-PurpleBook-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-HUDPluszOther-Weekday-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ConsoleOpacityMod-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-CosmeticLockIcon-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-EnhancedPatch-v3.1.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ExpandedInteractionPrompts-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-GlobalStormTracker-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ItemTypeIconColor-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-LockableWorkstations-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-OpenAllButton-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-ScreamerAlert-v1.1.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-SortingBox-v1.0.5
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-Toolbelt12Slots-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AdminModdingSupport-v1.0.3
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AlternativeRecipes-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AmmoDisassembly-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ApiaryPlus-v1.0.3
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ArcheryFeathersChange-v1.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ArmorHarvestMods-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-AutomobilesRespawn-v3.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BedrollPlus-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BetterEggChance-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BreakItGetIt-v1.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-BuyTraderVendingMachines-v3.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftSewingKits-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftStackEngBattCells-v3.3.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-CraftVitamins-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DecorationBlock-v3.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DewsPlus-v2.4.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DoorsPlus-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DrinkableAcid-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-DyesPlus-v3.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FarmingPlus-v5.6.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FloraHarvester-v2.3.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-FuelBurnPlus-v2.3.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MasterTool-v6.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MaxLevel500-v2.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicationNoInsectSlow-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MiningPlus-v1.2.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-Mod988-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ModBundling-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ModSlotsPlus-v3.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PaintbrushPlus-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PickupLanternsPlus-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PlayerResetQuests-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PlayerVendingMachinesPlus-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-PumpkinsPlus-v2.0.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-QuickStart-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RebundleBundles-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RecipeRottingFlesh-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RenamesAlphabeticalSort-v2.0.4
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-RestorePowerAnyTime-v1.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ScrapBatts4Acid-v1.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ScrapEquipmentFaster-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-SimplifiedStacks-v1.2.3
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-SmeltingPlus-v2.4.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerAnimalCorpse-v2.0.2
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerPlayerBackpack-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-StayLongerZombieLoot-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TacticalRiflePlus-v2.1.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderAlwaysOpen-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderCostlierPrices-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TraderSellsMoreBooks-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TradersRestockEvery2Days-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-TreesPlus-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehiclePerformance-v1.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehiclesExtraSeating-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-VehicleStoragePlus-v2.1.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-WriteStoryOnCrate-v1.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-XPDeathPenaltyReduction-v2.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieBiomeSpawning-v3.0.0
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-ZombieLargerHordes-v2.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for zzzAGF-Special-Compatibilities-v4.0.3
+[2026-04-03 04:36:42] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-AntiCM-v0.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-4Modders-ESCWindowPlus-v0.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-NoEAC-TerrainLeveler-v0.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicallyTreatOthers-v0.0.1
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write README + ReadableReadMe for AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.1
+[2026-04-03 04:36:42] [INFO] Step 6: Create all mod and category zip files
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would ensure zip output directory exists: C:\GitHub\7D2D-Mods\04_DownloadZips
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_4Modders_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_BackpackPlus_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_GigglePack_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_HUDPluszOther_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_HUDPlus_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_NoEAC_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: 00_VP_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-4Modders-10IngredientSlots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-4Modders-ConfigureWindowEnteringDuration.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-4Modders-CustomWindowEnteringDuration.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-4Modders-Fix4DestroyBiomeBadge.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-4Modders-Fix4RemoveItems.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-4Modders-SkillPointCap.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-060Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-072Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-084Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-BackpackPlus-119Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-1Main.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-BMCounter.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-HealthBars.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-PurpleBook.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPlus-RemoveEnteringPopUp.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-RemoveWrittentormAlerts.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-SmallerInteractionPrompt.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-TinyBuffsPopUp.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-HUDPluszOther-Weekday.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ConsoleOpacityMod.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-CosmeticLockIcon.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-EnhancedPatch.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ExpandedInteractionPrompts.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-GlobalStormTracker.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ItemTypeIconColor.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-LockableWorkstations.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-OpenAllButton.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-ScreamerAlert.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-SortingBox.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-NoEAC-Toolbelt12Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AdminModdingSupport.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AlternativeRecipes.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AmmoDisassembly.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ApiaryPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ArcheryFeathersChange.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ArmorHarvestMods.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-AutomobilesRespawn.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BedrollPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BetterEggChance.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BreakItGetIt.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-BuyTraderVendingMachines.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-CraftSewingKits.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-CraftStackEngBattCells.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-CraftVitamins.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DecorationBlock.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DewsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DoorsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DrinkableAcid.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-DyesPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-FarmingPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-FloraHarvester.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-FuelBurnPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MasterTool.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MaxLevel500.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MedicationNoInsectSlow.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-MiningPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-Mod988.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ModBundling.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ModSlotsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PaintbrushPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PickupLanternsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PlayerResetQuests.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PlayerVendingMachinesPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-PumpkinsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-QuickStart.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RebundleBundles.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RecipeRottingFlesh.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RenamesAlphabeticalSort.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-RestorePowerAnyTime.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ScrapBatts4Acid.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ScrapEquipmentFaster.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-SimplifiedStacks.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-SmeltingPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-StayLongerAnimalCorpse.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-StayLongerPlayerBackpack.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-StayLongerZombieLoot.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TacticalRiflePlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TraderAlwaysOpen.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TraderCostlierPrices.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TraderSellsMoreBooks.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TradersRestockEvery2Days.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-TreesPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-VehiclePerformance.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-VehiclesExtraSeating.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-VehicleStoragePlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-WriteStoryOnCrate.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-XPDeathPenaltyReduction.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ZombieBiomeSpawning.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ZombieCorpseLeaveQuicker.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: AGF-VP-ZombieLargerHordes.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would delete old zip: zzzAGF-Special-Compatibilities.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-4Modders-10IngredientSlots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-4Modders-ConfigureWindowEnteringDuration.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-4Modders-CustomWindowEnteringDuration.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-4Modders-Fix4DestroyBiomeBadge.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-4Modders-Fix4RemoveItems.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-4Modders-SkillPointCap.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-060Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-072Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-119Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-BackpackPlus-084Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-1Main.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-BMCounter.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-HealthBars.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-RemoveEnteringPopUp.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPlus-PurpleBook.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-RemoveWrittentormAlerts.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-SmallerInteractionPrompt.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-TinyBuffsPopUp.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-HUDPluszOther-Weekday.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ConsoleOpacityMod.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-CosmeticLockIcon.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-EnhancedPatch.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ExpandedInteractionPrompts.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-GlobalStormTracker.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ItemTypeIconColor.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-LockableWorkstations.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-OpenAllButton.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-ScreamerAlert.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-SortingBox.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-NoEAC-Toolbelt12Slots.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AdminModdingSupport.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AlternativeRecipes.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AmmoDisassembly.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ApiaryPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ArcheryFeathersChange.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ArmorHarvestMods.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-AutomobilesRespawn.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BedrollPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BetterEggChance.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BreakItGetIt.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-BuyTraderVendingMachines.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-CraftSewingKits.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-CraftStackEngBattCells.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-CraftVitamins.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DecorationBlock.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DewsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DoorsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DrinkableAcid.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-DyesPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-FarmingPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-FloraHarvester.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-FuelBurnPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MasterTool.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MaxLevel500.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MedicationNoInsectSlow.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-MiningPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-Mod988.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ModBundling.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ModSlotsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PaintbrushPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PickupLanternsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PlayerResetQuests.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PlayerVendingMachinesPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-PumpkinsPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-QuickStart.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RebundleBundles.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RecipeRottingFlesh.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RenamesAlphabeticalSort.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-RestorePowerAnyTime.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ScrapBatts4Acid.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ScrapEquipmentFaster.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-SimplifiedStacks.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-SmeltingPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-StayLongerAnimalCorpse.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-StayLongerPlayerBackpack.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-StayLongerZombieLoot.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TacticalRiflePlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TraderAlwaysOpen.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TraderCostlierPrices.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TraderSellsMoreBooks.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TradersRestockEvery2Days.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-TreesPlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-VehiclePerformance.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-VehicleStoragePlus.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-VehiclesExtraSeating.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-WriteStoryOnCrate.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-XPDeathPenaltyReduction.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ZombieBiomeSpawning.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ZombieCorpseLeaveQuicker.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: AGF-VP-ZombieLargerHordes.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create mod zip: zzzAGF-Special-Compatibilities.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_BackpackPlus_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_GigglePack_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_HUDPlus_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_HUDPluszOther_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_NoEAC_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_4Modders_All.zip
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would create pack zip: 00_VP_All.zip
+[2026-04-03 04:36:42] [INFO] Step 6.5: Generate GigglePack release metadata + changelog outputs
+[2026-04-03 04:36:42] [INFO] Step 7: Generate main README.md
+[2026-04-03 04:36:42] [INFO] [DRYRUN] Would write main README: C:\GitHub\7D2D-Mods\README.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 90
+scanned_game_mods: 83
+synced_pull_from_game: 0
+synced_push_to_game: 0
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 1
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 186
+readable_txt_written: 186
+pushed_back_to_game: 0
+mod_zips_created: 91
+pack_zips_created: 7
+promoted_to_publish_ready: 0
+warnings: 0
+errors: 0
+
+=== MOD CHANGES ===
+none

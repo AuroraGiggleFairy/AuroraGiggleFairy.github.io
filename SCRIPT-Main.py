@@ -3219,17 +3219,20 @@ def run_pipeline(args: argparse.Namespace) -> int:
             cleanup_legacy_4modders_renames_in_dir(PUBLISH_READY, args.dry_run, log)
             cleanup_older_versions_in_dir(PUBLISH_READY, args.dry_run, log)
 
-            # 5) Ensure ReleaseSource metadata/quotes/readmes are normalized before packaging.
+            # 5) Ensure ReleaseSource + Draft metadata/quotes/readmes are normalized before packaging.
             release_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(PUBLISH_READY,))
+            draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
+            all_renames = release_renames + draft_renames
             csv_rows = normalize_compat_csv(
-                release_renames,
+                all_renames,
                 args.dry_run,
                 log,
                 mod_dirs=(PUBLISH_READY, IN_PROGRESS),
                 prune_to_mods_now=True,
             )
-            normalize_quote_files(csv_rows, release_renames, args.dry_run, log)
+            normalize_quote_files(csv_rows, all_renames, args.dry_run, log)
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(PUBLISH_READY,))
+            generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(IN_PROGRESS,))
 
             # 6) Package and regenerate main README.
             create_all_zips(args.dry_run, args.workers, log)

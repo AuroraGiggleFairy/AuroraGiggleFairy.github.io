@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-NoEAC-TerrainLeveler" is MISSINGDATA to install on an existing game.
-- "AGF-NoEAC-TerrainLeveler" is MISSINGDATA to remove from an existing game.
-- Unique Details: MISSINGDATA
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-TerrainLeveler" is SAFE to install on an existing game.
+- "AGF-NoEAC-TerrainLeveler" is DANGEROUS to remove from an existing game.
+- Unique Details: None
 
 ---
 ---

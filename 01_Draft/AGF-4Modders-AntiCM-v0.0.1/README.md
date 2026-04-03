@@ -1,9 +1,9 @@
 # AGF-4Modders-AntiCM
 7d2d Version 2  
 **Version:** 0.0.1  
-[Download]([Add link later])
+[Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-AntiCM.zip)
 
- [Add quote later]
+ > AGF's role in this is simply to make it work code wise. Phitradio is the brains behind this. Thank you Phitradio for keeping us players game safety in mind.
 
 ---
 ---
@@ -67,12 +67,12 @@
 ---
 
 ## 4. Compatibility
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-4Modders-AntiCM" is MISSINGDATA to install on an existing game.
-- "AGF-4Modders-AntiCM" is MISSINGDATA to remove from an existing game.
-- Unique Details: MISSINGDATA
+- EAC Friendly: No
+- Server Side: Unknown
+- Client Required for Multiplayer: Unknown
+- "AGF-4Modders-AntiCM" is SAFE to install on an existing game.
+- "AGF-4Modders-AntiCM" is SAFE to remove from an existing game.
+- Unique Details: None
 
 ---
 ---
