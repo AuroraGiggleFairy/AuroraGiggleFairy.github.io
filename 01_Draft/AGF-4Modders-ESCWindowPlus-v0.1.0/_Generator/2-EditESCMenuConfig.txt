@@ -82,9 +82,9 @@ headerMotto: An AuroraGiggleFairy 7d2d Server
 // @enabledLinks controls how many link rows are used (1-5).
 // Link row format: number | Button Name | Full URL
 
-@enabledLinks: 3
+@enabledLinks: 4
 @linksClientOrServer: server
-@linksXMLWebBaseUrl: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links
+@linksXMLWebBaseUrl: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/
 
 // Advanced (optional):
 // - @linksClientOrServer: client or server
@@ -95,7 +95,7 @@ headerMotto: An AuroraGiggleFairy 7d2d Server
 1 | AGF's Discord | https://discord.gg/Vm5eyW6N4r
 2 | AGF's Mods | https://auroragigglefairy.github.io/
 3 | Donate to Server | https://pingperfect.com/index.php?m=public_pay&hash_id=MWxlNPA7zkP6
-4 |  | 
+4 | Live Map | http://63.143.56.130:41344/app/map
 5 |  | 
 
 

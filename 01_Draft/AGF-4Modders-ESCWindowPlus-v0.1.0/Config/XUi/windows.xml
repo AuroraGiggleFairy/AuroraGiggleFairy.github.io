@@ -96,15 +96,18 @@
                      <rect name="links" pos="0,-860" width="1100" height="60" globalopacity="true" globalopacitymod="1.75" visible="true">
                         <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="50" type="sliced"/>
                         <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="60" type="sliced"/>
-                        <grid name="linkButtons" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                        <grid name="linkButtons" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                           </rect>
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                              <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
                         </grid>
                      </rect>
@@ -190,15 +193,18 @@
                      <rect name="links" pos="0,-860" width="1100" height="60" visible="true">
                         <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="50" type="sliced" globalopacity="false"/>
                         <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="60" type="sliced" globalopacity="false"/>
-                        <grid name="linkButtons_hc" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                        <grid name="linkButtons_hc" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                           </rect>
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                              <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
                         </grid>
                      </rect>
@@ -309,15 +315,18 @@
                      <rect name="links" pos="0,-860" width="1100" height="60" globalopacity="true" globalopacitymod="1.75" visible="true">
                         <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="50" type="sliced"/>
                         <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="60" type="sliced"/>
-                        <grid name="linkButtons" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                        <grid name="linkButtons" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                           </rect>
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                              <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
                         </grid>
                      </rect>
@@ -402,15 +411,18 @@
                      <rect name="links" pos="0,-860" width="1100" height="60" visible="true">
                         <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="50" type="sliced" globalopacity="false"/>
                         <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="60" type="sliced" globalopacity="false"/>
-                        <grid name="linkButtons_hc" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                        <grid name="linkButtons_hc" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
-                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                               <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                           </rect>
+                           <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                              <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                            </rect>
                         </grid>
                      </rect>
@@ -529,15 +541,18 @@
                               <rect name="links" pos="0,-860" width="1100" height="60" globalopacity="false" globalopacitymod="1.75" visible="true">
                                  <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="50" type="sliced" globalopacity="false"/>
                                  <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="60" type="sliced" globalopacity="false"/>
-                                 <grid name="linkButtons" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                                 <grid name="linkButtons" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                                    </rect>
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                                       <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
                                  </grid>
                               </rect>
@@ -601,15 +616,18 @@
                               <rect name="links" pos="0,-860" width="1100" height="60" globalopacity="false" globalopacitymod="1.75" visible="true">
                                  <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="95,89,128" width="1090" height="50" type="sliced" globalopacity="false"/>
                                  <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="0,0,0" width="1100" height="60" type="sliced" globalopacity="false"/>
-                                 <grid name="linkButtons" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                                 <grid name="linkButtons" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                                    </rect>
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                                       <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="0,0,0" defaultcolor="64,64,64" hovercolor="50,50,50,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_color_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
                                  </grid>
                               </rect>
@@ -712,15 +730,18 @@
                               <rect name="links" pos="0,-860" width="1100" height="60" visible="true">
                                  <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="50" type="sliced" globalopacity="false"/>
                                  <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="60" type="sliced" globalopacity="false"/>
-                                 <grid name="linkButtons_hc" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                                 <grid name="linkButtons_hc" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                                    </rect>
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                                       <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
                                  </grid>
                               </rect>
@@ -784,15 +805,18 @@
                               <rect name="links" pos="0,-860" width="1100" height="60" visible="true">
                                  <sprite name="linksBackground" depth="2" pos="5,-5" sprite="ui_game_header_fill" color="20,20,20" width="1090" height="50" type="sliced" globalopacity="false"/>
                                  <sprite name="linksBorder" depth="1" sprite="ui_game_header_fill" color="102,102,102" width="1100" height="60" type="sliced" globalopacity="false"/>
-                                 <grid name="linkButtons_hc" pos="235,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/discord.xml">
+                                 <grid name="linkButtons_hc" pos="130,-12" depth="10" rows="1" cols="5" cell_width="210" cell_height="36" arrangement="horizontal">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/discord.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_1_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/agf_s_mods.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/agf_s_mods.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_2_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
-                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/tree/main/Links/donate_to_server.xml">
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/donate_to_server.xml">
                                        <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_3_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
+                                    </rect>
+                                    <rect controller="NewsWindow" sources="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/live_map.xml">
+                                       <simplebutton name="btnLink" width="200" height="36" font_size="24" sprite="menu_empty3px" bordercolor="102,102,102" defaultcolor="44,44,44" hovercolor="58,58,58,255" selectedsprite="menu_empty3px" selectedcolor="74, 33, 150" foregroundlayer="false" caption_key="windowESC_highvisibility_link_4_label" enabled="{has_link}" gamepad_selectable="{has_news}"/>
                                     </rect>
                                  </grid>
                               </rect>
