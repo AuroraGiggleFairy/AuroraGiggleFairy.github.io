@@ -1,0 +1,42 @@
+{
+  "api_base_url": "https://api.nexusmods.com/v2",
+  "game_domain": "7daystodie",
+  "api_key_env_var": "AGF_NEXUSMODS_API_KEY",
+  "application_name": "AGF-NexusMods-Automation",
+  "application_version": "0.1.0",
+  "default_download_base_url": "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips",
+  "mods": {
+    "AGF-NoEAC-Toolbelt12Slots": {
+      "intent": "update",
+      "nexus_mod_id": 0,
+      "update_group_id": "",
+      "update_group_name": "",
+      "file_category": "main",
+      "legacy_latest_file_id": 0,
+      "legacy_name_hint": "",
+      "page_url": "",
+      "tested_game_version_override": "",
+      "brief_overview_override": "",
+      "detailed_description_override": "",
+      "file_description_override": "",
+      "summary_override": "",
+      "description_override": ""
+    },
+    "AGF-Example-NewMod": {
+      "intent": "publish",
+      "nexus_mod_id": 0,
+      "update_group_id": "",
+      "update_group_name": "",
+      "file_category": "main",
+      "legacy_latest_file_id": 0,
+      "legacy_name_hint": "",
+      "page_url": "",
+      "tested_game_version_override": "",
+      "brief_overview_override": "",
+      "detailed_description_override": "",
+      "file_description_override": "",
+      "summary_override": "",
+      "description_override": ""
+    }
+  }
+}

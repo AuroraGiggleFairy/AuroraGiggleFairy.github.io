@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*April 3, 2026, 4:37 AM EST*
+*April 10, 2026, 4:45 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -346,7 +346,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.3.1)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.3.2)**
 
 > - *All AGF mods in one convenient download.*
 > - *Direct set-up is AGF preference and only server side mods*
@@ -356,7 +356,7 @@
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v1.3.1 - April 1, 2026 5:29pm<ul><li>Change summary: +0 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.0 - March 29, 2026 10:25pm<ul><li>Change summary: +3 new, ~0 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip">AGF-4Modders-SkillPointCap</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">AGF-4Modders-Fix4DestroyBiomeBadge</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip">AGF-4Modders-Fix4RemoveItems</a> (new: v1.0.0-BETA)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip">AGF-4Modders-CustomWindowEnteringDuration</a> (renamed from AGF-4Modders-ConfigureWindowEnteringDuration, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.2.1 - March 28, 2026 8:39pm<ul><li>Change summary: +0 new, ~2 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip">AGF-NoEAC-EnhancedPatch</a> (v3.1.0 -&gt; v3.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.0.0-BETA -&gt; v1.1.0-BETA)</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip">AGF-NoEAC-ConsoleOpacityMod</a> (renamed from AGF-4Modders-ConsoleOpacityMod, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v1.3.2 - April 10, 2026 4:43pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.1.0-BETA -&gt; v1.1.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip">AGF-VP-AutomobilesRespawn</a> (v3.0.1 -&gt; v3.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.1 - April 1, 2026 5:29pm<ul><li>Change summary: +0 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.0 - March 29, 2026 10:25pm<ul><li>Change summary: +3 new, ~0 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip">AGF-4Modders-SkillPointCap</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">AGF-4Modders-Fix4DestroyBiomeBadge</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip">AGF-4Modders-Fix4RemoveItems</a> (new: v1.0.0-BETA)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip">AGF-4Modders-CustomWindowEnteringDuration</a> (renamed from AGF-4Modders-ConfigureWindowEnteringDuration, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -607,7 +607,7 @@
 
 ---
 
-> ### **AGF-VP-AutomobilesRespawn** *-v3.0.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip)
+> ### **AGF-VP-AutomobilesRespawn** *-v3.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip)
 > *Vehicles will respawn after 10 real life hours. Editable.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1276,7 +1276,7 @@
 
 ---
 
-> ### **AGF-NoEAC-LockableWorkstations** *-v1.1.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
+> ### **AGF-NoEAC-LockableWorkstations** *-v1.1.1-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
 > *Workstations and collectors can now be locked or unlocked to control access.*
 > <details> <summary>*Show detailed features*</summary>
 >

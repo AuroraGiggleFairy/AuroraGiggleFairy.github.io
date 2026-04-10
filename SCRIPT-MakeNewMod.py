@@ -171,7 +171,7 @@ def main():
         readme_content = readme_content.replace("{{QUOTE}}", "[Add quote later]")
         # Set all compatibility fields to MISSINGDATA
         for field in [
-            "EAC_FRIENDLY", "SERVER_SIDE", "CLIENT_REQUIRED",
+            "TESTED_GAME_VERSION", "EAC_FRIENDLY", "SERVER_SIDE", "CLIENT_REQUIRED",
             "SAFE_TO_INSTALL", "SAFE_TO_REMOVE", "UNIQUE"
         ]:
             readme_content = readme_content.replace(f"{{{{{field}}}}}", "MISSINGDATA")

@@ -1,0 +1,963 @@
+URL: https://nexusmods.com
+Overview
+Build tools and integrations for the Nexus Mods platform using our API.
+
+Access mod data, user information, and platform features to power your own applications, services, and workflows.
+Use our OpenAPI specification to explore and integrate the API.
+I want to
+upload a mod
+Using GitHub to manage your mod workflow? Try our GitHub action and sample workflow!
+Or get started at creating a new upload session.
+Legacy APIs
+Legacy integrations may still be using our v1 API.
+
+Tags
+Tags	Description
+Beta	Pending stabilisation. May still change.
+Experimental	Endpoints subject to change or removal. Use at your own risk- for evaluation only.
+collections
+Collection management
+
+Create a collection Experimental
+Creates a collection and claims an upload using the upload_id from a finalised upload session.
+
+Authorizations:
+ApiKeyAuth
+Request Body schema: application/json
+required
+upload_id
+required
+string <uuid>
+The unique identifier for the upload to claim against this new collection.
+
+collection_data
+required
+object (CollectionPayload)
+The data payload used to create a collection revision.
+
+Responses
+200 Upload
+400 Bad Request
+403 Forbidden
+404 Not Found
+422 Unprocessable Entity
+
+post
+/collections
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"upload_id": "f2ef591b-135b-46fa-a604-3d4fda5bfbfb",
+"collection_data": {
+"adult_content": true,
+"collection_manifest": {},
+"collection_schema_id": 0
+}
+}
+Response samples
+200400403404422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "string",
+"revision_id": "string"
+}
+}
+Create a collection revision Experimental
+Creates a collection revision claims an upload using the upload_id from a finalised upload session.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the collection this revision will belong to.
+
+Request Body schema: application/json
+required
+upload_id
+required
+string <uuid>
+The unique identifier for the upload to claim against this new collection.
+
+collection_data
+required
+object (CollectionPayload)
+The data payload used to create a collection revision.
+
+Responses
+200 Upload
+400 Bad Request
+403 Forbidden
+404 Not Found
+422 Unprocessable Entity
+
+post
+/collections/{id}/revisions
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"upload_id": "f2ef591b-135b-46fa-a604-3d4fda5bfbfb",
+"collection_data": {
+"adult_content": true,
+"collection_manifest": {},
+"collection_schema_id": 0
+}
+}
+Response samples
+200400403404422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "string",
+"collection_id": "string"
+}
+}
+mod-files
+Mod file management
+
+Get mod file Experimental
+Retrieve a specific file for a game.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+game_domain
+required
+string
+Game domain name.
+
+This is the human readable game name which appears in URLs on the site e.g. skyrimspecialedition and fallout4.
+
+game_scoped_id
+required
+string
+The game-scoped identifier for the mod file.
+
+Responses
+200 Mod file details
+400 Bad Request
+403 Forbidden
+404 Not Found
+
+get
+/games/{game_domain}/mod-files/{game_scoped_id}
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "string",
+"game_scoped_id": "string",
+"game_id": "string",
+"mod_game_scoped_id": "string",
+"update_group_version": {}
+}
+}
+Create mod file Experimental
+Creates a new mod file using the data from a finalised upload session.
+
+Note that this is for entirely new files, not new versions of existing files.
+
+Authorizations:
+ApiKeyAuth
+Request Body schema: application/json
+required
+upload_id
+required
+string <uuid>
+The unique identifier for the upload.
+
+mod_id
+required
+string
+The unique identifier for the mod this file belongs to.
+
+Use get mod to get the game scoped ID for a mod using the data from a site URL e.g. /skyrimspecialedition/mods/12604.
+name
+required
+string <= 50 characters [a-zA-Z0-9 _'().-]+$
+Mod file name.
+
+version
+required
+string <= 50 characters ^[a-zA-Z0-9.-]+$
+Mod file version.
+
+description	
+string or null
+Description of the mod file.
+
+file_category
+required
+string (NewModFileCategory)
+Enum: "main" "optional" "miscellaneous"
+Responses
+201 ModFile
+400 Bad Request
+403 Forbidden
+404 Not Found
+422 Unprocessable Entity
+
+post
+/mod-files
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+{
+"upload_id": "f2ef591b-135b-46fa-a604-3d4fda5bfbfb",
+"mod_id": "string",
+"name": "string",
+"version": "string",
+"description": "string",
+"file_category": "main"
+}
+Response samples
+201400403404422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "string",
+"game_scoped_id": "string",
+"name": "string",
+"file_category": "main"
+}
+}
+Create a new update group version (updates a mod file) Beta
+Creates a new version of an update group (tied to a mod file), the upload specified in the request becomes the most recent entry in the update chain.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+group_id
+required
+string
+The unique identifier for the update group.
+
+Request Body schema: application/json
+required
+upload_id
+required
+string <uuid>
+The unique identifier for the upload.
+
+name
+required
+string <= 50 characters ^[a-zA-Z0-9 _'().-]+$
+Mod file name
+
+description	
+string or null
+Description of the mod file
+
+version
+required
+string <= 50 characters ^[a-zA-Z0-9.-]+$
+Mod file version
+
+file_category
+required
+string (NewModFileCategory)
+Enum: "main" "optional" "miscellaneous"
+Responses
+201 UpdateGroupVersion
+400 Bad Request
+403 Forbidden
+404 Not Found
+422 Unprocessable Content
+
+post
+/mod-file-update-groups/{group_id}/versions
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+{
+"upload_id": "f2ef591b-135b-46fa-a604-3d4fda5bfbfb",
+"name": "string",
+"description": "string",
+"version": "string",
+"file_category": "main"
+}
+Response samples
+201400403404422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "string",
+"game_scoped_id": "string",
+"name": "string",
+"file_category": "main"
+}
+}
+mods
+Mod management
+
+Get mod Experimental
+Retrieve specified mod, from a specified game.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+game_domain
+required
+string
+Game domain name.
+
+This is the human readable game name which appears in URLs on the site e.g. skyrimspecialedition and fallout4.
+
+game_scoped_id
+required
+string
+The game-scoped identifier for the mod.
+
+This is the mod identifier which appears in URLs on the site e.g. 12604 from path /skyrimspecialedition/mods/12604.
+
+Responses
+200 Mod details
+400 Bad Request
+403 Forbidden
+404 Not Found
+
+get
+/games/{game_domain}/mods/{game_scoped_id}
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "string",
+"game_scoped_id": "string",
+"game_id": "string",
+"name": "string"
+}
+}
+Get mod file update groups Experimental
+Retrieve all file update groups for a given mod.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the mod.
+
+Responses
+200 The mod's file update groups.
+400 Bad Request
+403 Access to the mod is forbidden.
+404 The mod was not found.
+
+get
+/mods/{id}/file-update-groups
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"groups": []
+}
+}
+Update a file update group
+Updates the name of an existing file update group by its ID.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier of the file update group to update.
+
+Request Body schema: application/json
+required
+The new data for the file update group.
+
+name
+required
+string <= 255 characters ^[a-zA-Z0-9 _'().-]+$
+The name of the file update group.
+
+Responses
+204 Successfully updated the file update group.
+403 Forbidden
+404 The mod file update group was not found.
+422 The request body failed validation.
+
+put
+/mod-file-update-groups/{id}
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+{
+"name": "string"
+}
+Response samples
+403404422
+Content type
+application/problem+json
+
+Copy
+{
+"type": "http://example.com",
+"title": "string",
+"status": 404,
+"detail": "string",
+"instance": "http://example.com"
+}
+Get mod file dependencies Experimental
+Retrieve all dependencies for a given mod file.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the mod file.
+
+Responses
+200 The mod file's dependencies.
+400 Bad Request
+404 The mod file was not found.
+
+get
+/mod-files/{id}/dependencies
+
+Response samples
+200400404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"dependencies": []
+}
+}
+Update mod file dependencies Experimental
+Replace all dependencies for a given mod file. Each dependency contains an array of candidate file IDs. Candidates within the same dependency represent alternatives (OR). Separate dependencies are independent requirements (AND).
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the mod file (i.e. the file to create dependencies for).
+
+Request Body schema: application/json
+required
+dependencies
+required
+Array of objects (ModFileDependencyDefinition)
+Responses
+200 The mod file's updated dependencies.
+400 Bad Request
+403 Forbidden
+404 The mod file was not found.
+422 The request body failed validation.
+
+put
+/mod-files/{id}/dependencies
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"dependencies": [
+{}
+]
+}
+Response samples
+200400403404422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"dependencies": []
+}
+}
+Get mod file dependency ranges Experimental
+Retrieve dependency ranges for a given mod file. Each dependency definition contains a set of version ranges within update groups that satisfy the dependency.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the mod file.
+
+Responses
+200 The mod file's dependency ranges.
+400 Bad Request
+403 Forbidden
+404 The mod file was not found.
+
+get
+/mod-files/{id}/dependencies/ranges
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"dependency_definitions": [
+{}
+]
+}
+Update mod file dependency ranges Experimental
+Replace all dependency range definitions for a given mod file. Each dependency definition contains an array of version ranges. Ranges within the same definition represent alternatives (OR). Separate definitions are independent requirements (AND).
+
+A range is defined by a min_version_id (required) and an optional max_version_id. Both must refer to versions within the same file update group. When max_version_id is null the range is open-ended (no upper bound).
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the mod file (i.e. the file to create dependency ranges for).
+
+Request Body schema: application/json
+required
+dependency_definitions
+required
+Array of objects (ModFileDependencyRangeDefinitionInput)
+Responses
+204 Successfully updated the mod file dependency ranges.
+400 Bad Request
+403 Forbidden
+404 The mod file was not found.
+422 The request body failed validation.
+
+put
+/mod-files/{id}/dependencies/ranges
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"dependency_definitions": [
+{}
+]
+}
+Response samples
+400403404422
+Content type
+application/problem+json
+
+Copy
+{
+"type": "http://example.com",
+"title": "string",
+"status": 404,
+"detail": "string",
+"instance": "http://example.com"
+}
+Get mod file materialized dependencies Experimental
+Retrieve materialized dependencies for a given mod file. Resolves the stored dependency ranges into concrete candidate files grouped by update group.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the mod file.
+
+Responses
+200 The mod file's materialized dependencies.
+400 Bad Request
+403 Forbidden
+404 The mod file was not found.
+
+get
+/mod-files/{id}/dependencies/materialized
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"dependencies": [
+{}
+]
+}
+Get file update group versions Experimental
+Retrieve all versions for a given file update group.
+
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string
+The unique identifier for the file update group.
+
+Responses
+200 The file update group's versions.
+400 Bad Request
+403 Forbidden
+404 The file update group was not found.
+
+get
+/file-update-groups/{id}/versions
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"versions": []
+}
+}
+Move multiple file update group versions Experimental
+Moves one or more file update group versions to a new position relative to another version which might be in a different group.
+
+The versions will be moved together, preserving their order within the payload.
+
+Authorizations:
+ApiKeyAuth
+Request Body schema: application/json
+required
+version_ids
+required
+Array of strings non-empty
+The unique identifiers for the file update group versions to move. The order of IDs in this array dictates the order they are inserted at the destination.
+
+target
+required
+object (MoveToPosition)
+Move the versions before or after an existing version.
+
+Responses
+200 The versions were moved successfully.
+400 Bad Request
+403 Forbidden
+404 The file update group was not found.
+422 The request body failed validation.
+
+post
+/mod-file-update-group-versions/move
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"version_ids": [
+"string"
+],
+"target": {
+"target_version_id": "string",
+"relative_placement": "before"
+}
+}
+Response samples
+200400403404422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"versions": [
+{}
+],
+"modified_source_groups": [
+{}
+],
+"deleted_source_group_ids": [
+"string"
+],
+"target_group": {
+"id": "string",
+"name": "string",
+"is_active": true,
+"last_file_uploaded_at": "2019-08-24T14:15:22Z",
+"versions_count": 0,
+"archived_count": 0,
+"removed_count": 0
+}
+}
+uploads
+Upload management
+
+Get upload Beta
+Get the state of an upload session.
+
+Next steps
+Once the state is available, the upload may be used to create a mod file.
+FAQ
+How do I create an upload?
+Use create upload to start a new upload session.
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string <uuid>
+The unique identifier for the upload.
+
+Responses
+200 Upload
+400 Bad Request
+403 Forbidden
+404 Not Found
+
+get
+/uploads/{id}
+
+Response samples
+200400403404
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+"user_id": "string",
+"state": "created"
+}
+}
+Create upload Beta
+Creates a new upload session. This allows you to upload data for a new mod file.
+
+⚠️ Files larger than 100 MiB must use a multi part upload.
+
+Next steps
+Call PUT with your file data to the returned presigned_url. Recommended for files up to 100 MiB.
+Once all data is uploaded, finalise the upload.
+Authorizations:
+ApiKeyAuth
+Request Body schema: application/json
+required
+size_bytes
+required
+integer <int64>
+Size of file in bytes.
+
+filename
+required
+string
+User-defined filename.
+
+Responses
+201 Upload ID and presigned URL
+400 Bad Request
+403 Forbidden
+422 Unprocessable Entity
+
+post
+/uploads
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+{
+"size_bytes": 0,
+"filename": "string"
+}
+Response samples
+201400403422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"presigned_url": "string",
+"id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+"user_id": "string",
+"state": "created"
+}
+}
+Create multipart upload Beta
+Creates a new multipart upload session. This allows you to upload data for a new mod file.
+
+💡 Files smaller than 100 MiB can use the simpler single part upload.
+
+Next steps
+Multipart upload uses the Amazon S3 multipart upload specification.
+
+Call PUT with your file data to each parts_presigned_url.
+Each part must be parts_size bytes, apart from the final part which may be smaller.
+Retrieve the ETag response header value from each part upload.
+Once all parts are uploaded, call POST to the complete presigned_url with XML post data describing the ETag for each part.
+Once multipart complete is called, finalise the upload.
+Multipart resources
+Sample XML for completing the multipart upload:
+
+<CompleteMultipartUpload>                                                                                                                                                                                                          
+  <Part>                                                                                                                                                                                                                                                                           
+    <PartNumber>1</PartNumber>                                                                                                                                                                                                                                                     
+    <ETag>a54357aff0632cce46d942af68356b38</ETag>                                                                                                                                                                                                                                
+  </Part>                                                                                                                                                                                                                                                                          
+  <Part>                                                                                                                                                                                                                                                                           
+    <PartNumber>2</PartNumber>                                                                                                                                                                                                                                                     
+    <ETag>0c78aef83f66abc1fa1e8477f296d394</ETag>                                                                                                                                                                                                                                
+  </Part>                                                                                                                                                                                                                                                                          
+  <Part>                                                                                                                                                                                                                                                                           
+    <PartNumber>3</PartNumber>                                                                                                                                                                                                                                                     
+    <ETag>acbd18db4cc2f85cedef654fccc4a4d8</ETag>                                                                                                                                                                                                                                
+  </Part>                                                                                                                                                                                                                                                                          
+</CompleteMultipartUpload>
+Authorizations:
+ApiKeyAuth
+Request Body schema: application/json
+required
+size_bytes
+required
+integer <int64>
+Size of file in bytes.
+
+filename
+required
+string
+User-defined filename.
+
+Responses
+201 Upload ID and presigned URL
+400 Bad Request
+403 Forbidden
+422 Unprocessable Content
+
+post
+/uploads/multipart
+
+Request samples
+Payload
+Content type
+application/json
+
+Copy
+{
+"size_bytes": 0,
+"filename": "string"
+}
+Response samples
+201400403422
+Content type
+application/json
+
+Copy
+Expand allCollapse all
+{
+"data": {
+"parts_size": 0,
+"parts_presigned_url": [],
+"complete_presigned_url": "string",
+"id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+"user_id": "string",
+"state": "created"
+}
+}
+Finalise upload Beta
+Closes the upload session once all data is uploaded. Sessions must be closed before you can use the upload as a mod file.
+
+Next steps
+Wait for the upload to be ready for use as a mod file. Use get upload to check that state is available.
+Create a mod file from this upload.
+Authorizations:
+ApiKeyAuth
+path Parameters
+id
+required
+string <uuid>
+The unique identifier for the upload.
+
+Responses
+200 Upload
+400 Bad Request
+403 Forbidden
+404 Not Found
+422 Unprocessable Entity

@@ -1,6 +1,22 @@
 # GigglePack Release Changelog
 Newest entries appear at the top.
 
+## GigglePack v1.3.2 (April 10, 2026 4:43pm)
+### Summary: +0 new, ~2 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-NoEAC-LockableWorkstations](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip) (v1.1.0-BETA -> v1.1.1-BETA)
+  - [AGF-VP-AutomobilesRespawn](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip) (v3.0.1 -> v3.1.0)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
+Newest entries appear at the top.
+
 ## GigglePack v1.3.1 (April 1, 2026 5:29pm)
 ### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
 - **New Mods**

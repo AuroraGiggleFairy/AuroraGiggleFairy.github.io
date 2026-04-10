@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "1.3.1",
-  "previous_gigglepack_version": "1.3.0",
+  "gigglepack_version": "1.3.2",
+  "previous_gigglepack_version": "1.3.1",
   "is_baseline_release": false,
-  "released_at": "2026-04-01 17:29:20",
+  "released_at": "2026-04-10 16:43:03",
   "mods": {
     "AGF-4Modders-10IngredientSlots": "1.0.1",
     "AGF-4Modders-ConfigureWindowEnteringDuration": "1.0.1",
@@ -29,7 +29,7 @@
     "AGF-NoEAC-ExpandedInteractionPrompts": "1.1.0",
     "AGF-NoEAC-GlobalStormTracker": "1.0.0",
     "AGF-NoEAC-ItemTypeIconColor": "1.0.0",
-    "AGF-NoEAC-LockableWorkstations": "1.1.0",
+    "AGF-NoEAC-LockableWorkstations": "1.1.1",
     "AGF-NoEAC-OpenAllButton": "1.0.1",
     "AGF-NoEAC-ScreamerAlert": "1.1.1",
     "AGF-NoEAC-SortingBox": "1.0.5",
@@ -40,7 +40,7 @@
     "AGF-VP-ApiaryPlus": "1.0.3",
     "AGF-VP-ArcheryFeathersChange": "1.0.2",
     "AGF-VP-ArmorHarvestMods": "2.1.0",
-    "AGF-VP-AutomobilesRespawn": "3.0.1",
+    "AGF-VP-AutomobilesRespawn": "3.1.0",
     "AGF-VP-BedrollPlus": "1.0.0",
     "AGF-VP-BetterEggChance": "2.1.0",
     "AGF-VP-BreakItGetIt": "1.0.2",
@@ -98,18 +98,23 @@
   },
   "updated_mods": [
     {
-      "mod": "AGF-NoEAC-Toolbelt12Slots",
-      "from": "1.0.0",
-      "to": "1.0.1"
+      "mod": "AGF-NoEAC-LockableWorkstations",
+      "from": "1.1.0",
+      "to": "1.1.1"
+    },
+    {
+      "mod": "AGF-VP-AutomobilesRespawn",
+      "from": "3.0.1",
+      "to": "3.1.0"
     }
   ],
   "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v1.3.1.zip",
+  "versioned_zip": "AGF-GigglePack-v1.3.2.zip",
   "change_counts": {
     "new_mods": 0,
-    "updated_existing_mods": 1,
+    "updated_existing_mods": 2,
     "renamed_mods": 0,
     "removed_mods": 0
   }

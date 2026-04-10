@@ -67,6 +67,7 @@
 ---
 
 ## 4. Compatibility
+- Last 7d2d Version tested on: 2.6
 - EAC Friendly: No
 - Server Side: UNIQUE
 - Client Required for Multiplayer: UNIQUE

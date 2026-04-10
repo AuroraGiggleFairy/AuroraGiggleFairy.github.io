@@ -72,6 +72,7 @@ Language Support
 ========================================
 
 4. Compatibility
+- Last 7d2d Version tested on: 2.6
 - EAC Friendly: No
 - Server Side: No
 - Client Required for Multiplayer: Yes

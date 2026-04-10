@@ -67,6 +67,7 @@
 ---
 
 ## 4. Compatibility
+- Last 7d2d Version tested on: {{TESTED_GAME_VERSION}}
 - EAC Friendly: {{EAC_FRIENDLY}}
 - Server Side: {{SERVER_SIDE}}
 - Client Required for Multiplayer: {{CLIENT_REQUIRED}}

@@ -70,6 +70,13 @@ Use only `SCRIPT-Main.py` with one of these modes:
 4. Test in game.
 5. When ready to release, bump version in `ModInfo.xml` and run `SCRIPT-Main.py --mode promote`.
 6. Run `SCRIPT-Main.py --mode package`.
+7. Handle Nexus Mods publishing or update planning separately with `SCRIPT-NexusMods.py`.
+
+### Nexus Mods Workflow Boundary
+
+- `SCRIPT-Main.py` remains responsible for workspace sync, release prep, zips, README output, and GigglePack release notes.
+- `SCRIPT-NexusMods.py` is the separate workflow for Nexus Mods planning and live version checks.
+- Keep Nexus work separate so you can edit that script independently and run targeted update-only passes without touching the main packaging workflow.
 
 ---
 
@@ -129,6 +136,7 @@ Use only `SCRIPT-Main.py` with one of these modes:
 
 - Identity and version come from each mod's `ModInfo.xml` (`Name` and `Version`).
 - Compatibility fields come from `HELPER_ModCompatibility.csv` by `MOD_NAME` (base mod name, no version suffix).
+- `TESTED_GAME_VERSION` is the source for the README line `Last 7d2d Version tested on:`.
 - Quotes come from `_Quotes/<MOD_NAME>.txt` (or `QUOTE_FILE` in CSV when provided).
 - If a mod exists but has no CSV row yet, README generation still runs with `MISSINGDATA` defaults and logs a warning.
 - Existing `FEATURES` and `CHANGELOG` blocks are preserved when regenerating README files.
@@ -158,7 +166,7 @@ Use only `SCRIPT-Main.py` with one of these modes:
 
 ### README.md and ReadableReadMe.txt
 - For each mod, create a `README.md` from the template `TEMPLATE-ModReadMes.md`:
-  - Fill in **all fields** (`MOD_NAME`, `MOD_VERSION`, `DOWNLOAD_LINK`, and all compatibility/metadata fields such as EAC_FRIENDLY, SERVER_SIDE, CLIENT_REQUIRED, SAFE_TO_INSTALL, SAFE_TO_REMOVE, UNIQUE, etc.) **from `HELPER_ModCompatibility.csv` using the base mod name**.
+   - Fill in **all fields** (`MOD_NAME`, `MOD_VERSION`, `DOWNLOAD_LINK`, and all compatibility/metadata fields such as TESTED_GAME_VERSION, EAC_FRIENDLY, SERVER_SIDE, CLIENT_REQUIRED, SAFE_TO_INSTALL, SAFE_TO_REMOVE, UNIQUE, etc.) **from `HELPER_ModCompatibility.csv` using the base mod name**.
   - Insert the contents of the quote file (looked up by base mod name) as a Markdown blockquote for `{{QUOTE}}`.
 - After updating `README.md`, create `ReadableReadMe.txt` in the same folder by converting the Markdown to plain text (remove formatting, links, blockquotes, and convert dividers).
 - Do this for both `_Mods1.PublishReady` and `_Mods2.In-Progress`.

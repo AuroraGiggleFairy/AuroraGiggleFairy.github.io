@@ -74,6 +74,7 @@ GIGGLEPACK_V100_FOCUS_MODS = (
     "AGF-NoEAC-ScreamerAlert",
 )
 README_COMPAT_FIELDS = (
+    "TESTED_GAME_VERSION",
     "EAC_FRIENDLY",
     "SERVER_SIDE",
     "CLIENT_REQUIRED",
@@ -1161,7 +1162,7 @@ def rename_mod_folders_to_modinfo(
 
 
 def load_compat_csv() -> Tuple[List[str], List[Dict[str, str]]]:
-    default_fields = ["MOD_NAME", "QUOTE_FILE"]
+    default_fields = ["MOD_NAME", "TESTED_GAME_VERSION", "QUOTE_FILE"]
     if not os.path.exists(COMPAT_CSV):
         return default_fields, []
 
@@ -1217,6 +1218,9 @@ def normalize_compat_csv(
     fieldnames, rows = load_compat_csv()
     if "MOD_NAME" not in fieldnames:
         fieldnames.insert(0, "MOD_NAME")
+    if "TESTED_GAME_VERSION" not in fieldnames:
+        insert_at = 1 if "MOD_NAME" in fieldnames else 0
+        fieldnames.insert(insert_at, "TESTED_GAME_VERSION")
     if "QUOTE_FILE" not in fieldnames:
         fieldnames.append("QUOTE_FILE")
 
@@ -1347,6 +1351,7 @@ def generate_mod_readmes(
             download_link = zip_download_link(zip_name)
 
             compat = compat_data.get(base_name, {})
+            tested_game_version = compat.get("TESTED_GAME_VERSION", "MISSINGDATA")
             eac_friendly = compat.get("EAC_FRIENDLY", "MISSINGDATA")
             server_side = compat.get("SERVER_SIDE", "MISSINGDATA")
             client_required = compat.get("CLIENT_REQUIRED", "MISSINGDATA")
@@ -1375,6 +1380,7 @@ def generate_mod_readmes(
             readme_content = readme_content.replace("{{MOD_VERSION}}", mod_version_display)
             readme_content = readme_content.replace("{{DOWNLOAD_LINK}}", download_link)
             readme_content = readme_content.replace("{{QUOTE}}", quote_md)
+            readme_content = readme_content.replace("{{TESTED_GAME_VERSION}}", tested_game_version)
             readme_content = readme_content.replace("{{EAC_FRIENDLY}}", eac_friendly)
             readme_content = readme_content.replace("{{SERVER_SIDE}}", server_side)
             readme_content = readme_content.replace("{{CLIENT_REQUIRED}}", client_required)
