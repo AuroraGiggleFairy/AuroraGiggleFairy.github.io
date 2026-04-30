@@ -1,0 +1,37 @@
+{
+  "project_to_mod_overrides": {
+    "stormtracker": "AGF-NoEAC-GlobalStormTracker",
+    "enhancedagf": "AGF-NoEAC-EnhancedPatch",
+    "screameralertvariant": "AGF-NoEAC-ScreamerAlert",
+    "roboticinboxagffiles": "AGF-NoEAC-SortingBox"
+  },
+  "project_rename_overrides": {
+    "stormtracker": "GlobalStormTracker",
+    "enhancedagf": "EnhancedAGF",
+    "screameralertvariant": "ScreamerAlert",
+    "roboticinboxagffiles": "SortingBox"
+  },
+  "project_category_overrides": {
+    "audioptionsplus": "NoEAC",
+    "autorun": "NoEAC",
+    "consoleopacitymod": "4Modders",
+    "cosmeticlockicon": "NoEAC",
+    "enhancedagf": "NoEAC",
+    "expandedinteractionprompts": "NoEAC",
+    "flightlevelassist": "NoEAC",
+    "itemtypeiconcolor": "NoEAC",
+    "lockableworkstations": "Security",
+    "openallbutton": "NoEAC",
+    "stormtracker": "NoEAC",
+    "toolbelt12slots": "NoEAC",
+    "visualentitytracker": "NoEAC",
+    "anticm": "Security",
+    "damagetypefix": "Fixes",
+    "destroybiomebadgefix": "Fixes",
+    "removeitemsrepeatablemod": "Fixes",
+    "windowenteringduration": "4Modders",
+    "skillcap": "4Modders",
+    "optionsagf": "Fixes",
+    "roboticinboxagffiles": "NoEAC"
+  }
+}

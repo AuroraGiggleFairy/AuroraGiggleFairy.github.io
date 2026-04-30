@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "1.3.2",
-  "previous_gigglepack_version": "1.3.1",
+  "gigglepack_version": "1.4.0",
+  "previous_gigglepack_version": "1.3.2",
   "is_baseline_release": false,
-  "released_at": "2026-04-10 16:43:03",
+  "released_at": "2026-04-30 03:50:09",
   "mods": {
     "AGF-4Modders-10IngredientSlots": "1.0.1",
     "AGF-4Modders-ConfigureWindowEnteringDuration": "1.0.1",
@@ -14,7 +14,7 @@
     "AGF-BackpackPlus-072Slots": "3.2.2",
     "AGF-BackpackPlus-084Slots": "3.2.2",
     "AGF-BackpackPlus-119Slots": "1.2.2",
-    "AGF-HUDPlus-1Main": "5.4.4",
+    "AGF-HUDPlus-1Main": "5.4.5",
     "AGF-HUDPlus-BMCounter": "2.1.2",
     "AGF-HUDPlus-HealthBars": "4.0.0",
     "AGF-HUDPlus-PurpleBook": "2.0.0",
@@ -23,17 +23,20 @@
     "AGF-HUDPluszOther-SmallerInteractionPrompt": "1.0.0",
     "AGF-HUDPluszOther-TinyBuffsPopUp": "1.0.0",
     "AGF-HUDPluszOther-Weekday": "2.1.0",
+    "AGF-NoEAC-AudioOptionsPlus": "1.0.0",
+    "AGF-NoEAC-AutoRun": "1.0.0",
     "AGF-NoEAC-ConsoleOpacityMod": "1.0.0",
     "AGF-NoEAC-CosmeticLockIcon": "1.0.1",
-    "AGF-NoEAC-EnhancedPatch": "3.1.1",
+    "AGF-NoEAC-EnhancedAGF": "3.2.0",
     "AGF-NoEAC-ExpandedInteractionPrompts": "1.1.0",
+    "AGF-NoEAC-FlightAssist": "1.0.0",
     "AGF-NoEAC-GlobalStormTracker": "1.0.0",
     "AGF-NoEAC-ItemTypeIconColor": "1.0.0",
-    "AGF-NoEAC-LockableWorkstations": "1.1.1",
+    "AGF-NoEAC-LockableWorkstations": "1.2.0",
     "AGF-NoEAC-OpenAllButton": "1.0.1",
-    "AGF-NoEAC-ScreamerAlert": "1.1.1",
+    "AGF-NoEAC-ScreamerAlert": "1.2.0",
     "AGF-NoEAC-SortingBox": "1.0.5",
-    "AGF-NoEAC-Toolbelt12Slots": "1.0.1",
+    "AGF-NoEAC-Toolbelt12Slots": "1.0.2",
     "AGF-VP-AdminModdingSupport": "1.0.3",
     "AGF-VP-AlternativeRecipes": "1.0.1",
     "AGF-VP-AmmoDisassembly": "1.0.1",
@@ -56,7 +59,7 @@
     "AGF-VP-FarmingPlus": "5.6.1",
     "AGF-VP-FloraHarvester": "2.3.0",
     "AGF-VP-FuelBurnPlus": "2.3.0",
-    "AGF-VP-MasterTool": "6.1.0",
+    "AGF-VP-MasterTool": "6.1.1",
     "AGF-VP-MaxLevel500": "2.0.2",
     "AGF-VP-MedicationNoInsectSlow": "1.1.0",
     "AGF-VP-MiningPlus": "1.2.0",
@@ -94,27 +97,24 @@
     "AGF-VP-ZombieBiomeSpawning": "3.0.0",
     "AGF-VP-ZombieCorpseLeaveQuicker": "2.0.1",
     "AGF-VP-ZombieLargerHordes": "2.0.1",
-    "zzzAGF-Special-Compatibilities": "4.0.3"
+    "zzzAGF-Special-Compatibilities": "4.1.0"
   },
   "updated_mods": [
     {
-      "mod": "AGF-NoEAC-LockableWorkstations",
-      "from": "1.1.0",
-      "to": "1.1.1"
-    },
-    {
-      "mod": "AGF-VP-AutomobilesRespawn",
-      "from": "3.0.1",
-      "to": "3.1.0"
+      "mod": "AGF-HUDPlus-1Main",
+      "from": "5.4.4",
+      "to": "5.4.5",
+      "from_display": "5.4.4",
+      "to_display": "5.4.5"
     }
   ],
   "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v1.3.2.zip",
+  "versioned_zip": "AGF-GigglePack-v1.5.2.zip",
   "change_counts": {
     "new_mods": 0,
-    "updated_existing_mods": 2,
+    "updated_existing_mods": 1,
     "renamed_mods": 0,
     "removed_mods": 0
   }

@@ -1,0 +1,9 @@
+using Microsoft.CodeAnalysis;
+
+namespace System.Runtime.CompilerServices;
+
+[CompilerGenerated]
+[_003Ccd1acc41_002D06dd_002D404e_002D91b0_002Da058fd6ac622_003EEmbedded]
+internal sealed class _003C943c0d9f_002D9e8d_002D4b94_002D8043_002Dfa75de3db6e3_003EIsReadOnlyAttribute : Attribute
+{
+}

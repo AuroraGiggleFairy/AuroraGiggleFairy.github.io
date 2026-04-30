@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*April 10, 2026, 4:45 PM EST*
+*April 30, 2026, 3:50 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -346,7 +346,7 @@
 
 ---
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.3.2)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v1.4.0)**
 
 > - *All AGF mods in one convenient download.*
 > - *Direct set-up is AGF preference and only server side mods*
@@ -356,7 +356,7 @@
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v1.3.2 - April 10, 2026 4:43pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.1.0-BETA -&gt; v1.1.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip">AGF-VP-AutomobilesRespawn</a> (v3.0.1 -&gt; v3.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.1 - April 1, 2026 5:29pm<ul><li>Change summary: +0 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.0 - March 29, 2026 10:25pm<ul><li>Change summary: +3 new, ~0 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip">AGF-4Modders-SkillPointCap</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">AGF-4Modders-Fix4DestroyBiomeBadge</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip">AGF-4Modders-Fix4RemoveItems</a> (new: v1.0.0-BETA)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip">AGF-4Modders-CustomWindowEnteringDuration</a> (renamed from AGF-4Modders-ConfigureWindowEnteringDuration, v1.0.0-BETA)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v1.4.0 - April 30, 2026 3:50am<ul><li>Change summary: +3 new, ~6 updated, =1 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip">AGF-NoEAC-AudioOptionsPlus</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (new: v1.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FlightAssist.zip">AGF-NoEAC-FlightAssist</a> (new: v1.0.0-BETA)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v5.4.4 -&gt; v5.4.5)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.1.1-BETA -&gt; v1.2.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">AGF-NoEAC-ScreamerAlert</a> (v1.1.1-BETA -&gt; v1.2.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v1.0.1 -&gt; v1.0.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">AGF-VP-MasterTool</a> (v6.1.0 -&gt; v6.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">zzzAGF-Special-Compatibilities</a> (v4.0.3 -&gt; v4.1.0)</li></ul></li><li>Renamed mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (renamed from AGF-NoEAC-EnhancedPatch, v3.1.1 -&gt; v3.2.0)</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.2 - April 10, 2026 4:43pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">AGF-NoEAC-LockableWorkstations</a> (v1.1.0-BETA -&gt; v1.1.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip">AGF-VP-AutomobilesRespawn</a> (v3.0.1 -&gt; v3.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v1.3.1 - April 1, 2026 5:29pm<ul><li>Change summary: +0 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -378,11 +378,11 @@
 
 *Quality-of-life HUD enhancements and visual tweaks.*
 
-> ### **AGF-HUDPlus-1Main** *-v5.4.4* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip)
+> ### **AGF-HUDPlus-1Main** *-v5.4.5* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip)
 > *Refined HUD with clear stats, menus, and visual cues for easier gameplay.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul><li>Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.</li><li>Lockable inventory slots are clearly marked for quick identification.</li><li>Compass is wider and features a visible center mark.</li><li>Toolbelt is lowered for better backpack mod compatibility, with numbered slots for convenience.</li><li>Chat messages are easier to read with updated backgrounds.</li><li>Map details are displayed in a dedicated section beside the map, with clear labels.</li><li>Crafting and burning timers are visually clearer and easier to read.</li><li>Date, time, outdoor temperature, and the location display are visible on all menus.</li><li>Storm visual alerts now appear below the location display, freeing space for other mods.</li><li>Trader dialogue, including quest selection, is easier to read with updated backgrounds.</li><li>Simple color-coding for interactive prompts (the text that appears when looking at loot, workstations, etc.) for quick recognition.</li><li>You now have 5 centered crafting slots instead of 4.</li><li>Schematics, magazines, and books are color-coded to show whether they’ve been read.</li><li>The NoEAC-EnhancedPatch provides even more visual features if also installed.</li><li>Compatible with all 7 Days to Die versions since 2.5. (For new game updates, check for the latest HUDPlus version if needed.)</li></ul>
+> <ul><li>NOTE: Major update 1 of 3 is applied in this version (vehicle stats).</li><li>Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.</li><li>Lockable inventory slots are clearly marked for quick identification.</li><li>Compass is wider and features a visible center mark.</li><li>Toolbelt is lowered for better backpack mod compatibility, with numbered slots for convenience.</li><li>Chat messages are easier to read with updated backgrounds.</li><li>Map details are displayed in a dedicated section beside the map, with clear labels.</li><li>Crafting and burning timers are visually clearer and easier to read.</li><li>Date, time, outdoor temperature, and the location display are visible on all menus.</li><li>Storm visual alerts now appear below the location display, freeing space for other mods.</li><li>Trader dialogue, including quest selection, is easier to read with updated backgrounds.</li><li>Simple color-coding for interactive prompts (the text that appears when looking at loot, workstations, etc.) for quick recognition.</li><li>You now have 5 centered crafting slots instead of 4.</li><li>Schematics, magazines, and books are color-coded to show whether they’ve been read.</li><li>The NoEAC-EnhancedAGF provides even more visual features if also installed.</li><li>Compatible with all 7 Days to Die versions since 2.5. (For new game updates, check for the latest HUDPlus version if needed.)</li></ul>
 >
 > </details>
 > 
@@ -516,7 +516,7 @@
 
 ---
 
-> ### **zzzAGF-Special-Compatibilities** *-v4.0.3* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip)
+> ### **zzzAGF-Special-Compatibilities** *-v4.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip)
 > *Compatibility Patch Collection.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -783,7 +783,7 @@
 
 ---
 
-> ### **AGF-VP-MasterTool** *-v6.1.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip)
+> ### **AGF-VP-MasterTool** *-v6.1.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip)
 > *Master Tool can do the work of an auger, chainsaw, knife, wrench, and nailgun combined, with minimal damage output.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1215,6 +1215,28 @@
 
 *Mods that require EAC to be off or are client-side only.*
 
+> ### **AGF-NoEAC-AudioOptionsPlus** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip)
+> *Adds in-game audio options for specialized volume controls and animal injury sounds.*
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Adds two new in-game audio tabs: Volume Controls and Sound Swaps.</li><li>Volume Controls lets players fine-tune a wide range of sound categories, including:</li><ul><li>equipment, looping sounds, traders, and more.</li></ul><li>Sound Swaps lets players replace animal injury sounds with non-injury sounds.</li><ul><li>Includes an option to enable Silly Sounds from Twitch Integration.</li></ul></ul>
+>
+> </details>
+> 
+
+---
+
+> ### **AGF-NoEAC-AutoRun** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip)
+> **
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Summary:</li><li>Works on foot and in vehicles.</li><li>Double tap your Forward key to enable Auto-Run.</li><li>Detailed:</li><li>Double tap your Forward key: Auto-Run ON.</li><li>Hold Sprint while double tapping Forward key: Auto-Run starts with Sprint ON.</li><li>While Auto-Run is ON:</li><ul><li>Double tap Sprint: Sprint ON.</li><li>Tap Sprint once: Sprint OFF.</li></ul><li>Press Forward key once: Auto-Run OFF and manual control resumes.</li></ul>
+>
+> </details>
+> 
+
+---
+
 > ### **AGF-NoEAC-ConsoleOpacityMod** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip)
 > *In the configs folder, you can change F1 opacity..*
 > 
@@ -1232,7 +1254,7 @@
 
 ---
 
-> ### **AGF-NoEAC-EnhancedPatch** *-v3.1.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedPatch.zip)
+> ### **AGF-NoEAC-EnhancedAGF** *-v3.2.0* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip)
 > *Adds extra info that is only available from non-EAC friendly places.*
 > <details> <summary>*Show detailed features*</summary>
 >
@@ -1248,6 +1270,17 @@
 > <details> <summary>*Show detailed features*</summary>
 >
 > <ul><li>When looking at any workstation, provides crafting and status information on the prompt.</li><li>When looking at storages, provides slots used status.</li><li>When looking at vehicles, shows seats available, locked status, and slots used.</li></ul>
+>
+> </details>
+> 
+
+---
+
+> ### **AGF-NoEAC-FlightAssist** *-v1.0.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FlightAssist.zip)
+> **
+> <details> <summary>*Show detailed features*</summary>
+>
+> <ul><li>Includes two flight assist patterns:</li><ul><li>Gyrocopter: Press X to enable forward flight while maintaining current elevation.</li><li>Helicopter: Press X once to enable hover mode, then press X again to enable forward flight while maintaining current elevation.</li></ul><li>The current Flight Assist mode is shown on the HUD.</li></ul>
 >
 > </details>
 > 
@@ -1276,11 +1309,11 @@
 
 ---
 
-> ### **AGF-NoEAC-LockableWorkstations** *-v1.1.1-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
+> ### **AGF-NoEAC-LockableWorkstations** *-v1.2.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip)
 > *Workstations and collectors can now be locked or unlocked to control access.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul><li>Adds lock/unlock to workstations, collectors, generators, and ranged defenses.</li><li>Owners can set and use a passcode.</li><li>Other players can access only if unlocked or they enter the correct code.</li><li>Shows clear status text: Secured, Accessible, Access Denied.</li></ul>
+> <ul><li>Hybrid Mod Description:</li><li>This is a hybrid server/client mod.</li><li>Server-only install works and players still benefit.</li><li>Installing on both server and client provides the best experience.</li><li>Players are not required to download the mod to join your game.</li><li>All Versions:</li><li>Placed workstations, collectors, generators, and ranged defenses are automatically locked to non-owners.</li><li>Interacting with a locked block plays the game’s locked sound.</li><li>Server-Side Use:</li><li>While within 5 meters and looking at a lockable block, use chat commands to lock, unlock, or set a keycode.</li><li>Lock status is not shown in the UI on server-only installs.</li><li>Client-Side Use:</li><li>Shows lock status in the UI when you look at stations.</li><li>Lets you edit lock status in the UI, similar to storage blocks.</li><li>Lock status displays as: Secured, Accessible, or Access Denied.</li></ul>
 >
 > </details>
 > 
@@ -1298,11 +1331,11 @@
 
 ---
 
-> ### **AGF-NoEAC-ScreamerAlert** *-v1.1.1-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip)
+> ### **AGF-NoEAC-ScreamerAlert** *-v1.2.0-BETA* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip)
 > *A visual Screamer Alert appears when the player is near a screamer or its horde.*
 > <details> <summary>*Show detailed features*</summary>
 >
-> <ul><li>An alert appears when you are within 120 meters of any live screamer or any zombie spawned by a screamer horde.</li><li>The alert shows how many of these zombies are in range.</li><li>The alert disappears if none are close or alive.</li></ul>
+> <ul><li>Hybrid Mod Description:</li><li>This is a hybrid server/client mod.</li><li>Server-only install works and players still benefit.</li><li>Installing on both server and client provides the best experience.</li><li>Players are not required to download the mod to join your game.</li><li>All Versions:</li><li>Alerts are triggered when live Screamers or Screamer-spawned zombies are within 120 meters.</li><li>Server-Side Use:</li><li>Players without the client-side install receive a private chat alert.</li><li>Server-side only users can use off/on only (private message alerts enabled or disabled).</li><li>Server-side alerts are initial notification only (not live-tracked in UI).</li><li>Chat command for server-side-only users: /sa <off|on>.</li><li>Chat command to check current setting: /sa status.</li><li>Client-Side Use:</li><li>Provides a real-time on-screen alert.</li><li>The alert disappears when no matching enemies are alive or in range.</li><li>Can display the number of currently tracked Screamers and horde zombies.</li><li>3 Modes: Off, On (alert only), Counts (shows Screamer and horde zombie counts).</li><li>Chat command to set mode: /sa <off|on|counts|cycle>.</li><li>Console command (F1) to set mode: agf-sa <off|on|counts|cycle>.</li><li>Status command: /sa status or agf-sa status.</li><li>Can also be toggled via the ESC Window mod (if installed).</li><li>Admin Notes:</li><li>Console commands (F1): "agf-screameralert" or "agf-sa".</li><li>Admin target command (F1): agf-sa admin <entityId> <off|on|counts|cycle>.</li></ul>
 >
 > </details>
 > 
@@ -1315,7 +1348,7 @@
 
 ---
 
-> ### **AGF-NoEAC-Toolbelt12Slots** *-v1.0.1* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip)
+> ### **AGF-NoEAC-Toolbelt12Slots** *-v1.0.2* - [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip)
 > *Simply expands toolbelt from 10 to 12 slots.*
 > <details> <summary>*Show detailed features*</summary>
 >

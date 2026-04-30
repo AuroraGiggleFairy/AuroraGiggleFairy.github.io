@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-4Modders-ESCWindowPlus"/>
+    <DisplayName value="AGF ESC Window Plus"/>
+    <Version value="0.3.1"/>
+    <Description value="Users can self generate their ESC Window and Server Join."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

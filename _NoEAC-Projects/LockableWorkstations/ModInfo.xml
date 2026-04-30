@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-  <ModInfo>
-    <Name value="LockableWorkstations" />
-    <Description value="Adds lockable workstation behavior." />
-    <Author value="AGFProjects" />
-    <Version value="1.0.0" />
-  </ModInfo>
-</xml>

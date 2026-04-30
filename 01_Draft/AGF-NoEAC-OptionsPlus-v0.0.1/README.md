@@ -67,13 +67,13 @@
 ---
 
 ## 4. Compatibility
-- Last 7d2d Version tested on: MISSINGDATA
-- EAC Friendly: MISSINGDATA
-- Server Side: MISSINGDATA
-- Client Required for Multiplayer: MISSINGDATA
-- "AGF-NoEAC-OptionsPlus" is MISSINGDATA to install on an existing game.
-- "AGF-NoEAC-OptionsPlus" is MISSINGDATA to remove from an existing game.
-- Unique Details: MISSINGDATA
+- Last 7d2d Version tested on: 2.6
+- EAC Friendly: No
+- Server Side: No
+- Client Required for Multiplayer: Yes
+- "AGF-NoEAC-OptionsPlus" is SAFE to install on an existing game.
+- "AGF-NoEAC-OptionsPlus" is UNKNOWN to remove from an existing game.
+- Unique Details: This simply enables the addition options in the ESC Window mod.
 
 ---
 ---

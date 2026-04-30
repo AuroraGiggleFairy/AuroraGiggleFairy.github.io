@@ -1,6 +1,28 @@
 # GigglePack Release Changelog
 Newest entries appear at the top.
 
+## GigglePack v1.4.0 (April 30, 2026 3:50am)
+### Summary: +3 new, ~6 updated, =1 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-AudioOptionsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip) (new: v1.0.0-BETA)
+  - [AGF-NoEAC-AutoRun](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip) (new: v1.0.0-BETA)
+  - [AGF-NoEAC-FlightAssist](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FlightAssist.zip) (new: v1.0.0-BETA)
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v5.4.4 -> v5.4.5)
+  - [AGF-NoEAC-LockableWorkstations](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip) (v1.1.1-BETA -> v1.2.0-BETA)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v1.1.1-BETA -> v1.2.0-BETA)
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v1.0.1 -> v1.0.2)
+  - [AGF-VP-MasterTool](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip) (v6.1.0 -> v6.1.1)
+  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (v4.0.3 -> v4.1.0)
+- **Renamed Mods**
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (renamed from AGF-NoEAC-EnhancedPatch, v3.1.1 -> v3.2.0)
+- **Removed Mods**
+  - None
+
+---
+
+Newest entries appear at the top.
+
 ## GigglePack v1.3.2 (April 10, 2026 4:43pm)
 ### Summary: +0 new, ~2 updated, =0 renamed, -0 removed
 - **New Mods**

@@ -1,3 +1,0 @@
-# Deprecated: SkillCap now uses progression XML attribute only.
-# Add this to your progression level node instead:
-# skill_point_level_cap="60"

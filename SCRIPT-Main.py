@@ -893,7 +893,7 @@ def sync_publishready_to_staging_latest(dry_run: bool, log: Logger) -> None:
                 log.warn(f"Could not hash compare release/active tie for {base_name}: {ex}")
 
 
-def sync_game_and_draft(dry_run: bool, log: Logger) -> None:
+def sync_game_and_draft(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     """Sync updates from Game into Draft for AGF mods present in both lanes.
 
     This keeps Draft current when a mod was originally tracked in Draft but got
@@ -912,6 +912,8 @@ def sync_game_and_draft(dry_run: bool, log: Logger) -> None:
         get_base_mod_name(folder): (folder, path)
         for folder, path in game_folders.items()
     }
+
+    mods_pulled_from_game: List[Tuple[str, str]] = []
 
     overlap = sorted(set(draft_by_base.keys()) & set(game_by_base.keys()))
     for base_name in overlap:
@@ -932,6 +934,7 @@ def sync_game_and_draft(dry_run: bool, log: Logger) -> None:
         if cmp_value > 0:
             if maybe_copytree(game_path, draft_path, dry_run, log):
                 log.stats.synced_pull_from_game += 1
+                mods_pulled_from_game.append((draft_folder, draft_path))
                 log.info(
                     f"Draft/game pull: {game_folder} v{game_ver} -> {draft_folder} v{draft_ver}"
                 )
@@ -942,12 +945,15 @@ def sync_game_and_draft(dry_run: bool, log: Logger) -> None:
                 if draft_hash != game_hash:
                     if maybe_copytree(game_path, draft_path, dry_run, log):
                         log.stats.synced_pull_from_game += 1
+                        mods_pulled_from_game.append((draft_folder, draft_path))
                         log.info(
                             f"Draft/game tie refresh for {base_name}: both v{game_ver} but content differed. "
                             "Pulled game copy into Draft."
                         )
             except Exception as ex:
                 log.warn(f"Could not hash compare game/draft tie for {base_name}: {ex}")
+
+    return mods_pulled_from_game
 
 
 def enforce_staging_major_policy(dry_run: bool, log: Logger) -> None:
@@ -1464,6 +1470,8 @@ def push_back_pulled_mods(mods_pulled_from_game: List[Tuple[str, str]], dry_run:
         workspace_by_base[get_base_mod_name(folder)] = path
     for folder, path in scan_mod_folders(IN_PROGRESS).items():
         workspace_by_base[get_base_mod_name(folder)] = path
+    for folder, path in scan_mod_folders(STAGING).items():
+        workspace_by_base[get_base_mod_name(folder)] = path
 
     for mod_name, ws_path in mods_pulled_from_game:
         resolved_ws_path = ws_path
@@ -1475,13 +1483,87 @@ def push_back_pulled_mods(mods_pulled_from_game: List[Tuple[str, str]], dry_run:
             log.warn(f"Pushback skipped for {mod_name}: workspace path missing {ws_path}")
             continue
 
-        dest_path = os.path.join(GAME_MODS, os.path.basename(resolved_ws_path))
+        pushed_folder_name = os.path.basename(resolved_ws_path)
+        pushed_version = get_modinfo_version(resolved_ws_path)
+        if pushed_version is None:
+            log.warn(f"Pushback skipped for {mod_name}: unreadable ModInfo.xml at {resolved_ws_path}")
+            continue
+
+        try:
+            pushed_major = int((pushed_version or "0.0.0").split(".", 1)[0])
+        except Exception:
+            pushed_major = 0
+
+        if pushed_major < 1:
+            log.info(
+                f"Pushback skipped for {mod_name}: version {pushed_version} is draft-only (major < 1)"
+            )
+            continue
+
+        if is_4modders_mod(pushed_folder_name):
+            existing_game_root_path = os.path.join(GAME_MODS, pushed_folder_name)
+            if not os.path.isdir(existing_game_root_path):
+                log.info(
+                    f"Pushback skipped for {mod_name}: 4Modders mods only push when already present in game root"
+                )
+                continue
+
+        if mod_name != pushed_folder_name:
+            old_game_path = os.path.join(GAME_MODS, mod_name)
+            if maybe_remove_dir(old_game_path, dry_run, log):
+                log.info(
+                    f"Pushback cleanup: removed old game folder name {mod_name} before pushing {pushed_folder_name}"
+                )
+
+        dest_path = os.path.join(GAME_MODS, pushed_folder_name)
         if maybe_remove_dir(dest_path, dry_run, log) and maybe_copytree(resolved_ws_path, dest_path, dry_run, log):
             log.stats.pushed_back_to_game += 1
             log.info(f"Pushback complete: {mod_name}")
 
 
-def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
+def remap_pulled_mods_after_renames(
+    mods_pulled_from_game: List[Tuple[str, str]],
+    folder_renames: List[Tuple[str, str, str]],
+    log: Logger,
+) -> List[Tuple[str, str]]:
+    """Remap pulled-mod tracking entries when folder names changed during the run."""
+    if not mods_pulled_from_game or not folder_renames:
+        return mods_pulled_from_game
+
+    rename_by_name: Dict[str, Tuple[str, str]] = {}
+    rename_by_name_and_dir: Dict[Tuple[str, str], Tuple[str, str]] = {}
+    for old_name, new_name, mod_dir in folder_renames:
+        new_path = os.path.join(mod_dir, new_name)
+        rename_by_name[old_name] = (new_name, new_path)
+        rename_by_name_and_dir[(old_name, mod_dir)] = (new_name, new_path)
+
+    remapped: List[Tuple[str, str]] = []
+    seen: set[Tuple[str, str]] = set()
+    for mod_name, ws_path in mods_pulled_from_game:
+        current_name = mod_name
+        current_path = ws_path
+
+        mod_dir = os.path.dirname(ws_path)
+        mapped = rename_by_name_and_dir.get((mod_name, mod_dir))
+        if mapped is None:
+            mapped = rename_by_name.get(mod_name)
+
+        if mapped is not None:
+            current_name, current_path = mapped
+            log.info(
+                f"Pushback remap: {mod_name} -> {current_name} (using post-rename workspace path)"
+            )
+
+        key = (current_name, current_path)
+        if key in seen:
+            continue
+        seen.add(key)
+        remapped.append(key)
+
+    return remapped
+
+
+def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     """Sync only between staging and game lanes.
 
     This mode is for day-to-day test syncs and does not touch PublishReady.
@@ -1495,6 +1577,7 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
 
     staging_folders = scan_mod_folders(STAGING)
     game_folders = scan_mod_folders(GAME_MODS)
+    mods_pulled_from_game: List[Tuple[str, str]] = []
     renamed_suffixes: set[str] = set()
     for folder_name in staging_folders:
         match = re.match(r"^AGF-4Modders-(.+)-v([0-9][0-9a-zA-Z\.-]*)$", folder_name)
@@ -1588,6 +1671,7 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
             target = os.path.join(STAGING, game_folder)
             if maybe_copytree(game_path, target, dry_run, log):
                 log.stats.synced_pull_from_game += 1
+                mods_pulled_from_game.append((game_folder, target))
                 log.info(f"sync-work pull: {game_folder} v{game_ver} -> staging")
         else:
             try:
@@ -1669,6 +1753,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> None:
 
     # Normalize active-build folder names after pulls so names track ModInfo versions.
     rename_mod_folders_to_modinfo(dry_run, log, mod_dirs=(STAGING,))
+
+    return mods_pulled_from_game
 
 
 def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
@@ -2552,10 +2638,10 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         "is_baseline_release": is_baseline_release,
         "released_at": now_iso,
         "mods": giggle_mod_versions,
-        "updated_mods": updated_mod_entries,
-        "new_mods": new_mod_entries,
-        "renamed_mods": renamed_mod_entries,
-        "removed_mods": removed_mod_entries,
+        "updated_mods": updated_mod_entries_display,
+        "new_mods": new_mod_entries_display,
+        "renamed_mods": renamed_mod_entries_display,
+        "removed_mods": removed_mod_entries_display,
         "versioned_zip": versioned_zip_name,
         "change_counts": {
             "new_mods": len(new_mod_entries),
@@ -2859,7 +2945,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
             for entry in new_mods:
                 if isinstance(entry, dict):
                     mod_name = str(entry.get("mod", "")).strip()
-                    to_ver = str(entry.get("to", "")).strip()
+                    to_ver = str(entry.get("to_display", entry.get("to", ""))).strip()
                     if mod_name:
                         new_items.append(f"{mod_download_html_link(mod_name)} (new: v{escape_html(to_ver)})")
 
@@ -2868,8 +2954,8 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
             for entry in updated_mods:
                 if isinstance(entry, dict):
                     mod_name = str(entry.get("mod", "")).strip()
-                    from_ver = str(entry.get("from", "")).strip()
-                    to_ver = str(entry.get("to", "")).strip()
+                    from_ver = str(entry.get("from_display", entry.get("from", ""))).strip()
+                    to_ver = str(entry.get("to_display", entry.get("to", ""))).strip()
                     if mod_name:
                         updated_items.append(
                             f"{mod_download_html_link(mod_name)} (v{escape_html(from_ver)} -&gt; v{escape_html(to_ver)})"
@@ -2881,7 +2967,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
                 if isinstance(entry, dict):
                     from_mod = str(entry.get("from_mod", "")).strip()
                     to_mod = str(entry.get("to_mod", "")).strip()
-                    version = str(entry.get("version", "")).strip()
+                    version = str(entry.get("version_display", entry.get("version", ""))).strip()
                     if from_mod and to_mod:
                         renamed_items.append(
                             f"{mod_download_html_link(to_mod)} (renamed from {escape_html(from_mod)}, v{escape_html(version)})"
@@ -2892,7 +2978,7 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
             for entry in removed_mods:
                 if isinstance(entry, dict):
                     mod_name = str(entry.get("mod", "")).strip()
-                    from_ver = str(entry.get("from", "")).strip()
+                    from_ver = str(entry.get("from_display", entry.get("from", ""))).strip()
                     if mod_name:
                         removed_items.append(f"{escape_html(mod_name)} (was v{escape_html(from_ver)})")
 
@@ -3194,11 +3280,13 @@ def run_pipeline(args: argparse.Namespace) -> int:
         else:
             log.info(
                 "Mode full: sync Game<->Draft for tracked draft mods, ingest Draft->ActiveBuild, "
-                "sync ActiveBuild<->Game, then finalize/promote/package."
+                "sync ActiveBuild<->Game, then apply targeted pushback for pulled mods, then finalize/promote/package."
             )
 
+            pulled_mods_for_pushback: List[Tuple[str, str]] = []
+
             # 0.25) Pull newer game updates into Draft for overlapping AGF mods.
-            sync_game_and_draft(args.dry_run, log)
+            pulled_mods_for_pushback.extend(sync_game_and_draft(args.dry_run, log))
 
             # 0.5) Ensure ActiveBuild includes latest Draft copies before game sync.
             sync_draft_to_staging_latest(args.dry_run, log)
@@ -3207,25 +3295,22 @@ def run_pipeline(args: argparse.Namespace) -> int:
             enforce_staging_major_policy(args.dry_run, log)
 
             # 1) Keep ActiveBuild and Game synchronized first.
-            sync_staging_and_game(args.dry_run, log)
+            pulled_mods_for_pushback.extend(sync_staging_and_game(args.dry_run, log))
 
             # 2) Apply naming/readme updates in ActiveBuild.
             prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
             cleanup_legacy_4modders_renames_in_dir(STAGING, args.dry_run, log)
             cleanup_older_versions_in_dir(STAGING, args.dry_run, log)
 
-            # 3) Push finalized ActiveBuild changes back to game (version/hash aware).
-            sync_staging_and_game(args.dry_run, log)
-
-            # 4) Promote finalized ActiveBuild content to ReleaseSource.
+            # 3) Promote finalized ActiveBuild content to ReleaseSource.
             promote_staging_to_publish_ready(args.dry_run, log)
 
-            # 4.5) Remove stale legacy folder names replaced by AGF-4Modders naming.
+            # 3.5) Remove stale legacy folder names replaced by AGF-4Modders naming.
             cleanup_release_legacy_4modders_renames(args.dry_run, log)
             cleanup_legacy_4modders_renames_in_dir(PUBLISH_READY, args.dry_run, log)
             cleanup_older_versions_in_dir(PUBLISH_READY, args.dry_run, log)
 
-            # 5) Ensure ReleaseSource + Draft metadata/quotes/readmes are normalized before packaging.
+            # 4) Ensure ReleaseSource + Draft metadata/quotes/readmes are normalized before packaging.
             release_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(PUBLISH_READY,))
             draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             all_renames = release_renames + draft_renames
@@ -3239,6 +3324,15 @@ def run_pipeline(args: argparse.Namespace) -> int:
             normalize_quote_files(csv_rows, all_renames, args.dry_run, log)
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(PUBLISH_READY,))
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(IN_PROGRESS,))
+
+            pulled_mods_for_pushback = remap_pulled_mods_after_renames(
+                pulled_mods_for_pushback,
+                all_renames,
+                log,
+            )
+
+            # 5) After names/metadata are finalized, push back only pulled mods that qualify.
+            push_back_pulled_mods(pulled_mods_for_pushback, args.dry_run, log)
 
             # 6) Package and regenerate main README.
             create_all_zips(args.dry_run, args.workers, log)

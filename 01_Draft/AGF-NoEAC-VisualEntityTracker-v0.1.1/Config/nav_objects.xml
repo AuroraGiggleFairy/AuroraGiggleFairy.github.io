@@ -1,0 +1,321 @@
+<AGF-VisualEntityTracker>
+
+	<!-- Not going to lie, this is from BDubyahs zAlert mod with changes -->
+  <append xpath="/nav_object_classes">
+    <nav_object_class name="VETDLLZombie">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_zombie"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLBandit">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_run_and_gun"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLBear">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_bear"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLChicken">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_chicken"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLDeer">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_deer"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLRabbit">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_rabbit"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLWolf">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLMountainLion">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_mountain_lion"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLVulture">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_bat"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLSnake">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_snake"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="VETDLLBoar">
+      <property name="requirement_type" value="None" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_pig"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+    
+    <nav_object_class name="VETDllSwarm">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_traps"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+
+  </append>
+
+  <append xpath="/nav_object_classes">
+    <nav_object_class name="ZAzombie">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_zombie"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAbandit">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_run_and_gun"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAbear">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_bear"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAchicken">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_chicken"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAdeer">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_deer"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZArabbit">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_rabbit"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAwolf">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAcoyote">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAmountainlion">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_mountain_lion"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAvulture">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_bat"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAdog">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_wolf"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAsnake">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_snake"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+    <nav_object_class name="ZAboar">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_pig"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+
+     <nav_object_class name="ZABugSwarm">
+      <property name="requirement_type" value="Tracking" />
+      <compass_settings>
+        <property name="sprite_name" value="ui_game_symbol_tracking_traps"/>
+        <property name="min_distance" value="0"/>
+        <property name="max_distance" value="25"/>
+        <property name="color" value="255,0,0,255"/>
+        <property name="has_pulse" value="true"/>
+        <property name="icon_clamped" value="true"/>
+      </compass_settings>
+    </nav_object_class>
+  </append>
+</AGF-VisualEntityTracker>

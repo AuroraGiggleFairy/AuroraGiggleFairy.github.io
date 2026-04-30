@@ -1,0 +1,130 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
+using Newtonsoft.Json.Utilities;
+
+namespace Newtonsoft.Json.Serialization;
+
+[_003C464f7c58_002D4ec4_002D4694_002Da30c_002D0ded4d74fb4d_003ENullableContext(1)]
+[_003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(0)]
+internal class DefaultSerializationBinder : SerializationBinder, ISerializationBinder
+{
+	internal static readonly DefaultSerializationBinder Instance = new DefaultSerializationBinder();
+
+	[_003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(new byte[] { 1, 0, 2, 1, 1 })]
+	private readonly ThreadSafeStore<StructMultiKey<string, string>, Type> _typeCache;
+
+	public DefaultSerializationBinder()
+	{
+		_typeCache = new ThreadSafeStore<StructMultiKey<string, string>, Type>(GetTypeFromTypeNameKey);
+	}
+
+	private Type GetTypeFromTypeNameKey([_003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(new byte[] { 0, 2, 1 })] StructMultiKey<string, string> typeNameKey)
+	{
+		string value = typeNameKey.Value1;
+		string value2 = typeNameKey.Value2;
+		if (value != null)
+		{
+			Assembly assembly = Assembly.LoadWithPartialName(value);
+			if (assembly == null)
+			{
+				Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+				foreach (Assembly assembly2 in assemblies)
+				{
+					if (assembly2.FullName == value || assembly2.GetName().Name == value)
+					{
+						assembly = assembly2;
+						break;
+					}
+				}
+			}
+			if (assembly == null)
+			{
+				throw new JsonSerializationException("Could not load assembly '{0}'.".FormatWith(CultureInfo.InvariantCulture, value));
+			}
+			Type type = assembly.GetType(value2);
+			if (type == null)
+			{
+				if (StringUtils.IndexOf(value2, '`') >= 0)
+				{
+					try
+					{
+						type = GetGenericTypeFromTypeName(value2, assembly);
+					}
+					catch (Exception innerException)
+					{
+						throw new JsonSerializationException("Could not find type '{0}' in assembly '{1}'.".FormatWith(CultureInfo.InvariantCulture, value2, assembly.FullName), innerException);
+					}
+				}
+				if (type == null)
+				{
+					throw new JsonSerializationException("Could not find type '{0}' in assembly '{1}'.".FormatWith(CultureInfo.InvariantCulture, value2, assembly.FullName));
+				}
+			}
+			return type;
+		}
+		return Type.GetType(value2);
+	}
+
+	[return: _003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(2)]
+	private Type GetGenericTypeFromTypeName(string typeName, Assembly assembly)
+	{
+		Type result = null;
+		int num = StringUtils.IndexOf(typeName, '[');
+		if (num >= 0)
+		{
+			string name = typeName.Substring(0, num);
+			Type type = assembly.GetType(name);
+			if (type != null)
+			{
+				List<Type> list = new List<Type>();
+				int num2 = 0;
+				int num3 = 0;
+				int num4 = typeName.Length - 1;
+				for (int i = num + 1; i < num4; i++)
+				{
+					switch (typeName[i])
+					{
+					case '[':
+						if (num2 == 0)
+						{
+							num3 = i + 1;
+						}
+						num2++;
+						break;
+					case ']':
+						num2--;
+						if (num2 == 0)
+						{
+							StructMultiKey<string, string> typeNameKey = ReflectionUtils.SplitFullyQualifiedTypeName(typeName.Substring(num3, i - num3));
+							list.Add(GetTypeByName(typeNameKey));
+						}
+						break;
+					}
+				}
+				result = type.MakeGenericType(list.ToArray());
+			}
+		}
+		return result;
+	}
+
+	private Type GetTypeByName([_003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(new byte[] { 0, 2, 1 })] StructMultiKey<string, string> typeNameKey)
+	{
+		return _typeCache.Get(typeNameKey);
+	}
+
+	public override Type BindToType([_003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(2)] string assemblyName, string typeName)
+	{
+		return GetTypeByName(new StructMultiKey<string, string>(assemblyName, typeName));
+	}
+
+	[_003C464f7c58_002D4ec4_002D4694_002Da30c_002D0ded4d74fb4d_003ENullableContext(2)]
+	public override void BindToName([_003C9200ff2c_002Dc7a6_002D43ef_002Da776_002D3d61f59ba112_003ENullable(1)] Type serializedType, out string assemblyName, out string typeName)
+	{
+		assemblyName = serializedType.Assembly.FullName;
+		typeName = serializedType.FullName;
+	}
+}

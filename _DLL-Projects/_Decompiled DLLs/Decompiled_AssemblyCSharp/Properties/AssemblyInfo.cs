@@ -1,0 +1,22 @@
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Security.Permissions;
+using Unity.Burst;
+using WorldGenerationEngineFinal;
+
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindDetailedPath_0000A282_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindDetailedPath_0000A284_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002ECalcPathBounds_0000A285_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindClosestPathPoint_0000A286_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindClosestPathPoint_0000A287_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EIsPointOnPath_0000A288_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002ESmoothAlpha_0000A2E3_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EDrawStamp_0000A306_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EDrawWaterStamp_0000A309_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EClearWaterUnderTerrain_0000A3CE_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFinalizeWater_0000A3D1_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002ESmoothRoadTerrainTask_0000A3D8_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EAdjustHeights_0000A3EA_0024BurstDirectCall))]
+[assembly: AssemblyVersion("0.0.0.0")]

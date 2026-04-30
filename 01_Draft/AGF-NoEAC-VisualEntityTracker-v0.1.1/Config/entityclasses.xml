@@ -1,0 +1,13 @@
+<configs>
+	
+	<append xpath="/entity_classes/entity_class[@name='playerMale']">
+		<effect_group>
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffZAlert"/>
+			<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffZAlert"/>
+		</effect_group>
+	</append>	
+	
+	<append xpath="/entity_classes/entity_class[@name='animalInsectSwarm']/property[@name='Tags']/@value">,bugswarm</append>
+	<append xpath="/entity_classes/entity_class[@name='animalBeeSwarm']/property[@name='Tags']/@value">,bugswarm</append>
+
+</configs>

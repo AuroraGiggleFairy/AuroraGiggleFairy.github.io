@@ -1,0 +1,51 @@
+using System;
+
+namespace Discord;
+
+[Flags]
+internal enum GuildFeature : long
+{
+	None = 0L,
+	AnimatedBanner = 1L,
+	AnimatedIcon = 2L,
+	Banner = 4L,
+	ChannelBanner = 8L,
+	Commerce = 0x10L,
+	Community = 0x20L,
+	Discoverable = 0x40L,
+	DiscoverableDisabled = 0x80L,
+	EnabledDiscoverableBefore = 0x100L,
+	Featureable = 0x200L,
+	ForceRelay = 0x400L,
+	HasDirectoryEntry = 0x800L,
+	Hub = 0x1000L,
+	InternalEmployeeOnly = 0x2000L,
+	InviteSplash = 0x4000L,
+	LinkedToHub = 0x8000L,
+	MemberProfiles = 0x10000L,
+	MemberVerificationGateEnabled = 0x20000L,
+	MonetizationEnabled = 0x40000L,
+	MoreEmoji = 0x80000L,
+	MoreStickers = 0x100000L,
+	News = 0x200000L,
+	NewThreadPermissions = 0x400000L,
+	Partnered = 0x800000L,
+	PremiumTier3Override = 0x1000000L,
+	PreviewEnabled = 0x2000000L,
+	PrivateThreads = 0x4000000L,
+	RelayEnabled = 0x8000000L,
+	RoleIcons = 0x10000000L,
+	RoleSubscriptionsAvailableForPurchase = 0x20000000L,
+	RoleSubscriptionsEnabled = 0x40000000L,
+	SevenDayThreadArchive = 0x80000000L,
+	TextInVoiceEnabled = 0x100000000L,
+	ThreadsEnabled = 0x200000000L,
+	ThreadsEnabledTesting = 0x400000000L,
+	ThreadsDefaultAutoArchiveDuration = 0x800000000L,
+	ThreeDayThreadArchive = 0x1000000000L,
+	TicketedEventsEnabled = 0x2000000000L,
+	VanityUrl = 0x4000000000L,
+	Verified = 0x8000000000L,
+	VIPRegions = 0x10000000000L,
+	WelcomeScreenEnabled = 0x20000000000L
+}

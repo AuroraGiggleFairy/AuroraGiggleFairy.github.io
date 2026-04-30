@@ -1,9 +1,0 @@
-<xml>
-  <ModInfo>
-    <Name value="StormTracker" />
-    <Description value="Tracks and logs in-game storms and weather events." />
-    <Author value="YourName" />
-    <Version value="1.0.0" />
-    <GameVersion value="A21" />
-  </ModInfo>
-</xml>

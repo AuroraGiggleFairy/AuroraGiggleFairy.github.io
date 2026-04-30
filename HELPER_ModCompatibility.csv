@@ -1,5 +1,4 @@
 MOD_NAME,TESTED_GAME_VERSION,EAC_FRIENDLY,SERVER_SIDE,CLIENT_REQUIRED,SAFE_TO_INSTALL,SAFE_TO_REMOVE,UNIQUE,QUOTE_FILE
-AGF-NoEAC-OptionsPlus,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,MISSINGDATA,AGF-NoEAC-OptionsPlus.txt
 AGF-VP-MedicallyTreatOthers,2.6,Yes,Yes,No,SAFE,MISSINGDATA,MISSINGDATA,AGF-VP-MedicallyTreatOthers.txt
 AGF-VP-MedicalTreatOthersTreatedInjuries,2.6,Yes,Yes,No,SAFE,MISSINGDATA,MISSINGDATA,AGF-VP-MedicalTreatOthersTreatedInjuries.txt
 AGF-4Modders-10IngredientSlots,2.6,Yes,Yes,No,SAFE,SAFE,None,AGF-4Modders-10IngredientSlots.txt
@@ -23,18 +22,23 @@ AGF-HUDPluszOther-RemoveWrittentormAlerts,2.6,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDP
 AGF-HUDPluszOther-SmallerInteractionPrompt,2.6,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-SmallerInteractionPrompt.txt
 AGF-HUDPluszOther-TinyBuffsPopUp,2.6,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-TinyBuffsPopUp.txt
 AGF-HUDPluszOther-Weekday,2.6,Yes,Yes,No,SAFE,SAFE,None,AGF-HUDPluszOther-Weekday.txt
+AGF-NoEAC-AudioOptionsPlus,2.6,No,No,Yes,SAFE,UNKNOWN,This has no affect if installed on a server as it is purely client side.,AGF-NoEAC-AudioOptionsPlus.txt
+AGF-NoEAC-AutoRun,2.6,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-AutoRun.txt
 AGF-NoEAC-ConsoleOpacityMod,2.6,No,Unknown,Unknown,SAFE,Unknown,None,AGF-NoEAC-ConsoleOpacityMod.txt
 AGF-NoEAC-CosmeticLockIcon,2.6,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-CosmeticLockIcon.txt
-AGF-NoEAC-EnhancedPatch,2.6,No,No,Yes,SAFE,SAFE,None,AGF-NoEAC-EnhancedPatch.txt
+AGF-NoEAC-EnhancedAGF,2.6,No,No,Yes,SAFE,SAFE,None,AGF-NoEAC-EnhancedAGF.txt
 AGF-NoEAC-ExpandedInteractionPrompts,2.6,No,No,Yes,Safe,Safe,None,AGF-NoEAC-ExpandedInteractionPrompts.txt
+AGF-NoEAC-FlightAssist,2.6,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-FlightAssist.txt
 AGF-NoEAC-GlobalStormTracker,2.6,No,Yes,No,SAFE,UNKNOWN,None,AGF-NoEAC-GlobalStormTracker.txt
 AGF-NoEAC-ItemTypeIconColor,2.6,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-ItemTypeIconColor.txt
-AGF-NoEAC-LockableWorkstations,2.6,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-LockableWorkstations.txt
+AGF-NoEAC-LockableWorkstations,2.6,No,Yes,Yes,SAFE,DANGEROUS,Hybrid-works server side but improved with client,AGF-NoEAC-LockableWorkstations.txt
 AGF-NoEAC-OpenAllButton,2.6,No,No,Yes,Yes,UNKNOWN,None,AGF-NoEAC-OpenAllButton.txt
-AGF-NoEAC-ScreamerAlert,2.6,No,No,Yes,SAFE,UNKNOWN,None,AGF-NoEAC-ScreamerAlert.txt
+AGF-NoEAC-OptionsPlus,2.6,No,No,Yes,SAFE,UNKNOWN,This simply enables the addition options in the ESC Window mod.,AGF-NoEAC-OptionsPlus.txt
+AGF-NoEAC-ScreamerAlert,2.6,No,Yes,Yes,SAFE,UNKNOWN,Hybrid-works server side but improved with client,AGF-NoEAC-ScreamerAlert.txt
 AGF-NoEAC-SortingBox,2.6,No,UNIQUE,UNIQUE,SAFE,DANGEROUS,Server side if dedicated server - otherwise client side.,AGF-NoEAC-SortingBox.txt
 AGF-NoEAC-TerrainLeveler,2.6,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt
 AGF-NoEAC-Toolbelt12Slots,2.6,No,No,Yes,SAFE,DANGEROUS,None,AGF-NoEAC-Toolbelt12Slots.txt
+AGF-NoEAC-VisualEntityTracker,2.6,No,Yes,Yes,SAFE,UNKNOWN,Hybrid-works server side but improved with client,AGF-NoEAC-VisualEntityTracker.txt
 AGF-VP-AdminModdingSupport,2.6,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-AdminModdingSupport.txt
 AGF-VP-AlternativeRecipes,2.6,Yes,Yes,No,SAFE,SAFE,None,AGF-VP-AlternativeRecipes.txt
 AGF-VP-AmmoDisassembly,2.6,Yes,Yes,No,SAFE,DANGEROUS,None,AGF-VP-AmmoDisassembly.txt
