@@ -1,0 +1,36 @@
+# Flight Level Assist client-side config
+#
+# Hotkey used for press-toggle level assist.
+# Must be a valid UnityEngine.KeyCode name.
+# Default: Z
+#
+# Behavior:
+# - Pressing the key enables latched flat-lock.
+# - Pressing again while flat-lock is active does nothing.
+# - Flat-lock remains active until manual pitch input cancels it.
+#
+# Recommended keys to test:
+# - Z (easy thumb reach from WASD; not used by default vehicle controls)
+# - V (easy hold key, usually free while driving)
+# - G (easy tap key, usually free while driving)
+# - Mouse3 / Mouse4 (if your mouse has side/middle buttons)
+#
+# Avoid these default vehicle keys:
+# - W, A, S, D, LeftShift, Space, C, X
+#
+LevelAssistHotkey=Z
+
+# Optional controller activation action.
+# Default: None (disabled)
+# Valid values:
+# - None
+# - ToggleTurnMode
+# - HonkHorn
+# - ToggleFlashlight
+# - Scoreboard
+# - Inventory
+# - Activate
+#
+# Example:
+# ControllerActivationAction=HonkHorn
+ControllerActivationAction=None

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="ForceDisableCM" />
+    <DisplayName value="Force Disable Creative/Debug" />
+    <Description value="Monitors players for Creative/Debug usage, logs attempts, and can auto-kick offenders." />
+    <Author value="morganamu" />
+    <Version value="1.0.0" />
+    <Website value="" />
+</xml>

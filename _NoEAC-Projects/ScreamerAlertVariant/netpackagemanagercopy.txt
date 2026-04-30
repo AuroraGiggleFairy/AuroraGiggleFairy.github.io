@@ -1,0 +1,1195 @@
+// Token: 0x02000707 RID: 1799
+.class public auto ansi abstract sealed NetPackageManager
+	extends [mscorlib]System.Object
+{
+	// Nested Types
+	// Token: 0x02000708 RID: 1800
+	.class interface nested public auto ansi abstract IPackageInformation
+	{
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Methods
+		// Token: 0x06003549 RID: 13641
+		.method public hidebysig newslot abstract virtual 
+			instance class NetPackage GetRawPackage () cil managed 
+		{
+		} // end of method IPackageInformation::GetRawPackage
+
+		// Token: 0x0600354A RID: 13642
+		.method public hidebysig newslot abstract virtual 
+			instance void FreePackage (
+				class NetPackage _package
+			) cil managed 
+		{
+		} // end of method IPackageInformation::FreePackage
+
+		// Token: 0x0600354B RID: 13643
+		.method public hidebysig newslot abstract virtual 
+			instance void GetStats (
+				[out] int32& _packages,
+				[out] int32& _totalSize
+			) cil managed 
+		{
+		} // end of method IPackageInformation::GetStats
+
+	} // end of class IPackageInformation
+
+	// Token: 0x02000709 RID: 1801
+	.class nested public auto ansi beforefieldinit NetPackageInformation`1<(NetPackage) TPackage>
+		extends [mscorlib]System.Object
+		implements NetPackageManager/IPackageInformation
+	{
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Fields
+		// Token: 0x04002BE3 RID: 11235
+		.field public static class NetPackageManager/NetPackageInformation`1<!TPackage> 'instance'
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BE4 RID: 11236
+		.field public initonly !TPackage[] pool
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BE5 RID: 11237
+		.field public int32 poolSize
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BE6 RID: 11238
+		.field public initonly int32 capacity
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BE7 RID: 11239
+		.field public initonly class [mscorlib]System.Reflection.ConstructorInfo ctor
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BE8 RID: 11240
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler getSampler
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BE9 RID: 11241
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler getSamplerPool
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BEA RID: 11242
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler getSamplerNew
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BEB RID: 11243
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler getSamplerType
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BEC RID: 11244
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler freeSampler
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BED RID: 11245
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler freeSamplerPool
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Token: 0x04002BEE RID: 11246
+		.field public initonly class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler freeSamplerCleanup
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+
+		// Methods
+		// Token: 0x0600354C RID: 13644 RVA: 0x00167767 File Offset: 0x00165967
+		.method public hidebysig specialname static 
+			class NetPackageManager/NetPackageInformation`1<!TPackage> get_Instance () cil managed 
+		{
+			// Header Size: 1 byte
+			// Code Size: 23 (0x17) bytes
+			.maxstack 8
+
+			/* 0x00165968 7E4115000A   */ IL_0000: ldsfld    class NetPackageManager/NetPackageInformation`1<!0> class NetPackageManager/NetPackageInformation`1<!TPackage>::'instance'
+			/* 0x0016596D 2D0A         */ IL_0005: brtrue.s  IL_0011
+
+			/* 0x0016596F 734215000A   */ IL_0007: newobj    instance void class NetPackageManager/NetPackageInformation`1<!TPackage>::.ctor()
+			/* 0x00165974 804115000A   */ IL_000C: stsfld    class NetPackageManager/NetPackageInformation`1<!0> class NetPackageManager/NetPackageInformation`1<!TPackage>::'instance'
+
+			/* 0x00165979 7E4115000A   */ IL_0011: ldsfld    class NetPackageManager/NetPackageInformation`1<!0> class NetPackageManager/NetPackageInformation`1<!TPackage>::'instance'
+			/* 0x0016597E 2A           */ IL_0016: ret
+		} // end of method NetPackageInformation`1::get_Instance
+
+		// Token: 0x0600354D RID: 13645 RVA: 0x00167780 File Offset: 0x00165980
+		.method public hidebysig specialname rtspecialname 
+			instance void .ctor () cil managed 
+		{
+			.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+				01 00 02 00 00 00 00 00
+			)
+			// Header Size: 12 bytes
+			// Code Size: 298 (0x12A) bytes
+			// LocalVarSig Token: 0x110009ED RID: 2541
+			.maxstack 7
+			.locals init (
+				[0] class [mscorlib]System.Type,
+				[1] valuetype [mscorlib]System.Reflection.BindingFlags,
+				[2] class [mscorlib]System.Reflection.MethodInfo
+			)
+
+			/* 0x0016598C 02           */ IL_0000: ldarg.0
+			/* 0x0016598D 72642D0570   */ IL_0001: ldstr     "NPM.PI.GetPackage"
+			/* 0x00165992 16           */ IL_0006: ldc.i4.0
+			/* 0x00165993 28A614000A   */ IL_0007: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x00165998 7D4315000A   */ IL_000C: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::getSampler
+			/* 0x0016599D 02           */ IL_0011: ldarg.0
+			/* 0x0016599E 72882D0570   */ IL_0012: ldstr     "Pooled"
+			/* 0x001659A3 16           */ IL_0017: ldc.i4.0
+			/* 0x001659A4 28A614000A   */ IL_0018: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x001659A9 7D4415000A   */ IL_001D: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::getSamplerPool
+			/* 0x001659AE 02           */ IL_0022: ldarg.0
+			/* 0x001659AF 72962D0570   */ IL_0023: ldstr     "New"
+			/* 0x001659B4 16           */ IL_0028: ldc.i4.0
+			/* 0x001659B5 28A614000A   */ IL_0029: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x001659BA 7D4515000A   */ IL_002E: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::getSamplerNew
+			/* 0x001659BF 02           */ IL_0033: ldarg.0
+			/* 0x001659C0 D00300001B   */ IL_0034: ldtoken   !TPackage
+			/* 0x001659C5 282B03000A   */ IL_0039: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+			/* 0x001659CA 6F3C05000A   */ IL_003E: callvirt  instance string [mscorlib]System.Reflection.MemberInfo::get_Name()
+			/* 0x001659CF 16           */ IL_0043: ldc.i4.0
+			/* 0x001659D0 28A614000A   */ IL_0044: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x001659D5 7D4615000A   */ IL_0049: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::getSamplerType
+			/* 0x001659DA 02           */ IL_004E: ldarg.0
+			/* 0x001659DB 729E2D0570   */ IL_004F: ldstr     "NPM.PI.FreePackage"
+			/* 0x001659E0 16           */ IL_0054: ldc.i4.0
+			/* 0x001659E1 28A614000A   */ IL_0055: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x001659E6 7D4715000A   */ IL_005A: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::freeSampler
+			/* 0x001659EB 02           */ IL_005F: ldarg.0
+			/* 0x001659EC 72C42D0570   */ IL_0060: ldstr     "ToPool"
+			/* 0x001659F1 16           */ IL_0065: ldc.i4.0
+			/* 0x001659F2 28A614000A   */ IL_0066: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x001659F7 7D4815000A   */ IL_006B: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::freeSamplerPool
+			/* 0x001659FC 02           */ IL_0070: ldarg.0
+			/* 0x001659FD 72D22D0570   */ IL_0071: ldstr     "Cleanup"
+			/* 0x00165A02 16           */ IL_0076: ldc.i4.0
+			/* 0x00165A03 28A614000A   */ IL_0077: call      class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler::Create(string, bool)
+			/* 0x00165A08 7D4915000A   */ IL_007C: stfld     class [UnityEngine.CoreModule]UnityEngine.Profiling.CustomSampler class NetPackageManager/NetPackageInformation`1<!TPackage>::freeSamplerCleanup
+			/* 0x00165A0D 02           */ IL_0081: ldarg.0
+			/* 0x00165A0E 280300000A   */ IL_0082: call      instance void [mscorlib]System.Object::.ctor()
+			/* 0x00165A13 D00300001B   */ IL_0087: ldtoken   !TPackage
+			/* 0x00165A18 282B03000A   */ IL_008C: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+			/* 0x00165A1D 0A           */ IL_0091: stloc.0
+			/* 0x00165A1E 1F34         */ IL_0092: ldc.i4.s  52
+			/* 0x00165A20 0B           */ IL_0094: stloc.1
+			/* 0x00165A21 02           */ IL_0095: ldarg.0
+			/* 0x00165A22 06           */ IL_0096: ldloc.0
+			/* 0x00165A23 07           */ IL_0097: ldloc.1
+			/* 0x00165A24 14           */ IL_0098: ldnull
+			/* 0x00165A25 19           */ IL_0099: ldc.i4.3
+			/* 0x00165A26 7E3D05000A   */ IL_009A: ldsfld    class [mscorlib]System.Type[] [mscorlib]System.Type::EmptyTypes
+			/* 0x00165A2B 14           */ IL_009F: ldnull
+			/* 0x00165A2C 6F4A15000A   */ IL_00A0: callvirt  instance class [mscorlib]System.Reflection.ConstructorInfo [mscorlib]System.Type::GetConstructor(valuetype [mscorlib]System.Reflection.BindingFlags, class [mscorlib]System.Reflection.Binder, valuetype [mscorlib]System.Reflection.CallingConventions, class [mscorlib]System.Type[], valuetype [mscorlib]System.Reflection.ParameterModifier[])
+			/* 0x00165A31 7D4B15000A   */ IL_00A5: stfld     class [mscorlib]System.Reflection.ConstructorInfo class NetPackageManager/NetPackageInformation`1<!TPackage>::ctor
+			/* 0x00165A36 D0ED110002   */ IL_00AA: ldtoken   IMemoryPoolableObject
+			/* 0x00165A3B 282B03000A   */ IL_00AF: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+			/* 0x00165A40 06           */ IL_00B4: ldloc.0
+			/* 0x00165A41 6F2D05000A   */ IL_00B5: callvirt  instance bool [mscorlib]System.Type::IsAssignableFrom(class [mscorlib]System.Type)
+			/* 0x00165A46 2C6D         */ IL_00BA: brfalse.s IL_0129
+
+			/* 0x00165A48 02           */ IL_00BC: ldarg.0
+			/* 0x00165A49 1F0A         */ IL_00BD: ldc.i4.s  10
+			/* 0x00165A4B 7D4C15000A   */ IL_00BF: stfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::capacity
+			/* 0x00165A50 06           */ IL_00C4: ldloc.0
+			/* 0x00165A51 72E22D0570   */ IL_00C5: ldstr     "GetPoolSize"
+			/* 0x00165A56 1F18         */ IL_00CA: ldc.i4.s  24
+			/* 0x00165A58 14           */ IL_00CC: ldnull
+			/* 0x00165A59 7E3D05000A   */ IL_00CD: ldsfld    class [mscorlib]System.Type[] [mscorlib]System.Type::EmptyTypes
+			/* 0x00165A5E 14           */ IL_00D2: ldnull
+			/* 0x00165A5F 6F4D15000A   */ IL_00D3: callvirt  instance class [mscorlib]System.Reflection.MethodInfo [mscorlib]System.Type::GetMethod(string, valuetype [mscorlib]System.Reflection.BindingFlags, class [mscorlib]System.Reflection.Binder, class [mscorlib]System.Type[], valuetype [mscorlib]System.Reflection.ParameterModifier[])
+			/* 0x00165A64 0C           */ IL_00D8: stloc.2
+			/* 0x00165A65 08           */ IL_00D9: ldloc.2
+			/* 0x00165A66 14           */ IL_00DA: ldnull
+			/* 0x00165A67 284E15000A   */ IL_00DB: call      bool [mscorlib]System.Reflection.MethodInfo::op_Inequality(class [mscorlib]System.Reflection.MethodInfo, class [mscorlib]System.Reflection.MethodInfo)
+			/* 0x00165A6C 2C36         */ IL_00E0: brfalse.s IL_0118
+
+			/* 0x00165A6E 08           */ IL_00E2: ldloc.2
+			/* 0x00165A6F 6F4F15000A   */ IL_00E3: callvirt  instance class [mscorlib]System.Type [mscorlib]System.Reflection.MethodInfo::get_ReturnType()
+			/* 0x00165A74 D031000001   */ IL_00E8: ldtoken   [mscorlib]System.Int32
+			/* 0x00165A79 282B03000A   */ IL_00ED: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+			/* 0x00165A7E 28860D000A   */ IL_00F2: call      bool [mscorlib]System.Type::op_Equality(class [mscorlib]System.Type, class [mscorlib]System.Type)
+			/* 0x00165A83 2C15         */ IL_00F7: brfalse.s IL_010E
+
+			/* 0x00165A85 02           */ IL_00F9: ldarg.0
+			/* 0x00165A86 08           */ IL_00FA: ldloc.2
+			/* 0x00165A87 14           */ IL_00FB: ldnull
+			/* 0x00165A88 14           */ IL_00FC: ldnull
+			/* 0x00165A89 6F5015000A   */ IL_00FD: callvirt  instance object [mscorlib]System.Reflection.MethodBase::Invoke(object, object[])
+			/* 0x00165A8E A531000001   */ IL_0102: unbox.any [mscorlib]System.Int32
+			/* 0x00165A93 7D4C15000A   */ IL_0107: stfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::capacity
+			/* 0x00165A98 2B0A         */ IL_010C: br.s      IL_0118
+
+			/* 0x00165A9A 72FA2D0570   */ IL_010E: ldstr     "Poolable NetPackage has GetPoolSize method with wrong return type"
+			/* 0x00165A9F 28FA00000A   */ IL_0113: call      void [LogLibrary]Log::Warning(string)
+
+			/* 0x00165AA4 02           */ IL_0118: ldarg.0
+			/* 0x00165AA5 02           */ IL_0119: ldarg.0
+			/* 0x00165AA6 7B4C15000A   */ IL_011A: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::capacity
+			/* 0x00165AAB 8D0300001B   */ IL_011F: newarr    !TPackage
+			/* 0x00165AB0 7D5115000A   */ IL_0124: stfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+
+			/* 0x00165AB5 2A           */ IL_0129: ret
+		} // end of method NetPackageInformation`1::.ctor
+
+		// Token: 0x0600354E RID: 13646 RVA: 0x001678B8 File Offset: 0x00165AB8
+		.method public hidebysig 
+			instance !TPackage GetPackage () cil managed 
+		{
+			// Header Size: 12 bytes
+			// Code Size: 126 (0x7E) bytes
+			// LocalVarSig Token: 0x110009EE RID: 2542
+			.maxstack 4
+			.locals init (
+				[0] !TPackage[],
+				[1] bool,
+				[2] !TPackage
+			)
+
+			/* 0x00165AC4 02           */ IL_0000: ldarg.0
+			/* 0x00165AC5 7B5115000A   */ IL_0001: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165ACA 2C62         */ IL_0006: brfalse.s IL_006A
+
+			/* 0x00165ACC 02           */ IL_0008: ldarg.0
+			/* 0x00165ACD 7B5115000A   */ IL_0009: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165AD2 0A           */ IL_000E: stloc.0
+			/* 0x00165AD3 16           */ IL_000F: ldc.i4.0
+			/* 0x00165AD4 0B           */ IL_0010: stloc.1
+			.try
+			{
+				/* 0x00165AD5 06           */ IL_0011: ldloc.0
+				/* 0x00165AD6 1201         */ IL_0012: ldloca.s  V_1
+				/* 0x00165AD8 287F02000A   */ IL_0014: call      void [mscorlib]System.Threading.Monitor::Enter(object, bool&)
+				/* 0x00165ADD 02           */ IL_0019: ldarg.0
+				/* 0x00165ADE 7B5215000A   */ IL_001A: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165AE3 16           */ IL_001F: ldc.i4.0
+				/* 0x00165AE4 313C         */ IL_0020: ble.s     IL_005E
+
+				/* 0x00165AE6 02           */ IL_0022: ldarg.0
+				/* 0x00165AE7 02           */ IL_0023: ldarg.0
+				/* 0x00165AE8 7B5215000A   */ IL_0024: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165AED 17           */ IL_0029: ldc.i4.1
+				/* 0x00165AEE 59           */ IL_002A: sub
+				/* 0x00165AEF 7D5215000A   */ IL_002B: stfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165AF4 02           */ IL_0030: ldarg.0
+				/* 0x00165AF5 7B5115000A   */ IL_0031: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+				/* 0x00165AFA 02           */ IL_0036: ldarg.0
+				/* 0x00165AFB 7B5215000A   */ IL_0037: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165B00 A30300001B   */ IL_003C: ldelem    !TPackage
+				/* 0x00165B05 02           */ IL_0041: ldarg.0
+				/* 0x00165B06 7B5115000A   */ IL_0042: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+				/* 0x00165B0B 02           */ IL_0047: ldarg.0
+				/* 0x00165B0C 7B5215000A   */ IL_0048: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165B11 1202         */ IL_004D: ldloca.s  V_2
+				/* 0x00165B13 FE150300001B */ IL_004F: initobj   !TPackage
+				/* 0x00165B19 08           */ IL_0055: ldloc.2
+				/* 0x00165B1A A40300001B   */ IL_0056: stelem    !TPackage
+				/* 0x00165B1F 0C           */ IL_005B: stloc.2
+				/* 0x00165B20 DE1E         */ IL_005C: leave.s   IL_007C
+
+				/* 0x00165B22 DE0A         */ IL_005E: leave.s   IL_006A
+			} // end .try
+			finally
+			{
+				/* 0x00165B24 07           */ IL_0060: ldloc.1
+				/* 0x00165B25 2C06         */ IL_0061: brfalse.s IL_0069
+
+				/* 0x00165B27 06           */ IL_0063: ldloc.0
+				/* 0x00165B28 288202000A   */ IL_0064: call      void [mscorlib]System.Threading.Monitor::Exit(object)
+
+				/* 0x00165B2D DC           */ IL_0069: endfinally
+			} // end handler
+
+			/* 0x00165B2E 02           */ IL_006A: ldarg.0
+			/* 0x00165B2F 7B4B15000A   */ IL_006B: ldfld     class [mscorlib]System.Reflection.ConstructorInfo class NetPackageManager/NetPackageInformation`1<!TPackage>::ctor
+			/* 0x00165B34 14           */ IL_0070: ldnull
+			/* 0x00165B35 6F5315000A   */ IL_0071: callvirt  instance object [mscorlib]System.Reflection.ConstructorInfo::Invoke(object[])
+			/* 0x00165B3A A50300001B   */ IL_0076: unbox.any !TPackage
+			/* 0x00165B3F 2A           */ IL_007B: ret
+
+			/* 0x00165B40 08           */ IL_007C: ldloc.2
+			/* 0x00165B41 2A           */ IL_007D: ret
+		} // end of method NetPackageInformation`1::GetPackage
+
+		// Token: 0x0600354F RID: 13647 RVA: 0x00167954 File Offset: 0x00165B54
+		.method public final hidebysig newslot virtual 
+			instance class NetPackage GetRawPackage () cil managed 
+		{
+			// Header Size: 1 byte
+			// Code Size: 12 (0xC) bytes
+			.maxstack 8
+
+			/* 0x00165B55 02           */ IL_0000: ldarg.0
+			/* 0x00165B56 285415000A   */ IL_0001: call      instance !0 class NetPackageManager/NetPackageInformation`1<!TPackage>::GetPackage()
+			/* 0x00165B5B 8C0300001B   */ IL_0006: box       !TPackage
+			/* 0x00165B60 2A           */ IL_000B: ret
+		} // end of method NetPackageInformation`1::GetRawPackage
+
+		// Token: 0x06003550 RID: 13648 RVA: 0x00167964 File Offset: 0x00165B64
+		.method public final hidebysig newslot virtual 
+			instance void FreePackage (
+				class NetPackage _package
+			) cil managed 
+		{
+			// Header Size: 12 bytes
+			// Code Size: 111 (0x6F) bytes
+			// LocalVarSig Token: 0x110009EF RID: 2543
+			.maxstack 3
+			.locals init (
+				[0] class IMemoryPoolableObject,
+				[1] !TPackage[],
+				[2] bool
+			)
+
+			/* 0x00165B70 02           */ IL_0000: ldarg.0
+			/* 0x00165B71 7B5115000A   */ IL_0001: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165B76 2D01         */ IL_0006: brtrue.s  IL_0009
+
+			/* 0x00165B78 2A           */ IL_0008: ret
+
+			/* 0x00165B79 03           */ IL_0009: ldarg.1
+			/* 0x00165B7A 74ED110002   */ IL_000A: castclass IMemoryPoolableObject
+			/* 0x00165B7F 0A           */ IL_000F: stloc.0
+			/* 0x00165B80 02           */ IL_0010: ldarg.0
+			/* 0x00165B81 7B5115000A   */ IL_0011: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165B86 0B           */ IL_0016: stloc.1
+			/* 0x00165B87 16           */ IL_0017: ldc.i4.0
+			/* 0x00165B88 0C           */ IL_0018: stloc.2
+			.try
+			{
+				/* 0x00165B89 07           */ IL_0019: ldloc.1
+				/* 0x00165B8A 1202         */ IL_001A: ldloca.s  V_2
+				/* 0x00165B8C 287F02000A   */ IL_001C: call      void [mscorlib]System.Threading.Monitor::Enter(object, bool&)
+				/* 0x00165B91 02           */ IL_0021: ldarg.0
+				/* 0x00165B92 7B5215000A   */ IL_0022: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165B97 02           */ IL_0027: ldarg.0
+				/* 0x00165B98 7B4C15000A   */ IL_0028: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::capacity
+				/* 0x00165B9D 2F2D         */ IL_002D: bge.s     IL_005C
+
+				/* 0x00165B9F 06           */ IL_002F: ldloc.0
+				/* 0x00165BA0 6FA08F0006   */ IL_0030: callvirt  instance void IMemoryPoolableObject::Reset()
+				/* 0x00165BA5 02           */ IL_0035: ldarg.0
+				/* 0x00165BA6 7B5115000A   */ IL_0036: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+				/* 0x00165BAB 02           */ IL_003B: ldarg.0
+				/* 0x00165BAC 7B5215000A   */ IL_003C: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165BB1 03           */ IL_0041: ldarg.1
+				/* 0x00165BB2 A50300001B   */ IL_0042: unbox.any !TPackage
+				/* 0x00165BB7 A40300001B   */ IL_0047: stelem    !TPackage
+				/* 0x00165BBC 02           */ IL_004C: ldarg.0
+				/* 0x00165BBD 02           */ IL_004D: ldarg.0
+				/* 0x00165BBE 7B5215000A   */ IL_004E: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165BC3 17           */ IL_0053: ldc.i4.1
+				/* 0x00165BC4 58           */ IL_0054: add
+				/* 0x00165BC5 7D5215000A   */ IL_0055: stfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165BCA DE12         */ IL_005A: leave.s   IL_006E
+
+				/* 0x00165BCC 06           */ IL_005C: ldloc.0
+				/* 0x00165BCD 6FA18F0006   */ IL_005D: callvirt  instance void IMemoryPoolableObject::Cleanup()
+				/* 0x00165BD2 DE0A         */ IL_0062: leave.s   IL_006E
+			} // end .try
+			finally
+			{
+				/* 0x00165BD4 08           */ IL_0064: ldloc.2
+				/* 0x00165BD5 2C06         */ IL_0065: brfalse.s IL_006D
+
+				/* 0x00165BD7 07           */ IL_0067: ldloc.1
+				/* 0x00165BD8 288202000A   */ IL_0068: call      void [mscorlib]System.Threading.Monitor::Exit(object)
+
+				/* 0x00165BDD DC           */ IL_006D: endfinally
+			} // end handler
+
+			/* 0x00165BDE 2A           */ IL_006E: ret
+		} // end of method NetPackageInformation`1::FreePackage
+
+		// Token: 0x06003551 RID: 13649 RVA: 0x001679F0 File Offset: 0x00165BF0
+		.method public final hidebysig newslot virtual 
+			instance void GetStats (
+				[out] int32& _packages,
+				[out] int32& _totalSize
+			) cil managed 
+		{
+			// Header Size: 12 bytes
+			// Code Size: 53 (0x35) bytes
+			// LocalVarSig Token: 0x110009F0 RID: 2544
+			.maxstack 2
+			.locals init (
+				[0] !TPackage[],
+				[1] bool
+			)
+
+			/* 0x00165BFC 03           */ IL_0000: ldarg.1
+			/* 0x00165BFD 16           */ IL_0001: ldc.i4.0
+			/* 0x00165BFE 54           */ IL_0002: stind.i4
+			/* 0x00165BFF 04           */ IL_0003: ldarg.2
+			/* 0x00165C00 16           */ IL_0004: ldc.i4.0
+			/* 0x00165C01 54           */ IL_0005: stind.i4
+			/* 0x00165C02 02           */ IL_0006: ldarg.0
+			/* 0x00165C03 7B5115000A   */ IL_0007: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165C08 2D01         */ IL_000C: brtrue.s  IL_000F
+
+			/* 0x00165C0A 2A           */ IL_000E: ret
+
+			/* 0x00165C0B 02           */ IL_000F: ldarg.0
+			/* 0x00165C0C 7B5115000A   */ IL_0010: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165C11 0A           */ IL_0015: stloc.0
+			/* 0x00165C12 16           */ IL_0016: ldc.i4.0
+			/* 0x00165C13 0B           */ IL_0017: stloc.1
+			.try
+			{
+				/* 0x00165C14 06           */ IL_0018: ldloc.0
+				/* 0x00165C15 1201         */ IL_0019: ldloca.s  V_1
+				/* 0x00165C17 287F02000A   */ IL_001B: call      void [mscorlib]System.Threading.Monitor::Enter(object, bool&)
+				/* 0x00165C1C 03           */ IL_0020: ldarg.1
+				/* 0x00165C1D 02           */ IL_0021: ldarg.0
+				/* 0x00165C1E 7B5215000A   */ IL_0022: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+				/* 0x00165C23 54           */ IL_0027: stind.i4
+				/* 0x00165C24 DE0A         */ IL_0028: leave.s   IL_0034
+			} // end .try
+			finally
+			{
+				/* 0x00165C26 07           */ IL_002A: ldloc.1
+				/* 0x00165C27 2C06         */ IL_002B: brfalse.s IL_0033
+
+				/* 0x00165C29 06           */ IL_002D: ldloc.0
+				/* 0x00165C2A 288202000A   */ IL_002E: call      void [mscorlib]System.Threading.Monitor::Exit(object)
+
+				/* 0x00165C2F DC           */ IL_0033: endfinally
+			} // end handler
+
+			/* 0x00165C30 2A           */ IL_0034: ret
+		} // end of method NetPackageInformation`1::GetStats
+
+		// Token: 0x06003552 RID: 13650 RVA: 0x00167A44 File Offset: 0x00165C44
+		.method public hidebysig 
+			instance void Cleanup () cil managed 
+		{
+			// Header Size: 12 bytes
+			// Code Size: 83 (0x53) bytes
+			// LocalVarSig Token: 0x110009F1 RID: 2545
+			.maxstack 2
+			.locals init (
+				[0] !TPackage[],
+				[1] bool,
+				[2] int32
+			)
+
+			/* 0x00165C50 02           */ IL_0000: ldarg.0
+			/* 0x00165C51 7B5115000A   */ IL_0001: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165C56 2D01         */ IL_0006: brtrue.s  IL_0009
+
+			/* 0x00165C58 2A           */ IL_0008: ret
+
+			/* 0x00165C59 02           */ IL_0009: ldarg.0
+			/* 0x00165C5A 7B5115000A   */ IL_000A: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+			/* 0x00165C5F 0A           */ IL_000F: stloc.0
+			/* 0x00165C60 16           */ IL_0010: ldc.i4.0
+			/* 0x00165C61 0B           */ IL_0011: stloc.1
+			.try
+			{
+				/* 0x00165C62 06           */ IL_0012: ldloc.0
+				/* 0x00165C63 1201         */ IL_0013: ldloca.s  V_1
+				/* 0x00165C65 287F02000A   */ IL_0015: call      void [mscorlib]System.Threading.Monitor::Enter(object, bool&)
+				/* 0x00165C6A 16           */ IL_001A: ldc.i4.0
+				/* 0x00165C6B 0C           */ IL_001B: stloc.2
+				/* 0x00165C6C 2B1F         */ IL_001C: br.s      IL_003D
+				// loop start (head: IL_003D)
+					/* 0x00165C6E 02           */ IL_001E: ldarg.0
+					/* 0x00165C6F 7B5115000A   */ IL_001F: ldfld     !0[] class NetPackageManager/NetPackageInformation`1<!TPackage>::pool
+					/* 0x00165C74 08           */ IL_0024: ldloc.2
+					/* 0x00165C75 A30300001B   */ IL_0025: ldelem    !TPackage
+					/* 0x00165C7A 8C0300001B   */ IL_002A: box       !TPackage
+					/* 0x00165C7F 74ED110002   */ IL_002F: castclass IMemoryPoolableObject
+					/* 0x00165C84 6FA18F0006   */ IL_0034: callvirt  instance void IMemoryPoolableObject::Cleanup()
+					/* 0x00165C89 08           */ IL_0039: ldloc.2
+					/* 0x00165C8A 17           */ IL_003A: ldc.i4.1
+					/* 0x00165C8B 58           */ IL_003B: add
+					/* 0x00165C8C 0C           */ IL_003C: stloc.2
+
+					/* 0x00165C8D 08           */ IL_003D: ldloc.2
+					/* 0x00165C8E 02           */ IL_003E: ldarg.0
+					/* 0x00165C8F 7B5215000A   */ IL_003F: ldfld     int32 class NetPackageManager/NetPackageInformation`1<!TPackage>::poolSize
+					/* 0x00165C94 32D8         */ IL_0044: blt.s     IL_001E
+				// end loop
+
+				/* 0x00165C96 DE0A         */ IL_0046: leave.s   IL_0052
+			} // end .try
+			finally
+			{
+				/* 0x00165C98 07           */ IL_0048: ldloc.1
+				/* 0x00165C99 2C06         */ IL_0049: brfalse.s IL_0051
+
+				/* 0x00165C9B 06           */ IL_004B: ldloc.0
+				/* 0x00165C9C 288202000A   */ IL_004C: call      void [mscorlib]System.Threading.Monitor::Exit(object)
+
+				/* 0x00165CA1 DC           */ IL_0051: endfinally
+			} // end handler
+
+			/* 0x00165CA2 2A           */ IL_0052: ret
+		} // end of method NetPackageInformation`1::Cleanup
+
+		// Properties
+		// Token: 0x17000559 RID: 1369
+		.property class NetPackageManager/NetPackageInformation`1<!TPackage> Instance()
+		{
+			// Token: 0x0600354C RID: 13644 RVA: 0x00167767 File Offset: 0x00165967
+			.get class NetPackageManager/NetPackageInformation`1<!0> NetPackageManager/NetPackageInformation`1::get_Instance()
+		}
+
+	} // end of class NetPackageInformation`1
+
+	// Token: 0x0200070A RID: 1802
+	.class nested public auto ansi beforefieldinit UnknownNetPackageException
+		extends [mscorlib]System.Exception
+	{
+		// Methods
+		// Token: 0x06003553 RID: 13651 RVA: 0x00167AB4 File Offset: 0x00165CB4
+		.method public hidebysig specialname rtspecialname 
+			instance void .ctor (
+				int32 _packageId
+			) cil managed 
+		{
+			// Header Size: 1 byte
+			// Code Size: 24 (0x18) bytes
+			.maxstack 8
+
+			/* 0x00165CB5 02           */ IL_0000: ldarg.0
+			/* 0x00165CB6 727F2E0570   */ IL_0001: ldstr     "Unknown NetPackage ID: "
+			/* 0x00165CBB 0F01         */ IL_0006: ldarga.s  _packageId
+			/* 0x00165CBD 286D00000A   */ IL_0008: call      instance string [mscorlib]System.Int32::ToString()
+			/* 0x00165CC2 286E00000A   */ IL_000D: call      string [mscorlib]System.String::Concat(string, string)
+			/* 0x00165CC7 281204000A   */ IL_0012: call      instance void [mscorlib]System.Exception::.ctor(string)
+			/* 0x00165CCC 2A           */ IL_0017: ret
+		} // end of method UnknownNetPackageException::.ctor
+
+	} // end of class UnknownNetPackageException
+
+	// Token: 0x0200070B RID: 1803
+	.class nested public auto ansi sealed serializable beforefieldinit '<>c'
+		extends [mscorlib]System.Object
+	{
+		.custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = (
+			01 00 00 00
+		)
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Fields
+		// Token: 0x04002BEF RID: 11247
+		.field public static initonly class NetPackageManager/'<>c' '<>9'
+
+		// Methods
+		// Token: 0x06003554 RID: 13652 RVA: 0x00167ACD File Offset: 0x00165CCD
+		.method public hidebysig specialname rtspecialname static 
+			void .cctor () cil managed 
+		{
+			.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+				01 00 02 00 00 00 00 00
+			)
+			// Header Size: 1 byte
+			// Code Size: 11 (0xB) bytes
+			.maxstack 8
+
+			/* 0x00165CCE 7355350006   */ IL_0000: newobj    instance void NetPackageManager/'<>c'::.ctor()
+			/* 0x00165CD3 80EF2B0004   */ IL_0005: stsfld    class NetPackageManager/'<>c' NetPackageManager/'<>c'::'<>9'
+			/* 0x00165CD8 2A           */ IL_000A: ret
+		} // end of method '<>c'::.cctor
+
+		// Token: 0x06003555 RID: 13653 RVA: 0x0000EA92 File Offset: 0x0000CC92
+		.method public hidebysig specialname rtspecialname 
+			instance void .ctor () cil managed 
+		{
+			// Header Size: 1 byte
+			// Code Size: 7 (0x7) bytes
+			.maxstack 8
+
+			/* 0x0000CC93 02           */ IL_0000: ldarg.0
+			/* 0x0000CC94 280300000A   */ IL_0001: call      instance void [mscorlib]System.Object::.ctor()
+			/* 0x0000CC99 2A           */ IL_0006: ret
+		} // end of method '<>c'::.ctor
+
+		// Token: 0x06003556 RID: 13654 RVA: 0x00167AD9 File Offset: 0x00165CD9
+		.method public hidebysig 
+			instance void '<.cctor>b__5_0' (
+				class [mscorlib]System.Type _type
+			) cil managed 
+		{
+			.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+				01 00 04 00 00 00 00 00
+			)
+			// Header Size: 1 byte
+			// Code Size: 18 (0x12) bytes
+			.maxstack 8
+
+			/* 0x00165CDA 7EE12B0004   */ IL_0000: ldsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type> NetPackageManager::knownPackageTypes
+			/* 0x00165CDF 03           */ IL_0005: ldarg.1
+			/* 0x00165CE0 6F3C05000A   */ IL_0006: callvirt  instance string [mscorlib]System.Reflection.MemberInfo::get_Name()
+			/* 0x00165CE5 03           */ IL_000B: ldarg.1
+			/* 0x00165CE6 6F5515000A   */ IL_000C: callvirt  instance void class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type>::Add(!0, !1)
+			/* 0x00165CEB 2A           */ IL_0011: ret
+		} // end of method '<>c'::'<.cctor>b__5_0'
+
+	} // end of class <>c
+
+
+	// Fields
+	// Token: 0x04002BDE RID: 11230
+	.field public static class [mscorlib]System.Type[] packageIdToClass
+	.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+		01 00 02 00 00 00 00 00
+	)
+	// Token: 0x04002BDF RID: 11231
+	.field public static class NetPackageManager/IPackageInformation[] packageIdToPackageInformation
+	.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+		01 00 02 00 00 00 00 00
+	)
+	// Token: 0x04002BE0 RID: 11232
+	.field public static class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32> packageClassToPackageId
+	.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+		01 00 02 00 00 00 00 00
+	)
+	// Token: 0x04002BE1 RID: 11233
+	.field public static initonly class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type> knownPackageTypes
+	.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+		01 00 02 00 00 00 00 00
+	)
+	// Token: 0x04002BE2 RID: 11234
+	.field public static initonly class [mscorlib]System.Type packageIdsType
+	.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+		01 00 02 00 00 00 00 00
+	)
+
+	// Methods
+	// Token: 0x06003539 RID: 13625 RVA: 0x0016743C File Offset: 0x0016563C
+	.method public hidebysig specialname rtspecialname static 
+		void .cctor () cil managed 
+	{
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Header Size: 12 bytes
+		// Code Size: 68 (0x44) bytes
+		.maxstack 3
+
+		/* 0x00165648 733615000A   */ IL_0000: newobj    instance void class CaseInsensitiveStringDictionary`1<class [mscorlib]System.Type>::.ctor()
+		/* 0x0016564D 80E12B0004   */ IL_0005: stsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type> NetPackageManager::knownPackageTypes
+		/* 0x00165652 D07C070002   */ IL_000A: ldtoken   NetPackagePackageIds
+		/* 0x00165657 282B03000A   */ IL_000F: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+		/* 0x0016565C 80E22B0004   */ IL_0014: stsfld    class [mscorlib]System.Type NetPackageManager::packageIdsType
+		/* 0x00165661 72EC2B0570   */ IL_0019: ldstr     "NetPackageManager Init"
+		/* 0x00165666 281302000A   */ IL_001E: call      void [LogLibrary]Log::Out(string)
+		/* 0x0016566B D005070002   */ IL_0023: ldtoken   NetPackage
+		/* 0x00165670 282B03000A   */ IL_0028: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+		/* 0x00165675 7EEF2B0004   */ IL_002D: ldsfld    class NetPackageManager/'<>c' NetPackageManager/'<>c'::'<>9'
+		/* 0x0016567A FE0656350006 */ IL_0032: ldftn     instance void NetPackageManager/'<>c'::'<.cctor>b__5_0'(class [mscorlib]System.Type)
+		/* 0x00165680 731905000A   */ IL_0038: newobj    instance void class [mscorlib]System.Action`1<class [mscorlib]System.Type>::.ctor(object, native int)
+		/* 0x00165685 16           */ IL_003D: ldc.i4.0
+		/* 0x00165686 285D910006   */ IL_003E: call      void ReflectionHelpers::FindTypesImplementingBase(class [mscorlib]System.Type, class [mscorlib]System.Action`1<class [mscorlib]System.Type>, bool)
+		/* 0x0016568B 2A           */ IL_0043: ret
+	} // end of method NetPackageManager::.cctor
+
+	// Token: 0x0600353A RID: 13626 RVA: 0x0016748C File Offset: 0x0016568C
+	.method public hidebysig static 
+		void ResetMappings () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 19 (0x13) bytes
+		.maxstack 8
+
+		/* 0x0016568D 14           */ IL_0000: ldnull
+		/* 0x0016568E 80DE2B0004   */ IL_0001: stsfld    class [mscorlib]System.Type[] NetPackageManager::packageIdToClass
+		/* 0x00165693 14           */ IL_0006: ldnull
+		/* 0x00165694 80DF2B0004   */ IL_0007: stsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+		/* 0x00165699 14           */ IL_000C: ldnull
+		/* 0x0016569A 80E02B0004   */ IL_000D: stsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32> NetPackageManager::packageClassToPackageId
+		/* 0x0016569F 2A           */ IL_0012: ret
+	} // end of method NetPackageManager::ResetMappings
+
+	// Token: 0x0600353B RID: 13627 RVA: 0x001674A0 File Offset: 0x001656A0
+	.method public hidebysig static 
+		void AddPackageMapping (
+			int32 _id,
+			class [mscorlib]System.Type _type
+		) cil managed 
+	{
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Header Size: 12 bytes
+		// Code Size: 77 (0x4D) bytes
+		// LocalVarSig Token: 0x110009E9 RID: 2537
+		.maxstack 5
+		.locals init (
+			[0] class NetPackageManager/IPackageInformation
+		)
+
+		/* 0x001656AC 7EDE2B0004   */ IL_0000: ldsfld    class [mscorlib]System.Type[] NetPackageManager::packageIdToClass
+		/* 0x001656B1 02           */ IL_0005: ldarg.0
+		/* 0x001656B2 03           */ IL_0006: ldarg.1
+		/* 0x001656B3 A2           */ IL_0007: stelem.ref
+		/* 0x001656B4 7EE02B0004   */ IL_0008: ldsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32> NetPackageManager::packageClassToPackageId
+		/* 0x001656B9 03           */ IL_000D: ldarg.1
+		/* 0x001656BA 02           */ IL_000E: ldarg.0
+		/* 0x001656BB 6F2E05000A   */ IL_000F: callvirt  instance void class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32>::set_Item(!0, !1)
+		/* 0x001656C0 D009070002   */ IL_0014: ldtoken   NetPackageManager/NetPackageInformation`1
+		/* 0x001656C5 282B03000A   */ IL_0019: call      class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+		/* 0x001656CA 17           */ IL_001E: ldc.i4.1
+		/* 0x001656CB 8D8B000001   */ IL_001F: newarr    [mscorlib]System.Type
+		/* 0x001656D0 25           */ IL_0024: dup
+		/* 0x001656D1 16           */ IL_0025: ldc.i4.0
+		/* 0x001656D2 03           */ IL_0026: ldarg.1
+		/* 0x001656D3 A2           */ IL_0027: stelem.ref
+		/* 0x001656D4 6F3715000A   */ IL_0028: callvirt  instance class [mscorlib]System.Type [mscorlib]System.Type::MakeGenericType(class [mscorlib]System.Type[])
+		/* 0x001656D9 721A2C0570   */ IL_002D: ldstr     "Instance"
+		/* 0x001656DE 6F3815000A   */ IL_0032: callvirt  instance class [mscorlib]System.Reflection.PropertyInfo [mscorlib]System.Type::GetProperty(string)
+		/* 0x001656E3 14           */ IL_0037: ldnull
+		/* 0x001656E4 14           */ IL_0038: ldnull
+		/* 0x001656E5 6F3915000A   */ IL_0039: callvirt  instance object [mscorlib]System.Reflection.PropertyInfo::GetValue(object, object[])
+		/* 0x001656EA 7408070002   */ IL_003E: castclass NetPackageManager/IPackageInformation
+		/* 0x001656EF 0A           */ IL_0043: stloc.0
+		/* 0x001656F0 7EDF2B0004   */ IL_0044: ldsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+		/* 0x001656F5 02           */ IL_0049: ldarg.0
+		/* 0x001656F6 06           */ IL_004A: ldloc.0
+		/* 0x001656F7 A2           */ IL_004B: stelem.ref
+		/* 0x001656F8 2A           */ IL_004C: ret
+	} // end of method NetPackageManager::AddPackageMapping
+
+	// Token: 0x0600353C RID: 13628 RVA: 0x001674F9 File Offset: 0x001656F9
+	.method public hidebysig static 
+		void SetupBaseMapping () cil managed 
+	{
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Header Size: 1 byte
+		// Code Size: 52 (0x34) bytes
+		.maxstack 8
+
+		/* 0x001656FA 2846350006   */ IL_0000: call      int32 NetPackageManager::get_KnownPackageCount()
+		/* 0x001656FF 8D8B000001   */ IL_0005: newarr    [mscorlib]System.Type
+		/* 0x00165704 80DE2B0004   */ IL_000A: stsfld    class [mscorlib]System.Type[] NetPackageManager::packageIdToClass
+		/* 0x00165709 2846350006   */ IL_000F: call      int32 NetPackageManager::get_KnownPackageCount()
+		/* 0x0016570E 8D08070002   */ IL_0014: newarr    NetPackageManager/IPackageInformation
+		/* 0x00165713 80DF2B0004   */ IL_0019: stsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+		/* 0x00165718 731E05000A   */ IL_001E: newobj    instance void class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32>::.ctor()
+		/* 0x0016571D 80E02B0004   */ IL_0023: stsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32> NetPackageManager::packageClassToPackageId
+		/* 0x00165722 16           */ IL_0028: ldc.i4.0
+		/* 0x00165723 7EE22B0004   */ IL_0029: ldsfld    class [mscorlib]System.Type NetPackageManager::packageIdsType
+		/* 0x00165728 283B350006   */ IL_002E: call      void NetPackageManager::AddPackageMapping(int32, class [mscorlib]System.Type)
+		/* 0x0016572D 2A           */ IL_0033: ret
+	} // end of method NetPackageManager::SetupBaseMapping
+
+	// Token: 0x0600353D RID: 13629 RVA: 0x00167530 File Offset: 0x00165730
+	.method public hidebysig static 
+		void StartServer () cil managed 
+	{
+		// Header Size: 12 bytes
+		// Code Size: 95 (0x5F) bytes
+		// LocalVarSig Token: 0x110009EA RID: 2538
+		.maxstack 2
+		.locals init (
+			[0] int32,
+			[1] valuetype [mscorlib]System.Collections.Generic.Dictionary`2/Enumerator<string, class [mscorlib]System.Type>,
+			[2] valuetype [mscorlib]System.Collections.Generic.KeyValuePair`2<string, class [mscorlib]System.Type>
+		)
+
+		/* 0x0016573C 283A350006   */ IL_0000: call      void NetPackageManager::ResetMappings()
+		/* 0x00165741 283C350006   */ IL_0005: call      void NetPackageManager::SetupBaseMapping()
+		/* 0x00165746 17           */ IL_000A: ldc.i4.1
+		/* 0x00165747 0A           */ IL_000B: stloc.0
+		/* 0x00165748 7EE12B0004   */ IL_000C: ldsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type> NetPackageManager::knownPackageTypes
+		/* 0x0016574D 6F3A15000A   */ IL_0011: callvirt  instance valuetype [mscorlib]System.Collections.Generic.Dictionary`2/Enumerator<!0, !1> class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type>::GetEnumerator()
+		/* 0x00165752 0B           */ IL_0016: stloc.1
+		.try
+		{
+			/* 0x00165753 2B2C         */ IL_0017: br.s      IL_0045
+			// loop start (head: IL_0045)
+				/* 0x00165755 1201         */ IL_0019: ldloca.s  V_1
+				/* 0x00165757 283B15000A   */ IL_001B: call      instance valuetype [mscorlib]System.Collections.Generic.KeyValuePair`2<!0, !1> valuetype [mscorlib]System.Collections.Generic.Dictionary`2/Enumerator<string, class [mscorlib]System.Type>::get_Current()
+				/* 0x0016575C 0C           */ IL_0020: stloc.2
+				/* 0x0016575D 1202         */ IL_0021: ldloca.s  V_2
+				/* 0x0016575F 283C15000A   */ IL_0023: call      instance !1 valuetype [mscorlib]System.Collections.Generic.KeyValuePair`2<string, class [mscorlib]System.Type>::get_Value()
+				/* 0x00165764 7EE22B0004   */ IL_0028: ldsfld    class [mscorlib]System.Type NetPackageManager::packageIdsType
+				/* 0x00165769 28860D000A   */ IL_002D: call      bool [mscorlib]System.Type::op_Equality(class [mscorlib]System.Type, class [mscorlib]System.Type)
+				/* 0x0016576E 2D11         */ IL_0032: brtrue.s  IL_0045
+
+				/* 0x00165770 06           */ IL_0034: ldloc.0
+				/* 0x00165771 1202         */ IL_0035: ldloca.s  V_2
+				/* 0x00165773 283C15000A   */ IL_0037: call      instance !1 valuetype [mscorlib]System.Collections.Generic.KeyValuePair`2<string, class [mscorlib]System.Type>::get_Value()
+				/* 0x00165778 283B350006   */ IL_003C: call      void NetPackageManager::AddPackageMapping(int32, class [mscorlib]System.Type)
+				/* 0x0016577D 06           */ IL_0041: ldloc.0
+				/* 0x0016577E 17           */ IL_0042: ldc.i4.1
+				/* 0x0016577F 58           */ IL_0043: add
+				/* 0x00165780 0A           */ IL_0044: stloc.0
+
+				/* 0x00165781 1201         */ IL_0045: ldloca.s  V_1
+				/* 0x00165783 283D15000A   */ IL_0047: call      instance bool valuetype [mscorlib]System.Collections.Generic.Dictionary`2/Enumerator<string, class [mscorlib]System.Type>::MoveNext()
+				/* 0x00165788 2DCB         */ IL_004C: brtrue.s  IL_0019
+			// end loop
+
+			/* 0x0016578A DE0E         */ IL_004E: leave.s   IL_005E
+		} // end .try
+		finally
+		{
+			/* 0x0016578C 1201         */ IL_0050: ldloca.s  V_1
+			/* 0x0016578E FE165304001B */ IL_0052: constrained. valuetype [mscorlib]System.Collections.Generic.Dictionary`2/Enumerator<string, class [mscorlib]System.Type>
+			/* 0x00165794 6FA700000A   */ IL_0058: callvirt  instance void [mscorlib]System.IDisposable::Dispose()
+			/* 0x00165799 DC           */ IL_005D: endfinally
+		} // end handler
+
+		/* 0x0016579A 2A           */ IL_005E: ret
+	} // end of method NetPackageManager::StartServer
+
+	// Token: 0x0600353E RID: 13630 RVA: 0x001675AC File Offset: 0x001657AC
+	.method public hidebysig static 
+		void StartClient () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 11 (0xB) bytes
+		.maxstack 8
+
+		/* 0x001657AD 283A350006   */ IL_0000: call      void NetPackageManager::ResetMappings()
+		/* 0x001657B2 283C350006   */ IL_0005: call      void NetPackageManager::SetupBaseMapping()
+		/* 0x001657B7 2A           */ IL_000A: ret
+	} // end of method NetPackageManager::StartClient
+
+	// Token: 0x0600353F RID: 13631 RVA: 0x001675B8 File Offset: 0x001657B8
+	.method public hidebysig static 
+		void IdMappingsReceived (
+			string[] _mappings
+		) cil managed 
+	{
+		// Header Size: 12 bytes
+		// Code Size: 118 (0x76) bytes
+		// LocalVarSig Token: 0x110009EB RID: 2539
+		.maxstack 5
+		.locals init (
+			[0] int32,
+			[1] class [mscorlib]System.Type,
+			[2] valuetype [mscorlib]System.DateTime
+		)
+
+		/* 0x001657C4 16           */ IL_0000: ldc.i4.0
+		/* 0x001657C5 0A           */ IL_0001: stloc.0
+		/* 0x001657C6 2B6B         */ IL_0002: br.s      IL_006F
+		// loop start (head: IL_006F)
+			/* 0x001657C8 7EE12B0004   */ IL_0004: ldsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type> NetPackageManager::knownPackageTypes
+			/* 0x001657CD 02           */ IL_0009: ldarg.0
+			/* 0x001657CE 06           */ IL_000A: ldloc.0
+			/* 0x001657CF 9A           */ IL_000B: ldelem.ref
+			/* 0x001657D0 1201         */ IL_000C: ldloca.s  V_1
+			/* 0x001657D2 6F2405000A   */ IL_000E: callvirt  instance bool class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type>::TryGetValue(!0, !1&)
+			/* 0x001657D7 2D42         */ IL_0013: brtrue.s  IL_0057
+
+			/* 0x001657D9 722C2C0570   */ IL_0015: ldstr     "[NET] Unknown package type "
+			/* 0x001657DE 02           */ IL_001A: ldarg.0
+			/* 0x001657DF 06           */ IL_001B: ldloc.0
+			/* 0x001657E0 9A           */ IL_001C: ldelem.ref
+			/* 0x001657E1 72642C0570   */ IL_001D: ldstr     ", can not proceed connecting to server"
+			/* 0x001657E6 28A000000A   */ IL_0022: call      string [mscorlib]System.String::Concat(string, string, string)
+			/* 0x001657EB 28F700000A   */ IL_0027: call      void [LogLibrary]Log::Error(string)
+			/* 0x001657F0 7E8103000A   */ IL_002C: ldsfld    !0 class SingletonMonoBehaviour`1<class ConnectionManager>::Instance
+			/* 0x001657F5 6FAB330006   */ IL_0031: callvirt  instance void ConnectionManager::Disconnect()
+			/* 0x001657FA 7EE1600004   */ IL_0036: ldsfld    class GameManager GameManager::Instance
+			/* 0x001657FF 1F12         */ IL_003B: ldc.i4.s  18
+			/* 0x00165801 16           */ IL_003D: ldc.i4.0
+			/* 0x00165802 1202         */ IL_003E: ldloca.s  V_2
+			/* 0x00165804 FE15DF000001 */ IL_0040: initobj   [mscorlib]System.DateTime
+			/* 0x0016580A 08           */ IL_0046: ldloc.2
+			/* 0x0016580B 72A7030070   */ IL_0047: ldstr     ""
+			/* 0x00165810 734D810006   */ IL_004C: newobj    instance void GameUtils/KickPlayerData::.ctor(valuetype GameUtils/EKickReason, int32, valuetype [mscorlib]System.DateTime, string)
+			/* 0x00165815 6F2A7E0006   */ IL_0051: callvirt  instance void GameManager::ShowMessagePlayerDenied(valuetype GameUtils/KickPlayerData)
+			/* 0x0016581A 2A           */ IL_0056: ret
+
+			/* 0x0016581B 07           */ IL_0057: ldloc.1
+			/* 0x0016581C 7EE22B0004   */ IL_0058: ldsfld    class [mscorlib]System.Type NetPackageManager::packageIdsType
+			/* 0x00165821 28860D000A   */ IL_005D: call      bool [mscorlib]System.Type::op_Equality(class [mscorlib]System.Type, class [mscorlib]System.Type)
+			/* 0x00165826 2D07         */ IL_0062: brtrue.s  IL_006B
+
+			/* 0x00165828 06           */ IL_0064: ldloc.0
+			/* 0x00165829 07           */ IL_0065: ldloc.1
+			/* 0x0016582A 283B350006   */ IL_0066: call      void NetPackageManager::AddPackageMapping(int32, class [mscorlib]System.Type)
+
+			/* 0x0016582F 06           */ IL_006B: ldloc.0
+			/* 0x00165830 17           */ IL_006C: ldc.i4.1
+			/* 0x00165831 58           */ IL_006D: add
+			/* 0x00165832 0A           */ IL_006E: stloc.0
+
+			/* 0x00165833 06           */ IL_006F: ldloc.0
+			/* 0x00165834 02           */ IL_0070: ldarg.0
+			/* 0x00165835 8E           */ IL_0071: ldlen
+			/* 0x00165836 69           */ IL_0072: conv.i4
+			/* 0x00165837 328F         */ IL_0073: blt.s     IL_0004
+		// end loop
+
+		/* 0x00165839 2A           */ IL_0075: ret
+	} // end of method NetPackageManager::IdMappingsReceived
+
+	// Token: 0x06003540 RID: 13632 RVA: 0x0016763A File Offset: 0x0016583A
+	.method public hidebysig static 
+		class NetPackage ParsePackage (
+			class PooledBinaryReader _reader,
+			class ClientInfo _sender
+		) cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 31 (0x1F) bytes
+		.maxstack 8
+
+		/* 0x0016583B 02           */ IL_0000: ldarg.0
+		/* 0x0016583C 6FFF04000A   */ IL_0001: callvirt  instance uint16 [mscorlib]System.IO.BinaryReader::ReadUInt16()
+		/* 0x00165841 2842350006   */ IL_0006: call      class NetPackageManager/IPackageInformation NetPackageManager::getPackageInfoByType(int32)
+		/* 0x00165846 6F49350006   */ IL_000B: callvirt  instance class NetPackage NetPackageManager/IPackageInformation::GetRawPackage()
+		/* 0x0016584B 25           */ IL_0010: dup
+		/* 0x0016584C 03           */ IL_0011: ldarg.1
+		/* 0x0016584D 6F29350006   */ IL_0012: callvirt  instance void NetPackage::set_Sender(class ClientInfo)
+		/* 0x00165852 25           */ IL_0017: dup
+		/* 0x00165853 02           */ IL_0018: ldarg.0
+		/* 0x00165854 6F2B350006   */ IL_0019: callvirt  instance void NetPackage::read(class PooledBinaryReader)
+		/* 0x00165859 2A           */ IL_001E: ret
+	} // end of method NetPackageManager::ParsePackage
+
+	// Token: 0x06003541 RID: 13633 RVA: 0x0016765A File Offset: 0x0016585A
+	.method public hidebysig static 
+		void FreePackage (
+			class NetPackage _package
+		) cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 18 (0x12) bytes
+		.maxstack 8
+
+		/* 0x0016585B 02           */ IL_0000: ldarg.0
+		/* 0x0016585C 6F27350006   */ IL_0001: callvirt  instance int32 NetPackage::get_PackageId()
+		/* 0x00165861 2842350006   */ IL_0006: call      class NetPackageManager/IPackageInformation NetPackageManager::getPackageInfoByType(int32)
+		/* 0x00165866 02           */ IL_000B: ldarg.0
+		/* 0x00165867 6F4A350006   */ IL_000C: callvirt  instance void NetPackageManager/IPackageInformation::FreePackage(class NetPackage)
+		/* 0x0016586C 2A           */ IL_0011: ret
+	} // end of method NetPackageManager::FreePackage
+
+	// Token: 0x06003542 RID: 13634 RVA: 0x0016766D File Offset: 0x0016586D
+	.method public hidebysig static 
+		class NetPackageManager/IPackageInformation getPackageInfoByType (
+			int32 _packageTypeId
+		) cil managed 
+	{
+		.custom instance void PublicizedFromAttribute::.ctor(valuetype EAccessModifier) = (
+			01 00 02 00 00 00 00 00
+		)
+		// Header Size: 1 byte
+		// Code Size: 34 (0x22) bytes
+		.maxstack 8
+
+		/* 0x0016586E 02           */ IL_0000: ldarg.0
+		/* 0x0016586F 7EDF2B0004   */ IL_0001: ldsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+		/* 0x00165874 8E           */ IL_0006: ldlen
+		/* 0x00165875 69           */ IL_0007: conv.i4
+		/* 0x00165876 2F09         */ IL_0008: bge.s     IL_0013
+
+		/* 0x00165878 7EDF2B0004   */ IL_000A: ldsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+		/* 0x0016587D 02           */ IL_000F: ldarg.0
+		/* 0x0016587E 9A           */ IL_0010: ldelem.ref
+		/* 0x0016587F 2D07         */ IL_0011: brtrue.s  IL_001A
+
+		/* 0x00165881 02           */ IL_0013: ldarg.0
+		/* 0x00165882 7353350006   */ IL_0014: newobj    instance void NetPackageManager/UnknownNetPackageException::.ctor(int32)
+		/* 0x00165887 7A           */ IL_0019: throw
+
+		/* 0x00165888 7EDF2B0004   */ IL_001A: ldsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+		/* 0x0016588D 02           */ IL_001F: ldarg.0
+		/* 0x0016588E 9A           */ IL_0020: ldelem.ref
+		/* 0x0016588F 2A           */ IL_0021: ret
+	} // end of method NetPackageManager::getPackageInfoByType
+
+	// Token: 0x06003543 RID: 13635 RVA: 0x00167690 File Offset: 0x00165890
+	.method public hidebysig static 
+		!!TPackage GetPackage<(NetPackage) TPackage> () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 11 (0xB) bytes
+		.maxstack 8
+
+		/* 0x00165891 283E15000A   */ IL_0000: call      class NetPackageManager/NetPackageInformation`1<!0> class NetPackageManager/NetPackageInformation`1<!!TPackage>::get_Instance()
+		/* 0x00165896 6F3F15000A   */ IL_0005: callvirt  instance !0 class NetPackageManager/NetPackageInformation`1<!!TPackage>::GetPackage()
+		/* 0x0016589B 2A           */ IL_000A: ret
+	} // end of method NetPackageManager::GetPackage
+
+	// Token: 0x06003544 RID: 13636 RVA: 0x0016769C File Offset: 0x0016589C
+	.method public hidebysig static 
+		int32 GetPackageId (
+			class [mscorlib]System.Type _type
+		) cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 12 (0xC) bytes
+		.maxstack 8
+
+		/* 0x0016589D 7EE02B0004   */ IL_0000: ldsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32> NetPackageManager::packageClassToPackageId
+		/* 0x001658A2 02           */ IL_0005: ldarg.0
+		/* 0x001658A3 6F4015000A   */ IL_0006: callvirt  instance !1 class [mscorlib]System.Collections.Generic.Dictionary`2<class [mscorlib]System.Type, int32>::get_Item(!0)
+		/* 0x001658A8 2A           */ IL_000B: ret
+	} // end of method NetPackageManager::GetPackageId
+
+	// Token: 0x06003545 RID: 13637 RVA: 0x001676A9 File Offset: 0x001658A9
+	.method public hidebysig static 
+		string GetPackageName (
+			int32 _id
+		) cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 13 (0xD) bytes
+		.maxstack 8
+
+		/* 0x001658AA 7EDE2B0004   */ IL_0000: ldsfld    class [mscorlib]System.Type[] NetPackageManager::packageIdToClass
+		/* 0x001658AF 02           */ IL_0005: ldarg.0
+		/* 0x001658B0 9A           */ IL_0006: ldelem.ref
+		/* 0x001658B1 6F0800000A   */ IL_0007: callvirt  instance string [mscorlib]System.Object::ToString()
+		/* 0x001658B6 2A           */ IL_000C: ret
+	} // end of method NetPackageManager::GetPackageName
+
+	// Token: 0x06003546 RID: 13638 RVA: 0x001676B7 File Offset: 0x001658B7
+	.method public hidebysig specialname static 
+		int32 get_KnownPackageCount () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 11 (0xB) bytes
+		.maxstack 8
+
+		/* 0x001658B8 7EE12B0004   */ IL_0000: ldsfld    class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type> NetPackageManager::knownPackageTypes
+		/* 0x001658BD 6F1805000A   */ IL_0005: callvirt  instance int32 class [mscorlib]System.Collections.Generic.Dictionary`2<string, class [mscorlib]System.Type>::get_Count()
+		/* 0x001658C2 2A           */ IL_000A: ret
+	} // end of method NetPackageManager::get_KnownPackageCount
+
+	// Token: 0x06003547 RID: 13639 RVA: 0x001676C3 File Offset: 0x001658C3
+	.method public hidebysig specialname static 
+		class [mscorlib]System.Type[] get_PackageMappings () cil managed 
+	{
+		// Header Size: 1 byte
+		// Code Size: 6 (0x6) bytes
+		.maxstack 8
+
+		/* 0x001658C4 7EDE2B0004   */ IL_0000: ldsfld    class [mscorlib]System.Type[] NetPackageManager::packageIdToClass
+		/* 0x001658C9 2A           */ IL_0005: ret
+	} // end of method NetPackageManager::get_PackageMappings
+
+	// Token: 0x06003548 RID: 13640 RVA: 0x001676CC File Offset: 0x001658CC
+	.method public hidebysig static 
+		void LogStats () cil managed 
+	{
+		// Header Size: 12 bytes
+		// Code Size: 143 (0x8F) bytes
+		// LocalVarSig Token: 0x110009EC RID: 2540
+		.maxstack 5
+		.locals init (
+			[0] int32,
+			[1] int32,
+			[2] int32,
+			[3] class NetPackageManager/IPackageInformation,
+			[4] int32,
+			[5] int32
+		)
+
+		/* 0x001658D8 72B22C0570   */ IL_0000: ldstr     "NetPackage pool stats:"
+		/* 0x001658DD 281302000A   */ IL_0005: call      void [LogLibrary]Log::Out(string)
+		/* 0x001658E2 16           */ IL_000A: ldc.i4.0
+		/* 0x001658E3 0A           */ IL_000B: stloc.0
+		/* 0x001658E4 16           */ IL_000C: ldc.i4.0
+		/* 0x001658E5 0B           */ IL_000D: stloc.1
+		/* 0x001658E6 16           */ IL_000E: ldc.i4.0
+		/* 0x001658E7 0C           */ IL_000F: stloc.2
+		/* 0x001658E8 2B50         */ IL_0010: br.s      IL_0062
+		// loop start (head: IL_0062)
+			/* 0x001658EA 7EDF2B0004   */ IL_0012: ldsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+			/* 0x001658EF 08           */ IL_0017: ldloc.2
+			/* 0x001658F0 9A           */ IL_0018: ldelem.ref
+			/* 0x001658F1 0D           */ IL_0019: stloc.3
+			/* 0x001658F2 09           */ IL_001A: ldloc.3
+			/* 0x001658F3 2C41         */ IL_001B: brfalse.s IL_005E
+
+			/* 0x001658F5 09           */ IL_001D: ldloc.3
+			/* 0x001658F6 1204         */ IL_001E: ldloca.s  V_4
+			/* 0x001658F8 1205         */ IL_0020: ldloca.s  V_5
+			/* 0x001658FA 6F4B350006   */ IL_0022: callvirt  instance void NetPackageManager/IPackageInformation::GetStats(int32&, int32&)
+			/* 0x001658FF 72E02C0570   */ IL_0027: ldstr     "    {0}: {1} packages, {2} Bytes"
+			/* 0x00165904 19           */ IL_002C: ldc.i4.3
+			/* 0x00165905 8D01000001   */ IL_002D: newarr    [mscorlib]System.Object
+			/* 0x0016590A 25           */ IL_0032: dup
+			/* 0x0016590B 16           */ IL_0033: ldc.i4.0
+			/* 0x0016590C 08           */ IL_0034: ldloc.2
+			/* 0x0016590D 2845350006   */ IL_0035: call      string NetPackageManager::GetPackageName(int32)
+			/* 0x00165912 A2           */ IL_003A: stelem.ref
+			/* 0x00165913 25           */ IL_003B: dup
+			/* 0x00165914 17           */ IL_003C: ldc.i4.1
+			/* 0x00165915 1104         */ IL_003D: ldloc.s   V_4
+			/* 0x00165917 8C31000001   */ IL_003F: box       [mscorlib]System.Int32
+			/* 0x0016591C A2           */ IL_0044: stelem.ref
+			/* 0x0016591D 25           */ IL_0045: dup
+			/* 0x0016591E 18           */ IL_0046: ldc.i4.2
+			/* 0x0016591F 1105         */ IL_0047: ldloc.s   V_5
+			/* 0x00165921 8C31000001   */ IL_0049: box       [mscorlib]System.Int32
+			/* 0x00165926 A2           */ IL_004E: stelem.ref
+			/* 0x00165927 286203000A   */ IL_004F: call      void [LogLibrary]Log::Out(string, object[])
+			/* 0x0016592C 06           */ IL_0054: ldloc.0
+			/* 0x0016592D 1104         */ IL_0055: ldloc.s   V_4
+			/* 0x0016592F 58           */ IL_0057: add
+			/* 0x00165930 0A           */ IL_0058: stloc.0
+			/* 0x00165931 07           */ IL_0059: ldloc.1
+			/* 0x00165932 1105         */ IL_005A: ldloc.s   V_5
+			/* 0x00165934 58           */ IL_005C: add
+			/* 0x00165935 0B           */ IL_005D: stloc.1
+
+			/* 0x00165936 08           */ IL_005E: ldloc.2
+			/* 0x00165937 17           */ IL_005F: ldc.i4.1
+			/* 0x00165938 58           */ IL_0060: add
+			/* 0x00165939 0C           */ IL_0061: stloc.2
+
+			/* 0x0016593A 08           */ IL_0062: ldloc.2
+			/* 0x0016593B 7EDF2B0004   */ IL_0063: ldsfld    class NetPackageManager/IPackageInformation[] NetPackageManager::packageIdToPackageInformation
+			/* 0x00165940 8E           */ IL_0068: ldlen
+			/* 0x00165941 69           */ IL_0069: conv.i4
+			/* 0x00165942 32A6         */ IL_006A: blt.s     IL_0012
+		// end loop
+
+		/* 0x00165944 72222D0570   */ IL_006C: ldstr     "  Total: {0} packages, {1} Bytes"
+		/* 0x00165949 18           */ IL_0071: ldc.i4.2
+		/* 0x0016594A 8D01000001   */ IL_0072: newarr    [mscorlib]System.Object
+		/* 0x0016594F 25           */ IL_0077: dup
+		/* 0x00165950 16           */ IL_0078: ldc.i4.0
+		/* 0x00165951 06           */ IL_0079: ldloc.0
+		/* 0x00165952 8C31000001   */ IL_007A: box       [mscorlib]System.Int32
+		/* 0x00165957 A2           */ IL_007F: stelem.ref
+		/* 0x00165958 25           */ IL_0080: dup
+		/* 0x00165959 17           */ IL_0081: ldc.i4.1
+		/* 0x0016595A 07           */ IL_0082: ldloc.1
+		/* 0x0016595B 8C31000001   */ IL_0083: box       [mscorlib]System.Int32
+		/* 0x00165960 A2           */ IL_0088: stelem.ref
+		/* 0x00165961 286203000A   */ IL_0089: call      void [LogLibrary]Log::Out(string, object[])
+		/* 0x00165966 2A           */ IL_008E: ret
+	} // end of method NetPackageManager::LogStats
+
+	// Properties
+	// Token: 0x17000557 RID: 1367
+	.property int32 KnownPackageCount()
+	{
+		// Token: 0x06003546 RID: 13638 RVA: 0x001676B7 File Offset: 0x001658B7
+		.get int32 NetPackageManager::get_KnownPackageCount()
+	}
+	// Token: 0x17000558 RID: 1368
+	.property class [mscorlib]System.Type[] PackageMappings()
+	{
+		// Token: 0x06003547 RID: 13639 RVA: 0x001676C3 File Offset: 0x001658C3
+		.get class [mscorlib]System.Type[] NetPackageManager::get_PackageMappings()
+	}
+
+} // end of class NetPackageManager

@@ -1,0 +1,451 @@
+<config>
+
+<conditional>
+		<if cond="mod_loaded('AGF-NoEAC-EnhancedPatch') and mod_loaded('AGF-NoEAC-AutoRun') and mod_loaded('AGF-NoEAC-FlightAssist')">				
+			<remove xpath="/windows/window[@name='windowVehicle']/panel[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]/label[2]"/>												
+			<append xpath="/windows/window[@name='windowVehicle']/panel[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]">
+				<label depth="3" pos="15,-3" width="350" font_size="26" text="{fuel}%   ({agfVehicleFuelCurrentWithMax})" justify="right" color="[selectedColor]"/>
+			</append>
+	
+			<remove xpath="/windows/window[@name='windowVehicle']/panel[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]/label[2]"/>												
+			<append xpath="/windows/window[@name='windowVehicle']/panel[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]">
+				<label depth="3" pos="15,-3" width="350" font_size="26" text="{agfVehicleDurabilityPercent}%   ({agfVehicleDurabilityCurrentWithMax})" justify="right" color="[selectedColor]"/>
+			</append>
+			<remove xpath="/windows/window[@name='HUDRightStatBars']/rect[2]"/>	
+			<append xpath="/windows/window[@name='HUDRightStatBars']">
+					<!-- Vehicle auxiliary panel (left side): centered 3-column layout. -->
+					<rect name="vehicleAuxPanelAGF" pos="-349,106" width="168" height="96" disableautobackground="true" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+						<sprite depth="0" name="auxShell" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill" />
+
+						<!-- Outside icon lane uses its own 2-row layout (independent of the 3-column info grid). -->
+						<rect name="auxModeIconsColumn" pos="-32,-6" width="32" height="84" disableautobackground="true">
+							<sprite depth="6" name="cruiseIconExternal" visible="{agfVehicleCruiseVisible}" sprite="ui_game_symbol_drive" size="34,34" pos="10,-21" pivot="center" color="245,245,245,255" foregroundlayer="true" tooltip="Cruise Control" />
+							<sprite depth="6" name="turboIndicatorExternal" visible="{agfVehicleTurboVisible}" atlas="{uiatlas}" sprite="ui_game_symbol_twitch_fast" size="34,34" pos="10,-63" pivot="center" color="245,245,245,255" tooltip_key="xuiSprint" />
+						</rect>
+
+						<!-- Inner grid metrics: margin=8, colGap=8, col widths=44/46/46. -->
+						<!-- Column 1 is speed. Columns 2-3 are environment + flight assist. -->
+						<rect name="auxTopInfoRow" pos="8,-8" width="44" height="28" disableautobackground="true">
+							<sprite depth="2" name="auxTopInfoBack" color="0,0,0,150" type="sliced" />
+							<label depth="3" name="speedCurrentTop" pos="22,-15" width="44" height="22" justify="center" pivot="center" font_size="30" color="[white]" text="{agfVehicleSpeedCurrent}" tooltip_key="xuiVehicleSpeed" />
+						</rect>
+
+						<rect name="vehicleSpeedometer" pos="8,-40" width="44" height="52" disableautobackground="true">
+							<label depth="7" name="speedMaxMid" pos="22,-1" width="44" height="12" justify="center" pivot="center" font_size="15" color="214,226,236,236" text="{agfVehicleSpeedMax} m/s" tooltip_key="xuiVehicleSpeed" />
+							<!-- Single square speedometer: needle pivots from the inside bottom-right corner. -->
+							<rect name="speedSquareGauge" depth="4" pos="0,-4" width="44" height="44" disableautobackground="true">
+								<sprite depth="4" name="speedGaugeBack" pos="0,0" width="44" height="44" color="14,18,24,230" type="sliced" />
+								<sprite depth="5" name="speedGaugeFrameOuter" pos="0,0" width="44" height="44" color="0,0,0,245" type="sliced" fillcenter="false" />
+								<sprite depth="6" name="speedGaugeFrameInner" pos="1,-1" width="42" height="42" color="205,224,238,220" type="sliced" fillcenter="false" />
+
+								<!-- Dots for 0, 25, 50, 75, 100 positioned just beyond the needle tip arc. -->
+								<sprite depth="7" name="speedDot0" width="3" height="3" pos="6,-37" sprite="ui_game_filled_circle" color="196,210,220,220" pivot="center" />
+								<sprite depth="7" name="speedDot25" width="3" height="3" pos="8,-26" sprite="ui_game_filled_circle" color="196,210,220,220" pivot="center" />
+								<sprite depth="7" name="speedDot50" width="3" height="3" pos="14,-16" sprite="ui_game_filled_circle" color="196,210,220,220" pivot="center" />
+								<sprite depth="7" name="speedDot75" width="3" height="3" pos="24,-10" sprite="ui_game_filled_circle" color="196,210,220,220" pivot="center" />
+								<sprite depth="7" name="speedDot100" width="3" height="3" pos="35,-7" sprite="ui_game_filled_circle" color="196,210,220,220" pivot="center" />
+
+								<rect name="speedNeedleRotator" depth="8" pos="36,-36" width="1" height="1" pivot="center" disableautobackground="true">
+									<sprite depth="8" name="speedNeedleGlow" width="28" height="3" pos="0,-1" pivot="left" color="18,124,172,210" type="sliced" />
+									<sprite depth="9" name="speedNeedle" width="26" height="2" pos="0,0" pivot="left" color="255,255,255,245" type="sliced" />
+								</rect>
+								<sprite depth="10" name="speedNeedleHubOuter" width="6" height="6" pos="36,-36" sprite="ui_game_filled_circle" pivot="center" color="0,0,0,245" />
+								<sprite depth="11" name="speedNeedleHubInner" width="4" height="4" pos="36,-36" sprite="ui_game_filled_circle" pivot="center" color="236,242,246,245" />
+							</rect>
+						</rect>
+
+						<!-- Top row in columns 2-3: Elevation and AGL. -->
+						<rect name="elevationStatus" pos="60,-8" width="46" height="52" disableautobackground="true">
+							<sprite depth="2" name="elevationBack" color="0,0,0,150" type="sliced" />
+							<sprite depth="3" name="elevationFrameOuter" color="0,0,0,245" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="elevationFrameInner" pos="1,-1" width="44" height="50" color="120,132,142,220" type="sliced" fillcenter="false" />
+							<sprite depth="5" name="elevationIcon" sprite="ui_game_symbol_survival" size="20,20" pos="23,-14" pivot="center" color="232,236,240,238" foregroundlayer="true" tooltip_key="xuiElevation" />
+							<label depth="5" name="elevationValue" pos="23,-38" width="44" height="16" justify="center" pivot="center" font_size="20" color="[white]" text="{mapelevation}" controller="MapStats" tooltip_key="xuiElevation" />
+						</rect>
+
+						<rect name="aglStatus" pos="114,-8" width="46" height="52" disableautobackground="true">
+							<sprite depth="2" name="aglBack" color="0,0,0,150" type="sliced" />
+							<sprite depth="3" name="aglFrameOuter" color="0,0,0,245" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="aglFrameInner" pos="1,-1" width="44" height="50" color="120,132,142,220" type="sliced" fillcenter="false" />
+							<label depth="5" name="aglTag" pos="23,-13" width="44" height="20" justify="center" pivot="center" font_size="18" color="210,222,232,235" text="AGL" tooltip="Meters above ground directly below vehicle" />
+							<label depth="5" name="aglValue" pos="23,-38" width="44" height="16" justify="center" pivot="center" font_size="24" color="[white]" text="{agfVehicleGroundClearanceMeters}m" tooltip="Meters above ground directly below vehicle" />
+						</rect>
+
+						<!-- Bottom row, columns 2-3: Flight assist gets wider text room. -->
+						<rect name="flightAssistStatus" pos="60,-62" width="100" height="26" disableautobackground="true" visible="{agfVehicleFlightAssistVisible}">
+							<sprite depth="2" name="flightAssistBack" color="0,0,0,150" type="sliced" />
+							<sprite depth="3" name="flightAssistFrameOuter" color="0,0,0,245" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="flightAssistFrameInner" pos="1,-1" width="98" height="24" color="120,132,142,220" type="sliced" fillcenter="false" />
+							<sprite depth="5" name="flightAssistOffIcon" sprite="ui_game_symbol_gyrocopter" size="20,20" pos="20,-13" pivot="center" color="204,228,246,226" foregroundlayer="true" visible="{agfVehicleFlightAssistOffVisible}" tooltip="Flight Assist mode" />
+							<sprite depth="5" name="flightAssistHoverIcon" sprite="ui_game_symbol_drone" size="20,20" pos="20,-13" pivot="center" color="204,228,246,226" foregroundlayer="true" visible="{agfVehicleFlightAssistHoverVisible}" tooltip="Flight Assist mode" />
+							<sprite depth="6" name="flightAssistYLockAxisDown" sprite="ui_game_symbol_drop" size="11,11" pos="17,-15" pivot="center" color="[white]" foregroundlayer="true" visible="{agfVehicleFlightAssistYLockVisible}" tooltip="Flight Assist Y-Lock" />
+							<sprite depth="6" name="flightAssistYLockAxisUp" sprite="ui_game_symbol_drop" size="11,11" pos="17,-11" pivot="center" flip="Vertically" color="[white]" foregroundlayer="true" visible="{agfVehicleFlightAssistYLockVisible}" tooltip="Flight Assist Y-Lock" />
+							<sprite depth="7" name="flightAssistYLockLock" sprite="ui_game_symbol_lock" size="12,12" pos="25,-13" pivot="center" color="[white]" foregroundlayer="true" visible="{agfVehicleFlightAssistYLockVisible}" tooltip="Flight Assist Y-Lock" />
+							<label depth="5" name="flightAssistModeText" pos="65,-13" width="64" height="16" justify="center" pivot="center" font_size="16" color="[white]" text="{agfVehicleFlightAssistModeText}" tooltip="Flight Assist mode (Off / Hover / Y-Lock)" />
+						</rect>
+					</rect>
+
+					<!-- Replicated vehicle square layout: fuel (left), pitch circle (top-right), durability (bottom-right). -->
+					<rect name="vehicleStatsAGF" pos="-177,106" width="168" height="96" disableautobackground="true" controller="HUDStatBar" stat_type="VehicleHealth" visible="{agfVehiclePlayerMountedVisible}">
+						<sprite depth="-1" name="clusterHalo" color="0,0,0,110" type="sliced" pos="-2,2" width="172" height="100" />
+						<sprite depth="0" name="clusterBack" color="46,46,46,205" type="sliced" />
+						<sprite depth="1" name="clusterOuter" color="0,0,0,248" type="sliced" fillcenter="false" />
+						<sprite depth="2" name="clusterGray" sprite="menu_empty3px" color="92,104,112,255" type="sliced" fillcenter="false" pos="1,-1" width="166" height="94" />
+						<sprite depth="9" name="centerDivider" width="2" height="88" pos="83,-4" color="232,238,244,196" type="sliced" />
+
+						<rect name="vehicleFuelSquare" pos="4,-4" width="80" height="88">
+							<sprite depth="1" name="border" color="0,0,0,235" type="sliced" />
+							<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+							<rect name="vehicleFuelData" pos="0,0" width="80" height="88" disableautobackground="true" controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}">
+								<filledsprite depth="3" name="background" color="86,86,86,138" width="80" type="filled" fill="{statmodifiedmax}" />
+								<sprite depth="4" name="dataBand" color="0,0,0,92" width="80" height="40" pos="0,0" type="sliced" />
+								<filledsprite depth="5" name="barContent" color="236,174,44,170" width="80" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false" />
+								<sprite depth="6" name="tickL100" width="7" height="2" pos="0,-1" color="224,224,224,210" type="sliced" />
+								<sprite depth="6" name="tickL75" width="5" height="2" pos="0,-22" color="224,224,224,210" type="sliced" />
+								<sprite depth="6" name="tickL50" width="7" height="2" pos="0,-43" color="224,224,224,210" type="sliced" />
+								<sprite depth="6" name="tickL25" width="5" height="2" pos="0,-64" color="224,224,224,210" type="sliced" />
+								<sprite depth="6" name="tickL0" width="7" height="2" pos="0,-85" color="224,224,224,210" type="sliced" />
+								<sprite depth="7" name="icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="245,245,245,232" size="22,22" pos="15,-62" foregroundlayer="true" />
+
+								<label depth="6" name="TextContent" pos="30,-14" font_size="32" color="250,250,250,255" justify="center" pivot="center" text="{statcurrentwithmax}" width="46" height="24"/>
+								<label depth="7" name="textCurrent" pos="8,-44" font_size="24" color="246,246,246,255" text="{agfVehicleFuelCurrent}" height="16" width="34" justify="left" pivot="bottomleft"/>
+								<label depth="7" name="textMax" pos="8,-44" font_size="18" color="230,232,236,248" text="/{agfVehicleFuelMax}" height="16" width="34" justify="left" pivot="topleft"/>
+								<filledsprite depth="8" name="mask" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+								<filledsprite depth="3" name="edge" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+							</rect>
+							<sprite depth="8" name="frame" color="0,0,0,255" type="sliced" fillcenter="false" />
+						</rect>
+
+						<rect name="vehiclePitch" pos="84,-48" width="75" height="75" pivot="center">
+							<!-- Circle stack: dark outer border, thin gray ring, dark pitch ring, gray center. -->
+							<sprite depth="10" name="outerBorder" width="77" height="77" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false" />
+							<sprite depth="11" name="outerThinGrayRing" width="73" height="73" sprite="ui_game_filled_circle" color="115,115,115,255" pivot="center" globalopacity="false" />
+							<sprite depth="13" name="centerCircle" width="69" height="69" sprite="ui_game_filled_circle" color="95,95,95,255" pivot="center" globalopacity="false" />
+
+							<!-- Digital screen-in-circle: rectangular clamp area with top bezel overlay. -->
+							<sprite depth="14" name="screenBack" width="44" height="40" pos="0,-7" color="12,16,24,210" type="sliced" pivot="center" globalopacity="false" />
+							<panel name="vehiclePitchViewport" depth="15" width="40" height="36" pos="0,-7" pivot="center" disableautobackground="true" clipping="SoftClip" clippingcenter="0,0" clippingsize="40,36" clippingsoftness="0,0" createuipanel="true" backgroundcolor="0,0,0,0" bordercolor="0,0,0,0" borderthickness="0" backgroundspritename="menu_empty" borderspritename="menu_empty">
+								<rect name="vehiclePitchHorizonMover" width="64" height="64" pivot="center" disableautobackground="true">
+									<sprite depth="15" name="skyBand" width="88" height="44" pos="0,22" color="86,132,174,185" type="simple" pivot="center" />
+									<sprite depth="15" name="groundBand" width="88" height="44" pos="0,-22" color="118,84,58,185" type="simple" pivot="center" />
+									<sprite depth="16" name="horizonLineLeft" width="32" height="2" pos="-20,0" color="212,234,255,245" type="sliced" pivot="center" />
+									<sprite depth="16" name="horizonLineRight" width="32" height="2" pos="20,0" color="212,234,255,245" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP15L" width="14" height="2" pos="-12,10" color="242,242,242,215" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP15R" width="14" height="2" pos="12,10" color="242,242,242,215" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM15L" width="14" height="2" pos="-12,-10" color="242,242,242,215" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM15R" width="14" height="2" pos="12,-10" color="242,242,242,215" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP30L" width="10" height="2" pos="-11,20" color="226,226,226,190" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP30R" width="10" height="2" pos="11,20" color="226,226,226,190" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM30L" width="10" height="2" pos="-11,-20" color="226,226,226,190" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM30R" width="10" height="2" pos="11,-20" color="226,226,226,190" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP45L" width="8" height="2" pos="-10,30" color="215,215,215,170" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP45R" width="8" height="2" pos="10,30" color="215,215,215,170" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM45L" width="8" height="2" pos="-10,-30" color="215,215,215,170" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM45R" width="8" height="2" pos="10,-30" color="215,215,215,170" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP60L" width="6" height="2" pos="-10,40" color="205,205,205,155" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchP60R" width="6" height="2" pos="10,40" color="205,205,205,155" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM60L" width="6" height="2" pos="-10,-40" color="205,205,205,155" type="sliced" pivot="center" />
+									<sprite depth="16" name="pitchM60R" width="6" height="2" pos="10,-40" color="205,205,205,155" type="sliced" pivot="center" />
+								</rect>
+							</panel>
+							<sprite depth="18" name="screenBezel" width="44" height="40" pos="0,-7" color="0,0,0,245" type="sliced" fillcenter="false" pivot="center" globalopacity="false" />
+							<sprite depth="18" name="pitchReadoutBack" width="28" height="16" pos="0,23" color="8,12,18,220" type="sliced" pivot="center" globalopacity="false" />
+							<sprite depth="19" name="pitchReadoutBezel" width="28" height="16" pos="0,23" color="0,0,0,245" type="sliced" fillcenter="false" pivot="center" globalopacity="false" />
+
+							<!-- Fixed aircraft reference (does not rotate). -->
+							<sprite depth="18" name="aircraftLeftWingOutline" width="20" height="5" pos="-12,-7" color="0,0,0,230" type="sliced" pivot="center" foregroundlayer="true" />
+							<sprite depth="18" name="aircraftRightWingOutline" width="20" height="5" pos="12,-7" color="0,0,0,230" type="sliced" pivot="center" foregroundlayer="true" />
+							<sprite depth="18" name="aircraftDotOutline" width="6" height="6" pos="0,-7" sprite="ui_game_filled_circle" color="0,0,0,230" pivot="center" foregroundlayer="true" />
+							<sprite depth="19" name="aircraftLeftWing" width="18" height="3" pos="-12,-7" color="255,176,92,255" type="sliced" pivot="center" foregroundlayer="true" />
+							<sprite depth="19" name="aircraftRightWing" width="18" height="3" pos="12,-7" color="255,176,92,255" type="sliced" pivot="center" foregroundlayer="true" />
+							<sprite depth="19" name="aircraftDot" width="4" height="4" pos="0,-7" sprite="ui_game_filled_circle" color="255,176,92,255" pivot="center" foregroundlayer="true" />
+							<sprite depth="20" name="centerDot" width="3" height="3" pos="0,-7" sprite="ui_game_filled_circle" color="235,235,235,255" pivot="center" globalopacity="false" />
+
+							<!-- Optional debug readout while tuning scaling/feel. -->
+							<label depth="20" name="pitchText" pos="0,23" width="26" height="16" pivot="center" justify="center" font_size="14" color="[white]" text="{agfVehiclePitchDegrees}" />
+						</rect>
+
+						<rect name="vehicleDurabilitySquare" pos="84,-4" width="80" height="88" controller="HUDStatBar" stat_type="VehicleHealth">
+							<sprite depth="1" name="border" color="0,0,0,235" type="sliced" />
+							<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+							<filledsprite depth="3" name="background" color="86,86,86,138" width="80" type="filled" fill="{statmodifiedmax}" />
+							<sprite depth="4" name="dataBand" color="0,0,0,92" width="80" height="40" pos="0,0" type="sliced" />
+							<filledsprite depth="5" name="barContent" color="48,194,214,170" width="80" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false" />
+							<sprite depth="6" name="tickR100" width="7" height="2" pos="73,-1" color="224,224,224,210" type="sliced" />
+							<sprite depth="6" name="tickR75" width="5" height="2" pos="75,-22" color="224,224,224,210" type="sliced" />
+							<sprite depth="6" name="tickR50" width="7" height="2" pos="73,-43" color="224,224,224,210" type="sliced" />
+							<sprite depth="6" name="tickR25" width="5" height="2" pos="75,-64" color="224,224,224,210" type="sliced" />
+							<sprite depth="6" name="tickR0" width="7" height="2" pos="73,-85" color="224,224,224,210" type="sliced" />
+							<sprite depth="7" name="icon" sprite="ui_game_symbol_twitch_shield" color="230,236,242,232" size="22,22" pos="43,-62" foregroundlayer="true" />
+
+							<label depth="6" name="TextContent" pos="50,-14" font_size="32" color="250,250,250,255" justify="center" pivot="center" text="{statcurrentwithmax}" width="46" height="24"/>
+							<label depth="7" name="textCurrent" pos="72,-44" font_size="24" color="246,246,246,255" text="{agfVehicleDurabilityCurrent}" height="16" width="34" justify="right" pivot="bottomright"/>
+							<label depth="7" name="textMax" pos="72,-44" font_size="18" color="230,232,236,248" text="/{agfVehicleDurabilityMax}" height="16" width="34" justify="right" pivot="topright"/>
+
+							<sprite depth="8" name="frame" color="0,0,0,255" type="sliced" fillcenter="false" />
+							<filledsprite depth="8" name="mask" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+							<filledsprite depth="3" name="edge" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+						</rect>
+					</rect>
+				</append>
+		</if>
+		<else>
+			<remove xpath="/windows/window[@name='HUDRightStatBars']/rect[2]"/>
+			<append xpath="/windows/window[@name='HUDRightStatBars']">
+				<!-- Vanilla-safe fallback panel: no EnhancedPatch-only bindings. -->
+				<rect name="vehicleStatsAGFVanilla" pos="-177,106" width="168" height="96" disableautobackground="true" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+					<!-- Match Enhanced lane geometry so turbo icon sits in the exact same relative position. -->
+					<rect name="vanillaModeIconsColumn" pos="-32,-6" width="32" height="84" disableautobackground="true">
+						<sprite depth="6" name="turboIndicatorVanilla" visible="{sprintactive}" atlas="{uiatlas}" sprite="ui_game_symbol_twitch_fast" size="34,34" pos="10,-63" pivot="center" color="245,245,245,255" foregroundlayer="true" tooltip_key="xuiSprint" />
+					</rect>
+
+					<sprite depth="-1" name="clusterHalo" color="0,0,0,110" type="sliced" pos="-2,2" width="172" height="100" />
+					<sprite depth="0" name="clusterBack" color="46,46,46,205" type="sliced" />
+					<sprite depth="1" name="clusterOuter" color="0,0,0,248" type="sliced" fillcenter="false" />
+					<sprite depth="2" name="clusterGray" sprite="menu_empty3px" color="92,104,112,255" type="sliced" fillcenter="false" pos="1,-1" width="166" height="94" />
+					<sprite depth="9" name="centerDivider" width="2" height="88" pos="83,-4" color="232,238,244,196" type="sliced" />
+
+					<rect name="vehicleFuelSquare" pos="4,-4" width="80" height="88" controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}">
+						<sprite depth="1" name="border" color="0,0,0,235" type="sliced" />
+						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+						<filledsprite depth="3" name="background" color="86,86,86,138" width="80" type="filled" fill="{statmodifiedmax}" />
+						<sprite depth="4" name="dataBand" color="0,0,0,92" width="80" height="40" pos="0,0" type="sliced" />
+						<filledsprite depth="5" name="barContent" color="236,174,44,170" width="80" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false" />
+						<sprite depth="6" name="tickL100" width="7" height="2" pos="0,-1" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickL75" width="5" height="2" pos="0,-22" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickL50" width="7" height="2" pos="0,-43" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickL25" width="5" height="2" pos="0,-64" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickL0" width="7" height="2" pos="0,-85" color="224,224,224,210" type="sliced" />
+						<sprite depth="7" name="icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" color="245,245,245,244" size="30,30" pos="10,-80" pivot="bottomleft" foregroundlayer="true" />
+						<label depth="6" name="TextContent" pos="30,-14" font_size="32" color="250,250,250,255" justify="center" pivot="center" text="{statcurrentwithmax}" width="46" height="24"/>
+						<filledsprite depth="8" name="mask" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+						<filledsprite depth="3" name="edge" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+						<sprite depth="8" name="frame" color="0,0,0,255" type="sliced" fillcenter="false" />
+					</rect>
+
+					<!-- XP-circle style shell, but intentionally no radial fill. -->
+					<rect name="vehicleCenterGaugeVanilla" pos="84,-48" width="75" height="75" pivot="center" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+						<sprite depth="8" name="circleOuterBorder" width="77" height="77" sprite="ui_game_filled_circle" color="0,0,0,255" pivot="center" globalopacity="false" />
+						<sprite depth="9" name="circleOuterFill" sprite="ui_game_filled_circle" color="115,115,115,255" pivot="center" globalopacity="false" />
+						<sprite depth="10" name="circleInnerBorder" width="69" height="69" sprite="ui_game_filled_circle" color="0,0,0,255" pivot="center" globalopacity="false" />
+						<sprite depth="12" name="circleCenter" width="55" height="55" sprite="ui_game_filled_circle" color="115,115,115,255" pivot="center" globalopacity="false" />
+
+						<!-- Center icon only, no XP-style radial fill. -->
+						<sprite depth="15" name="vehicleCenterIcon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="34,34" pos="0,0" pivot="center" color="245,245,245,255" foregroundlayer="true" />
+					</rect>
+
+					<rect name="vehicleDurabilitySquare" pos="84,-4" width="80" height="88" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+						<sprite depth="1" name="border" color="0,0,0,235" type="sliced" />
+						<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+						<filledsprite depth="3" name="background" color="86,86,86,138" width="80" type="filled" fill="{statmodifiedmax}" />
+						<sprite depth="4" name="dataBand" color="0,0,0,92" width="80" height="40" pos="0,0" type="sliced" />
+						<filledsprite depth="5" name="barContent" color="48,194,214,170" width="80" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false" />
+						<sprite depth="6" name="tickR100" width="7" height="2" pos="73,-1" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickR75" width="5" height="2" pos="75,-22" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickR50" width="7" height="2" pos="73,-43" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickR25" width="5" height="2" pos="75,-64" color="224,224,224,210" type="sliced" />
+						<sprite depth="6" name="tickR0" width="7" height="2" pos="73,-85" color="224,224,224,210" type="sliced" />
+						<sprite depth="7" name="icon" sprite="ui_game_symbol_twitch_shield" color="238,242,248,244" size="30,30" pos="70,-80" pivot="bottomright" foregroundlayer="true" />
+						<label depth="6" name="TextContent" pos="50,-14" font_size="32" color="250,250,250,255" justify="center" pivot="center" text="{statcurrentwithmax}" width="46" height="24"/>
+						<sprite depth="8" name="frame" color="0,0,0,255" type="sliced" fillcenter="false" />
+						<filledsprite depth="8" name="mask" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+						<filledsprite depth="3" name="edge" color="0,0,0,255" width="80" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					</rect>
+				</rect>
+			</append>
+		</else>
+
+</conditional>
+
+
+</config>
+
+
+
+<!-- VANILLA VEHICLE HUD PORTION
+
+            	<window name="HUDRightStatBars" anchor="RightBottom">
+
+		<rect name="hud" pos="-90,32" side="right" controller="CollectedItemList" pivot="BottomLeft">
+			<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
+				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="44" width="162" pivot="center" />
+				<sprite depth="4" name="Icon" atlas="ItemIconAtlas"  size="38,38" pos="50,0" pivot="center" foregroundlayer="true"/>
+				<label depth="6" pos="12,0" name="TextContent" font_size="30" color="[white]" justify="right" height="32" pivot="right"/>
+				<sprite depth="6" pos="0,16" width="36" height="36" name="Negative" sprite="ui_game_symbol_x" color="[red]" />
+			</panel>
+		</rect>
+
+		<grid name="hud" pos="-194,55" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
+			<rect width="188" height="46" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+				<sprite depth="3" pos="3,0"  name="BarContent" sprite="{statimage|once}" height="46" width="182" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="39,35" pos="130,-6" color="{staticoncolor}" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="115,-26" font_size="28" color="[white]" justify="right" pivot="right" text="{statcurrentwithmax}" width="250" height="30" />
+			</rect>
+		</grid>
+		<rect name="hud" pos="-177,106" rows="2" cols="1" width="168" side="right">
+			<rect width="168" height="46" controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+				<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+				<sprite depth="2" pos="3,-3"  name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+				<filledsprite depth="5" name="BarContent" color="0,54,255,128" width="169" type="filled" fill="{statfill}" flip="Horizontally" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="148,-24" pivot="center" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="125,-24" font_size="32" color="[white]" justify="center" pivot="right" text="{statcurrentwithmax}" width="120" height="35"/>
+				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+			</rect>
+			<rect width="168" height="46" pos="0,-50" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+				<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+				<sprite depth="2" pos="3,-3"  name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+
+				<filledsprite depth="5" name="BarContent" color="255,0,0,128" width="169" type="filled" fill="{statfill}" flip="Horizontally" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="148,-24" pivot="center" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="125,-24" font_size="28" color="[white]" justify="center" pivot="right" text="{statcurrentwithmax}" width="120" height="35"/>
+				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+			</rect>
+		</rect>
+
+	</window>
+
+-->
+ <!-- My edited but vanilla friendly HUD xml of the Left Stat Bar
+  
+ 
+ <window name="HUDLeftStatBars" anchor="LeftBottom">
+			<rect name="hud" pos="9,145" rows="2" cols="1" width="168" side="right" >
+
+				<!--Stealth Bar Adjustment-->
+				<rect pos="1,55" width="150" height="36" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,150" height="36" type="sliced" />						
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />					
+					<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1" />					
+					<filledsprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fill="{statfill}" />					
+					<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="2,-2"  foregroundlayer="true"/>
+					<label depth="6" name="TextContent" pos="38,-5" font_size="28" color="[white]" justify="center"  text="{statcurrent}" height="34" width="100"/>					
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="1" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="1" />
+				</rect>
+				
+				<!--Health Bar Adjustment-->					
+				<rect  pos="1,15" width="150" height="36" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" >
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>
+					<sprite depth="2"  name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="149" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="5"  name="BarContent" color="255,0,0,180" width="149" type="filled" fill="{statfill}" />
+					<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="28,28" pos="2,-4" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="46,-5" font_size="28" color="[white]" text="{statcurrentwithmax}" height="34"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8"  name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+				</rect>
+			
+				<!--Stamina Bar Adjustment-->
+				<rect pos="1,-25" width="150" height="36"  controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" >
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>						
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="149" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="5" name="BarContent" color="0,54,255,180" width="149" type="filled" fill="{statfill}" />
+					<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" size="32,32" pos="2,-2" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="46,-5" font_size="28" color="[white]" text="{statcurrentwithmax}" height="34"/>
+					<sprite depth="8"  name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<sprite depth="8" visible="{sprintactive}" name="sprint" atlas="{uiatlas}" sprite="server_z_always_run" size="36,36" pos="147,-19" pivot="left"/>
+				</rect>
+				
+				<!--XP Bar Adjustments, Now Circle-->
+				<rect name="XPStuff" pos="76,-103" width="75" height="75" cursor_area="true" xp_fill_speed="2" controller="HUDStatBar" visible="{statvisible}">
+					<sprite depth="8" height="77" width="77"  name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>			
+					<sprite depth="9" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/>
+					<sprite depth="10" height="69" width="69"  name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>				
+					<sprite depth="11" height="69" width="69" name="background" sprite="ui_game_filled_circle" color="{xpcolor}" pivot="center" globalopacity="false" type="filled" fill="{xp}" filldirection="radial360" controller="ToolbeltWindow"/>
+					<sprite depth="12" width="55" height="55" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/>
+					<label depth="15" pos="0,9" name="Level" width="45" height="42" pivot="center" justify="center" text="LEVEL" font_size="18"/>						
+					<label depth="15" pos="0,-10" name="LevelNumber" width="45" height="42" pivot="center" justify="center" text="{cvar($LastPlayerLevel)}" font_size="20" controller="MapStats" />						
+				</rect>	
+										
+				<!--Food Bar Adjustments-->			
+				<rect name="food" pos="1,-64" width="75" height="77"  controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced" />									
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="5" name="BarContent" color="0,150,54,180" width="75" type="filled" fill="{statfill}" filldirection="vertical" />
+					<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_fork" size="22,28" pos="11,-47" foregroundlayer="true" tooltip_key="xuiFoodPercentage"/>
+					<label depth="7" name="TextContent" pos="0,-2" font_size="30" color="[white]" text="{statcurrentwithmax}" height="34" width="46" justify="center" tooltip_key="xuiFoodPercentage" />
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				</rect>
+						
+				<!--Water Bar Adjustments-->	
+				<rect name="water" pos="76,-64" width="75" height="77" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />									
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="5" name="BarContent" color="0,200,255,180" width="75" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false"/>
+					<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water" size="30,30" pos="38,-45" foregroundlayer="true" tooltip_key="xuiWaterPercentage"/>
+					<label depth="7" name="TextContent" pos="28,-2" font_size="30" color="[white]" text="{statcurrentwithmax}"  height="34" width="46" justify="center" tooltip_key="xuiWaterPercentage"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"  />
+				</rect>	
+								
+				
+				<conditional evaluator="client" >
+					<if cond="mod_loaded('AGF-NoEAC-EnhancedPatch')"><!--shows the updated stuff if the .dll modlet is installed.-->
+						<rect name="extraStatsHUD1" controller="HUDStatBar" visible="{statvisible}">
+						
+						<rect controller="PlayerStats, EnhancedAGF" pos="160,-70" >
+						
+								<sprite depth="2" name="background" pos="-5,5" width="160" height="77" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/>
+						
+								<sprite depth="2" name="armorIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_light_armor2" color="201, 201, 201" foregroundlayer="true" tooltip_key="statPhysicalDamageResist"/>
+								<label depth="15" name="armorRating"  pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerArmor}" font_size="18" tooltip_key="statPhysicalDamageResist" />
+									
+								<sprite depth="2" name="explosionIcon" pos="15,-35" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_explosion" color="201, 201, 201" foregroundlayer="true" tooltip_key="statExplosionResistance"/>
+								<label depth="15" name="explosionResist"  pos="45,-37" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerExplosionResist}" font_size="18" tooltip_key="statExplosionResistance" />
+									
+								<sprite depth="2" name="critIcon" pos="15,-55" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_map_cursor" color="201, 201, 201" foregroundlayer="true" tooltip_key="statBuffResistance"/>
+								<label depth="15" name="critResist"  pos="45,-57" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerCritResist}" font_size="18" tooltip_key="statBuffResistance" />
+									
+																		
+								<sprite depth="2" name="entityDamageIcon" pos="95,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_stunned" color="201, 201, 201" foregroundlayer="true" tooltip_key="statEntityDamage"/>
+								<label depth="15" name="entityDamage"  pos="125,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerDamage}" font_size="18" tooltip_key="statEntityDamage" />
+												
+								<sprite depth="2" name="blockDamageIcon" pos="95,-35" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_mining" color="201, 201, 201" foregroundlayer="true" tooltip_key="statBlockDamage"/>
+								<label depth="15" name="blockDamage"  pos="125,-37" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerBlockDamage}" font_size="18" tooltip_key="statBlockDamage" />
+									
+								<sprite depth="2" name="mobilityIcon" pos="95,-55" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_agility" color="201, 201, 201" foregroundlayer="true" tooltip_key="statMobility"/>
+								<label depth="15" name="mobility"  pos="125,-57" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerMobility}" font_size="18" tooltip_key="statMobility" />
+									
+						</rect>			
+					</rect>
+
+					</if>
+					<else><!--The server side only stuff-->
+					<!--Player Elevation-->
+						<rect name="Elevation" pos="160,-93" rows="1" cols="1" width="84" controller="HUDStatBar" visible="{statvisible}">
+							<sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/>
+							<sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_survival" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiElevation"/>
+							<label depth="15"  name="elevationStat" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{mapelevation}" font_size="22" tooltip_key="xuiElevation" controller="MapStats"  />
+						</rect>				
+					</else>	
+				</conditional>
+			</rect>		
+	<!--Adjusted surrounding windows to fit changes, such as God Mode / buff popups-->
+			<rect name="hud" pos="91,187" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+				<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" >
+					<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
+					<sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/>
+					<label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/>
+				</panel>
+			</rect>					
+			
+			</window>
+ 
+ 
+ 
+ -->           
+        
+        
+        

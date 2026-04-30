@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>optionsAGF</RootNamespace>
+    <AssemblyName>optionsAGF</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'==''">$(MSBuildProjectDirectory)\..\..\..</SevenDaysToDieDir>
+
+    <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <HarmonyDll Condition="'$(HarmonyDll)'==''">$(MSBuildProjectDirectory)\..\..\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <OutputPath>.\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

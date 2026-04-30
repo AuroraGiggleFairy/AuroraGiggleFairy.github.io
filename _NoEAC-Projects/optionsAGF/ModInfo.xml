@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="optionsAGF" />
+    <Description value="Options host for ESC window rows and tri-state mod controls." />
+    <Author value="AGFProjects" />
+    <Version value="1.0.0" />
+    <Website value="https://auroragigglefairy.github.io/" />
+  </ModInfo>
+</xml>

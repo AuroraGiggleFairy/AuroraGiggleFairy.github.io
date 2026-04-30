@@ -1,0 +1,11 @@
+# AntiCM configuration
+# key=value lines; '#' starts a comment
+
+kickOnDetection=true
+enableDiscordAlerts=false
+discordWebhookUrl=
+scanIntervalSeconds=0.25
+allowedSteamIds=
+
+# Example:
+# allowedSteamIds=76561198000000000,76561198000000001

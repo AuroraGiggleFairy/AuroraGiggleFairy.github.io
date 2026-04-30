@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Example usage: -->
+  <!--
+  <item name="myItem">
+    <property name="ItemTypeIconColor" value="#FF00FF" />
+  </item>
+  -->
+</configs>

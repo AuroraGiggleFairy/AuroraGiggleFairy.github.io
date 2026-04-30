@@ -1,0 +1,33 @@
+# Build outputs
+**/bin/
+**/obj/
+**/Release/
+**/Debug/
+**/TestResults/
+
+# Compiled artifacts
+*.dll
+*.pdb
+*.exe
+
+# IDE/workspace
+.vs/
+.vscode/
+**/.vs/
+**/.idea/
+*.VC.db
+*.VC.opendb
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+
+# Temporary local diagnostics
+.git_branch.txt
+.git_remotes.txt
+*.log
+*.cache
+*.tmp
+
+# Decompiled references and large local-only assets
+Decompiled DLLs/

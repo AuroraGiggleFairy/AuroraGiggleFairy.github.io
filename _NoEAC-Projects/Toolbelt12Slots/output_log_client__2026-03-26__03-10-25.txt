@@ -1,0 +1,2091 @@
+Mono path[0] = 'C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/Managed'
+Mono config path = 'C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+Loading player data from C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/data.unity3d
+Initialize engine version: 2022.3.62f2 (7670c08855a9)
+[Subsystems] Discovering subsystems at path C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/UnitySubsystems
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; threaded=1; jobified=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Laptop GPU (ID=0x2820)
+    Vendor:   NVIDIA
+    VRAM:     7948 MB
+    Driver:   32.0.15.9186
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.162 seconds
+- Finished resetting the current domain, in  0.001 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+UnloadTime: 0.776500 ms
+2026-03-26T03:10:27 0.028 INF Backtrace Initialized
+2026-03-26T03:10:27 0.053 INF Version: V 2.5 (b32) Compatibility Version: V 2.5, Build: WindowsPlayer 64 Bit
+2026-03-26T03:10:27 0.053 INF System information:
+2026-03-26T03:10:27 0.054 INF    OS: Windows 11  (10.0.26200) 64bit
+2026-03-26T03:10:27 0.055 INF    CPU: 13th Gen Intel(R) Core(TM) i9-13900HX (cores: 32)
+2026-03-26T03:10:27 0.056 INF    RAM: 65264 MB
+2026-03-26T03:10:27 0.056 INF    GPU: NVIDIA GeForce RTX 4070 Laptop GPU (7948 MB)
+2026-03-26T03:10:27 0.060 INF    Graphics API: Direct3D 11.0 [level 11.1] (shader level 5.0)
+2026-03-26T03:10:27 0.063 INF Local UTC offset: -4 hours
+2026-03-26T03:10:27 0.080 INF Command line arguments: "C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe" -skipnewsscreen=true -skipintro -force-d3d11 -nogs -noeac -logfile C:\Users\rft30\AppData\Roaming\7DaysToDie\logs\output_log_client__2026-03-26__03-10-25.txt
+2026-03-26T03:10:27 0.082 INF UserDataFolder: C:\Users\rft30\AppData\Roaming/7DaysToDie
+2026-03-26T03:10:27 0.084 INF [Platform] Init
+2026-03-26T03:10:27 0.117 INF [Platform] Using native platform: Steam
+2026-03-26T03:10:27 0.119 INF [Platform] Using cross platform: EOS
+2026-03-26T03:10:27 0.119 INF [Platform] Using server platform: Steam
+2026-03-26T03:10:27 0.119 INF [Platform] Using server platform: XBL
+2026-03-26T03:10:27 0.120 INF [Platform] Using server platform: PSN
+2026-03-26T03:10:27 0.120 INF [Platform] Using server platform: LAN
+2026-03-26T03:10:27 0.129 INF Starting PlayerInputManager...
+2026-03-26T03:10:27 0.131 INF InControl (version 1.8.9 build 9376, native module = True, XInput = True)
+2026-03-26T03:10:27 0.134 INF InControl (version 1.8.9 build 9376)
+2026-03-26T03:10:27 0.142 INF InControl Native (version 1.0.6)
+2026-03-26T03:10:27 0.216 INF [InControl] NativeInputDeviceManager enabled.
+2026-03-26T03:10:27 0.235 INF [Platform] Initializing Steam
+2026-03-26T03:10:27 0.335 INF [Steamworks.NET] SteamAPI_Init() ok
+2026-03-26T03:10:27 0.336 INF [Steamworks.NET] Registering auth callbacks
+2026-03-26T03:10:27 0.338 INF Not running in Big Picture Mode, no on-screen keyboard available
+2026-03-26T03:10:27 0.338 INF [Platform] Initializing EOS
+2026-03-26T03:10:27 0.353 INF [EOS] Initialize: Success
+2026-03-26T03:10:27 0.371 INF [EOS-Voice] Successfully initialized.
+2026-03-26T03:10:27 0.372 INF [EOS-ACC] Not started with EAC, anticheat disabled
+2026-03-26T03:10:27 0.372 INF [EAC] AntiCheatServerP2P initialized with null interface
+2026-03-26T03:10:27 0.373 INF [Platform] Initializing XBL
+2026-03-26T03:10:27 0.375 INF [Platform] Initializing PSN
+2026-03-26T03:10:27 0.375 INF [Platform] Initializing LAN
+2026-03-26T03:10:27 0.377 INF [SaveDataUtils] InitStatic Begin
+2026-03-26T03:10:27 0.379 INF [SaveDataUtils] SdPlayerPrefs -> Unity
+2026-03-26T03:10:27 0.379 INF [SaveDataUtils] InitStatic Complete
+2026-03-26T03:10:27 0.392 INF Last played version: V 2.5
+2026-03-26T03:10:27 0.571 INF Localization language from platform: english
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+[PhysX] Initialized MultithreadedTaskDispatcher with 32 workers.
+UnloadTime: 1.243800 ms
+2026-03-26T03:10:27 0.627 INF Awake IsFocused: True
+2026-03-26T03:10:27 0.627 INF Awake
+2026-03-26T03:10:27 0.818 INF Occlusion: Awake
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 6550.
+Total: 6.594500 ms (FindLiveObjects: 0.174900 ms CreateObjectMapping: 0.072500 ms MarkObjects: 6.299800 ms  DeleteObjects: 0.046900 ms)
+
+2026-03-26T03:10:27 0.855 INF ApplyAllOptions streaming budget 7153.2 MB
+2026-03-26T03:10:27 0.857 INF ApplyAllOptions current screen 2560 x 1600, 165hz, window 2560 x 1600, mode FullScreenWindow
+2026-03-26T03:10:27 0.862 INF Texture quality is set to 1
+2026-03-26T03:10:27 0.863 INF ApplyTextureFilter 1, AF Enable
+2026-03-26T03:10:27 0.863 INF ApplyTerrainOptions 1
+2026-03-26T03:10:28 0.977 INF [MODS] Start loading from: 'C:\Users\rft30\AppData\Roaming/7DaysToDie/Mods'
+2026-03-26T03:10:28 0.979 INF [MODS] Start loading from: 'C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods'
+2026-03-26T03:10:28 0.982 INF [MODS]   Trying to load from folder: '.Optionals-Backpack'
+2026-03-26T03:10:28 0.983 WRN [MODS]     Folder .Optionals-Backpack does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 0.984 INF [MODS]   Trying to load from folder: '.Optionals-HUDPlus'
+2026-03-26T03:10:28 0.984 WRN [MODS]     Folder .Optionals-HUDPlus does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 0.984 INF [MODS]   Trying to load from folder: '_BACKUP'
+2026-03-26T03:10:28 0.984 WRN [MODS]     Folder _BACKUP does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 0.985 INF [MODS]   Trying to load from folder: '_MyServerTemp'
+2026-03-26T03:10:28 0.985 WRN [MODS]     Folder _MyServerTemp does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 0.985 INF [MODS]   Trying to load from folder: '0_TFP_Harmony'
+2026-03-26T03:10:28 0.996 INF [MODS]     Loaded assembly 0Harmony (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\0Harmony.dll)
+2026-03-26T03:10:28 0.997 INF [MODS]     Loaded assembly Mono.Cecil (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\Mono.Cecil.dll)
+2026-03-26T03:10:28 0.999 INF [MODS]     Loaded assembly Mono.Cecil.Mdb (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\Mono.Cecil.Mdb.dll)
+2026-03-26T03:10:28 1.000 INF [MODS]     Loaded assembly Mono.Cecil.Pdb (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\Mono.Cecil.Pdb.dll)
+2026-03-26T03:10:28 1.001 INF [MODS]     Loaded assembly Mono.Cecil.Rocks (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\Mono.Cecil.Rocks.dll)
+2026-03-26T03:10:28 1.002 INF [MODS]     Loaded assembly MonoMod.Backports (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\MonoMod.Backports.dll)
+2026-03-26T03:10:28 1.003 INF [MODS]     Loaded assembly MonoMod.Core (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\MonoMod.Core.dll)
+2026-03-26T03:10:28 1.004 INF [MODS]     Loaded assembly MonoMod.Iced (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\MonoMod.Iced.dll)
+2026-03-26T03:10:28 1.005 INF [MODS]     Loaded assembly MonoMod.ILHelpers (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\MonoMod.ILHelpers.dll)
+2026-03-26T03:10:28 1.006 INF [MODS]     Loaded assembly MonoMod.RuntimeDetour (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\MonoMod.RuntimeDetour.dll)
+2026-03-26T03:10:28 1.007 INF [MODS]     Loaded assembly MonoMod.Utils (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\MonoMod.Utils.dll)
+2026-03-26T03:10:28 1.008 INF [MODS]     Loaded assembly System.ValueTuple (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\System.ValueTuple.dll)
+2026-03-26T03:10:28 1.009 INF [MODS]     Loaded assembly TfpHarmony (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\TfpHarmony.dll)
+2026-03-26T03:10:28 1.009 INF [MODS]     Loaded Mod: TFP_Harmony (1.1.0.4)
+2026-03-26T03:10:28 1.010 INF [MODS]   Trying to load from folder: '0-Alter_OverrideSounds'
+2026-03-26T03:10:28 1.011 INF [MODS]     Loaded assembly OverrideSounds (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Alter_OverrideSounds\OverrideSounds.dll)
+2026-03-26T03:10:28 1.012 INF [MODS]     Loaded assembly RemoveItemsRepeatableMod (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Alter_OverrideSounds\RemoveItemsRepeatableMod.dll)
+2026-03-26T03:10:28 1.012 INF [MODS]     Loaded Mod: Alter_Soundoverride (1.1.0.4)
+2026-03-26T03:10:28 1.012 INF [MODS]   Trying to load from folder: '0-CustomFPVFov'
+2026-03-26T03:10:28 1.014 INF [MODS]     Loaded assembly CustomFPVFov (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\CustomFPVFov.dll)
+2026-03-26T03:10:28 1.015 INF [MODS]     Loaded assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll)
+2026-03-26T03:10:28 1.015 INF [MODS]     Loaded Mod: CustomFpvFov (1.0.4)
+2026-03-26T03:10:28 1.016 INF [MODS]   Trying to load from folder: '0-CustomParticleLoader'
+2026-03-26T03:10:28 1.017 INF [MODS]     Loaded assembly CustomParticleLoader (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomParticleLoader\CustomParticleLoader.dll)
+2026-03-26T03:10:28 1.017 INF [MODS]     Loaded Mod: CustomParticleLoader (1.6.0)
+2026-03-26T03:10:28 1.017 INF [MODS]   Trying to load from folder: '0-CustomPlayerActionManager'
+2026-03-26T03:10:28 1.019 INF [MODS]     Loaded assembly CustomPlayerActionManager (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomPlayerActionManager\CustomPlayerActionManager.dll)
+2026-03-26T03:10:28 1.019 INF [MODS]     Loaded Mod: CustomPlayerActionManager (1.3.3)
+2026-03-26T03:10:28 1.019 INF [MODS]   Trying to load from folder: '0-FPVLegs'
+2026-03-26T03:10:28 1.020 INF [MODS]     Loaded assembly FPVLegs (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-FPVLegs\FPVLegs.dll)
+2026-03-26T03:10:28 1.021 INF [MODS]     Loaded assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll)
+2026-03-26T03:10:28 1.021 INF [MODS]     Loaded Mod: FPVLegs (1.1.6)
+2026-03-26T03:10:28 1.021 INF [MODS]   Trying to load from folder: '0-FullautoLauncher'
+2026-03-26T03:10:28 1.022 INF [MODS]     Loaded assembly FullautoLauncher (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-FullautoLauncher\FullautoLauncher.dll)
+2026-03-26T03:10:28 1.022 INF [MODS]     Loaded Mod: FullautoLauncher (1.4.0)
+2026-03-26T03:10:28 1.023 INF [MODS]   Trying to load from folder: '0-KeepReloading'
+2026-03-26T03:10:28 1.024 INF [MODS]     Loaded assembly KeepReloading (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-KeepReloading\KeepReloading.dll)
+2026-03-26T03:10:28 1.024 INF [MODS]     Loaded Mod: KeepReloading (1.0.0)
+2026-03-26T03:10:28 1.024 INF [MODS]   Trying to load from folder: '0-Quartz'
+2026-03-26T03:10:28 1.025 INF [MODS]     Loaded assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll)
+2026-03-26T03:10:28 1.026 INF [MODS]     Loaded assembly Quartz (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Quartz\Quartz.dll)
+2026-03-26T03:10:28 1.026 INF [MODS]     Loaded Mod: Quartz (7.1.1)
+2026-03-26T03:10:28 1.026 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_Visible_FPV_Gloves_mod'
+2026-03-26T03:10:28 1.027 INF [MODS]     Loaded Mod: IZY_FPV_GLOVES (1.1.0.4)
+2026-03-26T03:10:28 1.027 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_Visible_Mods_mod'
+2026-03-26T03:10:28 1.028 INF [MODS]     Loaded Mod: IZY_MMVMV2 (1.1.0.4)
+2026-03-26T03:10:28 1.028 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackMisc_pack'
+2026-03-26T03:10:28 1.029 INF [MODS]     Loaded Mod: IZY_RMP_Miscpack (1.1.0.4)
+2026-03-26T03:10:28 1.029 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_44mag'
+2026-03-26T03:10:28 1.030 INF [MODS]     Loaded Mod: IZY_RMP_44magnum (1.1.0.4)
+2026-03-26T03:10:28 1.030 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_45ACP'
+2026-03-26T03:10:28 1.030 INF [MODS]     Loaded Mod: IZY_RMP_45ACP (1.1.0.4)
+2026-03-26T03:10:28 1.030 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_556pack'
+2026-03-26T03:10:28 1.031 INF [MODS]     Loaded Mod: IZY_RMP_556pack (1.1.0.4)
+2026-03-26T03:10:28 1.031 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_762pack'
+2026-03-26T03:10:28 1.031 INF [MODS]     Loaded Mod: IZY_RMP_762pack (1.1.0.4)
+2026-03-26T03:10:28 1.032 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_9mmVAL'
+2026-03-26T03:10:28 1.032 INF [MODS]     Loaded Mod: IZY_RMP_9mmVAL (1.1.0.4)
+2026-03-26T03:10:28 1.032 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_DemolitionPack'
+2026-03-26T03:10:28 1.033 INF [MODS]     Loaded Mod: IZY_RMP_Demopack (1.1.0.4)
+2026-03-26T03:10:28 1.033 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_Heavy_WeaponPack'
+2026-03-26T03:10:28 1.033 INF [MODS]     Loaded Mod: IZY_RMP_HVW (1.1.0.4)
+2026-03-26T03:10:28 1.034 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL'
+2026-03-26T03:10:28 1.034 INF [MODS]     Loaded Mod: IZY_RMP_SG (1.1.0.4)
+2026-03-26T03:10:28 1.034 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackRemastered_Technicalpack'
+2026-03-26T03:10:28 1.035 INF [MODS]     Loaded Mod: IZY_RMP_Tech (1.1.0.4)
+2026-03-26T03:10:28 1.035 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackSpecial_Melee'
+2026-03-26T03:10:28 1.035 INF [MODS]     Loaded Mod: IZY_melee (1.1.0.4)
+2026-03-26T03:10:28 1.035 INF [MODS]   Trying to load from folder: '7D1.0_Izayo_WeaponpackVanillaReplacer'
+2026-03-26T03:10:28 1.036 INF [MODS]     Loaded Mod: IZY_VRP (1.1.0.4)
+2026-03-26T03:10:28 1.036 INF [MODS]   Trying to load from folder: 'AGF-BackpackPlus-084Slots-v3.2.1'
+2026-03-26T03:10:28 1.036 INF [MODS]     Loaded Mod: AGF-BackpackPlus-084Slots (3.2.1)
+2026-03-26T03:10:28 1.037 INF [MODS]   Trying to load from folder: 'AGF-HUDPlus-1Main-v5.4.3'
+2026-03-26T03:10:28 1.037 INF [MODS]     Loaded Mod: AGF-HUDPlus-1Main (5.4.3)
+2026-03-26T03:10:28 1.037 INF [MODS]   Trying to load from folder: 'AGF-HUDPlus-BMCounter-v2.1.2'
+2026-03-26T03:10:28 1.038 INF [MODS]     Loaded Mod: AGF-HUDPlus-BMCounter (2.1.2)
+2026-03-26T03:10:28 1.038 INF [MODS]   Trying to load from folder: 'AGF-HUDPlus-HealthBars-v4.0.0'
+2026-03-26T03:10:28 1.038 INF [MODS]     Loaded Mod: AGF-HUDPlus-HealthBars (4.0.0)
+2026-03-26T03:10:28 1.038 INF [MODS]   Trying to load from folder: 'AGF-HUDPlus-PurpleBook-v2.0.0'
+2026-03-26T03:10:28 1.039 INF [MODS]     Loaded Mod: AGF-HUDPlus-PurpleBook (2.0.0)
+2026-03-26T03:10:28 1.039 INF [MODS]   Trying to load from folder: 'AGF-HUDPlus-RemoveEnteringPopUp-v1.0.0'
+2026-03-26T03:10:28 1.039 INF [MODS]     Loaded Mod: AGF-HUDPlus-RemoveEnteringPopUp (1.0.0)
+2026-03-26T03:10:28 1.039 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1'
+2026-03-26T03:10:28 1.041 INF [MODS]     Loaded assembly windowEnteringDuration (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1\windowEnteringDuration.dll)
+2026-03-26T03:10:28 1.041 INF [MODS]     Loaded Mod: AGF-NoEAC-ConfigureWindowEnteringDuration (1.0.1)
+2026-03-26T03:10:28 1.041 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-ConsoleOpacityMod-v1.0.0'
+2026-03-26T03:10:28 1.043 INF [MODS]     Loaded assembly ConsoleOpacityMod (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConsoleOpacityMod-v1.0.0\ConsoleOpacityMod.dll)
+2026-03-26T03:10:28 1.043 INF [MODS]     Loaded Mod: AGF-NoEAC-ConsoleOpacityMod (1.0.0)
+2026-03-26T03:10:28 1.043 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-CosmeticLockIcon-v1.0.1'
+2026-03-26T03:10:28 1.045 INF [MODS]     Loaded assembly CosmeticLockIcon (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-CosmeticLockIcon-v1.0.1\CosmeticLockIcon.dll)
+2026-03-26T03:10:28 1.045 INF [MODS]     Loaded Mod: AGF-NoEAC-CosmeticLockIcon (1.0.1)
+2026-03-26T03:10:28 1.045 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-EnhancedPatch-v2.1.0'
+2026-03-26T03:10:28 1.046 INF [MODS]     Loaded assembly EnhancedAGF (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-EnhancedPatch-v2.1.0\EnhancedAGF.dll)
+2026-03-26T03:10:28 1.047 INF [MODS]     Loaded Mod: AGF-NoEAC-EnhancedPatch (3.0.0)
+2026-03-26T03:10:28 1.047 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-ExpandedInteractionPrompts-v0.0.1'
+2026-03-26T03:10:28 1.048 INF [MODS]     Loaded assembly ExpandedInteractionPrompts (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ExpandedInteractionPrompts-v0.0.1\ExpandedInteractionPrompts.dll)
+2026-03-26T03:10:28 1.049 INF [MODS]     Loaded Mod: AGF-NoEAC-ExpandedInteractionPrompts (1.0.1)
+2026-03-26T03:10:28 1.049 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-GlobalStormTracker-v1.0.0'
+2026-03-26T03:10:28 1.050 INF [MODS]     Loaded assembly StormTracker (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-GlobalStormTracker-v1.0.0\StormTracker.dll)
+2026-03-26T03:10:28 1.050 INF [MODS]     Loaded Mod: AGF-NoEAC-GlobalStormTracker (1.0.0)
+2026-03-26T03:10:28 1.051 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-ItemTypeIconColor-v1.0.0'
+2026-03-26T03:10:28 1.052 INF [MODS]     Loaded assembly ItemTypeIconColor (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ItemTypeIconColor-v1.0.0\ItemTypeIconColor.dll)
+2026-03-26T03:10:28 1.052 INF [MODS]     Loaded Mod: AGF-NoEAC-ItemTypeIconColor (1.0.0)
+2026-03-26T03:10:28 1.052 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-OpenAllButton-v1.0.0'
+2026-03-26T03:10:28 1.053 INF [MODS]     Loaded assembly OpenAll (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-OpenAllButton-v1.0.0\OpenAll.dll)
+2026-03-26T03:10:28 1.053 INF [MODS]     Loaded Mod: AGF-NoEAC-OpenAllButton (1.0.0)
+2026-03-26T03:10:28 1.054 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-ScreamerAlert-v1.1.0'
+2026-03-26T03:10:28 1.055 INF [MODS]     Loaded assembly ScreamerAlert (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ScreamerAlert-v1.1.0\ScreamerAlert.dll)
+2026-03-26T03:10:28 1.055 INF [MODS]     Loaded Mod: AGF-NoEAC-ScreamerAlert (1.1.1)
+2026-03-26T03:10:28 1.055 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-SortingBox-v1.0.4'
+2026-03-26T03:10:28 1.056 INF [MODS]     Loaded assembly RoboticInbox (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-SortingBox-v1.0.4\RoboticInbox.dll)
+2026-03-26T03:10:28 1.057 INF [MODS]     Loaded Mod: AGF-NoEAC-SortingBox (1.0.4)
+2026-03-26T03:10:28 1.057 INF [MODS]   Trying to load from folder: 'AGF-NoEAC-Toolbelt12Slots-v0.0.1'
+2026-03-26T03:10:28 1.081 INF [MODS]     Loaded assembly Toolbelt12Slots (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-Toolbelt12Slots-v0.0.1\Toolbelt12Slots.dll)
+2026-03-26T03:10:28 1.082 INF [MODS]     Loaded Mod: AGF-NoEAC-Toolbelt12Slots (0.0.1)
+2026-03-26T03:10:28 1.082 INF [MODS]   Trying to load from folder: 'AGF-VP-AdminModdingSupport-v1.0.3'
+2026-03-26T03:10:28 1.086 INF [MODS]     Loaded Mod: AGF-VP-AdminModdingSupport (1.0.3)
+2026-03-26T03:10:28 1.086 INF [MODS]   Trying to load from folder: 'AGF-VP-AlternativeRecipes-v1.0.1'
+2026-03-26T03:10:28 1.086 INF [MODS]     Loaded Mod: AGF-VP-AlternativeRecipes (1.0.1)
+2026-03-26T03:10:28 1.086 INF [MODS]   Trying to load from folder: 'AGF-VP-AmmoDisassembly-v1.0.1'
+2026-03-26T03:10:28 1.087 INF [MODS]     Loaded Mod: AGF-VP-AmmoDisassembly (1.0.1)
+2026-03-26T03:10:28 1.087 INF [MODS]   Trying to load from folder: 'AGF-VP-ApiaryPlus-v1.0.3'
+2026-03-26T03:10:28 1.088 INF [MODS]     Loaded Mod: AGF-VP-ApiaryPlus (1.0.3)
+2026-03-26T03:10:28 1.088 INF [MODS]   Trying to load from folder: 'AGF-VP-ArcheryFeathersChange-v1.0.2'
+2026-03-26T03:10:28 1.088 INF [MODS]     Loaded Mod: AGF-VP-ArcheryFeathersChange (1.0.2)
+2026-03-26T03:10:28 1.088 INF [MODS]   Trying to load from folder: 'AGF-VP-ArmorHarvestMods-v2.1.0'
+2026-03-26T03:10:28 1.089 INF [MODS]     Loaded Mod: AGF-VP-ArmorHarvestMods (2.1.0)
+2026-03-26T03:10:28 1.089 INF [MODS]   Trying to load from folder: 'AGF-VP-AutomobilesRespawn-v3.0.1'
+2026-03-26T03:10:28 1.089 INF [MODS]     Loaded Mod: AGF-VP-AutomobilesRespawn (3.0.1)
+2026-03-26T03:10:28 1.089 INF [MODS]   Trying to load from folder: 'AGF-VP-BedrollPlus-v1.0.0'
+2026-03-26T03:10:28 1.090 INF [MODS]     Loaded Mod: AGF-VP-BedrollPlus (1.0.0)
+2026-03-26T03:10:28 1.090 INF [MODS]   Trying to load from folder: 'AGF-VP-BetterEggChance-v2.1.0'
+2026-03-26T03:10:28 1.090 INF [MODS]     Loaded Mod: AGF-VP-BetterEggChance (2.1.0)
+2026-03-26T03:10:28 1.091 INF [MODS]   Trying to load from folder: 'AGF-VP-BreakItGetIt-v1.0.2'
+2026-03-26T03:10:28 1.091 INF [MODS]     Loaded Mod: AGF-VP-BreakItGetIt (1.0.2)
+2026-03-26T03:10:28 1.091 INF [MODS]   Trying to load from folder: 'AGF-VP-BuyTraderVendingMachines-v3.0.2'
+2026-03-26T03:10:28 1.092 INF [MODS]     Loaded Mod: AGF-VP-BuyTraderVendingMachines (3.0.2)
+2026-03-26T03:10:28 1.092 INF [MODS]   Trying to load from folder: 'AGF-VP-CraftSewingKits-v1.0.0'
+2026-03-26T03:10:28 1.092 INF [MODS]     Loaded Mod: AGF-VP-CraftSewingKits (1.0.0)
+2026-03-26T03:10:28 1.092 INF [MODS]   Trying to load from folder: 'AGF-VP-CraftStackEngBattCells-v3.3.0'
+2026-03-26T03:10:28 1.093 INF [MODS]     Loaded Mod: AGF-VP-CraftStackEngBattCells (3.3.0)
+2026-03-26T03:10:28 1.093 INF [MODS]   Trying to load from folder: 'AGF-VP-CraftVitamins-v1.1.0'
+2026-03-26T03:10:28 1.094 INF [MODS]     Loaded Mod: AGF-VP-CraftVitamins (1.1.0)
+2026-03-26T03:10:28 1.094 INF [MODS]   Trying to load from folder: 'AGF-VP-DecorationBlock-v3.0.2'
+2026-03-26T03:10:28 1.094 INF [MODS]     Loaded Mod: AGF-VP-DecorationBlock (3.0.2)
+2026-03-26T03:10:28 1.094 INF [MODS]   Trying to load from folder: 'AGF-VP-DewsPlus-v2.4.2'
+2026-03-26T03:10:28 1.095 INF [MODS]     Loaded Mod: AGF-VP-DewsPlus (2.4.2)
+2026-03-26T03:10:28 1.095 INF [MODS]   Trying to load from folder: 'AGF-VP-DoorsPlus-v3.0.0'
+2026-03-26T03:10:28 1.095 INF [MODS]     Loaded Mod: AGF-VP-DoorsPlus (3.0.0)
+2026-03-26T03:10:28 1.096 INF [MODS]   Trying to load from folder: 'AGF-VP-DrinkableAcid-v2.0.1'
+2026-03-26T03:10:28 1.096 INF [MODS]     Loaded Mod: AGF-VP-DrinkableAcid (2.0.1)
+2026-03-26T03:10:28 1.096 INF [MODS]   Trying to load from folder: 'AGF-VP-DyesPlus-v3.1.0'
+2026-03-26T03:10:28 1.097 INF [MODS]     Loaded Mod: AGF-VP-DyesPlus (3.1.0)
+2026-03-26T03:10:28 1.097 INF [MODS]   Trying to load from folder: 'AGF-VP-FarmingPlus-v5.6.1'
+2026-03-26T03:10:28 1.097 INF [MODS]     Loaded Mod: AGF-VP-FarmingPlus (5.6.1)
+2026-03-26T03:10:28 1.097 INF [MODS]   Trying to load from folder: 'AGF-VP-FloraHarvester-v2.3.0'
+2026-03-26T03:10:28 1.098 INF [MODS]     Loaded Mod: AGF-VP-FloraHarvester (2.3.0)
+2026-03-26T03:10:28 1.098 INF [MODS]   Trying to load from folder: 'AGF-VP-FuelBurnPlus-v2.3.0'
+2026-03-26T03:10:28 1.099 INF [MODS]     Loaded Mod: AGF-VP-FuelBurnPlus (2.3.0)
+2026-03-26T03:10:28 1.099 INF [MODS]   Trying to load from folder: 'AGF-VP-MasterTool-v6.1.0'
+2026-03-26T03:10:28 1.100 INF [MODS]     Loaded Mod: AGF-VP-MasterTool (6.1.0)
+2026-03-26T03:10:28 1.100 INF [MODS]   Trying to load from folder: 'AGF-VP-MaxLevel500-v2.0.2'
+2026-03-26T03:10:28 1.100 INF [MODS]     Loaded Mod: AGF-VP-MaxLevel500 (2.0.2)
+2026-03-26T03:10:28 1.101 INF [MODS]   Trying to load from folder: 'AGF-VP-MedicationNoInsectSlow-v1.1.0'
+2026-03-26T03:10:28 1.101 INF [MODS]     Loaded Mod: AGF-VP-MedicationNoInsectSlow (1.1.0)
+2026-03-26T03:10:28 1.102 INF [MODS]   Trying to load from folder: 'AGF-VP-MiningPlus-v1.2.0'
+2026-03-26T03:10:28 1.102 INF [MODS]     Loaded Mod: AGF-VP-MiningPlus (1.2.0)
+2026-03-26T03:10:28 1.103 INF [MODS]   Trying to load from folder: 'AGF-VP-Mod988-v2.0.1'
+2026-03-26T03:10:28 1.104 INF [MODS]     Loaded Mod: AGF-VP-Mod988 (2.0.1)
+2026-03-26T03:10:28 1.104 INF [MODS]   Trying to load from folder: 'AGF-VP-ModBundling-v1.0.1'
+2026-03-26T03:10:28 1.105 INF [MODS]     Loaded Mod: AGF-VP-ModBundling (1.0.1)
+2026-03-26T03:10:28 1.105 INF [MODS]   Trying to load from folder: 'AGF-VP-ModSlotsPlus-v3.0.1'
+2026-03-26T03:10:28 1.105 INF [MODS]     Loaded Mod: AGF-VP-ModSlotsPlus (3.0.1)
+2026-03-26T03:10:28 1.105 INF [MODS]   Trying to load from folder: 'AGF-VP-PaintbrushPlus-v2.1.0'
+2026-03-26T03:10:28 1.106 INF [MODS]     Loaded Mod: AGF-VP-PaintbrushPlus (2.1.0)
+2026-03-26T03:10:28 1.106 INF [MODS]   Trying to load from folder: 'AGF-VP-PickupLanternsPlus-v2.0.1'
+2026-03-26T03:10:28 1.106 INF [MODS]     Loaded Mod: AGF-VP-PickupLanternsPlus (2.0.1)
+2026-03-26T03:10:28 1.107 INF [MODS]   Trying to load from folder: 'AGF-VP-PlayerResetQuests-v2.0.1'
+2026-03-26T03:10:28 1.107 INF [MODS]     Loaded Mod: AGF-VP-PlayerResetQuests (2.0.1)
+2026-03-26T03:10:28 1.107 INF [MODS]   Trying to load from folder: 'AGF-VP-PlayerVendingMachinesPlus-v1.0.0'
+2026-03-26T03:10:28 1.108 INF [MODS]     Loaded Mod: AGF-VP-PlayerVendingMachinesPlus (1.0.0)
+2026-03-26T03:10:28 1.108 INF [MODS]   Trying to load from folder: 'AGF-VP-PumpkinsPlus-v2.0.4'
+2026-03-26T03:10:28 1.108 INF [MODS]     Loaded Mod: AGF-VP-PumpkinsPlus (2.0.4)
+2026-03-26T03:10:28 1.109 INF [MODS]   Trying to load from folder: 'AGF-VP-QuickStart-v2.0.0'
+2026-03-26T03:10:28 1.109 INF [MODS]     Loaded Mod: AGF-VP-QuickStart (2.0.0)
+2026-03-26T03:10:28 1.109 INF [MODS]   Trying to load from folder: 'AGF-VP-RebundleBundles-v1.0.0'
+2026-03-26T03:10:28 1.110 INF [MODS]     Loaded Mod: AGF-VP-RebundleBundles (1.0.0)
+2026-03-26T03:10:28 1.110 INF [MODS]   Trying to load from folder: 'AGF-VP-RecipeRottingFlesh-v1.0.0'
+2026-03-26T03:10:28 1.110 INF [MODS]     Loaded Mod: AGF-VP-RecipeRottingFlesh (1.0.0)
+2026-03-26T03:10:28 1.110 INF [MODS]   Trying to load from folder: 'AGF-VP-RenamesAlphabeticalSort-v2.0.4'
+2026-03-26T03:10:28 1.111 INF [MODS]     Loaded Mod: AGF-VP-RenamesAlphabeticalSort (2.0.4)
+2026-03-26T03:10:28 1.111 INF [MODS]   Trying to load from folder: 'AGF-VP-RestorePowerAnyTime-v1.0.2'
+2026-03-26T03:10:28 1.111 INF [MODS]     Loaded Mod: AGF-VP-RestorePowerAnyTime (1.0.2)
+2026-03-26T03:10:28 1.111 INF [MODS]   Trying to load from folder: 'AGF-VP-ScrapBatts4Acid-v1.1.0'
+2026-03-26T03:10:28 1.112 INF [MODS]     Loaded Mod: AGF-VP-ScrapBatts4Acid (1.1.0)
+2026-03-26T03:10:28 1.112 INF [MODS]   Trying to load from folder: 'AGF-VP-ScrapEquipmentFaster-v1.0.0'
+2026-03-26T03:10:28 1.112 INF [MODS]     Loaded Mod: AGF-VP-ScrapEquipmentFaster (1.0.0)
+2026-03-26T03:10:28 1.113 INF [MODS]   Trying to load from folder: 'AGF-VP-SimplifiedStacks-v1.2.3'
+2026-03-26T03:10:28 1.113 INF [MODS]     Loaded Mod: AGF-VP-SimplifiedStacks (1.2.3)
+2026-03-26T03:10:28 1.113 INF [MODS]   Trying to load from folder: 'AGF-VP-SmeltingPlus-v2.4.0'
+2026-03-26T03:10:28 1.114 INF [MODS]     Loaded Mod: AGF-VP-SmeltingPlus (2.4.0)
+2026-03-26T03:10:28 1.114 INF [MODS]   Trying to load from folder: 'AGF-VP-StayLongerAnimalCorpse-v2.0.2'
+2026-03-26T03:10:28 1.114 INF [MODS]     Loaded Mod: AGF-VP-StayLongerAnimalCorpse (2.0.2)
+2026-03-26T03:10:28 1.114 INF [MODS]   Trying to load from folder: 'AGF-VP-StayLongerPlayerBackpack-v2.0.1'
+2026-03-26T03:10:28 1.115 INF [MODS]     Loaded Mod: AGF-VP-StayLongerPlayerBackpack (2.0.1)
+2026-03-26T03:10:28 1.115 INF [MODS]   Trying to load from folder: 'AGF-VP-StayLongerZombieLoot-v2.0.1'
+2026-03-26T03:10:28 1.115 INF [MODS]     Loaded Mod: AGF-VP-StayLongerZombieLoot (2.0.1)
+2026-03-26T03:10:28 1.116 INF [MODS]   Trying to load from folder: 'AGF-VP-TacticalRiflePlus-v2.1.0'
+2026-03-26T03:10:28 1.116 INF [MODS]     Loaded Mod: AGF-VP-TacticalRiflePlus (2.1.0)
+2026-03-26T03:10:28 1.116 INF [MODS]   Trying to load from folder: 'AGF-VP-TraderAlwaysOpen-v2.0.1'
+2026-03-26T03:10:28 1.117 INF [MODS]     Loaded Mod: AGF-VP-TraderAlwaysOpen (2.0.1)
+2026-03-26T03:10:28 1.117 INF [MODS]   Trying to load from folder: 'AGF-VP-TraderCostlierPrices-v1.0.0'
+2026-03-26T03:10:28 1.117 INF [MODS]     Loaded Mod: AGF-VP-TraderCostlierPrices (1.0.0)
+2026-03-26T03:10:28 1.117 INF [MODS]   Trying to load from folder: 'AGF-VP-TraderSellsMoreBooks-v3.0.0'
+2026-03-26T03:10:28 1.118 INF [MODS]     Loaded Mod: AGF-VP-TraderSellsMoreBooks (3.0.0)
+2026-03-26T03:10:28 1.118 INF [MODS]   Trying to load from folder: 'AGF-VP-TradersRestockEvery2Days-v1.0.0'
+2026-03-26T03:10:28 1.118 INF [MODS]     Loaded Mod: AGF-VP-TradersRestockEvery2Days (1.0.0)
+2026-03-26T03:10:28 1.119 INF [MODS]   Trying to load from folder: 'AGF-VP-TreesPlus-v3.0.0'
+2026-03-26T03:10:28 1.119 INF [MODS]     Loaded Mod: AGF-VP-TreesPlus (3.0.0)
+2026-03-26T03:10:28 1.119 INF [MODS]   Trying to load from folder: 'AGF-VP-VehiclePerformance-v1.0.1'
+2026-03-26T03:10:28 1.120 INF [MODS]     Loaded Mod: AGF-VP-VehiclePerformance (1.0.1)
+2026-03-26T03:10:28 1.120 INF [MODS]   Trying to load from folder: 'AGF-VP-VehiclesExtraSeating-v1.0.0'
+2026-03-26T03:10:28 1.121 INF [MODS]     Loaded Mod: AGF-VP-VehiclesExtraSeating (1.0.0)
+2026-03-26T03:10:28 1.121 INF [MODS]   Trying to load from folder: 'AGF-VP-VehicleStoragePlus-v2.1.1'
+2026-03-26T03:10:28 1.121 INF [MODS]     Loaded Mod: AGF-VP-VehicleStoragePlus (2.1.1)
+2026-03-26T03:10:28 1.121 INF [MODS]   Trying to load from folder: 'AGF-VP-WriteStoryOnCrate-v1.0.0'
+2026-03-26T03:10:28 1.122 INF [MODS]     Loaded Mod: AGF-VP-WriteStoryOnCrate (1.0.0)
+2026-03-26T03:10:28 1.122 INF [MODS]   Trying to load from folder: 'AGF-VP-XPDeathPenaltyReduction-v2.0.0'
+2026-03-26T03:10:28 1.122 INF [MODS]     Loaded Mod: AGF-VP-XPDeathPenaltyReduction (2.0.0)
+2026-03-26T03:10:28 1.123 INF [MODS]   Trying to load from folder: 'AGF-VP-ZombieBiomeSpawning-v3.0.0'
+2026-03-26T03:10:28 1.123 INF [MODS]     Loaded Mod: AGF-VP-ZombieBiomeSpawning (3.0.0)
+2026-03-26T03:10:28 1.123 INF [MODS]   Trying to load from folder: 'AGF-VP-ZombieCorpseLeaveQuicker-v2.0.1'
+2026-03-26T03:10:28 1.124 INF [MODS]     Loaded Mod: AGF-VP-ZombieCorpseLeaveQuicker (2.0.1)
+2026-03-26T03:10:28 1.124 INF [MODS]   Trying to load from folder: 'AGF-VP-ZombieLargerHordes-v2.0.1'
+2026-03-26T03:10:28 1.124 INF [MODS]     Loaded Mod: AGF-VP-ZombieLargerHordes (2.0.1)
+2026-03-26T03:10:28 1.124 INF [MODS]   Trying to load from folder: 'BDub Localization File'
+2026-03-26T03:10:28 1.124 WRN [MODS]     Folder BDub Localization File does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 1.125 INF [MODS]   Trying to load from folder: 'FLM_Server_Info_Suite'
+2026-03-26T03:10:28 1.125 INF [MODS]     Loaded Mod: FLM_Info_Suite (2.0.0)
+2026-03-26T03:10:28 1.125 INF [MODS]   Trying to load from folder: 'Gyzzidonth Wire Distance 50'
+2026-03-26T03:10:28 1.126 INF [MODS]     Loaded Mod: MaxWireLength (082324.1)
+2026-03-26T03:10:28 1.126 INF [MODS]   Trying to load from folder: 'MPLogue_Better_Biomes_7D2D_v2_0_1'
+2026-03-26T03:10:28 1.126 INF [MODS]     Loaded Mod: MPLogue_Better_Biomes_7D2D_v2_0_1 (2.0.1)
+2026-03-26T03:10:28 1.127 INF [MODS]   Trying to load from folder: 'MPLogue_UrbanDecay_7D2D_v2_0_1'
+2026-03-26T03:10:28 1.127 INF [MODS]     Loaded Mod: MPLogue_UrbanDecay_7D2D_v1_0 (1.2.1)
+2026-03-26T03:10:28 1.127 INF [MODS]   Trying to load from folder: 'OcbStoragePouch'
+2026-03-26T03:10:28 1.129 INF [MODS]     Loaded assembly StoragePouch (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\OcbStoragePouch\StoragePouch.dll)
+2026-03-26T03:10:28 1.129 INF [MODS]     Loaded Mod: OcbStoragePouch (0.2.0)
+2026-03-26T03:10:28 1.129 INF [MODS]   Trying to load from folder: 'Other Mods'
+2026-03-26T03:10:28 1.129 WRN [MODS]     Folder Other Mods does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 1.129 INF [MODS]   Trying to load from folder: 'Other-BdubsVehicles'
+2026-03-26T03:10:28 1.130 INF [MODS]     Loaded Mod: Bdubs_Vehicles (2.5.1.1)
+2026-03-26T03:10:28 1.130 INF [MODS]   Trying to load from folder: 'Other-BeyondStorage2-AGFSettings'
+2026-03-26T03:10:28 1.131 INF [MODS]     Loaded assembly BeyondStorage2 (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-BeyondStorage2-AGFSettings\BeyondStorage2.dll)
+2026-03-26T03:10:28 1.132 INF [MODS]     Loaded Mod: BeyondStorage2 (2.5.1)
+2026-03-26T03:10:28 1.132 INF [MODS]   Trying to load from folder: 'Other-DoubleG_Zombies_2.4-AGFEdits'
+2026-03-26T03:10:28 1.132 INF [MODS]     Loaded Mod: DoubleGZombies2 (2.4)
+2026-03-26T03:10:28 1.133 INF [MODS]   Trying to load from folder: 'Other-GSVanillaCookBook'
+2026-03-26T03:10:28 1.133 INF [MODS]     Loaded Mod: VanillaExtended (2.1.0)
+2026-03-26T03:10:28 1.133 INF [MODS]   Trying to load from folder: 'Other-GW71_FoundationBlock'
+2026-03-26T03:10:28 1.134 INF [MODS]     Loaded Mod: GW71_FoundationBlock (0.7.1)
+2026-03-26T03:10:28 1.134 INF [MODS]   Trying to load from folder: 'Other-LittleRedSonja_ZombiePack'
+2026-03-26T03:10:28 1.134 INF [MODS]     Loaded Mod: LittleRedSonja_ZombiePack (2.2.3)
+2026-03-26T03:10:28 1.134 INF [MODS]   Trying to load from folder: 'Other-OcbStopFuelWaste'
+2026-03-26T03:10:28 1.136 INF [MODS]     Loaded assembly StopFuelWaste (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-OcbStopFuelWaste\StopFuelWaste.dll)
+2026-03-26T03:10:28 1.136 INF [MODS]     Loaded Mod: OcbStopFuelWaste (1.1.0)
+2026-03-26T03:10:28 1.136 INF [MODS]   Trying to load from folder: 'Other-QuickStack-AGFSettings'
+2026-03-26T03:10:28 1.137 INF [MODS]     Loaded assembly QuickStack (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-QuickStack-AGFSettings\QuickStack.dll)
+2026-03-26T03:10:28 1.138 INF [MODS]     Loaded Mod: QuickStack (1.7.3)
+2026-03-26T03:10:28 1.138 INF [MODS]   Trying to load from folder: 'Other-V2-OakravenAmmoPress'
+2026-03-26T03:10:28 1.138 INF [MODS]     Loaded Mod: V2_OakravenAmmoPress (2.5.0.0)
+2026-03-26T03:10:28 1.138 INF [MODS]   Trying to load from folder: 'PathSmoothing'
+2026-03-26T03:10:28 1.143 INF [MODS]     Loaded assembly PathSmoothing (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PathSmoothing\PathSmoothing.dll)
+2026-03-26T03:10:28 1.144 INF [MODS]     Loaded Mod: PathSmoothing (1.8.11.0)
+2026-03-26T03:10:28 1.144 INF [MODS]   Trying to load from folder: 'PGz Massive Cities v1'
+2026-03-26T03:10:28 1.144 INF [MODS]     Loaded Mod: PGzMassiveCitiesV1 (1.0.0.0)
+2026-03-26T03:10:28 1.144 INF [MODS]   Trying to load from folder: 'PGz UIAtlas Icons'
+2026-03-26T03:10:28 1.145 INF [MODS]     Loaded Mod: PGzUIAtlasIcons (1.0.0.0)
+2026-03-26T03:10:28 1.145 INF [MODS]   Trying to load from folder: 'ServerTools'
+2026-03-26T03:10:28 1.146 INF [MODS]     Loaded assembly ServerTools (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\ServerTools\ServerTools.dll)
+2026-03-26T03:10:28 1.146 INF [MODS]     Loaded Mod: ServerTools (2.5.1.0)
+2026-03-26T03:10:28 1.147 INF [MODS]   Trying to load from folder: 'ServerTools_Config'
+2026-03-26T03:10:28 1.147 WRN [MODS]     Folder ServerTools_Config does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 1.147 INF [MODS]   Trying to load from folder: 'UPDATE MOD PACKAGEv8.2'
+2026-03-26T03:10:28 1.147 WRN [MODS]     Folder UPDATE MOD PACKAGEv8.2 does not contain a ModInfo.xml, ignoring
+2026-03-26T03:10:28 1.147 INF [MODS]   Trying to load from folder: 'WMMLootRespawnTweak'
+2026-03-26T03:10:28 1.149 INF [MODS]     Loaded assembly WMMLootRespawnTweak (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMLootRespawnTweak\WMMLootRespawnTweak.dll)
+2026-03-26T03:10:28 1.149 INF [MODS]     Loaded Mod: WMMLootRespawnTweak (2.5.23.1)
+2026-03-26T03:10:28 1.149 INF [MODS]   Trying to load from folder: 'WMMSharedGamestageBugfix'
+2026-03-26T03:10:28 1.150 INF [MODS]     Loaded assembly WMMSharedGamestageBugfix (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMSharedGamestageBugfix\WMMSharedGamestageBugfix.dll)
+2026-03-26T03:10:28 1.151 INF [MODS]     Loaded Mod: WMMSharedGamestageBugfix (2.5.23.1)
+2026-03-26T03:10:28 1.151 INF [MODS]   Trying to load from folder: 'WMMStopBikesFallingOver'
+2026-03-26T03:10:28 1.152 INF [MODS]     Loaded assembly WMMStopBikesFallingOver (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMStopBikesFallingOver\WMMStopBikesFallingOver.dll)
+2026-03-26T03:10:28 1.152 INF [MODS]     Loaded Mod: WMMStopBikesFallingOver (2.5.23.2)
+2026-03-26T03:10:28 1.152 INF [MODS]   Trying to load from folder: 'WMMVehicleCruiseControl'
+2026-03-26T03:10:28 1.154 INF [MODS]     Loaded assembly WMMVehicleCruiseControl (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMVehicleCruiseControl\WMMVehicleCruiseControl.dll)
+2026-03-26T03:10:28 1.154 INF [MODS]     Loaded Mod: WMMVehicleCruiseControl (2.5.23.1)
+2026-03-26T03:10:28 1.154 INF [MODS]   Trying to load from folder: 'WMMVehiclesTriggerPressurePlates'
+2026-03-26T03:10:28 1.155 INF [MODS]     Loaded assembly WMMVehiclesTriggerPressurePlates (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMVehiclesTriggerPressurePlates\WMMVehiclesTriggerPressurePlates.dll)
+2026-03-26T03:10:28 1.155 INF [MODS]     Loaded Mod: WMMVehiclesTriggerPressurePlates (2.5.23.1)
+2026-03-26T03:10:28 1.156 INF [MODS]   Trying to load from folder: 'WMMWorkstationMaterialTimer'
+2026-03-26T03:10:28 1.157 INF [MODS]     Loaded assembly WMMWorkstationMaterialTimer (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMWorkstationMaterialTimer\WMMWorkstationMaterialTimer.dll)
+2026-03-26T03:10:28 1.157 INF [MODS]     Loaded Mod: WMMWorkstationMaterialTimer (2.5.23.1)
+2026-03-26T03:10:28 1.157 INF [MODS]   Trying to load from folder: 'WMMZAirdropSpawnZeds'
+2026-03-26T03:10:28 1.159 INF [MODS]     Loaded assembly WMMZAirdropSpawnZeds (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMZAirdropSpawnZeds\WMMZAirdropSpawnZeds.dll)
+2026-03-26T03:10:28 1.159 INF [MODS]     Loaded Mod: WMMZAirdropSpawnZeds (2.5.23.1)
+2026-03-26T03:10:28 1.159 INF [MODS]   Trying to load from folder: 'z_7D2.5_Izayo_WeaponFixes'
+2026-03-26T03:10:28 1.160 INF [MODS]     Loaded assembly IzayoUtils (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\z_7D2.5_Izayo_WeaponFixes\IzayoUtils.dll)
+2026-03-26T03:10:28 1.161 INF [MODS]     Loaded Mod: z_Izayo_WeaponFixes (1.0)
+2026-03-26T03:10:28 1.161 INF [MODS]   Trying to load from folder: 'zMPLogue_Better_Biomes_TreeStumpPatch'
+2026-03-26T03:10:28 1.161 INF [MODS]     Loaded Mod: MPLogue_Better_Biomes_TreeStumpPatch (1.0.0)
+2026-03-26T03:10:28 1.162 INF [MODS]   Trying to load from folder: 'ZZZ_HornOpensDoors'
+2026-03-26T03:10:28 1.163 INF [MODS]     Loaded assembly HornOpensDoors (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\ZZZ_HornOpensDoors\HornOpensDoors.dll)
+2026-03-26T03:10:28 1.163 INF [MODS]     Loaded Mod: HornOpensDoors_A88 (1.0.2)
+2026-03-26T03:10:28 1.163 INF [MODS]   Trying to load from folder: 'zzzAGF-Special-Compatibilities-v4.0.2'
+2026-03-26T03:10:28 1.164 INF [MODS]     Loaded Mod: zzzAGF-Special-Compatibilities (4.0.2)
+2026-03-26T03:10:28 1.164 INF [MODS] Initializing mod code
+2026-03-26T03:10:28 1.165 INF [MODS]   Initializing mod TFP_Harmony
+2026-03-26T03:10:28 1.175 INF [MODS]     Found ModAPI in assembly TfpHarmony (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\TfpHarmony.dll), creating instance
+2026-03-26T03:10:28 1.176 INF [MODS]       [Harmony] Init done
+Fallback handler could not load library C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/MonoBleedingEdge/data-000002D4EEC99F70.dll
+2026-03-26T03:10:28 1.389 INF [MODS]     Initialized code in mod 'TFP_Harmony' in assembly TfpHarmony (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0_TFP_Harmony\TfpHarmony.dll)
+2026-03-26T03:10:28 1.389 INF [MODS]   Initializing mod Alter_Soundoverride
+2026-03-26T03:10:28 1.389 INF [MODS]     Found ModAPI in assembly OverrideSounds (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Alter_OverrideSounds\OverrideSounds.dll), creating instance
+2026-03-26T03:10:28 1.390 INF  Loading Patch: Harmony.OverrideSounds
+2026-03-26T03:10:28 1.396 INF [MODS]     Initialized code in mod 'Alter_Soundoverride' in assembly OverrideSounds (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Alter_OverrideSounds\OverrideSounds.dll)
+2026-03-26T03:10:28 1.397 INF [MODS]     Found ModAPI in assembly RemoveItemsRepeatableMod (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Alter_OverrideSounds\RemoveItemsRepeatableMod.dll), creating instance
+2026-03-26T03:10:28 1.398 INF [MODS]     Initialized code in mod 'Alter_Soundoverride' in assembly RemoveItemsRepeatableMod (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Alter_OverrideSounds\RemoveItemsRepeatableMod.dll)
+2026-03-26T03:10:28 1.398 INF [MODS]   Initializing mod CustomFpvFov
+2026-03-26T03:10:28 1.398 INF [MODS]     Found ModAPI in assembly CustomFPVFov (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\CustomFPVFov.dll), creating instance
+2026-03-26T03:10:28 1.399 INF  Loading Patch: CustomFPVFov.Init
+2026-03-26T03:10:28 1.468 INF [MODS]     Initialized code in mod 'CustomFpvFov' in assembly CustomFPVFov (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\CustomFPVFov.dll)
+2026-03-26T03:10:28 1.469 INF [MODS]     Found ModAPI in assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll), creating instance
+2026-03-26T03:10:28 1.469 INF [Gears API] Gears API version 2.0.1.0 loaded
+2026-03-26T03:10:28 1.469 INF [MODS]     Initialized code in mod 'CustomFpvFov' in assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll)
+2026-03-26T03:10:28 1.470 INF [MODS]   Initializing mod CustomParticleLoader
+2026-03-26T03:10:28 1.470 INF [MODS]     Found ModAPI in assembly CustomParticleLoader (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomParticleLoader\CustomParticleLoader.dll), creating instance
+2026-03-26T03:10:28 1.471 INF  Loading Patch: CustomParticleEffectLoaderInit
+2026-03-26T03:10:28 1.730 INF [MODS]     Initialized code in mod 'CustomParticleLoader' in assembly CustomParticleLoader (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomParticleLoader\CustomParticleLoader.dll)
+2026-03-26T03:10:28 1.731 INF [MODS]   Initializing mod CustomPlayerActionManager
+2026-03-26T03:10:28 1.731 INF [MODS]     Found ModAPI in assembly CustomPlayerActionManager (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomPlayerActionManager\CustomPlayerActionManager.dll), creating instance
+2026-03-26T03:10:28 1.732 INF  Loading Patch: CustomPlayerActionManagerInit
+2026-03-26T03:10:28 1.802 INF Choosing new GetBindingValueInternal for XUiController for game version 2.5
+2026-03-26T03:10:28 1.809 INF [MODS]     Initialized code in mod 'CustomPlayerActionManager' in assembly CustomPlayerActionManager (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomPlayerActionManager\CustomPlayerActionManager.dll)
+2026-03-26T03:10:28 1.809 INF [MODS]   Initializing mod FPVLegs
+2026-03-26T03:10:28 1.809 INF [MODS]     Found ModAPI in assembly FPVLegs (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-FPVLegs\FPVLegs.dll), creating instance
+2026-03-26T03:10:28 1.810 INF Loading Patch: FPVLegs.FPVLegsInit
+2026-03-26T03:10:28 1.835 INF [MODS]     Initialized code in mod 'FPVLegs' in assembly FPVLegs (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-FPVLegs\FPVLegs.dll)
+2026-03-26T03:10:28 1.836 INF [MODS]     Found ModAPI in assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll), creating instance
+2026-03-26T03:10:28 1.836 INF [Gears API] Gears API version 2.0.1.0 loaded
+2026-03-26T03:10:28 1.836 INF [MODS]     Initialized code in mod 'FPVLegs' in assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll)
+2026-03-26T03:10:28 1.837 INF [MODS]   Initializing mod FullautoLauncher
+2026-03-26T03:10:28 1.837 INF [MODS]     Found ModAPI in assembly FullautoLauncher (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-FullautoLauncher\FullautoLauncher.dll), creating instance
+2026-03-26T03:10:28 1.837 INF  Loading Patch: FullautoLauncherInit
+2026-03-26T03:10:29 1.986 INF [MODS]     Initialized code in mod 'FullautoLauncher' in assembly FullautoLauncher (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-FullautoLauncher\FullautoLauncher.dll)
+2026-03-26T03:10:29 1.986 INF [MODS]   Initializing mod KeepReloading
+2026-03-26T03:10:29 1.987 INF [MODS]     Found ModAPI in assembly KeepReloading (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-KeepReloading\KeepReloading.dll), creating instance
+2026-03-26T03:10:29 1.987 INF  Loading Patch: KeepReloading.KeepReloadingInit
+2026-03-26T03:10:29 1.991 INF [MODS]     Initialized code in mod 'KeepReloading' in assembly KeepReloading (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-KeepReloading\KeepReloading.dll)
+2026-03-26T03:10:29 1.991 INF [MODS]   Initializing mod Quartz
+2026-03-26T03:10:29 1.991 INF [MODS]     Found ModAPI in assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll), creating instance
+2026-03-26T03:10:29 1.991 INF [Gears API] Gears API version 2.0.1.0 loaded
+2026-03-26T03:10:29 1.991 INF [MODS]     Initialized code in mod 'Quartz' in assembly GearsAPI (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-CustomFPVFov\GearsAPI.dll)
+2026-03-26T03:10:29 1.992 INF [MODS]     Found ModAPI in assembly Quartz (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Quartz\Quartz.dll), creating instance
+2026-03-26T03:10:29 1.994 INF [Quartz] Loading Patch
+2026-03-26T03:10:29 2.134 INF Updated culture for display texts
+2026-03-26T03:10:29 2.150 INF [Quartz] Loaded Patch
+2026-03-26T03:10:29 2.151 INF [Quartz] Loading ActionSets
+2026-03-26T03:10:29 2.153 INF [Quartz] ActionSets file version: 2
+2026-03-26T03:10:29 2.155 INF [MODS]     Initialized code in mod 'Quartz' in assembly Quartz (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\0-Quartz\Quartz.dll)
+2026-03-26T03:10:29 2.155 INF [MODS]   Initializing mod AGF-NoEAC-ConfigureWindowEnteringDuration
+2026-03-26T03:10:29 2.155 INF [MODS]     Found ModAPI in assembly windowEnteringDuration (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1\windowEnteringDuration.dll), creating instance
+2026-03-26T03:10:29 2.265 INF [MODS]     Initialized code in mod 'AGF-NoEAC-ConfigureWindowEnteringDuration' in assembly windowEnteringDuration (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConfigureWindowEnteringDuration-v1.0.1\windowEnteringDuration.dll)
+2026-03-26T03:10:29 2.265 INF [MODS]   Initializing mod AGF-NoEAC-ConsoleOpacityMod
+2026-03-26T03:10:29 2.265 INF [MODS]     Found ModAPI in assembly ConsoleOpacityMod (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConsoleOpacityMod-v1.0.0\ConsoleOpacityMod.dll), creating instance
+2026-03-26T03:10:29 2.277 INF [MODS]     Initialized code in mod 'AGF-NoEAC-ConsoleOpacityMod' in assembly ConsoleOpacityMod (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ConsoleOpacityMod-v1.0.0\ConsoleOpacityMod.dll)
+2026-03-26T03:10:29 2.277 INF [MODS]   Initializing mod AGF-NoEAC-CosmeticLockIcon
+2026-03-26T03:10:29 2.277 INF [MODS]     Found ModAPI in assembly CosmeticLockIcon (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-CosmeticLockIcon-v1.0.1\CosmeticLockIcon.dll), creating instance
+CosmeticLockIcon: Harmony patches registered.
+2026-03-26T03:10:29 2.350 INF [MODS]     Initialized code in mod 'AGF-NoEAC-CosmeticLockIcon' in assembly CosmeticLockIcon (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-CosmeticLockIcon-v1.0.1\CosmeticLockIcon.dll)
+2026-03-26T03:10:29 2.351 INF [MODS]   Initializing mod AGF-NoEAC-EnhancedPatch
+2026-03-26T03:10:29 2.351 INF [MODS]     No ModAPI found in mod DLLs
+2026-03-26T03:10:29 2.351 INF [MODS]   Initializing mod AGF-NoEAC-ExpandedInteractionPrompts
+2026-03-26T03:10:29 2.352 INF [MODS]     Found ModAPI in assembly ExpandedInteractionPrompts (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ExpandedInteractionPrompts-v0.0.1\ExpandedInteractionPrompts.dll), creating instance
+2026-03-26T03:10:29 2.413 INF [MODS]     Initialized code in mod 'AGF-NoEAC-ExpandedInteractionPrompts' in assembly ExpandedInteractionPrompts (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ExpandedInteractionPrompts-v0.0.1\ExpandedInteractionPrompts.dll)
+2026-03-26T03:10:29 2.413 INF [MODS]   Initializing mod AGF-NoEAC-GlobalStormTracker
+2026-03-26T03:10:29 2.414 INF [MODS]     Found ModAPI in assembly StormTracker (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-GlobalStormTracker-v1.0.0\StormTracker.dll), creating instance
+2026-03-26T03:10:29 2.435 INF [MODS]     Initialized code in mod 'AGF-NoEAC-GlobalStormTracker' in assembly StormTracker (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-GlobalStormTracker-v1.0.0\StormTracker.dll)
+2026-03-26T03:10:29 2.436 INF [MODS]   Initializing mod AGF-NoEAC-ItemTypeIconColor
+2026-03-26T03:10:29 2.436 INF [MODS]     Found ModAPI in assembly ItemTypeIconColor (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ItemTypeIconColor-v1.0.0\ItemTypeIconColor.dll), creating instance
+2026-03-26T03:10:29 2.479 INF [MODS]     Initialized code in mod 'AGF-NoEAC-ItemTypeIconColor' in assembly ItemTypeIconColor (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ItemTypeIconColor-v1.0.0\ItemTypeIconColor.dll)
+2026-03-26T03:10:29 2.479 INF [MODS]   Initializing mod AGF-NoEAC-OpenAllButton
+2026-03-26T03:10:29 2.480 INF [MODS]     Found ModAPI in assembly OpenAll (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-OpenAllButton-v1.0.0\OpenAll.dll), creating instance
+2026-03-26T03:10:29 2.492 INF [MODS]     Initialized code in mod 'AGF-NoEAC-OpenAllButton' in assembly OpenAll (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-OpenAllButton-v1.0.0\OpenAll.dll)
+2026-03-26T03:10:29 2.493 INF [MODS]   Initializing mod AGF-NoEAC-ScreamerAlert
+2026-03-26T03:10:29 2.493 INF [MODS]     Found ModAPI in assembly ScreamerAlert (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ScreamerAlert-v1.1.0\ScreamerAlert.dll), creating instance
+2026-03-26T03:10:29 2.538 INF [MODS]     Initialized code in mod 'AGF-NoEAC-ScreamerAlert' in assembly ScreamerAlert (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-ScreamerAlert-v1.1.0\ScreamerAlert.dll)
+2026-03-26T03:10:29 2.538 INF [MODS]   Initializing mod AGF-NoEAC-SortingBox
+2026-03-26T03:10:29 2.538 INF [MODS]     Found ModAPI in assembly RoboticInbox (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-SortingBox-v1.0.4\RoboticInbox.dll), creating instance
+2026-03-26T03:10:29 2.539 INF [RoboticInbox.ModApi] Robotic Inbox DLL Version dev-dll-version build for 7DTD dev-build-target
+2026-03-26T03:10:29 2.598 INF [RoboticInbox.Utilities.SettingsManager] Successfully loaded settings for Robotic Inbox mod; filename: robotic-inbox.json.
+2026-03-26T03:10:29 2.599 INF [RoboticInbox.Utilities.SettingsManager] 
+=== Current Settings for Robotic Inbox
+- horizontal-range: 20
+  - [recommended: 20 | must be: >= 0 & <= 128 | impact: very high]
+- vertical-range: 20
+  - [recommended: 20 | must be: >= -1 & <= 253 | -1 = bedrock-to-sky | impact: high]
+- success-notice-time: 2.0
+  - [recommended: 2.0 | must be >= 0 & <= 10 | disable with 0.0]
+- blocked-notice-time: 3.0
+  - [recommended: 3.0 | must be >= 0 & <= 10 | disable with 0.0]
+- base-siphoning-protection: True
+  - [recommended: True]
+  - if placed within an LCB, the inbox will not distribute to containers outside of that same LCB
+  - this option helps to protect players from unintentionally dumping items in nearby raider chests placed just outside of their bases
+- debug mode: False
+  - [recommended: False]
+  - enabling this adds a lot of overhead and should only be running for debugging purposes
+  - server starts with this in the False state
+=== Settings Stored In: robotic-inbox.json
+2026-03-26T03:10:29 2.600 INF [MODS]     Initialized code in mod 'AGF-NoEAC-SortingBox' in assembly RoboticInbox (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-SortingBox-v1.0.4\RoboticInbox.dll)
+2026-03-26T03:10:29 2.600 INF [MODS]   Initializing mod AGF-NoEAC-Toolbelt12Slots
+2026-03-26T03:10:29 2.600 INF [MODS]     Found ModAPI in assembly Toolbelt12Slots (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-Toolbelt12Slots-v0.0.1\Toolbelt12Slots.dll), creating instance
+Toolbelt12Slots: Harmony patches registered.
+2026-03-26T03:10:29 2.606 INF [MODS]     Initialized code in mod 'AGF-NoEAC-Toolbelt12Slots' in assembly Toolbelt12Slots (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-Toolbelt12Slots-v0.0.1\Toolbelt12Slots.dll)
+2026-03-26T03:10:29 2.606 INF [MODS]   Initializing mod OcbStoragePouch
+2026-03-26T03:10:29 2.606 INF [MODS]     Found ModAPI in assembly StoragePouch (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\OcbStoragePouch\StoragePouch.dll), creating instance
+2026-03-26T03:10:29 2.607 INF OCB Harmony Patch: OcbStoragePouch
+2026-03-26T03:10:29 2.647 INF [MODS]     Initialized code in mod 'OcbStoragePouch' in assembly StoragePouch (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\OcbStoragePouch\StoragePouch.dll)
+2026-03-26T03:10:29 2.647 INF [MODS]   Initializing mod BeyondStorage2
+2026-03-26T03:10:29 2.648 INF [MODS]     Found ModAPI in assembly BeyondStorage2 (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-BeyondStorage2-AGFSettings\BeyondStorage2.dll), creating instance
+2026-03-26T03:10:29 2.703 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiC_PowerSourceStats.BtnRefuel_OnPress
+2026-03-26T03:10:29 2.705 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiC_PowerSourceStats.BtnRefuel_OnPress in 1 places
+2026-03-26T03:10:29 2.722 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiC_IngredientEntry.GetBindingValueInternal
+2026-03-26T03:10:29 2.723 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiC_IngredientEntry.GetBindingValueInternal in 4 places
+2026-03-26T03:10:29 2.727 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiC_RecipeCraftCount.calcMaxCraftable
+2026-03-26T03:10:29 2.728 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiC_RecipeCraftCount.calcMaxCraftable in 1 places
+2026-03-26T03:10:29 2.735 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiC_RecipeList.Update
+2026-03-26T03:10:29 2.738 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiC_RecipeList.Update in 1 places
+2026-03-26T03:10:29 2.742 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiM_PlayerInventory.HasItems
+2026-03-26T03:10:29 2.742 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiM_PlayerInventory.HasItems
+2026-03-26T03:10:29 2.743 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiM_PlayerInventory.HasItems in 1 places
+2026-03-26T03:10:29 2.746 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionEntryCraft.hasItems
+2026-03-26T03:10:29 2.747 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionEntryCraft.hasItems in 1 places
+2026-03-26T03:10:29 2.753 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionEntryRepair.OnActivated
+2026-03-26T03:10:29 2.754 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionEntryRepair.OnActivated in 1 places
+2026-03-26T03:10:29 2.758 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionEntryRepair.RefreshEnabled
+2026-03-26T03:10:29 2.760 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionEntryRepair.RefreshEnabled in 1 places
+2026-03-26T03:10:29 2.835 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiC_RecipeTrackerIngredientEntry.Ingredient
+2026-03-26T03:10:29 2.835 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiC_RecipeTrackerIngredientEntry.Ingredient in 1 places
+2026-03-26T03:10:29 2.838 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiC_HUDStatBar.updateActiveItemAmmo
+2026-03-26T03:10:29 2.838 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiC_HUDStatBar.updateActiveItemAmmo in 1 places
+2026-03-26T03:10:29 2.846 INF [BeyondStorage2](v2.5.1)(Info) Transpiling BlockSecureLootSigned.OnBlockActivated
+2026-03-26T03:10:29 2.846 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched BlockSecureLootSigned.OnBlockActivated in 1 places
+2026-03-26T03:10:29 2.852 INF [BeyondStorage2](v2.5.1)(Info) Transpiling BlockSecureLoot.OnBlockActivated
+2026-03-26T03:10:29 2.852 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched BlockSecureLoot.OnBlockActivated in 1 places
+2026-03-26T03:10:29 2.857 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionAttack.SetupRadial
+2026-03-26T03:10:29 2.858 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionAttack.SetupRadial in 1 places
+2026-03-26T03:10:29 2.865 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionEntrySell.OnActivated
+2026-03-26T03:10:29 2.866 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionEntrySell.OnActivated in 1 places
+2026-03-26T03:10:29 2.872 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionEntryPurchase.RefreshEnabled
+2026-03-26T03:10:29 2.873 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionEntryPurchase.RefreshEnabled in 1 places
+2026-03-26T03:10:29 2.882 INF [BeyondStorage2](v2.5.1)(Info) Transpiling ItemActionEntryPurchase.OnActivated
+2026-03-26T03:10:29 2.882 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched ItemActionEntryPurchase.OnActivated in 1 places
+2026-03-26T03:10:29 2.894 INF [BeyondStorage2](v2.5.1)(Info) Transpiling XUiM_PlayerInventory.RefreshCurrency
+2026-03-26T03:10:29 2.894 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched XUiM_PlayerInventory.RefreshCurrency in 1 places
+2026-03-26T03:10:29 2.898 INF [BeyondStorage2](v2.5.1)(Info) Transpiling TEFeatureLockPickable.OnBlockActivated
+2026-03-26T03:10:29 2.899 INF [BeyondStorage2](v2.5.1)(Info) Successfully patched TEFeatureLockPickable.OnBlockActivated in 1 places
+2026-03-26T03:10:29 2.912 INF [MODS]     Initialized code in mod 'BeyondStorage2' in assembly BeyondStorage2 (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-BeyondStorage2-AGFSettings\BeyondStorage2.dll)
+2026-03-26T03:10:29 2.912 INF [MODS]   Initializing mod OcbStopFuelWaste
+2026-03-26T03:10:29 2.913 INF [MODS]     Found ModAPI in assembly StopFuelWaste (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-OcbStopFuelWaste\StopFuelWaste.dll), creating instance
+2026-03-26T03:10:29 2.913 INF OCB Harmony Patch: StopFuelWaste
+2026-03-26T03:10:30 2.924 INF [MODS]     Initialized code in mod 'OcbStopFuelWaste' in assembly StopFuelWaste (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-OcbStopFuelWaste\StopFuelWaste.dll)
+2026-03-26T03:10:30 2.925 INF [MODS]   Initializing mod QuickStack
+2026-03-26T03:10:30 2.925 INF [MODS]     Found ModAPI in assembly QuickStack (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-QuickStack-AGFSettings\QuickStack.dll), creating instance
+2026-03-26T03:10:30 2.931 INF [QuickStack] Loaded config in 4 ms
+2026-03-26T03:10:30 2.947 INF [MODS]     Initialized code in mod 'QuickStack' in assembly QuickStack (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\Other-QuickStack-AGFSettings\QuickStack.dll)
+2026-03-26T03:10:30 2.947 INF [MODS]   Initializing mod PathSmoothing
+2026-03-26T03:10:30 2.948 INF [MODS]     Found ModAPI in assembly PathSmoothing (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PathSmoothing\PathSmoothing.dll), creating instance
+2026-03-26T03:10:30 3.069 INF [MODS]     Initialized code in mod 'PathSmoothing' in assembly PathSmoothing (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\PathSmoothing\PathSmoothing.dll)
+2026-03-26T03:10:30 3.069 INF [MODS]   Initializing mod ServerTools
+2026-03-26T03:10:30 3.070 INF [MODS]     Found ModAPI in assembly ServerTools (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\ServerTools\ServerTools.dll), creating instance
+2026-03-26T03:10:30 3.071 INF [MODS]     Initialized code in mod 'ServerTools' in assembly ServerTools (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\ServerTools\ServerTools.dll)
+2026-03-26T03:10:30 3.071 INF [MODS]   Initializing mod WMMLootRespawnTweak
+2026-03-26T03:10:30 3.071 INF [MODS]     Found ModAPI in assembly WMMLootRespawnTweak (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMLootRespawnTweak\WMMLootRespawnTweak.dll), creating instance
+2026-03-26T03:10:30 3.072 INF  Loading Patch: WMMLootRespawnTweak_Init
+2026-03-26T03:10:30 3.078 INF [MODS]     Initialized code in mod 'WMMLootRespawnTweak' in assembly WMMLootRespawnTweak (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMLootRespawnTweak\WMMLootRespawnTweak.dll)
+2026-03-26T03:10:30 3.079 INF [MODS]   Initializing mod WMMSharedGamestageBugfix
+2026-03-26T03:10:30 3.079 INF [MODS]     Found ModAPI in assembly WMMSharedGamestageBugfix (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMSharedGamestageBugfix\WMMSharedGamestageBugfix.dll), creating instance
+2026-03-26T03:10:30 3.079 INF  Loading Patch: WMMSharedGamestageBugfix+WMMSharedGamestageBugfix_Init
+2026-03-26T03:10:30 3.084 INF [MODS]     Initialized code in mod 'WMMSharedGamestageBugfix' in assembly WMMSharedGamestageBugfix (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMSharedGamestageBugfix\WMMSharedGamestageBugfix.dll)
+2026-03-26T03:10:30 3.084 INF [MODS]   Initializing mod WMMStopBikesFallingOver
+2026-03-26T03:10:30 3.085 INF [MODS]     Found ModAPI in assembly WMMStopBikesFallingOver (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMStopBikesFallingOver\WMMStopBikesFallingOver.dll), creating instance
+2026-03-26T03:10:30 3.085 INF  Loading Patch: WMMStopBikesFallingOver_Init
+2026-03-26T03:10:30 3.111 INF [MODS]     Initialized code in mod 'WMMStopBikesFallingOver' in assembly WMMStopBikesFallingOver (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMStopBikesFallingOver\WMMStopBikesFallingOver.dll)
+2026-03-26T03:10:30 3.111 INF [MODS]   Initializing mod WMMVehicleCruiseControl
+2026-03-26T03:10:30 3.112 INF [MODS]     Found ModAPI in assembly WMMVehicleCruiseControl (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMVehicleCruiseControl\WMMVehicleCruiseControl.dll), creating instance
+2026-03-26T03:10:30 3.112 INF  Loading Patch: WMMVehicleCruiseControl+WMMVehicleCruiseControl_Init
+2026-03-26T03:10:30 3.124 INF [MODS]     Initialized code in mod 'WMMVehicleCruiseControl' in assembly WMMVehicleCruiseControl (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMVehicleCruiseControl\WMMVehicleCruiseControl.dll)
+2026-03-26T03:10:30 3.125 INF [MODS]   Initializing mod WMMVehiclesTriggerPressurePlates
+2026-03-26T03:10:30 3.125 INF [MODS]     Found ModAPI in assembly WMMVehiclesTriggerPressurePlates (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMVehiclesTriggerPressurePlates\WMMVehiclesTriggerPressurePlates.dll), creating instance
+2026-03-26T03:10:30 3.125 INF  Loading Patch: WMMVehiclesTriggerPressurePlates+WMMVehiclesTriggerPressurePlates_Init
+2026-03-26T03:10:30 3.136 INF [MODS]     Initialized code in mod 'WMMVehiclesTriggerPressurePlates' in assembly WMMVehiclesTriggerPressurePlates (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMVehiclesTriggerPressurePlates\WMMVehiclesTriggerPressurePlates.dll)
+2026-03-26T03:10:30 3.136 INF [MODS]   Initializing mod WMMWorkstationMaterialTimer
+2026-03-26T03:10:30 3.136 INF [MODS]     Found ModAPI in assembly WMMWorkstationMaterialTimer (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMWorkstationMaterialTimer\WMMWorkstationMaterialTimer.dll), creating instance
+2026-03-26T03:10:30 3.137 INF  Loading Patch: WMMWorkstationMaterialTimer+WMMWorkstationMaterialTimer_Init
+2026-03-26T03:10:30 3.143 INF [MODS]     Initialized code in mod 'WMMWorkstationMaterialTimer' in assembly WMMWorkstationMaterialTimer (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMWorkstationMaterialTimer\WMMWorkstationMaterialTimer.dll)
+2026-03-26T03:10:30 3.143 INF [MODS]   Initializing mod WMMZAirdropSpawnZeds
+2026-03-26T03:10:30 3.143 INF [MODS]     Found ModAPI in assembly WMMZAirdropSpawnZeds (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMZAirdropSpawnZeds\WMMZAirdropSpawnZeds.dll), creating instance
+2026-03-26T03:10:30 3.143 INF  Loading Patch: WMMZAirdropSpawnZeds+WMMZAirdropSpawnZeds_Init
+2026-03-26T03:10:30 3.148 INF [MODS]     Initialized code in mod 'WMMZAirdropSpawnZeds' in assembly WMMZAirdropSpawnZeds (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\WMMZAirdropSpawnZeds\WMMZAirdropSpawnZeds.dll)
+2026-03-26T03:10:30 3.148 INF [MODS]   Initializing mod z_Izayo_WeaponFixes
+2026-03-26T03:10:30 3.149 INF [MODS]     Found ModAPI in assembly IzayoUtils (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\z_7D2.5_Izayo_WeaponFixes\IzayoUtils.dll), creating instance
+2026-03-26T03:10:30 3.156 INF [MODS]     Initialized code in mod 'z_Izayo_WeaponFixes' in assembly IzayoUtils (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\z_7D2.5_Izayo_WeaponFixes\IzayoUtils.dll)
+2026-03-26T03:10:30 3.156 INF [MODS]   Initializing mod HornOpensDoors_A88
+2026-03-26T03:10:30 3.156 INF [MODS]     Found ModAPI in assembly HornOpensDoors (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\ZZZ_HornOpensDoors\HornOpensDoors.dll), creating instance
+2026-03-26T03:10:30 3.157 INF  Loading Patch: HornOpensDoors.HornOpensDoors
+2026-03-26T03:10:30 3.181 INF [MODS]     Initialized code in mod 'HornOpensDoors_A88' in assembly HornOpensDoors (in C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\ZZZ_HornOpensDoors\HornOpensDoors.dll)
+2026-03-26T03:10:30 3.182 INF [MODS] Loading done
+2026-03-26T03:10:30 3.188 INF UIAtlas UIAtlas: Pack took 2011 us
+2026-03-26T03:10:30 3.196 INF UIAtlas ItemIconAtlas: Pack took 2904 us
+2026-03-26T03:10:30 3.197 INF [MODS] Creating new atlas 'Mui' for mod 'IZY_MMVMV2'
+2026-03-26T03:10:30 3.207 INF UIAtlas UIAtlas: Pack took 5633 us
+2026-03-26T03:10:30 3.219 INF UIAtlas ItemIconAtlas: Pack took 4769 us
+2026-03-26T03:10:30 3.228 INF UIAtlas ItemIconAtlas: Pack took 2847 us
+2026-03-26T03:10:30 3.251 INF UIAtlas ItemIconAtlas: Pack took 9550 us
+2026-03-26T03:10:30 3.269 INF UIAtlas ItemIconAtlas: Pack took 7029 us
+2026-03-26T03:10:30 3.293 INF UIAtlas ItemIconAtlas: Pack took 11031 us
+2026-03-26T03:10:30 3.311 INF UIAtlas ItemIconAtlas: Pack took 7003 us
+2026-03-26T03:10:30 3.323 INF UIAtlas ItemIconAtlas: Pack took 4416 us
+2026-03-26T03:10:30 3.331 INF UIAtlas ItemIconAtlas: Pack took 2867 us
+2026-03-26T03:10:30 3.334 INF UIAtlas UIAtlas: Pack took 560 us
+2026-03-26T03:10:30 3.349 INF UIAtlas ItemIconAtlas: Pack took 7184 us
+2026-03-26T03:10:30 3.352 INF UIAtlas ItemIconAtlas: Pack took 698 us
+2026-03-26T03:10:30 3.357 INF UIAtlas ItemIconAtlas: Pack took 1273 us
+2026-03-26T03:10:30 3.358 INF UIAtlas UIAtlas: Pack took 177 us
+2026-03-26T03:10:30 3.375 INF UIAtlas ItemIconAtlas: Pack took 6956 us
+2026-03-26T03:10:30 3.389 INF UIAtlas ItemIconAtlas: Pack took 5363 us
+2026-03-26T03:10:30 3.403 INF UIAtlas UIAtlas: Pack took 10276 us
+2026-03-26T03:10:30 3.503 INF UIAtlas ItemIconAtlas: Pack took 41551 us
+2026-03-26T03:10:30 3.528 INF UIAtlas UIAtlas: Pack took 9356 us
+2026-03-26T03:10:30 3.529 INF UIAtlas UIAtlas: Pack took 321 us
+2026-03-26T03:10:30 3.549 INF UIAtlas ItemIconAtlas: Pack took 8137 us
+2026-03-26T03:10:30 3.552 INF UIAtlas UIAtlas: Pack took 278 us
+2026-03-26T03:10:30 3.553 INF UIAtlas ItemIconAtlas: Pack took 385 us
+2026-03-26T03:10:30 3.557 INF UIAtlas UIAtlas: Pack took 1214 us
+2026-03-26T03:10:30 3.558 INF [MODS] Loading localization from mod: CustomFpvFov
+2026-03-26T03:10:30 3.559 INF [MODS] Loading localization from mod: Quartz
+2026-03-26T03:10:30 3.559 INF [MODS] Loading localization from mod: IZY_MMVMV2
+2026-03-26T03:10:30 3.560 INF [MODS] Loading localization from mod: IZY_RMP_Miscpack
+2026-03-26T03:10:30 3.560 INF [MODS] Loading localization from mod: IZY_RMP_44magnum
+2026-03-26T03:10:30 3.560 INF [MODS] Loading localization from mod: IZY_RMP_45ACP
+2026-03-26T03:10:30 3.561 INF [MODS] Loading localization from mod: IZY_RMP_556pack
+2026-03-26T03:10:30 3.561 INF [MODS] Loading localization from mod: IZY_RMP_762pack
+2026-03-26T03:10:30 3.562 INF [MODS] Loading localization from mod: IZY_RMP_9mmVAL
+2026-03-26T03:10:30 3.562 INF [MODS] Loading localization from mod: IZY_RMP_Demopack
+2026-03-26T03:10:30 3.563 INF [MODS] Loading localization from mod: IZY_RMP_HVW
+2026-03-26T03:10:30 3.563 INF [MODS] Loading localization from mod: IZY_RMP_SG
+2026-03-26T03:10:30 3.564 INF [MODS] Loading localization from mod: IZY_RMP_Tech
+2026-03-26T03:10:30 3.564 INF [MODS] Loading localization from mod: IZY_melee
+2026-03-26T03:10:30 3.565 INF [MODS] Loading localization from mod: IZY_VRP
+2026-03-26T03:10:30 3.565 INF [MODS] Loading localization from mod: AGF-BackpackPlus-084Slots
+2026-03-26T03:10:30 3.566 INF [MODS] Loading localization from mod: AGF-HUDPlus-1Main
+2026-03-26T03:10:30 3.567 INF [MODS] Loading localization from mod: AGF-HUDPlus-BMCounter
+2026-03-26T03:10:30 3.568 INF [MODS] Loading localization from mod: AGF-HUDPlus-PurpleBook
+2026-03-26T03:10:30 3.569 INF [MODS] Loading localization from mod: AGF-NoEAC-ExpandedInteractionPrompts
+2026-03-26T03:10:30 3.569 INF [MODS] Loading localization from mod: AGF-NoEAC-GlobalStormTracker
+2026-03-26T03:10:30 3.570 INF [MODS] Loading localization from mod: AGF-NoEAC-OpenAllButton
+2026-03-26T03:10:30 3.570 INF [MODS] Loading localization from mod: AGF-NoEAC-ScreamerAlert
+2026-03-26T03:10:30 3.570 INF [MODS] Loading localization from mod: AGF-NoEAC-SortingBox
+2026-03-26T03:10:30 3.571 INF [MODS] Loading localization from mod: AGF-NoEAC-Toolbelt12Slots
+2026-03-26T03:10:30 3.571 INF [MODS] Loading localization from mod: AGF-VP-AmmoDisassembly
+2026-03-26T03:10:30 3.572 INF [MODS] Loading localization from mod: AGF-VP-ApiaryPlus
+2026-03-26T03:10:30 3.573 INF [MODS] Loading localization from mod: AGF-VP-ArmorHarvestMods
+2026-03-26T03:10:30 3.573 INF [MODS] Loading localization from mod: AGF-VP-AutomobilesRespawn
+2026-03-26T03:10:30 3.574 INF [MODS] Loading localization from mod: AGF-VP-BedrollPlus
+2026-03-26T03:10:30 3.575 INF [MODS] Loading localization from mod: AGF-VP-BreakItGetIt
+2026-03-26T03:10:30 3.575 INF [MODS] Loading localization from mod: AGF-VP-BuyTraderVendingMachines
+2026-03-26T03:10:30 3.575 INF [MODS] Loading localization from mod: AGF-VP-CraftSewingKits
+2026-03-26T03:10:30 3.576 INF [MODS] Loading localization from mod: AGF-VP-CraftStackEngBattCells
+2026-03-26T03:10:30 3.576 INF [MODS] Loading localization from mod: AGF-VP-CraftVitamins
+2026-03-26T03:10:30 3.576 INF [MODS] Loading localization from mod: AGF-VP-DecorationBlock
+2026-03-26T03:10:30 3.657 INF [MODS] Loading localization from mod: AGF-VP-DewsPlus
+2026-03-26T03:10:30 3.658 INF [MODS] Loading localization from mod: AGF-VP-DoorsPlus
+2026-03-26T03:10:30 3.717 INF [MODS] Loading localization from mod: AGF-VP-DrinkableAcid
+2026-03-26T03:10:30 3.717 INF [MODS] Loading localization from mod: AGF-VP-DyesPlus
+2026-03-26T03:10:30 3.718 INF [MODS] Loading localization from mod: AGF-VP-FarmingPlus
+2026-03-26T03:10:30 3.721 INF [MODS] Loading localization from mod: AGF-VP-FloraHarvester
+2026-03-26T03:10:30 3.721 INF [MODS] Loading localization from mod: AGF-VP-FuelBurnPlus
+2026-03-26T03:10:30 3.722 INF [MODS] Loading localization from mod: AGF-VP-MasterTool
+2026-03-26T03:10:30 3.722 INF [MODS] Loading localization from mod: AGF-VP-MedicationNoInsectSlow
+2026-03-26T03:10:30 3.722 INF [MODS] Loading localization from mod: AGF-VP-MiningPlus
+2026-03-26T03:10:30 3.723 INF [MODS] Loading localization from mod: AGF-VP-Mod988
+2026-03-26T03:10:30 3.723 INF [MODS] Loading localization from mod: AGF-VP-ModBundling
+2026-03-26T03:10:30 3.724 INF [MODS] Loading localization from mod: AGF-VP-PickupLanternsPlus
+2026-03-26T03:10:30 3.725 INF [MODS] Loading localization from mod: AGF-VP-PumpkinsPlus
+2026-03-26T03:10:30 3.726 INF [MODS] Loading localization from mod: AGF-VP-RenamesAlphabeticalSort
+2026-03-26T03:10:30 3.732 INF [MODS] Loading localization from mod: AGF-VP-RestorePowerAnyTime
+2026-03-26T03:10:30 3.732 INF [MODS] Loading localization from mod: AGF-VP-ScrapBatts4Acid
+2026-03-26T03:10:30 3.733 INF [MODS] Loading localization from mod: AGF-VP-SimplifiedStacks
+2026-03-26T03:10:30 3.733 INF [MODS] Loading localization from mod: AGF-VP-SmeltingPlus
+2026-03-26T03:10:30 3.734 INF [MODS] Loading localization from mod: AGF-VP-TraderAlwaysOpen
+2026-03-26T03:10:30 3.734 INF [MODS] Loading localization from mod: AGF-VP-TreesPlus
+2026-03-26T03:10:30 3.735 INF [MODS] Loading localization from mod: AGF-VP-WriteStoryOnCrate
+2026-03-26T03:10:30 3.736 INF [MODS] Loading localization from mod: FLM_Info_Suite
+2026-03-26T03:10:30 3.736 INF [MODS] Loading localization from mod: MPLogue_Better_Biomes_7D2D_v2_0_1
+2026-03-26T03:10:30 3.737 INF [MODS] Loading localization from mod: MPLogue_UrbanDecay_7D2D_v1_0
+2026-03-26T03:10:30 3.737 INF [MODS] Loading localization from mod: OcbStoragePouch
+2026-03-26T03:10:30 3.738 INF [MODS] Loading localization from mod: Bdubs_Vehicles
+2026-03-26T03:10:30 3.739 INF [MODS] Loading localization from mod: BeyondStorage2
+2026-03-26T03:10:30 3.739 INF [MODS] Loading localization from mod: DoubleGZombies2
+2026-03-26T03:10:30 3.740 INF [MODS] Loading localization from mod: VanillaExtended
+2026-03-26T03:10:30 3.740 INF [MODS] Loading localization from mod: GW71_FoundationBlock
+2026-03-26T03:10:30 3.740 INF [MODS] Loading localization from mod: LittleRedSonja_ZombiePack
+2026-03-26T03:10:30 3.741 INF [MODS] Loading localization from mod: QuickStack
+2026-03-26T03:10:30 3.741 INF [MODS] Loading localization from mod: V2_OakravenAmmoPress
+2026-03-26T03:10:30 3.742 INF [MODS] Loading localization from mod: zzzAGF-Special-Compatibilities
+2026-03-26T03:10:30 3.884 INF Loading permissions file at 'C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/serveradmin.xml'
+2026-03-26T03:10:30 3.893 WRN Ignoring unknown section in permissions file: apitokens
+2026-03-26T03:10:30 3.893 WRN Ignoring unknown section in permissions file: webmodules
+2026-03-26T03:10:30 3.894 WRN Ignoring unknown section in permissions file: webusers
+2026-03-26T03:10:30 3.894 INF Loading permissions file done.
+2026-03-26T03:10:30 3.906 INF Creating TransformDebug GameObject
+2026-03-26T03:10:30 3.911 INF [BeyondStorage2](v2.5.1)(Info) Registered command: bshelp
+2026-03-26T03:10:30 3.911 INF [BeyondStorage2](v2.5.1)(Info) Registered command: bsclearcache
+2026-03-26T03:10:30 3.911 INF [BeyondStorage2](v2.5.1)(Info) Registered command: bsreloadconfig
+2026-03-26T03:10:30 3.912 INF [BeyondStorage2](v2.5.1)(Info) Registered command: bssetconfig
+2026-03-26T03:10:30 3.913 INF [BeyondStorage2](v2.5.1)(Info) Registered command: bsshowconfig
+2026-03-26T03:10:31 3.942 INF Initiating custom controls...
+2026-03-26T03:10:31 3.945 WRN Action Set not found: KFLibPlayerActions
+2026-03-26T03:10:31 3.946 INF GameSense server not found (no props file), disabling
+2026-03-26T03:10:31 3.949 INF [Discord] Loaded settings with DiscordDisabled=True
+2026-03-26T03:10:31 3.954 INF [PartyQuests] Initialized
+2026-03-26T03:10:31 3.958 INF Awake done in 3331 ms
+2026-03-26T03:10:31 4.072 INF [XUi] Instantiating XUi from default prefab.
+2026-03-26T03:10:31 4.078 INF [XUi] XUi instantiation completed in 5 ms
+2026-03-26T03:10:31 4.173 INF [Quartz] Loading Fonts
+2026-03-26T03:10:31 4.173 INF [Quartz] Loaded Fonts
+2026-03-26T03:10:31 4.179 INF [XUi] Loading XUi asynchronously
+2026-03-26T03:10:31 4.352 INF [EOS] Read cached (NewsFeatured.xml) completed: 1875 bytes
+2026-03-26T03:10:31 4.366 INF [EOS] Read cached (News.xml) completed: 10385 bytes
+2026-03-26T03:10:31 4.633 INF Reloading serveradmin.xml
+2026-03-26T03:10:31 4.633 INF Loading permissions file at 'C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/serveradmin.xml'
+2026-03-26T03:10:31 4.633 INF Permissions file unchanged, skipping reloading
+2026-03-26T03:10:31 4.703 INF Initializing custom option control panel
+2026-03-26T03:10:31 4.705 INF Recalculating options controls grid size...
+2026-03-26T03:10:31 4.707 INF Size of tab 1 rows is set to 11
+2026-03-26T03:10:31 4.708 INF Size of tab 2 rows is set to 7
+2026-03-26T03:10:31 4.708 INF Size of tab 3 rows is set to 7
+2026-03-26T03:10:31 4.708 INF Size of tab 4 rows is set to 7
+2026-03-26T03:10:31 4.708 INF Size of tab 5 rows is set to 8
+2026-03-26T03:10:31 4.708 INF Size of tab 6 rows is set to 6
+2026-03-26T03:10:31 4.708 INF Size of tab 7 rows is set to 11
+2026-03-26T03:10:31 4.709 INF Size of tab 8 rows is set to 8
+2026-03-26T03:10:31 4.747 INF Recalculating options controller grid size...
+2026-03-26T03:10:31 4.748 INF Size of tab inpTabPlayerOnFoot rows is set to 14
+2026-03-26T03:10:31 4.748 INF Size of tab inpTabVehicle rows is set to 6
+2026-03-26T03:10:31 4.748 INF Size of tab inpTabMenus rows is set to 4
+Couldn't create a Convex Mesh from source mesh "hull_forklift_tire" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+2026-03-26T03:10:32 4.934 INF [Quartz] [UIAtlastList] UIAtlas found
+2026-03-26T03:10:32 4.985 INF [XUi] Parsing all window groups completed in 708 ms total.
+2026-03-26T03:10:32 5.251 INF [EOS] Read cached (news_featured_2026_merger.jpg) completed: 154308 bytes
+2026-03-26T03:10:32 5.263 INF [EOS] Read cached (news_featured_2026_steam_03.jpg) completed: 257286 bytes
+2026-03-26T03:10:32 5.290 INF [EOS] Read cached (news_featured_ytz2.1.jpg) completed: 123752 bytes
+2026-03-26T03:10:32 5.311 INF [EOS] Read cached (news_featured_tfpmerch.jpg) completed: 78916 bytes
+2026-03-26T03:10:32 5.329 INF [EOS] Read cached (news_featured_soundtrack.jpg) completed: 235045 bytes
+2026-03-26T03:10:32 5.359 INF [EOS] Read cached (news_game_2026_merger.jpg) completed: 84307 bytes
+2026-03-26T03:10:32 5.365 INF [EOS] Read cached (news_game_2025_2.5_stable.jpg) completed: 102102 bytes
+2026-03-26T03:10:32 5.378 INF [EOS] Read cached (news_game_2.4_stable.jpg) completed: 87456 bytes
+2026-03-26T03:10:32 5.390 INF [EOS] Read cached (news_game_2.3_stable.jpg) completed: 72704 bytes
+2026-03-26T03:10:32 5.403 INF [EOS] Read cached (news_game_2.2_stable.jpg) completed: 96101 bytes
+2026-03-26T03:10:32 5.417 INF [EOS] Read cached (news_game_2.1_stable.jpg) completed: 95868 bytes
+2026-03-26T03:10:32 5.430 INF [EOS] Read cached (news_game_06_2.0_stable.jpg) completed: 96807 bytes
+2026-03-26T03:10:33 6.752 INF Loaded default EULA
+2026-03-26T03:10:33 6.904 INF [XUi] Initialized all window groups completed in 1780 ms total.
+Couldn't create a Convex Mesh from source mesh "Head" within the maximum polygons limit (256). The partial hull will be used. Consider simplifying your mesh.
+2026-03-26T03:10:34 7.598 INF LoadTextureArraysForQuality quality -1 to 1, reload False
+2026-03-26T03:10:34 7.837 INF LoadTextureArraysForQuality took 0.238
+2026-03-26T03:10:34 7.873 INF Loaded (local): events in 0.01
+2026-03-26T03:10:34 7.914 INF Loaded (local): rwgmixer in 0.02
+2026-03-26T03:10:35 7.952 INF Loaded (local): archetypes in 0.02
+2026-03-26T03:10:35 7.985 INF Loaded (local): loadingscreen in 0.01
+2026-03-26T03:10:35 8.017 INF Added 1336 subtitle data entries and 3 speaker colors
+2026-03-26T03:10:35 8.021 INF Loaded (local): subtitles in 0.01
+2026-03-26T03:10:35 8.058 INF Loaded (local): videos in 0.01
+2026-03-26T03:10:35 8.058 INF WorldStaticData.Init() needed 3.000s
+2026-03-26T03:10:35 8.065 INF [Steamworks.NET] Login ok.
+2026-03-26T03:10:35 8.067 INF [EOS] Login
+2026-03-26T03:10:35 8.374 INF AchievementManager: Received stats and achievements from Steam
+2026-03-26T03:10:35 8.823 INF [EOS] Login succeeded, PUID: 00020b7e80d94dd482e3362716849921
+2026-03-26T03:10:35 8.823 INF [EOS] Getting native user for 00020b7e80d94dd482e3362716849921
+2026-03-26T03:10:35 8.825 INF [EOS] CopyIdToken result: Success
+2026-03-26T03:10:36 8.970 INF [BACKTRACE] Attempting to get User ID from platform: EOS
+2026-03-26T03:10:36 8.974 INF [EOS] Created RFS Request: NewsFeatured.xml
+2026-03-26T03:10:36 8.975 INF [EOS] Created RFS Request: News.xml
+2026-03-26T03:10:36 8.988 INF [EOS] Created RFS Request: DLCConfiguration
+2026-03-26T03:10:36 8.988 INF [EOS] Created RFS Request: eula_english
+2026-03-26T03:10:36 8.989 INF [PermissionsManager] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False)
+2026-03-26T03:10:36 8.997 INF [PermissionsManager] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False) Fetching Title Storage Overrides...
+2026-03-26T03:10:36 8.998 INF [EOS] Created RFS Request: PlatformOverrides
+2026-03-26T03:10:36 9.007 INF [EOS] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False)
+2026-03-26T03:10:36 9.177 INF [EOS] Read (NewsFeatured.xml) completed: Success, received 1875 bytes
+2026-03-26T03:10:36 9.178 INF [EOS] Created RFS Request: news_featured_2026_merger.jpg
+2026-03-26T03:10:36 9.178 INF [EOS] Created RFS Request: news_featured_2026_steam_03.jpg
+2026-03-26T03:10:36 9.178 INF [EOS] Created RFS Request: news_featured_ytz2.1.jpg
+2026-03-26T03:10:36 9.238 INF [EOS] Read (BlockedPlayerList) completed: Success, received 1008 bytes
+2026-03-26T03:10:36 9.239 INF [EOS] Read (News.xml) completed: Success, received 10385 bytes
+2026-03-26T03:10:36 9.240 INF [EOS] Created RFS Request: news_game_2026_merger.jpg
+2026-03-26T03:10:36 9.240 INF [EOS] Created RFS Request: news_game_2025_2.5_stable.jpg
+2026-03-26T03:10:36 9.240 INF [EOS] Created RFS Request: news_game_2.4_stable.jpg
+2026-03-26T03:10:36 9.274 INF [EOS] found external account for 0002b172a07d4fceb65f5a2bd297e0d0: Type: Steam, Id: 76561198129780068
+2026-03-26T03:10:36 9.274 INF [EOS] found external account for 0002370f792a4c42a589b97419bac41a: Type: Steam, Id: 76561198033247314
+2026-03-26T03:10:36 9.274 INF [EOS] found external account for 0002f6de59f24b25b4db0defc3e5c87a: Type: Steam, Id: 76561198287958667
+2026-03-26T03:10:36 9.274 INF [EOS] found external account for 00023f1e229a475280beaec8dc518e4e: Type: Steam, Id: 76561198065278937
+2026-03-26T03:10:36 9.275 INF [EOS] found external account for 000238446db04155b76b7576cd806e6f: Type: Steam, Id: 76561198083386264
+2026-03-26T03:10:36 9.275 INF [EOS] found external account for 0002cf77c301495caf74a2a09955de2d: Type: Steam, Id: 76561198044293904
+2026-03-26T03:10:36 9.275 INF [EOS] found external account for 00028e6f25214207a2da17a3f33275a8: Type: Steam, Id: 76561199478012851
+2026-03-26T03:10:36 9.275 INF [EOS] found external account for 0002ffcb4a0a48c3868b00274069be5c: Type: Steam, Id: 76561199436739690
+2026-03-26T03:10:36 9.308 INF [EOS] Read (DLCConfiguration) completed: Success, received 3232 bytes
+2026-03-26T03:10:36 9.310 INF [DLCTitleStorageManager] Successfully retrieved DLC configuration.
+2026-03-26T03:10:36 9.345 INF [EOS] Read (eula_english) completed: Success, received 34433 bytes
+2026-03-26T03:10:36 9.347 INF [EOS] Created RFS Request: backtraceconfig.xml
+2026-03-26T03:10:36 9.369 INF [EOS] Read (PlatformOverrides) completed: Success, received 532 bytes
+2026-03-26T03:10:36 9.371 INF [TitleStorageOverridesManager] Successfully retrieved overrides.
+2026-03-26T03:10:36 9.372 INF [PermissionsManager] ResolvePermissions(_perms: [Multiplayer, Communication, Crossplay], _canPrompt: False) Fetched Title Storage Overrides!
+2026-03-26T03:10:36 9.442 INF [EOS] Read (news_featured_2026_merger.jpg) completed: Success, received 154308 bytes
+2026-03-26T03:10:36 9.442 INF [EOS] Created RFS Request: news_featured_tfpmerch.jpg
+2026-03-26T03:10:36 9.491 INF [EOS] Read (news_featured_2026_steam_03.jpg) completed: Success, received 257286 bytes
+2026-03-26T03:10:36 9.492 INF [EOS] Created RFS Request: news_featured_soundtrack.jpg
+2026-03-26T03:10:36 9.522 INF [EOS] Read (news_featured_ytz2.1.jpg) completed: Success, received 123752 bytes
+2026-03-26T03:10:36 9.554 INF [EOS] Read (news_game_2026_merger.jpg) completed: Success, received 84307 bytes
+2026-03-26T03:10:36 9.555 INF [EOS] Created RFS Request: news_game_2.3_stable.jpg
+2026-03-26T03:10:36 9.571 INF [EOS] Read (news_game_2025_2.5_stable.jpg) completed: Success, received 102102 bytes
+2026-03-26T03:10:36 9.572 INF [EOS] Created RFS Request: news_game_2.2_stable.jpg
+2026-03-26T03:10:36 9.614 INF [EOS] Read (news_game_2.4_stable.jpg) completed: Success, received 87456 bytes
+2026-03-26T03:10:36 9.615 INF [EOS] Created RFS Request: news_game_2.1_stable.jpg
+2026-03-26T03:10:36 9.669 INF [EOS] Read (backtraceconfig.xml) completed: Success, received 2424 bytes
+2026-03-26T03:10:36 9.671 INF [BACKTRACE] Bug reporting Enabled with save uploading: Disabled
+2026-03-26T03:10:36 9.671 INF [BACKTRACE] Save Attaching Feature: Disabled
+2026-03-26T03:10:36 9.671 INF [BACKTRACE] Entire World Attaching Feature: Disabled
+2026-03-26T03:10:36 9.672 INF [BACKTRACE] Bug reporting Disabled with save uploading: Disabled
+2026-03-26T03:10:36 9.672 INF Backtrace Configuration refreshed from XML: Enabled False
+2026-03-26T03:10:36 9.672 INF [BACKTRACE] Bug reporting: Disabled
+2026-03-26T03:10:36 9.672 INF [BACKTRACE] Bug reporting attach save feature: Disabled
+2026-03-26T03:10:36 9.672 INF [BACKTRACE] Bug reporting attach entire world feature: Disabled
+2026-03-26T03:10:36 9.687 INF [TitleStorageOverridesManager] Using cached last success.
+2026-03-26T03:10:36 9.759 INF [EOS] Read (news_featured_tfpmerch.jpg) completed: Success, received 78916 bytes
+2026-03-26T03:10:36 9.824 INF [EOS] Read (news_game_2.3_stable.jpg) completed: Success, received 72704 bytes
+2026-03-26T03:10:36 9.825 INF [EOS] Created RFS Request: news_game_06_2.0_stable.jpg
+2026-03-26T03:10:36 9.859 INF [EOS] Read (news_featured_soundtrack.jpg) completed: Success, received 235045 bytes
+2026-03-26T03:10:36 9.889 INF [EOS] Read (news_game_2.2_stable.jpg) completed: Success, received 96101 bytes
+2026-03-26T03:10:37 9.938 INF [EOS] Read (news_game_2.1_stable.jpg) completed: Success, received 95868 bytes
+2026-03-26T03:10:37 10.016 INF [EOS] Read (news_game_06_2.0_stable.jpg) completed: Success, received 96807 bytes
+2026-03-26T03:10:40 12.962 INF NET: Starting offline server.
+2026-03-26T03:10:40 12.963 INF [PlatformApplication] restart required = False
+2026-03-26T03:10:40 12.963 INF StartGame
+2026-03-26T03:10:40 12.974 INF NetPackageManager Init
+2026-03-26T03:10:40 13.015 INF [XUi] Instantiating XUi from default prefab.
+2026-03-26T03:10:40 13.030 INF [XUi] XUi instantiation completed in 14 ms
+2026-03-26T03:10:40 13.038 INF Persistent GamePrefs saved
+GamePref.AdminFileName = serveradmin.xml
+GamePref.AirDropFrequency = 0
+GamePref.AirDropMarker = False
+GamePref.AISmellMode = 3
+GamePref.AllowSpawnNearBackpack = True
+GamePref.AllowSpawnNearFriend = 2
+GamePref.AutopilotMode = 0
+GamePref.BedrollDeadZoneSize = 15
+GamePref.BedrollExpiryTime = 45
+GamePref.BiomeProgression = False
+GamePref.BlockDamageAI = 100
+GamePref.BlockDamageAIBM = 100
+GamePref.BlockDamagePlayer = 100
+GamePref.BloodMoonEnemyCount = 8
+GamePref.BloodMoonFrequency = 7
+GamePref.BloodMoonRange = 0
+GamePref.BloodMoonWarning = 8
+GamePref.BuildCreate = False
+GamePref.CameraRestrictionMode = 0
+GamePref.ConnectToServerIP = 83.223.206.54
+GamePref.ConnectToServerPort = 26930
+GamePref.CreateLevelDim = 4096
+GamePref.CreateLevelName = My Level
+GamePref.CreativeMenuEnabled = False
+GamePref.DayCount = 3
+GamePref.DayLightLength = 18
+GamePref.DayNightLength = 60
+GamePref.DeathPenalty = 3
+GamePref.DebugMenuEnabled = False
+GamePref.DebugMenuShowTasks = False
+GamePref.DebugPanelsEnabled = ,Ply,Ge,Sp,Ch,Ca,Fo,Pr,Plx,
+GamePref.DebugStopEnemiesMoving = False
+GamePref.DropOnDeath = 4
+GamePref.DropOnQuit = 0
+GamePref.DynamicMeshDistance = 100
+GamePref.DynamicMeshEnabled = True
+GamePref.DynamicMeshLandClaimBuffer = 1
+GamePref.DynamicMeshLandClaimOnly = True
+GamePref.DynamicMeshMaxItemCache = 1
+GamePref.DynamicMeshMaxRegionCache = 1
+GamePref.DynamicMeshUseImposters = True
+GamePref.DynamicSpawner = 
+GamePref.EACEnabled = False
+GamePref.EnableMapRendering = False
+GamePref.EnemyDifficulty = 0
+GamePref.EnemySpawnMode = True
+GamePref.EulaLatestVersion = 2
+GamePref.EulaVersionAccepted = 2
+GamePref.FavoriteServersList = 
+GamePref.FragLimit = 20
+GamePref.GameDifficulty = 1
+GamePref.GameGuidClient = 
+GamePref.GameMode = GameModeSurvival
+GamePref.GameName = TestGame2
+GamePref.GameNameClient = My Game
+GamePref.GameVersion = V 2.5
+GamePref.GameWorld = Navezgane
+GamePref.HideCommandExecutionLog = 0
+GamePref.IgnoreEOSSanctions = False
+GamePref.JarRefund = 0
+GamePref.JoiningOptions = True
+GamePref.LandClaimCount = 5
+GamePref.LandClaimDeadZone = 30
+GamePref.LandClaimDecayMode = 0
+GamePref.LandClaimExpiryTime = 7
+GamePref.LandClaimOfflineDelay = 0
+GamePref.LandClaimOfflineDurabilityModifier = 4
+GamePref.LandClaimOnlineDurabilityModifier = 4
+GamePref.LandClaimSize = 41
+GamePref.Language = 
+GamePref.LanguageBrowser = 
+GamePref.LastGameResetRevision = 13
+GamePref.LastLoadedPrefab = body_shop_01
+GamePref.LastLoadingTipRead = 5
+GamePref.LootAbundance = 100
+GamePref.LootRespawnDays = 5
+GamePref.LootTimer = 
+GamePref.MatchLength = 10
+GamePref.MaxChunkAge = -1
+GamePref.MaxQueuedMeshLayers = 40
+GamePref.MaxSpawnedAnimals = 50
+GamePref.MaxSpawnedZombies = 64
+GamePref.MaxUncoveredMapChunksPerPlayer = 524288
+GamePref.NoGraphicsMode = False
+GamePref.OptionsAllowController = True
+GamePref.OptionsAmbientVolumeLevel = 0.4949833
+GamePref.OptionsAudioOcclusion = False
+GamePref.OptionsAutoPartyWithFriends = False
+GamePref.OptionsBackgroundGlobalOpacity = 0.95
+GamePref.OptionsBindingsResetRevision = 1
+GamePref.OptionsChatCommunication = True
+GamePref.OptionsControllerAimAssists = True
+GamePref.OptionsControllerCursorHoverSensitivity = 0.5
+GamePref.OptionsControllerCursorSnap = True
+GamePref.OptionsControllerIconStyle = 0
+GamePref.OptionsControllerJoystickLayout = 0
+GamePref.OptionsControllerLookAcceleration = 4
+GamePref.OptionsControllerLookAxisDeadzone = 0.1
+GamePref.OptionsControllerLookInvert = False
+GamePref.OptionsControllerMoveAxisDeadzone = 0.1
+GamePref.OptionsControllerSensitivityX = 0.35
+GamePref.OptionsControllerSensitivityY = 0.25
+GamePref.OptionsControllerTriggerEffects = False
+GamePref.OptionsControllerVehicleSensitivity = 1
+GamePref.OptionsControllerVibration = True
+GamePref.OptionsControllerVibrationStrength = 2
+GamePref.OptionsControllerWeaponAiming = False
+GamePref.OptionsControllerZoomSensitivity = 0.5
+GamePref.OptionsControlsDefaultQuickAction = 0
+GamePref.OptionsControlsResetRevision = 7
+GamePref.OptionsControlsSprintLock = 0
+GamePref.OptionsCrossplay = True
+GamePref.OptionsDisableChunkLODs = False
+GamePref.OptionsDisableXmlEvents = False
+GamePref.OptionsDynamicMusicDailyTime = 0.45
+GamePref.OptionsDynamicMusicEnabled = False
+GamePref.OptionsFilterProfanity = False
+GamePref.OptionsForegroundGlobalOpacity = 1
+GamePref.OptionsGfx3PCameraMode = 0
+GamePref.OptionsGfxAA = 2
+GamePref.OptionsGfxAASharpness = 0
+GamePref.OptionsGfxBloom = False
+GamePref.OptionsGfxBrightness = 0.5
+GamePref.OptionsGfxCameraDistance3P = 0.7500001
+GamePref.OptionsGfxDefaultFirstPersonCamera = True
+GamePref.OptionsGfxDOF = False
+GamePref.OptionsGfxDynamicMinFPS = 30
+GamePref.OptionsGfxDynamicMode = 0
+GamePref.OptionsGfxDynamicScale = 1
+GamePref.OptionsGfxFOV = 65
+GamePref.OptionsGfxFOV3P = 65
+GamePref.OptionsGfxFSRPreset = 4
+GamePref.OptionsGfxGrassDistance = 1
+GamePref.OptionsGfxLODDistance = 0.5
+GamePref.OptionsGfxMotionBlur = 1
+GamePref.OptionsGfxMotionBlurEnabled = True
+GamePref.OptionsGfxObjQuality = 2
+GamePref.OptionsGfxOcclusion = False
+GamePref.OptionsGfxQualityPreset = 5
+GamePref.OptionsGfxReflectQuality = 1
+GamePref.OptionsGfxReflectShadows = False
+GamePref.OptionsGfxResetRevision = 4
+GamePref.OptionsGfxResolution = 0
+GamePref.OptionsGfxShadowDistance = 1
+GamePref.OptionsGfxShadowQuality = 1
+GamePref.OptionsGfxSSAO = True
+GamePref.OptionsGfxSSReflections = 1
+GamePref.OptionsGfxStreamMipmaps = True
+GamePref.OptionsGfxSunShafts = True
+GamePref.OptionsGfxTerrainQuality = 1
+GamePref.OptionsGfxTexFilter = 1
+GamePref.OptionsGfxTexQuality = 1
+GamePref.OptionsGfxTreeDistance = 4
+GamePref.OptionsGfxUpscalerMode = 5
+GamePref.OptionsGfxViewDistance = 7
+GamePref.OptionsGfxVsync = 1
+GamePref.OptionsGfxWaterPtlLimiter = 0.5
+GamePref.OptionsGfxWaterQuality = 0
+GamePref.OptionsHudOpacity = 1
+GamePref.OptionsHudSize = 1
+GamePref.OptionsInterfaceSensitivity = 0.5
+GamePref.OptionsIntroMovieEnabled = True
+GamePref.OptionsInvertMouse = False
+GamePref.OptionsJournalPopup = True
+GamePref.OptionsLookSensitivity = 0.5
+GamePref.OptionsMenuMusicVolumeLevel = 0
+GamePref.OptionsMicVolumeLevel = 0.75
+GamePref.OptionsMumblePositionalAudioSupport = False
+GamePref.OptionsMusicVolumeLevel = 0
+GamePref.OptionsOverallAudioVolumeLevel = 0.2374582
+GamePref.OptionsPlayChanceFrequency = 3
+GamePref.OptionsPlayChanceProbability = 0.983
+GamePref.OptionsPlayerModel = playerFemale
+GamePref.OptionsPlayerModelTexture = Player/Male/Player_male
+GamePref.OptionsPOICulling = 1
+GamePref.OptionsPoiVolumesSkipDeleteConfirmation = False
+GamePref.OptionsQuestsAutoAccept = False
+GamePref.OptionsQuestsAutoShare = False
+GamePref.OptionsScreenBoundsValue = 1
+GamePref.OptionsSelectionBoxAlphaMultiplier = 0.4
+GamePref.OptionsShowCompass = True
+GamePref.OptionsShowConsoleButton = False
+GamePref.OptionsShowCrosshair = True
+GamePref.OptionsStabSpawnBlocksOnGround = True
+GamePref.OptionsSubtitlesEnabled = True
+GamePref.OptionsTempCelsius = False
+GamePref.OptionsUiCompassUseEnglishCardinalDirections = False
+GamePref.OptionsUiFpsScaling = 1
+GamePref.OptionsVehicleLookSensitivity = 0.5
+GamePref.OptionsVoiceChatEnabled = False
+GamePref.OptionsVoiceInputDevice = {0ddc3191-c5b7-4174-ac21-64ce2e53da8b}
+GamePref.OptionsVoiceOutputDevice = {0.0.0.00000000}.{a82a988f-1f6d-4199-8dd2-156ac5510f67}
+GamePref.OptionsVoiceVolumeLevel = 0.75
+GamePref.OptionsWeaponAiming = False
+GamePref.OptionsZoomAccel = 0.5
+GamePref.OptionsZoomSensitivity = 0.3
+GamePref.PartySharedKillRange = 100
+GamePref.PersistentPlayerProfiles = False
+GamePref.PlayerAutologin = False
+GamePref.PlayerKillingMode = 2
+GamePref.PlayerName = AuroraGiggleFairy
+GamePref.PlayerSafeZoneHours = 7
+GamePref.PlayerSafeZoneLevel = 5
+GamePref.PlayerToken = 
+GamePref.PlaytestBiome = 3
+GamePref.QuestProgressionDailyLimit = -1
+GamePref.RebuildMap = False
+GamePref.Region = Europe
+GamePref.SaveDataLimit = -1
+GamePref.SaveDataLimitType = Unlimited
+GamePref.SelectionContextMode = 0
+GamePref.SelectionOperationMode = 0
+GamePref.ServerAdminSlots = 0
+GamePref.ServerAdminSlotsPermission = 0
+GamePref.ServerAllowCrossplay = True
+GamePref.ServerDescription = 
+GamePref.ServerDisabledNetworkProtocols = 
+GamePref.ServerEACPeerToPeer = False
+GamePref.ServerEnabled = False
+GamePref.ServerIP = 
+GamePref.ServerIsPublic = True
+GamePref.ServerLoginConfirmationText = 
+GamePref.ServerMatchmakingGroup = 
+GamePref.ServerMaxAllowedViewDistance = 12
+GamePref.ServerMaxPlayerCount = 1
+GamePref.ServerMaxWorldTransferSpeedKiBs = 512
+GamePref.ServerName = Default Server
+GamePref.ServerPort = 26900
+GamePref.ServerReservedSlots = 0
+GamePref.ServerReservedSlotsPermission = 100
+GamePref.ServerVisibility = 0
+GamePref.ServerWebsiteURL = 
+GamePref.ShowFriendPlayerOnMap = True
+GamePref.SkipSpawnButton = False
+GamePref.StormFreq = 100
+GamePref.TelnetEnabled = False
+GamePref.TelnetFailedLoginLimit = 10
+GamePref.TelnetFailedLoginsBlocktime = 10
+GamePref.TelnetPort = 25003
+GamePref.TerminalWindowEnabled = True
+GamePref.TwitchBloodMoonAllowed = True
+GamePref.TwitchServerPermission = 90
+GamePref.UNUSED_ControlPanelEnabled = False
+GamePref.UNUSED_ControlPanelPort = 8080
+GamePref.UNUSED_LastLoadedPrefabSize = 
+GamePref.UNUSED_NewGameSetDefaults = 
+GamePref.UNUSED_OptionsBloom = 
+GamePref.UNUSED_OptionsDOF = 
+GamePref.UNUSED_OptionsFieldOfViewNew = 
+GamePref.UNUSED_OptionsGamma = 
+GamePref.UNUSED_OptionsGfxGameplayResolutionHeight = 
+GamePref.UNUSED_OptionsGfxGameplayResolutionWidth = 
+GamePref.UNUSED_OptionsGfxUMATexQuality = 
+GamePref.UNUSED_OptionsMotionBlur = 
+GamePref.UNUSED_OptionsObjectBlur = 
+GamePref.UNUSED_OptionsReflectionBounces = 
+GamePref.UNUSED_OptionsReflectionCullList = 
+GamePref.UNUSED_OptionsReflectionFarClip = 
+GamePref.UNUSED_OptionsReflectionRefreshMode = 
+GamePref.UNUSED_OptionsReflectionShadowDistance = 
+GamePref.UNUSED_OptionsReflectionTimeSlicingMode = 
+GamePref.UNUSED_OptionsSSAO = 
+GamePref.UNUSED_OptionsStreamingMipmapsBudget = 
+GamePref.UNUSED_OptionsSunShafts = 
+GamePref.UNUSED_PlayerId = 
+GamePref.UNUSED_SaveGameFolder = 
+GamePref.UNUSED_UserDataFolder = 
+GamePref.WebDashboardEnabled = False
+GamePref.WebDashboardPort = 8080
+GamePref.WebDashboardUrl = 
+GamePref.WorldGenSeed = 
+GamePref.WorldGenSize = 8192
+GamePref.XPMultiplier = 100
+GamePref.ZombieBMMove = 3
+GamePref.ZombieFeralMove = 3
+GamePref.ZombieFeralSense = 0
+GamePref.ZombieMove = 0
+GamePref.ZombieMoveNight = 3
+GamePref.ZombiePlayers = True
+GameStat.AirDropFrequency = 0
+GameStat.AirDropMarker = True
+GameStat.AllowedViewDistance = 12
+GameStat.AnimalCount = 0
+GameStat.AutoParty = False
+GameStat.BedrollExpiryTime = 45
+GameStat.BiomeProgression = True
+GameStat.BlockDamagePlayer = 100
+GameStat.BloodMoonDay = 0
+GameStat.BloodMoonEnemyCount = 8
+GameStat.BloodMoonWarning = 8
+GameStat.CameraRestrictionMode = 0
+GameStat.ChunkStabilityEnabled = True
+GameStat.CurrentRoundIx = 0
+GameStat.DayLightLength = 18
+GameStat.DayLimitActive = False
+GameStat.DayLimitThisRound = 0
+GameStat.DeathPenalty = XPOnly
+GameStat.DropOnDeath = 1
+GameStat.DropOnQuit = 0
+GameStat.EnemyCount = 0
+GameStat.EnemyDifficulty = Normal
+GameStat.EnemySpawnMode = True
+GameStat.FragLimitActive = False
+GameStat.FragLimitThisRound = 0
+GameStat.GameDifficulty = 2
+GameStat.GameDifficultyBonus = 1
+GameStat.GameModeId = 0
+GameStat.GameState = 0
+GameStat.GlobalMessageToShow = 
+GameStat.IsCreativeMenuEnabled = False
+GameStat.IsFlyingEnabled = False
+GameStat.IsPlayerCollisionEnabled = True
+GameStat.IsPlayerDamageEnabled = True
+GameStat.IsResetMapOnRestart = False
+GameStat.IsSaveSupplyCrates = True
+GameStat.IsSpawnEnemies = True
+GameStat.IsSpawnNearOtherPlayer = False
+GameStat.IsTeleportEnabled = False
+GameStat.IsVersionCheckDone = False
+GameStat.JarRefund = 0
+GameStat.LandClaimCount = 5
+GameStat.LandClaimDeadZone = 30
+GameStat.LandClaimDecayMode = 0
+GameStat.LandClaimExpiryTime = 3
+GameStat.LandClaimOfflineDelay = 0
+GameStat.LandClaimOfflineDurabilityModifier = 32
+GameStat.LandClaimOnlineDurabilityModifier = 32
+GameStat.LandClaimSize = 41
+GameStat.LoadScene = 
+GameStat.LootTimer = 
+GameStat.OptionsPOICulling = 0
+GameStat.PartySharedKillRange = 100
+GameStat.PlayerKillingMode = KillStrangersOnly
+GameStat.QuestProgressionDailyLimit = 4
+GameStat.ScoreDiedMultiplier = -5
+GameStat.ScorePlayerKillMultiplier = 1
+GameStat.ScoreZombieKillMultiplier = 1
+GameStat.ShowAllPlayersOnMap = False
+GameStat.ShowFriendPlayerOnMap = True
+GameStat.ShowSpawnWindow = False
+GameStat.ShowWindow = 
+GameStat.StormFreq = 0
+GameStat.TimeLimitActive = False
+GameStat.TimeLimitThisRound = 0
+GameStat.TimeOfDayIncPerSec = 20
+GameStat.TwitchBloodMoonAllowed = True
+GameStat.UNUSED_ShowZombieCounter = 
+GameStat.XPMultiplier = 100
+GameStat.ZombieHordeMeter = False
+2026-03-26T03:10:40 13.119 INF StartAsServer
+2026-03-26T03:10:40 13.130 INF Setting for 'DeathPenalty' does not match the default (server will go to the modded category): current = 3, default = 1
+2026-03-26T03:10:40 13.131 INF Setting for 'DropOnDeath' does not match the default (server will go to the modded category): current = 4, default = 1
+2026-03-26T03:10:40 13.131 INF Setting for 'LootRespawnDays' does not match the default (server will go to the modded category): current = 5, default = 7
+2026-03-26T03:10:40 13.131 INF Setting for 'AirDropFrequency' does not match the default (server will go to the modded category): current = 0, default = 72
+2026-03-26T03:10:40 13.229 INF Loaded (local): events in 0.01
+2026-03-26T03:10:40 13.618 INF Set Microsplat diffuse: MicroSplatConfig_diff_tarray_1 (UnityEngine.Texture2DArray)
+2026-03-26T03:10:40 13.618 INF Set Microsplat normals: MicroSplatConfig_normal_tarray_1 (UnityEngine.Texture2DArray)
+2026-03-26T03:10:40 13.619 INF Set Microsplat smooth:  MicroSplatConfig_smoothAO_tarray_1 (UnityEngine.Texture2DArray)
+2026-03-26T03:10:40 13.626 INF Loaded (local): materials in 0.37
+2026-03-26T03:10:40 13.665 INF Loaded (local): physicsbodies in 0.02
+2026-03-26T03:10:40 13.698 INF Loaded (local): painting in 0.01
+2026-03-26T03:10:40 13.774 INF Loaded (local): shapes in 0.01
+Unloading 5 Unused Serialized files (Serialized files now loaded: 97)
+2026-03-26T03:10:59 32.801 INF Block IDs with mapping
+2026-03-26T03:10:59 32.812 INF Block IDs total 44009, terr 44007, last 41978
+2026-03-26T03:10:59 32.827 INF Loaded (local): blocks in 15.92
+Unloading 39640 unused Assets to reduce memory usage. Loaded Objects now: 311886.
+Total: 362.446400 ms (FindLiveObjects: 14.682900 ms CreateObjectMapping: 7.325400 ms MarkObjects: 325.294900 ms  DeleteObjects: 15.143100 ms)
+
+2026-03-26T03:11:00 33.319 INF Loaded (local): progression in 0.08
+2026-03-26T03:11:00 33.815 INF Loaded (local): buffs in 0.35
+2026-03-26T03:11:00 33.850 INF Loaded (local): misc in 0.01
+2026-03-26T03:11:03 36.708 INF Original path:#@modfolder(IZY_RMP_762pack):Resources/IZY_762_Pack_MainResource_SNP_MMR.unity3d?IZY_FRAGExplosive762round_effect.Prefab
+2026-03-26T03:11:03 36.708 INF Hashed index:54078
+2026-03-26T03:11:03 36.709 INF Bundle path: C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\7D1.0_Izayo_WeaponpackRemastered_762pack/Resources/IZY_762_Pack_MainResource_SNP_MMR.unity3d
+2026-03-26T03:11:04 37.370 INF Original path:#@modfolder(IZY_RMP_Demopack):Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_DemolisEffect_RPG_HE.Prefab
+2026-03-26T03:11:04 37.370 INF Hashed index:39771
+2026-03-26T03:11:04 37.370 INF Bundle path: C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\7D1.0_Izayo_WeaponpackRemastered_DemolitionPack/Resources/IZY_Demolis_Effects_and_Projectiles.unity3d
+2026-03-26T03:11:04 37.374 INF Original path:#@modfolder(IZY_RMP_Demopack):Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_DemolisEffect_RPG_Incendiary.Prefab
+2026-03-26T03:11:04 37.375 INF Hashed index:5842
+2026-03-26T03:11:04 37.375 INF Bundle path: C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\7D1.0_Izayo_WeaponpackRemastered_DemolitionPack/Resources/IZY_Demolis_Effects_and_Projectiles.unity3d
+2026-03-26T03:11:04 37.378 INF Original path:#@modfolder(IZY_RMP_Demopack):Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_LGL_Effect_25mmFRAGS.Prefab
+2026-03-26T03:11:04 37.378 INF Hashed index:16366
+2026-03-26T03:11:04 37.378 INF Bundle path: C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\7D1.0_Izayo_WeaponpackRemastered_DemolitionPack/Resources/IZY_Demolis_Effects_and_Projectiles.unity3d
+2026-03-26T03:11:04 37.379 INF Original path:#@modfolder(IZY_RMP_Demopack):Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_LGL_Effect_25mmHE.Prefab
+2026-03-26T03:11:04 37.380 INF Hashed index:56954
+2026-03-26T03:11:04 37.380 INF Bundle path: C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\7D1.0_Izayo_WeaponpackRemastered_DemolitionPack/Resources/IZY_Demolis_Effects_and_Projectiles.unity3d
+2026-03-26T03:11:07 40.045 INF Original path:#@modfolder(IZY_RMP_HVW):Resources/IZY_FlameThrower_asset.unity3d?IZY_Flamethrowner_DOT.Prefab
+2026-03-26T03:11:07 40.046 INF Hashed index:24065
+2026-03-26T03:11:07 40.046 INF Bundle path: C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\7D1.0_Izayo_WeaponpackRemastered_Heavy_WeaponPack/Resources/IZY_FlameThrower_asset.unity3d
+2026-03-26T03:11:07 40.050 INF Original path:#@modfolder(IZY_RMP_HVW):Resources/IZY_FlameThrower_asset.unity3d?IZY_Flamethrowner_DOT.Prefab
+2026-03-26T03:11:07 40.050 INF Hashed index:24065
+2026-03-26T03:11:07 40.051 INF Original path:#@modfolder(IZY_RMP_HVW):Resources/IZY_FlameThrower_asset.unity3d?IZY_Flamethrowner_DOT.Prefab
+2026-03-26T03:11:07 40.051 INF Hashed index:24065
+2026-03-26T03:11:07 40.051 INF Original path:#@modfolder(IZY_RMP_HVW):Resources/IZY_FlameThrower_asset.unity3d?IZY_Flamethrowner_DOT.Prefab
+2026-03-26T03:11:07 40.051 INF Hashed index:24065
+2026-03-26T03:11:07 40.171 INF Loaded (local): items in 4.06
+2026-03-26T03:11:07 40.206 WRN XML patch for "item_modifiers.xml" from mod "IZY_RMP_SG" did not apply: <append xpath="/item_modifiers/item_modifier[@name='IZYgunT3TradshotgunTrenchGunM1897']">
+  <item_property_overrides name="IZYgunT3TACshotgunSPAS12G">
+    <property name="Meshfile" value="#@modfolder(IZY_RMP_SG):Resources/IZY_Shotgun_Pack_MainResource.unity3d?IZY_SG_M1897trenchgun_Short.Prefab" />
+  </item_property_overrides>
+</append> (line 13 at pos 3)
+2026-03-26T03:11:07 40.311 INF Item IDs with mapping
+2026-03-26T03:11:07 40.311 INF ItemIDs from Mapping
+2026-03-26T03:11:07 40.316 INF ItemClass assignLeftOverItems 68084 of 81920
+2026-03-26T03:11:07 40.394 INF Loaded (local): item_modifiers in 0.08
+2026-03-26T03:11:07 40.576 INF Loaded (local): entityclasses in 0.13
+2026-03-26T03:11:07 40.631 INF Loaded (local): qualityinfo in 0.02
+2026-03-26T03:11:08 41.010 INF Loaded (local): sounds in 0.26
+2026-03-26T03:11:08 41.294 INF Loaded (local): recipes in 0.04
+2026-03-26T03:11:08 41.333 INF Loaded (local): blockplaceholders in 0.02
+2026-03-26T03:11:08 41.527 INF Loaded (local): loot in 0.03
+2026-03-26T03:11:10 43.059 INF Loaded (local): entitygroups in 0.03
+2026-03-26T03:11:10 43.116 INF Loaded (local): utilityai in 0.02
+2026-03-26T03:11:10 43.183 INF Loaded (local): vehicles in 0.01
+2026-03-26T03:11:10 43.219 INF Loaded (local): rwgmixer in 0.01
+2026-03-26T03:11:10 43.255 INF Loaded (local): weathersurvival in 0.01
+2026-03-26T03:11:10 43.292 INF Loaded (local): archetypes in 0.01
+2026-03-26T03:11:10 43.333 INF Loaded (local): challenges in 0.02
+2026-03-26T03:11:10 43.406 INF Loaded (local): quests in 0.05
+2026-03-26T03:11:10 43.455 INF Loaded (local): traders in 0.01
+2026-03-26T03:11:10 43.496 INF Loaded (local): npc in 0.02
+2026-03-26T03:11:10 43.535 INF Loaded (local): dialogs in 0.01
+2026-03-26T03:11:10 43.580 INF Loaded (local): ui_display in 0.02
+2026-03-26T03:11:10 43.623 INF Loaded (local): nav_objects in 0.02
+2026-03-26T03:11:10 43.678 INF Loaded (local): gamestages in 0.02
+2026-03-26T03:11:10 43.913 INF Loaded (local): gameevents in 0.20
+2026-03-26T03:11:11 43.992 INF Loaded (local): twitch in 0.04
+2026-03-26T03:11:11 44.034 INF Loaded (local): twitch_events in 0.01
+2026-03-26T03:11:11 44.086 INF Loaded (local): dmscontent in 0.03
+2026-03-26T03:11:11 44.122 INF Loaded (local): XUi_Common/styles in 0.01
+2026-03-26T03:11:11 44.159 INF Loaded (local): XUi_Common/controls in 0.01
+2026-03-26T03:11:11 44.195 INF Loaded (local): XUi/styles in 0.01
+2026-03-26T03:11:11 44.238 INF Loaded (local): XUi/controls in 0.01
+2026-03-26T03:11:11 44.267 WRN XML patch for "XUi/windows.xml" from mod "AGF-HUDPlus-1Main" did not apply: <remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"></remove> (line 751 at pos 6)
+2026-03-26T03:11:11 44.268 WRN XML patch for "XUi/windows.xml" from mod "AGF-HUDPlus-1Main" did not apply: <remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/vehicle_item_stack"></remove> (line 755 at pos 6)
+2026-03-26T03:11:11 44.269 WRN XML patch for "XUi/windows.xml" from mod "AGF-HUDPlus-1Main" did not apply: <conditional>
+  <!--Manages what to add for 7d2d version 2.2+ if without one of my backpacks-->
+  <if cond="game_version() &gt;= version(1,2,2) and game_version() &lt; version(1,2,5) and mod_loaded('AGF-BackpackPlus-60Slots') == false and mod_loaded('AGF-BackpackPlus-72Slots') == false and mod_loaded('AGF-BackpackPlus-84Slots') == false and mod_loaded('AGF-BackpackPlus-119Slots') == false">
+    <set xpath="/windows/window[@name='windowLooting']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+    <set xpath="/windows/window[@name='windowVehicleStorage']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+    <remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"></remove>
+    <append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']">
+      <item_stackAGF name="0" />
+    </append>
+    <remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/item_stack"></remove>
+    <append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']">
+      <item_stackAGF name="0" />
+    </append>
+  </if>
+  <if cond="game_version() &gt;= version(1,2,5) and mod_loaded('AGF-BackpackPlus-60Slots') == false and mod_loaded('AGF-BackpackPlus-72Slots') == false and mod_loaded('AGF-BackpackPlus-84Slots') == false and mod_loaded('AGF-BackpackPlus-119Slots') == false">
+    <set xpath="/windows/window[@name='windowLooting']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+    <set xpath="/windows/window[@name='windowVehicleStorage']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+    <remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"></remove>
+    <append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']">
+      <item_stackAGF name="0" />
+    </append>
+    <remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/vehicle_item_stack"></remove>
+    <append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']">
+      <vehicle_item_stackAGF name="0" />
+    </append>
+  </if>
+</conditional> (line 735 at pos 3)
+2026-03-26T03:11:11 44.557 INF Loaded (local): XUi/windows in 0.01
+2026-03-26T03:11:11 44.593 INF Loaded (local): XUi/xui in 0.01
+2026-03-26T03:11:11 44.599 INF [Quartz] Loading Fonts
+2026-03-26T03:11:11 44.600 INF [Quartz] Loaded Fonts
+2026-03-26T03:11:11 44.617 INF [XUi] Loading XUi asynchronously
+2026-03-26T03:11:12 44.933 INF Loaded (local): biomes in 0.12
+2026-03-26T03:11:12 45.206 INF Loaded (local): worldglobal in 0.07
+2026-03-26T03:11:12 45.433 INF Loaded (local): spawning in 0.08
+2026-03-26T03:11:12 45.660 INF Loaded (local): loadingscreen in 0.07
+2026-03-26T03:11:12 45.876 INF Added 1336 subtitle data entries and 3 speaker colors
+2026-03-26T03:11:12 45.903 INF Loaded (local): subtitles in 0.05
+2026-03-26T03:11:13 46.081 INF Loaded (local): videos in 0.05
+2026-03-26T03:11:13 46.129 INF [XUi] Parsing all window groups completed in 1277 ms total.
+2026-03-26T03:11:13 46.668 INF Loading players.xml
+2026-03-26T03:11:13 46.679 INF createWorld: Navezgane, TestGame2, GameModeSurvival
+2026-03-26T03:11:13 46.679 INF Occlusion: Disabled
+2026-03-26T03:11:13 46.729 INF Started thread ChunkRegeneration
+2026-03-26T03:11:13 46.730 INF Started thread ChunkCalc
+2026-03-26T03:11:13 46.730 INF Started thread ChunkMeshBake
+2026-03-26T03:11:13 46.813 INF World.Load: Navezgane
+2026-03-26T03:11:13 46.824 INF BloodMoon SetDay: day 14, last day 7, freq 7, range 0
+2026-03-26T03:11:13 46.859 INF Started thread WaterSimulationApplyChanges
+2026-03-26T03:11:14 47.834 INF ShapeControllers: 96
+2026-03-26T03:11:17 50.722 INF [XUi] Initialized all window groups completed in 1958 ms total.
+2026-03-26T03:11:18 50.921 INF Started thread GenerateChunks
+2026-03-26T03:11:18 51.169 INF Calculating world hashes took 235 ms (world size 193 MiB)
+2026-03-26T03:11:18 51.171 INF Initial ENABLE_FILE_BACKED_ARRAYS == False
+2026-03-26T03:11:18 51.219 INF GenWorldFromRaw load dtm took 286ms
+2026-03-26T03:11:18 51.268 INF Biomes image size w= 3072, h = 3072
+2026-03-26T03:11:18 51.735 INF GenWorldFromRaw biomes took 515ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 138)
+Unloading 1366 unused Assets to reduce memory usage. Loaded Objects now: 654938.
+Total: 728.605000 ms (FindLiveObjects: 33.455000 ms CreateObjectMapping: 12.753300 ms MarkObjects: 678.701800 ms  DeleteObjects: 3.694600 ms)
+
+2026-03-26T03:11:20 53.291 INF GenWorldFromRaw shader control textures took 470ms
+2026-03-26T03:11:20 53.613 INF Computed 505 chunk groups containing a total of 9726 chunks. Largest group contains 435 chunks.
+2026-03-26T03:11:20 53.628 INF Started thread SaveChunks C:\Users\rft30\AppData\Roaming\7DaysToDie\Saves\Navezgane\TestGame2\Region
+2026-03-26T03:11:20 53.636 INF GenWorldFromRaw misc took 344ms
+2026-03-26T03:11:20 53.916 INF GenWorldFromRaw splats took 279ms
+Unloading 0 Unused Serialized files (Serialized files now loaded: 138)
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 654942.
+Total: 717.482200 ms (FindLiveObjects: 30.018700 ms CreateObjectMapping: 11.887000 ms MarkObjects: 673.238000 ms  DeleteObjects: 2.338000 ms)
+
+2026-03-26T03:11:22 55.383 INF [DECO] read 83735
+2026-03-26T03:11:22 55.428 INF Dynamic Music Initialized on Server
+2026-03-26T03:11:22 55.437 INF Dynamic Music Initialized on Client
+2026-03-26T03:11:22 55.437 INF Begin DMS Conductor Preload Routine
+2026-03-26T03:11:22 55.438 INF Preloading LayeredSection Exploration : Type: DynamicMusic.Adventure
+2026-03-26T03:11:22 55.439 INF Loading new config for Exploration...
+2026-03-26T03:11:22 55.444 INF Loading new ClipSets for Exploration...
+2026-03-26T03:11:22 55.617 INF Exploration loaded new config and clipsets
+2026-03-26T03:11:22 55.651 INF Preloading LayeredSection Suspense : Type: DynamicMusic.Adventure
+2026-03-26T03:11:22 55.652 INF Loading new config for Suspense...
+2026-03-26T03:11:22 55.654 INF Loading new ClipSets for Suspense...
+2026-03-26T03:11:22 55.745 INF Suspense loaded new config and clipsets
+2026-03-26T03:11:22 55.779 INF Preloading LayeredSection Combat : Type: DynamicMusic.Combat
+2026-03-26T03:11:22 55.779 INF Loading new config for Combat...
+2026-03-26T03:11:22 55.782 INF Loading new ClipSets for Combat...
+2026-03-26T03:11:22 55.859 INF Combat loaded new config and clipsets
+2026-03-26T03:11:22 55.891 INF Preloading LayeredSection Bloodmoon : Type: DynamicMusic.Bloodmoon
+2026-03-26T03:11:22 55.892 INF Loading new config for Bloodmoon...
+2026-03-26T03:11:23 56.056 INF [EOS] Created RFS Request: drops.xml
+2026-03-26T03:11:23 56.155 INF AstarManager Init
+2026-03-26T03:11:23 56.402 INF [EOS] Read (drops.xml) completed: Success, received 781 bytes
+2026-03-26T03:11:23 56.406 INF fetching Twitch entitlements for s76561198039400585
+2026-03-26T03:11:23 56.499 INF createWorld() done
+2026-03-26T03:11:23 56.872 INF Successfully fetched Twitch entitlements
+2026-03-26T03:11:25 58.222 INF Created player with id=171
+2026-03-26T03:11:25 58.230 INF [PartyQuests] Player registered: [type=EntityPlayerLocal, name=AuroraGiggleFairy, id=171]
+2026-03-26T03:11:25 58.408 INF Respawning: LoadedGame
+2026-03-26T03:11:25 58.412 INF Loaded player
+2026-03-26T03:11:25 58.536 INF 2415 VehicleManager read #0, id 2232, vehicleBicycle, (667.7, 61.0, 874.7), chunk 41, 54
+2026-03-26T03:11:25 58.536 INF 2415 VehicleManager read #1, id 2231, vehicleBicycleOldBV, (665.2, 61.0, 876.1), chunk 41, 54
+2026-03-26T03:11:25 58.536 INF VehicleManager C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/Navezgane/TestGame2/vehicles.dat, loaded 2
+2026-03-26T03:11:25 58.537 INF DroneManager C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/Navezgane/TestGame2/drones.dat, loaded 0
+2026-03-26T03:11:25 58.538 INF TurretTracker C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/Navezgane/TestGame2/turrets.dat, loaded 0
+Unloading 3 Unused Serialized files (Serialized files now loaded: 173)
+Unloading 2259 unused Assets to reduce memory usage. Loaded Objects now: 670181.
+Total: 724.844300 ms (FindLiveObjects: 30.644700 ms CreateObjectMapping: 12.039900 ms MarkObjects: 678.087200 ms  DeleteObjects: 4.072300 ms)
+
+2026-03-26T03:11:26 59.696 INF 60sec delta: 0,current: 3644942,desired: 3673102
+2026-03-26T03:11:26 59.697 INF [Backtrace] Updated Statistics
+2026-03-26T03:11:26 59.796 INF OpenSpawnWindow
+2026-03-26T03:11:26 59.808 INF Loading dymesh settings
+2026-03-26T03:11:26 59.808 INF Dynamic Mesh Settings
+2026-03-26T03:11:26 59.808 INF Use Imposter Values: True
+2026-03-26T03:11:26 59.809 INF Only Player Areas: True
+2026-03-26T03:11:26 59.809 INF Player Area Buffer: 1
+2026-03-26T03:11:26 59.809 INF Max View Distance: 100
+2026-03-26T03:11:26 59.809 INF Regen all on new world: False
+2026-03-26T03:11:26 59.835 INF Dymesh: Prepping dynamic mesh. Resend Default: True
+2026-03-26T03:11:26 59.836 INF Dymesh: Mesh location: C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/Navezgane/TestGame2/DynamicMeshes/
+2026-03-26T03:11:26 59.837 INF [RoboticInbox.Utilities.StorageManager] Mod recognizes you as the host, so it will begin managing containers.
+2026-03-26T03:11:26 59.838 INF [RoboticInbox.Utilities.StorageManager] Attempting to verify blocks for Robotic Inbox mod.
+2026-03-26T03:11:26 59.840 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInbox (block id: 24628) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.841 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecure (block id: 24629) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.841 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecure (block id: 24629) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.841 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxRed (block id: 24630) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.841 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxOrange (block id: 24631) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.841 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxYellow (block id: 24632) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.841 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxGreen (block id: 24633) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.842 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxPink (block id: 24634) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.842 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxPurple (block id: 24635) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.842 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxGrey (block id: 24636) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.842 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxWhite (block id: 24637) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.842 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxArmyGreen (block id: 24638) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.842 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxCobalt (block id: 24639) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.843 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureRed (block id: 24640) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.843 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureRed (block id: 24640) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.843 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureOrange (block id: 24641) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.843 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureOrange (block id: 24641) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.844 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureYellow (block id: 24642) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.844 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureYellow (block id: 24642) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.844 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureGreen (block id: 24643) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.844 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureGreen (block id: 24643) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecurePink (block id: 24644) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecurePink (block id: 24644) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecurePurple (block id: 24645) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecurePurple (block id: 24645) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureGrey (block id: 24646) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureGrey (block id: 24646) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.845 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureWhite (block id: 24647) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.846 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureWhite (block id: 24647) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.846 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureArmyGreen (block id: 24648) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.846 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureArmyGreen (block id: 24648) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.846 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureCobalt (block id: 24649) verified as an Insecure Robotic Inbox Block.
+2026-03-26T03:11:26 59.846 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxInsecureCobalt (block id: 24649) verified as a Block with a Repairable Lock.
+2026-03-26T03:11:26 59.846 INF [RoboticInbox.Utilities.StorageManager] cntRoboticInboxVariantHelper (block id: 24650) verified as a Robotic Inbox Block.
+2026-03-26T03:11:26 59.849 INF [RoboticInbox.Utilities.StorageManager] LandClaimRadius found to be 20m
+2026-03-26T03:11:26 59.852 INF StartGame done
+2026-03-26T03:11:27 60.635 INF Respawn almost done
+2026-03-26T03:11:27 60.645 INF PlayerSpawnedInWorld (reason: LoadedGame, position: 734, 61, 877): localplayer
+2026-03-26T03:11:27 60.648 INF 2466+0 Origin Reposition (0.0, 0.0, 0.0) to (720.0, 48.0, 864.0)
+2026-03-26T03:11:27 60.788 INF AuroraGiggleFairy onNewBiomeEntered +buffForest_Hazard
+2026-03-26T03:11:27 60.815 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerLootStage
+2026-03-26T03:11:27 60.815 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerBagUsedSlots
+2026-03-26T03:11:27 60.816 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerBagSize
+2026-03-26T03:11:27 60.817 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerColdResist
+2026-03-26T03:11:27 60.818 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerCoreTemp
+2026-03-26T03:11:27 60.818 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerHeatResist
+2026-03-26T03:11:27 60.830 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerArmor
+2026-03-26T03:11:27 60.830 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerExplosionResist
+2026-03-26T03:11:27 60.830 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerCritResist
+2026-03-26T03:11:27 60.831 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerDamage
+2026-03-26T03:11:27 60.831 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerBlockDamage
+2026-03-26T03:11:27 60.832 INF [PlayerStatController] [XUiC_PlayerStats] Adding binding with bindingName = PlayerMobility
+2026-03-26T03:11:27 60.856 INF Dymesh: Warming dynamic mesh
+2026-03-26T03:11:27 60.857 INF Dymesh: Creating dynamic mesh manager
+2026-03-26T03:11:27 60.859 INF Dymesh: Awake
+2026-03-26T03:11:27 60.860 INF Dymesh: Mesh location: C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/Navezgane/TestGame2/DynamicMeshes/
+2026-03-26T03:11:27 60.861 INF Dymesh: Loading Items: C:\Users\rft30\AppData\Roaming/7DaysToDie\Saves/Navezgane/TestGame2/DynamicMeshes/
+2026-03-26T03:11:27 60.862 INF Dymesh: Loaded Items: 0
+2026-03-26T03:11:27 60.863 INF Dymesh: Loading all items took: 0.0019912 seconds.
+2026-03-26T03:11:27 60.866 INF Meshlist count is now 1
+2026-03-26T03:11:27 60.867 INF Meshlist count is now 2
+2026-03-26T03:11:27 60.868 INF Force load took 0 seconds
+2026-03-26T03:11:27 60.869 INF Clearing queues.
+2026-03-26T03:11:27 60.869 INF Cleared queues.
+2026-03-26T03:11:27 60.870 INF Dynamic thread starting
+2026-03-26T03:11:27 60.871 INF Dymesh door replacement: imposterBlock
+The referenced script (UnityEngine.Rendering.Universal.UniversalAdditionalLightData) on this Behaviour is missing!
+The referenced script on this Behaviour (Game Object 'headlight') is missing!
+2026-03-26T03:11:28 61.305 INF 2490 Vehicle PostInit [type=EntityBicycle, name=vehicleBicycleOldBV, id=2231], (665.22, 60.99, 876.07) (chunk 41, 54), rbPos (720.00, 48.00, 864.00)
+2026-03-26T03:11:28 61.308 INF Refresh Vehicle Position Waypoint 2231 False
+2026-03-26T03:11:28 61.309 INF 2490 VehicleManager loaded #1, id 2231, [type=EntityBicycle, name=vehicleBicycleOldBV, id=2231], (665.2, 61.0, 876.1), chunk 41, 54 (41, 54), owner EOS_00020b7e80d94dd482e3362716849921
+2026-03-26T03:11:28 61.319 INF 2490 Vehicle PostInit [type=EntityBicycle, name=vehicleBicycle, id=2232], (667.69, 60.99, 874.67) (chunk 41, 54), rbPos (720.00, 48.00, 864.00)
+2026-03-26T03:11:28 61.319 INF Refresh Vehicle Position Waypoint 2232 False
+2026-03-26T03:11:28 61.320 INF 2490 VehicleManager loaded #0, id 2232, [type=EntityBicycle, name=vehicleBicycle, id=2232], (667.7, 61.0, 874.7), chunk 41, 54 (41, 54), owner EOS_00020b7e80d94dd482e3362716849921
+2026-03-26T03:11:28 61.320 INF 2490 VehicleManager Update loaded 2
+Toolbelt12Slots DEBUG | in=0 final=0 shift=False key=Alpha1 keySlot=0 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=1 final=1 shift=False key=Alpha2 keySlot=1 focused=0 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=2 final=2 shift=False key=Alpha3 keySlot=2 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=3 final=3 shift=False key=Alpha4 keySlot=3 focused=2 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=4 final=4 shift=False key=Alpha5 keySlot=4 focused=3 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=5 final=5 shift=False key=Alpha6 keySlot=5 focused=4 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=6 final=6 shift=False key=Alpha7 keySlot=6 focused=5 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=7 final=7 shift=False key=Alpha8 keySlot=7 focused=6 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=8 final=8 shift=False key=Alpha9 keySlot=8 focused=7 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=9 final=9 shift=False key=Alpha0 keySlot=9 focused=8 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+2026-03-26T03:11:32 65.794 INF AuroraGiggleFairy WeatherStatusTick  to default
+2026-03-26T03:11:32 65.795 INF AuroraGiggleFairy WeatherBuffUpdate , indoors False
+Toolbelt12Slots DEBUG | in=-1 final=10 shift=False key=Minus keySlot=10 focused=9 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=-1 final=11 shift=False key=Equals keySlot=11 focused=10 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=0 final=0 shift=True key=Alpha1 keySlot=0 focused=11 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=1 final=1 shift=True key=Alpha2 keySlot=1 focused=0 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+2026-03-26T03:11:39 72.610 INF [DECO] written 83735, in 10ms
+2026-03-26T03:11:39 72.613 INF [DECO] write thread 2ms
+Toolbelt12Slots DEBUG | in=2 final=2 shift=True key=Alpha3 keySlot=2 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=3 final=3 shift=True key=Alpha4 keySlot=3 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=4 final=4 shift=True key=Alpha5 keySlot=4 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=5 final=5 shift=True key=Alpha6 keySlot=5 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=6 final=6 shift=True key=Alpha7 keySlot=6 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=7 final=7 shift=True key=Alpha8 keySlot=7 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=8 final=8 shift=True key=Alpha9 keySlot=8 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=9 final=9 shift=True key=Alpha0 keySlot=9 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=-1 final=10 shift=True key=Minus keySlot=10 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=-1 final=11 shift=True key=Equals keySlot=11 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+2026-03-26T03:11:48 81.329 INF Saving 101 of chunks took 861ms
+Toolbelt12Slots DEBUG | in=0 final=0 shift=True key=Alpha1 keySlot=0 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=1 final=1 shift=True key=Alpha2 keySlot=1 focused=0 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+Toolbelt12Slots DEBUG | in=2 final=2 shift=True key=Alpha3 keySlot=2 focused=1 public=12 shiftOffset=12 secondRowActive=False vanillaOffsetActive=False vanillaOffset=0
+2026-03-26T03:11:55 88.614 INF Saving 105 of chunks took 1010ms
+2026-03-26T03:11:56 89.539 INF Disconnect
+2026-03-26T03:11:56 89.548 INF [NET] ServerShutdown
+2026-03-26T03:11:56 89.548 INF NET: Stopping server protocols
+2026-03-26T03:11:56 89.549 INF SaveAndCleanupWorld
+2026-03-26T03:11:56 89.550 INF Refresh Vehicle Position Waypoint 2231 True
+2026-03-26T03:11:56 89.550 INF Refresh Vehicle Position Waypoint 2232 True
+2026-03-26T03:11:57 90.478 INF Saving 104 of chunks took 914ms
+2026-03-26T03:11:57 90.483 INF [Steamworks.NET] Exiting Lobby
+2026-03-26T03:11:57 90.484 INF [Steamworks.NET] Stopping server
+2026-03-26T03:11:57 90.485 INF [PlayerInteractions] Shutdown, record disconnect for all currently connected players
+2026-03-26T03:11:57 90.486 INF [PartyQuests] Player unregistered
+2026-03-26T03:11:58 91.724 INF [MODS] Loading localization from mod: CustomFpvFov
+2026-03-26T03:11:58 91.748 INF [MODS] Loading localization from mod: Quartz
+2026-03-26T03:11:58 91.773 INF [MODS] Loading localization from mod: IZY_MMVMV2
+2026-03-26T03:11:58 91.786 INF [MODS] Loading localization from mod: IZY_RMP_Miscpack
+2026-03-26T03:11:58 91.798 INF [MODS] Loading localization from mod: IZY_RMP_44magnum
+2026-03-26T03:11:58 91.810 INF [MODS] Loading localization from mod: IZY_RMP_45ACP
+2026-03-26T03:11:58 91.822 INF [MODS] Loading localization from mod: IZY_RMP_556pack
+2026-03-26T03:11:58 91.835 INF [MODS] Loading localization from mod: IZY_RMP_762pack
+2026-03-26T03:11:58 91.847 INF [MODS] Loading localization from mod: IZY_RMP_9mmVAL
+2026-03-26T03:11:58 91.860 INF [MODS] Loading localization from mod: IZY_RMP_Demopack
+2026-03-26T03:11:58 91.873 INF [MODS] Loading localization from mod: IZY_RMP_HVW
+2026-03-26T03:11:58 91.885 INF [MODS] Loading localization from mod: IZY_RMP_SG
+2026-03-26T03:11:58 91.897 INF [MODS] Loading localization from mod: IZY_RMP_Tech
+2026-03-26T03:11:58 91.910 INF [MODS] Loading localization from mod: IZY_melee
+2026-03-26T03:11:59 91.923 INF [MODS] Loading localization from mod: IZY_VRP
+2026-03-26T03:11:59 91.936 INF [MODS] Loading localization from mod: AGF-BackpackPlus-084Slots
+2026-03-26T03:11:59 91.949 INF [MODS] Loading localization from mod: AGF-HUDPlus-1Main
+2026-03-26T03:11:59 91.962 INF [MODS] Loading localization from mod: AGF-HUDPlus-BMCounter
+2026-03-26T03:11:59 91.987 INF [MODS] Loading localization from mod: AGF-HUDPlus-PurpleBook
+2026-03-26T03:11:59 92.045 INF [MODS] Loading localization from mod: AGF-NoEAC-ExpandedInteractionPrompts
+2026-03-26T03:11:59 92.057 INF [MODS] Loading localization from mod: AGF-NoEAC-GlobalStormTracker
+2026-03-26T03:11:59 92.069 INF [MODS] Loading localization from mod: AGF-NoEAC-OpenAllButton
+2026-03-26T03:11:59 92.081 INF [MODS] Loading localization from mod: AGF-NoEAC-ScreamerAlert
+2026-03-26T03:11:59 92.093 INF [MODS] Loading localization from mod: AGF-NoEAC-SortingBox
+2026-03-26T03:11:59 92.106 INF [MODS] Loading localization from mod: AGF-NoEAC-Toolbelt12Slots
+2026-03-26T03:11:59 92.141 INF [MODS] Loading localization from mod: AGF-VP-AmmoDisassembly
+2026-03-26T03:11:59 92.154 INF [MODS] Loading localization from mod: AGF-VP-ApiaryPlus
+2026-03-26T03:11:59 92.179 INF [MODS] Loading localization from mod: AGF-VP-ArmorHarvestMods
+2026-03-26T03:11:59 92.194 INF [MODS] Loading localization from mod: AGF-VP-AutomobilesRespawn
+2026-03-26T03:11:59 92.208 INF [MODS] Loading localization from mod: AGF-VP-BedrollPlus
+2026-03-26T03:11:59 92.233 INF [MODS] Loading localization from mod: AGF-VP-BreakItGetIt
+2026-03-26T03:11:59 92.245 INF [MODS] Loading localization from mod: AGF-VP-BuyTraderVendingMachines
+2026-03-26T03:11:59 92.258 INF [MODS] Loading localization from mod: AGF-VP-CraftSewingKits
+2026-03-26T03:11:59 92.271 INF [MODS] Loading localization from mod: AGF-VP-CraftStackEngBattCells
+2026-03-26T03:11:59 92.283 INF [MODS] Loading localization from mod: AGF-VP-CraftVitamins
+2026-03-26T03:11:59 92.295 INF [MODS] Loading localization from mod: AGF-VP-DecorationBlock
+2026-03-26T03:11:59 92.387 INF [MODS] Loading localization from mod: AGF-VP-DewsPlus
+2026-03-26T03:11:59 92.404 INF [MODS] Loading localization from mod: AGF-VP-DoorsPlus
+2026-03-26T03:11:59 92.442 INF [MODS] Loading localization from mod: AGF-VP-DrinkableAcid
+2026-03-26T03:11:59 92.455 INF [MODS] Loading localization from mod: AGF-VP-DyesPlus
+2026-03-26T03:11:59 92.468 INF [MODS] Loading localization from mod: AGF-VP-FarmingPlus
+2026-03-26T03:11:59 92.483 INF [MODS] Loading localization from mod: AGF-VP-FloraHarvester
+2026-03-26T03:11:59 92.495 INF [MODS] Loading localization from mod: AGF-VP-FuelBurnPlus
+2026-03-26T03:11:59 92.507 INF [MODS] Loading localization from mod: AGF-VP-MasterTool
+2026-03-26T03:11:59 92.531 INF [MODS] Loading localization from mod: AGF-VP-MedicationNoInsectSlow
+2026-03-26T03:11:59 92.543 INF [MODS] Loading localization from mod: AGF-VP-MiningPlus
+2026-03-26T03:11:59 92.556 INF [MODS] Loading localization from mod: AGF-VP-Mod988
+2026-03-26T03:11:59 92.568 INF [MODS] Loading localization from mod: AGF-VP-ModBundling
+2026-03-26T03:11:59 92.604 INF [MODS] Loading localization from mod: AGF-VP-PickupLanternsPlus
+2026-03-26T03:11:59 92.639 INF [MODS] Loading localization from mod: AGF-VP-PumpkinsPlus
+2026-03-26T03:11:59 92.686 INF [MODS] Loading localization from mod: AGF-VP-RenamesAlphabeticalSort
+2026-03-26T03:11:59 92.705 INF [MODS] Loading localization from mod: AGF-VP-RestorePowerAnyTime
+2026-03-26T03:11:59 92.718 INF [MODS] Loading localization from mod: AGF-VP-ScrapBatts4Acid
+2026-03-26T03:11:59 92.741 INF [MODS] Loading localization from mod: AGF-VP-SimplifiedStacks
+2026-03-26T03:11:59 92.754 INF [MODS] Loading localization from mod: AGF-VP-SmeltingPlus
+2026-03-26T03:11:59 92.812 INF [MODS] Loading localization from mod: AGF-VP-TraderAlwaysOpen
+2026-03-26T03:11:59 92.858 INF [MODS] Loading localization from mod: AGF-VP-TreesPlus
+2026-03-26T03:11:59 92.906 INF [MODS] Loading localization from mod: AGF-VP-WriteStoryOnCrate
+2026-03-26T03:12:00 92.966 INF [MODS] Loading localization from mod: FLM_Info_Suite
+2026-03-26T03:12:00 92.991 INF [MODS] Loading localization from mod: MPLogue_Better_Biomes_7D2D_v2_0_1
+2026-03-26T03:12:00 93.004 INF [MODS] Loading localization from mod: MPLogue_UrbanDecay_7D2D_v1_0
+2026-03-26T03:12:00 93.017 INF [MODS] Loading localization from mod: OcbStoragePouch
+2026-03-26T03:12:00 93.030 INF [MODS] Loading localization from mod: Bdubs_Vehicles
+2026-03-26T03:12:00 93.044 INF [MODS] Loading localization from mod: BeyondStorage2
+2026-03-26T03:12:00 93.057 INF [MODS] Loading localization from mod: DoubleGZombies2
+2026-03-26T03:12:00 93.070 INF [MODS] Loading localization from mod: VanillaExtended
+2026-03-26T03:12:00 93.082 INF [MODS] Loading localization from mod: GW71_FoundationBlock
+2026-03-26T03:12:00 93.095 INF [MODS] Loading localization from mod: LittleRedSonja_ZombiePack
+2026-03-26T03:12:00 93.108 INF [MODS] Loading localization from mod: QuickStack
+2026-03-26T03:12:00 93.120 INF [MODS] Loading localization from mod: V2_OakravenAmmoPress
+2026-03-26T03:12:00 93.231 INF [MODS] Loading localization from mod: zzzAGF-Special-Compatibilities
+2026-03-26T03:12:00 93.377 INF [EOS] Created RFS Request: NewsFeatured.xml
+2026-03-26T03:12:00 93.377 INF [EOS] Created RFS Request: News.xml
+2026-03-26T03:12:00 93.378 INF [EOS] Created RFS Request: eula_english
+2026-03-26T03:12:00 93.391 INF [TitleStorageOverridesManager] Using cached last success.
+2026-03-26T03:12:00 93.392 INF AstarManager Cleanup
+2026-03-26T03:12:00 93.396 INF Clearing queues.
+2026-03-26T03:12:00 93.396 INF Cleared queues.
+2026-03-26T03:12:01 94.398 INF Clearing queues.
+2026-03-26T03:12:01 94.398 INF Cleared queues.
+2026-03-26T03:12:01 94.403 INF World.Unload
+2026-03-26T03:12:01 94.407 INF Exited thread GenerateChunks
+2026-03-26T03:12:01 94.417 INF Refresh Vehicle Position Waypoint 2232 True
+2026-03-26T03:12:01 94.418 INF 5226 VehicleManager RemoveTrackedVehicle [type=EntityBicycle, name=vehicleBicycle, id=2232], Unloaded
+2026-03-26T03:12:01 94.418 INF Refresh Vehicle Position Waypoint 2231 True
+2026-03-26T03:12:01 94.419 INF 5226 VehicleManager RemoveTrackedVehicle [type=EntityBicycle, name=vehicleBicycleOldBV, id=2231], Unloaded
+2026-03-26T03:12:02 95.271 INF Exited thread SaveChunks C:\Users\rft30\AppData\Roaming\7DaysToDie\Saves\Navezgane\TestGame2\Region
+2026-03-26T03:12:02 95.314 INF World.Cleanup
+2026-03-26T03:12:02 95.319 INF Exited thread ChunkRegeneration
+2026-03-26T03:12:02 95.324 INF Exited thread ChunkCalc
+2026-03-26T03:12:02 95.325 INF Exited thread ChunkMeshBake
+2026-03-26T03:12:02 95.332 INF Exited thread WaterSimulationApplyChanges
+2026-03-26T03:12:02 95.335 INF VehicleManager saving 2 (0 + 2)
+2026-03-26T03:12:02 95.336 INF 5226 VehicleManager write #0, id 2232, vehicleBicycle, (667.7, 61.0, 874.7), chunk 41, 54
+2026-03-26T03:12:02 95.336 INF 5226 VehicleManager write #1, id 2231, vehicleBicycleOldBV, (665.2, 61.0, 876.1), chunk 41, 54
+2026-03-26T03:12:02 95.338 INF VehicleManager saved 926 bytes
+2026-03-26T03:12:02 95.338 INF DroneManager saving 0 (0 + 0)
+2026-03-26T03:12:02 95.340 INF DroneManager saved 9 bytes
+2026-03-26T03:12:02 95.341 INF TurretTracker saving 0 (0 + 0)
+2026-03-26T03:12:02 95.342 INF TurretTracker saved 9 bytes
+2026-03-26T03:12:02 95.370 INF Persistent GamePrefs saved
+2026-03-26T03:12:02 95.370 INF Custom Explosion Manager cleanup...
+2026-03-26T03:12:02 95.625 INF [EOS] Read (BlockedPlayerList) completed: Success, received 1008 bytes
+2026-03-26T03:12:02 95.635 INF [EOS] found external account for 0002b172a07d4fceb65f5a2bd297e0d0: Type: Steam, Id: 76561198129780068
+2026-03-26T03:12:02 95.635 INF [EOS] found external account for 0002370f792a4c42a589b97419bac41a: Type: Steam, Id: 76561198033247314
+2026-03-26T03:12:02 95.636 INF [EOS] found external account for 0002f6de59f24b25b4db0defc3e5c87a: Type: Steam, Id: 76561198287958667
+2026-03-26T03:12:02 95.636 INF [EOS] found external account for 00023f1e229a475280beaec8dc518e4e: Type: Steam, Id: 76561198065278937
+2026-03-26T03:12:02 95.636 INF [EOS] found external account for 000238446db04155b76b7576cd806e6f: Type: Steam, Id: 76561198083386264
+2026-03-26T03:12:02 95.636 INF [EOS] found external account for 0002cf77c301495caf74a2a09955de2d: Type: Steam, Id: 76561198044293904
+2026-03-26T03:12:02 95.637 INF [EOS] found external account for 00028e6f25214207a2da17a3f33275a8: Type: Steam, Id: 76561199478012851
+2026-03-26T03:12:02 95.637 INF [EOS] found external account for 0002ffcb4a0a48c3868b00274069be5c: Type: Steam, Id: 76561199436739690
+2026-03-26T03:12:02 95.746 INF [EOS] Read (NewsFeatured.xml) completed: Success, received 1875 bytes
+2026-03-26T03:12:02 95.747 INF [EOS] Created RFS Request: news_featured_2026_merger.jpg
+2026-03-26T03:12:02 95.747 INF [EOS] Created RFS Request: news_featured_2026_steam_03.jpg
+2026-03-26T03:12:02 95.748 INF [EOS] Created RFS Request: news_featured_ytz2.1.jpg
+2026-03-26T03:12:02 95.830 INF [EOS] Read (News.xml) completed: Success, received 10385 bytes
+2026-03-26T03:12:02 95.831 INF [EOS] Created RFS Request: news_game_2026_merger.jpg
+2026-03-26T03:12:02 95.831 INF [EOS] Created RFS Request: news_game_2025_2.5_stable.jpg
+2026-03-26T03:12:02 95.832 INF [EOS] Created RFS Request: news_game_2.4_stable.jpg
+2026-03-26T03:12:02 95.832 INF [EOS] Read (eula_english) completed: Success, received 34433 bytes
+2026-03-26T03:12:02 95.833 INF [EOS] Created RFS Request: backtraceconfig.xml
+2026-03-26T03:12:03 95.988 INF [EOS] Read (news_featured_2026_merger.jpg) completed: Success, received 154308 bytes
+2026-03-26T03:12:03 95.989 INF [EOS] Created RFS Request: news_featured_tfpmerch.jpg
+2026-03-26T03:12:03 96.003 INF [EOS] Read (news_featured_ytz2.1.jpg) completed: Success, received 123752 bytes
+2026-03-26T03:12:03 96.004 INF [EOS] Created RFS Request: news_featured_soundtrack.jpg
+2026-03-26T03:12:03 96.075 INF [EOS] Read (news_featured_2026_steam_03.jpg) completed: Success, received 257286 bytes
+2026-03-26T03:12:03 96.118 INF [EOS] Read (news_game_2026_merger.jpg) completed: Success, received 84307 bytes
+2026-03-26T03:12:03 96.118 INF [EOS] Created RFS Request: news_game_2.3_stable.jpg
+2026-03-26T03:12:03 96.135 INF [EOS] Read (backtraceconfig.xml) completed: Success, received 2424 bytes
+2026-03-26T03:12:03 96.136 INF [BACKTRACE] Bug reporting Enabled with save uploading: Disabled
+2026-03-26T03:12:03 96.137 INF [BACKTRACE] Save Attaching Feature: Disabled
+2026-03-26T03:12:03 96.137 INF [BACKTRACE] Entire World Attaching Feature: Disabled
+2026-03-26T03:12:03 96.137 INF [BACKTRACE] Bug reporting Disabled with save uploading: Disabled
+2026-03-26T03:12:03 96.137 INF Backtrace Configuration refreshed from XML: Enabled False
+2026-03-26T03:12:03 96.137 INF [BACKTRACE] Bug reporting: Disabled
+2026-03-26T03:12:03 96.138 INF [BACKTRACE] Bug reporting attach save feature: Disabled
+2026-03-26T03:12:03 96.138 INF [BACKTRACE] Bug reporting attach entire world feature: Disabled
+2026-03-26T03:12:03 96.196 INF [EOS] Read (news_game_2025_2.5_stable.jpg) completed: Success, received 102102 bytes
+2026-03-26T03:12:03 96.196 INF [EOS] Created RFS Request: news_game_2.2_stable.jpg
+2026-03-26T03:12:03 96.233 INF [EOS] Read (news_game_2.4_stable.jpg) completed: Success, received 87456 bytes
+2026-03-26T03:12:03 96.234 INF [EOS] Created RFS Request: news_game_2.1_stable.jpg
+2026-03-26T03:12:03 96.281 INF [EOS] Read (news_featured_tfpmerch.jpg) completed: Success, received 78916 bytes
+2026-03-26T03:12:03 96.366 INF [EOS] Read (news_featured_soundtrack.jpg) completed: Success, received 235045 bytes
+2026-03-26T03:12:03 96.403 INF [EOS] Read (news_game_2.3_stable.jpg) completed: Success, received 72704 bytes
+2026-03-26T03:12:03 96.404 INF [EOS] Created RFS Request: news_game_06_2.0_stable.jpg
+2026-03-26T03:12:03 96.499 INF [EOS] Read (news_game_2.2_stable.jpg) completed: Success, received 96101 bytes
+2026-03-26T03:12:03 96.515 INF [EOS] Read (news_game_2.1_stable.jpg) completed: Success, received 95868 bytes
+2026-03-26T03:12:03 96.638 INF [EOS] Read (news_game_06_2.0_stable.jpg) completed: Success, received 96807 bytes
+2026-03-26T03:12:03 96.912 INF Preparing quit
+2026-03-26T03:12:03 96.916 INF Persistent GamePrefs saved
+2026-03-26T03:12:03 96.916 INF Cleanup
+2026-03-26T03:12:03 96.918 INF [Discord] Saving settings with DiscordDisabled=True
+2026-03-26T03:12:04 97.454 INF AchievementManager.Cleanup
+2026-03-26T03:12:04 97.788 INF Terminating threads
+2026-03-26T03:12:04 97.788 INF OnApplicationQuit
+2026-03-26T03:12:04 97.793 INF Terminating threads
+2026-03-26T03:12:04 97.793 INF OnApplicationQuit
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+Memory Statistics:
+[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators : 
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [0-1.0 KB]: 1203 frames, [1.0 KB-2.0 KB]: 38 frames, [2.0 KB-4.0 KB]: 29 frames, [4.0 KB-8.0 KB]: 5 frames, [8.0 KB-16.0 KB]: 1126 frames, [16.0 KB-32.0 KB]: 21 frames, [32.0 KB-64.0 KB]: 133 frames, [64.0 KB-128.0 KB]: 2623 frames, [128.0 KB-256.0 KB]: 42 frames, [256.0 KB-0.5 MB]: 74 frames, [0.5 MB-1.0 MB]: 22 frames, [1.0 MB-2.0 MB]: 63 frames, [2.0 MB-4.0 MB]: 17 frames, [4.0 MB-8.0 MB]: 7 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 8.0 MB
+      Peak Allocated Bytes 8.0 MB
+      Overflow Count 22212
+    [ALLOC_TEMP_Job.Worker 18]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager]
+      Initial Block Size 256.0 KB
+      Current Block Size 0.5 MB
+      Peak Allocated Bytes 511.0 KB
+      Overflow Count 3600
+    [ALLOC_TEMP_Background Job.Worker 8]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 1
+    [ALLOC_TEMP_Background Job.Worker 10]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 22.0 KB
+      Overflow Count 1
+    [ALLOC_TEMP_Job.Worker 16]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 6]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 31.0 KB
+      Overflow Count 2
+    [ALLOC_TEMP_Job.Worker 4]
+      Initial Block Size 256.0 KB
+      Current Block Size 364.0 KB
+      Peak Allocated Bytes 360.1 KB
+      Overflow Count 1
+    [ALLOC_TEMP_Job.Worker 27]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 17]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 14]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 3]
+      Initial Block Size 256.0 KB
+      Current Block Size 460.0 KB
+      Peak Allocated Bytes 459.5 KB
+      Overflow Count 4
+    [ALLOC_TEMP_Background Job.Worker 12]
+      Initial Block Size 32.0 KB
+      Current Block Size 48.0 KB
+      Peak Allocated Bytes 45.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 1]
+      Initial Block Size 32.0 KB
+      Current Block Size 52.0 KB
+      Peak Allocated Bytes 50.9 KB
+      Overflow Count 2
+    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 31
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 138 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 5]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 4.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 13]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 358 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 11]
+      Initial Block Size 32.0 KB
+      Current Block Size 52.0 KB
+      Peak Allocated Bytes 49.6 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 2]
+      Initial Block Size 256.0 KB
+      Current Block Size 504.0 KB
+      Peak Allocated Bytes 499.1 KB
+      Overflow Count 48
+    [ALLOC_TEMP_Background Job.Worker 3]
+      Initial Block Size 32.0 KB
+      Current Block Size 40.0 KB
+      Peak Allocated Bytes 35.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 11.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 20]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 11]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 28.3 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 4]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 16.7 KB
+      Overflow Count 0
+    [ALLOC_TEMP_BatchDeleteObjects]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 30]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 6]
+      Initial Block Size 256.0 KB
+      Current Block Size 280.0 KB
+      Peak Allocated Bytes 232.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 0]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 26]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 21]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 5]
+      Initial Block Size 256.0 KB
+      Current Block Size 416.0 KB
+      Peak Allocated Bytes 365.5 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 9]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 23.7 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 25]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 14]
+      Initial Block Size 32.0 KB
+      Current Block Size 40.0 KB
+      Peak Allocated Bytes 38.2 KB
+      Overflow Count 0
+    [ALLOC_TEMP_ReadCacheIndex]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 0.5 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 29]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 13]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_EnlightenWorker] x 16
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 15]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 349 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 2]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 1
+    [ALLOC_TEMP_Job.Worker 28]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 7]
+      Initial Block Size 32.0 KB
+      Current Block Size 56.0 KB
+      Peak Allocated Bytes 53.7 KB
+      Overflow Count 0
+    [ALLOC_TEMP_UnityGfxDeviceWorker]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 57.3 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 22]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 9]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 163.5 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 8]
+      Initial Block Size 256.0 KB
+      Current Block Size 292.0 KB
+      Peak Allocated Bytes 268.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 7]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 190.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 23]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 1]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 30.6 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 10]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 24]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 15]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 12]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 19]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.AsyncRead]
+      Initial Block Size 64.0 KB
+      Current Block Size 128.0 KB
+      Peak Allocated Bytes 128.0 KB
+      Overflow Count 3
+[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 457575
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 4 Subsections = 4096 buckets. Failed count: 1646974
+        32B: 35 Subsections = 17920 buckets. Failed count: 521870
+        48B: 30 Subsections = 10240 buckets. Failed count: 1037212
+        64B: 26 Subsections = 6656 buckets. Failed count: 562317
+        80B: 66 Subsections = 13516 buckets. Failed count: 189908
+        96B: 73 Subsections = 12458 buckets. Failed count: 266087
+        112B: 13 Subsections = 1901 buckets. Failed count: 104904
+        128B: 9 Subsections = 1152 buckets. Failed count: 245435
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [16.0 MB-32.0 MB]: 350 frames, [32.0 MB-64.0 MB]: 12 frames, [64.0 MB-128.0 MB]: 1313 frames, [128.0 MB-256.0 MB]: 688 frames, [256.0 MB-0.50 GB]: 3040 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 24
+      Peak Allocated memory 412.1 MB
+      Peak Large allocation bytes 102.2 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [8.0 MB-16.0 MB]: 337 frames, [16.0 MB-32.0 MB]: 1186 frames, [32.0 MB-64.0 MB]: 99 frames, [64.0 MB-128.0 MB]: 945 frames, [128.0 MB-256.0 MB]: 2836 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 16
+      Peak Allocated memory 235.1 MB
+      Peak Large allocation bytes 128.0 MB
+[ALLOC_TEMP_JOB_1_FRAME]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_2_FRAMES]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 7
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_ASYNC (Background)]
+  Initial Block Size 1.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 3
+  Overflow Count (full) 0
+[ALLOC_GFX] Dual Thread Allocator
+  Peak main deferred allocation count 92
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 4 Subsections = 4096 buckets. Failed count: 1646974
+        32B: 35 Subsections = 17920 buckets. Failed count: 521870
+        48B: 30 Subsections = 10240 buckets. Failed count: 1037212
+        64B: 26 Subsections = 6656 buckets. Failed count: 562317
+        80B: 66 Subsections = 13516 buckets. Failed count: 189908
+        96B: 73 Subsections = 12458 buckets. Failed count: 266087
+        112B: 13 Subsections = 1901 buckets. Failed count: 104904
+        128B: 9 Subsections = 1152 buckets. Failed count: 245435
+    [ALLOC_GFX_MAIN]
+      Peak usage frame count: [32.0 KB-64.0 KB]: 329 frames, [64.0 KB-128.0 KB]: 18 frames, [256.0 KB-0.5 MB]: 39 frames, [0.5 MB-1.0 MB]: 17 frames, [1.0 MB-2.0 MB]: 1110 frames, [2.0 MB-4.0 MB]: 12 frames, [4.0 MB-8.0 MB]: 96 frames, [8.0 MB-16.0 MB]: 1 frames, [16.0 MB-32.0 MB]: 1 frames, [32.0 MB-64.0 MB]: 39 frames, [64.0 MB-128.0 MB]: 537 frames, [128.0 MB-256.0 MB]: 3191 frames, [256.0 MB-0.50 GB]: 13 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 9
+      Peak Allocated memory 454.5 MB
+      Peak Large allocation bytes 340.0 MB
+    [ALLOC_GFX_THREAD]
+      Peak usage frame count: [128.0 KB-256.0 KB]: 339 frames, [256.0 KB-0.5 MB]: 1 frames, [1.0 MB-2.0 MB]: 3 frames, [4.0 MB-8.0 MB]: 37 frames, [8.0 MB-16.0 MB]: 234 frames, [16.0 MB-32.0 MB]: 939 frames, [32.0 MB-64.0 MB]: 21 frames, [64.0 MB-128.0 MB]: 1176 frames, [128.0 MB-256.0 MB]: 2653 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 11
+      Peak Allocated memory 169.2 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_CACHEOBJECTS] Dual Thread Allocator
+  Peak main deferred allocation count 28337
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 4 Subsections = 4096 buckets. Failed count: 1646974
+        32B: 35 Subsections = 17920 buckets. Failed count: 521870
+        48B: 30 Subsections = 10240 buckets. Failed count: 1037212
+        64B: 26 Subsections = 6656 buckets. Failed count: 562317
+        80B: 66 Subsections = 13516 buckets. Failed count: 189908
+        96B: 73 Subsections = 12458 buckets. Failed count: 266087
+        112B: 13 Subsections = 1901 buckets. Failed count: 104904
+        128B: 9 Subsections = 1152 buckets. Failed count: 245435
+    [ALLOC_CACHEOBJECTS_MAIN]
+      Peak usage frame count: [2.0 MB-4.0 MB]: 329 frames, [4.0 MB-8.0 MB]: 9 frames, [8.0 MB-16.0 MB]: 1187 frames, [32.0 MB-64.0 MB]: 95 frames, [64.0 MB-128.0 MB]: 36 frames, [128.0 MB-256.0 MB]: 9 frames, [256.0 MB-0.50 GB]: 84 frames, [0.50 GB-1.00 GB]: 3654 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 130
+      Peak Allocated memory 0.55 GB
+      Peak Large allocation bytes 96.0 MB
+    [ALLOC_CACHEOBJECTS_THREAD]
+      Peak usage frame count: [64.0 KB-128.0 KB]: 329 frames, [128.0 KB-256.0 KB]: 1 frames, [16.0 MB-32.0 MB]: 6 frames, [32.0 MB-64.0 MB]: 1 frames, [64.0 MB-128.0 MB]: 2 frames, [128.0 MB-256.0 MB]: 1076 frames, [256.0 MB-0.50 GB]: 3988 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 100
+      Peak Allocated memory 415.4 MB
+      Peak Large allocation bytes 99.9 MB
+[ALLOC_TYPETREE] Dual Thread Allocator
+  Peak main deferred allocation count 1
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 4 Subsections = 4096 buckets. Failed count: 1646974
+        32B: 35 Subsections = 17920 buckets. Failed count: 521870
+        48B: 30 Subsections = 10240 buckets. Failed count: 1037212
+        64B: 26 Subsections = 6656 buckets. Failed count: 562317
+        80B: 66 Subsections = 13516 buckets. Failed count: 189908
+        96B: 73 Subsections = 12458 buckets. Failed count: 266087
+        112B: 13 Subsections = 1901 buckets. Failed count: 104904
+        128B: 9 Subsections = 1152 buckets. Failed count: 245435
+    [ALLOC_TYPETREE_MAIN]
+      Peak usage frame count: [4.0 KB-8.0 KB]: 330 frames, [8.0 KB-16.0 KB]: 1195 frames, [128.0 KB-256.0 KB]: 123 frames, [256.0 KB-0.5 MB]: 1 frames, [0.5 MB-1.0 MB]: 2 frames, [1.0 MB-2.0 MB]: 12 frames, [2.0 MB-4.0 MB]: 5 frames, [4.0 MB-8.0 MB]: 77 frames, [8.0 MB-16.0 MB]: 3658 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 7
+      Peak Allocated memory 13.5 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_TYPETREE_THREAD]
+      Peak usage frame count: [0-1.0 KB]: 330 frames, [256.0 KB-0.5 MB]: 3 frames, [0.5 MB-1.0 MB]: 3 frames, [2.0 MB-4.0 MB]: 2 frames, [4.0 MB-8.0 MB]: 1214 frames, [8.0 MB-16.0 MB]: 3851 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 5
+      Peak Allocated memory 9.5 MB
+      Peak Large allocation bytes 0 B

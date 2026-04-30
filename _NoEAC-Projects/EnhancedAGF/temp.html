@@ -1,0 +1,97 @@
+ <window name="HUDRightStatBars" anchor="RightBottom">
+    <rect name="hud" pos="-30,132" side="right" controller="CollectedItemList" pivot="BottomLeft">
+      <!--Attribute "pos" replaced by: "zzzAGF-Special-Compatibilities"-->
+      <!--Attribute "pos" replaced by: "AGF-HUDPlus-1Main"-->
+      <panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0">
+        <sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="44" width="162" pivot="center" />
+        <sprite depth="4" name="Icon" atlas="ItemIconAtlas" size="38,38" pos="50,0" pivot="center" foregroundlayer="true" />
+        <label depth="6" pos="12,0" name="TextContent" font_size="30" color="[white]" justify="right" height="32" pivot="right" />
+        <sprite depth="6" pos="0,16" width="36" height="36" name="Negative" sprite="ui_game_symbol_x" color="[red]" />
+      </panel>
+      <!-- <rect width="168" height="43" controller="CollectedItem">
+				<sprite depth="3" pos="3,0"  name="Background" sprite="{itembackground}" height="43" width="162" color="{itembackgroundcolor}" />
+				<sprite depth="4" name="Icon" atlas="ItemIconAtlas" sprite="{itemicon}" size="32,32" pos="130,-6" color="{itemiconcolor}" />
+				<label depth="6" name="TextContent" pos="15,-10" font_size="28" color="[white]" justify="center" text="{itemcount}" height="30"/>
+			</rect> -->
+    </rect>
+    <grid name="hud" pos="-194,50" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
+      <!--Attribute "pos" replaced by: "AGF-HUDPlus-1Main"-->
+      <rect width="188" height="46" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+        <sprite depth="3" pos="3,0" name="BarContent" sprite="{statimage|once}" height="46" width="182" />
+        <sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="39,35" pos="130,-6" color="{staticoncolor}" foregroundlayer="true" />
+        <label depth="6" name="TextContent" pos="115,-26" font_size="28" color="[white]" justify="right" pivot="right" text="{statcurrentwithmax}" width="250" height="30" />
+      </rect>
+    </grid>
+    <rect name="hud" pos="-177,100" rows="2" cols="1" width="168" side="right">
+      <!--Attribute "pos" replaced by: "AGF-HUDPlus-1Main"-->
+      <rect width="168" height="46" pos="0,50" controller="XUiC_WMMCruiseControl, WMMVehicleCruiseControl" visible="True">
+        <!--Element inserted by: "WMMVehicleCruiseControl"-->
+        <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+        <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+        <sprite depth="2" pos="3,-3" name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+        <filledsprite depth="5" name="BarContent" width="169" type="filled" fill="1" flip="Horizontally" />
+        <label depth="6" name="TextContent" pos="125,-24" font_size="32" color="[white]" justify="center" pivot="right" text="Cruise" width="120" height="35" />
+        <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
+      </rect>
+      <rect width="168" height="46" pos="0,50" controller="HUDStatBar" stat_type="VehicleFuel" visible="{agfVehiclePlayerMountedVisible}">
+        <!--Element inserted by: "AGF-HUDPlus-1Main"-->
+        <!-- Keep stat_type="VehicleFuel" for HUD live updating purposes -->
+        <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+        <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+        <sprite depth="2" pos="3,-3" name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+        <filledsprite depth="5" name="BarContent" color="0,150,54,180" width="169" type="filled" fill="{agfVehicleSpeedFill}" flip="Horizontally" />
+        <sprite depth="4" name="Icon" sprite="ui_game_symbol_speed" size="35,35" pos="148,-24" pivot="center" foregroundlayer="true" />
+        <label depth="6" name="TextContent" pos="125,-24" font_size="32" color="[white]" justify="center" pivot="right" text="{agfVehicleSpeedCurrentWithMax}" width="120" height="35" />
+        <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
+        <sprite depth="8" visible="{agfVehicleTurboVisible}" name="sprint" atlas="{uiatlas}" sprite="ui_game_symbol_twitch_fast" size="48,48" pos="-50,-23" pivot="left" />
+      </rect>
+      <rect width="168" height="46" pos="0,50" controller="XUiC_WMMCruiseControl, WMMVehicleCruiseControl" visible="True">
+        <!--Element inserted by: "WMMVehicleCruiseControl"-->
+        <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+        <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+        <sprite depth="2" pos="3,-3" name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+        <filledsprite depth="5" name="BarContent" width="169" type="filled" fill="1" flip="Horizontally" />
+        <label depth="6" name="TextContent" pos="125,-24" font_size="32" color="[white]" justify="center" pivot="right" text="Cruise" width="120" height="35" />
+        <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
+      </rect>
+      <rect width="168" height="46" controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}">
+        <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+        <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+        <sprite depth="2" pos="3,-3" name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+        <filledsprite depth="5" name="BarContent" color="0,54,255,128" width="169" type="filled" fill="{statfill}" flip="Horizontally" />
+        <sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="148,-24" pivot="center" foregroundlayer="true" />
+        <label depth="6" name="TextContent" pos="68,-24" font_size="32" color="[white]" justify="center" pivot="right" text="{statcurrentwithmax}" width="60" height="35">
+          <!--Attribute "pivot" replaced by: "AGF-HUDPlus-1Main"-->
+          <!--Attribute "width" replaced by: "AGF-HUDPlus-1Main"-->
+          <!--Attribute "pos" replaced by: "AGF-HUDPlus-1Main"-->
+        </label>
+        <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
+        <label depth="6" name="TextContent" pos="75,-13" font_size="20" color="[white]" justify="center" pivot="left" text="{agfVehicleFuelCurrent}" width="50" height="20">
+          <!--Element appended by: "AGF-HUDPlus-1Main"-->
+        </label>
+        <label depth="6" name="TextContent" pos="75,-34" font_size="20" color="[white]" justify="center" pivot="left" text="/{agfVehicleFuelMax}" width="50" height="20">
+          <!--Element appended by: "AGF-HUDPlus-1Main"-->
+        </label>
+      </rect>
+      <rect width="168" height="46" pos="0,-50" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+        <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+        <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
+        <sprite depth="2" pos="3,-3" name="background" height="40" width="162" color="64,64,64,100" type="sliced" />
+        <filledsprite depth="5" name="BarContent" color="255,0,0,128" width="169" type="filled" fill="{statfill}" flip="Horizontally" />
+        <sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="148,-24" pivot="center" foregroundlayer="true" />
+        <label depth="6" name="TextContent" pos="68,-24" font_size="32" color="[white]" justify="center" pivot="right" text="{statcurrentwithmax}" width="60" height="35">
+          <!--Attribute "font_size" replaced by: "AGF-HUDPlus-1Main"-->
+          <!--Attribute "pivot" replaced by: "AGF-HUDPlus-1Main"-->
+          <!--Attribute "width" replaced by: "AGF-HUDPlus-1Main"-->
+          <!--Attribute "pos" replaced by: "AGF-HUDPlus-1Main"-->
+        </label>
+        <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
+        <label depth="6" name="TextContent" pos="75,-13" font_size="20" color="[white]" justify="center" pivot="left" text="{agfVehicleDurabilityCurrent}" width="50" height="20">
+          <!--Element appended by: "AGF-HUDPlus-1Main"-->
+        </label>
+        <label depth="6" name="TextContent" pos="75,-34" font_size="20" color="[white]" justify="center" pivot="left" text="/{agfVehicleDurabilityMax}" width="50" height="20">
+          <!--Element appended by: "AGF-HUDPlus-1Main"-->
+        </label>
+      </rect>
+    </rect>
+  </window>

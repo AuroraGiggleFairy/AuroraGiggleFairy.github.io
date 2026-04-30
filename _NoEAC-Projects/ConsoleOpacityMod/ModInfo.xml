@@ -1,0 +1,7 @@
+<ModInfo>
+  <Name value="ConsoleOpacityMod" />
+  <Description>Configurable console background opacity for 7 Days to Die F1 console.</Description>
+  <Author>YourName</Author>
+  <Version>1.0</Version>
+  <HarmonyVersion>2.0.0</HarmonyVersion>
+</ModInfo>

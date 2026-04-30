@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <ModInfo>
+    <Name value="ItemTypeIconColor" />
+    <Description value="Enables ItemTypeIconColor property for items via XML." />
+    <Author value="AGFProjects" />
+    <Version value="1.0.0" />
+  </ModInfo>
+</xml>

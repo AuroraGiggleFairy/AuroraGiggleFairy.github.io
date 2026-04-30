@@ -1,0 +1,651 @@
+{
+  "guild_id": "818567847436877825",
+  "enforce_role_hierarchy": true,
+  "allow_create_missing": true,
+  "strict_permission_overwrites": true,
+  "enforce_exact_names": true,
+  "required_roles": [
+    "The Giggle Fairy",
+    "2nd In Command",
+    "Moderator",
+    "Mod Tester",
+    "Server Player",
+    "Streamer",
+    "Modder",
+    "Survivor",
+    "Writer",
+    "Artist",
+    "Musician",
+    "Editor",
+    "Content Creator",
+    "Photographer",
+    "Voice Actor",
+    "Developer",
+    "They/Them",
+    "He/Him",
+    "She/Her",
+    "Ze/Hir",
+    "Xe/Xem",
+    "Ver/Vir",
+    "Te/Tem",
+    "Ey/Em",
+    "It/Its",
+    "Any/All Pronouns"
+  ],
+  "role_hierarchy_top_to_bottom": [
+    "The Giggle Fairy",
+    "2nd In Command",
+    "Giggle Fairy Spawn",
+    "Moderator",
+    "Nexus Bot",
+    "Mod Tester",
+    "Modder",
+    "Server Player",
+    "Streamer",
+    "Survivor"
+  ],
+  "member_baseline_roles": {
+    "enabled": false,
+    "all_members_role_names": [
+      "Survivor"
+    ],
+    "include_bots": false
+  },
+  "guild_settings": {
+    "rules_channel_ref": "ENTRANCE PORTAL/rules"
+  },
+  "onboarding": {
+    "manage": true,
+    "enabled": true,
+    "mode": 0,
+    "include_all_public_channels": true,
+    "default_channels": [
+      "ENTRANCE PORTAL/welcome",
+      "ENTRANCE PORTAL/rules",
+      "ENTRANCE PORTAL/start-here",
+      "ENTRANCE PORTAL/roles-selection",
+      "ENTRANCE PORTAL/pronoun-requests"
+    ],
+    "prompts": [
+      {
+        "title": "What do you seek in my realm?",
+        "single_select": false,
+        "required": true,
+        "in_onboarding": true,
+        "type": 0,
+        "options": [
+          {
+            "title": "Mod updates",
+            "description": "See AGF releases and update posts",
+            "emoji_name": "\u2728",
+            "role_names": [ "Survivor" ],
+            "channel_refs": [
+              "AGF MODS & UPDATES/updates",
+              "AGF MODS & UPDATES/latest-published-mods"
+            ]
+          },
+          {
+            "title": "Get support",
+            "description": "Install help and compatibility questions",
+            "emoji_name": "\ud83d\udee0\ufe0f",
+            "role_names": [ "Survivor" ],
+            "channel_refs": [
+              "NEED HELP?/how-to-install-mods",
+              "NEED HELP?/help-is-here",
+              "NEED HELP?/request-for-compatibility"
+            ]
+          },
+          {
+            "title": "Community chat",
+            "description": "Hangout, media, and server chat",
+            "emoji_name": "\ud83d\udcac",
+            "role_names": [ "Survivor" ],
+            "channel_refs": [
+              "7D2D HANGOUT/7d2d-discussions",
+              "7D2D HANGOUT/server-chat"
+            ]
+          },
+          {
+            "title": "Server info and status",
+            "description": "Follow AGF server details and announcements",
+            "emoji_name": "\ud83d\udce1",
+            "role_names": [ "Survivor" ],
+            "channel_refs": [
+              "7D2D HANGOUT/agf-server-info",
+              "7D2D HANGOUT/server-updates"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tell me about yourself.",
+        "single_select": false,
+        "required": false,
+        "in_onboarding": true,
+        "type": 0,
+        "options": [
+          {
+            "title": "Streamer",
+            "description": "Post in promote-your-stream and clips",
+            "emoji_name": "\ud83c\udfa5",
+            "role_names": [ "Streamer" ],
+            "channel_refs": [ "STREAM LOUNGE/promote-your-stream", "STREAM LOUNGE/clips" ]
+          },
+          {
+            "title": "Modder",
+            "description": "I create or work on mods",
+            "emoji_name": "\u2692\ufe0f",
+            "role_names": [ "Modder" ],
+            "channel_refs": [ "7D2D HANGOUT/community-mods", "AGF MODS & UPDATES/agf-mod-site" ]
+          },
+          {
+            "title": "Developer",
+            "description": "I code, build, or script",
+            "emoji_name": "\ud83d\udcbb",
+            "role_names": [ "Developer" ]
+          },
+          {
+            "title": "Writer",
+            "description": "I write stories, lore, or guides",
+            "emoji_name": "\u270d\ufe0f",
+            "role_names": [ "Writer" ]
+          },
+          {
+            "title": "Editor",
+            "description": "I edit video, audio, or written content",
+            "emoji_name": "\u2702\ufe0f",
+            "role_names": [ "Editor" ]
+          },
+          {
+            "title": "Artist",
+            "description": "I create visual art or illustrations",
+            "emoji_name": "\ud83c\udfa8",
+            "role_names": [ "Artist" ]
+          },
+          {
+            "title": "Musician",
+            "description": "I make or perform music",
+            "emoji_name": "\ud83c\udfb5",
+            "role_names": [ "Musician" ]
+          },
+          {
+            "title": "Photographer",
+            "description": "I take photos or create visual media",
+            "emoji_name": "\ud83d\udcf7",
+            "role_names": [ "Photographer" ]
+          },
+          {
+            "title": "Voice Actor",
+            "description": "I do voice work or narration",
+            "emoji_name": "\ud83c\udf99\ufe0f",
+            "role_names": [ "Voice Actor" ]
+          },
+          {
+            "title": "Content Creator",
+            "description": "I create online content (YouTube, TikTok, etc.)",
+            "emoji_name": "\ud83c\udfac",
+            "role_names": [ "Content Creator" ]
+          }
+        ]
+      },
+      {
+        "title": "May I interest you in joining me on these adventures?",
+        "single_select": false,
+        "required": false,
+        "in_onboarding": true,
+        "type": 0,
+        "options": [
+          {
+            "title": "Server Player",
+            "description": "Follow AGF server spaces and join sessions",
+            "emoji_name": "\ud83c\udfae",
+            "role_names": [
+              "Server Player"
+            ],
+            "channel_refs": [
+              "7D2D HANGOUT/agf-server-info",
+              "7D2D HANGOUT/server-updates",
+              "7D2D HANGOUT/playing-now"
+            ]
+          },
+          {
+            "title": "Mod Tester",
+            "emoji_name": "\ud83e\uddea",
+            "role_names": [
+              "Mod Tester"
+            ],
+            "channel_refs": [
+              "AGF MODS & UPDATES/testing"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pronouns",
+        "single_select": false,
+        "required": false,
+        "in_onboarding": true,
+        "type": 0,
+        "options": [
+          {
+            "title": "They/Them/Theirs/Themself",
+            "description": "My pronouns are They/Them/Theirs/Themself",
+            "emoji_name": "\ud83d\udfe3",
+            "role_names": [ "They/Them" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "He/Him/His/Himself",
+            "description": "My pronouns are He/Him/His/Himself",
+            "emoji_name": "\ud83d\udd35",
+            "role_names": [ "He/Him" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "She/Her/Hers/Herself",
+            "description": "My pronouns are She/Her/Hers/Herself",
+            "emoji_name": "\ud83c\udf38",
+            "role_names": [ "She/Her" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "Ze/Hir/Hirs/Hirself",
+            "description": "My pronouns are Ze/Hir/Hirs/Hirself",
+            "emoji_name": "\ud83d\udd34",
+            "role_names": [ "Ze/Hir" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "Xe/Xem/Xirs/Xemself",
+            "description": "My pronouns are Xe/Xem/Xirs/Xemself",
+            "emoji_name": "\ud83d\udfe0",
+            "role_names": [ "Xe/Xem" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "Ver/Vir/Vis/Verself",
+            "description": "My pronouns are Ver/Vir/Vis/Verself",
+            "emoji_name": "\ud83d\udfe1",
+            "role_names": [ "Ver/Vir" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "Te/Tem/Ter/Temself",
+            "description": "My pronouns are Te/Tem/Ter/Temself",
+            "emoji_name": "\ud83d\udfe4",
+            "role_names": [ "Te/Tem" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "Ey/Em/Eir/Emself",
+            "description": "My pronouns are Ey/Em/Eir/Emself",
+            "emoji_name": "\ud83d\udfe3",
+            "role_names": [ "Ey/Em" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "It/Its/Its/Itself",
+            "description": "My pronouns are It/Its/Its/Itself",
+            "emoji_name": "\u26ab",
+            "role_names": [ "It/Its" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          },
+          {
+            "title": "Any/All Pronouns",
+            "description": "Any/All pronouns are okay for me",
+            "emoji_name": "\u26aa",
+            "role_names": [ "Any/All Pronouns" ],
+            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
+          }
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "name": "ENTRANCE PORTAL",
+      "aliases": [
+        "1. WELCOME",
+        "WELCOME"
+      ],
+      "channels": [
+        {
+          "name": "welcome",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Survivor": { "view": "allow", "send": "deny" },
+            "Moderator": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "rules",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Survivor": { "view": "allow", "send": "deny" },
+            "Moderator": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "start-here",
+          "aliases": [
+            "where-do-i-go",
+            "Where Do I Go"
+          ],
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Survivor": { "view": "allow", "send": "deny" },
+            "Moderator": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "roles-selection",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Survivor": { "view": "allow", "send": "deny" },
+            "Nexus Bot": { "view": "allow", "send": "allow" },
+            "Moderator": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "pronoun-requests",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Survivor": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AGF MODS & UPDATES",
+      "aliases": [
+        "2. AGF 7d2d Mods",
+        "MODS & DEVELOPMENT"
+      ],
+      "channels": [
+        {
+          "name": "updates",
+          "type": "announcement",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "latest-published-mods",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "agf-mod-site",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "agf-status",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "testing",
+          "type": "forum",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Mod Tester": { "view": "allow", "send": "deny", "react": "allow" }
+          }
+        },
+        {
+          "name": "my-notes",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "bot-updates",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "NEED HELP?",
+      "aliases": [
+        "3. Need Help?",
+        "SUPPORT & HELP"
+      ],
+      "channels": [
+        {
+          "name": "how-to-install-mods",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "help-is-here",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "request-for-compatibility",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "support-tickets",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Survivor": { "view": "allow", "send": "deny" },
+            "Nexus Bot": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "live-help",
+          "aliases": [
+            "vocalizing-help",
+            "Vocalizing Help"
+          ],
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "allow", "connect": "allow" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "7D2D HANGOUT",
+      "aliases": [
+        "4. 7D2D Hangout!",
+        "7D2D COMMUNITY"
+      ],
+      "channels": [
+        {
+          "name": "7d2d-media",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "7d2d-discussions",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "community-mods",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "looking-for-group",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "agf-server-info",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "server-bot",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "server-chat",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "server-updates",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "fun-pimps-announcements",
+          "aliases": [
+            "7d2d-staff-rss",
+            "Fun Pimps Announcements"
+          ],
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "playing-now",
+          "aliases": [
+            "playing-on-the-server",
+            "Playing On The Server",
+            "Playing On the Server!"
+          ],
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "allow", "connect": "allow" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "STREAM LOUNGE",
+      "aliases": [
+        "5. TWITCH",
+        "TWITCH & STREAMING"
+      ],
+      "channels": [
+        {
+          "name": "promote-your-stream",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Streamer": { "view": "allow", "send": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "clips",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "Streamer": { "view": "allow", "send": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "giggles-guide-videos",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow" }
+          }
+        },
+        {
+          "name": "lounge-chat",
+          "aliases": [
+            "general-chat"
+          ],
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "waiting-room",
+          "aliases": [
+            "Waiting Room"
+          ],
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "allow", "connect": "allow" }
+          }
+        },
+        {
+          "name": "streaming",
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "deny", "connect": "deny" },
+            "The Giggle Fairy": { "view": "allow", "connect": "allow" },
+            "2nd In Command": { "view": "allow", "connect": "allow" },
+            "Moderator": { "view": "allow", "connect": "allow" }
+          }
+        }
+      ]
+    }
+  ]
+}
