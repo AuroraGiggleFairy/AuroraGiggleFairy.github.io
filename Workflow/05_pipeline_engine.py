@@ -4012,8 +4012,8 @@ def build_mod_entry(
     banner_abs = os.path.join(IMAGES_GENERATED_ROOT, banner_file)
     banner_html = ""
     if os.path.isfile(banner_abs):
-        banner_rel = f"00_Images/_generated/{banner_file}"
-        banner_html = f'<a href="{banner_rel}"><img src="{banner_rel}" width="150"></a>'
+        banner_url = f"https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/{banner_file}?raw=true"
+        banner_html = f'<a href="{banner_url}"><img src="{banner_url}" width="150"></a>'
 
     template = re.sub(r"<!--.*?-->", "", (mod_entry_template or DEFAULT_MAIN_README_MOD_ENTRY_TEMPLATE), flags=re.DOTALL).strip("\n")
     entry = template

@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*May 4, 2026, 3:41 AM EST*
+*May 4, 2026, 3:47 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -419,7 +419,7 @@ Quality-of-life HUD enhancements and visual tweaks.
 ---
 
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-HUDPlus-1Main.png"><img src="00_Images/_generated/ModImage_AGF-HUDPlus-1Main.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-1Main.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-1Main.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF HUDPlus</b> &nbsp;·&nbsp; v5.4.7 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
 Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
@@ -429,7 +429,7 @@ Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-HUDPlus-BMCounter.png"><img src="00_Images/_generated/ModImage_AGF-HUDPlus-BMCounter.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-BMCounter.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-BMCounter.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF BM Counter</b> &nbsp;·&nbsp; v2.1.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip">Download</a><br>
 Adds a Blood Moon countdown under the compass for fixed BM schedules.
@@ -439,7 +439,7 @@ Adds a Blood Moon countdown under the compass for fixed BM schedules.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-HUDPlus-HealthBars.png"><img src="00_Images/_generated/ModImage_AGF-HUDPlus-HealthBars.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-HealthBars.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-HealthBars.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Health Bars</b> &nbsp;·&nbsp; v4.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip">Download</a><br>
 Adds AGF-styled enemy health bars for easier combat reading.
@@ -449,7 +449,7 @@ Adds AGF-styled enemy health bars for easier combat reading.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-HUDPlus-PurpleBook.png"><img src="00_Images/_generated/ModImage_AGF-HUDPlus-PurpleBook.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-PurpleBook.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-PurpleBook.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Purple Book</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">Download</a><br>
 Adds a Purple Book button for a tabbed progression reference covering magazines, books, schematics, and armor details.
@@ -459,7 +459,7 @@ Adds a Purple Book button for a tabbed progression reference covering magazines,
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-HUDPlus-RemoveEnteringPopUp.png"><img src="00_Images/_generated/ModImage_AGF-HUDPlus-RemoveEnteringPopUp.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-RemoveEnteringPopUp.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-RemoveEnteringPopUp.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Removes Entering Popups</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip">Download</a><br>
 Removes the Entering Area popup text from the HUD.
@@ -501,7 +501,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 ---
 
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-BackpackPlus-060Slots.png"><img src="00_Images/_generated/ModImage_AGF-BackpackPlus-060Slots.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-060Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-060Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF BackpackPlus 60 Slots</b> &nbsp;·&nbsp; v3.2.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">Download</a><br>
 Expands inventory to 60 slots with craftable large storage options.
@@ -511,7 +511,7 @@ Expands inventory to 60 slots with craftable large storage options.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-BackpackPlus-072Slots.png"><img src="00_Images/_generated/ModImage_AGF-BackpackPlus-072Slots.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-072Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-072Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF BackpackPlus 72 Slots</b> &nbsp;·&nbsp; v3.2.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip">Download</a><br>
 Expands inventory to 72 slots with craftable large storage options.
@@ -521,7 +521,7 @@ Expands inventory to 72 slots with craftable large storage options.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-BackpackPlus-084Slots.png"><img src="00_Images/_generated/ModImage_AGF-BackpackPlus-084Slots.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-084Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-084Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF BackpackPlus 84 Slots</b> &nbsp;·&nbsp; v3.2.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip">Download</a><br>
 Expands inventory to 84 slots with craftable large storage options.
@@ -531,7 +531,7 @@ Expands inventory to 84 slots with craftable large storage options.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-BackpackPlus-119Slots.png"><img src="00_Images/_generated/ModImage_AGF-BackpackPlus-119Slots.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-119Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-119Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF BackpackPlus 119 Slots</b> &nbsp;·&nbsp; v1.2.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip">Download</a><br>
 Expands inventory to 119 slots with craftable large storage options.
@@ -558,7 +558,7 @@ Requests can be sent to AGF in [Discord](https://discord.gg/Vm5eyW6N4r).
 ---
 
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_zzzAGF-Special-Compatibilities.png"><img src="00_Images/_generated/ModImage_zzzAGF-Special-Compatibilities.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_zzzAGF-Special-Compatibilities.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_zzzAGF-Special-Compatibilities.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Special Compatibilities</b> &nbsp;·&nbsp; v4.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">Download</a><br>
 Compatibility patch collection bridging AGF mods with popular third-party mods.
@@ -587,7 +587,7 @@ All Server-side (EAC-Friendly)!
 ---
 
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-AdminModdingSupport.png"><img src="00_Images/_generated/ModImage_AGF-VP-AdminModdingSupport.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AdminModdingSupport.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AdminModdingSupport.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Admin and Modding Support</b> &nbsp;·&nbsp; v1.0.5 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AdminModdingSupport.zip">Download</a><br>
 Adds a faster block replace tool, dev XP books, and harvest test blocks for admin use.
@@ -597,7 +597,7 @@ Adds a faster block replace tool, dev XP books, and harvest test blocks for admi
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-AlternativeRecipes.png"><img src="00_Images/_generated/ModImage_AGF-VP-AlternativeRecipes.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AlternativeRecipes.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AlternativeRecipes.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Alternative Recipes</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AlternativeRecipes.zip">Download</a><br>
 Adds alternative recipes for cobblestone, bandages, and first aid kits using basic materials.
@@ -607,7 +607,7 @@ Adds alternative recipes for cobblestone, bandages, and first aid kits using bas
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-AmmoDisassembly.png"><img src="00_Images/_generated/ModImage_AGF-VP-AmmoDisassembly.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AmmoDisassembly.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AmmoDisassembly.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Ammo Disassembly</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">Download</a><br>
 Scraps any ammo into ingredient bundles; combine into x100 or x1000 for large batch handling.
@@ -617,7 +617,7 @@ Scraps any ammo into ingredient bundles; combine into x100 or x1000 for large ba
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ApiaryPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-ApiaryPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ApiaryPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ApiaryPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Apiary Plus</b> &nbsp;·&nbsp; v1.0.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ApiaryPlus.zip">Download</a><br>
 Shrinks apiaries to 2x2 and removes their heat map.
@@ -627,7 +627,7 @@ Shrinks apiaries to 2x2 and removes their heat map.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ArcheryFeathersChange.png"><img src="00_Images/_generated/ModImage_AGF-VP-ArcheryFeathersChange.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ArcheryFeathersChange.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ArcheryFeathersChange.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Archery Feathers Change</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ArcheryFeathersChange.zip">Download</a><br>
 Swaps plastic for feathers in archery ammo recipes and adds a feather crafting recipe.
@@ -637,7 +637,7 @@ Swaps plastic for feathers in archery ammo recipes and adds a feather crafting r
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ArmorHarvestMods.png"><img src="00_Images/_generated/ModImage_AGF-VP-ArmorHarvestMods.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ArmorHarvestMods.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ArmorHarvestMods.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Armor Harvest Mods</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ArmorHarvestMods.zip">Download</a><br>
 Adds craftable armor mods that carry harvesting bonuses onto your worn equipment.
@@ -647,7 +647,7 @@ Adds craftable armor mods that carry harvesting bonuses onto your worn equipment
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-AutomobilesRespawn.png"><img src="00_Images/_generated/ModImage_AGF-VP-AutomobilesRespawn.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AutomobilesRespawn.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-AutomobilesRespawn.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Automobiles Respawn</b> &nbsp;·&nbsp; v3.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip">Download</a><br>
 Salvaged vehicles downgrade into a seed that slowly regrows a similar vehicle.
@@ -657,7 +657,7 @@ Salvaged vehicles downgrade into a seed that slowly regrows a similar vehicle.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-BedrollPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-BedrollPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BedrollPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BedrollPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Bedroll Plus</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip">Download</a><br>
 Adds a tougher Bedroll+ spawn point available in all bed models with pickup support.
@@ -667,7 +667,7 @@ Adds a tougher Bedroll+ spawn point available in all bed models with pickup supp
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-BetterEggChance.png"><img src="00_Images/_generated/ModImage_AGF-VP-BetterEggChance.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BetterEggChance.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BetterEggChance.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Better Egg Chance</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BetterEggChance.zip">Download</a><br>
 Raises bird nest egg probability from 35% to 63%.
@@ -677,7 +677,7 @@ Raises bird nest egg probability from 35% to 63%.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-BreakItGetIt.png"><img src="00_Images/_generated/ModImage_AGF-VP-BreakItGetIt.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BreakItGetIt.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BreakItGetIt.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Break It, Get It</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip">Download</a><br>
 Breaking stations, storage, and electrical blocks returns the placed block to inventory.
@@ -687,7 +687,7 @@ Breaking stations, storage, and electrical blocks returns the placed block to in
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-BuyTraderVendingMachines.png"><img src="00_Images/_generated/ModImage_AGF-VP-BuyTraderVendingMachines.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BuyTraderVendingMachines.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-BuyTraderVendingMachines.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Buy Trader Vending Machines</b> &nbsp;·&nbsp; v3.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BuyTraderVendingMachines.zip">Download</a><br>
 Adds daily-restocking vending machines to trader stock once your trader stage is high enough; break to recover.
@@ -697,7 +697,7 @@ Adds daily-restocking vending machines to trader stock once your trader stage is
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-CraftSewingKits.png"><img src="00_Images/_generated/ModImage_AGF-VP-CraftSewingKits.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-CraftSewingKits.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-CraftSewingKits.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Craft Sewing Kits</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftSewingKits.zip">Download</a><br>
 Unlocks a workbench sewing kit recipe after reading Wasteland Treasures 6.
@@ -707,7 +707,7 @@ Unlocks a workbench sewing kit recipe after reading Wasteland Treasures 6.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-CraftStackEngBattCells.png"><img src="00_Images/_generated/ModImage_AGF-VP-CraftStackEngBattCells.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-CraftStackEngBattCells.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-CraftStackEngBattCells.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Craft and Stack Engine/Battery/Cells</b> &nbsp;·&nbsp; v3.3.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftStackEngBattCells.zip">Download</a><br>
 Makes engines, batteries, and solar cells stackable and craftable through Electrician progression.
@@ -717,7 +717,7 @@ Makes engines, batteries, and solar cells stackable and craftable through Electr
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-CraftVitamins.png"><img src="00_Images/_generated/ModImage_AGF-VP-CraftVitamins.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-CraftVitamins.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-CraftVitamins.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Craft Vitamins</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip">Download</a><br>
 Unlocks vitamin crafting at the same Medical progression level as herbal antibiotics.
@@ -727,7 +727,7 @@ Unlocks vitamin crafting at the same Medical progression level as herbal antibio
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-DecorationBlock.png"><img src="00_Images/_generated/ModImage_AGF-VP-DecorationBlock.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DecorationBlock.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DecorationBlock.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Decoration Block</b> &nbsp;·&nbsp; v3.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DecorationBlock.zip">Download</a><br>
 One craftable block with 5700+ model choices including storage, lights, and functional variants.
@@ -737,7 +737,7 @@ One craftable block with 5700+ model choices including storage, lights, and func
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-DewsPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-DewsPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DewsPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DewsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Dews Plus</b> &nbsp;·&nbsp; v2.4.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DewsPlus.zip">Download</a><br>
 Shrinks dew collectors to 2x2, removes heat map, and adds x5 and x25 variants.
@@ -747,7 +747,7 @@ Shrinks dew collectors to 2x2, removes heat map, and adds x5 and x25 variants.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-DoorsPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-DoorsPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DoorsPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DoorsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Doors Plus</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">Download</a><br>
 All door models available through one craftable helper per material tier, with recovery on break.
@@ -757,7 +757,7 @@ All door models available through one craftable helper per material tier, with r
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-DrinkableAcid.png"><img src="00_Images/_generated/ModImage_AGF-VP-DrinkableAcid.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DrinkableAcid.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DrinkableAcid.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Drinkable Acid</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">Download</a><br>
 Drink acid for a wild mix of damage, speed buffs, trippy effects, and danceoff music.
@@ -767,7 +767,7 @@ Drink acid for a wild mix of damage, speed buffs, trippy effects, and danceoff m
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-DyesPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-DyesPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DyesPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-DyesPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Dyes Plus</b> &nbsp;·&nbsp; v3.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">Download</a><br>
 Adds 27 extra dye colors with simple 15-paint scrap-and-craft swapping.
@@ -777,7 +777,7 @@ Adds 27 extra dye colors with simple 15-paint scrap-and-craft swapping.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-FarmingPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-FarmingPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-FarmingPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-FarmingPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Farming Plus</b> &nbsp;·&nbsp; v5.6.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FarmingPlus.zip">Download</a><br>
 Adds a Seed Station, plantable birdnests, and x5/x25/self-replanting variants for all seeds.
@@ -787,7 +787,7 @@ Adds a Seed Station, plantable birdnests, and x5/x25/self-replanting variants fo
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-FloraHarvester.png"><img src="00_Images/_generated/ModImage_AGF-VP-FloraHarvester.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-FloraHarvester.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-FloraHarvester.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Flora Harvester</b> &nbsp;·&nbsp; v2.3.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip">Download</a><br>
 Fast, cheap tool for harvesting plants and crops with Living Off the Land perk synergy.
@@ -797,7 +797,7 @@ Fast, cheap tool for harvesting plants and crops with Living Off the Land perk s
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-FuelBurnPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-FuelBurnPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-FuelBurnPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-FuelBurnPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Fuel Burn Plus</b> &nbsp;·&nbsp; v2.3.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">Download</a><br>
 Condenses wood or coal into single fuel items with burn times from 10 to 6000 minutes.
@@ -807,7 +807,7 @@ Condenses wood or coal into single fuel items with burn times from 10 to 6000 mi
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-MasterTool.png"><img src="00_Images/_generated/ModImage_AGF-VP-MasterTool.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MasterTool.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MasterTool.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Master Tool</b> &nbsp;·&nbsp; v6.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">Download</a><br>
 Endgame multi-role tool combining auger, chainsaw, knife, wrench, and nailgun behind a late-game unlock quest.
@@ -817,7 +817,7 @@ Endgame multi-role tool combining auger, chainsaw, knife, wrench, and nailgun be
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-MaxLevel500.png"><img src="00_Images/_generated/ModImage_AGF-VP-MaxLevel500.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MaxLevel500.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MaxLevel500.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Max Level 500</b> &nbsp;·&nbsp; v2.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip">Download</a><br>
 Raises the max player level cap from 300 to 500.
@@ -827,7 +827,7 @@ Raises the max player level cap from 300 to 500.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-MedicationNoInsectSlow.png"><img src="00_Images/_generated/ModImage_AGF-VP-MedicationNoInsectSlow.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MedicationNoInsectSlow.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MedicationNoInsectSlow.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Medication No Insect Slow</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MedicationNoInsectSlow.zip">Download</a><br>
 Adds Bee Gone Cream to clear and prevent insect slow effects; steroids share the same protection.
@@ -837,7 +837,7 @@ Adds Bee Gone Cream to clear and prevent insect slow effects; steroids share the
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-MiningPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-MiningPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MiningPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-MiningPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Mining Plus</b> &nbsp;·&nbsp; v1.2.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">Download</a><br>
 Adds clay, sand, and brass bundle recipes through the Mining perk with a slight sand mining boost.
@@ -847,7 +847,7 @@ Adds clay, sand, and brass bundle recipes through the Mining perk with a slight 
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-Mod988.png"><img src="00_Images/_generated/ModImage_AGF-VP-Mod988.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-Mod988.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-Mod988.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Mod 988</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-Mod988.zip">Download</a><br>
 Replaces the noose block and icon with plain rope. For those who need it. (988)
@@ -857,7 +857,7 @@ Replaces the noose block and icon with plain rope. For those who need it. (988)
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ModBundling.png"><img src="00_Images/_generated/ModImage_AGF-VP-ModBundling.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ModBundling.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ModBundling.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Mod Bundling</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModBundling.zip">Download</a><br>
 Bundles non-stackable mod items into a single stackable item to save inventory space.
@@ -867,7 +867,7 @@ Bundles non-stackable mod items into a single stackable item to save inventory s
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ModSlotsPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-ModSlotsPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ModSlotsPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ModSlotsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Mod Slots Plus</b> &nbsp;·&nbsp; v3.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">Download</a><br>
 Rebalances mod slot progression so upgrading never reduces your slots, with a max of 6.
@@ -877,7 +877,7 @@ Rebalances mod slot progression so upgrading never reduces your slots, with a ma
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-PaintbrushPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-PaintbrushPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PaintbrushPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PaintbrushPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Paintbrush Plus</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PaintbrushPlus.zip">Download</a><br>
 Painting costs no paint, supports hold-to-paint, and has reduced reach to prevent accidents.
@@ -887,7 +887,7 @@ Painting costs no paint, supports hold-to-paint, and has reduced reach to preven
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-PickupLanternsPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-PickupLanternsPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PickupLanternsPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PickupLanternsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Pickup Lanterns Plus</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip">Download</a><br>
 Lanterns, flashlights, burning barrels, and jack-o-lanterns are all pickupable.
@@ -897,7 +897,7 @@ Lanterns, flashlights, burning barrels, and jack-o-lanterns are all pickupable.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-PlayerResetQuests.png"><img src="00_Images/_generated/ModImage_AGF-VP-PlayerResetQuests.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PlayerResetQuests.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PlayerResetQuests.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Player Reset Quests</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip">Download</a><br>
 Adds a trader dialogue option to regenerate the current quest list.
@@ -907,7 +907,7 @@ Adds a trader dialogue option to regenerate the current quest list.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-PlayerVendingMachinesPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-PlayerVendingMachinesPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PlayerVendingMachinesPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PlayerVendingMachinesPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Player Vending Plus</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerVendingMachinesPlus.zip">Download</a><br>
 Adds a cheap crafting recipe for player vending machines with improved trader stock counts.
@@ -917,7 +917,7 @@ Adds a cheap crafting recipe for player vending machines with improved trader st
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-PumpkinsPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-PumpkinsPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PumpkinsPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-PumpkinsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Pumpkins Plus</b> &nbsp;·&nbsp; v2.0.5 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PumpkinsPlus.zip">Download</a><br>
 Adds throwable pumpkin molotovs and a wearable jack-o-lantern helmet cosmetic.
@@ -927,7 +927,7 @@ Adds throwable pumpkin molotovs and a wearable jack-o-lantern helmet cosmetic.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-QuickStart.png"><img src="00_Images/_generated/ModImage_AGF-VP-QuickStart.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-QuickStart.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-QuickStart.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Quick Start</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-QuickStart.zip">Download</a><br>
 Auto-grants starter items and completes initial challenges on first spawn.
@@ -937,7 +937,7 @@ Auto-grants starter items and completes initial challenges on first spawn.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-RebundleBundles.png"><img src="00_Images/_generated/ModImage_AGF-VP-RebundleBundles.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RebundleBundles.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RebundleBundles.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Rebundle Bundles</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">Download</a><br>
 Lets you rebundle opened resource and ammo bundles with tinted icons for easy identification.
@@ -947,7 +947,7 @@ Lets you rebundle opened resource and ammo bundles with tinted icons for easy id
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-RecipeRottingFlesh.png"><img src="00_Images/_generated/ModImage_AGF-VP-RecipeRottingFlesh.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RecipeRottingFlesh.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RecipeRottingFlesh.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Recipe Rotting Flesh</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RecipeRottingFlesh.zip">Download</a><br>
 Adds a campfire recipe for rotting flesh using raw meat and murky water.
@@ -957,7 +957,7 @@ Adds a campfire recipe for rotting flesh using raw meat and murky water.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-RenamesAlphabeticalSort.png"><img src="00_Images/_generated/ModImage_AGF-VP-RenamesAlphabeticalSort.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RenamesAlphabeticalSort.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RenamesAlphabeticalSort.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Renames Alphabetical Sort</b> &nbsp;·&nbsp; v2.0.5 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RenamesAlphabeticalSort.zip">Download</a><br>
 Renames items with category prefixes so Auto Sort groups like items consistently.
@@ -967,7 +967,7 @@ Renames items with category prefixes so Auto Sort groups like items consistently
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-RestorePowerAnyTime.png"><img src="00_Images/_generated/ModImage_AGF-VP-RestorePowerAnyTime.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RestorePowerAnyTime.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-RestorePowerAnyTime.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Restore Power Any Time</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RestorePowerAnyTime.zip">Download</a><br>
 Removes the nighttime-only restriction from Restore Power quests.
@@ -977,7 +977,7 @@ Removes the nighttime-only restriction from Restore Power quests.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ScrapBatts4Acid.png"><img src="00_Images/_generated/ModImage_AGF-VP-ScrapBatts4Acid.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ScrapBatts4Acid.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ScrapBatts4Acid.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Scrap Batteries for Acid</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapBatts4Acid.zip">Download</a><br>
 Scrapping a car battery now yields acid instead of lead.
@@ -987,7 +987,7 @@ Scrapping a car battery now yields acid instead of lead.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ScrapEquipmentFaster.png"><img src="00_Images/_generated/ModImage_AGF-VP-ScrapEquipmentFaster.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ScrapEquipmentFaster.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ScrapEquipmentFaster.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Scrap Equipment Faster</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapEquipmentFaster.zip">Download</a><br>
 Cuts equipment scrap time from 10 seconds to 4.
@@ -997,7 +997,7 @@ Cuts equipment scrap time from 10 seconds to 4.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-SimplifiedStacks.png"><img src="00_Images/_generated/ModImage_AGF-VP-SimplifiedStacks.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-SimplifiedStacks.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-SimplifiedStacks.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Simplified Stacks</b> &nbsp;·&nbsp; v1.2.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">Download</a><br>
 Standardizes stack sizes into clean category tiers for simpler inventory management.
@@ -1007,7 +1007,7 @@ Standardizes stack sizes into clean category tiers for simpler inventory managem
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-SmeltingPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-SmeltingPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-SmeltingPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-SmeltingPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Smelting Plus</b> &nbsp;·&nbsp; v2.4.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SmeltingPlus.zip">Download</a><br>
 Adds a third forge input row, 1:5 sand ratio, single-unit crafting, and advanced metal smelting stacks.
@@ -1017,7 +1017,7 @@ Adds a third forge input row, 1:5 sand ratio, single-unit crafting, and advanced
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-StayLongerAnimalCorpse.png"><img src="00_Images/_generated/ModImage_AGF-VP-StayLongerAnimalCorpse.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-StayLongerAnimalCorpse.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-StayLongerAnimalCorpse.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Stay Longer Animal Corpse</b> &nbsp;·&nbsp; v2.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerAnimalCorpse.zip">Download</a><br>
 Animal corpses stay for 10 minutes instead of 5.
@@ -1027,7 +1027,7 @@ Animal corpses stay for 10 minutes instead of 5.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-StayLongerPlayerBackpack.png"><img src="00_Images/_generated/ModImage_AGF-VP-StayLongerPlayerBackpack.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-StayLongerPlayerBackpack.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-StayLongerPlayerBackpack.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Stay Longer Player Backpack</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerPlayerBackpack.zip">Download</a><br>
 Player death backpack stays for 5 hours instead of 1.
@@ -1037,7 +1037,7 @@ Player death backpack stays for 5 hours instead of 1.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-StayLongerZombieLoot.png"><img src="00_Images/_generated/ModImage_AGF-VP-StayLongerZombieLoot.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-StayLongerZombieLoot.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-StayLongerZombieLoot.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Stay Longer Zombie Loot</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerZombieLoot.zip">Download</a><br>
 Zombie loot containers stay for 1 hour instead of 20 minutes.
@@ -1047,7 +1047,7 @@ Zombie loot containers stay for 1 hour instead of 20 minutes.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-TacticalRiflePlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-TacticalRiflePlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TacticalRiflePlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TacticalRiflePlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Tactical Rifle Plus</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TacticalRiflePlus.zip">Download</a><br>
 Removes 3-round burst from the Tactical Rifle and raises the magazine to 36.
@@ -1057,7 +1057,7 @@ Removes 3-round burst from the Tactical Rifle and raises the magazine to 36.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-TraderAlwaysOpen.png"><img src="00_Images/_generated/ModImage_AGF-VP-TraderAlwaysOpen.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TraderAlwaysOpen.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TraderAlwaysOpen.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Trader Always Open</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TraderAlwaysOpen.zip">Download</a><br>
 Traders are always open, except during bloodmoons.
@@ -1067,7 +1067,7 @@ Traders are always open, except during bloodmoons.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-TraderCostlierPrices.png"><img src="00_Images/_generated/ModImage_AGF-VP-TraderCostlierPrices.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TraderCostlierPrices.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TraderCostlierPrices.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Trader Costlier Prices</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TraderCostlierPrices.zip">Download</a><br>
 Raises trader buy markup from x3 to x10 for a tougher economy.
@@ -1077,7 +1077,7 @@ Raises trader buy markup from x3 to x10 for a tougher economy.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-TraderSellsMoreBooks.png"><img src="00_Images/_generated/ModImage_AGF-VP-TraderSellsMoreBooks.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TraderSellsMoreBooks.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TraderSellsMoreBooks.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Trader Sells More Books</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TraderSellsMoreBooks.zip">Download</a><br>
 Traders stock up to 8 of a single magazine and up to 13 different types.
@@ -1087,7 +1087,7 @@ Traders stock up to 8 of a single magazine and up to 13 different types.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-TradersRestockEvery2Days.png"><img src="00_Images/_generated/ModImage_AGF-VP-TradersRestockEvery2Days.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TradersRestockEvery2Days.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TradersRestockEvery2Days.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Traders restock every 2 days</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TradersRestockEvery2Days.zip">Download</a><br>
 Traders restock every 2 days instead of 3.
@@ -1097,7 +1097,7 @@ Traders restock every 2 days instead of 3.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-TreesPlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-TreesPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TreesPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-TreesPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Trees Plus</b> &nbsp;·&nbsp; v3.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TreesPlus.zip">Download</a><br>
 Adds x5 and x25 tree seed variants with growth stage name display.
@@ -1107,7 +1107,7 @@ Adds x5 and x25 tree seed variants with growth stage name display.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-VehiclePerformance.png"><img src="00_Images/_generated/ModImage_AGF-VP-VehiclePerformance.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-VehiclePerformance.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-VehiclePerformance.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Vehicle Performance</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclePerformance.zip">Download</a><br>
 Improves all vehicle acceleration, braking, handling, hill climbing, speed, and durability.
@@ -1117,7 +1117,7 @@ Improves all vehicle acceleration, braking, handling, hill climbing, speed, and 
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-VehicleStoragePlus.png"><img src="00_Images/_generated/ModImage_AGF-VP-VehicleStoragePlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-VehicleStoragePlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-VehicleStoragePlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Vehicle Storage Plus</b> &nbsp;·&nbsp; v2.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehicleStoragePlus.zip">Download</a><br>
 Adds 2 extra storage rows to every vehicle (truck already at max capacity).
@@ -1127,7 +1127,7 @@ Adds 2 extra storage rows to every vehicle (truck already at max capacity).
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-VehiclesExtraSeating.png"><img src="00_Images/_generated/ModImage_AGF-VP-VehiclesExtraSeating.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-VehiclesExtraSeating.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-VehiclesExtraSeating.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Vehicle Extra Seating.</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclesExtraSeating.zip">Download</a><br>
 Adds extra seats to ground vehicles; bikes seat 3 and the truck seats up to 8.
@@ -1137,7 +1137,7 @@ Adds extra seats to ground vehicles; bikes seat 3 and the truck seats up to 8.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-WriteStoryOnCrate.png"><img src="00_Images/_generated/ModImage_AGF-VP-WriteStoryOnCrate.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-WriteStoryOnCrate.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-WriteStoryOnCrate.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Write Story On Crate</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-WriteStoryOnCrate.zip">Download</a><br>
 Adds a lockable iron storage crate with 8 lines of writable text.
@@ -1147,7 +1147,7 @@ Adds a lockable iron storage crate with 8 lines of writable text.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-XPDeathPenaltyReduction.png"><img src="00_Images/_generated/ModImage_AGF-VP-XPDeathPenaltyReduction.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-XPDeathPenaltyReduction.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-XPDeathPenaltyReduction.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF XP Death Penalty Reduction.</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-XPDeathPenaltyReduction.zip">Download</a><br>
 Lowers the death XP penalty to 10% per death with a 30% maximum.
@@ -1157,7 +1157,7 @@ Lowers the death XP penalty to 10% per death with a 30% maximum.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ZombieBiomeSpawning.png"><img src="00_Images/_generated/ModImage_AGF-VP-ZombieBiomeSpawning.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ZombieBiomeSpawning.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ZombieBiomeSpawning.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Zombie Biome Spawning</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieBiomeSpawning.zip">Download</a><br>
 Roughly 5x biome zombie spawning that scales progressively from pine forest to wasteland.
@@ -1167,7 +1167,7 @@ Roughly 5x biome zombie spawning that scales progressively from pine forest to w
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ZombieCorpseLeaveQuicker.png"><img src="00_Images/_generated/ModImage_AGF-VP-ZombieCorpseLeaveQuicker.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ZombieCorpseLeaveQuicker.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ZombieCorpseLeaveQuicker.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Zombie Corpse Leave Quicker</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieCorpseLeaveQuicker.zip">Download</a><br>
 Zombie corpses disappear after 10 seconds instead of 30 for better performance.
@@ -1177,7 +1177,7 @@ Zombie corpses disappear after 10 seconds instead of 30 for better performance.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-VP-ZombieLargerHordes.png"><img src="00_Images/_generated/ModImage_AGF-VP-ZombieLargerHordes.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ZombieLargerHordes.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-VP-ZombieLargerHordes.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Zombie Larger Hordes</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieLargerHordes.zip">Download</a><br>
 Roughly triples wandering zombie horde sizes with smaller animal horde increases.
@@ -1206,7 +1206,7 @@ Installation requirements vary — check each mod's details.
 ---
 
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-AudioOptionsPlus.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-AudioOptionsPlus.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-AudioOptionsPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-AudioOptionsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Audio Options Plus</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip">Download</a><br>
 Adds two audio menu tabs: per-category volume profiles and animal pain/death sound swapping.
@@ -1216,7 +1216,7 @@ Adds two audio menu tabs: per-category volume profiles and animal pain/death sou
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-AutoRun.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-AutoRun.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-AutoRun.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-AutoRun.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Auto Run</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">Download</a><br>
 Adds double-tap auto-run on foot and in vehicles with sprint toggle support.
@@ -1226,7 +1226,7 @@ Adds double-tap auto-run on foot and in vehicles with sprint toggle support.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-ConsoleOpacityMod.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-ConsoleOpacityMod.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ConsoleOpacityMod.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ConsoleOpacityMod.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Configurable Console Visuals</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ConsoleOpacityMod.zip">Download</a><br>
 Lets you configure the F1 console background opacity.
@@ -1236,7 +1236,7 @@ Lets you configure the F1 console background opacity.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-CosmeticLockIcon.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-CosmeticLockIcon.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-CosmeticLockIcon.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-CosmeticLockIcon.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Armor Cosmetic Locked Icon</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">Download</a><br>
 Adds a scrap icon on armor entries not yet unlocked as cosmetics.
@@ -1246,7 +1246,7 @@ Adds a scrap icon on armor entries not yet unlocked as cosmetics.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-EnhancedAGF.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-EnhancedAGF.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-EnhancedAGF.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-EnhancedAGF.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v3.2.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
 Adds extended HUD bindings and Harmony patches that power extra AGF features.
@@ -1256,7 +1256,7 @@ Adds extended HUD bindings and Harmony patches that power extra AGF features.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-ExpandedInteractionPrompts.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-ExpandedInteractionPrompts.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ExpandedInteractionPrompts.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ExpandedInteractionPrompts.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Expanded Interaction Prompts</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ExpandedInteractionPrompts.zip">Download</a><br>
 Expands prompts with crafting state, storage slot usage, and vehicle status details.
@@ -1266,7 +1266,7 @@ Expands prompts with crafting state, storage slot usage, and vehicle status deta
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-FlightAssist.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-FlightAssist.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-FlightAssist.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-FlightAssist.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Flight Assist</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FlightAssist.zip">Download</a><br>
 Adds same-elevation flight assist for gyrocopters and helicopters with HUD mode display.
@@ -1276,7 +1276,7 @@ Adds same-elevation flight assist for gyrocopters and helicopters with HUD mode 
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-GlobalStormTracker.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-GlobalStormTracker.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-GlobalStormTracker.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-GlobalStormTracker.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Global Storm Tracker</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip">Download</a><br>
 Sends a global chat alert showing the active storm biome and when it clears.
@@ -1286,7 +1286,7 @@ Sends a global chat alert showing the active storm biome and when it clears.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-ItemTypeIconColor.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-ItemTypeIconColor.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ItemTypeIconColor.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ItemTypeIconColor.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF ItemTypeIconColor</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ItemTypeIconColor.zip">Download</a><br>
 Adds XML support for coloring the main item type icon.
@@ -1296,7 +1296,7 @@ Adds XML support for coloring the main item type icon.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-LockableWorkstations.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-LockableWorkstations.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-LockableWorkstations.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-LockableWorkstations.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Lockable Workstations</b> &nbsp;·&nbsp; v1.2.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-LockableWorkstations.zip">Download</a><br>
 Workstations, collectors, and generators are now lockable with owner-based access control, just like storage.
@@ -1306,7 +1306,7 @@ Workstations, collectors, and generators are now lockable with owner-based acces
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-OpenAllButton.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-OpenAllButton.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-OpenAllButton.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-OpenAllButton.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Open All Button</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">Download</a><br>
 Adds an Open All button that rapidly opens bundled items without overfilling inventory.
@@ -1316,7 +1316,7 @@ Adds an Open All button that rapidly opens bundled items without overfilling inv
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-ScreamerAlert.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-ScreamerAlert.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ScreamerAlert.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ScreamerAlert.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Screamer Alert</b> &nbsp;·&nbsp; v1.2.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">Download</a><br>
 Shows a live on-screen alert when a Screamer or its horde is within 120m.
@@ -1326,7 +1326,7 @@ Shows a live on-screen alert when a Screamer or its horde is within 120m.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-SortingBox.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-SortingBox.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-SortingBox.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-SortingBox.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Sorting Box</b> &nbsp;·&nbsp; v1.0.6 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SortingBox.zip">Download</a><br>
 Auto-sorts items from a crafted Sorting Box into matching nearby storage.
@@ -1336,7 +1336,7 @@ Auto-sorts items from a crafted Sorting Box into matching nearby storage.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-NoEAC-Toolbelt12Slots.png"><img src="00_Images/_generated/ModImage_AGF-NoEAC-Toolbelt12Slots.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-Toolbelt12Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-Toolbelt12Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Toolbelt 12 Slots</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">Download</a><br>
 Expands the toolbelt from 10 to 12 slots with hotkeys for the new slots.
@@ -1365,7 +1365,7 @@ Read each description before installing.
 ---
 
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-4Modders-10IngredientSlots.png"><img src="00_Images/_generated/ModImage_AGF-4Modders-10IngredientSlots.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-10IngredientSlots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-10IngredientSlots.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF 10 Ingredient Slots</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-10IngredientSlots.zip">Download</a><br>
 Expands the crafting info ingredient panel from 5 to 10 visible rows.
@@ -1375,7 +1375,7 @@ Expands the crafting info ingredient panel from 5 to 10 visible rows.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-4Modders-CustomWindowEnteringDuration.png"><img src="00_Images/_generated/ModImage_AGF-4Modders-CustomWindowEnteringDuration.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-CustomWindowEnteringDuration.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-CustomWindowEnteringDuration.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Custom Window Entering Duration</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-CustomWindowEnteringDuration.zip">Download</a><br>
 Configurable display duration for the Entering Area popup.
@@ -1385,7 +1385,7 @@ Configurable display duration for the Entering Area popup.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-4Modders-Fix4DestroyBiomeBadge.png"><img src="00_Images/_generated/ModImage_AGF-4Modders-Fix4DestroyBiomeBadge.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-Fix4DestroyBiomeBadge.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-Fix4DestroyBiomeBadge.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Fix DestroyBiomeBadge</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">Download</a><br>
 Prevents DestroyBiomeBadge from accidentally removing clothing items.
@@ -1395,7 +1395,7 @@ Prevents DestroyBiomeBadge from accidentally removing clothing items.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-4Modders-Fix4RemoveItems.png"><img src="00_Images/_generated/ModImage_AGF-4Modders-Fix4RemoveItems.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-Fix4RemoveItems.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-Fix4RemoveItems.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Fix RemoveItems</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4RemoveItems.zip">Download</a><br>
 Fixes RemoveItems so it triggers correctly in repeated multiplayer use.
@@ -1405,7 +1405,7 @@ Fixes RemoveItems so it triggers correctly in repeated multiplayer use.
 
 ---
 <table><tr>
-<td width="160"><a href="00_Images/_generated/ModImage_AGF-4Modders-SkillPointCap.png"><img src="00_Images/_generated/ModImage_AGF-4Modders-SkillPointCap.png" width="150"></a></td>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-SkillPointCap.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-4Modders-SkillPointCap.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>BETA - AGF Skill Point Cap</b> &nbsp;·&nbsp; v1.0.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-SkillPointCap.zip">Download</a><br>
 Adds a configurable level cap for stopping skill point rewards on level-up.
