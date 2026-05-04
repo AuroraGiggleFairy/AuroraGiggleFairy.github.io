@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-05-04T03:37:09.556333",
+  "mode": "full",
+  "dry_run": false,
+  "exit_code": 0,
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260504-033709.log",
+  "stats": {
+    "scanned_workspace_mods": 93,
+    "scanned_game_mods": 81,
+    "synced_pull_from_game": 0,
+    "synced_push_to_game": 81,
+    "sync_conflicts": 0,
+    "moved_to_publish_ready": 0,
+    "moved_to_in_progress": 0,
+    "renamed_folders": 0,
+    "csv_added_rows": 0,
+    "csv_removed_rows": 0,
+    "quote_files_created": 0,
+    "quote_files_renamed": 0,
+    "quote_files_blanked_none": 0,
+    "readmes_written": 192,
+    "readable_txt_written": 192,
+    "pushed_back_to_game": 0,
+    "mod_zips_created": 93,
+    "pack_zips_created": 7,
+    "promoted_to_publish_ready": 0,
+    "warnings": 0,
+    "errors": 0
+  },
+  "action_needed": [],
+  "mod_changes": [
+    "none"
+  ]
+}

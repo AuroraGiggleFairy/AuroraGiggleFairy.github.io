@@ -1,0 +1,29 @@
+<AGFVanillaPlus-ApiaryPlus>
+
+
+	<!-- Removing Heatmap of original Apiary (as new one will extend it. Must load before the next set of code) -->
+		<remove xpath="/blocks/block[@name='cntApiary']/property[@name='HeatMapStrength']"/>
+		<remove xpath="/blocks/block[@name='cntApiary']/property[@name='HeatMapTime']"/>
+		<remove xpath="/blocks/block[@name='cntApiary']/property[@name='HeatMapFrequency']"/>
+					
+					
+	<!--Did NOT change the original cntApiary size. Created a new one to replace the existing one. This makes applying this mod safe for existing games-->
+		<append xpath="/blocks">
+			<block name="cntApiaryAGF">
+				<property name="Extends" value="cntApiary"/>
+				<property name="CustomIcon" value="cntApiary"/>
+				<property name="MultiBlockDim" value="2,2,1"/>
+				<!-- ^^^Changes the size, default is 3,2,1-->
+			</block>
+		</append>
+
+
+	<!--Makes older version destroyable into the new one and removing its harvesting. Break it, you only get the NEW apiary. Break that one for harvest.-->	
+		<remove xpath="/blocks/block[@name='cntApiary']/drop"/>
+		<append xpath="/blocks/block[@name='cntApiary']">
+			<drop event="Destroy" name="cntApiaryAGF" count="1"/>
+			<drop event="Fall" name="cntApiaryAGF" count="1" prob="0.9" stick_chance="1"/>
+		</append>
+
+
+</AGFVanillaPlus-ApiaryPlus>

@@ -254,8 +254,8 @@ Use only `SCRIPT-Main.py` with one of these modes:
    - If nothing changed, keep the same version.
 5. Produce these outputs automatically:
    - `04_DownloadZips/AGF-GigglePack-vX.Y.Z.zip` (versioned zip)
-   - `05_GigglePackReleaseData/latest-gigglepack-discord.txt` (Discord-ready update text)
-   - `05_GigglePackReleaseData/latest-gigglepack-release.md` (Markdown release note)
+   - `05_GigglePackReleaseData/Discord/discord-post.txt` (Discord-ready update text)
+   - `05_GigglePackReleaseData/gigglepack-release-history.md` (ongoing release history)
 6. The release notes must explicitly separate:
    - New mods (with their first released version)
    - Updated existing mods (showing previous version -> latest version)
@@ -267,12 +267,12 @@ Use only `SCRIPT-Main.py` with one of these modes:
 **Why:** To automatically publish a Discord announcement only when GigglePack actually changes.
 
 1. The Discord message is rendered from template:
-   - `05_GigglePackReleaseData/TEMPLATE-DiscordUpdate.md`
+   - `05_GigglePackReleaseData/Discord/TEMPLATE-DiscordUpdate.md`
    - Parsed block is only the text between:
      - `<!-- DISCORD_TEMPLATE_START -->`
      - `<!-- DISCORD_TEMPLATE_END -->`
 2. The generated post output is written to:
-   - `05_GigglePackReleaseData/latest-gigglepack-discord.txt`
+   - `05_GigglePackReleaseData/Discord/discord-post.txt`
 3. Webhook configuration:
    - Preferred: user environment variable `AGF_DISCORD_WEBHOOK_URL`
    - Optional override: CLI argument `--discord-webhook-url`
@@ -288,7 +288,7 @@ Use only `SCRIPT-Main.py` with one of these modes:
 5. Message size safety:
    - If Discord content exceeds message limits, the script posts in chunks.
 6. First-time seeding note:
-   - If you need an initial post while there are no detected changes, do a one-time manual webhook send using `latest-gigglepack-discord.txt`.
+   - If you need an initial post while there are no detected changes, do a one-time manual webhook send using `Discord/discord-post.txt`.
 
 ---
 

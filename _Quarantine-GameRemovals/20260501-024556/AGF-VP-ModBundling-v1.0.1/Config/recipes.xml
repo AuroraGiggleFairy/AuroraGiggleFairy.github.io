@@ -1,0 +1,467 @@
+<AGFVanillaPlus-ModBundling>
+
+<append xpath="/recipes">
+	<recipe name="modArmorAdvancedMuffledConnectorsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorAdvancedMuffledConnectors" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorAgilityBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorAgility" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorBandolierBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorBandolier" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorCigarBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorCigar" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modArmorCoolingMeshBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorCoolingMesh" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modArmorCustomizedFittingsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorCustomizedFittings" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorDoubleStoragePocketBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorDoubleStoragePocket" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorFortitudeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorFortitude" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorHelmetLightBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorHelmetLight" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorImpactBracingBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorImpactBracing" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorImprovedFittingsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorImprovedFittings" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modArmorInsulatedLinerBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorInsulatedLiner" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modArmorIntellectBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorIntellect" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modArmorJumpJetsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorJumpJets" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modArmorMuffledConnectorsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorMuffledConnectors" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorNightVisionBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorNightVision" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorPerceptionBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorPerception" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorPlatingBasicBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorPlatingBasic" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorPlatingReinforcedBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorPlatingReinforced" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorQuadStoragePocketBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorQuadStoragePocket" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorStealthBootsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorStealthBoots" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorStoragePocketBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorStoragePocket" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorStrengthBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorStrength" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorTreasureHunterBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorTreasureHunter" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorTripleStoragePocketBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorTripleStoragePocket" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modArmorWaterPurifierBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modArmorWaterPurifier" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modFuelTankLargeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modFuelTankLarge" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modFuelTankSmallBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modFuelTankSmall" count="1"/>
+	</recipe>
+</append>
+
+<append xpath="/recipes">
+	<recipe name="modGunBarrelExtenderBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunBarrelExtender" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunBipodBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunBipod" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modGunBowAdminArcheryReloadRecoveryBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunBowAdminArcheryReloadRecovery" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modGunBowArrowRestBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunBowArrowRest" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunBowPolymerStringBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunBowPolymerString" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modGunButtkick3000Bundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunButtkick3000" count="1"/>
+	</recipe>
+</append>-->
+<!--<append xpath="/recipes">
+	<recipe name="modGunButtkick4000Bundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunButtkick4000" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modGunChokeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunChoke" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunCrippleEmBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunCrippleEm" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunDrumMagazineExtenderBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunDrumMagazineExtender" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunDuckbillBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunDuckbill" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunFlashlightBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunFlashlight" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modGunFoldingStockBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunFoldingStock" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modGunForegripBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunForegrip" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunLaserSightBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunLaserSight" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunMagazineExtenderBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunMagazineExtender" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunMeleeRadRemoverBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunMeleeRadRemover" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunMeleeTheHunterBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunMeleeTheHunter" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunMuzzleBrakeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunMuzzleBrake" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunReflexSightBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunReflexSight" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunRetractingStockBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunRetractingStock" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunScopeLargeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunScopeLarge" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunScopeMediumBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunScopeMedium" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunScopeSmallBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunScopeSmall" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunShotgunTubeExtenderMagazineBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunShotgunTubeExtenderMagazine" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunSoundSuppressorSilencerBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunSoundSuppressorSilencer" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunTriggerGroupAutomaticBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunTriggerGroupAutomatic" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunTriggerGroupBurst3Bundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunTriggerGroupBurst3" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modGunTriggerGroupSemiBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modGunTriggerGroupSemi" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeBunkerBusterBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeBunkerBuster" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeClubBarbedWireBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeClubBarbedWire" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeClubBurningShaftBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeClubBurningShaft" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeClubMetalChainBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeClubMetalChain" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeClubMetalSpikesBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeClubMetalSpikes" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeDiamondTipBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeDiamondTip" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeErgonomicGripBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeErgonomicGrip" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeFiremansAxeModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeFiremansAxeMod" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeFortifyingGripBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeFortifyingGrip" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeGraveDiggerBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeGraveDigger" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modMeleeGunToolDecapitizerBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeGunToolDecapitizer" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modMeleeIronBreakerBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeIronBreaker" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeSerratedBladeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeSerratedBlade" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeStructuralBraceBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeStructuralBrace" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeStunBatonRepulsorBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeStunBatonRepulsor" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeTemperedBladeBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeTemperedBlade" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeWeightedHeadBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeWeightedHead" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modMeleeWoodSplitterBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modMeleeWoodSplitter" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modRadiationReadyBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRadiationReady" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modRoboticDroneArmorPlatingModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneArmorPlatingMod" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modRoboticDroneCargoModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneCargoMod" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modRoboticDroneHeadlampModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneHeadlampMod" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modRoboticDroneMedicModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneMedicMod" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modRoboticDroneMoraleBoosterModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneMoraleBoosterMod" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modRoboticDroneStunWeaponModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneStunWeaponMod" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modRoboticDroneWeaponModBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modRoboticDroneWeaponMod" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modShotgunSawedOffBarrelBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modShotgunSawedOffBarrel" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modVehicleArmorBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleArmor" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modVehicleExpandedSeatBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleExpandedSeat" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modVehicleFuelSaverBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleFuelSaver" count="1"/>
+	</recipe>
+</append>
+<!--<append xpath="/recipes">
+	<recipe name="modVehicleMegaBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleMega" count="1"/>
+	</recipe>
+</append>-->
+<append xpath="/recipes">
+	<recipe name="modVehicleOffRoadHeadlightsBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleOffRoadHeadlights" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modVehiclePlowBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehiclePlow" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modVehicleReserveFuelTankBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleReserveFuelTank" count="1"/>
+	</recipe>
+</append>
+<append xpath="/recipes">
+	<recipe name="modVehicleSuperChargerBundle" count="1" craft_time="0" craft_exp_gain="0">
+		<ingredient name="modVehicleSuperCharger" count="1"/>
+	</recipe>
+</append>
+
+
+
+</AGFVanillaPlus-ModBundling>

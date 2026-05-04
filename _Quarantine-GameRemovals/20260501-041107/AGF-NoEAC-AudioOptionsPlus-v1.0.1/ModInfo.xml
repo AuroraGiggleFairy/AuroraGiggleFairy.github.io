@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-NoEAC-AudioOptionsPlus"/>
+    <DisplayName value="BETA - AGF Audio Options Plus"/>
+    <Version value="1.0.1"/>
+    <Description value="Adds in-game audio options for specialized volume controls and animal injury sounds."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

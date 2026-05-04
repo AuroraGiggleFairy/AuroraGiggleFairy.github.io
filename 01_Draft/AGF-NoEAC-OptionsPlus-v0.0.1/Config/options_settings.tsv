@@ -1,4 +1,0 @@
-# optionsAGF per-player settings
-# Format: playerKey<TAB>optionKey<TAB>modeInt
-entity_171	screamer_alert_mode	2
-entity_171	visual_entity_tracker_mode	1

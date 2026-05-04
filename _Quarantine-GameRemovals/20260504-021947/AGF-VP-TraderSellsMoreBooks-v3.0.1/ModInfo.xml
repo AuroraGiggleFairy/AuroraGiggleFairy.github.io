@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-TraderSellsMoreBooks" />
+  <DisplayName value="AGF Trader Sells More Books" />
+  <Version value="3.0.1" />
+  <Description value="Traders stock up to 8 of a single magazine and up to 13 different types." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

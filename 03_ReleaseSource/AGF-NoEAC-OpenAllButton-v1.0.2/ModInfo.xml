@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-OpenAllButton" />
+  <DisplayName value="AGF Open All Button" />
+  <Version value="1.0.2" />
+  <Description value="Adds an Open All button that rapidly opens bundled items without overfilling inventory." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://discord.gg/Vm5eyW6N4r" />
+  <SkipWithAntiCheat value="true" />
+</xml>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-AutomobilesRespawn" />
+  <DisplayName value="AGF Automobiles Respawn" />
+  <Version value="3.1.1" />
+  <Description value="Salvaged vehicles downgrade into a seed that slowly regrows a similar vehicle." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

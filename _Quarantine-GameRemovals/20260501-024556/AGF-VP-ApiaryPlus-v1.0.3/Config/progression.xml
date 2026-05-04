@@ -1,0 +1,14 @@
+<AGFVanillaPlus-ApiaryPlus>
+
+
+	<!-- Adding the NEW Apiary block to be unlocked for play with level 30 of craftingWorkstations (same as vanilla) -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="cntApiaryAGF"/>
+	</append>
+
+	<!-- Changing the Display Entry when looking at when you can unlock the item to give the correct localization for the new Apiary block-->
+	<!-- ^^^ Old apiary's name was changed to destroy for 2x2 -->
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[3]/unlock_entry[@item='cntApiary']/@item">cntApiaryAGF</set>
+
+
+</AGFVanillaPlus-ApiaryPlus>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-AutomobilesRespawn"/>
+	<DisplayName value="AGF Automobiles Respawn"/>
+	<Version value="3.1.1"/>
+	<Description value="Vehicles will respawn after 10 real life hours. Editable."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

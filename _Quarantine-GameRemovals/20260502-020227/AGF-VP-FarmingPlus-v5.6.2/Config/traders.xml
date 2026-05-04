@@ -1,0 +1,19 @@
+<AGFVanillaPlus-FarmingPlus>
+
+
+		<conditional>
+			<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+				<!--Favorite Flower of Bees in Trader List-->
+				<append xpath="/traders/trader_item_groups/trader_item_group[@name='seeds']">
+					<item name="beeFlower" prob="0.05"/>
+				</append>
+			</if>
+		</conditional>
+
+		<!--Plantable Bird's Nest and its schematics in Trader List-->
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='seeds']">
+			<item name="birdsNestEmpty" prob="0.05"/>
+		</append>
+		
+	
+</AGFVanillaPlus-FarmingPlus>

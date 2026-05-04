@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-FuelBurnPlus"/>
-	<DisplayName value="AGF Fuel Burn Plus"/>
-	<Version value="2.3.0"/>
-	<Description value="Combine wood or coal to create a single item with longer burn times."/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

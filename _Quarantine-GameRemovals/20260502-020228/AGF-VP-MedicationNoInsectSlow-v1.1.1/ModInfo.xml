@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-MedicationNoInsectSlow" />
+  <DisplayName value="AGF Medication No Insect Slow" />
+  <Version value="1.1.1" />
+  <Description value="Adds Bee Gone Cream to clear and prevent insect slow effects; steroids share the same protection." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

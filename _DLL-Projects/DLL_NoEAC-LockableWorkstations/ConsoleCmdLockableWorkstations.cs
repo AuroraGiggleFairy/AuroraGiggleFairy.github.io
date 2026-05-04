@@ -12,7 +12,15 @@ namespace LockableWorkstations
 
 		public override string[] getCommands()
 		{
-			return new[] { "lw", "lockws", "lockableworkstations" };
+			return new[]
+			{
+				"agf-lw",
+				"agf-lockws",
+				"agf-lockableworkstations",
+				"lw",
+				"lockws",
+				"lockableworkstations"
+			};
 		}
 
 		public override string getDescription()
@@ -23,18 +31,15 @@ namespace LockableWorkstations
 		public override string getHelp()
 		{
 			return "Usage:\n"
-				+ "  lw help\n"
-				+ "  lw status\n"
-				+ "  lw lock\n"
-				+ "  lw unlock\n"
-				+ "  lw code set <code>\n"
-				+ "  lw code clear\n"
-				+ "  lw code use <code>\n"
+				+ "  agf-lw help\n"
+				+ "  agf-lw status\n"
+				+ "  agf-lw lock\n"
+				+ "  agf-lw unlock\n"
+				+ "  agf-lw code set <code>\n"
+				+ "  agf-lw code clear\n"
+				+ "  agf-lw code use <code>\n"
 				+ "Notes:\n"
-				+ "  - commands operate on the currently focused block within 5 meters.\n"
-				+ "  - admins can manage any lockable workstation.\n"
-				+ "  - non-admin players can manage only their own/ACL workstations.\n"
-				+ "  - console/telnet cannot use focused-block commands.";
+				+ "  - commands operate on the currently focused block within 5 meters.";
 		}
 
 		public override void Execute(List<string> _params, CommandSenderInfo _senderInfo)

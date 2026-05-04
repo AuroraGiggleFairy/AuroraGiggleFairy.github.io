@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPlus-PurpleBook" />
+  <DisplayName value="AGF Purple Book" />
+  <Version value="2.0.1" />
+  <Description value="Adds a Purple Book button for a tabbed progression reference covering magazines, books, schematics, and armor details." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

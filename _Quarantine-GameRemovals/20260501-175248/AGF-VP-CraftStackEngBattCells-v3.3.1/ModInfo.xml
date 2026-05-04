@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-CraftStackEngBattCells"/>
+	<DisplayName value="AGF Craft and Stack Engine/Battery/Cells"/>
+	<Version value="3.3.1"/>
+	<Description value="Engines, Batteries, and Solar Cells are craftable and stack!"/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

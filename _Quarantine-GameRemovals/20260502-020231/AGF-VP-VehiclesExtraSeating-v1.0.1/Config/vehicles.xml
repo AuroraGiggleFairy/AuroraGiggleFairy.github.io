@@ -1,0 +1,215 @@
+<AGFVanillaPlus-VehicleSeating>
+
+
+
+<!--Bicycle Seats, 2 extra-->	
+		<append xpath="/vehicles/vehicle[@name='vehicleBicycle']">
+			<property class="seat1"><!--Actual Seat1-->
+				<property name="class" value="Seat"/>
+				<property name="pose" value="21"/>
+				<property name="position" value="0, .1, -.1"/>
+				<property name="rotation" value="6, 0, 0"/>
+				<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>
+				
+				<property name="IKFootLPosition" value="-0.15, .3, -.50"/>
+				<property name="IKFootLRotation" value="-8, 0, 0"/>
+				
+				<property name="IKFootRPosition" value="0.15, .3, -.50"/>
+				<property name="IKFootRRotation" value="-8, 0, 0"/>				
+			</property>
+			
+			<property class="seat2"><!--Actual Seat2-->
+				<property name="class" value="Seat"/>
+				<property name="pose" value="21"/>
+				<property name="position" value="0, .9, -1"/>
+				<property name="rotation" value="45, 0, 0"/>
+				<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>	
+
+				<property name="IKFootLPosition" value="0, -1, -1.1"/>
+				<property name="IKFootLRotation" value="55, 0, 0"/>
+				
+				<property name="IKFootRPosition" value="-.20, -1, 1"/><!--Good Centered Position for foot-->
+				<property name="IKFootRRotation" value="-40, 0, 0"/>
+
+	
+				<property name="IKHandRPosition" value="0.2, 2.8, 1.9"/>
+				<property name="IKHandRRotation" value="0, 100, -230"/>
+				
+			</property>
+		</append>
+		
+		<remove xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='seat1']/property[@name='mod']"/>	
+		<append xpath="/vehicles/vehicle[@name='vehicleMinibike']">			
+			<property class="seat2"><!--Actual Seat2-->
+				<property name="class" value="Seat"/>
+				<property name="pose" value="21"/>
+				<property name="position" value="0, .48, -1.15"/>
+				<property name="rotation" value="27, 0, 0"/>
+				<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>	
+
+				<property name="IKFootLPosition" value="-.1, .4, 0"/>
+				<property name="IKFootLRotation" value="-10, 0, 0"/>
+				
+				<property name="IKFootRPosition" value=".1, .4, 0"/>
+				<property name="IKFootRRotation" value="-10, 0, 0"/>
+
+	
+				<property name="IKHandRPosition" value="0.2, 2.8, 1.9"/>
+				<property name="IKHandRRotation" value="0, 100, -230"/>
+				
+			</property>
+		</append>		
+		
+<!--This is for testing purposes only		<remove xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='seat0']"/>
+											<remove xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='handlebars']"/>-->
+
+		<remove xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='seat1']/property[@name='mod']"/>		
+		<append xpath="/vehicles/vehicle[@name='vehicleMotorcycle']">			
+			<property class="seat2"><!--Actual Seat2-->
+				<property name="class" value="Seat"/>
+				<property name="pose" value="21"/>
+				<property name="position" value="0, .6, -1.6"/>
+				<property name="rotation" value="27, 0, 0"/>
+				<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>	
+
+				<property name="IKFootLPosition" value="-.25, .4, 0"/>
+				<property name="IKFootLRotation" value="-10, 0, 0"/>
+				
+				<property name="IKFootRPosition" value=".25, .4, 0"/>
+				<property name="IKFootRRotation" value="-10, 0, 0"/>
+
+	
+				<property name="IKHandRPosition" value="0.2, 2.8, 1.9"/>
+				<property name="IKHandRRotation" value="0, 100, -230"/>
+				
+			</property>
+		</append>		
+		
+	
+
+		
+		<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@class='seat5']/@class">seat7</set>
+		<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@class='seat4']/@class">seat6</set>
+		
+		<append xpath="/vehicles/vehicle[@name='vehicleTruck4x4']">			
+			<property class="seat4">
+				<property name="class" value="Seat"/>
+				<property name="pose" value="21"/>
+				<property name="position" value=".327, .609, -2"/>
+				<property name="rotation" value="-14, 90, 0"/>
+			
+				<property name="exit" value="1.1,0,-3.2 ~ 2,0,-2 ~ -2,0,-2.2 ~ .5,0,-3.6 ~ -.5,0,3 ~ .3,1.4,-2"/>
+
+
+				<property name="IKFootLPosition" value="-.1, .6, .6"/>
+				<property name="IKFootLRotation" value="-60, 0, 0"/>
+				
+				<property name="IKFootRPosition" value=".1, .6, .6"/>
+				<property name="IKFootRRotation" value="-60, 0, 0"/>
+
+
+				<property name="IKHandLPosition" value="-1, 1.5, -.8"/>
+				<property name="IKHandLRotation" value="0, 0, 0"/>	
+				
+				<property name="IKHandRPosition" value="1, 1.5, -1"/>
+				<property name="IKHandRRotation" value="180, 0, 0"/>
+				
+			</property>
+			<property class="seat5">
+				<property name="class" value="Seat"/>
+				<property name="mod" value="seat"/> <!--Requires the expanded seat mod-->
+				<property name="pose" value="21"/>
+				<property name="position" value="-.26, .609, -2.5"/>
+				<property name="rotation" value="-14, -90, 0"/>
+			
+				<property name="exit" value="1.1,0,-3.2 ~ 2,0,-2 ~ -2,0,-2.2 ~ .5,0,-3.6 ~ -.5,0,3 ~ .3,1.4,-2"/>
+
+
+				<property name="IKFootLPosition" value="-.1, .6, .6"/>
+				<property name="IKFootLRotation" value="-60, 0, 0"/>
+				
+				<property name="IKFootRPosition" value=".1, .8, 0"/>
+				<property name="IKFootRRotation" value="0, 30, 0"/>
+
+
+				<property name="IKHandLPosition" value="-.1, .4, 0"/>
+				<property name="IKHandLRotation" value="0, 90, 0"/>
+				
+				<property name="IKHandRPosition" value="1, 1.5, -1"/>
+				<property name="IKHandRRotation" value="180, 0, 0"/>
+			</property>
+		</append>
+
+
+<!--(From A21) Notes on Positions, rotations, and exits.
+
+
+	Seat Poses, are sepcific to vehicle and seat number:
+	Seaet Poses are pre-made configurations of body placement and position while in a seat.	
+	
+	Pose 10 means "1 in the 10 is for bicycle" "0 in the 10 means drivers seat" (Vanilla doesn't have passenger seats)
+	
+	Pose 20 means "2 in the 20 is for motor bike" (There is also pose 21 for the passenger seat)
+	
+	Pose 30 means "3 in the 30 is for motorcycle" (There is also pose 31 for the passenger seat)
+	
+	Pose 40 means "4 in the 40 is for truck" (There is pose 41, 42, 43, 44, and 45 for the passenger seats)
+	
+	Pose 50 means "5 in the 50 is for gyrocopter" (There is pose 51 for the passenger seat)
+	
+	
+	
+	Position Theory: While "person" is facing you...
+		X Axis - shoulder to shoulder. Increase number, they move to your right.
+		Y Axis - Down/Up the spine.	Increase number, they move Up
+		Z Axis - Distance, increase number move towards you
+
+		Seat Position Information:
+		1st pos, is Left-Right,
+		2nd pos, is Up-down, 
+		3rd pos, is front-back (Increasing number goes more front, decreasing number goes more back)
+		*** +1 to a position moves them 1 meter in appropriate direction. Decimals are allowed.
+		
+		Seat Rotation Information: (numbers are degrees 0-360)
+		The rotation center is NOT in the person, but the 1 meter block it is "standing on"
+		the "Center" is the 1 meter block the "person" is standing on.
+		So if you were to rotate someone 180 degrees, they are now standing UNDERNEATH that block.
+			-To see the person upside down in PLACE, you would have to raise their y axis by 2 meters.
+		
+		
+		1st rot, Spinning on the x-axis. Leaning forward or backwards (increasing number leans more forward)
+		2nd rot, Spinning on the y-axis. Facing front, left, right, backwards, etc.
+		3rd rot, Spinning on the z-axis. Leaning left, right, upside down, etc.
+		(FOR ROTATIONS, using a negative (-) makes the spinning opposite direction)
+		
+	*POSITIONS WITH FEET AND HANDS WORK DIFFERENTLY*
+	HANDS	x Axis - Increase number moves it to your left (while looking at person face to face)
+	
+		
+		
+		
+
+	Under "Exit" the "~" means "or". Coordinates given are optional exits in case exits are blocked.
+	
+	Exit of the gyrocopter gives "left ~ right ~ behind ~ infront ~ above" exit options
+	With the truck, similar but to each side.
+	
+	
+				<property name="IKFootLPosition" value="0, 0, 0"/>
+				<property name="IKFootLRotation" value="0, 0, 0"/>
+				
+				<property name="IKFootRPosition" value="0, 0, 0"/>
+				<property name="IKFootRRotation" value="0, 0, 0"/>
+		
+				<property name="IKHandLPosition" value="0, 0, 0"/>
+				<property name="IKHandLRotation" value="0, 0, 0"/>	
+				
+				<property name="IKHandRPosition" value="0, 0, 0"/>
+				<property name="IKHandRRotation" value="0, 0, 0"/>
+	
+	
+	
+	
+
+-->
+</AGFVanillaPlus-VehicleSeating>

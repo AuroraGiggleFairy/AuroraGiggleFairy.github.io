@@ -15,10 +15,10 @@ VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
 ZIP_OUTPUT_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
 RELEASE_META_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
-DEFAULT_CONFIG_PATH = os.path.join(RELEASE_META_DIR, "nexusmods-config.json")
-DEFAULT_TEMPLATE_PATH = os.path.join(RELEASE_META_DIR, "TEMPLATE-NexusModsConfig.json")
-DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "nexusmods-release-plan.json")
-DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "nexusmods-upload-plan.json")
+DEFAULT_CONFIG_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-config.json")
+DEFAULT_TEMPLATE_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "TEMPLATE-NexusModsConfig.json")
+DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-release-plan.json")
+DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-upload-plan.json")
 DEFAULT_API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"
 DEFAULT_APPLICATION_NAME = "AGF-NexusMods-Automation"
 DEFAULT_APPLICATION_VERSION = "0.1.0"
@@ -101,7 +101,7 @@ def extract_feature_bullets(text: str) -> List[str]:
         return []
 
     marker_match = re.search(
-        r"<!--\s*FEATURES START\s*-->(.*?)<!--\s*FEATURES END\s*-->",
+        r"<!--\s*FEATURES-SUMMARY START\s*-->(.*?)<!--\s*FEATURES-SUMMARY END\s*-->",
         normalized,
         flags=re.IGNORECASE | re.DOTALL,
     )

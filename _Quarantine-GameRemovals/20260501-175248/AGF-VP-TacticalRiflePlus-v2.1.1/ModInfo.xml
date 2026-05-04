@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-TacticalRiflePlus"/>
+	<DisplayName value="AGF Tactical Rifle Plus"/>
+	<Version value="2.1.1"/>
+	<Description value="Removed 3 round burst, magazine size up to 36 from 30."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

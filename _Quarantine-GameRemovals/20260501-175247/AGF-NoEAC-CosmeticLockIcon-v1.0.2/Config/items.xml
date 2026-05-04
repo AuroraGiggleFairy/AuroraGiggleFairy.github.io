@@ -1,0 +1,33 @@
+<CosmeticLockIcon>
+
+  
+	<!--Added the "Scrap" Icon to locked cosmetic armors. Then made the Alt disappear with the 0 opacity-->
+	<append xpath="/items/item[@name='armorPrimitiveMaster']">
+		<property name="ItemTypeIcon" value="scrap"/>
+		<property name="AltItemTypeIcon" value="light_armor"/>
+		<property name="AltItemTypeIconColor" value="120,120,120,0" />
+	</append>	
+	<append xpath="/items/item[@name='armorLightMaster']">
+		<property name="ItemTypeIcon" value="scrap"/>
+		<property name="AltItemTypeIcon" value="light_armor"/>
+		<property name="AltItemTypeIconColor" value="120,120,120,0" />
+	</append>	
+	<append xpath="/items/item[@name='armorMediumMaster']">
+		<property name="ItemTypeIcon" value="scrap"/>
+		<property name="AltItemTypeIcon" value="light_armor2"/>
+		<property name="AltItemTypeIconColor" value="120,120,120,0" />
+	</append>	
+	<append xpath="/items/item[@name='armorHeavyMaster']">
+		<property name="ItemTypeIcon" value="scrap"/>
+		<property name="AltItemTypeIcon" value="armor_iron"/>
+		<property name="AltItemTypeIconColor" value="120,120,120,0" />
+	</append>
+
+	<!--Biome Gear does not need to have these item type icons-->
+	<append xpath="/items/item[@name='biomeWeatherItem1']">
+		<property name="ItemTypeIcon" value=""/>
+		<property name="AltItemTypeIcon" value=""/>
+	</append> 
+ 
+ 
+</CosmeticLockIcon>

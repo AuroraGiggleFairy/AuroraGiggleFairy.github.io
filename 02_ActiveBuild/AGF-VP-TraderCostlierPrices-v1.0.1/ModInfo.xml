@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-TraderCostlierPrices" />
+  <DisplayName value="AGF Trader Costlier Prices" />
+  <Version value="1.0.1" />
+  <Description value="Raises trader buy markup from x3 to x10 for a tougher economy." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

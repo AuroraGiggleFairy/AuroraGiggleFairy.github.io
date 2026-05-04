@@ -7,5 +7,11 @@
 			"path": "../../Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.encoding": "utf8",
+		"files.autoGuessEncoding": false,
+		"files.eol": "\n",
+		"edit-csv.maxCellLength": 10000,
+		"rainbow_csv.enable_auto_csv_lint": true
+	}
 }

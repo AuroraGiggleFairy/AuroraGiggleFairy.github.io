@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-CraftSewingKits" />
+  <DisplayName value="AGF Craft Sewing Kits" />
+  <Version value="1.0.1" />
+  <Description value="Unlocks a workbench sewing kit recipe after reading Wasteland Treasures 6." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

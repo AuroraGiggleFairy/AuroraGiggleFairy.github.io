@@ -6,27 +6,37 @@
 [category_descriptions]
 
 [GIGGLE PACK]
-> - *All AGF mods in one convenient download.*
-> - *Direct set-up is AGF preference and only server side mods*
-> - *Client Side enhancements are in the NoEAC folder*
+All AGF mods in one convenient download.
+
+Pre-arranged for immediate use as Server-Side (EAC-Friendly).
+
+Non-EAC mods are inside optional folders within the pack.
 
 [HUDPLUS]
-*Quality-of-life HUD enhancements and visual tweaks.*
+Quality-of-life HUD enhancements and visual tweaks.
 
 [BACKPACKPLUS]
-*Download all above or select one below.*
+Increases backpack size. Choose the slot count that fits your needs.
 
 [SPECIAL]
-*A single mod for compatibilities between AGF and mods listed below. Requests are welcome in discord.*
+Compatibility patches between AGF mods and select third-party mods.
+
+Requests can be sent to AGF in [Discord](https://discord.gg/Vm5eyW6N4r).
 
 [VP]
-*Vanilla Plus: gameplay tweaks and new features.*
+Gameplay tweaks and new features that expand on the base game.
+
+All Server-side (EAC-Friendly)!
 
 [NOEAC]
-*Mods that require EAC to be off, some require client download.*
+Game enhancements that require a DLL. EAC must be off.
+
+Installation requirements vary — check each mod's details.
 
 [4MODDERS]
-*Optional modder-focused helpers and tooling that stay in an optionals folder by default.*
+Modder resources and niche mods.
+
+Read each description before installing.
 
 [OTHER]
-*Additional requested HUD options and tweaks.*
+Additional requested HUD options and tweaks.

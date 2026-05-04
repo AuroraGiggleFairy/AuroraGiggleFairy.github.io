@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-4Modders-10IngredientSlots" />
+  <DisplayName value="AGF 10 Ingredient Slots" />
+  <Version value="1.0.2" />
+  <Description value="Expands the crafting info ingredient panel from 5 to 10 visible rows." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

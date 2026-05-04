@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-4Modders-ItemTypeIconColor" />
+  <DisplayName value="AGF ItemTypeIconColor" />
+  <Version value="1.0.2" />
+  <Description value="Adds XML support for coloring the main item type icon." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://discord.gg/Vm5eyW6N4r" />
+  <SkipWithAntiCheat value="true" />
+</xml>

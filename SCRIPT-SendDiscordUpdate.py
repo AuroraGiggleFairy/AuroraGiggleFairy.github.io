@@ -7,7 +7,7 @@ import urllib.request
 from typing import List
 
 VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_RELEASE_TEXT_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "latest-gigglepack-discord.txt")
+DEFAULT_RELEASE_TEXT_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "Discord", "discord-post.txt")
 DISCORD_WEBHOOK_ENV_VAR = "AGF_DISCORD_WEBHOOK_URL"
 
 

@@ -1,0 +1,126 @@
+<AGFVanillaPlus-AmmoDisassembly>
+
+
+	<!--Ammo Scrapping System-->
+	<!--This section allows items to be scrapped into these named parts-->
+		<append xpath="/recipes">
+			<recipe name="disa9mmBulletBall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa9mmBulletHP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa9mmBulletAP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa44MagnumBulletBall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa44MagnumBulletHP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa44MagnumBulletAP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa762mmBulletBall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa762mmBulletHP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disa762mmBulletAP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaShotgunShell" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaShotgunSlug" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaShotgunBreachingSlug" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaArrowFlaming" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaCrossbowBoltFlaming" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaArrowExploding" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaCrossbowBoltExploding" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaArrowIron" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaCrossbowBoltIron" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaArrowSteelAP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaCrossbowBoltSteelAP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaArrowStone" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaCrossbowBoltStone" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaRocketFrag" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaRocketHE" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="dthrownPipeBomb" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="dthrownGrenadeContact" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="dthrownGrenade" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="dthrownTimedCharge" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="dthrownDynamite" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="dthrownMolotovCocktail" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaDartIron" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaJunkTurretRegular" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaJunkTurretAP" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+			<recipe name="disaJunkTurretShell" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+		</append>
+
+	<!-- This section is adding recipes to combine multiple disassemble bundles, as server side players cannot have an "open all" button.-->	
+		<!-- First group is taking 100 disassembled bundles and turning it into 1.-->
+		<!-- Second group is taking 1,000 disassembled bundles and turning it into 1.-->
+		<append xpath="/recipes">
+			<!--combining 100 dissassembled ammo into 1, for easier opening-->
+			<recipe name="disa44MagnumBulletAP100" count="1" craft_time="1"><ingredient name="disa44MagnumBulletAP" count="100"/></recipe>
+			<recipe name="disa44MagnumBulletBall100" count="1" craft_time="1"><ingredient name="disa44MagnumBulletBall" count="100"/></recipe>
+			<recipe name="disa44MagnumBulletHP100" count="1" craft_time="1"><ingredient name="disa44MagnumBulletHP" count="100"/></recipe>
+			<recipe name="disa762mmBulletAP100" count="1" craft_time="1"><ingredient name="disa762mmBulletAP" count="100"/></recipe>
+			<recipe name="disa762mmBulletBall100" count="1" craft_time="1"><ingredient name="disa762mmBulletBall" count="100"/></recipe>
+			<recipe name="disa762mmBulletHP100" count="1" craft_time="1"><ingredient name="disa762mmBulletHP" count="100"/></recipe>
+			<recipe name="disa9mmBulletAP100" count="1" craft_time="1"><ingredient name="disa9mmBulletAP" count="100"/></recipe>
+			<recipe name="disa9mmBulletBall100" count="1" craft_time="1"><ingredient name="disa9mmBulletBall" count="100"/></recipe>
+			<recipe name="disa9mmBulletHP100" count="1" craft_time="1"><ingredient name="disa9mmBulletHP" count="100"/></recipe>
+			<recipe name="disaArrowExploding100" count="1" craft_time="1"><ingredient name="disaArrowExploding" count="100"/></recipe>
+			<recipe name="disaArrowFlaming100" count="1" craft_time="1"><ingredient name="disaArrowFlaming" count="100"/></recipe>
+			<recipe name="disaArrowIron100" count="1" craft_time="1"><ingredient name="disaArrowIron" count="100"/></recipe>
+			<recipe name="disaArrowSteelAP100" count="1" craft_time="1"><ingredient name="disaArrowSteelAP" count="100"/></recipe>
+			<recipe name="disaArrowStone100" count="1" craft_time="1"><ingredient name="disaArrowStone" count="100"/></recipe>
+			<recipe name="disaCrossbowBoltExploding100" count="1" craft_time="1"><ingredient name="disaCrossbowBoltExploding" count="100"/></recipe>
+			<recipe name="disaCrossbowBoltFlaming100" count="1" craft_time="1"><ingredient name="disaCrossbowBoltFlaming" count="100"/></recipe>
+			<recipe name="disaCrossbowBoltIron100" count="1" craft_time="1"><ingredient name="disaCrossbowBoltIron" count="100"/></recipe>
+			<recipe name="disaCrossbowBoltSteelAP100" count="1" craft_time="1"><ingredient name="disaCrossbowBoltSteelAP" count="100"/></recipe>
+			<recipe name="disaCrossbowBoltStone100" count="1" craft_time="1"><ingredient name="disaCrossbowBoltStone" count="100"/></recipe>
+			<recipe name="disaDartIron100" count="1" craft_time="1"><ingredient name="disaDartIron" count="100"/></recipe>
+			<recipe name="disaJunkTurretAP100" count="1" craft_time="1"><ingredient name="disaJunkTurretAP" count="100"/></recipe>
+			<recipe name="disaJunkTurretRegular100" count="1" craft_time="1"><ingredient name="disaJunkTurretRegular" count="100"/></recipe>
+			<recipe name="disaJunkTurretShell100" count="1" craft_time="1"><ingredient name="disaJunkTurretShell" count="100"/></recipe>
+			<recipe name="disaRocketFrag100" count="1" craft_time="1"><ingredient name="disaRocketFrag" count="100"/></recipe>
+			<recipe name="disaRocketHE100" count="1" craft_time="1"><ingredient name="disaRocketHE" count="100"/></recipe>
+			<recipe name="disaShotgunBreachingSlug100" count="1" craft_time="1"><ingredient name="disaShotgunBreachingSlug" count="100"/></recipe>
+			<recipe name="disaShotgunShell100" count="1" craft_time="1"><ingredient name="disaShotgunShell" count="100"/></recipe>
+			<recipe name="disaShotgunSlug100" count="1" craft_time="1"><ingredient name="disaShotgunSlug" count="100"/></recipe>
+			<recipe name="dthrownMolotovCocktail100" count="1" craft_time="1"><ingredient name="dthrownMolotovCocktail" count="100"/></recipe>
+			<recipe name="dthrownPipeBomb100" count="1" craft_time="1"><ingredient name="dthrownPipeBomb" count="100"/></recipe>
+			<recipe name="dthrownDynamite100" count="1" craft_time="1"><ingredient name="dthrownDynamite" count="100"/></recipe>
+			<recipe name="dthrownGrenade100" count="1" craft_time="1"><ingredient name="dthrownGrenade" count="100"/></recipe>
+			<recipe name="dthrownGrenadeContact100" count="1" craft_time="1"><ingredient name="dthrownGrenadeContact" count="100"/></recipe>
+			<recipe name="dthrownTimedCharge100" count="1" craft_time="1"><ingredient name="dthrownTimedCharge" count="100"/></recipe>
+			
+			<!--combining 1,000 dissassembled ammo into 1, for easier opening-->
+			<recipe name="disa44MagnumBulletAP1000" count="1" craft_time="1"><ingredient name="disa44MagnumBulletAP" count="1000"/></recipe>
+			<recipe name="disa44MagnumBulletBall1000" count="1" craft_time="1"><ingredient name="disa44MagnumBulletBall" count="1000"/></recipe>
+			<recipe name="disa44MagnumBulletHP1000" count="1" craft_time="1"><ingredient name="disa44MagnumBulletHP" count="1000"/></recipe>
+			<recipe name="disa762mmBulletAP1000" count="1" craft_time="1"><ingredient name="disa762mmBulletAP" count="1000"/></recipe>
+			<recipe name="disa762mmBulletBall1000" count="1" craft_time="1"><ingredient name="disa762mmBulletBall" count="1000"/></recipe>
+			<recipe name="disa762mmBulletHP1000" count="1" craft_time="1"><ingredient name="disa762mmBulletHP" count="1000"/></recipe>
+			<recipe name="disa9mmBulletAP1000" count="1" craft_time="1"><ingredient name="disa9mmBulletAP" count="1000"/></recipe>
+			<recipe name="disa9mmBulletBall1000" count="1" craft_time="1"><ingredient name="disa9mmBulletBall" count="1000"/></recipe>
+			<recipe name="disa9mmBulletHP1000" count="1" craft_time="1"><ingredient name="disa9mmBulletHP" count="1000"/></recipe>
+			<recipe name="disaArrowExploding1000" count="1" craft_time="1"><ingredient name="disaArrowExploding" count="1000"/></recipe>
+			<recipe name="disaArrowFlaming1000" count="1" craft_time="1"><ingredient name="disaArrowFlaming" count="1000"/></recipe>
+			<recipe name="disaArrowIron1000" count="1" craft_time="1"><ingredient name="disaArrowIron" count="1000"/></recipe>
+			<recipe name="disaArrowSteelAP1000" count="1" craft_time="1"><ingredient name="disaArrowSteelAP" count="1000"/></recipe>
+			<recipe name="disaArrowStone1000" count="1" craft_time="1"><ingredient name="disaArrowStone" count="1000"/></recipe>
+			<recipe name="disaCrossbowBoltExploding1000" count="1" craft_time="1"><ingredient name="disaCrossbowBoltExploding" count="1000"/></recipe>
+			<recipe name="disaCrossbowBoltFlaming1000" count="1" craft_time="1"><ingredient name="disaCrossbowBoltFlaming" count="1000"/></recipe>
+			<recipe name="disaCrossbowBoltIron1000" count="1" craft_time="1"><ingredient name="disaCrossbowBoltIron" count="1000"/></recipe>
+			<recipe name="disaCrossbowBoltSteelAP1000" count="1" craft_time="1"><ingredient name="disaCrossbowBoltSteelAP" count="1000"/></recipe>
+			<recipe name="disaCrossbowBoltStone1000" count="1" craft_time="1"><ingredient name="disaCrossbowBoltStone" count="1000"/></recipe>
+			<recipe name="disaDartIron1000" count="1" craft_time="1"><ingredient name="disaDartIron" count="1000"/></recipe>
+			<recipe name="disaJunkTurretAP1000" count="1" craft_time="1"><ingredient name="disaJunkTurretAP" count="1000"/></recipe>
+			<recipe name="disaJunkTurretRegular1000" count="1" craft_time="1"><ingredient name="disaJunkTurretRegular" count="1000"/></recipe>
+			<recipe name="disaJunkTurretShell1000" count="1" craft_time="1"><ingredient name="disaJunkTurretShell" count="1000"/></recipe>
+			<recipe name="disaRocketFrag1000" count="1" craft_time="1"><ingredient name="disaRocketFrag" count="1000"/></recipe>
+			<recipe name="disaRocketHE1000" count="1" craft_time="1"><ingredient name="disaRocketHE" count="1000"/></recipe>
+			<recipe name="disaShotgunBreachingSlug1000" count="1" craft_time="1"><ingredient name="disaShotgunBreachingSlug" count="1000"/></recipe>
+			<recipe name="disaShotgunShell1000" count="1" craft_time="1"><ingredient name="disaShotgunShell" count="1000"/></recipe>
+			<recipe name="disaShotgunSlug1000" count="1" craft_time="1"><ingredient name="disaShotgunSlug" count="1000"/></recipe>
+			<recipe name="dthrownMolotovCocktail1000" count="1" craft_time="1"><ingredient name="dthrownMolotovCocktail" count="1000"/></recipe>
+			<recipe name="dthrownPipeBomb1000" count="1" craft_time="1"><ingredient name="dthrownPipeBomb" count="1000"/></recipe>
+			<recipe name="dthrownDynamite1000" count="1" craft_time="1"><ingredient name="dthrownDynamite" count="1000"/></recipe>
+			<recipe name="dthrownGrenade1000" count="1" craft_time="1"><ingredient name="dthrownGrenade" count="1000"/></recipe>
+			<recipe name="dthrownGrenadeContact1000" count="1" craft_time="1"><ingredient name="dthrownGrenadeContact" count="1000"/></recipe>
+			<recipe name="dthrownTimedCharge1000" count="1" craft_time="1"><ingredient name="dthrownTimedCharge" count="1000"/></recipe>
+		</append>
+
+
+
+				
+
+</AGFVanillaPlus-AmmoDisassembly>
+
+

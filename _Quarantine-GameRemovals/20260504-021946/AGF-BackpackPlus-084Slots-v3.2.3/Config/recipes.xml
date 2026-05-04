@@ -1,0 +1,21 @@
+<AGF-Backpack84>
+
+<!--Recipes for the larger versions of player crates. Basically x3 resources as the slots are significantly larger.-->
+	<append xpath="/recipes">
+			<recipe name="storageLargeWoodVariantHelper" count="1">
+				<ingredient name="resourceWood" count="30"/>
+			</recipe>
+
+			<recipe name="storageLargeIronVariantHelper" count="1">
+				<ingredient name="resourceForgedIron" count="30"/>
+			</recipe>
+
+			<recipe name="storageLargeSteelVariantHelper" count="1">
+				<ingredient name="resourceForgedSteel" count="30"/>
+			</recipe>
+	</append>
+
+		
+</AGF-Backpack84>
+
+

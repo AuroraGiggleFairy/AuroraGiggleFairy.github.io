@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+bloodMoonTraderClosed_NoTrader,twitch,Buffs,,,"Blood Moon - No Trader",,"Blutmond „Kein Händler“","Luna de sangre - sin comerciante","Lune de sang : aucun marchand","Luna Rossa: No negoziante","ブラッド・ムーン トレーダーなし","블러드 문  상인 없음","krwawy księżyc – bez handlarzy","luas de sangue","Таким не продаем (кровавая луна)","kanlı Ay Tüccar Yok","血月无商人","血月 無商人"

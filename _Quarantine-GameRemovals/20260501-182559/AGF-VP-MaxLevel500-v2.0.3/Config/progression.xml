@@ -1,0 +1,9 @@
+<AGFVanillaPlus-MaxLevel500>
+	
+			<!--Level 500 cap-->
+			<set xpath="/progression/level/@max_level">500</set>
+	
+
+</AGFVanillaPlus-MaxLevel500>
+
+ 

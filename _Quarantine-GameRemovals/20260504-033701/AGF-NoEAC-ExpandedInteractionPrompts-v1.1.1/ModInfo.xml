@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-ExpandedInteractionPrompts" />
+  <DisplayName value="AGF Expanded Interaction Prompts" />
+  <Version value="1.1.1" />
+  <Description value="Expands prompts with crafting state, storage slot usage, and vehicle status details." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

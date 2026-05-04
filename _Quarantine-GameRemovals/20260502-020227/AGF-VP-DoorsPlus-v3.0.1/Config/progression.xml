@@ -1,0 +1,17 @@
+<AGFVanillaPlus-DoorsPlus>
+
+
+
+	<!--Making the new powered doors' recipe unlock as intended with crafting electrician-->
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group">
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,100" value="1" tags="miscpoweredDoorVariantHelperAGF"/>
+		</append>
+		
+		
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/display_entry[@icon='batterybank']/unlock_entry/@item">,miscpoweredDoorVariantHelperAGF</append>
+
+
+
+</AGFVanillaPlus-DoorsPlus>
+
+ 

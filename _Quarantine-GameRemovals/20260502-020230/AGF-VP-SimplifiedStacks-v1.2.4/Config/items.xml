@@ -1,0 +1,291 @@
+<AGFVanillaPlus-SimplifiedStacks>
+
+
+
+
+<!--STACKS PLUS
+	Feature: 	Simplified stack sizes that keeps close to vanilla experience.
+				Bundles and consumables stack to 50
+				Ammo stacks to 500
+				Resources are generally 500, 1000, or 6000
+				Gas, Coins, and plant fibers stack to 30000
+				Placeable blocks (like workstations) to 500
+				Farming and General blocks to 5000
+				Opening bundles adapted to new stack sizes
+				
+	Default: 	Default values are listed next to each line of code.
+	
+	XML's: 		Items, Blocks, Recipes, Localization
+	
+	Why: 		Quality of Life, improve the vanilla experience
+				Stack sizes more consistent with each other.
+				Easier to remember and organize.
+				Took HEAVY consideration of economic impact utilizing complex excel formulas.
+				This section could be simplified, but made it possible for others to make specific adjustments.
+	
+	Delete?: 	Only modifies existing items, therefore safe to remove from existing games.
+				After removing from existing games, existing stacks will stay that amount until player adjusts them.
+					Auto-sort fixes all of them as well.
+	
+	Code:		Set new "Stacknumber" values by general category and use of each item.
+				Updated bundle's "Create_item_count" to match the new stack sizes.
+				Made some items unsellable with SellableToTrader="false"
+				Code wise, this could be done in significantly less lines, 
+					but this shows specifically the changes I made and aided thorough testing.
+				Many match the default value, these resulted in thorough testing.-->
+				
+		<!--Bundles stack size increase-->			
+			<set xpath="/items/item[@name='ammoBundle9mmBulletBall']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='ammoBundle9mmBulletHP']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='ammoBundle9mmBulletAP']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='ammoBundle44MagnumBulletBall']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='ammoBundle44MagnumBulletHP']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='ammoBundle44MagnumBulletAP']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='resourceRockSmallBundle']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			<set xpath="/items/item[@name='ammoBundleMaster']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			<set xpath="/items/item[@name='resourceLockPickBundle']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+		
+		<!--Stacks to 30000-->
+			<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">30000</set><!--Default = 10000-->
+			<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set><!--Default = 10000-->
+			<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set><!--Default 20000= -->
+			<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='Stacknumber']/@value">30000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceFeather']/property[@name='Stacknumber']/@value">30000</set><!--Default = 250-->
+			<set xpath="/items/item[@name='resourceFeather']/property[@name='EconomicValue']/@value">2</set><!--Default = 10-->		
+			<set xpath="/items/item[@name='resourceBrokenGlass']/property[@name='Stacknumber']/@value">30000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourcePaper']/property[@name='Stacknumber']/@value">30000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceNail']/property[@name='Stacknumber']/@value">30000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourcePaint']/property[@name='Stacknumber']/@value">30000</set><!--Default = 1000-->
+			
+		<!--Stacks to 6000-->		
+			<set xpath="/items/item[@name='resourceBone']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1200-->
+			<set xpath="/items/item[@name='resourceCement']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceClayLump']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceCoal']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceCrushedSand']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceOilShale']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourcePotassiumNitratePowder']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceRockSmall']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceScrapBrass']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceScrapIron']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceScrapLead']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']/@value">6000</set><!--Default = 6000-->
+			<set xpath="/items/item[@name='resourceConcreteMix']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->			
+			<set xpath="/items/item[@name='resourceBuckshot']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceBulletTip']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceGunPowder']/property[@name='Stacknumber']/@value">6000</set><!--Default = 1000-->
+			
+			<set xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']/@value">6000</set><!--Default = 250-->	
+			<set xpath="/items/item[@name='resourceArrowHeadIron']/property[@name='Stacknumber']/@value">6000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceArrowHeadSteelAP']/property[@name='Stacknumber']/@value">6000</set><!--Default = 500-->			
+			
+		<!--Stacks to 1000-->				
+			<set xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">1000</set><!--Default = 1000-->	
+			<set xpath="/items/item[@name='resourceDuctTape']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceElectricParts']/property[@name='Stacknumber']/@value">1000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceFishingWeight']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceForgedIron']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceForgedSteel']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceGlue']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->			
+			<set xpath="/items/item[@name='resourceLeather']/property[@name='Stacknumber']/@value">1000</set><!--Default = 250-->
+			<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='Stacknumber']/@value">1000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceMetalPipe']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceRocketCasing']/property[@name='Stacknumber']/@value">1000</set><!--Default = 50-->
+			<set xpath="/items/item[@name='resourceRocketTip']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceScrapPolymers']/property[@name='Stacknumber']/@value">1000</set><!--Default = 1000-->
+			<set xpath="/items/item[@name='resourceSewingKit']/property[@name='Stacknumber']/@value">1000</set><!--Default = 20-->
+			<set xpath="/items/item[@name='resourceSpring']/property[@name='Stacknumber']/@value">1000</set><!--Default = 500-->	
+			<set xpath="/items/item[@name='resourceScopeLens']/property[@name='Stacknumber']/@value">1000</set><!--Default = 10-->	
+			<set xpath="/items/item[@name='resourceHeadlight']/property[@name='Stacknumber']/@value">1000</set><!--Default = 50-->
+				<set xpath="/items/item[@name='resourceHeadlight']/property[@name='EconomicValue']/@value">10</set><!--Default = 150-->
+				<append xpath="/items/item[@name='resourceHeadlight']"><property name="EconomicBundleSize" value="10"/></append>
+			
+			
+		<!--Stacks to 500-->				
+			<set xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']/@value">500</set><!--Default = 150-->
+			<set xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']/@value">500</set><!--Default = 300-->
+			<set xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']/@value">500</set><!--Default = 75-->
+			<set xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']/@value">500</set><!--Default = 150--><!--iron arrows extends this-->
+			<set xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='Stacknumber']/@value">500</set><!--Default = 75-->
+			<set xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Stacknumber']/@value">500</set><!--Default = 150-->
+			<set xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Stacknumber']/@value">500</set><!--Default = 150-->
+			<set xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']/@value">500</set><!--Default = 150-->
+			<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']/@value">500</set><!--Default = 150-->
+			<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']/@value">500</set><!--Default = 150-->
+			<set xpath="/items/item[@name='foodCornMeal']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodCropGraceCorn']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodEgg']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='gunMGT1AK47Parts']/property[@name='Stacknumber']/@value">500</set><!--Default = 50-->
+			<set xpath="/items/item[@name='resourceAnimalFat']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceCandleStick']/property[@name='Stacknumber']/@value">500</set><!--Default = 250-->
+			<set xpath="/items/item[@name='resourceCropAloeLeaf']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceCropChrysanthemumPlant']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceCropCoffeeBeans']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceCropCottonPlant']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceCropGoldenrodPlant']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceCropHopsFlower']/property[@name='Stacknumber']/@value">500</set><!--Default = 500-->
+			<set xpath="/items/item[@name='resourceDoorKnob']/property[@name='Stacknumber']/@value">500</set><!--Default = 250-->
+			<set xpath="/items/item[@name='resourceSilverNugget']/property[@name='Stacknumber']/@value">500</set><!--Default = 250-->
+			<set xpath="/items/item[@name='resourceTestosteroneExtract']/property[@name='Stacknumber']/@value">500</set><!--Default = 10-->
+			<set xpath="/items/item[@name='resourceTrophy1']/property[@name='Stacknumber']/@value">500</set><!--Default = 250-->
+			<set xpath="/items/item[@name='resourceTrophy2']/property[@name='Stacknumber']/@value">500</set><!--Default = 250-->
+			<set xpath="/items/item[@name='foodCropPotato']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodCropMushrooms']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodCropYuccaFruit']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodCropPumpkin']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodCropCorn']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='foodCropBlueberries']/property[@name='Stacknumber']/@value">500</set><!--Default = 125-->
+			<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">500</set>	<!--Default = 125-->		
+			<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">500</set><!--Default = 1-->		
+			<set xpath="/items/item[@name='medicalBloodBag']/property[@name='Stacknumber']/@value">500</set>	<!--Default = 15-->
+			<set xpath="/items/item[@name='resourceOil']/property[@name='Stacknumber']/@value">500</set><!--Default = 50-->		
+			<set xpath="/items/item[@name='foodShamSandwich']/property[@name='Stacknumber']/@value">500</set><!--Default = 10-->
+			<set xpath="/items/item[@name='masterSkillMagazine']/property[@name='Stacknumber']/@value">500</set><!--Default = 20-->
+			<set xpath="/items/item[@name='resourceAcid']/property[@name='Stacknumber']/@value">500</set><!--Default = 100-->
+			
+			<!--I decided the boiled water becomes a significant space taker-upper so went ahead and changed it to 500 as well-->
+			<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']/@value">500</set><!--Default = 10-->
+			
+			
+		<!--Stacks to 50-->			
+			<set xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']/@value">50</set><!--Default = 20-->
+			<set xpath="/items/item[@name='bookFiremansAlmanacHeat']/property[@name='Stacknumber']/@value">50</set><!--Default = 20-->
+			<set xpath="/items/item[@name='candle']/property[@name='Stacknumber']/@value">50</set><!--Default = 50-->
+			<set xpath="/items/item[@name='drinkJarBeer']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarCoffee']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarGoldenRodTea']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarPureMineralWater']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarRedTea']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarYuccaJuice']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drugAntibiotics']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drugAtomJunkies']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drugHerbalAntibiotics']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodHoboStew']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drugPainkillers']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drugRecog']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drugVitamins']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodBaconAndEggs']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodBakedPotato']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodBlueberryPie']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodBoiledMeat']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodCharredMeat']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodCornBread']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodCornOnTheCob']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodEggBoiled']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodFishTacos']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodGrilledMeat']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodGumboStew']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodHoney']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodMeatStew']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodPumpkinBread']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodPumpkinCheesecake']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodPumpkinPie']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodShepardsPie']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodSpaghetti']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodSteakAndPotato']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodTunaFishGravyToast']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='foodVegetableStew']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']/@value">50</set><!--Default = 15-->
+			<set xpath="/items/item[@name='medicalBandage']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			<set xpath="/items/item[@name='medicalFirstAidKit']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			<set xpath="/items/item[@name='medicalSplint']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Stacknumber']/@value">50</set><!--Default = 50-->
+			<append xpath="/items/item[@name='toolDewFilter']"><property name="Stacknumber" value="50"/></append><!--Default = 1-->
+			<append xpath="/items/item[@name='toolDewTarp']"><property name="Stacknumber" value="50"/></append><!--Default = 1-->
+			<append xpath="/items/item[@name='toolDewGatherer']"><property name="Stacknumber" value="50"/></append><!--Default = 1-->
+			
+			
+			<set xpath="/items/item[@name='resourceLockPick']/property[@name='Stacknumber']/@value">50</set><!--Default = 50-->
+			<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			<set xpath="/items/item[@name='resourceRepairKit']/property[@name='Stacknumber']/@value">50</set><!--Default = 25-->
+			<set xpath="/items/item[@name='resourceLegendaryParts']/property[@name='Stacknumber']/@value">50</set><!--Default = 25-->
+			<set xpath="/items/item[@name='resourceArmorCraftingKit']/property[@name='Stacknumber']/@value">50</set><!--Default = 25-->
+			<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">50</set><!--Default = 5-->
+			
+			<set xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']/@value">50</set><!--Default = 20-->
+			<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">50</set><!--Default = 20-->
+			<set xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='thrownGrenadeContact']/property[@name='Stacknumber']/@value">50</set><!--Default = 25-->
+			<set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='toolBeaker']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+			<set xpath="/items/item[@name='toolCookingGrill']/property[@name='Stacknumber']/@value">50</set><!--Default = 250-->
+			<set xpath="/items/item[@name='toolCookingPot']/property[@name='Stacknumber']/@value">50</set><!--Default = 250-->		
+			
+			
+			<set xpath="/items/item[@name='foodCanBeef']/property[@name='Stacknumber']/@value">50</set>	<!--Default = 10-->			
+			<set xpath="/items/item[@name='meleeToolFlashlight02']/property[@name='Stacknumber']/@value">50</set><!--Default = 1-->
+			<set xpath="/items/item[@name='meleeToolPaintTool']/property[@name='Stacknumber']/@value">50</set><!--Default = 1-->
+			<set xpath="/items/item[@name='meleeToolWireTool']/property[@name='Stacknumber']/@value">50</set><!--Default = 1-->	
+			
+			
+		<!--Stacks to 10-->				
+			<set xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='Stacknumber']/@value">10</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='Stacknumber']/@value">10</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@name='Stacknumber']/@value">10</set><!--Default = 10-->
+			<set xpath="/items/item[@name='drinkJarGrandpasMoonshine']/property[@name='Stacknumber']/@value">10</set><!--Default = 10-->
+			
+		<!--Stacks to 5-->			
+			<set xpath="/items/item[@name='toolAnvil']/property[@name='Stacknumber']/@value">5</set><!--Default = 1-->
+			<set xpath="/items/item[@name='toolBellows']/property[@name='Stacknumber']/@value">5</set><!--Default = 1-->
+			<set xpath="/items/item[@name='toolForgeCrucible']/property[@name='Stacknumber']/@value">5</set><!--Default = 1-->
+
+		<!--bundles adjusted to match new stacksizes-->
+			<set xpath="/items/item[@name='ammoGasCanBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">30000</set><!--Default = 5000-->
+			<set xpath="/items/item[@name='resourceGunPowderBundle']/property[@class='Action0']/property[@name='Create_item_count']/@value">6000</set><!--Default = 1000-->
+			<append xpath="/items/item[contains(@name,'ammoBundle9mm')]/property[@class='Action0']"><property name="Create_item_count" value="500"/></append><!--Default = 100-->
+			<append xpath="/items/item[contains(@name,'ammoBundle44Magnum')]/property[@class='Action0']"><property name="Create_item_count" value="500"/></append><!--Default = 100-->
+			<append xpath="/items/item[contains(@name,'ammoBundle762mm')]/property[@class='Action0']"><property name="Create_item_count" value="500"/></append><!--Default = 100-->
+			<append xpath="/items/item[contains(@name,'ammoBundleShotgun')]/property[@class='Action0']"><property name="Create_item_count" value="500"/></append><!--Default = 100-->
+			<append xpath="/items/item[contains(@name,'ammoBundleArrow')]/property[@class='Action0']"><property name="Create_item_count" value="500"/></append><!--Default = 100-->
+			<set xpath="/items/item[contains(@name,'ammoBundleArrowExploding')]/property[@class='Action0']/property[@name='Create_item_count']/@value">500</set><!--Default = 75-->
+			<append xpath="/items/item[contains(@name,'ammoBundleCrossbowBolt')]/property[@class='Action0']"><property name="Create_item_count" value="500"/></append><!--Default = 100-->
+			<set xpath="/items/item[contains(@name,'ammoBundleCrossbowBoltExploding')]/property[@class='Action0']/property[@name='Create_item_count']/@value">500</set><!--Default = 75-->
+
+		<!--Make Unsellable in order to not break the game-->
+			<append xpath="/items/item[@name='resourceRocketTip']"> <property name="SellableToTrader" value="false"/></append>
+			<append xpath="/items/item[@name='resourceRocketCasing']"> <property name="SellableToTrader" value="false"/></append>
+
+
+		<!--Changes to only apply with 7d2d version 2.5+ -->
+		<conditional>
+			<if cond="game_version() &gt;= version(1,2,5)">
+				<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">500</set>	<!--Default = 10-->
+				<set xpath="/items/item[@name='resourceBeeswax']/property[@name='Stacknumber']/@value">50</set><!--Default = 10--><!--Questionably bad for economy-->
+				<set xpath="/items/item[@name='foodHoneyGlazedSham']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+				<set xpath="/items/item[@name='foodHoneyBrisket']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->
+				<set xpath="/items/item[@name='toolApiaryExtractor']/property[@name='Stacknumber']/@value">50</set><!--Default = 1-->		
+				<set xpath="/items/item[@name='toolApiaryBroodBox']/property[@name='Stacknumber']/@value">50</set><!--Default = 1-->		
+				<set xpath="/items/item[@name='toolApiarySmoker']/property[@name='Stacknumber']/@value">50</set><!--Default = 1-->	
+				<set xpath="/items/item[@name='foodRawMeatBundle']/property[@name='Stacknumber']/@value">50</set><!--Default = 10-->	
+				<set xpath="/items/item[@name='drinkJarHoneyTea']/property[@name='Stacknumber']/@value">50</set>	<!--Default = 10-->
+
+				<append xpath="/items">
+					<item name="foodRawMeatBundleAGF">
+						<property name="Extends" value="foodRawMeatBundle"/>
+						<property name="DescriptionKey" value="foodRawMeatBundleDesc"/>
+						<property name="CustomIconTint" value="930CF8"/>
+						<property name="CustomIcon" value="foodRawMeatBundle"/>
+						<property name="Stacknumber" value="50"/>
+						<property class="Action0">
+							<property name="Class" value="OpenBundle"/>
+							<property name="Delay" value="0"/>
+							<property name="Sound_start" value="close_garbage"/>
+							<property name="Create_item" value="foodRawMeat"/>
+							<property name="Create_item_count" value="500"/>
+						</property>
+					</item>				
+				</append>
+
+				
+			</if>
+		</conditional>					
+			
+
+</AGFVanillaPlus-SimplifiedStacks>

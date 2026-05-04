@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-MaxLevel500"/>
-	<DisplayName value="AGF Max Level 500"/>
-	<Version value="2.0.2"/>
-	<Description value="Paises the max level from 300 to 500, because why not?"/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

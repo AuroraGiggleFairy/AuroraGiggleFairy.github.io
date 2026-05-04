@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-FloraHarvester"/>
-	<DisplayName value="AGF Flora Harvester"/>
-	<Version value="2.3.0"/>
-	<Description value="Special tool to quickly cut grass and crops."/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

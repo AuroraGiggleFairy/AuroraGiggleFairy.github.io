@@ -1,0 +1,24 @@
+<AGF-Backpack60>
+
+
+<!--Included updated carry capacity for GOD mode-->
+	<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set><!--Default = 45-->
+	
+<!--Included updated carry capacity for effects from Steroids-->	
+	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">65</set><!--Default = 50, ?-->
+
+<!--Included twitch buff pack mule-->
+	<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">65</set><!--Default = 50, ?-->
+
+<!--Included twitch buff encumbered, to slow you down-->
+	<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">30</set><!--Default = 22, which rounded down is half of 45-->
+
+
+<!--Updated Mobilited effect from encumberance.-->
+	<!--mobility effects need to be updated to match vanilla playstyle. Otherwise, you could come to a standstill.-->
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@operation='multiply']/@value">0.0155</set><!--Default = 0.026-->
+
+<!--With inventory size 60, 30 encumbrance slots, value 0.0155 offers vanilla mobility. 
+Vanilla Mobility is with inventory full (no pockets or packmule) 53% mobility. With heavy armor, down to 23%)-->
+
+</AGF-Backpack60>

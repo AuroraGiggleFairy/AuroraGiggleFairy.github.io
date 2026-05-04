@@ -33,7 +33,7 @@ namespace ScreamerAlert
             }
 
             string cmd = parts[0].ToLowerInvariant();
-            if (cmd != "sa" && cmd != "screameralert" && cmd != "agf-sa" && cmd != "agf-screameralert")
+            if (cmd != "agf-sa" && cmd != "agf-screameralert")
             {
                 return ModEvents.EModEventResult.Continue;
             }
@@ -64,11 +64,11 @@ namespace ScreamerAlert
             {
                 if (allowExtendedModes)
                 {
-                    WhisperToSender(senderEntityId, "[ScreamerAlert] Usage: /sa <off|on|counts|cycle|status>");
+                    WhisperToSender(senderEntityId, "[ScreamerAlert] Usage: /agf-sa <off|on|counts|cycle|status>");
                 }
                 else
                 {
-                    WhisperToSender(senderEntityId, "[ScreamerAlert] Usage: /sa <off|on|status>");
+                    WhisperToSender(senderEntityId, "[ScreamerAlert] Usage: /agf-sa <off|on|status>");
                 }
 
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;

@@ -1,0 +1,43 @@
+<!--
+  MOD ENTRY TEMPLATE — Controls how each individual mod appears in the main README mod list.
+
+  PLACEHOLDERS:
+    {{MOD_NAME}}
+        The mod's internal name from ModInfo.xml <Name> field.
+        Example: "AGF-HUDPlus-1Main"
+
+    {{MOD_VERSION}}
+        Version string built from ModInfo.xml <Version> field and optional display-name suffix.
+        Example: "v5.4.4"  or  "v5.4.4 [HUDPlus Main]"
+
+    {{DOWNLOAD_LINK}}
+        Direct URL to the mod's .zip file on GitHub Pages.
+        Example: "https://auroragiggles.com/mods/AGF-HUDPlus-1Main.zip"
+
+    {{MOD_DESCRIPTION}}
+        Short one-line description from ModInfo.xml <Description> field.
+        Example: "Overhauls the HUD with enhanced displays and new panels."
+
+    {{MOD_BANNER}}
+        The mod's banner image as a self-linking anchor+img tag (150px wide), or empty string if no banner exists.
+        Clicking opens the full-size image. Example:
+        <a href="00_Images/_generated/AGF-HUDPlus-1Main_banner.png"><img src="00_Images/_generated/AGF-HUDPlus-1Main_banner.png" width="150"></a>
+
+    {{MOD_FEATURES_BLOCK}}
+        Mod type/compatibility line from HELPER_ModCompatibility.csv (MOD_TYPE_ID).
+        Empty string if no MOD_TYPE_ID is found. When present, renders as:
+
+            <ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+
+  NOTE: HTML comment blocks (like this one) are stripped before the template
+  is applied, so documentation here does not appear in the final README.
+-->
+<table><tr>
+<td width="160">{{MOD_BANNER}}</td>
+<td valign="top">
+<b>{{MOD_NAME}}</b> &nbsp;·&nbsp; v{{MOD_VERSION}} &nbsp;·&nbsp; <a href="{{DOWNLOAD_LINK}}">Download</a><br>
+{{MOD_DESCRIPTION}}
+{{MOD_FEATURES_BLOCK}}</td>
+</tr></table>
+
+---

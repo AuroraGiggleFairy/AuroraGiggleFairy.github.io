@@ -1,0 +1,71 @@
+<AGFVanillaPlus-FuelPlus>
+
+<!--BURNING FUEL PLUS
+	Feature:	Turn wood / coal resources into a sigle item that burns for 10min, 60min (1hour), or 600mins(10hours).
+				Vanilla friendly as its ingredients require the exact amount from vanilla to make the burning times.
+				These fuel items can be converted back to its original wood/coal resource.
+	
+	Default: 	You have to put in specific amounts of fuel to get the time you want.
+	
+	XML's: 		items, recipes, localization
+	
+	Why: 		Quality of Life for planning burn times and managing resources
+	
+	Delete?: 	Creates new items, therefore not safe to remove from an existing game.
+				Can be "removed" from an existing game if you delete its section under recipes.xml.
+	
+	Code:		-->
+
+		<!--Burning Items, one burns for 10 minutes, the other 60 minutes, and another 600-->
+			<append xpath="/items">
+				<item name="resourceWood10min"> <!--Same as 12 wood, 6 coal-->
+					<property name="HoldType" value="45"/>
+					<property name="CustomIcon" value="modularFireWoodStackC"/> 
+					<property name="CustomIconTint" value="A42ACC"/>
+					<property name="ItemTypeIcon" value="campfire"/>
+					<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+					<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+					<property name="Material" value="MresourceWood"/>
+					<property name="NoScrapping" value="true"/>
+					<property name="DescriptionKey" value="fuelAGFdesc"/>
+					<property name="Weight" value="1"/>
+							
+					<property name="Stacknumber" value="500"/> 
+					<property name="FuelValue" value="600"/>
+					<property name="Group" value="Resources"/>
+					<property name="CraftingIngredientTime" value=".25"/>
+					<property name="EconomicValue" value="1"/>
+					<property name="SellableToTrader" value="false"/>
+				</item>
+				<item name="resourceWood60min"> <!--Same as 72 wood, 36 coal-->
+					<property name="Extends" value="resourceWood10min"/>
+					<property name="Material" value="MresourceWood"/>
+					<property name="CustomIcon" value="ammoGasCan"/> 
+					<property name="CustomIconTint" value="A42ACC"/>
+					<property name="ItemTypeIcon" value="campfire"/>
+					<property name="EconomicValue" value="6"/>
+					<property name="FuelValue" value="3600"/>
+				</item>
+				<item name="resourceWood600min"> <!--Same as 720 wood, 360 coal-->
+					<property name="Extends" value="resourceWood10min"/>
+					<property name="Material" value="MresourceWood"/>
+					<property name="CustomIcon" value="burningBarrelPlayer"/>
+					<property name="CustomIconTint" value="A42ACC"/>
+					<property name="ItemTypeIcon" value="campfire"/>
+					<property name="FuelValue" value="36000"/>
+					<property name="EconomicValue" value="60"/>
+				</item>	
+				<item name="resourceWood6000min"> <!--Same as 7200 wood, 3600 coal-->
+					<property name="Extends" value="resourceWood10min"/>
+					<property name="Material" value="MresourceWood"/>
+					<property name="CustomIcon" value="tankPropaneWhite"/>
+					<property name="CustomIconTint" value="A42ACC"/>
+					<property name="ItemTypeIcon" value="campfire"/>
+					<property name="FuelValue" value="360000"/>
+					<property name="EconomicValue" value="600"/>
+				</item>							
+			</append>
+			
+
+
+</AGFVanillaPlus-FuelPlus>

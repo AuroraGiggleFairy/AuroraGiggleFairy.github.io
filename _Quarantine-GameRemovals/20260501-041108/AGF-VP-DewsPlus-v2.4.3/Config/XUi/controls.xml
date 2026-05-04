@@ -1,0 +1,9 @@
+<AGFVanillaPlus-DewsPlus>
+
+	<!--adds the ability to see the "bundle" icon on the items within the dew collector-->
+	<append xpath="/controls/dewcollector_stack/rect">
+		<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+	</append>
+
+
+</AGFVanillaPlus-DewsPlus>

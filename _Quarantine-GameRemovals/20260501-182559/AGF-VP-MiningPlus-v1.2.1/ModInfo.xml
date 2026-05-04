@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-MiningPlus"/>
+	<DisplayName value="AGF Mining Plus"/>
+	<Version value="1.2.1"/>
+	<Description value="Mining Perk now allows bundling clay, brass, and sand."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

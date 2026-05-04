@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-NoEAC-TerrainLeveler"/>
+	<DisplayName value="AGF TerrainLeveler"/>
+	<Version value="0.0.2"/>
+	<Description value="Special tool to quickly cut grass and crops."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

@@ -68,6 +68,29 @@ def is_valid_mod_name(mod_name: str) -> bool:
     return mod_name.startswith("AGF-") or mod_name.startswith("zzzAGF-")
 
 
+def ensure_section_line(content: str, start_marker: str, end_marker: str, line: str, at_start: bool) -> str:
+    pattern = re.compile(
+        rf"({re.escape(start_marker)}\r?\n)(.*?)?(\r?\n{re.escape(end_marker)})",
+        re.DOTALL,
+    )
+    match = pattern.search(content)
+    if not match:
+        return content
+
+    body = match.group(2) or ""
+    lines = body.splitlines()
+    filtered = [ln for ln in lines if ln.strip() != line]
+
+    if at_start:
+        new_body_lines = [line] + filtered
+    else:
+        new_body_lines = filtered + [line]
+
+    new_body = "\r\n".join(new_body_lines)
+    replacement = f"{match.group(1)}{new_body}{match.group(3)}"
+    return content[: match.start()] + replacement + content[match.end() :]
+
+
 def append_compatibility_row(mod_name: str) -> None:
     if not os.path.exists(COMPAT_CSV_PATH):
         return
@@ -93,8 +116,11 @@ def append_compatibility_row(mod_name: str) -> None:
     if mod_name in existing_mods:
         return
 
-    new_row = ["MISSINGDATA" for _ in fieldnames]
+    new_row = ["TBD" for _ in fieldnames]
     new_row[mod_name_idx] = mod_name
+    if "MOD_TYPE_ID" in fieldnames:
+        mod_type_idx = fieldnames.index("MOD_TYPE_ID")
+        new_row[mod_type_idx] = "0"
     if "QUOTE_FILE" in fieldnames:
         quote_idx = fieldnames.index("QUOTE_FILE")
         new_row[quote_idx] = f"{mod_name}.txt"
@@ -171,7 +197,7 @@ def main():
         readme_content = readme_content.replace("{{QUOTE}}", "[Add quote later]")
         # Set all compatibility fields to MISSINGDATA
         for field in [
-            "TESTED_GAME_VERSION", "EAC_FRIENDLY", "SERVER_SIDE", "CLIENT_REQUIRED",
+            "TESTED_GAME_VERSION", "EAC_FRIENDLY", "SERVER_SIDE_PLAYER", "SERVER_SIDE_DEDICATED", "CLIENT_SIDE",
             "SAFE_TO_INSTALL", "SAFE_TO_REMOVE", "UNIQUE"
         ]:
             readme_content = readme_content.replace(f"{{{{{field}}}}}", "MISSINGDATA")
@@ -183,6 +209,22 @@ def main():
             readme_content = readme_content.replace(remove_line + '\n', '')
             readme_content = readme_content.replace('\n' + remove_line, '')
             readme_content = readme_content.replace(remove_line, '')
+
+        # Enforce default README section lines for newly created mods.
+        readme_content = ensure_section_line(
+            readme_content,
+            "<!-- FEATURES-SUMMARY START -->",
+            "<!-- FEATURES-SUMMARY END -->",
+            "- See this mod's README for full details.",
+            at_start=False,
+        )
+        readme_content = ensure_section_line(
+            readme_content,
+            "<!-- FEATURES-DETAILED START -->",
+            "<!-- FEATURES-DETAILED END -->",
+            "- Works standalone.",
+            at_start=True,
+        )
 
         # Insert initial changelog entry
         changelog_marker = "<!-- CHANGELOG START -->"

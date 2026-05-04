@@ -1,0 +1,64 @@
+<!--
+  GIGGLE PACK TEMPLATE — Controls the section header rendered for the A. GIGGLE PACK
+  category in the main README. This template is unique in that it includes a changelog
+  block placeholder — no mod cards follow this section.
+
+  PLACEHOLDERS:
+    {{CATEGORY_TITLE}}
+        The section title. Always "A. GIGGLE PACK".
+
+    {{CATEGORY_DOWNLOAD_LINE}}
+        The download button with version number appended.
+        Example: "[**⬇️ DOWNLOAD ALL AGF MODS**](https://...) **(GigglePack v1.5.0)**"
+
+    {{CATEGORY_DESCRIPTION}}
+        The description block from TEMPLATE-CategoryDescriptions.md under [GIGGLE PACK].
+
+    {{GIGGLE_CHANGELOG}}
+        The auto-generated changelog details block (latest 3 releases).
+        Injected by the pipeline — do not edit manually.
+
+  STRUCTURE OF A FULL RENDERED GIGGLE PACK SECTION:
+
+    ---
+
+    <br>
+
+    ## **A. GIGGLE PACK**
+
+    ⬇️ DOWNLOAD ALL AGF MODS (GigglePack v1.5.0)
+
+    All AGF mods in one convenient download.
+    ...
+
+    [(Back to Top)](#agf-7-days-to-die-mods)
+
+    ---
+
+    <details> <summary>Changelog (latest 3 releases)</summary>
+    ...
+    </details>
+
+    ---
+
+  NOTE: HTML comment blocks (like this one) are stripped before the template
+  is applied, so documentation here does not appear in the final README.
+-->
+---
+
+<br>
+
+## **{{CATEGORY_TITLE}}**
+
+{{CATEGORY_DOWNLOAD_LINE}}
+
+{{CATEGORY_DESCRIPTION}}
+
+*[(Back to Top)](#agf-7-days-to-die-mods)*
+
+---
+
+{{GIGGLE_CHANGELOG}}
+
+---
+

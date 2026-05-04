@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-LockableWorkstations" />
+  <DisplayName value="BETA - AGF Lockable Workstations" />
+  <Version value="1.2.1" />
+  <Description value="Workstations, collectors, and generators are now lockable with owner-based access control, just like storage." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://discord.gg/Vm5eyW6N4r" />
+  <SkipWithAntiCheat value="true" />
+</xml>

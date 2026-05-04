@@ -1,0 +1,7 @@
+<AGFVanillaPlus-BuyTraderVendingMachines>
+	
+<!--Simply put, traders now sell 1-4 at a time.-->
+	<set xpath="//item[@name='cntVendingMachine']/@count">1,4</set>
+
+
+</AGFVanillaPlus-BuyTraderVendingMachines>

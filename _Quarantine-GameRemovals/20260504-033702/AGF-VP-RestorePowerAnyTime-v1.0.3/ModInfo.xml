@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-RestorePowerAnyTime" />
+  <DisplayName value="AGF Restore Power Any Time" />
+  <Version value="1.0.3" />
+  <Description value="Removes the nighttime-only restriction from Restore Power quests." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

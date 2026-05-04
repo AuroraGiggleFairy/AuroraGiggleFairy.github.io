@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-ZombieBiomeSpawning" />
+  <DisplayName value="AGF Zombie Biome Spawning" />
+  <Version value="3.0.1" />
+  <Description value="Roughly 5x biome zombie spawning that scales progressively from pine forest to wasteland." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-ConsoleOpacityMod" />
+  <DisplayName value="BETA - AGF Configurable Console Visuals" />
+  <Version value="1.0.1" />
+  <Description value="Lets you configure the F1 console background opacity." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

@@ -1,0 +1,8 @@
+<AGFVanillaPlus-ScrapBatts4Acid>
+
+
+<!--Making acid it's own material for scrapping designators.-->
+	<set xpath="/materials/material[@id='MresourceAcid']/property[@name='forge_category']/@value">resourceAcid</set>
+
+	
+</AGFVanillaPlus-ScrapBatts4Acid>

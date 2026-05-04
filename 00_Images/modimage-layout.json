@@ -1,0 +1,130 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "output": {
+    "width": 820,
+    "height": 461,
+    "resample": "lanczos"
+  },
+  "paths": {
+    "template": "00_Images/_template-banner.png",
+    "logo": "00_Images/_logo.png",
+    "media_root": "00_Images/mod-media",
+    "source_root": "00_Images/source",
+    "generated_root": "00_Images/_generated",
+    "manifest": "00_Images/_generated/_modimage-manifest.json",
+    "media_status_csv": "00_Images/media-status.csv"
+  },
+  "zones": {
+    "logo": {
+      "x": 22,
+      "y": 22,
+      "w": 225,
+      "h": 219
+    },
+    "title": {
+      "x": 247,
+      "y": 37,
+      "w": 1428,
+      "h": 64
+    },
+    "version": {
+      "x": 247,
+      "y": 108,
+      "w": 1428,
+      "h": 48
+    },
+    "description": {
+      "x": 341,
+      "y": 163,
+      "w": 1240,
+      "h": 58
+    },
+    "compatibility": {
+      "x": 1675,
+      "y": 20,
+      "w": 225,
+      "h": 221
+    },
+    "features": {
+      "x": 20,
+      "y": 261,
+      "w": 445,
+      "h": 619
+    },
+    "mod_type": {
+      "x": 20,
+      "y": 890,
+      "w": 445,
+      "h": 180
+    },
+    "media": {
+      "x": 491,
+      "y": 267,
+      "w": 1403,
+      "h": 787
+    }
+  },
+  "typography": {
+    "font_regular": "00_Images/_fonts/DejaVuSans.ttf",
+    "font_bold": "00_Images/_fonts/DejaVuSans-Bold.ttf",
+    "title_size": 60,
+    "version_size": 48,
+    "description_size": 36,
+    "description_min_size": 20,
+    "compatibility_size": 34,
+    "compatibility_min_size": 18,
+    "features_size": 28,
+    "features_min_size": 14,
+    "features_padding_x": 14,
+    "features_padding_y": 24,
+    "features_line_spacing": 1.4,
+    "features_min_line_spacing": 0.75,
+    "features_gap_ratio": 0.65,
+    "features_overflow_notice": "and more! Full list in README.",
+    "mod_type_size": 30,
+    "mod_type_min_size": 14,
+    "mod_type_line_spacing": 1.4,
+    "mod_type_align": "left",
+    "mod_type_valign": "center",
+    "missing_media_text": "Image Work in-Progress",
+    "missing_media_angle": 28,
+    "missing_media_color": "#DDCDFA",
+    "missing_media_size": 132,
+    "missing_media_min_size": 36,
+    "line_spacing": 1.4,
+    "feature_bullet": "",
+    "feature_continuation_indent": 4,
+    "title_align": "center",
+    "title_valign": "center",
+    "version_align": "center",
+    "version_valign": "center",
+    "description_align": "center",
+    "description_valign": "center",
+    "top_even_spacing": true,
+    "top_stack_y": 20,
+    "top_stack_h": 221,
+    "compatibility_align": "center",
+    "compatibility_valign": "center",
+    "features_align": "left",
+    "features_valign": "center"
+  },
+  "colors": {
+    "title": "#DDCDFA",
+    "version": "#8DB580",
+    "description": "#DDCDFA",
+    "compatibility": "#8DB580",
+    "features": "#DDCDFA",
+    "mod_type": "#8DB580"
+  },
+  "limits": {
+    "title_lines": 2,
+    "description_lines": 2,
+    "compatibility_lines": 7,
+    "feature_lines": 30,
+    "mod_type_lines": 4,
+    "max_previews": 0
+  }
+}

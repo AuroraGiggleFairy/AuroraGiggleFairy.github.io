@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-TraderAlwaysOpen"/>
+	<DisplayName value="AGF Trader Always Open"/>
+	<Version value="2.0.2"/>
+	<Description value="Traders are always open... but possibly not during bloodmoon?"/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

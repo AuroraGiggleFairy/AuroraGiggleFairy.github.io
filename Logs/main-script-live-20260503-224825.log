@@ -1,0 +1,464 @@
+[2026-05-03 22:47:59] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-05-03 22:47:59] [INFO] Selected mode: full
+[2026-05-03 22:47:59] [INFO] Scope policy: only AGF-/zzzAGF-prefixed mods are managed in workspace and game folders
+[2026-05-03 22:47:59] [INFO] Preflight writeability check passed
+[2026-05-03 22:47:59] [INFO] Mode full: sync Game<->Draft for tracked draft mods, ingest Draft->ActiveBuild, sync ActiveBuild<->Game, then apply targeted pushback for pulled mods, then finalize/promote/package.
+[2026-05-03 22:47:59] [INFO] Step 0.25: Compare Game <-> Draft and pull newer game updates into Draft
+[2026-05-03 22:47:59] [INFO] Step 0.5: Ensure latest Draft mods are in ActiveBuild
+[2026-05-03 22:47:59] [INFO] Draft sync skipped for AGF-4Modders-AntiCM-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-05-03 22:47:59] [INFO] Draft sync skipped for AGF-4Modders-ESCWindowPlus-v0.3.2: version 0.3.2 is draft-only (major < 1)
+[2026-05-03 22:47:59] [INFO] Draft sync skipped for AGF-NoEAC-TerrainLeveler-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-05-03 22:47:59] [INFO] Draft sync skipped for AGF-NoEAC-VisualEntityTracker-v0.1.2: version 0.1.2 is draft-only (major < 1)
+[2026-05-03 22:47:59] [INFO] Draft sync skipped for AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-05-03 22:47:59] [INFO] Draft sync skipped for AGF-VP-MedicallyTreatOthers-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-05-03 22:47:59] [INFO] Lane policy: keep major v0.x mods in Draft, not ActiveBuild
+[2026-05-03 22:47:59] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-05-03 22:47:59] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-05-03 22:47:59] [INFO] Mode sync-work: Sync Staging <-> Game by version
+[2026-05-03 22:47:59] [INFO] Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root.
+[2026-05-03 22:48:00] [INFO] sync-work push: AGF-VP-TreesPlus-v3.0.2 v3.0.2 -> game
+[2026-05-03 22:48:00] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-10IngredientSlots-v1.0.2
+[2026-05-03 22:48:00] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-CustomWindowEnteringDuration-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-Fix4RemoveItems-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: 4Modders optional updated: AGF-4Modders-SkillPointCap-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-060Slots-v3.2.3
+[2026-05-03 22:48:00] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-072Slots-v3.2.3
+[2026-05-03 22:48:00] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-084Slots-v3.2.3
+[2026-05-03 22:48:00] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-119Slots-v1.2.3
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-1Main-v5.4.7
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-BMCounter-v2.1.3
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-HealthBars-v4.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-PurpleBook-v2.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-RemoveEnteringPopUp-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1
+[2026-05-03 22:48:00] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-Weekday-v2.1.1
+[2026-05-03 22:48:00] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-05-03 22:48:00] [INFO] sync-work cleanup: post-rename cleanup pass
+[2026-05-03 22:48:00] [INFO] Quarantined game folder instead of delete: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-VP-TreesPlus-v3.0.1 -> C:\GitHub\7D2D-Mods\_Quarantine-GameRemovals\20260503-224800\AGF-VP-TreesPlus-v3.0.1
+[2026-05-03 22:48:00] [INFO] sync-work cleanup: post-rename removed extra game version for base AGF-VP-TreesPlus: AGF-VP-TreesPlus-v3.0.1
+[2026-05-03 22:48:00] [INFO] Pre-release prep: refresh folder names + README files
+[2026-05-03 22:48:00] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-05-03 22:48:00] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-05-03 22:48:00] [INFO] Step 4.3: Normalize quote files
+[2026-05-03 22:48:00] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-05-03 22:48:00] [INFO] Cleanup: Remove legacy 4Modders-replaced folders in 02_ActiveBuild
+[2026-05-03 22:48:00] [INFO] Cleanup: Remove older duplicate versions in 02_ActiveBuild
+[2026-05-03 22:48:00] [INFO] Generating mod images: C:\GitHub\7D2D-Mods\.venv\Scripts\python.exe C:\GitHub\7D2D-Mods\Workflow\SCRIPT-GenerateModImages.py --changed-only
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-4Modders-10IngredientSlots (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-4Modders-CustomWindowEnteringDuration (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-4Modders-Fix4DestroyBiomeBadge (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-4Modders-Fix4RemoveItems (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-4Modders-SkillPointCap (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-BackpackPlus-060Slots (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-BackpackPlus-072Slots (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-BackpackPlus-084Slots (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-BackpackPlus-119Slots (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPlus-1Main
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPlus-BMCounter (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPlus-HealthBars (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPlus-PurpleBook (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPlus-RemoveEnteringPopUp (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPluszOther-RemoveWrittentormAlerts (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPluszOther-SmallerInteractionPrompt (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPluszOther-TinyBuffsPopUp (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-HUDPluszOther-Weekday (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-AudioOptionsPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-AutoRun (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-ConsoleOpacityMod (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-CosmeticLockIcon (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-EnhancedAGF (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-ExpandedInteractionPrompts (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-FlightAssist (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-GlobalStormTracker (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-ItemTypeIconColor (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-LockableWorkstations (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-OpenAllButton (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-ScreamerAlert (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-SortingBox (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-NoEAC-Toolbelt12Slots (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-AdminModdingSupport (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-AlternativeRecipes (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-AmmoDisassembly (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ApiaryPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ArcheryFeathersChange (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ArmorHarvestMods (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-AutomobilesRespawn (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-BedrollPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-BetterEggChance (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-BreakItGetIt (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-BuyTraderVendingMachines (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-CraftSewingKits (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-CraftStackEngBattCells (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-CraftVitamins (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-DecorationBlock (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-DewsPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-DoorsPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-DrinkableAcid (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-DyesPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-FarmingPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-FloraHarvester (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-FuelBurnPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-MasterTool (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-MaxLevel500 (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-MedicationNoInsectSlow (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-MiningPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-Mod988 (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ModBundling (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ModSlotsPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-PaintbrushPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-PickupLanternsPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-PlayerResetQuests (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-PlayerVendingMachinesPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-PumpkinsPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-QuickStart (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-RebundleBundles (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-RecipeRottingFlesh (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-RenamesAlphabeticalSort (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-RestorePowerAnyTime (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ScrapBatts4Acid (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ScrapEquipmentFaster (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-SimplifiedStacks (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-SmeltingPlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-StayLongerAnimalCorpse (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-StayLongerPlayerBackpack (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-StayLongerZombieLoot (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-TacticalRiflePlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-TraderAlwaysOpen (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-TraderCostlierPrices (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-TraderSellsMoreBooks (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-TradersRestockEvery2Days (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-VehiclePerformance (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-VehiclesExtraSeating (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-VehicleStoragePlus (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-WriteStoryOnCrate (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-XPDeathPenaltyReduction (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ZombieBiomeSpawning (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ZombieCorpseLeaveQuicker (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated AGF-VP-ZombieLargerHordes (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] generated zzzAGF-Special-Compatibilities (placeholder media)
+[2026-05-03 22:48:15] [INFO]   [modimages] unchanged-skipped=1
+[2026-05-03 22:48:15] [INFO]   [modimages] media-status-csv=C:\GitHub\7D2D-Mods\00_Images\media-status.csv
+[2026-05-03 22:48:15] [INFO]   [modimages] done: generated_or_planned=92, skipped=0, total=93
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-4Modders-10IngredientSlots-v1.0.2\ModImage_AGF-4Modders-10IngredientSlots.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-4Modders-CustomWindowEnteringDuration-v1.0.1\ModImage_AGF-4Modders-CustomWindowEnteringDuration.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1\ModImage_AGF-4Modders-Fix4DestroyBiomeBadge.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-4Modders-Fix4RemoveItems-v1.0.1\ModImage_AGF-4Modders-Fix4RemoveItems.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-4Modders-SkillPointCap-v1.0.1\ModImage_AGF-4Modders-SkillPointCap.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-BackpackPlus-060Slots-v3.2.3\ModImage_AGF-BackpackPlus-060Slots.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-BackpackPlus-072Slots-v3.2.3\ModImage_AGF-BackpackPlus-072Slots.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-BackpackPlus-084Slots-v3.2.3\ModImage_AGF-BackpackPlus-084Slots.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-BackpackPlus-119Slots-v1.2.3\ModImage_AGF-BackpackPlus-119Slots.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPlus-1Main-v5.4.7\ModImage_AGF-HUDPlus-1Main.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPlus-BMCounter-v2.1.3\ModImage_AGF-HUDPlus-BMCounter.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPlus-HealthBars-v4.0.1\ModImage_AGF-HUDPlus-HealthBars.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPlus-PurpleBook-v2.0.1\ModImage_AGF-HUDPlus-PurpleBook.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPlus-RemoveEnteringPopUp-v1.0.1\ModImage_AGF-HUDPlus-RemoveEnteringPopUp.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1\ModImage_AGF-HUDPluszOther-RemoveWrittentormAlerts.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1\ModImage_AGF-HUDPluszOther-SmallerInteractionPrompt.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1\ModImage_AGF-HUDPluszOther-TinyBuffsPopUp.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-HUDPluszOther-Weekday-v2.1.1\ModImage_AGF-HUDPluszOther-Weekday.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-AudioOptionsPlus-v1.0.1\ModImage_AGF-NoEAC-AudioOptionsPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-AutoRun-v1.0.1\ModImage_AGF-NoEAC-AutoRun.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-ConsoleOpacityMod-v1.0.1\ModImage_AGF-NoEAC-ConsoleOpacityMod.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-CosmeticLockIcon-v1.0.2\ModImage_AGF-NoEAC-CosmeticLockIcon.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-EnhancedAGF-v3.2.1\ModImage_AGF-NoEAC-EnhancedAGF.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1\ModImage_AGF-NoEAC-ExpandedInteractionPrompts.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-FlightAssist-v1.0.1\ModImage_AGF-NoEAC-FlightAssist.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-GlobalStormTracker-v1.0.1\ModImage_AGF-NoEAC-GlobalStormTracker.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-ItemTypeIconColor-v1.0.3\ModImage_AGF-NoEAC-ItemTypeIconColor.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-LockableWorkstations-v1.2.1\ModImage_AGF-NoEAC-LockableWorkstations.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-OpenAllButton-v1.0.2\ModImage_AGF-NoEAC-OpenAllButton.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-ScreamerAlert-v1.2.1\ModImage_AGF-NoEAC-ScreamerAlert.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-SortingBox-v1.0.6\ModImage_AGF-NoEAC-SortingBox.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-NoEAC-Toolbelt12Slots-v1.0.3\ModImage_AGF-NoEAC-Toolbelt12Slots.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-AdminModdingSupport-v1.0.5\ModImage_AGF-VP-AdminModdingSupport.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-AlternativeRecipes-v1.0.2\ModImage_AGF-VP-AlternativeRecipes.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-AmmoDisassembly-v1.0.2\ModImage_AGF-VP-AmmoDisassembly.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ApiaryPlus-v1.0.4\ModImage_AGF-VP-ApiaryPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ArcheryFeathersChange-v1.0.3\ModImage_AGF-VP-ArcheryFeathersChange.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ArmorHarvestMods-v2.1.1\ModImage_AGF-VP-ArmorHarvestMods.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-AutomobilesRespawn-v3.1.1\ModImage_AGF-VP-AutomobilesRespawn.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-BedrollPlus-v1.0.1\ModImage_AGF-VP-BedrollPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-BetterEggChance-v2.1.1\ModImage_AGF-VP-BetterEggChance.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-BreakItGetIt-v1.0.3\ModImage_AGF-VP-BreakItGetIt.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-BuyTraderVendingMachines-v3.0.3\ModImage_AGF-VP-BuyTraderVendingMachines.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-CraftSewingKits-v1.0.1\ModImage_AGF-VP-CraftSewingKits.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-CraftStackEngBattCells-v3.3.1\ModImage_AGF-VP-CraftStackEngBattCells.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-CraftVitamins-v1.1.1\ModImage_AGF-VP-CraftVitamins.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-DecorationBlock-v3.0.3\ModImage_AGF-VP-DecorationBlock.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-DewsPlus-v2.4.3\ModImage_AGF-VP-DewsPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-DoorsPlus-v3.0.1\ModImage_AGF-VP-DoorsPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-DrinkableAcid-v2.0.2\ModImage_AGF-VP-DrinkableAcid.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-DyesPlus-v3.1.1\ModImage_AGF-VP-DyesPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-FarmingPlus-v5.6.2\ModImage_AGF-VP-FarmingPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-FloraHarvester-v2.3.1\ModImage_AGF-VP-FloraHarvester.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-FuelBurnPlus-v2.3.1\ModImage_AGF-VP-FuelBurnPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-MasterTool-v6.1.2\ModImage_AGF-VP-MasterTool.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-MaxLevel500-v2.0.3\ModImage_AGF-VP-MaxLevel500.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-MedicationNoInsectSlow-v1.1.1\ModImage_AGF-VP-MedicationNoInsectSlow.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-MiningPlus-v1.2.1\ModImage_AGF-VP-MiningPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-Mod988-v2.0.2\ModImage_AGF-VP-Mod988.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ModBundling-v1.0.2\ModImage_AGF-VP-ModBundling.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ModSlotsPlus-v3.0.2\ModImage_AGF-VP-ModSlotsPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-PaintbrushPlus-v2.1.1\ModImage_AGF-VP-PaintbrushPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-PickupLanternsPlus-v2.0.2\ModImage_AGF-VP-PickupLanternsPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-PlayerResetQuests-v2.0.2\ModImage_AGF-VP-PlayerResetQuests.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-PlayerVendingMachinesPlus-v1.0.1\ModImage_AGF-VP-PlayerVendingMachinesPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-PumpkinsPlus-v2.0.5\ModImage_AGF-VP-PumpkinsPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-QuickStart-v2.0.1\ModImage_AGF-VP-QuickStart.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-RebundleBundles-v1.0.1\ModImage_AGF-VP-RebundleBundles.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-RecipeRottingFlesh-v1.0.1\ModImage_AGF-VP-RecipeRottingFlesh.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-RenamesAlphabeticalSort-v2.0.5\ModImage_AGF-VP-RenamesAlphabeticalSort.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-RestorePowerAnyTime-v1.0.3\ModImage_AGF-VP-RestorePowerAnyTime.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ScrapBatts4Acid-v1.1.1\ModImage_AGF-VP-ScrapBatts4Acid.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ScrapEquipmentFaster-v1.0.1\ModImage_AGF-VP-ScrapEquipmentFaster.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-SimplifiedStacks-v1.2.4\ModImage_AGF-VP-SimplifiedStacks.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-SmeltingPlus-v2.4.1\ModImage_AGF-VP-SmeltingPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-StayLongerAnimalCorpse-v2.0.3\ModImage_AGF-VP-StayLongerAnimalCorpse.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-StayLongerPlayerBackpack-v2.0.2\ModImage_AGF-VP-StayLongerPlayerBackpack.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-StayLongerZombieLoot-v2.0.2\ModImage_AGF-VP-StayLongerZombieLoot.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-TacticalRiflePlus-v2.1.1\ModImage_AGF-VP-TacticalRiflePlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-TraderAlwaysOpen-v2.0.2\ModImage_AGF-VP-TraderAlwaysOpen.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-TraderCostlierPrices-v1.0.1\ModImage_AGF-VP-TraderCostlierPrices.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-TraderSellsMoreBooks-v3.0.1\ModImage_AGF-VP-TraderSellsMoreBooks.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-TradersRestockEvery2Days-v1.0.1\ModImage_AGF-VP-TradersRestockEvery2Days.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-TreesPlus-v3.0.2\ModImage_AGF-VP-TreesPlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-VehiclePerformance-v1.0.2\ModImage_AGF-VP-VehiclePerformance.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-VehicleStoragePlus-v2.1.2\ModImage_AGF-VP-VehicleStoragePlus.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-VehiclesExtraSeating-v1.0.1\ModImage_AGF-VP-VehiclesExtraSeating.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-WriteStoryOnCrate-v1.0.1\ModImage_AGF-VP-WriteStoryOnCrate.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-XPDeathPenaltyReduction-v2.0.1\ModImage_AGF-VP-XPDeathPenaltyReduction.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ZombieBiomeSpawning-v3.0.1\ModImage_AGF-VP-ZombieBiomeSpawning.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2\ModImage_AGF-VP-ZombieCorpseLeaveQuicker.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\AGF-VP-ZombieLargerHordes-v2.0.2\ModImage_AGF-VP-ZombieLargerHordes.png
+[2026-05-03 22:48:15] [INFO] Copy banner -> 02_ActiveBuild\zzzAGF-Special-Compatibilities-v4.1.1\ModImage_zzzAGF-Special-Compatibilities.png
+[2026-05-03 22:48:15] [INFO] ModImage copy: 93 file(s) updated
+[2026-05-03 22:48:15] [INFO] Mode promote: Promote Staging -> PublishReady (version-gated)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-4Modders-10IngredientSlots-v1.0.2 v1.0.2 (same version, content/name changed from AGF-4Modders-10IngredientSlots-v1.0.2)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-4Modders-CustomWindowEnteringDuration-v1.0.1 v1.0.1 (same version, content/name changed from AGF-4Modders-CustomWindowEnteringDuration-v1.0.1)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1 v1.0.1 (same version, content/name changed from AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-4Modders-Fix4RemoveItems-v1.0.1 v1.0.1 (same version, content/name changed from AGF-4Modders-Fix4RemoveItems-v1.0.1)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-4Modders-SkillPointCap-v1.0.1 v1.0.1 (same version, content/name changed from AGF-4Modders-SkillPointCap-v1.0.1)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-BackpackPlus-060Slots-v3.2.3 v3.2.3 (same version, content/name changed from AGF-BackpackPlus-060Slots-v3.2.3)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-BackpackPlus-072Slots-v3.2.3 v3.2.3 (same version, content/name changed from AGF-BackpackPlus-072Slots-v3.2.3)
+[2026-05-03 22:48:15] [INFO] Promoted refresh: AGF-BackpackPlus-084Slots-v3.2.3 v3.2.3 (same version, content/name changed from AGF-BackpackPlus-084Slots-v3.2.3)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-BackpackPlus-119Slots-v1.2.3 v1.2.3 (same version, content/name changed from AGF-BackpackPlus-119Slots-v1.2.3)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPlus-1Main-v5.4.7 v5.4.7 (same version, content/name changed from AGF-HUDPlus-1Main-v5.4.7)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPlus-BMCounter-v2.1.3 v2.1.3 (same version, content/name changed from AGF-HUDPlus-BMCounter-v2.1.3)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPlus-HealthBars-v4.0.1 v4.0.1 (same version, content/name changed from AGF-HUDPlus-HealthBars-v4.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPlus-PurpleBook-v2.0.1 v2.0.1 (same version, content/name changed from AGF-HUDPlus-PurpleBook-v2.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPlus-RemoveEnteringPopUp-v1.0.1 v1.0.1 (same version, content/name changed from AGF-HUDPlus-RemoveEnteringPopUp-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1 v2.0.1 (same version, content/name changed from AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1 v1.0.1 (same version, content/name changed from AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1 v1.0.1 (same version, content/name changed from AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-HUDPluszOther-Weekday-v2.1.1 v2.1.1 (same version, content/name changed from AGF-HUDPluszOther-Weekday-v2.1.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-AudioOptionsPlus-v1.0.1 v1.0.1 (same version, content/name changed from AGF-NoEAC-AudioOptionsPlus-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-AutoRun-v1.0.1 v1.0.1 (same version, content/name changed from AGF-NoEAC-AutoRun-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-ConsoleOpacityMod-v1.0.1 v1.0.1 (same version, content/name changed from AGF-NoEAC-ConsoleOpacityMod-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-CosmeticLockIcon-v1.0.2 v1.0.2 (same version, content/name changed from AGF-NoEAC-CosmeticLockIcon-v1.0.2)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-EnhancedAGF-v3.2.1 v3.2.1 (same version, content/name changed from AGF-NoEAC-EnhancedAGF-v3.2.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1 v1.1.1 (same version, content/name changed from AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-FlightAssist-v1.0.1 v1.0.1 (same version, content/name changed from AGF-NoEAC-FlightAssist-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-GlobalStormTracker-v1.0.1 v1.0.1 (same version, content/name changed from AGF-NoEAC-GlobalStormTracker-v1.0.1)
+[2026-05-03 22:48:16] [INFO] Promoted new mod: AGF-NoEAC-ItemTypeIconColor-v1.0.3 v1.0.3
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-LockableWorkstations-v1.2.1 v1.2.1 (same version, content/name changed from AGF-NoEAC-LockableWorkstations-v1.2.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-OpenAllButton-v1.0.2 v1.0.2 (same version, content/name changed from AGF-NoEAC-OpenAllButton-v1.0.2)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-ScreamerAlert-v1.2.1 v1.2.1 (same version, content/name changed from AGF-NoEAC-ScreamerAlert-v1.2.1)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-SortingBox-v1.0.6 v1.0.6 (same version, content/name changed from AGF-NoEAC-SortingBox-v1.0.6)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-NoEAC-Toolbelt12Slots-v1.0.3 v1.0.3 (same version, content/name changed from AGF-NoEAC-Toolbelt12Slots-v1.0.3)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-VP-AdminModdingSupport-v1.0.5 v1.0.5 (same version, content/name changed from AGF-VP-AdminModdingSupport-v1.0.5)
+[2026-05-03 22:48:16] [INFO] Promoted refresh: AGF-VP-AlternativeRecipes-v1.0.2 v1.0.2 (same version, content/name changed from AGF-VP-AlternativeRecipes-v1.0.2)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-AmmoDisassembly-v1.0.2 v1.0.2 (same version, content/name changed from AGF-VP-AmmoDisassembly-v1.0.2)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-ApiaryPlus-v1.0.4 v1.0.4 (same version, content/name changed from AGF-VP-ApiaryPlus-v1.0.4)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-ArcheryFeathersChange-v1.0.3 v1.0.3 (same version, content/name changed from AGF-VP-ArcheryFeathersChange-v1.0.3)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-ArmorHarvestMods-v2.1.1 v2.1.1 (same version, content/name changed from AGF-VP-ArmorHarvestMods-v2.1.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-AutomobilesRespawn-v3.1.1 v3.1.1 (same version, content/name changed from AGF-VP-AutomobilesRespawn-v3.1.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-BedrollPlus-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-BedrollPlus-v1.0.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-BetterEggChance-v2.1.1 v2.1.1 (same version, content/name changed from AGF-VP-BetterEggChance-v2.1.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-BreakItGetIt-v1.0.3 v1.0.3 (same version, content/name changed from AGF-VP-BreakItGetIt-v1.0.3)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-BuyTraderVendingMachines-v3.0.3 v3.0.3 (same version, content/name changed from AGF-VP-BuyTraderVendingMachines-v3.0.3)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-CraftSewingKits-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-CraftSewingKits-v1.0.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-CraftStackEngBattCells-v3.3.1 v3.3.1 (same version, content/name changed from AGF-VP-CraftStackEngBattCells-v3.3.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-CraftVitamins-v1.1.1 v1.1.1 (same version, content/name changed from AGF-VP-CraftVitamins-v1.1.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-DecorationBlock-v3.0.3 v3.0.3 (same version, content/name changed from AGF-VP-DecorationBlock-v3.0.3)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-DewsPlus-v2.4.3 v2.4.3 (same version, content/name changed from AGF-VP-DewsPlus-v2.4.3)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-DoorsPlus-v3.0.1 v3.0.1 (same version, content/name changed from AGF-VP-DoorsPlus-v3.0.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-DrinkableAcid-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-DrinkableAcid-v2.0.2)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-DyesPlus-v3.1.1 v3.1.1 (same version, content/name changed from AGF-VP-DyesPlus-v3.1.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-FarmingPlus-v5.6.2 v5.6.2 (same version, content/name changed from AGF-VP-FarmingPlus-v5.6.2)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-FloraHarvester-v2.3.1 v2.3.1 (same version, content/name changed from AGF-VP-FloraHarvester-v2.3.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-FuelBurnPlus-v2.3.1 v2.3.1 (same version, content/name changed from AGF-VP-FuelBurnPlus-v2.3.1)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-MasterTool-v6.1.2 v6.1.2 (same version, content/name changed from AGF-VP-MasterTool-v6.1.2)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-MaxLevel500-v2.0.3 v2.0.3 (same version, content/name changed from AGF-VP-MaxLevel500-v2.0.3)
+[2026-05-03 22:48:17] [INFO] Promoted refresh: AGF-VP-MedicationNoInsectSlow-v1.1.1 v1.1.1 (same version, content/name changed from AGF-VP-MedicationNoInsectSlow-v1.1.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-MiningPlus-v1.2.1 v1.2.1 (same version, content/name changed from AGF-VP-MiningPlus-v1.2.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-Mod988-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-Mod988-v2.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-ModBundling-v1.0.2 v1.0.2 (same version, content/name changed from AGF-VP-ModBundling-v1.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-ModSlotsPlus-v3.0.2 v3.0.2 (same version, content/name changed from AGF-VP-ModSlotsPlus-v3.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-PaintbrushPlus-v2.1.1 v2.1.1 (same version, content/name changed from AGF-VP-PaintbrushPlus-v2.1.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-PickupLanternsPlus-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-PickupLanternsPlus-v2.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-PlayerResetQuests-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-PlayerResetQuests-v2.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-PlayerVendingMachinesPlus-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-PlayerVendingMachinesPlus-v1.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-PumpkinsPlus-v2.0.5 v2.0.5 (same version, content/name changed from AGF-VP-PumpkinsPlus-v2.0.5)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-QuickStart-v2.0.1 v2.0.1 (same version, content/name changed from AGF-VP-QuickStart-v2.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-RebundleBundles-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-RebundleBundles-v1.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-RecipeRottingFlesh-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-RecipeRottingFlesh-v1.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-RenamesAlphabeticalSort-v2.0.5 v2.0.5 (same version, content/name changed from AGF-VP-RenamesAlphabeticalSort-v2.0.5)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-RestorePowerAnyTime-v1.0.3 v1.0.3 (same version, content/name changed from AGF-VP-RestorePowerAnyTime-v1.0.3)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-ScrapBatts4Acid-v1.1.1 v1.1.1 (same version, content/name changed from AGF-VP-ScrapBatts4Acid-v1.1.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-ScrapEquipmentFaster-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-ScrapEquipmentFaster-v1.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-SimplifiedStacks-v1.2.4 v1.2.4 (same version, content/name changed from AGF-VP-SimplifiedStacks-v1.2.4)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-SmeltingPlus-v2.4.1 v2.4.1 (same version, content/name changed from AGF-VP-SmeltingPlus-v2.4.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-StayLongerAnimalCorpse-v2.0.3 v2.0.3 (same version, content/name changed from AGF-VP-StayLongerAnimalCorpse-v2.0.3)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-StayLongerPlayerBackpack-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-StayLongerPlayerBackpack-v2.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-StayLongerZombieLoot-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-StayLongerZombieLoot-v2.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-TacticalRiflePlus-v2.1.1 v2.1.1 (same version, content/name changed from AGF-VP-TacticalRiflePlus-v2.1.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-TraderAlwaysOpen-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-TraderAlwaysOpen-v2.0.2)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-TraderCostlierPrices-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-TraderCostlierPrices-v1.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-TraderSellsMoreBooks-v3.0.1 v3.0.1 (same version, content/name changed from AGF-VP-TraderSellsMoreBooks-v3.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted refresh: AGF-VP-TradersRestockEvery2Days-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-TradersRestockEvery2Days-v1.0.1)
+[2026-05-03 22:48:18] [INFO] Promoted update: AGF-VP-TreesPlus-v3.0.2 v3.0.2 (was AGF-VP-TreesPlus-v3.0.1 v3.0.1)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-VehiclePerformance-v1.0.2 v1.0.2 (same version, content/name changed from AGF-VP-VehiclePerformance-v1.0.2)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-VehiclesExtraSeating-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-VehiclesExtraSeating-v1.0.1)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-VehicleStoragePlus-v2.1.2 v2.1.2 (same version, content/name changed from AGF-VP-VehicleStoragePlus-v2.1.2)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-WriteStoryOnCrate-v1.0.1 v1.0.1 (same version, content/name changed from AGF-VP-WriteStoryOnCrate-v1.0.1)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-XPDeathPenaltyReduction-v2.0.1 v2.0.1 (same version, content/name changed from AGF-VP-XPDeathPenaltyReduction-v2.0.1)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-ZombieBiomeSpawning-v3.0.1 v3.0.1 (same version, content/name changed from AGF-VP-ZombieBiomeSpawning-v3.0.1)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: AGF-VP-ZombieLargerHordes-v2.0.2 v2.0.2 (same version, content/name changed from AGF-VP-ZombieLargerHordes-v2.0.2)
+[2026-05-03 22:48:19] [INFO] Promoted refresh: zzzAGF-Special-Compatibilities-v4.1.1 v4.1.1 (same version, content/name changed from zzzAGF-Special-Compatibilities-v4.1.1)
+[2026-05-03 22:48:19] [INFO] Cleanup: Remove legacy ReleaseSource folders replaced by AGF-4Modders renames
+[2026-05-03 22:48:19] [INFO] Cleanup: Remove legacy 4Modders-replaced folders in 03_ReleaseSource
+[2026-05-03 22:48:19] [INFO] Removed legacy folder in 03_ReleaseSource: AGF-NoEAC-ItemTypeIconColor-v1.0.3 -> replaced by AGF-4Modders-ItemTypeIconColor-v1.0.2
+[2026-05-03 22:48:19] [INFO] Cleanup: Remove older duplicate versions in 03_ReleaseSource
+[2026-05-03 22:48:20] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-05-03 22:48:20] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-05-03 22:48:20] [INFO] Cleanup: Remove older duplicate versions in 01_Draft
+[2026-05-03 22:48:20] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-05-03 22:48:20] [INFO] Step 4.3: Normalize quote files
+[2026-05-03 22:48:20] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-05-03 22:48:22] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-05-03 22:48:23] [INFO] Step 5: Push updated pulled mods back to game folder
+[2026-05-03 22:48:23] [INFO] Step 6: Create all mod and category zip files
+[2026-05-03 22:48:25] [INFO] Step 6.5: Generate GigglePack release metadata + changelog outputs
+[2026-05-03 22:48:25] [INFO] Step 7: Generate main README.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 93
+scanned_game_mods: 81
+synced_pull_from_game: 0
+synced_push_to_game: 1
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 1
+csv_removed_rows: 1
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 192
+readable_txt_written: 192
+pushed_back_to_game: 0
+mod_zips_created: 93
+pack_zips_created: 7
+promoted_to_publish_ready: 93
+warnings: 0
+errors: 0
+
+=== MOD CHANGES ===
+AGF-4Modders-10IngredientSlots-v1.0.2 | promoted (refresh)
+AGF-4Modders-CustomWindowEnteringDuration-v1.0.1 | promoted (refresh)
+AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1 | promoted (refresh)
+AGF-4Modders-Fix4RemoveItems-v1.0.1 | promoted (refresh)
+AGF-4Modders-SkillPointCap-v1.0.1 | promoted (refresh)
+AGF-BackpackPlus-060Slots-v3.2.3 | promoted (refresh)
+AGF-BackpackPlus-072Slots-v3.2.3 | promoted (refresh)
+AGF-BackpackPlus-084Slots-v3.2.3 | promoted (refresh)
+AGF-BackpackPlus-119Slots-v1.2.3 | promoted (refresh)
+AGF-HUDPlus-1Main-v5.4.7 | promoted (refresh)
+AGF-HUDPlus-BMCounter-v2.1.3 | promoted (refresh)
+AGF-HUDPlus-HealthBars-v4.0.1 | promoted (refresh)
+AGF-HUDPlus-PurpleBook-v2.0.1 | promoted (refresh)
+AGF-HUDPlus-RemoveEnteringPopUp-v1.0.1 | promoted (refresh)
+AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1 | promoted (refresh)
+AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1 | promoted (refresh)
+AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1 | promoted (refresh)
+AGF-HUDPluszOther-Weekday-v2.1.1 | promoted (refresh)
+AGF-NoEAC-AudioOptionsPlus-v1.0.1 | promoted (refresh)
+AGF-NoEAC-AutoRun-v1.0.1 | promoted (refresh)
+AGF-NoEAC-ConsoleOpacityMod-v1.0.1 | promoted (refresh)
+AGF-NoEAC-CosmeticLockIcon-v1.0.2 | promoted (refresh)
+AGF-NoEAC-EnhancedAGF-v3.2.1 | promoted (refresh)
+AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1 | promoted (refresh)
+AGF-NoEAC-FlightAssist-v1.0.1 | promoted (refresh)
+AGF-NoEAC-GlobalStormTracker-v1.0.1 | promoted (refresh)
+AGF-NoEAC-ItemTypeIconColor-v1.0.3 | promoted (new)
+AGF-NoEAC-LockableWorkstations-v1.2.1 | promoted (refresh)
+AGF-NoEAC-OpenAllButton-v1.0.2 | promoted (refresh)
+AGF-NoEAC-ScreamerAlert-v1.2.1 | promoted (refresh)
+AGF-NoEAC-SortingBox-v1.0.6 | promoted (refresh)
+AGF-NoEAC-Toolbelt12Slots-v1.0.3 | promoted (refresh)
+AGF-VP-AdminModdingSupport-v1.0.5 | promoted (refresh)
+AGF-VP-AlternativeRecipes-v1.0.2 | promoted (refresh)
+AGF-VP-AmmoDisassembly-v1.0.2 | promoted (refresh)
+AGF-VP-ApiaryPlus-v1.0.4 | promoted (refresh)
+AGF-VP-ArcheryFeathersChange-v1.0.3 | promoted (refresh)
+AGF-VP-ArmorHarvestMods-v2.1.1 | promoted (refresh)
+AGF-VP-AutomobilesRespawn-v3.1.1 | promoted (refresh)
+AGF-VP-BedrollPlus-v1.0.1 | promoted (refresh)
+AGF-VP-BetterEggChance-v2.1.1 | promoted (refresh)
+AGF-VP-BreakItGetIt-v1.0.3 | promoted (refresh)
+AGF-VP-BuyTraderVendingMachines-v3.0.3 | promoted (refresh)
+AGF-VP-CraftSewingKits-v1.0.1 | promoted (refresh)
+AGF-VP-CraftStackEngBattCells-v3.3.1 | promoted (refresh)
+AGF-VP-CraftVitamins-v1.1.1 | promoted (refresh)
+AGF-VP-DecorationBlock-v3.0.3 | promoted (refresh)
+AGF-VP-DewsPlus-v2.4.3 | promoted (refresh)
+AGF-VP-DoorsPlus-v3.0.1 | promoted (refresh)
+AGF-VP-DrinkableAcid-v2.0.2 | promoted (refresh)
+AGF-VP-DyesPlus-v3.1.1 | promoted (refresh)
+AGF-VP-FarmingPlus-v5.6.2 | promoted (refresh)
+AGF-VP-FloraHarvester-v2.3.1 | promoted (refresh)
+AGF-VP-FuelBurnPlus-v2.3.1 | promoted (refresh)
+AGF-VP-MasterTool-v6.1.2 | promoted (refresh)
+AGF-VP-MaxLevel500-v2.0.3 | promoted (refresh)
+AGF-VP-MedicationNoInsectSlow-v1.1.1 | promoted (refresh)
+AGF-VP-MiningPlus-v1.2.1 | promoted (refresh)
+AGF-VP-Mod988-v2.0.2 | promoted (refresh)
+AGF-VP-ModBundling-v1.0.2 | promoted (refresh)
+AGF-VP-ModSlotsPlus-v3.0.2 | promoted (refresh)
+AGF-VP-PaintbrushPlus-v2.1.1 | promoted (refresh)
+AGF-VP-PickupLanternsPlus-v2.0.2 | promoted (refresh)
+AGF-VP-PlayerResetQuests-v2.0.2 | promoted (refresh)
+AGF-VP-PlayerVendingMachinesPlus-v1.0.1 | promoted (refresh)
+AGF-VP-PumpkinsPlus-v2.0.5 | promoted (refresh)
+AGF-VP-QuickStart-v2.0.1 | promoted (refresh)
+AGF-VP-RebundleBundles-v1.0.1 | promoted (refresh)
+AGF-VP-RecipeRottingFlesh-v1.0.1 | promoted (refresh)
+AGF-VP-RenamesAlphabeticalSort-v2.0.5 | promoted (refresh)
+AGF-VP-RestorePowerAnyTime-v1.0.3 | promoted (refresh)
+AGF-VP-ScrapBatts4Acid-v1.1.1 | promoted (refresh)
+AGF-VP-ScrapEquipmentFaster-v1.0.1 | promoted (refresh)
+AGF-VP-SimplifiedStacks-v1.2.4 | promoted (refresh)
+AGF-VP-SmeltingPlus-v2.4.1 | promoted (refresh)
+AGF-VP-StayLongerAnimalCorpse-v2.0.3 | promoted (refresh)
+AGF-VP-StayLongerPlayerBackpack-v2.0.2 | promoted (refresh)
+AGF-VP-StayLongerZombieLoot-v2.0.2 | promoted (refresh)
+AGF-VP-TacticalRiflePlus-v2.1.1 | promoted (refresh)
+AGF-VP-TraderAlwaysOpen-v2.0.2 | promoted (refresh)
+AGF-VP-TraderCostlierPrices-v1.0.1 | promoted (refresh)
+AGF-VP-TraderSellsMoreBooks-v3.0.1 | promoted (refresh)
+AGF-VP-TradersRestockEvery2Days-v1.0.1 | promoted (refresh)
+AGF-VP-TreesPlus-v3.0.2 | pushed to game, promoted (updated)
+AGF-VP-VehiclePerformance-v1.0.2 | promoted (refresh)
+AGF-VP-VehiclesExtraSeating-v1.0.1 | promoted (refresh)
+AGF-VP-VehicleStoragePlus-v2.1.2 | promoted (refresh)
+AGF-VP-WriteStoryOnCrate-v1.0.1 | promoted (refresh)
+AGF-VP-XPDeathPenaltyReduction-v2.0.1 | promoted (refresh)
+AGF-VP-ZombieBiomeSpawning-v3.0.1 | promoted (refresh)
+AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2 | promoted (refresh)
+AGF-VP-ZombieLargerHordes-v2.0.2 | promoted (refresh)

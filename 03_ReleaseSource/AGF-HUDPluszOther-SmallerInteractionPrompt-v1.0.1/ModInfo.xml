@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPluszOther-SmallerInteractionPrompt" />
+  <DisplayName value="AGF Smaller Interaction Prompt" />
+  <Version value="1.0.1" />
+  <Description value="Slightly reduces the interaction prompt text size on screen." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-RenamesAlphabeticalSort" />
+  <DisplayName value="AGF Renames Alphabetical Sort" />
+  <Version value="2.0.5" />
+  <Description value="Renames items with category prefixes so Auto Sort groups like items consistently." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

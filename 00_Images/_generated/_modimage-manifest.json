@@ -1,0 +1,560 @@
+{
+  "AGF-VP-TreesPlus": {
+    "signature": "5afcd0bc1c36cd92ef5072ac8e3aac74702fd2fa1b13b3ca723fbdef5fc17efb",
+    "version": "3.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-4Modders-10IngredientSlots": {
+    "signature": "46d8cb212989f6c14cad1174ebb6368ad411c20d11f00e460e2dab128a9bfbe1",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-4Modders-CustomWindowEnteringDuration": {
+    "signature": "caefc881536e2720f7b41d5095c721dfedcdc08032dd6b4d70a473233e890a5a",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-4Modders-Fix4DestroyBiomeBadge": {
+    "signature": "fead76524b9a68852b859b01b3861fded455929a6f892bac9269f56d9972d598",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-4Modders-Fix4RemoveItems": {
+    "signature": "a4123b77a868d4faddeba24792e9e0775e9641a6a75637059029a29abaae1c73",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-4Modders-SkillPointCap": {
+    "signature": "2cf8ea53dbf0fe9511155797f2dcf52da0a25a86616bde299c37c2319854e62f",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-BackpackPlus-060Slots": {
+    "signature": "e2fe9ac01bdaf07c76cbc6a814f24c87e4705eeb6d5bc7e00d7da251dacb67aa",
+    "version": "3.2.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-BackpackPlus-072Slots": {
+    "signature": "bef541d72ff8ddba02061d27a231aa77193ba2470f98550d3b27c01b76b7a12e",
+    "version": "3.2.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-BackpackPlus-084Slots": {
+    "signature": "2690fdf9b0ed64bf4ed909493cb854c7f95dbf203e328194b27234bef35b7039",
+    "version": "3.2.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-BackpackPlus-119Slots": {
+    "signature": "efe965f43b6a29c8d1588f64879ad2f021a2403edf63144bf600a4574bdc2fde",
+    "version": "1.2.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPlus-1Main": {
+    "signature": "3cc53bd393d3862a71e2a1c53051ee7a78f69ec83a28186f09df2f22d1dc842a",
+    "version": "5.4.7",
+    "has_media": true,
+    "media_file": "AGF-HUDPlus-1Main.png"
+  },
+  "AGF-HUDPlus-BMCounter": {
+    "signature": "d223ca3bcfd58b940dc3795ac72dbe7259e182e9331d4b80300f3db7a1e0391e",
+    "version": "2.1.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPlus-HealthBars": {
+    "signature": "ea37193af30b9e204513d31aa6c40579769564062bfb8cae16b8ee5760b9e43e",
+    "version": "4.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPlus-PurpleBook": {
+    "signature": "2a305be489e46c3027a209c06412dff8ae55d8565adb281ac33273ef0ffa67a6",
+    "version": "2.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPlus-RemoveEnteringPopUp": {
+    "signature": "193923dc2946c3a21850d13f770ea60901aaafaac861c4fd5fecf14f085d455d",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPluszOther-RemoveWrittentormAlerts": {
+    "signature": "f303e3043a28af4557a77f7edc26ee07230ee11ea2f156c7fe571bb9c222f40d",
+    "version": "2.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPluszOther-SmallerInteractionPrompt": {
+    "signature": "70cc3f22b35dedd368e85836b28cf7382f9dde86f8bb3d9652fbc8f1028afb2c",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPluszOther-TinyBuffsPopUp": {
+    "signature": "7b4816d5cca230dfdc72f4311330be1660fea66b757a648a4551aaeac90ea219",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-HUDPluszOther-Weekday": {
+    "signature": "11667df19c0269e5138334318e994f0c2174083aafad3b2c7bdafaaab70560b0",
+    "version": "2.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-AudioOptionsPlus": {
+    "signature": "16c554a42edadf03761c028d13b98c637e5eacad3d43d562ead1e56e5a886104",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-AutoRun": {
+    "signature": "eabecb12c61adf63ef884c34ce6176003fb52f71906119b270d84e8d16557ae2",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-ConsoleOpacityMod": {
+    "signature": "e02c94309069e08d2dca50ea72ffe0136d3bfc057d0a59e2a44b17cca80756f1",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-CosmeticLockIcon": {
+    "signature": "50efccf86ce32b0228ddcf3e60d8c3b97cf11a31457cdbc113ca0bc2067d1a84",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-EnhancedAGF": {
+    "signature": "e570fb25b27fff11a838ba023c47325835c6f69fcdf511108a2db3fb53e2c8b9",
+    "version": "3.2.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-ExpandedInteractionPrompts": {
+    "signature": "5c59c8ff0b26f8c14f39fff30c705de7dc0ca51148bc929a8f765cdd3f096916",
+    "version": "1.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-FlightAssist": {
+    "signature": "a3ef451ebdd416955839607e3b8dd21194ed2ce7cd699aa5a86d4ae45faa93d3",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-GlobalStormTracker": {
+    "signature": "96c829aebe84016ccae581dcd67f692994c4bf23b3551ace624ace1dbf7ab111",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-ItemTypeIconColor": {
+    "signature": "4042a5b691210e00e20c68cda9d3ab8276eb9d355e49d426d32865e77696a17d",
+    "version": "1.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-LockableWorkstations": {
+    "signature": "70cf4db3220afa7ff8a610e3a59d8c3b3e555fd02677d6b37a4163a4fbd85bbd",
+    "version": "1.2.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-OpenAllButton": {
+    "signature": "9d850349eed53e3f6dc3d9c32cba40a3b401661c994525eba27312c6126d1d05",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-ScreamerAlert": {
+    "signature": "6ff7f535aa5a4230337e0039ad6f78be257cd07507894137fca653a95d34e7a3",
+    "version": "1.2.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-SortingBox": {
+    "signature": "fdffde3c9b36ed6e62af6c958d3e1b1efc9c42fbb82ef84c3da78783094c590d",
+    "version": "1.0.6",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-Toolbelt12Slots": {
+    "signature": "a6536f957a93feb42acbacd46a7268254d7094eea18b8e51a290b1d161ac443b",
+    "version": "1.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-AdminModdingSupport": {
+    "signature": "af36a872b770ee94c5bd0bfa1e0f6d35ca7c2a0b1eceb2ca5f0adac5e5abf8c1",
+    "version": "1.0.5",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-AlternativeRecipes": {
+    "signature": "67122663e3ea53a70517b27243fa1cce394743353afa1de486449a4ec39eba85",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-AmmoDisassembly": {
+    "signature": "26459f3214335f2a8215a7b9138dca5cb46f7ce053fb42289cb98b0a629dfa59",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ApiaryPlus": {
+    "signature": "c2a5debd06bb82648ca0dd64d3edcfd33d1d0977c254d63571c1bb990d6648e7",
+    "version": "1.0.4",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ArcheryFeathersChange": {
+    "signature": "85655e48b420eb67280266a00a373c06764c677dff70b5bc8d94a36e1563e459",
+    "version": "1.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ArmorHarvestMods": {
+    "signature": "1bfcfbe50f2a623a511c79af157ad32813275c5355b4a2d84bc208aaa3c4db9e",
+    "version": "2.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-AutomobilesRespawn": {
+    "signature": "9e6eeacfee37d3c18202dee12671fd5058c57954b2f1496d34c815f6a8aef3e9",
+    "version": "3.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-BedrollPlus": {
+    "signature": "76dd5262706d44519f47de0258a41c6d947babbbcc0a89efc29084468c074b53",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-BetterEggChance": {
+    "signature": "ca742689aefffdaee2dc6a625ed697317511c5f7f4261513768eabae92e20139",
+    "version": "2.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-BreakItGetIt": {
+    "signature": "64025984f1aa737338db8af320effc0bae1be887036a4d743e7a7e2d9f8c389d",
+    "version": "1.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-BuyTraderVendingMachines": {
+    "signature": "f157877ba5c47f466d578d7d1f519e651c00f7c92007a4ff2eb3b2e9922e2b5f",
+    "version": "3.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-CraftSewingKits": {
+    "signature": "69a7ea273aeeebd66c939ad6b0f3e5b1ea91639a4e7e63bea8f8d28e8dd9e935",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-CraftStackEngBattCells": {
+    "signature": "7fc7e75b770566850db77ef74dff5b15de235d1fc1072ad44f5e54313bc39a25",
+    "version": "3.3.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-CraftVitamins": {
+    "signature": "8c5a1792d071c81cd20deb55e3f2ac5f99e37635ad55fe4e20f2c8e70b3fb955",
+    "version": "1.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-DecorationBlock": {
+    "signature": "637f0e88a6cbfd3374d04d39df917f514ea2560c35208a4eff3327668759b0f8",
+    "version": "3.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-DewsPlus": {
+    "signature": "df0525c8b4ea530d2a0f137182c0f8fe763d22b6bb4e045811a59089b0484801",
+    "version": "2.4.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-DoorsPlus": {
+    "signature": "7f4d1c4cc4ffcbea547a9bc6dcbd26dfa4f8528876516ff081d0a4af94762ac9",
+    "version": "3.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-DrinkableAcid": {
+    "signature": "941de0adb5fb0ae2c8f4b9837cf2b63bba02d9eca492cf9db1d31b141bb05552",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-DyesPlus": {
+    "signature": "a5174172546e470fe74b8c3bb26e8dd5375f22c9850780778aae38757ca06054",
+    "version": "3.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-FarmingPlus": {
+    "signature": "0985a2e83e0ec87e0533016c0d5b404dc96c5df77e6baec616ff6c0e523ce596",
+    "version": "5.6.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-FloraHarvester": {
+    "signature": "ae57dd74dbb5d049596a47bdc552570a7ccff89c7dcd9e188cf2a6dcdd7fd53b",
+    "version": "2.3.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-FuelBurnPlus": {
+    "signature": "770e32857298f7135cb31617c2c350ca001aab62d12a53d5d841e8ebf0996f8e",
+    "version": "2.3.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-MasterTool": {
+    "signature": "0941bc5486edee2c16a52f29da02c9d0a3dbef6cf24a4aef1b5b5af1e0b7a128",
+    "version": "6.1.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-MaxLevel500": {
+    "signature": "6bf0708a687119eadb6f9703254bbb00905f4ad2823578ec830dc57c1c4a0c59",
+    "version": "2.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-MedicationNoInsectSlow": {
+    "signature": "28fe396fd7fcd202e75042d173db384c9b866a1f7642a8782db2c49e7d7820be",
+    "version": "1.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-MiningPlus": {
+    "signature": "d659f649e7fe05b9dabc44a42bbe2dea776ed6cf84ac0e972e08794b73f36c8e",
+    "version": "1.2.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-Mod988": {
+    "signature": "0e4af12796e003d8ec63723fe2c8b9feb408598634cf4dde5f6d3053e5b6df99",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ModBundling": {
+    "signature": "f05bbebfae5944451362c0cc025aac653f8843014498c48781a262a369c9ffe9",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ModSlotsPlus": {
+    "signature": "7d75af5c263b2878e0473eed0253874b4142d6f92725aff581d598d7221571bd",
+    "version": "3.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-PaintbrushPlus": {
+    "signature": "4078c100d9225cb33e4d63dbe97ddabb3eab58459eb4bb83c67205a9211193e2",
+    "version": "2.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-PickupLanternsPlus": {
+    "signature": "234b8eca50a621dea8eb6f5c66561faffc6935205b9b1890e1a7ea4a14b2f79c",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-PlayerResetQuests": {
+    "signature": "8de6c0ac40cf243252c756882ef03d5fc49eb6789954f442daff9336572a7068",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-PlayerVendingMachinesPlus": {
+    "signature": "a26e1ef3a069a27088b168228f14a5dacc02a2b633d115c21bf733c04bc7e7fd",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-PumpkinsPlus": {
+    "signature": "3709559edea9a8278a3251ede0144afafb4612cf2a1bf5ac1f567bcc6514a198",
+    "version": "2.0.5",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-QuickStart": {
+    "signature": "36b5c710057cac9cee1575e5f28d09c90c7e4bf58d8ba7c21e0d90fe89f0eb40",
+    "version": "2.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-RebundleBundles": {
+    "signature": "206b92c43915293fcb3a4c25373fbb7c8c4729cc065b41a37ac0cce11c1ca7a8",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-RecipeRottingFlesh": {
+    "signature": "2f6534d8e23e51b30b68619b79b98d5f0716503708da05d42f69355615279ff4",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-RenamesAlphabeticalSort": {
+    "signature": "00f53b2c0bd7b3d0ef51eb7fc1dcb128aaf8302683de3630b1acb2210e52c692",
+    "version": "2.0.5",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-RestorePowerAnyTime": {
+    "signature": "2d30d319bf81089b8c6c784775edbbed148a7acdb7813a679938ae120baeaa34",
+    "version": "1.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ScrapBatts4Acid": {
+    "signature": "8e0ef45cd877823691daf262116b88229255f1c637f7a227ae436c5b518d8b8b",
+    "version": "1.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ScrapEquipmentFaster": {
+    "signature": "4a6b30469ac2f13cc798f631675d7f24e9c0e9d0095dafba71b9e51f59ea20f3",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-SimplifiedStacks": {
+    "signature": "66dfd4b0ea82dea2250746e16734dfcf1e73517fb3a578d031862e56d8762be8",
+    "version": "1.2.4",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-SmeltingPlus": {
+    "signature": "2d8419c6cb5a6af2608accbf86ec69cb1ef6b171a95252bb45b96e81bdf6ce02",
+    "version": "2.4.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-StayLongerAnimalCorpse": {
+    "signature": "3980caed085c356a35dd65c8d09ea9690faa9031407ab6023fa4fe340158618c",
+    "version": "2.0.3",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-StayLongerPlayerBackpack": {
+    "signature": "66db44c5a4adda37f0881d24c7d7d2bd797cce23e8944256744055275f3e996a",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-StayLongerZombieLoot": {
+    "signature": "3469aec8bf6ef7ea8e6873adcd68ba4d3031704869465154159ee5e311cb5666",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-TacticalRiflePlus": {
+    "signature": "95f1f94fb8f193b187e472bc347423e4d5a061699350f3b61221c75912dacf38",
+    "version": "2.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-TraderAlwaysOpen": {
+    "signature": "df7b6802a02c69eac9990d8ffe354fd3ab0de4488360e83f38cfa681e3eb258f",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-TraderCostlierPrices": {
+    "signature": "8c6642dd6fc2e98d7b93e2e0abbf36232559c04507a53531a35cdacd3dff4145",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-TraderSellsMoreBooks": {
+    "signature": "91a37d17249477493a416a73a46512af2d570597402f797697fb0542f385da5c",
+    "version": "3.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-TradersRestockEvery2Days": {
+    "signature": "467de1f5031499a07dd1451d742629eedfd40401e9f7ca04e4085b752b0ac2da",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-VehiclePerformance": {
+    "signature": "49811264a3f23487dabf282e4031c00cc0e3f47d6fcc9888a5dc01a1e7032c74",
+    "version": "1.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-VehiclesExtraSeating": {
+    "signature": "68759b21440209cc6be72f02e3a3d32fa0e2aaec3e18873288430d836f0de3aa",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-VehicleStoragePlus": {
+    "signature": "54a84420c0f02399a6f9878f0983e368548149fb54cf30fbb1d8fcb2c3101478",
+    "version": "2.1.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-WriteStoryOnCrate": {
+    "signature": "7a081f4691d13d968fcce3c58c5cfcda69b29d43c23a103fdae93380d5765d10",
+    "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-XPDeathPenaltyReduction": {
+    "signature": "70077976af09aefc51cec2ca6efb44cb8a042a83d149b231552f94df2c92ff8d",
+    "version": "2.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ZombieBiomeSpawning": {
+    "signature": "1bf9cbe6eed182d7e656aef8f4891acfda6f9af0393002a1e992a5c7ed17d1af",
+    "version": "3.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ZombieCorpseLeaveQuicker": {
+    "signature": "9f42d910a2cba979b8d13b788b5ead0c94c0bad78df8ccf69580e65fa47fbcc5",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-ZombieLargerHordes": {
+    "signature": "71f620ce73ce2e92724b6ec0996b448e44d6d2038f19c7472984de2164e584dd",
+    "version": "2.0.2",
+    "has_media": false,
+    "media_file": ""
+  },
+  "zzzAGF-Special-Compatibilities": {
+    "signature": "bdb6c3520613679988f7307fb07fcfd6e19fd4ce8fa30abbaeb5362df7e2e883",
+    "version": "4.1.1",
+    "has_media": false,
+    "media_file": ""
+  }
+}

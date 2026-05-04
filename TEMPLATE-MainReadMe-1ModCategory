@@ -1,0 +1,66 @@
+<!--
+  CATEGORY TEMPLATE — Controls the section header rendered for each mod category
+  in the main README mod list. Individual mod entries (from TEMPLATE-MainReadMe-2ModEntry)
+  are appended automatically below this block.
+
+  PLACEHOLDERS:
+    {{CATEGORY_TITLE}}
+        The section heading text, including the letter prefix.
+        Example: "B. HUD PLUS MODS"
+
+    {{CATEGORY_DOWNLOAD_LINE}}
+        Markdown link for the download-all .zip for this category.
+        Example: "[**⬇️ Download All HUD Plus Mods**](https://auroragiggles.com/mods/00_HUDPlus_All.zip)"
+        Empty string for categories that have no bulk download.
+
+    {{CATEGORY_DESCRIPTION}}
+        Subtitle / tagline block placed under the download link.
+        May include a "---" divider line and an italic description line.
+        Example (multi-line):
+            ---
+
+            *Quality-of-life HUD enhancements and visual tweaks.*
+
+  STRUCTURE OF A FULL RENDERED CATEGORY SECTION:
+
+    ---
+
+    <br>
+
+    ## **B. HUD PLUS MODS**
+
+    *[(Back to Top)](#agf-7-days-to-die-mods)*
+
+    [**⬇️ Download All HUD Plus Mods**](https://...)
+
+    ---
+
+    *Quality-of-life HUD enhancements and visual tweaks.*
+
+    > ### **AGF-HUDPlus-1Main** *-v5.4.4* - [Download](https://...)
+    > *Overhauls the HUD with enhanced displays and new panels.*
+    > <details> <summary>*Show detailed features*</summary>
+    > ...
+    > </details>
+    >
+    ---
+    ... (more mod entries follow)
+
+  NOTE: HTML comment blocks (like this one) are stripped before the template
+  is applied, so documentation here does not appear in the final README.
+-->
+---
+
+<br>
+
+## **{{CATEGORY_TITLE}}**
+
+{{CATEGORY_DOWNLOAD_LINE}}
+
+{{CATEGORY_DESCRIPTION}}
+
+*[(Back to Top)](#agf-7-days-to-die-mods)*
+
+---
+
+---

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-BuyTraderVendingMachines"/>
+	<DisplayName value="AGF Buy Trader Vending Machines"/>
+	<Version value="3.0.3"/>
+	<Description value="With high trader stage you can purchase working vending machines from traders."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

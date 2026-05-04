@@ -1,0 +1,22 @@
+<AGFVanillaPlus-MedicationNoInsectSlow>
+
+
+	<!--To find in world, loot, whatever, essentially placed in same location as aloe cream-->
+		<append xpath="/lootcontainers/lootgroup[@name='survivalMedical']">
+			<item name="medicalInsectCream" count="1,2" loot_prob_template="med"/>
+		</append>	
+		<append xpath="/lootcontainers/lootgroup[@name='groupMedicalAll']">
+			<item name="medicalInsectCream" loot_prob_template="med"/>
+		</append>	
+		<append xpath="/lootcontainers/lootgroup[@name='groupMedicalCommon']">
+			<item name="medicalInsectCream" loot_prob_template="med"/>
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='groupZpackNurseA']">
+			<item name="medicalInsectCream" loot_prob_template="med"/>
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='twitch_med1']">
+			<item name="medicalInsectCream" count="1,2"/>
+		</append>
+
+
+</AGFVanillaPlus-MedicationNoInsectSlow>

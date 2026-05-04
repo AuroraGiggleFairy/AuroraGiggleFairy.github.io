@@ -1,0 +1,767 @@
+<AGFVanillaPlus-BedrollPlus>
+	
+	
+<!--Unused "master" block to extend from-->
+	<append xpath="/blocks">
+		<block name="bedrollAGFMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="SleepingBag"/>
+			<property name="IndexName" value="brBlock"/>
+			<!-- need this to show the bigger covering area -->
+			<property name="DescriptionKey" value="bedGroupDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="CustomIconTint" value="50493F"/>
+			<property name="TintColor" value="50493F"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="Material" value="Mfurniturecloth"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="FallDamage" value=".8"/>
+			<property name="CanPickup" value="true" param1="bedrollBlockVariantHelperAGF"/>
+			<property class="RepairItems">
+				<property name="resourceCloth" value="20"/>
+			</property>
+			<drop event="Harvest" count="0"/>
+			<drop event="Destroy" name="bedrollBlockVariantHelperAGF" count="1"/>
+			<drop event="Fall" name="bedrollBlockVariantHelperAGF" count="1" prob=".9" stick_chance=".9"/>
+			<property name="Group" value="Basics,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+			<property name="SoundPickup" value="bedroll_grab"/>
+			<property name="SoundPlace" value="bedroll_place"/>
+		</block>
+		
+		
+<!--BEDROLLS-->	
+		<block name="bedrollAGF">
+			<!--Can have color-->
+			<property name="Extends" value="bedrollAGFMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bedroll"/>
+			<property name="CustomIconTint" value="50493F"/><!--Brown?-->
+			<property name="TintColor" value="50493F"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/RespawnPoints/bedRollPrefab.prefab"/>
+			<property name="ModelOffset" value=".5,0,0"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="SortOrder1" value="AGF01"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+				<!-- Red -->
+				<block name="bedrollRedAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="523538"/>
+					<property name="TintColor" value="523538"/>
+					<property name="SortOrder2" value="0003"/>
+				</block>
+				<!-- Orange -->
+				<block name="bedrollOrangeAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="5A4329"/>
+					<property name="TintColor" value="5A4329"/>
+					<property name="SortOrder2" value="0004"/>
+				</block>
+				<!-- Yellow -->
+				<block name="bedrollYellowAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="545526"/>
+					<property name="TintColor" value="545526"/>
+					<property name="SortOrder2" value="0005"/>
+				</block>
+				<!-- Green -->
+				<block name="bedrollGreenAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="2E462C"/>
+					<property name="TintColor" value="2E462C"/>
+					<property name="SortOrder2" value="0006"/>
+				</block>
+				<!-- Blue -->
+				<block name="bedrollBlueAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="2A405A"/>
+					<property name="TintColor" value="2A405A"/>
+					<property name="SortOrder2" value="0007"/>
+				</block>
+				<!-- Purple -->
+				<block name="bedrollPurpleAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="3D3D63"/>
+					<property name="TintColor" value="3D3D63"/>
+					<property name="SortOrder2" value="0008"/>
+				</block>
+				<!-- Pink -->
+				<block name="bedrollPinkAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="7B5F72"/>
+					<property name="TintColor" value="7B5F72"/>
+					<property name="SortOrder2" value="0011"/>
+				</block>
+				<!-- Grey -->
+				<block name="bedrollGreyAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="414141"/>
+					<property name="TintColor" value="414141"/>
+					<property name="SortOrder2" value="0009"/>
+				</block>
+				<!-- White -->
+				<block name="bedrollWhiteAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="8C8C8C"/>
+					<property name="TintColor" value="8C8C8C"/>
+					<property name="SortOrder2" value="0001"/>
+				</block>
+				<!-- Black -->
+				<block name="bedrollBlackAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="2E2E2E"/>
+					<property name="TintColor" value="2E2E2E"/>
+					<property name="SortOrder2" value="0010"/>
+				</block>
+				<!-- Army Green -->
+				<block name="bedrollArmyGreenAGF">
+					<property name="Extends" value="bedrollAGF"/>
+					<property name="CreativeMode" value="Player"/>
+					<property name="CustomIcon" value="bedroll"/>
+					<property name="CustomIconTint" value="354600"/>
+					<property name="TintColor" value="354600"/>
+					<property name="SortOrder2" value="0012"/>
+				</block>
+		
+<!--Bed Made on Mattress on Floor-->		
+		<block name="bedMadeNoFrameWhiteAGF">
+			<!--Can have color-->
+			<property name="Extends" value="bedrollAGFMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+			<property name="CustomIconTint" value="A2A29C"/>
+			<property name="TintColor" value="A2A29C"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/bedMadeNoFramePrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="SortOrder1" value="AGF02"/>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+				<!-- Brown -->
+				<block name="bedMadeNoFrameBrownAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="524938"/>
+					<property name="TintColor" value="524938"/>
+					<property name="SortOrder2" value="0002"/>
+				</block>
+				<!-- Red -->
+				<block name="bedMadeNoFrameRedAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="7E3737"/>
+					<property name="TintColor" value="7E3737"/>
+					<property name="SortOrder2" value="0003"/>
+				</block>
+				<!-- Orange -->
+				<block name="bedMadeNoFrameOrangeAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="7E5738"/>
+					<property name="TintColor" value="7E5738"/>
+					<property name="SortOrder2" value="0004"/>
+				</block>
+				<!-- Yellow -->
+				<block name="bedMadeNoFrameYellowAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="7E7738"/>
+					<property name="TintColor" value="7E7738"/>
+					<property name="SortOrder2" value="0005"/>
+				</block>
+				<!-- Green -->
+				<block name="bedMadeNoFrameGreenAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="315D3B"/>
+					<property name="TintColor" value="315D3B"/>
+					<property name="SortOrder2" value="0006"/>
+				</block>
+				<!-- Blue -->
+				<block name="bedMadeNoFrameBlueAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="3B5671"/>
+					<property name="TintColor" value="3B5671"/>
+					<property name="SortOrder2" value="0007"/>
+				</block>
+				<!-- Purple -->
+				<block name="bedMadeNoFramePurpleAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="3B3D70"/>
+					<property name="TintColor" value="3B3D70"/>
+					<property name="SortOrder2" value="0008"/>
+				</block>
+				<!-- Grey -->
+				<block name="bedMadeNoFrameGreyAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="656565"/>
+					<property name="TintColor" value="656565"/>
+					<property name="SortOrder2" value="0009"/>
+				</block>
+				<!-- Black -->
+				<block name="bedMadeNoFrameBlackAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="2E2E2E"/>
+					<property name="TintColor" value="2E2E2E"/>
+					<property name="SortOrder2" value="0010"/>
+				</block>
+				<!-- Pink -->
+				<block name="bedMadeNoFramePinkAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="775D76"/>
+					<property name="TintColor" value="775D76"/>
+					<property name="SortOrder2" value="0011"/>
+				</block>
+				<!-- Army Green -->
+				<block name="bedMadeNoFrameArmyGreenAGF">
+					<property name="Extends" value="bedMadeNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMadeNoFrameWhite"/>
+					<property name="CustomIconTint" value="475643"/>
+					<property name="TintColor" value="475643"/>
+					<property name="SortOrder2" value="0012"/>
+				</block>
+				
+<!--Bed Messy on Mattress on Floor-->					
+		<block name="bedMessyNoFrameWhiteAGF">
+			<!--Can have color-->
+			<property name="Extends" value="bedrollAGFMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+			<property name="CustomIconTint" value="A2A29C"/>
+			<property name="TintColor" value="A2A29C"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/bedMessyNoFramePrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="SortOrder1" value="AGF03"/>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+				<!-- Brown -->
+				<block name="bedMessyNoFrameBrownAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="524938"/>
+					<property name="TintColor" value="524938"/>
+					<property name="SortOrder2" value="0002"/>
+				</block>
+				<!-- Red -->
+				<block name="bedMessyNoFrameRedAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="7E3737"/>
+					<property name="TintColor" value="7E3737"/>
+					<property name="SortOrder2" value="0003"/>
+				</block>
+				<!-- Orange -->
+				<block name="bedMessyNoFrameOrangeAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="7E5738"/>
+					<property name="TintColor" value="7E5738"/>
+					<property name="SortOrder2" value="0004"/>
+				</block>
+				<!-- Yellow -->
+				<block name="bedMessyNoFrameYellowAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="7E7738"/>
+					<property name="TintColor" value="7E7738"/>
+					<property name="SortOrder2" value="0005"/>
+				</block>
+				<!-- Green -->
+				<block name="bedMessyNoFrameGreenAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="315D3B"/>
+					<property name="TintColor" value="315D3B"/>
+					<property name="SortOrder2" value="0006"/>
+				</block>
+				<!-- Blue -->
+				<block name="bedMessyNoFrameBlueAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="3B5671"/>
+					<property name="TintColor" value="3B5671"/>
+					<property name="SortOrder2" value="0007"/>
+				</block>
+				<!-- Purple -->
+				<block name="bedMessyNoFramePurpleAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="3B3D70"/>
+					<property name="TintColor" value="3B3D70"/>
+					<property name="SortOrder2" value="0008"/>
+				</block>
+				<!-- Grey -->
+				<block name="bedMessyNoFrameGreyAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="656565"/>
+					<property name="TintColor" value="656565"/>
+					<property name="SortOrder2" value="0009"/>
+				</block>
+				<!-- Black -->
+				<block name="bedMessyNoFrameBlackAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="2E2E2E"/>
+					<property name="TintColor" value="2E2E2E"/>
+					<property name="SortOrder2" value="0010"/>
+				</block>
+				<!-- Pink -->
+				<block name="bedMessyNoFramePinkAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="775D76"/>
+					<property name="TintColor" value="775D76"/>
+					<property name="SortOrder2" value="0011"/>
+				</block>
+				<!-- Army Green -->
+				<block name="bedMessyNoFrameArmyGreenAGF">
+					<property name="Extends" value="bedMessyNoFrameWhiteAGF"/>
+					<property name="CustomIcon" value="bedMessyNoFrameWhite"/>
+					<property name="CustomIconTint" value="475643"/>
+					<property name="TintColor" value="475643"/>
+					<property name="SortOrder2" value="0012"/>
+				</block>
+				
+<!--Bunk Bed Made-->				
+		<block name="bunkBedMadeAGF">
+			<!--Can have color-->
+			<property name="Extends" value="bedrollAGFMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bunkBedMadeWhite"/>
+			<property name="CustomIconTint" value="2E2E2E"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/bedMadePrefab.prefab"/>
+			<property name="Texture" value="282"/>
+			<property name="Material" value="Mfurnituremetal"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="SortOrder1" value="AGF04"/>
+			<property name="SortOrder2" value="0010"/>
+		</block>
+				<!-- Black -->
+				<block name="bunkBedMadeWhiteAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="A2A29C"/>
+					<property name="TintColor" value="A2A29C"/>
+					<property name="SortOrder2" value="0001"/>
+				</block>
+				<!-- Brown -->
+				<block name="bunkBedMadeBrownAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="524938"/>
+					<property name="TintColor" value="524938"/>
+					<property name="SortOrder2" value="0002"/>
+				</block>
+				<!-- Red -->
+				<block name="bunkBedMadeRedAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="7E3737"/>
+					<property name="TintColor" value="7E3737"/>
+					<property name="SortOrder2" value="0003"/>
+				</block>
+				<!-- Orange -->
+				<block name="bunkBedMadeOrangeAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="7E5738"/>
+					<property name="TintColor" value="7E5738"/>
+					<property name="SortOrder2" value="0004"/>
+				</block>
+				<!-- Yellow -->
+				<block name="bunkBedMadeYellowAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="7E7738"/>
+					<property name="TintColor" value="7E7738"/>
+					<property name="SortOrder2" value="0005"/>
+				</block>
+				<!-- Green -->
+				<block name="bunkBedMadeGreenAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="315D3B"/>
+					<property name="TintColor" value="315D3B"/>
+					<property name="SortOrder2" value="0006"/>
+				</block>
+				<!-- Blue -->
+				<block name="bunkBedMadeBlueAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="3B5671"/>
+					<property name="TintColor" value="3B5671"/>
+					<property name="SortOrder2" value="0007"/>
+				</block>
+				<!-- Purple -->
+				<block name="bunkBedMadePurpleAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="3B3D70"/>
+					<property name="TintColor" value="3B3D70"/>
+					<property name="SortOrder2" value="0008"/>
+				</block>
+				<!-- Grey -->
+				<block name="bunkBedMadeGreyAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="656565"/>
+					<property name="TintColor" value="656565"/>
+					<property name="SortOrder2" value="0009"/>
+				</block>
+				<!-- Pink -->
+				<block name="bunkBedMadePinkAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="775D76"/>
+					<property name="TintColor" value="775D76"/>
+					<property name="SortOrder2" value="0011"/>
+				</block>
+				<!-- Army Green -->
+				<block name="bunkBedMadeArmyGreenAGF">
+					<property name="Extends" value="bunkBedMadeAGF"/>
+					<property name="CustomIcon" value="bunkBedMadeWhite"/>
+					<property name="CustomIconTint" value="475643"/>
+					<property name="TintColor" value="475643"/>
+					<property name="SortOrder2" value="0012"/>
+				</block>
+				
+<!--Bunk Bed Messy-->				
+		<block name="bunkBedMessyAGF">	<!--Can have color-->
+			<property name="Extends" value="bedrollAGFMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bunkBedMessyWhite"/>
+			<property name="CustomIconTint" value="2E2E2E"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/bedMessyPrefab.prefab"/>
+			<property name="Texture" value="282"/>
+			<property name="Material" value="Mfurnituremetal"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="SortOrder1" value="AGF05"/>
+			<property name="SortOrder2" value="0010"/>
+		</block>
+				<!-- White -->
+				<block name="bunkBedMessyWhiteAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="A2A29C"/>
+					<property name="TintColor" value="A2A29C"/>
+					<property name="SortOrder2" value="0001"/>
+				</block>
+				<!-- Brown -->
+				<block name="bunkBedMessyBrownAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="524938"/>
+					<property name="TintColor" value="524938"/>
+					<property name="SortOrder2" value="0002"/>
+				</block>
+				<!-- Red -->
+				<block name="bunkBedMessyRedAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="7E3737"/>
+					<property name="TintColor" value="7E3737"/>
+					<property name="SortOrder2" value="0003"/>
+				</block>
+				<!-- Orange -->
+				<block name="bunkBedMessyOrangeAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="7E5738"/>
+					<property name="TintColor" value="7E5738"/>
+					<property name="SortOrder2" value="0004"/>
+				</block>
+				<!-- Yellow -->
+				<block name="bunkBedMessyYellowAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="7E7738"/>
+					<property name="TintColor" value="7E7738"/>
+					<property name="SortOrder2" value="0005"/>
+				</block>
+				<!-- Green -->
+				<block name="bunkBedMessyGreenAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="315D3B"/>
+					<property name="TintColor" value="315D3B"/>
+					<property name="SortOrder2" value="0006"/>
+				</block>
+				<!-- Blue -->
+				<block name="bunkBedMessyBlueAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="3B5671"/>
+					<property name="TintColor" value="3B5671"/>
+					<property name="SortOrder2" value="0007"/>
+				</block>
+				<!-- Purple -->
+				<block name="bunkBedMessyPurpleAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="3B3D70"/>
+					<property name="TintColor" value="3B3D70"/>
+					<property name="SortOrder2" value="0008"/>
+				</block>
+				<!-- Grey -->
+				<block name="bunkBedMessyGreyAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="656565"/>
+					<property name="TintColor" value="656565"/>
+					<property name="SortOrder2" value="0009"/>
+				</block>
+				<!-- Pink -->
+				<block name="bunkBedMessyPinkAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="775D76"/>
+					<property name="TintColor" value="775D76"/>
+					<property name="SortOrder2" value="0011"/>
+				</block>
+				<!-- Army Green -->
+				<block name="bunkBedMessyArmyGreenAGF">
+					<property name="Extends" value="bunkBedMessyAGF"/>
+					<property name="CustomIcon" value="bunkBedMessyWhite"/>
+					<property name="CustomIconTint" value="475643"/>
+					<property name="TintColor" value="475643"/>
+					<property name="SortOrder2" value="0012"/>
+				</block>
+		
+<!--King Size Bed-->		
+		<block name="bed02AGF">
+			<!--Can have color-->
+			<property name="Extends" value="bedrollAGFMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bed02White"/>
+			<property name="CustomIconTint" value="333333"/>
+			<property name="TintColor" value="333333"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/kingSizedBedPrefab.prefab"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="SortOrder1" value="AGF06"/>
+			<property name="SortOrder2" value="0010"/>
+		</block>
+				<!-- White -->
+				<block name="bed02WhiteAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="A2A29C"/>
+					<property name="TintColor" value="A2A29C"/>
+					<property name="SortOrder2" value="9000"/>
+					<property name="SortOrder2" value="0001"/>
+				</block>
+				<!-- Brown -->
+				<block name="bed02BrownAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="524938"/>
+					<property name="TintColor" value="524938"/>
+					<property name="SortOrder2" value="0002"/>
+				</block>
+				<!-- Red -->
+				<block name="bed02RedAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="7E3737"/>
+					<property name="TintColor" value="7E3737"/>
+					<property name="SortOrder2" value="0003"/>
+				</block>
+				<!-- Orange -->
+				<block name="bed02OrangeAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="7E5738"/>
+					<property name="TintColor" value="7E5738"/>
+					<property name="SortOrder2" value="0004"/>
+				</block>
+				<!-- Yellow -->
+				<block name="bed02YellowAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="7E7738"/>
+					<property name="TintColor" value="7E7738"/>
+					<property name="SortOrder2" value="0005"/>
+				</block>
+				<!-- Green -->
+				<block name="bed02GreenAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="315D3B"/>
+					<property name="TintColor" value="315D3B"/>
+					<property name="SortOrder2" value="0006"/>
+				</block>
+				<!-- Blue -->
+				<block name="bed02BlueAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="3B5671"/>
+					<property name="TintColor" value="3B5671"/>
+					<property name="SortOrder2" value="0007"/>
+				</block>
+				<!-- Purple -->
+				<block name="bed02PurpleAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="3B3D70"/>
+					<property name="TintColor" value="3B3D70"/>
+					<property name="SortOrder2" value="0008"/>
+				</block>
+				<!-- Grey -->
+				<block name="bed02GreyAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="656565"/>
+					<property name="TintColor" value="656565"/>
+					<property name="SortOrder2" value="0009"/>
+				</block>
+				<!-- Pink -->
+				<block name="bed02PinkAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="775D76"/>
+					<property name="TintColor" value="775D76"/>
+					<property name="SortOrder2" value="0011"/>
+				</block>
+				<!-- Army Green -->
+				<block name="bed02ArmyGreenAGF">
+					<property name="Extends" value="bed02AGF"/>
+					<property name="CustomIcon" value="bed02White"/>
+					<property name="CustomIconTint" value="475643"/>
+					<property name="TintColor" value="475643"/>
+					<property name="SortOrder2" value="0012"/>
+				</block>
+				
+<!--Mattress Flat on ground-->				
+		<block name="mattressFlatThinAGF">
+			<property name="Extends" value="bedrollAGFMaster" param1="CustomIconTint"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="mattressFlatThin"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/mattressFlatPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,.5"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="Texture" value="282"/>
+			<property name="SortOrder1" value="AGF07"/>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+		
+<!--Mattress Curled Up against wall-->		
+		<block name="mattressCurledAGF">
+			<property name="Extends" value="bedrollAGFMaster" param1="CustomIconTint"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="mattressCurled"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/mattressCurledPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,-.5"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Texture" value="282"/>
+			<property name="SortOrder1" value="AGF07"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+				
+<!--Bunk Bed with just a Mattress-->				
+		<block name="bunkBedMattressAGF">
+			<property name="Extends" value="bedrollAGFMaster" param1="CustomIconTint"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bunkBedMessyWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/bedMattressPrefab.prefab"/>
+			<property name="Texture" value="282"/>
+			<property name="Material" value="Mfurnituremetal"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="SortOrder1" value="AGF07"/>
+			<property name="SortOrder2" value="0003"/>
+		</block>
+						
+<!--Gurney-->		
+		<block name="gurneyBedAGF">
+			<property name="Extends" value="bedrollAGFMaster" param1="CustomIconTint"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="gurneyBed"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/gurneyPrefab.prefab" param1="main_mesh"/>
+			<property name="ModelOffset" value="0,.5,.5"/>
+			<property name="Material" value="Mfurnituremetal"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/><!--Made it to where you can walk through it, helps with respawn-->
+			<property name="Path" value="solid"/>
+			<property name="SortOrder1" value="AGF07"/>
+			<property name="SortOrder2" value="0004"/>
+		</block>
+		
+<!--Hospital Bed-->		
+		<block name="hospitalBedAGF">
+			<property name="Extends" value="bedrollAGFMaster" param1="CustomIconTint"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="hospitalBed"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Furniture/hospitalBedPrefab.prefab" param1="main_mesh"/>
+			<property name="ModelOffset" value="0,.5,.5"/>
+			<property name="Material" value="Mfurnituremetal"/>
+			<property name="MultiBlockDim" value="1,2,2"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/><!--Made it to where you can walk through it, helps with respawn-->
+			<property name="Path" value="solid"/>
+			<property name="SortOrder1" value="AGF07"/>
+			<property name="SortOrder2" value="0005"/>
+		</block>
+
+				
+<!--BedrollPlus Variant Helper-->				
+		<block name="bedrollBlockVariantHelperAGF">
+			<property name="Extends" value="bedrollAGF"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="bedroll"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="DescriptionKey" value="bedGroupDesc"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="bedrollAGF,bedrollBlackAGF,bedrollRedAGF,bedrollOrangeAGF,bedrollYellowAGF,bedrollGreenAGF,bedrollBlueAGF,bedrollPurpleAGF,bedrollPinkAGF,bedrollGreyAGF,bedrollWhiteAGF,bedrollArmyGreenAGF,bunkBedMadeAGF,bunkBedMadeWhiteAGF,bunkBedMadeBrownAGF,bunkBedMadeRedAGF,bunkBedMadeOrangeAGF,bunkBedMadeYellowAGF,bunkBedMadeGreenAGF,bunkBedMadeBlueAGF,bunkBedMadePurpleAGF,bunkBedMadeGreyAGF,bunkBedMadePinkAGF,bunkBedMadeArmyGreenAGF,bunkBedMessyAGF,bunkBedMessyWhiteAGF,bunkBedMessyBrownAGF,bunkBedMessyRedAGF,bunkBedMessyOrangeAGF,bunkBedMessyYellowAGF,bunkBedMessyGreenAGF,bunkBedMessyBlueAGF,bunkBedMessyPurpleAGF,bunkBedMessyGreyAGF,bunkBedMessyPinkAGF,bunkBedMessyArmyGreenAGF,bunkBedMattressAGF,bedMadeNoFrameWhiteAGF,bedMadeNoFrameBrownAGF,bedMadeNoFrameRedAGF,bedMadeNoFrameOrangeAGF,bedMadeNoFrameYellowAGF,bedMadeNoFrameGreenAGF,bedMadeNoFrameBlueAGF,bedMadeNoFramePurpleAGF,bedMadeNoFrameGreyAGF,bedMadeNoFrameBlackAGF,bedMadeNoFramePinkAGF,bedMadeNoFrameArmyGreenAGF,bedMessyNoFrameWhiteAGF,bedMessyNoFrameBrownAGF,bedMessyNoFrameRedAGF,bedMessyNoFrameOrangeAGF,bedMessyNoFrameYellowAGF,bedMessyNoFrameGreenAGF,bedMessyNoFrameBlueAGF,bedMessyNoFramePurpleAGF,bedMessyNoFrameGreyAGF,bedMessyNoFrameBlackAGF,bedMessyNoFramePinkAGF,bedMessyNoFrameArmyGreenAGF,mattressFlatThinAGF,mattressCurledAGF,gurneyBedAGF,hospitalBedAGF,bed02AGF,bed02WhiteAGF,bed02BrownAGF,bed02RedAGF,bed02OrangeAGF,bed02YellowAGF,bed02GreenAGF,bed02BlueAGF,bed02PurpleAGF,bed02GreyAGF,bed02PinkAGF,bed02ArmyGreenAGF"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+	</append>
+
+
+</AGFVanillaPlus-BedrollPlus>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-PaintbrushPlus" />
+  <DisplayName value="AGF Paintbrush Plus" />
+  <Version value="2.1.1" />
+  <Description value="Painting costs no paint, supports hold-to-paint, and has reduced reach to prevent accidents." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

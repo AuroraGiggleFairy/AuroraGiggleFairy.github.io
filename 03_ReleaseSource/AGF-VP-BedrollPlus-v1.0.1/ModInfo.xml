@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-BedrollPlus" />
+  <DisplayName value="AGF Bedroll Plus" />
+  <Version value="1.0.1" />
+  <Description value="Adds a tougher Bedroll+ spawn point available in all bed models with pickup support." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

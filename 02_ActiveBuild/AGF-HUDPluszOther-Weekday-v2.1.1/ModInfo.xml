@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPluszOther-Weekday" />
+  <DisplayName value="AGF Weekday" />
+  <Version value="2.1.1" />
+  <Description value="Adds the weekday name next to the in-game day number on the HUD." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

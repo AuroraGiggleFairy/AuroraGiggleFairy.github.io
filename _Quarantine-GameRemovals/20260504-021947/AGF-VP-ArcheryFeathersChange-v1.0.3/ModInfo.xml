@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-ArcheryFeathersChange" />
+  <DisplayName value="AGF Archery Feathers Change" />
+  <Version value="1.0.3" />
+  <Description value="Swaps plastic for feathers in archery ammo recipes and adds a feather crafting recipe." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

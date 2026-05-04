@@ -1,0 +1,54 @@
+<AGFVanillaPlus-AutomobilesRespawn>
+
+
+<!--Will revist another time.-->
+
+<!--
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group name="carRespawnCheck">	
+			<requirement name="!HasBuff" buff="buffCarRespawnTip"/>		
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="carRespawnTipTimer" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCarRespawnTip">
+				
+			</triggered_effect>
+		</effect_group>
+	</append>
+
+
+
+
+<!{1}**this is to create an on screen tip that the vehicle will respawn.**{1}>
+<!{1}**If I did it right, First car break in current game session will trigger the respawn tip. Then you have to break at least 10 more before it begins rolling to say it again**{1}>
+	<append xpath="/buffs">>
+		<buff name="buffCarRespawnTip" name_key="buff Car Respawn Tip Name" icon="ui_game_symbol_mining" hidden="false" remove_on_death="false">
+			<duration value="0"/>	
+			<stack_type value="ignore"/>		
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="carRespawnTipTimer" operation="set" value="100"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="TriggerHasTags" tags="carSeed"/>
+					<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="carRespawnTipTimer" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="buffCarRespawnTipDisplay">
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="GTE" value="@carRespawnTipTimer"/>
+					</triggered_effect>
+			</effect_group>
+		</buff>
+
+
+		<buff name="buffCarRespawnTipDisplay" name_key="buffCarRespawnTipDisplayName" description_key="buffCarRespawnTipDisplayDesc" tooltip_key="buffCarRespawnTipDisplayTooltip" icon="ui_game_symbol_quest">
+			<duration value="8"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffCarRespawnTipDisplay"/>
+				<triggered_effect name="onSelfBuffFinish" action="ModifyCVar" cvar="carRespawnTipTimer" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+	</append>-->
+
+
+	
+	
+	
+</AGFVanillaPlus-AutomobilesRespawn>

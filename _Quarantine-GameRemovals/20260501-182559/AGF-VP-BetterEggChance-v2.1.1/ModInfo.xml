@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="AGF-VP-BetterEggChance"/>
+	<DisplayName value="AGF Better Egg Chance"/>
+	<Version value="2.1.1"/>
+	<Description value="Birdnests now have a 63% chance to have an egg instead of 35%."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

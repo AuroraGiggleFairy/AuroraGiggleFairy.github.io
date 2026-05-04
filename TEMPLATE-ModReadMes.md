@@ -12,14 +12,16 @@
 1. About Author
 2. Mod Philosophy
 3. Need Help?
-4. Compatibility
-5. Features
-6. Changelog
-7. Important Mod Details
-8. Installation Guide
-9. Removal Guide
-10. Update Guide
-11. Backup Guide
+4. Mod Type
+5. Compatibility
+6. Features Summary
+7. Features Details
+8. Changelog
+9. Important Mod Details
+10. Installation Guide
+11. Removal Guide
+12. Update Guide
+13. Backup Guide
 
 ---
 ---
@@ -66,11 +68,14 @@
 ---
 ---
 
-## 4. Compatibility
+## 4. Mod Type
+- {{MOD_TYPE_LINE}}
+
+---
+---
+
+## 5. Compatibility
 - Last 7d2d Version tested on: {{TESTED_GAME_VERSION}}
-- EAC Friendly: {{EAC_FRIENDLY}}
-- Server Side: {{SERVER_SIDE}}
-- Client Required for Multiplayer: {{CLIENT_REQUIRED}}
 - "{{MOD_NAME}}" is {{SAFE_TO_INSTALL}} to install on an existing game.
 - "{{MOD_NAME}}" is {{SAFE_TO_REMOVE}} to remove from an existing game.
 - Unique Details: {{UNIQUE}}
@@ -78,15 +83,25 @@
 ---
 ---
 
-## 5. Features
-<!-- FEATURES START -->
+## 6. Features Summary
+<!-- FEATURES-SUMMARY START -->
+- See this mod's README for full details.
 
-<!-- FEATURES END -->
+<!-- FEATURES-SUMMARY END -->
 
 ---
 ---
 
-## 6. Changelog
+## 7. Features Details
+<!-- FEATURES-DETAILED START -->
+- Works standalone.
+
+<!-- FEATURES-DETAILED END -->
+
+---
+---
+
+## 8. Changelog
 <!-- CHANGELOG START -->
 
 <!-- CHANGELOG END -->
@@ -94,46 +109,46 @@
 ---
 ---
 
-## 7. Important Mod Details
+## 9. Important Mod Details
 
 ---
 
-### A. What are 🖧 Server-Side 🖧 Mods? 
-> - *Mods that can be installed on **JUST** the server and will automatically work for joining players.*
-> - *Don’t let the word “server” confuse you—these mods also work in singleplayer if you install them on your own device.*
+### A. What is a Mod Type?
+> - There are 6 types and they tell you where a mod has to be installed to work, and whether or not you need EAC on or off.
+>   - **Server** — where the game is hosted. This could be your own PC if you are hosting the game yourself, or a game hosting service like Pingperfect.
+>   - **Client** — your own PC.
+>   - Some mods only need to be in one place. Others need to be in both. Some have other caveats. Please see the table in the next section.
 
 ---
 
-### B. What are 🖥️ Client-Side 🖥️ Mods? 
-> - *For multiplayer, both the **HOST** and **PLAYER** must have these mods installed.*
-> - *For singleplayer, just install them on your own device.*
+### B. The 6 Mod Types
+
+| # | Mod Type | What It Means |
+|---|----------|---------------|
+| 1 | Server-Side (EAC-Friendly) | Server install works for all joining players; EAC on or off. |
+| 2 | Server-Side (EAC Off) | EAC off required; server install works for all joining players. |
+| 3 | Server-Side (Dedicated Only, EAC Off) | EAC off required; dedicated uses server install only, but player-hosted requires host and joining players to install it. |
+| 4 | Hybrid (EAC Off) | EAC off required; server install works for all joining players; client install is optional for extra features. |
+| 5 | Server/Client-Side (Required) | EAC off required; host and joining players must install it. |
+| 6 | Client-Side (Only) | EAC off required; server install has no effect; only the installing player gets the feature. |
 
 ---
 
-### C. What are 🛡️ EAC-Friendly 🛡️ Mods? 
-> - *EAC stands for Easy-Anti-Cheat.*
-> - *EAC-Friendly means the mod will work with it enabled or disabled.* 
-> - *If a mod is not EAC-Friendly, EAC must be turned off for it to work.*
->    - *Non-EAC-Friendly mods often have custom code.*
-
-#### 1. What are the risks of disabling EAC?
-> - *Players may use hacks or cheats to gain unfair advantages.*
-> - *Servers may be at higher risk for exploits, griefing, or disruptive behavior.*
-
-#### 2. Why disable EAC?
-> - *Non-EAC-Friendly mods add amazing features and enhancements to the game.*
-
-#### 3. What are the best practices when running multiplayer with EAC disabled?
-> - *Require a password and be conservative in distributing it.*
-> - *There are tools available such as ALOC and Server Tools to add extra protections.*
-> - *Optionally, require the whitelist system for the strictest limitation on who can join.*
-> - *Seek out other server hosts and discuss what they do.*
->    - *You can do this on AGF's Discord as well: [DISCORD](https://discord.gg/Vm5eyW6N4r)*
+### C. Should I play with EAC on or off?
+> - EAC stands for **Easy Anti-Cheat**. It's a program built into 7 Days to Die that helps protect multiplayer sessions from cheating.
+> - Mod Types 2–6 require EAC to be turned off. These mods use custom code to deliver more advanced features.
+> - Running without EAC opens up a wider range of mods and experiences. If you're running a multiplayer server without EAC, here are some good practices to keep things running smoothly:
+>   - **Recommended practices when running multiplayer with EAC off:**
+>     - Require a password and be conservative in distributing it.
+>     - There are tools available such as ALOC and Server Tools to add extra protections.
+>     - Optionally, require the whitelist system for the strictest limitation on who can join.
+>     - Seek out other server hosts and discuss what they do.
+>     - You can find help on AGF's Discord: [DISCORD](https://discord.gg/Vm5eyW6N4r)
 
 ---
 ---
 
-## 8. Installation Guide
+## 10. Installation Guide
 
 ---
 
@@ -174,7 +189,7 @@
 ---
 ---
 
-## 9. Removal Guide
+## 11. Removal Guide
 
 ---
 
@@ -202,7 +217,7 @@
 ---
 ---
 
-## 10. Update Guide
+## 12. Update Guide
 
 ---
 
@@ -240,7 +255,7 @@
 ---
 ---
 
-## 11. Backup Guide
+## 13. Backup Guide
 
 ---
 

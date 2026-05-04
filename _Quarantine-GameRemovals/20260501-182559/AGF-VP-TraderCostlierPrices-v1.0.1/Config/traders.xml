@@ -1,0 +1,9 @@
+<AGFVanillaPlus-TraderCostlierPrices>
+
+
+<!--Trader prices are higher/costlier!-->
+	<set xpath="/traders/@buy_markup">10</set><!--Default 3 --><!--
+	<set xpath="/traders/@sell_markdown">.01</set><!{1}** Default 0.2**{1}>-->
+	
+	
+</AGFVanillaPlus-TraderCostlierPrices>

@@ -1,0 +1,54 @@
+[2026-04-30 20:42:12] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-04-30 20:42:12] [INFO] Selected mode: full
+[2026-04-30 20:42:12] [INFO] Dry-run mode enabled: no file system changes will be written
+[2026-04-30 20:42:12] [WARN] Required directory not found: C:\GitHub\7D2D-Mods\Workflow\02_ActiveBuild
+[2026-04-30 20:42:12] [WARN] Required directory not found: C:\GitHub\7D2D-Mods\Workflow\03_ReleaseSource
+[2026-04-30 20:42:12] [WARN] Required directory not found: C:\GitHub\7D2D-Mods\Workflow\01_Draft
+[2026-04-30 20:42:12] [WARN] Required template not found: C:\GitHub\7D2D-Mods\Workflow\TEMPLATE-ModReadMes.md
+[2026-04-30 20:42:12] [WARN] Required template not found: C:\GitHub\7D2D-Mods\Workflow\TEMPLATE-MainReadMe.md
+[2026-04-30 20:42:12] [INFO] Mode full: sync Game<->Draft for tracked draft mods, ingest Draft->ActiveBuild, sync ActiveBuild<->Game, then apply targeted pushback for pulled mods, then finalize/promote/package.
+[2026-04-30 20:42:12] [INFO] Step 0.25: Compare Game <-> Draft and pull newer game updates into Draft
+[2026-04-30 20:42:12] [INFO] Step 0.5: Ensure latest Draft mods are in ActiveBuild
+[2026-04-30 20:42:12] [INFO] Lane policy: keep major v0.x mods in Draft, not ActiveBuild
+[2026-04-30 20:42:12] [INFO] Mode sync-work: Sync Staging <-> Game by version
+[2026-04-30 20:42:12] [INFO] Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root.
+[2026-04-30 20:42:12] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-Backpack
+[2026-04-30 20:42:12] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-HUDPlus
+[2026-04-30 20:42:12] [INFO] [DRYRUN] Would ensure game optionals folder exists: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\.Optionals-4Modders
+[2026-04-30 20:42:12] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-30 20:42:12] [INFO] Pre-release prep: refresh folder names + README files
+[2026-04-30 20:42:12] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-04-30 20:42:12] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-04-30 20:42:12] [INFO] [DRYRUN] Would write compatibility CSV: C:\GitHub\7D2D-Mods\Workflow\HELPER_ModCompatibility.csv (0 rows)
+[2026-04-30 20:42:12] [WARN] Compatibility CSV has no rows; README generation will use fallback values.
+[2026-04-30 20:42:12] [INFO] Step 4.3: Normalize quote files
+[2026-04-30 20:42:12] [INFO] [DRYRUN] Would ensure quote directory exists: C:\GitHub\7D2D-Mods\Workflow\_Quotes
+[2026-04-30 20:42:12] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-04-30 20:42:12] [ERROR] Missing required template: C:\GitHub\7D2D-Mods\Workflow\TEMPLATE-ModReadMes.md
+[2026-04-30 20:42:12] [ERROR] Pipeline aborted due to unhandled exception: C:\GitHub\7D2D-Mods\Workflow\TEMPLATE-ModReadMes.md
+
+=== SUMMARY ===
+scanned_workspace_mods: 0
+scanned_game_mods: 86
+synced_pull_from_game: 0
+synced_push_to_game: 0
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 0
+readable_txt_written: 0
+pushed_back_to_game: 0
+mod_zips_created: 0
+pack_zips_created: 0
+promoted_to_publish_ready: 0
+warnings: 6
+errors: 2
+
+=== MOD CHANGES ===
+none

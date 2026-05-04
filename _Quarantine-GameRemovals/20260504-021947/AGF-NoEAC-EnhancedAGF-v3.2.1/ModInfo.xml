@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-EnhancedAGF" />
+  <DisplayName value="AGF Enhanced Patch" />
+  <Version value="3.2.1" />
+  <Description value="Adds extended HUD bindings and Harmony patches that power extra AGF features." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://discord.gg/Vm5eyW6N4r" />
+  <SkipWithAntiCheat value="true" />
+</xml>

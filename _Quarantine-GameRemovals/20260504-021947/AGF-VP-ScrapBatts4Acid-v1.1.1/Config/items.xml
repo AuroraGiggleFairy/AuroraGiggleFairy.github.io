@@ -1,0 +1,32 @@
+<AGFVanillaPlus-ScrapBatts4Acid>
+
+
+
+<!--Batteries scrap into acid-->
+		<set xpath="/items/item[@name='carBattery']/property[@name='Material']/@value">MresourceAcid</set><!--Default = MresourceScrapLeadLarge-->
+		<set xpath="/items/item[@name='carBattery']/property[@name='Weight']/@value">3</set>		
+		<set xpath="/items/item[@name='resourceAcid']/property[@name='Weight']/@value">1</set>
+
+							<!--When you want to find what the weight should be to get EQUAL ingredient costs back.
+							
+								X = How much it costs to craft 1
+								Y = The weight of one ingredient you are scrapping it into
+																
+								X / 75% * Y = Weight
+								
+								12 / 75% * 5 (resourceWood weight is 5) = 80
+								
+								Scrapping time is dependent on the weight of each individual ingredient added all up... then multiply that by the number of items you are scrapping at once.
+							-->	
+							<!--I keep confusing myself with the math.
+							
+							
+							500 *.75 * 4 = 1500 -outside of scrapping 1, this is equal acid going in and going out.
+							500 *.75 * 3 = 1125 -you get 2 for scrapping 1, but it is technically 2.66repeating. Scrap 500, 1125 acids.
+							500 *.75 * 2 =  750
+							500 *.75 * 1 =  375
+							-->
+
+
+
+</AGFVanillaPlus-ScrapBatts4Acid>

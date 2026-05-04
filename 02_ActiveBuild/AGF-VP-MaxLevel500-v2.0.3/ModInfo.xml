@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-MaxLevel500" />
+  <DisplayName value="AGF Max Level 500" />
+  <Version value="2.0.3" />
+  <Description value="Raises the max player level cap from 300 to 500." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

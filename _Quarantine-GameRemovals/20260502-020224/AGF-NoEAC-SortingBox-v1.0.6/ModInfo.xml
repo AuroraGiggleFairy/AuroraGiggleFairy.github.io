@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModInfo>
+	<Name value="AGF-NoEAC-SortingBox" />
+	<DisplayName value="AGF Sorting Box" />
+	<Description value="With permissions, integrated from Kanaverum's original mod and Asylum." />
+	<Author value="AuroraGiggleFairy (AGF)" /> 
+	<Version value="1.0.6"/>
+   	<Website value="https://discord.gg/Vm5eyW6N4r"/>
+	<SkipWithAntiCheat value="true" />
+</ModInfo>

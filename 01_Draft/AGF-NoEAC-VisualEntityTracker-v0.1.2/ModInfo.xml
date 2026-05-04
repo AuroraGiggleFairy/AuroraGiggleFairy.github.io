@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-NoEAC-VisualEntityTracker"/>
+    <DisplayName value="BETA - AGF Visual Entity Tracker"/>
+    <Version value="0.1.2"/>
+    <Description value="Accessibility-focused nearby entity tracking for compass visuals (XML baseline + optional DLL extensions)."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

@@ -1,0 +1,133 @@
+<AGFVanillaPlus-DecorationBlock>
+
+
+<append xpath="/xui/ruleset">
+
+<window_group name="workstation_agfDecocntWoodBurningStoveCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntwallOvenFullWhiteCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntwallOvenFullGreyCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntwallOvenFullBlackCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntwallOvenEmptyWhiteCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntwallOvenEmptyGreyCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntwallOvenEmptyBlackCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntStoveOldVer2OpenCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntStoveOldVer1ClosedCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntStoveModernVer2OpenCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntStoveModernVer1ClosedCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntMicrowaveOvenVer2OpenCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntMicrowaveOvenVer2ClosedCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntMicrowaveOvenVer1OpenCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntMicrowaveOvenVer1ClosedCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntgasRangeWhiteCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntgasRangeGreyCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntgasRangeBlackCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntGasGrillOpenCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntGasGrillClosedCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntCoffeeMakerCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntCoffeeMakerCommercialCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntCharcoalGrillOpenCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+<window_group name="workstation_agfDecocntCharcoalGrillClosedCooking" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true"><window name="windowCraftingList"/><window name="craftingInfoPanel"/><window name="windowCraftingQueue"/><window name="windowToolsCampfire" /><window name="windowFuel" /><window name="windowOutput" /><window name="windowNonPagingHeader" /></window_group>
+
+
+
+</append>
+
+
+<!--
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntStoveOldVer2OpenCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntStoveModernVer1ClosedCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntStoveModernVer2OpenCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntWoodBurningStoveCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntCharcoalGrillOpenCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntCharcoalGrillClosedCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntGasGrillOpenCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>
+
+<append xpath="/xui/ruleset">
+		<window_group name="workstation_agfcntGasGrillClosedCampfire" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+</append>-->
+
+</AGFVanillaPlus-DecorationBlock>

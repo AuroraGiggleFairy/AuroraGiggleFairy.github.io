@@ -1,0 +1,1171 @@
+<AGFVanillaPlus-FarmingPlus>
+
+
+<!--Seed Station-->
+<append xpath="/recipes">
+	<recipe name="seedStation" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedIron" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="resourceMetalPipe" count="100"/>
+		<ingredient name="resourceScrapPolymers" count="100"/>
+		<ingredient name="bucketRiverWater" count="3"/>
+	</recipe>
+</append>
+
+
+<!--FARMING PLUS-->
+		<!--plant birds nests-->
+		<append xpath="/recipes">
+			<recipe name="birdsNestEmpty" count="1" craft_time="1" tags="learnable,packMuleCrafting">
+				<ingredient name="resourceYuccaFibers" count="5"/>
+				<ingredient name="foodCornMeal" count="5"/>
+			</recipe>
+		</append>
+		
+		<!--Bee Hive flower will not be craftable with 7d2d version 2.5+, however will still exist IF it exists in your world for safe updating.-->
+		<conditional>
+			<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,5)">
+				<!--plant bee flower for honey-->
+				<append xpath="/recipes">
+					<recipe name="beeFlower" count="1" craft_time="1" tags="learnable,packMuleCrafting">
+						<ingredient name="resourceCropChrysanthemumPlant" count="20"/>
+						<ingredient name="resourceCropGoldenrodPlant" count="20"/>
+						<ingredient name="resourceYuccaFibers" count="20"/>
+					</recipe>
+					<recipe name="beeFlowerx5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+						<ingredient name="beeFlower" count="5"/>
+					</recipe>
+					<recipe name="beeFlowerx5" count="1" craft_time="1" tags="learnable,perkLivingOffTheLand">
+						<ingredient name="resourceCropChrysanthemumPlant" count="100"/>
+						<ingredient name="resourceCropGoldenrodPlant" count="100"/>
+						<ingredient name="resourceYuccaFibers" count="100"/>
+					</recipe>
+					<recipe name="beeFlowerx25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+						<ingredient name="beeFlower" count="25"/>
+					</recipe>
+					<recipe name="beeFlowerx25" count="1" craft_time="1" tags="learnable,perkLivingOffTheLand">
+						<ingredient name="resourceCropChrysanthemumPlant" count="500"/>
+						<ingredient name="resourceCropGoldenrodPlant" count="500"/>
+						<ingredient name="resourceYuccaFibers" count="500"/>
+					</recipe>
+					<recipe name="beeFlowerx25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+						<ingredient name="beeFlowerx5" count="5"/>
+					</recipe>
+					<recipe name="beeFlowerx5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+						<ingredient name="beeFlower" count="5"/>
+					</recipe>
+					<recipe name="beeFlower" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+						<ingredient name="resourceCropChrysanthemumPlant" count="20"/>
+						<ingredient name="resourceCropGoldenrodPlant" count="20"/>
+						<ingredient name="resourceYuccaFibers" count="20"/>
+					</recipe>
+					<recipe name="beeFlowerx5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,perkLivingOffTheLand,agfSeedCrafting">
+						<ingredient name="resourceCropChrysanthemumPlant" count="100"/>
+						<ingredient name="resourceCropGoldenrodPlant" count="100"/>
+						<ingredient name="resourceYuccaFibers" count="100"/>
+					</recipe>
+					<recipe name="beeFlowerx25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+						<ingredient name="beeFlower" count="25"/>
+					</recipe>
+					<recipe name="beeFlowerx25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,perkLivingOffTheLand,agfSeedCrafting">
+						<ingredient name="resourceCropChrysanthemumPlant" count="500"/>
+						<ingredient name="resourceCropGoldenrodPlant" count="500"/>
+						<ingredient name="resourceYuccaFibers" count="500"/>
+					</recipe>
+					<recipe name="beeFlowerx25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+						<ingredient name="beeFlowerx5" count="5"/>
+					</recipe>
+				</append>			
+			</if>
+		</conditional>
+		
+<!--x5 and x25 inventory crafting-->
+	
+<!--Seed Crafting Station Recipes-->		
+	<!--x5 seed recipes from having 5 seeds.-->	
+		<append xpath="/recipes">
+			<recipe name="plantedMushroom1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedMushroom1" count="5"/>
+			</recipe>
+			<recipe name="plantedYucca1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedYucca1" count="5"/>
+			</recipe>
+			<recipe name="plantedCotton1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCotton1" count="5"/>
+			</recipe>
+			<recipe name="plantedCoffee1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCoffee1" count="5"/>
+			</recipe>
+			<recipe name="plantedGoldenrod1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedGoldenrod1" count="5"/>
+			</recipe>
+			<recipe name="plantedAloe1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedAloe1" count="5"/>
+			</recipe>
+			<recipe name="plantedBlueberry1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedBlueberry1" count="5"/>
+			</recipe>
+			<recipe name="plantedPotato1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedPotato1" count="5"/>
+			</recipe>
+			<recipe name="plantedChrysanthemum1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedChrysanthemum1" count="5"/>
+			</recipe>
+			<recipe name="plantedCorn1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCorn1" count="5"/>
+			</recipe>
+			<recipe name="plantedGraceCorn1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedGraceCorn1" count="5"/>
+			</recipe>
+			<recipe name="plantedHop1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedHop1" count="5"/>
+			</recipe>
+			<recipe name="plantedPumpkin1x5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedPumpkin1" count="5"/>
+			</recipe>
+			<recipe name="birdsNestEmptyx5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="birdsNestEmpty" count="5"/>
+			</recipe>
+
+			<recipe name="farmPlotBlockVariantHelperx5" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="farmPlotBlockVariantHelper" count="5"/>
+			</recipe>
+		</append>	
+
+		
+	<!--x5 Seeds FROM crop directly-->
+		<append xpath="/recipes">
+			<recipe name="plantedAloe1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropAloeLeaf" count="25"/>
+			</recipe>
+
+			<recipe name="plantedBlueberry1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropBlueberries" count="25"/>
+			</recipe>
+
+			<recipe name="plantedChrysanthemum1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropChrysanthemumPlant" count="25"/>
+			</recipe>
+
+			<recipe name="plantedCoffee1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropCoffeeBeans" count="25"/>
+			</recipe>
+
+			<recipe name="plantedCorn1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropCorn" count="25"/>
+			</recipe>
+
+			<recipe name="plantedCotton1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropCottonPlant" count="25"/>
+			</recipe>
+
+			<recipe name="plantedGoldenrod1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropGoldenrodPlant" count="25"/>
+			</recipe>
+
+			<recipe name="plantedGraceCorn1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropGraceCorn" count="25"/>
+			</recipe>
+
+			<recipe name="plantedHop1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropHopsFlower" count="25"/>
+			</recipe>
+
+			<recipe name="plantedMushroom1x5" count="1" craft_time="2" tags="learnable">
+				<ingredient name="foodCropMushrooms" count="25"/>
+				<ingredient name="resourceClayLump" count="10"/>
+			</recipe>
+
+			<recipe name="plantedPotato1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropPotato" count="25"/>
+			</recipe>
+
+			<recipe name="plantedYucca1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropYuccaFruit" count="25"/>
+			</recipe>
+
+			<recipe name="plantedPumpkin1x5" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropPumpkin" count="25"/>
+			</recipe>
+			<recipe name="farmPlotBlockVariantHelperx5" count="1" craft_time="20" tags="perkLivingOffTheLandCrafting,packMuleCrafting" >
+				<ingredient name="resourceWood" count="20"/>
+				<ingredient name="foodRottingFlesh" count="50"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="125"/>
+				<ingredient name="resourceClayLump" count="500"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+				</effect_group>
+			</recipe>
+		</append>		
+		<!--plant birds nests-->
+		<append xpath="/recipes">
+			<recipe name="birdsNestEmptyx5" count="1" craft_time="1" tags="learnable,perkLivingOffTheLand">
+				<ingredient name="resourceYuccaFibers" count="25"/>
+				<ingredient name="foodCornMeal" count="25"/>
+			</recipe>
+		</append>
+			
+			
+<!--x25 Seed Stuff-->
+	<!--x25 seed recipes from having 25 seeds.-->	
+		<append xpath="/recipes">
+			<recipe name="plantedMushroom1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedMushroom1" count="25"/>
+			</recipe>
+			<recipe name="plantedYucca1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedYucca1" count="25"/>
+			</recipe>
+			<recipe name="plantedCotton1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCotton1" count="25"/>
+			</recipe>
+			<recipe name="plantedCoffee1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCoffee1" count="25"/>
+			</recipe>
+			<recipe name="plantedGoldenrod1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedGoldenrod1" count="25"/>
+			</recipe>
+			<recipe name="plantedAloe1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedAloe1" count="25"/>
+			</recipe>
+			<recipe name="plantedBlueberry1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedBlueberry1" count="25"/>
+			</recipe>
+			<recipe name="plantedPotato1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedPotato1" count="25"/>
+			</recipe>
+			<recipe name="plantedChrysanthemum1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedChrysanthemum1" count="25"/>
+			</recipe>
+			<recipe name="plantedCorn1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCorn1" count="25"/>
+			</recipe>
+			<recipe name="plantedGraceCorn1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedGraceCorn1" count="25"/>
+			</recipe>
+			<recipe name="plantedHop1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedHop1" count="25"/>
+			</recipe>
+			<recipe name="plantedPumpkin1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedPumpkin1" count="25"/>
+			</recipe>
+			<recipe name="birdsNestEmptyx25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="birdsNestEmpty" count="25"/>
+			</recipe>
+			<recipe name="farmPlotBlockVariantHelperx25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="farmPlotBlockVariantHelper" count="25"/>
+			</recipe>
+		</append>	
+
+	
+		
+	<!--x25 Seeds FROM crop directly-->
+		<append xpath="/recipes">
+			<recipe name="plantedAloe1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropAloeLeaf" count="125"/>
+			</recipe>
+
+			<recipe name="plantedBlueberry1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropBlueberries" count="125"/>
+			</recipe>
+
+			<recipe name="plantedChrysanthemum1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropChrysanthemumPlant" count="125"/>
+			</recipe>
+
+			<recipe name="plantedCoffee1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropCoffeeBeans" count="125"/>
+			</recipe>
+
+			<recipe name="plantedCorn1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropCorn" count="125"/>
+			</recipe>
+
+			<recipe name="plantedCotton1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropCottonPlant" count="125"/>
+			</recipe>
+
+			<recipe name="plantedGoldenrod1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropGoldenrodPlant" count="125"/>
+			</recipe>
+
+			<recipe name="plantedGraceCorn1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropGraceCorn" count="125"/>
+			</recipe>
+
+			<recipe name="plantedHop1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="resourceCropHopsFlower" count="125"/>
+			</recipe>
+
+			<recipe name="plantedMushroom1x25" count="1" craft_time="2" tags="learnable">
+				<ingredient name="foodCropMushrooms" count="125"/>
+				<ingredient name="resourceClayLump" count="10"/>
+			</recipe>
+
+			<recipe name="plantedPotato1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropPotato" count="125"/>
+			</recipe>
+
+			<recipe name="plantedYucca1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropYuccaFruit" count="125"/>
+			</recipe>
+
+			<recipe name="plantedPumpkin1x25" count="1" craft_time="1" tags="learnable">
+				<ingredient name="foodCropPumpkin" count="125"/>
+			</recipe>
+			<recipe name="farmPlotBlockVariantHelperx25" count="1" craft_time="20" tags="perkLivingOffTheLandCrafting,packMuleCrafting" >
+				<ingredient name="resourceWood" count="100"/>
+				<ingredient name="foodRottingFlesh" count="250"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="625"/>
+				<ingredient name="resourceClayLump" count="2500"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+				</effect_group>
+			</recipe>
+		</append>		
+		<!--plant birds nests-->
+		<append xpath="/recipes">
+			<recipe name="birdsNestEmptyx25" count="1" craft_time="1" tags="learnable,perkLivingOffTheLand">
+				<ingredient name="resourceYuccaFibers" count="125"/>
+				<ingredient name="foodCornMeal" count="125"/>
+			</recipe>
+		</append>
+	
+		
+
+	<!--x25 seed recipes from having x5 seeds.-->	
+		<append xpath="/recipes">
+			<recipe name="plantedMushroom1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedMushroom1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedYucca1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedYucca1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedCotton1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCotton1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedCoffee1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCoffee1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedGoldenrod1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedGoldenrod1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedAloe1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedAloe1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedBlueberry1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedBlueberry1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedPotato1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedPotato1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedChrysanthemum1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedChrysanthemum1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedCorn1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedCorn1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedGraceCorn1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedGraceCorn1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedHop1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedHop1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedPumpkin1x25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="plantedPumpkin1x5" count="5"/>
+			</recipe>
+			<recipe name="birdsNestEmptyx25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="birdsNestEmptyx5" count="5"/>
+			</recipe>
+
+			<recipe name="farmPlotBlockVariantHelperx25" count="1" craft_time="1" craft_exp_gain="0" tags="learnable">
+				<ingredient name="farmPlotBlockVariantHelperx5" count="5"/>
+			</recipe>
+		</append>		
+		
+		
+		
+		
+<!--Seed Crafting Station Recipes-->		
+	<!--x5 seed recipes from having 5 seeds.-->	
+		<append xpath="/recipes">
+			<recipe name="plantedMushroom1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedMushroom1" count="5"/>
+			</recipe>
+			<recipe name="plantedYucca1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedYucca1" count="5"/>
+			</recipe>
+			<recipe name="plantedCotton1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCotton1" count="5"/>
+			</recipe>
+			<recipe name="plantedCoffee1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCoffee1" count="5"/>
+			</recipe>
+			<recipe name="plantedGoldenrod1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedGoldenrod1" count="5"/>
+			</recipe>
+			<recipe name="plantedAloe1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedAloe1" count="5"/>
+			</recipe>
+			<recipe name="plantedBlueberry1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedBlueberry1" count="5"/>
+			</recipe>
+			<recipe name="plantedPotato1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedPotato1" count="5"/>
+			</recipe>
+			<recipe name="plantedChrysanthemum1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedChrysanthemum1" count="5"/>
+			</recipe>
+			<recipe name="plantedCorn1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCorn1" count="5"/>
+			</recipe>
+			<recipe name="plantedGraceCorn1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedGraceCorn1" count="5"/>
+			</recipe>
+			<recipe name="plantedHop1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedHop1" count="5"/>
+			</recipe>
+			<recipe name="plantedPumpkin1x5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedPumpkin1" count="5"/>
+			</recipe>
+			<recipe name="birdsNestEmptyx5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="birdsNestEmpty" count="5"/>
+			</recipe>
+
+			<recipe name="farmPlotBlockVariantHelperx5" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="farmPlotBlockVariantHelper" count="5"/>
+			</recipe>
+		</append>	
+
+	<!--Normal Seeds-->
+		<append xpath="/recipes">
+			<recipe name="plantedAloe1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropAloeLeaf" count="5"/>
+			</recipe>
+
+			<recipe name="plantedBlueberry1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropBlueberries" count="5"/>
+			</recipe>
+
+			<recipe name="plantedChrysanthemum1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+			</recipe>
+
+			<recipe name="plantedCoffee1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropCoffeeBeans" count="5"/>
+			</recipe>
+
+			<recipe name="plantedCorn1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropCorn" count="5"/>
+			</recipe>
+
+			<recipe name="plantedCotton1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropCottonPlant" count="5"/>
+			</recipe>
+
+			<recipe name="plantedGoldenrod1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+			</recipe>
+
+			<recipe name="plantedGraceCorn1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropGraceCorn" count="5"/>
+			</recipe>
+
+			<recipe name="plantedHop1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropHopsFlower" count="5"/>
+			</recipe>
+
+			<recipe name="plantedMushroom1" count="1" craft_time="2" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropMushrooms" count="5"/>
+				<ingredient name="resourceClayLump" count="2"/>
+			</recipe>
+
+			<recipe name="plantedPotato1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropPotato" count="5"/>
+			</recipe>
+
+			<recipe name="plantedYucca1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropYuccaFruit" count="5"/>
+			</recipe>
+
+			<recipe name="plantedPumpkin1" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropPumpkin" count="5"/>
+			</recipe>	
+			<recipe name="farmPlotBlockVariantHelper" count="1" craft_area="seedStation" craft_time="20" tags="perkLivingOffTheLandCrafting,packMuleCrafting,agfSeedCrafting" >
+				<ingredient name="resourceWood" count="4"/>
+				<ingredient name="foodRottingFlesh" count="10"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="25"/>
+				<ingredient name="resourceClayLump" count="100"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+				</effect_group>
+			</recipe>
+		</append>
+		<!--plant birds nests-->
+		<append xpath="/recipes">
+			<recipe name="birdsNestEmpty" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceYuccaFibers" count="5"/>
+				<ingredient name="foodCornMeal" count="5"/>
+			</recipe>
+		</append>
+
+		
+	<!--x5 Seeds FROM crop directly-->
+		<append xpath="/recipes">
+			<recipe name="plantedAloe1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropAloeLeaf" count="25"/>
+			</recipe>
+
+			<recipe name="plantedBlueberry1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropBlueberries" count="25"/>
+			</recipe>
+
+			<recipe name="plantedChrysanthemum1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropChrysanthemumPlant" count="25"/>
+			</recipe>
+
+			<recipe name="plantedCoffee1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropCoffeeBeans" count="25"/>
+			</recipe>
+
+			<recipe name="plantedCorn1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropCorn" count="25"/>
+			</recipe>
+
+			<recipe name="plantedCotton1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropCottonPlant" count="25"/>
+			</recipe>
+
+			<recipe name="plantedGoldenrod1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropGoldenrodPlant" count="25"/>
+			</recipe>
+
+			<recipe name="plantedGraceCorn1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropGraceCorn" count="25"/>
+			</recipe>
+
+			<recipe name="plantedHop1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropHopsFlower" count="25"/>
+			</recipe>
+
+			<recipe name="plantedMushroom1x5" count="1" craft_time="2" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropMushrooms" count="25"/>
+				<ingredient name="resourceClayLump" count="10"/>
+			</recipe>
+
+			<recipe name="plantedPotato1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropPotato" count="25"/>
+			</recipe>
+
+			<recipe name="plantedYucca1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropYuccaFruit" count="25"/>
+			</recipe>
+
+			<recipe name="plantedPumpkin1x5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropPumpkin" count="25"/>
+			</recipe>
+			<recipe name="farmPlotBlockVariantHelperx5" count="1" craft_area="seedStation" craft_time="20" tags="perkLivingOffTheLandCrafting,packMuleCrafting,agfSeedCrafting" >
+				<ingredient name="resourceWood" count="20"/>
+				<ingredient name="foodRottingFlesh" count="50"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="125"/>
+				<ingredient name="resourceClayLump" count="500"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+				</effect_group>
+			</recipe>
+		</append>		
+		<!--plant birds nests-->
+		<append xpath="/recipes">
+			<recipe name="birdsNestEmptyx5" count="1" craft_time="1" craft_area="seedStation" tags="learnable,perkLivingOffTheLand,agfSeedCrafting">
+				<ingredient name="resourceYuccaFibers" count="25"/>
+				<ingredient name="foodCornMeal" count="25"/>
+			</recipe>
+		</append>
+			
+			
+<!--x25 Seed Stuff-->
+	<!--x25 seed recipes from having 25 seeds.-->	
+		<append xpath="/recipes">
+			<recipe name="plantedMushroom1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedMushroom1" count="25"/>
+			</recipe>
+			<recipe name="plantedYucca1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedYucca1" count="25"/>
+			</recipe>
+			<recipe name="plantedCotton1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCotton1" count="25"/>
+			</recipe>
+			<recipe name="plantedCoffee1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCoffee1" count="25"/>
+			</recipe>
+			<recipe name="plantedGoldenrod1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedGoldenrod1" count="25"/>
+			</recipe>
+			<recipe name="plantedAloe1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedAloe1" count="25"/>
+			</recipe>
+			<recipe name="plantedBlueberry1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedBlueberry1" count="25"/>
+			</recipe>
+			<recipe name="plantedPotato1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedPotato1" count="25"/>
+			</recipe>
+			<recipe name="plantedChrysanthemum1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedChrysanthemum1" count="25"/>
+			</recipe>
+			<recipe name="plantedCorn1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCorn1" count="25"/>
+			</recipe>
+			<recipe name="plantedGraceCorn1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedGraceCorn1" count="25"/>
+			</recipe>
+			<recipe name="plantedHop1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedHop1" count="25"/>
+			</recipe>
+			<recipe name="plantedPumpkin1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedPumpkin1" count="25"/>
+			</recipe>
+			<recipe name="birdsNestEmptyx25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="birdsNestEmpty" count="25"/>
+			</recipe>
+			<recipe name="farmPlotBlockVariantHelperx25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="farmPlotBlockVariantHelper" count="25"/>
+			</recipe>
+		</append>	
+
+	
+		
+	<!--x25 Seeds FROM crop directly-->
+		<append xpath="/recipes">
+			<recipe name="plantedAloe1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropAloeLeaf" count="125"/>
+			</recipe>
+
+			<recipe name="plantedBlueberry1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropBlueberries" count="125"/>
+			</recipe>
+
+			<recipe name="plantedChrysanthemum1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropChrysanthemumPlant" count="125"/>
+			</recipe>
+
+			<recipe name="plantedCoffee1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropCoffeeBeans" count="125"/>
+			</recipe>
+
+			<recipe name="plantedCorn1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropCorn" count="125"/>
+			</recipe>
+
+			<recipe name="plantedCotton1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropCottonPlant" count="125"/>
+			</recipe>
+
+			<recipe name="plantedGoldenrod1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropGoldenrodPlant" count="125"/>
+			</recipe>
+
+			<recipe name="plantedGraceCorn1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropGraceCorn" count="125"/>
+			</recipe>
+
+			<recipe name="plantedHop1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="resourceCropHopsFlower" count="125"/>
+			</recipe>
+
+			<recipe name="plantedMushroom1x25" count="1" craft_time="2" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropMushrooms" count="125"/>
+				<ingredient name="resourceClayLump" count="10"/>
+			</recipe>
+
+			<recipe name="plantedPotato1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropPotato" count="125"/>
+			</recipe>
+
+			<recipe name="plantedYucca1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropYuccaFruit" count="125"/>
+			</recipe>
+
+			<recipe name="plantedPumpkin1x25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,agfSeedCrafting">
+				<ingredient name="foodCropPumpkin" count="125"/>
+			</recipe>
+			<recipe name="farmPlotBlockVariantHelperx25" count="1" craft_area="seedStation" craft_time="20" tags="perkLivingOffTheLandCrafting,packMuleCrafting,agfSeedCrafting" >
+				<ingredient name="resourceWood" count="100"/>
+				<ingredient name="foodRottingFlesh" count="250"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="625"/>
+				<ingredient name="resourceClayLump" count="2500"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+				</effect_group>
+			</recipe>
+		</append>		
+		<!--plant birds nests-->
+		<append xpath="/recipes">
+			<recipe name="birdsNestEmptyx25" count="1" craft_time="1" craft_area="seedStation" tags="learnable,perkLivingOffTheLand,agfSeedCrafting">
+				<ingredient name="resourceYuccaFibers" count="125"/>
+				<ingredient name="foodCornMeal" count="125"/>
+			</recipe>
+		</append>
+
+		
+		
+
+	<!--x25 seed recipes from having x5 seeds.-->	
+		<append xpath="/recipes">
+			<recipe name="plantedMushroom1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedMushroom1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedYucca1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedYucca1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedCotton1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCotton1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedCoffee1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCoffee1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedGoldenrod1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedGoldenrod1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedAloe1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedAloe1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedBlueberry1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedBlueberry1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedPotato1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedPotato1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedChrysanthemum1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedChrysanthemum1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedCorn1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedCorn1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedGraceCorn1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedGraceCorn1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedHop1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedHop1x5" count="5"/>
+			</recipe>
+			<recipe name="plantedPumpkin1x25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="plantedPumpkin1x5" count="5"/>
+			</recipe>
+			<recipe name="birdsNestEmptyx25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="birdsNestEmptyx5" count="5"/>
+			</recipe>
+
+			<recipe name="farmPlotBlockVariantHelperx25" count="1" craft_time="1" craft_area="seedStation" craft_exp_gain="0" tags="learnable,agfSeedCrafting">
+				<ingredient name="farmPlotBlockVariantHelperx5" count="5"/>
+			</recipe>
+		</append>
+
+
+
+
+
+<!--Replantables are Scrappable-->
+<append xpath="/recipes">
+
+<recipe name="birdsNestEmpty" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="birdsNestEmptyx25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="birdsNestEmptyx5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedAloe1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedAloe1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedAloe1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedBlueberry1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedBlueberry1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedBlueberry1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedChrysanthemum1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedChrysanthemum1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedChrysanthemum1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCoffee1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCoffee1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCoffee1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCorn1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCorn1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCorn1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCotton1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCotton1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedCotton1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedGoldenrod1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedGoldenrod1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedGoldenrod1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedGraceCorn1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedGraceCorn1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedGraceCorn1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedHop1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedHop1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedHop1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedMushroom1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedMushroom1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedMushroom1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedPotato1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedPotato1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedPotato1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedPumpkin1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedPumpkin1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedPumpkin1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedYucca1" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedYucca1x25" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+<recipe name="plantedYucca1x5" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+	<wildcard_forge_category/>
+</recipe>
+
+<recipe name="birdsNestEmptyReplants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="birdsNestEmpty" count="1"/>
+</recipe>
+<recipe name="birdsNestEmptyx25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="birdsNestEmptyx25" count="1"/>
+</recipe>
+<recipe name="birdsNestEmptyx5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="birdsNestEmptyx5" count="1"/>
+</recipe>
+<recipe name="plantedAloe1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedAloe1" count="1"/>
+</recipe>
+<recipe name="plantedAloe1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedAloe1x25" count="1"/>
+</recipe>
+<recipe name="plantedAloe1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedAloe1x5" count="1"/>
+</recipe>
+<recipe name="plantedBlueberry1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedBlueberry1" count="1"/>
+</recipe>
+<recipe name="plantedBlueberry1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedBlueberry1x25" count="1"/>
+</recipe>
+<recipe name="plantedBlueberry1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedBlueberry1x5" count="1"/>
+</recipe>
+<recipe name="plantedChrysanthemum1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedChrysanthemum1" count="1"/>
+</recipe>
+<recipe name="plantedChrysanthemum1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedChrysanthemum1x25" count="1"/>
+</recipe>
+<recipe name="plantedChrysanthemum1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedChrysanthemum1x5" count="1"/>
+</recipe>
+<recipe name="plantedCoffee1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCoffee1" count="1"/>
+</recipe>
+<recipe name="plantedCoffee1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCoffee1x25" count="1"/>
+</recipe>
+<recipe name="plantedCoffee1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCoffee1x5" count="1"/>
+</recipe>
+<recipe name="plantedCorn1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCorn1" count="1"/>
+</recipe>
+<recipe name="plantedCorn1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCorn1x25" count="1"/>
+</recipe>
+<recipe name="plantedCorn1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCorn1x5" count="1"/>
+</recipe>
+<recipe name="plantedCotton1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCotton1" count="1"/>
+</recipe>
+<recipe name="plantedCotton1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCotton1x25" count="1"/>
+</recipe>
+<recipe name="plantedCotton1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedCotton1x5" count="1"/>
+</recipe>
+<recipe name="plantedGoldenrod1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedGoldenrod1" count="1"/>
+</recipe>
+<recipe name="plantedGoldenrod1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedGoldenrod1x25" count="1"/>
+</recipe>
+<recipe name="plantedGoldenrod1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedGoldenrod1x5" count="1"/>
+</recipe>
+<recipe name="plantedGraceCorn1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedGraceCorn1" count="1"/>
+</recipe>
+<recipe name="plantedGraceCorn1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedGraceCorn1x25" count="1"/>
+</recipe>
+<recipe name="plantedGraceCorn1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedGraceCorn1x5" count="1"/>
+</recipe>
+<recipe name="plantedHop1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedHop1" count="1"/>
+</recipe>
+<recipe name="plantedHop1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedHop1x25" count="1"/>
+</recipe>
+<recipe name="plantedHop1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedHop1x5" count="1"/>
+</recipe>
+<recipe name="plantedMushroom1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedMushroom1" count="1"/>
+</recipe>
+<recipe name="plantedMushroom1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedMushroom1x25" count="1"/>
+</recipe>
+<recipe name="plantedMushroom1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedMushroom1x5" count="1"/>
+</recipe>
+<recipe name="plantedPotato1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedPotato1" count="1"/>
+</recipe>
+<recipe name="plantedPotato1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedPotato1x25" count="1"/>
+</recipe>
+<recipe name="plantedPotato1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedPotato1x5" count="1"/>
+</recipe>
+<recipe name="plantedPumpkin1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedPumpkin1" count="1"/>
+</recipe>
+<recipe name="plantedPumpkin1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedPumpkin1x25" count="1"/>
+</recipe>
+<recipe name="plantedPumpkin1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedPumpkin1x5" count="1"/>
+</recipe>
+<recipe name="plantedYucca1Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedYucca1" count="1"/>
+</recipe>
+<recipe name="plantedYucca1x25Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedYucca1x25" count="1"/>
+</recipe>
+<recipe name="plantedYucca1x5Replants" count="1" craft_time="1" craft_exp_gain="0" craft_area="seedStation">
+	<ingredient name="plantedYucca1x5" count="1"/>
+</recipe>
+
+<recipe name="birdsNestEmptyReplants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="birdsNestEmpty" count="1"/>
+</recipe>
+<recipe name="birdsNestEmptyx25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="birdsNestEmptyx25" count="1"/>
+</recipe>
+<recipe name="birdsNestEmptyx5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="birdsNestEmptyx5" count="1"/>
+</recipe>
+<recipe name="plantedAloe1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedAloe1" count="1"/>
+</recipe>
+<recipe name="plantedAloe1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedAloe1x25" count="1"/>
+</recipe>
+<recipe name="plantedAloe1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedAloe1x5" count="1"/>
+</recipe>
+<recipe name="plantedBlueberry1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedBlueberry1" count="1"/>
+</recipe>
+<recipe name="plantedBlueberry1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedBlueberry1x25" count="1"/>
+</recipe>
+<recipe name="plantedBlueberry1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedBlueberry1x5" count="1"/>
+</recipe>
+<recipe name="plantedChrysanthemum1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedChrysanthemum1" count="1"/>
+</recipe>
+<recipe name="plantedChrysanthemum1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedChrysanthemum1x25" count="1"/>
+</recipe>
+<recipe name="plantedChrysanthemum1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedChrysanthemum1x5" count="1"/>
+</recipe>
+<recipe name="plantedCoffee1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCoffee1" count="1"/>
+</recipe>
+<recipe name="plantedCoffee1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCoffee1x25" count="1"/>
+</recipe>
+<recipe name="plantedCoffee1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCoffee1x5" count="1"/>
+</recipe>
+<recipe name="plantedCorn1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCorn1" count="1"/>
+</recipe>
+<recipe name="plantedCorn1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCorn1x25" count="1"/>
+</recipe>
+<recipe name="plantedCorn1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCorn1x5" count="1"/>
+</recipe>
+<recipe name="plantedCotton1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCotton1" count="1"/>
+</recipe>
+<recipe name="plantedCotton1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCotton1x25" count="1"/>
+</recipe>
+<recipe name="plantedCotton1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedCotton1x5" count="1"/>
+</recipe>
+<recipe name="plantedGoldenrod1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedGoldenrod1" count="1"/>
+</recipe>
+<recipe name="plantedGoldenrod1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedGoldenrod1x25" count="1"/>
+</recipe>
+<recipe name="plantedGoldenrod1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedGoldenrod1x5" count="1"/>
+</recipe>
+<recipe name="plantedGraceCorn1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedGraceCorn1" count="1"/>
+</recipe>
+<recipe name="plantedGraceCorn1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedGraceCorn1x25" count="1"/>
+</recipe>
+<recipe name="plantedGraceCorn1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedGraceCorn1x5" count="1"/>
+</recipe>
+<recipe name="plantedHop1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedHop1" count="1"/>
+</recipe>
+<recipe name="plantedHop1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedHop1x25" count="1"/>
+</recipe>
+<recipe name="plantedHop1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedHop1x5" count="1"/>
+</recipe>
+<recipe name="plantedMushroom1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedMushroom1" count="1"/>
+</recipe>
+<recipe name="plantedMushroom1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedMushroom1x25" count="1"/>
+</recipe>
+<recipe name="plantedMushroom1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedMushroom1x5" count="1"/>
+</recipe>
+<recipe name="plantedPotato1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedPotato1" count="1"/>
+</recipe>
+<recipe name="plantedPotato1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedPotato1x25" count="1"/>
+</recipe>
+<recipe name="plantedPotato1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedPotato1x5" count="1"/>
+</recipe>
+<recipe name="plantedPumpkin1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedPumpkin1" count="1"/>
+</recipe>
+<recipe name="plantedPumpkin1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedPumpkin1x25" count="1"/>
+</recipe>
+<recipe name="plantedPumpkin1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedPumpkin1x5" count="1"/>
+</recipe>
+<recipe name="plantedYucca1Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedYucca1" count="1"/>
+</recipe>
+<recipe name="plantedYucca1x25Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedYucca1x25" count="1"/>
+</recipe>
+<recipe name="plantedYucca1x5Replants" count="1" craft_time="2" craft_exp_gain="0">
+	<ingredient name="plantedYucca1x5" count="1"/>
+</recipe>
+
+
+
+
+
+
+
+</append>
+
+
+
+
+
+
+
+
+
+
+
+
+</AGFVanillaPlus-FarmingPlus>
+
+
