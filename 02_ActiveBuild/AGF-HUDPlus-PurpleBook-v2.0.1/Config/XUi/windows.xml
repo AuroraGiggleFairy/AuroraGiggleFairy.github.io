@@ -1,4 +1,4 @@
-<AGF-HUDPlus-PurpleBook>
+﻿<AGF-HUDPlus-PurpleBook>
 <!--Schematic Checklist-->
 <!--The Button to access Schematic Checklist-->
 <append xpath="windows/window[@name='windowPagingHeader']">
@@ -3612,8 +3612,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck10)}"/>
 										<!--Q1-->
@@ -3650,8 +3650,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck13)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck16}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck19}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck16)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck19)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck22)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck25)}"/>
 										<!--Q1-->
@@ -3688,8 +3688,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck30)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck35}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck40}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck35)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck40)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck45)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck50)}"/>
 										<!--Q1-->
@@ -3726,8 +3726,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck51)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck55)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck60}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck65}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck60)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck65)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck70)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck75)}"/>
 										<!--Q1-->
@@ -3764,8 +3764,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck76)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck80)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck85}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck90}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck85)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck90)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck95)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRoboticsCheck100)}"/>
 										<!--Q1-->
@@ -4006,8 +4006,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck10)}"/>
 										<!--Q1-->
@@ -4044,8 +4044,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck12)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck14}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck16}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck14)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck16)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck18)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck20)}"/>
 										<!--Q1-->
@@ -4082,8 +4082,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck21)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck23)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck26}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck29}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck26)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck29)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck32)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck35)}"/>
 										<!--Q1-->
@@ -4120,8 +4120,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck36)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck39)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck43}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck47}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck43)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck47)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck51)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck55)}"/>
 										<!--Q1-->
@@ -4158,8 +4158,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck56)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck59)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck63}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck67}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck63)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck67)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck71)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBowsCheck75)}"/>
 										<!--Q1-->
@@ -4400,8 +4400,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck10)}"/>
 										<!--Q1-->
@@ -4438,8 +4438,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck13)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck16}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck19}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck16)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck19)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck22)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck25)}"/>
 										<!--Q1-->
@@ -4476,8 +4476,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck29)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck33}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck37}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck33)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck37)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck41)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck45)}"/>
 										<!--Q1-->
@@ -4514,8 +4514,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck46)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck50)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck55}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck60}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck55)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck60)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck65)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck70)}"/>
 										<!--Q1-->
@@ -4552,8 +4552,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck71)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck76)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck82}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck88}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck82)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck88)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck94)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHandgunsCheck100)}"/>
 										<!--Q1-->
@@ -4794,8 +4794,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck10)}"/>
 										<!--Q1-->
@@ -4832,8 +4832,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck13)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck16}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck19}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck16)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck19)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck22)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck25)}"/>
 										<!--Q1-->
@@ -4870,8 +4870,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck32)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck39}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck46}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck39)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck46)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck53)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck60)}"/>
 										<!--Q1-->
@@ -4908,8 +4908,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck61)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck68)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck76}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck84}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck76)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck84)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck92)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRiflesCheck100)}"/>
 										<!--Q1-->
@@ -5150,8 +5150,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck10)}"/>
 										<!--Q1-->
@@ -5188,8 +5188,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck13)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck16}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck19}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck16)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck19)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck22)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck25)}"/>
 										<!--Q1-->
@@ -5226,8 +5226,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck32)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck39}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck46}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck39)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck46)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck53)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck60)}"/>
 										<!--Q1-->
@@ -5264,8 +5264,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck61)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck68)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck76}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck84}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck76)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck84)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck92)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingMachineGunsCheck100)}"/>
 										<!--Q1-->
@@ -5506,8 +5506,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck10)}"/>
 										<!--Q1-->
@@ -5544,8 +5544,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck13)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck16}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck19}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck16)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck19)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck22)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck25)}"/>
 										<!--Q1-->
@@ -5582,8 +5582,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck32)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck39}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck46}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck39)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck46)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck53)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck60)}"/>
 										<!--Q1-->
@@ -5620,8 +5620,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck61)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck68)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck76}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck84}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck76)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck84)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck92)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingShotgunsCheck100)}"/>
 										<!--Q1-->
@@ -5862,8 +5862,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck10)}"/>
 										<!--Q1-->
@@ -5901,8 +5901,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck13)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck16}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck19}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck16)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck19)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck22)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck25)}"/>
 										<!--Q1-->
@@ -5941,8 +5941,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck32)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck39}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck46}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck39)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck46)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck53)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck60)}"/>
 										<!--Q1-->
@@ -5981,8 +5981,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck61)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck68)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck76}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck84}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck76)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck84)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck92)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingHarvestingToolsCheck100)}"/>
 										<!--Q1-->
@@ -6224,8 +6224,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck10)}"/>
 										<!--Q1-->
@@ -6262,8 +6262,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck20)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck40}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck60}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck40)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck60)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck80)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="200" fillcenter="true" type="filled" fill="{cvar(craftingArmorCheck100)}"/>
 										<!--Q1-->
@@ -6518,8 +6518,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck10)}"/>
 										<!--Q1-->
@@ -6556,8 +6556,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck15)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck20}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck25}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck20)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck25)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck30)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck35)}"/>
 										<!--Q1-->
@@ -6594,8 +6594,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck36)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck43)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck51}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck59}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck51)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck59)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck67)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingBladesCheck75)}"/>
 										<!--Q1-->
@@ -6836,8 +6836,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck10)}"/>
 										<!--Q1-->
@@ -6874,8 +6874,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck15)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck20}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck25}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck20)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck25)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck30)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck35)}"/>
 										<!--Q1-->
@@ -6912,8 +6912,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck36)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck43)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck51}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck59}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck51)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck59)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck67)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingClubsCheck75)}"/>
 										<!--Q1-->
@@ -7154,8 +7154,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck10)}"/>
 										<!--Q1-->
@@ -7192,8 +7192,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck15)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck20}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck25}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck20)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck25)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck30)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck35)}"/>
 										<!--Q1-->
@@ -7230,8 +7230,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck36)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck43)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck51}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck59}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck51)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck59)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck67)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingKnucklesCheck75)}"/>
 										<!--Q1-->
@@ -7472,8 +7472,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck10)}"/>
 										<!--Q1-->
@@ -7510,8 +7510,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck15)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck20}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck25}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck20)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck25)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck30)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck35)}"/>
 										<!--Q1-->
@@ -7548,8 +7548,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck36)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck43)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck51}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck59}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck51)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck59)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck67)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSledgehammersCheck75)}"/>
 										<!--Q1-->
@@ -7790,8 +7790,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck1)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck2)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck4}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck6}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck4)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck6)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck8)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck10)}"/>
 										<!--Q1-->
@@ -7828,8 +7828,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck11)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck15)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck20}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck25}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck20)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck25)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck30)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck35)}"/>
 										<!--Q1-->
@@ -7866,8 +7866,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck36)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck43)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck51}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck59}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck51)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck59)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck67)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSpearsCheck75)}"/>
 										<!--Q1-->
@@ -8108,8 +8108,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck4)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck8)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck12}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck16}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck12)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck16)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck20)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck25)}"/>
 										<!--Q1-->
@@ -8146,8 +8146,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck30)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck35}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck40}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck35)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck40)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck45)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck50)}"/>
 										<!--Q1-->
@@ -8184,8 +8184,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck51)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck55)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck60}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck65}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck60)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck65)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck70)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingSalvageToolsCheck75)}"/>
 										<!--Q1-->
@@ -8426,8 +8426,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck4)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck8)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck12}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck16}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck12)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck16)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck20)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck25)}"/>
 										<!--Q1-->
@@ -8464,8 +8464,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck26)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck30)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck35}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck40}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck35)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck40)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck45)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingRepairToolsCheck50)}"/>
 										<!--Q1-->
@@ -9566,8 +9566,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck55)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="50,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck60)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="100,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck70}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="150,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck80}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="100,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck70)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="150,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck80)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="200,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck90)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="250,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingElectricianCheck100)}"/>
 										<!--Q1-->
@@ -10218,8 +10218,8 @@
 										<!--If completed-->
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="50" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck50)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="100" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck60)}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck70}"/>
-										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck80}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="150" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck70)}"/>
+										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="200" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck80)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="250" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck90)}"/>
 										<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" globalopacity="false" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck100)}"/>
 										<!--Q1-->

@@ -1,0 +1,236 @@
+============================================================
+  THE MOD NETWORK (TMN) API - REFERENCE NOTES
+  Source: https://themodnetwork.com/api/v1
+  Captured: 2026-05-04
+============================================================
+
+BASE URL
+--------
+https://themodnetwork.com/api/v1
+
+All responses are JSON.
+Errors return: { "error": "message" } with appropriate HTTP status code.
+
+
+AUTHENTICATION
+--------------
+- Read endpoints (search, details, download): NO auth required.
+- Write endpoints (publish): require API key in header:
+    Authorization: Bearer tmn_your_key_here
+- Get your key at: Creator Settings > API Keys
+- Keys start with "tmn_" and are shown ONCE on creation. Store securely.
+- Env var name to use: AGF_TMN_API_KEY  (to be consistent with Nexus pattern)
+
+
+RATE LIMITS
+-----------
+- 100 requests per minute per IP
+- Returns HTTP 429 when exceeded
+- On 429: back off and retry after a few seconds. Do not loop.
+- Metadata and mod details don't change often — cache where possible.
+
+
+------------------------------------------------------------
+  READ ENDPOINTS (no auth needed)
+------------------------------------------------------------
+
+SEARCH MODS
+  GET /search
+  Find mods across all games.
+
+  PARAMETERS:
+    q             string  Search text (title + description)
+    game_id       int     Filter by game ID (3 = Minecraft). Use to find 7D2D game_id.
+    game          string  Filter by game slug (e.g. "minecraft")
+    category      string  Filter by category slug
+    featured      bool    "true" to show featured mods only
+    sort          string  popular (default), newest, updated, endorsed, trending
+    page          int     Page number (default 1)
+    limit         int     Results per page (default 20, max 50)
+
+  EXAMPLE: curl "https://themodnetwork.com/api/v1/search?q=magic&game_id=3&sort=popular"
+  TO FIND 7D2D: curl "https://themodnetwork.com/api/v1/search?game=7-days-to-die"
+               or try game slug variants: "7daystodie", "7-days-to-die", "7dtd"
+
+  RESPONSE:
+    {
+      "mods": [
+        {
+          "id": "uuid",
+          "slug": "my-cool-mod",
+          "title": "My Cool Mod",
+          "description": "Does cool stuff",
+          "thumbnail": "https://pub-...r2.dev/thumbs/...",
+          "version": "1.2.0",
+          "download_count": 1234,
+          "author_name": "SomeModder",
+          "game_name": "Minecraft",
+          "endorsement_count": 42,
+          "created_at": "2026-01-15T...",
+          "updated_at": "2026-04-20T..."
+        }
+      ],
+      "total": 156,
+      "page": 1,
+      "pages": 8
+    }
+
+  NOTE: Search response is a subset of full mod details (no long_description, tags, screenshots).
+        Use GET /mod/:slug for full details on a specific mod.
+
+MOD DETAILS
+  GET /mod/:slug
+  Full info for a single mod.
+  Response fields:
+    mod.id               - uuid
+    mod.slug             - URL slug (e.g. "my-cool-mod") — used for updates
+    mod.title            - Mod title
+    mod.description      - Short one-line description
+    mod.long_description - Full HTML description
+    mod.thumbnail        - URL
+    mod.banner_url       - URL
+    mod.version          - Latest version string
+    mod.download_count   - int
+    mod.endorsement_count- int
+    mod.avg_rating       - string (e.g. "4.50")
+    mod.rating_count     - int
+    mod.tags             - [{"id": int, "name": string}]
+    mod.author_name      - string
+    mod.game_name        - string
+    mod.category_name    - string
+    mod.screenshots      - [url, url, ...]
+    mod.release_count    - int
+    mod.created_at       - ISO timestamp
+    mod.updated_at       - ISO timestamp
+
+VERSIONS
+  GET /mod/:slug/versions
+  All releases for a mod.
+
+  NOTE: Minecraft mods include loaders, game_versions, and environment on each version.
+        OTHER GAMES (including 7D2D) WON'T HAVE THESE FIELDS.
+        So for 7D2D mods, don't send loaders/game_versions/environment to /publish.
+
+  RESPONSE:
+    {
+      "versions": [
+        {
+          "id": "uuid",
+          "version": "1.2.0",
+          "release_notes": "Fixed crash on startup",
+          "changelog": "- Fix crash\n- Add new items",
+          "is_latest": true,
+          "files": [
+            {"id": "uuid", "name": "mymod-1.2.0.jar", "size": 524288, "category": "required"}
+          ],
+          "loaders": ["fabric", "forge"],      <- Minecraft only, absent for 7D2D
+          "game_versions": ["1.20.1", "1.21"], <- Minecraft only, absent for 7D2D
+          "environment": "both",               <- Minecraft only, absent for 7D2D
+          "created_at": "2026-04-20T..."
+        }
+      ]
+    }
+
+  USE CASE: Call this to check if a mod already has a release at the target version
+            before publishing, to avoid duplicate releases.
+
+DOWNLOADS
+  NOTE: Downloads go through TMN counter so modder always gets credit.
+        Endpoints return 302 redirect to the actual file. Download count incremented automatically.
+
+  GET /mod/:slug/download
+  Download the latest release (302 redirect).
+  PARAMETERS:
+    slug   string  The mod slug
+  EXAMPLE: curl -L "https://themodnetwork.com/api/v1/mod/my-cool-mod/download" -o mod.zip
+
+  GET /mod/:slug/download/:versionId
+  Download a specific version (302 redirect).
+  PARAMETERS:
+    slug       string  The mod slug
+    versionId  string  Release ID from the versions endpoint (GET /mod/:slug/versions)
+
+
+------------------------------------------------------------
+  WRITE ENDPOINTS (API key required)
+------------------------------------------------------------
+
+PUBLISH (create or update)
+  POST /publish
+  Multipart form data (not JSON).
+  Single endpoint handles BOTH new mod creation AND updates.
+
+  PARAMETERS:
+    file          file    Your mod file (jar, zip, etc.). Max 500MB. REQUIRED.
+    version       string  Release version (e.g. "1.2.0"). REQUIRED.
+    slug          string  Existing mod slug to update. OMIT for new mods.
+    title         string  Mod title. REQUIRED for new mods.
+    description   string  Short one-line description.
+    changelog     string  Release notes / changelog for this version.
+    game_id       int     Game ID (default 3 = Minecraft). NEED TO FIND 7D2D ID.
+    loaders       string  Comma-separated (e.g. "fabric,forge"). May not apply to 7D2D.
+    game_versions string  Comma-separated (e.g. "1.20.1,1.21"). Use 7D2D version.
+    environment   string  "client", "server", or "both".
+    release_type  string  "stable" (default), "beta", or "alpha".
+
+  RESPONSE:
+    {
+      "success": true,
+      "mod_id": "uuid",
+      "slug": "my-cool-mod",       <- SAVE THIS for future updates
+      "release_id": "uuid",
+      "release_version": "1.2.0",
+      "url": "https://themodnetwork.com/mods/my-cool-mod",
+      "is_new": false              <- true if this call created a new page
+    }
+
+  BEHAVIOR:
+    - No slug provided → creates brand new mod page + uploads file (is_new: true)
+    - slug provided    → adds new release to existing mod (is_new: false)
+    - No multi-step upload/finalize/poll — single call does everything.
+
+  ADDITIONAL FIELDS (discovered from live mod response, not in docs):
+    game_version  string  Game version string (e.g. "2.6") — appears as own field, not game_versions
+    requirements  string  Requirements text (e.g. "None.")
+    mod_side      string  "server", "client", or "both" — maps to EAC/server-side behavior
+
+  NOTES FOR 7D2D INTEGRATION:
+    - "loaders" param → DO NOT SEND for 7D2D (Minecraft-only field)
+    - "game_versions" → DO NOT SEND; use "game_version" (singular) instead
+    - "environment" → DO NOT SEND; use "mod_side" instead ("server"/"client"/"both")
+    - SAFE 7D2D publish payload: file, version, title (new) or slug (update),
+      description, changelog, game_id (7D2D id), release_type, game_version, mod_side, requirements
+
+  LONG_DESCRIPTION FORMATTING WARNING:
+    - TMN wraps markdown content in <pre><code class="language-markdown"> blocks
+    - This renders as a code block, NOT formatted HTML
+    - To get proper rendering, send HTML (not markdown) in the description field
+    - OR send plain text — do NOT send raw markdown with # headers and - bullets
+    - The script must convert markdown → plain text or HTML before sending
+    - Need to discover correct game_id for 7 Days to Die on TMN
+
+
+------------------------------------------------------------
+  OPEN QUESTIONS / TO RESOLVE
+------------------------------------------------------------
+[ ] What is the numeric game_id for 7 Days to Die?
+    - game_slug: "7-days-to-die" confirmed from live mod response
+    - game_id integer NOT returned by any read endpoint
+    - First live mod (agf-hudplus) confirmed on 7D2D — game was set correctly via web UI
+    - For API publish: try omitting game_id and rely on slug matching, OR
+      test sending game="7-days-to-die" as string param instead of game_id int
+[x] Does /publish support long_description?
+    - YES but with a catch: TMN wraps markdown in <pre><code> blocks (bad rendering)
+    - Must send HTML or plain text, NOT raw markdown
+[x] New fields confirmed from live mod: game_version, requirements, mod_side
+[x] Slug for agf-hudplus-1main → TMN generated "agf-hudplus" (stripped -1Main suffix)
+[ ] Does /publish support long_description (full body text)?
+    - Not shown in publish params — may be update-only via separate endpoint
+    - Or may only be settable through the web UI
+[ ] Does /publish support thumbnail/banner image upload?
+    - Not shown in publish params — images may require separate endpoint or web UI
+[ ] Does /publish support tags?
+    - Not shown in publish params
+[ ] Is there a Minecraft API section (separate sidebar item) that has 7D2D-irrelevant endpoints?
+[ ] Slug auto-generation: when creating new mod, does TMN auto-generate slug from title?
+    - Response returns slug, so we store it after first publish and reuse for updates

@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL_craftingShotguns_L11,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL — craftingShotguns L11:\nIZYgunT1TACCompactshotgunSuperShortty, IZYgunT1TradshotgunDoubleBarrelOverUnder",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL_craftingShotguns_L26,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL — craftingShotguns L26:\nIZYgunT2TradshotgunLeveractionShotgunModel1887",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL_craftingShotguns_L61,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL — craftingShotguns L61:\nIZYgunT3TACshotgunSPAS12G, IZYgunT3TradshotgunTrenchGunM1897, IZYgunT4TradshotgunBrowningAuto5",,,,,,,,,,,,,

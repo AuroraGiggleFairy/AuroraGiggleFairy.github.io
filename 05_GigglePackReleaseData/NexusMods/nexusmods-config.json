@@ -1,5 +1,5 @@
 {
-  "api_base_url": "https://api.nexusmods.com/v2",
+  "api_base_url": "https://api.nexusmods.com/v3",
   "game_domain": "7daystodie",
   "api_key_env_var": "AGF_NEXUSMODS_API_KEY",
   "application_name": "AGF-NexusMods-Automation",
@@ -9,8 +9,8 @@
     "AGF-HUDPlus-1Main": {
       "intent": "update",
       "nexus_mod_id": 870,
-      "update_group_id": "",
-      "update_group_name": "",
+      "update_group_id": "1843750",
+      "update_group_name": "AGF - HUDPlus",
       "file_category": "main",
       "legacy_latest_file_id": 35368,
       "legacy_name_hint": "1Main",

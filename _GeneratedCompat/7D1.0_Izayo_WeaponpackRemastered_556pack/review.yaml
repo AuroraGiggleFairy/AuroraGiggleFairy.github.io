@@ -1,0 +1,78 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_556pack
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries:
+- item: ammo556mmArmorPiercing
+  icon: IZYammo556mmArmorpiercing
+  fill: '1'
+- item: ammo556mmArmorPiercingBundle
+  icon: IZYammo556mmArmorpiercing
+  fill: '1'
+- item: ammo556mmBulletBall
+  icon: IZYammo556mmBulletBall
+  fill: '1'
+- item: ammo556mmBulletBallBundle
+  icon: IZYammo556mmBulletBall
+  fill: '1'
+- item: ammo556mmHIpower
+  icon: IZYammo556mmHighPower
+  fill: '1'
+- item: ammo556mmHIpowerBundle
+  icon: IZYammo556mmHighPower
+  fill: '1'
+magazine_sections:
+- skill: craftingMachineGuns
+  level: 11
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingMachineGuns_L11
+  icon_item: IZYgunT1ARCabineM608SurvivalRifle
+  icon: IZYgunT1ARCabineM608SurvivalRifle
+  items:
+  - IZYgunT1ARCabineM608SurvivalRifle
+- skill: craftingMachineGuns
+  level: 26
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingMachineGuns_L26
+  icon_item: IZYgunT2ARCabineCAR15
+  icon: IZYgunT2ARCabineCAR15
+  items:
+  - IZYgunT2ARCabineCAR15
+  - IZYgunT2LMGLMG36
+- skill: craftingMachineGuns
+  level: 61
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingMachineGuns_L61
+  icon_item: IZYgunT3ARCabineM4Carbine
+  icon: IZYgunT3ARCabineM4Carbine
+  items:
+  - IZYgunT3ARCabineM4Carbine
+  - IZYgunT3BULLPUPHellionVHS2
+  - IZYgunT3LMGM249FNminimi
+  - IZYgunT4ARCabineHK416
+  - IZYgunT4BULLPUPFNF2000
+- skill: craftingRifles
+  level: 1
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingRifles_L1
+  icon_item: IZYgunT0SNIPERpipeAR15Broken15Junk
+  icon: IZYgunT0SNIPERpipeAR15Broken15Junk
+  items:
+  - IZYgunT0SNIPERpipeAR15Broken15Junk
+- skill: craftingRifles
+  level: 61
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingRifles_L61
+  icon_item: IZYgunT3MarksManRifle556M16A2DMR
+  icon: IZYgunT3MarksManRifle556M16A2DMR
+  items:
+  - IZYgunT3MarksManRifle556M16A2DMR
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYgunT1ARCabineMASFARifle
+  - IZYgunT1LRLongRifleM16a1
+  - IZYgunT3AREUCabineSG552
+  - IZYgunT4MarksManRifle556SSMAR15
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

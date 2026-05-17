@@ -1,0 +1,137 @@
+<zzzAGF-Compatibilities>
+	<!-- Bdubs_Vehicles -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+			<!-- Section 1 -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[2]/@height">87</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[2]/sprite[@height='62']/@height">87</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[2]/filledsprite/@height">85</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[2]/sprite[7]">
+				<sprite name="itemIcon" depth="3" pos="2,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleBicycleOldBVPlaceable" color="" tooltip_key="AGFvehicleBicycleOldBV"/>
+			</insertafter>
+			<!-- Section 2 -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[3]/@pos">0,-185</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[3]/@height">112</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[3]/sprite[@height='92']/@height">112</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[3]/filledsprite/@height">110</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[3]/sprite[8]">
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="GolfCart" color="" tooltip_key="AGFvehicleGolfCart"/>
+				<sprite name="itemIcon" depth="3" pos="2,-85" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleMinibikeOldBVPlaceable" color="" tooltip_key="AGFvehicleMinibikeOldBV"/>
+			</insertafter>
+			<!-- Section 3 -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[4]/@pos">0,-295</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[4]/@height">132</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[4]/sprite[@height='62']/@height">132</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[4]/filledsprite/@height">130</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[4]/sprite[8]">
+				<sprite name="itemIcon" depth="3" pos="2,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleMotorcycleOldBVPlaceable" color="" tooltip_key="AGFvehicleMotorcycleOldBV"/>
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="DirtBike" color="" tooltip_key="AGFvehicleDirtBike"/>
+				<sprite name="itemIcon" depth="3" pos="2,-85" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Cruiser" color="" tooltip_key="AGFvehicleCruiser"/>
+				<sprite name="itemIcon" depth="3" pos="26,-85" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Rat" color="" tooltip_key="AGFvehicleRat"/>
+				<sprite name="itemIcon" depth="3" pos="2,-110" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Junker" color="" tooltip_key="AGFvehicleJunker"/>
+			</insertafter>
+			<!-- Section 4 -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[5]/@pos">0,-425</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[5]/@height">222</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[5]/sprite[@height='62']/@height">222</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[5]/filledsprite/@height">220</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[5]/sprite[6]/@pos">26,-31</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[5]/sprite[6]">
+				<sprite name="itemIcon" depth="3" pos="2,-31" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleTruck4x4OldBVPlaceable" color="" tooltip_key="AGFvehicleTruck4x4OldBV"/>
+				<sprite name="itemIcon" depth="3" pos="2,-52" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleWillyJeepplaceable" color="" tooltip_key="AGFvehicleWillyJeep"/>
+				<sprite name="itemIcon" depth="3" pos="26,-52" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleTrophyTruckplaceable" color="" tooltip_key="AGFvehicleTrophyTruck"/>
+				<sprite name="itemIcon" depth="3" pos="2,-73" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="UAZ" color="" tooltip_key="AGFvehicleUAZ452"/>
+				<sprite name="itemIcon" depth="3" pos="26,-73" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Pickup" color="" tooltip_key="AGFvehiclePickup"/>
+				<sprite name="itemIcon" depth="3" pos="2,-94" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="GNX" color="" tooltip_key="AGFvehicleGNX"/>
+				<sprite name="itemIcon" depth="3" pos="26,-94" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Nova" color="" tooltip_key="AGFvehicleNova"/>
+				<sprite name="itemIcon" depth="3" pos="2,-115" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleStallionplaceable" color="" tooltip_key="AGFvehicleStallion"/>
+				<sprite name="itemIcon" depth="3" pos="26,-115" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="WorkTruck" color="" tooltip_key="AGFvehicleWorkTruck"/>
+				<sprite name="itemIcon" depth="3" pos="2,-136" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleHotRod1" color="" tooltip_key="AGFvehicleHotRod1"/>
+				<sprite name="itemIcon" depth="3" pos="26,-136" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="SHERP" color="" tooltip_key="AGFvehicleSHERP"/>
+				<sprite name="itemIcon" depth="3" pos="2,-157" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ChargerNew" color="" tooltip_key="AGFvehicleChargerNew"/>
+				<sprite name="itemIcon" depth="3" pos="26,-157" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Buggy" color="" tooltip_key="AGFvehicleBuggy"/>
+				<sprite name="itemIcon" depth="3" pos="2,-178" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="BoxTruckplain" color="" tooltip_key="AGFvehicleBoxTruckPlain"/>
+				<sprite name="itemIcon" depth="3" pos="26,-178" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Humvee" color="" tooltip_key="AGFvehicleHumvee"/>
+				<sprite name="itemIcon" depth="3" pos="2,-199" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Oldsemi" color="" tooltip_key="AGFvehicleOldSemi"/>
+			</insertafter>
+			<!-- Section 5 -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[6]/@pos">0,-645</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[6]/@height">122</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[6]/sprite[@height='62']/@height">122</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[6]/filledsprite/@height">120</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[6]/sprite[6]/@pos">26,-31</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[6]/sprite[6]">
+				<sprite name="itemIcon" depth="3" pos="2,-31" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="UH60" color="" tooltip_key="AGFvehicleUH60"/>
+				<sprite name="itemIcon" depth="3" pos="26,-52" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Duster" color="" tooltip_key="AGFvehicleDuster"/>
+				<sprite name="itemIcon" depth="3" pos="2,-52" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="MD500" color="" tooltip_key="AGFvehicleMD500"/>
+				<sprite name="itemIcon" depth="3" pos="26,-73" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="BRDM2" color="" tooltip_key="AGFvehicleBRDM2new"/>
+				<sprite name="itemIcon" depth="3" pos="2,-73" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="MRAP" color="" tooltip_key="AGFvehicleMRAP"/>
+				<sprite name="itemIcon" depth="3" pos="26,-94" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Marauder" color="" tooltip_key="AGFvehicleMarauder"/>
+				<sprite name="itemIcon" depth="3" pos="2,-94" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleGyrocopterOldBVPlaceable" color="" tooltip_key="AGFvehicleGyrocopterOldBV"/>
+			</insertafter>
+			<!--Zoomed In Vehicle Section-->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehiclesTitle']/@pos">265,-260</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/@pos">565,-185</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry/sprite[@name='backgroundSection']/@width">560</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry/sprite[@name='backgroundBorderSection']/@width">560</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry/filledsprite[@name='yesUnlocked']/@width">560</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@sprite='vehicleWheels']/@pos">60,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@sprite='vehicleBicycleChassis']/@pos">115,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@sprite='vehicleBicycleHandlebars']/@pos">170,-25</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@sprite='vehicleBicycleHandlebars']">
+				<sprite name="itemIcon" depth="3" pos="225,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleBicycleOldBVPlaceable" color="" tooltip_key="AGFvehicleBicycleOldBV"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@sprite='ammoGasCan']/@pos">60,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@sprite='vehicleMinibikeChassis']/@pos">115,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@sprite='vehicleMinibikeHandlebars']/@pos">170,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@sprite='resourceOil']/@pos">225,-25</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@sprite='resourceOil']">
+				<sprite name="itemIcon" depth="3" pos="280,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="GolfCart" color="" tooltip_key="AGFvehicleGolfCart"/>
+				<sprite name="itemIcon" depth="3" pos="335,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleMinibikeOldBVPlaceable" color="" tooltip_key="AGFvehicleMinibikeOldBV"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@sprite='ammoGasCan']/@pos">60,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@sprite='ui_game_symbol_treasure']/@pos">60,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@sprite='vehicleMotorcycleChassis']/@pos">115,-25</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@sprite='vehicleMotorcycleHandlebars']/@pos">170,-25</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@sprite='vehicleMotorcycleHandlebars']">
+				<sprite name="itemIcon" depth="3" pos="225,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Junker" color="" tooltip_key="AGFvehicleJunker"/>
+				<sprite name="itemIcon" depth="3" pos="280,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Rat" color="" tooltip_key="AGFvehicleRat"/>
+				<sprite name="itemIcon" depth="3" pos="335,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Cruiser" color="" tooltip_key="AGFvehicleCruiser"/>
+				<sprite name="itemIcon" depth="3" pos="390,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="DirtBike" color="" tooltip_key="AGFvehicleDirtBike"/>
+				<sprite name="itemIcon" depth="3" pos="445,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleMotorcycleOldBVPlaceable" color="" tooltip_key="AGFvehicleMotorcycleOldBV"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@sprite='vehicleTruck4x4Chassis']/@pos">60,-5</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@sprite='vehicleTruck4x4Accessories']/@pos">115,-5</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@sprite='vehicleTruck4x4Accessories']">
+				<sprite name="itemIcon" depth="3" pos="170,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Oldsemi" color="" tooltip_key="AGFvehicleOldSemi"/>
+				<sprite name="itemIcon" depth="3" pos="225,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="BoxTruckplain" color="" tooltip_key="AGFvehicleBoxTruckPlain"/>
+				<sprite name="itemIcon" depth="3" pos="280,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Buggy" color="" tooltip_key="AGFvehicleBuggy"/>
+				<sprite name="itemIcon" depth="3" pos="335,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Humvee" color="" tooltip_key="AGFvehicleHumvee"/>
+				<sprite name="itemIcon" depth="3" pos="390,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleHotRod1" color="" tooltip_key="AGFvehicleHotRod1"/>
+				<sprite name="itemIcon" depth="3" pos="445,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="SHERP" color="" tooltip_key="AGFvehicleSHERP"/>
+				<sprite name="itemIcon" depth="3" pos="500,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ChargerNew" color="" tooltip_key="AGFvehicleChargerNew"/>
+				<sprite name="itemIcon" depth="3" pos="60,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleStallionplaceable" color="" tooltip_key="AGFvehicleStallion"/>
+				<sprite name="itemIcon" depth="3" pos="115,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="WorkTruck" color="" tooltip_key="AGFvehicleWorkTruck"/>
+				<sprite name="itemIcon" depth="3" pos="170,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Nova" color="" tooltip_key="AGFvehicleNova"/>
+				<sprite name="itemIcon" depth="3" pos="225,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Pickup" color="" tooltip_key="AGFvehiclePickup"/>
+				<sprite name="itemIcon" depth="3" pos="280,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="GNX" color="" tooltip_key="AGFvehicleGNX"/>
+				<sprite name="itemIcon" depth="3" pos="335,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="UAZ" color="" tooltip_key="AGFvehicleUAZ452"/>
+				<sprite name="itemIcon" depth="3" pos="390,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleTruck4x4OldBVPlaceable" color="" tooltip_key="AGFvehicleTruck4x4OldBV"/>
+				<sprite name="itemIcon" depth="3" pos="445,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleTrophyTruckplaceable" color="" tooltip_key="AGFvehicleTrophyTruck"/>
+				<sprite name="itemIcon" depth="3" pos="500,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleWillyJeepplaceable" color="" tooltip_key="AGFvehicleWillyJeep"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@sprite='vehicleGyroCopterChassis']/@pos">60,-5</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@sprite='vehicleGyroCopterAccessories']/@pos">115,-5</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@sprite='vehicleGyroCopterAccessories']">
+				<sprite name="itemIcon" depth="3" pos="170,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="LMTV" color="" tooltip_key="AGFvehicleLMTV"/>
+				<sprite name="itemIcon" depth="3" pos="225,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="UH60" color="" tooltip_key="AGFvehicleUH60"/>
+				<sprite name="itemIcon" depth="3" pos="280,-5" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Duster" color="" tooltip_key="AGFvehicleDuster"/>
+				<sprite name="itemIcon" depth="3" pos="60,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="MD500" color="" tooltip_key="AGFvehicleMD500"/>
+				<sprite name="itemIcon" depth="3" pos="115,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="BRDM2" color="" tooltip_key="AGFvehicleBRDM2new"/>
+				<sprite name="itemIcon" depth="3" pos="170,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="MRAP" color="" tooltip_key="AGFvehicleMRAP"/>
+				<sprite name="itemIcon" depth="3" pos="225,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="Marauder" color="" tooltip_key="AGFvehicleMarauder"/>
+				<sprite name="itemIcon" depth="3" pos="280,-50" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleGyrocopterOldBVPlaceable" color="" tooltip_key="AGFvehicleGyrocopterOldBV"/>
+			</insertafter>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

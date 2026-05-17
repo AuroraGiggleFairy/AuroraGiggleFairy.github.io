@@ -1,0 +1,25 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_44mag
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries: []
+magazine_sections:
+- skill: craftingHandguns
+  level: 71
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_44mag_craftingHandguns_L71
+  icon_item: IZYgunT3PistolMagnumAutomag44
+  icon: IZYgunT3PistolMagnumAutomag44
+  items:
+  - IZYgunT3PistolMagnumAutomag44
+  - IZYgunT4DualMagnumDesertEagles
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYgunT3RifleMagnumLeveractionCarbine44
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

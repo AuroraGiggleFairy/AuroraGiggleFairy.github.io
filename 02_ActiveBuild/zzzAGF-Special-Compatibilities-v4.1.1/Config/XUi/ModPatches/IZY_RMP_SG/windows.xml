@@ -1,0 +1,59 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_SG -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+			<!--All Checklist - Section 2 of shotguns-->
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistShotguns']/rect[3]">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT1TACCompactshotgunSuperShortty" color="" tooltip_key="IZYgunT1TACCompactshotgunSuperShortty"/>
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT1TradshotgunDoubleBarrelOverUnder" color="" tooltip_key="IZYgunT1TradshotgunDoubleBarrelOverUnder"/>
+			</append>
+			<!--Zoomed Checklist - Section 2 of shotguns-->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedShotguns']/grid[@name='checklistShotguns']/entry[2]/sprite[@sprite='gunShotgunT1DoubleBarrel']/@pos">75,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedShotguns']/grid[@name='checklistShotguns']/entry[2]/sprite[@sprite='gunShotgunT1DoubleBarrel']">
+				<sprite name="itemIcon" depth="3" pos="125,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT1TACCompactshotgunSuperShortty" color="" tooltip_key="IZYgunT1TACCompactshotgunSuperShortty"/>
+				<sprite name="itemIcon" depth="3" pos="175,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT1TradshotgunDoubleBarrelOverUnder" color="" tooltip_key="IZYgunT1TradshotgunDoubleBarrelOverUnder"/>
+			</insertafter>
+			<!--All Checklist - Section 3  of shotguns-->
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistShotguns']/rect[4]">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT2TradshotgunLeveractionShotgunModel1887" color="" tooltip_key="IZYgunT2TradshotgunLeveractionShotgunModel1887"/>
+			</append>
+			<!--Zoomed Checklist - Section 3 of shotguns-->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedShotguns']/grid[@name='checklistShotguns']/entry[3]/sprite[@sprite='gunShotgunT2PumpShotgun']/@pos">100,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedShotguns']/grid[@name='checklistShotguns']/entry[3]/sprite[@sprite='gunShotgunT2PumpShotgun']">
+				<sprite name="itemIcon" depth="3" pos="150,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT2TradshotgunLeveractionShotgunModel1887" color="" tooltip_key="IZYgunT2TradshotgunLeveractionShotgunModel1887"/>
+			</insertafter>
+			<!--All Checklist - Section 4  of shotguns-->
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistShotguns']/rect[5]">
+				<sprite name="itemIcon" depth="3" pos="26,-31" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT3TACshotgunSPAS12G" color="" tooltip_key="IZYgunT3TACshotgunSPAS12G"/>
+				<sprite name="itemIcon" depth="3" pos="26,-52" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT3TradshotgunTrenchGunM1897" color="" tooltip_key="IZYgunT3TradshotgunTrenchGunM1897"/>
+				<sprite name="itemIcon" depth="3" pos="26,-73" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT4TradshotgunBrowningAuto5" color="" tooltip_key="IZYgunT4TradshotgunBrowningAuto5"/>
+			</append>
+			<!--Zoomed Checklist - Section 4 of shotguns-->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedShotguns']/grid[@name='checklistShotguns']/entry[4]/sprite[@sprite='gunShotgunT3AutoShotgun']/@pos">50,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedShotguns']/grid[@name='checklistShotguns']/entry[4]/sprite[@sprite='gunShotgunT3AutoShotgun']">
+				<sprite name="itemIcon" depth="3" pos="100,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT3TACshotgunSPAS12G" color="" tooltip_key="IZYgunT3TACshotgunSPAS12G"/>
+				<sprite name="itemIcon" depth="3" pos="150,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT3TradshotgunTrenchGunM1897" color="" tooltip_key="IZYgunT3TradshotgunTrenchGunM1897"/>
+				<sprite name="itemIcon" depth="3" pos="200,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="IZYgunT4TradshotgunBrowningAuto5" color="" tooltip_key="IZYgunT4TradshotgunBrowningAuto5"/>
+			</insertafter>
+			<!--UNLOCKS for ammo-->
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/grid/entry[@name='ammoShotgunBreachingSlug']">
+				<entry name="item">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="8,-8" width="64" height="64" size="64,64" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammoShotgunShellPremium" color="" tooltip_key="ammoShotgunShellPremium"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="8,-8" width="64" height="64" fillcenter="true" type="filled" fill="{cvar(AGFperkShotgunMessiahComplete)}"/>
+					<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="" pos="9,-9" foregroundlayer="true" color=""/>
+				</entry>
+			</insertafter>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/grid/entry[@name='ammoBundleShotgunBreachingSlug']">
+				<entry name="item">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="70" height="70" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="8,-8" width="64" height="64" size="64,64" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammoShotgunShellPremium" color="147, 12, 248" tooltip_key="ammoShotgunShellPremiumBundle"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="8,-8" width="64" height="64" fillcenter="true" type="filled" fill="{cvar(AGFperkShotgunMessiahComplete)}"/>
+					<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_bundle" pos="9,-9" foregroundlayer="true" color=""/>
+				</entry>
+			</insertafter>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -1,0 +1,33 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_45ACP -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly')">
+			<append xpath="/materials">
+				<material id="Mammo45ACPBulletBall">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa45ACPBulletBall"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo45ACPHighpower">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa45ACPHighpower"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo45ACPArmorpiecing">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa45ACPArmorpiecing"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo45ACPEnhanced">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa45ACPEnhanced"/>
+					<property name="Experience" value="2"/>
+				</material>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

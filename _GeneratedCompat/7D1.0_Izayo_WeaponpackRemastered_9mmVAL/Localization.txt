@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L1,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_9mmVAL — craftingHandguns L1:\nIZYgunT0SMGPIPEsubmachinegun",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L11,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_9mmVAL — craftingHandguns L11:\nIZYgunT1DualPistolCOLTnavyRevolver, IZYgunT1Pistol9Makarov, IZYgunT1SMGTec9submachinegun",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L26,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_9mmVAL — craftingHandguns L26:\nIZYgunT2DualPistolM9bs, IZYgunT2SMGUZIsubmachinegun",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L46,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_9mmVAL — craftingHandguns L46:\nIZYgunT3DualPistolGlock18C, IZYgunT3SMGMP9submachinegun",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L71,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_9mmVAL — craftingHandguns L71:\nIZYgunT4DualPistolMP9s, IZYgunT4SMGCZScorpionEVO3",,,,,,,,,,,,,

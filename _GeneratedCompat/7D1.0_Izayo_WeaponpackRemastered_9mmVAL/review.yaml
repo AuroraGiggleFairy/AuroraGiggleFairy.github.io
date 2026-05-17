@@ -1,0 +1,60 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_9mmVAL
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries: []
+magazine_sections:
+- skill: craftingHandguns
+  level: 1
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L1
+  icon_item: IZYgunT0SMGPIPEsubmachinegun
+  icon: IZYgunT0SMGPIPEsubmachinegun
+  items:
+  - IZYgunT0SMGPIPEsubmachinegun
+- skill: craftingHandguns
+  level: 11
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L11
+  icon_item: IZYgunT1DualPistolCOLTnavyRevolver
+  icon: IZYgunT1DualPistolCOLTnavyRevolver
+  items:
+  - IZYgunT1DualPistolCOLTnavyRevolver
+  - IZYgunT1Pistol9Makarov
+  - IZYgunT1SMGTec9submachinegun
+- skill: craftingHandguns
+  level: 26
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L26
+  icon_item: IZYgunT2DualPistolM9bs
+  icon: IZYgunT2DualPistolM9bs
+  items:
+  - IZYgunT2DualPistolM9bs
+  - IZYgunT2SMGUZIsubmachinegun
+- skill: craftingHandguns
+  level: 46
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L46
+  icon_item: IZYgunT3DualPistolGlock18C
+  icon: IZYgunT3DualPistolGlock18C
+  items:
+  - IZYgunT3DualPistolGlock18C
+  - IZYgunT3SMGMP9submachinegun
+- skill: craftingHandguns
+  level: 71
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_9mmVAL_craftingHandguns_L71
+  icon_item: IZYgunT4DualPistolMP9s
+  icon: IZYgunT4DualPistolMP9s
+  items:
+  - IZYgunT4DualPistolMP9s
+  - IZYgunT4SMGCZScorpionEVO3
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYgunT2ClassicSMGMP34
+  - IZYgunT3SMGMP5Ksubmachinegun
+  - IZYgunT4DualPistolC96M
+  - IZYgunT4SMGColt9mmsubmachinegun
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

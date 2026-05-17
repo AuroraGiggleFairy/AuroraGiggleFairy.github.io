@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-AmmoDisassembly"/>
-	<DisplayName value="Ammo Disassembly"/>
-	<Version value="1.0.1"/>
-	<Description value="Scrap your ammo into bundles that contain the ingredients."/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

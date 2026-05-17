@@ -121,6 +121,9 @@ Language Support
 
 8. Changelog
 
+v2.1.0
+- Fixed typos on some of the filled sprite sections.
+
 v2.0.1
 - ReadMe Format Update.
 

@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "2.0.0",
-  "previous_gigglepack_version": "1.4.0",
+  "gigglepack_version": "2.0.1",
+  "previous_gigglepack_version": "2.0.0",
   "is_baseline_release": false,
-  "released_at": "2026-05-02 02:02:00",
+  "released_at": "2026-05-17 18:07:12",
   "mods": {
     "AGF-4Modders-10IngredientSlots": "1.0.2",
     "AGF-4Modders-CustomWindowEnteringDuration": "1.0.1",
@@ -21,7 +21,7 @@
     "AGF-HUDPluszOther-RemoveWrittentormAlerts": "2.0.1",
     "AGF-HUDPluszOther-SmallerInteractionPrompt": "1.0.1",
     "AGF-HUDPluszOther-TinyBuffsPopUp": "1.0.1",
-    "AGF-HUDPluszOther-Weekday": "2.1.1",
+    "AGF-HUDPluszOther-Weekday": "2.1.2",
     "AGF-NoEAC-AudioOptionsPlus": "1.0.1",
     "AGF-NoEAC-AutoRun": "1.0.1",
     "AGF-NoEAC-ConsoleOpacityMod": "1.0.1",
@@ -55,7 +55,7 @@
     "AGF-VP-DoorsPlus": "3.0.1",
     "AGF-VP-DrinkableAcid": "2.0.2",
     "AGF-VP-DyesPlus": "3.1.1",
-    "AGF-VP-FarmingPlus": "5.6.2",
+    "AGF-VP-FarmingPlus": "5.6.3",
     "AGF-VP-FloraHarvester": "2.3.1",
     "AGF-VP-FuelBurnPlus": "2.3.1",
     "AGF-VP-MasterTool": "6.1.2",
@@ -98,27 +98,30 @@
     "AGF-VP-ZombieLargerHordes": "2.0.2",
     "zzzAGF-Special-Compatibilities": "4.1.1"
   },
-  "updated_mods": [],
-  "new_mods": [
+  "updated_mods": [
     {
-      "mod": "AGF-NoEAC-ItemTypeIconColor",
-      "to": "1.0.3",
-      "to_display": "1.0.3"
+      "mod": "AGF-HUDPluszOther-Weekday",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-VP-FarmingPlus",
+      "from": "5.6.2",
+      "to": "5.6.3",
+      "from_display": "5.6.2",
+      "to_display": "5.6.3"
     }
   ],
+  "new_mods": [],
   "renamed_mods": [],
-  "removed_mods": [
-    {
-      "mod": "AGF-4Modders-ItemTypeIconColor",
-      "from": "1.0.2",
-      "from_display": "1.0.2"
-    }
-  ],
-  "versioned_zip": "AGF-GigglePack-v2.1.0.zip",
+  "removed_mods": [],
+  "versioned_zip": "AGF-GigglePack-v2.0.1.zip",
   "change_counts": {
-    "new_mods": 1,
-    "updated_existing_mods": 0,
+    "new_mods": 0,
+    "updated_existing_mods": 2,
     "renamed_mods": 0,
-    "removed_mods": 1
+    "removed_mods": 0
   }
 }

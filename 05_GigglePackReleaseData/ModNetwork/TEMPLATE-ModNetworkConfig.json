@@ -1,0 +1,37 @@
+{
+  "api_base_url": "https://themodnetwork.com/api/v1",
+  "api_key_env_var": "AGF_TMN_API_KEY",
+  "tmn_game_id": null,
+  "game_version_default": "2.6",
+  "release_type_default": "stable",
+  "mods": {
+    "AGF-Example-NewMod": {
+      "intent": "publish",
+      "tmn_slug": "",
+      "tmn_mod_id": "",
+      "page_url": "",
+      "tmn_category": "",
+      "tmn_thumbnail_path": "",
+      "tmn_screenshot_paths": [],
+      "mod_side_override": "",
+      "game_version_override": "",
+      "release_type_override": "",
+      "long_description_override": "",
+      "install_description_override": ""
+    },
+    "AGF-Example-ExistingMod": {
+      "intent": "update",
+      "tmn_slug": "agf-example-existingmod",
+      "tmn_mod_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "page_url": "https://themodnetwork.com/mods/agf-example-existingmod",
+      "tmn_category": "ui",
+      "tmn_thumbnail_path": "",
+      "tmn_screenshot_paths": [],
+      "mod_side_override": "",
+      "game_version_override": "",
+      "release_type_override": "",
+      "long_description_override": "",
+      "install_description_override": ""
+    }
+  }
+}

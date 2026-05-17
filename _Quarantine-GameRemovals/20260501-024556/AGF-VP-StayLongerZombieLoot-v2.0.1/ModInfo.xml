@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-StayLongerZombieLoot"/>
-	<DisplayName value="AGF Stay Longer Zombie Loot"/>
-	<Version value="2.0.1"/>
-	<Description value="Zombie loot disappears after 1 hour instead of 20 minutes."/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

@@ -1,2 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-modularRopeNoose,blocks,Block,,,"Rope Tiled",,"Befestigtes Seil","Cuerda alicatada","Corde nouée","Corda del cappio","ロープタイル","밧줄 (타일)","Lina — spłaszczona","Corda amarrada","Сложенная веревка","Örgülü Halat","绳子 打结","平鋪繩子"

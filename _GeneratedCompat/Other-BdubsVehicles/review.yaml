@@ -1,0 +1,368 @@
+target_mod: Other-BdubsVehicles
+strategy: vehicle_family
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries: []
+magazine_sections: []
+vehicle_families:
+- stem: vehicleBRDM2
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleBRDM2
+  icon_item: vehicleBRDM2placeable
+  icon: BRDM2
+  parts:
+  - vehicleBRDM2accessories
+  - vehicleBRDM2chassis
+  - vehicleBRDM2placeable
+- stem: vehicleBicycleOldBV
+  skill: craftingVehicles
+  level: 5
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleBicycleOldBV
+  icon_item: vehicleBicycleOldBVPlaceable
+  icon: vehicleBicycleOldBVPlaceable
+  parts:
+  - vehicleBicycleOldBVChassis
+  - vehicleBicycleOldBVHandlebars
+  - vehicleBicycleOldBVPlaceable
+- stem: vehicleBoxTruck
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleBoxTruck
+  icon_item: vehicleBoxTruckbody
+  icon: BoxTruckbody
+  parts:
+  - vehicleBoxTruckbody
+  - vehicleBoxTruckchassis
+- stem: vehicleBuggy
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleBuggy
+  icon_item: vehicleBuggyplaceable
+  icon: Buggy
+  parts:
+  - vehicleBuggyaccessories
+  - vehicleBuggychassis
+  - vehicleBuggyplaceable
+- stem: vehicleCharger
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleCharger
+  icon_item: vehicleChargeraccessories
+  icon: Chargeraccessories
+  parts:
+  - vehicleChargeraccessories
+  - vehicleChargerchassis
+- stem: vehicleCruiser
+  skill: craftingVehicles
+  level: 45
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleCruiser
+  icon_item: vehicleCruiserplaceable
+  icon: Cruiser
+  parts:
+  - vehicleCruiserbars
+  - vehicleCruiserchassis
+  - vehicleCruiserplaceable
+- stem: vehicleDirtBike
+  skill: craftingVehicles
+  level: 45
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleDirtBike
+  icon_item: vehicleDirtBikeplaceable
+  icon: DirtBike
+  parts:
+  - vehicleDirtBikeChassis
+  - vehicleDirtBikeParts
+  - vehicleDirtBikeplaceable
+- stem: vehicleDuster
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleDuster
+  icon_item: vehicleDusterplaceable
+  icon: Duster
+  parts:
+  - vehicleDusteraccessories
+  - vehicleDusterchassis
+  - vehicleDusterplaceable
+- stem: vehicleGNX
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleGNX
+  icon_item: vehicleGNXplaceable
+  icon: GNX
+  parts:
+  - vehicleGNXaccessories
+  - vehicleGNXchassis
+  - vehicleGNXplaceable
+- stem: vehicleGolfCart
+  skill: craftingVehicles
+  level: 20
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleGolfCart
+  icon_item: vehicleGolfCartplaceable
+  icon: GolfCart
+  parts:
+  - vehicleGolfCartaccessories
+  - vehicleGolfCartchassis
+  - vehicleGolfCartplaceable
+- stem: vehicleGyrocopterOldBV
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleGyrocopterOldBV
+  icon_item: vehicleGyrocopterOldBVPlaceable
+  icon: vehicleGyrocopterOldBVPlaceable
+  parts:
+  - vehicleGyrocopterOldBVAccessories
+  - vehicleGyrocopterOldBVChassis
+  - vehicleGyrocopterOldBVPlaceable
+- stem: vehicleHotRod
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleHotRod
+  icon_item: vehicleHotRodaccessories
+  icon: HotRodaccessories
+  parts:
+  - vehicleHotRodaccessories
+  - vehicleHotRodchassis
+- stem: vehicleHumvee
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleHumvee
+  icon_item: vehicleHumveeplaceable
+  icon: Humvee
+  parts:
+  - vehicleHumveebody
+  - vehicleHumveechassis
+  - vehicleHumveeplaceable
+- stem: vehicleJunker
+  skill: craftingVehicles
+  level: 45
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleJunker
+  icon_item: vehicleJunkerplaceable
+  icon: Junker
+  parts:
+  - vehicleJunkerChassis
+  - vehicleJunkerbars
+  - vehicleJunkerplaceable
+- stem: vehicleLMTV
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleLMTV
+  icon_item: vehicleLMTVplaceable
+  icon: LMTV
+  parts:
+  - vehicleLMTVbody
+  - vehicleLMTVchassis
+  - vehicleLMTVplaceable
+- stem: vehicleMD500
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleMD500
+  icon_item: vehicleMD500placeable
+  icon: MD500
+  parts:
+  - vehicleMD500accessories
+  - vehicleMD500chassis
+  - vehicleMD500placeable
+- stem: vehicleMRAP
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleMRAP
+  icon_item: vehicleMRAPplaceable
+  icon: MRAP
+  parts:
+  - vehicleMRAPaccessories
+  - vehicleMRAPparts
+  - vehicleMRAPplaceable
+- stem: vehicleMarauder
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleMarauder
+  icon_item: vehicleMarauderplaceable
+  icon: Marauder
+  parts:
+  - vehicleMarauderaccessories
+  - vehicleMarauderchassis
+  - vehicleMarauderplaceable
+- stem: vehicleMinibikeOldBV
+  skill: craftingVehicles
+  level: 20
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleMinibikeOldBV
+  icon_item: vehicleMinibikeOldBVPlaceable
+  icon: vehicleMinibikeOldBVPlaceable
+  parts:
+  - vehicleMinibikeOldBVChassis
+  - vehicleMinibikeOldBVHandlebars
+  - vehicleMinibikeOldBVPlaceable
+- stem: vehicleMotorcycleOldBV
+  skill: craftingVehicles
+  level: 45
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleMotorcycleOldBV
+  icon_item: vehicleMotorcycleOldBVPlaceable
+  icon: vehicleMotorcycleOldBVPlaceable
+  parts:
+  - vehicleMotorcycleOldBVChassis
+  - vehicleMotorcycleOldBVHandlebars
+  - vehicleMotorcycleOldBVPlaceable
+- stem: vehicleNova
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleNova
+  icon_item: vehicleNovaplaceable
+  icon: Nova
+  parts:
+  - vehicleNovaaccessories
+  - vehicleNovachassis
+  - vehicleNovaplaceable
+- stem: vehicleOldSemi
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleOldSemi
+  icon_item: vehicleOldSemiplaceable
+  icon: Oldsemi
+  parts:
+  - vehicleOldSemibody
+  - vehicleOldSemichassis
+  - vehicleOldSemiplaceable
+- stem: vehiclePickup
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehiclePickup
+  icon_item: vehiclePickupplaceable
+  icon: Pickup
+  parts:
+  - vehiclePickupaccessories
+  - vehiclePickupchassis
+  - vehiclePickupplaceable
+- stem: vehicleRat
+  skill: craftingVehicles
+  level: 45
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleRat
+  icon_item: vehicleRatplaceable
+  icon: Rat
+  parts:
+  - vehicleRatChassis
+  - vehicleRatbars
+  - vehicleRatplaceable
+- stem: vehicleSHERP
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleSHERP
+  icon_item: vehicleSHERPplaceable
+  icon: SHERP
+  parts:
+  - vehicleSHERPaccessories
+  - vehicleSHERPchassis
+  - vehicleSHERPplaceable
+- stem: vehicleStallion
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleStallion
+  icon_item: vehicleStallionplaceable
+  icon: vehicleStallionplaceable
+  parts:
+  - vehicleStallionaccessories
+  - vehicleStallionchassis
+  - vehicleStallionplaceable
+- stem: vehicleTrophyTruck
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleTrophyTruck
+  icon_item: vehicleTrophyTruckplaceable
+  icon: vehicleTrophyTruckplaceable
+  parts:
+  - vehicleTrophyTruckbody
+  - vehicleTrophyTruckchassis
+  - vehicleTrophyTruckplaceable
+- stem: vehicleTruck4x4OldBV
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleTruck4x4OldBV
+  icon_item: vehicleTruck4x4OldBVPlaceable
+  icon: vehicleTruck4x4OldBVPlaceable
+  parts:
+  - vehicleTruck4x4OldBVAccessories
+  - vehicleTruck4x4OldBVChassis
+  - vehicleTruck4x4OldBVPlaceable
+- stem: vehicleUAZ
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleUAZ
+  icon_item: vehicleUAZaccessories
+  icon: UAZaccessories
+  parts:
+  - vehicleUAZaccessories
+- stem: vehicleUAZ452
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleUAZ452
+  icon_item: vehicleUAZ452placeable
+  icon: UAZ
+  parts:
+  - vehicleUAZ452chassis
+  - vehicleUAZ452placeable
+- stem: vehicleUH60
+  skill: craftingVehicles
+  level: 100
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleUH60
+  icon_item: vehicleUH60placeable
+  icon: UH60
+  parts:
+  - vehicleUH60accessories
+  - vehicleUH60chassis
+  - vehicleUH60placeable
+- stem: vehicleWorkTruck
+  skill: craftingVehicles
+  level: 70
+  loc_key: AGFcompat_Other-BdubsVehicles_family_vehicleWorkTruck
+  icon_item: vehicleWorkTruckplaceable
+  icon: WorkTruck
+  parts:
+  - vehicleWorkTruckaccessories
+  - vehicleWorkTruckchassis
+  - vehicleWorkTruckplaceable
+skipped:
+  not_ready: []
+  no_unlock: []
+  not_craftable:
+  - questRewardBRDMPartsBundle
+  - questRewardBoxTruckPartsBundle
+  - questRewardBuggyPartsBundle
+  - questRewardChargerPartsBundle
+  - questRewardCruiserPartsBundle
+  - questRewardDirtBikePartsBundle
+  - questRewardDusterPartsBundle
+  - questRewardGNXPartsBundle
+  - questRewardGolfCartPartsBundle
+  - questRewardHotRodPartsBundle
+  - questRewardHumveePartsBundle
+  - questRewardJunkerPartsBundle
+  - questRewardLMTVPartsBundle
+  - questRewardMD500PartsBundle
+  - questRewardMRAPPartsBundle
+  - questRewardMarauderPartsBundle
+  - questRewardNovaPartsBundle
+  - questRewardOldSemiPartsBundle
+  - questRewardPickupPartsBundle
+  - questRewardRatPartsBundle
+  - questRewardSHERPPartsBundle
+  - questRewardStallionPartsBundle
+  - questRewardTrophyTruckPartsBundle
+  - questRewardUAZ452PartsBundle
+  - questRewardUH60PartsBundle
+  - questRewardWorkTruckPartsBundle
+  unmapped:
+  - vehicleBRDM2desertplaceable (family=vehicleBRDM2desert, no breakpoint)
+  - vehicleBRDM2newplaceable (family=vehicleBRDM2new, no breakpoint)
+  - vehicleBoxTruckHostessplaceable (family=vehicleBoxTruckHostess, no breakpoint)
+  - vehicleBoxTruckPlainplaceable (family=vehicleBoxTruckPlain, no breakpoint)
+  - vehicleChargerNewplaceable (family=vehicleChargerNew, no breakpoint)
+  - vehicleHotRod1placeable (family=vehicleHotRod1, no breakpoint)
+  - vehicleHotRod2placeable (family=vehicleHotRod2, no breakpoint)
+  - vehicleHotRod3placeable (family=vehicleHotRod3, no breakpoint)
+  - vehicleHotRod4placeable (family=vehicleHotRod4, no breakpoint)
+  - vehicleHotRod5placeable (family=vehicleHotRod5, no breakpoint)
+  - vehicleHotRod6placeable (family=vehicleHotRod6, no breakpoint)
+  - vehicleWillyJeepplaceable (family=vehicleWillyJeep, no breakpoint)

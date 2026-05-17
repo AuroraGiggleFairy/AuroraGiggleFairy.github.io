@@ -1,0 +1,16 @@
+target_mod: 7D1.0_Izayo_WeaponpackVanillaReplacer
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries: []
+magazine_sections: []
+vehicle_families: []
+skipped:
+  not_ready: []
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

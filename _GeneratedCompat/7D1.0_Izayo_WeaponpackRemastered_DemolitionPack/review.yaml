@@ -1,0 +1,49 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_DemolitionPack
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries:
+- item: ammo25mmGrenadeFRAGS
+  icon: ammo25mmFRAGS
+  fill: '1'
+- item: ammo25mmGrenadeHE
+  icon: ammo25mmHE
+  fill: '1'
+- item: ammo25mmGrenadeTraining
+  icon: ammo25mmTRAINING
+  fill: '1'
+magazine_sections:
+- skill: craftingExplosives
+  level: 45
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_DemolitionPack_craftingExplosives_L45
+  icon_item: IZYgunT2LGLChinalakeGrenadeLauncher
+  icon: IZYgunT2LGLChinalakeGrenadeLauncher
+  items:
+  - IZYgunT2LGLChinalakeGrenadeLauncher
+  - IZYgunT3LGLXM25
+  - IZYgunT3RocketLauncherRPG7
+- skill: craftingExplosives
+  level: 50
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_DemolitionPack_craftingExplosives_L50
+  icon_item: ammoRocketRPGTraning
+  icon: ammoRocketRPGTraning
+  items:
+  - ammoRocketRPGTraning
+- skill: craftingExplosives
+  level: 60
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_DemolitionPack_craftingExplosives_L60
+  icon_item: ammoRocketRPGHE
+  icon: ammoRocketRPGHE
+  items:
+  - ammoRocketRPGHE
+  - ammoRocketRPGIncendiary
+vehicle_families: []
+skipped:
+  not_ready: []
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

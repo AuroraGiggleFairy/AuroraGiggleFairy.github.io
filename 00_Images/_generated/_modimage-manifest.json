@@ -108,8 +108,8 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "11667df19c0269e5138334318e994f0c2174083aafad3b2c7bdafaaab70560b0",
-    "version": "2.1.1",
+    "signature": "e97bba7d3b580fe0813c0a206bda8cea577c60f730b7e1a5f6b888108e9825d6",
+    "version": "2.1.2",
     "has_media": false,
     "media_file": ""
   },
@@ -312,8 +312,8 @@
     "media_file": ""
   },
   "AGF-VP-FarmingPlus": {
-    "signature": "0985a2e83e0ec87e0533016c0d5b404dc96c5df77e6baec616ff6c0e523ce596",
-    "version": "5.6.2",
+    "signature": "ee13a1950a512785dd3ae5e7d498ec9d892db7057b30bf3b9e48c2e755165221",
+    "version": "5.6.3",
     "has_media": false,
     "media_file": ""
   },

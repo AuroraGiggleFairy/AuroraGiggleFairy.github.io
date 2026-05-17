@@ -1,0 +1,145 @@
+================================================================================
+TMN FIELD MAPPING — AGF MODS
+The Mod Network POST /publish field decisions
+================================================================================
+
+--------------------------------------------------------------------------------
+FIELD: Title
+  Source:   ModInfo.xml  <Name value="...">
+  Notes:    Use display name as-is.
+
+--------------------------------------------------------------------------------
+FIELD: Game
+  Source:   Static
+  Value:    7 Days to Die  (game_slug: "7-days-to-die")
+  Notes:    Same for all mods. game_id numeric TBD (see Api Informaiton.txt).
+
+--------------------------------------------------------------------------------
+FIELD: Category
+  Source:   modnetwork-config.json  per-mod entry: "tmn_category"
+  Notes:    Must be set manually per mod. No automatic source.
+            Set during initial config setup for each mod.
+
+--------------------------------------------------------------------------------
+FIELD: Mod Side
+  Source:   HELPER_ModCompatibility.csv  column: MOD_TYPE_ID
+  Mapping:
+    MOD_TYPE_ID 0 = TBD/Unknown         → review manually
+    MOD_TYPE_ID 1 = Server-Side EAC-OK  → "server"
+    MOD_TYPE_ID 2 = Server-Side EAC Off → "server"
+    MOD_TYPE_ID 3 = Server Dedicated    → "server"
+    MOD_TYPE_ID 4 = Hybrid EAC Off      → "both"
+    MOD_TYPE_ID 5 = Server+Client Req.  → "both"
+    MOD_TYPE_ID 6 = Client-Side Only    → "client"
+
+--------------------------------------------------------------------------------
+FIELD: Version
+  Source:   ModInfo.xml  <Version value="...">
+  Notes:    Used as-is (e.g. "5.4.7").
+
+--------------------------------------------------------------------------------
+FIELD: Game Version
+  Source:   HELPER_ModCompatibility.csv  column: TESTED_GAME_VERSION
+  Notes:    String value (e.g. "2.6").
+
+--------------------------------------------------------------------------------
+FIELD: Short Description
+  Source:   ModInfo.xml  <Description value="...">
+  Notes:    Plain text, used as-is. This is the mod card / search result blurb.
+
+--------------------------------------------------------------------------------
+FIELD: Full Description  (long_description — rendered HTML body of the page)
+  Source:   README.md — specific sections extracted and combined in order
+  Format:   HTML via markdown.markdown() — headings, bullets, bold, blockquotes all render
+  Section order:
+    1. Need Help? (README section 3)
+         Discord link, contact note
+    2. Mod Type + Compatibility + Features Summary (README sections 4, 5, 6 — consolidated)
+         Quick-glance block: EAC type, version tested, safe to install/remove, summary bullets
+    3. Features Details (README section 7)
+         Full bullet list of all features
+    4. About Author + Mod Philosophy (README sections 1, 2)
+         Name/history/links, design goals, language support, quote
+  Notes:    Section dividers (---) from README will render as <hr> tags.
+            Script extracts each section by ## header number, concatenates, then converts.
+  Override: long_description_override in modnetwork-config.json
+
+--------------------------------------------------------------------------------
+FIELD: Image Banner
+  Source:   Static — purple preset
+  Notes:    TMN has a preset selector. Script will select the purple gradient.
+            If TMN API does not expose a preset selector param, set manually
+            once per mod page (it persists on update).
+
+--------------------------------------------------------------------------------
+FIELD: Thumbnail
+  Source:   modnetwork-config.json  per-mod entry: "tmn_thumbnail_path"
+  Notes:    Local image file path. Uploaded as multipart form field.
+            Also: screenshots uploaded similarly if provided.
+            Set per mod during initial config setup.
+
+--------------------------------------------------------------------------------
+FIELD: Changelog  (shown in Releases & Files / Version History tab)
+  Source:   README.md  <!-- CHANGELOG START --> ... <!-- CHANGELOG END -->
+  Decision:   Last 3 version entries only.
+              The oldest of the 3 gets an appended note:
+              "See the README for the full changelog."
+  Format:     HTML via markdown.markdown()
+
+--------------------------------------------------------------------------------
+FIELD: Requirements
+  Source:   Static
+  Value:    "None."
+  Notes:    All AGF mods have no requirements. Hardcoded.
+
+--------------------------------------------------------------------------------
+FIELD: How To Install  (separate tab / text field)
+  Source:   README.md — sections 9 through 13 extracted and combined in order
+  Format:   HTML via markdown.markdown()
+  Section order:
+    1. Important Mod Details (README section 9)
+         Mod type table, EAC explainer, "should I play with EAC on or off?"
+    2. Installation Guide (README section 10)
+    3. Removal Guide (README section 11)
+    4. Update Guide (README section 12)
+    5. Backup Guide (README section 13)
+  Override: install_description_override in modnetwork-config.json
+
+--------------------------------------------------------------------------------
+FIELD: Dependencies
+  Source:   Static
+  Value:    None
+  Notes:    No dependencies for any AGF mod.
+
+--------------------------------------------------------------------------------
+FIELD: Permissions
+  Source:   Static — same for all mods
+  Values:
+    General use:      Ask first
+    Re-upload/mirror: Not Allowed
+    Credit required:  Yes (checked)
+    Custom text:      "I'm easy to work with, feel free to ask!"
+  Notes:    These are set once per mod page. TMN API may not expose
+            permissions params — may need to be set manually on each page
+            or confirmed via API testing.
+
+================================================================================
+PER-MOD CONFIG KEYS  (modnetwork-config.json)
+================================================================================
+
+  Global (top-level):
+    tmn_game_id           int     Numeric 7D2D game ID (TBD)
+    api_key_env_var       string  "AGF_TMN_API_KEY"
+
+  Per-mod (keyed by base mod name e.g. "AGF-HUDPlus-1Main"):
+    intent                string  "publish" | "update" | "skip" | "review"
+    tmn_slug              string  TMN-generated slug (stored after first publish)
+    tmn_mod_id            string  UUID returned by TMN after first publish
+    page_url              string  TMN page URL (stored after first publish)
+    tmn_category          string  TMN category slug for this mod
+    tmn_thumbnail_path    string  Local path to thumbnail image
+    tmn_screenshot_paths  array   Local paths to screenshot images
+    long_description_override     string  (optional) Full HTML body override
+    install_description_override  string  (optional) How-to-install HTML override
+
+================================================================================

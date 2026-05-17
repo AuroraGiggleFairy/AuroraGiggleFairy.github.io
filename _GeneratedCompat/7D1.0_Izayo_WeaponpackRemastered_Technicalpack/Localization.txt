@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_Technicalpack_craftingRobotics_L76,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_Technicalpack — craftingRobotics L76:\nIZYgunT3TechnicalNailmachinegun",,,,,,,,,,,,,

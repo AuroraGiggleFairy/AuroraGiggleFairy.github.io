@@ -1,0 +1,26 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_Heavy_WeaponPack
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries:
+- item: IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture
+  icon: IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture
+  fill: '1'
+- item: IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+  icon: IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+  fill: '1'
+magazine_sections: []
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYgunT5HeavyWeaponAA12AutoShotgun
+  - IZYgunT5HeavyWeaponSuperEagle44SMG
+  no_unlock: []
+  not_craftable:
+  - IZYgunT5HeavyWeaponM134MinigunGatling (UnlockedBy=craftingMachineGuns)
+  - IZYgunT5HeavyWeaponM2flameThrower (UnlockedBy=craftingRobotics)
+  unmapped: []

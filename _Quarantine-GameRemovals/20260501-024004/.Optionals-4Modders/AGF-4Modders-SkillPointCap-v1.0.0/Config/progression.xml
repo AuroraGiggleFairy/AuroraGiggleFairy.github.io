@@ -1,9 +1,0 @@
-<AGFVanillaPlus-SkillPointCap>
-
-
-	<setattribute xpath="/progression/level" name="skill_point_level_cap">60</setattribute>
-		
-	
-</AGFVanillaPlus-SkillPointCap>
-
- 

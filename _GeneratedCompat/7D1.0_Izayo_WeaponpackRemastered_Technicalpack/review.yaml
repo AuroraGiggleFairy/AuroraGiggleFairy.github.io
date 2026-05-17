@@ -1,0 +1,23 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_Technicalpack
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries: []
+magazine_sections:
+- skill: craftingRobotics
+  level: 76
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_Technicalpack_craftingRobotics_L76
+  icon_item: IZYgunT3TechnicalNailmachinegun
+  icon: IZYgunT3TechnicalNailmachinegun
+  items:
+  - IZYgunT3TechnicalNailmachinegun
+vehicle_families: []
+skipped:
+  not_ready: []
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

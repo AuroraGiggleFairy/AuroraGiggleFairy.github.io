@@ -1,0 +1,22 @@
+<zzzAGF-Compatibilities>
+	<!-- MoreQuestsNoScrollbar -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+			<remove xpath="/windows/window[@name='windowResponses']"/>
+			<append xpath="/windows">
+				<window name="windowResponses" pos="90,-450" width="800" height="480" anchor="LeftTop" cursor_area="true" controller="DialogResponseList">
+					<sprite depth="0" name="background" pos="-45,375" width="1770" height="900" type="sliced" color="96,96,96,255" globalopacity="false"/>
+					<sprite depth="1" name="background" pos="-40,370" width="1760" height="890" type="sliced" color="0,0,0,255" globalopacity="false"/>
+					<label name="lblName" style="subtitle" text="{respondentname}" color="[selectedColor]" justify="left" depth="2" pos="-20,350"/>
+					<grid name="items" pos="0,300" rows="22" cols="3" width="50" height="200" cell_width="560" cell_height="36" repeat_content="true" arrangement="vertical">
+						<response_entry id="0"/>
+					</grid>
+					<rect pos="1560,370">
+						<sprite depth="2" name="dayTimeIcon" width="24" height="24" pos="-30,-10" sprite="ui_game_symbol_clock" color="[iconColor]" foregroundlayer="true" visible="{showtime}"/>
+						<label depth="2" name="dayTimeLabel" width="230" height="28" pos="0,-12" text="{mapdaytimetitle}: [DECEA3]{mapdaytime}[-]" font_size="22" controller="MapStats" visible="{showtime}"/>
+					</rect>
+				</window>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

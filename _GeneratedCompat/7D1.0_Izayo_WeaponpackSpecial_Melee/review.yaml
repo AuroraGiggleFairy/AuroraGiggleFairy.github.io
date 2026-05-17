@@ -1,0 +1,35 @@
+target_mod: 7D1.0_Izayo_WeaponpackSpecial_Melee
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries:
+- item: IZYMeleeT4SpearPoleAxe
+  icon: IZYMeleeT4SpearPoleAxe
+  fill: '1'
+magazine_sections:
+- skill: craftingBlades
+  level: 36
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackSpecial_Melee_craftingBlades_L36
+  icon_item: IZYMeleeT4BladeKatana
+  icon: IZYMeleeT4BladeKatana
+  items:
+  - IZYMeleeT4BladeKatana
+- skill: craftingSledgehammers
+  level: 36
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackSpecial_Melee_craftingSledgehammers_L36
+  icon_item: IZYMeleeT4SledghammerSpikeMace
+  icon: IZYMeleeT4SledghammerSpikeMace
+  items:
+  - IZYMeleeT4SledghammerSpikeMace
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYMeleeT4BatonPunisher9000
+  - IZYMeleeT4DualKnivesKnife
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

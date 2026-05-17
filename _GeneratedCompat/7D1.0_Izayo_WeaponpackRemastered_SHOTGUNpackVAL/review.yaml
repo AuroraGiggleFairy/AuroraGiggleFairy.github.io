@@ -1,0 +1,45 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries:
+- item: ammoShotgunShellPremium
+  icon: ammoShotgunShellPremium
+  fill: '1'
+magazine_sections:
+- skill: craftingShotguns
+  level: 11
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL_craftingShotguns_L11
+  icon_item: IZYgunT1TACCompactshotgunSuperShortty
+  icon: IZYgunT1TACCompactshotgunSuperShortty
+  items:
+  - IZYgunT1TACCompactshotgunSuperShortty
+  - IZYgunT1TradshotgunDoubleBarrelOverUnder
+- skill: craftingShotguns
+  level: 26
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL_craftingShotguns_L26
+  icon_item: IZYgunT2TradshotgunLeveractionShotgunModel1887
+  icon: IZYgunT2TradshotgunLeveractionShotgunModel1887
+  items:
+  - IZYgunT2TradshotgunLeveractionShotgunModel1887
+- skill: craftingShotguns
+  level: 61
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_SHOTGUNpackVAL_craftingShotguns_L61
+  icon_item: IZYgunT3TACshotgunSPAS12G
+  icon: IZYgunT3TACshotgunSPAS12G
+  items:
+  - IZYgunT3TACshotgunSPAS12G
+  - IZYgunT3TradshotgunTrenchGunM1897
+  - IZYgunT4TradshotgunBrowningAuto5
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYgunT4TACshotgunM1014
+  no_unlock:
+  - ammoShotgunShellDragoBreath
+  not_craftable: []
+  unmapped: []

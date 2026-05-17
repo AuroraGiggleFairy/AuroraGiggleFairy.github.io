@@ -1,0 +1,86 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_45ACP
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries:
+- item: ammo45ACPBulletBall
+  icon: ammo45ACPBulletBall
+  fill: '1'
+- item: ammoBundle45ACPArmorpiecing
+  icon: ammo45ACPAP
+  fill: '{cvar(AGFperkPistolPeteComplete)}'
+- item: ammoBundle45ACPBulletBall
+  icon: ammo45ACPBulletBall
+  fill: '{cvar(AGFperkPistolPeteComplete)}'
+- item: ammoBundle45ACPEnhanced
+  icon: ammo45ACPENH
+  fill: '{cvar(AGFperkPistolPeteComplete)}'
+- item: ammoBundle45ACPHighpower
+  icon: ammo45ACPHipower
+  fill: '{cvar(AGFperkPistolPeteComplete)}'
+magazine_sections:
+- skill: craftingHandguns
+  level: 1
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_45ACP_craftingHandguns_L1
+  icon_item: IZYgunT0PistolLiberatorImprovisedPistol
+  icon: IZYgunT0PistolLiberatorImprovisedPistol
+  items:
+  - IZYgunT0PistolLiberatorImprovisedPistol
+- skill: craftingHandguns
+  level: 11
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_45ACP_craftingHandguns_L11
+  icon_item: IZYgunT145TACSMGMAC10
+  icon: IZYgunT145TACSMGMAC10
+  items:
+  - IZYgunT145TACSMGMAC10
+  - IZYgunT1Pistol45M1917
+  - IZYgunT1Pistol45Type17C96
+- skill: craftingHandguns
+  level: 26
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_45ACP_craftingHandguns_L26
+  icon_item: IZYgunT245SMGM3Greasegun
+  icon: IZYgunT245SMGM3Greasegun
+  items:
+  - IZYgunT245SMGM3Greasegun
+  - IZYgunT2DualPistols45M1911A1
+  - IZYgunT2Pistol45M1911A1
+  - ammo45ACPHighpower
+- skill: craftingHandguns
+  level: 46
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_45ACP_craftingHandguns_L46
+  icon_item: ammo45ACPArmorpiecing
+  icon: ammo45ACPAP
+  items:
+  - ammo45ACPArmorpiecing
+- skill: craftingHandguns
+  level: 71
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_45ACP_craftingHandguns_L71
+  icon_item: IZYgunT345SMGM1thompson
+  icon: IZYgunT345SMGM1thompson
+  items:
+  - IZYgunT345SMGM1thompson
+  - IZYgunT3Pistol45USP45
+  - IZYgunT445SMGM1928thompson
+  - IZYgunT445TACSMGKrissSuperV
+  - IZYgunT4Pistol45STIEAGLE6
+  - ammo45ACPEnhanced
+- skill: craftingRifles
+  level: 61
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_45ACP_craftingRifles_L61
+  icon_item: IZYgunT3MarksmanRifleMMRM1Carbine45
+  icon: IZYgunT3MarksmanRifleMMRM1Carbine45
+  items:
+  - IZYgunT3MarksmanRifleMMRM1Carbine45
+  - IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+vehicle_families: []
+skipped:
+  not_ready:
+  - IZYgunT3DualPistols45USP45
+  - IZYgunT5DualSMGsSuperVectors
+  no_unlock: []
+  not_craftable: []
+  unmapped: []

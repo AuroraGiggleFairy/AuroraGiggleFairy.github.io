@@ -1,0 +1,25 @@
+<zzzAGF-Compatibilities>
+	<!-- V2_OakravenAmmoPress -->
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_556pack')">
+			<append xpath="/items/item[@name='ammo556mmBulletBall']">
+				<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+			</append>
+			<append xpath="/items/item[@name='ammo556mmBulletBallBundle']">
+				<property name="Group" value="Ammo/Weapons,Ammo,RegularAmmo"/>
+			</append>
+			<append xpath="/items/item[@name='ammo556mmHIpower']">
+				<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+			</append>
+			<append xpath="/items/item[@name='ammo556mmHIpowerBundle']">
+				<property name="Group" value="Ammo/Weapons,Ammo,HPAmmo"/>
+			</append>
+			<append xpath="/items/item[@name='ammo556mmArmorPiercing']">
+				<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+			</append>
+			<append xpath="/items/item[@name='ammo556mmArmorPiercingBundle']">
+				<property name="Group" value="Ammo/Weapons,Ammo,APAmmo"/>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

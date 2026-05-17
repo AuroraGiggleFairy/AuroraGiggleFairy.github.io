@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-PaintbrushPlus"/>
-	<DisplayName value="AGF Paintbrush Plus"/>
-	<Version value="2.1.0"/>
-	<Description value="Paint without paint, hold trigger to keep painting, limited distance reach."/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

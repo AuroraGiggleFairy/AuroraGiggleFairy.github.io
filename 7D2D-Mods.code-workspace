@@ -12,6 +12,7 @@
 		"files.autoGuessEncoding": false,
 		"files.eol": "\n",
 		"edit-csv.maxCellLength": 10000,
-		"rainbow_csv.enable_auto_csv_lint": true
+		"rainbow_csv.enable_auto_csv_lint": true,
+		"powershell.cwd": "7D2D-Mods"
 	}
 }

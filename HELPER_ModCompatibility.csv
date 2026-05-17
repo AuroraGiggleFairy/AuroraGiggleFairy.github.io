@@ -15,6 +15,7 @@ AGF-NoEAC-OpenAllButton,4,2.6,SAFE,TBD,Requires EAC off; ignores server mod requ
 AGF-NoEAC-ScreamerAlert,5,2.6,SAFE,TBD,Players can join without it; install locally for full features.,AGF-NoEAC-ScreamerAlert.txt,No,Hybrid,Hybrid,Optional
 AGF-NoEAC-TerrainLeveler,0,2.6,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required
 AGF-NoEAC-VisualEntityTracker,5,2.6,SAFE,TBD,Players can join without it; install locally for full features.,AGF-NoEAC-VisualEntityTracker.txt,No,Hybrid,Hybrid,Optional
+AGF-PurpleBookTest,0,TBD,TBD,TBD,TBD,AGF-PurpleBookTest.txt,TBD,TBD,TBD,TBD
 AGF-VP-MedicallyTreatOthers,1,2.6,SAFE,TBD,TBD,AGF-VP-MedicallyTreatOthers.txt,Yes,Yes,Yes,None
 AGF-VP-MedicalTreatOthersTreatedInjuries,1,2.6,SAFE,TBD,TBD,AGF-VP-MedicalTreatOthersTreatedInjuries.txt,Yes,Yes,Yes,None
 AGF-4Modders-10IngredientSlots,1,2.6,SAFE,SAFE,None,AGF-4Modders-10IngredientSlots.txt,Yes,Yes,Yes,None

@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_DemolitionPack_craftingExplosives_L45,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_DemolitionPack — craftingExplosives L45:\nIZYgunT2LGLChinalakeGrenadeLauncher, IZYgunT3LGLXM25, IZYgunT3RocketLauncherRPG7",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_DemolitionPack_craftingExplosives_L50,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_DemolitionPack — craftingExplosives L50:\nammoRocketRPGTraning",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_DemolitionPack_craftingExplosives_L60,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_DemolitionPack — craftingExplosives L60:\nammoRocketRPGHE, ammoRocketRPGIncendiary",,,,,,,,,,,,,

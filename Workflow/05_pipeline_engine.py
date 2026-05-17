@@ -716,18 +716,40 @@ def has_version_drift(folder_name: str, mod_version: str) -> bool:
     return folder_version != (mod_version or "")
 
 
-def is_notepadpp_running() -> bool:
+def get_notepadpp_pids() -> List[int]:
+    """Return live Notepad++ process IDs on Windows.
+
+    Uses CSV tasklist output to avoid fragile substring checks.
+    """
     try:
         result = subprocess.run(
-            ["tasklist", "/FI", "IMAGENAME eq notepad++.exe"],
+            ["tasklist", "/FO", "CSV", "/NH", "/FI", "IMAGENAME eq notepad++.exe"],
             capture_output=True,
             text=True,
             check=False,
         )
-        output = (result.stdout or "") + "\n" + (result.stderr or "")
-        return "notepad++.exe" in output.lower()
+        output = (result.stdout or "").strip()
+        pids: List[int] = []
+        if not output:
+            return pids
+
+        for row in csv.reader(io.StringIO(output)):
+            if len(row) < 2:
+                continue
+            image = (row[0] or "").strip().lower()
+            if image != "notepad++.exe":
+                continue
+            try:
+                pids.append(int((row[1] or "").strip()))
+            except ValueError:
+                continue
+        return pids
     except Exception:
-        return False
+        return []
+
+
+def is_notepadpp_running() -> bool:
+    return bool(get_notepadpp_pids())
 
 
 def extract_folder_version(folder_name: str) -> str:
@@ -770,10 +792,15 @@ def ensure_notepadpp_closed_for_version_bumps(
             log.error("Run aborted by user due to Notepad++ pre-flight check for version bumps")
             return False
 
-        if not is_notepadpp_running():
+        pids = get_notepadpp_pids()
+        if not pids:
             return True
 
-        log.warn("Notepad++ is still running. Close it, then press Enter, or type 'skip' to abort.")
+        log.warn(
+            "Notepad++ is still running (PID(s): "
+            + ", ".join(str(pid) for pid in pids)
+            + "). Close it, then press Enter, or type 'skip' to abort."
+        )
 
 
 def ensure_notepadpp_closed_for_game_sync(dry_run: bool, log: Logger) -> bool:
@@ -801,23 +828,63 @@ def ensure_notepadpp_closed_for_game_sync(dry_run: bool, log: Logger) -> bool:
             log.error("Run aborted by user due to Notepad++ pre-flight check for game-folder sync")
             return False
 
-        if not is_notepadpp_running():
+        pids = get_notepadpp_pids()
+        if not pids:
             return True
 
-        log.warn("Notepad++ is still running. Close it, then press Enter, or type 'skip' to abort.")
+        log.warn(
+            "Notepad++ is still running (PID(s): "
+            + ", ".join(str(pid) for pid in pids)
+            + "). Close it, then press Enter, or type 'skip' to abort."
+        )
 
 
 def acquire_run_lock() -> bool:
-    try:
-        fd = os.open(RUN_LOCK_PATH, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            f.write(f"pid={os.getpid()}\n")
-            f.write(f"started={dt.datetime.now().isoformat()}\n")
-        return True
-    except FileExistsError:
-        return False
-    except Exception:
-        return False
+    def read_lock_pid() -> Optional[int]:
+        try:
+            with open(RUN_LOCK_PATH, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.startswith("pid="):
+                        value = line.split("=", 1)[1].strip()
+                        return int(value)
+        except Exception:
+            return None
+        return None
+
+    def pid_is_running(pid: int) -> bool:
+        if pid <= 0:
+            return False
+        try:
+            os.kill(pid, 0)
+            return True
+        except OSError:
+            return False
+        except Exception:
+            return False
+
+    for _ in range(2):
+        try:
+            fd = os.open(RUN_LOCK_PATH, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(f"pid={os.getpid()}\n")
+                f.write(f"started={dt.datetime.now().isoformat()}\n")
+            return True
+        except FileExistsError:
+            lock_pid = read_lock_pid()
+            if lock_pid is not None and pid_is_running(lock_pid):
+                return False
+
+            # Lock file exists but owner process is gone (or unreadable); clear stale lock and retry once.
+            try:
+                os.remove(RUN_LOCK_PATH)
+            except FileNotFoundError:
+                pass
+            except Exception:
+                return False
+        except Exception:
+            return False
+
+    return False
 
 
 def release_run_lock() -> None:

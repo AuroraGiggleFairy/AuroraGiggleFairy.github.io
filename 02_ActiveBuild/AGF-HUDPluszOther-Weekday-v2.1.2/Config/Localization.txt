@@ -1,0 +1,8 @@
+﻿Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+daycount_1,,,,,"Mon",,"Mo","Lun","Lun","Lun","月","월","Pon","Seg","Пн","Pzt","周一","週一"
+daycount_2,,,,,"Tue",,"Di","Mar","Mar","Mar","火","화","Wt","Ter","Вт","Sal","周二","週二"
+daycount_3,,,,,"Wed",,"Mi","Mié","Mer","Mer","水","수","Śr","Qua","Ср","Çar","周三","週三"
+daycount_4,,,,,"Thu",,"Do","Jue","Jeu","Gio","木","목","Czw","Qui","Чт","Per","周四","週四"
+daycount_5,,,,,"Fri",,"Fr","Vie","Ven","Ven","金","금","Pt","Sex","Пт","Cum","周五","週五"
+daycount_6,,,,,"Sat",,"Sa","Sáb","Sam","Sab","土","토","Sob","Sáb","Сб","Cmt","周六","週六"
+daycount_0,,,,,"Sun",,"So","Dom","Dim","Dom","日","일","Nd","Dom","Вс","Paz","周日","週日"

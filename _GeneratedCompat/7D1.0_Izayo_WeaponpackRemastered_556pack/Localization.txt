@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingMachineGuns_L11,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_556pack — craftingMachineGuns L11:\nIZYgunT1ARCabineM608SurvivalRifle",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingMachineGuns_L26,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_556pack — craftingMachineGuns L26:\nIZYgunT2ARCabineCAR15, IZYgunT2LMGLMG36",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingMachineGuns_L61,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_556pack — craftingMachineGuns L61:\nIZYgunT3ARCabineM4Carbine, IZYgunT3BULLPUPHellionVHS2, IZYgunT3LMGM249FNminimi, IZYgunT4ARCabineHK416, IZYgunT4BULLPUPFNF2000",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingRifles_L1,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_556pack — craftingRifles L1:\nIZYgunT0SNIPERpipeAR15Broken15Junk",,,,,,,,,,,,,
+AGFcompat_7D1.0_Izayo_WeaponpackRemastered_556pack_craftingRifles_L61,XUi,checklist,,,"7D1.0_Izayo_WeaponpackRemastered_556pack — craftingRifles L61:\nIZYgunT3MarksManRifle556M16A2DMR",,,,,,,,,,,,,

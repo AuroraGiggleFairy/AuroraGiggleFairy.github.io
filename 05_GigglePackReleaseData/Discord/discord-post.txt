@@ -1,1 +1,16 @@
-
+#   GigglePack v2.0.1 - *May 17, 2026 6:07pm*
+## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
+## *Or download the individual changed mods below.*
+--------------------------------------------------------------------
+###  **Change summary: +0 new, ~2 updated, =0 renamed, -0 removed**
+- **New mods:**
+  - None
+- **Updated existing mods:**
+  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (v2.1.1 -> v2.1.2)
+  - [AGF-VP-FarmingPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FarmingPlus.zip) (v5.6.2 -> v5.6.3)
+- **Renamed mods:**
+  - None
+- **Removed mods:**
+  - None
+--------------------------------------------------------------------
+## Remember, all downloads are available here:  https://auroragigglefairy.github.io/

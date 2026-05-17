@@ -1,0 +1,68 @@
+target_mod: 7D1.0_Izayo_WeaponpackRemastered_762pack
+strategy: magazine_summary
+filters:
+  not_ready_markers:
+  - Notready
+  - NotReady
+  - not_ready
+  - NOTREADY
+unlock_entries: []
+magazine_sections:
+- skill: craftingMachineGuns
+  level: 11
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_762pack_craftingMachineGuns_L11
+  icon_item: IZYgunT1BattleRifleBARbrowningautomaticrifle
+  icon: IZYgunT1BattleRifleBARbrowningautomaticrifle
+  items:
+  - IZYgunT1BattleRifleBARbrowningautomaticrifle
+- skill: craftingMachineGuns
+  level: 26
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_762pack_craftingMachineGuns_L26
+  icon_item: IZYgunT2ARSTG44N
+  icon: IZYgunT2ARSTG44N
+  items:
+  - IZYgunT2ARSTG44N
+  - IZYgunT2BattleRifleFNFALRifle
+  - IZYgunT2LMGlightmachinegunRPD
+- skill: craftingMachineGuns
+  level: 61
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_762pack_craftingMachineGuns_L61
+  icon_item: IZYgunT3ARAKM
+  icon: IZYgunT3ARAKM
+  items:
+  - IZYgunT3ARAKM
+  - IZYgunT3BattleRifleHKG3
+  - IZYgunT4BattleRifleSCARH
+  - IZYgunT4LMGlightmachinegunMG34R
+- skill: craftingRifles
+  level: 11
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_762pack_craftingRifles_L11
+  icon_item: IZYgunT1SNIPERRIFLE762Mosinnagant
+  icon: IZYgunT1SNIPERRIFLE762Mosinnagant
+  items:
+  - IZYgunT1SNIPERRIFLE762Mosinnagant
+- skill: craftingRifles
+  level: 26
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_762pack_craftingRifles_L26
+  icon_item: IZYgunT2MarksManRifle762M1garandNavyconverted
+  icon: IZYgunT2MarksManRifle762M1garandNavyconverted
+  items:
+  - IZYgunT2MarksManRifle762M1garandNavyconverted
+- skill: craftingRifles
+  level: 61
+  loc_key: AGFcompat_7D1.0_Izayo_WeaponpackRemastered_762pack_craftingRifles_L61
+  icon_item: IZYgunT3MarksManRifle762HKPSG1
+  icon: IZYgunT3MarksManRifle762HKPSG1
+  items:
+  - IZYgunT3MarksManRifle762HKPSG1
+  - IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+  - IZYgunT4MarksManRifle762SVUprototypeRifle
+  - IZYgunT4MarksManRifleM110SASS
+  - IZYgunT4SNIPERRIFLE762L96AWMRifle
+vehicle_families: []
+skipped:
+  not_ready: []
+  no_unlock: []
+  not_craftable:
+  - ammo762mmExplosiveFragmentations (UnlockedBy=craftingRifles)
+  unmapped: []

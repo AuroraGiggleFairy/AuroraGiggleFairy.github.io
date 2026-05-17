@@ -22,7 +22,7 @@ DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "n
 DEFAULT_API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"
 DEFAULT_APPLICATION_NAME = "AGF-NexusMods-Automation"
 DEFAULT_APPLICATION_VERSION = "0.1.0"
-DEFAULT_API_BASE_URL = "https://api.nexusmods.com/v2"
+DEFAULT_API_BASE_URL = "https://api.nexusmods.com/v3"
 DEFAULT_API_V1_BASE_URL = "https://api.nexusmods.com/v1"
 DEFAULT_DOWNLOAD_BASE_URL = (
     "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips"
@@ -720,7 +720,7 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
             update_groups = fetch_mod_update_groups(api_base_url, live_mod_id, headers)
         except urllib.error.HTTPError as group_ex:
             update_groups_error = f"HTTP {group_ex.code}"
-            if group_ex.code != 404:
+            if group_ex.code == 403:
                 raise
 
     if not update_groups:
@@ -857,7 +857,7 @@ def discover_live_update_groups(plan: Dict[str, object], config: Dict[str, objec
                     groups = fetch_mod_update_groups(api_base_url, live_mod_id, headers)
                 except urllib.error.HTTPError as group_ex:
                     update_groups_error = f"HTTP {group_ex.code}"
-                    if group_ex.code != 404:
+                    if group_ex.code == 403:
                         raise
 
             if not groups:
@@ -944,7 +944,7 @@ def run_live_check(plan: Dict[str, object], config: Dict[str, object]) -> int:
                     update_groups = fetch_mod_update_groups(api_base_url, live_mod_id, headers)
                 except urllib.error.HTTPError as group_ex:
                     update_groups_error = f"HTTP {group_ex.code}"
-                    if group_ex.code != 404:
+                    if group_ex.code == 403:
                         raise
 
             if not update_groups:

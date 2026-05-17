@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+AGFcompat_7D1.0_Izayo_WeaponpackMisc_pack_craftingBows_L56,XUi,checklist,,,"7D1.0_Izayo_WeaponpackMisc_pack — craftingBows L56:\nIZYgunT4BowVanhelsingAutomaticCrossbowVH",,,,,,,,,,,,,

@@ -1,0 +1,17 @@
+<AGF-HUDPlus-Weekday>
+	<!--Thanks to DragonTander, we now can easily add days of the week!-->
+
+		<conditional>
+			<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+				<!--Uses my HUD and IS NOT using the NoDayCount-->
+				<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[@text='[{daycolor}]{day}']/@text">[{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]</set>
+			</if>
+
+			<if cond="mod_loaded('AGF-HUDPlus-BMCounter-NoDayCount') == false">
+				<!--Using Vanilla Settings, also allows for KeepDayCount-->
+				<set xpath="/windows/window[@name='windowCompass']/sprite/label[@text='{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]']/@text">{daytitle}: [{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]</set>
+			</if>
+		</conditional>
+
+
+</AGF-HUDPlus-Weekday>
