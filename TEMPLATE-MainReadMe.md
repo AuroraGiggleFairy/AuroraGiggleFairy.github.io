@@ -374,6 +374,11 @@
 
 # **7. Mod List**
 
+## 7d2d Version 3.0 is here!
+> *AGF has begun working on updating mods for the new version.*
+> *This will be repopulated as she updates them.*
+> *7d2d version 2.6 Giggle Pack is available at the bottom of the page.*
+
 <!-- MOD_LIST_START -->
 
 <!-- MOD_LIST_END -->
@@ -382,4 +387,4 @@
 
 ---
 
-## When will Version 3.0 come out?
+## When will Version 4.0 come out?

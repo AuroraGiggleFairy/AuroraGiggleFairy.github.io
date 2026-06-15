@@ -60,8 +60,8 @@
     "media_file": ""
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "3cc53bd393d3862a71e2a1c53051ee7a78f69ec83a28186f09df2f22d1dc842a",
-    "version": "5.4.7",
+    "signature": "9ce204d7ff0400ddf568df6ec98a66ca3c4ef366aeefff7236da4c26eec4221e",
+    "version": "6.0.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main.png"
   },
@@ -72,10 +72,10 @@
     "media_file": ""
   },
   "AGF-HUDPlus-HealthBars": {
-    "signature": "ea37193af30b9e204513d31aa6c40579769564062bfb8cae16b8ee5760b9e43e",
-    "version": "4.0.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "a889bcd1cc9b4071add723c852147fed493acae48e3e514c9027392a3a952ae2",
+    "version": "5.0.0",
+    "has_media": true,
+    "media_file": "AGF-HUDPlus-HealthBars.png"
   },
   "AGF-HUDPlus-PurpleBook": {
     "signature": "2a305be489e46c3027a209c06412dff8ae55d8565adb281ac33273ef0ffa67a6",
@@ -84,8 +84,8 @@
     "media_file": ""
   },
   "AGF-HUDPlus-RemoveEnteringPopUp": {
-    "signature": "193923dc2946c3a21850d13f770ea60901aaafaac861c4fd5fecf14f085d455d",
-    "version": "1.0.1",
+    "signature": "72f86468dbcdfc5bdcd1c17e499477220d288620e0074605e7f2fee46102c0e3",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -108,10 +108,10 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "e97bba7d3b580fe0813c0a206bda8cea577c60f730b7e1a5f6b888108e9825d6",
-    "version": "2.1.2",
-    "has_media": false,
-    "media_file": ""
+    "signature": "19b3559b4df8911c3626f8f63965268aca0ffa0c277608d35b0ee78ea7c17f0c",
+    "version": "3.0.1",
+    "has_media": true,
+    "media_file": "AGF-HUDPluszOther-Weekday.png"
   },
   "AGF-NoEAC-AudioOptionsPlus": {
     "signature": "16c554a42edadf03761c028d13b98c637e5eacad3d43d562ead1e56e5a886104",

@@ -21,6 +21,9 @@
     "Photographer",
     "Voice Actor",
     "Developer",
+    "Conan Exiles",
+    "Helldivers 2",
+    "Survive the Nights",
     "They/Them",
     "He/Him",
     "She/Her",
@@ -37,10 +40,11 @@
     "2nd In Command",
     "Giggle Fairy Spawn",
     "Moderator",
-    "Nexus Bot",
     "Mod Tester",
     "Modder",
     "Server Player",
+    "Conan Exiles",
+    "Helldivers 2",
     "Streamer",
     "Survivor"
   ],
@@ -118,7 +122,7 @@
         ]
       },
       {
-        "title": "Tell me about yourself.",
+        "title": "Tell me about yourself!",
         "single_select": false,
         "required": false,
         "in_onboarding": true,
@@ -189,12 +193,48 @@
         ]
       },
       {
-        "title": "May I interest you in joining me on these adventures?",
+        "title": "Do you play any of these or join these adventures?",
         "single_select": false,
         "required": false,
         "in_onboarding": true,
         "type": 0,
         "options": [
+          {
+            "title": "Helldivers 2",
+            "description": "Get access to Helldivers 2 LFG and chat channels",
+            "emoji_name": "\ud83d\udca5",
+            "role_names": [
+              "Helldivers 2"
+            ],
+            "channel_refs": [
+              "HELLDIVERS 2/looking-for-group",
+              "HELLDIVERS 2/helldivers-chat"
+            ]
+          },
+          {
+            "title": "Survive the Nights",
+            "description": "Follow and chat in Survive the Nights spaces",
+            "emoji_name": "\ud83c\udf19",
+            "role_names": [
+              "Survive the Nights"
+            ],
+            "channel_refs": [
+              "SURVIVE THE NIGHTS GAME/agf-tips"
+            ]
+          },
+          {
+            "title": "Conan Exiles",
+            "description": "Get access to Conan Exiles LFG, chat, and mod support",
+            "emoji_name": "\ud83d\udcaa",
+            "role_names": [
+              "Conan Exiles"
+            ],
+            "channel_refs": [
+              "CONAN EXILES/looking-for-group",
+              "CONAN EXILES/conan-chat",
+              "CONAN EXILES/mod-support"
+            ]
+          },
           {
             "title": "Server Player",
             "description": "Follow AGF server spaces and join sessions",
@@ -221,31 +261,31 @@
         ]
       },
       {
-        "title": "Pronouns",
+        "title": "How may I address you?",
         "single_select": false,
         "required": false,
         "in_onboarding": true,
         "type": 0,
         "options": [
           {
-            "title": "They/Them/Theirs/Themself",
-            "description": "My pronouns are They/Them/Theirs/Themself",
-            "emoji_name": "\ud83d\udfe3",
-            "role_names": [ "They/Them" ],
+            "title": "She/Her/Hers/Herself",
+            "description": "My pronouns are She/Her/Hers/Herself",
+            "emoji_name": "\ud83d\udd35",
+            "role_names": [ "She/Her" ],
             "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
           },
           {
             "title": "He/Him/His/Himself",
             "description": "My pronouns are He/Him/His/Himself",
-            "emoji_name": "\ud83d\udd35",
+            "emoji_name": "\ud83d\udfe2",
             "role_names": [ "He/Him" ],
             "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
           },
           {
-            "title": "She/Her/Hers/Herself",
-            "description": "My pronouns are She/Her/Hers/Herself",
-            "emoji_name": "\ud83c\udf38",
-            "role_names": [ "She/Her" ],
+            "title": "They/Them/Theirs/Themself",
+            "description": "My pronouns are They/Them/Theirs/Themself",
+            "emoji_name": "\ud83d\udfe3",
+            "role_names": [ "They/Them" ],
             "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
           },
           {
@@ -279,22 +319,15 @@
           {
             "title": "Ey/Em/Eir/Emself",
             "description": "My pronouns are Ey/Em/Eir/Emself",
-            "emoji_name": "\ud83d\udfe3",
+            "emoji_name": "\u26ab",
             "role_names": [ "Ey/Em" ],
             "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
           },
           {
             "title": "It/Its/Its/Itself",
             "description": "My pronouns are It/Its/Its/Itself",
-            "emoji_name": "\u26ab",
-            "role_names": [ "It/Its" ],
-            "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
-          },
-          {
-            "title": "Any/All Pronouns",
-            "description": "Any/All pronouns are okay for me",
             "emoji_name": "\u26aa",
-            "role_names": [ "Any/All Pronouns" ],
+            "role_names": [ "It/Its" ],
             "channel_refs": [ "ENTRANCE PORTAL/roles-selection" ]
           }
         ]
@@ -346,7 +379,7 @@
           "permissions": {
             "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
             "Survivor": { "view": "allow", "send": "deny" },
-            "Nexus Bot": { "view": "allow", "send": "allow" },
+            "AGF-ServerBot": { "view": "allow", "send": "allow" },
             "Moderator": { "view": "allow", "send": "allow" }
           }
         },
@@ -467,7 +500,7 @@
           "permissions": {
             "@everyone": { "view": "allow", "send": "deny", "react": "allow" },
             "Survivor": { "view": "allow", "send": "deny" },
-            "Nexus Bot": { "view": "allow", "send": "allow", "react": "allow" },
+            "AGF-ServerBot": { "view": "allow", "send": "allow", "react": "allow" },
             "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
           }
         },
@@ -580,12 +613,185 @@
       ]
     },
     {
+      "name": "CONAN EXILES",
+      "aliases": [
+        "CONAN"
+      ],
+      "channels": [
+        {
+          "name": "looking-for-group",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Conan Exiles": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "conan-chat",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Conan Exiles": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "mod-support",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Conan Exiles": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "conan-voice",
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "deny", "connect": "deny" },
+            "Conan Exiles": { "view": "allow", "connect": "allow" },
+            "The Giggle Fairy": { "view": "allow", "connect": "allow" },
+            "2nd In Command": { "view": "allow", "connect": "allow" },
+            "Moderator": { "view": "allow", "connect": "allow" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "HELLDIVERS 2",
+      "aliases": [
+        "HELLDIVERS",
+        "Helldivers 2"
+      ],
+      "channels": [
+        {
+          "name": "giggle-battle-recommendations",
+          "aliases": [
+            "giggle-battle-recommen..."
+          ],
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Helldivers 2": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "chat",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Helldivers 2": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "rankings",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Helldivers 2": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "looking-for-group",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Helldivers 2": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "helldivers-chat",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Helldivers 2": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
+        {
+          "name": "helldivers-voice",
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "deny", "connect": "deny" },
+            "Helldivers 2": { "view": "allow", "connect": "allow" },
+            "The Giggle Fairy": { "view": "allow", "connect": "allow" },
+            "2nd In Command": { "view": "allow", "connect": "allow" },
+            "Moderator": { "view": "allow", "connect": "allow" }
+          }
+        },
+        {
+          "name": "giggle-squad",
+          "aliases": [
+            "Giggle Squad"
+          ],
+          "type": "voice",
+          "permissions": {
+            "@everyone": { "view": "deny", "connect": "deny" },
+            "Helldivers 2": { "view": "allow", "connect": "allow" },
+            "The Giggle Fairy": { "view": "allow", "connect": "allow" },
+            "2nd In Command": { "view": "allow", "connect": "allow" },
+            "Moderator": { "view": "allow", "connect": "allow" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "SURVIVE THE NIGHTS GAME",
+      "aliases": [
+        "Survive the Nights Game"
+      ],
+      "channels": [
+        {
+          "name": "agf-tips",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        }
+      ]
+    },
+    {
       "name": "STREAM LOUNGE",
       "aliases": [
         "5. TWITCH",
         "TWITCH & STREAMING"
       ],
       "channels": [
+        {
+          "name": "streamer-auto-live-setup",
+          "type": "text",
+          "permissions": {
+            "@everyone": { "view": "deny", "send": "deny", "react": "deny" },
+            "Streamer": { "view": "allow", "send": "allow", "react": "allow" },
+            "The Giggle Fairy": { "view": "allow", "send": "allow", "react": "allow" },
+            "2nd In Command": { "view": "allow", "send": "allow", "react": "allow" },
+            "Moderator": { "view": "allow", "send": "allow", "react": "allow" }
+          }
+        },
         {
           "name": "promote-your-stream",
           "type": "text",

@@ -1,0 +1,502 @@
+{
+  "AGF-4Modders-10IngredientSlots": {
+    "folder": "AGF-4Modders-10IngredientSlots-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-4Modders-AntiCM": {
+    "folder": "AGF-4Modders-AntiCM-v0.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.0.2"
+  },
+  "AGF-4Modders-CustomWindowEnteringDuration": {
+    "folder": "AGF-4Modders-CustomWindowEnteringDuration-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-4Modders-ESCWindowPlus": {
+    "folder": "AGF-4Modders-ESCWindowPlus-v0.3.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.3.2"
+  },
+  "AGF-4Modders-Fix4DestroyBiomeBadge": {
+    "folder": "AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-4Modders-Fix4RemoveItems": {
+    "folder": "AGF-4Modders-Fix4RemoveItems-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-4Modders-SkillPointCap": {
+    "folder": "AGF-4Modders-SkillPointCap-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-BackpackPlus-060Slots": {
+    "folder": "AGF-BackpackPlus-060Slots-v3.2.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.2.3"
+  },
+  "AGF-BackpackPlus-072Slots": {
+    "folder": "AGF-BackpackPlus-072Slots-v3.2.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.2.3"
+  },
+  "AGF-BackpackPlus-084Slots": {
+    "folder": "AGF-BackpackPlus-084Slots-v3.2.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.2.3"
+  },
+  "AGF-BackpackPlus-119Slots": {
+    "folder": "AGF-BackpackPlus-119Slots-v1.2.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.2.3"
+  },
+  "AGF-HUDPlus-1Main": {
+    "folder": "AGF-HUDPlus-1Main-v6.0.0",
+    "recorded_at": "2026-06-15T03:01:34",
+    "version": "6.0.0"
+  },
+  "AGF-HUDPlus-BMCounter": {
+    "folder": "AGF-HUDPlus-BMCounter-v2.1.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.1.3"
+  },
+  "AGF-HUDPlus-HealthBars": {
+    "folder": "AGF-HUDPlus-HealthBars-v5.0.0",
+    "recorded_at": "2026-06-15T03:01:34",
+    "version": "5.0.0"
+  },
+  "AGF-HUDPlus-PurpleBook": {
+    "folder": "AGF-HUDPlus-PurpleBook-v2.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.1"
+  },
+  "AGF-HUDPlus-RemoveEnteringPopUp": {
+    "folder": "AGF-HUDPlus-RemoveEnteringPopUp-v2.0.0",
+    "recorded_at": "2026-06-15T03:01:34",
+    "version": "2.0.0"
+  },
+  "AGF-HUDPluszOther-RemoveWrittentormAlerts": {
+    "folder": "AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.1"
+  },
+  "AGF-HUDPluszOther-SmallerInteractionPrompt": {
+    "folder": "AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-HUDPluszOther-TinyBuffsPopUp": {
+    "folder": "AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-HUDPluszOther-Weekday": {
+    "folder": "AGF-HUDPluszOther-Weekday-v3.0.0",
+    "recorded_at": "2026-06-15T03:01:34",
+    "version": "3.0.0"
+  },
+  "AGF-NoEAC-AudioOptionsPlus": {
+    "folder": "AGF-NoEAC-AudioOptionsPlus-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-NoEAC-AutoRun": {
+    "folder": "AGF-NoEAC-AutoRun-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-NoEAC-ConsoleOpacityMod": {
+    "folder": "AGF-NoEAC-ConsoleOpacityMod-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-NoEAC-CosmeticLockIcon": {
+    "folder": "AGF-NoEAC-CosmeticLockIcon-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-NoEAC-EnhancedAGF": {
+    "folder": "AGF-NoEAC-EnhancedAGF-v3.2.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.2.1"
+  },
+  "AGF-NoEAC-ExpandedInteractionPrompts": {
+    "folder": "AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.1.1"
+  },
+  "AGF-NoEAC-FlightAssist": {
+    "folder": "AGF-NoEAC-FlightAssist-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-NoEAC-GlobalStormTracker": {
+    "folder": "AGF-NoEAC-GlobalStormTracker-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-NoEAC-ItemTypeIconColor": {
+    "folder": "AGF-NoEAC-ItemTypeIconColor-v1.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.3"
+  },
+  "AGF-NoEAC-LockableWorkstations": {
+    "folder": "AGF-NoEAC-LockableWorkstations-v1.2.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.2.1"
+  },
+  "AGF-NoEAC-OpenAllButton": {
+    "folder": "AGF-NoEAC-OpenAllButton-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-NoEAC-ScreamerAlert": {
+    "folder": "AGF-NoEAC-ScreamerAlert-v1.2.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.2.1"
+  },
+  "AGF-NoEAC-SortingBox": {
+    "folder": "AGF-NoEAC-SortingBox-v1.0.6",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.6"
+  },
+  "AGF-NoEAC-TerrainLeveler": {
+    "folder": "AGF-NoEAC-TerrainLeveler-v0.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.0.2"
+  },
+  "AGF-NoEAC-Toolbelt12Slots": {
+    "folder": "AGF-NoEAC-Toolbelt12Slots-v1.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.3"
+  },
+  "AGF-NoEAC-VisualEntityTracker": {
+    "folder": "AGF-NoEAC-VisualEntityTracker-v0.1.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.1.2"
+  },
+  "AGF-PurpleBookGenerator": {
+    "folder": "AGF-PurpleBookGenerator-v0.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.0.1"
+  },
+  "AGF-VP-AdminModdingSupport": {
+    "folder": "AGF-VP-AdminModdingSupport-v1.0.5",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.5"
+  },
+  "AGF-VP-AlternativeRecipes": {
+    "folder": "AGF-VP-AlternativeRecipes-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-VP-AmmoDisassembly": {
+    "folder": "AGF-VP-AmmoDisassembly-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-VP-ApiaryPlus": {
+    "folder": "AGF-VP-ApiaryPlus-v1.0.4",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.4"
+  },
+  "AGF-VP-ArcheryFeathersChange": {
+    "folder": "AGF-VP-ArcheryFeathersChange-v1.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.3"
+  },
+  "AGF-VP-ArmorHarvestMods": {
+    "folder": "AGF-VP-ArmorHarvestMods-v2.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.1.1"
+  },
+  "AGF-VP-AutomobilesRespawn": {
+    "folder": "AGF-VP-AutomobilesRespawn-v3.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.1.1"
+  },
+  "AGF-VP-BedrollPlus": {
+    "folder": "AGF-VP-BedrollPlus-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-BetterEggChance": {
+    "folder": "AGF-VP-BetterEggChance-v2.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.1.1"
+  },
+  "AGF-VP-BreakItGetIt": {
+    "folder": "AGF-VP-BreakItGetIt-v1.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.3"
+  },
+  "AGF-VP-BuyTraderVendingMachines": {
+    "folder": "AGF-VP-BuyTraderVendingMachines-v3.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.3"
+  },
+  "AGF-VP-CraftSewingKits": {
+    "folder": "AGF-VP-CraftSewingKits-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-CraftStackEngBattCells": {
+    "folder": "AGF-VP-CraftStackEngBattCells-v3.3.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.3.1"
+  },
+  "AGF-VP-CraftVitamins": {
+    "folder": "AGF-VP-CraftVitamins-v1.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.1.1"
+  },
+  "AGF-VP-DecorationBlock": {
+    "folder": "AGF-VP-DecorationBlock-v3.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.3"
+  },
+  "AGF-VP-DewsPlus": {
+    "folder": "AGF-VP-DewsPlus-v2.4.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.4.3"
+  },
+  "AGF-VP-DoorsPlus": {
+    "folder": "AGF-VP-DoorsPlus-v3.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.1"
+  },
+  "AGF-VP-DrinkableAcid": {
+    "folder": "AGF-VP-DrinkableAcid-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-DyesPlus": {
+    "folder": "AGF-VP-DyesPlus-v3.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.1.1"
+  },
+  "AGF-VP-FarmingPlus": {
+    "folder": "AGF-VP-FarmingPlus-v5.6.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "5.6.3"
+  },
+  "AGF-VP-FloraHarvester": {
+    "folder": "AGF-VP-FloraHarvester-v2.3.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.3.1"
+  },
+  "AGF-VP-FuelBurnPlus": {
+    "folder": "AGF-VP-FuelBurnPlus-v2.3.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.3.1"
+  },
+  "AGF-VP-MasterTool": {
+    "folder": "AGF-VP-MasterTool-v6.1.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "6.1.2"
+  },
+  "AGF-VP-MaxLevel500": {
+    "folder": "AGF-VP-MaxLevel500-v2.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.3"
+  },
+  "AGF-VP-MedicalTreatOthersTreatedInjuries": {
+    "folder": "AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.0.2"
+  },
+  "AGF-VP-MedicallyTreatOthers": {
+    "folder": "AGF-VP-MedicallyTreatOthers-v0.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "0.0.2"
+  },
+  "AGF-VP-MedicationNoInsectSlow": {
+    "folder": "AGF-VP-MedicationNoInsectSlow-v1.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.1.1"
+  },
+  "AGF-VP-MiningPlus": {
+    "folder": "AGF-VP-MiningPlus-v1.2.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.2.1"
+  },
+  "AGF-VP-Mod988": {
+    "folder": "AGF-VP-Mod988-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-ModBundling": {
+    "folder": "AGF-VP-ModBundling-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-VP-ModSlotsPlus": {
+    "folder": "AGF-VP-ModSlotsPlus-v3.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.2"
+  },
+  "AGF-VP-PaintbrushPlus": {
+    "folder": "AGF-VP-PaintbrushPlus-v2.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.1.1"
+  },
+  "AGF-VP-PickupLanternsPlus": {
+    "folder": "AGF-VP-PickupLanternsPlus-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-PlayerResetQuests": {
+    "folder": "AGF-VP-PlayerResetQuests-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-PlayerVendingMachinesPlus": {
+    "folder": "AGF-VP-PlayerVendingMachinesPlus-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-PumpkinsPlus": {
+    "folder": "AGF-VP-PumpkinsPlus-v2.0.5",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.5"
+  },
+  "AGF-VP-QuickStart": {
+    "folder": "AGF-VP-QuickStart-v2.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.1"
+  },
+  "AGF-VP-RebundleBundles": {
+    "folder": "AGF-VP-RebundleBundles-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-RecipeRottingFlesh": {
+    "folder": "AGF-VP-RecipeRottingFlesh-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-RenamesAlphabeticalSort": {
+    "folder": "AGF-VP-RenamesAlphabeticalSort-v2.0.5",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.5"
+  },
+  "AGF-VP-RestorePowerAnyTime": {
+    "folder": "AGF-VP-RestorePowerAnyTime-v1.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.3"
+  },
+  "AGF-VP-ScrapBatts4Acid": {
+    "folder": "AGF-VP-ScrapBatts4Acid-v1.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.1.1"
+  },
+  "AGF-VP-ScrapEquipmentFaster": {
+    "folder": "AGF-VP-ScrapEquipmentFaster-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-SimplifiedStacks": {
+    "folder": "AGF-VP-SimplifiedStacks-v1.2.4",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.2.4"
+  },
+  "AGF-VP-SmeltingPlus": {
+    "folder": "AGF-VP-SmeltingPlus-v2.4.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.4.1"
+  },
+  "AGF-VP-StayLongerAnimalCorpse": {
+    "folder": "AGF-VP-StayLongerAnimalCorpse-v2.0.3",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.3"
+  },
+  "AGF-VP-StayLongerPlayerBackpack": {
+    "folder": "AGF-VP-StayLongerPlayerBackpack-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-StayLongerZombieLoot": {
+    "folder": "AGF-VP-StayLongerZombieLoot-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-TacticalRiflePlus": {
+    "folder": "AGF-VP-TacticalRiflePlus-v2.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.1.1"
+  },
+  "AGF-VP-TraderAlwaysOpen": {
+    "folder": "AGF-VP-TraderAlwaysOpen-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-TraderCostlierPrices": {
+    "folder": "AGF-VP-TraderCostlierPrices-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-TraderSellsMoreBooks": {
+    "folder": "AGF-VP-TraderSellsMoreBooks-v3.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.1"
+  },
+  "AGF-VP-TradersRestockEvery2Days": {
+    "folder": "AGF-VP-TradersRestockEvery2Days-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-TreesPlus": {
+    "folder": "AGF-VP-TreesPlus-v3.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.2"
+  },
+  "AGF-VP-VehiclePerformance": {
+    "folder": "AGF-VP-VehiclePerformance-v1.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.2"
+  },
+  "AGF-VP-VehicleStoragePlus": {
+    "folder": "AGF-VP-VehicleStoragePlus-v2.1.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.1.2"
+  },
+  "AGF-VP-VehiclesExtraSeating": {
+    "folder": "AGF-VP-VehiclesExtraSeating-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-WriteStoryOnCrate": {
+    "folder": "AGF-VP-WriteStoryOnCrate-v1.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "1.0.1"
+  },
+  "AGF-VP-XPDeathPenaltyReduction": {
+    "folder": "AGF-VP-XPDeathPenaltyReduction-v2.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.1"
+  },
+  "AGF-VP-ZombieBiomeSpawning": {
+    "folder": "AGF-VP-ZombieBiomeSpawning-v3.0.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "3.0.1"
+  },
+  "AGF-VP-ZombieCorpseLeaveQuicker": {
+    "folder": "AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "AGF-VP-ZombieLargerHordes": {
+    "folder": "AGF-VP-ZombieLargerHordes-v2.0.2",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "2.0.2"
+  },
+  "zzzAGF-Special-Compatibilities": {
+    "folder": "zzzAGF-Special-Compatibilities-v4.1.1",
+    "recorded_at": "2026-06-15T02:20:47",
+    "version": "4.1.1"
+  }
+}

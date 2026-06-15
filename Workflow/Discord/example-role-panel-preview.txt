@@ -1,0 +1,18 @@
+[Preview Only - No Role Assignment Active]
+
+Tell me about yourself!
+React with an emoji below that matches you.
+
+🕹️  Streamer
+⛏️  Modder
+💻  Developer
+✍️  Writer
+✂️  Editor
+🎨  Artist
+🎵  Musician
+📷  Photographer
+🎙️  Voice Actor
+🎬  Content Creator
+
+This is just a preview post in #bot-updates for layout/content testing.
+No roles are being assigned from this message yet.

@@ -1,0 +1,76 @@
+{
+  "guild_id": 818567847436877825,
+  "channel_id": 1487266037182496880,
+  "message_id": 1509028854961012867,
+  "panel_title": "Tell me about yourself!",
+  "panel_description": "I'm excited to learn about you! Let me know by selecting options below that fit you.",
+  "placeholder": "Choose roles",
+  "min_values": 0,
+  "max_values": 5,
+  "custom_id": "agf_role_selector",
+  "enable_select_menu": false,
+  "enable_buttons": false,
+  "enable_reactions": true,
+  "role_options": [
+    {
+      "role_id": 1490195323778371674,
+      "label": "Streamer",
+      "description": "Creator identity role",
+      "emoji": "\ud83d\udd79\ufe0f"
+    },
+    {
+      "role_id": 1497374036269731860,
+      "label": "Modder",
+      "description": "Creator identity role",
+      "emoji": "\u26cf\ufe0f"
+    },
+    {
+      "role_id": 1497953089309769768,
+      "label": "Developer",
+      "description": "Creator identity role",
+      "emoji": "\ud83d\udcbb"
+    },
+    {
+      "role_id": 1497953078412972203,
+      "label": "Writer",
+      "description": "Creator identity role",
+      "emoji": "\u270d\ufe0f"
+    },
+    {
+      "role_id": 1497953083945255023,
+      "label": "Editor",
+      "description": "Creator identity role",
+      "emoji": "\u2702\ufe0f"
+    },
+    {
+      "role_id": 1497953080124375082,
+      "label": "Artist",
+      "description": "Creator identity role",
+      "emoji": "\ud83c\udfa8"
+    },
+    {
+      "role_id": 1497953082330583120,
+      "label": "Musician",
+      "description": "Creator identity role",
+      "emoji": "\ud83c\udfb5"
+    },
+    {
+      "role_id": 1497953086973411558,
+      "label": "Photographer",
+      "description": "Creator identity role",
+      "emoji": "\ud83d\udcf7"
+    },
+    {
+      "role_id": 1497953088152014958,
+      "label": "Voice Actor",
+      "description": "Creator identity role",
+      "emoji": "\ud83c\udf99\ufe0f"
+    },
+    {
+      "role_id": 1497953085710926047,
+      "label": "Content Creator",
+      "description": "Creator identity role",
+      "emoji": "\ud83c\udfac"
+    }
+  ]
+}

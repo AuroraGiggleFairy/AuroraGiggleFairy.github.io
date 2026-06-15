@@ -1,13 +1,15 @@
-#   GigglePack v2.0.1 - *May 17, 2026 6:07pm*
+#   GigglePack v0.1.0 - *June 15, 2026 3:45am*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +0 new, ~2 updated, =0 renamed, -0 removed**
+###  **Change summary: +4 new, ~0 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - None
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (new: v6.0.0)
+  - [AGF-HUDPlus-HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip) (new: v5.0.0)
+  - [AGF-HUDPlus-RemoveEnteringPopUp](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip) (new: v2.0.0)
+  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (new: v3.0.1)
 - **Updated existing mods:**
-  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (v2.1.1 -> v2.1.2)
-  - [AGF-VP-FarmingPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FarmingPlus.zip) (v5.6.2 -> v5.6.3)
+  - None
 - **Renamed mods:**
   - None
 - **Removed mods:**

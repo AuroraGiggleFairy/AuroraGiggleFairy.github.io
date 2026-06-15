@@ -1,5 +1,5 @@
 # AGF-VP-MedicalTreatOthersTreatedInjuries
-7d2d Version 2  
+7d2d Version 3
 **Version:** 0.0.2  
 [Download](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MedicalTreatOthersTreatedInjuries.zip)
 
@@ -75,7 +75,7 @@
 ---
 
 ## 5. Compatibility
-- Last 7d2d Version tested on: 2.6
+- Last 7d2d Version tested on: 3.0
 - "AGF-VP-MedicalTreatOthersTreatedInjuries" is SAFE to install on an existing game.
 - "AGF-VP-MedicalTreatOthersTreatedInjuries" is TBD to remove from an existing game.
 - Unique Details: TBD

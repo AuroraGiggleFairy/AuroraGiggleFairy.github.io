@@ -1,5 +1,0 @@
-<zzzAGF-Compatibilities>
-	<!-- IZY_MMVMV2 -->
-	<remove xpath="/recipes/recipe[@name='IZYmodPistolHoldstyle01']"/>
-	<remove xpath="/recipes/recipe[@name='IZYmodPistolHoldstyle02']"/>
-</zzzAGF-Compatibilities>

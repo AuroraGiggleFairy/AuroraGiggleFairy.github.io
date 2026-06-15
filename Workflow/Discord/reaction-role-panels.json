@@ -1,0 +1,165 @@
+{
+  "guild_id": 818567847436877825,
+  "channel_id": 1490193824746569839,
+  "live_announcement_channel_id": 0,
+  "live_announcement_channel_name": "promote-your-stream",
+  "streamer_role_name": "Streamer",
+  "stream_check_interval_seconds": 120,
+  "stream_grace_seconds": 60,
+  "message_ids": [
+    1509040334116749323,
+    1509040356501753876,
+    1509040363678208021,
+    1509040370208604280
+  ],
+  "panels": [
+    {
+      "title": "Tell me about yourself!",
+      "description": "I am excited to learn about you! Let me know by selecting options below that fit you.",
+      "note": "",
+      "roles": [
+        {
+          "emoji": "\ud83c\udfa5",
+          "role_name": "Streamer",
+          "label": "Streamer"
+        },
+        {
+          "emoji": "\u2692\ufe0f",
+          "role_name": "Modder",
+          "label": "Modder"
+        },
+        {
+          "emoji": "\ud83d\udcbb",
+          "role_name": "Developer",
+          "label": "Developer"
+        },
+        {
+          "emoji": "\u270d\ufe0f",
+          "role_name": "Writer",
+          "label": "Writer"
+        },
+        {
+          "emoji": "\u2702\ufe0f",
+          "role_name": "Editor",
+          "label": "Editor"
+        },
+        {
+          "emoji": "\ud83c\udfa8",
+          "role_name": "Artist",
+          "label": "Artist"
+        },
+        {
+          "emoji": "\ud83c\udfb5",
+          "role_name": "Musician",
+          "label": "Musician"
+        },
+        {
+          "emoji": "\ud83d\udcf7",
+          "role_name": "Photographer",
+          "label": "Photographer"
+        },
+        {
+          "emoji": "\ud83c\udf99\ufe0f",
+          "role_name": "Voice Actor",
+          "label": "Voice Actor"
+        },
+        {
+          "emoji": "\ud83c\udfac",
+          "role_name": "Content Creator",
+          "label": "Content Creator"
+        }
+      ]
+    },
+    {
+      "title": "Do you play any of these?",
+      "description": "React below to opt into game-specific pings and channels. You can select multiple.",
+      "note": "All of us are 7 Days to Die Survivors here!",
+      "roles": [
+        {
+          "emoji": "\ud83d\udca5",
+          "role_name": "Helldivers 2",
+          "label": "Helldivers 2"
+        },
+        {
+          "emoji": "\ud83c\udf19",
+          "role_name": "Survive the Nights",
+          "label": "Survive the Nights"
+        },
+        {
+          "emoji": "\ud83d\udcaa",
+          "role_name": "Conan Exiles",
+          "label": "Conan Exiles"
+        }
+      ]
+    },
+    {
+      "title": "May I interest you in joining me on these adventures?",
+      "description": "Ready for adventure? React below to join in. You can pick multiple and change them anytime.",
+      "note": "",
+      "roles": [
+        {
+          "emoji": "\ud83c\udfae",
+          "role_name": "Server Player",
+          "label": "Server Player"
+        },
+        {
+          "emoji": "\ud83d\udd2c",
+          "role_name": "Mod Tester",
+          "label": "Mod Tester"
+        }
+      ]
+    },
+    {
+      "title": "How may I address you?",
+      "description": "React below to choose your pronouns.",
+      "note": "If your pronouns are missing, please let us know in #pronoun-requests.",
+      "roles": [
+        {
+          "emoji": "\ud83d\udd35",
+          "role_name": "She/Her",
+          "label": "She/Her"
+        },
+        {
+          "emoji": "\ud83d\udfe2",
+          "role_name": "He/Him",
+          "label": "He/Him"
+        },
+        {
+          "emoji": "\ud83d\udfe3",
+          "role_name": "They/Them",
+          "label": "They/Them"
+        },
+        {
+          "emoji": "\ud83d\udd34",
+          "role_name": "Ze/Hir",
+          "label": "Ze/Hir"
+        },
+        {
+          "emoji": "\ud83d\udfe0",
+          "role_name": "Xe/Xem",
+          "label": "Xe/Xem"
+        },
+        {
+          "emoji": "\ud83d\udfe1",
+          "role_name": "Ver/Vir",
+          "label": "Ver/Vir"
+        },
+        {
+          "emoji": "\ud83d\udfe4",
+          "role_name": "Te/Tem",
+          "label": "Te/Tem"
+        },
+        {
+          "emoji": "\u26ab",
+          "role_name": "Ey/Em",
+          "label": "Ey/Em"
+        },
+        {
+          "emoji": "\u26aa",
+          "role_name": "It/Its",
+          "label": "It/Its"
+        }
+      ]
+    }
+  ]
+}

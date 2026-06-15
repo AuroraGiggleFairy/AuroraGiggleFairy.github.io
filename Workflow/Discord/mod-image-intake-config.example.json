@@ -1,0 +1,9 @@
+{
+  "guild_id": 818567847436877825,
+  "forum_channel_id": 0,
+  "forum_channel_name": "mod-image-intake",
+  "tracker_csv": "Workflow/Discord/mod-image-intake-tracker.csv",
+  "seed_csv": "Workflow/Discord/mod-image-intake-thread-seed.csv",
+  "tag_needed": "Needed",
+  "tag_submitted": "Submitted"
+}

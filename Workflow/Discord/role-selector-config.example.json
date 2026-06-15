@@ -1,0 +1,76 @@
+{
+  "guild_id": 123456789012345678,
+  "channel_id": 123456789012345678,
+  "message_id": 0,
+  "panel_title": "Pick Your Roles",
+  "panel_description": "Select the alerts and channels you want access to.",
+  "placeholder": "Choose your roles",
+  "min_values": 0,
+  "max_values": 4,
+  "custom_id": "agf_role_selector",
+  "enable_select_menu": false,
+  "enable_buttons": true,
+  "enable_reactions": true,
+  "role_options": [
+    {
+      "role_id": 123456789012345678,
+      "label": "Streamer",
+      "description": "Creator identity role",
+      "emoji": "🕹️"
+    },
+    {
+      "role_id": 234567890123456789,
+      "label": "Modder",
+      "description": "Creator identity role",
+      "emoji": "⛏️"
+    },
+    {
+      "role_id": 345678901234567890,
+      "label": "Developer",
+      "description": "Creator identity role",
+      "emoji": "💻"
+    },
+    {
+      "role_id": 456789012345678901,
+      "label": "Writer",
+      "description": "Creator identity role",
+      "emoji": "✍️"
+    },
+    {
+      "role_id": 567890123456789012,
+      "label": "Editor",
+      "description": "Creator identity role",
+      "emoji": "✂️"
+    },
+    {
+      "role_id": 678901234567890123,
+      "label": "Artist",
+      "description": "Creator identity role",
+      "emoji": "🎨"
+    },
+    {
+      "role_id": 789012345678901234,
+      "label": "Musician",
+      "description": "Creator identity role",
+      "emoji": "🎵"
+    },
+    {
+      "role_id": 890123456789012345,
+      "label": "Photographer",
+      "description": "Creator identity role",
+      "emoji": "📷"
+    },
+    {
+      "role_id": 901234567890123456,
+      "label": "Voice Actor",
+      "description": "Creator identity role",
+      "emoji": "🎙️"
+    },
+    {
+      "role_id": 912345678901234567,
+      "label": "Content Creator",
+      "description": "Creator identity role",
+      "emoji": "🎬"
+    }
+  ]
+}

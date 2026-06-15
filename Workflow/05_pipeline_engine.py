@@ -84,8 +84,12 @@ RUN_LOCK_PATH = os.path.join(VS_CODE_ROOT, ".script-main.lock")
 RUN_MANIFEST_MAX_FILES = 20
 GAME_REMOVALS_QUARANTINE_DIR = os.path.join(VS_CODE_ROOT, "_Quarantine-GameRemovals")
 TRANSACTION_ROLLBACK_DIR = os.path.join(VS_CODE_ROOT, "_TransactionRollback")
+DRAFT_PROMOTION_BASELINE_PATH = os.path.join(VS_CODE_ROOT, "Workflow", "draft-promotion-baseline.json")
 GIGGLEPACK_CANONICAL_ZIP = "00_GigglePack_All.zip"
 GIGGLEPACK_VERSIONED_ZIP_PREFIX = "AGF-GigglePack-v"
+LEGACY_FINAL_GIGGLEPACK_ZIP = "AGF-7d2d-v2.6-GigglePack-Final.zip"
+LEGACY_FINAL_CATEGORY_KEY = "AGF 7d2d v2.6 GigglePack FINAL"
+GIGGLEPACK_BASELINE_VERSION = "0.1.0"
 GIGGLEPACK_MAJOR_BUMP_MARKER = "gigglepack-major-bump.txt"
 DISCORD_WEBHOOK_ENV_VAR = "AGF_DISCORD_WEBHOOK_URL"
 GIGGLEPACK_V100_FOCUS_MODS = (
@@ -666,6 +670,62 @@ def parse_modinfo(modinfo_path: str, fallback_name: str) -> Tuple[str, str]:
         return mod_name, mod_version
     except Exception:
         return fallback_name, "0.0.0"
+
+
+def load_draft_promotion_baseline(log: "Logger") -> Dict[str, Dict[str, object]]:
+    if not os.path.exists(DRAFT_PROMOTION_BASELINE_PATH):
+        return {}
+
+    try:
+        with open(DRAFT_PROMOTION_BASELINE_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            return data
+        log.warn("Draft promotion baseline file is invalid; starting with empty baseline")
+        return {}
+    except Exception as ex:
+        log.warn(f"Could not read draft promotion baseline file: {ex}")
+        return {}
+
+
+def save_draft_promotion_baseline(
+    baseline: Dict[str, Dict[str, object]],
+    dry_run: bool,
+    log: "Logger",
+) -> None:
+    if dry_run:
+        log.info(f"[DRYRUN] Would update draft promotion baseline: {DRAFT_PROMOTION_BASELINE_PATH}")
+        return
+
+    try:
+        os.makedirs(os.path.dirname(DRAFT_PROMOTION_BASELINE_PATH), exist_ok=True)
+        with open(DRAFT_PROMOTION_BASELINE_PATH, "w", encoding="utf-8") as f:
+            json.dump(baseline, f, indent=2, sort_keys=True)
+    except Exception as ex:
+        log.warn(f"Could not write draft promotion baseline file: {ex}")
+
+
+def refresh_draft_promotion_baseline_from_lane(dry_run: bool, log: "Logger") -> None:
+    """Capture current Draft lane versions as the promotion baseline."""
+    draft_folders = scan_mod_folders(IN_PROGRESS)
+    now_iso = dt.datetime.now().isoformat(timespec="seconds")
+    baseline: Dict[str, Dict[str, object]] = {}
+
+    for draft_folder, draft_path in sorted(draft_folders.items()):
+        base_name = get_base_mod_name(draft_folder)
+        draft_ver = get_modinfo_version(draft_path)
+        if not draft_ver:
+            continue
+        baseline[base_name] = {
+            "folder": draft_folder,
+            "version": draft_ver,
+            "recorded_at": now_iso,
+        }
+
+    save_draft_promotion_baseline(baseline, dry_run, log)
+    log.info(
+        f"Draft promotion baseline refreshed from Draft lane: {len(baseline)} mod(s) recorded"
+    )
 
 
 def get_modinfo_display_name(modinfo_path: str, fallback_name: str) -> str:
@@ -1647,6 +1707,46 @@ def sync_game_and_draft(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     return mods_pulled_from_game
 
 
+def reset_activebuild_to_draft(dry_run: bool, log: Logger) -> None:
+    """Move all ActiveBuild AGF mods into Draft and reset Draft promotion baseline."""
+    log.info("Lane reset: move all ActiveBuild AGF mods to Draft")
+
+    staging_folders = scan_mod_folders(STAGING)
+    if not staging_folders:
+        log.info("Lane reset: no ActiveBuild AGF mods found to move")
+        return
+
+    draft_folders = scan_mod_folders(IN_PROGRESS)
+    draft_by_base: Dict[str, Tuple[str, str]] = {
+        get_base_mod_name(folder): (folder, path)
+        for folder, path in draft_folders.items()
+    }
+
+    moved_count = 0
+    for st_folder in sorted(staging_folders.keys()):
+        st_path = staging_folders[st_folder]
+        base_name = get_base_mod_name(st_folder)
+
+        existing_draft = draft_by_base.get(base_name)
+        if existing_draft:
+            draft_folder, draft_path = existing_draft
+            if maybe_remove_dir(draft_path, dry_run, log):
+                log.info(
+                    f"Lane reset: removed existing Draft copy {draft_folder} before moving {st_folder}"
+                )
+            else:
+                continue
+
+        dest = os.path.join(IN_PROGRESS, st_folder)
+        if maybe_move(st_path, dest, dry_run, log):
+            moved_count += 1
+            log.stats.moved_to_in_progress += 1
+            log.info(f"Lane reset move: {st_folder} ActiveBuild -> Draft")
+
+    refresh_draft_promotion_baseline_from_lane(dry_run, log)
+    log.info(f"Lane reset complete: moved {moved_count} mod(s) from ActiveBuild to Draft")
+
+
 def enforce_staging_major_policy(dry_run: bool, log: Logger) -> None:
     """Ensure ActiveBuild only contains major-version >= 1 mods.
 
@@ -1727,15 +1827,15 @@ def enforce_staging_major_policy(dry_run: bool, log: Logger) -> None:
 
 
 def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
-    """Ensure ActiveBuild contains the latest Draft copy for each base mod name.
+    """Promote Draft mods into ActiveBuild only on major-version upgrade.
 
     Rules:
-    - If a draft mod is missing in ActiveBuild, copy it in.
-    - If draft version is higher than ActiveBuild version, replace ActiveBuild copy.
-    - If versions tie but content differs, replace ActiveBuild with Draft copy.
-    - If ActiveBuild version is higher, keep ActiveBuild and warn.
+    - Draft major < 1 never promotes to ActiveBuild.
+    - If no ActiveBuild copy exists and draft major >= 1, add it.
+    - If ActiveBuild exists, promote only when draft major > active major.
+    - Minor/patch-only updates in Draft are intentionally held in Draft.
     """
-    log.info("Step 0.5: Ensure latest Draft mods are in ActiveBuild")
+    log.info("Step 0.5: Promote Draft mods to ActiveBuild only on major-version upgrade")
 
     draft_folders = scan_mod_folders(IN_PROGRESS)
     staging_folders = scan_mod_folders(STAGING)
@@ -1748,6 +1848,9 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
         get_base_mod_name(folder): (folder, path)
         for folder, path in staging_folders.items()
     }
+
+    baseline = load_draft_promotion_baseline(log)
+    baseline_changed = False
 
     for base_name in sorted(draft_by_base.keys()):
         draft_folder, draft_path = draft_by_base[base_name]
@@ -1766,12 +1869,42 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
             )
             continue
 
+        baseline_entry = baseline.get(base_name)
+        baseline_major: Optional[int] = None
+        if isinstance(baseline_entry, dict):
+            baseline_ver = str(baseline_entry.get("version", ""))
+            try:
+                baseline_major = int(baseline_ver.split(".", 1)[0])
+            except Exception:
+                baseline_major = None
+
+        # First sighting in Draft records current version and waits for a future major bump.
+        if baseline_major is None:
+            baseline[base_name] = {
+                "folder": draft_folder,
+                "version": draft_ver,
+                "recorded_at": dt.datetime.now().isoformat(timespec="seconds"),
+            }
+            baseline_changed = True
+            log.info(
+                f"Draft baseline recorded for {draft_folder} v{draft_ver}; "
+                "will promote after a future major bump"
+            )
+            continue
+
+        if draft_major <= baseline_major:
+            log.info(
+                f"Draft hold: {draft_folder} v{draft_ver} not promoted "
+                f"(baseline major {baseline_major}; waiting for major increase)"
+            )
+            continue
+
         remove_draft_after_sync = False
 
         if base_name not in staging_by_base:
             dest = os.path.join(STAGING, draft_folder)
             if maybe_copytree(draft_path, dest, dry_run, log):
-                log.info(f"Draft sync add: {draft_folder} v{draft_ver}")
+                log.info(f"Draft promotion add: {draft_folder} v{draft_ver} (no existing ActiveBuild copy)")
                 remove_draft_after_sync = True
         else:
             st_folder, st_path = staging_by_base[base_name]
@@ -1780,40 +1913,39 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
                 log.warn(f"Draft sync skipped for {st_folder}: unreadable active ModInfo.xml")
                 continue
 
-            cmp_value = compare_versions(draft_ver, st_ver)
-            if cmp_value > 0:
+            try:
+                st_major = int((st_ver or "0.0.0").split(".", 1)[0])
+            except Exception:
+                st_major = 0
+
+            if draft_major > st_major:
                 dest = os.path.join(STAGING, draft_folder)
                 if maybe_remove_dir(st_path, dry_run, log) and maybe_copytree(draft_path, dest, dry_run, log):
-                    log.info(f"Draft sync update: {st_folder} v{st_ver} -> {draft_folder} v{draft_ver}")
+                    log.info(
+                        f"Draft promotion update: {st_folder} v{st_ver} -> {draft_folder} v{draft_ver} "
+                        f"(major {st_major} -> {draft_major})"
+                    )
                     remove_draft_after_sync = True
-            elif cmp_value < 0:
-                log.warn(
-                    f"Draft sync kept newer ActiveBuild mod for {base_name}: "
-                    f"active v{st_ver} > draft v{draft_ver}"
-                )
-                remove_draft_after_sync = True
             else:
-                try:
-                    draft_hash = hash_directory(draft_path)
-                    st_hash = hash_directory(st_path)
-                    if draft_hash != st_hash:
-                        dest = os.path.join(STAGING, draft_folder)
-                        if maybe_remove_dir(st_path, dry_run, log) and maybe_copytree(draft_path, dest, dry_run, log):
-                            log.info(
-                                f"Draft sync refresh: {st_folder} and {draft_folder} are both v{draft_ver} "
-                                "but content differed. Replaced ActiveBuild with Draft copy."
-                            )
-                            remove_draft_after_sync = True
-                    else:
-                        remove_draft_after_sync = True
-                except Exception as ex:
-                    log.warn(f"Could not hash compare draft/active tie for {base_name}: {ex}")
+                log.info(
+                    f"Draft hold: {draft_folder} v{draft_ver} not promoted because major did not increase "
+                    f"(ActiveBuild {st_folder} v{st_ver})"
+                )
 
         if remove_draft_after_sync and maybe_remove_dir(draft_path, dry_run, log):
+            baseline[base_name] = {
+                "folder": draft_folder,
+                "version": draft_ver,
+                "recorded_at": dt.datetime.now().isoformat(timespec="seconds"),
+            }
+            baseline_changed = True
             log.info(
                 f"Draft promotion cleanup: removed {draft_folder} v{draft_ver} from Draft "
                 "after syncing to ActiveBuild"
             )
+
+    if baseline_changed:
+        save_draft_promotion_baseline(baseline, dry_run, log)
 
 
 # =============================================================
@@ -2233,7 +2365,7 @@ def update_gigglepack_pending_changes(
 ) -> Dict[str, object]:
     """Compute/update pending changes since last published GigglePack state from ActiveBuild."""
     release_state = load_gigglepack_release_state()
-    prev_version = str(release_state.get("gigglepack_version", "1.0.0"))
+    prev_version = str(release_state.get("gigglepack_version", "0.0.0"))
     prev_mods_raw = release_state.get("mods", {})
     prev_mods = prev_mods_raw if isinstance(prev_mods_raw, dict) else {}
 
@@ -2598,6 +2730,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
 
     staging_folders = scan_mod_folders(STAGING)
     game_folders = scan_mod_folders(GAME_MODS)
+    draft_folders = scan_mod_folders(IN_PROGRESS)
+    draft_bases: set[str] = {get_base_mod_name(folder) for folder in draft_folders}
     mods_pulled_from_game: List[Tuple[str, str]] = []
     renamed_suffixes: set[str] = set()
     for folder_name in staging_folders:
@@ -2619,6 +2753,11 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
 
     # Keep game root clean for root-policy-only mods.
     for game_folder, game_path in game_folders.items():
+        game_base = get_base_mod_name(game_folder)
+        if game_base in draft_bases:
+            log.info(f"sync-work preserve: kept Draft-tracked game mod in root: {game_folder}")
+            continue
+
         if is_backpack_mod(game_folder) and active_backpack and game_folder != active_backpack:
             if maybe_remove_dir(game_path, dry_run, log):
                 log.info(f"sync-work cleanup: removed non-active backpack from game root: {game_folder}")
@@ -2683,6 +2822,13 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     # This handles renamed mods and removed mods so stale folders do not linger in game.
     stale_game_bases = sorted(set(game_by_base_all.keys()) - set(staging_by_base.keys()))
     for base_name in stale_game_bases:
+        if base_name in draft_bases:
+            for game_folder, _game_path in game_by_base_all.get(base_name, []):
+                log.info(
+                    f"sync-work preserve: kept game mod not in ActiveBuild because Draft tracks it: {game_folder}"
+                )
+            continue
+
         for game_folder, game_path in game_by_base_all.get(base_name, []):
             if base_name in managed_mods:
                 if maybe_remove_dir(game_path, dry_run, log):
@@ -2907,6 +3053,14 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
 
     final_stale_game_bases = sorted(set(final_game_by_base_all.keys()) - set(final_staging_by_base.keys()))
     for base_name in final_stale_game_bases:
+        if base_name in draft_bases:
+            for game_folder, _game_path in final_game_by_base_all.get(base_name, []):
+                log.info(
+                    "sync-work preserve: post-rename kept game mod not in ActiveBuild "
+                    f"because Draft tracks it: {game_folder}"
+                )
+            continue
+
         for game_folder, game_path in final_game_by_base_all.get(base_name, []):
             if base_name in managed_mods:
                 if maybe_remove_dir(game_path, dry_run, log):
@@ -3272,21 +3426,24 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
         ".Optionals-NoEAC": noeac_mods,
         ".Optionals-4Modders": modders_mods,
     }
-    packs.append(("00_GigglePack_All", giggle_root, giggle_optionals))
+    giggle_optionals = {k: v for k, v in giggle_optionals.items() if v}
+    packs.append(("00_GigglePack_All", giggle_root, giggle_optionals or None))
 
     hudplus_all_root = hudplus_mods + special_mods
     hudplus_all_optionals = {
         ".Optionals-NoEAC": noeac_mods,
         ".Optionals-HUDPluszOther": hudpluszother_mods,
     }
-    packs.append(("00_HUDPlus_All", hudplus_all_root, hudplus_all_optionals))
+    hudplus_all_optionals = {k: v for k, v in hudplus_all_optionals.items() if v}
+    packs.append(("00_HUDPlus_All", hudplus_all_root, hudplus_all_optionals or None))
     packs.append(("00_HUDPluszOther_All", hudpluszother_mods, None))
     packs.append(("00_NoEAC_All", noeac_mods, None))
     packs.append(("00_4Modders_All", modders_mods, None))
 
     vp_all_root = vp_mods + special_mods
     vp_all_optionals = {".Optionals-NoEAC": noeac_mods}
-    packs.append(("00_VP_All", vp_all_root, vp_all_optionals))
+    vp_all_optionals = {k: v for k, v in vp_all_optionals.items() if v}
+    packs.append(("00_VP_All", vp_all_root, vp_all_optionals or None))
 
     return packs
 
@@ -3606,7 +3763,7 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
     markdown_path = os.path.join(release_meta_dir, "gigglepack-release-history.md")
 
     prev_state = load_json_file(state_path)
-    prev_version = str(prev_state.get("gigglepack_version", "1.0.0"))
+    prev_version = str(prev_state.get("gigglepack_version", "0.0.0"))
     prev_mods = prev_state.get("mods", {})
     if not isinstance(prev_mods, dict):
         prev_mods = {}
@@ -3655,7 +3812,7 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
     is_baseline_release = not prev_state
 
     if is_baseline_release:
-        release_version = "1.0.0"
+        release_version = GIGGLEPACK_BASELINE_VERSION
     elif major_bump_requested:
         prev_major, _, _ = parse_three_part_version(prev_version)
         release_version = format_three_part_version(prev_major + 1, 0, 0)
@@ -3769,8 +3926,8 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         for entry in removed_mod_entries
     ]
 
-    # v1.0.0 special baseline: keep changelog intentionally focused and readable.
-    if release_version == "1.0.0":
+    # Baseline special handling: keep changelog intentionally focused and readable.
+    if release_version == GIGGLEPACK_BASELINE_VERSION:
         focused_entries: List[Dict[str, str]] = []
         for mod_name in GIGGLEPACK_V100_FOCUS_MODS:
             if mod_name in giggle_mod_versions:
@@ -3977,6 +4134,8 @@ def create_all_zips(dry_run: bool, workers: int, log: Logger) -> List[str]:
         existing_zips = [f for f in os.listdir(ZIP_OUTPUT) if f.lower().endswith(".zip")]
 
     for file in existing_zips:
+        if file == LEGACY_FINAL_GIGGLEPACK_ZIP:
+            continue
         path = os.path.join(ZIP_OUTPUT, file)
         if dry_run:
             log.info(f"[DRYRUN] Would delete old zip: {file}")
@@ -4001,10 +4160,39 @@ def create_all_zips(dry_run: bool, workers: int, log: Logger) -> List[str]:
     packs = build_pack_definitions(all_folders)
 
     for pack_name, root_mods, optionals_map in packs:
+        has_root_content = bool(root_mods)
+        has_optionals_content = bool(optionals_map and any(optionals_map.values()))
+        if not has_root_content and not has_optionals_content:
+            log.info(f"Pack zip skipped (empty): {pack_name}.zip")
+            continue
+
         ok = zip_category(pack_name, root_mods, optionals_map, dry_run, log)
         if ok:
             log.stats.pack_zips_created += 1
             created_mod_zips.append(f"{pack_name}.zip")
+
+    legacy_final_zip_path = os.path.join(ZIP_OUTPUT, LEGACY_FINAL_GIGGLEPACK_ZIP)
+    canonical_zip_path = os.path.join(ZIP_OUTPUT, GIGGLEPACK_CANONICAL_ZIP)
+    if not os.path.isfile(legacy_final_zip_path):
+        if os.path.isfile(canonical_zip_path):
+            if dry_run:
+                log.info(
+                    f"[DRYRUN] Would preserve legacy final GigglePack zip: {LEGACY_FINAL_GIGGLEPACK_ZIP}"
+                )
+            else:
+                try:
+                    shutil.copy2(canonical_zip_path, legacy_final_zip_path)
+                    created_mod_zips.append(LEGACY_FINAL_GIGGLEPACK_ZIP)
+                    log.info(
+                        "Created preserved legacy final GigglePack zip from current canonical pack: "
+                        f"{LEGACY_FINAL_GIGGLEPACK_ZIP}"
+                    )
+                except Exception as ex:
+                    log.warn(f"Failed to create {LEGACY_FINAL_GIGGLEPACK_ZIP}: {ex}")
+        else:
+            log.warn(
+                "Could not create preserved legacy final GigglePack zip because canonical zip is missing"
+            )
 
     return sorted(set(created_mod_zips))
 
@@ -4466,11 +4654,18 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     vp_mods = [f for f in all_mods if f.startswith("AGF-VP-")]
     special_mods = [f for f in all_mods if f.startswith("zzzAGF-Special")]
 
+    updates_in_progress = "Updates are in progress."
+
+    def category_download_line(mods: List[str], label: str, zip_name: str) -> str:
+        if mods:
+            return f"[**⬇️ {label}**]({zip_download_link(zip_name)})"
+        return updates_in_progress
+
     md: List[str] = []
     giggle_release_state = load_gigglepack_release_state()
     giggle_release_version = str(giggle_release_state.get("gigglepack_version", "")).strip()
-    giggle_download_label = f"[**⬇️ DOWNLOAD ALL AGF MODS**]({zip_download_link('00_GigglePack_All.zip')})"
-    if giggle_release_version:
+    giggle_download_label = category_download_line(all_mods, "DOWNLOAD ALL AGF MODS", "00_GigglePack_All.zip")
+    if giggle_release_version and giggle_download_label != updates_in_progress:
         giggle_download_label += f" **(GigglePack v{giggle_release_version})**"
 
     giggle_release_lines = build_gigglepack_readme_release_lines(giggle_release_state)
@@ -4499,13 +4694,16 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         render_main_readme_category_block(
             category_template,
             "B. HUD PLUS MODS",
-            f"[**⬇️ Download All HUD Plus Mods**]({zip_download_link('00_HUDPlus_All.zip')})",
+            category_download_line(hudplus_mods, "Download All HUD Plus Mods", "00_HUDPlus_All.zip"),
             cat_desc.get("HUDPLUS", "Quality-of-life HUD enhancements and visual tweaks."),
         )
     )
     md.append("")
-    for mod in hudplus_mods:
-        md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    if hudplus_mods:
+        for mod in hudplus_mods:
+            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
 
     if hudpluszother_mods:
         md.extend([
@@ -4529,7 +4727,11 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         render_main_readme_category_block(
             category_template,
             "C. BACKPACK PLUS MODS",
-            f"[**⬇️ Download All Backpack Plus Mods**]({zip_download_link('00_BackpackPlus_All.zip')})",
+            category_download_line(
+                backpackplus_mods,
+                "Download All Backpack Plus Mods",
+                "00_BackpackPlus_All.zip",
+            ),
             cat_desc.get("BACKPACKPLUS", "Increases backpack size. Choose the slot count that fits your needs."),
         )
     )
@@ -4537,52 +4739,62 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
 
     preferred_last = "AGF-BackpackPlus-119Slots"
     backpack_sorted = sorted(backpackplus_mods, key=lambda x: (get_base_mod_name(x) == preferred_last, x))
-    for mod in backpack_sorted:
-        md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    if backpack_sorted:
+        for mod in backpack_sorted:
+            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
 
-    if special_mods:
-        md.extend(
-            render_main_readme_category_block(
-                category_template,
-                "D. SPECIAL COMPATIBILITY MOD",
-                "",
-                cat_desc.get("SPECIAL", "Compatibility patches between AGF mods and select third-party mods."),
-            )
+    md.extend(
+        render_main_readme_category_block(
+            category_template,
+            "D. SPECIAL COMPATIBILITY MOD",
+            updates_in_progress if not special_mods else "",
+            cat_desc.get("SPECIAL", "Compatibility patches between AGF mods and select third-party mods."),
         )
-        md.append("")
+    )
+    md.append("")
+    if special_mods:
         for mod in special_mods:
             md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
 
     md.extend(
         render_main_readme_category_block(
             category_template,
             "E. VANILLA PLUS MODS",
-            f"[**⬇️ Download All VP Mods**]({zip_download_link('00_VP_All.zip')})",
+            category_download_line(vp_mods, "Download All VP Mods", "00_VP_All.zip"),
             cat_desc.get("VP", "Gameplay tweaks and new features that expand on the base game."),
         )
     )
     md.append("")
-    for mod in vp_mods:
-        md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    if vp_mods:
+        for mod in vp_mods:
+            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
 
-    if noeac_mods:
-        md.extend(
-            render_main_readme_category_block(
-                category_template,
-                "F. NO EAC MODS",
-                f"[**⬇️ Download All NoEAC Mods**]({zip_download_link('00_NoEAC_All.zip')})",
-                cat_desc.get("NOEAC", "Game enhancements that require a DLL. EAC must be off."),
-            )
+    md.extend(
+        render_main_readme_category_block(
+            category_template,
+            "F. NO EAC MODS",
+            category_download_line(noeac_mods, "Download All NoEAC Mods", "00_NoEAC_All.zip"),
+            cat_desc.get("NOEAC", "Game enhancements that require a DLL. EAC must be off."),
         )
-        md.append("")
+    )
+    md.append("")
+    if noeac_mods:
         for mod in noeac_mods:
             md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
 
     md.extend(
         render_main_readme_category_block(
             category_template,
             "G. 4MODDERS MODS",
-            f"[**⬇️ Download All 4Modders Mods**]({zip_download_link('00_4Modders_All.zip')})",
+            category_download_line(modders_mods, "Download All 4Modders Mods", "00_4Modders_All.zip"),
             cat_desc.get("4MODDERS", "Modder resources and niche mods. Read each description before installing."),
         )
     )
@@ -4591,7 +4803,19 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         for mod in modders_mods:
             md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
     else:
-        md.append("*No AGF-4Modders mods are currently published.*")
+        md.append("*Updates are in progress.*")
+
+    md.extend(
+        render_main_readme_category_block(
+            category_template,
+            "H. AGF-7d2d-v2.6-GigglePack-Final",
+            f"[**⬇️ Download AGF 7D2D v2.6 Final**]({zip_download_link(LEGACY_FINAL_GIGGLEPACK_ZIP)})",
+            cat_desc.get(
+                LEGACY_FINAL_CATEGORY_KEY,
+                "Everything AGF made for 7d2d 2.6 in a frozen final snapshot.",
+            ),
+        )
+    )
 
     modlist_str = "\n".join(md)
     main_content = re.sub(
@@ -4806,6 +5030,8 @@ def run_pipeline(args: argparse.Namespace) -> int:
                     print(f"Run manifest: {manifest_path}")
                 return 1
             sync_staging_and_game(args.dry_run, log)
+        elif args.mode == "reset-active-to-draft":
+            reset_activebuild_to_draft(args.dry_run, log)
         elif args.mode == "update":
             log.info(
                 "Mode update: sync Draft<->Game, ingest Draft->ActiveBuild, "
@@ -4824,6 +5050,19 @@ def run_pipeline(args: argparse.Namespace) -> int:
                     print(f"Run manifest: {manifest_path}")
                 return 1
             pulled_mods_for_pushback.extend(sync_game_and_draft(args.dry_run, log))
+
+            # 0.4) Normalize Draft names first so version-bumped game pulls are promoted using updated folder names.
+            pre_promote_draft_rename_plan = plan_mod_folder_renames((IN_PROGRESS,), log)
+            if not ensure_notepadpp_closed_for_version_bumps(pre_promote_draft_rename_plan, args.dry_run, log):
+                log_path = log.write_log_file()
+                manifest_path = write_run_manifest(log, args.mode, args.dry_run, 1, log_path)
+                if log_path:
+                    print(f"Log file: {log_path}")
+                if manifest_path:
+                    print(f"Run manifest: {manifest_path}")
+                return 1
+            pre_promote_draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
+            update_mod_loaded_references_for_renames(pre_promote_draft_renames, args.dry_run, log)
 
             # 0.5) Ensure ActiveBuild includes latest Draft copies before game sync.
             sync_draft_to_staging_latest(args.dry_run, log)
@@ -4874,7 +5113,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
                 return 1
             draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             cleanup_older_versions_in_dir(IN_PROGRESS, args.dry_run, log)
-            all_renames = pre_sync_renames + staging_renames + draft_renames
+            all_renames = pre_promote_draft_renames + pre_sync_renames + staging_renames + draft_renames
             post_sync_renames = staging_renames + draft_renames
             csv_rows = normalize_compat_csv(
                 all_renames,
@@ -4945,6 +5184,19 @@ def run_pipeline(args: argparse.Namespace) -> int:
                 return 1
             pulled_mods_for_pushback.extend(sync_game_and_draft(args.dry_run, log))
 
+            # 0.4) Normalize Draft names first so version-bumped game pulls are promoted using updated folder names.
+            pre_promote_draft_rename_plan = plan_mod_folder_renames((IN_PROGRESS,), log)
+            if not ensure_notepadpp_closed_for_version_bumps(pre_promote_draft_rename_plan, args.dry_run, log):
+                log_path = log.write_log_file()
+                manifest_path = write_run_manifest(log, args.mode, args.dry_run, 1, log_path)
+                if log_path:
+                    print(f"Log file: {log_path}")
+                if manifest_path:
+                    print(f"Run manifest: {manifest_path}")
+                return 1
+            pre_promote_draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
+            update_mod_loaded_references_for_renames(pre_promote_draft_renames, args.dry_run, log)
+
             # 0.5) Ensure ActiveBuild includes latest Draft copies before game sync.
             sync_draft_to_staging_latest(args.dry_run, log)
 
@@ -4997,7 +5249,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
             release_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(PUBLISH_READY,))
             draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             cleanup_older_versions_in_dir(IN_PROGRESS, args.dry_run, log)
-            all_renames = release_renames + draft_renames
+            all_renames = pre_promote_draft_renames + release_renames + draft_renames
             csv_rows = normalize_compat_csv(
                 all_renames,
                 args.dry_run,
@@ -5077,7 +5329,16 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Main AGF mod automation pipeline")
     parser.add_argument(
         "--mode",
-        choices=["full", "update", "sync-work", "prep-work", "promote", "package", "self-test"],
+        choices=[
+            "full",
+            "update",
+            "sync-work",
+            "reset-active-to-draft",
+            "prep-work",
+            "promote",
+            "package",
+            "self-test",
+        ],
         default="full",
         help="Workflow mode: full pipeline, staging sync, prep active-build readmes, promote, or package output",
     )

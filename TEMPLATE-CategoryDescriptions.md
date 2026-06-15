@@ -8,6 +8,8 @@
 [GIGGLE PACK]
 All AGF mods in one convenient download.
 
+New Pack has started for 7d2d Version 3.0!
+
 Pre-arranged for immediate use as Server-Side (EAC-Friendly).
 
 Non-EAC mods are inside optional folders within the pack.
@@ -40,3 +42,7 @@ Read each description before installing.
 
 [OTHER]
 Additional requested HUD options and tweaks.
+
+[AGF 7d2d v2.6 GigglePack FINAL]
+Everything AGF made for 7d2d 2.6 is here.
+

@@ -1,5 +1,5 @@
 # {{MOD_NAME}}
-7d2d Version 2  
+7d2d Version 3
 **Version:** {{MOD_VERSION}}  
 [Download]({{DOWNLOAD_LINK}})
 

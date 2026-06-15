@@ -1,5 +1,5 @@
 AGF-VP-MedicallyTreatOthers
-7d2d Version 2  
+7d2d Version 3
 Version: 0.0.2  
 Download: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04DownloadZips/AGF-VP-MedicallyTreatOthers.zip
 
@@ -81,7 +81,7 @@ Language Support
 ========================================
 
 5. Compatibility
-- Last 7d2d Version tested on: 2.6
+- Last 7d2d Version tested on: 3.0
 - "AGF-VP-MedicallyTreatOthers" is SAFE to install on an existing game.
 - "AGF-VP-MedicallyTreatOthers" is TBD to remove from an existing game.
 - Unique Details: TBD

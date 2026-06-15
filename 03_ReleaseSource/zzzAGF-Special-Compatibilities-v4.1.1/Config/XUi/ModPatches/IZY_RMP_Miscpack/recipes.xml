@@ -1,4 +1,0 @@
-<zzzAGF-Compatibilities>
-	<!-- IZY_RMP_Miscpack -->
-	<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltSteelAP']" name="tags">learnable</setattribute>
-</zzzAGF-Compatibilities>

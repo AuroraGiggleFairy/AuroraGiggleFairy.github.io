@@ -1,0 +1,131 @@
+{
+  "channel_id": 1490193824746569839,
+  "channel_name": "roles-selection",
+  "guild_id": 818567847436877825,
+  "guild_name": "Aurora Twilight",
+  "current_bot_id": 1497393865244541121,
+  "current_bot_name": "Fairy Bot#0763",
+  "messages_checked": 4,
+  "candidate_panels": [
+    {
+      "message_id": 1497979610292289697,
+      "created_at": "2026-04-26T15:16:10.209000+00:00",
+      "author_id": 456226577798135808,
+      "author_name": "Deleted User#0000",
+      "editable_by_current_bot": false,
+      "content_start": "",
+      "embeds": [],
+      "reactions": [
+        {
+          "emoji": "\ud83d\udd35",
+          "count": 6
+        },
+        {
+          "emoji": "\ud83d\udfe2",
+          "count": 5
+        },
+        {
+          "emoji": "\ud83d\udfe3",
+          "count": 1
+        },
+        {
+          "emoji": "\ud83d\udd34",
+          "count": 1
+        },
+        {
+          "emoji": "\ud83d\udfe0",
+          "count": 1
+        },
+        {
+          "emoji": "\ud83d\udfe1",
+          "count": 1
+        },
+        {
+          "emoji": "\ud83d\udfe4",
+          "count": 1
+        },
+        {
+          "emoji": "\u26ab",
+          "count": 1
+        },
+        {
+          "emoji": "\u26aa",
+          "count": 2
+        }
+      ],
+      "candidate_role_panel": true
+    },
+    {
+      "message_id": 1497969405928411208,
+      "created_at": "2026-04-26T14:35:37.299000+00:00",
+      "author_id": 456226577798135808,
+      "author_name": "Deleted User#0000",
+      "editable_by_current_bot": false,
+      "content_start": "",
+      "embeds": [],
+      "reactions": [
+        {
+          "emoji": "\ud83c\udfae",
+          "count": 3
+        },
+        {
+          "emoji": "\ud83d\udd2c",
+          "count": 5
+        }
+      ],
+      "candidate_role_panel": true
+    },
+    {
+      "message_id": 1497967746640777437,
+      "created_at": "2026-04-26T14:29:01.694000+00:00",
+      "author_id": 456226577798135808,
+      "author_name": "Deleted User#0000",
+      "editable_by_current_bot": false,
+      "content_start": "",
+      "embeds": [],
+      "reactions": [
+        {
+          "emoji": "\ud83c\udfa5",
+          "count": 6
+        },
+        {
+          "emoji": "\u2692\ufe0f",
+          "count": 5
+        },
+        {
+          "emoji": "\ud83d\udcbb",
+          "count": 1
+        },
+        {
+          "emoji": "\u270d\ufe0f",
+          "count": 1
+        },
+        {
+          "emoji": "\u2702\ufe0f",
+          "count": 1
+        },
+        {
+          "emoji": "\ud83c\udfa8",
+          "count": 2
+        },
+        {
+          "emoji": "\ud83c\udfb5",
+          "count": 2
+        },
+        {
+          "emoji": "\ud83d\udcf7",
+          "count": 2
+        },
+        {
+          "emoji": "\ud83c\udf99\ufe0f",
+          "count": 1
+        },
+        {
+          "emoji": "\ud83c\udfac",
+          "count": 4
+        }
+      ],
+      "candidate_role_panel": true
+    }
+  ]
+}

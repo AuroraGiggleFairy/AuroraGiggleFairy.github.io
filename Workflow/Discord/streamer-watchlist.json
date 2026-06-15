@@ -1,0 +1,14 @@
+{
+  "users": {
+    "354088130133098496": {
+      "streams": [
+        {
+          "platform": "twitch",
+          "url": "https://www.twitch.tv/auroragigglefairy",
+          "is_live": false,
+          "last_stream_id": ""
+        }
+      ]
+    }
+  }
+}

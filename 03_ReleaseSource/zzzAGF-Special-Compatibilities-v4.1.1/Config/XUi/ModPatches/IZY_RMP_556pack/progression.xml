@@ -1,6 +1,0 @@
-<zzzAGF-Compatibilities>
-	<!-- IZY_RMP_556pack -->
-	<append xpath="/progression/perks/book[@name='perkSniperHPAmmo']/effect_group/passive_effect/@tags">,ammo556mmHIpower</append>
-	<append xpath="/progression/perks/book[@name='perkSniperAPAmmo']/effect_group/passive_effect/@tags">,ammo556mmArmorPiercing</append>
-	<append xpath="/progression/perks/book[@name='perkSniperComplete']/effect_group[1]/passive_effect/@tags">,ammo556mmBulletBallBundle,ammo556mmHIpowerBundle,ammo556mmArmorPiercingBundle</append>
-</zzzAGF-Compatibilities>
