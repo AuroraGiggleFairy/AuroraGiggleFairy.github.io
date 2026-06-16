@@ -36,20 +36,20 @@
     "media_file": ""
   },
   "AGF-BackpackPlus-060Slots": {
-    "signature": "df3632bf2a07898a55f286f06e373fe22a497edb4b45bca51c57d05fe416f3d5",
-    "version": "4.0.1",
+    "signature": "35e479c490af5e1e5ad7d784a2be41cecd54e0f6a8ee47130d8a842650693118",
+    "version": "4.0.2",
     "has_media": false,
     "media_file": ""
   },
   "AGF-BackpackPlus-072Slots": {
-    "signature": "bef541d72ff8ddba02061d27a231aa77193ba2470f98550d3b27c01b76b7a12e",
-    "version": "3.2.3",
+    "signature": "e17e286806a5c8567647d80caa7e99633169c6bd2eb59bfaf4cb43075f33dc35",
+    "version": "4.0.0",
     "has_media": false,
     "media_file": ""
   },
   "AGF-BackpackPlus-084Slots": {
-    "signature": "2690fdf9b0ed64bf4ed909493cb854c7f95dbf203e328194b27234bef35b7039",
-    "version": "3.2.3",
+    "signature": "73ef409e817b294fcad2d186ad1bad8a8f98af29b912481dd735e4bcdad645dd",
+    "version": "4.0.0",
     "has_media": false,
     "media_file": ""
   },

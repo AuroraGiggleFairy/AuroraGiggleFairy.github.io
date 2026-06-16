@@ -1,4 +1,3 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-lblContextActionOpenAll,UI,Item Context Menu,,,"Open All",,"Alle Ã¶ffnen","Abrir todo","Tout ouvrir","Apri tutti","ã™ã¹ã¦é–‹å°","ëª¨ë‘ ì—´ê¸°","OtwÃ³rz wszystko","Abrir tudo","ÐžÑ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ð²ÑÐµ","TÃ¼mÃ¼nÃ¼ AÃ§","å…¨éƒ¨å¼€å¯","å…¨éƒ¨é–‹å•Ÿ"
-lblContextActionOpenAllStop,UI,Item Context Menu,,,"Stop Opening",,"Ã–ffnen abbrechen","Dejar de abrir","ArrÃªter l'ouverture","Interrompi apertura","é–‹å°ã‚’ä¸­æ­¢","ì—´ê¸° ì¤‘ë‹¨","Przerwij otwieranie","Parar de abrir","ÐžÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ","AÃ§mayÄ± Durdur","åœæ­¢å¼€å¯","åœæ­¢é–‹å•Ÿ"
-
+lblContextActionOpenAll,UI,Item Context Menu,,,,"Open All","","Alle öffnen","Abrir todo","Tout ouvrir","Apri tutti","すべて開封","모두 열기","Otwórz wszystko","Abrir tudo","Открыть все","Tümünü Aç","全部开启","全部開啟"
+lblContextActionOpenAllStop,UI,Item Context Menu,,,,"Stop Opening","","Öffnen abbrechen","Dejar de abrir","Arrêter l'ouverture","Interrompi apertura","開封を中止","열기 중단","Przerwij otwieranie","Parar de abrir","Остановить открытие","Açmayı Durdur","停止开启","停止開啟"

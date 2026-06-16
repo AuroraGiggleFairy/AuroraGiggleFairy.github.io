@@ -1,10 +1,12 @@
 {
-  "gigglepack_version": "0.3.0",
-  "previous_gigglepack_version": "0.2.0",
+  "gigglepack_version": "0.4.0",
+  "previous_gigglepack_version": "0.3.0",
   "is_baseline_release": false,
-  "released_at": "2026-06-16 03:42:45",
+  "released_at": "2026-06-16 17:43:51",
   "mods": {
-    "AGF-BackpackPlus-060Slots": "4.0.1",
+    "AGF-BackpackPlus-060Slots": "4.0.2",
+    "AGF-BackpackPlus-072Slots": "4.0.0",
+    "AGF-BackpackPlus-084Slots": "4.0.0",
     "AGF-HUDPlus-1Main": "6.0.2",
     "AGF-HUDPlus-HealthBars": "5.0.1",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.0.1",
@@ -16,42 +18,30 @@
   "updated_mods": [
     {
       "mod": "AGF-BackpackPlus-060Slots",
-      "from": "4.0.0",
-      "to": "4.0.1",
-      "from_display": "4.0.0",
-      "to_display": "4.0.1"
-    },
-    {
-      "mod": "AGF-HUDPlus-1Main",
-      "from": "6.0.1",
-      "to": "6.0.2",
-      "from_display": "6.0.1",
-      "to_display": "6.0.2"
+      "from": "4.0.1",
+      "to": "4.0.2",
+      "from_display": "4.0.1",
+      "to_display": "4.0.2"
     }
   ],
   "new_mods": [
     {
-      "mod": "AGF-NoEAC-GlobalStormTracker",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
+      "mod": "AGF-BackpackPlus-072Slots",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
     },
     {
-      "mod": "AGF-NoEAC-ScreamerAlert",
-      "to": "2.0.0",
-      "to_display": "2.0.0-BETA"
-    },
-    {
-      "mod": "AGF-NoEAC-Toolbelt12Slots",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
+      "mod": "AGF-BackpackPlus-084Slots",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.3.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.4.0.zip",
   "change_counts": {
-    "new_mods": 3,
-    "updated_existing_mods": 2,
+    "new_mods": 2,
+    "updated_existing_mods": 1,
     "renamed_mods": 0,
     "removed_mods": 0
   }

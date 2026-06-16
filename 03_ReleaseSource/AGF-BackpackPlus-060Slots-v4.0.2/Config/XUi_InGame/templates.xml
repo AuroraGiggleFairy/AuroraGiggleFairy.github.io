@@ -1,0 +1,101 @@
+<AGF-Backpack60>
+
+<!-- This section is a direct copy of the game's item_stack but with the name item_stackAGF. This provides the template I edit below.-->
+<append xpath="/templates">
+	<item_stackAGF controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" cell_size="[itemStack:width]">
+		<rect controller="${controller}" style="itemStack, hover" width="${cell_size}" height="${cell_size}" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }">
+			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" color="[black]" type="sliced" fillcenter="false" width="${3+cell_size}" height="${3+cell_size}"/>
+			<sprite depth="3" name="background" sprite="menu_empty3px" color="{selectionbordercolor}" type="sliced" fillcenter="false" width="${-2+cell_size}" height="${-2+cell_size}"/>
+			<sprite depth="2" name="highlightOverlay" color="{backgroundcolor}" pos="0,0" type="sliced" width="${-3+cell_size}" height="${-3+cell_size}"/>
+			<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" size="${-2+cell_size},${-2+cell_size}"/>
+			<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+			<sprite depth="7" name="itemIcon" width="${-11+cell_size}" height="${-11+cell_size}" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}" pos="${Floor(cell_size/2)},${-Floor(cell_size/2)}"/>
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+			<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}"/>
+			<sprite depth="2" name="durabilityBackground" sprite="menu_empty3px" color="185,0,0,255" type="sliced" globalopacitymod="0" visible="{haspermadurability}" width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}"/>
+			<sprite depth="4" name="durability" sprite="menu_empty2px" color="[darkGrey]" fill="{removeddurabilityfill}" type="filled" fillspritepad="true" globalopacitymod="0" visible="{hasdurability}" width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}"/>
+			<filledsprite depth="5" name="durability" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" globalopacitymod="0" visible="{hasdurability}" width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}"/>
+			<label depth="8" name="stackValue" height="28" text="{itemcount}" font_size="26" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}" pos="-2,${-Floor(3*cell_size/5)}" width="${-5+cell_size}"/>
+			<label depth="8" name="timer" height="24" font_size="24" justify="center" pivot="center" color="[beige]" effect="outline" pos="${Floor(cell_size/2)},${-Floor(cell_size/2)}" width="${-5+cell_size}" effect_distance="1,1" effect_color="0,0,0,255"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" visible="{# ishovered and islocked}" foregroundlayer="true" width="${-5+cell_size}" height="${-5+cell_size}"/>
+			<sprite depth="13" name="assembleIcon" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" size="${-35+cell_size},${-35+cell_size}"/>
+			<sprite depth="14" name="quickswapIcon" size="30,30" sprite="server_refresh" pos="40,-2" foregroundlayer="true" visible="{isQuickSwap}"/>
+			<button name="rectSlotLock" depth="15" style="press, hover" width="${-2+cell_size}" height="${-2+cell_size}" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+				<sprite depth="16" name="slotLockIcon" width="24" height="24" sprite="{# !defined('userlockmode') ? '' : (userlockedslot ? 'ui_game_symbol_lock' : 'ui_game_symbol_unlock') }" pos="50, -14" style="icon32px" pivot="center" color="{# !defined('userlockmode') ? '255,255,255,1' : (userlockedslot ? '222,206,163' : '255,255,255') }"/>
+			</button>
+			<sprite depth="15" name="iconSlotLock" width="20" height="20" sprite="ui_game_symbol_lock" pos="50, -14" style="icon32px" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]"/>
+		</rect>
+	</item_stackAGF>
+</append>
+
+<!-- This section is for my custom Lockable Slots-->	
+<remove xpath="/templates/item_stackAGF/rect/button"/>
+<remove xpath="/templates/item_stackAGF/rect/sprite[@name='iconSlotLock']"/>
+<append xpath="/templates/item_stackAGF/rect">
+	<button name="rectSlotLock" depth="15" style="press, hover" width="${-2+cell_size}" height="${-2+cell_size}" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+		<sprite name="slotLockOverlayFill" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="true" color="{# userlockedslot ? '255,0,0,150' : '0,255,0,150' }"/>
+		<sprite name="slotLockOverlayBorder" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="false" color="{# userlockedslot ? '255,0,0,150' : '0,255,0,150' }"/>
+	</button>
+	<sprite depth="3" name="iconSlotLockFill" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="true" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="255,0,0,150"/>
+	<sprite depth="3" name="iconSlotLockBorder" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="false" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="255,0,0,150"/>
+</append>	
+	
+
+
+				<append xpath="/templates">
+					<item_action_entry7>
+						<rect height="31" controller="ItemActionEntry" disabled_font_color="[disabledLabelColor]" default_font_color="[labelColor]" default_background_color="[mediumGrey]">
+							<sprite depth="3" name="background" color="[mediumGrey]" type="sliced" on_press="true" on_hover="true" width="147" sound_play_on_hover="[default_hover]" gamepad_selectable="false"/>
+							<sprite depth="4" name="Icon" sprite="{actionicon}" size="24,24" color="{statuscolor}" pos="2,-3" foregroundlayer="true"/>
+							<label depth="4" name="Name" pos="32,-15" width="78" height="26" text="{actionname}" font_size="26" color="{statuscolor}" effect="shadow" pivot="left" />
+							<gamepad_icon depth="4" name="gamepadIcon" size="44,44" pos="146,-22" pivot="Right" visible="{inspectheld}" />
+							<label depth="4" name="keyboardButton" pos="145,-15" width="36" height="26" text="&lt;W&gt;" font_size="26" color="{statuscolor}" effect="shadow" pivot="right" justify="center" />
+						</rect>
+					</item_action_entry7>
+				</append>
+				
+
+
+					
+			<!--these changes below are for making the panel above the backpack match the width of the backpack.-->	
+				
+				<!--Ingredients / recipe section-->
+				<set xpath="/templates/ingredient_header/rect[@name='header']/@width">519</set>
+				
+				<set xpath="/templates/ingredient_header/rect[@name='header']/rect[@width='236']/sprite/@width">314</set>
+				<set xpath="/templates/ingredient_header/rect[@name='header']/rect[@width='236']/label/@width">302</set>
+				<set xpath="/templates/ingredient_header/rect[@name='header']/rect[@width='236']/label/@pos">154,-23</set>
+				<set xpath="/templates/ingredient_header/rect[@name='header']/rect[@width='236']/@width">308</set>
+				
+				<set xpath="/templates/ingredient_header/rect[@name='header']/rect[@width='140']/@pos">379,0</set>
+				
+				
+				
+				<set xpath="/templates/ingredient_row/rect[@name='row']/@width">519</set>
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='65']/sprite[@name='backgroundMain']/@height">52</set>
+				
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='236']/sprite/@width">314</set>
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='236']/label/@width">302</set>
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='236']/label/@pos">154,-23</set>
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='236']/sprite[@name='backgroundMain']/@height">52</set>
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='236']/@width">308</set>
+				
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='140']/@pos">379,0</set>
+				<set xpath="/templates/ingredient_row/rect[@name='row']/rect[@width='140']/sprite[@name='backgroundMain']/@height">52</set>
+				
+				
+				<!--Unlocked by section--><!--updated for A21.1-->
+				<set xpath="/templates/unlocked_by_header/rect[@name='header']/@width">514</set>
+				<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[@width='304']/sprite[@name='backgroundMain']/@width">381</set>
+				<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[@width='304']/@width">380</set>		
+				<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[@width='82']/@pos">440,0</set>	
+				
+				
+				<set xpath="/templates/unlocked_by_row/rect[@name='row']/@width">514</set>
+				<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[@width='304']/sprite[@name='backgroundMain']/@width">381</set>
+				<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[@width='304']/@width">380</set>
+				<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect/sprite[@name='backgroundMain']/@height">52</set>		
+				<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[@width='82']/@pos">440,0</set>			
+
+	
+</AGF-Backpack60>

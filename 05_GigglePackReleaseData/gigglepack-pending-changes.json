@@ -1,0 +1,23 @@
+{
+  "computed_at": "2026-06-16T17:29:07",
+  "since_gigglepack_version": "0.3.0",
+  "new_mods": [
+    [
+      "AGF-BackpackPlus-072Slots",
+      "4.0.0"
+    ],
+    [
+      "AGF-BackpackPlus-084Slots",
+      "4.0.0"
+    ]
+  ],
+  "updated_mods": [
+    [
+      "AGF-BackpackPlus-060Slots",
+      "4.0.1",
+      "4.0.2"
+    ]
+  ],
+  "renamed_mods": [],
+  "removed_mods": []
+}

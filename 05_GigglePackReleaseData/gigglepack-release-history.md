@@ -1,5 +1,19 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.4.0 (June 16, 2026 5:43pm)
+### Summary: +2 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-BackpackPlus-072Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip) (new: v4.0.0)
+  - [AGF-BackpackPlus-084Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip) (new: v4.0.0)
+- **Updated Existing Mods**
+  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (v4.0.1 -> v4.0.2)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.3.0 (June 16, 2026 3:42am)
 ### Summary: +3 new, ~2 updated, =0 renamed, -0 removed
 - **New Mods**
