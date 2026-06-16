@@ -1,0 +1,93 @@
+public class GameModeSurvivalMP : GameModeAbstract
+{
+	public static readonly string TypeName = typeof(GameModeSurvivalMP).Name;
+
+	public override string GetName()
+	{
+		return "gmSurvivalMP";
+	}
+
+	public override string GetDescription()
+	{
+		return "gmSurvivalMPDesc";
+	}
+
+	public override int GetID()
+	{
+		return 7;
+	}
+
+	public override ModeGamePref[] GetSupportedGamePrefsInfo()
+	{
+		return new ModeGamePref[37]
+		{
+			new ModeGamePref(EnumGamePrefs.GameDifficulty, GamePrefs.EnumType.Int, 1),
+			new ModeGamePref(EnumGamePrefs.DayNightLength, GamePrefs.EnumType.Int, 60),
+			new ModeGamePref(EnumGamePrefs.DayLightLength, GamePrefs.EnumType.Int, 18),
+			new ModeGamePref(EnumGamePrefs.PlayerKillingMode, GamePrefs.EnumType.Int, EnumPlayerKillingMode.KillStrangersOnly),
+			new ModeGamePref(EnumGamePrefs.ShowFriendPlayerOnMap, GamePrefs.EnumType.Bool, true),
+			new ModeGamePref(EnumGamePrefs.LootAbundance, GamePrefs.EnumType.Int, 100),
+			new ModeGamePref(EnumGamePrefs.LootRespawnDays, GamePrefs.EnumType.Int, 7),
+			new ModeGamePref(EnumGamePrefs.DropOnDeath, GamePrefs.EnumType.Int, 0),
+			new ModeGamePref(EnumGamePrefs.DropOnQuit, GamePrefs.EnumType.Int, 0),
+			new ModeGamePref(EnumGamePrefs.BloodMoonEnemyCount, GamePrefs.EnumType.Int, 8),
+			new ModeGamePref(EnumGamePrefs.EnemySpawnMode, GamePrefs.EnumType.Bool, true),
+			new ModeGamePref(EnumGamePrefs.EnemyDifficulty, GamePrefs.EnumType.Int, 0),
+			new ModeGamePref(EnumGamePrefs.ServerEnabled, GamePrefs.EnumType.Bool, false),
+			new ModeGamePref(EnumGamePrefs.ServerIsPublic, GamePrefs.EnumType.Bool, true),
+			new ModeGamePref(EnumGamePrefs.ServerVisibility, GamePrefs.EnumType.Int, 2),
+			new ModeGamePref(EnumGamePrefs.ServerMaxPlayerCount, GamePrefs.EnumType.Int, 8),
+			new ModeGamePref(EnumGamePrefs.ServerPassword, GamePrefs.EnumType.String, ""),
+			new ModeGamePref(EnumGamePrefs.ServerPort, GamePrefs.EnumType.Int, Constants.cDefaultPort),
+			new ModeGamePref(EnumGamePrefs.ServerEACPeerToPeer, GamePrefs.EnumType.Bool, true),
+			new ModeGamePref(EnumGamePrefs.LandClaimCount, GamePrefs.EnumType.Int, 5),
+			new ModeGamePref(EnumGamePrefs.LandClaimSize, GamePrefs.EnumType.Int, 41),
+			new ModeGamePref(EnumGamePrefs.LandClaimDeadZone, GamePrefs.EnumType.Int, 30),
+			new ModeGamePref(EnumGamePrefs.LandClaimExpiryTime, GamePrefs.EnumType.Int, 3),
+			new ModeGamePref(EnumGamePrefs.LandClaimDecayMode, GamePrefs.EnumType.Int, 0),
+			new ModeGamePref(EnumGamePrefs.LandClaimOnlineDurabilityModifier, GamePrefs.EnumType.Int, 4),
+			new ModeGamePref(EnumGamePrefs.LandClaimOfflineDurabilityModifier, GamePrefs.EnumType.Int, 4),
+			new ModeGamePref(EnumGamePrefs.LandClaimOfflineDelay, GamePrefs.EnumType.Int, 0),
+			new ModeGamePref(EnumGamePrefs.BedrollDeadZoneSize, GamePrefs.EnumType.Int, 15),
+			new ModeGamePref(EnumGamePrefs.BedrollExpiryTime, GamePrefs.EnumType.Int, 45),
+			new ModeGamePref(EnumGamePrefs.AirDropFrequency, GamePrefs.EnumType.Int, 3),
+			new ModeGamePref(EnumGamePrefs.BuildCreate, GamePrefs.EnumType.Bool, false),
+			new ModeGamePref(EnumGamePrefs.PersistentPlayerProfiles, GamePrefs.EnumType.Bool, false),
+			new ModeGamePref(EnumGamePrefs.AirDropMarker, GamePrefs.EnumType.Bool, true),
+			new ModeGamePref(EnumGamePrefs.PartySharedKillRange, GamePrefs.EnumType.Int, 100),
+			new ModeGamePref(EnumGamePrefs.QuestProgressionDailyLimit, GamePrefs.EnumType.Int, 4),
+			new ModeGamePref(EnumGamePrefs.MaxChunkAge, GamePrefs.EnumType.Int, -1),
+			new ModeGamePref(EnumGamePrefs.BiomeProgression, GamePrefs.EnumType.Bool, true)
+		};
+	}
+
+	public override void Init()
+	{
+		base.Init();
+		GameStats.Set(EnumGameStats.ShowSpawnWindow, _value: false);
+		GameStats.Set(EnumGameStats.TimeLimitActive, _value: false);
+		GameStats.Set(EnumGameStats.DayLimitActive, _value: false);
+		GameStats.Set(EnumGameStats.ShowWindow, "");
+		GameStats.Set(EnumGameStats.IsSpawnEnemies, GamePrefs.GetBool(EnumGamePrefs.EnemySpawnMode));
+		GameStats.Set(EnumGameStats.ScorePlayerKillMultiplier, 0);
+		GameStats.Set(EnumGameStats.ScoreZombieKillMultiplier, 1);
+		GameStats.Set(EnumGameStats.ScoreDiedMultiplier, -5);
+		GameStats.Set(EnumGameStats.IsSpawnNearOtherPlayer, _value: false);
+		GameStats.Set(EnumGameStats.ZombieHordeMeter, _value: true);
+		GameStats.Set(EnumGameStats.IsFlyingEnabled, GamePrefs.GetBool(EnumGamePrefs.BuildCreate));
+	}
+
+	public override int GetRoundCount()
+	{
+		return 1;
+	}
+
+	public override void StartRound(int _idx)
+	{
+		GameStats.Set(EnumGameStats.GameState, 1);
+	}
+
+	public override void EndRound(int _idx)
+	{
+	}
+}

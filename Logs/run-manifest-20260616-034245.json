@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-06-16T03:42:45.883362",
+  "mode": "full",
+  "dry_run": false,
+  "exit_code": 0,
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260616-034245.log",
+  "stats": {
+    "scanned_workspace_mods": 8,
+    "scanned_game_mods": 9,
+    "synced_pull_from_game": 6,
+    "synced_push_to_game": 2,
+    "sync_conflicts": 0,
+    "moved_to_publish_ready": 0,
+    "moved_to_in_progress": 0,
+    "renamed_folders": 6,
+    "csv_added_rows": 0,
+    "csv_removed_rows": 0,
+    "quote_files_created": 0,
+    "quote_files_renamed": 0,
+    "quote_files_blanked_none": 0,
+    "readmes_written": 108,
+    "readable_txt_written": 108,
+    "pushed_back_to_game": 5,
+    "mod_zips_created": 8,
+    "pack_zips_created": 6,
+    "promoted_to_publish_ready": 5,
+    "warnings": 1,
+    "errors": 0
+  },
+  "action_needed": [],
+  "mod_changes": [
+    "AGF-BackpackPlus-060Slots-v4.0.0 | pulled from game",
+    "AGF-BackpackPlus-060Slots-v4.0.1 | promoted (updated)",
+    "AGF-HUDPlus-1Main-v6.0.1 | pulled from game",
+    "AGF-HUDPlus-1Main-v6.0.2 | promoted (updated)",
+    "AGF-NoEAC-GlobalStormTracker-v2.0.0 | promoted (new)",
+    "AGF-NoEAC-ScreamerAlert-v2.0.0 | promoted (new)",
+    "AGF-NoEAC-Toolbelt12Slots-v2.0.0 | promoted (new)"
+  ]
+}

@@ -57,7 +57,7 @@ public class BagCarryCapacity : Binding
             return cachedValue;
         }
 
-        cachedValue = MathUtils.Min(player.bag.MaxItemCount, player.bag.SlotCount).ToString();
+        cachedValue = MathUtils.Min(player.CarryCapacity, player.bag.SlotCount).ToString();
         nextRefreshTime = now + RefreshIntervalSeconds;
         return cachedValue;
     }
@@ -81,7 +81,7 @@ public class BagMaxCarryCapacity : Binding
             return cachedValue;
         }
 
-        cachedValue = player.bag.MaxItemCount.ToString();
+        cachedValue = player.CarryCapacity.ToString();
         nextRefreshTime = now + RefreshIntervalSeconds;
         return cachedValue;
     }

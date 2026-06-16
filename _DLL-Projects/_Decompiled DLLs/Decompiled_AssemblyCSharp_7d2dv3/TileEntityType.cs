@@ -1,0 +1,26 @@
+public enum TileEntityType : byte
+{
+	None = 0,
+	Collector = 3,
+	VendingMachine = 7,
+	Forge = 8,
+	Campfire = 9,
+	Workstation = 12,
+	Powered = 15,
+	PowerSource = 16,
+	PowerRangeTrap = 17,
+	Light = 18,
+	Trigger = 19,
+	Sleeper = 20,
+	PowerMeleeTrap = 21,
+	Composite = 25,
+	Taskboard = 27,
+	LandClaim = 4,
+	Loot = 5,
+	Trader = 6,
+	SecureLoot = 10,
+	SecureDoor = 11,
+	Sign = 13,
+	GoreBlock = 14,
+	SecureLootSigned = 22
+}

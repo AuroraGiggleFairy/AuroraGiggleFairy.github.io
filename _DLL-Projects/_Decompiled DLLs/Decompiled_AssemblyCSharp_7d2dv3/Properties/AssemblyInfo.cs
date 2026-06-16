@@ -1,0 +1,23 @@
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Security.Permissions;
+using Unity.Burst;
+using WorldGenerationEngineFinal;
+
+[assembly: BurstCompiler.StaticTypeReinit(typeof(ChunkProviderGenerateWorldFromRaw.RoadSmooth_00005653_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindDetailedPath_0000B5ED_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindDetailedPath_0000B5EF_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002ECalcPathBounds_0000B5F0_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindClosestPathPoint_0000B5F1_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFindClosestPathPoint_0000B5F2_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EIsPointOnPath_0000B5F3_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002ESmoothAlpha_0000B63C_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EDrawStamp_0000B65F_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EDrawWaterStamp_0000B662_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EClearWaterUnderTerrain_0000B723_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EFinalizeWater_0000B726_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002ESmoothRoadTerrainTask_0000B72D_0024BurstDirectCall))]
+[assembly: BurstCompiler.StaticTypeReinit(typeof(WorldGenerationEngineFinal_002EAdjustHeights_0000B740_0024BurstDirectCall))]
+[assembly: AssemblyVersion("0.0.0.0")]

@@ -36,8 +36,8 @@
     "media_file": ""
   },
   "AGF-BackpackPlus-060Slots": {
-    "signature": "d344bb5357143384fde8f2cce87502c8b72b4b3d03ebd562a8fa572e6fe66bb8",
-    "version": "4.0.0",
+    "signature": "df3632bf2a07898a55f286f06e373fe22a497edb4b45bca51c57d05fe416f3d5",
+    "version": "4.0.1",
     "has_media": false,
     "media_file": ""
   },
@@ -60,8 +60,8 @@
     "media_file": ""
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "108329de80a07cc790b0f20d42885d5e874cc42973fded5cf445769a57528335",
-    "version": "6.0.1",
+    "signature": "6c936ad195ef87c876cd0161ecef945360fd1c34de3b108012b501bb1b9a2812",
+    "version": "6.0.2",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main.png"
   },
@@ -156,8 +156,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-GlobalStormTracker": {
-    "signature": "96c829aebe84016ccae581dcd67f692994c4bf23b3551ace624ace1dbf7ab111",
-    "version": "1.0.1",
+    "signature": "d4d56169c36717c2cb37897f090511f009aa8e012e7333524851ab67ca6e6704",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -180,8 +180,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-ScreamerAlert": {
-    "signature": "6ff7f535aa5a4230337e0039ad6f78be257cd07507894137fca653a95d34e7a3",
-    "version": "1.2.1",
+    "signature": "0517b6b495c79b9cd8f11287810c527a14eff3d7b50775f14aedf1f137e05de8",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -192,8 +192,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "a6536f957a93feb42acbacd46a7268254d7094eea18b8e51a290b1d161ac443b",
-    "version": "1.0.3",
+    "signature": "5ad02fc1e148394ccfd9e06f02c79bb17873aeaac6c0a555a5440e638c1084dc",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },

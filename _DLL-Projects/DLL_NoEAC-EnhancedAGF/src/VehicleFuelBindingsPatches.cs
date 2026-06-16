@@ -117,7 +117,8 @@ public static class VehicleFuelBindingsPatches
             return false;
         }
 
-        EntityVehicle entityVehicle = __instance?.xui?.vehicle;
+        EntityPlayerLocal attachedPlayer = __instance?.xui?.playerUI?.entityPlayer;
+        EntityVehicle entityVehicle = attachedPlayer?.AttachedToEntity as EntityVehicle;
         Vehicle vehicle = entityVehicle?.GetVehicle();
         if (!TryResolveVehicleWindowBinding(vehicle, entityVehicle, bindingName, out value))
         {

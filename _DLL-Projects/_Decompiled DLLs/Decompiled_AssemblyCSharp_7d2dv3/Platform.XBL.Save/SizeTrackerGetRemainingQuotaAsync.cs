@@ -1,0 +1,3 @@
+namespace Platform.XBL.Save;
+
+public delegate void SizeTrackerGetRemainingQuotaAsync(SizeTrackerGetRemainingQuotaCompleted completionRoutine);

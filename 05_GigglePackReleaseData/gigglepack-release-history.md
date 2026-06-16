@@ -1,5 +1,21 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.3.0 (June 16, 2026 3:42am)
+### Summary: +3 new, ~2 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-GlobalStormTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip) (new: v2.0.0)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (new: v2.0.0-BETA)
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (new: v2.0.0)
+- **Updated Existing Mods**
+  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (v4.0.0 -> v4.0.1)
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.0.1 -> v6.0.2)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.2.0 (June 16, 2026 2:18am)
 ### Summary: +1 new, ~4 updated, =0 renamed, -0 removed
 - **New Mods**

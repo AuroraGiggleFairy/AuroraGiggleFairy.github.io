@@ -72,7 +72,7 @@ public class XUiC_PlayerStats : XUiController
 			{
 				return;
 			}
-            base.RefreshBindings(isDirty);
+            base.RefreshBindings();
             isDirty = false;
 
             if (nextChangePollTime < now)
@@ -126,7 +126,7 @@ public class XUiC_PlayerStats : XUiController
             //for the bindingName, it will return false if no BindingType is found.
             if (string.IsNullOrEmpty(value))
             {
-                return Bindings.SupportsBinding(bindingName);
+                return StatControllers.Bindings.SupportsBinding(bindingName);
             }
 
             return true;
@@ -181,7 +181,7 @@ public class XUiC_PlayerStats : XUiController
 
         if (stat == null)
         {
-            stat = Bindings.GetBinding(bindingName);
+            stat = StatControllers.Bindings.GetBinding(bindingName);
             if (stat == null)
             {
                 return "";
