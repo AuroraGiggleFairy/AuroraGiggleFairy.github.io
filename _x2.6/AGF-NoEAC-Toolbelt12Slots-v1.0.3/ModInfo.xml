@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-Toolbelt12Slots" />
+  <DisplayName value="AGF Toolbelt 12 Slots" />
+  <Version value="1.0.3" />
+  <Description value="Expands the toolbelt from 10 to 12 slots with hotkeys for the new slots." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

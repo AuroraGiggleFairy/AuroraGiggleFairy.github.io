@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-DoorsPlus" />
+  <DisplayName value="AGF Doors Plus" />
+  <Version value="3.0.1" />
+  <Description value="All door models available through one craftable helper per material tier, with recovery on break." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

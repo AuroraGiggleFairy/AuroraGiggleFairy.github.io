@@ -1,0 +1,45 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_Demopack -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly')">
+			<append xpath="/materials">
+				<material id="MammoRocketRPGTraning">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disaRocketRPGTraning"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="MammoRocketRPGHE">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disaRocketRPGHE"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="MammoRocketRPGIncendiary">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disaRocketRPGIncendiary"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo25mmGrenadeTraining">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa25mmGrenadeTraining"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo25mmGrenadeFRAGS">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa25mmGrenadeFRAGS"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo25mmGrenadeHE">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa25mmGrenadeHE"/>
+					<property name="Experience" value="2"/>
+				</material>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -1,0 +1,57 @@
+<AGFVanillaPlus-AdminModdingSupport>
+
+
+	<!--Admin Stuff, quicker Block Replace Tool action-->
+		<set xpath="/items/item[@name='meleeToolBlockReplaceTool']/property[@class='Action1']/property[@name='Delay']/@value">.1</set>
+
+	<!--Admin, give XP to a player-->
+	<!--XP multiplier affects the actual xp given-->
+		<append xpath="/items">
+			<item name="levelUp100k">
+				<property name="CustomIcon" value="schematicMaster"/>
+				<property name="CreativeMode" value="Dev"/>
+				<!-- ^^^ Only accessible via creative menu with DEV / ADMIN selected-->
+				<property name="HoldType" value="31"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mpaper"/>
+				<property name="Weight" value="5"/>
+				<property name="Stacknumber" value="50"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="UseAnimation" value="false"/>
+					<property name="Sound_start" value="read_mod"/>
+					<property name="Sound_in_head" value="true"/>
+				</property>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100000"/>
+					<!-- ^^^ XP Multiplayer affects this amount.-->
+				</effect_group>
+			</item>
+			<item name="levelUp1m">
+				<property name="CustomIcon" value="schematicMaster"/>
+				<property name="CreativeMode" value="Dev"/>
+				<!-- ^^^ Only accessible via creative menu with DEV / ADMIN selected-->
+				<property name="HoldType" value="31"/>
+				<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+				<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+				<property name="Material" value="Mpaper"/>
+				<property name="Weight" value="5"/>
+				<property name="Stacknumber" value="50"/>
+				<property class="Action0">
+					<property name="Class" value="Eat"/>
+					<property name="Delay" value="1.0"/>
+					<property name="UseAnimation" value="false"/>
+					<property name="Sound_start" value="read_mod"/>
+					<property name="Sound_in_head" value="true"/>
+				</property>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="1000000"/>
+					<!-- ^^^ XP Multiplayer affects this amount.-->
+				</effect_group>
+			</item>
+		</append>
+
+
+</AGFVanillaPlus-AdminModdingSupport>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-AudioOptionsPlus" />
+  <DisplayName value="BETA - AGF Audio Options Plus" />
+  <Version value="1.0.1" />
+  <Description value="Adds two audio menu tabs: per-category volume profiles and animal pain/death sound swapping." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

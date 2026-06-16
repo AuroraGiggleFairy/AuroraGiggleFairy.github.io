@@ -1,0 +1,17 @@
+<AGFVanillaPlus-MedicationNoInsectSlow>
+
+
+	<!--Recipe for Bee Gone Cream-->
+		<append xpath="/recipes">
+			<recipe name="medicalInsectCream" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+				<ingredient name="resourceCropAloeLeaf" count="4"/>
+				<ingredient name="foodCropBlueberries" count="4"/>
+				<ingredient name="foodCropPotato" count="4"/>
+				<ingredient name="drinkJarBoiledWater" count="1"/>
+			</recipe>		
+		</append>	
+		<!--The idea was to take natural anti-histamines, such as Vitamin C (not very strong but is in the game) and turn it into a cream.-->
+	
+</AGFVanillaPlus-MedicationNoInsectSlow>
+
+

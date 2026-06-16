@@ -1,0 +1,10 @@
+<AGF-Backpack120-1>
+	
+<!--Set the starting carry capacity. Max capacity minus encumbered slots.-->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity']/@value">68</set><!--Total capacity - 36-->
+
+<!--Sets the new max backpack size.-->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize']/@value">119</set>
+
+	
+</AGF-Backpack120-1>

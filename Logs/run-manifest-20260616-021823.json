@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-06-16T02:18:23.253919",
+  "mode": "full",
+  "dry_run": false,
+  "exit_code": 0,
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260616-021823.log",
+  "stats": {
+    "scanned_workspace_mods": 5,
+    "scanned_game_mods": 4,
+    "synced_pull_from_game": 1,
+    "synced_push_to_game": 5,
+    "sync_conflicts": 0,
+    "moved_to_publish_ready": 0,
+    "moved_to_in_progress": 0,
+    "renamed_folders": 5,
+    "csv_added_rows": 0,
+    "csv_removed_rows": 0,
+    "quote_files_created": 0,
+    "quote_files_renamed": 0,
+    "quote_files_blanked_none": 0,
+    "readmes_written": 105,
+    "readable_txt_written": 105,
+    "pushed_back_to_game": 1,
+    "mod_zips_created": 5,
+    "pack_zips_created": 4,
+    "promoted_to_publish_ready": 5,
+    "warnings": 1,
+    "errors": 0
+  },
+  "action_needed": [],
+  "mod_changes": [
+    "AGF-BackpackPlus-060Slots-v4.0.0 | pushed to game, promoted (new)",
+    "AGF-HUDPlus-1Main-v6.0.1 | pushed to game, promoted (updated)",
+    "AGF-HUDPlus-HealthBars-v5.0.1 | pushed to game, promoted (updated)",
+    "AGF-HUDPlus-RemoveEnteringPopUp-v2.0.1 | pushed to game, promoted (updated)",
+    "AGF-HUDPluszOther-Weekday-v3.0.2 | promoted (updated)"
+  ]
+}

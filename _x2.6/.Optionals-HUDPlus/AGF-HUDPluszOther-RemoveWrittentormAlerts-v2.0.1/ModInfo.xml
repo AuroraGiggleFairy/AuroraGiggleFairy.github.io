@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPluszOther-RemoveWrittentormAlerts" />
+  <DisplayName value="AGF Removes Written Storm Alerts" />
+  <Version value="2.0.1" />
+  <Description value="Removes written storm warning messages from the HUD." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

@@ -1,0 +1,96 @@
+<AGFVanillaPlus-FloraHarvester>
+
+<!--The item itself!-->
+	<append xpath="/items">
+			<item name="meleeToolFloraHarvester">
+				<property name="CustomIcon" value="resourceYuccaFibers"/>
+				<property name="CustomIconTint" value="30, 117, 54"/>
+				<property name="ItemTypeIcon" value="tree"/>
+				<property name="Tags" value="melee,grunting,light,floraHarvestorTag"/>
+				<property name="DisplayType" value="melee"/>
+				<property name="DescriptionKey" value="meleeToolFloraHarvesterDesc"/>
+				<property name="HoldType" value="36"/>
+				<property name="UnlockedBy" value="craftingSeeds"/>
+				<property name="Meshfile" value="@:Other/Items/Crafting/plant_fibersPrefab.prefab"/>
+				<property name="Material" value="MresourceYuccaFibersAGF"/>
+				<!--<property name="TintColor" value="30, 117, 54"/>-->
+				<property name="ScrapTimeOverride" value="10.0"/>
+				<property name="RepairTools" value="resourceYuccaFibers"/>
+				<property name="DegradationBreaksAfter" value="false"/>
+				<property name="EconomicValue" value="50"/>
+				<property name="TraderStageTemplate" value="baseTier1"/><!-- meleeWpnBladeT1HuntingKnife -->
+				<property name="SoundJammed" value="ItemNeedsRepair"/>
+				<property name="SoundDestroy" value="wooddestroy1"/>
+				<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+				<property name="RepairExpMultiplier" value="1.5"/>
+				<property name="SoundUnholster" value="weapon_unholster"/>
+				<property name="SoundHolster" value="weapon_holster"/>
+				<property name="SoundPickup" value="knife_hunting_grab"/>
+				<property name="SoundPlace" value="knife_hunting_place"/>
+				<property name="ShowQuality" value="true"/>
+				<property class="Action0">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Damage_type" value="Piercing"/>
+					<property name="Sphere" value=".1"/>
+					<property name="Sound_start" value="knife_metal_swinglight"/>
+					<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+					<property name="UseGrazingHits" value="false"/>
+					<property name="GrazeStart" value=".2"/>
+					<property name="GrazeEnd" value=".3"/>
+					<property name="SwingDegrees" value="80"/>
+					<property name="SwingAngle" value="140"/>
+					<property class="HitSounds">
+						<property name="Override0" value="organic" param1="metalstaborganic"/>
+					</property>
+					<property class="GrazeSounds">
+						<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+					</property>
+				</property>	
+
+				<property class="Action1">
+					<property name="Class" value="DynamicMelee"/>
+					<property name="Damage_type" value="Piercing"/>
+					<property name="Sphere" value=".1"/>
+					<property name="Sound_start" value="knife_metal_swinglight"/>
+					<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+					<property name="UseGrazingHits" value="false"/>
+					<property name="GrazeStart" value=".2"/>
+					<property name="GrazeEnd" value=".3"/>
+					<property name="SwingDegrees" value="80"/>
+					<property name="SwingAngle" value="140"/>
+					<property class="HitSounds">
+						<property name="Override0" value="organic" param1="metalstaborganic"/>
+					</property>
+					<property class="GrazeSounds">
+						<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+					</property>
+				</property>						
+				<effect_group name="meleeToolFloraHarvester" tiered="false">
+					<passive_effect name="AttacksPerMinute" operation="base_set" value="10000"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="2" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="9999" tags="admin"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="admin"/>
+					<passive_effect name="MaxRange" operation="base_set" value=".2" />
+					<passive_effect name="BlockRange" operation="base_set" value="6.0" />
+					<passive_effect name="ModSlots" operation="base_set" value="0" />
+					<passive_effect name="EntityDamage" operation="base_set" value="0" /> 
+							
+					<passive_effect name="BlockDamage" operation="base_set" value="1" />	
+					<passive_effect name="PlayerExpGain" operation="perc_add" value="-.9" tags="Harvesting"/>
+					
+					<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="earth"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="stone"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="metal"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="organic"/>
+					
+				</effect_group>
+			</item>
+	</append>
+
+
+<!--Makes repairing item take WAY less time to repair.-->
+	<set xpath="/items/item[@name='resourceYuccaFibers']/property[@name='RepairAmount']/@value">500</set>
+
+
+
+</AGFVanillaPlus-FloraHarvester>

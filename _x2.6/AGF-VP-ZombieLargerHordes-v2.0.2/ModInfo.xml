@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-ZombieLargerHordes" />
+  <DisplayName value="AGF Zombie Larger Hordes" />
+  <Version value="2.0.2" />
+  <Description value="Roughly triples wandering zombie horde sizes with smaller animal horde increases." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

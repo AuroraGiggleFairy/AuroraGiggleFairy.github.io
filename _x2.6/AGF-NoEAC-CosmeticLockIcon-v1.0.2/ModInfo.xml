@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-CosmeticLockIcon" />
+  <DisplayName value="AGF Armor Cosmetic Locked Icon" />
+  <Version value="1.0.2" />
+  <Description value="Adds a scrap icon on armor entries not yet unlocked as cosmetics." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://discord.gg/Vm5eyW6N4r" />
+  <SkipWithAntiCheat value="true" />
+</xml>

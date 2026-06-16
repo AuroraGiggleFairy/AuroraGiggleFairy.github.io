@@ -1,0 +1,115 @@
+<zzzAGF-Compatibilities>
+
+
+<!--NOTE: In notepad++ I use "linearize" from the xml tool plugin to make a collection of code to go on a single line.-->
+
+<!-- All things IZY.-->
+<!--Izy's .45 ammo and that they are learned only with the 9mm variants from pistol pete book. Localization is updated.-->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_45ACP')">
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']//unlock_entry[@tags='ammo45ACPHighpower']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']//passive_effect[@tags='ammo45ACPHighpower']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']//unlock_entry[@tags='ammo45ACPArmorpiecing']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']//passive_effect[@tags='ammo45ACPArmorpiecing']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']//unlock_entry[@tags='ammo45ACPEnhanced']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']//passive_effect[@tags='ammo45ACPEnhanced']"/>
+		<append xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']/effect_group/passive_effect/@tags">,ammo45ACPHighpower</append>
+		<append xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']/effect_group/passive_effect/@tags">,ammo45ACPArmorpiecing</append>
+		<append xpath="/progression/perks/book[@name='perkPistolPeteComplete']/effect_group[1]/passive_effect/@tags">,ammo45ACPEnhanced</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_Miscpack')">
+		<append xpath="/progression/perks/book[@name='perkRangersAPAmmo']/effect_group/passive_effect/@tags">,ammoCrossbowLightBoltSteelAP</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_SG')">
+		<!-- Removing Izy's premium shotgun ammo from crafting magazines.-->
+		<remove xpath="progression/crafting_skills/crafting_skill[@name='craftingShotguns']//unlock_entry[@tags='ammoShotgunShellPremium']"/>
+		<remove xpath="progression/crafting_skills/crafting_skill[@name='craftingShotguns']//passive_effect[@tags='ammoShotgunShellPremium']"/>
+		<!-- Adding it to shotgun complete books-->
+		<append xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group[1]/passive_effect/@tags">,ammoShotgunShellPremium,ammoShotgunShellPremiumBundle</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_556pack')">
+		<append xpath="/progression/perks/book[@name='perkSniperHPAmmo']/effect_group/passive_effect/@tags">,ammo556mmHIpower</append>
+		<append xpath="/progression/perks/book[@name='perkSniperAPAmmo']/effect_group/passive_effect/@tags">,ammo556mmArmorPiercing</append>
+		<append xpath="/progression/perks/book[@name='perkSniperComplete']/effect_group[1]/passive_effect/@tags">,ammo556mmBulletBallBundle,ammo556mmHIpowerBundle,ammo556mmArmorPiercingBundle</append>
+	</if>
+</conditional>
+<!--	Izy's Explosives with AGF edits for simplification		-->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_Demopack')">
+		<!--Removes existing progression from Demopack-->
+		<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']/@has_quality">false</set>
+		<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']/@icon">ammoRocketFrag</set>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='IZYgunT2LGLChinalakeGrenadeLauncher']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='IZYgunT2LGLChinalakeGrenadeLauncher']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='IZYgunT3LGLXM25']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='IZYgunT3LGLXM25']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='IZYgunT3RocketLauncherRPG7']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='IZYgunT3RocketLauncherRPG7']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='ammo25mmGrenadeTraining']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='ammo25mmGrenadeTraining']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='ammo25mmGrenadeHE']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='ammo25mmGrenadeHE']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='ammo25mmGrenadeFRAGS']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='ammo25mmGrenadeFRAGS']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='ammoRocketRPGTraning']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='ammoRocketRPGTraning']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='ammoRocketRPGHE']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='ammoRocketRPGHE']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry/unlock_entry[@tags='ammoRocketRPGIncendiary']"/>
+		<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='ammoRocketRPGIncendiary']"/>
+		
+		
+		<!--Izy's Explosive Weapons and ammo to unlock along with vanilla rocket launcher.-->
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT5']/unlock_entry/@item">,IZYgunT2LGLChinalakeGrenadeLauncher,IZYgunT3LGLXM25,IZYgunT3RocketLauncherRPG7</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunExplosivesT3RocketLauncher']/@tags">,IZYgunT3LGLXM25,IZYgunT3RocketLauncherRPG7,IZYgunT2LGLChinalakeGrenadeLauncher,ammo25mmGrenadeTraining,ammo25mmGrenadeHE,ammo25mmGrenadeFRAGS,ammoRocketRPGTraning,ammoRocketRPGHE,ammoRocketRPGIncendiary</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@tags='gunExplosivesT3RocketLauncher']/@tags">,IZYgunT2LGLChinalakeGrenadeLauncher,IZYgunT3LGLXM25,IZYgunT3RocketLauncherRPG7</append>
+		<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']/@unlock_level">45,50</set>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']">
+			<unlock_entry item="ammo25mmGrenadeTraining,ammo25mmGrenadeHE,ammo25mmGrenadeFRAGS,ammoRocketRPGTraning,ammoRocketRPGHE,ammoRocketRPGIncendiary" unlock_tier="2"/>
+		</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']/@name_key">,explosivesT4-2</append>
+	</if>
+</conditional>
+
+
+<!--The food recipes-->
+<conditional>
+	<if cond="mod_loaded('VanillaExtended')">		
+		<!-- Vanilla Display thing -->
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[1]/unlock_entry[3]/@item">,MashedPotatoes</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[1]/unlock_entry[4]/@item">,ScrambledMelody</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[1]/unlock_entry[5]/@item">,FrenchFries,BreakfastSandwich,FriedShamSandwich,TunaFishSandwich,BlueberryMuffin,Hotdog</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[2]/unlock_entry[2]/@item">,FishSticks,PastaSalad,YuccaFritters</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[2]/unlock_entry[3]/@item">,MeatySkewers,HoneyTea</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[2]/unlock_entry[4]/@item">,YuccaBluePie</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[3]/unlock_entry[1]/@item">,BlueberrySmoothie</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[3]/unlock_entry[2]/@item">,BlueberryIceCream</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[3]/unlock_entry[3]/@item">,AloeIceCream</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[4]/unlock_entry[1]/@item">,ChickenSoup</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[4]/unlock_entry[2]/@item">,ChickenPotPie,MushroomPotPie</append>
+		
+		
+		<!-- Recipe Unlock Level -->
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='6,100']/@tags">,MashedPotatoes</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='8,100']/@tags">,ScrambledMelody</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='10,100']/@tags">,FrenchFries,BreakfastSandwich,FriedShamSandwich,TunaFishSandwich,BlueberryMuffin,Hotdog</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='14,100']/@tags">,FishSticks,PastaSalad,YuccaFritters</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='18,100']/@tags">,MeatySkewers,HoneyTea</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='22,100']/@tags">,YuccaBluePie</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='27,100']/@tags">,BlueberrySmoothie</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='35,100']/@tags">,BlueberryIceCream</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='43,100']/@tags">,AloeIceCream</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='60,100']/@tags">,ChickenSoup</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[@level='70,100']/@tags">,ChickenPotPie,MushroomPotPie</append>
+	</if>
+</conditional>
+
+
+</zzzAGF-Compatibilities>
+

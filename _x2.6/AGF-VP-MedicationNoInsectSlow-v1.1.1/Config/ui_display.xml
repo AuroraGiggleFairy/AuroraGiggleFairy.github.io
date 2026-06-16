@@ -1,0 +1,20 @@
+<AGFVanillaPlus-MedicationNoInsectSlow>
+
+
+	<!--Stat Display for the Bee Gone Cream-->
+		<append xpath="/ui_display_info/item_display">
+			<item_display_info display_type="stopSlows" display_group="groupConsumables">
+				<display_entry name="dStopsSlows" title_key="statStopsSlows" display_type="Percent" negative_preferred="true"/>
+				<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+			</item_display_info>
+		</append>
+
+
+	<!--Added the slow preventation stat to the Steroid display-->
+		<insertafter xpath="/ui_display_info/item_display/item_display_info[@display_type='drugSteroids']/display_entry[3]">
+			<display_entry name="dStopsSlows" title_key="statStopsSlows" display_type="Percent" negative_preferred="true"/>
+		</insertafter>
+
+
+
+</AGFVanillaPlus-MedicationNoInsectSlow>

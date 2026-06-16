@@ -1,0 +1,10 @@
+<AGFVanillaPlus-MedicationNoInsectSlow>
+
+
+	<!--Bee Gone Cream findable in traders-->
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='medicine']">
+			<item name="medicalInsectCream" count="1,4"/>
+		</append>
+
+
+</AGFVanillaPlus-MedicationNoInsectSlow>

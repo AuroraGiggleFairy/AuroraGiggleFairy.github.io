@@ -1,0 +1,17 @@
+<AGFVanillaPlus-DecorationBlock>
+
+	<append xpath="/recipes">
+		<recipe name="agfDecorationsVariantHelper" count="1"  craft_area="workbench"  tags="perkAdvancedEngineering">	
+			<ingredient name="resourceScrapIron" count="10"/>
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+			<ingredient name="resourceClayLump" count="10"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="resourceScrapIron,resourceScrapPolymers,resourceClayLump"/>
+			</effect_group>
+		</recipe>
+	</append>
+
+
+</AGFVanillaPlus-DecorationBlock>

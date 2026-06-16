@@ -1,0 +1,18 @@
+<AGFVanillaPlus-FloraHarvester>
+
+	<!--Flora Harvester unlocks at level 4-->
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry[@unlock_level='2,4,6,8,10']/unlock_entry[@unlock_tier='2']/@item">,meleeToolFloraHarvester</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[@level='4,100']/@tags">,meleeToolFloraHarvester</append>
+	
+
+		<append xpath="/progression/perks/perk[@name='perkLivingOffTheLand']">
+			<effect_group>
+				<requirement name="ItemHasTags" tags="floraHarvestorTag"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1,2,3" value="-.1,-.2,-.5"/>
+			</effect_group>		
+		</append>
+		
+
+</AGFVanillaPlus-FloraHarvester>
+
+ 

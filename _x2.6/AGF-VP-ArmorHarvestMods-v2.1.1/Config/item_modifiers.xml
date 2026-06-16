@@ -1,0 +1,299 @@
+<AGFVanillaPlus-ArmorHarvestMods>
+
+<!--
+Farmer Helmet: seed loot +
+Farmer Outfit: harvest count +
+Farmer Boots: harvest seed +
+Miner Helmet: Harvest count +
+Miner Outfit: Mining Tool Stamina -
+Miner Gloves: Mining block dmg +
+Scavenger Helmet: scavanging xp+
+Scavenger Gloves: harvest count +
+Scavenger Boots: Salvage Tool Stamina -
+Lumberjack Helmet: Harvest Count
+Lumberjack Set: Axe stamina -
+Luberjack Set: x2 Wood Harvest
+-->
+
+	<append xpath="/item_modifiers">
+
+		<item_modifier name="modArmorFarmer" installable_tags="armor" modifier_tags="armorHarvestMods" blocked_tags="noMods,armorFarmerBonus" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="plantedPumpkin1"/>		
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="DescriptionKey" value="modArmorFarmerDesc"/>
+			<property name="UnlockedBy" value="craftingArmor"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="DisplayType" value="modFarmer"/>
+			<property name="Material" value="MArmorCraftingKit"/>
+			<property name="Weight" value="3"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="ScrapTimeOverride" value="3.0"/>
+
+
+				<!--Helmet-->
+			<effect_group tiered="true">
+				<passive_effect name="LootProb" operation="perc_add" value="2,4,6,8,10,20" tier="1,2,3,4,5,6" tags="seedSkill"/>
+				<display_value name="dLootProb" value=".02,.04,.06,.08,.1,.2" tier="1,2,3,4,5,6"/>
+			</effect_group>
+			
+				<!--Outfit-->				
+			<effect_group>
+				<display_value name="dHarvestCount" value=".1,.2,.3,.4,.5,1" tier="1,2,3,4,5,6"/>
+			</effect_group>
+
+			<!-- Gives a chance to add an additional harvest. Chance increases with tier -->
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="2"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="2"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="3"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="5"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="6"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusHarvest"/>
+			</effect_group>
+
+				<!--Gloves-->
+		
+				<!--Boots-->
+			<effect_group>
+				<display_value name="dHarvestCount2" value=".02,.04,.06,.08,.1,.2" tier="1,2,3,4,5,6"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusSeed"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="2"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="4"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusSeed"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="3"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="6"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusSeed"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="8"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusSeed"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="5"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusSeed"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="6"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="1" tags="farmerBonusSeed"/>
+			</effect_group>
+				
+				<!--Set Bonus-->			
+		</item_modifier>
+		
+		
+		
+		<item_modifier name="modArmorMiner" installable_tags="armor" modifier_tags="armorHarvestMods" blocked_tags="noMods,armorMinerCheck" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="meleeToolPickT2SteelPickaxe"/>		
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="DescriptionKey" value="modArmorMinerDesc"/>
+			<property name="UnlockedBy" value="craftingArmor"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="DisplayType" value="modMiner"/>
+			<property name="Material" value="MArmorCraftingKit"/>
+			<property name="Weight" value="3"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="ScrapTimeOverride" value="3.0"/>
+			
+				<!--Helmet-->				
+			<effect_group>
+				<display_value name="dHarvestCount" value=".05,.1,.15,.20,.25,.30" tier="1,2,3,4,5,6"/>
+			</effect_group>	
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="miningTool"/>
+				<requirement name="!HoldingItemHasTags" tags="axe,chainsaw"/><!--This is to account for lumberjack bonus not stacking with oreWoodHarvest-->
+					<passive_effect name="HarvestCount" operation="perc_add" value=".05,.1,.15,.20,.25,.30" tier="1,2,3,4,5,6" tags="oreWoodHarvest"/>
+			</effect_group>	
+				
+				<!--Outfit-->
+			<effect_group>
+				<display_value name="dStaminaLoss" value="-.05,-.1,-.149,-.2,-.25,-.299" tier="1,2,3,4,5,6" tags=""/>
+			</effect_group>	
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="miningTool"/>
+					<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,-.1,-.15,-.2,-.25,-.3" tier="1,2,3,4,5,6"/>
+			</effect_group>			
+				
+				<!--Gloves-->				
+			<effect_group>
+				<display_value name="dBlockDamage" value=".05,.1,.15,.20,.25,.5" tier="1,2,3,4,5,6"/>
+			</effect_group>	
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="miningTool"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value=".05,.1,.15,.20,.25,.5" tier="1,2,3,4,5,6" tags="ore"/>
+			</effect_group>
+
+				<!--Boots, unrelated to mining-->
+
+				<!--Set Bonus-->
+
+		</item_modifier>
+						
+			
+		
+		<item_modifier name="modArmorScavenger" installable_tags="armor" modifier_tags="armorHarvestMods" blocked_tags="noMods,armorScavengerBonus" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="meleeToolSalvageT2Ratchet"/>		
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="DescriptionKey" value="modArmorScavengerDesc"/>
+			<property name="UnlockedBy" value="craftingArmor"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="DisplayType" value="modScavenger"/>
+			<property name="Material" value="MArmorCraftingKit"/>
+			<property name="Weight" value="3"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="ScrapTimeOverride" value="3.0"/>
+			
+				<!--Helmet-->
+			<effect_group>
+				<display_value name="dPlayerExpGain" value=".1,.2,.3,.4,.5,.6" tier="1,2,3,4,5,6"/>	
+			</effect_group>	
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="salvageTool"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1,.2,.3,.4,.5,.6" tier="1,2,3,4,5,6" tags="Harvesting"/>
+			</effect_group>	
+				
+				<!--Outfit-->							
+				
+				<!--Gloves-->	
+			<effect_group>
+				<display_value name="dHarvestSalvage" value=".05,.1,.15,.2,.25,.3" tier="1,2,3,4,5,6"/>
+			</effect_group>				
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+				<requirement name="HoldingItemHasTags" tags="salvagingSkill"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest,allHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="2"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				<requirement name="HoldingItemHasTags" tags="salvagingSkill"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest,allHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="3"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				<requirement name="HoldingItemHasTags" tags="salvagingSkill"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest,allHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="HoldingItemHasTags" tags="salvagingSkill"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest,allHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="5"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				<requirement name="HoldingItemHasTags" tags="salvagingSkill"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest,allHarvest"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="RequirementItemTier" operation="Equals" value="6"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				<requirement name="HoldingItemHasTags" tags="salvagingSkill"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="1" tags="salvageHarvest,allHarvest"/>
+			</effect_group>
+
+				<!--Boots-->
+			<effect_group>
+				<display_value name="dStaminaLoss" value="-.05,-.1,-.149,-.2,-.25,-.4" tier="1,2,3,4,5,6"/>
+			</effect_group>			
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="salvageTool"/>
+					<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,-.1,-.15,-.2,-.25,-.4" tier="1,2,3,4,5,6"/>
+			</effect_group>
+				
+				<!--Set Bonus-->
+		</item_modifier>	
+			
+			
+		
+		<item_modifier name="modArmorLumberjack" installable_tags="armor" modifier_tags="armorHarvestMods" blocked_tags="noMods,armorLumberjackCheck" type="attachment">
+			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="meleeToolAxeT2SteelAxe"/>		
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="DescriptionKey" value="modArmorLumberjackDesc"/>
+			<property name="UnlockedBy" value="craftingArmor"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="DisplayType" value="modLumberjack"/>
+			<property name="Material" value="MArmorCraftingKit"/>
+			<property name="Weight" value="3"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="ScrapTimeOverride" value="3.0"/>
+
+
+			
+				<!--Helmet-->
+			<effect_group>
+				<passive_effect name="HarvestCount" operation="perc_add" value=".05,.1,.15,.2,.25,.5" tier="1,2,3,4,5,6" tags="lumberjackHarvest"/>
+				<display_value name="dHarvestCount" value=".05,.1,.15,.2,.25,.5" tier="1,2,3,4,5,6"/>
+			</effect_group>	
+			
+				<!--Outfit-->
+				<!--Gloves-->	
+				<!--Boots-->	
+				
+				<!--Set Bonus, adds 20% lootstage. Not this mod.-->
+			<effect_group>	
+				<display_value name="dStaminaLoss" value="-.05,-.1,-.149,-.2,-.25,-.3" tier="1,2,3,4,5,6"/>
+				<display_value name="dHarvestCount2" value="2,2,2,2,2,2" tier="1,2,3,4,5,6"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,-.10,-.15,-.20,-.25,-.3" tier="1,2,3,4,5,6">
+					<requirement name="HoldingItemHasTags" tags="axe"/>
+				</passive_effect>
+				<passive_effect name="HarvestCount" operation="perc_add" value="1" tags="lumberjackHarvest">
+					<requirement name="HoldingItemHasTags" tags="axe,chainsaw"/>
+				</passive_effect>
+			</effect_group>		
+
+		</item_modifier>			
+			
+			
+	</append>
+
+
+</AGFVanillaPlus-ArmorHarvestMods>

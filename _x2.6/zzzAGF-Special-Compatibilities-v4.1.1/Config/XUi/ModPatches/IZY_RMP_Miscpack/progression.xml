@@ -1,0 +1,4 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_Miscpack -->
+	<append xpath="/progression/perks/book[@name='perkRangersAPAmmo']/effect_group/passive_effect/@tags">,ammoCrossbowLightBoltSteelAP</append>
+</zzzAGF-Compatibilities>

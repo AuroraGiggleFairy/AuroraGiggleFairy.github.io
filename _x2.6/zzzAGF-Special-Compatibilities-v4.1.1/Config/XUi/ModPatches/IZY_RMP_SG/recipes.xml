@@ -1,0 +1,70 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_SG -->
+	<remove xpath="/recipes/recipe[@name='ammoShotgunShellPremium']"/>
+	<append xpath="/recipes">
+		<recipe name="ammoShotgunShellPremium" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceBuckshot" count="1"/>
+			<ingredient name="resourceGunPowder" count="6"/>
+			<ingredient name="resourceScrapPolymers" count="1"/>
+		</recipe>
+	</append>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('AGF-VP-RebundleBundles') == false">
+			<append xpath="/recipes">
+				<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="resourceBuckshot" count="80"/>
+					<ingredient name="resourceGunPowder" count="480"/>
+					<ingredient name="resourceScrapPolymers" count="80"/>
+				</recipe>
+			</append>
+		</if>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('AGF-VP-RebundleBundles') == false">
+			<append xpath="/recipes">
+				<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="resourceBuckshot" count="400"/>
+					<ingredient name="resourceGunPowder" count="2400"/>
+					<ingredient name="resourceScrapPolymers" count="400"/>
+				</recipe>
+			</append>
+		</if>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks') == false and mod_loaded('AGF-VP-RebundleBundles')">
+			<append xpath="/recipes">
+				<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="resourceBuckshot" count="80"/>
+					<ingredient name="resourceGunPowder" count="480"/>
+					<ingredient name="resourceScrapPolymers" count="80"/>
+				</recipe>
+				<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="ammoShotgunShellPremium" count="100"/>
+				</recipe>
+			</append>
+		</if>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('AGF-VP-RebundleBundles')">
+			<append xpath="/recipes">
+				<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="420" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="resourceBuckshot" count="400"/>
+					<ingredient name="resourceGunPowder" count="2400"/>
+					<ingredient name="resourceScrapPolymers" count="400"/>
+				</recipe>
+				<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+					<ingredient name="ammoShotgunShellPremium" count="500"/>
+				</recipe>
+			</append>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly')">
+			<append xpath="/recipes">
+				<recipe name="disaShotgunShellPremium" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+					<wildcard_forge_category/>
+				</recipe>
+				<recipe name="disaShotgunShellPremium100" count="1" craft_time="1">
+					<ingredient name="disaShotgunShellPremium" count="100"/>
+				</recipe>
+				<recipe name="disaShotgunShellPremium1000" count="1" craft_time="1">
+					<ingredient name="disaShotgunShellPremium" count="1000"/>
+				</recipe>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

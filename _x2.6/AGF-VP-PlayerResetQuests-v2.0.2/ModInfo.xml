@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-PlayerResetQuests" />
+  <DisplayName value="AGF Player Reset Quests" />
+  <Version value="2.0.2" />
+  <Description value="Adds a trader dialogue option to regenerate the current quest list." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

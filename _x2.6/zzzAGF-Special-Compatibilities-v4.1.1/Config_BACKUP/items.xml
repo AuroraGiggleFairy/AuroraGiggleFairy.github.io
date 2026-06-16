@@ -1,0 +1,771 @@
+<zzzAGF-Compatibilities>
+
+
+<!--A fix? because one letter is lower case?!-->
+<set xpath="/items/item[@name='ammoBundle762mmBulletHP']/property[@name='CustomIcon']/@value">ammo762mmBulletHP</set>
+
+
+<!--NOTE: In notepad++ I use "linearize" from the xml tool plugin to make a collection of code to go on a single line.-->
+
+<!--All Things IZY-->
+<!--Izy's .45 ammo and that they are learned only with the 9mm variants from pistol pete book. Localization is updated.-->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_45ACP')">
+		<set xpath="/items/item[@name='ammo45ACPHighpower']/property[@name='UnlockedBy']/@value">perkPistolPeteHPAmmo</set>
+		<set xpath="/items/item[@name='ammo45ACPArmorpiecing']/property[@name='UnlockedBy']/@value">perkPistolPeteAPAmmo</set>
+		<set xpath="/items/item[@name='ammo45ACPEnhanced']/property[@name='UnlockedBy']/@value">perkPistolPeteComplete</set>
+	</if>
+</conditional>
+<!--Izy's .45 ammo and SimplifiedStacks-->
+<conditional>
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_45ACP')">
+		<set xpath="/items/item[@name='ammo45ACPBulletBall']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammo45ACPHighpower']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammo45ACPArmorpiecing']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammo45ACPEnhanced']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammoBundle45ACPBulletBall']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ammoBundle45ACPHighpower']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ammoBundle45ACPArmorpiecing']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ammoBundle45ACPEnhanced']/property[@name='Stacknumber']/@value">50</set>
+		<append xpath="/items/item[@name='ammoBundle45ACPBulletBall']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+		<append xpath="/items/item[@name='ammoBundle45ACPHighpower']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+		<append xpath="/items/item[@name='ammoBundle45ACPArmorpiecing']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+		<append xpath="/items/item[@name='ammoBundle45ACPEnhanced']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+	</if>
+</conditional>
+<!-- Izy's .45 ammo and Disassembly-->
+<conditional>
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
+		<!-- Modifications to the Ammo-->
+		<append xpath="/items/item[@name='ammo45ACPBulletBall']">
+			<property name="Material" value="Mammo45ACPBulletBall"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo45ACPHighpower']">
+			<property name="Material" value="Mammo45ACPHighpower"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo45ACPArmorpiecing']">
+			<property name="Material" value="Mammo45ACPArmorpiecing"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo45ACPEnhanced']">
+			<property name="Material" value="Mammo45ACPEnhanced"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<!-- The Disassembled Bundles-->
+		<append xpath="/items">
+			<!-- x1 -->
+			<item name="disa45ACPBulletBall">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo45ACPBulletBall"/>
+				<property name="Material" value="Mammo45ACPBulletBall"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,1,1,1"/>
+				</property>
+			</item>
+			<item name="disa45ACPHighpower">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo45ACPHipower"/>
+				<property name="Material" value="Mammo45ACPHighpower"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,2,2,1"/>
+				</property>
+			</item>
+			<item name="disa45ACPArmorpiecing">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo45ACPAP"/>
+				<property name="Material" value="Mammo45ACPArmorpiecing"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="2,2,2,1"/>
+				</property>
+			</item>
+			<item name="disa45ACPEnhanced">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo45ACPENH"/>
+				<property name="Material" value="Mammo45ACPEnhanced"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="2,3,6,1"/>
+				</property>
+			</item>
+			<!-- x100 -->
+			<item name="disa45ACPBulletBall100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo45ACPBulletBall"/>
+				<property name="Material" value="Mammo45ACPBulletBall"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,100,100,100"/>
+				</property>
+			</item>
+			<item name="disa45ACPHighpower100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo45ACPHipower"/>
+				<property name="Material" value="Mammo45ACPHighpower"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,200,200,100"/>
+				</property>
+			</item>
+			<item name="disa45ACPArmorpiecing100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo45ACPAP"/>
+				<property name="Material" value="Mammo45ACPArmorpiecing"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="200,200,200,100"/>
+				</property>
+			</item>
+			<item name="disa45ACPEnhanced100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo45ACPENH"/>
+				<property name="Material" value="Mammo45ACPEnhanced"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="200,300,600,100"/>
+				</property>
+			</item>
+			<!-- x1000-->
+			<item name="disa45ACPBulletBall1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo45ACPBulletBall"/>
+				<property name="Material" value="Mammo45ACPBulletBall"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,1000,1000,1000"/>
+				</property>
+			</item>
+			<item name="disa45ACPHighpower1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo45ACPHipower"/>
+				<property name="Material" value="Mammo45ACPHighpower"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,2000,2000,1000"/>
+				</property>
+			</item>
+			<item name="disa45ACPArmorpiecing1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo45ACPAP"/>
+				<property name="Material" value="Mammo45ACPArmorpiecing"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="2000,2000,2000,1000"/>
+				</property>
+			</item>
+			<item name="disa45ACPEnhanced1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo45ACPENH"/>
+				<property name="Material" value="Mammo45ACPEnhanced"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="2000,3000,6000,1000"/>
+				</property>
+			</item>
+		</append>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_45ACP') and mod_loaded('V2_OakravenAmmoPress')">
+		<append xpath="/items/item[@name='ammo45ACPBulletBall']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>
+		
+		<append xpath="/items/item[@name='ammoBundle45ACPBulletBall']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>
+
+		<append xpath="/items/item[@name='ammo45ACPHighpower']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+		</append>
+
+		<append xpath="/items/item[@name='ammoBundle45ACPHighpower']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+		</append>
+
+		<append xpath="/items/item[@name='ammo45ACPArmorpiecing']">        
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+		</append>
+
+		<append xpath="/items/item[@name='ammoBundle45ACPArmorpiecing']">        
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+		</append>
+
+		<append xpath="/items/item[@name='ammo45ACPEnhanced']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>
+
+		<append xpath="/items/item[@name='ammoBundle45ACPEnhanced']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>
+	</if>
+</conditional>
+
+
+
+
+<!--	IZY_RMP_Miscpack in General -->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_Miscpack')">
+		<append xpath="/items/item[@name='ammoCrossbowLightBoltStone']">
+			<property name="DescriptionKey" value="lightboltdesc"/>
+		</append>
+		<append xpath="/items/item[@name='ammoCrossbowLightBoltIron']">
+			<property name="DescriptionKey" value="lightboltdesc"/>
+		</append>
+		<append xpath="/items/item[@name='ammoCrossbowLightBoltSteelAP']">
+			<property name="UnlockedBy" value="perkRangersAPAmmo"/>
+			<property name="DescriptionKey" value="lightboltdesc"/>
+		</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_loaded('AGF-VP-SimplifiedStacks')">
+		<set xpath="/items/item[@name='ammoCrossbowLightBoltStone']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammoCrossbowLightBoltIron']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammoCrossbowLightBoltSteelAP']/property[@name='Stacknumber']/@value">500</set>
+	</if>
+</conditional>
+<!-- Izy's Shotgun Stuff-->
+<!--Makes existing shotguns also be able to use the premium shotgun shells.-->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_SG')">
+		<append xpath="/items/item[contains(@name,'Shotgun')]/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoShotgunShellPremium</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks') == false">
+		<append xpath="/items">
+			<item name="ammoShotgunShellPremiumBundle">
+				<property name="Extends" value="ammoBundleMaster"/>
+				<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+				<property name="Stacknumber" value="10"/>
+				<property name="EconomicValue" value="900"/>
+				<property name="TraderStageTemplate" value="ammoTier3"/>
+				<property name="UnlockedBy" value="perkShotgunMessiahComplete"/>
+				<property class="Action0">
+					<property name="Create_item" value="ammoShotgunShellPremium"/>
+					<property name="Create_item_count" value="100"/>
+				</property>
+			</item>
+		</append>
+	</if>
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('AGF-VP-SimplifiedStacks')">
+		<append xpath="/items">
+			<item name="ammoShotgunShellPremiumBundle">
+				<property name="Extends" value="ammoBundleMaster"/>
+				<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+				<property name="Stacknumber" value="50"/>
+				<property name="EconomicValue" value="900"/>
+				<property name="TraderStageTemplate" value="ammoTier3"/>
+				<property name="UnlockedBy" value="perkShotgunMessiahComplete"/>
+				<property class="Action0">
+					<property name="Create_item" value="ammoShotgunShellPremium"/>
+					<property name="Create_item_count" value="500"/>
+				</property>
+			</item>
+		</append>
+		<set xpath="/items/item[@name='ammoShotgunShellPremium']/property[@name='Stacknumber']/@value">500</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_SG') and mod_loaded('V2_OakravenAmmoPress')">
+		<append xpath="/items/item[@name='ammoShotgunShellPremium']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>
+		
+		<append xpath="/items/item[@name='ammoShotgunShellPremiumBundle']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>		
+	
+
+	</if>
+</conditional>
+<!-- Izy's Shotgun ammo and Disassembly-->
+<conditional>
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_SG')">
+		<!-- Modifications to the Ammo-->
+		<append xpath="/items/item[@name='ammoShotgunShellPremium']">
+			<property name="Material" value="MammoShotgunShellPremium"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<!-- The Disassembled Bundles-->
+		<append xpath="/items">
+			<!-- x1 -->
+			<item name="disaShotgunShellPremium">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+				<property name="Material" value="MammoShotgunShellPremium"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceScrapPolymers"/>
+					<property name="Create_item_count" value="1,6,1"/>
+				</property>
+			</item>
+			<!-- x100 -->
+			<item name="disaShotgunShellPremium100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+				<property name="Material" value="MammoShotgunShellPremium"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceScrapPolymers"/>
+					<property name="Create_item_count" value="100,600,100"/>
+				</property>
+			</item>
+			<!-- x1000-->
+			<item name="disaShotgunShellPremium1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+				<property name="Material" value="MammoShotgunShellPremium"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourceScrapPolymers"/>
+					<property name="Create_item_count" value="1000,6000,1000"/>
+				</property>
+			</item>
+		</append>
+	</if>
+</conditional>
+<!--Izy's 5.56 Ammo Stuff-->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_556pack')">
+		<append xpath="/items/item[@name='ammo556mmHIpower']">
+			<property name="UnlockedBy" value="perkSniperHPAmmo"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmArmorPiercing']">
+			<property name="UnlockedBy" value="perkSniperAPAmmo"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmBulletBallBundle']">
+			<property name="UnlockedBy" value="perkSniperComplete"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmHIpowerBundle']">
+			<property name="UnlockedBy" value="perkSniperComplete"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmArmorPiercingBundle']">
+			<property name="UnlockedBy" value="perkSniperComplete"/>
+		</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('AGF-VP-SimplifiedStacks') and mod_loaded('IZY_RMP_556pack')">
+		<set xpath="/items/item[@name='ammo556mmBulletBall']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammo556mmHIpower']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammo556mmArmorPiercing']/property[@name='Stacknumber']/@value">500</set>
+		<append xpath="/items/item[@name='ammo556mmBulletBallBundle']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmHIpowerBundle']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmArmorPiercingBundle']/property[@class='Action0']">
+			<property name="Create_item_count" value="500"/>
+		</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('V2_OakravenAmmoPress') and mod_loaded('IZY_RMP_556pack')">
+	   <append xpath="/items/item[@name='ammo556mmBulletBall']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmBulletBallBundle']">        
+			<property name="Group" value="Ammo/Weapons,Ammo,RegularAmmo"/>
+		</append>    
+		<append xpath="/items/item[@name='ammo556mmHIpower']">    
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmHIpowerBundle']">        
+			<property name="Group" value="Ammo/Weapons,Ammo,HPAmmo"/>
+		</append>    
+		<append xpath="/items/item[@name='ammo556mmArmorPiercing']">        
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmArmorPiercingBundle']">        
+			<property name="Group" value="Ammo/Weapons,Ammo,APAmmo"/>
+		</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_45ACP')">
+		<!-- Modifications to the Ammo-->
+		<append xpath="/items/item[@name='ammo556mmBulletBall']">
+			<property name="Material" value="Mammo556mmBulletBall"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmHIpower']">
+			<property name="Material" value="Mammo556mmHIpower"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo556mmArmorPiercing']">
+			<property name="Material" value="Mammo556mmArmorPiercing"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<!-- The Disassembled Bundles-->
+		<append xpath="/items">
+			<!-- x1 -->
+			<item name="disa556mmBulletBall">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="IZYammo556mmBulletBall"/>
+				<property name="Material" value="Mammo556mmBulletBall"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,1,2,1"/>
+				</property>
+			</item>
+			<item name="disa556mmHIpower">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="IZYammo556mmHighPower"/>
+				<property name="Material" value="Mammo556mmHIpower"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,1,4,1"/>
+				</property>
+			</item>
+			<item name="disa556mmArmorPiercing">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="IZYammo556mmArmorpiercing"/>
+				<property name="Material" value="Mammo556mmArmorPiercing"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,5,3,1"/>
+				</property>
+			</item>
+			<!-- x100 -->
+			<item name="disa556mmBulletBall100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="IZYammo556mmBulletBall"/>
+				<property name="Material" value="Mammo556mmBulletBall"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,100,200,100"/>
+				</property>
+			</item>
+			<item name="disa556mmHIpower100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="IZYammo556mmHighPower"/>
+				<property name="Material" value="Mammo556mmHIpower"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,100,400,100"/>
+				</property>
+			</item>
+			<item name="disa556mmArmorPiercing100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="IZYammo556mmArmorpiercing"/>
+				<property name="Material" value="Mammo556mmArmorPiercing"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,500,300,100"/>
+				</property>
+			</item>
+			<!-- x1000-->
+			<item name="disa556mmBulletBall1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="IZYammo556mmBulletBall"/>
+				<property name="Material" value="Mammo556mmBulletBall"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,1000,2000,1000"/>
+				</property>
+			</item>
+			<item name="disa556mmHIpower1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="IZYammo556mmHighPower"/>
+				<property name="Material" value="Mammo556mmHIpower"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,1000,4000,1000"/>
+				</property>
+			</item>
+			<item name="disa556mmArmorPiercing1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="IZYammo556mmArmorpiercing"/>
+				<property name="Material" value="Mammo556mmArmorPiercing"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceBulletTip,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,5000,3000,1000"/>
+				</property>
+			</item>
+		</append>
+	</if>
+</conditional>
+<!--	Izy's Explosives with AGF edits for simplification		-->
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_Demopack')">
+		<append xpath="/items/item[@name='ammo25mmGrenadeTraining']">
+			<property name="UnlockedBy" value="craftingExplosives"/>
+		</append>
+		<append xpath="/items/item[@name='ammo25mmGrenadeFRAGS']">
+			<property name="UnlockedBy" value="craftingExplosives"/>
+		</append>
+		<append xpath="/items/item[@name='ammo25mmGrenadeHE']">
+			<property name="UnlockedBy" value="craftingExplosives"/>
+		</append>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('IZY_RMP_Demopack') and mod_loaded('AGF-VP-SimplifiedStacks')">
+		<set xpath="/items/item[@name='ammoRocketRPGTraning']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ammoRocketRPGHE']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ammoRocketRPGIncendiary']/property[@name='Stacknumber']/@value">50</set>
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('AGF-VP-AmmoDisassembly') and mod_loaded('IZY_RMP_Demopack')">
+		<!-- Modifications to the Ammo-->
+		<append xpath="/items/item[@name='ammoRocketRPGTraning']">
+			<property name="Material" value="MammoRocketRPGTraning"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammoRocketRPGHE']">
+			<property name="Material" value="MammoRocketRPGHE"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammoRocketRPGIncendiary']">
+			<property name="Material" value="MammoRocketRPGIncendiary"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo25mmGrenadeTraining']">
+			<property name="Material" value="Mammo25mmGrenadeTraining"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo25mmGrenadeFRAGS']">
+			<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<append xpath="/items/item[@name='ammo25mmGrenadeHE']">
+			<property name="Material" value="Mammo25mmGrenadeHE"/>
+			<property name="Weight" value="1"/>
+		</append>
+		<!-- The Disassembled Bundles-->
+		<append xpath="/items">
+			<!-- x1 -->
+			<item name="disaRocketRPGTraning">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammoRocketRPGTraning"/>
+				<property name="Material" value="MammoRocketRPGTraning"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceForgedSteel,resourceGunPowder"/>
+					<property name="Create_item_count" value="1,1,2,1,15"/>
+				</property>
+			</item>
+			<item name="disaRocketRPGHE">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammoRocketRPGHE"/>
+				<property name="Material" value="MammoRocketRPGHE"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder"/>
+					<property name="Create_item_count" value="1,1,2,40"/>
+				</property>
+			</item>
+			<item name="disaRocketRPGIncendiary">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammoRocketRPGIncendiary"/>
+				<property name="Material" value="MammoRocketRPGIncendiary"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder,ammoGasCan"/>
+					<property name="Create_item_count" value="1,1,2,30,300"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeTraining">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo25mmTRAINING"/>
+				<property name="Material" value="Mammo25mmGrenadeTraining"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,10,4"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeFRAGS">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo25mmFRAGS"/>
+				<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,2,16,4"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeHE">
+				<property name="Extends" value="disa9mmBulletBall"/>
+				<property name="CustomIcon" value="ammo25mmHE"/>
+				<property name="Material" value="Mammo25mmGrenadeHE"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1,5,14,4"/>
+				</property>
+			</item>
+			<!-- x100 -->
+			<item name="disaRocketRPGTraning100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammoRocketRPGTraning"/>
+				<property name="Material" value="MammoRocketRPGTraning"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceForgedSteel,resourceGunPowder"/>
+					<property name="Create_item_count" value="100,100,200,100,1500"/>
+				</property>
+			</item>
+			<item name="disaRocketRPGHE100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammoRocketRPGHE"/>
+				<property name="Material" value="MammoRocketRPGHE"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder"/>
+					<property name="Create_item_count" value="100,100,200,4000"/>
+				</property>
+			</item>
+			<item name="disaRocketRPGIncendiary100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammoRocketRPGIncendiary"/>
+				<property name="Material" value="MammoRocketRPGIncendiary"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder,ammoGasCan"/>
+					<property name="Create_item_count" value="100,100,200,3000,30000"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeTraining100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo25mmTRAINING"/>
+				<property name="Material" value="Mammo25mmGrenadeTraining"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,1000,400"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeFRAGS100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo25mmFRAGS"/>
+				<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,200,1600,400"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeHE100">
+				<property name="Extends" value="disa9mmBulletBall100"/>
+				<property name="CustomIcon" value="ammo25mmHE"/>
+				<property name="Material" value="Mammo25mmGrenadeHE"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="100,500,1400,400"/>
+				</property>
+			</item>
+			<!-- x1000-->
+			<item name="disaRocketRPGTraning1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammoRocketRPGTraning"/>
+				<property name="Material" value="MammoRocketRPGTraning"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceForgedSteel,resourceGunPowder"/>
+					<property name="Create_item_count" value="1000,1000,2000,1000,15000"/>
+				</property>
+			</item>
+			<item name="disaRocketRPGHE1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammoRocketRPGHE"/>
+				<property name="Material" value="MammoRocketRPGHE"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder"/>
+					<property name="Create_item_count" value="1000,1000,2000,40000"/>
+				</property>
+			</item>
+			<item name="disaRocketRPGIncendiary1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammoRocketRPGIncendiary"/>
+				<property name="Material" value="MammoRocketRPGIncendiary"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder,ammoGasCan"/>
+					<property name="Create_item_count" value="1000,1000,2000,30000,300000"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeTraining1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo25mmTRAINING"/>
+				<property name="Material" value="Mammo25mmGrenadeTraining"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,10000,4000"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeFRAGS1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo25mmFRAGS"/>
+				<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,2000,16000,4000"/>
+				</property>
+			</item>
+			<item name="disa25mmGrenadeHE1000">
+				<property name="Extends" value="disa9mmBulletBall1000"/>
+				<property name="CustomIcon" value="ammo25mmHE"/>
+				<property name="Material" value="Mammo25mmGrenadeHE"/>
+				<property class="Action0">
+					<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+					<property name="Create_item_count" value="1000,5000,14000,4000"/>
+				</property>
+			</item>
+		</append>
+	</if>
+</conditional>	
+
+<!--The food recipes-->
+<conditional>
+	<if cond="mod_loaded('VanillaExtended')">
+		<append xpath="/items/item[@name='MashedPotatoes']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='ScrambledMelody']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='FrenchFries']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='BreakfastSandwich']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='FriedShamSandwich']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='TunaFishSandwich']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='BlueberryMuffin']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='FishSticks']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='PastaSalad']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='YuccaFritters']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='MeatySkewers']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='HoneyTea']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='YuccaBluePie']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='BlueberrySmoothie']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='BlueberryIceCream']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='AloeIceCream']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='ChickenSoup']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='ChickenPotPie']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='MushroomPotPie']"><property name="UnlockedBy" value="craftingFood"/></append>
+		<append xpath="/items/item[@name='Hotdog']"><property name="UnlockedBy" value="craftingFood"/></append>
+	</if>
+</conditional>	
+<conditional>
+	<if cond="mod_loaded('VanillaExtended') and mod_loaded('AGF-VP-SimplifiedStacks')">		
+		<set xpath="/items/item[@name='MashedPotatoes']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ScrambledMelody']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='FrenchFries']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='BreakfastSandwich']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='FriedShamSandwich']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='TunaFishSandwich']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='BlueberryMuffin']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='FishSticks']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='PastaSalad']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='YuccaFritters']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='MeatySkewers']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='YuccaBluePie']/property[@name='Stacknumber']/@value">50</set>	
+		<set xpath="/items/item[@name='BlueberrySmoothie']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='BlueberryIceCream']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='AloeIceCream']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ChickenSoup']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='ChickenPotPie']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='MushroomPotPie']/property[@name='Stacknumber']/@value">50</set>
+		<set xpath="/items/item[@name='Hotdog']/property[@name='Stacknumber']/@value">50</set>
+	</if>
+</conditional>
+</zzzAGF-Compatibilities>

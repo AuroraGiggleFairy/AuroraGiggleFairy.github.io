@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-BreakItGetIt" />
+  <DisplayName value="AGF Break It, Get It" />
+  <Version value="1.0.3" />
+  <Description value="Breaking stations, storage, and electrical blocks returns the placed block to inventory." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

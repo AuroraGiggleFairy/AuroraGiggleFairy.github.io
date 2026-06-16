@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+lblContextActionOpenAll,UI,Item Context Menu,,,"Open All",,"Alle Ã¶ffnen","Abrir todo","Tout ouvrir","Apri tutti","ã™ã¹ã¦é–‹å°","ëª¨ë‘ ì—´ê¸°","OtwÃ³rz wszystko","Abrir tudo","ÐžÑ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ð²ÑÐµ","TÃ¼mÃ¼nÃ¼ AÃ§","å…¨éƒ¨å¼€å¯","å…¨éƒ¨é–‹å•Ÿ"
+lblContextActionOpenAllStop,UI,Item Context Menu,,,"Stop Opening",,"Ã–ffnen abbrechen","Dejar de abrir","ArrÃªter l'ouverture","Interrompi apertura","é–‹å°ã‚’ä¸­æ­¢","ì—´ê¸° ì¤‘ë‹¨","Przerwij otwieranie","Parar de abrir","ÐžÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ","AÃ§mayÄ± Durdur","åœæ­¢å¼€å¯","åœæ­¢é–‹å•Ÿ"
+

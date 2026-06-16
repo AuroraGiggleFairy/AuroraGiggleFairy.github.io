@@ -1,0 +1,27 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_556pack -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly')">
+			<append xpath="/materials">
+				<material id="Mammo556mmBulletBall">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa556mmBulletBall"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo556mmHIpower">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa556mmHIpower"/>
+					<property name="Experience" value="2"/>
+				</material>
+				<material id="Mammo556mmArmorPiercing">
+					<property name="damage_category" value="metal"/>
+					<property name="surface_category" value="metal"/>
+					<property name="forge_category" value="disa556mmArmorPiercing"/>
+					<property name="Experience" value="2"/>
+				</material>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

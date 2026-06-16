@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPlus-HealthBars" />
+  <DisplayName value="AGF Health Bars" />
+  <Version value="4.0.1" />
+  <Description value="Adds AGF-styled enemy health bars for easier combat reading." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

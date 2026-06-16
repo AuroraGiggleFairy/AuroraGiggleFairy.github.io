@@ -1,0 +1,47 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('IZY_MMVMV2')">
+			<include filename="XUi/ModPatches/IZY_MMVMV2/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_45ACP')">
+			<include filename="XUi/ModPatches/IZY_RMP_45ACP/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_556pack')">
+			<include filename="XUi/ModPatches/IZY_RMP_556pack/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Demopack')">
+			<include filename="XUi/ModPatches/IZY_RMP_Demopack/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_HVW')">
+			<include filename="XUi/ModPatches/IZY_RMP_HVW/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Miscpack')">
+			<include filename="XUi/ModPatches/IZY_RMP_Miscpack/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_SG')">
+			<include filename="XUi/ModPatches/IZY_RMP_SG/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('V2_OakravenAmmoPress')">
+			<include filename="XUi/ModPatches/V2_OakravenAmmoPress/recipes.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('VanillaExtended')">
+			<include filename="XUi/ModPatches/VanillaExtended/recipes.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

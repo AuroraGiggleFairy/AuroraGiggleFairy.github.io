@@ -1,0 +1,20 @@
+<zzzAGF-Compatibilities>
+
+<conditional>
+	<if cond="mod_loaded('V2_OakravenAmmoPress') and mod_loaded('AGF-VP-BreakItGetIt')">
+	
+			<remove xpath="/blocks/block[@name='ammopress']/drop"/>
+			<append xpath="/blocks/block[@name='ammopress']">
+				<drop event="Destroy" name="ammopress" count="1"/>
+				<drop event="Fall" name="ammopress" count="1" prob="0.9" stick_chance="1"/>
+			</append>	
+	
+	</if>
+</conditional>
+<conditional>
+	<if cond="mod_loaded('V2_OakravenAmmoPress') and mod_loaded('AGF-VP-SimplifiedStacks')">		
+			<set xpath="/blocks/block[@name='ammopress']/property[@name='Stacknumber']/@value">500</set>	
+	</if>
+</conditional>
+
+</zzzAGF-Compatibilities>

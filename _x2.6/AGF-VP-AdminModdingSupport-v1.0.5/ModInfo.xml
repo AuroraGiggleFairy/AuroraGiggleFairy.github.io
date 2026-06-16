@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-AdminModdingSupport" />
+  <DisplayName value="AGF Admin and Modding Support" />
+  <Version value="1.0.5" />
+  <Description value="Adds a faster block replace tool, dev XP books, and harvest test blocks for admin use." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

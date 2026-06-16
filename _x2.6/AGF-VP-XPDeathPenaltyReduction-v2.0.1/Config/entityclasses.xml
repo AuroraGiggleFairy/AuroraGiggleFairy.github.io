@@ -1,0 +1,8 @@
+<AGFVanillaPlus-XPDeathPenaltyReduction>
+
+	<!--Each death adds a 10% death penalty UP TO 30%, where the vanilla is 25% up to 50%-->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='ExpDeficitPerDeathPercentage']/@value">.1</set><!--Default is 25% at .25.-->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='ExpDeficitMaxPercentage']/@value">.3</set><!--Default is max of 50% at .5-->
+
+
+</AGFVanillaPlus-XPDeathPenaltyReduction>

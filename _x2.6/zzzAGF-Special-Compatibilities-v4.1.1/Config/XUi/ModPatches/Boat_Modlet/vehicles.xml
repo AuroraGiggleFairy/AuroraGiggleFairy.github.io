@@ -1,0 +1,145 @@
+<zzzAGF-Compatibilities>
+	<!-- Boat_Modlet -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-VehiclesExtraSeating')">
+			<remove xpath="/vehicles/vehicle[@name='vehicleFlatBoat']/property[contains(@class,'seat')]"/>
+			<append xpath="/vehicles/vehicle[@name='vehicleFlatBoat']">
+				<property class="seat0">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="41"/>
+					<property name="position" value="-0.441, -0.407, -1.451"/>
+					<property name="rotation" value="2.7, 0,  0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+					<property name="IKFootLPosition" value="-.069, 0.62, 0.512"/>
+					<property name="IKFootLRotation" value="-3.9, 0, 0"/>
+					<property name="IKFootRPosition" value=".119, 0.62, 0.512"/>
+					<property name="IKFootRRotation" value="-3.9, 0, 0"/>
+				</property>
+				<property class="seat1">
+					<!--The NEW seat1-->
+					<property name="class" value="Seat"/>
+					<property name="pose" value="41"/>
+					<property name="position" value="0.441, -0.46, -1.30"/>
+					<property name="rotation" value="2.7, 0,  0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+					<property name="IKHandLPosition" value="-0.25, 1.1, 0.05"/>
+					<property name="IKHandLRotation" value="298, 4, 74"/>
+					<property name="IKHandRPosition" value="0.35, 1.1, 0.0"/>
+					<property name="IKHandRRotation" value="113.3, 19.1, 102.1651"/>
+					<property name="IKFootLPosition" value="-.2, 0.67, 0.512"/>
+					<property name="IKFootLRotation" value="-3.9, 0, 0"/>
+					<property name="IKFootRPosition" value="0.25, 1.1, 0.8"/>
+					<property name="IKFootRRotation" value="-75, 14, -10"/>
+				</property>
+				<property class="seat2">
+					<!-- Original Seat1 that is now seat2-->
+					<property name="class" value="Seat"/>
+					<property name="pose" value="40"/>
+					<property name="position" value="0.42, -.46, 1"/>
+					<property name="rotation" value="-3, 0, 0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+					<property name="IKHandLPosition" value="-0.3, 1.1, -0.05"/>
+					<property name="IKHandLRotation" value="298, 4, 74"/>
+					<property name="IKHandRPosition" value="0.35, 1.05, 0.0"/>
+					<property name="IKHandRRotation" value="113.3, 19.1, 102.1651"/>
+					<property name="IKFootLPosition" value="-.2, 0.6 ,0.35"/>
+					<property name="IKFootLRotation" value="-20, -20, 0"/>
+					<property name="IKFootRPosition" value=".2, 0.6 ,0.35"/>
+					<property name="IKFootRRotation" value="-20, 20, 0"/>
+				</property>
+				<property class="seat3">
+					<!-- Mirrored seat2 on opposite side -->
+					<property name="class" value="Seat"/>
+					<property name="pose" value="40"/>
+					<property name="position" value="-0.42, -.46, 1"/>
+					<property name="rotation" value="-3, 0, 0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+					<property name="IKHandLPosition" value="-0.35, 1.05, 0.0"/>
+					<property name="IKHandLRotation" value="298, 4, 74"/>
+					<property name="IKHandRPosition" value="0.3, 1.1, -0.05"/>
+					<property name="IKHandRRotation" value="113.3, 19.1, 102.1651"/>
+					<property name="IKFootLPosition" value="-.2, 0.6 ,0.35"/>
+					<property name="IKFootLRotation" value="-20, -20, 0"/>
+					<property name="IKFootRPosition" value=".2, 0.6 ,0.35"/>
+					<property name="IKFootRRotation" value="-20, 20, 0"/>
+				</property>
+				<property class="seat4">
+					<!-- Middle plank counterpart of seat2 -->
+					<property name="class" value="Seat"/>
+					<property name="pose" value="40"/>
+					<property name="position" value="0.42, -.46, 0"/>
+					<property name="rotation" value="-3, 0, 0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+					<property name="IKHandLPosition" value="-0.3, 1.1, -0.05"/>
+					<property name="IKHandLRotation" value="298, 4, 74"/>
+					<property name="IKHandRPosition" value="0.35, 1.05, 0.0"/>
+					<property name="IKHandRRotation" value="113.3, 19.1, 102.1651"/>
+					<property name="IKFootLPosition" value="-.2, 0.6 ,0.35"/>
+					<property name="IKFootLRotation" value="-20, -20, 0"/>
+					<property name="IKFootRPosition" value=".2, 0.6 ,0.35"/>
+					<property name="IKFootRRotation" value="-20, 20, 0"/>
+				</property>
+				<property class="seat5">
+					<!-- Middle plank counterpart of seat3 -->
+					<property name="class" value="Seat"/>
+					<property name="pose" value="40"/>
+					<property name="position" value="-0.42, -.46, 0"/>
+					<property name="rotation" value="-3, 0, 0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+					<property name="IKHandLPosition" value="-0.35, 1.05, 0.0"/>
+					<property name="IKHandLRotation" value="298, 4, 74"/>
+					<property name="IKHandRPosition" value="0.3, 1.1, -0.05"/>
+					<property name="IKHandRRotation" value="113.3, 19.1, 102.1651"/>
+					<property name="IKFootLPosition" value="-.2, 0.6 ,0.35"/>
+					<property name="IKFootLRotation" value="-20, -20, 0"/>
+					<property name="IKFootRPosition" value=".2, 0.6 ,0.35"/>
+					<property name="IKFootRRotation" value="-20, 20, 0"/>
+				</property>
+			</append>
+			<remove xpath="/vehicles/vehicle[@name='vehicleDinghy']/property[contains(@class,'seat')]"/>
+			<append xpath="/vehicles/vehicle[@name='vehicleDinghy']">
+				<property class="seat0">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="20"/>
+					<property name="position" value="0.119, 0.123, -0.501"/>
+					<property name="rotation" value="347.6, 97.8,  0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+					<property name="IKFootLPosition" value="-0.259, .497, .189"/>
+					<property name="IKFootRPosition" value="0.369, 0.511, 0.024"/>
+					<property name="IKFootLRotation" value="13.7, 24.8, 0"/>
+					<property name="IKFootRRotation" value="16.5, 0, 0"/>
+				</property>
+				<property class="seat1">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="1"/>
+					<property name="position" value="0.2, 0.100, 0.980 "/>
+					<property name="rotation" value="326,0,0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+					<property name="IKHandLPosition" value="-.414, -.103, -0.155"/>
+					<property name="IKHandRPosition" value=".425, -0.052, -0.017"/>
+					<property name="IKHandLRotation" value="0, 90, 117.7"/>
+					<property name="IKHandRRotation" value="0, 80.7, 285.5"/>
+					<property name="IKFootLPosition" value="-.11, .537, .11"/>
+					<property name="IKFootRPosition" value=".11, .537, .11"/>
+					<property name="IKFootLRotation" value="22.5, 0, 0"/>
+					<property name="IKFootRRotation" value="22.5, 0, 0"/>
+				</property>
+				<property class="seat2">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="1"/>
+					<property name="position" value="-0.2, 0.100, 0.980"/>
+					<property name="rotation" value="326,0,0"/>
+					<property name="exit" value="0,3,0 ~ 0,3,0 ~ .4,0,-2.8 ~ .4,0,2.6 ~ .4,2.1,0"/>
+					<property name="IKHandLPosition" value="-.414, -.103, -0.155"/>
+					<property name="IKHandRPosition" value=".425, -0.052, -0.017"/>
+					<property name="IKHandLRotation" value="0, 90, 117.7"/>
+					<property name="IKHandRRotation" value="0, 80.7, 285.5"/>
+					<property name="IKFootLPosition" value="-.11, .537, .11"/>
+					<property name="IKFootRPosition" value=".11, .537, .11"/>
+					<property name="IKFootLRotation" value="22.5, 0, 0"/>
+					<property name="IKFootRRotation" value="22.5, 0, 0"/>
+				</property>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

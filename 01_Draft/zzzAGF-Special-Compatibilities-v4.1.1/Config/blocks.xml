@@ -1,7 +1,7 @@
 <zzzAGF-Compatibilities>
 	<conditional>
 		<if cond="mod_loaded('V2_OakravenAmmoPress')">
-			<include filename="XUi/ModPatches/V2_OakravenAmmoPress/blocks.xml"/>
+			<include filename="XUi_InGame/ModPatches/V2_OakravenAmmoPress/blocks.xml"/>
 		</if>
 	</conditional>
 </zzzAGF-Compatibilities>

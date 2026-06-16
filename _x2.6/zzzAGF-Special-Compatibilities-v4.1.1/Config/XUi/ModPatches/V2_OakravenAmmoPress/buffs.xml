@@ -1,0 +1,16 @@
+<zzzAGF-Compatibilities>
+	<!-- V2_OakravenAmmoPress -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook') and mod_loaded('DishongTowerChallenge') == false">
+			<insertafter xpath="/buffs/buff[@name='agfRecalculate']/effect_group[@name='recaculateChecklistPorgression']/triggered_effect[@cvar='craftingWorkstationsCheck34' and @value='0']">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="0"/>
+			</insertafter>
+			<insertafter xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group[@name='craftingChecker']/triggered_effect[@cvar='craftingWorkstationsCheck34' and @value='1']">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="36"/>
+					<requirement name="CVarCompare" cvar="craftingWorkstationsCheck36" operation="LT" value="1"/>
+				</triggered_effect>
+			</insertafter>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

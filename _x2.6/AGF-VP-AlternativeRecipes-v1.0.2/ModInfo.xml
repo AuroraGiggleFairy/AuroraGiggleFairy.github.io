@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-AlternativeRecipes" />
+  <DisplayName value="AGF Alternative Recipes" />
+  <Version value="1.0.2" />
+  <Description value="Adds alternative recipes for cobblestone, bandages, and first aid kits using basic materials." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

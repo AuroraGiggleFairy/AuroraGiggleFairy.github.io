@@ -1,0 +1,86 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_556pack -->
+	<conditional>
+		<!--To match progression of vanilla-->
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks')">
+			<!--A correction, I assume, for the 5.56AP bundle-->
+			<set xpath="/recipes/recipe[@name='ammo556mmArmorPiercingBundle']/ingredient[@name='resourceForgedSteel']/@name">resourceScrapIron</set>
+			<!--The bundled ammo now hold 500 bullets. Changing the amount of ingredients to make them.-->
+			<set xpath="/recipes/recipe[@name='ammo556mmBulletBallBundle']/ingredient[@name='resourceBulletTip']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmBulletBallBundle']/ingredient[@name='resourceGunPowder']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmBulletBallBundle']/ingredient[@name='resourceScrapIron']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmBulletBallBundle']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmHIpowerBundle']/ingredient[@name='resourceBulletTip']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmHIpowerBundle']/ingredient[@name='resourceGunPowder']/@count">1600</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmHIpowerBundle']/ingredient[@name='resourceScrapIron']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmHIpowerBundle']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmArmorPiercingBundle']/ingredient[@name='resourceBulletTip']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmArmorPiercingBundle']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmArmorPiercingBundle']/ingredient[@name='resourceScrapIron']/@count">2000</set>
+			<set xpath="/recipes/recipe[@name='ammo556mmArmorPiercingBundle']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-RebundleBundles') and mod_loaded('AGF-VP-SimplifiedStacks') == false">
+			<append xpath="/recipes">
+				<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+					<ingredient name="ammo556mmBulletBall" count="100"/>
+				</recipe>
+				<recipe name="ammo556mmHIpowerBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+					<ingredient name="ammo556mmHIpower" count="100"/>
+				</recipe>
+				<recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+					<ingredient name="ammo556mmArmorPiercing" count="100"/>
+				</recipe>
+			</append>
+		</if>
+		<if cond="mod_loaded('AGF-VP-RebundleBundles') and mod_loaded('AGF-VP-SimplifiedStacks')">
+			<append xpath="/recipes">
+				<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+					<ingredient name="ammo556mmBulletBall" count="500"/>
+				</recipe>
+				<recipe name="ammo556mmHIpowerBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+					<ingredient name="ammo556mmHIpower" count="500"/>
+				</recipe>
+				<recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+					<ingredient name="ammo556mmArmorPiercing" count="500"/>
+				</recipe>
+			</append>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly')">
+			<append xpath="/recipes">
+				<recipe name="disa556mmBulletBall" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+					<wildcard_forge_category/>
+				</recipe>
+				<recipe name="disa556mmHIpower" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+					<wildcard_forge_category/>
+				</recipe>
+				<recipe name="disa556mmArmorPiercing" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
+					<wildcard_forge_category/>
+				</recipe>
+				<recipe name="disa556mmBulletBall100" count="1" craft_time="1">
+					<ingredient name="disa556mmBulletBall" count="100"/>
+				</recipe>
+				<recipe name="disa556mmHIpower100" count="1" craft_time="1">
+					<ingredient name="disa556mmHIpower" count="100"/>
+				</recipe>
+				<recipe name="disa556mmArmorPiercing100" count="1" craft_time="1">
+					<ingredient name="disa556mmArmorPiercing" count="100"/>
+				</recipe>
+				<recipe name="disa556mmBulletBall1000" count="1" craft_time="1">
+					<ingredient name="disa556mmBulletBall" count="1000"/>
+				</recipe>
+				<recipe name="disa556mmHIpower1000" count="1" craft_time="1">
+					<ingredient name="disa556mmHIpower" count="1000"/>
+				</recipe>
+				<recipe name="disa556mmArmorPiercing1000" count="1" craft_time="1">
+					<ingredient name="disa556mmArmorPiercing" count="1000"/>
+				</recipe>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

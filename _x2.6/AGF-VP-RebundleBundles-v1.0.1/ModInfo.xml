@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-RebundleBundles" />
+  <DisplayName value="AGF Rebundle Bundles" />
+  <Version value="1.0.1" />
+  <Description value="Lets you rebundle opened resource and ammo bundles with tinted icons for easy identification." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

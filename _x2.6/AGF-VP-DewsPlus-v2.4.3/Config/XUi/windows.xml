@@ -1,0 +1,10 @@
+<AGFVanillaPlus-DewsPlus>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+			<!--For the PURPLE BOOK of my HUD-->
+			<set xpath="//sprite[@name='itemIcon' and @sprite='cntDewCollector']/@tooltip_key">cntDewCollectorAGF</set>
+		</if>
+	</conditional>
+
+</AGFVanillaPlus-DewsPlus>

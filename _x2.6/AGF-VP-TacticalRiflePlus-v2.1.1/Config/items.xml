@@ -1,0 +1,9 @@
+<AGFVanillaPlus-TacticalRiflePlus>
+
+
+	<!--Tactical Assault Rifle... removed 3 round bursts and slightly improved magazine size-->
+		<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='BurstRoundCount']/@value">1000</set><!--Default = 3-->
+		<set xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='MagazineSize'][@value='30']/@value">36</set><!--Default = 30-->
+
+
+</AGFVanillaPlus-TacticalRiflePlus>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-RecipeRottingFlesh" />
+  <DisplayName value="AGF Recipe Rotting Flesh" />
+  <Version value="1.0.1" />
+  <Description value="Adds a campfire recipe for rotting flesh using raw meat and murky water." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

@@ -1,0 +1,74 @@
+<AGFVanillaPlus-ArmorHarvestMods>
+
+
+
+	<append xpath="/recipes">
+		<recipe name="resourceArmorCraftingKit" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="modArmorFarmer" count="1" craft_time="30" craft_area="workbench" tags="perkMediumArmor,learnable">
+			<ingredient name="resourceArmorCraftingKit" count="4"/>
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceForgedIron" count="0"/>
+			<ingredient name="resourceForgedSteel" count="0"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="4,20" tags="resourceArmorCraftingKit"/>
+				<passive_effect name="CraftingIngredientCount" level="2,3,4,5,6" operation="base_add" value="20,40,60,80,100" tags="resourceLeather"/>
+				<passive_effect name="CraftingIngredientCount" level="3,4,5,6" operation="base_add" value="20,40,100,100" tags="resourceForgedIron"/>
+				<passive_effect name="CraftingIngredientCount" level="5,6" operation="base_add" value="40,100" tags="resourceForgedSteel"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="4" tags="resourceLegendaryParts"/>
+			</effect_group>			
+		</recipe>
+		
+		<recipe name="modArmorMiner" count="1" craft_time="30" craft_area="workbench" tags="perkHeavyArmor,learnable">
+			<ingredient name="resourceArmorCraftingKit" count="4"/>
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceForgedIron" count="0"/>
+			<ingredient name="resourceForgedSteel" count="0"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="4,20" tags="resourceArmorCraftingKit"/>
+				<passive_effect name="CraftingIngredientCount" level="2,3,4,5,6" operation="base_add" value="20,40,60,80,100" tags="resourceLeather"/>
+				<passive_effect name="CraftingIngredientCount" level="3,4,5,6" operation="base_add" value="20,40,100,100" tags="resourceForgedIron"/>
+				<passive_effect name="CraftingIngredientCount" level="5,6" operation="base_add" value="40,100" tags="resourceForgedSteel"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="4" tags="resourceLegendaryParts"/>
+			</effect_group>
+		</recipe>
+		
+		<recipe name="modArmorScavenger" count="1" craft_time="30" craft_area="workbench" tags="perkMediumArmor,learnable">
+			<ingredient name="resourceArmorCraftingKit" count="4"/>
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceForgedIron" count="0"/>
+			<ingredient name="resourceForgedSteel" count="0"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="4,20" tags="resourceArmorCraftingKit"/>
+				<passive_effect name="CraftingIngredientCount" level="2,3,4,5,6" operation="base_add" value="20,40,60,80,100" tags="resourceLeather"/>
+				<passive_effect name="CraftingIngredientCount" level="3,4,5,6" operation="base_add" value="20,40,100,100" tags="resourceForgedIron"/>
+				<passive_effect name="CraftingIngredientCount" level="5,6" operation="base_add" value="40,100" tags="resourceForgedSteel"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="4" tags="resourceLegendaryParts"/>
+			</effect_group>
+		</recipe>
+		
+		<recipe name="modArmorLumberjack" count="1" craft_time="30" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceArmorCraftingKit" count="4"/>
+			<ingredient name="resourceCloth" count="20"/>
+			<ingredient name="resourceForgedIron" count="0"/>
+			<ingredient name="resourceForgedSteel" count="0"/>
+			<ingredient name="resourceLegendaryParts" count="0"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="4,20" tags="resourceArmorCraftingKit"/>
+				<passive_effect name="CraftingIngredientCount" level="2,3,4,5,6" operation="base_add" value="20,40,60,80,100" tags="resourceCloth"/>
+				<passive_effect name="CraftingIngredientCount" level="3,4,5,6" operation="base_add" value="20,40,100,100" tags="resourceForgedIron"/>
+				<passive_effect name="CraftingIngredientCount" level="5,6" operation="base_add" value="40,100" tags="resourceForgedSteel"/>
+				<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="4" tags="resourceLegendaryParts"/>	
+			</effect_group>
+		</recipe>
+	</append>	
+	
+	
+</AGFVanillaPlus-ArmorHarvestMods>
+
+

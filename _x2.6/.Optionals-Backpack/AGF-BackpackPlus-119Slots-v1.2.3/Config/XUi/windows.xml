@@ -1,0 +1,157 @@
+<AGF-Backpack120-1>
+
+
+	<conditional>
+		<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,2)">
+			<!--LOCKABLE SLOTS CHANGES, on backpack--><set xpath="/windows/window[@name='windowBackpack']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set><!--Backpack Adjustments--><!--Raises the Backpack Inventory up a bit--><setattribute xpath="/windows/window[@name='windowBackpack']/panel[@name='header']" name="pos">0,6</setattribute><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@pos">0,-37</set><!--the background of the Backpack Window--><set xpath="/windows/window[@name='windowBackpack']/@width">675</set><!--grid cell_width X # of columns + 3--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@width">675</set><!--matches overall width--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@height">393</set><!--grid cell_height X # of rows + 1--><!--The cells of the backpack--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cols">12</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows">7</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_width">56</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_height">56</set><!--Repositioning the header to match--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/@pos">338,0</set><!--half of overall width--><!--Centering the backpack header icons--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/@pos">274,0</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/button[@name='btnClearInventory']/@pos">200,-22</set><!--Positioning of the Cost Icon to the widened header--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/label[@width='80']/@pos">560,-10 </set><!--width - 134--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/sprite[@name='costIcon']/@pos">646,-10 </set><!--width - 29--><!--Storage Settings, this is REQUIRED--><!--Allows for larger storages!!!--><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set><!--Inventory Updates--><!--Utilizing a different stack style but SPECIFICALLY for backpack only--><remove xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/backpack_item_stack"/><append xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']"><backpack_item_stackAGF name="0"/></append><!--Utilizing a different stack style but SPECIFICALLY for Loot Containers Only--><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_width">56</set><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_height">56</set><removeattribute xpath="/windows/window[@name='windowLooting']/panel/rect/@visible"/><set xpath="/windows/window[@name='windowLooting']/panel/label[@name='lootName']/@anchor_right">queue,1,-140</set><remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"/><append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']"><other_item_stackAGF name="0"/></append><!--Utilizing a different stack style but SPECIFICALLY for Vehicle Storage OnlyHardcoded somewhere that 90 is max vehicle storage slots--><set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_width">56</set><set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_height">56</set><remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/item_stack"/><append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']"><other_item_stackAGF name="0"/></append><!--Adjustments to make the panel above the backpack match in width. Also requires edits in controls.xml.--><set xpath="/windows/window[@name='emptyInfoPanel']/@width">675</set><set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='8']/@width">675</set><set xpath="/windows/window[@name='craftingInfoPanel']/@width">675</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/@width">520</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/@width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite/@width">525</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite/@height">302</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/label/@width">512</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/@width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@height">230</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='5']/@width">675</set><set xpath="/windows/window[@name='itemInfoPanel']/@width">675</set><set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/label[@pos='575,-8']/@pos">647,-8</set><set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/sprite[@name='costIcon']/@pos">649,-10</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@depth='5']/@width">675</set><remove xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/item_action_entry"/><append xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid"><item_action_entry7 /></append><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/@rows">7</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/@cell_height">30</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/@pos">3,-132</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@width">520</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite/@width">521</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/@width">519</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/sprite/@width">525</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/label/@width">512</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/@width">525</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/label/@width">512</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/rect/label/@width">502</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@pos">154,-271</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cell_width">74</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cols">7</set><!--the comparing notice to fit new size--><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@width">521</set><!--adjustments to make the active buff window match the width of the new backpack--><set xpath="/windows/window[@name='buffInfoPanel']/@width">675</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/sprite[@width='603']/@width">675</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/@width">520</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/sprite[@name='backgroundMain']/@width">525</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/rect/label/@width">512</set>
+		</if>
+		<if cond="game_version() &gt;= version(1,2,2) and game_version() &lt; version(1,2,5)">
+			<!--LOCKABLE SLOTS CHANGES, on backpack--><set xpath="/windows/window[@name='windowLooting']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set><set xpath="/windows/window[@name='windowBackpack']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set><set xpath="/windows/window[@name='windowVehicleStorage']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set><!--Backpack Adjustments--><!--Raises the Backpack Inventory up a bit--><setattribute xpath="/windows/window[@name='windowBackpack']/panel[@name='header']" name="pos">0,6</setattribute><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@pos">0,-37</set><!--the background of the Backpack Window--><set xpath="/windows/window[@name='windowBackpack']/@width">955</set><!--grid cell_width X # of columns + 3--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@width">955</set><!--matches overall width--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@height">393</set><!--grid cell_height X # of rows + 1--><!--The cells of the backpack--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cols">17</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows">7</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_width">56</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_height">56</set><!--Repositioning the header to match--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/@pos">477,0</set><!--half of overall width--><!--Centering the backpack header icons--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/@pos">300,0</set><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/button[@name='btnClearInventory']/@pos">200,-22</set><!--Positioning of the Cost Icon to the widened header--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/label[@width='80']/@pos">560,-10 </set><!--width - 134--><set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/sprite[@name='costIcon']/@pos">646,-10 </set><!--width - 29--><!--Storage Settings, this is REQUIRED--><!--Allows for larger storages!!!--><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set><!--Inventory Updates--><!--Utilizing a different stack style but SPECIFICALLY for backpack only--><remove xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/backpack_item_stack"/><append xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']"><backpack_item_stackAGF name="0"/></append><!--Utilizing a different stack style but SPECIFICALLY for Loot Containers Only--><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_width">56</set><set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_height">56</set><removeattribute xpath="/windows/window[@name='windowLooting']/panel/rect/@visible"/><set xpath="/windows/window[@name='windowLooting']/panel/label[@name='lootName']/@anchor_right">queue,1,-162</set><remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"/><append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']"><item_stackAGF name="0"/></append><!--Utilizing a different stack style but SPECIFICALLY for Vehicle Storage OnlyHardcoded somewhere that 90 is max vehicle storage slots--><set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_width">56</set><set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_height">56</set><remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/item_stack"/><append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']"><item_stackAGF name="0"/></append><!--Adjustments to make the panel above the backpack match in width. Also requires edits in controls.xml.--><set xpath="/windows/window[@name='emptyInfoPanel']/@width">675</set><set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='8']/@width">675</set><set xpath="/windows/window[@name='craftingInfoPanel']/@width">675</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/@width">520</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/@width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite/@width">525</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite/@height">302</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/label/@width">512</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/@width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@height">230</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_width">519</set><set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='5']/@width">675</set><set xpath="/windows/window[@name='itemInfoPanel']/@width">675</set><set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/label[@pos='575,-8']/@pos">647,-8</set><set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/sprite[@name='costIcon']/@pos">649,-10</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@depth='5']/@width">675</set><remove xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/item_action_entry"/><append xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid"><item_action_entry7 /></append><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/@rows">7</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/@cell_height">30</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/@pos">3,-132</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@width">520</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite/@width">521</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/@width">519</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/sprite/@width">525</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/label/@width">512</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/@width">525</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/label/@width">512</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/rect/label/@width">502</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@pos">154,-271</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cell_width">74</set><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cols">7</set><!--the comparing notice to fit new size--><set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@width">521</set><!--adjustments to make the active buff window match the width of the new backpack--><set xpath="/windows/window[@name='buffInfoPanel']/@width">675</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/sprite[@width='603']/@width">675</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/@width">520</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/sprite[@name='backgroundMain']/@width">525</set><set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/rect/label/@width">512</set>
+		</if>
+		<if cond="game_version() &gt;= version(1,2,5)">
+		
+			
+<!--LOCKABLE SLOTS CHANGES, on backpack-->
+	<set xpath="/windows/window[@name='windowLooting']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+	<set xpath="/windows/window[@name='windowVehicleStorage']/panel/rect/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+
+
+
+<!--Backpack Adjustments-->
+
+	<!--Raises the Backpack Inventory up a bit-->
+	<setattribute xpath="/windows/window[@name='windowBackpack']/panel[@name='header']" name="pos">0,6</setattribute>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@pos">0,-37</set>
+	
+	<!--the background of the Backpack Window-->
+	<set xpath="/windows/window[@name='windowBackpack']/@width">955</set><!--grid cell_width X # of columns + 3-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@width">955</set><!--matches overall width-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@height">393</set><!--grid cell_height X # of rows + 1-->
+	
+	<!--The cells of the backpack-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cols">17</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows">7</set>
+	
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_width">56</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_height">56</set>			
+	
+	<!--Repositioning the header to match-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/@pos">477,0</set><!--half of overall width-->
+	
+	<!--Centering the backpack header icons-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/@pos">300,0</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/rect/button[@name='btnClearInventory']/@pos">200,-22</set>
+	
+	<!--Positioning of the Cost Icon to the widened header-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/label[@width='80']/@pos">560,-10 </set><!--width - 134-->
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='header']/sprite[@name='costIcon']/@pos">646,-10 </set><!--width - 29-->
+
+
+
+<!--Storage Settings, this is REQUIRED-->
+	<!--Allows for larger storages!!!-->
+    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
+    <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>		
+	
+	
+
+<!--Inventory Updates-->	
+	<!--Utilizing a different stack style but SPECIFICALLY for backpack only-->
+	<remove xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/backpack_item_stack"></remove>
+	<append xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']">
+       <backpack_item_stackAGF name="0"/>
+	</append>	
+
+	<!--Utilizing a different stack style but SPECIFICALLY for Loot Containers Only-->
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_width">56</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_height">56</set>	
+	<removeattribute xpath="/windows/window[@name='windowLooting']/panel/rect/@visible"/>	
+	<set xpath="/windows/window[@name='windowLooting']/panel/label[@name='lootName']/@anchor_right">queue,1,-162</set>	
+	<remove xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/item_stack"></remove>
+	<append xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']">
+       <item_stackAGF name="0"/>
+	</append>	
+	
+	<!--Utilizing a different stack style but SPECIFICALLY for Vehicle Storage Only
+	Hardcoded somewhere that 90 is max vehicle storage slots-->
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_width">56</set>
+	<set xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/@cell_height">56</set>
+
+	<remove xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']/vehicle_item_stack"></remove>
+	<append xpath="/windows/window[@name='windowVehicleStorage']/grid[@name='queue']">
+       <vehicle_item_stackAGF name="0"/>
+	</append>
+
+
+<!--Adjustments to make the panel above the backpack match in width. Also requires edits in controls.xml.-->
+	<set xpath="/windows/window[@name='emptyInfoPanel']/@width">675</set>
+	<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='8']/@width">675</set>
+
+	<set xpath="/windows/window[@name='craftingInfoPanel']/@width">675</set>
+
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/@width">520</set>
+
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/@width">519</set>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite/@width">525</set>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite/@height">302</set>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/label/@width">512</set>
+
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/@width">519</set>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@width">519</set>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@height">230</set>
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_width">519</set>
+
+	<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='5']/@width">675</set>
+
+
+
+	<set xpath="/windows/window[@name='itemInfoPanel']/@width">675</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/label[@pos='575,-8']/@pos">647,-8</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/sprite[@name='costIcon']/@pos">649,-10</set>
+	
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@depth='5']/@width">675</set>
+	
+	<remove xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/item_action_entry"/>
+	<append xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid">
+		<item_action_entry7 />
+	</append>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/@rows">7</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/grid/@cell_height">30</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@pos='3,-133']/@pos">3,-132</set>
+	
+
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@width">520</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite/@width">521</set>
+
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/@width">519</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/sprite/@width">525</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/label/@width">512</set>
+	
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/@width">525</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/label/@width">512</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect/rect/label/@width">502</set>
+	
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@pos">154,-271</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cell_width">74</set>
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cols">7</set>
+	
+		<!--the comparing notice to fit new size-->
+	<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@width">521</set>	
+
+
+<!--adjustments to make the active buff window match the width of the new backpack-->
+	<set xpath="/windows/window[@name='buffInfoPanel']/@width">675</set>
+	<set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/sprite[@width='603']/@width">675</set>
+	<set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/@width">520</set>
+	<set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/sprite[@name='backgroundMain']/@width">525</set>
+	<set xpath="/windows/window[@name='buffInfoPanel']/rect/rect/rect/rect/label/@width">512</set>
+	
+		</if>
+	</conditional>		
+		
+	
+	
+</AGF-Backpack120-1>
+
+

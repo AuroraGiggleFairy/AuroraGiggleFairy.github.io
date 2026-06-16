@@ -1,0 +1,1094 @@
+<AGFVanillaPlus-AmmoDisassembly>
+
+<!-- NOTE FOR AGF: Mod conditionals from archery feathers is adjusted on that mod, not here.-->
+	
+<!--AMMO SCRAPPING SYSTEM for MORE RESOURCES WHEN DISMANTLING AMMO-->
+	
+<!--Ammo Material and Weight Changes-->
+	<!-- ^^^ All ammo now converts appropriately to disassembled bundle version with the following material and weight changes-->
+	<append xpath="/items/item[@name='ammo9mmBulletBall']">
+		<property name="Material" value="Mammo9mmBulletBall"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo9mmBulletHP']">
+		<property name="Material" value="Mammo9mmBulletHP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo9mmBulletAP']">
+		<property name="Material" value="Mammo9mmBulletAP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo44MagnumBulletBall']">
+		<property name="Material" value="Mammo44MagnumBulletBall"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo44MagnumBulletHP']">
+		<property name="Material" value="Mammo44MagnumBulletHP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo44MagnumBulletAP']">
+		<property name="Material" value="Mammo44MagnumBulletAP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo762mmBulletBall']">
+		<property name="Material" value="Mammo762mmBulletBall"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo762mmBulletHP']">
+		<property name="Material" value="Mammo762mmBulletHP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammo762mmBulletAP']">
+		<property name="Material" value="Mammo762mmBulletAP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoShotgunShell']">
+		<property name="Material" value="MammoShotgunShell"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoShotgunSlug']">
+		<property name="Material" value="MammoShotgunSlug"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoShotgunBreachingSlug']">
+		<property name="Material" value="MammoShotgunBreachingSlug"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoRocketHE']">
+		<property name="Material" value="MammoRocketHE"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoRocketFrag']">
+		<property name="Material" value="MammoRocketFrag"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoArrowStone']">
+		<property name="Material" value="MammoArrowStone"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoArrowIron']">
+		<property name="Material" value="MammoArrowIron"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoArrowSteelAP']">
+		<property name="Material" value="MammoArrowSteelAP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoArrowFlaming']">
+		<property name="Material" value="MammoArrowFlaming"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoArrowExploding']">
+		<property name="Material" value="MammoArrowExploding"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltStone']">
+		<property name="Material" value="MammoCrossbowBoltStone"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltIron']">
+		<property name="Material" value="MammoCrossbowBoltIron"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltSteelAP']">
+		<property name="Material" value="MammoCrossbowBoltSteelAP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltFlaming']">
+		<property name="Material" value="MammoCrossbowBoltFlaming"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltExploding']">
+		<property name="Material" value="MammoCrossbowBoltExploding"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='thrownAmmoPipeBomb']">
+		<property name="Material" value="MthrownAmmoPipeBomb"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='thrownGrenade']">
+		<property name="Material" value="MthrownGrenade"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='thrownDynamite']">
+		<property name="Material" value="MthrownDynamite"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='thrownAmmoMolotovCocktail']">
+		<property name="Material" value="MthrownAmmoMolotovCocktail"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoDartIron']">
+		<property name="Material" value="MammoDartIron"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoJunkTurretRegular']">
+		<property name="Material" value="MammoJunkTurretRegular"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoJunkTurretAP']">
+		<property name="Material" value="MammoJunkTurretAP"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='ammoJunkTurretShell']">
+		<property name="Material" value="MammoJunkTurretShell"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='thrownGrenadeContact']">
+		<property name="Material" value="MthrownGrenadeContact"/>
+		<property name="Weight" value="1"/>
+	</append>
+	<append xpath="/items/item[@name='thrownTimedCharge']">
+		<property name="Material" value="MthrownTimedCharge"/>
+		<property name="Weight" value="1"/>
+	</append>
+
+<!--Disassembled Bundles-->
+	<append xpath="/items">
+		<item name="disa9mmBulletBall">
+			<!-- ^^^The initial bundle to extend off of.-->
+			<property name="DescriptionKey" value="disadesc"/>
+			<property name="CustomIcon" value="ammo9mmBulletBall"/>
+			<property name="CustomIconTint" value="130, 85, 85"/>
+			<property name="ItemTypeIcon" value="treasure"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mammo9mmBulletBall"/>
+			<property name="Stacknumber" value="3000"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="1"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="0.2"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1,1,1"/>
+				<!-- ^^^ Same as the recipe to make 1 9mmBulletBall-->
+			</property>
+		</item>
+		<item name="disa9mmBulletHP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo9mmBulletHP"/>
+			<property name="Material" value="Mammo9mmBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,1,1"/>
+			</property>
+		</item>
+		<item name="disa9mmBulletAP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo9mmBulletAP"/>
+			<property name="Material" value="Mammo9mmBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,2,1"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletBall">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletBall"/>
+			<property name="Material" value="Mammo44MagnumBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1,2,1"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletHP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletHP"/>
+			<property name="Material" value="Mammo44MagnumBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,2,1"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletAP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletAP"/>
+			<property name="Material" value="Mammo44MagnumBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,3,1"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletBall">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo762mmBulletBall"/>
+			<property name="Material" value="Mammo762mmBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1,3,1"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletHP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo762mmBulletHP"/>
+			<property name="Material" value="Mammo762mmBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,3,1"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletAP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo762mmBulletAP"/>
+			<property name="Material" value="Mammo762mmBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2,5,1"/>
+			</property>
+		</item>
+		<item name="disaShotgunShell">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoShotgunShell"/>
+			<property name="Material" value="MammoShotgunShell"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="1,4,1"/>
+			</property>
+		</item>
+		<item name="disaShotgunSlug">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoShotgunSlug"/>
+			<property name="Material" value="MammoShotgunSlug"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="2,5,1"/>
+			</property>
+		</item>
+		<item name="disaShotgunBreachingSlug">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoShotgunBreachingSlug"/>
+			<property name="Material" value="MammoShotgunBreachingSlug"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="3,2,4,1"/>
+			</property>
+		</item>
+		<item name="disaRocketFrag">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoRocketFrag"/>
+			<property name="Material" value="MammoRocketFrag"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="25,15,500,1"/>
+			</property>
+		</item>
+		<item name="disaRocketHE">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoRocketHE"/>
+			<property name="Material" value="MammoRocketHE"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="1,15,500,1"/>
+			</property>
+		</item>
+		<item name="disaArrowStone">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoArrowStone"/>
+			<property name="Material" value="MammoArrowStone"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceRockSmall"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltStone">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltStone"/>
+			<property name="Material" value="MammoCrossbowBoltStone"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceRockSmall"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+		<item name="disaArrowIron">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoArrowIron"/>
+			<property name="Material" value="MammoArrowIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceArrowHeadIron"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltIron">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltIron"/>
+			<property name="Material" value="MammoCrossbowBoltIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceArrowHeadIron"/>
+				<property name="Create_item_count" value="1,1,1"/>
+			</property>
+		</item>
+		<item name="disaArrowSteelAP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoArrowSteelAP"/>
+			<property name="Material" value="MammoArrowSteelAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapPolymers,resourceArrowHeadSteelAP"/>
+				<property name="Create_item_count" value="2,1"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltSteelAP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltSteelAP"/>
+			<property name="Material" value="MammoCrossbowBoltSteelAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapPolymers,resourceArrowHeadSteelAP"/>
+				<property name="Create_item_count" value="2,1"/>
+			</property>
+		</item>
+		<item name="disaArrowFlaming">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoArrowFlaming"/>
+			<property name="Material" value="MammoArrowFlaming"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth"/>
+				<property name="Create_item_count" value="1,2,2,5"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltFlaming">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltFlaming"/>
+			<property name="Material" value="MammoCrossbowBoltFlaming"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth"/>
+				<property name="Create_item_count" value="1,2,2,5"/>
+			</property>
+		</item>
+		<item name="disaArrowExploding">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoArrowExploding"/>
+			<property name="Material" value="MammoArrowExploding"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder"/>
+				<property name="Create_item_count" value="1,2,6"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltExploding">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltExploding"/>
+			<property name="Material" value="MammoCrossbowBoltExploding"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder"/>
+				<property name="Create_item_count" value="1,2,8"/>
+			</property>
+		</item>
+		<item name="dthrownPipeBomb">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+			<property name="Material" value="MthrownAmmoPipeBomb"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceYuccaFibers,resourceGunPowder,resourceMetalPipe"/>
+				<property name="Create_item_count" value="1,12,1"/>
+			</property>
+		</item>
+		<item name="dthrownGrenadeContact">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="thrownGrenadeContact"/>
+			<property name="Material" value="MthrownGrenadeContact"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceMechanicalParts,resourceGunPowder,resourceForgedIron,resourceSpring"/>
+				<property name="Create_item_count" value="2,14,4,1"/>
+			</property>
+		</item>
+		<item name="dthrownGrenade">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="thrownGrenade"/>
+			<property name="Material" value="MthrownGrenade"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceMechanicalParts,resourceGunPowder,resourceForgedIron,resourceSpring"/>
+				<property name="Create_item_count" value="1,14,4,1"/>
+			</property>
+		</item>
+		<item name="dthrownTimedCharge">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="thrownTimedCharge"/>
+			<property name="Material" value="MthrownTimedCharge"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapIron,resourceGunPowder,resourceElectricParts"/>
+				<property name="Create_item_count" value="20,10,1"/>
+			</property>
+		</item>
+		<item name="dthrownDynamite">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="thrownDynamite"/>
+			<property name="Material" value="MthrownDynamite"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceYuccaFibers,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="1,20,10"/>
+			</property>
+		</item>
+		<item name="dthrownMolotovCocktail">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+			<property name="Material" value="MthrownAmmoMolotovCocktail"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceCloth,ammoGasCan,resourceOil"/>
+				<property name="Create_item_count" value="1,300,1"/>
+			</property>
+		</item>
+		<item name="disaDartIron">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="Material" value="MammoDartIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapIron"/>
+				<property name="Create_item_count" value="3"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretRegular">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoJunkTurretRegular"/>
+			<property name="Material" value="MammoJunkTurretRegular"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead"/>
+				<property name="Create_item_count" value="3"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretAP">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoJunkTurretAP"/>
+			<property name="Material" value="MammoJunkTurretAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead,resourceScrapIron"/>
+				<property name="Create_item_count" value="3,3"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretShell">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammoJunkTurretShell"/>
+			<property name="Material" value="MammoJunkTurretShell"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead,resourceBuckshot"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+	</append>
+
+<!-- Section Below is because server side mods cannot have a "open all" button.-->
+<!--Disassembled Bundles version after combining 100-->
+	<append xpath="/items">
+		<item name="disa9mmBulletBall100">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo9mmBulletBall"/>
+			<property name="CustomIconTint" value="49, 85, 176"/>
+			<property name="Material" value="Mammo9mmBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,100,100"/>
+			</property>
+		</item>
+		<item name="disa9mmBulletHP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo9mmBulletHP"/>
+			<property name="Material" value="Mammo9mmBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="200,100,100"/>
+			</property>
+		</item>
+		<item name="disa9mmBulletAP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo9mmBulletAP"/>
+			<property name="Material" value="Mammo9mmBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="200,200,100"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletBall100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletBall"/>
+			<property name="Material" value="Mammo44MagnumBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,200,100"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletHP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletHP"/>
+			<property name="Material" value="Mammo44MagnumBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="200,200,100"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletAP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletAP"/>
+			<property name="Material" value="Mammo44MagnumBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="200,300,100"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletBall100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo762mmBulletBall"/>
+			<property name="Material" value="Mammo762mmBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="100,300,100"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletHP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo762mmBulletHP"/>
+			<property name="Material" value="Mammo762mmBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="200,300,100"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletAP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammo762mmBulletAP"/>
+			<property name="Material" value="Mammo762mmBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="200,500,100"/>
+			</property>
+		</item>
+		<item name="disaShotgunShell100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoShotgunShell"/>
+			<property name="Material" value="MammoShotgunShell"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="100,400,100"/>
+			</property>
+		</item>
+		<item name="disaShotgunSlug100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoShotgunSlug"/>
+			<property name="Material" value="MammoShotgunSlug"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="200,500,100"/>
+			</property>
+		</item>
+		<item name="disaShotgunBreachingSlug100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoShotgunBreachingSlug"/>
+			<property name="Material" value="MammoShotgunBreachingSlug"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="300,200,400,100"/>
+			</property>
+		</item>
+		<item name="disaRocketFrag100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoRocketFrag"/>
+			<property name="Material" value="MammoRocketFrag"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="2500,1500,50000,100"/>
+			</property>
+		</item>
+		<item name="disaRocketHE100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoRocketHE"/>
+			<property name="Material" value="MammoRocketHE"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="100,1500,50000,100"/>
+			</property>
+		</item>
+		<item name="disaArrowStone100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoArrowStone"/>
+			<property name="Material" value="MammoArrowStone"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceRockSmall"/>
+				<property name="Create_item_count" value="100,100,100"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltStone100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltStone"/>
+			<property name="Material" value="MammoCrossbowBoltStone"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceRockSmall"/>
+				<property name="Create_item_count" value="100,100,100"/>
+			</property>
+		</item>
+		<item name="disaArrowIron100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoArrowIron"/>
+			<property name="Material" value="MammoArrowIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceArrowHeadIron"/>
+				<property name="Create_item_count" value="100,100,100"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltIron100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltIron"/>
+			<property name="Material" value="MammoCrossbowBoltIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceArrowHeadIron"/>
+				<property name="Create_item_count" value="100,100,100"/>
+			</property>
+		</item>
+		<item name="disaArrowSteelAP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoArrowSteelAP"/>
+			<property name="Material" value="MammoArrowSteelAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapPolymers,resourceArrowHeadSteelAP"/>
+				<property name="Create_item_count" value="200,100"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltSteelAP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltSteelAP"/>
+			<property name="Material" value="MammoCrossbowBoltSteelAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapPolymers,resourceArrowHeadSteelAP"/>
+				<property name="Create_item_count" value="200,100"/>
+			</property>
+		</item>
+		<item name="disaArrowFlaming100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoArrowFlaming"/>
+			<property name="Material" value="MammoArrowFlaming"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth"/>
+				<property name="Create_item_count" value="100,200,200,100"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltFlaming100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltFlaming"/>
+			<property name="Material" value="MammoCrossbowBoltFlaming"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth"/>
+				<property name="Create_item_count" value="100,200,200,100"/>
+			</property>
+		</item>
+		<item name="disaArrowExploding100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoArrowExploding"/>
+			<property name="Material" value="MammoArrowExploding"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder"/>
+				<property name="Create_item_count" value="100,200,600"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltExploding100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltExploding"/>
+			<property name="Material" value="MammoCrossbowBoltExploding"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder"/>
+				<property name="Create_item_count" value="100,200,800"/>
+			</property>
+		</item>
+		<item name="dthrownPipeBomb100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+			<property name="Material" value="MthrownAmmoPipeBomb"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceYuccaFibers,resourceGunPowder,resourceMetalPipe"/>
+				<property name="Create_item_count" value="100,1200,100"/>
+			</property>
+		</item>
+		<item name="dthrownGrenadeContact100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="thrownGrenadeContact"/>
+			<property name="Material" value="MthrownGrenadeContact"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceMechanicalParts,resourceGunPowder,resourceForgedIron,resourceSpring"/>
+				<property name="Create_item_count" value="200,1400,400,100"/>
+			</property>
+		</item>
+		<item name="dthrownGrenade100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="thrownGrenade"/>
+			<property name="Material" value="MthrownGrenade"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceMechanicalParts,resourceGunPowder,resourceForgedIron,resourceSpring"/>
+				<property name="Create_item_count" value="100,1400,400,100"/>
+			</property>
+		</item>
+		<item name="dthrownTimedCharge100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="thrownTimedCharge"/>
+			<property name="Material" value="MthrownTimedCharge"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapIron,resourceGunPowder,resourceElectricParts"/>
+				<property name="Create_item_count" value="2000,1000,100"/>
+			</property>
+		</item>
+		<item name="dthrownDynamite100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="thrownDynamite"/>
+			<property name="Material" value="MthrownDynamite"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceYuccaFibers,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="100,2000,1000"/>
+			</property>
+		</item>
+		<item name="dthrownMolotovCocktail100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+			<property name="Material" value="MthrownAmmoMolotovCocktail"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceCloth,ammoGasCan,resourceOil"/>
+				<property name="Create_item_count" value="100,30000,100"/>
+			</property>
+		</item>
+		<item name="disaDartIron100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="Material" value="MammoDartIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapIron"/>
+				<property name="Create_item_count" value="300"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretRegular100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoJunkTurretRegular"/>
+			<property name="Material" value="MammoJunkTurretRegular"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead"/>
+				<property name="Create_item_count" value="300"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretAP100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoJunkTurretAP"/>
+			<property name="Material" value="MammoJunkTurretAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead,resourceScrapIron"/>
+				<property name="Create_item_count" value="300,300"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretShell100">
+			<property name="Extends" value="disa9mmBulletBall100"/>
+			<property name="CustomIcon" value="ammoJunkTurretShell"/>
+			<property name="Material" value="MammoJunkTurretShell"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead,resourceBuckshot"/>
+				<property name="Create_item_count" value="100,100"/>
+			</property>
+		</item>
+	</append>
+	
+<!--Disassembled Bundles version after combining 1,000-->
+	<append xpath="/items">
+		<item name="disa9mmBulletBall1000">
+			<property name="Extends" value="disa9mmBulletBall"/>
+			<property name="CustomIcon" value="ammo9mmBulletBall"/>
+			<property name="CustomIconTint" value="107, 2, 194"/>
+			<property name="Material" value="Mammo9mmBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1000,1000,1000"/>
+			</property>
+		</item>
+		<item name="disa9mmBulletHP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo9mmBulletHP"/>
+			<property name="Material" value="Mammo9mmBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2000,1000,1000"/>
+			</property>
+		</item>
+		<item name="disa9mmBulletAP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo9mmBulletAP"/>
+			<property name="Material" value="Mammo9mmBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2000,2000,1000"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletBall1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletBall"/>
+			<property name="Material" value="Mammo44MagnumBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1000,2000,1000"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletHP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletHP"/>
+			<property name="Material" value="Mammo44MagnumBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2000,2000,1000"/>
+			</property>
+		</item>
+		<item name="disa44MagnumBulletAP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo44MagnumBulletAP"/>
+			<property name="Material" value="Mammo44MagnumBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2000,3000,1000"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletBall1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo762mmBulletBall"/>
+			<property name="Material" value="Mammo762mmBulletBall"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="1000,3000,1000"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletHP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo762mmBulletHP"/>
+			<property name="Material" value="Mammo762mmBulletHP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2000,3000,1000"/>
+			</property>
+		</item>
+		<item name="disa762mmBulletAP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammo762mmBulletAP"/>
+			<property name="Material" value="Mammo762mmBulletAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceBulletCasing"/>
+				<property name="Create_item_count" value="2000,5000,1000"/>
+			</property>
+		</item>
+		<item name="disaShotgunShell1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoShotgunShell"/>
+			<property name="Material" value="MammoShotgunShell"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="1000,4000,1000"/>
+			</property>
+		</item>
+		<item name="disaShotgunSlug1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoShotgunSlug"/>
+			<property name="Material" value="MammoShotgunSlug"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBulletTip,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="2000,5000,1000"/>
+			</property>
+		</item>
+		<item name="disaShotgunBreachingSlug1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoShotgunBreachingSlug"/>
+			<property name="Material" value="MammoShotgunBreachingSlug"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceForgedSteel,resourceClayLump,resourceGunPowder,resourceScrapPolymers"/>
+				<property name="Create_item_count" value="3000,2000,4000,1000"/>
+			</property>
+		</item>
+		<item name="disaRocketFrag1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoRocketFrag"/>
+			<property name="Material" value="MammoRocketFrag"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceBuckshot,resourceGunPowder,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="25000,15000,500000,1000"/>
+			</property>
+		</item>
+		<item name="disaRocketHE1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoRocketHE"/>
+			<property name="Material" value="MammoRocketHE"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceRocketTip,resourceGunPowder,ammoGasCan,resourceRocketCasing"/>
+				<property name="Create_item_count" value="1000,15000,500000,1000"/>
+			</property>
+		</item>
+		<item name="disaArrowStone1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoArrowStone"/>
+			<property name="Material" value="MammoArrowStone"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceRockSmall"/>
+				<property name="Create_item_count" value="1000,1000,1000"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltStone1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltStone"/>
+			<property name="Material" value="MammoCrossbowBoltStone"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceRockSmall"/>
+				<property name="Create_item_count" value="1000,1000,1000"/>
+			</property>
+		</item>
+		<item name="disaArrowIron1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoArrowIron"/>
+			<property name="Material" value="MammoArrowIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceArrowHeadIron"/>
+				<property name="Create_item_count" value="1000,1000,1000"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltIron1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltIron"/>
+			<property name="Material" value="MammoCrossbowBoltIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceFeather,resourceWood,resourceArrowHeadIron"/>
+				<property name="Create_item_count" value="1000,1000,1000"/>
+			</property>
+		</item>
+		<item name="disaArrowSteelAP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoArrowSteelAP"/>
+			<property name="Material" value="MammoArrowSteelAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapPolymers,resourceArrowHeadSteelAP"/>
+				<property name="Create_item_count" value="2000,1000"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltSteelAP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltSteelAP"/>
+			<property name="Material" value="MammoCrossbowBoltSteelAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapPolymers,resourceArrowHeadSteelAP"/>
+				<property name="Create_item_count" value="2000,1000"/>
+			</property>
+		</item>
+		<item name="disaArrowFlaming1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoArrowFlaming"/>
+			<property name="Material" value="MammoArrowFlaming"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth"/>
+				<property name="Create_item_count" value="1000,2000,2000,1000"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltFlaming1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltFlaming"/>
+			<property name="Material" value="MammoCrossbowBoltFlaming"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder,resourceCloth"/>
+				<property name="Create_item_count" value="1000,2000,2000,1000"/>
+			</property>
+		</item>
+		<item name="disaArrowExploding1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoArrowExploding"/>
+			<property name="Material" value="MammoArrowExploding"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder"/>
+				<property name="Create_item_count" value="1000,2000,6000"/>
+			</property>
+		</item>
+		<item name="disaCrossbowBoltExploding1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoCrossbowBoltExploding"/>
+			<property name="Material" value="MammoCrossbowBoltExploding"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceArrowHeadSteelAP,resourceScrapPolymers,resourceGunPowder"/>
+				<property name="Create_item_count" value="1000,2000,8000"/>
+			</property>
+		</item>
+		<item name="dthrownPipeBomb1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+			<property name="Material" value="MthrownAmmoPipeBomb"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceYuccaFibers,resourceGunPowder,resourceMetalPipe"/>
+				<property name="Create_item_count" value="1000,12000,1000"/>
+			</property>
+		</item>
+		<item name="dthrownGrenadeContact1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="thrownGrenadeContact"/>
+			<property name="Material" value="MthrownGrenadeContact"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceMechanicalParts,resourceGunPowder,resourceForgedIron,resourceSpring"/>
+				<property name="Create_item_count" value="2000,14000,4000,1000"/>
+			</property>
+		</item>
+		<item name="dthrownGrenade1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="thrownGrenade"/>
+			<property name="Material" value="MthrownGrenade"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceMechanicalParts,resourceGunPowder,resourceForgedIron,resourceSpring"/>
+				<property name="Create_item_count" value="1000,14000,4000,1000"/>
+			</property>
+		</item>
+		<item name="dthrownTimedCharge1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="thrownTimedCharge"/>
+			<property name="Material" value="MthrownTimedCharge"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapIron,resourceGunPowder,resourceElectricParts"/>
+				<property name="Create_item_count" value="20000,10000,1000"/>
+			</property>
+		</item>
+		<item name="dthrownDynamite1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="thrownDynamite"/>
+			<property name="Material" value="MthrownDynamite"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceYuccaFibers,resourceGunPowder,resourcePaper"/>
+				<property name="Create_item_count" value="1000,20000,10000"/>
+			</property>
+		</item>
+		<item name="dthrownMolotovCocktail1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+			<property name="Material" value="MthrownAmmoMolotovCocktail"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceCloth,ammoGasCan,resourceOil"/>
+				<property name="Create_item_count" value="1000,300000,1000"/>
+			</property>
+		</item>
+		<item name="disaDartIron1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoDartIron"/>
+			<property name="Material" value="MammoDartIron"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapIron"/>
+				<property name="Create_item_count" value="3000"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretRegular1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoJunkTurretRegular"/>
+			<property name="Material" value="MammoJunkTurretRegular"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead"/>
+				<property name="Create_item_count" value="3000"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretAP1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoJunkTurretAP"/>
+			<property name="Material" value="MammoJunkTurretAP"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead,resourceScrapIron"/>
+				<property name="Create_item_count" value="3000,3000"/>
+			</property>
+		</item>
+		<item name="disaJunkTurretShell1000">
+			<property name="Extends" value="disa9mmBulletBall1000"/>
+			<property name="CustomIcon" value="ammoJunkTurretShell"/>
+			<property name="Material" value="MammoJunkTurretShell"/>
+			<property class="Action0">
+				<property name="Create_item" value="resourceScrapLead,resourceBuckshot"/>
+				<property name="Create_item_count" value="1000,1000"/>
+			</property>
+		</item>
+	</append>
+</AGFVanillaPlus-AmmoDisassembly>

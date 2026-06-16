@@ -1,0 +1,88 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('WMM12SlotToolbelt')">
+			<include filename="ModPatches/WMM12SlotToolbelt/windows.xml"/>
+		</if>
+		<if cond="mod_loaded('15SlotToolbelt')">
+			<include filename="ModPatches/15SlotToolbelt/windows.xml"/>
+		</if>
+		<if cond="mod_loaded('Dewtas18SlotToolbelt')">
+			<include filename="ModPatches/Dewtas18SlotToolbelt/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('Bdubs_Vehicles')">
+			<include filename="ModPatches/Bdubs_Vehicles/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('DishongTowerChallenge')">
+			<include filename="ModPatches/DishongTowerChallenge/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_44magnum')">
+			<include filename="ModPatches/IZY_RMP_44magnum/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_45ACP')">
+			<include filename="ModPatches/IZY_RMP_45ACP/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_556pack')">
+			<include filename="ModPatches/IZY_RMP_556pack/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Demopack')">
+			<include filename="ModPatches/IZY_RMP_Demopack/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Miscpack')">
+			<include filename="ModPatches/IZY_RMP_Miscpack/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_SG')">
+			<include filename="ModPatches/IZY_RMP_SG/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Tech')">
+			<include filename="ModPatches/IZY_RMP_Tech/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_melee')">
+			<include filename="ModPatches/IZY_melee/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('MoreQuestsNoScrollbar')">
+			<include filename="ModPatches/MoreQuestsNoScrollbar/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('RecipeStatsTab')">
+			<include filename="ModPatches/RecipeStatsTab/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('V2_OakravenAmmoPress')">
+			<include filename="ModPatches/V2_OakravenAmmoPress/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('VanillaExtended')">
+			<include filename="ModPatches/VanillaExtended/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('WMMVehicleCruiseControl')">
+			<include filename="ModPatches/WMMVehicleCruiseControl/windows.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

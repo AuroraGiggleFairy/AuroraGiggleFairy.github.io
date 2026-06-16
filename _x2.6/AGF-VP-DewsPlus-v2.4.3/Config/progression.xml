@@ -1,0 +1,30 @@
+<AGFVanillaPlus-DewsPlus>
+
+
+	<!--making sure the progression works with the new 2x2-->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,100" value="1" tags="cntDewCollectorAGF,cntDewCollectorAGFx5,cntDewCollectorAGFx25"/>
+	</append>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry/unlock_entry[@item='cntDewCollector']/@item">cntDewCollectorAGF,cntDewCollectorAGFx5,cntDewCollectorAGFx25</set>
+
+
+
+<conditional>
+	<if cond="game_version() &lt; version(2,6,0)">
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group">
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="toolDewGathererx5,toolDewGathererx25"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="32,100" value="1" tags="toolDewTarpx5,toolDewTarpx25"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="48,100" value="1" tags="toolDewFilterx5,toolDewFilterx25"/>
+		</append>	
+		
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[2]/unlock_entry[@item='toolDewGatherer']/@item">,toolDewGathererx5,toolDewGathererx25</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[3]/unlock_entry[@item='toolDewTarp']/@item">,toolDewTarpx5,toolDewTarpx25</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[4]/unlock_entry[@item='toolDewFilter']/@item">,toolDewFilterx5,toolDewFilterx25</append>
+	</if>	
+	
+	
+</conditional>
+
+
+</AGFVanillaPlus-DewsPlus>

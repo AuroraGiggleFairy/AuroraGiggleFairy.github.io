@@ -1,0 +1,30 @@
+<AGFVanillaPlus-DrinkableAcid>
+
+
+<!--Adjusting resourceAcid's current stats to act like drinking-->
+		<set xpath="/items/item[@name='resourceAcid']/property[@name='HoldType']/@value">3</set>
+		<set xpath="/items/item[@name='resourceAcid']/property[@name='Meshfile']/@value">@:Other/Items/Food/bottled_waterPrefab.prefab</set>
+
+
+<!--Adding the necessary effects to trigger the fun times-->
+		<append xpath="/items/item[@name='resourceAcid']">
+			<property name="Tags" value="drinks"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<!-- <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<effect_group tiered="false"> 
+					<display_value name="dStaminaRegen" value=".30"/>
+					<display_value name="dDuration" value="20"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrankAcidDuration" operation="add" value="23"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrankAcidDuration" operation="set" value="63">
+						<requirement name="CVarCompare" cvar="$buffDrankAcidDuration" operation="GT" value="63"/></triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrankAcid"/>
+			</effect_group>
+		</append>
+
+
+</AGFVanillaPlus-DrinkableAcid>
+

@@ -1,0 +1,33 @@
+<AGFVanillaPlus-PumpkinsPlus>
+
+
+	<!--The Jack-O-Lanter cosmetic mod itself as a "dye" -->
+		<append xpath="/item_modifiers">
+			<item_modifier name="modJackOHead" installable_tags="head" modifier_tags="visual" blocked_tags="noMods" type="attachment">
+				<property name="CustomIcon" value="decoPumpkinJackOLantern"/>
+				<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+				<property name="DropMeshfile" value="@:Entities/Plants/pumpkinJackoLanternPrefab.prefab"/>
+				<property name="EconomicValue" value="5"/>			
+				<property name="Material" value="Mplants"/>
+				<property name="DescriptionKey" value="modCosmeticDesc"/>
+
+				<effect_group>
+					<requirement name="IsFPV" />
+					<triggered_effect trigger="onSelfEquipStart" action="RemovePrefabFromEntity" prefab="@:Entities/Plants/pumpkinJackoLanternPrefab.prefab" />
+				</effect_group>
+	
+				<effect_group tiered="false">	
+					<requirement name="!IsFPV"/> 	
+					<triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="@:Entities/Plants/pumpkinJackoLanternPrefab.prefab" local_offset="0,.41,0" local_rotation="0,10,0" local_scale="1,1,1"  parent_transform="Head"/>
+				</effect_group>	
+				
+				<effect_group tiered="false">			
+					<triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="@:Entities/Plants/pumpkinJackoLanternPrefab.prefab" parent_transform="Head"/>
+				</effect_group>
+
+			</item_modifier>
+		</append>
+
+
+
+</AGFVanillaPlus-PumpkinsPlus>

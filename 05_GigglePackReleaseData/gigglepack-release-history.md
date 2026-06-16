@@ -1,5 +1,21 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.2.0 (June 16, 2026 2:18am)
+### Summary: +1 new, ~4 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (new: v4.0.0)
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.0.0 -> v6.0.1)
+  - [AGF-HUDPlus-HealthBars](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip) (v5.0.0 -> v5.0.1)
+  - [AGF-HUDPlus-RemoveEnteringPopUp](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip) (v2.0.0 -> v2.0.1)
+  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (v3.0.1 -> v3.0.2)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.1.0 (June 15, 2026 3:45am)
 ### Summary: +4 new, ~0 updated, =0 renamed, -0 removed
 - **New Mods**

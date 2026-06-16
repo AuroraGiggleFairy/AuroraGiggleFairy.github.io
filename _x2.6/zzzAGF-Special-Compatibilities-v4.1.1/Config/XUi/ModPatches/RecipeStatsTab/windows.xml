@@ -1,0 +1,14 @@
+<zzzAGF-Compatibilities>
+	<!-- RecipeStatsTab -->
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-060Slots') or mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='stats']/@width">525</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='stats']/rect/label/@width">502</set>
+			<append xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='stats']">
+				<grid name="parts" rows="1" cols="7" pos="1,-229" cell_width="74" cell_height="75" repeat_content="true" controller="PartList" visible="{isnotcomparing}">
+					<item_stack name="0"/>
+				</grid>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

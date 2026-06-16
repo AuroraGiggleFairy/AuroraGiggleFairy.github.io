@@ -1,0 +1,52 @@
+<AGF-Backpack120-1>
+
+
+<!--Included updated carry capacity for GOD mode-->
+	<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">119</set><!--Default = 45-->
+	
+<!--Included updated carry capacity for effects from Steroids-->	
+	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">124</set><!--Default = 50, ?-->
+
+<!--Included twitch buff pack mule-->
+	<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">124</set><!--Default = 50, ?-->
+
+<!--Included twitch buff encumbered, to slow you down-->
+	<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">42</set><!--Default = 22, which rounded down is half of 45-->
+
+
+<!--Updated Mobilited effect from encumberance.-->
+	<!--mobility effects need to be updated to match vanilla playstyle. Otherwise, you could come to a standstill.-->
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@operation='multiply']/@value">0.0091</set><!--Default = 0.026, Notes on how I got this value is below-->
+
+	<!--TLDR Version: In Vanilla, heaviest armor, full inventory, with all encumberance slots: mobility is reduced to 23%. The value 0.01297 matches this for 84 slots.-->
+
+	
+	<!--VANILLA Mobility Notes-->
+		<!--With heaviest armor, full inventory, all encumberance slots, MOBILITY = 23%-->
+		<!--Vanilla Mobility Equation, 0.026% X 27 = 0.70--><!--This didn't exactly help me-->
+				<!--Max Inventory - Max Pack Mule OR encumberance slots = 27-->
+				<!--No Clothes/Light Armor or PackMule, full inventory = 53% mobility-->
+				<!--HEAVY ARMOR = 23%, JUST LIKE PREVIOUS ALPHAS-->
+
+		
+	<!--BACKPACK84 Mobility Notes-->
+		<!--Using Vanilla Fomrula above gives me this... 84 - 36 = 48.  So  (0.01458) x 48 = 0.70-->
+			<!--HEAVY ARMOR, Full Inventory, All Encumberance Slots = 17%, with this formula.... We want 23%-->
+			<!--In previous version and still applies to V1.0, I had the value of 0.01 and brought us down to 34% mobility.-->
+			<!--Doing some weird math thing with a calculator.... I got 0.01297, and confirmed gives us 23% mobility-->
+				<!--0.01458 to 17					34			23				17
+					0.01000 to 34               	___		   ____			    _____
+					0.01297 is x to 23             	1		 	297?			458
+										
+					MATH?!	-->
+					
+	<!--BACKPACK120-1 Mobility Notes-->
+		<!--attempting to get 23% mobility with zero perks, heavy armor, and full inventory.-->
+		<!-- 0.01297 = 3% mobility
+			 0.009 = 24%
+			 0.008 = 29%
+			 X = 23%
+		-->
+			 
+
+</AGF-Backpack120-1>

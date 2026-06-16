@@ -1,0 +1,2633 @@
+<AGF-Backpack120-1>
+
+	<!--Larger Versions of Player Chests-->
+		<append xpath="/blocks"><!--WritableCrate-->			
+			<block name="cntWoodWritableCrateLarge">
+				<property name="CustomIcon" value="cntWoodWritableCrate"/>
+				<property name="CustomIconTint" value="930CF8"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="CompositeTileEntity"/>
+				<property class="CompositeFeatures">
+					<property class="TEFeatureStorage">
+						<property name="LootList" value="playerWoodWritableStorageLarge"/>
+					</property>
+					<property class="TEFeatureLockable"/>
+					<property class="TEFeatureSignable">
+						<property name="FontSize" value="90"/>
+						<property name="LineCount" value="3"/>
+						<property name="LineWidth" value="0.55"/>
+					</property>
+				</property>
+				<property name="DescriptionKey" value="cntWoodWritableCrateDesc"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="ModelEntity"/>
+				<property name="Model" value="@:Entities/LootContainers/woodWritableCratePrefab.prefab"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodWritableCrateInsecureLarge"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronWritableCrateLarge"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodWritableCrateInsecureLarge">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="CompositeTileEntity"/>
+				<property class="CompositeFeatures">
+					<property class="TEFeatureStorage">
+						<property name="LootList" value="playerWoodWritableStorageLarge"/>
+					</property>
+					<property class="TEFeatureSignable">
+						<property name="FontSize" value="90"/>
+						<property name="LineCount" value="3"/>
+						<property name="LineWidth" value="0.55"/>
+					</property>
+				</property>
+				<property name="CustomIcon" value="cntWoodWritableCrate"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="ModelEntity"/>
+				<property name="Model" value="@:Entities/LootContainers/woodWritableCratePrefab.prefab"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronWritableCrateLarge">
+				<property name="CustomIcon" value="cntIronWritableCrate"/>
+				<property name="CustomIconTint" value="930CF8"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="CompositeTileEntity"/>
+				<property class="CompositeFeatures">
+					<property class="TEFeatureStorage">
+						<property name="LootList" value="playerIronWritableStorageLarge"/>
+					</property>
+					<property class="TEFeatureLockable"/>
+					<property class="TEFeatureSignable">
+						<property name="FontSize" value="90"/>
+						<property name="LineCount" value="3"/>
+						<property name="LineWidth" value="0.55"/>
+					</property>
+				</property>
+				<property name="DescriptionKey" value="cntIronWritableCrateDesc"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="ModelEntity"/>
+				<property name="Model" value="@:Entities/LootContainers/ironWritableCratePrefab.prefab"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronWritableCrateInsecureLarge"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelWritableCrateLarge"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronWritableCrateInsecureLarge">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="CompositeTileEntity"/>
+				<property class="CompositeFeatures">
+					<property class="TEFeatureStorage">
+						<property name="LootList" value="playerIronWritableStorageLarge"/>
+					</property>
+					<property class="TEFeatureSignable">
+						<property name="FontSize" value="90"/>
+						<property name="LineCount" value="3"/>
+						<property name="LineWidth" value="0.55"/>
+					</property>
+				</property>
+				<property name="CustomIcon" value="cntIronWritableCrate"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="ModelEntity"/>
+				<property name="Model" value="@:Entities/LootContainers/ironWritableCratePrefab.prefab"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelWritableCrateLarge">
+				<property name="CustomIcon" value="cntSteelWritableCrate"/>
+				<property name="CustomIconTint" value="930CF8"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="CompositeTileEntity"/>
+				<property class="CompositeFeatures">
+					<property class="TEFeatureStorage">
+						<property name="LootList" value="playerSteelWritableStorageLarge"/>
+					</property>
+					<property class="TEFeatureLockable"/>
+					<property class="TEFeatureSignable">
+						<property name="FontSize" value="90"/>
+						<property name="LineCount" value="3"/>
+						<property name="LineWidth" value="0.55"/>
+					</property>
+				</property>
+				<property name="DescriptionKey" value="cntSteelWritableCrateDesc"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="ModelEntity"/>
+				<property name="Model" value="@:Entities/LootContainers/steelWritableCratePrefab.prefab"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelWritableCrateInsecureLarge"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelWritableCrateInsecureLarge">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="CompositeTileEntity"/>
+				<property class="CompositeFeatures">
+					<property class="TEFeatureStorage">
+						<property name="LootList" value="playerSteelWritableStorageLarge"/>
+					</property>
+					<property class="TEFeatureSignable">
+						<property name="FontSize" value="90"/>
+						<property name="LineCount" value="3"/>
+						<property name="LineWidth" value="0.55"/>
+					</property>
+				</property>
+				<property name="CustomIcon" value="cntSteelWritableCrate"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="ModelEntity"/>
+				<property name="Model" value="@:Entities/LootContainers/steelWritableCratePrefab.prefab"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>	
+		<append xpath="/blocks"><!--Cube-->		
+			<block name="cntWoodCube">
+				<property name="CustomIcon" value="shapeCube"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodCubeInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronCube"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodCubeInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCube"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCube">
+				<property name="CustomIcon" value="shapeCube"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronCubeInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelCube"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCubeInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCube"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelCube">
+				<property name="CustomIcon" value="shapeCube"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelCubeInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelCubeInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelCube"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--Bevel-->
+			<block name="cntWoodBevel">
+				<property name="CustomIcon" value="shapeCupboardCorner"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_corner.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodBevelInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronBevel"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodBevelInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCupboardCorner"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_corner.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBevel">
+				<property name="CustomIcon" value="shapeCupboardCorner"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_corner.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronBevelInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelBevel"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBevelInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCupboardCorner"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_corner.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelBevel">
+				<property name="CustomIcon" value="shapeCupboardCorner"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_corner.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelBevelInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelBevelInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_corner.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelBevel"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--Buffet-->
+			<block name="cntWoodBuffet">
+				<property name="CustomIcon" value="shapeBuffetCounter"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/buffet_counter.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodBuffetInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronBuffet"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodBuffetInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeBuffetCounter"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/buffet_counter.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBuffet">
+				<property name="CustomIcon" value="shapeBuffetCounter"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/buffet_counter.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronBuffetInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelBuffet"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBuffetInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeBuffetCounter"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/buffet_counter.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelBuffet">
+				<property name="CustomIcon" value="shapeBuffetCounter"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/buffet_counter.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelBuffetInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelBuffetInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/buffet_counter.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelBuffet"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--SinkRound-->
+			<block name="cntWoodSinkRound">
+				<property name="CustomIcon" value="shapeCounterSinkHoleRound"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodSinkRoundInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronSinkRound"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodSinkRoundInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCounterSinkHoleRound"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronSinkRound">
+				<property name="CustomIcon" value="shapeCounterSinkHoleRound"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronSinkRoundInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelSinkRound"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronSinkRoundInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCounterSinkHoleRound"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelSinkRound">
+				<property name="CustomIcon" value="shapeCounterSinkHoleRound"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelSinkRoundInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelSinkRoundInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelSinkRound"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--HollowTop-->
+			<block name="cntWoodHollowTop">
+				<property name="CustomIcon" value="shapeCounterHollowTop"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_hollow_top.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodHollowTopInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronHollowTop"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodHollowTopInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCounterHollowTop"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_hollow_top.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronHollowTop">
+				<property name="CustomIcon" value="shapeCounterHollowTop"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_hollow_top.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronHollowTopInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelHollowTop"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronHollowTopInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCounterHollowTop"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_hollow_top.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelHollowTop">
+				<property name="CustomIcon" value="shapeCounterHollowTop"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_hollow_top.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelHollowTopInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelHollowTopInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_hollow_top.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelHollowTop"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--BevelBookCase-->
+			<block name="cntWoodBevelBookCase">
+				<property name="CustomIcon" value="shapeCubeCornerBeveledBookcaseFull"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_corner_beveled_bookcase_full.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodBevelBookCaseInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronBevelBookCase"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodBevelBookCaseInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCubeCornerBeveledBookcaseFull"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_corner_beveled_bookcase_full.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBevelBookCase">
+				<property name="CustomIcon" value="shapeCubeCornerBeveledBookcaseFull"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_corner_beveled_bookcase_full.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronBevelBookCaseInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelBevelBookCase"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBevelBookCaseInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCubeCornerBeveledBookcaseFull"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_corner_beveled_bookcase_full.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelBevelBookCase">
+				<property name="CustomIcon" value="shapeCubeCornerBeveledBookcaseFull"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_corner_beveled_bookcase_full.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelBevelBookCaseInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelBevelBookCaseInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_corner_beveled_bookcase_full.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelBevelBookCase"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--BookCase-->
+			<block name="cntWoodBookCase">
+				<property name="CustomIcon" value="shapeBookcaseFull"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_full.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodBookCaseInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronBookCase"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodBookCaseInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeBookcaseFull"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_full.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBookCase">
+				<property name="CustomIcon" value="shapeBookcaseFull"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_full.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronBookCaseInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelBookCase"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBookCaseInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeBookcaseFull"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_full.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelBookCase">
+				<property name="CustomIcon" value="shapeBookcaseFull"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_full.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelBookCaseInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelBookCaseInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_full.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelBookCase"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--MorticianDrawer-->
+			<block name="cntWoodMorticianDrawer">
+				<property name="CustomIcon" value="shapeMorticianDrawer"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/mortician_drawer.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodMorticianDrawerInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronMorticianDrawer"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodMorticianDrawerInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeMorticianDrawer"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/mortician_drawer.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronMorticianDrawer">
+				<property name="CustomIcon" value="shapeMorticianDrawer"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/mortician_drawer.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronMorticianDrawerInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelMorticianDrawer"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronMorticianDrawerInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeMorticianDrawer"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/mortician_drawer.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelMorticianDrawer">
+				<property name="CustomIcon" value="shapeMorticianDrawer"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/mortician_drawer.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelMorticianDrawerInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelMorticianDrawerInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/mortician_drawer.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelMorticianDrawer"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--Half-->
+			<block name="cntWoodHalf">
+				<property name="CustomIcon" value="shapeCubeHalf"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_half.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodHalfInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronHalf"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodHalfInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCubeHalf"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_half.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronHalf">
+				<property name="CustomIcon" value="shapeCubeHalf"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_half.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronHalfInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelHalf"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronHalfInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCubeHalf"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_half.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelHalf">
+				<property name="CustomIcon" value="shapeCubeHalf"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_half.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelHalfInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelHalfInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cube_half.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelHalf"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--Counter-->
+			<block name="cntWoodCounter">
+				<property name="CustomIcon" value="shapeCounter"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodCounterInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronCounter"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodCounterInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCounter"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCounter">
+				<property name="CustomIcon" value="shapeCounter"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronCounterInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelCounter"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCounterInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCounter"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelCounter">
+				<property name="CustomIcon" value="shapeCounter"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelCounterInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelCounterInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelCounter"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--CounterRound-->
+			<block name="cntWoodCounterRound">
+				<property name="CustomIcon" value="shapeCounterRound1m"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_round1m.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodCounterRoundInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronCounterRound"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodCounterRoundInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCounterRound1m"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_round1m.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCounterRound">
+				<property name="CustomIcon" value="shapeCounterRound1m"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_round1m.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronCounterRoundInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelCounterRound"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCounterRoundInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCounterRound1m"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_round1m.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelCounterRound">
+				<property name="CustomIcon" value="shapeCounterRound1m"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_round1m.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelCounterRoundInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelCounterRoundInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/counter_round1m.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelCounterRound"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--CabinetAjar-->
+			<block name="cntWoodCabinetAjar">
+				<property name="CustomIcon" value="shapeCabinetAjar"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cabinet_ajar.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodCabinetAjarInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronCabinetAjar"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodCabinetAjarInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCabinetAjar"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cabinet_ajar.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCabinetAjar">
+				<property name="CustomIcon" value="shapeCabinetAjar"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cabinet_ajar.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronCabinetAjarInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelCabinetAjar"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCabinetAjarInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCabinetAjar"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cabinet_ajar.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelCabinetAjar">
+				<property name="CustomIcon" value="shapeCabinetAjar"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cabinet_ajar.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelCabinetAjarInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelCabinetAjarInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cabinet_ajar.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelCabinetAjar"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--CupboardAjar-->
+			<block name="cntWoodCupboardAjar">
+				<property name="CustomIcon" value="shapeCupboardAjar"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_ajar.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodCupboardAjarInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronCupboardAjar"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodCupboardAjarInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeCupboardAjar"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_ajar.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCupboardAjar">
+				<property name="CustomIcon" value="shapeCupboardAjar"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_ajar.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronCupboardAjarInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelCupboardAjar"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronCupboardAjarInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeCupboardAjar"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_ajar.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelCupboardAjar">
+				<property name="CustomIcon" value="shapeCupboardAjar"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_ajar.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelCupboardAjarInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelCupboardAjarInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/cupboard_ajar.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelCupboardAjar"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+		<append xpath="/blocks"><!--BookCaseCube-->
+			<block name="cntWoodBookcaseCube">
+				<property name="CustomIcon" value="shapeBookcaseCubeFull"/>
+				<property name="CustomIconTint" value="522901"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_cube_full.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntWoodBookcaseCubeInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntIronBookcaseCube"/>
+					<property name="Item" value="resourceForgedIron"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0000"/>
+				<property name="Group" value="Basics,Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntWoodBookcaseCubeInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerWoodWritableStorageLarge"/>
+				<property name="CustomIcon" value="shapeBookcaseCubeFull"/>
+				<property name="Material" value="MwoodReinforced"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_cube_full.fbx"/>
+				<property name="Texture" value="246"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="500"/>
+				<property class="RepairItems">
+					<property name="resourceWood" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeWoodVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeWoodVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0001"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBookcaseCube">
+				<property name="CustomIcon" value="shapeBookcaseCubeFull"/>
+				<property name="CustomIconTint" value="3b3a3a"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_cube_full.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntIronBookcaseCubeInsecure"/>
+				<property class="UpgradeBlock">
+					<property name="ToBlock" value="cntSteelBookcaseCube"/>
+					<property name="Item" value="resourceForgedSteel"/>
+					<property name="ItemCount" value="30"/>
+					<property name="UpgradeHitCount" value="4"/>
+				</property>
+				<property name="UpgradeSound" value="place_block_metal"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0002"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntIronBookcaseCubeInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerIronWritableStorageLarge"/>
+				<property name="Material" value="Mmetal"/>
+				<property name="CustomIcon" value="shapeBookcaseCubeFull"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_cube_full.fbx"/>
+				<property name="Texture" value="605"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="2500"/>
+				<property class="RepairItems">
+					<property name="resourceForgedIron" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeIronVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeIronVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0003"/>
+			</block>
+			<block name="cntSteelBookcaseCube">
+				<property name="CustomIcon" value="shapeBookcaseCubeFull"/>
+				<property name="CustomIconTint" value="858585"/>
+				<property name="CreativeMode" value="Player"/>
+				<property name="Class" value="SecureLoot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_cube_full.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="Path" value="solid"/>
+				<property name="Place" value="TowardsPlacerInverted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="FuelValue" value="300"/>
+				<property name="EconomicValue" value="9"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="DowngradeBlock" value="cntSteelBookcaseCubeInsecure"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0004"/>
+				<property name="Group" value="Building,advBuilding"/>
+				<property name="Tags" value="timecharge"/>
+				<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			</block>
+			<block name="cntSteelBookcaseCubeInsecure">
+				<property name="CreativeMode" value="None"/>
+				<property name="Class" value="Loot"/>
+				<property name="LootList" value="playerSteelWritableStorageLarge"/>
+				<property name="Material" value="Msteel"/>
+				<property name="Shape" value="New"/>
+				<property name="Model" value="@:Shapes/bookcase_cube_full.fbx"/>
+				<property name="Texture" value="358"/>
+				<property name="CustomIcon" value="cntSteelBookcaseCube"/>
+				<property name="WaterFlow" value="permitted"/>
+				<property name="AllowedRotations" value="No45"/>
+				<property name="Path" value="solid"/>
+				<property name="MaxDamage" value="5000"/>
+				<property class="RepairItems">
+					<property name="resourceForgedSteel" value="30"/>
+				</property>
+				<drop event="Destroy" name="storageLargeSteelVariantHelper" count="1"/>
+				<drop event="Fall" name="storageLargeSteelVariantHelper" count="1" prob="0.9" stick_chance="1"/>
+				<property name="SortOrder1" value="B106"/>
+				<property name="SortOrder2" value="0005"/>
+			</block>
+		</append>
+
+
+	<!--Variant Helpers-->
+		<append xpath="/blocks">
+			<block name="storageLargeWoodVariantHelper">
+				<property name="Extends" value="cntWoodWritableCrateLarge"/>
+				<property name="CustomIcon" value="cntWoodWritableCrate"/>		
+				<property name="AllowedRotations" value="No45"/>
+				<property name="CustomIconTint" value="930CF8"/>
+				<property name="DescriptionKey" value="storageLargeVariantHelperDesc"/>
+				<property name="ItemTypeIcon" value="all_blocks"/>
+				<property name="SelectAlternates" value="true"/>
+				<property name="PlaceAltBlockValue" value="cntWoodWritableCrateLarge,cntWoodCube,cntWoodBevel,cntWoodHalf,cntWoodCupboardAjar,cntWoodCounter,cntWoodCabinetAjar,cntWoodCounterRound,cntWoodBuffet,cntWoodSinkRound,cntWoodHollowTop,cntWoodBookcaseCube,cntWoodBevelBookCase,cntWoodBookCase,cntWoodMorticianDrawer"/>
+				<property name="FilterTags" value="MC_helpers,SC_residential"/>
+				<property name="SortOrder1" value="U200"/>
+				<property name="SortOrder2" value="0000"/>		
+				<property name="CreativeMode" value="Player"/>
+			</block>	
+			<block name="storageLargeIronVariantHelper">
+				<property name="Extends" value="cntIronWritableCrateLarge"/>
+				<property name="CustomIcon" value="cntIronWritableCrate"/>		
+				<property name="AllowedRotations" value="No45"/>
+				<property name="CustomIconTint" value="930CF8"/>
+				<property name="DescriptionKey" value="storageLargeVariantHelperDesc"/>
+				<property name="ItemTypeIcon" value="all_blocks"/>
+				<property name="SelectAlternates" value="true"/>
+				<property name="PlaceAltBlockValue" value="cntIronWritableCrateLarge,cntIronCube,cntIronBevel,cntIronHalf,cntIronCupboardAjar,cntIronCounter,cntIronCabinetAjar,cntIronCounterRound,cntIronBuffet,cntIronSinkRound,cntIronHollowTop,cntIronBookcaseCube,cntIronBevelBookCase,cntIronBookCase,cntIronMorticianDrawer"/>
+				<property name="FilterTags" value="MC_helpers,SC_residential"/>
+				<property name="SortOrder1" value="U200"/>
+				<property name="SortOrder2" value="0000"/>		
+				<property name="CreativeMode" value="Player"/>
+			</block>
+			<block name="storageLargeSteelVariantHelper">
+				<property name="Extends" value="cntSteelWritableCrateLarge"/>
+				<property name="CustomIcon" value="cntSteelWritableCrate"/>		
+				<property name="AllowedRotations" value="No45"/>
+				<property name="CustomIconTint" value="930CF8"/>
+				<property name="DescriptionKey" value="storageLargeVariantHelperDesc"/>
+				<property name="ItemTypeIcon" value="all_blocks"/>
+				<property name="SelectAlternates" value="true"/>
+				<property name="PlaceAltBlockValue" value="cntSteelWritableCrateLarge,cntSteelCube,cntSteelBevel,cntSteelHalf,cntSteelCupboardAjar,cntSteelCounter,cntSteelCabinetAjar,cntSteelCounterRound,cntSteelBuffet,cntSteelSinkRound,cntSteelHollowTop,cntSteelBookcaseCube,cntSteelBevelBookCase,cntSteelBookCase,cntSteelMorticianDrawer"/>
+				<property name="FilterTags" value="MC_helpers,SC_residential"/>
+				<property name="SortOrder1" value="U200"/>
+				<property name="SortOrder2" value="0000"/>		
+				<property name="CreativeMode" value="Player"/>
+			</block>	
+		</append>
+
+
+<!--Notes of Mine-->
+
+	<!--Notes: I kept the health the same as original. Recipe, repair, and upgrade cost is x3. I made economic value 9, where original is 6.-->
+	
+	<!--Paintable Full Block Version of Wood, Iron, and Steel-->
+	<!--Paintable Half Block Version of Wood, Iron, and Steel-->
+	<!--Paintable Bevel Block Version of Wood, Iron, and Steel-->
+	<!--Paintable Buffet Block Version of Wood, Iron, and Steel-->
+	<!--Paintable SinkRound Block Version of Wood, Iron, and Steel-->
+	<!--Paintable HollowTop Block Version of Wood, Iron, and Steel-->
+	<!--Paintable BevelBookCase Block Version of Wood, Iron, and Steel-->
+	<!--Paintable BookCase Block Version of Wood, Iron, and Steel-->
+	<!--Paintable Mortician Block Version of Wood, Iron, and Steel-->
+
+		
+	<!--
+	Wood texture = 246		tint = 522901
+	Iron texture = 605		tint = 3b3a3a
+	Steel texture = 358		tint = 858585
+	-->
+
+</AGF-Backpack120-1>

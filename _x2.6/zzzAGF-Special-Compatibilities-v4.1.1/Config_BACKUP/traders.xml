@@ -1,0 +1,8 @@
+<AGFVanillaPlus-TraderAlwaysOpen>
+
+
+	<!-- Trader restocks every 2 days.-->
+	<set xpath="/traders/trader_info[@reset_interval='3']/@reset_interval">2</set>
+	
+	
+</AGFVanillaPlus-TraderAlwaysOpen>

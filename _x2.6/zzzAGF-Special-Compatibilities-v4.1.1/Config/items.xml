@@ -1,0 +1,38 @@
+<zzzAGF-Compatibilities>
+	<set xpath="/items/item[@name='ammoBundle762mmBulletHP']/property[@name='CustomIcon']/@value">ammo762mmBulletHP</set>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_45ACP')">
+			<include filename="XUi/ModPatches/IZY_RMP_45ACP/items.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_556pack')">
+			<include filename="XUi/ModPatches/IZY_RMP_556pack/items.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Demopack')">
+			<include filename="XUi/ModPatches/IZY_RMP_Demopack/items.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_Miscpack')">
+			<include filename="XUi/ModPatches/IZY_RMP_Miscpack/items.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('IZY_RMP_SG')">
+			<include filename="XUi/ModPatches/IZY_RMP_SG/items.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('V2_OakravenAmmoPress')">
+			<include filename="XUi/ModPatches/V2_OakravenAmmoPress/items.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('VanillaExtended')">
+			<include filename="XUi/ModPatches/VanillaExtended/items.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

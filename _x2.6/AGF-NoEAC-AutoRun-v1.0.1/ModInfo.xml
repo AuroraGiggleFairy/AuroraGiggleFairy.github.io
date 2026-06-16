@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-AutoRun" />
+  <DisplayName value="BETA - AGF Auto Run" />
+  <Version value="1.0.1" />
+  <Description value="Adds double-tap auto-run on foot and in vehicles with sprint toggle support." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

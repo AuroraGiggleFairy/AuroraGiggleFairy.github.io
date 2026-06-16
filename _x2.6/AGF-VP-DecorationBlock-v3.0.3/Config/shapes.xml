@@ -1,0 +1,37 @@
+<AGFVanillaPlus-DecorationBlock>
+
+
+<!--
+	<append xpath="/shapes/categories">
+		<category name="Decorations" icon="ui_game_symbol_shape_text" order="15" />
+	</append>
+
+
+
+	<append xpath="/shapes">
+		<shape name="agfDecocntCoffeeMakerTest"> 
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="agfDecoMaster"/>
+			<property name="CustomIcon" value="cntCoffeeMaker"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Appliances/coffeeMakerPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0.5"/>
+			<property name="Texture" value="282"/>
+			<property name="SortOrder1" value="0001"/>
+			<property name="Path" value="solid"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="UpgradeSound" value="place_block_metal"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Class" value="SecureLoot"/>
+			<property name="LootList" value="agfStorage"/>
+			<dropextendsoff/>
+			<drop event="Destroy" count="0"/>
+			<property name="DowngradeBlock" value="agfDecocntCoffeeMakerInsecure"/>
+				 <property name="ShapeCategories" value="Decorations" /> 
+		</shape> 
+	</append>
+
+-->
+
+
+</AGFVanillaPlus-DecorationBlock>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPlus-BMCounter" />
+  <DisplayName value="AGF BM Counter" />
+  <Version value="2.1.3" />
+  <Description value="Adds a Blood Moon countdown under the compass for fixed BM schedules." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

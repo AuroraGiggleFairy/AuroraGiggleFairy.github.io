@@ -1,0 +1,6 @@
+<zzzAGF-Compatibilities>
+	<!-- VanillaExtended -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')"/>
+	</conditional>
+</zzzAGF-Compatibilities>

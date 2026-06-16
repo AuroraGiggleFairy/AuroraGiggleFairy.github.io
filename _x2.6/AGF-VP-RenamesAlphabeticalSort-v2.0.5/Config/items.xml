@@ -1,0 +1,13 @@
+<AGFVanillaPlus-RenamesAlphabeticalSort>
+
+
+
+<!--SORTING PLUS, just some group changes for AUTO SORTING purposes-->
+		<set xpath="/items/item[@name='foodCornMeal']/property[@name='Group']/@value">Food/Cooking,Resources,CFFood/Cooking</set>
+		<set xpath="/items/item[@name='resourceCropCottonPlant']/property[@name='Group']/@value">Food/Cooking,Resources,CFFood/Cooking</set>
+		<set xpath="/items/item[@name='resourceCropAloeLeaf']/property[@name='Group']/@value">Food/Cooking,Science</set>
+		<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Group']/@value">Food/Cooking,CFDrink/Cooking,Resources</set>
+	
+	
+
+</AGFVanillaPlus-RenamesAlphabeticalSort>

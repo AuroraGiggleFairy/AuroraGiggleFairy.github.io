@@ -1,43 +1,58 @@
 {
-  "gigglepack_version": "0.1.0",
-  "previous_gigglepack_version": "0.0.0",
-  "is_baseline_release": true,
-  "released_at": "2026-06-15 03:45:29",
+  "gigglepack_version": "0.2.0",
+  "previous_gigglepack_version": "0.1.0",
+  "is_baseline_release": false,
+  "released_at": "2026-06-16 02:18:23",
   "mods": {
-    "AGF-HUDPlus-1Main": "6.0.0",
-    "AGF-HUDPlus-HealthBars": "5.0.0",
-    "AGF-HUDPlus-RemoveEnteringPopUp": "2.0.0",
-    "AGF-HUDPluszOther-Weekday": "3.0.1"
+    "AGF-BackpackPlus-060Slots": "4.0.0",
+    "AGF-HUDPlus-1Main": "6.0.1",
+    "AGF-HUDPlus-HealthBars": "5.0.1",
+    "AGF-HUDPlus-RemoveEnteringPopUp": "2.0.1",
+    "AGF-HUDPluszOther-Weekday": "3.0.2"
   },
-  "updated_mods": [],
-  "new_mods": [
+  "updated_mods": [
     {
       "mod": "AGF-HUDPlus-1Main",
-      "to": "6.0.0",
-      "to_display": "6.0.0"
+      "from": "6.0.0",
+      "to": "6.0.1",
+      "from_display": "6.0.0",
+      "to_display": "6.0.1"
     },
     {
       "mod": "AGF-HUDPlus-HealthBars",
-      "to": "5.0.0",
-      "to_display": "5.0.0"
+      "from": "5.0.0",
+      "to": "5.0.1",
+      "from_display": "5.0.0",
+      "to_display": "5.0.1"
     },
     {
       "mod": "AGF-HUDPlus-RemoveEnteringPopUp",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
     },
     {
       "mod": "AGF-HUDPluszOther-Weekday",
-      "to": "3.0.1",
-      "to_display": "3.0.1"
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "from_display": "3.0.1",
+      "to_display": "3.0.2"
+    }
+  ],
+  "new_mods": [
+    {
+      "mod": "AGF-BackpackPlus-060Slots",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.1.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.2.0.zip",
   "change_counts": {
-    "new_mods": 4,
-    "updated_existing_mods": 0,
+    "new_mods": 1,
+    "updated_existing_mods": 4,
     "renamed_mods": 0,
     "removed_mods": 0
   }

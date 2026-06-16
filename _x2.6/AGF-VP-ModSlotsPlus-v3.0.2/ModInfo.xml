@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-ModSlotsPlus" />
+  <DisplayName value="AGF Mod Slots Plus" />
+  <Version value="3.0.2" />
+  <Description value="Rebalances mod slot progression so upgrading never reduces your slots, with a max of 6." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

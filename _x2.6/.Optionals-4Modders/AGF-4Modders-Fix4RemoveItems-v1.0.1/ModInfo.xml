@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-4Modders-Fix4RemoveItems" />
+  <DisplayName value="BETA - AGF Fix RemoveItems" />
+  <Version value="1.0.1" />
+  <Description value="Fixes RemoveItems so it triggers correctly in repeated multiplayer use." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+  <SkipWithAntiCheat value="true" />
+</xml>

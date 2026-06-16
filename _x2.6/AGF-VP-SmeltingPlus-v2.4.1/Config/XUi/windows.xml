@@ -1,0 +1,25 @@
+<AGFVanillaPlus-SmeltingPlus>
+
+
+	<!--3rd Forge Smelting Slot-->
+		<set xpath="/windows/window[@name='windowForgeInput']/@height">280</set>
+		<set xpath="/windows/window[@name='windowForgeInput']/sprite/@height">229</set>
+		<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/grid/@rows">3</set>
+		<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']/@height">228</set>
+		<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/@height">224</set>
+		<set xpath="/windows/window[@name='windowForgeInput']/rect[@name='content2']/grid/@cell_height">38</set>
+		
+		<setattribute xpath="/windows/window[@name='windowForgeInput']/rect/sprite" name="pos">-1,0</setattribute>
+		<setattribute xpath="/windows/window[@name='windowForgeInput']/rect/sprite" name="width">149</setattribute>
+		<setattribute xpath="/windows/window[@name='windowForgeInput']/rect/sprite" name="height">225</setattribute>
+		<setattribute xpath="/windows/window[@name='windowForgeInput']/sprite" name="width">228</setattribute>
+		
+		<!--numbered labels on the 3 slots-->
+		<append xpath="/windows/window[@name='windowForgeInput']/rect[@name='content']">
+			<label depth="10" pos="7,-13"  height="64" width="64" color="255,255,255,120" text="1" font_size="54" justify="center" />
+			<label depth="10" pos="7,-88" height="64" width="64" color="255,255,255,120" text="2" font_size="54" justify="center" />
+			<label depth="10" pos="7,-163" height="64" width="64" color="255,255,255,120" text="3" font_size="54" justify="center" />
+		</append>
+
+
+</AGFVanillaPlus-SmeltingPlus>

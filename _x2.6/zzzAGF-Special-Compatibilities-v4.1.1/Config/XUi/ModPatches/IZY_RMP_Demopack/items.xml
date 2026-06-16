@@ -1,0 +1,216 @@
+<zzzAGF-Compatibilities>
+	<!-- IZY_RMP_Demopack -->
+	<append xpath="/items/item[@name='ammo25mmGrenadeTraining']">
+		<property name="UnlockedBy" value="craftingExplosives"/>
+	</append>
+	<append xpath="/items/item[@name='ammo25mmGrenadeFRAGS']">
+		<property name="UnlockedBy" value="craftingExplosives"/>
+	</append>
+	<append xpath="/items/item[@name='ammo25mmGrenadeHE']">
+		<property name="UnlockedBy" value="craftingExplosives"/>
+	</append>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks')">
+			<set xpath="/items/item[@name='ammoRocketRPGTraning']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='ammoRocketRPGHE']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='ammoRocketRPGIncendiary']/property[@name='Stacknumber']/@value">50</set>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-AmmoDisassembly')">
+			<!-- Modifications to the Ammo-->
+			<append xpath="/items/item[@name='ammoRocketRPGTraning']">
+				<property name="Material" value="MammoRocketRPGTraning"/>
+				<property name="Weight" value="1"/>
+			</append>
+			<append xpath="/items/item[@name='ammoRocketRPGHE']">
+				<property name="Material" value="MammoRocketRPGHE"/>
+				<property name="Weight" value="1"/>
+			</append>
+			<append xpath="/items/item[@name='ammoRocketRPGIncendiary']">
+				<property name="Material" value="MammoRocketRPGIncendiary"/>
+				<property name="Weight" value="1"/>
+			</append>
+			<append xpath="/items/item[@name='ammo25mmGrenadeTraining']">
+				<property name="Material" value="Mammo25mmGrenadeTraining"/>
+				<property name="Weight" value="1"/>
+			</append>
+			<append xpath="/items/item[@name='ammo25mmGrenadeFRAGS']">
+				<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+				<property name="Weight" value="1"/>
+			</append>
+			<append xpath="/items/item[@name='ammo25mmGrenadeHE']">
+				<property name="Material" value="Mammo25mmGrenadeHE"/>
+				<property name="Weight" value="1"/>
+			</append>
+			<!-- The Disassembled Bundles-->
+			<append xpath="/items">
+				<!-- x1 -->
+				<item name="disaRocketRPGTraning">
+					<property name="Extends" value="disa9mmBulletBall"/>
+					<property name="CustomIcon" value="ammoRocketRPGTraning"/>
+					<property name="Material" value="MammoRocketRPGTraning"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceForgedSteel,resourceGunPowder"/>
+						<property name="Create_item_count" value="1,1,2,1,15"/>
+					</property>
+				</item>
+				<item name="disaRocketRPGHE">
+					<property name="Extends" value="disa9mmBulletBall"/>
+					<property name="CustomIcon" value="ammoRocketRPGHE"/>
+					<property name="Material" value="MammoRocketRPGHE"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder"/>
+						<property name="Create_item_count" value="1,1,2,40"/>
+					</property>
+				</item>
+				<item name="disaRocketRPGIncendiary">
+					<property name="Extends" value="disa9mmBulletBall"/>
+					<property name="CustomIcon" value="ammoRocketRPGIncendiary"/>
+					<property name="Material" value="MammoRocketRPGIncendiary"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder,ammoGasCan"/>
+						<property name="Create_item_count" value="1,1,2,30,300"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeTraining">
+					<property name="Extends" value="disa9mmBulletBall"/>
+					<property name="CustomIcon" value="ammo25mmTRAINING"/>
+					<property name="Material" value="Mammo25mmGrenadeTraining"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="1,10,4"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeFRAGS">
+					<property name="Extends" value="disa9mmBulletBall"/>
+					<property name="CustomIcon" value="ammo25mmFRAGS"/>
+					<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="1,2,16,4"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeHE">
+					<property name="Extends" value="disa9mmBulletBall"/>
+					<property name="CustomIcon" value="ammo25mmHE"/>
+					<property name="Material" value="Mammo25mmGrenadeHE"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="1,5,14,4"/>
+					</property>
+				</item>
+				<!-- x100 -->
+				<item name="disaRocketRPGTraning100">
+					<property name="Extends" value="disa9mmBulletBall100"/>
+					<property name="CustomIcon" value="ammoRocketRPGTraning"/>
+					<property name="Material" value="MammoRocketRPGTraning"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceForgedSteel,resourceGunPowder"/>
+						<property name="Create_item_count" value="100,100,200,100,1500"/>
+					</property>
+				</item>
+				<item name="disaRocketRPGHE100">
+					<property name="Extends" value="disa9mmBulletBall100"/>
+					<property name="CustomIcon" value="ammoRocketRPGHE"/>
+					<property name="Material" value="MammoRocketRPGHE"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder"/>
+						<property name="Create_item_count" value="100,100,200,4000"/>
+					</property>
+				</item>
+				<item name="disaRocketRPGIncendiary100">
+					<property name="Extends" value="disa9mmBulletBall100"/>
+					<property name="CustomIcon" value="ammoRocketRPGIncendiary"/>
+					<property name="Material" value="MammoRocketRPGIncendiary"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder,ammoGasCan"/>
+						<property name="Create_item_count" value="100,100,200,3000,30000"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeTraining100">
+					<property name="Extends" value="disa9mmBulletBall100"/>
+					<property name="CustomIcon" value="ammo25mmTRAINING"/>
+					<property name="Material" value="Mammo25mmGrenadeTraining"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="100,1000,400"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeFRAGS100">
+					<property name="Extends" value="disa9mmBulletBall100"/>
+					<property name="CustomIcon" value="ammo25mmFRAGS"/>
+					<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="100,200,1600,400"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeHE100">
+					<property name="Extends" value="disa9mmBulletBall100"/>
+					<property name="CustomIcon" value="ammo25mmHE"/>
+					<property name="Material" value="Mammo25mmGrenadeHE"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="100,500,1400,400"/>
+					</property>
+				</item>
+				<!-- x1000-->
+				<item name="disaRocketRPGTraning1000">
+					<property name="Extends" value="disa9mmBulletBall1000"/>
+					<property name="CustomIcon" value="ammoRocketRPGTraning"/>
+					<property name="Material" value="MammoRocketRPGTraning"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceForgedSteel,resourceGunPowder"/>
+						<property name="Create_item_count" value="1000,1000,2000,1000,15000"/>
+					</property>
+				</item>
+				<item name="disaRocketRPGHE1000">
+					<property name="Extends" value="disa9mmBulletBall1000"/>
+					<property name="CustomIcon" value="ammoRocketRPGHE"/>
+					<property name="Material" value="MammoRocketRPGHE"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder"/>
+						<property name="Create_item_count" value="1000,1000,2000,40000"/>
+					</property>
+				</item>
+				<item name="disaRocketRPGIncendiary1000">
+					<property name="Extends" value="disa9mmBulletBall1000"/>
+					<property name="CustomIcon" value="ammoRocketRPGIncendiary"/>
+					<property name="Material" value="MammoRocketRPGIncendiary"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceRocketTip,resourceRocketCasing,resourceDuctTape,resourceGunPowder,ammoGasCan"/>
+						<property name="Create_item_count" value="1000,1000,2000,30000,300000"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeTraining1000">
+					<property name="Extends" value="disa9mmBulletBall1000"/>
+					<property name="CustomIcon" value="ammo25mmTRAINING"/>
+					<property name="Material" value="Mammo25mmGrenadeTraining"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="1000,10000,4000"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeFRAGS1000">
+					<property name="Extends" value="disa9mmBulletBall1000"/>
+					<property name="CustomIcon" value="ammo25mmFRAGS"/>
+					<property name="Material" value="Mammo25mmGrenadeFRAGS"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="1000,2000,16000,4000"/>
+					</property>
+				</item>
+				<item name="disa25mmGrenadeHE1000">
+					<property name="Extends" value="disa9mmBulletBall1000"/>
+					<property name="CustomIcon" value="ammo25mmHE"/>
+					<property name="Material" value="Mammo25mmGrenadeHE"/>
+					<property class="Action0">
+						<property name="Create_item" value="resourceForgedIron,resourceScrapIron,resourceGunPowder,resourceBulletCasing"/>
+						<property name="Create_item_count" value="1000,5000,14000,4000"/>
+					</property>
+				</item>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

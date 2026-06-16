@@ -1,0 +1,2029 @@
+<AGFVanillaPlus-ModBundling>
+
+
+	<append xpath="/items">
+		<item name="modArmorAdvancedMuffledConnectorsBundle">
+			<property name="CustomIcon" value="modArmorAdvancedMuffledConnectors"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorAdvancedMuffledConnectors"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorAgilityBundle">
+			<property name="CustomIcon" value="modArmorAgility"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorAgility"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorBandolierBundle">
+			<property name="CustomIcon" value="modArmorBandolier"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorBandolier"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorCigarBundle">
+			<property name="CustomIcon" value="apparelCigar"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorCigar"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+<!--	<append xpath="/items">
+		<item name="modArmorCoolingMeshBundle">
+			<property name="CustomIcon" value="modArmorCoolingMesh"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorCoolingMesh"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>-->
+	<append xpath="/items">
+		<item name="modArmorCustomizedFittingsBundle">
+			<property name="CustomIcon" value="modArmorCustomizedFittings"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorCustomizedFittings"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorDoubleStoragePocketBundle">
+			<property name="CustomIcon" value="modArmorDoubleStoragePocket"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorDoubleStoragePocket"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorFortitudeBundle">
+			<property name="CustomIcon" value="modArmorFortitude"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorFortitude"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorHelmetLightBundle">
+			<property name="CustomIcon" value="modArmorHelmetLight"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorHelmetLight"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorImpactBracingBundle">
+			<property name="CustomIcon" value="modArmorImpactBracing"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorImpactBracing"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorImprovedFittingsBundle">
+			<property name="CustomIcon" value="modArmorImprovedFittings"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorImprovedFittings"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+<!--	<append xpath="/items">
+		<item name="modArmorInsulatedLinerBundle">
+			<property name="CustomIcon" value="modArmorInsulatedLiner"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorInsulatedLiner"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>-->
+	<append xpath="/items">
+		<item name="modArmorIntellectBundle">
+			<property name="CustomIcon" value="modArmorIntellect"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorIntellect"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorJumpJetsBundle">
+			<property name="CustomIcon" value="flamethrowerTrap"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorJumpJets"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorMuffledConnectorsBundle">
+			<property name="CustomIcon" value="modArmorMuffledConnectors"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorMuffledConnectors"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorNightVisionBundle">
+			<property name="CustomIcon" value="modArmorNightVision"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorNightVision"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorPerceptionBundle">
+			<property name="CustomIcon" value="modArmorPerception"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorPerception"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorPlatingBasicBundle">
+			<property name="CustomIcon" value="modArmorPlatingBasic"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorPlatingBasic"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorPlatingReinforcedBundle">
+			<property name="CustomIcon" value="modArmorPlatingReinforced"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorPlatingReinforced"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorQuadStoragePocketBundle">
+			<property name="CustomIcon" value="modArmorQuadStoragePocket"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorQuadStoragePocket"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorStealthBootsBundle">
+			<property name="CustomIcon" value="modArmorStealthBoots"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorStealthBoots"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorStoragePocketBundle">
+			<property name="CustomIcon" value="modArmorStoragePocket"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorStoragePocket"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorStrengthBundle">
+			<property name="CustomIcon" value="modArmorStrength"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorStrength"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorTreasureHunterBundle">
+			<property name="CustomIcon" value="modArmorTreasureHunter"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorTreasureHunter"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorTripleStoragePocketBundle">
+			<property name="CustomIcon" value="modArmorTripleStoragePocket"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorTripleStoragePocket"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modArmorWaterPurifierBundle">
+			<property name="CustomIcon" value="modArmorWaterPurifier"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modArmorWaterPurifier"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modFuelTankLargeBundle">
+			<property name="CustomIcon" value="modFuelTankLarge"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modFuelTankLarge"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modFuelTankSmallBundle">
+			<property name="CustomIcon" value="modFuelTankSmall"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modFuelTankSmall"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunBarrelExtenderBundle">
+			<property name="CustomIcon" value="modGunBarrelExtender"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunBarrelExtender"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunBipodBundle">
+			<property name="CustomIcon" value="modGunBipod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunBipod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunBowAdminArcheryReloadRecoveryBundle">
+			<property name="CustomIcon" value="modGunBowArrowRest"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunBowAdminArcheryReloadRecovery"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunBowArrowRestBundle">
+			<property name="CustomIcon" value="modGunBowArrowRest"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunBowArrowRest"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunBowPolymerStringBundle">
+			<property name="CustomIcon" value="modGunBowPolymerString"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunBowPolymerString"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunButtkick3000Bundle">
+			<property name="CustomIcon" value="apparelGothBoots"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunButtkick3000"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunButtkick4000Bundle">
+			<property name="CustomIcon" value="apparelGothBoots"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunButtkick4000"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunChokeBundle">
+			<property name="CustomIcon" value="modGunChoke"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunChoke"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunCrippleEmBundle">
+			<property name="CustomIcon" value="modGunCrippleEm"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunCrippleEm"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunDrumMagazineExtenderBundle">
+			<property name="CustomIcon" value="modGunDrumMagazineExtender"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunDrumMagazineExtender"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunDuckbillBundle">
+			<property name="CustomIcon" value="modGunDuckbill"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunDuckbill"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunFlashlightBundle">
+			<property name="CustomIcon" value="modGunFlashlight"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunFlashlight"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+<!--	<append xpath="/items">
+		<item name="modGunFoldingStockBundle">
+			<property name="CustomIcon" value="modGunFoldingStock"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunFoldingStock"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>-->
+	<append xpath="/items">
+		<item name="modGunForegripBundle">
+			<property name="CustomIcon" value="modGunForegrip"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunForegrip"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunLaserSightBundle">
+			<property name="CustomIcon" value="modGunLaserSight"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunLaserSight"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunMagazineExtenderBundle">
+			<property name="CustomIcon" value="modGunMagazineExtender"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunMagazineExtender"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunMeleeRadRemoverBundle">
+			<property name="CustomIcon" value="modGunMeleeRadRemover"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunMeleeRadRemover"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunMeleeTheHunterBundle">
+			<property name="CustomIcon" value="modGunMeleeTheHunter"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunMeleeTheHunter"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunMuzzleBrakeBundle">
+			<property name="CustomIcon" value="modGunMuzzleBrake"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunMuzzleBrake"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunReflexSightBundle">
+			<property name="CustomIcon" value="modGunReflexSight"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunReflexSight"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunRetractingStockBundle">
+			<property name="CustomIcon" value="modGunRetractingStock"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunRetractingStock"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunScopeLargeBundle">
+			<property name="CustomIcon" value="modGunScopeLarge"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunScopeLarge"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunScopeMediumBundle">
+			<property name="CustomIcon" value="modGunScopeMedium"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunScopeMedium"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunScopeSmallBundle">
+			<property name="CustomIcon" value="modGunScopeSmall"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunScopeSmall"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunShotgunTubeExtenderMagazineBundle">
+			<property name="CustomIcon" value="modGunShotgunTubeExtenderMagazine"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunShotgunTubeExtenderMagazine"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunSoundSuppressorSilencerBundle">
+			<property name="CustomIcon" value="modGunSoundSuppressorSilencer"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunSoundSuppressorSilencer"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunTriggerGroupAutomaticBundle">
+			<property name="CustomIcon" value="modGunTriggerGroupAutomatic"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunTriggerGroupAutomatic"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunTriggerGroupBurst3Bundle">
+			<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunTriggerGroupBurst3"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modGunTriggerGroupSemiBundle">
+			<property name="CustomIcon" value="modGunTriggerGroupSemi"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modGunTriggerGroupSemi"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeBunkerBusterBundle">
+			<property name="CustomIcon" value="modMeleeBunkerBuster"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeBunkerBuster"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeClubBarbedWireBundle">
+			<property name="CustomIcon" value="modMeleeClubBarbedWire"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeClubBarbedWire"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeClubBurningShaftBundle">
+			<property name="CustomIcon" value="modMeleeClubBurningShaft"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeClubBurningShaft"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeClubMetalChainBundle">
+			<property name="CustomIcon" value="modMeleeClubMetalChain"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeClubMetalChain"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeClubMetalSpikesBundle">
+			<property name="CustomIcon" value="modMeleeClubMetalSpikes"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeClubMetalSpikes"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeDiamondTipBundle">
+			<property name="CustomIcon" value="modMeleeDiamondTip"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeDiamondTip"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeErgonomicGripBundle">
+			<property name="CustomIcon" value="modMeleeErgonomicGrip"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeErgonomicGrip"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeFiremansAxeModBundle">
+			<property name="CustomIcon" value="modMeleeFiremansAxeMod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeFiremansAxeMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeFortifyingGripBundle">
+			<property name="CustomIcon" value="modMeleeFortifyingGrip"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeFortifyingGrip"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeGraveDiggerBundle">
+			<property name="CustomIcon" value="modMeleeGraveDigger"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeGraveDigger"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeGunToolDecapitizerBundle">
+			<property name="CustomIcon" value="meleeWpnBladeT1CandyKnife"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeGunToolDecapitizer"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeIronBreakerBundle">
+			<property name="CustomIcon" value="modMeleeIronBreaker"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeIronBreaker"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeSerratedBladeBundle">
+			<property name="CustomIcon" value="modMeleeSerratedBlade"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeSerratedBlade"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeStructuralBraceBundle">
+			<property name="CustomIcon" value="modMeleeStructuralBrace"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeStructuralBrace"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeStunBatonRepulsorBundle">
+			<property name="CustomIcon" value="modMeleeStunBatonRepulsor"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeStunBatonRepulsor"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeTemperedBladeBundle">
+			<property name="CustomIcon" value="modMeleeTemperedBlade"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeTemperedBlade"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeWeightedHeadBundle">
+			<property name="CustomIcon" value="modMeleeWeightedHead"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeWeightedHead"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modMeleeWoodSplitterBundle">
+			<property name="CustomIcon" value="modMeleeWoodSplitter"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modMeleeWoodSplitter"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRadiationReadyBundle">
+			<property name="CustomIcon" value="modRadiationReady"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRadiationReady"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneArmorPlatingModBundle">
+			<property name="CustomIcon" value="modRoboticDroneArmorPlatingMod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneArmorPlatingMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneCargoModBundle">
+			<property name="CustomIcon" value="modRoboticDroneCargoMod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneCargoMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneHeadlampModBundle">
+			<property name="CustomIcon" value="modRoboticDroneHeadlampMod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneHeadlampMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneMedicModBundle">
+			<property name="CustomIcon" value="modRoboticDroneMedicMod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneMedicMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneMoraleBoosterModBundle">
+			<property name="CustomIcon" value="modRoboticDroneMoraleBoosterMod"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneMoraleBoosterMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneStunWeaponModBundle">
+			<property name="CustomIcon" value="missingIcon"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneStunWeaponMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modRoboticDroneWeaponModBundle">
+			<property name="CustomIcon" value="missingIcon"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modRoboticDroneWeaponMod"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modShotgunSawedOffBarrelBundle">
+			<property name="CustomIcon" value="modShotgunSawedOffBarrel"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modShotgunSawedOffBarrel"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleArmorBundle">
+			<property name="CustomIcon" value="modVehicleArmor"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleArmor"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleExpandedSeatBundle">
+			<property name="CustomIcon" value="modVehicleExpandedSeat"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleExpandedSeat"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleFuelSaverBundle">
+			<property name="CustomIcon" value="modVehicleFuelSaver"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleFuelSaver"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleMegaBundle">
+			<property name="CustomIcon" value="modVehicleSuperCharger"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleMega"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleOffRoadHeadlightsBundle">
+			<property name="CustomIcon" value="modVehicleOffRoadHeadlights"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleOffRoadHeadlights"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehiclePlowBundle">
+			<property name="CustomIcon" value="modVehiclePlow"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehiclePlow"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleReserveFuelTankBundle">
+			<property name="CustomIcon" value="modVehicleReserveFuelTank"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleReserveFuelTank"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	<append xpath="/items">
+		<item name="modVehicleSuperChargerBundle">
+			<property name="CustomIcon" value="modVehicleSuperCharger"/>
+			<property name="DescriptionKey" value="modBundleDesc"/>
+			<property name="CustomIconTint" value="930CF8"/>
+			<property name="ItemTypeIcon" value="bundle"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Mods,Tool/Weapon Mods"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="modVehicleSuperCharger"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+	</append>
+	
+</AGFVanillaPlus-ModBundling>

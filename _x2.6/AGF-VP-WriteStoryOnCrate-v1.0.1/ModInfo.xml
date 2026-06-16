@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-WriteStoryOnCrate" />
+  <DisplayName value="AGF Write Story On Crate" />
+  <Version value="1.0.1" />
+  <Description value="Adds a lockable iron storage crate with 8 lines of writable text." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

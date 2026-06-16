@@ -1,0 +1,28 @@
+<AGF-Backpack120-1>
+	
+
+	<!--Large enough player backpack when players die, requires an update in windows.xml to work.-->
+	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">12,12</set>
+
+
+	<!--The size of the storages go upto (168 slots), requires an update in windows.xml to work.-->
+	<append xpath="/lootcontainers">
+		<!-- Large Wood Crate (120)--><!--Default Size = 8,6-->
+			<lootcontainer name="playerWoodWritableStorageLarge" count="0" size="12,10" sound_open="UseActions/crate_wood_open" sound_close="UseActions/crate_wood_close" loot_quality_template="qualBaseTemplate">
+				<item name="cobweb" count="0"/>
+			</lootcontainer>
+
+		<!-- Large Iron Crate (144)--><!--Default Size = 8,8-->
+			<lootcontainer name="playerIronWritableStorageLarge" count="0" size="12,12" sound_open="UseActions/crate_iron_open" sound_close="UseActions/crate_iron_close" loot_quality_template="qualBaseTemplate">
+				<item name="cobweb" count="0"/>
+			</lootcontainer>
+
+		<!-- Large Steel Crate (168)--><!--Default Size = 8,10-->
+			<lootcontainer name="playerSteelWritableStorageLarge" count="0" size="12,14" sound_open="UseActions/crate_steel_open" sound_close="UseActions/crate_steel_close" loot_quality_template="qualBaseTemplate">
+				<item name="cobweb" count="0"/>
+			</lootcontainer>
+	</append>
+
+
+	
+</AGF-Backpack120-1>

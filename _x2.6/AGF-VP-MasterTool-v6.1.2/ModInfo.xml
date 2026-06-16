@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-MasterTool" />
+  <DisplayName value="AGF Master Tool" />
+  <Version value="6.1.2" />
+  <Description value="Endgame multi-role tool combining auger, chainsaw, knife, wrench, and nailgun behind a late-game unlock quest." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

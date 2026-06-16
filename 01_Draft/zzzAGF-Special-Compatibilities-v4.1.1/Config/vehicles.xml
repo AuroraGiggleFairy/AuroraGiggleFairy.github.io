@@ -1,7 +1,7 @@
 <zzzAGF-Compatibilities>
 	<conditional>
 		<if cond="mod_loaded('Bdubs_Vehicles')">
-			<include filename="XUi/ModPatches/Bdubs_Vehicles/vehicles.xml"/>
+			<include filename="XUi_InGame/ModPatches/Bdubs_Vehicles/vehicles.xml"/>
 		</if>
 	</conditional>
 </zzzAGF-Compatibilities>

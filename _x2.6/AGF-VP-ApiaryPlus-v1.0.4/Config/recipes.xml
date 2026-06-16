@@ -1,0 +1,10 @@
+<AGFVanillaPlus-ApiaryPlus>
+
+
+	<!-- Takes the original Apiary Recipe and change to the NEW 2x2x1 Apiary Block-->
+	<!-- ^^^ Old Apiary cannot be crafted now, only new one.-->
+	<set xpath="/recipes/recipe[@name='cntApiary']/@name">cntApiaryAGF</set>
+
+
+</AGFVanillaPlus-ApiaryPlus>
+

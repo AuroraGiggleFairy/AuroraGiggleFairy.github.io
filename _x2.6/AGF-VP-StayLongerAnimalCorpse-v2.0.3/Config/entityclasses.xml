@@ -1,0 +1,11 @@
+<AGFVanillaPlus-StayLongerAnimalCorpse>
+
+
+		<!--Animal corpses stick around a bit longer.-->	
+		<set xpath="/entity_classes/entity_class[starts-with(@name,'animal') and not (contains(@name,'Swarm'))]/property[@name='TimeStayAfterDeath']/@value">600</set> <!--DEFUALT is 300 seconds (5 minutes). 600 seconds = 10 minutes-->
+	
+
+
+</AGFVanillaPlus-StayLongerAnimalCorpse>
+
+

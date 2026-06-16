@@ -1,0 +1,12 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('Bdubs_Vehicles')">
+			<include filename="XUi/ModPatches/Bdubs_Vehicles/vehicles.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('Boat_Modlet_For_V2')">
+			<include filename="XUi/ModPatches/Boat_Modlet/vehicles.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

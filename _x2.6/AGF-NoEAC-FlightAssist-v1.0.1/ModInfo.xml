@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-FlightAssist" />
+  <DisplayName value="BETA - AGF Flight Assist" />
+  <Version value="1.0.1" />
+  <Description value="Adds same-elevation flight assist for gyrocopters and helicopters with HUD mode display." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-HUDPluszOther-TinyBuffsPopUp" />
+  <DisplayName value="AGF Tiny Buffs Pop Up" />
+  <Version value="1.0.1" />
+  <Description value="Halves the on-screen size of buff pop-up notifications." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

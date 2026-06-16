@@ -1,0 +1,21 @@
+<AGFVanillaPlus-MiningPlus>
+
+
+	<!--perkArtOfMiningPallets to include Clay Soil and Crushed Sand-->
+		<append xpath="/recipes">
+			<recipe name="resourceClayLumpBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">
+				<ingredient name="resourceClayLump" count="6000"/>
+			</recipe>
+			<recipe name="resourceCrushedSandBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">			
+				<ingredient name="resourceCrushedSand" count="6000"/>
+			</recipe>
+			<recipe name="resourceScrapBrassBundle" count="1" craft_time="2" craft_exp_gain="0" tags="learnable">			
+				<ingredient name="resourceScrapBrass" count="6000"/>
+			</recipe>
+		</append>				
+			
+
+
+</AGFVanillaPlus-MiningPlus>
+
+
