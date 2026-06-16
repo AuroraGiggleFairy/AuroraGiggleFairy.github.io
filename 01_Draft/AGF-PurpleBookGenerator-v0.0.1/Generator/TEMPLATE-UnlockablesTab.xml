@@ -742,6 +742,12 @@
                     <sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modRoboticDroneMoraleBoosterMod" color="" tooltip_key="modRoboticDroneMoraleBoosterMod" />
                     <filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modRoboticDroneMoraleBoosterMod)}" />
                   </entry>
+                  <entry name="modRoboticDroneStunWeaponMod">
+                    <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true" />
+                    <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false" />
+                    <sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modRoboticDroneStunWeaponMod" color="" tooltip_key="modRoboticDroneStunWeaponMod" />
+                    <filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modRoboticDroneStunWeaponMod)}" />
+                  </entry>
                 </grid>
                 <label name="unlockAllSectionLabel5" depth="3" justify="left" pos="1054,-338" width="308" height="26" foregroundlayer="true" color="232,232,232,255" text_key="agfUnlockMisc" font_size="22" />
                 <grid name="unlockAllSectionGrid5" depth="3" rows="2" cols="7" pos="1048,-359" cell_width="44" cell_height="44" repeat_content="false" arrangement="horizontal" controller="MapStats">
@@ -1504,7 +1510,7 @@
                 </grid>
               </rect>
               <rect name="unlockDrone" controller="TabSelectorTab" tab_key="agfUnlockDrone">
-                <grid name="unlockDroneGrid" depth="3" rows="1" cols="5" pos="460,-92" cell_width="94" cell_height="94" repeat_content="false" arrangement="horizontal" controller="MapStats">
+                <grid name="unlockDroneGrid" depth="3" rows="1" cols="6" pos="460,-92" cell_width="94" cell_height="94" repeat_content="false" arrangement="horizontal" controller="MapStats">
                   <entry name="modRoboticDroneArmorPlatingMod">
                     <sprite depth="2" name="background" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[darkGrey]" type="sliced" fillcenter="true" />
                     <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[black]" type="sliced" fillcenter="false" />
@@ -1534,6 +1540,12 @@
                     <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[black]" type="sliced" fillcenter="false" />
                     <sprite depth="4" name="itemIcon" pos="12,-12" width="70" height="70" size="70,70" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modRoboticDroneMoraleBoosterMod" color="" tooltip_key="modRoboticDroneMoraleBoosterMod" />
                     <filledsprite depth="3" name="background" color="0,255,0,120" pos="12,-12" width="70" height="70" fillcenter="true" type="filled" fill="{cvar(modRoboticDroneMoraleBoosterMod)}" />
+                  </entry>
+                  <entry name="modRoboticDroneStunWeaponMod">
+                    <sprite depth="2" name="background" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[darkGrey]" type="sliced" fillcenter="true" />
+                    <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[black]" type="sliced" fillcenter="false" />
+                    <sprite depth="4" name="itemIcon" pos="12,-12" width="70" height="70" size="70,70" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modRoboticDroneStunWeaponMod" color="" tooltip_key="modRoboticDroneStunWeaponMod" />
+                    <filledsprite depth="3" name="background" color="0,255,0,120" pos="12,-12" width="70" height="70" fillcenter="true" type="filled" fill="{cvar(modRoboticDroneStunWeaponMod)}" />
                   </entry>
                 </grid>
               </rect>

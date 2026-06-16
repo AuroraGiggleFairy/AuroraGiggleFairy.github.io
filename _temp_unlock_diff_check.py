@@ -1,0 +1,34 @@
+﻿import re
+import pathlib
+import xml.etree.ElementTree as ET
+
+repo = pathlib.Path('c:/GitHub/7D2D-Mods')
+recipes = pathlib.Path('c:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Data/Config/recipes.xml')
+win = repo / '01_Draft/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml'
+
+rroot = ET.parse(recipes).getroot()
+learnable = set()
+all_recipes = set()
+for rec in rroot.iter('recipe'):
+    name = (rec.get('name') or '').strip()
+    if not name:
+        continue
+    all_recipes.add(name)
+    tags = {t.strip().lower() for t in (rec.get('tags', '').split(',')) if t.strip()}
+    req_text = ' '.join((req.get('name', '') + ' ' + req.get('value', '')) for req in rec.findall('./effect_group/requirement'))
+    if 'learnable' in tags or 'RecipeTagUnlocked' in req_text:
+        learnable.add(name)
+
+text = win.read_text(encoding='utf-8', errors='ignore')
+start = text.find('name="unlockablesTab"')
+frag = text[start:] if start != -1 else ''
+covered = set(re.findall(r'RecipeTagUnlocked([A-Za-z0-9_]+)', frag))
+
+missing = sorted([n for n in learnable if n not in covered])
+extra = sorted([n for n in covered if n not in all_recipes])
+
+print('learnable_recipes', len(learnable))
+print('unlock_cvars_in_tab', len(covered))
+print('missing_from_unlock_tab', len(missing))
+print('sample_missing', missing[:120])
+print('covered_not_recipe_sample', extra[:60])

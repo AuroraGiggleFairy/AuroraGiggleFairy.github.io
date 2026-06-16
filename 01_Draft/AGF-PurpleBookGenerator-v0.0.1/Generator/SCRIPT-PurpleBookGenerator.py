@@ -9,7 +9,7 @@ established ``booksTab``/``unlockablesTab`` layouts from template/source files.
 ``armorsTab`` remains an in-progress lane and is preserved from existing output
 when available so the resulting mod loads in-game.
 
-Output: ``01_Draft/AGF-PurpleBookGenerator-vX.Y.Z/Config/XUi/windows.xml``.
+Output: ``01_Draft/AGF-PurpleBookGenerator-vX.Y.Z/Config/XUi_InGame/windows.xml``.
 
 Usage::
 
@@ -68,15 +68,54 @@ DEFAULT_PROGRESSION = GAME_CONFIG / "progression.xml"
 DEFAULT_ITEMS = GAME_CONFIG / "items.xml"
 DEFAULT_BLOCKS = GAME_CONFIG / "blocks.xml"
 DEFAULT_RECIPES = GAME_CONFIG / "recipes.xml"
-DEFAULT_GAME_LOCALIZATION = GAME_CONFIG / "Localization.txt"
+DEFAULT_GAME_LOCALIZATION = GAME_CONFIG / "Localization.csv"
 DEFAULT_OUT_MOD = "AGF-PurpleBookGenerator-v0.0.1"
 DEFAULT_SEED_WINDOWS = WORKSPACE / "windowBackup.xml"
-DEFAULT_RELEASE_WINDOWS = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi" / "windows.xml"
-DEFAULT_ACTIVEBUILD_WINDOWS = WORKSPACE / "02_ActiveBuild" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi" / "windows.xml"
-DEFAULT_GAME_MOD_WINDOWS = Path(r"c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-PurpleBookGenerator-v0.0.1\Config\XUi\windows.xml")
+DEFAULT_RELEASE_WINDOWS = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi_InGame" / "windows.xml"
+DEFAULT_ACTIVEBUILD_WINDOWS = WORKSPACE / "02_ActiveBuild" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi_InGame" / "windows.xml"
+DEFAULT_GAME_MOD_WINDOWS = Path(r"c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-PurpleBookGenerator-v0.0.1\Config\XUi_InGame\windows.xml")
 DEFAULT_BOOKS_TEMPLATE = WORKSPACE / "01_Draft" / DEFAULT_OUT_MOD / "Generator" / "TEMPLATE-BooksTab.xml"
 DEFAULT_UNLOCKS_TEMPLATE = WORKSPACE / "01_Draft" / DEFAULT_OUT_MOD / "Generator" / "TEMPLATE-UnlockablesTab.xml"
 DEFAULT_ARMOR_COMPACT_EXAMPLE = WORKSPACE / "01_Draft" / DEFAULT_OUT_MOD / "Generator" / "EXAMPLE-ArmorCard-Biker-Compact.xml"
+
+LOCALIZATION_LANGUAGE_HEADERS = {
+    "english",
+    "german",
+    "spanish",
+    "french",
+    "italian",
+    "japanese",
+    "koreana",
+    "polish",
+    "brazilian",
+    "russian",
+    "turkish",
+    "schinese",
+    "tchinese",
+}
+
+DEFAULT_LOCALIZATION_HEADER_FIELDS = [
+    "Key",
+    "File",
+    "Type",
+    "UsedInMainMenu",
+    "NoTranslate",
+    "KeepLoaded",
+    "english",
+    "Context / Alternate Text",
+    "german",
+    "spanish",
+    "french",
+    "italian",
+    "japanese",
+    "koreana",
+    "polish",
+    "brazilian",
+    "russian",
+    "turkish",
+    "schinese",
+    "tchinese",
+]
 
 # Window frame
 # panel="Left" auto-stacks windows: the <window>'s own pos attribute is
@@ -691,6 +730,53 @@ def _csv_row_to_line_language_quoted(row: list[str], language_indices: set[int])
     return ",".join(cols)
 
 
+def _read_localization_header(path: Path) -> list[str]:
+    try:
+        with path.open("r", encoding="utf-8", newline="") as f:
+            reader = csv.reader(f)
+            header = next(reader, None)
+            if header:
+                return header
+    except (FileNotFoundError, OSError, UnicodeError, csv.Error):
+        pass
+    return []
+
+
+def _resolve_game_localization_path(path: Path) -> Path:
+    if path.exists():
+        return path
+    txt_alt = path.with_suffix(".txt")
+    csv_alt = path.with_suffix(".csv")
+    if txt_alt.exists():
+        return txt_alt
+    if csv_alt.exists():
+        return csv_alt
+    return path
+
+
+def _localization_schema(header_fields: list[str]) -> tuple[int, dict[str, int], list[str]]:
+    if not header_fields:
+        header_fields = DEFAULT_LOCALIZATION_HEADER_FIELDS[:]
+
+    english_index = 5
+    language_indices: dict[str, int] = {}
+    for idx, col in enumerate(header_fields):
+        name = (col or "").strip().lower()
+        if name == "english":
+            english_index = idx
+        if name in LOCALIZATION_LANGUAGE_HEADERS and name != "english":
+            language_indices[name] = idx
+
+    return english_index, language_indices, header_fields
+
+
+def _row_to_csv_line(row: list[str]) -> str:
+    buf = io.StringIO()
+    writer = csv.writer(buf, lineterminator="")
+    writer.writerow(row)
+    return buf.getvalue()
+
+
 def _extract_set_bonus_paragraph(localized_text: str) -> str:
     text = (localized_text or "")
     text = text.replace("\\r\\n", "\n").replace("\\n", "\n")
@@ -793,25 +879,10 @@ def parse_armor_setbonus_desc_rows_from_game_localization(path: Path) -> dict[st
             if not header:
                 return out
             ncols = len(header)
-            language_headers = {
-                "english",
-                "german",
-                "spanish",
-                "french",
-                "italian",
-                "japanese",
-                "koreana",
-                "polish",
-                "brazilian",
-                "russian",
-                "turkish",
-                "schinese",
-                "tchinese",
-            }
             language_indices = {
                 idx
                 for idx, col in enumerate(header)
-                if (col or "").strip().lower() in language_headers
+                if (col or "").strip().lower() in LOCALIZATION_LANGUAGE_HEADERS
             }
             for row in reader:
                 if len(row) < 1:
@@ -825,9 +896,10 @@ def parse_armor_setbonus_desc_rows_from_game_localization(path: Path) -> dict[st
 
                 row_out = [""] * ncols
                 row_out[0] = target_key
-                # Keep metadata columns aligned with source row when present.
-                for idx in range(1, min(5, len(row), ncols)):
-                    row_out[idx] = row[idx]
+                # Keep non-language metadata columns aligned with source row.
+                for idx in range(1, min(len(row), ncols)):
+                    if idx not in language_indices:
+                        row_out[idx] = row[idx]
 
                 # Copy true language columns with only the set-bonus paragraph.
                 for idx in sorted(language_indices):
@@ -876,25 +948,10 @@ def parse_armor_piece_desc_rows_from_game_localization(path: Path) -> dict[str, 
             if not header:
                 return out
             ncols = len(header)
-            language_headers = {
-                "english",
-                "german",
-                "spanish",
-                "french",
-                "italian",
-                "japanese",
-                "koreana",
-                "polish",
-                "brazilian",
-                "russian",
-                "turkish",
-                "schinese",
-                "tchinese",
-            }
             language_indices = {
                 idx
                 for idx, col in enumerate(header)
-                if (col or "").strip().lower() in language_headers
+                if (col or "").strip().lower() in LOCALIZATION_LANGUAGE_HEADERS
             }
             part_suffix_map = {
                 "Helmet": "Helmet",
@@ -915,9 +972,10 @@ def parse_armor_piece_desc_rows_from_game_localization(path: Path) -> dict[str, 
 
                 row_out = [""] * ncols
                 row_out[0] = target_key
-                # Keep metadata columns aligned with source row when present.
-                for idx in range(1, min(5, len(row), ncols)):
-                    row_out[idx] = row[idx]
+                # Keep non-language metadata columns aligned with source row.
+                for idx in range(1, min(len(row), ncols)):
+                    if idx not in language_indices:
+                        row_out[idx] = row[idx]
 
                 for idx in sorted(language_indices):
                     src = row[idx] if idx < len(row) else ""
@@ -984,7 +1042,10 @@ def _derive_setbonus_parts_from_desc_english(desc_text: str) -> tuple[str, str]:
     return one, "none"
 
 
-def derive_setbonus_rows_from_desc_rows(armor_setbonus_desc_rows: dict[str, str]) -> dict[str, str]:
+def derive_setbonus_rows_from_desc_rows(
+    armor_setbonus_desc_rows: dict[str, str],
+    english_index: int = 5,
+) -> dict[str, str]:
     """Build armorNAMESetBonus1/2 map by parsing english from SetBonusDesc rows."""
     out: dict[str, str] = {}
     for key, line in armor_setbonus_desc_rows.items():
@@ -996,7 +1057,7 @@ def derive_setbonus_rows_from_desc_rows(armor_setbonus_desc_rows: dict[str, str]
             parsed = next(csv.reader([line]))
         except csv.Error:
             continue
-        english = parsed[5].strip() if len(parsed) > 5 else ""
+        english = parsed[english_index].strip() if len(parsed) > english_index else ""
         b1, b2 = _derive_setbonus_parts_from_desc_english(english)
 
         # Keep short UI phrasing explicit where vanilla effect naming is clearer.
@@ -2558,10 +2619,10 @@ def emit_window(
            pos="-39,-3", height=36, width=36, color="[lightGrey]", type="sliced")
     w.leaf("sprite", name="background", sprite="ui_game_filled_circle", depth=1,
            pos="-41,-1", height=40, width=40, color="0, 0, 0", type="sliced")
-    w.leaf("button", pos="-21,-21", name="Schematics",
-           sprite="ui_game_symbol_book_read", defaultcolor="221, 205, 250",
-            tooltip_key="agf0PurpleBookButtonTooltip",
-           style="press, hover, paging.window.icon")
+        w.leaf("iconbutton", pos="-21,-21", depth="3", selectable="true", collider_scale="1.5",
+            name="Schematics", color="221, 205, 250", sprite="ui_game_symbol_book_read",
+            tooltip_key="agf0PurpleBookButtonTooltip", snap="false", gamepad_selectable="false",
+            visible="{is_creative}")
     w.close("append")
     # Reposition the gamepad LB icon to make room for the new button
     w.raw('<set xpath="windows/window[@name=\'windowPagingHeader\']/gamepad_icon[@name=\'LB_Icon\']/@pos">-58,-20</set>')
@@ -4889,13 +4950,14 @@ def _prune_backup_files(backup_dir: Path, prefix: str, max_files: int) -> None:
 
 
 def _write_localization_backup(loc_path: Path) -> Path | None:
-    """Create timestamped backup of current Localization.txt before overwrite."""
+    """Create timestamped backup of current Localization file before overwrite."""
     if not loc_path.exists():
         return None
     stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     backup_dir = Path(__file__).resolve().parent / "_AUTOBACKUP"
     backup_dir.mkdir(parents=True, exist_ok=True)
-    backup_path = backup_dir / f"Localization.prewrite.{stamp}.txt"
+    ext = loc_path.suffix or ".csv"
+    backup_path = backup_dir / f"Localization.prewrite.{stamp}{ext}"
     shutil.copy2(loc_path, backup_path)
     return backup_path
 
@@ -5039,7 +5101,9 @@ def main() -> int:
 
     items_path = Path(args.items)
     blocks_path = Path(args.blocks)
-    game_loc_path = Path(args.game_localization)
+    game_loc_path = _resolve_game_localization_path(Path(args.game_localization))
+    game_loc_header = _read_localization_header(game_loc_path)
+    english_index, lang_indices, loc_header_fields = _localization_schema(game_loc_header)
     global ITEM_ICONS, ARMOR_ROW2_VALUES
     ITEM_ICONS = parse_items(items_path, tag="item")
     print(f"[ok] parsed {len(ITEM_ICONS)} items from {items_path.name}")
@@ -5113,7 +5177,7 @@ def main() -> int:
         print("      Create it first with: python SCRIPT-MakeNewMod.py --name AGF-PurpleBookGenerator")
         return 2
 
-    out_xui_dir = out_mod_dir / "Config" / "XUi"
+    out_xui_dir = out_mod_dir / "Config" / "XUi_InGame"
     out_xui_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_xui_dir / "windows.xml"
 
@@ -5123,6 +5187,10 @@ def main() -> int:
     seed_path = Path(args.seed_windows)
     if not seed_path.exists() and DEFAULT_RELEASE_WINDOWS.exists():
         seed_path = DEFAULT_RELEASE_WINDOWS
+    if not seed_path.exists():
+        legacy_release = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi" / "windows.xml"
+        if legacy_release.exists():
+            seed_path = legacy_release
     seed_text = seed_path.read_text(encoding="utf-8") if seed_path.exists() else None
 
     books_template_path = Path(args.books_template)
@@ -5189,7 +5257,10 @@ def main() -> int:
         if removed_rows > 0:
             print(f"[ok] filtered {removed_rows} cosmetic/legacy armor localization rows not used by active armor sets")
 
-        armor_setbonus_from_desc = derive_setbonus_rows_from_desc_rows(armor_setbonus_desc_rows)
+        armor_setbonus_from_desc = derive_setbonus_rows_from_desc_rows(
+            armor_setbonus_desc_rows,
+            english_index=english_index,
+        )
         if armor_setbonus_from_desc:
             print("[ok] derived armor set bonus 1/2 from full-set descriptions")
     else:
@@ -5226,7 +5297,8 @@ def main() -> int:
 
     if args.sync_activebuild:
         activebuild_path = Path(args.activebuild_windows)
-        if activebuild_path.parent.exists():
+        if activebuild_path.parent.parent.exists():
+            activebuild_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(out_path, activebuild_path)
             print(f"[ok] synced ActiveBuild windows: {activebuild_path}")
         else:
@@ -5234,7 +5306,8 @@ def main() -> int:
 
     if args.sync_game_mod:
         game_mod_path = Path(args.game_mod_windows)
-        if game_mod_path.parent.exists():
+        if game_mod_path.parent.parent.exists():
+            game_mod_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(out_path, game_mod_path)
             print(f"[ok] synced game mod windows: {game_mod_path}")
         else:
@@ -5245,7 +5318,7 @@ def main() -> int:
     xui_text = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<AGF-PurpleBookGenerator>\n'
-        '\t<insertbefore xpath="/xui/ruleset/window_group[@name=\'crafting\']">\n'
+        '\t<insertbefore xpath="/xui/window_group[@name=\'crafting\']">\n'
         f'\t\t<window_group name="schematics" open_backpack_on_open="false" close_compass_on_open="false" stack_panel_y_offset="{STACK_PANEL_Y_OFFSET}">\n'
         '\t\t\t<window name="Schematics"/>\n'
         '\t\t</window_group>\n'
@@ -5257,7 +5330,8 @@ def main() -> int:
 
     if args.sync_activebuild:
         activebuild_xui_path = Path(args.activebuild_windows).parent / "xui.xml"
-        if activebuild_xui_path.parent.exists():
+        if activebuild_xui_path.parent.parent.exists():
+            activebuild_xui_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(xui_path, activebuild_xui_path)
             print(f"[ok] synced ActiveBuild xui: {activebuild_xui_path}")
         else:
@@ -5265,140 +5339,125 @@ def main() -> int:
 
     if args.sync_game_mod:
         game_mod_xui_path = Path(args.game_mod_windows).parent / "xui.xml"
-        if game_mod_xui_path.parent.exists():
+        if game_mod_xui_path.parent.parent.exists():
+            game_mod_xui_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(xui_path, game_mod_xui_path)
             print(f"[ok] synced game mod xui: {game_mod_xui_path}")
         else:
             print(f"[warn] game mod xui target missing: {game_mod_xui_path}")
 
     # Localization for tab captions and preserved rich key set
-    loc_path = out_mod_dir / "Config" / "Localization.txt"
-    loc_header = 'Key,File,Type,UsedInMainMenu,NoTranslate,english,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese\n'
-    loc_rows = [
-        ['agf1MainTabMagazines','','','','','Magazines'],
-        ['agf1MainTabBooks','','','','','Books'],
-        ['agf1MainTabUnlocks','','','','','Unlocks'],
-        ['agf4UnlocksCategoryAmmo','','','','','Ammo'],
-        ['agf4UnlocksCategoryAmmoRow44','','','','','.44 Ammo'],
-        ['agf4UnlocksCategoryAmmoRow762','','','','','7.62 Ammo'],
-        ['agf4UnlocksCategoryAmmoRow9mm','','','','','9mm Ammo'],
-        ['agf4UnlocksCategoryAmmoRowArrows','','','','','Arrows'],
-        ['agf4UnlocksCategoryAmmoRowBolts','','','','','Bolts'],
-        ['agf4UnlocksCategoryAmmoRowJunkTurret','','','','','Junk Turret Ammo'],
-        ['agf4UnlocksCategoryAmmoRowRockets','','','','','Rockets'],
-        ['agf4UnlocksCategoryAmmoRowShotgun','','','','','Shotgun Ammo'],
-        ['agf4UnlocksCategoryArmors','','','','','Armors'],
-        ['agf4UnlocksCategoryArmorsBoots','','','','','Boots'],
-        ['agf4UnlocksCategoryArmorsFittings','','','','','Fittings'],
-        ['agf4UnlocksCategoryArmorsGeneral','','','','','General'],
-        ['agf4UnlocksCategoryArmorsHelmet','','','','','Helmets'],
-        ['agf4UnlocksCategoryArmorsMuffledConnectors','','','','','Muffled Connectors'],
-        ['agf4UnlocksCategoryArmorsPlating','','','','','Platings'],
-        ['agf4UnlocksCategoryArmorsPockets','','','','','Pockets'],
-        ['agf4UnlocksCategoryDrone','','','','','Drones'],
-        ['agf4UnlocksCategoryMisc','','','','','Misc'],
-        ['agf4UnlocksCategoryToolsWeapons','','','','','Tools & Weapons'],
-        ['agf4UnlocksCategoryToolsWeaponsBarrels','','','','','Barrels'],
-        ['agf4UnlocksCategoryToolsWeaponsBlockDamage','','','','','Block Damage'],
-        ['agf4UnlocksCategoryToolsWeaponsClub','','','','','Clubs'],
-        ['agf4UnlocksCategoryToolsWeaponsMotorTool','','','','','Motor Tools'],
-        ['agf4UnlocksCategoryToolsWeaponsOtherGun','','','','','Ranged General'],
-        ['agf4UnlocksCategoryToolsWeaponsOtherMelee','','','','','Melee General'],
-        ['agf4UnlocksCategoryToolsWeaponsScopes','','','','','Scopes'],
-        ['agf4UnlocksCategoryToolsWeaponsShotgun','','','','','Shotguns'],
-        ['agf4UnlocksCategoryToolsWeaponsSpecial','','','','','Special'],
-        ['agf4UnlocksCategoryVehicles','','','','','Vehicles'],
-        ['agf1MainTabArmors','','','','','Armors'],
-        ['agf5ArmorsRatingLight','','','','','Light Armors'],
-        ['agf5ArmorsRatingMedium','','','','','Medium Armors'],
-        ['agf5ArmorsRatingHeavy','','','','','Heavy Armors'],
-        ['agf1MainTabOverview','','','','','Overview'],
-        ['agf1MainTabOverviewTooltip','','','','','Return to full page overview.'],
-        ['agf1MainHeaderHint','','','','','Hover for details. Use tabs to zoom in.'],
-        ['agf5ArmorSetBonusTooltip','','','','','Set Bonus'],
-        ['agf0PurpleBookButtonTooltip','','','','','Crafting List'],
-        ['agf5ArmorsRatingStatPhysicalDamageResist','ui_display','Item stat','','','Armor Rating'],
-        ['agf5ArmorsRatingStatPhysicalDamageResistHeavy','ui_display','Item stat','','','Heavy Armor Rating'],
-        ['agf5ArmorsRatingStatPhysicalDamageResistLight','ui_display','Item stat','','','Light Armor Rating'],
-        ['agf5ArmorsRatingStatPhysicalDamageResistMedium','ui_display','Item stat','','','Medium Armor Rating'],
+    loc_path = out_mod_dir / "Config" / "Localization.csv"
+    ncols = len(loc_header_fields)
+    static_loc_rows = [
+        ("agf1MainTabMagazines", "", "", "", "", "Magazines"),
+        ("agf1MainTabBooks", "", "", "", "", "Books"),
+        ("agf1MainTabUnlocks", "", "", "", "", "Unlocks"),
+        ("agf4UnlocksCategoryAmmo", "", "", "", "", "Ammo"),
+        ("agf4UnlocksCategoryAmmoRow44", "", "", "", "", ".44 Ammo"),
+        ("agf4UnlocksCategoryAmmoRow762", "", "", "", "", "7.62 Ammo"),
+        ("agf4UnlocksCategoryAmmoRow9mm", "", "", "", "", "9mm Ammo"),
+        ("agf4UnlocksCategoryAmmoRowArrows", "", "", "", "", "Arrows"),
+        ("agf4UnlocksCategoryAmmoRowBolts", "", "", "", "", "Bolts"),
+        ("agf4UnlocksCategoryAmmoRowJunkTurret", "", "", "", "", "Junk Turret Ammo"),
+        ("agf4UnlocksCategoryAmmoRowRockets", "", "", "", "", "Rockets"),
+        ("agf4UnlocksCategoryAmmoRowShotgun", "", "", "", "", "Shotgun Ammo"),
+        ("agf4UnlocksCategoryArmors", "", "", "", "", "Armors"),
+        ("agf4UnlocksCategoryArmorsBoots", "", "", "", "", "Boots"),
+        ("agf4UnlocksCategoryArmorsFittings", "", "", "", "", "Fittings"),
+        ("agf4UnlocksCategoryArmorsGeneral", "", "", "", "", "General"),
+        ("agf4UnlocksCategoryArmorsHelmet", "", "", "", "", "Helmets"),
+        ("agf4UnlocksCategoryArmorsMuffledConnectors", "", "", "", "", "Muffled Connectors"),
+        ("agf4UnlocksCategoryArmorsPlating", "", "", "", "", "Platings"),
+        ("agf4UnlocksCategoryArmorsPockets", "", "", "", "", "Pockets"),
+        ("agf4UnlocksCategoryDrone", "", "", "", "", "Drones"),
+        ("agf4UnlocksCategoryMisc", "", "", "", "", "Misc"),
+        ("agf4UnlocksCategoryToolsWeapons", "", "", "", "", "Tools & Weapons"),
+        ("agf4UnlocksCategoryToolsWeaponsBarrels", "", "", "", "", "Barrels"),
+        ("agf4UnlocksCategoryToolsWeaponsBlockDamage", "", "", "", "", "Block Damage"),
+        ("agf4UnlocksCategoryToolsWeaponsClub", "", "", "", "", "Clubs"),
+        ("agf4UnlocksCategoryToolsWeaponsMotorTool", "", "", "", "", "Motor Tools"),
+        ("agf4UnlocksCategoryToolsWeaponsOtherGun", "", "", "", "", "Ranged General"),
+        ("agf4UnlocksCategoryToolsWeaponsOtherMelee", "", "", "", "", "Melee General"),
+        ("agf4UnlocksCategoryToolsWeaponsScopes", "", "", "", "", "Scopes"),
+        ("agf4UnlocksCategoryToolsWeaponsShotgun", "", "", "", "", "Shotguns"),
+        ("agf4UnlocksCategoryToolsWeaponsSpecial", "", "", "", "", "Special"),
+        ("agf4UnlocksCategoryVehicles", "", "", "", "", "Vehicles"),
+        ("agf1MainTabArmors", "", "", "", "", "Armors"),
+        ("agf5ArmorsRatingLight", "", "", "", "", "Light Armors"),
+        ("agf5ArmorsRatingMedium", "", "", "", "", "Medium Armors"),
+        ("agf5ArmorsRatingHeavy", "", "", "", "", "Heavy Armors"),
+        ("agf1MainTabOverview", "", "", "", "", "Overview"),
+        ("agf1MainTabOverviewTooltip", "", "", "", "", "Return to full page overview."),
+        ("agf1MainHeaderHint", "", "", "", "", "Hover for details. Use tabs to zoom in."),
+        ("agf5ArmorSetBonusTooltip", "", "", "", "", "Set Bonus"),
+        ("agf0PurpleBookButtonTooltip", "", "", "", "", "Crafting List"),
+        ("agf5ArmorsRatingStatPhysicalDamageResist", "ui_display", "Item stat", "", "", "Armor Rating"),
+        ("agf5ArmorsRatingStatPhysicalDamageResistHeavy", "ui_display", "Item stat", "", "", "Heavy Armor Rating"),
+        ("agf5ArmorsRatingStatPhysicalDamageResistLight", "ui_display", "Item stat", "", "", "Light Armor Rating"),
+        ("agf5ArmorsRatingStatPhysicalDamageResistMedium", "ui_display", "Item stat", "", "", "Medium Armor Rating"),
     ]
 
-    # Language columns to fill if missing (index in row)
-    lang_indices = {
-        'german': 6,
-        'spanish': 7,
-        'french': 8,
-        'italian': 9,
-        'japanese': 10,
-        'koreana': 11,
-        'polish': 12,
-        'brazilian': 13,
-        'russian': 14,
-        'turkish': 15,
-        'schinese': 16,
-        'tchinese': 17,
-    }
-
-    # Fill missing translations for static rows
-    for i, row in enumerate(loc_rows):
-        if len(row) < 18:
-            row += [''] * (18 - len(row))
-        english = row[5]
-        if english and all(not row[idx] for idx in lang_indices.values()):
-            loc_rows[i] = _fill_missing_translations(row, lang_indices, english)
-
-    # Add dynamic rows (armor_setbonus_loc, armor_setbonus_desc_rows, armor_piece_desc_rows)
-    def _process_dynamic_row(line: str) -> str:
-        # Split CSV, fill missing translations if only English is present
-        row = next(csv.reader([line]))
-        if len(row) < 18:
-            row += [''] * (18 - len(row))
-        english = row[5]
-        if english and all(not row[idx] for idx in lang_indices.values()):
-            row = _fill_missing_translations(row, lang_indices, english)
-        # Re-quote and join
-        return ','.join('"' + c.replace('"', '""') + '"' if ',' in c or '"' in c else c for c in row)
+    loc_rows: list[list[str]] = []
+    for key, file_name, typ, used_in_main, no_translate, english in static_loc_rows:
+        row = [""] * ncols
+        row[0] = key
+        if ncols > 1:
+            row[1] = file_name
+        if ncols > 2:
+            row[2] = typ
+        if ncols > 3:
+            row[3] = used_in_main
+        if ncols > 4:
+            row[4] = no_translate
+        if english_index < ncols:
+            row[english_index] = english
+        loc_rows.append(row)
 
     if armor_setbonus_loc:
         for k in sorted(armor_setbonus_loc.keys()):
-            v = armor_setbonus_loc[k].replace('"', '""')
-            row = [k,'','','','',v] + ['']*12
-            if v and all(not x for x in row[6:]):
-                row = _fill_missing_translations(row, lang_indices, v)
+            v = armor_setbonus_loc[k]
+            row = [""] * ncols
+            row[0] = k
+            if english_index < ncols:
+                row[english_index] = v
             loc_rows.append(row)
+
     if armor_setbonus_desc_rows:
         for k in sorted(armor_setbonus_desc_rows.keys()):
             line = armor_setbonus_desc_rows[k]
-            loc_rows.append(next(csv.reader([line])) + ['']*(18-len(next(csv.reader([line])))))
+            parsed = next(csv.reader([line]))
+            if len(parsed) < ncols:
+                parsed += [""] * (ncols - len(parsed))
+            elif len(parsed) > ncols:
+                parsed = parsed[:ncols]
+            loc_rows.append(parsed)
+
     if armor_piece_desc_rows:
         for k in sorted(armor_piece_desc_rows.keys()):
             line = armor_piece_desc_rows[k]
-            loc_rows.append(next(csv.reader([line])) + ['']*(18-len(next(csv.reader([line])))))
+            parsed = next(csv.reader([line]))
+            if len(parsed) < ncols:
+                parsed += [""] * (ncols - len(parsed))
+            elif len(parsed) > ncols:
+                parsed = parsed[:ncols]
+            loc_rows.append(parsed)
 
-    # Fill missing translations for all rows
+    # Fill missing translations for rows that currently only have English.
     for i, row in enumerate(loc_rows):
-        if len(row) < 18:
-            row += [''] * (18 - len(row))
-        english = row[5]
+        english = row[english_index] if english_index < len(row) else ""
         if english and all(not row[idx] for idx in lang_indices.values()):
             loc_rows[i] = _fill_missing_translations(row, lang_indices, english)
 
-    # Write out
-    generated_loc_text = loc_header + '\n'.join([','.join(row) for row in loc_rows]) + '\n'
+    loc_header_line = _row_to_csv_line(loc_header_fields)
+    generated_loc_text = loc_header_line + "\n"
+    generated_loc_text += "\n".join(_row_to_csv_line(row) for row in loc_rows) + "\n"
 
-    if armor_setbonus_loc:
-        for k in sorted(armor_setbonus_loc.keys()):
-            v = armor_setbonus_loc[k].replace('"', '""')
-            generated_loc_text += f'{k},,,,,"{v}"\n'
-    if armor_setbonus_desc_rows:
-        for k in sorted(armor_setbonus_desc_rows.keys()):
-            generated_loc_text += armor_setbonus_desc_rows[k] + "\n"
-    if armor_piece_desc_rows:
-        for k in sorted(armor_piece_desc_rows.keys()):
-            generated_loc_text += armor_piece_desc_rows[k] + "\n"
-
-    existing_loc_text = loc_path.read_text(encoding="utf-8") if loc_path.exists() else None
-    fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "Localization.txt"
+    existing_loc_path = loc_path if loc_path.exists() else (out_mod_dir / "Config" / "Localization.txt")
+    existing_loc_text = existing_loc_path.read_text(encoding="utf-8") if existing_loc_path.exists() else None
+    fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "Localization.csv"
+    if not fallback_loc_path.exists():
+        fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "Localization.txt"
     fallback_loc_text = fallback_loc_path.read_text(encoding="utf-8") if fallback_loc_path.exists() else None
     loc_text = _merge_localization_text(
         generated_loc_text,
@@ -5418,11 +5477,11 @@ def main() -> int:
             preview = ", ".join(changed_keys[:8])
             extra = "" if len(changed_keys) <= 8 else f" (+{len(changed_keys)-8} more)"
             print(f"      - existing keys changed: {preview}{extra}")
-            print("      Localization.txt was not written to avoid losing edits")
+            print("      Localization.csv was not written to avoid losing edits")
             return 4
 
     if args.autobackup:
-        loc_backup = _write_localization_backup(loc_path)
+        loc_backup = _write_localization_backup(existing_loc_path if existing_loc_path.exists() else loc_path)
         if loc_backup:
             print(f"[ok] wrote localization backup: {loc_backup}")
             _prune_backup_files(loc_backup.parent, "Localization.prewrite.", args.autobackup_max_files)
@@ -5431,7 +5490,7 @@ def main() -> int:
     print(f"[ok] wrote {loc_path}  ({len(loc_text):,} bytes)")
 
     if args.sync_activebuild:
-        activebuild_loc_path = Path(args.activebuild_windows).parent.parent / "Localization.txt"
+        activebuild_loc_path = Path(args.activebuild_windows).parent.parent / "Localization.csv"
         if activebuild_loc_path.parent.exists():
             shutil.copy2(loc_path, activebuild_loc_path)
             print(f"[ok] synced ActiveBuild localization: {activebuild_loc_path}")
@@ -5439,7 +5498,7 @@ def main() -> int:
             print(f"[warn] ActiveBuild localization target missing: {activebuild_loc_path}")
 
     if args.sync_game_mod:
-        game_mod_loc_path = Path(args.game_mod_windows).parent.parent / "Localization.txt"
+        game_mod_loc_path = Path(args.game_mod_windows).parent.parent / "Localization.csv"
         if game_mod_loc_path.parent.exists():
             shutil.copy2(loc_path, game_mod_loc_path)
             print(f"[ok] synced game mod localization: {game_mod_loc_path}")

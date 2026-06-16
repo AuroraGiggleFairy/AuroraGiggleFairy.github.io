@@ -157,8 +157,8 @@
                                         <rect depth="10" pos="5,0" width="50" height="100">
                                             <sprite depth="10" name="itemIcon" pos="2,-9" width="50" height="50" size="46,46" foregroundlayer="true" atlas="ItemIconAtlas" sprite="bookElectricalTraps" color="" />
                                             <label depth="10" name="check" pos="0,-60" width="50" height="16" justify="center" text="[fc8c03]{cvar(craftingTrapsCheck)}[-]" font_size="22" foregroundlayer="true" />
-                                            <label depth="10" name="check" pos="0,-77" width="50" height="16" justify="center" text="/100" font_size="22" foregroundlayer="true" />
-                                            <filledsprite depth="9" name="yesUnlocked" color="10,255,10,65" pos="2,-1" width="46" height="98" fillcenter="true" type="filled" foregroundlayer="true" fill="{cvar(craftingTrapsCheck100)}" />
+                                            <label depth="10" name="check" pos="0,-77" width="50" height="16" justify="center" text="/75" font_size="22" foregroundlayer="true" />
+                                            <filledsprite depth="9" name="yesUnlocked" color="10,255,10,65" pos="2,-1" width="46" height="98" fillcenter="true" type="filled" foregroundlayer="true" fill="{cvar(craftingTrapsCheck75)}" />
                                         </rect>
                                     </entry>
                                     <entry>
@@ -1796,7 +1796,7 @@
                                             <sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="armorMinerOutfit" color="" tooltip_key="agf5ArmorsRatingHeavy" />
                                         </rect>
                                     </rect>
-                                    <rect name="checklistTraps" depth="3" pos="910,-110" width="50" height="151" controller="MapStats">
+                                    <rect name="checklistTraps" depth="3" pos="910,-110" width="50" height="121" controller="MapStats">
                                         <rect name="Section1" pos="0,0" width="50" height="61">
                                             <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="50" height="63" color="[darkGrey]" type="sliced" fillcenter="true" />
                                             <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" width="50" height="63" color="[black]" type="sliced" fillcenter="false" />
@@ -1825,15 +1825,6 @@
                                             <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="19" height="16" color="156, 136, 103" type="sliced" fillcenter="true" />
                                             <label depth="3" name="checkunlock" pos="0,-3" width="25" height="16" justify="center" text="75" color="[black]" font_size="16" />
                                             <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="autoTurret" color="" tooltip_key="autoTurret" />
-                                        </rect>
-                                        <rect name="Section4" pos="0,-121" width="50" height="30">
-                                            <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="50" height="32" color="[darkGrey]" type="sliced" fillcenter="true" />
-                                            <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" width="50" height="32" color="[black]" type="sliced" fillcenter="false" />
-                                            <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="30" fillcenter="true" type="filled" fill="{cvar(craftingTrapsCheck100)}" />
-                                            <sprite depth="2" name="backgroundBorder" sprite="menu_empty3px" pos="2,-2" width="21" height="18" color="[black]" type="sliced" fillcenter="false" />
-                                            <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="19" height="16" color="156, 136, 103" type="sliced" fillcenter="true" />
-                                            <label depth="3" name="checkunlock" pos="0,-3" width="25" height="16" justify="center" text="100" color="[black]" font_size="16" />
-                                            <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="m60Turret" color="" tooltip_key="m60Turret" />
                                         </rect>
                                     </rect>
                                     <rect name="checklistMedical" depth="3" pos="970,-110" width="50" height="240" controller="MapStats">
@@ -4932,15 +4923,15 @@
                                         <entry name="Magazine">
                                             <sprite depth="2" name="background" sprite="menu_empty3px" width="250" height="350" color="[black]" type="sliced" fillcenter="true" />
                                             <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" width="250" height="350" color="[black]" type="sliced" fillcenter="false" />
-                                            <filledsprite depth="1" name="yesUnlocked" color="0,255,0,200" pos="0,0" width="250" height="350" fillcenter="true" type="filled" fill="{cvar(craftingTrapsCheck100)}" />
+                                            <filledsprite depth="1" name="yesUnlocked" color="0,255,0,200" pos="0,0" width="250" height="350" fillcenter="true" type="filled" fill="{cvar(craftingTrapsCheck75)}" />
                                             <sprite depth="3" name="itemIcon" pos="2,-2" width="250" height="250" size="246,246" foregroundlayer="true" atlas="ItemIconAtlas" sprite="bookElectricalTraps" color="" tooltip_key="craftingTrapsName" />
                                         </entry>
                                         <entry name="level">
                                             <label depth="3" name="check" pos="0,-14" width="250" height="100" justify="center" text="[fc8c03]{cvar(craftingTrapsCheck)}[-]" font_size="40" tooltip_key="craftingTrapsName" />
-                                            <label depth="3" name="check" pos="0,-50" width="250" height="100" justify="center" text="/100" font_size="40" tooltip_key="craftingTrapsName" />
+                                            <label depth="3" name="check" pos="0,-50" width="250" height="100" justify="center" text="/75" font_size="40" tooltip_key="craftingTrapsName" />
                                         </entry>
                                     </grid>
-                                    <grid name="checklistTraps" depth="3" rows="6" cols="3" pos="695,-215" cell_width="300" cell_height="100" repeat_content="false" arrangement="vertical" controller="MapStats">
+                                    <grid name="checklistTraps" depth="3" rows="6" cols="3" pos="695,-265" cell_width="300" cell_height="100" repeat_content="false" arrangement="vertical" controller="MapStats">
                                         <entry name="QSection">
                                             <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="300" height="100" color="[darkGrey]" type="sliced" fillcenter="true" />
                                             <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" pos="0,0" width="300" height="100" color="[black]" type="sliced" fillcenter="false" />
@@ -4969,15 +4960,6 @@
                                             <sprite depth="2" name="background" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="156, 136, 103" type="sliced" fillcenter="true" />
                                             <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="75" color="[black]" font_size="26" />
                                             <sprite name="itemIcon" depth="3" pos="125,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="autoTurret" color="" tooltip_key="autoTurret" />
-                                        </entry>
-                                        <entry name="QSection">
-                                            <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="300" height="100" color="[darkGrey]" type="sliced" fillcenter="true" />
-                                            <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" pos="0,0" width="300" height="100" color="[black]" type="sliced" fillcenter="false" />
-                                            <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="300" height="100" fillcenter="true" type="filled" fill="{cvar(craftingTrapsCheck100)}" />
-                                            <sprite depth="3" name="backgroundBorder" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="[black]" type="sliced" fillcenter="false" />
-                                            <sprite depth="2" name="background" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="156, 136, 103" type="sliced" fillcenter="true" />
-                                            <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="100" color="[black]" font_size="26" />
-                                            <sprite name="itemIcon" depth="3" pos="125,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="m60Turret" color="" tooltip_key="m60Turret" />
                                         </entry>
                                     </grid>
                                 </rect>
