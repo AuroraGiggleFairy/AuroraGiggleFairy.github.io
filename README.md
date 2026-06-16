@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*June 16, 2026, 2:18 AM EST*
+*June 16, 2026, 3:42 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -387,7 +387,7 @@
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.2.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.3.0)**
 
 All AGF mods in one convenient download.
 
@@ -403,7 +403,7 @@ Non-EAC mods are inside optional folders within the pack.
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v0.2.0 - June 16, 2026 2:18am<ul><li>Change summary: +1 new, ~4 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">AGF-BackpackPlus-060Slots</a> (new: v4.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.0.0 -&gt; v6.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip">AGF-HUDPlus-HealthBars</a> (v5.0.0 -&gt; v5.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip">AGF-HUDPlus-RemoveEnteringPopUp</a> (v2.0.0 -&gt; v2.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip">AGF-HUDPluszOther-Weekday</a> (v3.0.1 -&gt; v3.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.1.0 - June 15, 2026 3:45am<ul><li>Change summary: +4 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (new: v6.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip">AGF-HUDPlus-HealthBars</a> (new: v5.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip">AGF-HUDPlus-RemoveEnteringPopUp</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip">AGF-HUDPluszOther-Weekday</a> (new: v3.0.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v0.3.0 - June 16, 2026 3:42am<ul><li>Change summary: +3 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip">AGF-NoEAC-GlobalStormTracker</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">AGF-NoEAC-ScreamerAlert</a> (new: v2.0.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (new: v2.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">AGF-BackpackPlus-060Slots</a> (v4.0.0 -&gt; v4.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.0.1 -&gt; v6.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.2.0 - June 16, 2026 2:18am<ul><li>Change summary: +1 new, ~4 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">AGF-BackpackPlus-060Slots</a> (new: v4.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.0.0 -&gt; v6.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip">AGF-HUDPlus-HealthBars</a> (v5.0.0 -&gt; v5.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip">AGF-HUDPlus-RemoveEnteringPopUp</a> (v2.0.0 -&gt; v2.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip">AGF-HUDPluszOther-Weekday</a> (v3.0.1 -&gt; v3.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.1.0 - June 15, 2026 3:45am<ul><li>Change summary: +4 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (new: v6.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-HealthBars.zip">AGF-HUDPlus-HealthBars</a> (new: v5.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip">AGF-HUDPlus-RemoveEnteringPopUp</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip">AGF-HUDPluszOther-Weekday</a> (new: v3.0.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -428,7 +428,7 @@ Quality-of-life HUD enhancements and visual tweaks.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-1Main.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-HUDPlus-1Main.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
+<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
 Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
 <ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
@@ -487,7 +487,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-060Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-BackpackPlus-060Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF BackpackPlus 60 Slots</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">Download</a><br>
+<b>AGF BackpackPlus 60 Slots</b> &nbsp;·&nbsp; v4.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">Download</a><br>
 Expands inventory to 60 slots.
 <ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
@@ -541,7 +541,7 @@ All Server-side (EAC-Friendly)!
 
 ## **F. NO EAC MODS**
 
-Updates are in progress.
+[**⬇️ Download All NoEAC Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_NoEAC_All.zip)
 
 Game enhancements that require a DLL. EAC must be off.
 
@@ -553,7 +553,36 @@ Installation requirements vary — check each mod's details.
 
 ---
 
-*Updates are in progress.*
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-GlobalStormTracker.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-GlobalStormTracker.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Global Storm Tracker</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip">Download</a><br>
+Sends a global chat alert showing the active storm biome and when it clears.
+<ul><li><em>Server-side (EAC Off): EAC off required; server install works for all joining players.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ScreamerAlert.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-ScreamerAlert.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>BETA - AGF Screamer Alert</b> &nbsp;·&nbsp; v2.0.0-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">Download</a><br>
+Shows a live on-screen alert when a Screamer or its horde is within 120m.
+<ul><li><em>Hybrid (EAC Off): EAC off required; server install works for all joining players; client install is optional for extra features.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-Toolbelt12Slots.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/ModImage_AGF-NoEAC-Toolbelt12Slots.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Toolbelt 12 Slots</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">Download</a><br>
+Expands the toolbelt from 10 to 12 slots with hotkeys for the new slots.
+<ul><li><em>Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
+</td>
+</tr></table>
+
+---
 
 ---
 
