@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-TradersRestockEvery2Days" />
+  <DisplayName value="AGF Traders restock every 2 days" />
+  <Version value="1.0.1" />
+  <Description value="Traders restock every 2 days instead of 3." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

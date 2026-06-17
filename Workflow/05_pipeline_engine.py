@@ -3349,6 +3349,18 @@ def collect_publishready_folders() -> List[str]:
     return sorted(scan_mod_folders(PUBLISH_READY).keys())
 
 
+def build_zip_arcname(*parts: str) -> str:
+    """Build a ZIP entry path using POSIX separators for cross-platform extraction."""
+    normalized_parts: List[str] = []
+    for part in parts:
+        if part is None:
+            continue
+        text = str(part).replace("\\", "/").strip("/")
+        if text:
+            normalized_parts.append(text)
+    return "/".join(normalized_parts)
+
+
 def zip_mod_folder(mod_folder: str, dry_run: bool, log: Logger) -> Tuple[str, bool]:
     mod_path = os.path.join(PUBLISH_READY, mod_folder)
     zip_name = f"{get_base_mod_name(mod_folder)}.zip"
@@ -3363,7 +3375,7 @@ def zip_mod_folder(mod_folder: str, dry_run: bool, log: Logger) -> Tuple[str, bo
             for root, _, files in os.walk(mod_path):
                 for file in files:
                     file_path = os.path.join(root, file)
-                    arcname = os.path.join(mod_folder, os.path.relpath(file_path, mod_path))
+                    arcname = build_zip_arcname(mod_folder, os.path.relpath(file_path, mod_path))
                     zipf.write(file_path, arcname)
         return zip_name, True
     except Exception as ex:
@@ -3386,7 +3398,7 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
                 for root, _, files in os.walk(mod_path):
                     for file in files:
                         file_path = os.path.join(root, file)
-                        arcname = os.path.join(mod_folder, os.path.relpath(file_path, mod_path))
+                        arcname = build_zip_arcname(mod_folder, os.path.relpath(file_path, mod_path))
                         zipf.write(file_path, arcname)
 
             if optionals_map:
@@ -3398,7 +3410,7 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
                         for root, _, files in os.walk(mod_path):
                             for file in files:
                                 file_path = os.path.join(root, file)
-                                arcname = os.path.join(opt_folder, mod_folder, os.path.relpath(file_path, mod_path))
+                                arcname = build_zip_arcname(opt_folder, mod_folder, os.path.relpath(file_path, mod_path))
                                 zipf.write(file_path, arcname)
         return True
     except Exception as ex:
