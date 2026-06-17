@@ -1,17 +1,14 @@
-#   GigglePack v0.5.0 - *June 16, 2026 9:00pm*
+#   GigglePack v0.6.0 - *June 16, 2026 10:01pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +1 new, ~6 updated, =0 renamed, -0 removed**
+###  **Change summary: +1 new, ~3 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (new: v4.0.1)
+  - [AGF-BackpackPlus-119Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip) (new: v2.0.0)
 - **Updated existing mods:**
-  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (v4.0.2 -> v4.0.3)
-  - [AGF-BackpackPlus-072Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip) (v4.0.0 -> v4.0.2)
-  - [AGF-BackpackPlus-084Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip) (v4.0.0 -> v4.0.1)
-  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.0.2 -> v6.0.4)
-  - [AGF-NoEAC-GlobalStormTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip) (v2.0.0 -> v2.0.1)
-  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v2.0.0 -> v2.0.1)
+  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (v4.0.3 -> v4.0.4)
+  - [AGF-BackpackPlus-072Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip) (v4.0.2 -> v4.0.3)
+  - [AGF-BackpackPlus-084Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip) (v4.0.1 -> v4.0.2)
 - **Renamed mods:**
   - None
 - **Removed mods:**

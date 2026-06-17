@@ -36,28 +36,28 @@
     "media_file": ""
   },
   "AGF-BackpackPlus-060Slots": {
-    "signature": "a4f24406924cfba660f5dfdd163784a8f6841f0243db4a22b5dbbbd5fc93c2f6",
-    "version": "4.0.3",
+    "signature": "ce972913502a64c2a087aa71dc955c2f92e9b65fa4ffed9763ebc4e13b82a8a6",
+    "version": "4.0.4",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-060Slots_01.png"
   },
   "AGF-BackpackPlus-072Slots": {
-    "signature": "c8c0bdf0748e37a726828f69fcfe3835d2259d58bafa7e2191e01252ca1e2119",
-    "version": "4.0.2",
+    "signature": "6de737d27da179cdda820f33ef304e07dbad8a81024f27faf88642e1cbdd5b2b",
+    "version": "4.0.3",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-072Slots_01.png"
   },
   "AGF-BackpackPlus-084Slots": {
-    "signature": "da1376a251b861f33f94ca0633e3be23a812c4cc03b502e24f215d78eefde9b8",
-    "version": "4.0.1",
+    "signature": "904761ecacebf99dbbab3f0d49225cc5eb1f491be02134f5007ad8814d31be14",
+    "version": "4.0.2",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-084Slots_01.png"
   },
   "AGF-BackpackPlus-119Slots": {
-    "signature": "efe965f43b6a29c8d1588f64879ad2f021a2403edf63144bf600a4574bdc2fde",
-    "version": "1.2.3",
-    "has_media": false,
-    "media_file": ""
+    "signature": "fa54a5df26b844f445e712a25ca77aa081c555ef1005fcb72b915d571df04017",
+    "version": "2.0.0",
+    "has_media": true,
+    "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
     "signature": "148f70f44254cda578e5c870971bc749a8270f6d7177e809c883320b0983b6ae",
