@@ -108,8 +108,8 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "313245fe194da9669d89fc79a95fc3f5c267d3ce932bf26862e91e1e2bb27505",
-    "version": "3.0.2",
+    "signature": "272de8c45baf36dea8533b42ae0810e6c941b7b46e9ec3713670889bf4ef78b6",
+    "version": "3.0.3",
     "has_media": true,
     "media_file": "AGF-HUDPluszOther-Weekday_01.png"
   },

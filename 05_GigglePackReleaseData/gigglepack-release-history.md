@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.6.1 (June 16, 2026 11:12pm)
+### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (v3.0.2 -> v3.0.3)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.6.0 (June 16, 2026 10:01pm)
 ### Summary: +1 new, ~3 updated, =0 renamed, -0 removed
 - **New Mods**
