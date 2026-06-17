@@ -4,6 +4,7 @@ AGF-4Modders-CustomWindowEnteringDuration,0,3.0,SAFE,SAFE,None,AGF-4Modders-Cust
 AGF-4Modders-ESCWindowPlus,1,3.0,SAFE,TBD,None,AGF-4Modders-ESCWindowPlus.txt,Yes,Yes,Yes,None
 AGF-4Modders-Fix4DestroyBiomeBadge,0,3.0,SAFE,TBD,None,AGF-4Modders-Fix4DestroyBiomeBadge.txt,No,TBD,TBD,TBD
 AGF-4Modders-Fix4RemoveItems,0,3.0,SAFE,TBD,None,AGF-4Modders-Fix4RemoveItems.txt,No,TBD,TBD,TBD
+AGF-HUDPlus-HealthBars,0,TBD,TBD,TBD,TBD,AGF-HUDPlus-HealthBars.txt,TBD,TBD,TBD,TBD
 AGF-NoEAC-AudioOptionsPlus,4,3.0,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-AudioOptionsPlus.txt,No,N/A,N/A,Only
 AGF-NoEAC-AutoRun,4,3.0,SAFE,TBD,"May only require client install, ignores server install.",AGF-NoEAC-AutoRun.txt,No,N/A,N/A,Only
 AGF-NoEAC-ConsoleOpacityMod,0,3.0,SAFE,TBD,None,AGF-NoEAC-ConsoleOpacityMod.txt,No,TBD,TBD,TBD
@@ -26,7 +27,6 @@ AGF-BackpackPlus-084Slots,1,3.0,SAFE,DANGEROUS,You may swap with 72 or 119.,AGF-
 AGF-BackpackPlus-119Slots,1,3.0,SAFE,DANGEROUS,You may swap with 84 or 72.,AGF-BackpackPlus-119Slots.txt,Yes,Yes,Yes,None
 AGF-HUDPlus-1Main,1,3.0,SAFE,SAFE,None,AGF-HUDPlus-1Main.txt,Yes,Yes,Yes,None
 AGF-HUDPlus-BMCounter,1,3.0,SAFE,SAFE,None,AGF-HUDPlus-BMCounter.txt,Yes,Yes,Yes,None
-AGF-HUDPlus-HealthBars,1,3.0,SAFE,SAFE,None,AGF-HUDPlus-HealthBars.txt,Yes,Yes,Yes,None
 AGF-HUDPlus-PurpleBook,1,3.0,SAFE,SAFE,None,AGF-HUDPlus-PurpleBook.txt,Yes,Yes,Yes,None
 AGF-HUDPlus-RemoveEnteringPopUp,1,3.0,SAFE,SAFE,None,AGF-HUDPlus-RemoveEnteringPopUp.txt,Yes,Yes,Yes,None
 AGF-HUDPluszOther-RemoveWrittentormAlerts,1,3.0,SAFE,SAFE,None,AGF-HUDPluszOther-RemoveWrittentormAlerts.txt,Yes,Yes,Yes,None

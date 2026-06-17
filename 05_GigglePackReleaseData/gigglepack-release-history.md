@@ -1,5 +1,23 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.5.0 (June 16, 2026 9:00pm)
+### Summary: +1 new, ~6 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (new: v4.0.1)
+- **Updated Existing Mods**
+  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (v4.0.2 -> v4.0.3)
+  - [AGF-BackpackPlus-072Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip) (v4.0.0 -> v4.0.2)
+  - [AGF-BackpackPlus-084Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip) (v4.0.0 -> v4.0.1)
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.0.2 -> v6.0.4)
+  - [AGF-NoEAC-GlobalStormTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip) (v2.0.0 -> v2.0.1)
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v2.0.0 -> v2.0.1)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.4.0 (June 16, 2026 5:43pm)
 ### Summary: +2 new, ~1 updated, =0 renamed, -0 removed
 - **New Mods**

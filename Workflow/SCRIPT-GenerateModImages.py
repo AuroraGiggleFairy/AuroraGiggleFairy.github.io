@@ -570,6 +570,12 @@ def resolve_media_image_path(media_root: str, mod_base_name: str, legacy_source_
     allowed_ext = [".png", ".jpg", ".jpeg", ".webp"]
 
     for ext in allowed_ext:
+        candidate = os.path.join(media_root, f"{mod_base_name}_01{ext}")
+        if os.path.isfile(candidate):
+            return candidate
+
+    # Backward compatibility with older unnumbered naming.
+    for ext in allowed_ext:
         candidate = os.path.join(media_root, f"{mod_base_name}{ext}")
         if os.path.isfile(candidate):
             return candidate
@@ -990,7 +996,10 @@ def generate_for_mod(mod: ModMeta, layout: Dict[str, object], media_image_path: 
                     expl_font, mt_color, mt_line_spacing, align="left", valign="top",
                 )
 
-    out_banner = os.path.join(generated_root, f"ModImage_{mod.base_name}.png")
+    out_full_merged = os.path.join(generated_root, f"{mod.base_name}_01.png")
+    base_img.convert("RGB").save(out_full_merged, format="PNG", optimize=True)
+
+    out_banner = os.path.join(generated_root, f"Thumbnail_{mod.base_name}.png")
     scaled = base_img.resize((int(output["width"]), int(output["height"])), Image.Resampling.LANCZOS)
     scaled.convert("RGB").save(out_banner, format="PNG", optimize=True)
 
@@ -1075,7 +1084,7 @@ def main() -> int:
         signature = build_mod_signature(mod, media_image_path)
         prev = previous_manifest.get(mod.base_name, {}) if isinstance(previous_manifest.get(mod.base_name, {}), dict) else {}
         prev_sig = str(prev.get("signature", ""))
-        banner_path = os.path.join(generated_root, f"ModImage_{mod.base_name}.png")
+        banner_path = os.path.join(generated_root, f"Thumbnail_{mod.base_name}.png")
         should_skip = args.changed_only and (signature == prev_sig) and os.path.isfile(banner_path)
         if should_skip and not args.mod:
             unchanged_count += 1

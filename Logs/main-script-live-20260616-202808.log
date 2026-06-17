@@ -1,0 +1,166 @@
+[2026-06-16 20:28:03] [INFO] Starting SCRIPT-Main automation pipeline
+[2026-06-16 20:28:03] [INFO] Selected mode: update
+[2026-06-16 20:28:03] [INFO] Scope policy: only AGF-/zzzAGF-prefixed mods are managed in workspace and game folders
+[2026-06-16 20:28:03] [INFO] Preflight writeability check passed
+[2026-06-16 20:28:03] [INFO] Mode update: sync Draft<->Game, ingest Draft->ActiveBuild, sync ActiveBuild<->Game, normalize names/readmes — no promote or package.
+[2026-06-16 20:28:03] [INFO] Step 0.25: Compare Game <-> Draft and pull newer game updates into Draft
+[2026-06-16 20:28:03] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-06-16 20:28:03] [INFO] Step 0.5: Promote Draft mods to ActiveBuild only on major-version upgrade
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-4Modders-10IngredientSlots-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-4Modders-AntiCM-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-4Modders-CustomWindowEnteringDuration-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-4Modders-ESCWindowPlus-v0.3.2: version 0.3.2 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-4Modders-Fix4RemoveItems-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-4Modders-SkillPointCap-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-BackpackPlus-119Slots-v1.2.3 v1.2.3 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-HUDPlus-BMCounter-v2.1.3 v2.1.3 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-HUDPlus-PurpleBook-v2.0.1 v2.0.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1 v2.0.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-AudioOptionsPlus-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-AutoRun-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-ConsoleOpacityMod-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-CosmeticLockIcon-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-EnhancedAGF-v3.2.1 v3.2.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1 v1.1.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-FlightAssist-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-ItemTypeIconColor-v1.0.3 v1.0.3 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-LockableWorkstations-v1.2.1 v1.2.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-OpenAllButton-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-NoEAC-SortingBox-v1.0.6 v1.0.6 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-NoEAC-TerrainLeveler-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-NoEAC-VisualEntityTracker-v0.2.0: version 0.2.0 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-PurpleBookGenerator-v0.0.1: version 0.0.1 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-AdminModdingSupport-v1.0.5 v1.0.5 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-AlternativeRecipes-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-AmmoDisassembly-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ApiaryPlus-v1.0.4 v1.0.4 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ArcheryFeathersChange-v1.0.3 v1.0.3 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ArmorHarvestMods-v2.1.1 v2.1.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-AutomobilesRespawn-v3.1.1 v3.1.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-BedrollPlus-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-BetterEggChance-v2.1.1 v2.1.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-BreakItGetIt-v1.0.3 v1.0.3 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-BuyTraderVendingMachines-v3.0.3 v3.0.3 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-CraftSewingKits-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-CraftStackEngBattCells-v3.3.1 v3.3.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-CraftVitamins-v1.1.1 v1.1.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-DecorationBlock-v3.0.3 v3.0.3 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-DewsPlus-v2.4.3 v2.4.3 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-DoorsPlus-v3.0.1 v3.0.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-DrinkableAcid-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-DyesPlus-v3.1.1 v3.1.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-FarmingPlus-v5.6.3 v5.6.3 not promoted (baseline major 5; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-FloraHarvester-v2.3.1 v2.3.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-FuelBurnPlus-v2.3.1 v2.3.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-MasterTool-v6.1.2 v6.1.2 not promoted (baseline major 6; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-MaxLevel500-v2.0.3 v2.0.3 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft sync skipped for AGF-VP-MedicallyTreatOthers-v0.0.2: version 0.0.2 is draft-only (major < 1)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-MedicationNoInsectSlow-v1.1.1 v1.1.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-MiningPlus-v1.2.1 v1.2.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-Mod988-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ModBundling-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ModSlotsPlus-v3.0.2 v3.0.2 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-PaintbrushPlus-v2.1.1 v2.1.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-PickupLanternsPlus-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-PlayerResetQuests-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-PlayerVendingMachinesPlus-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-PumpkinsPlus-v2.0.5 v2.0.5 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-QuickStart-v2.0.1 v2.0.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-RebundleBundles-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-RecipeRottingFlesh-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-RenamesAlphabeticalSort-v2.0.5 v2.0.5 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-RestorePowerAnyTime-v1.0.3 v1.0.3 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ScrapBatts4Acid-v1.1.1 v1.1.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ScrapEquipmentFaster-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-SimplifiedStacks-v1.2.4 v1.2.4 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-SmeltingPlus-v2.4.1 v2.4.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-StayLongerAnimalCorpse-v2.0.3 v2.0.3 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-StayLongerPlayerBackpack-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-StayLongerZombieLoot-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-TacticalRiflePlus-v2.1.1 v2.1.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-TraderAlwaysOpen-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-TraderCostlierPrices-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-TraderSellsMoreBooks-v3.0.1 v3.0.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-TradersRestockEvery2Days-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-TreesPlus-v3.0.2 v3.0.2 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-VehiclePerformance-v1.0.2 v1.0.2 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-VehicleStoragePlus-v2.1.2 v2.1.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-VehiclesExtraSeating-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-WriteStoryOnCrate-v1.0.1 v1.0.1 not promoted (baseline major 1; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-XPDeathPenaltyReduction-v2.0.1 v2.0.1 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ZombieBiomeSpawning-v3.0.1 v3.0.1 not promoted (baseline major 3; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: AGF-VP-ZombieLargerHordes-v2.0.2 v2.0.2 not promoted (baseline major 2; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Draft hold: zzzAGF-Special-Compatibilities-v4.1.1 v4.1.1 not promoted (baseline major 4; waiting for major increase)
+[2026-06-16 20:28:03] [INFO] Lane policy: keep major v0.x mods in Draft, not ActiveBuild
+[2026-06-16 20:28:03] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-06-16 20:28:03] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-06-16 20:28:04] [INFO] Mode sync-work: Sync Staging <-> Game by version
+[2026-06-16 20:28:04] [INFO] Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root.
+[2026-06-16 20:28:04] [INFO] sync-work preserve: kept Draft-tracked game mod in root: AGF-NoEAC-EnhancedAGF-v3.2.1
+[2026-06-16 20:28:04] [INFO] sync-work preserve: kept game mod not in ActiveBuild because Draft tracks it: AGF-NoEAC-EnhancedAGF-v3.2.1
+[2026-06-16 20:28:04] [INFO] Quarantined game folder instead of delete: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-1Main-v6.0.2 -> C:\GitHub\7D2D-Mods\_Quarantine-GameRemovals\20260616-202804\AGF-HUDPlus-1Main-v6.0.2
+[2026-06-16 20:28:04] [INFO] sync-work tie resolved for AGF-HUDPlus-1Main: both v6.0.2 but content differed. Pushed staging copy to game.
+[2026-06-16 20:28:04] [INFO] Quarantined game folder instead of delete: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-HealthBars-v5.0.1 -> C:\GitHub\7D2D-Mods\_Quarantine-GameRemovals\20260616-202804\AGF-HUDPlus-HealthBars-v5.0.1
+[2026-06-16 20:28:04] [INFO] sync-work tie resolved for AGF-HUDPlus-HealthBars: both v5.0.1 but content differed. Pushed staging copy to game.
+[2026-06-16 20:28:05] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-060Slots-v4.0.2
+[2026-06-16 20:28:05] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-072Slots-v4.0.0
+[2026-06-16 20:28:05] [INFO] sync-work mirror: backpack optional updated: AGF-BackpackPlus-084Slots-v4.0.0
+[2026-06-16 20:28:05] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-1Main-v6.0.2
+[2026-06-16 20:28:05] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-HealthBars-v5.0.1
+[2026-06-16 20:28:05] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPlus-RemoveEnteringPopUp-v2.0.1
+[2026-06-16 20:28:05] [INFO] sync-work mirror: HUD optional updated: AGF-HUDPluszOther-Weekday-v3.0.2
+[2026-06-16 20:28:05] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-06-16 20:28:05] [INFO] sync-work cleanup: post-rename cleanup pass
+[2026-06-16 20:28:05] [INFO] sync-work preserve: post-rename kept game mod not in ActiveBuild because Draft tracks it: AGF-NoEAC-EnhancedAGF-v3.2.1
+[2026-06-16 20:28:05] [INFO] Pre-release prep: refresh folder names + README files
+[2026-06-16 20:28:05] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-06-16 20:28:05] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-06-16 20:28:05] [INFO] Step 4.3: Normalize quote files
+[2026-06-16 20:28:05] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-06-16 20:28:05] [INFO] Cleanup: Remove legacy 4Modders-replaced folders in 02_ActiveBuild
+[2026-06-16 20:28:05] [INFO] Cleanup: Remove older duplicate versions in 02_ActiveBuild
+[2026-06-16 20:28:05] [INFO] Rename folders to match ModInfo Name+Version when safe
+[2026-06-16 20:28:05] [INFO] Cleanup: Remove older duplicate versions in 01_Draft
+[2026-06-16 20:28:05] [INFO] Step 4.2: Normalize HELPER_ModCompatibility.csv
+[2026-06-16 20:28:05] [INFO] Step 4.3: Normalize quote files
+[2026-06-16 20:28:05] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-06-16 20:28:05] [INFO] Generating mod images: C:\GitHub\7D2D-Mods\.venv\Scripts\python.exe C:\GitHub\7D2D-Mods\Workflow\SCRIPT-GenerateModImages.py --changed-only
+[2026-06-16 20:28:06] [INFO]   [modimages] unchanged-skipped=10
+[2026-06-16 20:28:06] [INFO]   [modimages] media-status-csv=C:\GitHub\7D2D-Mods\00_Images\media-status.csv
+[2026-06-16 20:28:06] [INFO]   [modimages] done: generated_or_planned=0, skipped=0, total=10
+[2026-06-16 20:28:06] [INFO] Thumbnail copy skipped by policy (thumbnails stay only in 00_Images/_generated)
+[2026-06-16 20:28:06] [INFO] Mod media copy: 0 file(s) updated
+[2026-06-16 20:28:06] [INFO] Generate per-mod README.md and ReadableReadMe.txt
+[2026-06-16 20:28:08] [INFO] Step 5: Push updated pulled mods back to game folder
+[2026-06-16 20:28:08] [INFO] Pending GigglePack changes updated: new=0, updated=0, renamed=0, removed=0
+
+=== SUMMARY ===
+scanned_workspace_mods: 10
+scanned_game_mods: 8
+synced_pull_from_game: 0
+synced_push_to_game: 2
+sync_conflicts: 0
+moved_to_publish_ready: 0
+moved_to_in_progress: 0
+renamed_folders: 0
+csv_added_rows: 0
+csv_removed_rows: 0
+quote_files_created: 0
+quote_files_renamed: 0
+quote_files_blanked_none: 0
+readmes_written: 110
+readable_txt_written: 110
+pushed_back_to_game: 0
+mod_zips_created: 0
+pack_zips_created: 0
+promoted_to_publish_ready: 0
+warnings: 0
+errors: 0
+
+=== MOD CHANGES ===
+none

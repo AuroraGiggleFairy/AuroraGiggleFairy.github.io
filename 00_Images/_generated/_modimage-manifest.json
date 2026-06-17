@@ -36,22 +36,22 @@
     "media_file": ""
   },
   "AGF-BackpackPlus-060Slots": {
-    "signature": "35e479c490af5e1e5ad7d784a2be41cecd54e0f6a8ee47130d8a842650693118",
-    "version": "4.0.2",
-    "has_media": false,
-    "media_file": ""
+    "signature": "a4f24406924cfba660f5dfdd163784a8f6841f0243db4a22b5dbbbd5fc93c2f6",
+    "version": "4.0.3",
+    "has_media": true,
+    "media_file": "AGF-BackpackPlus-060Slots_01.png"
   },
   "AGF-BackpackPlus-072Slots": {
-    "signature": "e17e286806a5c8567647d80caa7e99633169c6bd2eb59bfaf4cb43075f33dc35",
-    "version": "4.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "c8c0bdf0748e37a726828f69fcfe3835d2259d58bafa7e2191e01252ca1e2119",
+    "version": "4.0.2",
+    "has_media": true,
+    "media_file": "AGF-BackpackPlus-072Slots_01.png"
   },
   "AGF-BackpackPlus-084Slots": {
-    "signature": "73ef409e817b294fcad2d186ad1bad8a8f98af29b912481dd735e4bcdad645dd",
-    "version": "4.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "da1376a251b861f33f94ca0633e3be23a812c4cc03b502e24f215d78eefde9b8",
+    "version": "4.0.1",
+    "has_media": true,
+    "media_file": "AGF-BackpackPlus-084Slots_01.png"
   },
   "AGF-BackpackPlus-119Slots": {
     "signature": "efe965f43b6a29c8d1588f64879ad2f021a2403edf63144bf600a4574bdc2fde",
@@ -60,10 +60,10 @@
     "media_file": ""
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "6c936ad195ef87c876cd0161ecef945360fd1c34de3b108012b501bb1b9a2812",
-    "version": "6.0.2",
+    "signature": "148f70f44254cda578e5c870971bc749a8270f6d7177e809c883320b0983b6ae",
+    "version": "6.0.4",
     "has_media": true,
-    "media_file": "AGF-HUDPlus-1Main.png"
+    "media_file": "AGF-HUDPlus-1Main_01.png"
   },
   "AGF-HUDPlus-BMCounter": {
     "signature": "d223ca3bcfd58b940dc3795ac72dbe7259e182e9331d4b80300f3db7a1e0391e",
@@ -72,10 +72,10 @@
     "media_file": ""
   },
   "AGF-HUDPlus-HealthBars": {
-    "signature": "3e483b0b5aabf9ea8e3d2859ebbe0107cdc681d65545c62bb0dbbbe0147e42dd",
+    "signature": "61027f3d1b64d809d6b4367f68a24c7b045578be7439413a315b796fc2ac8377",
     "version": "5.0.1",
     "has_media": true,
-    "media_file": "AGF-HUDPlus-HealthBars.png"
+    "media_file": "AGF-HUDPlus-HealthBars_01.png"
   },
   "AGF-HUDPlus-PurpleBook": {
     "signature": "2a305be489e46c3027a209c06412dff8ae55d8565adb281ac33273ef0ffa67a6",
@@ -108,10 +108,10 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "aaeea463fbc3105220a5767683fe6bbe0e08323d311c5db9352d3192b297ba32",
+    "signature": "313245fe194da9669d89fc79a95fc3f5c267d3ce932bf26862e91e1e2bb27505",
     "version": "3.0.2",
     "has_media": true,
-    "media_file": "AGF-HUDPluszOther-Weekday.png"
+    "media_file": "AGF-HUDPluszOther-Weekday_01.png"
   },
   "AGF-NoEAC-AudioOptionsPlus": {
     "signature": "16c554a42edadf03761c028d13b98c637e5eacad3d43d562ead1e56e5a886104",
@@ -138,10 +138,10 @@
     "media_file": ""
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "e570fb25b27fff11a838ba023c47325835c6f69fcdf511108a2db3fb53e2c8b9",
-    "version": "3.2.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "256eb3c73a55a709c995bc64cd9738a602edc38b019ca4d34c2e2af13f556bc4",
+    "version": "4.0.1",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },
   "AGF-NoEAC-ExpandedInteractionPrompts": {
     "signature": "5c59c8ff0b26f8c14f39fff30c705de7dc0ca51148bc929a8f765cdd3f096916",
@@ -156,10 +156,10 @@
     "media_file": ""
   },
   "AGF-NoEAC-GlobalStormTracker": {
-    "signature": "d4d56169c36717c2cb37897f090511f009aa8e012e7333524851ab67ca6e6704",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "4e742f20ba36d24be22495e0bbb4cd31c4060b234bf3603e39ae15553bd849ba",
+    "version": "2.0.1",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-GlobalStormTracker_01.png"
   },
   "AGF-NoEAC-ItemTypeIconColor": {
     "signature": "4042a5b691210e00e20c68cda9d3ab8276eb9d355e49d426d32865e77696a17d",
@@ -192,10 +192,10 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "5ad02fc1e148394ccfd9e06f02c79bb17873aeaac6c0a555a5440e638c1084dc",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "c677a1d41f07340affc182e9f5cb052514fcdffe35875eec58422e746829cb29",
+    "version": "2.0.1",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
   },
   "AGF-VP-AdminModdingSupport": {
     "signature": "af36a872b770ee94c5bd0bfa1e0f6d35ca7c2a0b1eceb2ca5f0adac5e5abf8c1",

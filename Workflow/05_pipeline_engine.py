@@ -63,6 +63,7 @@ GIGGLE_PACK_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-MainReadMe-0Gig
 CATEGORY_DESCRIPTIONS_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-CategoryDescriptions.md")
 IMAGES_ROOT = os.path.join(VS_CODE_ROOT, "00_Images")
 IMAGES_SOURCE_ROOT = os.path.join(IMAGES_ROOT, "source")
+IMAGES_MEDIA_ROOT = os.path.join(IMAGES_ROOT, "mod-media")
 IMAGES_GENERATED_ROOT = os.path.join(IMAGES_ROOT, "_generated")
 DISCORD_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "Discord", "TEMPLATE-DiscordUpdate.md")
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
@@ -3707,12 +3708,16 @@ def generate_mod_images(dry_run: bool, log: Logger) -> None:
 
 
 def copy_mod_images_to_mod_folders(dry_run: bool, log: Logger, mod_dirs: Optional[Tuple[str, ...]] = None) -> None:
-    """Copy each mod's generated ModImage PNG into the root of its mod folder."""
+    """Copy generated full merged image (<base>_01.png) into each AGF mod folder root.
+
+    Thumbnails are intentionally not copied into mod folders.
+    """
     if mod_dirs is None:
         mod_dirs = (STAGING,)
     if not os.path.isdir(IMAGES_GENERATED_ROOT):
-        log.warn(f"Generated images folder not found, skipping ModImage copy: {IMAGES_GENERATED_ROOT}")
+        log.warn(f"Generated images folder not found, skipping generated image copy: {IMAGES_GENERATED_ROOT}")
         return
+
     copied = 0
     for mod_dir in mod_dirs:
         if not os.path.isdir(mod_dir):
@@ -3723,29 +3728,118 @@ def copy_mod_images_to_mod_folders(dry_run: bool, log: Logger, mod_dirs: Optiona
                 continue
             if not is_agf_mod(folder_name):
                 continue
+
             base_name = get_base_mod_name(folder_name)
-            banner_src = os.path.join(IMAGES_GENERATED_ROOT, f"ModImage_{base_name}.png")
-            if not os.path.isfile(banner_src):
+            generated_name = f"{base_name}_01.png"
+            generated_src = os.path.join(IMAGES_GENERATED_ROOT, generated_name)
+            if not os.path.isfile(generated_src):
                 continue
-            banner_dst = os.path.join(folder_path, f"ModImage_{base_name}.png")
-            try:
-                src_mtime = os.path.getmtime(banner_src)
-                dst_mtime = os.path.getmtime(banner_dst) if os.path.isfile(banner_dst) else 0
-                if src_mtime <= dst_mtime:
-                    continue
-            except OSError:
-                pass
-            log.info(f"Copy banner -> {os.path.relpath(banner_dst, VS_CODE_ROOT)}")
+
+            generated_dst = os.path.join(folder_path, generated_name)
+            log.info(f"Copy generated _01 -> {os.path.relpath(generated_dst, VS_CODE_ROOT)}")
             if not dry_run:
                 try:
-                    import shutil
-                    shutil.copy2(banner_src, banner_dst)
+                    shutil.copy2(generated_src, generated_dst)
                     copied += 1
                 except Exception as ex:
-                    log.warn(f"Could not copy banner to {banner_dst}: {ex}")
+                    log.warn(f"Could not copy generated image to {generated_dst}: {ex}")
             else:
                 copied += 1
-    log.info(f"ModImage copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
+
+    log.info(f"Generated _01 image copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
+    log.info("Thumbnail copy skipped by policy (thumbnails stay only in 00_Images/_generated)")
+
+
+def list_media_images_for_base(base_name: str) -> List[str]:
+    if not os.path.isdir(IMAGES_MEDIA_ROOT):
+        return []
+
+    allowed_exts = {".png", ".jpg", ".jpeg", ".webp"}
+    base_lower = base_name.lower()
+    numbered_pattern = re.compile(rf"^{re.escape(base_name)}_(\d+)$", re.IGNORECASE)
+
+    matches: List[Tuple[int, str]] = []
+    for name in os.listdir(IMAGES_MEDIA_ROOT):
+        src_path = os.path.join(IMAGES_MEDIA_ROOT, name)
+        if not os.path.isfile(src_path):
+            continue
+        stem, ext = os.path.splitext(name)
+        if ext.lower() not in allowed_exts:
+            continue
+
+        if stem.lower() == base_lower:
+            matches.append((1, src_path))
+            continue
+
+        numbered_match = numbered_pattern.match(stem)
+        if numbered_match:
+            idx = int(numbered_match.group(1))
+            matches.append((idx, src_path))
+
+    matches.sort(key=lambda item: item[0])
+    return [path for _, path in matches]
+
+
+def copy_mod_media_images_to_mod_folders(
+    dry_run: bool,
+    log: Logger,
+    mod_dirs: Optional[Tuple[str, ...]] = None,
+) -> None:
+    """Copy only numbered extra media images (_02+) into the root of each mod folder."""
+    if mod_dirs is None:
+        mod_dirs = (STAGING,)
+    if not os.path.isdir(IMAGES_MEDIA_ROOT):
+        log.warn(f"Media images folder not found, skipping media copy: {IMAGES_MEDIA_ROOT}")
+        return
+
+    copied = 0
+    for mod_dir in mod_dirs:
+        if not os.path.isdir(mod_dir):
+            continue
+        for folder_name in sorted(os.listdir(mod_dir)):
+            folder_path = os.path.join(mod_dir, folder_name)
+            if not os.path.isdir(folder_path):
+                continue
+            if not is_agf_mod(folder_name):
+                continue
+
+            base_name = get_base_mod_name(folder_name)
+            media_sources = list_media_images_for_base(base_name)
+            if not media_sources:
+                continue
+
+            for media_src in media_sources:
+                media_name = os.path.basename(media_src)
+                media_stem, _media_ext = os.path.splitext(media_name)
+                slot_match = re.search(r"_(\d+)$", media_stem)
+                if slot_match:
+                    try:
+                        slot_value = int(slot_match.group(1))
+                    except ValueError:
+                        slot_value = 0
+                    if slot_value <= 1:
+                        continue
+
+                media_dst = os.path.join(folder_path, os.path.basename(media_src))
+                try:
+                    src_stat = os.stat(media_src)
+                    dst_stat = os.stat(media_dst) if os.path.isfile(media_dst) else None
+                    if dst_stat is not None and src_stat.st_size == dst_stat.st_size and int(src_stat.st_mtime) <= int(dst_stat.st_mtime):
+                        continue
+                except OSError:
+                    pass
+
+                log.info(f"Copy media -> {os.path.relpath(media_dst, VS_CODE_ROOT)}")
+                if not dry_run:
+                    try:
+                        shutil.copy2(media_src, media_dst)
+                        copied += 1
+                    except Exception as ex:
+                        log.warn(f"Could not copy media image to {media_dst}: {ex}")
+                else:
+                    copied += 1
+
+    log.info(f"Mod media copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
 
 
 def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[str, object]:
@@ -4263,7 +4357,7 @@ def build_mod_entry(
             features_block = f"<ul><li><em>{mod_type_text}</em></li></ul>\n"
 
     base_mod_name = get_base_mod_name(folder_name)
-    banner_file = f"ModImage_{base_mod_name}.png"
+    banner_file = f"Thumbnail_{base_mod_name}.png"
     banner_abs = os.path.join(IMAGES_GENERATED_ROOT, banner_file)
     banner_html = ""
     if os.path.isfile(banner_abs):
@@ -5126,6 +5220,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(STAGING,))
             generate_mod_images(args.dry_run, log)
             copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             update_mod_loaded_references_for_renames(post_sync_renames, args.dry_run, log)
             update_mod_loaded_references_for_renames(all_renames, args.dry_run, log)
@@ -5159,6 +5254,9 @@ def run_pipeline(args: argparse.Namespace) -> int:
         elif args.mode == "promote":
             enforce_staging_major_policy(args.dry_run, log)
             prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
+            generate_mod_images(args.dry_run, log)
+            copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
             promote_staging_to_publish_ready(args.dry_run, log)
         elif args.mode == "package":
             prep_names_and_readmes_for_dirs((PUBLISH_READY,), args.dry_run, log)
@@ -5236,6 +5334,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
             cleanup_older_versions_in_dir(STAGING, args.dry_run, log)
             generate_mod_images(args.dry_run, log)
             copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
 
             # 3) Promote finalized ActiveBuild content to ReleaseSource.
             promote_staging_to_publish_ready(args.dry_run, log)

@@ -1,23 +1,24 @@
 {
-  "computed_at": "2026-06-16T17:29:07",
-  "since_gigglepack_version": "0.3.0",
+  "computed_at": "2026-06-16T20:36:34",
+  "since_gigglepack_version": "0.4.0",
   "new_mods": [
     [
-      "AGF-BackpackPlus-072Slots",
-      "4.0.0"
-    ],
-    [
-      "AGF-BackpackPlus-084Slots",
+      "AGF-NoEAC-EnhancedAGF",
       "4.0.0"
     ]
   ],
   "updated_mods": [
     [
-      "AGF-BackpackPlus-060Slots",
-      "4.0.1",
-      "4.0.2"
+      "AGF-HUDPlus-1Main",
+      "6.0.2",
+      "6.0.3"
     ]
   ],
   "renamed_mods": [],
-  "removed_mods": []
+  "removed_mods": [
+    [
+      "AGF-HUDPlus-HealthBars",
+      "5.0.1"
+    ]
+  ]
 }

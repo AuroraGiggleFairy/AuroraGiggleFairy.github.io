@@ -1,0 +1,6 @@
+<AGF-Backpack60>
+	
+<!--Large enough player backpack when players die, requires an update in windows.xml to work.-->
+	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>
+	
+</AGF-Backpack60>

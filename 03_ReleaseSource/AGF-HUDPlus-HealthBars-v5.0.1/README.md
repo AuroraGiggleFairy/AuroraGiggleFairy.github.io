@@ -69,16 +69,16 @@
 ---
 
 ## 4. Mod Type
-- Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.
+- To Be Determined.
 
 ---
 ---
 
 ## 5. Compatibility
-- Last 7d2d Version tested on: 3.0
-- "AGF-HUDPlus-HealthBars" is SAFE to install on an existing game.
-- "AGF-HUDPlus-HealthBars" is SAFE to remove from an existing game.
-- Unique Details: None
+- Last 7d2d Version tested on: TBD
+- "AGF-HUDPlus-HealthBars" is TBD to install on an existing game.
+- "AGF-HUDPlus-HealthBars" is TBD to remove from an existing game.
+- Unique Details: TBD
 
 ---
 ---
