@@ -3372,8 +3372,9 @@ def zip_mod_folder(mod_folder: str, dry_run: bool, log: Logger) -> Tuple[str, bo
 
     try:
         with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
-            for root, _, files in os.walk(mod_path):
-                for file in files:
+            for root, dirs, files in os.walk(mod_path):
+                dirs.sort()
+                for file in sorted(files):
                     file_path = os.path.join(root, file)
                     arcname = build_zip_arcname(mod_folder, os.path.relpath(file_path, mod_path))
                     zipf.write(file_path, arcname)
@@ -3395,8 +3396,9 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
                 mod_path = os.path.join(PUBLISH_READY, mod_folder)
                 if not os.path.isdir(mod_path):
                     continue
-                for root, _, files in os.walk(mod_path):
-                    for file in files:
+                for root, dirs, files in os.walk(mod_path):
+                    dirs.sort()
+                    for file in sorted(files):
                         file_path = os.path.join(root, file)
                         arcname = build_zip_arcname(mod_folder, os.path.relpath(file_path, mod_path))
                         zipf.write(file_path, arcname)
@@ -3407,8 +3409,9 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
                         mod_path = os.path.join(PUBLISH_READY, mod_folder)
                         if not os.path.isdir(mod_path):
                             continue
-                        for root, _, files in os.walk(mod_path):
-                            for file in files:
+                        for root, dirs, files in os.walk(mod_path):
+                            dirs.sort()
+                            for file in sorted(files):
                                 file_path = os.path.join(root, file)
                                 arcname = build_zip_arcname(opt_folder, mod_folder, os.path.relpath(file_path, mod_path))
                                 zipf.write(file_path, arcname)
