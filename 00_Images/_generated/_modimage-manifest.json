@@ -60,8 +60,8 @@
     "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "148f70f44254cda578e5c870971bc749a8270f6d7177e809c883320b0983b6ae",
-    "version": "6.0.4",
+    "signature": "b7910171862bb1ab3bf659277135cf098aaec2ec49851ce7018d7fd699a0482e",
+    "version": "6.1.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
@@ -120,10 +120,10 @@
     "media_file": ""
   },
   "AGF-NoEAC-AutoRun": {
-    "signature": "eabecb12c61adf63ef884c34ce6176003fb52f71906119b270d84e8d16557ae2",
-    "version": "1.0.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "69e68bec938e127986c0a04ee6cd5bf76f787fc8a54978bcf49de9bb828d95fd",
+    "version": "2.0.1",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-AutoRun_01.png"
   },
   "AGF-NoEAC-ConsoleOpacityMod": {
     "signature": "e02c94309069e08d2dca50ea72ffe0136d3bfc057d0a59e2a44b17cca80756f1",
@@ -192,8 +192,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "66610c3ea52b4253dcbe01e045dd99fd699d3fda01a5c3580b4e062d8d2a6862",
-    "version": "2.1.0",
+    "signature": "503a357e116b859b78492074f239893dd60d2f98a729813c56ed9465c8608e40",
+    "version": "2.1.1",
     "has_media": true,
     "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
   },

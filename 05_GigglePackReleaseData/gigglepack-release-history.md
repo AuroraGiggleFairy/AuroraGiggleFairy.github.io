@@ -1,5 +1,19 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.7.0 (June 21, 2026 3:50pm)
+### Summary: +1 new, ~2 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-AutoRun](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip) (new: v2.0.1)
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.0.4 -> v6.1.0)
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v2.1.0 -> v2.1.1)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.6.2 (June 20, 2026 10:51pm)
 ### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
 - **New Mods**
