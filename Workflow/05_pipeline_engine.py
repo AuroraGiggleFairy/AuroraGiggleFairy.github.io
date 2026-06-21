@@ -97,6 +97,10 @@ GIGGLEPACK_V100_FOCUS_MODS = (
     "AGF-NoEAC-ExpandedInteractionPrompts",
     "AGF-NoEAC-ScreamerAlert",
 )
+# Defender has repeatedly false-flagged DEFLATED output for this specific mod zip.
+ZIP_STORED_MOD_BASES = {
+    "AGF-NoEAC-AutoRun",
+}
 README_COMPAT_FIELDS = (
     "TESTED_GAME_VERSION",
     "EAC_FRIENDLY",
@@ -3363,21 +3367,23 @@ def build_zip_arcname(*parts: str) -> str:
 
 def zip_mod_folder(mod_folder: str, dry_run: bool, log: Logger) -> Tuple[str, bool]:
     mod_path = os.path.join(PUBLISH_READY, mod_folder)
-    zip_name = f"{get_base_mod_name(mod_folder)}.zip"
+    base_name = get_base_mod_name(mod_folder)
+    zip_name = f"{base_name}.zip"
     zip_path = os.path.join(ZIP_OUTPUT, zip_name)
+    compression = zipfile.ZIP_STORED if base_name in ZIP_STORED_MOD_BASES else zipfile.ZIP_DEFLATED
 
     if dry_run:
         log.info(f"[DRYRUN] Would create mod zip: {zip_name}")
         return zip_name, True
 
     try:
-        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
+        with zipfile.ZipFile(zip_path, "w", compression) as zipf:
             for root, dirs, files in os.walk(mod_path):
                 dirs.sort()
                 for file in sorted(files):
                     file_path = os.path.join(root, file)
                     arcname = build_zip_arcname(mod_folder, os.path.relpath(file_path, mod_path))
-                    zipf.write(file_path, arcname)
+                    zipf.write(file_path, arcname, compress_type=compression)
         return zip_name, True
     except Exception as ex:
         log.error(f"Failed creating mod zip {zip_name}: {ex}")
