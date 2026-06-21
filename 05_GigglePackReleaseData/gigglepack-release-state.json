@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.6.1",
-  "previous_gigglepack_version": "0.6.0",
+  "gigglepack_version": "0.6.2",
+  "previous_gigglepack_version": "0.6.1",
   "is_baseline_release": false,
-  "released_at": "2026-06-16 23:12:25",
+  "released_at": "2026-06-20 22:51:46",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.0.4",
     "AGF-BackpackPlus-072Slots": "4.0.3",
@@ -15,21 +15,21 @@
     "AGF-NoEAC-EnhancedAGF": "4.0.1",
     "AGF-NoEAC-GlobalStormTracker": "2.0.1",
     "AGF-NoEAC-ScreamerAlert": "2.0.0",
-    "AGF-NoEAC-Toolbelt12Slots": "2.0.1"
+    "AGF-NoEAC-Toolbelt12Slots": "2.1.0"
   },
   "updated_mods": [
     {
-      "mod": "AGF-HUDPluszOther-Weekday",
-      "from": "3.0.2",
-      "to": "3.0.3",
-      "from_display": "3.0.2",
-      "to_display": "3.0.3"
+      "mod": "AGF-NoEAC-Toolbelt12Slots",
+      "from": "2.0.1",
+      "to": "2.1.0",
+      "from_display": "2.0.1",
+      "to_display": "2.1.0"
     }
   ],
   "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.6.1.zip",
+  "versioned_zip": "AGF-GigglePack-v0.6.2.zip",
   "change_counts": {
     "new_mods": 0,
     "updated_existing_mods": 1,

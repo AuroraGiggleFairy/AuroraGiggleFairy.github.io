@@ -1,0 +1,56 @@
+AGF-HUDPlus-1Main — Quick README Example
+
+One-line summary: Makes the HUD and menus easier to read; improves layout for compass, toolbelt, map, trader windows, chat, and timers.
+
+---
+
+Compatibility: Tested: 3.0 · Mod Type: Server-side (EAC-friendly) · Safe to install: SAFE
+
+Quick Install (short):
+1. Copy the AGF-HUDPlus-1Main folder into your Mods folder (%appdata%\7DaysToDie\Mods or server Mods folder).
+2. Backup your saves. Start the game.
+
+---
+
+FEATURES (Summary)
+<!-- FEATURES-SUMMARY START -->
+- Makes the HUD and menus easier to read.
+- Improves layout for compass, toolbelt, map, trader windows, chat, and timers.
+- Adds clearer slot markers, color hints, 5 centered crafting slots, and always-visible date/time/location.
+<!-- FEATURES-SUMMARY END -->
+
+---
+
+Changelog (latest)
+<!-- CHANGELOG START -->
+v6.0.4
+- Updated image file.
+<!-- CHANGELOG END -->
+
+---
+
+Features (Detailed)
+<!-- FEATURES-DETAILED START -->
+- Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.
+- Lockable inventory slots are clearly marked.
+- Wider compass with center mark; toolbelt lowered and numbered for compatibility.
+- Map shows extra labeled details; crafting and burning timers are clearer.
+- Date, time, outdoor temperature, and location display visible on menus.
+- Storm visual alerts appear below the location display.
+- Trader dialogue and quest selection are easier to read.
+<!-- FEATURES-DETAILED END -->
+
+---
+
+Full Guides
+See the full Installation, Update, Removal, and Backup sections in the main README for step-by-step instructions.
+
+---
+
+Support & Credits
+Author: AuroraGiggleFairy (AGF)
+Support: https://discord.gg/Vm5eyW6N4r
+
+---
+
+# Automation: preserves the FEATURES and CHANGELOG markers for tooling

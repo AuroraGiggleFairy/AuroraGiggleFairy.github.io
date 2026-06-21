@@ -71,7 +71,6 @@ AGF-VP-PickupLanternsPlus,1,3.0,SAFE,DANGEROUS,None,AGF-VP-PickupLanternsPlus.tx
 AGF-VP-PlayerResetQuests,1,3.0,SAFE,SAFE,None,AGF-VP-PlayerResetQuests.txt,Yes,Yes,Yes,None
 AGF-VP-PlayerVendingMachinesPlus,1,3.0,SAFE,SAFE,None,AGF-VP-PlayerVendingMachinesPlus.txt,Yes,Yes,Yes,None
 AGF-VP-PumpkinsPlus,1,3.0,SAFE,DANGEROUS,None,AGF-VP-PumpkinsPlus.txt,Yes,Yes,Yes,None
-AGF-VP-QuickStart,1,3.0,SAFE,DANGEROUS,None,AGF-VP-QuickStart.txt,Yes,Yes,Yes,None
 AGF-VP-RebundleBundles,1,3.0,SAFE,DANGEROUS,None,AGF-VP-RebundleBundles.txt,Yes,Yes,Yes,None
 AGF-VP-RecipeRottingFlesh,1,3.0,SAFE,SAFE,None,AGF-VP-RecipeRottingFlesh.txt,Yes,Yes,Yes,None
 AGF-VP-RenamesAlphabeticalSort,1,3.0,SAFE,SAFE,None,AGF-VP-RenamesAlphabeticalSort.txt,Yes,Yes,Yes,None
@@ -84,17 +83,11 @@ AGF-VP-StayLongerAnimalCorpse,1,3.0,SAFE,SAFE,None,AGF-VP-StayLongerAnimalCorpse
 AGF-VP-StayLongerPlayerBackpack,1,3.0,SAFE,SAFE,None,AGF-VP-StayLongerPlayerBackpack.txt,Yes,Yes,Yes,None
 AGF-VP-StayLongerZombieLoot,1,3.0,SAFE,SAFE,None,AGF-VP-StayLongerZombieLoot.txt,Yes,Yes,Yes,None
 AGF-VP-TacticalRiflePlus,1,3.0,SAFE,SAFE,None,AGF-VP-TacticalRiflePlus.txt,Yes,Yes,Yes,None
-AGF-VP-TraderAlwaysOpen,1,3.0,SAFE,SAFE,None,AGF-VP-TraderAlwaysOpen.txt,Yes,Yes,Yes,None
-AGF-VP-TraderCostlierPrices,1,3.0,SAFE,SAFE,None,AGF-VP-TraderCostlierPrices.txt,Yes,Yes,Yes,None
-AGF-VP-TraderSellsMoreBooks,1,3.0,SAFE,SAFE,None,AGF-VP-TraderSellsMoreBooks.txt,Yes,Yes,Yes,None
-AGF-VP-TradersRestockEvery2Days,1,3.0,SAFE,SAFE,None,AGF-VP-TradersRestockEvery2Days.txt,Yes,Yes,Yes,None
 AGF-VP-TreesPlus,1,3.0,SAFE,DANGEROUS,None,AGF-VP-TreesPlus.txt,Yes,Yes,Yes,None
 AGF-VP-VehiclePerformance,1,3.0,SAFE,SAFE,None,AGF-VP-VehiclePerformance.txt,Yes,Yes,Yes,None
 AGF-VP-VehiclesExtraSeating,1,3.0,SAFE,SAFE,None,AGF-VP-VehiclesExtraSeating.txt,Yes,Yes,Yes,None
 AGF-VP-VehicleStoragePlus,1,3.0,SAFE,DANGEROUS,None,AGF-VP-VehicleStoragePlus.txt,Yes,Yes,Yes,None
 AGF-VP-WriteStoryOnCrate,1,3.0,SAFE,DANGEROUS,None,AGF-VP-WriteStoryOnCrate.txt,Yes,Yes,Yes,None
 AGF-VP-XPDeathPenaltyReduction,1,3.0,SAFE,SAFE,None,AGF-VP-XPDeathPenaltyReduction.txt,Yes,Yes,Yes,None
-AGF-VP-ZombieBiomeSpawning,1,3.0,SAFE,SAFE,None,AGF-VP-ZombieBiomeSpawning.txt,Yes,Yes,Yes,None
 AGF-VP-ZombieCorpseLeaveQuicker,1,3.0,SAFE,SAFE,None,AGF-VP-ZombieCorpseLeaveQuicker.txt,Yes,Yes,Yes,None
-AGF-VP-ZombieLargerHordes,1,3.0,SAFE,SAFE,None,AGF-VP-ZombieLargerHordes.txt,Yes,Yes,Yes,None
 zzzAGF-Special-Compatibilities,1,3.0,SAFE,DANGEROUS,None,zzzAGF-Special-Compatibilities.txt,Yes,Yes,Yes,None

@@ -192,8 +192,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "c677a1d41f07340affc182e9f5cb052514fcdffe35875eec58422e746829cb29",
-    "version": "2.0.1",
+    "signature": "66610c3ea52b4253dcbe01e045dd99fd699d3fda01a5c3580b4e062d8d2a6862",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
   },

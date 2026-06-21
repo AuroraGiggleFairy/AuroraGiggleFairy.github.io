@@ -1,4 +1,4 @@
-#   GigglePack v0.6.1 - *June 16, 2026 11:12pm*
+#   GigglePack v0.6.2 - *June 20, 2026 10:51pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
@@ -6,7 +6,7 @@
 - **New mods:**
   - None
 - **Updated existing mods:**
-  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (v3.0.2 -> v3.0.3)
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v2.0.1 -> v2.1.0)
 - **Renamed mods:**
   - None
 - **Removed mods:**

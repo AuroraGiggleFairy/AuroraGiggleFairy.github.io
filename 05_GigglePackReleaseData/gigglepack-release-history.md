@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.6.2 (June 20, 2026 10:51pm)
+### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v2.0.1 -> v2.1.0)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.6.1 (June 16, 2026 11:12pm)
 ### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
 - **New Mods**
