@@ -1,17 +1,15 @@
-#   GigglePack v0.7.1 - *June 25, 2026 10:28pm*
+#   GigglePack v0.7.2 - *June 25, 2026 10:53pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +0 new, ~3 updated, =0 renamed, -1 removed**
+###  **Change summary: +0 new, ~1 updated, =0 renamed, -0 removed**
 - **New mods:**
   - None
 - **Updated existing mods:**
-  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.1.0 -> v6.2.0)
-  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.0.1 -> v4.1.0)
-  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.0.0 -> v2.1.1)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.1.1 -> v2.1.2)
 - **Renamed mods:**
   - None
 - **Removed mods:**
-  - AGF-HUDPlus-HealthBars (was v5.0.1)
+  - None
 --------------------------------------------------------------------
 ## Remember, all downloads are available here:  https://auroragigglefairy.github.io/

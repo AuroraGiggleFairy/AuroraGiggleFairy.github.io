@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.7.2 (June 25, 2026 10:53pm)
+### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.1.1 -> v2.1.2)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.7.1 (June 25, 2026 10:28pm)
 ### Summary: +0 new, ~3 updated, =0 renamed, -1 removed
 - **New Mods**

@@ -180,8 +180,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-ScreamerAlert": {
-    "signature": "0280cf857273fb18550d390dce63230a73eda9b1164f04226e2d5a76df4e0aa9",
-    "version": "2.1.1",
+    "signature": "01ffb1932010405e440e1958af9cf6b82831aa20e23352460612f74334ada8b8",
+    "version": "2.1.2",
     "has_media": true,
     "media_file": "AGF-NoEAC-ScreamerAlert_01.png"
   },
