@@ -243,13 +243,13 @@ def main():
         with open(os.path.join(mod_path, "README.md"), "w", encoding="utf-8") as f:
             f.write(f"# {mod_name}\n\nVersion: {version}\n")
 
-    # Create Config and XUi folders (case sensitive)
+    # Create Config and XUi_InGame folders (case sensitive)
     config_path = os.path.join(mod_path, "Config")
-    xui_path = os.path.join(config_path, "XUi")
+    xui_path = os.path.join(config_path, "XUi_InGame")
     os.makedirs(xui_path)
-    # Create Localization.txt with correct header row
-    localization_path = os.path.join(config_path, "Localization.txt")
-    localization_header = "Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese\n"
+    # Create Localization.csv with the current draft schema
+    localization_path = os.path.join(config_path, "Localization.csv")
+    localization_header = "Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese\n"
     with open(localization_path, "w", encoding="utf-8") as f:
         f.write(localization_header)
 

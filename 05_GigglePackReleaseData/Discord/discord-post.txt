@@ -1,12 +1,21 @@
-#   GigglePack v0.7.2 - *June 25, 2026 10:53pm*
+#   GigglePack v0.8.0 - *June 26, 2026 5:57pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +0 new, ~1 updated, =0 renamed, -0 removed**
+###  **Change summary: +10 new, ~0 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - None
+  - [AGF-NoEAC-SignErrorGuard](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SignErrorGuard.zip) (new: v1.0.0)
+  - [AGF-VP-BedrollPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip) (new: v2.0.0)
+  - [AGF-VP-FuelBurnPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip) (new: v3.0.0)
+  - [AGF-VP-LargerStorageOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip) (new: v1.0.0)
+  - [AGF-VP-MaxLevel500](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip) (new: v3.0.0)
+  - [AGF-VP-ModSlotsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip) (new: v4.0.0)
+  - [AGF-VP-PickupLanternsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip) (new: v3.0.0)
+  - [AGF-VP-PlayerResetQuests](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip) (new: v3.0.0)
+  - [AGF-VP-RebundleBundles](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip) (new: v2.0.0)
+  - [AGF-VP-SimplifiedStacks](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip) (new: v2.0.1)
 - **Updated existing mods:**
-  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.1.1 -> v2.1.2)
+  - None
 - **Renamed mods:**
   - None
 - **Removed mods:**

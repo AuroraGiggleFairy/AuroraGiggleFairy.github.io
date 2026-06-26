@@ -159,6 +159,11 @@
     "recorded_at": "2026-06-16T03:42:40",
     "version": "2.0.0"
   },
+  "AGF-NoEAC-SignErrorGuard": {
+    "folder": "AGF-NoEAC-SignErrorGuard-v1.0.0",
+    "recorded_at": "2026-06-26T17:57:27",
+    "version": "1.0.0"
+  },
   "AGF-NoEAC-SortingBox": {
     "folder": "AGF-NoEAC-SortingBox-v1.0.6",
     "recorded_at": "2026-06-15T02:20:47",
@@ -175,9 +180,9 @@
     "version": "2.0.0"
   },
   "AGF-NoEAC-VisualEntityTracker": {
-    "folder": "AGF-NoEAC-VisualEntityTracker-v0.1.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "0.1.2"
+    "folder": "AGF-NoEAC-VisualEntityTracker-v0.2.0",
+    "recorded_at": "2026-06-26T17:57:27",
+    "version": "0.2.0"
   },
   "AGF-PurpleBookGenerator": {
     "folder": "AGF-PurpleBookGenerator-v0.0.1",
@@ -220,9 +225,9 @@
     "version": "3.1.1"
   },
   "AGF-VP-BedrollPlus": {
-    "folder": "AGF-VP-BedrollPlus-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-VP-BedrollPlus-v2.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "2.0.0"
   },
   "AGF-VP-BetterEggChance": {
     "folder": "AGF-VP-BetterEggChance-v2.1.1",
@@ -290,9 +295,14 @@
     "version": "2.3.1"
   },
   "AGF-VP-FuelBurnPlus": {
-    "folder": "AGF-VP-FuelBurnPlus-v2.3.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.3.1"
+    "folder": "AGF-VP-FuelBurnPlus-v3.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "3.0.0"
+  },
+  "AGF-VP-LargerStorageOption": {
+    "folder": "AGF-VP-LargerStorageOption-v1.0.0",
+    "recorded_at": "2026-06-26T17:57:27",
+    "version": "1.0.0"
   },
   "AGF-VP-MasterTool": {
     "folder": "AGF-VP-MasterTool-v6.1.2",
@@ -300,9 +310,9 @@
     "version": "6.1.2"
   },
   "AGF-VP-MaxLevel500": {
-    "folder": "AGF-VP-MaxLevel500-v2.0.3",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.3"
+    "folder": "AGF-VP-MaxLevel500-v3.0.0",
+    "recorded_at": "2026-06-26T17:57:27",
+    "version": "3.0.0"
   },
   "AGF-VP-MedicalTreatOthersTreatedInjuries": {
     "folder": "AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.2",
@@ -335,9 +345,9 @@
     "version": "1.0.2"
   },
   "AGF-VP-ModSlotsPlus": {
-    "folder": "AGF-VP-ModSlotsPlus-v3.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "3.0.2"
+    "folder": "AGF-VP-ModSlotsPlus-v4.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "4.0.0"
   },
   "AGF-VP-PaintbrushPlus": {
     "folder": "AGF-VP-PaintbrushPlus-v2.1.1",
@@ -345,14 +355,14 @@
     "version": "2.1.1"
   },
   "AGF-VP-PickupLanternsPlus": {
-    "folder": "AGF-VP-PickupLanternsPlus-v2.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.2"
+    "folder": "AGF-VP-PickupLanternsPlus-v3.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "3.0.0"
   },
   "AGF-VP-PlayerResetQuests": {
-    "folder": "AGF-VP-PlayerResetQuests-v2.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.2"
+    "folder": "AGF-VP-PlayerResetQuests-v3.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "3.0.0"
   },
   "AGF-VP-PlayerVendingMachinesPlus": {
     "folder": "AGF-VP-PlayerVendingMachinesPlus-v1.0.1",
@@ -370,9 +380,9 @@
     "version": "2.0.1"
   },
   "AGF-VP-RebundleBundles": {
-    "folder": "AGF-VP-RebundleBundles-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-VP-RebundleBundles-v2.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "2.0.0"
   },
   "AGF-VP-RecipeRottingFlesh": {
     "folder": "AGF-VP-RecipeRottingFlesh-v1.0.1",
@@ -400,9 +410,9 @@
     "version": "1.0.1"
   },
   "AGF-VP-SimplifiedStacks": {
-    "folder": "AGF-VP-SimplifiedStacks-v1.2.4",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.2.4"
+    "folder": "AGF-VP-SimplifiedStacks-v2.0.0",
+    "recorded_at": "2026-06-26T15:03:49",
+    "version": "2.0.0"
   },
   "AGF-VP-SmeltingPlus": {
     "folder": "AGF-VP-SmeltingPlus-v2.4.1",

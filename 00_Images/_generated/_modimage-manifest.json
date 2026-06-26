@@ -240,8 +240,8 @@
     "media_file": ""
   },
   "AGF-VP-BedrollPlus": {
-    "signature": "76dd5262706d44519f47de0258a41c6d947babbbcc0a89efc29084468c074b53",
-    "version": "1.0.1",
+    "signature": "d6fc32b9c8b930efbf24d53fc45ff02fd7a96bad6272db524f8bbe8fa133f9b1",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -324,8 +324,8 @@
     "media_file": ""
   },
   "AGF-VP-FuelBurnPlus": {
-    "signature": "770e32857298f7135cb31617c2c350ca001aab62d12a53d5d841e8ebf0996f8e",
-    "version": "2.3.1",
+    "signature": "c3605c81d60006aae7d7e920a9b44d7f8e4bd3ef70b3ec27aef4b4b30b2c12ee",
+    "version": "3.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -336,8 +336,8 @@
     "media_file": ""
   },
   "AGF-VP-MaxLevel500": {
-    "signature": "6bf0708a687119eadb6f9703254bbb00905f4ad2823578ec830dc57c1c4a0c59",
-    "version": "2.0.3",
+    "signature": "15259beff1e90cfc18c502335e5b7979119697045b504fe46832b8fe39ab23e7",
+    "version": "3.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -366,8 +366,8 @@
     "media_file": ""
   },
   "AGF-VP-ModSlotsPlus": {
-    "signature": "7d75af5c263b2878e0473eed0253874b4142d6f92725aff581d598d7221571bd",
-    "version": "3.0.2",
+    "signature": "8a9c074c67e747fc4654ef4ce81e51c3bc6fecf09e71cd6919f774ddbee9eba8",
+    "version": "4.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -378,14 +378,14 @@
     "media_file": ""
   },
   "AGF-VP-PickupLanternsPlus": {
-    "signature": "234b8eca50a621dea8eb6f5c66561faffc6935205b9b1890e1a7ea4a14b2f79c",
-    "version": "2.0.2",
+    "signature": "c1ff11c8ca21b714af3eaed21323ac9dcfe88023d1f2a61e1b41da7d701354c3",
+    "version": "3.0.0",
     "has_media": false,
     "media_file": ""
   },
   "AGF-VP-PlayerResetQuests": {
-    "signature": "8de6c0ac40cf243252c756882ef03d5fc49eb6789954f442daff9336572a7068",
-    "version": "2.0.2",
+    "signature": "a1aaa5eafb774f83790deac716fbc9a7cf0f46eacb62064d39ea048caad41e33",
+    "version": "3.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -408,8 +408,8 @@
     "media_file": ""
   },
   "AGF-VP-RebundleBundles": {
-    "signature": "206b92c43915293fcb3a4c25373fbb7c8c4729cc065b41a37ac0cce11c1ca7a8",
-    "version": "1.0.1",
+    "signature": "5f496de4a662e63f39e2ec9beb58bf2e76e03fc6a9b7f3dc7f0ecc7403dcac08",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -444,8 +444,8 @@
     "media_file": ""
   },
   "AGF-VP-SimplifiedStacks": {
-    "signature": "66dfd4b0ea82dea2250746e16734dfcf1e73517fb3a578d031862e56d8762be8",
-    "version": "1.2.4",
+    "signature": "4b77f642fcaa735012973145c3f32688061f596a32cb2d9626a4ddb5967f5f4e",
+    "version": "2.0.1",
     "has_media": false,
     "media_file": ""
   },
@@ -556,5 +556,17 @@
     "version": "4.1.1",
     "has_media": false,
     "media_file": ""
+  },
+  "AGF-NoEAC-SignErrorGuard": {
+    "signature": "ae4470f2191a616e339b720fc118338312bdcd88665e0df459dc7dfa0e40f019",
+    "version": "1.0.0",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VP-LargerStorageOption": {
+    "signature": "6fa3f808ecb75f3897143d02856169f554606bd7b0a95971b82186eb9baaba48",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "AGF-VP-LargerStorageOption_01.png"
   }
 }

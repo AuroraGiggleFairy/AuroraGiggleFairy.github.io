@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.7.2",
-  "previous_gigglepack_version": "0.7.1",
+  "gigglepack_version": "0.8.0",
+  "previous_gigglepack_version": "0.7.2",
   "is_baseline_release": false,
-  "released_at": "2026-06-25 22:53:10",
+  "released_at": "2026-06-26 17:57:37",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.0.4",
     "AGF-BackpackPlus-072Slots": "4.0.3",
@@ -15,24 +15,77 @@
     "AGF-NoEAC-EnhancedAGF": "4.1.0",
     "AGF-NoEAC-GlobalStormTracker": "2.0.1",
     "AGF-NoEAC-ScreamerAlert": "2.1.2",
-    "AGF-NoEAC-Toolbelt12Slots": "2.1.1"
+    "AGF-NoEAC-SignErrorGuard": "1.0.0",
+    "AGF-NoEAC-Toolbelt12Slots": "2.1.1",
+    "AGF-VP-BedrollPlus": "2.0.0",
+    "AGF-VP-FuelBurnPlus": "3.0.0",
+    "AGF-VP-LargerStorageOption": "1.0.0",
+    "AGF-VP-MaxLevel500": "3.0.0",
+    "AGF-VP-ModSlotsPlus": "4.0.0",
+    "AGF-VP-PickupLanternsPlus": "3.0.0",
+    "AGF-VP-PlayerResetQuests": "3.0.0",
+    "AGF-VP-RebundleBundles": "2.0.0",
+    "AGF-VP-SimplifiedStacks": "2.0.1"
   },
-  "updated_mods": [
+  "updated_mods": [],
+  "new_mods": [
     {
-      "mod": "AGF-NoEAC-ScreamerAlert",
-      "from": "2.1.1",
-      "to": "2.1.2",
-      "from_display": "2.1.1",
-      "to_display": "2.1.2"
+      "mod": "AGF-NoEAC-SignErrorGuard",
+      "to": "1.0.0",
+      "to_display": "1.0.0"
+    },
+    {
+      "mod": "AGF-VP-BedrollPlus",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-FuelBurnPlus",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-LargerStorageOption",
+      "to": "1.0.0",
+      "to_display": "1.0.0"
+    },
+    {
+      "mod": "AGF-VP-MaxLevel500",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-ModSlotsPlus",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
+    },
+    {
+      "mod": "AGF-VP-PickupLanternsPlus",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-PlayerResetQuests",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-RebundleBundles",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-SimplifiedStacks",
+      "to": "2.0.1",
+      "to_display": "2.0.1"
     }
   ],
-  "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.7.2.zip",
+  "versioned_zip": "AGF-GigglePack-v0.8.0.zip",
   "change_counts": {
-    "new_mods": 0,
-    "updated_existing_mods": 1,
+    "new_mods": 10,
+    "updated_existing_mods": 0,
     "renamed_mods": 0,
     "removed_mods": 0
   }

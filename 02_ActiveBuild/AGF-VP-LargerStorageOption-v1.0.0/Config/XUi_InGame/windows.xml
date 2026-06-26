@@ -1,0 +1,20 @@
+﻿<AGF-VP-LargerStorageOption>
+		
+	<!--Required for viewing the expanded large storage containers in the looting window.-->
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>
+	
+
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<setattribute xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/item_stackAGF" name="cell_size">56</setattribute>
+		
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/@cell_width">56</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/@cell_height">56</set>
+		
+		</if>
+	</conditional>	
+	
+	
+</AGF-VP-LargerStorageOption>
+ 

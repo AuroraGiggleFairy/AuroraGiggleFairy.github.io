@@ -13,6 +13,7 @@ AGF-NoEAC-GlobalStormTracker,2,3,SAFE,TBD,Clients do not need this; local instal
 AGF-NoEAC-ItemTypeIconColor,0,TBD,TBD,TBD,TBD,AGF-NoEAC-ItemTypeIconColor.txt,TBD,TBD,TBD,TBD
 AGF-NoEAC-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-OpenAllButton.txt,No,N/A,N/A,Only
 AGF-NoEAC-ScreamerAlert,2,3,SAFE,TBD,None,AGF-NoEAC-ScreamerAlert.txt,No,Yes,Yes,None
+AGF-NoEAC-SignErrorGuard,4,3,SAFE,TBD,TBD,AGF-NoEAC-SignErrorGuard.txt,No,N/A,N/A,Only
 AGF-NoEAC-TerrainLeveler,0,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required
 AGF-NoEAC-VisualEntityTracker,5,3,SAFE,TBD,Players can join without it; install locally for full features.,AGF-NoEAC-VisualEntityTracker.txt,No,Hybrid,Hybrid,Optional
 AGF-PurpleBookGenerator,0,TBD,TBD,TBD,TBD,AGF-PurpleBookGenerator.txt,TBD,TBD,TBD,TBD
@@ -58,6 +59,7 @@ AGF-VP-DyesPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-DyesPlus.txt,Yes,Yes,Yes,None
 AGF-VP-FarmingPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-FarmingPlus.txt,Yes,Yes,Yes,None
 AGF-VP-FloraHarvester,1,3,SAFE,DANGEROUS,None,AGF-VP-FloraHarvester.txt,Yes,Yes,Yes,None
 AGF-VP-FuelBurnPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-FuelBurnPlus.txt,Yes,Yes,Yes,None
+AGF-VP-LargerStorageOption,1,3,SAFE,DANGEROUS,None,AGF-VP-LargerStorageOption.txt,Yes,Yes,Yes,None
 AGF-VP-MasterTool,1,3,SAFE,DANGEROUS,None,AGF-VP-MasterTool.txt,Yes,Yes,Yes,None
 AGF-VP-MaxLevel500,1,3,SAFE,DANGEROUS,None,AGF-VP-MaxLevel500.txt,Yes,Yes,Yes,None
 AGF-VP-MedicationNoInsectSlow,1,3,SAFE,DANGEROUS,None,AGF-VP-MedicationNoInsectSlow.txt,Yes,Yes,Yes,None

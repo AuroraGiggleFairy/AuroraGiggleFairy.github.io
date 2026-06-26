@@ -1864,17 +1864,8 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
             log.warn(f"Draft sync skipped for {draft_folder}: unreadable draft ModInfo.xml")
             continue
 
-        try:
-            draft_major = int((draft_ver or "0.0.0").split(".", 1)[0])
-        except Exception:
-            draft_major = 0
-        if draft_major < 1:
-            log.info(
-                f"Draft sync skipped for {draft_folder}: version {draft_ver} is draft-only (major < 1)"
-            )
-            continue
-
         baseline_entry = baseline.get(base_name)
+        baseline_ver = ""
         baseline_major: Optional[int] = None
         if isinstance(baseline_entry, dict):
             baseline_ver = str(baseline_entry.get("version", ""))
@@ -1882,6 +1873,36 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
                 baseline_major = int(baseline_ver.split(".", 1)[0])
             except Exception:
                 baseline_major = None
+
+        try:
+            draft_major = int((draft_ver or "0.0.0").split(".", 1)[0])
+        except Exception:
+            draft_major = 0
+
+        # Keep baseline in sync while the mod is still draft-only (major < 1).
+        # This ensures the first v1 major bump is recognized as promotable.
+        if draft_major < 1:
+            if baseline_major is None or baseline_ver != draft_ver:
+                baseline[base_name] = {
+                    "folder": draft_folder,
+                    "version": draft_ver,
+                    "recorded_at": dt.datetime.now().isoformat(timespec="seconds"),
+                }
+                baseline_changed = True
+                if baseline_major is None:
+                    log.info(
+                        f"Draft baseline recorded for {draft_folder} v{draft_ver} "
+                        "while draft-only (major < 1)"
+                    )
+                else:
+                    log.info(
+                        f"Draft baseline updated for {draft_folder} v{draft_ver} "
+                        "while draft-only (major < 1)"
+                    )
+            log.info(
+                f"Draft sync skipped for {draft_folder}: version {draft_ver} is draft-only (major < 1)"
+            )
+            continue
 
         # First sighting in Draft records current version and waits for a future major bump.
         if baseline_major is None:
