@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -12,6 +13,20 @@ if not os.path.isfile(DEFAULT_RELEASE_TEXT_PATH):
     # Backward compatibility if this script is moved back to repo root.
     DEFAULT_RELEASE_TEXT_PATH = os.path.join(SCRIPT_DIR, "05_GigglePackReleaseData", "Discord", "discord-post.txt")
 DISCORD_WEBHOOK_ENV_VAR = "AGF_DISCORD_WEBHOOK_URL"
+SECTION_HEADER_PATTERN = re.compile(r"^-\s\*\*.+:\*\*\s*$")
+
+
+def continued_section_header(header_line: str) -> str:
+    stripped = header_line.rstrip("\n")
+    match = re.match(r"^(-\s\*\*)(.+?)(:\*\*)\s*$", stripped)
+    if not match:
+        return header_line if header_line.endswith("\n") else f"{header_line}\n"
+
+    prefix, label, suffix = match.groups()
+    clean_label = label.strip()
+    if "(continued)" not in clean_label.lower():
+        clean_label = f"{clean_label} (continued)"
+    return f"{prefix}{clean_label}{suffix}\n"
 
 
 def split_discord_message(content: str, max_len: int = 2000) -> List[str]:
@@ -21,7 +36,12 @@ def split_discord_message(content: str, max_len: int = 2000) -> List[str]:
     lines = content.splitlines(keepends=True)
     chunks: List[str] = []
     current = ""
+    active_section_header = ""
     for line in lines:
+        stripped_line = line.strip()
+        if SECTION_HEADER_PATTERN.match(stripped_line):
+            active_section_header = line if line.endswith("\n") else f"{line}\n"
+
         if len(current) + len(line) <= max_len:
             current += line
             continue
@@ -30,10 +50,31 @@ def split_discord_message(content: str, max_len: int = 2000) -> List[str]:
             chunks.append(current.rstrip("\n"))
             current = ""
 
+        # If a chunk begins with an indented list item, repeat the section header
+        # so Discord keeps the nested bullet indentation context.
+        if line.startswith("  - ") and active_section_header:
+            continued_header = continued_section_header(active_section_header)
+            if len(continued_header) + len(line) <= max_len:
+                current += continued_header
+            elif len(active_section_header) + len(line) <= max_len:
+                # Fallback to the original header if the continued label would overflow.
+                current += active_section_header
+
         while len(line) > max_len:
-            chunks.append(line[:max_len])
-            line = line[max_len:]
-        current = line
+            if current:
+                remaining = max_len - len(current)
+                if remaining <= 0:
+                    chunks.append(current.rstrip("\n"))
+                    current = ""
+                    continue
+                current += line[:remaining]
+                chunks.append(current.rstrip("\n"))
+                line = line[remaining:]
+                current = ""
+            else:
+                chunks.append(line[:max_len])
+                line = line[max_len:]
+        current += line
 
     if current:
         chunks.append(current.rstrip("\n"))

@@ -13,9 +13,10 @@ if not exist "%PYTHON_EXE%" (
     exit /b 1
 )
 
-echo Running publish run: update + promote + zips + GigglePack artifacts + README.
+echo Running publish run: update + promote + zips + README.
+echo GigglePack publish gate will ask: finalize now or queue pending changes.
 echo.
-"%PYTHON_EXE%" "%~dp0SCRIPT-Main.py" --mode full %*
+"%PYTHON_EXE%" "%~dp0SCRIPT-Main.py" --mode full --publish-gigglepack-action ask %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.

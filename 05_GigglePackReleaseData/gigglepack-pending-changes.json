@@ -1,8 +1,14 @@
 {
-  "computed_at": "2026-06-26T17:57:37",
+  "computed_at": "2026-06-26T19:08:15",
   "since_gigglepack_version": "0.8.0",
   "new_mods": [],
-  "updated_mods": [],
+  "updated_mods": [
+    [
+      "AGF-HUDPlus-1Main",
+      "6.2.0",
+      "6.3.0"
+    ]
+  ],
   "renamed_mods": [],
   "removed_mods": []
 }

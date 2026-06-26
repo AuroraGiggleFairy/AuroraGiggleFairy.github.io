@@ -1,0 +1,1 @@
+Thanks silverviolet9 for the detailed report and testing to find the exact trigger of a major bug.

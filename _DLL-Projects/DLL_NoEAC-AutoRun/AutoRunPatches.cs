@@ -35,11 +35,56 @@ namespace AutoRun
             PlayerAction action = GetActivationAction(player?.playerInput);
             if (action != null)
             {
-                return action.IsPressed;
+                if (action.IsPressed)
+                {
+                    return true;
+                }
+
+                if (IsAnyBoundKeyPressed(action, out bool hasKeyboardBinding))
+                {
+                    return true;
+                }
+
+                if (hasKeyboardBinding)
+                {
+                    return false;
+                }
             }
 
             // Fallback for cases where injected actions are unavailable.
             return Input.GetKey(KeyCode.Z);
+        }
+
+        private static bool IsAnyBoundKeyPressed(PlayerAction action, out bool hasKeyboardBinding)
+        {
+            hasKeyboardBinding = false;
+            if (action == null)
+            {
+                return false;
+            }
+
+            foreach (BindingSource binding in action.Bindings)
+            {
+                if (!(binding is KeyBindingSource keyBinding))
+                {
+                    continue;
+                }
+
+                hasKeyboardBinding = true;
+                try
+                {
+                    if (keyBinding.Control.IsPressed)
+                    {
+                        return true;
+                    }
+                }
+                catch
+                {
+                    // Ignore malformed combos and continue scanning other bindings.
+                }
+            }
+
+            return false;
         }
 
         public static void EnsureInstalled(PlayerActionsLocal actions)

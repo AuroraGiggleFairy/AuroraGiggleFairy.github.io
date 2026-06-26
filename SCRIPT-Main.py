@@ -101,6 +101,7 @@ def run_single_mode(args: argparse.Namespace) -> int:
 
     command = [sys.executable, ENGINE_SCRIPT, "--mode", args.mode]
     append_common_flags(command, args)
+    command.extend(["--publish-gigglepack-action", args.publish_gigglepack_action])
 
     print(f"[SCRIPT-Main] Running single mode '{args.mode}': {' '.join(command)}")
     engine_exit = int(subprocess.run(command, check=False).returncode)
@@ -142,6 +143,15 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--continue-on-error",
         action="store_true",
         help="When running the full chain, continue to the next step even if one fails",
+    )
+    parser.add_argument(
+        "--publish-gigglepack-action",
+        choices=["ask", "finalize", "queue"],
+        default="finalize",
+        help=(
+            "Only used for --mode full publish runs: ask before GigglePack finalize, "
+            "always finalize, or queue pending changes only"
+        ),
     )
     add_common_cli_args(parser)
     return parser

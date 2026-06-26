@@ -904,6 +904,44 @@ def ensure_notepadpp_closed_for_game_sync(dry_run: bool, log: Logger) -> bool:
         )
 
 
+def resolve_publish_gigglepack_action(requested_action: str, dry_run: bool, log: Logger) -> str:
+    """Resolve publish-time GigglePack behavior for full-mode runs."""
+    action = (requested_action or "finalize").strip().lower()
+    if action in {"finalize", "queue"}:
+        return action
+
+    if action != "ask":
+        log.warn(
+            f"Unknown --publish-gigglepack-action '{requested_action}'. Falling back to 'finalize'."
+        )
+        return "finalize"
+
+    if dry_run or not sys.stdin or not sys.stdin.isatty():
+        log.info(
+            "Publish GigglePack action is 'ask' but run is non-interactive/dry-run; defaulting to 'queue'."
+        )
+        return "queue"
+
+    prompt = (
+        "Publish GigglePack decision: [F] finalize release now, "
+        "or [Q] queue pending changes only (default: Q)"
+    )
+
+    while True:
+        print(prompt)
+        try:
+            response = input().strip().lower()
+        except EOFError:
+            response = ""
+
+        if response in {"", "q", "queue"}:
+            return "queue"
+        if response in {"f", "finalize"}:
+            return "finalize"
+
+        log.warn("Invalid publish selection. Type 'F' to finalize or 'Q' to queue.")
+
+
 def acquire_run_lock() -> bool:
     def read_lock_pid() -> Optional[int]:
         try:
@@ -5422,7 +5460,26 @@ def run_pipeline(args: argparse.Namespace) -> int:
 
             # 6) Package and regenerate main README.
             create_all_zips(args.dry_run, args.workers, log)
-            generate_gigglepack_release_artifacts(args.dry_run, log)
+            publish_gigglepack_action = resolve_publish_gigglepack_action(
+                args.publish_gigglepack_action,
+                args.dry_run,
+                log,
+            )
+            if publish_gigglepack_action == "finalize":
+                generate_gigglepack_release_artifacts(args.dry_run, log)
+            else:
+                log.info(
+                    "GigglePack finalization skipped for this publish run; "
+                    "updating pending changes queue only."
+                )
+                update_gigglepack_pending_changes(
+                    args.dry_run,
+                    log,
+                    args.pending_updates_consolidation_label,
+                )
+                log.action_needed(
+                    "GigglePack release remains queued. Re-run publish with --publish-gigglepack-action finalize when ready."
+                )
             generate_main_readme(args.dry_run, log)
 
         # Mark successful completion before the finally block so transactional
@@ -5528,6 +5585,15 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help=(
             "Optional one-time label to collapse pending updated_mods into a single bulk entry "
             "(example: AGF-Bulk-ReadMe-Format-Update)"
+        ),
+    )
+    parser.add_argument(
+        "--publish-gigglepack-action",
+        choices=["ask", "finalize", "queue"],
+        default="finalize",
+        help=(
+            "Only used by mode=full publish flow: ask before GigglePack finalize, "
+            "always finalize, or queue pending changes only"
         ),
     )
     return parser
