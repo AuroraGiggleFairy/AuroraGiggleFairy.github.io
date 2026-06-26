@@ -5,12 +5,22 @@ using UnityEngine;
 public class ScreamerAlertsController : MonoBehaviour
 {
     private static Dictionary<int, bool> playerAlertVisibility = new Dictionary<int, bool>();
+    private const float UiEvalIntervalSeconds = 0.2f;
+    private const float AlertRangeSqr = 120f * 120f;
     internal string screamerHordeAlertMessage = string.Empty;
+    internal int nearbyHordeCount;
+    internal int nearbyScoutCount;
     internal float hordeAlertEndTime;
     internal Vector3 hordeAlertPosition = Vector3.zero;
     public static ScreamerAlertsController Instance;
     public string screamerAlertMessage = string.Empty;
     public static bool CompassVisible = false;
+    private float nextUiEvalAt;
+    private string lastUiScoutMessage = string.Empty;
+    private string lastUiHordeMessage = string.Empty;
+    private int lastUiScoutCount = -1;
+    private int lastUiHordeCount = -1;
+    private ScreamerAlertMode lastUiMode = (ScreamerAlertMode)(-1);
 
     public static bool GetPlayerAlertVisibility(int entityId)
     {
@@ -28,21 +38,17 @@ public class ScreamerAlertsController : MonoBehaviour
 
     private void Update()
     {
-        UpdateAlertMessage();
-        UpdateHordeAlert();
-        ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForLocalPlayer(ScreamerAlertMode.OnWithNumbers);
-        if (mode == ScreamerAlertMode.Off)
+        if (Time.time < nextUiEvalAt)
         {
-            screamerAlertMessage = string.Empty;
-            screamerHordeAlertMessage = string.Empty;
+            return;
         }
 
-        if (((XUiC_ScreamerAlerts.Instance != null) ? XUiC_ScreamerAlerts.Instance.ViewComponent : null) != null)
-        {
-            bool isVisible = !string.IsNullOrEmpty(GetScreamerAlertMessage()) || !string.IsNullOrEmpty(GetScreamerHordeAlertMessage());
-            XUiC_ScreamerAlerts.Instance.ViewComponent.IsVisible = isVisible;
-            XUiC_ScreamerAlerts.Instance.RefreshBindingsSelfAndChildren();
-        }
+        nextUiEvalAt = Time.time + UiEvalIntervalSeconds;
+
+        UpdateAlertMessage();
+        UpdateHordeAlert();
+
+        RefreshUiBindingsIfNeeded();
     }
 
     public void TriggerScreamerHordeAlert(Vector3 hordePosition)
@@ -55,7 +61,7 @@ public class ScreamerAlertsController : MonoBehaviour
     private void UpdateHordeAlert()
     {
         EntityPlayer entityPlayer = GameManager.Instance.World?.GetPrimaryPlayer();
-        bool playerNearHorde = false;
+        int nearHordeCount = 0;
         var toRemove = new List<int>();
         if (entityPlayer != null && !entityPlayer.IsDead())
         {
@@ -69,10 +75,10 @@ public class ScreamerAlertsController : MonoBehaviour
                         toRemove.Add(entityId);
                         continue;
                     }
-                    float dist = Vector3.Distance(entityPlayer.position, entity.position);
-                    if (dist <= 120f)
+                    Vector3 delta = entityPlayer.position - entity.position;
+                    if (delta.sqrMagnitude <= AlertRangeSqr)
                     {
-                        playerNearHorde = true;
+                        nearHordeCount++;
                     }
                 }
                 else
@@ -84,11 +90,14 @@ public class ScreamerAlertsController : MonoBehaviour
         // Remove dead or missing zombies from the tracked set
         foreach (var id in toRemove)
             ScreamerAlertManager.Instance.persistentHordeZombieIds.Remove(id);
+
+        nearbyHordeCount = nearHordeCount;
+
         // Horde alert is now based only on live horde zombies and proximity
-        screamerHordeAlertMessage = playerNearHorde ? Localization.Get("ScreamerAlert_Horde") : string.Empty;
-        if (XUiC_ScreamerAlerts.Instance != null)
+        string nextHordeMessage = nearHordeCount > 0 ? Localization.Get("ScreamerAlert_Horde") : string.Empty;
+        if (nextHordeMessage != screamerHordeAlertMessage)
         {
-            XUiC_ScreamerAlerts.Instance.RefreshBindingsSelfAndChildren();
+            screamerHordeAlertMessage = nextHordeMessage;
         }
     }
 
@@ -127,68 +136,39 @@ public class ScreamerAlertsController : MonoBehaviour
         // (Removed screamerCount and hordeCount, handled in ScreamerAlertManager log)
         // Only log on server, handled in ScreamerAlertManager
         EntityPlayer entityPlayer = GameManager.Instance.World?.GetPrimaryPlayer();
-        bool playerNearScout = false;
+        int nearScoutCount = 0;
         var toRemove = new List<int>();
-        if (screamerIds != null)
+        if (screamerIds != null && entityPlayer != null && !entityPlayer.IsDead())
         {
             var worldEntities = GameManager.Instance.World?.Entities;
-            var players = GameManager.Instance.World?.Players?.dict?.Values;
             var screamerPositions = ScreamerAlertManager.Instance.syncedScreamerPositions;
-            if (players != null)
+            foreach (int entityId in screamerIds)
             {
-                foreach (var player in players)
+                Vector3 pos = Vector3.zero;
+                if (worldEntities != null && worldEntities.dict.TryGetValue(entityId, out var entity) && entity != null && !entity.IsDead())
                 {
-                    if (player == null || player.IsDead()) continue;
-                    foreach (int entityId in screamerIds)
-                    {
-                        Vector3 pos = Vector3.zero;
-                        if (worldEntities != null && worldEntities.dict.TryGetValue(entityId, out var entity) && entity != null && !entity.IsDead())
-                        {
-                            pos = entity.position;
-                        }
-                        else if (screamerPositions != null && screamerPositions.TryGetValue(entityId, out var syncedPos))
-                        {
-                            pos = syncedPos;
-                        }
-                        else
-                        {
-                            toRemove.Add(entityId);
-                            continue;
-                        }
-                        float dist = Vector3.Distance(player.position, pos);
-                        if (dist <= 120f)
-                        {
-                            if (player == entityPlayer) playerNearScout = true;
-                        }
-                    }
+                    pos = entity.position;
                 }
-            }
-            else if (entityPlayer != null && !entityPlayer.IsDead())
-            {
-                foreach (int entityId in screamerIds)
+                else if (screamerPositions != null && screamerPositions.TryGetValue(entityId, out var syncedPos))
                 {
-                    Vector3 pos = Vector3.zero;
-                    if (worldEntities != null && worldEntities.dict.TryGetValue(entityId, out var entity) && entity != null && !entity.IsDead())
-                    {
-                        pos = entity.position;
-                    }
-                    else if (screamerPositions != null && screamerPositions.TryGetValue(entityId, out var syncedPos))
-                    {
-                        pos = syncedPos;
-                    }
-                    else
-                    {
-                        toRemove.Add(entityId);
-                        continue;
-                    }
-                    float dist = Vector3.Distance(entityPlayer.position, pos);
-                    if (dist <= 120f)
-                    {
-                        playerNearScout = true;
-                    }
+                    pos = syncedPos;
+                }
+                else
+                {
+                    toRemove.Add(entityId);
+                    continue;
+                }
+
+                Vector3 delta = entityPlayer.position - pos;
+                if (delta.sqrMagnitude <= AlertRangeSqr)
+                {
+                    nearScoutCount++;
                 }
             }
         }
+
+        nearbyScoutCount = nearScoutCount;
+
         // Remove dead or missing screamers from the tracked set
         foreach (var id in toRemove)
         {
@@ -197,82 +177,85 @@ public class ScreamerAlertsController : MonoBehaviour
             else
                 ScreamerAlertManager.Instance.syncedScreamerIds.Remove(id);
         }
-        string text = playerNearScout ? Localization.Get("ScreamerAlert_Scout") : "";
+        string text = nearScoutCount > 0 ? Localization.Get("ScreamerAlert_Scout") : "";
         if (string.IsNullOrEmpty(text))
         {
             if (!string.IsNullOrEmpty(screamerAlertMessage))
             {
                 screamerAlertMessage = "";
-                UpdateScreamerAlertUI();
-                if (XUiC_ScreamerAlerts.Instance != null)
-                {
-                    XUiC_ScreamerAlerts.Instance.RefreshBindingsSelfAndChildren();
-                }
             }
         }
         else if (text != screamerAlertMessage)
         {
             screamerAlertMessage = text;
-            UpdateScreamerAlertUI();
-            if (XUiC_ScreamerAlerts.Instance != null)
-            {
-                XUiC_ScreamerAlerts.Instance.RefreshBindingsSelfAndChildren();
-            }
         }
+    }
+
+    private void RefreshUiBindingsIfNeeded()
+    {
+        string scoutMessage = screamerAlertMessage ?? string.Empty;
+        string hordeMessage = screamerHordeAlertMessage ?? string.Empty;
+        int scoutCount = nearbyScoutCount;
+        int hordeCount = nearbyHordeCount;
+        ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForLocalPlayer(ScreamerAlertMode.OnWithNumbers);
+
+        bool changed = scoutMessage != lastUiScoutMessage
+            || hordeMessage != lastUiHordeMessage
+            || scoutCount != lastUiScoutCount
+            || hordeCount != lastUiHordeCount
+            || mode != lastUiMode;
+
+        if (!changed)
+        {
+            return;
+        }
+
+        lastUiScoutMessage = scoutMessage;
+        lastUiHordeMessage = hordeMessage;
+        lastUiScoutCount = scoutCount;
+        lastUiHordeCount = hordeCount;
+        lastUiMode = mode;
+        UpdateScreamerAlertUI();
     }
 
     public string GetScreamerAlertMessage()
     {
-        ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForLocalPlayer(ScreamerAlertMode.OnWithNumbers);
+        ScreamerAlertMode mode = GetServerBaselineLocalMode();
         if (mode == ScreamerAlertMode.Off)
         {
             return string.Empty;
         }
 
-        // Show correct screamer count: use persistentScreamerIds on server, syncedScreamerIds on clients
-        int screamerCount = ConnectionManager.Instance.IsServer
-            ? (ScreamerAlertManager.Instance?.persistentScreamerIds?.Count ?? 0)
-            : (ScreamerAlertManager.Instance?.syncedScreamerIds?.Count ?? 0);
-
         string baseMessage = screamerAlertMessage;
-        if (mode == ScreamerAlertMode.On)
-        {
-            return ScreamerAlertModeSettings.StripNumberSuffix(baseMessage);
-        }
-
-        if (!string.IsNullOrEmpty(baseMessage))
-        {
-            return $"{baseMessage} [FFFFFF]({screamerCount})[-]";
-        }
-        return baseMessage;
+        return ScreamerAlertModeSettings.StripNumberSuffix(baseMessage);
     }
 
     public string GetScreamerHordeAlertMessage()
     {
-        ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForLocalPlayer(ScreamerAlertMode.OnWithNumbers);
+        ScreamerAlertMode mode = GetServerBaselineLocalMode();
         if (mode == ScreamerAlertMode.Off)
         {
             return string.Empty;
         }
 
-        // Append the number of tracked horde zombies in white
-        int hordeCount = ScreamerAlertManager.Instance?.persistentHordeZombieIds?.Count ?? 0;
-
         string baseMessage = screamerHordeAlertMessage;
-        if (mode == ScreamerAlertMode.On)
+        return ScreamerAlertModeSettings.StripNumberSuffix(baseMessage);
+    }
+
+    private static ScreamerAlertMode GetServerBaselineLocalMode()
+    {
+        ScreamerAlertMode defaultMode = ScreamerAlertModeSettings.GetServerDefaultMode();
+        if (defaultMode == ScreamerAlertMode.OnWithNumbers)
         {
-            return ScreamerAlertModeSettings.StripNumberSuffix(baseMessage);
+            defaultMode = ScreamerAlertMode.On;
         }
 
-        if (!string.IsNullOrEmpty(baseMessage))
-        {
-            return $"{baseMessage} [FFFFFF]({hordeCount})[-]";
-        }
-        return baseMessage;
+        ScreamerAlertMode storedMode = ScreamerAlertModeSettings.GetModeForLocalPlayer(defaultMode);
+        return storedMode == ScreamerAlertMode.Off ? ScreamerAlertMode.Off : ScreamerAlertMode.On;
     }
 
     public void UpdateScreamerAlertUI()
     {
-        // Placeholder for any additional UI update logic if needed
+        XUiC_ScreamerAlerts.Instance?.RefreshBindingsSelfAndChildren();
     }
 }

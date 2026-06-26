@@ -7,7 +7,22 @@ public class ModAPI : IModApi
     {
         try
         {
-            new Harmony("com.agfprojects.enhancedagf").PatchAll();
+            Harmony harmony = new Harmony("com.agfprojects.enhancedagf");
+            harmony.PatchAll();
+            ScreamerAlertEnhancedBindingsPatch.TryInstall(harmony);
+            ModEvents.PlayerSpawnedInWorld.RegisterHandler((ref ModEvents.SPlayerSpawnedInWorldData data) =>
+            {
+                if (!data.IsLocalPlayer)
+                {
+                    return;
+                }
+
+                ScreamerAlertEnhancedCapabilityHello.TrySendForLocalPlayerSpawn(data.EntityId);
+            });
+            ModEvents.GameUpdate.RegisterHandler((ref ModEvents.SGameUpdateData _) =>
+            {
+                ScreamerAlertEnhancedCapabilityHello.TickRetry();
+            });
             Logging.Inform("EnhancedAGF Harmony patches registered.");
         }
         catch (Exception ex)

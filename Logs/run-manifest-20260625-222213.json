@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-06-25T22:22:13.124561",
+  "mode": "update",
+  "dry_run": false,
+  "exit_code": 0,
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260625-222213.log",
+  "stats": {
+    "scanned_workspace_mods": 12,
+    "scanned_game_mods": 9,
+    "synced_pull_from_game": 3,
+    "synced_push_to_game": 0,
+    "sync_conflicts": 0,
+    "moved_to_publish_ready": 0,
+    "moved_to_in_progress": 0,
+    "renamed_folders": 3,
+    "csv_added_rows": 0,
+    "csv_removed_rows": 0,
+    "quote_files_created": 0,
+    "quote_files_renamed": 0,
+    "quote_files_blanked_none": 0,
+    "readmes_written": 103,
+    "readable_txt_written": 103,
+    "pushed_back_to_game": 3,
+    "mod_zips_created": 0,
+    "pack_zips_created": 0,
+    "promoted_to_publish_ready": 0,
+    "warnings": 1,
+    "errors": 0
+  },
+  "action_needed": [],
+  "mod_changes": [
+    "AGF-HUDPlus-1Main-v6.1.0 | pulled from game",
+    "AGF-NoEAC-EnhancedAGF-v4.0.1 | pulled from game",
+    "AGF-NoEAC-ScreamerAlert-v2.0.0 | pulled from game"
+  ]
+}

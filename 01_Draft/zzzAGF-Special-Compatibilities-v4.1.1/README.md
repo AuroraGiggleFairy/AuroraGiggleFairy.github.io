@@ -75,7 +75,7 @@
 ---
 
 ## 5. Compatibility
-- Last 7d2d Version tested on: 3.0
+- Last 7d2d Version tested on: 3
 - "zzzAGF-Special-Compatibilities" is SAFE to install on an existing game.
 - "zzzAGF-Special-Compatibilities" is DANGEROUS to remove from an existing game.
 - Unique Details: None

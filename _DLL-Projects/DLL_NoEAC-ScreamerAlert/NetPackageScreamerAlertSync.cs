@@ -93,10 +93,6 @@ public class NetPackageScreamerAlertSync : NetPackage
         // Do not set screamerAlertMessage from server; let each client calculate it locally
         ScreamerAlertsController.Instance.UpdateAlertMessage();
         ScreamerAlertsController.Instance.UpdateScreamerAlertUI();
-        if (XUiC_ScreamerAlerts.Instance != null)
-        {
-            XUiC_ScreamerAlerts.Instance.RefreshBindingsSelfAndChildren();
-        }
     }
 
     public override int GetLength()

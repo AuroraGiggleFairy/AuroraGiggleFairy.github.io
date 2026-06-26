@@ -1,5 +1,0 @@
-<AGF-Backpack72>
-	
-	<set xpath="/xui/window_group[@name='backpack']/window[@name='windowBackpack']/@name">windowBackpackAGF</set>
-	
-</AGF-Backpack72>

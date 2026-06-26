@@ -16,7 +16,10 @@ public static class ScreamerAlertModeSettings
     private static readonly object Sync = new object();
     private static readonly Dictionary<string, ScreamerAlertMode> ModesByPlayer = new Dictionary<string, ScreamerAlertMode>(StringComparer.OrdinalIgnoreCase);
     private static readonly Regex CountSuffixRegex = new Regex(@"\s*\[FFFFFF\]\(\d+\)\[-\]\s*$", RegexOptions.Compiled);
+    private const string DefaultModeStorageKey = "__default__";
+    private static ScreamerAlertMode _serverDefaultMode = ScreamerAlertMode.On;
     private static bool _loaded;
+    private static DateTime _lastLoadedWriteUtc = DateTime.MinValue;
 
     public static ScreamerAlertMode GetModeForLocalPlayer(ScreamerAlertMode defaultMode)
     {
@@ -74,6 +77,26 @@ public static class ScreamerAlertModeSettings
             }
 
             return defaultMode;
+        }
+    }
+
+    public static ScreamerAlertMode GetServerDefaultMode()
+    {
+        lock (Sync)
+        {
+            EnsureLoaded();
+            return _serverDefaultMode;
+        }
+    }
+
+    public static bool SetServerDefaultMode(ScreamerAlertMode mode)
+    {
+        lock (Sync)
+        {
+            EnsureLoaded();
+            _serverDefaultMode = mode;
+            Save_NoLock();
+            return true;
         }
     }
 
@@ -182,13 +205,30 @@ public static class ScreamerAlertModeSettings
 
     private static void EnsureLoaded()
     {
-        if (_loaded)
+        string filePath = GetFilePath();
+        DateTime writeUtc = DateTime.MinValue;
+        if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
+        {
+            try
+            {
+                writeUtc = File.GetLastWriteTimeUtc(filePath);
+            }
+            catch
+            {
+                writeUtc = DateTime.MinValue;
+            }
+        }
+
+        if (_loaded && writeUtc <= _lastLoadedWriteUtc)
         {
             return;
         }
 
         _loaded = true;
-        string filePath = GetFilePath();
+        _lastLoadedWriteUtc = writeUtc;
+        _serverDefaultMode = ScreamerAlertMode.On;
+        ModesByPlayer.Clear();
+
         if (string.IsNullOrEmpty(filePath) || !File.Exists(filePath))
         {
             return;
@@ -218,9 +258,18 @@ public static class ScreamerAlertModeSettings
 
                 if (TryParseMode(parts[1], out ScreamerAlertMode parsedMode))
                 {
-                    ModesByPlayer[key] = parsedMode;
+                    if (string.Equals(key, DefaultModeStorageKey, StringComparison.OrdinalIgnoreCase))
+                    {
+                        _serverDefaultMode = parsedMode;
+                    }
+                    else
+                    {
+                        ModesByPlayer[key] = parsedMode;
+                    }
                 }
             }
+
+            _lastLoadedWriteUtc = writeUtc;
         }
         catch (Exception ex)
         {
@@ -244,13 +293,27 @@ public static class ScreamerAlertModeSettings
                 Directory.CreateDirectory(directory);
             }
 
-            List<string> lines = new List<string>(ModesByPlayer.Count);
+            List<string> lines = new List<string>(ModesByPlayer.Count + 1);
+            lines.Add(DefaultModeStorageKey + "\t" + (int)_serverDefaultMode);
             foreach (KeyValuePair<string, ScreamerAlertMode> kv in ModesByPlayer)
             {
+                if (string.Equals(kv.Key, DefaultModeStorageKey, StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
                 lines.Add(kv.Key + "\t" + (int)kv.Value);
             }
 
             File.WriteAllLines(filePath, lines.ToArray());
+            try
+            {
+                _lastLoadedWriteUtc = File.GetLastWriteTimeUtc(filePath);
+            }
+            catch
+            {
+                _lastLoadedWriteUtc = DateTime.MinValue;
+            }
         }
         catch (Exception ex)
         {

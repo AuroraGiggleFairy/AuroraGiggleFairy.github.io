@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Platform;
 
 namespace ScreamerAlert
 {
@@ -33,7 +32,7 @@ namespace ScreamerAlert
             }
 
             string cmd = parts[0].ToLowerInvariant();
-            if (cmd != "agf-sa" && cmd != "agf-screameralert")
+            if (cmd != "agf-sa" && cmd != "agfsa")
             {
                 return ModEvents.EModEventResult.Continue;
             }
@@ -44,58 +43,76 @@ namespace ScreamerAlert
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
-            ClientInfo senderClientInfo = data.ClientInfo;
-            bool allowExtendedModes = SupportsExtendedModes(senderEntityId, senderClientInfo);
+            bool enhanced = IsEnhancedAvailableForEntity(senderEntityId);
 
             if (parts.Length == 1 || string.Equals(parts[1], "status", StringComparison.OrdinalIgnoreCase))
             {
-                ScreamerAlertMode current = ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, ScreamerAlertMode.OnWithNumbers);
-                if (!allowExtendedModes)
-                {
-                    current = NormalizeServerSideOnlyMode(current);
-                }
-
-                WhisperToSender(senderEntityId, "[ScreamerAlert] mode=" + ScreamerAlertModeSettings.GetModeLabel(current));
+                ScreamerAlertMode playerDefault = NormalizeForOutput(ScreamerAlertModeSettings.GetServerDefaultMode(), enhanced);
+                ScreamerAlertMode current = NormalizeForOutput(ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, playerDefault), enhanced);
+                WhisperToSender(senderEntityId, enhanced
+                    ? Localize("ScreamerAlert_Chat_Status_Enhanced", "[Screamer Alert = {0}] [Change with /agfsa <off|on|count>.]", ModeToken(current))
+                    : Localize("ScreamerAlert_Chat_Status_Baseline", "[Screamer Alert = {0}] [Change with /agfsa <off|on>.]", ModeToken(current)));
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
             string arg = parts[1].ToLowerInvariant();
-            if (arg == "help" || arg == "?")
+            if (arg == "help")
             {
-                if (allowExtendedModes)
-                {
-                    WhisperToSender(senderEntityId, "[ScreamerAlert] Usage: /agf-sa <off|on|counts|cycle|status>");
-                }
-                else
-                {
-                    WhisperToSender(senderEntityId, "[ScreamerAlert] Usage: /agf-sa <off|on|status>");
-                }
-
+                ScreamerAlertMode playerDefault = NormalizeForOutput(ScreamerAlertModeSettings.GetServerDefaultMode(), enhanced);
+                ScreamerAlertMode current = NormalizeForOutput(ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, playerDefault), enhanced);
+                WhisperToSender(senderEntityId, enhanced
+                    ? Localize("ScreamerAlert_Chat_Status_Enhanced", "[Screamer Alert = {0}] [Change with /agfsa <off|on|count>.]", ModeToken(current))
+                    : Localize("ScreamerAlert_Chat_Status_Baseline", "[Screamer Alert = {0}] [Change with /agfsa <off|on>.]", ModeToken(current)));
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
-            ScreamerAlertMode currentMode = ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, ScreamerAlertMode.OnWithNumbers);
-            if (!TryParseMode(arg, currentMode, allowExtendedModes, out ScreamerAlertMode nextMode))
+            if (IsCountAlias(arg))
             {
-                if (allowExtendedModes)
+                ScreamerAlertMode targetMode = enhanced ? ScreamerAlertMode.OnWithNumbers : ScreamerAlertMode.On;
+                if (!ScreamerAlertModeSettings.SetModeForEntityId(senderEntityId, targetMode))
                 {
-                    WhisperToSender(senderEntityId, "[ScreamerAlert] Invalid mode. Use: off | on | counts | cycle");
+                    return ModEvents.EModEventResult.StopHandlersAndVanilla;
+                }
+
+                if (enhanced)
+                {
+                    WhisperToSender(senderEntityId, Localize("ScreamerAlert_Chat_SetCount_Enhanced", "[Screamer Alert = COUNT] [Options: off|on|count.]"));
                 }
                 else
                 {
-                    WhisperToSender(senderEntityId, "[ScreamerAlert] Invalid mode for server-side-only users. Use: off | on");
+                    WhisperToSender(senderEntityId, Localize("ScreamerAlert_Chat_SetCount_Baseline", "[Screamer Alert = ON] [COUNT requires EnhancedAGF.]"));
                 }
-
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
+
+            if (!TryParseMode(arg, out ScreamerAlertMode requestedMode))
+            {
+                WhisperToSender(senderEntityId, enhanced
+                    ? Localize("ScreamerAlert_Chat_Invalid_Enhanced", "[Screamer Alert] [Invalid option. Try /agfsa <off|on|count>.]")
+                    : Localize("ScreamerAlert_Chat_Invalid_Baseline", "[Screamer Alert] [Invalid option. Try /agfsa <off|on>.]"));
+                return ModEvents.EModEventResult.StopHandlersAndVanilla;
+            }
+
+            ScreamerAlertMode nextMode = NormalizeForOutput(requestedMode, enhanced);
 
             if (!ScreamerAlertModeSettings.SetModeForEntityId(senderEntityId, nextMode))
             {
-                WhisperToSender(senderEntityId, "[ScreamerAlert] Could not save mode.");
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
-            WhisperToSender(senderEntityId, "[ScreamerAlert] mode set to " + ScreamerAlertModeSettings.GetModeLabel(nextMode));
+            if (nextMode == ScreamerAlertMode.Off)
+            {
+                WhisperToSender(senderEntityId, enhanced
+                    ? Localize("ScreamerAlert_Chat_SetOff_Enhanced", "[Screamer Alert = OFF] [Options: off|on|count.]")
+                    : Localize("ScreamerAlert_Chat_SetOff_Baseline", "[Screamer Alert = OFF] [Options: off|on.]"));
+            }
+            else
+            {
+                WhisperToSender(senderEntityId, enhanced
+                    ? Localize("ScreamerAlert_Chat_SetOn_Enhanced", "[Screamer Alert = ON] [Options: off|on|count.]")
+                    : Localize("ScreamerAlert_Chat_SetOn_Baseline", "[Screamer Alert = ON] [Options: off|on.]"));
+            }
+
             return ModEvents.EModEventResult.StopHandlersAndVanilla;
         }
 
@@ -109,35 +126,24 @@ namespace ScreamerAlert
             GameManager.Instance?.ChatMessageServer(null, EChatType.Whisper, -1, message, new List<int> { senderEntityId }, EMessageSender.Server);
         }
 
-        private static bool SupportsExtendedModes(int entityId, ClientInfo clientInfo)
+        private static ScreamerAlertMode NormalizeForOutput(ScreamerAlertMode mode, bool enhancedAvailable)
         {
-            if (entityId < 0)
+            if (!enhancedAvailable && mode == ScreamerAlertMode.OnWithNumbers)
             {
-                return false;
+                return ScreamerAlertMode.On;
             }
 
-            if (ScreamerAlertHybridRouting.HasClientCapability(clientInfo))
-            {
-                return true;
-            }
-
-            EntityPlayer localPlayer = GameManager.Instance?.World?.GetPrimaryPlayer();
-            if (localPlayer != null && localPlayer.entityId == entityId && XUiC_ScreamerAlerts.Instance != null)
-            {
-                return true;
-            }
-
-            return false;
+            return mode;
         }
 
-        private static ScreamerAlertMode NormalizeServerSideOnlyMode(ScreamerAlertMode mode)
+        private static bool IsEnhancedAvailableForEntity(int entityId)
         {
-            return mode == ScreamerAlertMode.Off ? ScreamerAlertMode.Off : ScreamerAlertMode.On;
+            return ScreamerAlertHybridRouting.HasClientCapabilityByEntityId(entityId);
         }
 
-        private static bool TryParseMode(string text, ScreamerAlertMode current, bool allowExtendedModes, out ScreamerAlertMode mode)
+        private static bool TryParseMode(string text, out ScreamerAlertMode mode)
         {
-            mode = allowExtendedModes ? current : NormalizeServerSideOnlyMode(current);
+            mode = ScreamerAlertMode.Off;
             if (string.IsNullOrEmpty(text))
             {
                 return false;
@@ -145,33 +151,67 @@ namespace ScreamerAlert
 
             switch (text.Trim().ToLowerInvariant())
             {
-                case "0":
                 case "off":
                     mode = ScreamerAlertMode.Off;
                     return true;
-                case "1":
                 case "on":
                     mode = ScreamerAlertMode.On;
                     return true;
-                case "2":
+                default:
+                    return false;
+            }
+        }
+
+        private static string ModeToken(ScreamerAlertMode mode)
+        {
+            switch (mode)
+            {
+                case ScreamerAlertMode.Off:
+                    return "OFF";
+                case ScreamerAlertMode.On:
+                    return "ON";
+                case ScreamerAlertMode.OnWithNumbers:
+                    return "COUNT";
+                default:
+                    return mode.ToString().ToUpperInvariant();
+            }
+        }
+
+        private static string Localize(string key, string fallback, params object[] args)
+        {
+            string template = Localization.Get(key);
+            if (string.IsNullOrEmpty(template) || string.Equals(template, key, StringComparison.Ordinal))
+            {
+                template = fallback;
+            }
+
+            if (args == null || args.Length == 0)
+            {
+                return template;
+            }
+
+            try
+            {
+                return string.Format(template, args);
+            }
+            catch
+            {
+                return string.Format(fallback, args);
+            }
+        }
+
+        private static bool IsCountAlias(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return false;
+            }
+
+            switch (text.Trim().ToLowerInvariant())
+            {
+                case "count":
                 case "counts":
                 case "numbers":
-                case "onwithnumbers":
-                case "on+#":
-                    if (!allowExtendedModes)
-                    {
-                        return false;
-                    }
-
-                    mode = ScreamerAlertMode.OnWithNumbers;
-                    return true;
-                case "cycle":
-                    if (!allowExtendedModes)
-                    {
-                        return false;
-                    }
-
-                    mode = ScreamerAlertModeSettings.Cycle(current);
                     return true;
                 default:
                     return false;

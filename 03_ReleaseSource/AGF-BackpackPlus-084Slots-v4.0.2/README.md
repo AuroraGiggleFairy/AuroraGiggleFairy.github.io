@@ -75,7 +75,7 @@
 ---
 
 ## 5. Compatibility
-- Last 7d2d Version tested on: 3.0
+- Last 7d2d Version tested on: 3
 - "AGF-BackpackPlus-084Slots" is SAFE to install on an existing game.
 - "AGF-BackpackPlus-084Slots" is DANGEROUS to remove from an existing game.
 - Unique Details: You may swap with 72 or 119.

@@ -1,7 +1,6 @@
 
 using System;
 using HarmonyLib;
-using Platform;
 using UnityEngine;
 
 namespace ScreamerAlert
@@ -11,20 +10,6 @@ public class ModAPI : IModApi
     public void InitMod(Mod modInstance)
     {
         new Harmony("com.agfprojects.screameralert").PatchAll();
-        ModEvents.PlayerSpawnedInWorld.RegisterHandler((ref ModEvents.SPlayerSpawnedInWorldData data) =>
-        {
-            ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
-            if (manager == null)
-            {
-                return;
-            }
-
-            if (data.IsLocalPlayer && !manager.IsServer)
-            {
-                string userCombined = PlatformManager.InternalLocalUserIdentifier?.CombinedString ?? string.Empty;
-                manager.SendToServer(NetPackageManager.GetPackage<NetPackageScreamerAlertClientHello>().Setup(data.EntityId, userCombined));
-            }
-        });
         ModEvents.PlayerDisconnected.RegisterHandler((ref ModEvents.SPlayerDisconnectedData data) =>
         {
             int entityId = data.ClientInfo?.entityId ?? -1;

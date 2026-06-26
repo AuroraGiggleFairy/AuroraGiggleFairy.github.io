@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class ScreamerAlertManager : MonoBehaviour
 {
+    private const float ServerScanIntervalSeconds = 0.5f;
     // Track screamer positions for sync
     public Dictionary<int, Vector3> screamerPositions = new Dictionary<int, Vector3>();
     // Synced from server (on clients)
@@ -17,6 +18,8 @@ public class ScreamerAlertManager : MonoBehaviour
     // Horde tracking is now isolated; do not mix with screamer tracking
     public HashSet<int> persistentHordeZombieIds = new HashSet<int>();
     public static Dictionary<Vector3, List<int>> ClientTargetScreamerIds = new Dictionary<Vector3, List<int>>();
+    private readonly HashSet<int> scanScreamerIdsBuffer = new HashSet<int>();
+    private readonly List<int> hordeCleanupBuffer = new List<int>();
     private float syncTimer = 0f;
     private float serverScanTimer = 0f;
 
@@ -27,77 +30,71 @@ public class ScreamerAlertManager : MonoBehaviour
 
     private void Update()
     {
-        var worldEntities = GameManager.Instance.World?.Entities;
+        GameManager gameManager = GameManager.Instance;
+        World world = gameManager?.World;
+        var worldEntities = world?.Entities;
         if (worldEntities == null)
         {
             return;
         }
+
+        ConnectionManager connectionManager = ConnectionManager.Instance;
         // Server owns authoritative tracking data. Clients should consume synced state.
-        if (ConnectionManager.Instance.IsServer)
+        if (connectionManager != null && connectionManager.IsServer)
         {
             serverScanTimer += Time.deltaTime;
-            if (serverScanTimer >= 0.2f)
+            if (serverScanTimer >= ServerScanIntervalSeconds)
             {
                 serverScanTimer = 0f;
 
                 // Rebuild scout screamer list from world entities.
-                var newScreamerIds = new HashSet<int>();
+                scanScreamerIdsBuffer.Clear();
                 screamerPositions.Clear();
-                foreach (Entity entity in GameManager.Instance.World.Entities.list)
+
+                List<Entity> entities = worldEntities.list;
+                for (int i = 0; i < entities.Count; i++)
                 {
+                    Entity entity = entities[i];
                     if (entity is EntityAlive alive && alive.IsScoutZombie && !entity.IsDead())
                     {
-                        newScreamerIds.Add(entity.entityId);
+                        bool wasTracked = persistentScreamerIds.Contains(entity.entityId);
+                        scanScreamerIdsBuffer.Add(entity.entityId);
                         screamerPositions[entity.entityId] = entity.position;
-                    }
-                }
-                persistentScreamerIds = newScreamerIds;
 
-                // persistentHordeZombieIds is managed by patches; remove dead/missing entries.
-                var worldEntitiesForHorde = GameManager.Instance.World?.Entities;
-                var toRemoveHorde = new List<int>();
-                foreach (int entityId in persistentHordeZombieIds)
-                {
-                    if (worldEntitiesForHorde == null || !worldEntitiesForHorde.dict.TryGetValue(entityId, out var entity) || entity == null || entity.IsDead())
-                    {
-                        toRemoveHorde.Add(entityId);
-                    }
-                }
-                foreach (var id in toRemoveHorde)
-                    persistentHordeZombieIds.Remove(id);
-            }
-        }
-        // Server-side: log screamer and horde counts for admin verification
-        if (ScreamerAlertsController.Instance != null)
-        {
-            ScreamerAlertsController.Instance.UpdateAlertMessage();
-            if (ConnectionManager.Instance.IsServer)
-            {
-                // Count all scout zombies
-                int scoutCount = 0;
-                int screamerCount = 0;
-                var entitiesList = GameManager.Instance.World?.Entities;
-                if (entitiesList != null)
-                {
-                    foreach (Entity entity in entitiesList.list)
-                    {
-                        if (entity != null && entity.GetType().Name == "EntityZombie" && entity.EntityClass != null)
+                        // Scan-based detection keeps scout whisper routing reliable even when
+                        // some spawn hooks are bypassed by engine path changes.
+                        if (!wasTracked)
                         {
-                            var alive = entity as EntityAlive;
-                            string className = entity.EntityClass.entityClassName.ToLower();
-                            if (alive != null && alive.IsScoutZombie && !entity.IsDead())
-                                scoutCount++;
-                            if (className.Contains("screamer") && !entity.IsDead())
-                                screamerCount++;
+                            ScreamerAlertHybridRouting.NotifyVanillaPlayersOnScoutSpawn(alive);
                         }
                     }
                 }
-                int hordeCount = persistentHordeZombieIds.Count;
-                // (Removed all logs as requested)
+
+                persistentScreamerIds.Clear();
+                persistentScreamerIds.UnionWith(scanScreamerIdsBuffer);
+
+                // persistentHordeZombieIds is managed by patches; remove dead/missing entries.
+                hordeCleanupBuffer.Clear();
+                foreach (int entityId in persistentHordeZombieIds)
+                {
+                    if (!worldEntities.dict.TryGetValue(entityId, out var entity) || entity == null || entity.IsDead())
+                    {
+                        hordeCleanupBuffer.Add(entityId);
+                    }
+                }
+
+                for (int i = 0; i < hordeCleanupBuffer.Count; i++)
+                {
+                    persistentHordeZombieIds.Remove(hordeCleanupBuffer[i]);
+                }
             }
+
+            // Flush queued follow-up incidents (3s merge, 7s cooldown) on server.
+            ScreamerAlertHybridRouting.TickQueuedIncidents();
         }
+
         // Multiplayer sync and horde alert logic remain separate
-        if (!ConnectionManager.Instance.IsServer || ScreamerAlertsController.Instance == null)
+        if (connectionManager == null || !connectionManager.IsServer || ScreamerAlertsController.Instance == null)
         {
             return;
         }
@@ -110,41 +107,29 @@ public class ScreamerAlertManager : MonoBehaviour
                 ScreamerAlertsController.Instance.hordeAlertPosition = Vector3.zero;
                 ScreamerAlertsController.Instance.hordeAlertEndTime = 0f;
             }
-            // Generate screamer alert message for sync (server-side)
-            string screamerMsg = "";
-            var screamerIds = persistentScreamerIds;
-            var worldEntitiesForProx = GameManager.Instance.World?.Entities;
-            EntityPlayer entityPlayer = GameManager.Instance.World?.GetPrimaryPlayer();
-            bool playerNearScout = false;
-            if (entityPlayer != null && !entityPlayer.IsDead() && screamerIds != null)
-            {
-                foreach (int entityId in screamerIds)
-                {
-                    if (worldEntitiesForProx != null && worldEntitiesForProx.dict.TryGetValue(entityId, out var entity) && entity != null && !entity.IsDead())
-                    {
-                        float dist = Vector3.Distance(entityPlayer.position, entity.position);
-                        if (dist <= 120f)
-                        {
-                            playerNearScout = true;
-                        }
-                    }
-                }
-            }
-            screamerMsg = playerNearScout ? Localization.Get("ScreamerAlert_Scout") : "";
+
+            // Sync tracked screamer/horde IDs and positions to enhanced-capable clients.
             var pkg = new NetPackageScreamerAlertSync(
                 persistentScreamerIds,
                 persistentHordeZombieIds,
-                screamerMsg,
+                string.Empty,
                 ScreamerAlertsController.Instance.screamerHordeAlertMessage,
                 ScreamerAlertsController.Instance.hordeAlertPosition,
                 ScreamerAlertsController.Instance.hordeAlertEndTime
             );
-            // Send custom sync only to clients that explicitly handshook support for this mod.
-            foreach (ClientInfo ci in SingletonMonoBehaviour<ConnectionManager>.Instance.Clients.List)
+
+            var clients = connectionManager.Clients?.List;
+            if (clients == null)
             {
-                if (ScreamerAlertHybridRouting.HasClientCapability(ci))
+                return;
+            }
+
+            for (int i = 0; i < clients.Count; i++)
+            {
+                ClientInfo clientInfo = clients[i];
+                if (ScreamerAlertHybridRouting.HasClientCapability(clientInfo))
                 {
-                    ci.SendPackage(pkg);
+                    clientInfo.SendPackage(pkg);
                 }
             }
         }

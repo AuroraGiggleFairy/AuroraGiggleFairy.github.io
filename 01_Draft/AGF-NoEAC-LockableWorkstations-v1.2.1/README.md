@@ -75,7 +75,7 @@
 ---
 
 ## 5. Compatibility
-- Last 7d2d Version tested on: 3.0
+- Last 7d2d Version tested on: 3
 - "AGF-NoEAC-LockableWorkstations" is SAFE to install on an existing game.
 - "AGF-NoEAC-LockableWorkstations" is DANGEROUS to remove from an existing game.
 - Unique Details: Players can join without it; install locally for full features.

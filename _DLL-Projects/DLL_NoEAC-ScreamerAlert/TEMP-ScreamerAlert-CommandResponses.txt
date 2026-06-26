@@ -1,0 +1,131 @@
+--------------------------------------------------------------------
+
+TEMP SPEC PURPOSE
+
+This file is the full command/response script spec used to structure implementation work.
+Use COMMANDS-README.md for player/admin-facing general command guidance.
+
+--------------------------------------------------------------------
+
+Non-EnhancedAGF CHAT Commands (Server Baseline)
+
+    Command: /agfsa, /agf-sa, /agfsa help, /agf-sa help, /agfsa status, /agf-sa status
+    Response: [Screamer Alert = <OFF|ON>]
+
+    Command: /agfsa on, /agf-sa on
+    Response: [Screamer Alert = ON]
+
+    Command: /agfsa off, /agf-sa off
+    Response: [Screamer Alert = OFF]
+
+    Command: /agfsa count, /agfsa counts, /agfsa numbers, /agf-sa count, /agf-sa counts, /agf-sa numbers
+    Response: [COUNT needs EnhancedAGF]
+
+    Command: /agfsa <invalid>, /agf-sa <invalid>
+    Response: [ERROR][Use /agfsa]
+
+--------------------------------------------------------------------
+
+EnhancedAGF CHAT Commands
+
+    Command: /agfsa, /agf-sa, /agfsa help, /agf-sa help, /agfsa status, /agf-sa status
+    Response: [Screamer Alert = <OFF|ON|COUNT>]
+
+    Command: /agfsa on, /agf-sa on
+    Response: [Screamer Alert = ON]
+
+    Command: /agfsa off, /agf-sa off
+    Response: [Screamer Alert = OFF]
+
+    Command: /agfsa count, /agfsa counts, /agfsa numbers, /agf-sa count, /agf-sa counts, /agf-sa numbers
+    Response: [Screamer Alert = COUNT]
+
+    Command: /agfsa <invalid>, /agf-sa <invalid>
+    Response: [ERROR][Use /agfsa]
+
+--------------------------------------------------------------------
+
+Admin CONSOLE Commands for Screamer Alert (Full Script Spec)
+
+    Quick Use:
+        1. agf-sa
+        2. agf-sa default <off|on|count>
+        3. agf-sa set <entityId|all> <off|on|count|default>
+        4. agf-sa list
+
+    Command: agf-sa, agf-sa help, agf-sa default
+    Response (multi-line):
+        [ScreamerAlert] Usage:
+        [ScreamerAlert]   agf-sa default <off|on|count>
+        [ScreamerAlert]   agf-sa set <entityId|all> <off|on|count|default>
+        [ScreamerAlert]   agf-sa list
+        [ScreamerAlert] default currently set to [OFF|ON|COUNT]
+        [ScreamerAlert] If target is set to COUNT and EnhancedAGF=NO, will use ON instead.
+
+    Command: agf-sa default on
+    Response: [ScreamerAlert] default set to ON. New joining players will start with Screamer Alert set to ON.
+
+    Command: agf-sa default off
+    Response: [ScreamerAlert] default set to OFF. New joining players will start with Screamer Alert set to OFF.
+
+    Command: agf-sa default count
+    Response: [ScreamerAlert] default set to COUNT. New joining players will start with Screamer Alert set to COUNT when EnhancedAGF is available, otherwise ON.
+
+    Command: agf-sa default <invalidMode>
+    Response: [ScreamerAlert] invalid option. Use: agf-sa default <off|on|count>.
+
+    Command: agf-sa set <entityId> on
+    Response: [ScreamerAlert] entity=<entityId> (<playerName>) mode set to ON.
+
+    Command: agf-sa set <entityId> off
+    Response: [ScreamerAlert] entity=<entityId> (<playerName>) mode set to OFF.
+
+    Command: agf-sa set <entityId> count
+    Response: [ScreamerAlert] entity=<entityId> (<playerName>) mode set to COUNT.
+
+    Command: agf-sa set <entityId> count (target not EnhancedAGF)
+    Response: [ScreamerAlert] entity=<entityId> (<playerName>) mode set to ON. EnhancedAGF=NO. COUNT is unavailable.
+
+    Command: agf-sa set <entityId> default
+    Response: [ScreamerAlert] entity=<entityId> (<playerName>) set to current default=<OFF|ON|COUNT>.
+    Conditional response (if current default=COUNT and target is non-EnhancedAGF):
+        [ScreamerAlert] non-EnhancedAGF players use ON.
+
+    Command: agf-sa set all on
+    Response: [ScreamerAlert] all online players set to ON. default unchanged.
+
+    Command: agf-sa set all off
+    Response: [ScreamerAlert] all online players set to OFF. default unchanged.
+
+    Command: agf-sa set all count
+    Response: [ScreamerAlert] all online players set to COUNT where EnhancedAGF is available, otherwise ON. default unchanged.
+
+    Command: agf-sa set all default
+    Response (multi-line):
+        [ScreamerAlert] all online players set to current default=<OFF|ON|COUNT>.
+        [ScreamerAlert] if current default=COUNT, non-EnhancedAGF players use ON.
+
+    Command: agf-sa list
+    Response (multi-line):
+        [ScreamerAlert] playername,id,screamer_alert,enhancedagf
+        [ScreamerAlert] <playerName>,<entityId>,<OFF|ON|COUNT>,<YES|NO|UNKNOWN>
+        [ScreamerAlert] total online=<N>
+
+    Command: agf-sa set <invalidEntityId> <off|on|count|default>
+    Response: [ScreamerAlert] invalid entityId. Use numeric entityId or all.
+
+    Command: agf-sa set all <invalidMode>
+    Response: [ScreamerAlert] invalid mode. Use: agf-sa set all <off|on|count|default>.
+
+    Command: agf-sa set <entityId|all> <invalidMode>, agf-sa <invalid>
+    Response: [ScreamerAlert] invalid option. Use: agf-sa help.
+
+    Command: agf-sa <anything> (non-admin)
+    Response: [ScreamerAlert] admin permission required.
+
+    Notes:
+        COUNT resolves to ON when EnhancedAGF=NO or EnhancedAGF=UNKNOWN for that target.
+        set all applies to online players only.
+        default controls baseline behavior for new joiners.
+        set <entityId|all> default applies the current default value immediately (no persistent default mode).
+

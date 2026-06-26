@@ -261,17 +261,23 @@ def draw_lines(
     if not lines:
         return
 
-    max_fit_lines = 1 + max(0, (h - line_h) // max(1, step))
-    lines_to_draw = lines[: max(0, max_fit_lines)]
+    # Build the largest line slice that truly fits this box, honoring reduced
+    # spacing for blank separator lines.
+    lines_to_draw: List[str] = []
+    total_h = 0
+    for line in lines:
+        if not lines_to_draw:
+            projected_h = line_h
+        else:
+            projected_h = total_h + (blank_step if lines_to_draw[-1] == "" else step)
+        if projected_h > h:
+            break
+        lines_to_draw.append(line)
+        total_h = projected_h
+
     if not lines_to_draw:
         return
 
-    if blank_line_ratio != 1.0:
-        total_h = line_h
-        for _i in range(len(lines_to_draw) - 1):
-            total_h += blank_step if lines_to_draw[_i] == "" else step
-    else:
-        total_h = line_h + step * (len(lines_to_draw) - 1)
     if valign == "center":
         y = int(box["y"]) + max(0, (h - total_h) // 2)
     elif valign == "bottom":

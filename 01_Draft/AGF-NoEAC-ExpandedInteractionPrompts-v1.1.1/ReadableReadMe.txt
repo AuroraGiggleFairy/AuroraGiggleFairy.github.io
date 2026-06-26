@@ -81,7 +81,7 @@ Language Support
 ========================================
 
 5. Compatibility
-- Last 7d2d Version tested on: 3.0
+- Last 7d2d Version tested on: 3
 - "AGF-NoEAC-ExpandedInteractionPrompts" is SAFE to install on an existing game.
 - "AGF-NoEAC-ExpandedInteractionPrompts" is SAFE to remove from an existing game.
 - Unique Details: Requires EAC off; ignores server mod requirements and applies only to the installing player.

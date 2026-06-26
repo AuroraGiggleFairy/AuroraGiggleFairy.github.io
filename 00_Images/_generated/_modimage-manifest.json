@@ -36,32 +36,32 @@
     "media_file": ""
   },
   "AGF-BackpackPlus-060Slots": {
-    "signature": "ce972913502a64c2a087aa71dc955c2f92e9b65fa4ffed9763ebc4e13b82a8a6",
+    "signature": "a7e7e63eccf84570ec907a7248aaada62e302aadabfc2e131a157ce0461b2d4d",
     "version": "4.0.4",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-060Slots_01.png"
   },
   "AGF-BackpackPlus-072Slots": {
-    "signature": "6de737d27da179cdda820f33ef304e07dbad8a81024f27faf88642e1cbdd5b2b",
+    "signature": "1ecdd3d5eab0f543d24f219b99e042a2a1ee36d3da4150fae9cbb5e406a3e1fa",
     "version": "4.0.3",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-072Slots_01.png"
   },
   "AGF-BackpackPlus-084Slots": {
-    "signature": "904761ecacebf99dbbab3f0d49225cc5eb1f491be02134f5007ad8814d31be14",
+    "signature": "ef8829aa79c4c61b5265cf6645cd09dc15392625bbc6225b538e919e1852f3d3",
     "version": "4.0.2",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-084Slots_01.png"
   },
   "AGF-BackpackPlus-119Slots": {
-    "signature": "fa54a5df26b844f445e712a25ca77aa081c555ef1005fcb72b915d571df04017",
+    "signature": "4aee789f608eca9d0efdd1c664bc11f5af77e58c24e2601d73fa10d2009411b0",
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "b7910171862bb1ab3bf659277135cf098aaec2ec49851ce7018d7fd699a0482e",
-    "version": "6.1.0",
+    "signature": "e486b9f2da1ef57b9e40f705bd1c295de056656db65a4701924266d560916277",
+    "version": "6.2.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
@@ -84,7 +84,7 @@
     "media_file": ""
   },
   "AGF-HUDPlus-RemoveEnteringPopUp": {
-    "signature": "6b8b54b9c0148457167b9c397721b58c5f9d39109bdb6b090e33052609e353fc",
+    "signature": "9e4c582853c9a136ca6da405b55479ca73d089477539696c63b942bef95aef1b",
     "version": "2.0.1",
     "has_media": false,
     "media_file": ""
@@ -108,7 +108,7 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "272de8c45baf36dea8533b42ae0810e6c941b7b46e9ec3713670889bf4ef78b6",
+    "signature": "cb3ae07754d4a2b34401df5b5876f22af5e3223988101bfbcb7986d43684868f",
     "version": "3.0.3",
     "has_media": true,
     "media_file": "AGF-HUDPluszOther-Weekday_01.png"
@@ -120,7 +120,7 @@
     "media_file": ""
   },
   "AGF-NoEAC-AutoRun": {
-    "signature": "69e68bec938e127986c0a04ee6cd5bf76f787fc8a54978bcf49de9bb828d95fd",
+    "signature": "09d66f883c040938ab42f70e9422ae839e89302e7e1ad63be72a4b9b6ec83550",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "AGF-NoEAC-AutoRun_01.png"
@@ -138,8 +138,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "256eb3c73a55a709c995bc64cd9738a602edc38b019ca4d34c2e2af13f556bc4",
-    "version": "4.0.1",
+    "signature": "8d33b4ebba5d267596a56db31d33d44f361fb56f4fcffee5dcbac63ea0820b61",
+    "version": "4.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },
@@ -156,7 +156,7 @@
     "media_file": ""
   },
   "AGF-NoEAC-GlobalStormTracker": {
-    "signature": "4e742f20ba36d24be22495e0bbb4cd31c4060b234bf3603e39ae15553bd849ba",
+    "signature": "cc73a0e002c147341d102eac490dbb8ba1202a2cde00bd4146e3454af731b453",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "AGF-NoEAC-GlobalStormTracker_01.png"
@@ -180,10 +180,10 @@
     "media_file": ""
   },
   "AGF-NoEAC-ScreamerAlert": {
-    "signature": "0517b6b495c79b9cd8f11287810c527a14eff3d7b50775f14aedf1f137e05de8",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "0280cf857273fb18550d390dce63230a73eda9b1164f04226e2d5a76df4e0aa9",
+    "version": "2.1.1",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-ScreamerAlert_01.png"
   },
   "AGF-NoEAC-SortingBox": {
     "signature": "fdffde3c9b36ed6e62af6c958d3e1b1efc9c42fbb82ef84c3da78783094c590d",
@@ -192,7 +192,7 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "503a357e116b859b78492074f239893dd60d2f98a729813c56ed9465c8608e40",
+    "signature": "b23d1ee857c610770081be5e484faaf2be69c3e08bd432be2a194bb187867f61",
     "version": "2.1.1",
     "has_media": true,
     "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
