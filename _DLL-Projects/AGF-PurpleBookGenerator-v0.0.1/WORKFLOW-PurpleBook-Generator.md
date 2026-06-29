@@ -1,0 +1,144 @@
+# WORKFLOW - Purple Book Generator
+
+## Working Methods
+- Source of truth script:
+  - _DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py
+- Preferred launch command (repo root, keeps existing workflow stable):
+  - c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild
+- Optional direct command (same result):
+  - c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild
+- Live-game sync command for HUDPlus PurpleBook target:
+  - c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe SCRIPT-PurpleBookGenerator.py --sync-game-mod --no-sync-activebuild --game-mod-windows "c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-HUDPlus-PurpleBook-v2.0.1\Config\XUi_InGame\windows.xml"
+- Output target default:
+  - _DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml
+- Non-EnhancedAGF fallback header objects (Title/DayTime/Location) are generator-managed in `emit_window`; adjust there instead of hand-editing live game `windows.xml`.
+
+## Change History
+- 2026-06-28:
+  - Moved AGF-PurpleBookGenerator-v0.0.1 from 01_Draft to _DLL-Projects.
+  - Updated root launcher SCRIPT-PurpleBookGenerator.py to point at _DLL-Projects path.
+  - Updated generator defaults to derive paths from script location.
+  - Added out-mod directory resolution fallback for _DLL-Projects and legacy 01_Draft.
+  - Updated key repo guidance files to new source-of-truth path.
+  - Ran no-sync validation successfully after relocation.
+- 2026-06-29:
+  - Confirmed source-of-truth remains `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Deleted stale duplicate draft folder:
+    - `01_Draft/AGF-PurpleBookGenerator-v0.0.1`
+  - Validation evidence:
+    - DLL script is newer than deleted draft copy (DLL LastWriteTime: 2026-06-29 15:18:39, draft LastWriteTime: 2026-06-28 13:00:33).
+  - Added generator emission for non-EnhancedAGF fallback block under Schematics window:
+    - `<conditional evaluator="client"><if cond="mod_loaded('AGF-NoEAC-EnhancedAGF') == false">...`
+    - `agfPbFallbackTitle`, `agfPbFallbackDayTime`, `agfPbFallbackLocation`
+  - Included current day/time internals used in live testing (icon + left-aligned label composite).
+  - Purpose: ensure fallback header UI is reproduced on every generator run.
+  - Ran live sync for PurpleBook files and verified fallback header exists in live game windows.xml.
+  - First sync attempt using default `--sync-game-mod` target warned missing path because default target resolves to `AGF-PurpleBookGenerator-v0.0.1` mod folder.
+  - Re-ran with explicit `--game-mod-windows` pointing to `AGF-HUDPlus-PurpleBook-v2.0.1`, which successfully synced:
+    - `Config/XUi_InGame/windows.xml`
+    - `Config/XUi_InGame/xui.xml`
+    - `Config/gameevents.xml`
+    - `Config/Localization.csv`
+  - Restored Purple Book localization key behavior in generator-managed output:
+    - Added `agf0PurpleBookButton` row with multilingual values.
+    - Changed `agf0PurpleBookButtonTooltip` from "Crafting List" back to "Purple Book" multilingual values.
+    - Updated localization merge controls so both keys are treated as generator-authored keys.
+  - Regenerated and synced live PurpleBook files; confirmed live Localization.csv now includes both expected key rows.
+  - Corrected fallback title label key in generator output from `xuiSchematics` to `agf0PurpleBookButton` so live header title resolves to Purple Book text instead of showing missing key text.
+  - Fixed live progression tracking sync gap:
+    - Root cause: `--sync-game-mod` copied windows/xui/gameevents/localization but did not copy `Config/buffs.xml`.
+    - Added `buffs.xml` sync for both `--sync-game-mod` and `--sync-activebuild` paths in generator source.
+    - Re-ran explicit live sync to HUDPlus PurpleBook target and confirmed `synced game mod buffs` is now emitted.
+    - Post-sync validation: live windows references and live buffs writers match for all categorized crafting `Check` CVars (428/428), with both `onSelfBuffStart` and `onSelfBuffUpdate` coverage.
+  - Added game-file driven buffs contract validation inside generator run:
+    - Uses parsed progression crafting skills (`name` + `max_level`) as source-of-truth expectations.
+    - Verifies `Config/buffs.xml` includes per-category total `crafting...Check`, start/update progression seeding up to each category max, and full UI cvar coverage used by windows.xml.
+    - Generator run now fails early if this contract is broken (prevents syncing partial/stale category tracking).
+  - Expanded generated gameevents recalc hooks for first-load and respawn paths:
+    - `game_first_spawn`
+    - `game_on_spawn`
+    - `game_on_respawn_none`
+    - `game_on_respawn_default`
+    - `game_on_respawn_injured`
+    - `game_on_respawn_permanent`
+    - Each appends `AddBuff agfRecalculate` so checklist/category CVars refresh on those lifecycle events.
+  - Switched buffs pipeline to full generator emission (no static buffs authoring dependency):
+    - Added `_emit_buffs_recalculate_patch(skills)` that builds full `Config/buffs.xml` from parsed progression categories and unlock thresholds.
+    - Added per-skill threshold derivation from display unlock levels (`*CheckN` CVars) and emits deterministic update toggles for in-range/out-of-range transitions.
+    - Generator now writes `Config/buffs.xml` every run, with autobackup support via `buffs.prewrite.*.xml`.
+  - Preserved legacy book/perk recalc behavior while generating crafting recalc logic:
+    - Added seed-driven preservation of non-crafting `triggered_effect` rows from `buff[@name='agfRecalculate']`.
+    - Added `--seed-buffs` argument and fallback ordering to source non-crafting recalc effects.
+    - Fallback now prefers original `buffs.pre-recreate.source.*` backups before current generated output to avoid AGF flag loss.
+  - Hardened buffs contract validation to generated-output parity checks before write/sync:
+    - Validates total `*Check` coverage, start/update max coverage to progression max, UI token coverage, and exact threshold-set parity per skill.
+    - Generator run now fails before deployment if generated buffs contract does not match progression/windows expectations.
+  - Refactored buffs emission to mirror original semantic behavior layers instead of a single collapsed block:
+    - `/buffs` append for `agfRecalculate` startup groups.
+    - `buffStatusCheck02` append for preserved AGF book runtime deltas (`bookProgression`).
+    - `buffStatusCheck02` append for generated crafting runtime deltas (`craftingChecker`).
+  - Fixed threshold runtime semantics by row type:
+    - Tiered rows use range-window behavior (`>= level` and `< next`) plus clear-on-next.
+    - Non-tiered rows use persistent unlock-flag behavior (`>= level` / `< level`) with no next-window bounds.
+  - Validation result after semantic fix:
+    - No-sync generator run passed.
+    - Full triggered_effect usage parity vs original seed backup reached exact match:
+      - missing CVar names: 0
+      - extra CVar names: 0
+      - mismatched CVar usage signatures: 0
+  - Fixed legacy paging-header key migration for EnhancedAGF compatibility:
+    - `checklistSchematicsTitle` now maps to `agf0PurpleBookButton` (all-caps header text) instead of `agf0PurpleBookButtonTooltip`.
+    - Intent: ensure legacy header references resolve to the all-caps Purple Book title key rather than mixed-case tooltip text.
+  - Added quality-tier compatibility guard driven by game `qualityinfo.xml`:
+    - New `--qualityinfo` argument (default: game `Data/Config/qualityinfo.xml`).
+    - Generator reads playable quality tier count from `<quality key="...">` and verifies it matches current tier rendering assumptions.
+    - Generator now stops early on mismatch to prevent silent Q-tier regressions in tiered rows and bars.
+  - Added progression quality-row validation:
+    - Every `has_quality` `display_entry` must match the detected quality tier count.
+    - Generator fails fast if a quality row unlock count diverges from qualityinfo tier model.
+  - Live test deployment to game Mods path completed with pre-sync backup:
+    - Created backup at:
+      - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-HUDPlus-PurpleBook-v2.0.1/Config/_AUTOBACKUP/pre-live-sync.20260629-151213`
+    - Backed up before sync:
+      - `Config/XUi_InGame/windows.xml`
+      - `Config/XUi_InGame/xui.xml`
+      - `Config/gameevents.xml`
+      - `Config/buffs.xml`
+      - `Config/Localization.csv`
+    - Ran live sync command:
+      - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --sync-game-mod --no-sync-activebuild --game-mod-windows "c:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-HUDPlus-PurpleBook-v2.0.1/Config/XUi_InGame/windows.xml"`
+    - Sync confirmed for all PurpleBook config targets:
+      - windows.xml, xui.xml, gameevents.xml, buffs.xml, Localization.csv
+    - Post-sync localization check on live file:
+      - `mojibake_count=0`
+  - EnhancedAGF live-title fallback fix for `XUISCHEMATICS` display:
+    - Root cause: EnhancedAGF title path can resolve to localization key `xuiSchematics`; when missing, the raw key was rendered in UI.
+    - Generator now emits a managed localization alias row:
+      - `xuiSchematics` => `PURPLE BOOK` (with curated language translations matching Purple Book title set).
+    - Added `xuiSchematics` to generator-managed localization sets:
+      - forced generated keys
+      - allowed preservation-change keys
+      - static localization rows authored each run
+    - Created second pre-sync backup at:
+      - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-HUDPlus-PurpleBook-v2.0.1/Config/_AUTOBACKUP/pre-live-sync.20260629-151747`
+    - Live sync rerun completed for all PurpleBook config files.
+    - Live validation:
+      - `Localization.csv` contains `xuiSchematics` row with Purple Book values.
+      - `mojibake_count=0`.
+
+## Do-Not-Do Notes
+- Do not reintroduce hardcoded 01_Draft output assumptions in generator path defaults.
+- Do not run sync-to-game flags by default while validating relocation/pathing changes.
+- Do not edit 02_ActiveBuild or 03_ReleaseSource unless explicitly requested.
+- Do not rely on manual live-game `Config/XUi_InGame/windows.xml` edits for fallback header behavior; those must be reflected in generator source.
+- Do not assume plain `--sync-game-mod` targets `AGF-HUDPlus-PurpleBook-v2.0.1`; pass explicit `--game-mod-windows` for live HUDPlus PurpleBook sync.
+- Do not hardcode `agf0PurpleBookButtonTooltip` to "Crafting List" when Purple Book naming is required for button UX/localization parity.
+- Do not assume config-side progression fixes are live until `Config/buffs.xml` is explicitly synced to the same game-mod target as windows.xml.
+- Do not trust manual category spot-checks alone; rely on generator contract pass (`[ok] buffs contract check passed`) before sync.
+- Do not reintroduce static/manual `Config/buffs.xml` editing for PurpleBook category logic; make all category/threshold behavior changes in generator emission code.
+- Do not seed non-crafting recalc preservation from already-generated `Config/buffs.xml` when original source backups are available.
+- Do not apply one threshold rule globally: tiered rows and non-tiered rows require different runtime CVar semantics.
+- Do not collapse AGF book runtime append and crafting runtime append into one combined `buffStatusCheck02` generation path.
+- Do not map `checklistSchematicsTitle` to tooltip/localized mixed-case keys when header/title behavior is intended; use `agf0PurpleBookButton`.
+- Do not remove `xuiSchematics` localization alias while EnhancedAGF title fallback is active; it prevents raw-key title rendering.
+- Do not assume quality tiers are always 6 without validating against `qualityinfo.xml` first.

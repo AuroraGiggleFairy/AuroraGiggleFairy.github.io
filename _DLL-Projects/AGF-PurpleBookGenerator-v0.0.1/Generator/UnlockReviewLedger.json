@@ -1,0 +1,2059 @@
+{
+  "version": 1,
+  "updated_utc": "2026-06-27T17:27:02Z",
+  "items": {
+    "ammo44MagnumBulletAP": {
+      "name": "ammo44MagnumBulletAP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": ".44 Ammo",
+      "order": 19,
+      "detected_category": "Ammo",
+      "detected_subcategory": ".44 Ammo",
+      "detected_order": 19,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|.44 Ammo|19",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo44MagnumBulletBall": {
+      "name": "ammo44MagnumBulletBall",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": ".44 Ammo",
+      "order": 17,
+      "detected_category": "Ammo",
+      "detected_subcategory": ".44 Ammo",
+      "detected_order": 17,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|.44 Ammo|17",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo44MagnumBulletHP": {
+      "name": "ammo44MagnumBulletHP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": ".44 Ammo",
+      "order": 18,
+      "detected_category": "Ammo",
+      "detected_subcategory": ".44 Ammo",
+      "detected_order": 18,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|.44 Ammo|18",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo762mmBulletAP": {
+      "name": "ammo762mmBulletAP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "7.62 Ammo",
+      "order": 16,
+      "detected_category": "Ammo",
+      "detected_subcategory": "7.62 Ammo",
+      "detected_order": 16,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|7.62 Ammo|16",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo762mmBulletBall": {
+      "name": "ammo762mmBulletBall",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "7.62 Ammo",
+      "order": 14,
+      "detected_category": "Ammo",
+      "detected_subcategory": "7.62 Ammo",
+      "detected_order": 14,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|7.62 Ammo|14",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo762mmBulletHP": {
+      "name": "ammo762mmBulletHP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "7.62 Ammo",
+      "order": 15,
+      "detected_category": "Ammo",
+      "detected_subcategory": "7.62 Ammo",
+      "detected_order": 15,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|7.62 Ammo|15",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo9mmBulletAP": {
+      "name": "ammo9mmBulletAP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "9mm Ammo",
+      "order": 13,
+      "detected_category": "Ammo",
+      "detected_subcategory": "9mm Ammo",
+      "detected_order": 13,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|9mm Ammo|13",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo9mmBulletBall": {
+      "name": "ammo9mmBulletBall",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "9mm Ammo",
+      "order": 11,
+      "detected_category": "Ammo",
+      "detected_subcategory": "9mm Ammo",
+      "detected_order": 11,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|9mm Ammo|11",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammo9mmBulletHP": {
+      "name": "ammo9mmBulletHP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "9mm Ammo",
+      "order": 12,
+      "detected_category": "Ammo",
+      "detected_subcategory": "9mm Ammo",
+      "detected_order": 12,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|9mm Ammo|12",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoArrowExploding": {
+      "name": "ammoArrowExploding",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Arrows",
+      "order": 5,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Arrows",
+      "detected_order": 5,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Arrows|5",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoArrowFlaming": {
+      "name": "ammoArrowFlaming",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Arrows",
+      "order": 4,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Arrows",
+      "detected_order": 4,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Arrows|4",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoArrowIron": {
+      "name": "ammoArrowIron",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Arrows",
+      "order": 2,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Arrows",
+      "detected_order": 2,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Arrows|2",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoArrowSteelAP": {
+      "name": "ammoArrowSteelAP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Arrows",
+      "order": 3,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Arrows",
+      "detected_order": 3,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Arrows|3",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoArrowStone": {
+      "name": "ammoArrowStone",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Arrows",
+      "order": 1,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Arrows",
+      "detected_order": 1,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Arrows|1",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoCrossbowBoltExploding": {
+      "name": "ammoCrossbowBoltExploding",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Bolts",
+      "order": 10,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Bolts",
+      "detected_order": 10,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Bolts|10",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoCrossbowBoltFlaming": {
+      "name": "ammoCrossbowBoltFlaming",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Bolts",
+      "order": 9,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Bolts",
+      "detected_order": 9,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Bolts|9",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoCrossbowBoltIron": {
+      "name": "ammoCrossbowBoltIron",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Bolts",
+      "order": 7,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Bolts",
+      "detected_order": 7,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Bolts|7",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoCrossbowBoltSteelAP": {
+      "name": "ammoCrossbowBoltSteelAP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Bolts",
+      "order": 8,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Bolts",
+      "detected_order": 8,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Bolts|8",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoCrossbowBoltStone": {
+      "name": "ammoCrossbowBoltStone",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Bolts",
+      "order": 6,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Bolts",
+      "detected_order": 6,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Bolts|6",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoJunkTurretAP": {
+      "name": "ammoJunkTurretAP",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Junk Turret Ammo",
+      "order": 25,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Junk Turret Ammo",
+      "detected_order": 25,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Junk Turret Ammo|25",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoJunkTurretRegular": {
+      "name": "ammoJunkTurretRegular",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Junk Turret Ammo",
+      "order": 23,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Junk Turret Ammo",
+      "detected_order": 23,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Junk Turret Ammo|23",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoJunkTurretShell": {
+      "name": "ammoJunkTurretShell",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Junk Turret Ammo",
+      "order": 24,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Junk Turret Ammo",
+      "detected_order": 24,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Junk Turret Ammo|24",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoRocketFrag": {
+      "name": "ammoRocketFrag",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Rockets",
+      "order": 26,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Rockets",
+      "detected_order": 26,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Rockets|26",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoRocketHE": {
+      "name": "ammoRocketHE",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Rockets",
+      "order": 27,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Rockets",
+      "detected_order": 27,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Rockets|27",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoShotgunBreachingSlug": {
+      "name": "ammoShotgunBreachingSlug",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Shotgun Ammo",
+      "order": 21,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Shotgun Ammo",
+      "detected_order": 21,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Shotgun Ammo|21",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoShotgunShell": {
+      "name": "ammoShotgunShell",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Shotgun Ammo",
+      "order": 20,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Shotgun Ammo",
+      "detected_order": 20,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Shotgun Ammo|20",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "ammoShotgunSlug": {
+      "name": "ammoShotgunSlug",
+      "include": true,
+      "category": "Ammo",
+      "subcategory": "Shotgun Ammo",
+      "order": 22,
+      "detected_category": "Ammo",
+      "detected_subcategory": "Shotgun Ammo",
+      "detected_order": 22,
+      "source_tab_key": "agf4UnlocksCategoryAmmo",
+      "fingerprint": "agf4UnlocksCategoryAmmo|Ammo|Shotgun Ammo|22",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "drinkJarPureMineralWater": {
+      "name": "drinkJarPureMineralWater",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 103,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 103,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||103",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "foodCanSham": {
+      "name": "foodCanSham",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 104,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 104,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||104",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorAdvancedMuffledConnectors": {
+      "name": "modArmorAdvancedMuffledConnectors",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Muffled Connectors",
+      "order": 86,
+      "detected_category": "Armors",
+      "detected_subcategory": "Muffled Connectors",
+      "detected_order": 86,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Muffled Connectors|86",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorBandolier": {
+      "name": "modArmorBandolier",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "General",
+      "order": 82,
+      "detected_category": "Armors",
+      "detected_subcategory": "General",
+      "detected_order": 82,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|General|82",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorCigar": {
+      "name": "modArmorCigar",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Helmets",
+      "order": 73,
+      "detected_category": "Armors",
+      "detected_subcategory": "Helmets",
+      "detected_order": 73,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Helmets|73",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorCustomizedFittings": {
+      "name": "modArmorCustomizedFittings",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Fittings",
+      "order": 84,
+      "detected_category": "Armors",
+      "detected_subcategory": "Fittings",
+      "detected_order": 84,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Fittings|84",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorDoubleStoragePocket": {
+      "name": "modArmorDoubleStoragePocket",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Pockets",
+      "order": 79,
+      "detected_category": "Armors",
+      "detected_subcategory": "Pockets",
+      "detected_order": 79,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Pockets|79",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorHelmetLight": {
+      "name": "modArmorHelmetLight",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Helmets",
+      "order": 74,
+      "detected_category": "Armors",
+      "detected_subcategory": "Helmets",
+      "detected_order": 74,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Helmets|74",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorImpactBracing": {
+      "name": "modArmorImpactBracing",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Boots",
+      "order": 76,
+      "detected_category": "Armors",
+      "detected_subcategory": "Boots",
+      "detected_order": 76,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Boots|76",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorImprovedFittings": {
+      "name": "modArmorImprovedFittings",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Fittings",
+      "order": 83,
+      "detected_category": "Armors",
+      "detected_subcategory": "Fittings",
+      "detected_order": 83,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Fittings|83",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorMuffledConnectors": {
+      "name": "modArmorMuffledConnectors",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Muffled Connectors",
+      "order": 85,
+      "detected_category": "Armors",
+      "detected_subcategory": "Muffled Connectors",
+      "detected_order": 85,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Muffled Connectors|85",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorPlatingBasic": {
+      "name": "modArmorPlatingBasic",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Platings",
+      "order": 87,
+      "detected_category": "Armors",
+      "detected_subcategory": "Platings",
+      "detected_order": 87,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Platings|87",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorPlatingReinforced": {
+      "name": "modArmorPlatingReinforced",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Platings",
+      "order": 88,
+      "detected_category": "Armors",
+      "detected_subcategory": "Platings",
+      "detected_order": 88,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Platings|88",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorQuadStoragePocket": {
+      "name": "modArmorQuadStoragePocket",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Pockets",
+      "order": 81,
+      "detected_category": "Armors",
+      "detected_subcategory": "Pockets",
+      "detected_order": 81,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Pockets|81",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorStealthBoots": {
+      "name": "modArmorStealthBoots",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Boots",
+      "order": 77,
+      "detected_category": "Armors",
+      "detected_subcategory": "Boots",
+      "detected_order": 77,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Boots|77",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorStoragePocket": {
+      "name": "modArmorStoragePocket",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Pockets",
+      "order": 78,
+      "detected_category": "Armors",
+      "detected_subcategory": "Pockets",
+      "detected_order": 78,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Pockets|78",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorTripleStoragePocket": {
+      "name": "modArmorTripleStoragePocket",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Pockets",
+      "order": 80,
+      "detected_category": "Armors",
+      "detected_subcategory": "Pockets",
+      "detected_order": 80,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Pockets|80",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modArmorWaterPurifier": {
+      "name": "modArmorWaterPurifier",
+      "include": true,
+      "category": "Armors",
+      "subcategory": "Helmets",
+      "order": 75,
+      "detected_category": "Armors",
+      "detected_subcategory": "Helmets",
+      "detected_order": 75,
+      "source_tab_key": "agf4UnlocksCategoryArmors",
+      "fingerprint": "agf4UnlocksCategoryArmors|Armors|Helmets|75",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modFuelTankLarge": {
+      "name": "modFuelTankLarge",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Motor Tools",
+      "order": 45,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Motor Tools",
+      "detected_order": 45,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Motor Tools|45",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modFuelTankSmall": {
+      "name": "modFuelTankSmall",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Motor Tools",
+      "order": 44,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Motor Tools",
+      "detected_order": 44,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Motor Tools|44",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunBarrelExtender": {
+      "name": "modGunBarrelExtender",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Barrels",
+      "order": 66,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Barrels",
+      "detected_order": 66,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Barrels|66",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunBipod": {
+      "name": "modGunBipod",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 52,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 52,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|52",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunBowArrowRest": {
+      "name": "modGunBowArrowRest",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 50,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 50,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|50",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunBowPolymerString": {
+      "name": "modGunBowPolymerString",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 51,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 51,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|51",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunChoke": {
+      "name": "modGunChoke",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Shotguns",
+      "order": 69,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Shotguns",
+      "detected_order": 69,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Shotguns|69",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunCrippleEm": {
+      "name": "modGunCrippleEm",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Special",
+      "order": 46,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Special",
+      "detected_order": 46,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Special|46",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunDrumMagazineExtender": {
+      "name": "modGunDrumMagazineExtender",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 58,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 58,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|58",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunDuckbill": {
+      "name": "modGunDuckbill",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Shotguns",
+      "order": 70,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Shotguns",
+      "detected_order": 70,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Shotguns|70",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunFlashlight": {
+      "name": "modGunFlashlight",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 55,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 55,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|55",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunForegrip": {
+      "name": "modGunForegrip",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 53,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 53,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|53",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunLaserSight": {
+      "name": "modGunLaserSight",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 56,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 56,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|56",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunMagazineExtender": {
+      "name": "modGunMagazineExtender",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 57,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 57,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|57",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunMeleeRadRemover": {
+      "name": "modGunMeleeRadRemover",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Special",
+      "order": 47,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Special",
+      "detected_order": 47,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Special|47",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunMeleeTheHunter": {
+      "name": "modGunMeleeTheHunter",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Special",
+      "order": 48,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Special",
+      "detected_order": 48,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Special|48",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunMuzzleBrake": {
+      "name": "modGunMuzzleBrake",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Barrels",
+      "order": 67,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Barrels",
+      "detected_order": 67,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Barrels|67",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunReflexSight": {
+      "name": "modGunReflexSight",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Scopes",
+      "order": 65,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Scopes",
+      "detected_order": 65,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Scopes|65",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunRetractingStock": {
+      "name": "modGunRetractingStock",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 54,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 54,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|54",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunScopeLarge": {
+      "name": "modGunScopeLarge",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Scopes",
+      "order": 64,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Scopes",
+      "detected_order": 64,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Scopes|64",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunScopeMedium": {
+      "name": "modGunScopeMedium",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Scopes",
+      "order": 63,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Scopes",
+      "detected_order": 63,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Scopes|63",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunScopeSmall": {
+      "name": "modGunScopeSmall",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Scopes",
+      "order": 62,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Scopes",
+      "detected_order": 62,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Scopes|62",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunShotgunTubeExtenderMagazine": {
+      "name": "modGunShotgunTubeExtenderMagazine",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Shotguns",
+      "order": 72,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Shotguns",
+      "detected_order": 72,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Shotguns|72",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunSoundSuppressorSilencer": {
+      "name": "modGunSoundSuppressorSilencer",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Barrels",
+      "order": 68,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Barrels",
+      "detected_order": 68,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Barrels|68",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunTriggerGroupAutomatic": {
+      "name": "modGunTriggerGroupAutomatic",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 59,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 59,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|59",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunTriggerGroupBurst3": {
+      "name": "modGunTriggerGroupBurst3",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 60,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 60,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|60",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modGunTriggerGroupSemi": {
+      "name": "modGunTriggerGroupSemi",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Ranged General",
+      "order": 61,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Ranged General",
+      "detected_order": 61,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Ranged General|61",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeBunkerBuster": {
+      "name": "modMeleeBunkerBuster",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Block Damage",
+      "order": 39,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Block Damage",
+      "detected_order": 39,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Block Damage|39",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeClubBarbedWire": {
+      "name": "modMeleeClubBarbedWire",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Clubs",
+      "order": 41,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Clubs",
+      "detected_order": 41,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Clubs|41",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeClubBurningShaft": {
+      "name": "modMeleeClubBurningShaft",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 28,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 28,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|28",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeClubMetalChain": {
+      "name": "modMeleeClubMetalChain",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Clubs",
+      "order": 42,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Clubs",
+      "detected_order": 42,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Clubs|42",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeClubMetalSpikes": {
+      "name": "modMeleeClubMetalSpikes",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Clubs",
+      "order": 43,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Clubs",
+      "detected_order": 43,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Clubs|43",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeDiamondTip": {
+      "name": "modMeleeDiamondTip",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 31,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 31,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|31",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeErgonomicGrip": {
+      "name": "modMeleeErgonomicGrip",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 33,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 33,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|33",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeFiremansAxeMod": {
+      "name": "modMeleeFiremansAxeMod",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Block Damage",
+      "order": 36,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Block Damage",
+      "detected_order": 36,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Block Damage|36",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeFortifyingGrip": {
+      "name": "modMeleeFortifyingGrip",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 34,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 34,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|34",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeGraveDigger": {
+      "name": "modMeleeGraveDigger",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Block Damage",
+      "order": 38,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Block Damage",
+      "detected_order": 38,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Block Damage|38",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeIronBreaker": {
+      "name": "modMeleeIronBreaker",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Block Damage",
+      "order": 40,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Block Damage",
+      "detected_order": 40,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Block Damage|40",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeSerratedBlade": {
+      "name": "modMeleeSerratedBlade",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 32,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 32,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|32",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeStructuralBrace": {
+      "name": "modMeleeStructuralBrace",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 30,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 30,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|30",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeStunBatonRepulsor": {
+      "name": "modMeleeStunBatonRepulsor",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Special",
+      "order": 49,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Special",
+      "detected_order": 49,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Special|49",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeTemperedBlade": {
+      "name": "modMeleeTemperedBlade",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Block Damage",
+      "order": 37,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Block Damage",
+      "detected_order": 37,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Block Damage|37",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeWeightedHead": {
+      "name": "modMeleeWeightedHead",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Melee General",
+      "order": 29,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Melee General",
+      "detected_order": 29,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Melee General|29",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modMeleeWoodSplitter": {
+      "name": "modMeleeWoodSplitter",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Block Damage",
+      "order": 35,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Block Damage",
+      "detected_order": 35,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Block Damage|35",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modRoboticDroneArmorPlatingMod": {
+      "name": "modRoboticDroneArmorPlatingMod",
+      "include": true,
+      "category": "Drones",
+      "subcategory": "",
+      "order": 97,
+      "detected_category": "Drones",
+      "detected_subcategory": "",
+      "detected_order": 97,
+      "source_tab_key": "agf4UnlocksCategoryDrone",
+      "fingerprint": "agf4UnlocksCategoryDrone|Drones||97",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modRoboticDroneCargoMod": {
+      "name": "modRoboticDroneCargoMod",
+      "include": true,
+      "category": "Drones",
+      "subcategory": "",
+      "order": 98,
+      "detected_category": "Drones",
+      "detected_subcategory": "",
+      "detected_order": 98,
+      "source_tab_key": "agf4UnlocksCategoryDrone",
+      "fingerprint": "agf4UnlocksCategoryDrone|Drones||98",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modRoboticDroneHeadlampMod": {
+      "name": "modRoboticDroneHeadlampMod",
+      "include": true,
+      "category": "Drones",
+      "subcategory": "",
+      "order": 99,
+      "detected_category": "Drones",
+      "detected_subcategory": "",
+      "detected_order": 99,
+      "source_tab_key": "agf4UnlocksCategoryDrone",
+      "fingerprint": "agf4UnlocksCategoryDrone|Drones||99",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modRoboticDroneMedicMod": {
+      "name": "modRoboticDroneMedicMod",
+      "include": true,
+      "category": "Drones",
+      "subcategory": "",
+      "order": 100,
+      "detected_category": "Drones",
+      "detected_subcategory": "",
+      "detected_order": 100,
+      "source_tab_key": "agf4UnlocksCategoryDrone",
+      "fingerprint": "agf4UnlocksCategoryDrone|Drones||100",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modRoboticDroneMoraleBoosterMod": {
+      "name": "modRoboticDroneMoraleBoosterMod",
+      "include": true,
+      "category": "Drones",
+      "subcategory": "",
+      "order": 101,
+      "detected_category": "Drones",
+      "detected_subcategory": "",
+      "detected_order": 101,
+      "source_tab_key": "agf4UnlocksCategoryDrone",
+      "fingerprint": "agf4UnlocksCategoryDrone|Drones||101",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modRoboticDroneStunWeaponMod": {
+      "name": "modRoboticDroneStunWeaponMod",
+      "include": true,
+      "category": "Drones",
+      "subcategory": "",
+      "order": 6,
+      "detected_category": "Drones",
+      "detected_subcategory": "",
+      "detected_order": 85,
+      "source_tab_key": "agf4UnlocksCategoryDrone",
+      "fingerprint": "agf4UnlocksCategoryDrone|Drones||85",
+      "discovered_from_game_scan": true,
+      "discovered_sources": [
+        "recipes.allowed",
+        "items.unlocks.schematic_or_book"
+      ],
+      "auto_seeded_from_existing_tab": false,
+      "updated_utc": "2026-06-27T17:23:37Z"
+    },
+    "modShotgunSawedOffBarrel": {
+      "name": "modShotgunSawedOffBarrel",
+      "include": true,
+      "category": "Tools & Weapons",
+      "subcategory": "Shotguns",
+      "order": 71,
+      "detected_category": "Tools & Weapons",
+      "detected_subcategory": "Shotguns",
+      "detected_order": 71,
+      "source_tab_key": "agf4UnlocksCategoryToolsWeapons",
+      "fingerprint": "agf4UnlocksCategoryToolsWeapons|Tools & Weapons|Shotguns|71",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleArmor": {
+      "name": "modVehicleArmor",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 89,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 89,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||89",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleExpandedSeat": {
+      "name": "modVehicleExpandedSeat",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 90,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 90,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||90",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleFuelSaver": {
+      "name": "modVehicleFuelSaver",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 91,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 91,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||91",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleOffRoadHeadlights": {
+      "name": "modVehicleOffRoadHeadlights",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 92,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 92,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||92",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehiclePlow": {
+      "name": "modVehiclePlow",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 93,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 93,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||93",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleReserveFuelTank": {
+      "name": "modVehicleReserveFuelTank",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 94,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 94,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||94",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleStorage": {
+      "name": "modVehicleStorage",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 95,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 95,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||95",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "modVehicleSuperCharger": {
+      "name": "modVehicleSuperCharger",
+      "include": true,
+      "category": "Vehicles",
+      "subcategory": "",
+      "order": 96,
+      "detected_category": "Vehicles",
+      "detected_subcategory": "",
+      "detected_order": 96,
+      "source_tab_key": "agf4UnlocksCategoryVehicles",
+      "fingerprint": "agf4UnlocksCategoryVehicles|Vehicles||96",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "plantedGraceCorn1": {
+      "name": "plantedGraceCorn1",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 105,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 105,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||105",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceCoalBundle": {
+      "name": "resourceCoalBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 106,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 106,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||106",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceLeadBundle": {
+      "name": "resourceLeadBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 107,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 107,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||107",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceLockPickBundle": {
+      "name": "resourceLockPickBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 102,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 102,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||102",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceOilShaleBundle": {
+      "name": "resourceOilShaleBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 108,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 108,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||108",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourcePotassiumNitratePowderBundle": {
+      "name": "resourcePotassiumNitratePowderBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 109,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 109,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||109",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceRockSmallBundle": {
+      "name": "resourceRockSmallBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 110,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 110,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||110",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceScrapBrassBundle": {
+      "name": "resourceScrapBrassBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 111,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 111,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||111",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceScrapIronBundle": {
+      "name": "resourceScrapIronBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 112,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 112,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||112",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    },
+    "resourceWoodBundle": {
+      "name": "resourceWoodBundle",
+      "include": true,
+      "category": "Misc",
+      "subcategory": "",
+      "order": 113,
+      "detected_category": "Misc",
+      "detected_subcategory": "",
+      "detected_order": 113,
+      "source_tab_key": "agf4UnlocksCategoryMisc",
+      "fingerprint": "agf4UnlocksCategoryMisc|Misc||113",
+      "discovered_from_game_scan": false,
+      "discovered_sources": [
+        "accounted_unlock_tab"
+      ],
+      "auto_seeded_from_existing_tab": true,
+      "updated_utc": "2026-06-27T17:06:41Z"
+    }
+  }
+}

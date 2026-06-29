@@ -1,0 +1,1 @@
+Thanks Stroichik for detailed bug report about 6.2.0's forge problem.

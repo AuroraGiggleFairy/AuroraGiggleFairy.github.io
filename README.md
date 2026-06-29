@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*June 26, 2026, 7:28 PM EST*
+*June 29, 2026, 3:27 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - Below are the latest versions of my mods.
@@ -387,7 +387,7 @@
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.8.1)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.9.0)**
 
 All AGF mods in one convenient download.
 
@@ -403,7 +403,7 @@ Non-EAC mods are inside optional folders within the pack.
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v0.8.1 - June 26, 2026 7:28pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.2.0 -&gt; v6.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.0.1 -&gt; v2.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.0 - June 26, 2026 5:57pm<ul><li>Change summary: +10 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SignErrorGuard.zip">AGF-NoEAC-SignErrorGuard</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip">AGF-VP-BedrollPlus</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">AGF-VP-FuelBurnPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip">AGF-VP-MaxLevel500</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip">AGF-VP-PickupLanternsPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip">AGF-VP-PlayerResetQuests</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">AGF-VP-RebundleBundles</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">AGF-VP-SimplifiedStacks</a> (new: v2.0.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.7.2 - June 25, 2026 10:53pm<ul><li>Change summary: +0 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">AGF-NoEAC-ScreamerAlert</a> (v2.1.1 -&gt; v2.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v0.9.0 - June 29, 2026 3:27pm<ul><li>Change summary: +1 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">AGF-HUDPlus-PurpleBook</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.0 -&gt; v6.3.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.0 -&gt; v4.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.1 - June 26, 2026 7:28pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.2.0 -&gt; v6.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.0.1 -&gt; v2.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.0 - June 26, 2026 5:57pm<ul><li>Change summary: +10 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SignErrorGuard.zip">AGF-NoEAC-SignErrorGuard</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip">AGF-VP-BedrollPlus</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">AGF-VP-FuelBurnPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip">AGF-VP-MaxLevel500</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip">AGF-VP-PickupLanternsPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip">AGF-VP-PlayerResetQuests</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">AGF-VP-RebundleBundles</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">AGF-VP-SimplifiedStacks</a> (new: v2.0.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -428,8 +428,18 @@ Quality-of-life HUD enhancements and visual tweaks.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-1Main.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-1Main.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.3.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
+<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.3.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
 Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
+<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-PurpleBook.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-PurpleBook.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Purple Book</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">Download</a><br>
+Adds a Purple Book button for a tabbed progression reference covering magazines, books, schematics, and armor details.
 <ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
@@ -576,7 +586,7 @@ Condenses wood or coal into single fuel items with burn times from 10 to 6000 mi
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-LargerStorageOption.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-LargerStorageOption.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF VP Larger Storage Option</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
+<b>AGF VP Larger Storage Option</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
 Adds craftable XL storage in multiple shapes, with 3x block health and break-to-pick-up.
 <ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
@@ -675,7 +685,7 @@ Auto-Run for keyboard and controller, configurable from in-game menus.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-EnhancedAGF.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-EnhancedAGF.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v4.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
+<b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v4.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
 Adds extended HUD bindings and Harmony patches that power extra AGF features.
 <ul><li><em>Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
 </td>

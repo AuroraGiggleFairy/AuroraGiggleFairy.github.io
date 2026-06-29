@@ -1,7 +1,7 @@
 """Compatibility launcher for the Purple Book generator.
 
 The actual generator now lives under:
-01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py
+_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py
 """
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 TARGET = (
     Path(__file__).resolve().parent
-    / "01_Draft"
+    / "_DLL-Projects"
     / "AGF-PurpleBookGenerator-v0.0.1"
     / "Generator"
     / "SCRIPT-PurpleBookGenerator.py"

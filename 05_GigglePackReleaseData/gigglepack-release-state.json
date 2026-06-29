@@ -1,25 +1,26 @@
 {
-  "gigglepack_version": "0.8.1",
-  "previous_gigglepack_version": "0.8.0",
+  "gigglepack_version": "0.9.0",
+  "previous_gigglepack_version": "0.8.1",
   "is_baseline_release": false,
-  "released_at": "2026-06-26 19:28:28",
+  "released_at": "2026-06-29 15:27:28",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.0.4",
     "AGF-BackpackPlus-072Slots": "4.0.3",
     "AGF-BackpackPlus-084Slots": "4.0.2",
     "AGF-BackpackPlus-119Slots": "2.0.0",
-    "AGF-HUDPlus-1Main": "6.3.0",
+    "AGF-HUDPlus-1Main": "6.3.1",
+    "AGF-HUDPlus-PurpleBook": "3.0.0",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.0.1",
     "AGF-HUDPluszOther-Weekday": "3.0.3",
     "AGF-NoEAC-AutoRun": "2.0.2",
-    "AGF-NoEAC-EnhancedAGF": "4.1.0",
+    "AGF-NoEAC-EnhancedAGF": "4.1.1",
     "AGF-NoEAC-GlobalStormTracker": "2.0.1",
     "AGF-NoEAC-ScreamerAlert": "2.1.2",
     "AGF-NoEAC-SignErrorGuard": "1.0.0",
     "AGF-NoEAC-Toolbelt12Slots": "2.1.1",
     "AGF-VP-BedrollPlus": "2.0.0",
     "AGF-VP-FuelBurnPlus": "3.0.0",
-    "AGF-VP-LargerStorageOption": "1.0.0",
+    "AGF-VP-LargerStorageOption": "1.0.1",
     "AGF-VP-MaxLevel500": "3.0.0",
     "AGF-VP-ModSlotsPlus": "4.0.0",
     "AGF-VP-PickupLanternsPlus": "3.0.0",
@@ -30,26 +31,39 @@
   "updated_mods": [
     {
       "mod": "AGF-HUDPlus-1Main",
-      "from": "6.2.0",
-      "to": "6.3.0",
-      "from_display": "6.2.0",
-      "to_display": "6.3.0"
+      "from": "6.3.0",
+      "to": "6.3.1",
+      "from_display": "6.3.0",
+      "to_display": "6.3.1"
     },
     {
-      "mod": "AGF-NoEAC-AutoRun",
-      "from": "2.0.1",
-      "to": "2.0.2",
-      "from_display": "2.0.1",
-      "to_display": "2.0.2"
+      "mod": "AGF-NoEAC-EnhancedAGF",
+      "from": "4.1.0",
+      "to": "4.1.1",
+      "from_display": "4.1.0",
+      "to_display": "4.1.1"
+    },
+    {
+      "mod": "AGF-VP-LargerStorageOption",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
     }
   ],
-  "new_mods": [],
+  "new_mods": [
+    {
+      "mod": "AGF-HUDPlus-PurpleBook",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    }
+  ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.8.1.zip",
+  "versioned_zip": "AGF-GigglePack-v0.9.0.zip",
   "change_counts": {
-    "new_mods": 0,
-    "updated_existing_mods": 2,
+    "new_mods": 1,
+    "updated_existing_mods": 3,
     "renamed_mods": 0,
     "removed_mods": 0
   }

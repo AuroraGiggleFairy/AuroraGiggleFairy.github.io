@@ -3,7 +3,7 @@ import pathlib
 import xml.etree.ElementTree as ET
 
 items = pathlib.Path('c:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Data/Config/items.xml')
-script = pathlib.Path('c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py')
+script = pathlib.Path('c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py')
 
 root = ET.parse(items).getroot()
 item_outfits = sorted({it.get('name') for it in root.iter('item') if re.match(r'^armor[A-Za-z0-9_]+Outfit$', it.get('name',''))})

@@ -3,8 +3,8 @@ import pathlib
 
 repo = pathlib.Path('c:/GitHub/7D2D-Mods')
 game = pathlib.Path('c:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Data/Config/Localization.csv')
-out = repo / '01_Draft/AGF-PurpleBookGenerator-v0.0.1/Config/Localization.csv'
-legacy = repo / '01_Draft/AGF-PurpleBookGenerator-v0.0.1/Config/Localization.txt'
+out = repo / '_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Config/Localization.csv'
+legacy = repo / '_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Config/Localization.txt'
 
 with game.open('r', encoding='utf-8', newline='') as f:
     g = csv.reader(f)

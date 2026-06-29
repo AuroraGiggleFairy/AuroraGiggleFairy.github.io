@@ -1,12 +1,27 @@
 {
-  "computed_at": "2026-06-26T19:08:15",
-  "since_gigglepack_version": "0.8.0",
-  "new_mods": [],
+  "computed_at": "2026-06-29T15:24:08",
+  "since_gigglepack_version": "0.8.1",
+  "new_mods": [
+    [
+      "AGF-HUDPlus-PurpleBook",
+      "3.0.0"
+    ]
+  ],
   "updated_mods": [
     [
       "AGF-HUDPlus-1Main",
-      "6.2.0",
-      "6.3.0"
+      "6.3.0",
+      "6.3.1"
+    ],
+    [
+      "AGF-NoEAC-EnhancedAGF",
+      "4.1.0",
+      "4.1.1"
+    ],
+    [
+      "AGF-VP-LargerStorageOption",
+      "1.0.0",
+      "1.0.1"
     ]
   ],
   "renamed_mods": [],

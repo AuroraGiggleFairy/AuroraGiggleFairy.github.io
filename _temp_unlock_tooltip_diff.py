@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 repo = pathlib.Path('c:/GitHub/7D2D-Mods')
 recipes = pathlib.Path('c:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Data/Config/recipes.xml')
-win = repo / '01_Draft/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml'
+win = repo / '_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml'
 
 rroot = ET.parse(recipes).getroot()
 learnable = set()

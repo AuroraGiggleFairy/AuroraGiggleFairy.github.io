@@ -1,5 +1,135 @@
 # Purple Book Generator Handoff (2026-05-28)
 
+## Status Update (2026-06-28, generator now manages gameevents trigger)
+- Change history:
+  - Added generator-managed output for `Config/gameevents.xml` in `SCRIPT-PurpleBookGenerator.py`.
+  - Added spawn hook patch generation that appends `AddBuff` for `agfRecalculate` on `game_on_spawn`.
+  - Added sync handling so `gameevents.xml` is copied when `--sync-activebuild` and/or `--sync-game-mod` are enabled.
+- Working method used:
+  - Source edit only: `01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Validation result included:
+    - `[ok] wrote .../Config/gameevents.xml`
+    - Generated content includes `buff_name="agfRecalculate"` under `game_on_spawn`.
+
+## Status Update (2026-06-28, draft AGF-HUDPlus-PurpleBook refresh)
+- Change history:
+  - Re-generated latest Purple Book outputs from generator source using no-sync run.
+  - Copied updated files into draft target mod folder `01_Draft/AGF-HUDPlus-PurpleBook-v2.0.1`.
+  - Included files:
+    - `Config/XUi_InGame/windows.xml`
+    - `Config/XUi_InGame/xui.xml`
+    - `Config/Localization.csv`
+  - Verified source/target file hash matches for all three files.
+  - Localization mojibake validation on target draft file: `MOJIBAKE_MATCHES: 0`.
+- Working method used:
+  - Generate latest without lane/game sync:
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Copy generated files from:
+    - `01_Draft/AGF-PurpleBookGenerator-v0.0.1/Config/...`
+  - Into draft target:
+    - `01_Draft/AGF-HUDPlus-PurpleBook-v2.0.1/Config/...`
+
+## Status Update (2026-06-28, live game sync for test)
+- Change history:
+  - Deployed latest Purple Book generator outputs to live game mod path for in-game validation.
+  - Follow-up fix: remapped `armorScavengerOutfit` header icon to medium class (`ui_game_symbol_light_armor2`) and re-synced live files.
+- Working method used:
+  - Run with game sync only:
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --sync-game-mod --no-sync-activebuild`
+  - Synced files:
+    - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml`
+    - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/xui.xml`
+    - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-PurpleBookGenerator-v0.0.1/Config/Localization.csv`
+
+## Status Update (2026-06-27, armor type icon mismatch)
+- Change history:
+  - Fixed armor header icon mismatch where overview cards were restored from a known-good block that still had medium icon sprites for every set.
+  - Added explicit post-merge icon normalization in generator so both overview (`allArmors`) and zoom tabs use per-outfit class icons consistently.
+  - Updated primitive outfit to use the light armor icon so it aligns with current armor rating presentation.
+- Working method used:
+  - Edit only: `01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Verification check: inspect `windows.xml` iconArmor sprites by tab/grid and confirm overview + zoom parity per set.
+  - Localization mojibake check after generation: `MOJIBAKE_MATCHES: 0`.
+- Do-not-do note:
+  - Do not rely on restored overview snapshots to preserve current icon semantics; always re-apply armor icon mapping after any overview replacement/merge stage.
+
+## Status Update (2026-06-28, set-bonus description v3.0 accuracy)
+- Change history:
+  - Audited generated armor set-bonus descriptions against v3.0 vanilla set-bonus intent.
+  - Found two accuracy gaps in generated English copy:
+    - Lumberjack set-bonus description omitted the wood-harvest effect.
+    - Preacher set-bonus description omitted the infection-resist effect.
+  - Added targeted generator-side English overrides in set-bonus desc extraction so these two rows stay accurate on future runs.
+- Working method used:
+  - Edit only: `01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Verified generated rows:
+    - `agf5ArmorLumberjackSetBonusDesc`
+    - `agf5ArmorPreacherSetBonusDesc`
+  - Mojibake signature check after generation: `0`.
+- Do-not-do note:
+  - Do not assume armorOutfitDesc set-bonus paragraphs fully cover dual-effect bonuses; validate against buff set-bonus intent before shipping wording.
+
+## Status Update (2026-06-27)
+- Change history: Fixed Primitive armor set-bonus fallback mojibake in generator localization output.
+- Working method used:
+  - Edit only: `01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Verify output row: `agf5ArmorPrimitiveSetBonusDesc` in generated `Config/Localization.csv`.
+- Do-not-do note:
+  - Do not paste raw multilingual fallback literals directly into Python source when encoding can drift.
+  - Use ASCII-safe unicode escapes (or source-derived text) for hardcoded multilingual fallbacks.
+
+## Status Update (2026-06-27, localization quality pass)
+- Change history:
+  - Replaced placeholder `[language] ...` output for generator-authored localization keys with curated translations for:
+    - `agf4UnlocksCategoryArmorsHelmet`
+    - `agf4UnlocksCategoryArmorsPlating`
+    - `agf4UnlocksCategoryDrone`
+    - `agf4UnlocksCategoryToolsWeaponsClub`
+    - `agf4UnlocksCategoryToolsWeaponsMotorTool`
+    - `agf4UnlocksCategoryToolsWeaponsOtherGun`
+    - `agf4UnlocksCategoryToolsWeaponsOtherMelee`
+    - `agf4UnlocksCategoryToolsWeaponsShotgun`
+    - `agf5ArmorSetBonusTooltip`
+  - Added CSV style normalization so generated `Localization.csv` writes:
+    - plain header fields
+    - forced quoting for language columns
+    - non-language columns quoted only when CSV escaping is required
+- Validation:
+  - Draft no-sync generator run succeeded.
+  - Placeholder rows check after generation: `0`.
+  - Mojibake signature check (known corruption sequences) after generation: `0`.
+- Do-not-do note:
+  - Do not use synthetic placeholder auto-translation output in shipped localization rows.
+
+## Status Update (2026-06-27, untranslated UI headers/categories)
+- Change history:
+  - Added curated translations in generator map for previously blank UI/header keys used by Purple Book tabs and unlock categories, including:
+    - main tabs (`agf1MainTab*`), header hint, and overview tooltip
+    - unlock category headers and ammo subgroup rows (`agf4UnlocksCategory*`)
+    - armor rating group labels (`agf5ArmorsRatingHeavy/Light/Medium`)
+    - button tooltip key (`agf0PurpleBookButtonTooltip`)
+  - Updated merge behavior so these generator-managed UI keys overwrite stale blank rows during localization merge (`force_generated_keys`).
+  - Updated localization preservation validator to allow those same managed keys (`allowed_changes`) so valid generator updates are not blocked.
+- Working method used:
+  - Edit only: `01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Validation checks after generation:
+    - target translated UI keys found: `33`
+    - target keys with missing language columns: `0`
+    - mostly untranslated rows: `0`
+    - mojibake signature matches: `0`
+- Do-not-do note:
+  - Do not add new generator-managed localization keys without updating both merge override allowlist and preservation allowlist, or writes will be blocked/ignored.
+
 ## Status Update (2026-05-29)
 - Magazines, Books, Unlocks, and Armors are essentially generating as intended in current generator output.
 - These core areas are now considered stable enough to move forward.

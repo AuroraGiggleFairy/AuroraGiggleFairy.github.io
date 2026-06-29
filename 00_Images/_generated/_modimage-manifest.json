@@ -60,8 +60,8 @@
     "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "b22ec9ffb66b8536f261684e61e08f81543f2f89964399d0b5b9161564746969",
-    "version": "6.3.0",
+    "signature": "7906826412ea8fd785390e233dc791ddbdd7d7b0213f45e597713833f5cab738",
+    "version": "6.3.1",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
@@ -78,10 +78,10 @@
     "media_file": "AGF-HUDPlus-HealthBars_01.png"
   },
   "AGF-HUDPlus-PurpleBook": {
-    "signature": "2a305be489e46c3027a209c06412dff8ae55d8565adb281ac33273ef0ffa67a6",
-    "version": "2.0.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "cb77dfae1b7dab773a14b64e25648927864ca1d9faa4aeb50134d68a19823d20",
+    "version": "3.0.0",
+    "has_media": true,
+    "media_file": "AGF-HUDPlus-PurpleBook_01.png"
   },
   "AGF-HUDPlus-RemoveEnteringPopUp": {
     "signature": "9e4c582853c9a136ca6da405b55479ca73d089477539696c63b942bef95aef1b",
@@ -138,8 +138,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "8d33b4ebba5d267596a56db31d33d44f361fb56f4fcffee5dcbac63ea0820b61",
-    "version": "4.1.0",
+    "signature": "fe857df1b5e5036e22a2e44021d11c37ee6dd23e60a773035bb6a129f1dac548",
+    "version": "4.1.1",
     "has_media": true,
     "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },
@@ -564,8 +564,8 @@
     "media_file": ""
   },
   "AGF-VP-LargerStorageOption": {
-    "signature": "6fa3f808ecb75f3897143d02856169f554606bd7b0a95971b82186eb9baaba48",
-    "version": "1.0.0",
+    "signature": "74c65be25c10d766a0857ee53139f72c47f68eea582fb58c6ea93d295268f30d",
+    "version": "1.0.1",
     "has_media": true,
     "media_file": "AGF-VP-LargerStorageOption_01.png"
   }

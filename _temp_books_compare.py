@@ -3,7 +3,7 @@ import pathlib
 import xml.etree.ElementTree as ET
 
 prog = pathlib.Path('c:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Data/Config/progression.xml')
-win = pathlib.Path('c:/GitHub/7D2D-Mods/01_Draft/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml')
+win = pathlib.Path('c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Config/XUi_InGame/windows.xml')
 
 root = ET.parse(prog).getroot()
 series = []

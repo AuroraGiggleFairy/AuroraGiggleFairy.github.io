@@ -1,5 +1,20 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.9.0 (June 29, 2026 3:27pm)
+### Summary: +1 new, ~3 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-HUDPlus-PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip) (new: v3.0.0)
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.3.0 -> v6.3.1)
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.1.0 -> v4.1.1)
+  - [AGF-VP-LargerStorageOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip) (v1.0.0 -> v1.0.1)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.8.1 (June 26, 2026 7:28pm)
 ### Summary: +0 new, ~2 updated, =0 renamed, -0 removed
 - **New Mods**

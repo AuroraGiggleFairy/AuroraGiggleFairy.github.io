@@ -1,63 +1,115 @@
-# Screamer Alert Mod - Documentation
+# Screamer Alert - Architecture and Workflow (Current)
 
-Audience:
-This document is for human readers and for AI systems that may need to review or recreate the mod. Each section includes a plain-language explanation and technical details.
+This is the canonical reference for the Screamer Alert DLL project.
 
-## I. Overview
+Scope:
+- Source folder: _DLL-Projects/DLL_NoEAC-ScreamerAlert
+- Current shipped mod version: AGF-NoEAC-ScreamerAlert-v2.1.2
+- Last updated: 2026-06-27
 
-### A. Basic Description
-This mod shows on-screen alerts when screamers or horde zombies are nearby. It works in singleplayer and multiplayer.
+## 1. What Is Current Right Now
 
-### B. Tech Details
-- Code is in the ScreamerAlertVariant folder.
-- Uses Harmony patches plus UI controller classes.
-- Multiplayer flow is server authoritative and synced to clients.
+1. The server is authoritative for tracked screamer/horde state.
+2. Baseline players receive server whispers when incidents are in range.
+3. Enhanced-capable players render alerts in UI (not via fallback whisper stream).
+4. Modes are tri-state per player:
+   - Off
+   - On
+   - On + # (count mode)
+5. Count mode falls back to On for non-enhanced clients.
 
-### C. Main Files
-- ScreamerAlertManager.cs: tracks screamers/horde entities, server sync flow, and list state.
-- ScreamerAlertsController.cs: per-player alert evaluation and UI-facing state.
-- NetPackageScreamerAlertSync.cs: net package that syncs alert tracking data to clients.
-- XUiC_ScreamerAlerts.cs: UI controller for text bindings.
+## 2. Runtime Architecture
 
-## II. UI Implementation
+1. Startup and wiring
+   - ModAPI.cs applies Harmony patches and registers chat hook.
+   - ModAPI.cs ensures ScreamerAlertManager and ScreamerAlertsController exist as persistent objects.
 
-### A. Basic Description
-When a screamer or horde threat is near the player, alert text appears on screen. It clears when no tracked threat is within range.
+2. Server tracking loop
+   - ScreamerAlertManager.cs server scan interval: 0.5s.
+   - Scout screamers are rebuilt from world entities each scan.
+   - Horde zombie IDs are patch-managed and dead/missing entries are cleaned.
+   - Net sync send interval: 0.5s to enhanced-capable clients.
 
-### B. Tech Details
-- UI binds to controller values `{screameralert}` and `{screamerhordealert}`.
-- UI logic is handled by XUiC_ScreamerAlerts.cs and ScreamerAlertsController.cs.
-- Typical XML block:
+3. Client capability routing
+   - NetPackageScreamerAlertClientHello.cs marks capability on server.
+   - ScreamerAlertHybridRouting.cs tracks capability by entity/user references.
+   - Capability contract constants are defined in AgfCapabilityContract.cs.
 
-```xml
-<rect name="ScreamerAlertRect" controller="ScreamerAlerts, ScreamerAlert">
-    <sprite depth="2" name="Background" pos="125,-131" width="250" height="98" sprite="ui_game_header_fill" color="0,0,0,180" type="sliced" pivot="center"/>
-    <label depth="3" name="ScreamerAlert" pos="125,-113" font_size="28" color="[white]" style="outline" text="{screameralert}" pivot="center" justify="center" width="250" height="38"/>
-    <label depth="3" name="ScreamerHordeAlert" pos="125,-149" font_size="28" color="[white]" style="outline" text="{screamerhordealert}" pivot="center" justify="center" width="250" height="38"/>
-</rect>
-```
+4. Baseline whisper behavior
+   - Trigger range: 120m.
+   - Incident merge window: 3s.
+   - Incident cooldown: 7s.
+   - Chat message text is stamped using localization templates:
+     - ScreamerAlert_Scout_ChatStamped
+     - ScreamerAlert_Horde_ChatStamped
 
-## III. Localization
+5. UI behavior
+   - XUiC_ScreamerAlerts.cs publishes bindings:
+     - {screameralert}
+     - {screamerhordealert}
+     - {screameralertsvisible}
+   - Refresh cadence is throttled to 0.2s.
 
-### A. Basic Description
-Alert text can be translated by editing localization rows.
+## 3. Mode Storage and Resolution
 
-### B. Localization Example
-```csv
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-ScreamerAlert_Scout,ui,label,,,"[FF5555]Screamer Alert[-]",,"[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]","[FF5555]Screamer Alert[-]"
-ScreamerAlert_Horde,ui,label,,,"[FFA94D]Horde Incoming[-]",,"[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]","[FFA94D]Horde Incoming[-]"
-```
+1. Storage file
+   - Saved in current save folder as:
+     - ScreamerAlert.playerModes.tsv
 
-### C. Tech Details
-- These keys are consumed by the screamer alert UI controller and rendered through the UI binding fields.
+2. Defaults and per-player values
+   - __default__ row stores server default.
+   - Per-player keys are persisted from player identity (with entity fallback).
 
-## IV. MCS Build Command
+3. Resolution rule
+   - If a target is non-enhanced and requested mode is On + #, effective mode becomes On.
 
-### A. Basic Description
-Run this exact command in PowerShell from the ScreamerAlertVariant directory to compile ScreamerAlert.dll.
+## 4. Command Surface (Current)
 
-### B. Tech Details (Exact Paste Command)
+1. Player chat commands
+   - /agf-sa
+   - /agf-sa on
+   - /agf-sa off
+   - /agf-sa count (aliases: count/counts/numbers)
+
+2. Admin console commands
+   - agf-sa
+   - agf-sa default <off|on|count>
+   - agf-sa set <entityId|all> <off|on|count|default>
+   - agf-sa list
+
+3. Command docs split
+   - General command guide: COMMANDS-README.md
+   - Full scripted response matrix: TEMP-ScreamerAlert-CommandResponses.txt
+
+## 5. UI Integration Files
+
+1. Screamer alert rect patch in shipped mod
+   - 02_ActiveBuild/AGF-NoEAC-ScreamerAlert-v2.1.2/Config/XUi_InGame/windows.xml
+
+2. ESC options controller integration source
+   - XUiC_ScreamerAlertOptions.cs in this DLL project.
+   - Controller name expected by UI:
+     - ScreamerAlertOptions, ScreamerAlert
+   - Expected button IDs:
+     - btnScreamerOff
+     - btnScreamerOn
+     - btnScreamerNum
+
+3. ESC generator linkage
+   - ESC windows generation source that should preserve this wiring:
+     - 01_Draft/AGF-4Modders-ESCWindowPlus-v0.3.2/_Generator/Code/SCRIPT-GenerateESCMenu.py
+
+Note:
+- There is no dedicated ScreamerAlert content generator in this DLL folder.
+- The generator coupling is for ESC window wiring in the ESCWindowPlus project.
+
+## 6. Clean Workflow (Build, Deploy, Verify)
+
+1. Edit source
+   - Update C# files in _DLL-Projects/DLL_NoEAC-ScreamerAlert.
+   - Update command docs when behavior text changes.
+
+2. Build DLL from source folder
 ```powershell
 & mcs -target:library -out:ScreamerAlert.dll -recurse:*.cs `
   -reference:"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\UnityEngine.dll" `
@@ -67,59 +119,44 @@ Run this exact command in PowerShell from the ScreamerAlertVariant directory to 
   -reference:"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\netstandard.dll"
 ```
 
-## V. DLL References
+3. Deploy DLL for testing
+   - Live game target:
+     - C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-NoEAC-ScreamerAlert-v2.1.2/ScreamerAlert.dll
+   - Dedicated server target:
+     - C:/Program Files (x86)/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods/AGF-NoEAC-ScreamerAlert-v2.1.2/ScreamerAlert.dll
 
-### A. Basic Description
-The build depends on game and Harmony DLL files. If a reference path is wrong, compile will fail.
+4. Lane policy
+   - Do not manually modify 02_ActiveBuild or 03_ReleaseSource unless explicitly requested for that operation.
 
-### B. Tech Details
-- 0Harmony.dll: Mods/0_TFP_Harmony/0Harmony.dll
-- UnityEngine.dll: 7DaysToDie_Data/Managed/UnityEngine.dll
-- UnityEngine.CoreModule.dll: 7DaysToDie_Data/Managed/UnityEngine.CoreModule.dll
-- Assembly-CSharp.dll: 7DaysToDie_Data/Managed/Assembly-CSharp.dll
-- netstandard.dll: 7DaysToDie_Data/Managed/netstandard.dll
+5. Verify behavior
+   - Player: /agf-sa, /agf-sa on, /agf-sa off, /agf-sa count.
+   - Admin: agf-sa default/set/list.
+   - Confirm fallback: non-enhanced COUNT requests resolve to ON.
+   - Confirm no XUi or net package errors in log.
 
-## VI. Screamer Tracking and Alert Logic
+## 7. Known Gotchas
 
-### A. Basic Description
-The mod keeps a tracked list of screamers. If any tracked screamer is close enough, the screamer alert is active.
+1. ScreamerAlertUI.xml in this folder is a placeholder/stub and not the runtime source of truth.
+2. When localization templates include commas, keep fields properly quoted in CSV.
+3. Keep horde/scout token parsing order correct in any downstream chat classifier logic.
 
-### B. Tech Details
-- Server and singleplayer maintain authoritative screamer IDs in a persistent set.
-- Clients store synced IDs from NetPackageScreamerAlertSync.
-- Proximity check uses player position versus tracked entity position (distance threshold, typically 120m).
-- Alert text state is derived from current tracked-in-range results.
-- Server-side entity scan and authoritative screamer rebuild now run on a 0.2 second interval.
+## 8. Source-of-Truth File Map
 
-### C. Patch/Hook Coverage
-- Spawn/update related patch files in this mod include:
-  - ScreamerScoutSpawnPatch.cs
-  - EntityFactoryCreateEntityPatch.cs
-  - AIScoutHordeSpawnerSpawnPatch.cs
-  - AIScoutHordeSpawnerSpawnUpdatePatch.cs
+1. Core runtime
+   - ModAPI.cs
+   - ScreamerAlertManager.cs
+   - ScreamerAlertsController.cs
+   - ScreamerAlertHybridRouting.cs
 
-## VII. Horde Tracking and Alert Logic
+2. Commands and mode state
+   - ChatCmdScreamerAlert.cs
+   - ConsoleCmdScreamerAlert.cs
+   - ScreamerAlertModeSettings.cs
 
-### A. Basic Description
-Horde zombies are tracked separately and use a different alert text.
+3. Network
+   - NetPackageScreamerAlertClientHello.cs
+   - NetPackageScreamerAlertSync.cs
 
-### B. Tech Details
-- Horde IDs are maintained in a dedicated persistent set.
-- Similar proximity logic to screamers, but writes to the horde alert channel.
-- Relevant patch coverage includes horde spawner and additional horde spawn hooks, such as:
-  - AIHordeSpawnerTickPatch.cs
-  - HordeSpawnMorePatch.cs
-
-## VIII. Multiplayer Handling
-
-### A. Basic Description
-Server tracks global state; clients display alerts using synced data.
-
-### B. Tech Details
-- Server sends screamer/horde tracking updates through NetPackageScreamerAlertSync on a regular interval.
-- Current sync send interval is 0.5 seconds.
-- Clients deserialize and refresh local synced sets.
-- This avoids relying on non-authoritative or partially synced vanilla fields on clients.
-
----
-Last updated: March 25, 2026
+4. UI controllers
+   - XUiC_ScreamerAlerts.cs
+   - XUiC_ScreamerAlertOptions.cs
