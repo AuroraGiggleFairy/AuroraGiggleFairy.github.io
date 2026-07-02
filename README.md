@@ -172,7 +172,9 @@
 >    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
 >    - *If the zip creates an extra parent folder, move the mod folder up one level*
 > 4. **Fully restart the server after install**
+
 <br>
+
 </details>
 
 
@@ -206,7 +208,9 @@
 >     - If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.
 >     - If you are unsure, check the mod's readme for specific removal notes or ask in AGF's [DISCORD](https://discord.gg/Vm5eyW6N4r).
 > - To remove, simply locate the mod folder and delete it. All done!
+
 <br>
+
 </details>
 
 
@@ -250,8 +254,10 @@
 > 3. **Carefully delete all AGF mods.** *(don't forget the zzzAGF mod)*
 > 4. **Install the new package as usual.** *(see above)*
 > 5. **THEN** you may turn the game back on.
+
 <br>
 </details>
+
 
 
 
@@ -301,7 +307,9 @@
 > 1. **Undo any mod changes**
 > 2. **Delete the current Game Name folder** *(in "Saves")*
 > 3. **Move your backup folder back into "Saves"**
+
 <br>
+
  </details>
 
 <br>
