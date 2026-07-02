@@ -1,8 +1,0 @@
-<zzzAGF-Compatibilities>
-	<!-- IZY_RMP_SG -->
-	<!-- Removing Izy's premium shotgun ammo from crafting magazines.-->
-	<remove xpath="progression/crafting_skills/crafting_skill[@name='craftingShotguns']//unlock_entry[@tags='ammoShotgunShellPremium']"/>
-	<remove xpath="progression/crafting_skills/crafting_skill[@name='craftingShotguns']//passive_effect[@tags='ammoShotgunShellPremium']"/>
-	<!-- Adding it to shotgun complete books-->
-	<append xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group[1]/passive_effect/@tags">,ammoShotgunShellPremium,ammoShotgunShellPremiumBundle</append>
-</zzzAGF-Compatibilities>

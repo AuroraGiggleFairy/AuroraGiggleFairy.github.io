@@ -1,5 +1,21 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.10.0 (July 2, 2026 12:45am)
+### Summary: +2 new, ~3 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-CosmeticLockIcon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip) (new: v3.0.0)
+  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (new: v5.0.0)
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.3.1 -> v6.4.0)
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.1.1 -> v4.2.0)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.1.2 -> v2.2.0)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.9.0 (June 29, 2026 3:27pm)
 ### Summary: +1 new, ~3 updated, =0 renamed, -0 removed
 - **New Mods**

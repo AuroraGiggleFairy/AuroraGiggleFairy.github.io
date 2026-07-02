@@ -12,12 +12,12 @@
 1. About Author
 2. Mod Philosophy
 3. Need Help?
-4. Mod Type
+4. Install Scope & EAC Requirement
 5. Compatibility
 6. Features Summary
 7. Features Details
 8. Changelog
-9. Important Mod Details
+9. Install Scope & EAC Requirement Guide
 10. Installation Guide
 11. Removal Guide
 12. Update Guide
@@ -26,37 +26,11 @@
 ---
 ---
 
-## 1. About Author
-- My name is AuroraGiggleFairy (AGF), previously known as RilesPlus
-- Started playing 7d2d during Alpha 8
-- Started attempting to mod in Alpha 17
-- First published a mod during Alpha 18
-- Where to find:
-  - https://discord.gg/Vm5eyW6N4r
-  - https://auroragigglefairy.github.io/
-  - https://www.twitch.tv/AuroraGiggleFairy
-  - https://7daystodiemods.com/
-  - https://www.nexusmods.com/7daystodie
-
----
----
-
-## 2. Mod Philosophy
-- Preferably easy installation and use!
-- Goal: Enhance Vanilla Gameplay!
-- Feedback and Testing is Beneficial!
-- Detailed Notes for Individual Preference and Mod Learning!
-- Accessibility is Required
-- All 13 Languages Supported (best I can.)
-
-> "The best mods rely on community involvement."
-
----
-
-### **Language Support**
-> - 7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Koreana, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.  
-> - *AGF mods add support for all 13 languages.*
-> - *If you find a translation error, please let AGF know on [DISCORD](https://discord.gg/Vm5eyW6N4r).*
+## 1. About AGF
+- AuroraGiggleFairy (AGF) creates accessibility-focused, vanilla-enhancing mods for 7 Days to Die.
+- Goal is to deliver practical, easy-to-use features shaped by community feedback.
+- Main site and first release source: [auroragigglefairy.github.io](https://auroragigglefairy.github.io/)
+- Discord is best for latest updates, fastest contact, and becoming a tester: [discord.gg/Vm5eyW6N4r](https://discord.gg/Vm5eyW6N4r)
 
 ---
 ---
@@ -68,8 +42,8 @@
 ---
 ---
 
-## 4. Mod Type
-- Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.
+## 4. Install Scope & EAC Requirement
+- Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.
 
 ---
 ---
@@ -119,34 +93,25 @@ v1.0.0
 ---
 ---
 
-## 9. Important Mod Details
+## 9. Install Scope & EAC Requirement Guide
 
 ---
 
-### A. What is a Mod Type?
-> - There are 6 types and they tell you where a mod has to be installed to work, and whether or not you need EAC on or off.
->   - **Server** — where the game is hosted. This could be your own PC if you are hosting the game yourself, or a game hosting service like Pingperfect.
->   - **Client** — your own PC.
->   - Some mods only need to be in one place. Others need to be in both. Some have other caveats. Please see the table in the next section.
+> *This guide explains where to install a mod and whether it is EAC friendly.*
 
 ---
 
-### B. The 6 Mod Types
-
-| # | Mod Type | What It Means |
-|---|----------|---------------|
-| 1 | Server-Side (EAC-Friendly) | Server install works for all joining players; EAC on or off. |
-| 2 | Server-Side (EAC Off) | EAC off required; server install works for all joining players. |
-| 3 | Server-Side (Dedicated Only, EAC Off) | EAC off required; dedicated uses server install only, but player-hosted requires host and joining players to install it. |
-| 4 | Hybrid (EAC Off) | EAC off required; server install works for all joining players; client install is optional for extra features. |
-| 5 | Server/Client-Side (Required) | EAC off required; host and joining players must install it. |
-| 6 | Client-Side (Only) | EAC off required; server install has no effect; only the installing player gets the feature. |
+### A. Install on Server, Client, or Both?
+>   - **Server** - where the game is hosted. This could be your own PC if you are hosting the game yourself, or a game hosting service like Pingperfect.
+>   - **Client** - your own PC.
+> - Some mods only need to be in one place. Others need to be in both. Please see the Mod Types section below for exact requirements.
 
 ---
 
-### C. Should I play with EAC on or off?
+### B. EAC Friendly?
+
 > - EAC stands for **Easy Anti-Cheat**. It's a program built into 7 Days to Die that helps protect multiplayer sessions from cheating.
-> - Mod Types 2–6 require EAC to be turned off. These mods use custom code to deliver more advanced features.
+> - Mod Type 1 is EAC friendly. Mod Types 2, 3, and 4 require EAC to be turned off.
 > - Running without EAC opens up a wider range of mods and experiences. If you're running a multiplayer server without EAC, here are some good practices to keep things running smoothly:
 >   - **Recommended practices when running multiplayer with EAC off:**
 >     - Require a password and be conservative in distributing it.
@@ -156,6 +121,17 @@ v1.0.0
 >     - You can find help on AGF's Discord: [DISCORD](https://discord.gg/Vm5eyW6N4r)
 
 ---
+
+### C. Mod Types
+
+| # | Mod Type | What It Means |
+|---|----------|---------------|
+| 1 | Server-Side (EAC-Friendly) | Server install works for all joining players; EAC on or off. |
+| 2 | Server-Side (EAC Off) | EAC off required; server install works for all joining players. |
+| 3 | Server/Client-Side (Required) | EAC off required; host and joining players must install it. |
+| 4 | Client-Side (Only) | EAC off required; server install has no effect; only the installing player gets the feature. |
+
+---
 ---
 
 ## 10. Installation Guide
@@ -163,7 +139,7 @@ v1.0.0
 ---
 
 > ⚠️ **IMPORTANT** ⚠️ Make a BACKUP!
-> - If you are making changes to an existing game, ALWAYS make a backup first!  
+> - If you are making changes to an existing game, ALWAYS make a backup first.
 > - *(See the backup instructions further below.)*
 
 ---
@@ -171,30 +147,33 @@ v1.0.0
 ### A. Special Note
 > - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
 > - If it is missing, you can restore it by verifying your installation:
->    - *In Steam, right click on 7 Days to Die*
+>    - *In Steam, right click on `7 Days to Die`*
 >    - *Select "Properties"*
 >    - *Select "Installed Files"*
 >    - *Click on "Verify integrity of game files" and wait for completion.*
 
 ---
 
-### B. Singleplayer, Player-to-Player Multiplayer, or Client-Side Requirement
-> 1. **Open "Run"** *(Windows key + R)*
-> 2. **Type `%appdata%` and click OK**
-> 3. **Open the "Roaming" folder**
-> 4. **Open "7DaysToDie"**
-> 5. **Open or create the "Mods" folder**
-> 6. **Extract the mod here**
->    - *Make sure the mod folder is not inside another folder with the same name (move it up if needed)*
+### B. Install to Your PC (Singleplayer, Hosting Friends, or Client-Required Mods)
+> 1. **In Steam, right click `7 Days to Die`**
+> 2. **Select `Manage`, then `Browse local files`**
+> 3. **Open the `Mods` folder**
+> 4. **Extract the mod into this `Mods` folder**
+>    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
+>    - *If the zip creates an extra parent folder, move the mod folder up one level*
+> 5. **Keep `0_TFP_Harmony` in this folder**
+>    - *It comes with the game and should remain in `Mods`*
 
 ---
 
-### C. Multiplayer Dedicated Server *(hosted sites or player-run)*
+### C. Install to a Dedicated Server *(hosted sites or player-run)*
 > 1. **Find the main server folder**
->    - *If using a hosted site, use their file manager or a program like FileZilla.*
-> 2. **Open the "Mods" folder**   
-> 3. **Extract the mod here**
->    - *Make sure the mod folder is not inside another folder with the same name (move it up if needed)*
+>    - *If using a hosted site, use their file manager or a program like FileZilla*
+> 2. **Open or create the `Mods` folder**
+> 3. **Extract the mod into this `Mods` folder**
+>    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
+>    - *If the zip creates an extra parent folder, move the mod folder up one level*
+> 4. **Fully restart the server after install**
 
 ---
 ---
@@ -238,7 +217,7 @@ v1.0.0
 ### A. Special Note
 > - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
 > - If it is missing, you can restore it by verifying your installation:
->    - *In Steam, right click on 7 Days to Die*
+>    - *In Steam, right click on `7 Days to Die`*
 >    - *Select "Properties"*
 >    - *Select "Installed Files"*
 >    - *Click on "Verify integrity of game files" and wait for completion.*
@@ -246,9 +225,9 @@ v1.0.0
 ---
 
 ### B. Updating individual AGF Mods
-> 1. **Shutdown the game.** 
+> 1. **Shutdown the game.**
 > 2. **Make a backup.** *(instructions below)*
-> 3. **Install the new version as usual.** *(see above)* 
+> 3. **Install the new version as usual.** *(see above)*
 > 4. **Delete the older version.**
 >    - *In your Mods folder, you will see two folders for the mod, each with its version number.*
 > 5. **THEN** you may turn the game back on.
@@ -280,7 +259,7 @@ v1.0.0
 > 4. **Open "7DaysToDie"**
 > 5. **Open "Saves"**
 > 6. **Find your World Name folder** *(e.g., "Navezgane")*
->    - *You can check your world name in the game’s "Continue Game" or "Join Server" menu.*
+>    - *You can check your world name in the game's "Continue Game" or "Join Server" menu.*
 > 7. **Select your Game Name folder** *(inside the World Name folder)*
 >    - *The Game Name is also shown in the game menus.*
 > 8. **Copy the entire Game Name folder and paste it somewhere safe**
@@ -293,7 +272,7 @@ v1.0.0
 >    - *Its location varies by host, but it's typically somewhere in the main dedicated server folder.*
 >    - *If you cannot find it, check your host's documentation or ask support.*
 > 2. **Find your World Name folder** *(e.g., "Navezgane")*
->    - *You can check your world name in the game’s "Join Server" menu or "Server Config".*
+>    - *You can check your world name in the game's "Join Server" menu or "Server Config".*
 > 3. **Select your Game Name folder** *(inside the World Name folder)*
 >    - *The Game Name is also shown in the game's "Join Server" menu or "Server Config".*
 > 4. **Copy the entire Game Name folder and paste it somewhere safe**
@@ -302,7 +281,7 @@ v1.0.0
 ---
 
 ### C. To Restore a Backup
-> - *Keep your backup until you’re sure everything works!*
+> - *Keep your backup until you're sure everything works!*
 > 1. **Undo any mod changes**
 > 2. **Delete the current Game Name folder** *(in "Saves")*
 > 3. **Move your backup folder back into "Saves"**

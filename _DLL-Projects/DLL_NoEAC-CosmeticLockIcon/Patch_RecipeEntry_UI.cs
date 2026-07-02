@@ -5,23 +5,31 @@ public class Patch_RecipeEntry_UI
 {
 	private static bool Prefix(ref bool __result, XUiC_RecipeEntry __instance, ref string value, string bindingName)
 	{
+		bool isIconBinding = bindingName == "itemtypeicon" || bindingName == "altitemtypeicon";
+		bool isTintBinding = bindingName == "itemtypeicontint" || bindingName == "altitemtypeiconcolor";
+		if (!isIconBinding && !isTintBinding)
+		{
+			return true;
+		}
+
 		Recipe recipe = __instance.recipe;
 		if (recipe == null)
 		{
 			return true;
 		}
 		ItemClass forId = ItemClass.GetForId(recipe.itemValueType);
-		EntityPlayerLocal entityPlayerLocal = __instance.xui?.playerUI?.entityPlayer;
-		if ((bindingName == "itemtypeicon" || bindingName == "altitemtypeicon") && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(forId, entityPlayerLocal, bindingName, out var icon))
+		EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
+		string icon;
+		if (isIconBinding && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(forId, entityPlayerLocal, bindingName, out icon))
 		{
 			value = icon;
 			__result = true;
 			return false;
 		}
-		if ((bindingName == "itemtypeicontint" || bindingName == "altitemtypeiconcolor") && forId is ItemClassArmor { IsCosmetic: not false } itemClassArmor && entityPlayerLocal != null)
+		ItemClassArmor itemClassArmor = forId as ItemClassArmor;
+		if (isTintBinding && itemClassArmor != null && itemClassArmor.IsCosmetic && entityPlayerLocal != null && !ArmorIconUIHarmonyPatches.HasMagnitudeIndicator(itemClassArmor))
 		{
-			(bool, EntitlementSetEnum)? tuple = entityPlayerLocal.equipment?.HasCosmeticUnlocked(itemClassArmor);
-			if (tuple.HasValue && tuple.Value.Item1)
+			if (ArmorIconUIHarmonyPatches.IsCosmeticUnlocked(entityPlayerLocal, itemClassArmor))
 			{
 				value = __instance.altitemtypeiconcolorFormatter.Format(itemClassArmor.AltItemTypeIconColor);
 				__result = true;

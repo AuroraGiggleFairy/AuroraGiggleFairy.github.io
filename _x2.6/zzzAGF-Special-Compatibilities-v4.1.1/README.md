@@ -105,18 +105,12 @@
     - AmmoDisassembly
     - RebundleBundles
 - Language support patches include:
-    - BDub's Vehicles
-    - IZY's Weapons
     - GS Vanilla Cook Book
 - Current compatibility list includes:
     - Dewtas' 18 slot toolbelt
     - Khaine's 15 slot toolbelt
     - Wookie's 12 slot toolbelt
     - RecipeStatsTab
-    - BDub's Vehicles
-    - IZY's Weapons
-    - MoreQuests
-    - Oakraven Ammo Press
     - GSVanillaCookBook
 	- Boat Modlet
 - More compatibility patches can be added by request.
@@ -127,6 +121,10 @@
 
 ## 8. Changelog
 <!-- CHANGELOG START -->
+v5.0.0
+- Work in progress, but updated to start off 7d2d version 3.
+- Removed some old things that need updated, left others but will likely need updates.
+
 v4.1.2
 - Added vehicle seating compatibility with boat modlet.
 

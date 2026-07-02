@@ -4,6 +4,9 @@ using System.Collections.Generic;
 public class XUiC_ScreamerAlertOptions : XUiController
 {
     private static readonly List<XUiC_ScreamerAlertOptions> LiveControllers = new List<XUiC_ScreamerAlertOptions>();
+    private static readonly bool LocalEnhancedAgfPresent = DetectLocalEnhancedAgf();
+    private static bool ServerCountCapabilityKnown;
+    private static bool ServerCountCapabilityAvailable;
 
     private bool pendingRefresh;
     private bool buttonHandlersBound;
@@ -25,6 +28,7 @@ public class XUiC_ScreamerAlertOptions : XUiController
         base.OnOpen();
         EnsureButtonHandlers();
         pendingRefresh = true;
+        RequestAuthoritativeModeRefresh();
     }
 
     public override void OnClose()
@@ -70,6 +74,9 @@ public class XUiC_ScreamerAlertOptions : XUiController
             case "opt_row_1_numtext":
                 value = string.Empty;
                 return true;
+            case "opt_row_1_num_visible":
+                value = IsCountModeAvailable().ToString().ToLowerInvariant();
+                return true;
             case "opt_row_1_off_selected_visible":
                 value = cachedMode == ScreamerAlertMode.Off ? "true" : "false";
                 return true;
@@ -77,11 +84,46 @@ public class XUiC_ScreamerAlertOptions : XUiController
                 value = cachedMode == ScreamerAlertMode.On ? "true" : "false";
                 return true;
             case "opt_row_1_num_selected_visible":
-                value = cachedMode == ScreamerAlertMode.OnWithNumbers ? "true" : "false";
+                value = IsCountModeAvailable() && cachedMode == ScreamerAlertMode.OnWithNumbers ? "true" : "false";
                 return true;
             default:
                 return base.GetBindingValueInternal(ref value, bindingName);
         }
+    }
+
+    public static void OnAuthoritativeModeAck(ScreamerAlertMode mode, bool countAvailable)
+    {
+        ServerCountCapabilityKnown = true;
+        ServerCountCapabilityAvailable = countAvailable;
+
+        ScreamerAlertMode effectiveMode = NormalizeModeForCapability(mode, countAvailable);
+        ScreamerAlertModeSettings.SetModeForLocalPlayer(effectiveMode);
+
+        EntityPlayer localPlayer = GameManager.Instance?.World?.GetPrimaryPlayer();
+        if (localPlayer != null)
+        {
+            ScreamerAlertModeSettings.SetModeForEntityId(localPlayer.entityId, effectiveMode);
+        }
+
+        for (int i = LiveControllers.Count - 1; i >= 0; i--)
+        {
+            XUiC_ScreamerAlertOptions controller = LiveControllers[i];
+            if (controller == null)
+            {
+                LiveControllers.RemoveAt(i);
+                continue;
+            }
+
+            controller.cachedMode = effectiveMode;
+            controller.pendingRefresh = true;
+            if (controller.ViewComponent != null && controller.ViewComponent.IsVisible)
+            {
+                controller.RefreshBindingsSelfAndChildren();
+                controller.ApplySelectedState();
+            }
+        }
+
+        XUiC_ScreamerAlerts.Instance?.RefreshBindingsSelfAndChildren();
     }
 
     public static void MarkAllDirty()
@@ -212,18 +254,36 @@ public class XUiC_ScreamerAlertOptions : XUiController
 
     private void BtnScreamerNum_OnPressed(XUiController _sender, int _mouseButton)
     {
+        if (!IsCountModeAvailable())
+        {
+            return;
+        }
+
         SetModeAndRefresh(ScreamerAlertMode.OnWithNumbers);
     }
 
     private void SetModeAndRefresh(ScreamerAlertMode mode)
     {
-        bool changed = ScreamerAlertModeSettings.SetModeForLocalPlayer(mode);
+        ScreamerAlertMode requestedMode = NormalizeModeForCapability(mode, IsCountModeAvailable());
+
+        // Update button selection immediately so users get instant UI feedback.
+        cachedMode = requestedMode;
+        RefreshBindingsSelfAndChildren();
+        ApplySelectedState();
+        XUiC_ScreamerAlerts.Instance?.RefreshBindingsSelfAndChildren();
+
+        if (TryRequestServerModeChange(requestedMode))
+        {
+            return;
+        }
+
+        bool changed = ScreamerAlertModeSettings.SetModeForLocalPlayer(requestedMode);
         if (!changed)
         {
             EntityPlayer player = GameManager.Instance?.World?.GetPrimaryPlayer();
             if (player != null)
             {
-                changed = ScreamerAlertModeSettings.SetModeForEntityId(player.entityId, mode);
+                changed = ScreamerAlertModeSettings.SetModeForEntityId(player.entityId, requestedMode);
             }
         }
 
@@ -233,16 +293,77 @@ public class XUiC_ScreamerAlertOptions : XUiController
             return;
         }
 
-        cachedMode = mode;
+        cachedMode = requestedMode;
         RefreshBindingsSelfAndChildren();
         ApplySelectedState();
         XUiC_ScreamerAlerts.Instance?.RefreshBindingsSelfAndChildren();
         MarkAllDirty();
     }
 
+    private bool TryRequestServerModeChange(ScreamerAlertMode requestedMode)
+    {
+        ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
+        EntityPlayer localPlayer = GameManager.Instance?.World?.GetPrimaryPlayer();
+        if (manager == null || localPlayer == null || localPlayer.entityId < 0)
+        {
+            return false;
+        }
+
+        if (manager.IsServer)
+        {
+            bool countAvailable = DetermineServerCountAvailability(localPlayer.entityId);
+            ScreamerAlertMode effectiveMode = NormalizeModeForCapability(requestedMode, countAvailable);
+            bool changed = ScreamerAlertModeSettings.SetModeForEntityId(localPlayer.entityId, effectiveMode);
+            if (!changed)
+            {
+                return false;
+            }
+
+            OnAuthoritativeModeAck(effectiveMode, countAvailable);
+            return true;
+        }
+
+        NetPackageScreamerAlertModeRequest package = NetPackageManager.GetPackage<NetPackageScreamerAlertModeRequest>();
+        if (package == null)
+        {
+            return false;
+        }
+
+        manager.SendToServer(package.Setup(localPlayer.entityId, requestedMode, queryOnly: false));
+        return true;
+    }
+
+    private void RequestAuthoritativeModeRefresh()
+    {
+        ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
+        EntityPlayer localPlayer = GameManager.Instance?.World?.GetPrimaryPlayer();
+        if (manager == null || localPlayer == null || localPlayer.entityId < 0)
+        {
+            return;
+        }
+
+        if (manager.IsServer)
+        {
+            bool countAvailable = DetermineServerCountAvailability(localPlayer.entityId);
+            ServerCountCapabilityKnown = true;
+            ServerCountCapabilityAvailable = countAvailable;
+            pendingRefresh = true;
+            MarkAllDirty();
+            return;
+        }
+
+        NetPackageScreamerAlertModeRequest package = NetPackageManager.GetPackage<NetPackageScreamerAlertModeRequest>();
+        if (package != null)
+        {
+            manager.SendToServer(package.Setup(localPlayer.entityId, ScreamerAlertMode.On, queryOnly: true));
+        }
+    }
+
     private void RefreshModeCache()
     {
-        cachedMode = ScreamerAlertModeSettings.GetModeForLocalPlayer(ScreamerAlertMode.OnWithNumbers);
+        bool countAvailable = IsCountModeAvailable();
+        ScreamerAlertMode fallback = countAvailable ? ScreamerAlertMode.OnWithNumbers : ScreamerAlertMode.On;
+        cachedMode = NormalizeModeForCapability(ScreamerAlertModeSettings.GetModeForLocalPlayer(fallback), countAvailable);
     }
 
     private void ApplySelectedState()
@@ -258,5 +379,75 @@ public class XUiC_ScreamerAlertOptions : XUiController
         {
             button.Button.Selected = isSelected;
         }
+    }
+
+    private static bool DetermineServerCountAvailability(int entityId)
+    {
+        bool hasEnhancedCapability = ScreamerAlertHybridRouting.HasClientCapabilityByEntityId(entityId);
+        if (!hasEnhancedCapability && !GameManager.IsDedicatedServer)
+        {
+            EntityPlayer localPlayer = GameManager.Instance?.World?.GetPrimaryPlayer();
+            if (localPlayer != null && localPlayer.entityId == entityId)
+            {
+                hasEnhancedCapability = LocalEnhancedAgfPresent;
+            }
+        }
+
+        ServerCountCapabilityKnown = true;
+        ServerCountCapabilityAvailable = hasEnhancedCapability;
+        return LocalEnhancedAgfPresent && hasEnhancedCapability;
+    }
+
+    private static bool IsCountModeAvailable()
+    {
+        return LocalEnhancedAgfPresent
+            && ServerCountCapabilityKnown
+            && ServerCountCapabilityAvailable;
+    }
+
+    private static ScreamerAlertMode NormalizeModeForCapability(ScreamerAlertMode mode, bool countAvailable)
+    {
+        if (!countAvailable && mode == ScreamerAlertMode.OnWithNumbers)
+        {
+            return ScreamerAlertMode.On;
+        }
+
+        return mode;
+    }
+
+    private static bool DetectLocalEnhancedAgf()
+    {
+        try
+        {
+            AppDomain domain = AppDomain.CurrentDomain;
+            if (domain == null)
+            {
+                return false;
+            }
+
+            foreach (var assembly in domain.GetAssemblies())
+            {
+                if (assembly == null)
+                {
+                    continue;
+                }
+
+                string assemblyName = assembly.GetName()?.Name;
+                if (!string.IsNullOrEmpty(assemblyName) && assemblyName.IndexOf("EnhancedAGF", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    return true;
+                }
+
+                if (assembly.GetType("ScreamerAlertEnhancedGate", throwOnError: false) != null)
+                {
+                    return true;
+                }
+            }
+        }
+        catch
+        {
+        }
+
+        return false;
     }
 }

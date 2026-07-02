@@ -27,13 +27,84 @@ INPROGRESS_DIR = resolve_lane_path(
     os.path.join(WORKSPACE_ROOT, "01_Draft"),
     os.path.join(WORKSPACE_ROOT, "_Mods2.In-Progress"),
 )
-TEMPLATE_README_PATH = os.path.join(WORKSPACE_ROOT, "TEMPLATE-ModReadMes.md")
-COMPAT_CSV_PATH = os.path.join(WORKSPACE_ROOT, "HELPER_ModCompatibility.csv")
+TEMPLATE_README_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Templates",
+    "TEMPLATE-ModReadMes.md",
+)
+ABOUTME_GUIDE_SNIPPET_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Snippets",
+    "ABOUTME-Guide.md",
+)
+MODTYPE_GUIDE_SNIPPET_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Snippets",
+    "MODTYPE-Guide.md",
+)
+INSTALL_GUIDE_SNIPPET_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Snippets",
+    "INSTALL-Guide.md",
+)
+REMOVAL_GUIDE_SNIPPET_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Snippets",
+    "REMOVAL-Guide.md",
+)
+UPDATE_GUIDE_SNIPPET_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Snippets",
+    "UPDATE-Guide.md",
+)
+BACKUP_GUIDE_SNIPPET_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Snippets",
+    "BACKUP-Guide.md",
+)
+ABOUTME_GUIDE_PLACEHOLDER = "{{ABOUTME_GUIDE_BODY}}"
+MODTYPE_GUIDE_PLACEHOLDER = "{{MODTYPE_GUIDE_BODY}}"
+INSTALL_GUIDE_PLACEHOLDER = "{{INSTALL_GUIDE_BODY}}"
+REMOVAL_GUIDE_PLACEHOLDER = "{{REMOVAL_GUIDE_BODY}}"
+UPDATE_GUIDE_PLACEHOLDER = "{{UPDATE_GUIDE_BODY}}"
+BACKUP_GUIDE_PLACEHOLDER = "{{BACKUP_GUIDE_BODY}}"
+COMPAT_CSV_PATH = os.path.join(
+    WORKSPACE_ROOT,
+    "Workflow",
+    "ReadmeSystem",
+    "Data",
+    "HELPER_ModCompatibility.csv",
+)
 QUOTES_DIR = os.path.join(WORKSPACE_ROOT, "_Quotes")
 TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name value=\"{mod_name}\"/>\n    <DisplayName value=\"{display_name}\"/>\n    <Version value=\"{version}\"/>\n    <Description value=\"\"/>\n    <Author value=\"AuroraGiggleFairy (AGF)\"/>\n    <Website value=\"https://auroragigglefairy.github.io/\"/>\n</xml>\n'''
 
 
 VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
+
+
+def load_snippet_body(path: str) -> str:
+    if not os.path.exists(path):
+        return ""
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        return ""
 
 
 def parse_args() -> argparse.Namespace:
@@ -177,7 +248,8 @@ def main():
     os.makedirs(INPROGRESS_DIR, exist_ok=True)
     os.makedirs(mod_path)
 
-    # Add entry to HELPER_ModCompatibility.csv (without duplicating existing MOD_NAME rows)
+    # Add entry to Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv
+    # (without duplicating existing MOD_NAME rows)
     append_compatibility_row(mod_name)
     # Create default quote file in _Quotes if it does not exist yet
     ensure_quote_file(mod_name)
@@ -190,6 +262,12 @@ def main():
     if os.path.exists(TEMPLATE_README_PATH):
         with open(TEMPLATE_README_PATH, "r", encoding="utf-8") as t:
             readme_content = t.read()
+        readme_content = readme_content.replace(ABOUTME_GUIDE_PLACEHOLDER, load_snippet_body(ABOUTME_GUIDE_SNIPPET_PATH))
+        readme_content = readme_content.replace(MODTYPE_GUIDE_PLACEHOLDER, load_snippet_body(MODTYPE_GUIDE_SNIPPET_PATH))
+        readme_content = readme_content.replace(INSTALL_GUIDE_PLACEHOLDER, load_snippet_body(INSTALL_GUIDE_SNIPPET_PATH))
+        readme_content = readme_content.replace(REMOVAL_GUIDE_PLACEHOLDER, load_snippet_body(REMOVAL_GUIDE_SNIPPET_PATH))
+        readme_content = readme_content.replace(UPDATE_GUIDE_PLACEHOLDER, load_snippet_body(UPDATE_GUIDE_SNIPPET_PATH))
+        readme_content = readme_content.replace(BACKUP_GUIDE_PLACEHOLDER, load_snippet_body(BACKUP_GUIDE_SNIPPET_PATH))
         # Replace placeholders
         readme_content = readme_content.replace("{{MOD_NAME}}", mod_name)
         readme_content = readme_content.replace("{{MOD_VERSION}}", version)

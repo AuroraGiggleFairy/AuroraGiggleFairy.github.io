@@ -90,7 +90,10 @@ namespace ItemTypeIconColor
                     color = Color.white;
                 }
                 // Store the color for this item name (even if white, for completeness)
-                ItemTypeIconColorPatch.ItemColors[__instance.Name] = color;
+                if (__instance != null && !string.IsNullOrEmpty(__instance.Name))
+                {
+                    ItemTypeIconColorPatch.ItemColors[__instance.Name] = color;
+                }
             }
         }
     }

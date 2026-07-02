@@ -1,0 +1,374 @@
+﻿
+========== GENERATED PURPLE BOOK REWRITE FROM DUMP ==========
+  vanilla dir: C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Config
+  dump dir   : C:/Users/rft30/AppData/Roaming/7DaysToDie/Saves/Dishong Challenge (3. Desert)/DTC Test2/ConfigsDump
+
+  -- craftingWorkstations: rewrite needed
+     vanilla max=75, dump max=50
+     vanilla sections=16, dump sections=16
+     new cvar levels for buffs: 1, 5, 7, 27, 28, 36, 45
+
+  -- craftingVehicles: rewrite needed
+     vanilla max=100, dump max=50
+     vanilla sections=5, dump sections=5
+     new cvar levels for buffs: 15, 35, 50
+
+  -- craftingSeeds: rewrite needed
+     vanilla max=20, dump max=1
+     vanilla sections=10, dump sections=10
+     note: all section levels are identical; generator keeps per-section entries to preserve per-item visibility.
+     new cvar levels for buffs: 1
+
+========== WINDOWS CONDITIONAL (GENERATED) ==========
+<conditional>
+	<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+		<!-- Auto-generated from progression dump diff. Rewrites section levels/icons and removes stale sections/icons. -->
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section1']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section1']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section1']/sprite[@name='itemIcon'][1]/@sprite">cntDewCollector</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section1']/sprite[@name='itemIcon'][1]/@tooltip_key">cntDewCollector</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section2']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck5)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section2']/label[@name='checkunlock']/@text">5</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section2']/sprite[@name='itemIcon'][1]/@sprite">forge</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section2']/sprite[@name='itemIcon'][1]/@tooltip_key">forge</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section3']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck7)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section3']/label[@name='checkunlock']/@text">7</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section3']/sprite[@name='itemIcon'][1]/@sprite">resourceLockPick</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section3']/sprite[@name='itemIcon'][1]/@tooltip_key">resourceLockPick</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section4']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck10)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section4']/label[@name='checkunlock']/@text">10</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section4']/sprite[@name='itemIcon'][1]/@sprite">workbench</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section4']/sprite[@name='itemIcon'][1]/@tooltip_key">workbench</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section5']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck16)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section5']/label[@name='checkunlock']/@text">16</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section5']/sprite[@name='itemIcon'][1]/@sprite">toolBellows</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section5']/sprite[@name='itemIcon'][1]/@tooltip_key">toolBellows</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section6']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck20)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section6']/label[@name='checkunlock']/@text">20</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section6']/sprite[@name='itemIcon'][1]/@sprite">toolAnvil</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section6']/sprite[@name='itemIcon'][1]/@tooltip_key">toolAnvil</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section7']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck26)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section7']/label[@name='checkunlock']/@text">26</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section7']/sprite[@name='itemIcon'][1]/@sprite">toolDewGatherer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section7']/sprite[@name='itemIcon'][1]/@tooltip_key">toolDewGatherer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section8']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck27)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section8']/label[@name='checkunlock']/@text">27</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section8']/sprite[@name='itemIcon'][1]/@sprite">cntApiary</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section8']/sprite[@name='itemIcon'][1]/@tooltip_key">cntApiary</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section9']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck28)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section9']/label[@name='checkunlock']/@text">28</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section9']/sprite[@name='itemIcon'][1]/@sprite">toolDewTarp</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section9']/sprite[@name='itemIcon'][1]/@tooltip_key">toolDewTarp</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section10']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck30)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section10']/label[@name='checkunlock']/@text">30</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section10']/sprite[@name='itemIcon'][1]/@sprite">cementMixer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section10']/sprite[@name='itemIcon'][1]/@tooltip_key">cementMixer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section11']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck32)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section11']/label[@name='checkunlock']/@text">32</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section11']/sprite[@name='itemIcon'][1]/@sprite">toolApiaryExtractor</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section11']/sprite[@name='itemIcon'][1]/@tooltip_key">toolApiaryExtractor</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section12']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck34)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section12']/label[@name='checkunlock']/@text">34</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section12']/sprite[@name='itemIcon'][1]/@sprite">toolApiaryBroodBox</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section12']/sprite[@name='itemIcon'][1]/@tooltip_key">toolApiaryBroodBox</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section13']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck36)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section13']/label[@name='checkunlock']/@text">36</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section13']/sprite[@name='itemIcon'][1]/@sprite">toolDewFilter</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section13']/sprite[@name='itemIcon'][1]/@tooltip_key">toolDewFilter</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section14']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck40)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section14']/label[@name='checkunlock']/@text">40</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section14']/sprite[@name='itemIcon'][1]/@sprite">chemistryStation</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section14']/sprite[@name='itemIcon'][1]/@tooltip_key">chemistryStation</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section15']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck45)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section15']/label[@name='checkunlock']/@text">45</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section15']/sprite[@name='itemIcon'][1]/@sprite">toolApiarySmoker</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section15']/sprite[@name='itemIcon'][1]/@tooltip_key">toolApiarySmoker</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section16']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck50)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section16']/label[@name='checkunlock']/@text">50</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section16']/sprite[@name='itemIcon'][1]/@sprite">toolForgeCrucible</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistWorkstations']/rect[@name='Section16']/sprite[@name='itemIcon'][1]/@tooltip_key">toolForgeCrucible</set>
+
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[1]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[1]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[1]/sprite[@name='itemIcon'][1]/@sprite">cntDewCollector</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[1]/sprite[@name='itemIcon'][1]/@tooltip_key">cntDewCollector</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[2]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck5)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[2]/label[@name='checkunlock']/@text">5</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[2]/sprite[@name='itemIcon'][1]/@sprite">forge</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[2]/sprite[@name='itemIcon'][1]/@tooltip_key">forge</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[3]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck7)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[3]/label[@name='checkunlock']/@text">7</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[3]/sprite[@name='itemIcon'][1]/@sprite">resourceLockPick</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[3]/sprite[@name='itemIcon'][1]/@tooltip_key">resourceLockPick</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[4]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck10)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[4]/label[@name='checkunlock']/@text">10</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[4]/sprite[@name='itemIcon'][1]/@sprite">workbench</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[4]/sprite[@name='itemIcon'][1]/@tooltip_key">workbench</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[5]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck16)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[5]/label[@name='checkunlock']/@text">16</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[5]/sprite[@name='itemIcon'][1]/@sprite">toolBellows</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[5]/sprite[@name='itemIcon'][1]/@tooltip_key">toolBellows</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[6]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck20)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[6]/label[@name='checkunlock']/@text">20</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[6]/sprite[@name='itemIcon'][1]/@sprite">toolAnvil</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[6]/sprite[@name='itemIcon'][1]/@tooltip_key">toolAnvil</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[7]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck26)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[7]/label[@name='checkunlock']/@text">26</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[7]/sprite[@name='itemIcon'][1]/@sprite">toolDewGatherer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[7]/sprite[@name='itemIcon'][1]/@tooltip_key">toolDewGatherer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[8]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck27)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[8]/label[@name='checkunlock']/@text">27</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[8]/sprite[@name='itemIcon'][1]/@sprite">cntApiary</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[8]/sprite[@name='itemIcon'][1]/@tooltip_key">cntApiary</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[9]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck28)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[9]/label[@name='checkunlock']/@text">28</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[9]/sprite[@name='itemIcon'][1]/@sprite">toolDewTarp</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[9]/sprite[@name='itemIcon'][1]/@tooltip_key">toolDewTarp</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[10]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck30)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[10]/label[@name='checkunlock']/@text">30</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[10]/sprite[@name='itemIcon'][1]/@sprite">cementMixer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[10]/sprite[@name='itemIcon'][1]/@tooltip_key">cementMixer</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[11]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck32)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[11]/label[@name='checkunlock']/@text">32</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[11]/sprite[@name='itemIcon'][1]/@sprite">toolApiaryExtractor</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[11]/sprite[@name='itemIcon'][1]/@tooltip_key">toolApiaryExtractor</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[12]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck34)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[12]/label[@name='checkunlock']/@text">34</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[12]/sprite[@name='itemIcon'][1]/@sprite">toolApiaryBroodBox</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[12]/sprite[@name='itemIcon'][1]/@tooltip_key">toolApiaryBroodBox</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[13]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck36)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[13]/label[@name='checkunlock']/@text">36</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[13]/sprite[@name='itemIcon'][1]/@sprite">toolDewFilter</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[13]/sprite[@name='itemIcon'][1]/@tooltip_key">toolDewFilter</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[14]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck40)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[14]/label[@name='checkunlock']/@text">40</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[14]/sprite[@name='itemIcon'][1]/@sprite">chemistryStation</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[14]/sprite[@name='itemIcon'][1]/@tooltip_key">chemistryStation</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[15]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck45)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[15]/label[@name='checkunlock']/@text">45</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[15]/sprite[@name='itemIcon'][1]/@sprite">toolApiarySmoker</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[15]/sprite[@name='itemIcon'][1]/@tooltip_key">toolApiarySmoker</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[16]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck50)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[16]/label[@name='checkunlock']/@text">50</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[16]/sprite[@name='itemIcon'][1]/@sprite">toolForgeCrucible</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/entry[16]/sprite[@name='itemIcon'][1]/@tooltip_key">toolForgeCrucible</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstationsTitle']/entry[@name='Magazine']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingWorkstationsCheck50)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstationsTitle']/entry[@name='level']/label[2]/@text">/50</set>
+
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck5)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/label[@name='checkunlock']/@text">5</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/sprite[@name='itemIcon'][1]/@sprite">vehicleWheels</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/sprite[@name='itemIcon'][1]/@tooltip_key">vehicleWheels</set>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/sprite[@name='itemIcon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/sprite[@name='itemtypeicon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/sprite[@name='itemIcon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section1']/sprite[@name='itemtypeicon'][3]"/>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck15)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/label[@name='checkunlock']/@text">15</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemIcon'][1]/@sprite">resourceOil</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemIcon'][1]/@tooltip_key">resourceOil</set>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemIcon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemtypeicon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemIcon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemtypeicon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemIcon'][4]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='itemtypeicon'][4]"/>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck20)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/label[@name='checkunlock']/@text">20</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='itemIcon'][1]/@sprite">ammoGasCan</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='itemIcon'][1]/@tooltip_key">ammoGasCan</set>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='itemIcon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='itemtypeicon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='itemIcon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='itemtypeicon'][3]"/>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section4']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck35)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section4']/label[@name='checkunlock']/@text">35</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section4']/sprite[@name='itemIcon'][1]/@sprite">resourceAcid</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section4']/sprite[@name='itemIcon'][1]/@tooltip_key">resourceAcid</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section4']/sprite[@name='itemIcon'][2]/@sprite">ammoGasCanBundle</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section4']/sprite[@name='itemIcon'][2]/@tooltip_key">ammoGasCanBundle</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section5']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck50)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section5']/label[@name='checkunlock']/@text">50</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section5']/sprite[@name='itemIcon'][1]/@sprite">vehicleGyroCopterChassis</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section5']/sprite[@name='itemIcon'][1]/@tooltip_key">vehicleGyroCopterChassis</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section5']/sprite[@name='itemIcon'][2]/@sprite">vehicleGyroCopterAccessories</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistVehicles']/rect[@name='Section5']/sprite[@name='itemIcon'][2]/@tooltip_key">vehicleGyroCopterAccessories</set>
+
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck5)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/label[@name='checkunlock']/@text">5</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@name='itemIcon'][1]/@sprite">vehicleWheels</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@name='itemIcon'][1]/@tooltip_key">vehicleWheels</set>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@name='itemIcon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@name='itemtypeicon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@name='itemIcon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[1]/sprite[@name='itemtypeicon'][3]"/>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck15)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/label[@name='checkunlock']/@text">15</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemIcon'][1]/@sprite">resourceOil</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemIcon'][1]/@tooltip_key">resourceOil</set>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemIcon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemtypeicon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemIcon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemtypeicon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemIcon'][4]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[2]/sprite[@name='itemtypeicon'][4]"/>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck20)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/label[@name='checkunlock']/@text">20</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@name='itemIcon'][1]/@sprite">ammoGasCan</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@name='itemIcon'][1]/@tooltip_key">ammoGasCan</set>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@name='itemIcon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@name='itemtypeicon'][2]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@name='itemIcon'][3]"/>
+			<remove xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[3]/sprite[@name='itemtypeicon'][3]"/>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck35)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/label[@name='checkunlock']/@text">35</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@name='itemIcon'][1]/@sprite">resourceAcid</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@name='itemIcon'][1]/@tooltip_key">resourceAcid</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@name='itemIcon'][2]/@sprite">ammoGasCanBundle</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[4]/sprite[@name='itemIcon'][2]/@tooltip_key">ammoGasCanBundle</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck50)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/label[@name='checkunlock']/@text">50</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@name='itemIcon'][1]/@sprite">vehicleGyroCopterChassis</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@name='itemIcon'][1]/@tooltip_key">vehicleGyroCopterChassis</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@name='itemIcon'][2]/@sprite">vehicleGyroCopterAccessories</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[5]/sprite[@name='itemIcon'][2]/@tooltip_key">vehicleGyroCopterAccessories</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehiclesTitle']/entry[@name='Magazine']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingVehiclesCheck50)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedVehicles']/grid[@name='checklistVehiclesTitle']/entry[@name='level']/label[2]/@text">/50</set>
+
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section1']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section1']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section1']/sprite[@name='itemIcon'][1]/@sprite">plantedCotton1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section1']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedCotton1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section2']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section2']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section2']/sprite[@name='itemIcon'][1]/@sprite">plantedGoldenrod1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section2']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedGoldenrod1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section2']/sprite[@name='itemIcon'][2]/@sprite">plantedChrysanthemum1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section2']/sprite[@name='itemIcon'][2]/@tooltip_key">plantedChrysanthemum1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section3']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section3']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section3']/sprite[@name='itemIcon'][1]/@sprite">plantedCoffee1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section3']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedCoffee1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section4']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section4']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section4']/sprite[@name='itemIcon'][1]/@sprite">plantedYucca1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section4']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedYucca1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section5']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section5']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section5']/sprite[@name='itemIcon'][1]/@sprite">plantedAloe1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section5']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedAloe1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section6']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section6']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section6']/sprite[@name='itemIcon'][1]/@sprite">plantedBlueberry1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section6']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedBlueberry1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section6']/sprite[@name='itemIcon'][2]/@sprite">plantedHop1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section6']/sprite[@name='itemIcon'][2]/@tooltip_key">plantedHop1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section7']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section7']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section7']/sprite[@name='itemIcon'][1]/@sprite">plantedPumpkin1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section7']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedPumpkin1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section8']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section8']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section8']/sprite[@name='itemIcon'][1]/@sprite">plantedMushroom1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section8']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedMushroom1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section9']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section9']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section9']/sprite[@name='itemIcon'][1]/@sprite">plantedCorn1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section9']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedCorn1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section10']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section10']/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section10']/sprite[@name='itemIcon'][1]/@sprite">plantedPotato1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='checklistSeeds']/rect[@name='Section10']/sprite[@name='itemIcon'][1]/@tooltip_key">plantedPotato1</set>
+
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[1]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[1]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[1]/sprite[@name='itemIcon'][1]/@sprite">plantedCotton1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[1]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedCotton1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[2]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[2]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[2]/sprite[@name='itemIcon'][1]/@sprite">plantedGoldenrod1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[2]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedGoldenrod1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[2]/sprite[@name='itemIcon'][2]/@sprite">plantedChrysanthemum1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[2]/sprite[@name='itemIcon'][2]/@tooltip_key">plantedChrysanthemum1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[3]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[3]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[3]/sprite[@name='itemIcon'][1]/@sprite">plantedCoffee1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[3]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedCoffee1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[4]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[4]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[4]/sprite[@name='itemIcon'][1]/@sprite">plantedYucca1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[4]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedYucca1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[5]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[5]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[5]/sprite[@name='itemIcon'][1]/@sprite">plantedAloe1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[5]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedAloe1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[6]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[6]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[6]/sprite[@name='itemIcon'][1]/@sprite">plantedBlueberry1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[6]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedBlueberry1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[6]/sprite[@name='itemIcon'][2]/@sprite">plantedHop1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[6]/sprite[@name='itemIcon'][2]/@tooltip_key">plantedHop1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[7]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[7]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[7]/sprite[@name='itemIcon'][1]/@sprite">plantedPumpkin1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[7]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedPumpkin1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[8]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[8]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[8]/sprite[@name='itemIcon'][1]/@sprite">plantedMushroom1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[8]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedMushroom1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[9]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[9]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[9]/sprite[@name='itemIcon'][1]/@sprite">plantedCorn1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[9]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedCorn1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[10]/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[10]/label[@name='checkunlock']/@text">1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[10]/sprite[@name='itemIcon'][1]/@sprite">plantedPotato1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[10]/sprite[@name='itemIcon'][1]/@tooltip_key">plantedPotato1</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeedsTitle']/entry[@name='Magazine']/filledsprite[@name='yesUnlocked']/@fill">{cvar(craftingSeedsCheck1)}</set>
+			<set xpath="/windows/window[@name='Schematics']//rect[@name='zoomedSeeds']/grid[@name='checklistSeedsTitle']/entry[@name='level']/label[2]/@text">/1</set>
+
+	</if>
+</conditional>
+
+========== BUFFS CONDITIONAL (GENERATED, NEW LEVEL CVARS ONLY) ==========
+<conditional>
+	<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+		<insertafter xpath="/buffs/buff[@name='agfRecalculate']/effect_group[@name='recaculateChecklistPorgression']/triggered_effect[@cvar='craftingVehiclesCheck100']">
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck1" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck5" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck7" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck27" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck28" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck45" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingVehiclesCheck15" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingVehiclesCheck35" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingVehiclesCheck50" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingSeedsCheck1" operation="set" value="0"/>
+		</insertafter>
+		<append xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group[@name='craftingChecker']">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck1" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="1"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck1" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck1" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="1"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck1" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck5" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="5"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck5" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck5" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="5"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck5" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck7" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="7"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck7" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck7" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="7"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck7" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck27" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="27"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck27" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck27" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="27"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck27" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck28" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="28"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck28" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck28" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="28"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck28" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="36"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck36" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="36"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck36" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck45" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="45"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck45" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck45" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="45"/><requirement name="CVarCompare" cvar="craftingWorkstationsCheck45" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingVehiclesCheck15" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingVehiclesCheck" operation="GTE" value="15"/><requirement name="CVarCompare" cvar="craftingVehiclesCheck15" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingVehiclesCheck15" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingVehiclesCheck" operation="LT" value="15"/><requirement name="CVarCompare" cvar="craftingVehiclesCheck15" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingVehiclesCheck35" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingVehiclesCheck" operation="GTE" value="35"/><requirement name="CVarCompare" cvar="craftingVehiclesCheck35" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingVehiclesCheck35" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingVehiclesCheck" operation="LT" value="35"/><requirement name="CVarCompare" cvar="craftingVehiclesCheck35" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingVehiclesCheck50" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingVehiclesCheck" operation="GTE" value="50"/><requirement name="CVarCompare" cvar="craftingVehiclesCheck50" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingVehiclesCheck50" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingVehiclesCheck" operation="LT" value="50"/><requirement name="CVarCompare" cvar="craftingVehiclesCheck50" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingSeedsCheck1" operation="set" value="1"><requirement name="CVarCompare" cvar="craftingSeedsCheck" operation="GTE" value="1"/><requirement name="CVarCompare" cvar="craftingSeedsCheck1" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingSeedsCheck1" operation="set" value="0"><requirement name="CVarCompare" cvar="craftingSeedsCheck" operation="LT" value="1"/><requirement name="CVarCompare" cvar="craftingSeedsCheck1" operation="GTE" value="1"/></triggered_effect>
+		</append>
+	</if>
+</conditional>

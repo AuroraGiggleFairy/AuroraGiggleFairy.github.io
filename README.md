@@ -1,14 +1,39 @@
 # AGF 7 Days to Die Mods
 
-*June 29, 2026, 3:27 PM EST*
+*July 2, 2026, 12:45 AM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
-> - Below are the latest versions of my mods.
-> - If you have any questions or issues, feel free to contact me on my [DISCORD](https://discord.gg/Vm5eyW6N4r).
-> - You may even catch me live on stream on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
-> - Donations are IMMENSELY appreciated, not required. [DONATE HERE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
+> - I create accessibility-focused, vanilla-enhancing mods for 7 Days to Die.
+> - Goal is to deliver practical, easy-to-use features shaped by community feedback.
+> - Main site and first release source: [auroragigglefairy.github.io](https://auroragigglefairy.github.io/).
+> - Discord is best for latest updates, fastest contact, and becoming a tester: [discord.gg/Vm5eyW6N4r](https://discord.gg/Vm5eyW6N4r).
+> - You may also catch me working on my mods live on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
+> - Donations are appreciated, not required: [DONATE HERE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
+>
+### 7 Days to Die Experience
+> - I started playing 7 Days to Die in Alpha 8.
+> - I started attempting to mod in Alpha 17.
+> - I first published a mod in Alpha 18.
+> - I continue to publish mods regularly.
+> - 7,000+ game hours played.
+>
+### Mod Philosophy
+> - Prioritize easy installation and use.
+> - Goal: enhance vanilla gameplay.
+> - Feedback and testing are beneficial.
+> - Detailed notes for individual preference and mod learning.
+> - Accessibility is required.
+> - All 13 languages supported (best effort).
+>
+> "The best mods rely on community involvement."
+>
+### Language Support
+> - 7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.
+> - AGF mods add support for all 13 languages.
+> - If you find a translation error, please let AGF know on [DISCORD](https://discord.gg/Vm5eyW6N4r).
+>
 ### **Server Hosting Recommendation**
-> - I recommend **Pingperfect**! They have provided me with excellent support, and I find their costs affordable and worth the service as a whole. You may support me by signing up through my [Referral Link](https://pingperfect.com/aff.php?aff=1834)!
+> - I recommend **Pingperfect**. They have provided excellent support, and I find their costs affordable and worth the service as a whole. You can support me by signing up through my [Referral Link](https://pingperfect.com/aff.php?aff=1834).
 
  <br>   
 
@@ -16,7 +41,7 @@
 
 
 ## Table of Contents
-- [1. Important Mod Details](#1-important-mod-details)
+- [1. Install Scope & EAC Requirement](#1-install-scope--eac-requirement)
 - [2. Language Support](#2-language-support)
 - [3. Installation Guide](#3-installation-guide)
 - [4. Removal Guide](#4-removal-guide)
@@ -37,95 +62,49 @@
 
 
 
-## **1. Important Mod Details**
+## **1. Install Scope & EAC Requirement**
 
 
 <details>
-<summary>Show Important Mod Details</summary>
+<summary>Show Install Scope & EAC Requirement</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 
-<i>⚡ Each mod's readme and its listing below both describe where it needs to be installed with EAC on or off. This section is the full explanation of what those descriptions mean.</i>
-<br><br>
+---
 
-<b>A. What is a Mod Type?</b>
-<ul>
-  <li>There are 6 types and they tell you where a mod has to be installed to work, and whether or not you need EAC on or off.</li>
-  <ul>
-    <li><b>Server</b> — where the game is hosted. This could be your own PC if you are hosting the game yourself, or a game hosting service like Pingperfect.</li>
-    <li><b>Client</b> — your own PC.</li>
-    <li>Some mods only need to be in one place. Others need to be in both. Some have other caveats. Please see the table in the next section.</li>
-  </ul>
-</ul>
-<br>
+> *This guide explains where to install a mod and whether it is EAC friendly.*
 
-<b>B. The 6 Mod Types</b>
-<br><br>
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Mod Type</th>
-      <th>What It Means</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Server-Side (EAC-Friendly)</td>
-      <td>Server install works for all joining players; EAC on or off.</td>
-    </tr>
-    <tr>
-      <td colspan="3"><i>Most AGF mods are this type. The Giggle Pack download is set up as Server-Side (EAC-Friendly) out of the box, with non-EAC mods in optional folders for those who want them.</i></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Server-Side (EAC Off)</td>
-      <td>EAC off required; server install works for all joining players.</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Server-Side (Dedicated Only, EAC Off)</td>
-      <td>EAC off required; dedicated uses server install only, but player-hosted requires host and joining players to install it.</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Hybrid (EAC Off)</td>
-      <td>EAC off required; server install works for all joining players; client install is optional for extra features.</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Server/Client-Side (Required)</td>
-      <td>EAC off required; host and joining players must install it.</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Client-Side (Only)</td>
-      <td>EAC off required; server install has no effect; only the installing player gets the feature.</td>
-    </tr>
-  </tbody>
-</table>
-<br>
+---
 
-<b>C. Should I play with EAC on or off?</b>
-<ul>
-  <li>EAC stands for <b>Easy Anti-Cheat</b>. It's a program built into 7 Days to Die that helps protect multiplayer sessions from cheating.</li>
-  <li>Mod Types 2–6 require EAC to be turned off. These mods use custom code to deliver more advanced features.</li>
-  <li>Running without EAC opens up a wider range of mods and experiences. If you're running a multiplayer server without EAC, here are some good practices to keep things running smoothly:</li>
-  <ul>
-    <br>
-    <li><b>Recommended practices when running multiplayer with EAC off:</b>
-      <ul>
-        <li>Require a password and be conservative in distributing it.</li>
-        <li>There are tools available such as ALOC and Server Tools to add extra protections.</li>
-        <li>Optionally, require the whitelist system for the strictest limitation on who can join.</li>
-        <li>Seek out other server hosts and discuss what they do.</li>
-        <li>You can find help on AGF's Discord: <a href="https://discord.gg/Vm5eyW6N4r">DISCORD</a></li>
-      </ul>
-    </li>
-  </ul>
-</ul>
-<br>
+### A. Install on Server, Client, or Both?
+>   - **Server** - where the game is hosted. This could be your own PC if you are hosting the game yourself, or a game hosting service like Pingperfect.
+>   - **Client** - your own PC.
+> - Some mods only need to be in one place. Others need to be in both. Please see the Mod Types section below for exact requirements.
+
+---
+
+### B. EAC Friendly?
+
+> - EAC stands for **Easy Anti-Cheat**. It's a program built into 7 Days to Die that helps protect multiplayer sessions from cheating.
+> - Mod Type 1 is EAC friendly. Mod Types 2, 3, and 4 require EAC to be turned off.
+> - Running without EAC opens up a wider range of mods and experiences. If you're running a multiplayer server without EAC, here are some good practices to keep things running smoothly:
+>   - **Recommended practices when running multiplayer with EAC off:**
+>     - Require a password and be conservative in distributing it.
+>     - There are tools available such as ALOC and Server Tools to add extra protections.
+>     - Optionally, require the whitelist system for the strictest limitation on who can join.
+>     - Seek out other server hosts and discuss what they do.
+>     - You can find help on AGF's Discord: [DISCORD](https://discord.gg/Vm5eyW6N4r)
+
+---
+
+### C. Mod Types
+
+| # | Mod Type | What It Means |
+|---|----------|---------------|
+| 1 | Server-Side (EAC-Friendly) | Server install works for all joining players; EAC on or off. |
+| 2 | Server-Side (EAC Off) | EAC off required; server install works for all joining players. |
+| 3 | Server/Client-Side (Required) | EAC off required; host and joining players must install it. |
+| 4 | Client-Side (Only) | EAC off required; server install has no effect; only the installing player gets the feature. |
 
 </details>
 
@@ -154,53 +133,45 @@
 <summary>Show Installation Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-<b>⚠️ IMPORTANT: Make a BACKUP!</b>
-<ul>
-  <li>If you are making changes to an existing game, ALWAYS make a backup first!</li>
-  <li><i>(See the backup instructions further below.)</i></li>
-</ul>
-<br>
-<b>A. Special Note - <i>Verify Files Guide</i></b>
-<ul>
-  <li>The mod named <b>"0_TFP_Harmony"</b> is <b><i>REQUIRED</i></b> and should never be removed.</li>
-  <li>If it is missing, you can restore it by verifying your installation:
-    <ol>
-      <li>In Steam, right click on 7 Days to Die</li>
-      <li>Select "Properties"</li>
-      <li>Select "Installed Files"</li>
-      <li>Click on "Verify integrity of game files" and wait for completion.</li>
-    </ol>
-  </li>
-</ul>
-<br>
-<b>B. Singleplayer, Player-to-Player Multiplayer, or Client-Side Requirement</b>
-<ol>
-  <li>Open "Run" <i>(Windows key + R)</i></li>
-  <li>Type <b>%appdata%</b> and click OK</li>
-  <li>Open the "Roaming" folder</li>
-  <li>Open "7DaysToDie"</li>
-  <li>Open or create the "Mods" folder</li>
-  <li>Extract the mod here
-    <ul>
-      <li><i>Make sure the mod folder is not inside another folder with the same name (move it up if needed)</i></li>
-    </ul>
-  </li>
-</ol>
-<br>
-<b>C. Multiplayer Dedicated Server <i>(hosted sites or player-run)</i></b>
-<ol>
-  <li>Find the main server folder
-    <ul>
-      <li><i>If using a hosted site, use their file manager or a program like FileZilla.</i></li>
-    </ul>
-  </li>
-  <li>Open the "Mods" folder</li>
-  <li>Extract the mod here
-    <ul>
-      <li><i>Make sure the mod folder is not inside another folder with the same name (move it up if needed)</i></li>
-    </ul>
-  </li>
-</ol>
+
+---
+
+> ⚠️ **IMPORTANT** ⚠️ Make a BACKUP!
+> - If you are making changes to an existing game, ALWAYS make a backup first.
+> - *(See the backup instructions further below.)*
+
+---
+
+### A. Special Note
+> - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - *In Steam, right click on `7 Days to Die`*
+>    - *Select "Properties"*
+>    - *Select "Installed Files"*
+>    - *Click on "Verify integrity of game files" and wait for completion.*
+
+---
+
+### B. Install to Your PC (Singleplayer, Hosting Friends, or Client-Required Mods)
+> 1. **In Steam, right click `7 Days to Die`**
+> 2. **Select `Manage`, then `Browse local files`**
+> 3. **Open the `Mods` folder**
+> 4. **Extract the mod into this `Mods` folder**
+>    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
+>    - *If the zip creates an extra parent folder, move the mod folder up one level*
+> 5. **Keep `0_TFP_Harmony` in this folder**
+>    - *It comes with the game and should remain in `Mods`*
+
+---
+
+### C. Install to a Dedicated Server *(hosted sites or player-run)*
+> 1. **Find the main server folder**
+>    - *If using a hosted site, use their file manager or a program like FileZilla*
+> 2. **Open or create the `Mods` folder**
+> 3. **Extract the mod into this `Mods` folder**
+>    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
+>    - *If the zip creates an extra parent folder, move the mod folder up one level*
+> 4. **Fully restart the server after install**
 <br>
 </details>
 
@@ -212,32 +183,29 @@
 <summary>Show Removal Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-<b>⚠️ IMPORTANT: Make a BACKUP First!</b>
-<br>
-<b>A. Special Note - <i>Verify Files Guide</i></b>
-<ul>
-  <li>The mod named <b>"0_TFP_Harmony"</b> is <b><i>REQUIRED</i></b> and should never be removed.</li>
-  <li>If it is missing, you can restore it by verifying your installation:
-    <ol>
-      <li>In Steam, right click on 7 Days to Die</li>
-      <li>Select "Properties"</li>
-      <li>Select "Installed Files"</li>
-      <li>Click on "Verify integrity of game files" and wait for completion.</li>
-    </ol>
-  </li>
-</ul>
-<br>
-<b>B. How do I remove mods?</b>
-<ul>
-  <li>The safest approach is to only remove mods when starting a new game.</li>
-  <li>ALSO smart to make a backup of the game (see below for instructions if needed).
-    <ul>
-      <li>If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.</li>
-      <li>If you are unsure, check the mod's readme for specific removal notes or ask in AGF's <a href="https://discord.gg/Vm5eyW6N4r">DISCORD</a>.</li>
-    </ul>
-  </li>
-  <li>To remove, simply locate the mod folder and delete it. All done!</li>
-</ul>
+
+---
+
+> ⚠️ **IMPORTANT** ⚠️ Make a BACKUP First!
+
+---
+
+### A. Special Note
+> - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - *In Steam, right click on 7 Days to Die*
+>    - *Select "Properties"*
+>    - *Select "Installed Files"*
+>    - *Click on "Verify integrity of game files" and wait for completion.*
+
+---
+
+### B. How do I remove mods?
+> - The safest approach is to only remove mods when starting a new game.
+> - ALSO smart to make a backup of the game (see below for instructions if needed).
+>     - If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.
+>     - If you are unsure, check the mod's readme for specific removal notes or ask in AGF's [DISCORD](https://discord.gg/Vm5eyW6N4r).
+> - To remove, simply locate the mod folder and delete it. All done!
 <br>
 </details>
 
@@ -249,42 +217,39 @@
 <summary>Show Update Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-<b>⚠️ IMPORTANT: Make a BACKUP First!</b>
-<br>
-<b>A. Special Note - <i>Verify Files Guide</i></b>
-<ul>
-  <li>The mod named <b>"0_TFP_Harmony"</b> is <b><i>REQUIRED</i></b> and should never be removed.</li>
-  <li>If it is missing, you can restore it by verifying your installation:
-    <ol>
-      <li>In Steam, right click on 7 Days to Die</li>
-      <li>Select "Properties"</li>
-      <li>Select "Installed Files"</li>
-      <li>Click on "Verify integrity of game files" and wait for completion.</li>
-    </ol>
-  </li>
-</ul>
-<br>
-<b>B. Updating individual AGF Mods</b>
-<ol>
-  <li>Shutdown the game.</li>
-  <li>Make a backup. <i>(instructions below)</i></li>
-  <li>Install the new version as usual. <i>(see above)</i></li>
-  <li>Delete the older version.
-    <ul>
-      <li>In your Mods folder, you will see two folders for the mod, each with its version number.</li>
-    </ul>
-  </li>
-  <li>THEN you may turn the game back on.</li>
-</ol>
-<br>
-<b>C. Updating entire AGF Pack</b>
-<ol>
-  <li>Shutdown the game.</li>
-  <li>Make a backup. <i>(instructions below)</i></li>
-  <li>Carefully delete all AGF mods. <i>(don't forget the zzzAGF mod)</i></li>
-  <li>Install the new package as usual. <i>(see above)</i></li>
-  <li>THEN you may turn the game back on.</li>
-</ol>
+
+---
+
+> ⚠️ **IMPORTANT** ⚠️ Make a BACKUP First!
+
+---
+
+### A. Special Note
+> - The mod named **"0_TFP_Harmony"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - *In Steam, right click on `7 Days to Die`*
+>    - *Select "Properties"*
+>    - *Select "Installed Files"*
+>    - *Click on "Verify integrity of game files" and wait for completion.*
+
+---
+
+### B. Updating individual AGF Mods
+> 1. **Shutdown the game.**
+> 2. **Make a backup.** *(instructions below)*
+> 3. **Install the new version as usual.** *(see above)*
+> 4. **Delete the older version.**
+>    - *In your Mods folder, you will see two folders for the mod, each with its version number.*
+> 5. **THEN** you may turn the game back on.
+
+---
+
+### C. Updating entire AGF Pack
+> 1. **Shutdown the game.**
+> 2. **Make a backup.** *(instructions below)*
+> 3. **Carefully delete all AGF mods.** *(don't forget the zzzAGF mod)*
+> 4. **Install the new package as usual.** *(see above)*
+> 5. **THEN** you may turn the game back on.
 <br>
 </details>
 
@@ -296,76 +261,48 @@
 <summary>Show Backup Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-<i>Having multiple backups are best when experimenting or hosting.</i>
-<br>
-<b>A. Backing Up Your Singleplayer or Local Game</b>
-<ol>
-  <li>Open "Run" <i>(Windows key + R)</i></li>
-  <li>Type <b>%appdata%</b> and click OK</li>
-  <li>Open the "Roaming" folder</li>
-  <li>Open "7DaysToDie"</li>
-  <li>Open "Saves"</li>
-  <li>Find your World Name folder <i>(e.g., "Navezgane")</i>
-    <ul>
-      <li>You can check your world name in the game’s "Continue Game" or "Join Server" menu.</li>
-    </ul>
-  </li>
-  <li>Select your Game Name folder <i>(inside the World Name folder)</i>
-    <ul>
-      <li>The Game Name is also shown in the game menus.</li>
-    </ul>
-  </li>
-  <li>Copy the entire Game Name folder and paste it somewhere safe
-    <ul>
-      <li>(like your Desktop or another safe location)</li>
-    </ul>
-  </li>
-</ol>
-<br>
-<b>B. Dedicated Server Game</b>
-<ol>
-  <li>Open the server's "Saves" folder
-    <ul>
-      <li>Its location varies by host, but it's typically somewhere in the main dedicated server folder.</li>
-      <li>If you cannot find it, check your host's documentation or ask support.</li>
-    </ul>
-  </li>
-  <li>Find your World Name folder <i>(e.g., "Navezgane")</i>
-    <ul>
-      <li>You can check your world name in the game’s "Join Server" menu or "Server Config".</li>
-    </ul>
-  </li>
-  <li>Select your Game Name folder <i>(inside the World Name folder)</i>
-    <ul>
-      <li>The Game Name is also shown in the game's "Join Server" menu or "Server Config".</li>
-    </ul>
-  </li>
-  <li>Copy the entire Game Name folder and paste it somewhere safe
-    <ul>
-      <li>(like your Desktop or another safe location)</li>
-    </ul>
-  </li>
-</ol>
-<br>
-<b>C. To Restore a Backup</b>
-<ol>
-  <li>Keep your backup until you’re sure everything works!</li>
-  <li>Undo any mod changes</li>
-  <li>Delete the current Game Name folder <i>(in "Saves")</i></li>
-  <li>Move your backup folder back into "Saves"</li>
-</ol>
-<br>
- </details>
-
-<br>
-<br>
-
-### UNDER CONSTRUCTION but EVERYTHING IS THERE.
-> *AGF is developing automation for easier distribution.*
-> *As of now all links should be working, but formatting of this page is not finalized.*
-> *She started this on March 6, 2026.*
 
 ---
+
+> *Having multiple backups are best when experimenting or hosting.*
+
+---
+
+### A. Backing Up Your Singleplayer or Local Game
+> 1. **Open "Run"** *(Windows key + R)*
+> 2. **Type `%appdata%` and click OK**
+> 3. **Open the "Roaming" folder**
+> 4. **Open "7DaysToDie"**
+> 5. **Open "Saves"**
+> 6. **Find your World Name folder** *(e.g., "Navezgane")*
+>    - *You can check your world name in the game's "Continue Game" or "Join Server" menu.*
+> 7. **Select your Game Name folder** *(inside the World Name folder)*
+>    - *The Game Name is also shown in the game menus.*
+> 8. **Copy the entire Game Name folder and paste it somewhere safe**
+>    - *(like your Desktop or another safe location)*.
+
+---
+
+### B. Dedicated Server Game
+> 1. **Open the server's "Saves" folder**
+>    - *Its location varies by host, but it's typically somewhere in the main dedicated server folder.*
+>    - *If you cannot find it, check your host's documentation or ask support.*
+> 2. **Find your World Name folder** *(e.g., "Navezgane")*
+>    - *You can check your world name in the game's "Join Server" menu or "Server Config".*
+> 3. **Select your Game Name folder** *(inside the World Name folder)*
+>    - *The Game Name is also shown in the game's "Join Server" menu or "Server Config".*
+> 4. **Copy the entire Game Name folder and paste it somewhere safe**
+>    - *(like your Desktop or another safe location)*.
+
+---
+
+### C. To Restore a Backup
+> - *Keep your backup until you're sure everything works!*
+> 1. **Undo any mod changes**
+> 2. **Delete the current Game Name folder** *(in "Saves")*
+> 3. **Move your backup folder back into "Saves"**
+<br>
+ </details>
 
 <br>
 <br>
@@ -387,7 +324,7 @@
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.9.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.10.0)**
 
 All AGF mods in one convenient download.
 
@@ -403,7 +340,7 @@ Non-EAC mods are inside optional folders within the pack.
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v0.9.0 - June 29, 2026 3:27pm<ul><li>Change summary: +1 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">AGF-HUDPlus-PurpleBook</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.0 -&gt; v6.3.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.0 -&gt; v4.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.1 - June 26, 2026 7:28pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.2.0 -&gt; v6.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.0.1 -&gt; v2.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.0 - June 26, 2026 5:57pm<ul><li>Change summary: +10 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SignErrorGuard.zip">AGF-NoEAC-SignErrorGuard</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip">AGF-VP-BedrollPlus</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">AGF-VP-FuelBurnPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip">AGF-VP-MaxLevel500</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip">AGF-VP-PickupLanternsPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip">AGF-VP-PlayerResetQuests</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">AGF-VP-RebundleBundles</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">AGF-VP-SimplifiedStacks</a> (new: v2.0.1)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v0.10.0 - July 2, 2026 12:45am<ul><li>Change summary: +2 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">zzzAGF-Special-Compatibilities</a> (new: v5.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.1 -&gt; v6.4.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.1 -&gt; v4.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">AGF-NoEAC-ScreamerAlert</a> (v2.1.2 -&gt; v2.2.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.9.0 - June 29, 2026 3:27pm<ul><li>Change summary: +1 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">AGF-HUDPlus-PurpleBook</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.0 -&gt; v6.3.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.0 -&gt; v4.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.1 - June 26, 2026 7:28pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.2.0 -&gt; v6.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.0.1 -&gt; v2.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -428,9 +365,9 @@ Quality-of-life HUD enhancements and visual tweaks.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-1Main.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-1Main.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.3.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
+<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.4.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
 Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -440,7 +377,7 @@ Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
 <td valign="top">
 <b>AGF Purple Book</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">Download</a><br>
 Adds a Purple Book button for a tabbed progression reference covering magazines, books, schematics, and armor details.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -450,7 +387,7 @@ Adds a Purple Book button for a tabbed progression reference covering magazines,
 <td valign="top">
 <b>AGF Removes Entering Popups</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip">Download</a><br>
 Removes the Entering Area popup text from the HUD.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -489,7 +426,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 <td valign="top">
 <b>AGF BackpackPlus 60 Slots</b> &nbsp;·&nbsp; v4.0.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">Download</a><br>
 Expands inventory to 60 slots.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -499,7 +436,7 @@ Expands inventory to 60 slots.
 <td valign="top">
 <b>AGF BackpackPlus 72 Slots</b> &nbsp;·&nbsp; v4.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip">Download</a><br>
 Expands inventory to 72 slots with craftable large storage options.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -509,7 +446,7 @@ Expands inventory to 72 slots with craftable large storage options.
 <td valign="top">
 <b>AGF BackpackPlus 84 Slots</b> &nbsp;·&nbsp; v4.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip">Download</a><br>
 Expands inventory to 84 slots with craftable large storage options.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -519,7 +456,7 @@ Expands inventory to 84 slots with craftable large storage options.
 <td valign="top">
 <b>AGF BackpackPlus 119 Slots</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip">Download</a><br>
 Expands inventory to 119 slots with AGF-style backpack UI updates.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -531,8 +468,6 @@ Expands inventory to 119 slots with AGF-style backpack UI updates.
 
 ## **D. SPECIAL COMPATIBILITY MOD**
 
-Updates are in progress.
-
 Compatibility patches between AGF mods and select third-party mods.
 
 Requests can be sent to AGF in [Discord](https://discord.gg/Vm5eyW6N4r).
@@ -543,7 +478,16 @@ Requests can be sent to AGF in [Discord](https://discord.gg/Vm5eyW6N4r).
 
 ---
 
-*Updates are in progress.*
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_zzzAGF-Special-Compatibilities.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_zzzAGF-Special-Compatibilities.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Special Compatibilities</b> &nbsp;·&nbsp; v5.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">Download</a><br>
+Compatibility patch collection bridging AGF mods with popular third-party mods.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
 
 ---
 
@@ -568,7 +512,7 @@ All Server-side (EAC-Friendly)!
 <td valign="top">
 <b>AGF Bedroll Plus</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip">Download</a><br>
 Adds a tougher Bedroll+ spawn point available in all bed models with pickup support.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -578,7 +522,7 @@ Adds a tougher Bedroll+ spawn point available in all bed models with pickup supp
 <td valign="top">
 <b>AGF Fuel Burn Plus</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">Download</a><br>
 Condenses wood or coal into single fuel items with burn times from 10 to 6000 minutes.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -588,7 +532,7 @@ Condenses wood or coal into single fuel items with burn times from 10 to 6000 mi
 <td valign="top">
 <b>AGF VP Larger Storage Option</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
 Adds craftable XL storage in multiple shapes, with 3x block health and break-to-pick-up.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -598,7 +542,7 @@ Adds craftable XL storage in multiple shapes, with 3x block health and break-to-
 <td valign="top">
 <b>AGF Max Level 500</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip">Download</a><br>
 Raises the max player level cap from 300 to 500.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -608,7 +552,7 @@ Raises the max player level cap from 300 to 500.
 <td valign="top">
 <b>AGF Mod Slots Plus</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">Download</a><br>
 Rebalances mod slot progression so upgrading never reduces your slots, with a max of 6.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -618,7 +562,7 @@ Rebalances mod slot progression so upgrading never reduces your slots, with a ma
 <td valign="top">
 <b>AGF Pickup Lanterns Plus</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip">Download</a><br>
 Lanterns, flashlights, burning barrels, and jack-o-lanterns are all pickupable.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -628,7 +572,7 @@ Lanterns, flashlights, burning barrels, and jack-o-lanterns are all pickupable.
 <td valign="top">
 <b>AGF Player Reset Quests</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip">Download</a><br>
 Adds a trader dialogue option to regenerate the current quest list.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -638,7 +582,7 @@ Adds a trader dialogue option to regenerate the current quest list.
 <td valign="top">
 <b>AGF Rebundle Bundles</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">Download</a><br>
 Lets you rebundle opened resource and ammo bundles with tinted icons for easy identification.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -648,7 +592,7 @@ Lets you rebundle opened resource and ammo bundles with tinted icons for easy id
 <td valign="top">
 <b>AGF Simplified Stacks</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">Download</a><br>
 Standardizes stack sizes into clean category tiers for simpler inventory management.
-<ul><li><em>Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
 
@@ -677,7 +621,17 @@ Installation requirements vary — check each mod's details.
 <td valign="top">
 <b>AGF Auto Run</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">Download</a><br>
 Auto-Run for keyboard and controller, configurable from in-game menus.
-<ul><li><em>Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
+<ul><li><em>Client-Side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-CosmeticLockIcon.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-CosmeticLockIcon.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Armor Cosmetic Locked Icon</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">Download</a><br>
+Adds cosmetic lock icon behavior for armor entries, excluding magnitude/star indicator items.
+<ul><li><em>Server/Client-Side (Required): EAC off required; host and joining players must install it.</em></li></ul>
 </td>
 </tr></table>
 
@@ -685,9 +639,9 @@ Auto-Run for keyboard and controller, configurable from in-game menus.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-EnhancedAGF.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-EnhancedAGF.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v4.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
+<b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v4.2.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
 Adds extended HUD bindings and Harmony patches that power extra AGF features.
-<ul><li><em>Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
+<ul><li><em>Client-Side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
 </td>
 </tr></table>
 
@@ -697,7 +651,7 @@ Adds extended HUD bindings and Harmony patches that power extra AGF features.
 <td valign="top">
 <b>AGF Global Storm Tracker</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip">Download</a><br>
 Sends a global chat alert showing the active storm biome and when it clears.
-<ul><li><em>Server-side (EAC Off): EAC off required; server install works for all joining players.</em></li></ul>
+<ul><li><em>Server-Side (EAC Off): EAC off required; server install works for all joining players.</em></li></ul>
 </td>
 </tr></table>
 
@@ -705,9 +659,9 @@ Sends a global chat alert showing the active storm biome and when it clears.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-ScreamerAlert.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-ScreamerAlert.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Screamer Alert</b> &nbsp;·&nbsp; v2.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">Download</a><br>
+<b>AGF Screamer Alert</b> &nbsp;·&nbsp; v2.2.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">Download</a><br>
 Sends a chat alert when a Screamer or its horde spawns within 120m.
-<ul><li><em>Server-side (EAC Off): EAC off required; server install works for all joining players.</em></li></ul>
+<ul><li><em>Server-Side (EAC Off): EAC off required; server install works for all joining players.</em></li></ul>
 </td>
 </tr></table>
 
@@ -717,7 +671,7 @@ Sends a chat alert when a Screamer or its horde spawns within 120m.
 <td valign="top">
 <b>AGF No EAC Sign Error Guard</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SignErrorGuard.zip">Download</a><br>
 Blocks the sign error from interrupting players. Temporary solution.
-<ul><li><em>Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
+<ul><li><em>Client-Side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
 </td>
 </tr></table>
 
@@ -727,7 +681,7 @@ Blocks the sign error from interrupting players. Temporary solution.
 <td valign="top">
 <b>AGF Toolbelt 12 Slots</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">Download</a><br>
 Expands the toolbelt from 10 to 12 slots with hotkeys for the new slots.
-<ul><li><em>Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
+<ul><li><em>Client-Side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
 </td>
 </tr></table>
 

@@ -102,7 +102,7 @@ Compare current `03_ReleaseSource` GigglePack mod versions against `gigglepack-r
 
 ### Step 6 — Rebuild main `README.md`
 
-Regenerate `README.md` from `TEMPLATE-MainReadMe.md` and current `03_ReleaseSource` state.
+Regenerate `README.md` from `Workflow/ReadmeSystem/Templates/TEMPLATE-MainReadMe.md` and current `03_ReleaseSource` state.
 
 Each category section follows: section header → Download All link → individually listed mods.
 

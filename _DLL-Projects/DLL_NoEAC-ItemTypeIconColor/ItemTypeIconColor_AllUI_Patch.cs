@@ -1,8 +1,72 @@
 using HarmonyLib;
 using UnityEngine;
+using System;
 
 namespace ItemTypeIconColor
 {
+    internal static class ItemTypeIconColorUiHelpers
+    {
+        private static object GetMemberValue(object instance, string memberName)
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+
+            var type = instance.GetType();
+            var prop = AccessTools.Property(type, memberName);
+            if (prop != null)
+            {
+                try
+                {
+                    return prop.GetValue(instance, null);
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+
+            var field = AccessTools.Field(type, memberName);
+            if (field != null)
+            {
+                try
+                {
+                    return field.GetValue(instance);
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+
+            return null;
+        }
+
+        public static EntityPlayerLocal GetEntityPlayer(object controller)
+        {
+            object xui = GetMemberValue(controller, "xui")
+                ?? GetMemberValue(controller, "XUi")
+                ?? GetMemberValue(controller, "_xui");
+            if (xui == null)
+            {
+                return null;
+            }
+
+            object playerUI = GetMemberValue(xui, "playerUI")
+                ?? GetMemberValue(xui, "PlayerUI")
+                ?? GetMemberValue(xui, "_playerUI");
+            if (playerUI == null)
+            {
+                return null;
+            }
+
+            return GetMemberValue(playerUI, "entityPlayer") as EntityPlayerLocal
+                ?? GetMemberValue(playerUI, "EntityPlayer") as EntityPlayerLocal
+                ?? GetMemberValue(playerUI, "_entityPlayer") as EntityPlayerLocal;
+        }
+    }
+
     // Patch for XUiC_TraderItemEntry
     [HarmonyPatch(typeof(XUiC_TraderItemEntry), "GetBindingValueInternal")]
     public class XUiC_TraderItemEntry_GetBindingValueInternal_Patch
@@ -23,10 +87,11 @@ namespace ItemTypeIconColor
             if (bindingName == "itemtypeicontint")
             {
                 bool isUnlocked = false;
+                var entityPlayer = ItemTypeIconColorUiHelpers.GetEntityPlayer(__instance);
                 // Try ItemClass first
                 if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null)
                 {
-                    if (__instance.xui == null || __instance.xui.playerUI == null || __instance.xui.playerUI.entityPlayer == null)
+                    if (entityPlayer == null)
                     {
                         return true;
                     }
@@ -35,7 +100,7 @@ namespace ItemTypeIconColor
                         var unlocks = itemClass.Properties.Values["Unlocks"] as string;
                         if (!string.IsNullOrEmpty(unlocks))
                         {
-                            isUnlocked = XUiM_ItemStack.CheckKnown(__instance.xui.playerUI.entityPlayer, itemClass);
+                            isUnlocked = XUiM_ItemStack.CheckKnown(entityPlayer, itemClass);
                         }
                     }
                     if (isUnlocked && itemClass.Properties.Values.ContainsKey("AltItemTypeIconColor"))
@@ -92,13 +157,18 @@ namespace ItemTypeIconColor
             {
                 var itemClass = ItemClass.GetForId(recipe.itemValueType);
                 bool isUnlocked = false;
-                if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null && itemClass.Properties.Values.ContainsKey("Unlocks") && __instance.xui != null && __instance.xui.playerUI != null && __instance.xui.playerUI.entityPlayer != null)
+                var entityPlayer = ItemTypeIconColorUiHelpers.GetEntityPlayer(__instance);
+                if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null && itemClass.Properties.Values.ContainsKey("Unlocks") && entityPlayer != null)
                 {
                     var unlocks = itemClass.Properties.Values["Unlocks"] as string;
                     if (!string.IsNullOrEmpty(unlocks))
                     {
-                        isUnlocked = XUiM_ItemStack.CheckKnown(__instance.xui.playerUI.entityPlayer, itemClass);
+                        isUnlocked = XUiM_ItemStack.CheckKnown(entityPlayer, itemClass);
                     }
+                }
+                if (itemClass == null || itemClass.Properties == null || itemClass.Properties.Values == null)
+                {
+                    return true;
                 }
                 if (isUnlocked && itemClass.Properties.Values.ContainsKey("AltItemTypeIconColor"))
                 {
@@ -138,6 +208,7 @@ namespace ItemTypeIconColor
             if (bindingName == "itemtypeicontint")
             {
                 bool isUnlocked = false;
+                var entityPlayer = ItemTypeIconColorUiHelpers.GetEntityPlayer(__instance);
                 if (itemStack == null)
                 {
                     return true;
@@ -154,7 +225,7 @@ namespace ItemTypeIconColor
                 {
                     return true;
                 }
-                if (__instance.xui == null || __instance.xui.playerUI == null || __instance.xui.playerUI.entityPlayer == null)
+                if (entityPlayer == null)
                 {
                     return true;
                 }
@@ -163,7 +234,7 @@ namespace ItemTypeIconColor
                     var unlocks = itemClass.Properties.Values["Unlocks"] as string;
                     if (!string.IsNullOrEmpty(unlocks))
                     {
-                        isUnlocked = XUiM_ItemStack.CheckKnown(__instance.xui.playerUI.entityPlayer, itemClass, itemStack.itemValue);
+                        isUnlocked = XUiM_ItemStack.CheckKnown(entityPlayer, itemClass, itemStack.itemValue);
                     }
                 }
                 if (isUnlocked && itemClass.Properties.Values.ContainsKey("AltItemTypeIconColor"))
@@ -204,13 +275,18 @@ namespace ItemTypeIconColor
             {
                 var itemClass = ItemClass.GetForId(recipe.itemValueType);
                 bool isUnlocked = false;
-                if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null && itemClass.Properties.Values.ContainsKey("Unlocks") && __instance.xui != null && __instance.xui.playerUI != null && __instance.xui.playerUI.entityPlayer != null)
+                var entityPlayer = ItemTypeIconColorUiHelpers.GetEntityPlayer(__instance);
+                if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null && itemClass.Properties.Values.ContainsKey("Unlocks") && entityPlayer != null)
                 {
                     var unlocks = itemClass.Properties.Values["Unlocks"] as string;
                     if (!string.IsNullOrEmpty(unlocks))
                     {
-                        isUnlocked = XUiM_ItemStack.CheckKnown(__instance.xui.playerUI.entityPlayer, itemClass);
+                        isUnlocked = XUiM_ItemStack.CheckKnown(entityPlayer, itemClass);
                     }
+                }
+                if (itemClass == null || itemClass.Properties == null || itemClass.Properties.Values == null)
+                {
+                    return true;
                 }
                 if (isUnlocked && itemClass.Properties.Values.ContainsKey("AltItemTypeIconColor"))
                 {
@@ -250,13 +326,18 @@ namespace ItemTypeIconColor
             {
                 var itemClass = item.itemValue.ItemClass;
                 bool isUnlocked = false;
-                if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null && itemClass.Properties.Values.ContainsKey("Unlocks") && __instance.xui != null && __instance.xui.playerUI != null && __instance.xui.playerUI.entityPlayer != null)
+                var entityPlayer = ItemTypeIconColorUiHelpers.GetEntityPlayer(__instance);
+                if (itemClass != null && itemClass.Properties != null && itemClass.Properties.Values != null && itemClass.Properties.Values.ContainsKey("Unlocks") && entityPlayer != null)
                 {
                     var unlocks = itemClass.Properties.Values["Unlocks"] as string;
                     if (!string.IsNullOrEmpty(unlocks))
                     {
-                        isUnlocked = XUiM_ItemStack.CheckKnown(__instance.xui.playerUI.entityPlayer, itemClass, item.itemValue);
+                        isUnlocked = XUiM_ItemStack.CheckKnown(entityPlayer, itemClass, item.itemValue);
                     }
+                }
+                if (itemClass == null || itemClass.Properties == null || itemClass.Properties.Values == null)
+                {
+                    return true;
                 }
                 if (isUnlocked && itemClass.Properties.Values.ContainsKey("AltItemTypeIconColor"))
                 {

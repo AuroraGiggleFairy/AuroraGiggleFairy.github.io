@@ -1,14 +1,15 @@
-#   GigglePack v0.9.0 - *June 29, 2026 3:27pm*
+#   GigglePack v0.10.0 - *July 2, 2026 12:45am*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +1 new, ~3 updated, =0 renamed, -0 removed**
+###  **Change summary: +2 new, ~3 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - [AGF-HUDPlus-PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip) (new: v3.0.0)
+  - [AGF-NoEAC-CosmeticLockIcon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip) (new: v3.0.0)
+  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (new: v5.0.0)
 - **Updated existing mods:**
-  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.3.0 -> v6.3.1)
-  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.1.0 -> v4.1.1)
-  - [AGF-VP-LargerStorageOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip) (v1.0.0 -> v1.0.1)
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.3.1 -> v6.4.0)
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.1.1 -> v4.2.0)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.1.2 -> v2.2.0)
 - **Renamed mods:**
   - None
 - **Removed mods:**

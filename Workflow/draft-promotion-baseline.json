@@ -29,6 +29,11 @@
     "recorded_at": "2026-06-15T02:20:47",
     "version": "1.0.1"
   },
+  "AGF-4Modders-ItemTypeIconColor": {
+    "folder": "AGF-4Modders-ItemTypeIconColor-v2.0.0",
+    "recorded_at": "2026-07-02T00:10:00",
+    "version": "2.0.0"
+  },
   "AGF-4Modders-SkillPointCap": {
     "folder": "AGF-4Modders-SkillPointCap-v1.0.1",
     "recorded_at": "2026-06-15T02:20:47",
@@ -115,9 +120,9 @@
     "version": "1.0.1"
   },
   "AGF-NoEAC-CosmeticLockIcon": {
-    "folder": "AGF-NoEAC-CosmeticLockIcon-v1.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.2"
+    "folder": "AGF-NoEAC-CosmeticLockIcon-v3.0.0",
+    "recorded_at": "2026-07-02T00:10:00",
+    "version": "3.0.0"
   },
   "AGF-NoEAC-EnhancedAGF": {
     "folder": "AGF-NoEAC-EnhancedAGF-v4.0.0",
@@ -505,8 +510,8 @@
     "version": "2.0.2"
   },
   "zzzAGF-Special-Compatibilities": {
-    "folder": "zzzAGF-Special-Compatibilities-v4.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "4.1.1"
+    "folder": "zzzAGF-Special-Compatibilities-v5.0.0",
+    "recorded_at": "2026-07-01T10:57:36",
+    "version": "5.0.0"
   }
 }

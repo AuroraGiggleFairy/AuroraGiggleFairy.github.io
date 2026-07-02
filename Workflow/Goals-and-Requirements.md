@@ -62,7 +62,7 @@ The current expectation is that the new-mod creation script mainly **creates the
 This is the most fragile part. When `Name` in `ModInfo.xml` changes:
 
 - The **folder name** must be updated to match.
-- The entry in **`HELPER_ModCompatibility.csv`** must be updated.
+- The entry in **`Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv`** must be updated.
 - The **quote file** in `_Quotes/` must be renamed to match.
 - Any **README references** must reflect the new name.
 - This must work whether the name change happens in the workspace lane OR in the game folder.

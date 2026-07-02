@@ -26,7 +26,7 @@ public static class HarmonyPatches
 		private static void Postfix(XUiC_RecipeStack __instance)
 		{
 			Recipe recipe = __instance.recipe;
-			EntityPlayerLocal entityPlayerLocal = __instance.xui?.playerUI?.entityPlayer;
+			EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
 			if (recipe != null && !(entityPlayerLocal == null) && recipe.IsScrap && recipe.ingredients.Count > 0)
 			{
 				ItemClass itemClass = recipe.ingredients[0].itemValue.ItemClass;
@@ -45,10 +45,24 @@ public static class HarmonyPatches
 		private static void Postfix(XUiC_ItemStack __instance)
 		{
 			ItemClass itemClassOrMissing = __instance.itemClassOrMissing;
-			EntityPlayerLocal entityPlayerLocal = __instance.xui?.playerUI?.entityPlayer;
+			EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
 			if (itemClassOrMissing != null && !(entityPlayerLocal == null))
 			{
-				string text = ((entityPlayerLocal.equipment == null || !entityPlayerLocal.equipment.HasCosmeticUnlocked(itemClassOrMissing).isUnlocked) ? (itemClassOrMissing.Properties.Values.ContainsKey("ItemTypeIcon") ? itemClassOrMissing.Properties.Values["ItemTypeIcon"] : null) : (itemClassOrMissing.Properties.Values.ContainsKey("AltItemTypeIcon") ? itemClassOrMissing.Properties.Values["AltItemTypeIcon"] : null));
+				ItemStack itemStack = __instance.ItemStack;
+				ItemValue itemValue = ((itemStack == null || itemStack.IsEmpty()) ? null : itemStack.itemValue);
+				if (ArmorIconUIHarmonyPatches.HasMagnitudeIndicator(itemClassOrMissing, itemValue))
+				{
+					return;
+				}
+
+				bool isUnlocked = false;
+				ItemClassArmor armorClass = itemClassOrMissing as ItemClassArmor;
+				if (armorClass != null)
+				{
+					isUnlocked = ArmorIconUIHarmonyPatches.IsCosmeticUnlocked(entityPlayerLocal, armorClass);
+				}
+
+				string text = ((!isUnlocked) ? (itemClassOrMissing.Properties.Values.ContainsKey("ItemTypeIcon") ? itemClassOrMissing.Properties.Values["ItemTypeIcon"] : null) : (itemClassOrMissing.Properties.Values.ContainsKey("AltItemTypeIcon") ? itemClassOrMissing.Properties.Values["AltItemTypeIcon"] : null));
 				if (!string.IsNullOrEmpty(text) && __instance.itemIconSprite != null)
 				{
 					__instance.itemIconSprite.SpriteName = "ui_game_symbol_" + text;

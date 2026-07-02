@@ -1,0 +1,47 @@
+<AGF-ESCWindowPlus>
+
+<append xpath="/styles/global">
+   <!-- FULL COLOR -->
+   <style_entry name="headerBackgroundColor" value="95,89,128"/>
+   <style_entry name="pageBackgroundColor" value="95,89,128"/>
+   <style_entry name="linkBackgroundColor" value="95,89,128"/>
+   <style_entry name="optionsBackgroundColor" value="95,89,128"/>
+   <style_entry name="panelBorderColor" value="0,0,0"/>
+   <style_entry name="headerTitleColor" value="141,181,128"/>
+   <style_entry name="headerMottoColor" value="221,205,250"/>
+   <style_entry name="pageTabButtonBackgroundColor" value="32,32,32"/>
+   <style_entry name="pageTabButtonBorderColor" value="0,0,0"/>
+   <style_entry name="pageTabButtonSelectedColor" value="74,33,150"/>
+   <style_entry name="pageTabButtonTextColor" value="141,181,128"/>
+   <style_entry name="pageTitleColor" value="141,181,128"/>
+   <style_entry name="pageBodyColor" value="221,205,250"/>
+   <style_entry name="textBoldingColor" value="141,181,128"/>
+   <style_entry name="textHighlightColor" value="255,255,255"/>
+   <style_entry name="linkButtonBackgroundColor" value="64,64,64"/>
+   <style_entry name="linkButtonBorderColor" value="0,0,0"/>
+   <style_entry name="linkButtonTextColor" value="255,255,255"/>
+   <style_entry name="linkButtonHoverColor" value="50,50,50"/>
+
+   <!-- High Visibility -->
+   <style_entry name="headerBackgroundColorHV" value="20,20,20"/>
+   <style_entry name="pageBackgroundColorHV" value="26,26,26"/>
+   <style_entry name="linkBackgroundColorHV" value="20,20,20"/>
+   <style_entry name="optionsBackgroundColorHV" value="26,26,26"/>
+   <style_entry name="panelBorderColorHV" value="102,102,102"/>
+   <style_entry name="headerTitleColorHV" value="210,178,108"/>
+   <style_entry name="headerMottoColorHV" value="176,176,176"/>
+   <style_entry name="pageTabButtonBackgroundColorHV" value="20,20,20"/>
+   <style_entry name="pageTabButtonBorderColorHV" value="70,70,70"/>
+   <style_entry name="pageTabButtonSelectedColorHV" value="97,97,97"/>
+   <style_entry name="pageTabButtonTextColorHV" value="255,255,255"/>
+   <style_entry name="pageTitleColorHV" value="210,178,108"/>
+   <style_entry name="pageBodyColorHV" value="220,220,220"/>
+   <style_entry name="textBoldingColorHV" value="210,178,108"/>
+   <style_entry name="textHighlightColorHV" value="210,178,108"/>
+   <style_entry name="linkButtonBackgroundColorHV" value="44,44,44"/>
+   <style_entry name="linkButtonBorderColorHV" value="102,102,102"/>
+   <style_entry name="linkButtonTextColorHV" value="220,220,220"/>
+   <style_entry name="linkButtonHoverColorHV" value="58,58,58"/>
+</append>
+
+</AGF-ESCWindowPlus>

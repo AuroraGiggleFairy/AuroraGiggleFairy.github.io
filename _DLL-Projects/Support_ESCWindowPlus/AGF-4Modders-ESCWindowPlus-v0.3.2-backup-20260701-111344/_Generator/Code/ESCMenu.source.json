@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "name": "AGF-4Modders-ESCWindowPlus",
+    "modFolder": "AGF-4Modders-ESCWindowPlus-v0.1.2",
+    "version": "0.1",
+    "description": "Single-source content for ESC menu localization and link feeds"
+  },
+  "labels": {
+    "headerTitle": "Twilight Realm",
+    "headerMotto": "An AuroraGiggleFairy 7d2d Server",
+    "linkLabel": "AGF's Discord",
+    "optionsTitle": "Options"
+  },
+  "links": [
+    {
+      "id": "discord",
+      "enabled": true,
+      "title": "Join Discord",
+      "url": "https://discord.gg/Vm5eyW6N4r"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "welcome",
+      "button": "Welcome",
+      "title": "Welcome!!!",
+      "body": "Welcome to the server.\\n\\nUse this tab for high-level server information."
+    },
+    {
+      "id": "rules",
+      "button": "Rules",
+      "title": "Rules",
+      "body": "1. Respect builds.\\n2. Be kind.\\n3. Report issues on Discord."
+    },
+    {
+      "id": "changes_log",
+      "button": "Changes Log",
+      "title": "Changes Log",
+      "body": "v0.0.1 - Initial ESC menu setup."
+    }
+  ],
+  "themes": {
+    "color": {
+      "headerBackground": "95,89,128",
+      "pageBackground": "95,89,128",
+      "linkBackgroundColor": "95,89,128",
+      "optionsBackgroundColor": "95,89,128",
+      "panelBorderColor": "0,0,0",
+      "headerTitleColor": "141,181,128",
+      "headerMottoColor": "221,205,250",
+      "pageTabButtonBackgroundColor": "32,32,32",
+      "pageTabButtonBorderColor": "0,0,0",
+      "pageTabButtonSelectedColor": "74,33,150",
+      "pageTabButtonTextColor": "141,181,128",
+      "linkButtonBackgroundColor": "64,64,64",
+      "linkButtonBorderColor": "0,0,0",
+      "linkButtonTextColor": "255,255,255",
+      "linkButtonHoverColor": "50,50,50",
+      "pageTitleColor": "141,181,128",
+      "pageBodyColor": "221,205,250",
+      "textBoldingColor": "141,181,128",
+      "textHighlightColor": "255,255,255"
+    }
+  },
+  "ui": {
+    "layout": {
+      "contentWidth": 1100,
+      "contentPadding": 20,
+      "buttonCellWidth": 130,
+      "buttonHeight": 42,
+      "buttonPosY": -20,
+      "maxLinks": 5,
+      "maxTabs": 8
+    }
+  },
+  "dev": {
+    "highVisibilityPreview": {
+  "headerBackground": "20,20,20",
+  "pageBackground": "26,26,26",
+  "linkBackgroundColor": "20,20,20",
+  "optionsBackgroundColor": "26,26,26",
+  "panelBorderColor": "102,102,102",
+  "headerTitleColor": "210,178,108",
+  "headerMottoColor": "176,176,176",
+  "pageTabButtonBackgroundColor": "20,20,20",
+  "pageTabButtonBorderColor": "70,70,70",
+  "pageTabButtonSelectedColor": "97,97,97",
+  "pageTabButtonTextColor": "255,255,255",
+  "linkButtonBackgroundColor": "44,44,44",
+  "linkButtonBorderColor": "102,102,102",
+  "linkButtonTextColor": "220,220,220",
+  "linkButtonHoverColor": "58,58,58",
+  "pageTitleColor": "210,178,108",
+  "pageBodyColor": "220,220,220",
+  "textBoldingColor": "210,178,108",
+  "textHighlightColor": "210,178,108"
+    }
+  }
+}
+

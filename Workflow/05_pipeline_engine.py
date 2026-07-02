@@ -53,14 +53,30 @@ QUOTES_DIR = os.path.join(VS_CODE_ROOT, "_Quotes")
 LOGS_DIR = os.path.join(VS_CODE_ROOT, "Logs")
 MAIN_LOG_MAX_FILES = 10
 
-COMPAT_CSV = os.path.join(VS_CODE_ROOT, "HELPER_ModCompatibility.csv")
-MOD_README_TEMPLATE = os.path.join(VS_CODE_ROOT, "TEMPLATE-ModReadMes.md")
-MOD_TYPE_DESCRIPTIONS_TEMPLATE = os.path.join(VS_CODE_ROOT, "TEMPLATE-ModTypeDescriptions.md")
-MAIN_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-MainReadMe.md")
-MAIN_MOD_CATEGORY_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-MainReadMe-1ModCategory")
-MAIN_MOD_ENTRY_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-MainReadMe-2ModEntry")
-GIGGLE_PACK_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-MainReadMe-0GigglePack")
-CATEGORY_DESCRIPTIONS_PATH = os.path.join(VS_CODE_ROOT, "TEMPLATE-CategoryDescriptions.md")
+README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "Workflow", "ReadmeSystem")
+README_TEMPLATE_ROOT = os.path.join(README_SYSTEM_ROOT, "Templates")
+README_SNIPPETS_ROOT = os.path.join(README_SYSTEM_ROOT, "Snippets")
+COMPAT_CSV = os.path.join(README_SYSTEM_ROOT, "Data", "HELPER_ModCompatibility.csv")
+ABOUTME_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ABOUTME-Guide.md")
+ABOUTME_MAIN_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ABOUTME-Main-Guide.md")
+MODTYPE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MODTYPE-Guide.md")
+INSTALL_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "INSTALL-Guide.md")
+REMOVAL_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "REMOVAL-Guide.md")
+UPDATE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "UPDATE-Guide.md")
+BACKUP_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "BACKUP-Guide.md")
+ABOUTME_GUIDE_PLACEHOLDER = "{{ABOUTME_GUIDE_BODY}}"
+ABOUTME_MAIN_GUIDE_PLACEHOLDER = "{{ABOUTME_MAIN_GUIDE_BODY}}"
+MODTYPE_GUIDE_PLACEHOLDER = "{{MODTYPE_GUIDE_BODY}}"
+INSTALL_GUIDE_PLACEHOLDER = "{{INSTALL_GUIDE_BODY}}"
+REMOVAL_GUIDE_PLACEHOLDER = "{{REMOVAL_GUIDE_BODY}}"
+UPDATE_GUIDE_PLACEHOLDER = "{{UPDATE_GUIDE_BODY}}"
+BACKUP_GUIDE_PLACEHOLDER = "{{BACKUP_GUIDE_BODY}}"
+MOD_README_TEMPLATE = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-ModReadMes.md")
+MAIN_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe.md")
+MAIN_MOD_CATEGORY_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe-1ModCategory")
+MAIN_MOD_ENTRY_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe-2ModEntry")
+GIGGLE_PACK_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe-0GigglePack")
+CATEGORY_DESCRIPTIONS_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-CategoryDescriptions.md")
 IMAGES_ROOT = os.path.join(VS_CODE_ROOT, "00_Images")
 IMAGES_SOURCE_ROOT = os.path.join(IMAGES_ROOT, "source")
 IMAGES_MEDIA_ROOT = os.path.join(IMAGES_ROOT, "mod-media")
@@ -133,8 +149,6 @@ DEFAULT_MOD_TYPE_LINE_BY_ID = {
     "2": "Server-side (EAC Off): EAC off required; server install works for all joining players.",
     "3": "Server/Client-side (Required): EAC off required; host and joining players must install it.",
     "4": "Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.",
-    "5": "Hybrid: EAC off required; server install works for all joining players; client install is optional for extra features.",
-    "6": "Server-side (Dedicated Only, EAC Off): EAC off required; dedicated uses server install only, but player-hosted requires host and joining players to install the mod.",
 }
 
 MOD_TYPE_COMPAT_BY_ID = {
@@ -162,21 +176,226 @@ MOD_TYPE_COMPAT_BY_ID = {
         "SERVER_SIDE_DEDICATED": "N/A",
         "CLIENT_SIDE": "Only",
     },
-    "5": {
-        "EAC_FRIENDLY": "No",
-        "SERVER_SIDE_PLAYER": "Hybrid",
-        "SERVER_SIDE_DEDICATED": "Hybrid",
-        "CLIENT_SIDE": "Optional",
-    },
-    "6": {
-        "EAC_FRIENDLY": "No",
-        "SERVER_SIDE_PLAYER": "No",
-        "SERVER_SIDE_DEDICATED": "Yes",
-        "CLIENT_SIDE": "Required",
-    },
 }
 
 FAIL_FAST_ENABLED = True
+
+DEFAULT_ABOUTME_GUIDE_BODY = """## 1. About AGF
+- AuroraGiggleFairy (AGF) creates accessibility-focused, vanilla-enhancing mods for 7 Days to Die.
+- Goal is to deliver practical, easy-to-use features shaped by community feedback.
+- Main site and first release source: [auroragigglefairy.github.io](https://auroragigglefairy.github.io/)
+- Discord is best for latest updates, fastest contact, and becoming a tester: [discord.gg/Vm5eyW6N4r](https://discord.gg/Vm5eyW6N4r)
+
+---
+---"""
+
+DEFAULT_ABOUTME_MAIN_GUIDE_BODY = """> - My name is AuroraGiggleFairy (AGF).
+> - I create accessibility-focused, vanilla-enhancing mods for 7 Days to Die.
+> - Goal is to deliver practical, easy-to-use features shaped by community feedback.
+> - Main site and first release source: [auroragigglefairy.github.io](https://auroragigglefairy.github.io/).
+> - Discord is best for latest updates, fastest contact, and becoming a tester: [discord.gg/Vm5eyW6N4r](https://discord.gg/Vm5eyW6N4r).
+> - You may also catch me working on my mods live on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
+> - Donations are appreciated, not required: [DONATE HERE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
+>
+> - I started playing 7 Days to Die in Alpha 8.
+> - I started attempting to mod in Alpha 17.
+> - I first published a mod in Alpha 18.
+> - I continue to publish mods regularly.
+> - 7,000+ game hours played.
+>
+### Mod Philosophy
+> - Prioritize easy installation and use.
+> - Goal: enhance vanilla gameplay.
+> - Feedback and testing are beneficial.
+> - Detailed notes for individual preference and mod learning.
+> - Accessibility is required.
+> - All 13 languages supported (best effort).
+>
+> "The best mods rely on community involvement."
+>
+### Language Support
+> - 7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.
+> - AGF mods add support for all 13 languages.
+> - If you find a translation error, please let AGF know on [DISCORD](https://discord.gg/Vm5eyW6N4r).
+>
+### **Server Hosting Recommendation**
+> - I recommend **Pingperfect**. They have provided excellent support, and I find their costs affordable and worth the service as a whole. You can support me by signing up through my [Referral Link](https://pingperfect.com/aff.php?aff=1834)."""
+
+DEFAULT_MODTYPE_GUIDE_BODY = """---
+
+> *This guide explains where to install a mod and whether it is EAC friendly.*
+
+---
+
+### A. Install on Server, Client, or Both?
+>   - **Server** - where the game is hosted. This could be your own PC if you are hosting the game yourself, or a game hosting service like Pingperfect.
+>   - **Client** - your own PC.
+> - Some mods only need to be in one place. Others need to be in both. Please see the Mod Types section below for exact requirements.
+
+---
+
+### B. EAC Friendly?
+
+> - EAC stands for **Easy Anti-Cheat**. It's a program built into 7 Days to Die that helps protect multiplayer sessions from cheating.
+> - Mod Type 1 is EAC friendly. Mod Types 2, 3, and 4 require EAC to be turned off.
+> - Running without EAC opens up a wider range of mods and experiences. If you're running a multiplayer server without EAC, here are some good practices to keep things running smoothly:
+>   - **Recommended practices when running multiplayer with EAC off:**
+>     - Require a password and be conservative in distributing it.
+>     - There are tools available such as ALOC and Server Tools to add extra protections.
+>     - Optionally, require the whitelist system for the strictest limitation on who can join.
+>     - Seek out other server hosts and discuss what they do.
+>     - You can find help on AGF's Discord: [DISCORD](https://discord.gg/Vm5eyW6N4r)
+
+---
+
+### C. Mod Types
+
+| # | Mod Type | What It Means |
+|---|----------|---------------|
+| 1 | Server-Side (EAC-Friendly) | Server install works for all joining players; EAC on or off. |
+| 2 | Server-Side (EAC Off) | EAC off required; server install works for all joining players. |
+| 3 | Server/Client-Side (Required) | EAC off required; host and joining players must install it. |
+| 4 | Client-Side (Only) | EAC off required; server install has no effect; only the installing player gets the feature. |
+"""
+
+DEFAULT_INSTALL_GUIDE_BODY = """---
+
+> **IMPORTANT** Make a BACKUP!
+> - If you are making changes to an existing game, ALWAYS make a backup first.
+> - *(See the backup instructions further below.)*
+
+---
+
+### A. Special Note
+> - The mod named **\"0_TFP_Harmony\"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - *In Steam, right click on `7 Days to Die`*
+>    - *Select \"Properties\"*
+>    - *Select \"Installed Files\"*
+>    - *Click on \"Verify integrity of game files\" and wait for completion.*
+
+---
+
+### B. Install to Your PC (Singleplayer, Hosting Friends, or Client-Required Mods)
+> 1. **In Steam, right click `7 Days to Die`**
+> 2. **Select `Manage`, then `Browse local files`**
+> 3. **Open the `Mods` folder**
+> 4. **Extract the mod into this `Mods` folder**
+>    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
+>    - *If the zip creates an extra parent folder, move the mod folder up one level*
+> 5. **Keep `0_TFP_Harmony` in this folder**
+>    - *It comes with the game and should remain in `Mods`*
+
+---
+
+### C. Install to a Dedicated Server *(hosted sites or player-run)*
+> 1. **Find the main server folder**
+>    - *If using a hosted site, use their file manager or a program like FileZilla*
+> 2. **Open or create the `Mods` folder**
+> 3. **Extract the mod into this `Mods` folder**
+>    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
+>    - *If the zip creates an extra parent folder, move the mod folder up one level*
+> 4. **Fully restart the server after install**
+"""
+
+DEFAULT_REMOVAL_GUIDE_BODY = """---
+
+> **IMPORTANT** Make a BACKUP First!
+
+---
+
+### A. Special Note
+> - The mod named **\"0_TFP_Harmony\"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - *In Steam, right click on `7 Days to Die`*
+>    - *Select \"Properties\"*
+>    - *Select \"Installed Files\"*
+>    - *Click on \"Verify integrity of game files\" and wait for completion.*
+
+---
+
+### B. How do I remove mods?
+> - The safest approach is to only remove mods when starting a new game.
+> - ALSO smart to make a backup of the game (see below for instructions if needed).
+>     - If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.
+>     - If you are unsure, check the mod's readme for specific removal notes or ask in AGF's [DISCORD](https://discord.gg/Vm5eyW6N4r).
+> - To remove, simply locate the mod folder and delete it. All done!
+"""
+
+DEFAULT_UPDATE_GUIDE_BODY = """---
+
+> **IMPORTANT** Make a BACKUP First!
+
+---
+
+### A. Special Note
+> - The mod named **\"0_TFP_Harmony\"** is ***REQUIRED*** and should never be removed.
+> - If it is missing, you can restore it by verifying your installation:
+>    - *In Steam, right click on 7 Days to Die*
+>    - *Select \"Properties\"*
+>    - *Select \"Installed Files\"*
+>    - *Click on \"Verify integrity of game files\" and wait for completion.*
+
+---
+
+### B. Updating individual AGF Mods
+> 1. **Shutdown the game.**
+> 2. **Make a backup.** *(instructions below)*
+> 3. **Install the new version as usual.** *(see above)*
+> 4. **Delete the older version.**
+>    - *In your Mods folder, you will see two folders for the mod, each with its version number.*
+> 5. **THEN** you may turn the game back on.
+
+---
+
+### C. Updating entire AGF Pack
+> 1. **Shutdown the game.**
+> 2. **Make a backup.** *(instructions below)*
+> 3. **Carefully delete all AGF mods.** *(don't forget the zzzAGF mod)*
+> 4. **Install the new package as usual.** *(see above)*
+> 5. **THEN** you may turn the game back on.
+"""
+
+DEFAULT_BACKUP_GUIDE_BODY = """---
+
+> *Having multiple backups are best when experimenting or hosting.*
+
+---
+
+### A. Backing Up Your Singleplayer or Local Game
+> 1. **Open \"Run\"** *(Windows key + R)*
+> 2. **Type `%appdata%` and click OK**
+> 3. **Open the \"Roaming\" folder**
+> 4. **Open \"7DaysToDie\"**
+> 5. **Open \"Saves\"**
+> 6. **Find your World Name folder** *(e.g., \"Navezgane\")*
+>    - *You can check your world name in the game's \"Continue Game\" or \"Join Server\" menu.*
+> 7. **Select your Game Name folder** *(inside the World Name folder)*
+>    - *The Game Name is also shown in the game menus.*
+> 8. **Copy the entire Game Name folder and paste it somewhere safe**
+>    - *(like your Desktop or another safe location)*.
+
+---
+
+### B. Dedicated Server Game
+> 1. **Open the server's \"Saves\" folder**
+>    - *Its location varies by host, but it's typically somewhere in the main dedicated server folder.*
+>    - *If you cannot find it, check your host's documentation or ask support.*
+> 2. **Find your World Name folder** *(e.g., \"Navezgane\")*
+>    - *You can check your world name in the game's \"Join Server\" menu or \"Server Config\".*
+> 3. **Select your Game Name folder** *(inside the World Name folder)*
+>    - *The Game Name is also shown in the game's \"Join Server\" menu or \"Server Config\".*
+> 4. **Copy the entire Game Name folder and paste it somewhere safe**
+>    - *(like your Desktop or another safe location)*.
+
+---
+
+### C. To Restore a Backup
+> - *Keep your backup until you're sure everything works!*
+> 1. **Undo any mod changes**
+> 2. **Delete the current Game Name folder** *(in \"Saves\")*
+> 3. **Move your backup folder back into \"Saves\"**
+"""
 
 
 @dataclass
@@ -190,61 +409,152 @@ class RunTransaction:
 CURRENT_TRANSACTION: Optional[RunTransaction] = None
 
 
-def load_mod_type_lines_from_template(log: "Logger") -> Dict[str, str]:
-    """Load MOD_TYPE_ID wording from TEMPLATE-ModTypeDescriptions.md.
+def load_mod_type_lines_from_modtype_guide(log: "Logger") -> Dict[str, str]:
+    """Load MOD_TYPE_ID wording from the Mod Types table in MODTYPE-Guide.md.
 
-    Expected format under the heading "Mod Types with Simple Descriptions":
-    `1 Server-side ...`
-    `2 Server-side ...`
-    etc.
+    Expected row format:
+    | 2 | Server-Side (EAC Off) | EAC off required; ... |
     """
-    if not os.path.exists(MOD_TYPE_DESCRIPTIONS_TEMPLATE):
+    if not os.path.isfile(MODTYPE_GUIDE_SNIPPET_PATH):
         log.warn(
-            "Missing TEMPLATE-ModTypeDescriptions.md; using built-in MOD_TYPE_ID wording defaults"
+            "Missing MODTYPE-Guide.md snippet; using built-in MOD_TYPE_ID wording defaults"
         )
         return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
 
     try:
-        with open(MOD_TYPE_DESCRIPTIONS_TEMPLATE, "r", encoding="utf-8") as f:
+        with open(MODTYPE_GUIDE_SNIPPET_PATH, "r", encoding="utf-8") as f:
             text = f.read()
     except Exception as ex:
         log.warn(
-            f"Failed to read {MOD_TYPE_DESCRIPTIONS_TEMPLATE}: {ex}; using built-in MOD_TYPE_ID wording defaults"
+            f"Failed to read {MODTYPE_GUIDE_SNIPPET_PATH}: {ex}; using built-in MOD_TYPE_ID wording defaults"
         )
         return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
 
-    heading_match = re.search(
-        r"^###\s+Mod Types with Simple Descriptions\s*$",
-        text,
-        flags=re.MULTILINE,
-    )
-    if not heading_match:
-        log.warn(
-            "Could not find 'Mod Types with Simple Descriptions' heading; using built-in MOD_TYPE_ID wording defaults"
-        )
-        return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
-
-    section_text = text[heading_match.end():]
     parsed: Dict[str, str] = {}
-    for raw_line in section_text.splitlines():
+    for raw_line in text.splitlines():
         line = raw_line.strip()
-        if not line:
+        if not line.startswith("|"):
             continue
-        if line.startswith("### "):
-            break
 
-        entry_match = re.match(r"^(\d+)\s+(.+)$", line)
-        if entry_match:
-            mod_type_id, wording = entry_match.groups()
-            parsed[mod_type_id.strip()] = wording.strip()
+        parts = [part.strip() for part in line.strip("|").split("|")]
+        if len(parts) < 3:
+            continue
+        mod_type_id = parts[0]
+        mod_type_name = parts[1]
+        wording = parts[2]
+
+        if not mod_type_id.isdigit():
+            continue
+        if mod_type_name in {"Mod Type", "----------"}:
+            continue
+
+        parsed[mod_type_id] = f"{mod_type_name}: {wording}"
 
     if not parsed:
         log.warn(
-            "No MOD_TYPE_ID lines parsed from TEMPLATE-ModTypeDescriptions.md; using built-in wording defaults"
+            "No MOD_TYPE_ID table rows parsed from MODTYPE-Guide.md; using built-in wording defaults"
         )
         return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
 
     return parsed
+
+
+def load_readme_snippet(
+    snippet_path: str,
+    snippet_label: str,
+    default_text: str,
+    log: Optional["Logger"] = None,
+) -> str:
+    if not os.path.isfile(snippet_path):
+        if log:
+            log.warn(
+                f"{snippet_label} snippet not found: {snippet_path}; "
+                f"using built-in {snippet_label.lower()} text"
+            )
+        return default_text
+
+    try:
+        with open(snippet_path, "r", encoding="utf-8") as f:
+            text = f.read().strip()
+    except Exception as ex:
+        if log:
+            log.warn(
+                f"Failed reading {snippet_label.lower()} snippet {snippet_path}: {ex}; "
+                f"using built-in {snippet_label.lower()} text"
+            )
+        return default_text
+
+    if not text:
+        if log:
+            log.warn(
+                f"{snippet_label} snippet is empty: {snippet_path}; "
+                f"using built-in {snippet_label.lower()} text"
+            )
+        return default_text
+
+    return text
+
+
+def load_install_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        INSTALL_GUIDE_SNIPPET_PATH,
+        "Install guide",
+        DEFAULT_INSTALL_GUIDE_BODY,
+        log,
+    )
+
+
+def load_aboutme_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        ABOUTME_GUIDE_SNIPPET_PATH,
+        "About Me guide",
+        DEFAULT_ABOUTME_GUIDE_BODY,
+        log,
+    )
+    
+def load_aboutme_main_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        ABOUTME_MAIN_GUIDE_SNIPPET_PATH,
+        "About Me main guide",
+        DEFAULT_ABOUTME_MAIN_GUIDE_BODY,
+        log,
+    )
+
+
+def load_modtype_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        MODTYPE_GUIDE_SNIPPET_PATH,
+        "Mod Type guide",
+        DEFAULT_MODTYPE_GUIDE_BODY,
+        log,
+    )
+
+
+def load_removal_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        REMOVAL_GUIDE_SNIPPET_PATH,
+        "Removal guide",
+        DEFAULT_REMOVAL_GUIDE_BODY,
+        log,
+    )
+
+
+def load_update_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        UPDATE_GUIDE_SNIPPET_PATH,
+        "Update guide",
+        DEFAULT_UPDATE_GUIDE_BODY,
+        log,
+    )
+
+
+def load_backup_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        BACKUP_GUIDE_SNIPPET_PATH,
+        "Backup guide",
+        DEFAULT_BACKUP_GUIDE_BODY,
+        log,
+    )
 
 
 # =============================================================
@@ -2501,7 +2811,13 @@ def generate_mod_readmes(
     mod_dirs: Optional[Tuple[str, ...]] = None,
 ) -> None:
     log.info("Generate per-mod README.md and ReadableReadMe.txt")
-    mod_type_line_by_id = load_mod_type_lines_from_template(log)
+    aboutme_guide_body = load_aboutme_guide_body(log)
+    mod_type_line_by_id = load_mod_type_lines_from_modtype_guide(log)
+    modtype_guide_body = load_modtype_guide_body(log)
+    install_guide_body = load_install_guide_body(log)
+    removal_guide_body = load_removal_guide_body(log)
+    update_guide_body = load_update_guide_body(log)
+    backup_guide_body = load_backup_guide_body(log)
 
     if not os.path.exists(MOD_README_TEMPLATE):
         log.error(f"Missing required template: {MOD_README_TEMPLATE}")
@@ -2568,6 +2884,12 @@ def generate_mod_readmes(
                     log.warn(f"Failed reading quote for {folder_name}: {ex}")
 
             readme_content = template
+            readme_content = readme_content.replace(ABOUTME_GUIDE_PLACEHOLDER, aboutme_guide_body)
+            readme_content = readme_content.replace(MODTYPE_GUIDE_PLACEHOLDER, modtype_guide_body)
+            readme_content = readme_content.replace(INSTALL_GUIDE_PLACEHOLDER, install_guide_body)
+            readme_content = readme_content.replace(REMOVAL_GUIDE_PLACEHOLDER, removal_guide_body)
+            readme_content = readme_content.replace(UPDATE_GUIDE_PLACEHOLDER, update_guide_body)
+            readme_content = readme_content.replace(BACKUP_GUIDE_PLACEHOLDER, backup_guide_body)
             readme_content = readme_content.replace("{{MOD_NAME}}", mod_name)
             readme_content = readme_content.replace("{{MOD_VERSION}}", mod_version_display)
             readme_content = readme_content.replace("{{DOWNLOAD_LINK}}", download_link)
@@ -4812,12 +5134,18 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
 
     cat_desc = load_category_descriptions(log)
 
-    mod_type_lines = load_mod_type_lines_from_template(log)
+    mod_type_lines = load_mod_type_lines_from_modtype_guide(log)
     _, compat_rows = load_compat_csv()
     compat_map: Dict[str, Dict[str, str]] = {row.get("MOD_NAME", "").strip(): dict(row) for row in compat_rows if row.get("MOD_NAME", "").strip()}
 
     now_str = dt.datetime.now().strftime("%B %d, %Y, %I:%M %p EST").lstrip("0").replace(" 0", " ")
     main_content = main_template.replace("{{LAST_UPDATED}}", now_str)
+    main_content = main_content.replace(ABOUTME_MAIN_GUIDE_PLACEHOLDER, load_aboutme_main_guide_body(log))
+    main_content = main_content.replace(MODTYPE_GUIDE_PLACEHOLDER, load_modtype_guide_body(log))
+    main_content = main_content.replace(INSTALL_GUIDE_PLACEHOLDER, load_install_guide_body(log))
+    main_content = main_content.replace(REMOVAL_GUIDE_PLACEHOLDER, load_removal_guide_body(log))
+    main_content = main_content.replace(UPDATE_GUIDE_PLACEHOLDER, load_update_guide_body(log))
+    main_content = main_content.replace(BACKUP_GUIDE_PLACEHOLDER, load_backup_guide_body(log))
 
     all_mods = collect_publishready_folders()
     backpackplus_mods = [f for f in all_mods if f.startswith("AGF-BackpackPlus-")]
@@ -5565,7 +5893,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--enforce-agf-csv",
         action=argparse.BooleanOptionalAction,
         default=True,
-        help="Fail if HELPER_ModCompatibility.csv contains non-AGF rows",
+        help="Fail if Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv contains non-AGF rows",
     )
     parser.add_argument(
         "--preflight-write-check",

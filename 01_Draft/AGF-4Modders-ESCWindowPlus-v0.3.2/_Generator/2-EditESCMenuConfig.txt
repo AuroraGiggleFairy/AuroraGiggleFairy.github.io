@@ -24,7 +24,7 @@
 // Below are options you can set to true or false
 
 showOptionsSection: true
-showAdminVersion: true
+showAdminVersion: false
 
 // Options Section is small panel with additional player options
 // Admin Version provides a set of up to 8 pages that only Admins can see
@@ -37,14 +37,14 @@ showAdminVersion: true
 // Examples: 255,255,255 = white | 0,0,0 = black | 255,0,0 = red
 
 // Panel Backgrounds
-headerBackgroundColor: 95,89,128
-pageBackgroundColor: 95,89,128
-linkBackgroundColor: 95,89,128
-optionsBackgroundColor: 95,89,128
+headerBackgroundColor: 64,64,64
+pageBackgroundColor: 64,64,64
+linkBackgroundColor: 64,64,64
+optionsBackgroundColor: 64,64,64
 
 // Header Text Colors
-headerTitleColor: 141,181,128
-headerMottoColor: 221,205,250
+headerTitleColor: 237,225,0
+headerMottoColor: 194,103,0
 
 // Page tab button colors (tab row at top of page content)
 pageTabButtonBackgroundColor: 32,32,32
@@ -52,12 +52,12 @@ pageTabButtonSelectedColor: 74,33,150
 pageTabButtonTextColor: 255,255,255
 
 // Page title and body text colors
-pageTitleColor: 141,181,128
-pageBodyColor: 221,205,250
+pageTitleColor: 237,225,0
+pageBodyColor: 255,255,255
 
 // Inline emphasis colors used in page body (**bold / ==highlight==)
-textBoldingColor: 141,181,128
-textHighlightColor: 255,255,255
+textBoldingColor: 194,103,0
+textHighlightColor: 237,225,0
 
 // Link button colors (buttons inside LINKS box)
 linkButtonBackgroundColor: 64,64,64
@@ -71,8 +71,8 @@ linkButtonHoverColor: 50,50,50
 # Headers
 // Edit text after the : only.
 // Keep text fairly short so it fits nicely in game.
-headerTitle: Twilight Realm
-headerMotto: An AuroraGiggleFairy 7d2d Server
+headerTitle: Dishong Tower Challenge
+headerMotto: Brought to you by HellsJanitor
 
 
 ===============================================
@@ -82,9 +82,9 @@ headerMotto: An AuroraGiggleFairy 7d2d Server
 // @enabledLinks controls how many link rows are used (1-5).
 // Link row format: number | Button Name | Full URL
 
-@enabledLinks: 4
-@linksClientOrServer: server
-@linksXMLWebBaseUrl: https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/refs/heads/main/Links/
+@enabledLinks: 1
+@linksClientOrServer: client
+@linksXMLWebBaseUrl:
 
 // Advanced (optional):
 // - @linksClientOrServer: client or server
@@ -92,10 +92,10 @@ headerMotto: An AuroraGiggleFairy 7d2d Server
 // - server = auto-builds from @linksXMLWebBaseUrl + /<id>.xml
 
 -----------------------------------------------
-1 | AGF's Discord | https://discord.gg/Vm5eyW6N4r
-2 | AGF's Mods | https://auroragigglefairy.github.io/
-3 | Donate to Server | https://pingperfect.com/index.php?m=public_pay&hash_id=MWxlNPA7zkP6
-4 | Live Map | http://63.143.56.130:41344/app/map
+1 | HellsJanitor Discord | https://discord.gg/GTQecRSMjM
+2 |  | 
+3 |  | 
+4 |  | 
 5 |  | 
 
 
@@ -103,15 +103,14 @@ headerMotto: An AuroraGiggleFairy 7d2d Server
 5) SERVER JOIN
 ===============================================
 # Server Join
-showServerJoinSection: true
+showServerJoinSection: false
 joiningTitleFontSize: 36
 joiningBodyFontSize: 28
 joiningBodyAlign: center
 joiningTitle: Leave or Join
 
 <!-- Server Join Body starts below this line -->
-Do you dare enter the Twilight Realm?
-The choice is yours...
+Join when ready.
 <!-- Server Join Body ends -->
 
 
@@ -119,7 +118,7 @@ The choice is yours...
 6) MAIN CONTENT
 ===============================================
 # Pages
-@enabledPages: 8
+@enabledPages: 3
 
 // Max Pages is 8.
 // Body text color uses pageBodyColor from the Colors section above.
@@ -135,8 +134,8 @@ PAGE 1
 -----------------------------------------------
 titleFontSize: 36
 bodyFontSize: 28
-titleLabel: Welcome!!!
-bodyColumns: 1
+titleLabel: Rules
+bodyColumns: 2
 autoSplitColumns: false
 bodyAlign: left
 bodyBoxCentered: false
@@ -146,28 +145,33 @@ body3Align: left
 body3BoxCentered: false
 
 <!-- Body Column 1 starts below this line -->
-My name is ==AuroraGiggleFairy== and welcome to my server!
+Welcome to the Dishong Tower Challenge.
 
-I created this server to have a fun space to play 7d2d and expand my abilities as a modder:
-  - making new mods, making mods work together, improving my mods... modding is life.
+Fight your way to the top of the tower, loot and craft what you need, then escape by gyrocopter.
 
-By joining my server you have essentially become my guinea pig! ==*Evil Laugh*==
+Failure is not an option.
 
-My biggest goal is to create an enjoyable 7d2d experience that is ever expanding!
+You have **ONE** life. Make it count.
 
-Feedback and suggestions are both ==WELCOMED== and ==PIVOTAL== for success!
+==1:== Keep **DEFAULT** player block damage, zombie block damage, XP gain, and similar settings. Loot should be **no higher** than **100%**.
 
-This ==Server Information Window== is available in game by pushing ==ESC==. Hopefully you can find ALL The details you may need.
-
-Please join my ==Discord== as information and updates are shared there. ==(Discord Link Above)==
-
-Again, welcome to my **Twilight Realm**!
-
-Happy modding... erm... HUNTING... and Enjoy!
-
-- ==AGF==
+==2:== You may set loot **LOWER** than **100%**.
+Enemy block damage may be **HIGHER** than **100%**.
+Player block damage may be **LOWER** than **100%**.
 <!-- Body Column 1 ends -->
 <!-- Body Column 2, if Enabled, starts below this line -->
+==3:== You **must** enter Dishong Tower immediately and **cannot leave** after that.
+
+==4:== Rubble around the tower is **NOT** part of the tower.
+Do **NOT** use it to support builds or crops unless done **WITHOUT** touching it.
+
+==5:== Bridges off the building are allowed, but they must be self-supporting and **cannot touch the ground**.
+
+==6:== You may **not** mine or dig under the building.
+
+==7:== If you die, **GAME OVER**.
+
+==8:== Survive until you can craft a gyrocopter and fly to trader safety.
 <!-- Body Column 2 ends -->
 <!-- Body Column 3, if Enabled, starts below this line -->
 <!-- Body Column 3 ends -->
@@ -176,7 +180,7 @@ PAGE 2
 -----------------------------------------------
 titleFontSize: 36
 bodyFontSize: 28
-titleLabel: Rules
+titleLabel: Tips 1
 bodyColumns: 1
 autoSplitColumns: false
 bodyAlign: left
@@ -187,19 +191,24 @@ body3Align: left
 body3BoxCentered: false
 
 <!-- Body Column 1 starts below this line -->
-**1.** PvE ONLY, which means please respect people's builds, homes, and things.
+==1.== **Seeds** - Seed crafting is unlocked by default.
+Some seeds only need a few food items, and some farm plots in the tower are usable.
 
-**2.** You ARE allowed to take over a POI as a base.
+==2.== **Zombie Loot** - Most zombies can drop loot bags.
+Some zombie types have chances for specific loot.
 
-**3.** You may play with Twitch Integration, but please keep away from other people's things just in case.
+==3.== **Skill Magazines** - Found in usual loot spots.
+Some zombie loot bags also have magazine chances.
 
-**4.** Use the ally system with only people in your crew, and use passwords on all storages and doors.
+==4.== **Looting** - Loot respawn is core to finishing this challenge.
+Containers restock based on your pregame Loot Respawn setting.
 
-**5.** Use your 5 landclaims and only use them on your territories.
+==5.== **Zombie Respawns** - Respawn timing can be configured.
+Use the Dishong settings on the main menu to pick respawn days.
 
-**6.** RESIST giving things away for free! Make outsiders pay!!!
-
-**7.** Any issues, please report to ==AuroraGiggleFairy== directly in discord. ==(Discord Link Above)==
+==6.== **Resources** - Resources are limited, but completion resources are obtainable.
+Some items (like old cash) are used in recipes, so check everything.
+Acid can be crafted and can also drop from zombies, along with antibiotics and beakers.
 <!-- Body Column 1 ends -->
 <!-- Body Column 2, if Enabled, starts below this line -->
 <!-- Body Column 2 ends -->
@@ -211,7 +220,7 @@ PAGE 3
 -----------------------------------------------
 titleFontSize: 36
 bodyFontSize: 28
-titleLabel: Etiquette
+titleLabel: Tips 2
 bodyColumns: 1
 autoSplitColumns: false
 bodyAlign: left
@@ -222,20 +231,25 @@ body3Align: left
 body3BoxCentered: false
 
 <!-- Body Column 1 starts below this line -->
-**VISITING A TRADER?**
- - PLEASE keep the trader gates closed!!! Help keep trader areas safe.
+==7.== **Crafting** - Workstations, key tools, and vehicles unlock with fewer magazines.
 
-**QUESTING WITH OTHERS?**
- - Unless quest owner states otherwise, owners get loot room and reading material.
+==8.== **Cheating** - Leaving the tower without a gyrocopter is a bad idea.
 
-**WANT TO AVOID BLOODMOON?**
- - If you are the only one online, please log off by noon before blood moon.
+==9.== **Customization** - Toggle features like health bars and XP popups in pause menu.
+Pause -> Video -> Customization.
 
-**USING SOMEONE'S BLOODMOON BASE?**
- - Unless base owner states otherwise, help repair and/or provide resources.
+==10.== **Special Thanks** - Horde nights can be disabled in main settings,
+or managed with the Avoid Bloodmoon injection.
 
-**FINISHED BLOODMOON WITH OTHERS?**
- - Unless player states otherwise, try sharing the loot bags evenly.
+==11.== **Horde Night** - Same as above: disable in settings or use Avoid Bloodmoon injection.
+
+==12.== **Tower Resources** - Many resource sources differ from vanilla.
+Example: harvest potted plants, farm plots, and destroyed stone for clay soil.
+
+==13.== **Locked Slots** - Hover inventory slot and press X to lock it.
+Locked slots show a green background.
+
+==14.== **Wrench** - Keep it repaired.
 <!-- Body Column 1 ends -->
 <!-- Body Column 2, if Enabled, starts below this line -->
 <!-- Body Column 2 ends -->
@@ -469,7 +483,7 @@ body3BoxCentered: false
 7) ADMIN CONTENT
 ===============================================
 # Admin Pages
-@enabledAdminPages: 3
+@enabledAdminPages: 1
 
 // Max of 8 pages
 

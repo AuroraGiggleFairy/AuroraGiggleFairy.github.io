@@ -5,7 +5,16 @@ This is the canonical reference for the Screamer Alert DLL project.
 Scope:
 - Source folder: _DLL-Projects/DLL_NoEAC-ScreamerAlert
 - Current shipped mod version: AGF-NoEAC-ScreamerAlert-v2.1.2
-- Last updated: 2026-06-27
+- Last updated: 2026-07-01
+
+Recent update (2026-07-01):
+- ESC Screamer buttons now use server-authoritative mode request/ack networking instead of local-only mode writes.
+- Added net packages:
+   - NetPackageScreamerAlertModeRequest.cs
+   - NetPackageScreamerAlertModeAck.cs
+- ESC option query now refreshes current mode from server on open.
+- COUNT button visibility is now capability-gated via `opt_row_1_num_visible` binding and only appears when EnhancedAGF capability is available.
+- ESC option button presses now apply immediate local selected-state feedback before authoritative reconciliation, so selection changes instantly without close/reopen.
 
 ## 1. What Is Current Right Now
 
@@ -49,6 +58,7 @@ Scope:
      - {screamerhordealert}
      - {screameralertsvisible}
    - Refresh cadence is throttled to 0.2s.
+   - XUiC_ScreamerAlertOptions.cs now requests authoritative mode from server and applies ack-synced selected state.
 
 ## 3. Mode Storage and Resolution
 
@@ -139,6 +149,7 @@ Note:
 1. ScreamerAlertUI.xml in this folder is a placeholder/stub and not the runtime source of truth.
 2. When localization templates include commas, keep fields properly quoted in CSV.
 3. Keep horde/scout token parsing order correct in any downstream chat classifier logic.
+4. Do not rely on authoritative ack timing alone for in-menu visual selection updates; keep immediate UI selected-state application on button press.
 
 ## 8. Source-of-Truth File Map
 

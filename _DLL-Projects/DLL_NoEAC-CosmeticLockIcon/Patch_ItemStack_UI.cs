@@ -5,18 +5,28 @@ public class Patch_ItemStack_UI
 {
 	private static bool Prefix(ref bool __result, XUiC_ItemStack __instance, ref string _value, string _bindingName)
 	{
+		bool isIconBinding = _bindingName == "itemtypeicon" || _bindingName == "altitemtypeicon";
+		bool isTintBinding = _bindingName == "itemtypeicontint" || _bindingName == "altitemtypeiconcolor";
+		if (!isIconBinding && !isTintBinding)
+		{
+			return true;
+		}
+
 		ItemClass itemClassOrMissing = __instance.itemClassOrMissing;
-		EntityPlayerLocal entityPlayerLocal = __instance.xui?.playerUI?.entityPlayer;
-		if ((_bindingName == "itemtypeicon" || _bindingName == "altitemtypeicon") && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(itemClassOrMissing, entityPlayerLocal, _bindingName, out var icon))
+		ItemStack itemStack = __instance.ItemStack;
+		ItemValue itemValue = ((itemStack == null || itemStack.IsEmpty()) ? null : itemStack.itemValue);
+		EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
+		string icon;
+		if (isIconBinding && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(itemClassOrMissing, entityPlayerLocal, _bindingName, out icon, itemValue))
 		{
 			_value = icon;
 			__result = true;
 			return false;
 		}
-		if ((_bindingName == "itemtypeicontint" || _bindingName == "altitemtypeiconcolor") && itemClassOrMissing is ItemClassArmor { IsCosmetic: not false } itemClassArmor && entityPlayerLocal != null)
+		ItemClassArmor itemClassArmor = itemClassOrMissing as ItemClassArmor;
+		if (isTintBinding && itemClassArmor != null && itemClassArmor.IsCosmetic && entityPlayerLocal != null && !ArmorIconUIHarmonyPatches.HasMagnitudeIndicator(itemClassArmor, itemValue))
 		{
-			(bool, EntitlementSetEnum)? tuple = entityPlayerLocal.equipment?.HasCosmeticUnlocked(itemClassArmor);
-			if (tuple.HasValue && tuple.Value.Item1)
+			if (ArmorIconUIHarmonyPatches.IsCosmeticUnlocked(entityPlayerLocal, itemClassArmor))
 			{
 				_value = __instance.altitemtypeiconcolorFormatter.Format(itemClassArmor.AltItemTypeIconColor);
 				__result = true;

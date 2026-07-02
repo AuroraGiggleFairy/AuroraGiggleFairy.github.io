@@ -22,7 +22,7 @@ Next step (waiting on you):
 - Tell me the expectations and priorities you want me to ask about or act on.
 
 
-## Template Table of Contents (source: `TEMPLATE-ModReadMes.md`)
+## Template Table of Contents (source: `Workflow/ReadmeSystem/Templates/TEMPLATE-ModReadMes.md`)
 This is the canonical section order used by the template — we'll discuss reordering or consolidating these.
 
 1. About Author

@@ -1,5 +1,0 @@
-<zzzAGF-Compatibilities>
-	<!-- IZY_RMP_HVW -->
-	<remove xpath="/recipes/recipe[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture']"/>
-	<remove xpath="/recipes/recipe[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']"/>
-</zzzAGF-Compatibilities>

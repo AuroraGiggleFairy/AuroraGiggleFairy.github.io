@@ -510,8 +510,34 @@ def fetch_nexus_mod_info(
 
 
 def fetch_mod_update_groups(api_base_url: str, mod_id: str, headers: Dict[str, str]) -> List[Dict[str, object]]:
-    url = f"{api_base_url}/mods/{mod_id}/file-update-groups"
-    payload = request_json(url, headers)
+    url = f"{api_base_url}/mods/{mod_id}/files"
+    try:
+        payload = request_json(url, headers)
+        data = extract_data_payload(payload)
+        if isinstance(data, dict):
+            mod_files = data.get("mod_files", [])
+            if isinstance(mod_files, list):
+                groups: List[Dict[str, object]] = []
+                for mod_file in mod_files:
+                    if not isinstance(mod_file, dict):
+                        continue
+                    groups.append(
+                        {
+                            "id": str(mod_file.get("id", "")).strip(),
+                            "name": str(mod_file.get("name", "")).strip(),
+                            "is_active": bool(mod_file.get("is_active", False)),
+                            "versions_count": safe_int(mod_file.get("versions_count", 0)),
+                            "source": "mod-files",
+                        }
+                    )
+                return groups
+    except urllib.error.HTTPError as ex:
+        # New API first. Fall back only when the newer route is unavailable.
+        if ex.code != 404:
+            raise
+
+    legacy_url = f"{api_base_url}/mods/{mod_id}/file-update-groups"
+    payload = request_json(legacy_url, headers)
     data = extract_data_payload(payload)
     if not isinstance(data, dict):
         return []
@@ -522,8 +548,21 @@ def fetch_mod_update_groups(api_base_url: str, mod_id: str, headers: Dict[str, s
 
 
 def fetch_group_versions(api_base_url: str, group_id: str, headers: Dict[str, str]) -> List[Dict[str, object]]:
-    url = f"{api_base_url}/file-update-groups/{group_id}/versions"
-    payload = request_json(url, headers)
+    url = f"{api_base_url}/mod-files/{group_id}/versions"
+    try:
+        payload = request_json(url, headers)
+        data = extract_data_payload(payload)
+        if isinstance(data, dict):
+            versions = data.get("versions", [])
+            if isinstance(versions, list):
+                return [version for version in versions if isinstance(version, dict)]
+    except urllib.error.HTTPError as ex:
+        # New API first. Fall back only when the newer route is unavailable.
+        if ex.code != 404:
+            raise
+
+    legacy_url = f"{api_base_url}/file-update-groups/{group_id}/versions"
+    payload = request_json(legacy_url, headers)
     data = extract_data_payload(payload)
     if not isinstance(data, dict):
         return []

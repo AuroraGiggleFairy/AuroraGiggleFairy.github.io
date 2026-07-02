@@ -2153,6 +2153,12 @@ def parse_items(path: Path, tag: str = "item") -> dict[str, ItemIcon]:
                 alt_type_icon = (alt_meta.get("ItemTypeIcon", "") or "").strip()
                 if alt_type_icon:
                     type_icon_name = alt_type_icon
+        # Cosmetic Lock Icon compatibility: ignore the scrap marker overlay so
+        # it never appears in Purple Book generated output.
+        type_icon_norm = type_icon_name.lower()
+        if type_icon_norm in ("scrap", "ui_game_symbol_scrap"):
+            type_icon_name = ""
+
         if not type_icon_name:
             type_icon_sprite = ""
         elif type_icon_name.startswith("ui_"):
@@ -3193,7 +3199,8 @@ def emit_qsection_nup(w: W, skill: str, levels: list[int], items: list[str], nam
 
 def emit_qsection_single(w: W, skill: str, level: int, items: list[str],
                          names: list[str] | None = None,
-                         cell_width: int = 300) -> None:
+                         cell_width: int = 300,
+                         section_height: int = 100) -> None:
     """A single-slot non-tiered section: 1 chip (top-left) + icons (centered).
 
     Used by the auto-layout zoomed-view grid where each unlock threshold gets
@@ -3203,12 +3210,12 @@ def emit_qsection_single(w: W, skill: str, level: int, items: list[str],
         names = list(items)
     w.open("entry", name="QSection")
     w.leaf("sprite", depth=1, name="backgroundSection", sprite="menu_empty3px",
-           width=cell_width, height=100, color="[darkGrey]", type="sliced", fillcenter="true")
+            width=cell_width, height=section_height, color="[darkGrey]", type="sliced", fillcenter="true")
     w.leaf("sprite", depth=3, name="backgroundBorderSection", sprite="menu_empty3px",
-           foregroundlayer="true", pos="0,0", width=cell_width, height=100,
+            foregroundlayer="true", pos="0,0", width=cell_width, height=section_height,
            color="[black]", type="sliced", fillcenter="false")
     w.leaf("filledsprite", depth=2, name="yesUnlocked", color="75,140,75,255",
-           pos="0,0", width=cell_width, height=100, fillcenter="true",
+            pos="0,0", width=cell_width, height=section_height, fillcenter="true",
            type="filled", fill=f"{{cvar({skill}Check{level})}}")
     # Chip top-left, Q1 brown
     w.leaf("sprite", depth=3, name="backgroundBorder", sprite="menu_empty3px",
@@ -3221,25 +3228,63 @@ def emit_qsection_single(w: W, skill: str, level: int, items: list[str],
     # Icons centered
     m = len(items)
     if m > 0:
-        icon_size = 50
-        gap = 10
-        slot_gap = gap
-        if m > 1:
-            max_gap = (cell_width - 4 - m * icon_size) // (m - 1)
-            if max_gap < gap:
-                slot_gap = max(0, max_gap)
-        group_w = m * icon_size + (m - 1) * slot_gap
-        start_x = (cell_width - group_w) // 2
+        max_per_row = 6
+        h_gap = 6
+        v_gap = 8 if section_height > 100 else 4
+
+        if m <= max_per_row:
+            icon_size = 50
+            slot_gap = 10
+            if m > 1:
+                max_gap = (cell_width - 4 - m * icon_size) // (m - 1)
+                if max_gap < slot_gap:
+                    slot_gap = max(0, max_gap)
+            group_w = m * icon_size + (m - 1) * slot_gap
+            start_x = (cell_width - group_w) // 2
+            top_pad = max(0, (section_height - icon_size) // 2)
+            y_positions = [-top_pad] * m
+            x_positions = [start_x + j * (icon_size + slot_gap) for j in range(m)]
+        else:
+            cols = min(max_per_row, m)
+            rows = math.ceil(m / cols)
+            # Prefer keeping icon size at 50 for wrapped rows by reducing vertical
+            # gap first, then shrinking icon size only if still required.
+            if rows > 1 and section_height <= 100:
+                max_v_gap_for_50 = (section_height - rows * 50) // (rows - 1)
+                if max_v_gap_for_50 >= 0:
+                    v_gap = min(v_gap, max_v_gap_for_50)
+
+            max_icon_w = (cell_width - 4 - h_gap * (cols - 1)) // cols
+            max_icon_h = (section_height - v_gap * (rows - 1)) // rows
+            icon_size = max(18, min(50, max_icon_w, max_icon_h))
+            total_h = rows * icon_size + (rows - 1) * v_gap
+            top_pad = max(0, (section_height - total_h) // 2)
+
+            x_positions: list[int] = []
+            y_positions: list[int] = []
+            idx = 0
+            for r in range(rows):
+                row_count = min(cols, m - idx)
+                row_w = row_count * icon_size + (row_count - 1) * h_gap
+                row_x = max(0, (cell_width - row_w) // 2)
+                y = -(top_pad + r * (icon_size + v_gap))
+                for c in range(row_count):
+                    x_positions.append(row_x + c * (icon_size + h_gap))
+                    y_positions.append(y)
+                idx += row_count
+
         for j, it in enumerate(items):
-            cx = start_x + j * (icon_size + slot_gap)
+            cx = x_positions[j]
+            cy = y_positions[j]
             tk = TOOLTIP_OVERRIDES.get(it) or (it if it in ITEM_ICONS else (names[j] if j < len(names) and names[j] else it))
             ic = resolve_item_icon(it)
-            w.leaf("sprite", name="itemIcon", depth=3, pos=f"{cx},-40", size="50,50",
+            w.leaf("sprite", name="itemIcon", depth=3, pos=f"{cx},{cy}", size=f"{icon_size},{icon_size}",
                    foregroundlayer="true", atlas="ItemIconAtlas", sprite=ic.sprite,
                    color=ic.tint, tooltip_key=tk)
             if ic.type_icon:
+                type_size = 20 if icon_size >= 40 else max(8, int(icon_size * 0.4))
                 w.leaf("sprite", name="itemtypeicon", depth=8,
-                       pos=f"{cx},-40", width=20, height=20,
+                       pos=f"{cx},{cy}", width=type_size, height=type_size,
                        sprite=ic.type_icon, foregroundlayer="true", color="")
     w.close("entry")
 
@@ -3486,12 +3531,75 @@ def emit_magazine_strip(w: W, skills: list[Skill]) -> None:
 # Compact strip + zoomed view
 # ---------------------------------------------------------------------------
 
+def _collect_non_tiered_slots(sk: Skill) -> list[tuple[int, list[str], list[str]]]:
+    """Flatten non-tiered display rows into ordered (level, items, names) slots."""
+    slots: list[tuple[int, list[str], list[str]]] = []
+    for row in sk.display:
+        if row.is_tiered:
+            continue
+        for i, lvl in enumerate(row.unlock_levels):
+            items = list(row.level_items[i]) if i < len(row.level_items) else list(row.items)
+            if not items:
+                items = list(row.items)
+            names = list(row.level_names[i]) if i < len(row.level_names) else list(row.name_keys)
+            slots.append((lvl, items, names))
+    return slots
+
+
+def _group_slots_by_unlock_level(
+    slots: list[tuple[int, list[str], list[str]]]
+) -> list[tuple[int, list[str], list[str]]]:
+    """Merge slot items by unlock level while preserving first-seen order."""
+    grouped_items: dict[int, list[str]] = {}
+    grouped_names: dict[int, list[str]] = {}
+
+    for lvl, items, names in slots:
+        if lvl not in grouped_items:
+            grouped_items[lvl] = []
+            grouped_names[lvl] = []
+        out_items = grouped_items[lvl]
+        out_names = grouped_names[lvl]
+        for idx, item in enumerate(items):
+            if not item or item in out_items:
+                continue
+            out_items.append(item)
+            nm = names[idx] if idx < len(names) and names[idx] else item
+            out_names.append(nm)
+
+    return [(lvl, grouped_items[lvl], grouped_names[lvl]) for lvl in grouped_items.keys()]
+
 def emit_compact_strip(w: W, sk: Skill, x: int) -> None:
     """The narrow 50px column shown in the All-Checklists view.
     The Magazine header (icon + level/max + greenfill) lives in the
     tabsHeader buttons themselves, so the strip starts directly with
     Section1 just under the buttons."""
     short_n = sk.short_name
+
+    if sk.name == "craftingSeeds":
+        # Non-quality behavior: section grouping follows unlock levels.
+        seeds_slots = _group_slots_by_unlock_level(_collect_non_tiered_slots(sk))
+        total_h = 0
+        for _lvl, items, _names in seeds_slots:
+            total_h += _nontiered_height(max(1, len(items)))
+
+        w.open("rect", name=f"checklist{short_n}", depth=3, pos=f"{x},-110", width=50, height=total_h, controller="MapStats")
+        y_cursor = 0
+        section_idx = 0
+        for lvl, items, names in seeds_slots:
+            section_idx += 1
+            synthetic = DisplayRow(
+                items=list(items),
+                unlock_levels=[lvl],
+                name_keys=list(names),
+                has_quality=False,
+                level_items=[list(items)],
+                level_names=[list(names)],
+            )
+            sec_h = _emit_nontiered_section(w, sk, synthetic, 0, lvl, section_idx, y_cursor)
+            y_cursor -= sec_h
+        w.close("rect")
+        return
+
     # Pre-compute total column height as the sum of section heights.
     total_h = 0
     food_compact = (sk.name == "craftingFood")
@@ -3859,6 +3967,7 @@ def emit_zoomed_view(w: W, sk: Skill, all_skills: list[Skill]) -> None:
     seeds_cols = 2
     seeds_rows = 5
     seeds_cell_w = 150
+    seeds_cell_h = 100
     food_cols = 5
     food_rows = 4
     food_cell_w = 150
@@ -3885,21 +3994,39 @@ def emit_zoomed_view(w: W, sk: Skill, all_skills: list[Skill]) -> None:
         total_grid_h = medical_rows * 100
         total_grid_w = medical_cols * cell_width
     elif seeds_mode:
-        # Southern Farming: flatten to 10 single-slot containers and render as
-        # 2 columns x 5 rows. Use wider containers than the old 100px slots.
-        for row in sk.display:
-            if row.is_tiered:
-                continue
-            for i, lvl in enumerate(row.unlock_levels):
-                items = list(row.level_items[i]) if i < len(row.level_items) else list(row.items)
-                if not items:
-                    items = list(row.items)
-                names = list(row.level_names[i]) if i < len(row.level_names) else list(row.name_keys)
-                seeds_slots.append((lvl, items, names))
-        # Keep exactly 10 visible entries (2x5) in level order.
-        seeds_slots = seeds_slots[:seeds_cols * seeds_rows]
+        # Southern Farming keeps non-quality semantics: group sections by
+        # unlock level, then merge all items unlocked at the same threshold.
+        seeds_slots = _group_slots_by_unlock_level(_collect_non_tiered_slots(sk))
+
+        slot_count = max(1, len(seeds_slots))
+        seeds_cols = 1 if slot_count <= 2 else 2
+        seeds_rows = math.ceil(slot_count / seeds_cols)
+
+        max_icons = max((len(items) for _lvl, items, _names in seeds_slots), default=1)
+        # Size Seeds container from the widest rendered row (6-per-row cap)
+        # plus left-chip clearance so centered icons do not collide with the
+        # unlock chip at x=0..50.
+        max_per_row = 6
+        if max_icons <= max_per_row:
+            widest_row_w = max_icons * 50 + max(0, (max_icons - 1) * 10)
+        else:
+            widest_row_w = max_per_row * 50 + (max_per_row - 1) * 6
+        seeds_cell_w = max(150, widest_row_w + 110)
+        if max_icons > max_per_row:
+            icon_rows = math.ceil(max_icons / max_per_row)
+            # Wiring-55 style baseline for 2 rows (125), then add one row
+            # step (50 icon + 8 gap) for each additional row.
+            seeds_cell_h = max(125, icon_rows * 58 + 9)
+        max_two_col_cell = (WIN_WIDTH - 300) // 2
+        if seeds_cols == 2 and seeds_cell_w > max_two_col_cell:
+            seeds_cols = 1
+            seeds_rows = slot_count
+        if seeds_cols == 2:
+            seeds_cell_w = min(seeds_cell_w, max_two_col_cell)
+        seeds_cell_w = min(seeds_cell_w, WIN_WIDTH - 300)
+
         cell_width = seeds_cell_w
-        total_grid_h = seeds_rows * 100
+        total_grid_h = seeds_rows * seeds_cell_h
         total_grid_w = seeds_cols * cell_width
     elif food_mode:
         # Home Cooking Weekly: flatten to 20 single-slot containers and render
@@ -4032,11 +4159,12 @@ def emit_zoomed_view(w: W, sk: Skill, all_skills: list[Skill]) -> None:
         w.open("grid", name=f"checklist{short_n}", depth=3,
                rows=seeds_rows, cols=seeds_cols,
                pos=f"{main_pos_x},{main_pos_y}",
-               cell_width=cell_width, cell_height=100,
+               cell_width=cell_width, cell_height=seeds_cell_h,
                repeat_content="false", arrangement="horizontal",
                controller="MapStats")
         for lvl, items, names in seeds_slots:
-            emit_qsection_single(w, sk.name, lvl, items, names, cell_width)
+            emit_qsection_single(w, sk.name, lvl, items, names, cell_width,
+                                 section_height=seeds_cell_h)
         w.close("grid")
     elif food_mode:
         w.open("grid", name=f"checklist{short_n}", depth=3,
@@ -8519,13 +8647,18 @@ def main() -> int:
         kind = "tiered" if all(r.is_tiered for r in s.display) else "mixed"
         print(f"     {s.name:<28} max={s.max_level:<3} rows={rows} [{kind}]")
 
-    # Reorder TAB_ORDER: keep all tiered (and Armor) in their current order,
-    # then sort the non-tiered tail by computed column height descending so
-    # the panel cascades tallest -> shortest like the tiered prefix.
+    # Reorder TAB_ORDER by column height buckets:
+    # - tiered-only columns: longest -> shortest
+    # - non-tiered columns: shortest -> longest
     by_name = {s.name: s for s in skills}
 
     def _col_height(sk: Skill) -> int:
         h = 100
+        if sk.name == "craftingSeeds":
+            seeds_slots = _group_slots_by_unlock_level(_collect_non_tiered_slots(sk))
+            for _lvl, items, _names in seeds_slots:
+                h += _nontiered_height(max(1, len(items)))
+            return h
         for row in sk.display:
             if row.has_quality and len(row.unlock_levels) == 6:
                 h += max(120, 10 + 25 * max(1, len(row.items)) + 5)
@@ -8547,12 +8680,20 @@ def main() -> int:
             head.append(nm)
         else:
             tail.append(nm)
+    head.sort(key=lambda n: _col_height(by_name[n]) if n in by_name else 0, reverse=True)
     tail.sort(key=lambda n: _col_height(by_name[n]) if n in by_name else 0)
     TAB_ORDER[:] = head + tail
-    print("[ok] reordered TAB_ORDER (non-tiered tail sorted by height asc)")
+    print("[ok] reordered TAB_ORDER (tiered head desc, non-tiered tail asc)")
+    if head:
+        print("     tiered (desc):")
+        for nm in head:
+            if nm in by_name:
+                print(f"       {nm:<26} h={_col_height(by_name[nm])}")
+    if tail:
+        print("     non-tiered (asc):")
     for nm in tail:
         if nm in by_name:
-            print(f"     {nm:<28} h={_col_height(by_name[nm])}")
+            print(f"       {nm:<26} h={_col_height(by_name[nm])}")
 
     out_mod_dir = _resolve_out_mod_dir(args.out_mod)
     if not out_mod_dir.exists():
