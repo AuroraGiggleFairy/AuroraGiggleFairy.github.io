@@ -65,7 +65,7 @@
 ## **1. Install Scope & EAC Requirement**
 
 
-<details>
+<details markdown="1">
 <summary>Show Install Scope & EAC Requirement</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
@@ -112,7 +112,7 @@
 
 ## **2. Language Support**
 
-<details>
+<details markdown="1">
 <summary>Show Language Support</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
@@ -129,7 +129,7 @@
 
 ## **3. Installation Guide**
 
-<details>
+<details markdown="1">
 <summary>Show Installation Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
@@ -179,7 +179,7 @@
 
 ## **4. Removal Guide**
 
-<details>
+<details markdown="1">
 <summary>Show Removal Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
@@ -213,7 +213,7 @@
 
 ## **5. Update Guide**
 
-<details>
+<details markdown="1">
 <summary>Show Update Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
@@ -257,7 +257,7 @@
 
 ## **6. Backup Guide**
 
-<details>
+<details markdown="1">
 <summary>Show Backup Guide</summary>
 <br>
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
