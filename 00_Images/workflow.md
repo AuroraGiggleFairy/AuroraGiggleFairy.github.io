@@ -67,6 +67,7 @@
 2. Numbered files (_02, _03, ...) are extra media and not used as primary merge source.
 3. README thumbnail references point to 00_Images/_generated/Thumbnail_<base>.png.
 4. Keep mod-media files at 1920x1080 PNG with two-digit slot names.
+5. In changed-only generation, never skip a mod when <base>_01.png is newer than Thumbnail_<base>.png; regenerate both together.
 
 ### Required Automation Behavior
 1. Intake script must:
@@ -78,6 +79,7 @@
 2. Generator must produce both:
    - thumbnail PNG for README
   - full merged PNG 1920x1080
+  - changed-only mode must force regeneration when the full merged _01 is newer than its thumbnail
 3. Engine sync step must copy to mod folders:
   - mod-media files matching base_<two_digit_number>
   - must not copy thumbnails into mod folders

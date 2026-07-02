@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*July 2, 2026, 12:45 AM EST*
+*July 2, 2026, 6:10 PM EST*
 
 > - My name is AuroraGiggleFairy (AGF).
 > - I create accessibility-focused, vanilla-enhancing mods for 7 Days to Die.
@@ -324,7 +324,7 @@
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.10.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.11.0)**
 
 All AGF mods in one convenient download.
 
@@ -340,7 +340,7 @@ Non-EAC mods are inside optional folders within the pack.
 
 > <details> <summary><i>Changelog (latest 3 releases)</i></summary>
 >
-> <ul><li>GigglePack v0.10.0 - July 2, 2026 12:45am<ul><li>Change summary: +2 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">zzzAGF-Special-Compatibilities</a> (new: v5.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.1 -&gt; v6.4.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.1 -&gt; v4.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">AGF-NoEAC-ScreamerAlert</a> (v2.1.2 -&gt; v2.2.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.9.0 - June 29, 2026 3:27pm<ul><li>Change summary: +1 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">AGF-HUDPlus-PurpleBook</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.0 -&gt; v6.3.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.0 -&gt; v4.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.8.1 - June 26, 2026 7:28pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.2.0 -&gt; v6.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.0.1 -&gt; v2.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+> <ul><li>GigglePack v0.11.0 - July 2, 2026 6:10pm<ul><li>Change summary: +16 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip">AGF-HUDPlus-BMCounter</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip">AGF-VP-AutomobilesRespawn</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BetterEggChance.zip">AGF-VP-BetterEggChance</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip">AGF-VP-BreakItGetIt</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftSewingKits.zip">AGF-VP-CraftSewingKits</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip">AGF-VP-CraftVitamins</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">AGF-VP-MasterTool</a> (new: v7.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RestorePowerAnyTime.zip">AGF-VP-RestorePowerAnyTime</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapBatts4Acid.zip">AGF-VP-ScrapBatts4Acid</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapEquipmentFaster.zip">AGF-VP-ScrapEquipmentFaster</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclePerformance.zip">AGF-VP-VehiclePerformance</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclesExtraSeating.zip">AGF-VP-VehiclesExtraSeating</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehicleStoragePlus.zip">AGF-VP-VehicleStoragePlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieCorpseLeaveQuicker.zip">AGF-VP-ZombieCorpseLeaveQuicker</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerAnimalCorpse.zip">AGF-VP-StayLongerAnimalCorpse</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerPlayerBackpack.zip">AGF-VP-StayLongerPlayerBackpack</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.0.2 -&gt; v2.0.3)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.10.0 - July 2, 2026 12:45am<ul><li>Change summary: +2 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">zzzAGF-Special-Compatibilities</a> (new: v5.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.1 -&gt; v6.4.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.1 -&gt; v4.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">AGF-NoEAC-ScreamerAlert</a> (v2.1.2 -&gt; v2.2.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.9.0 - June 29, 2026 3:27pm<ul><li>Change summary: +1 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">AGF-HUDPlus-PurpleBook</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.3.0 -&gt; v6.3.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.1.0 -&gt; v4.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (v1.0.0 -&gt; v1.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 >
 > </details>
 
@@ -367,6 +367,16 @@ Quality-of-life HUD enhancements and visual tweaks.
 <td valign="top">
 <b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.4.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
 Comprehensive HUD overhaul with cleaner stats, wider compass, and cleaner menus.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-BMCounter.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-HUDPlus-BMCounter.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF BM Counter</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip">Download</a><br>
+Adds a Blood Moon countdown under the compass for fixed BM schedules.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
@@ -508,10 +518,60 @@ All Server-side (EAC-Friendly)!
 ---
 
 <table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-AutomobilesRespawn.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-AutomobilesRespawn.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Automobiles Respawn</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip">Download</a><br>
+Salvaged vehicles downgrade into a seed that slowly regrows a similar vehicle.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-BedrollPlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-BedrollPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Bedroll Plus</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip">Download</a><br>
 Adds a tougher Bedroll+ spawn point available in all bed models with pickup support.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-BetterEggChance.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-BetterEggChance.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Better Egg Chance</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BetterEggChance.zip">Download</a><br>
+Raises bird nest egg probability from 35% to 63%.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-BreakItGetIt.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-BreakItGetIt.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Break It, Get It</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip">Download</a><br>
+Breaking stations, storage, and electrical blocks returns the placed block to inventory.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-CraftSewingKits.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-CraftSewingKits.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Craft Sewing Kits</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftSewingKits.zip">Download</a><br>
+Unlocks a workbench sewing kit recipe after reading Wasteland Treasures 6.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-CraftVitamins.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-CraftVitamins.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Craft Vitamins</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip">Download</a><br>
+Unlocks vitamin crafting at the same Medical progression level as herbal antibiotics.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
@@ -532,6 +592,16 @@ Condenses wood or coal into single fuel items with burn times from 10 to 6000 mi
 <td valign="top">
 <b>AGF VP Larger Storage Option</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
 Adds craftable XL storage in multiple shapes, with 3x block health and break-to-pick-up.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-MasterTool.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-MasterTool.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Master Tool</b> &nbsp;·&nbsp; v7.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">Download</a><br>
+Endgame multi-role tool combining auger, chainsaw, knife, wrench, and nailgun behind a late-game unlock quest.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
@@ -588,10 +658,100 @@ Lets you rebundle opened resource and ammo bundles with tinted icons for easy id
 
 ---
 <table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-RestorePowerAnyTime.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-RestorePowerAnyTime.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Restore Power Any Time</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RestorePowerAnyTime.zip">Download</a><br>
+Removes the nighttime-only restriction from Restore Power quests.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-ScrapBatts4Acid.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-ScrapBatts4Acid.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Scrap Batteries for Acid</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapBatts4Acid.zip">Download</a><br>
+Scrapping a car battery now yields acid instead of lead.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-ScrapEquipmentFaster.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-ScrapEquipmentFaster.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Scrap Equipment Faster</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapEquipmentFaster.zip">Download</a><br>
+Cuts equipment scrap time from 10 seconds to 4.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-SimplifiedStacks.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-SimplifiedStacks.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Simplified Stacks</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">Download</a><br>
 Standardizes stack sizes into clean category tiers for simpler inventory management.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-StayLongerAnimalCorpse.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-StayLongerAnimalCorpse.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Stay Longer Animal Corpse</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerAnimalCorpse.zip">Download</a><br>
+Animal corpses stay for 10 minutes instead of 5.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-StayLongerPlayerBackpack.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-StayLongerPlayerBackpack.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Stay Longer Player Backpack</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerPlayerBackpack.zip">Download</a><br>
+Player death backpack stays for 5 hours instead of 1.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-VehiclePerformance.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-VehiclePerformance.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Vehicle Performance</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclePerformance.zip">Download</a><br>
+Improves all vehicle acceleration, braking, handling, hill climbing, speed, and durability.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-VehicleStoragePlus.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-VehicleStoragePlus.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Vehicle Storage Plus</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehicleStoragePlus.zip">Download</a><br>
+Adds 2 extra storage rows to every vehicle (truck already at max capacity).
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-VehiclesExtraSeating.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-VehiclesExtraSeating.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Vehicle Extra Seating.</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclesExtraSeating.zip">Download</a><br>
+Adds extra seats to ground vehicles; bikes seat 3 and the truck seats up to 8.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-ZombieCorpseLeaveQuicker.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-VP-ZombieCorpseLeaveQuicker.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Zombie Corpse Leave Quicker</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieCorpseLeaveQuicker.zip">Download</a><br>
+Zombie corpses disappear after 10 seconds instead of 30 for better performance.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players; EAC on or off.</em></li></ul>
 </td>
 </tr></table>
@@ -619,7 +779,7 @@ Installation requirements vary — check each mod's details.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-AutoRun.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/Thumbnail_AGF-NoEAC-AutoRun.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Auto Run</b> &nbsp;·&nbsp; v2.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">Download</a><br>
+<b>AGF Auto Run</b> &nbsp;·&nbsp; v2.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">Download</a><br>
 Auto-Run for keyboard and controller, configurable from in-game menus.
 <ul><li><em>Client-Side (Only): EAC off required; server install has no effect; only the installing player gets the feature.</em></li></ul>
 </td>

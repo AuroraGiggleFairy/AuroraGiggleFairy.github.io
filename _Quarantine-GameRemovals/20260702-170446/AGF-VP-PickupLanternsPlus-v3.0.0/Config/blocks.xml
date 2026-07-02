@@ -1,0 +1,204 @@
+<AGFVanillaPlus-LanternPickupPlus>			
+
+<!--Created player versions of the flashlights-->
+	<append xpath="/blocks">
+		<block name="flashlightDecorWhite_player">
+			<property name="Extends" value="flashlightDecorWhite"/>
+			<property name="Class" value=""/>
+			<property name="CustomIcon" value="flashlightDecorWhite"/>
+			<property name="CustomIconTint" value="808080"/>
+			<property name="TintColor" value="808080"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02Prefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="GndAlign" value="1"/>
+			<property name="LODCullScale" value="0.7"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="IgnoreLightsOff" value="true"/>
+			<property name="SortOrder1" value="B202"/>
+			<property name="SortOrder2" value="1302"/>
+			<property name="FilterTags" value="MC_building,SC_lighting,A21_NEW"/>	
+			<property name="CreativeMode" value="Player"/>
+			<property name="CanPickup" value="true"/>
+			<property name="Material" value="Mglass"/>
+			<property name="TakeDelay" value="2"/>
+			<property name="Group" value="Science,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+		</block>
+
+		<block name="flashlightDecorRed_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="CustomIcon" value="flashlightDecorWhite"/>
+			<property name="CustomIconTint" value="885A5A"/>
+			<property name="TintColor" value="885A5A"/>
+			<property name="SortOrder2" value="1312"/>
+		</block>
+
+		<block name="flashlightDecorOrange_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="CustomIcon" value="flashlightDecorWhite"/>
+			<property name="CustomIconTint" value="A2753E"/>
+			<property name="TintColor" value="A2753E"/>
+			<property name="SortOrder2" value="1322"/>
+		</block>
+
+		<block name="flashlightDecorYellow_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="CustomIcon" value="flashlightDecorWhite"/>
+			<property name="CustomIconTint" value="7F7B38"/>
+			<property name="TintColor" value="7F7B38"/>
+			<property name="SortOrder2" value="1332"/>
+		</block>
+
+		<block name="flashlightDecorGreen_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="CustomIcon" value="flashlightDecorWhite"/>
+			<property name="CustomIconTint" value="387E40"/>
+			<property name="TintColor" value="387E40"/>
+			<property name="SortOrder2" value="1342"/>
+		</block>
+
+		<block name="flashlightDecorBlue_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="CustomIcon" value="flashlightDecorWhite"/>
+			<property name="CustomIconTint" value="42667E"/>
+			<property name="TintColor" value="42667E"/>
+			<property name="SortOrder2" value="1352"/>
+		</block>
+
+		<!-- 6V Cell Lantern/Flashlight Side Centered -->
+		<!-- White -->
+		<block name="flashlightSideCenteredDecorWhite_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02SideCenteredPrefab.prefab"/>
+			<property name="SortOrder2" value="1303"/>
+		</block>
+
+		<!-- Red -->
+		<block name="flashlightSideCenteredDecorRed_player">
+			<property name="Extends" value="flashlightDecorRed_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02SideCenteredPrefab.prefab"/>
+			<property name="SortOrder2" value="1313"/>
+		</block>
+
+		<!-- Orange -->
+		<block name="flashlightSideCenteredDecorOrange_player">
+			<property name="Extends" value="flashlightDecorOrange_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02SideCenteredPrefab.prefab"/>
+			<property name="SortOrder2" value="1323"/>
+		</block>
+
+		<!-- Yellow -->
+		<block name="flashlightSideCenteredDecorYellow_player">
+			<property name="Extends" value="flashlightDecorYellow_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02SideCenteredPrefab.prefab"/>
+			<property name="SortOrder2" value="1333"/>
+		</block>
+
+		<!-- Green -->
+		<block name="flashlightSideCenteredDecorGreen_player">
+			<property name="Extends" value="flashlightDecorGreen_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02SideCenteredPrefab.prefab"/>
+			<property name="SortOrder2" value="1343"/>
+		</block>
+
+		<!-- Blue -->
+		<block name="flashlightSideCenteredDecorBlue_player">
+			<property name="Extends" value="flashlightDecorBlue_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02SideCenteredPrefab.prefab"/>
+			<property name="SortOrder2" value="1353"/>
+		</block>
+
+		<!-- 6V Cell Lantern/Flashlight Corner -->
+		<!-- White -->
+
+		<block name="flashlightCornerDecorWhite_player">
+			<property name="Extends" value="flashlightDecorWhite_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02CornerPrefab.prefab"/>
+			<property name="SortOrder2" value="1301"/>
+		</block>
+
+		<!-- Red -->
+		<block name="flashlightCornerDecorRed_player">
+			<property name="Extends" value="flashlightDecorRed_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02CornerPrefab.prefab"/>
+			<property name="SortOrder2" value="1311"/>
+		</block>
+
+		<!-- Orange -->
+		<block name="flashlightCornerDecorOrange_player">
+			<property name="Extends" value="flashlightDecorOrange_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02CornerPrefab.prefab"/>
+			<property name="SortOrder2" value="1321"/>
+		</block>
+
+		<!-- Yellow -->
+		<block name="flashlightCornerDecorYellow_player">
+			<property name="Extends" value="flashlightDecorYellow_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02CornerPrefab.prefab"/>
+			<property name="SortOrder2" value="1331"/>
+		</block>
+
+		<!-- Green -->
+		<block name="flashlightCornerDecorGreen_player">
+			<property name="Extends" value="flashlightDecorGreen_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02CornerPrefab.prefab"/>
+			<property name="SortOrder2" value="1341"/>
+		</block>
+
+		<!-- Blue -->
+		<block name="flashlightCornerDecorBlue_player">
+			<property name="Extends" value="flashlightDecorBlue_player"/>
+			<property name="Model" value="@:Entities/Lighting/flashlight_02CornerPrefab.prefab"/>
+			<property name="SortOrder2" value="1351"/>
+		</block>
+	</append>
+
+<!--Old Lanterns and regular ones combined into one Variant Helper-->
+	<set xpath="/blocks/block[@name='lanternOld_01_Player']/property[@name='CanPickup']/@param1">lanternDecorLightBlockVariantHelper</set>
+
+<!--Editing the existing Lantern Variant Block to include new player flashlights and the old lanterns.-->
+<append xpath="/blocks/block[@name='lanternDecorLightBlockVariantHelper']/property[@name='PlaceAltBlockValue']/@value">,lanternOld_01_Player,lanternOld_02_Player,lanternOld_03_Player,lanternOld_04_Player,flashlightCornerDecorBlue_player,flashlightCornerDecorGreen_player,flashlightCornerDecorOrange_player,flashlightCornerDecorRed_player,flashlightCornerDecorWhite_player,flashlightCornerDecorYellow_player,flashlightDecorBlue_player,flashlightDecorGreen_player,flashlightDecorOrange_player,flashlightDecorRed_player,flashlightDecorWhite_player,flashlightDecorYellow_player,flashlightSideCenteredDecorBlue_player,flashlightSideCenteredDecorGreen_player,flashlightSideCenteredDecorOrange_player,flashlightSideCenteredDecorRed_player,flashlightSideCenteredDecorWhite_player,flashlightSideCenteredDecorYellow_player</append>
+
+
+
+
+
+
+
+<!--Pick up lanterns and such-->
+		<append xpath="/blocks/block[@name='lanternDecorLightWhite']">
+			<property name="CanPickup" value="true" param1="lanternDecorLightBlockVariantHelper"/>
+			<property name="TakeDelay" value="2"/>		
+			<property name="Class" value=""/>
+			<property name="Material" value="Mmetal_thin"/>
+		</append>
+		<append xpath="/blocks/block[@name='burningBarrel']"> 
+			<property name="CanPickup" value="true" param1="burningBarrelPlayer"/>
+			<property name="TakeDelay" value="2"/>		
+			<property name="Class" value=""/>
+		</append>	
+		<append xpath="/blocks/block[@name='decoPumpkinJackOLantern']"> 
+			<property name="CanPickup" value="true" param1="decoPumpkinJackOLantern"/>
+			<property name="TakeDelay" value="2"/>		
+			<property name="Class" value=""/>
+		</append>				
+		<append xpath="/blocks/block[starts-with(@name,'flashlightDecor')]">
+			<property name="CanPickup" value="true" param1="lanternDecorLightBlockVariantHelper"/>
+			<property name="TakeDelay" value="2"/>	
+			<property name="Class" value=""/>
+		</append>
+		<append xpath="/blocks/block[starts-with(@name,'flashlightSideCenteredDecor')]">
+			<property name="CanPickup" value="true" param1="lanternDecorLightBlockVariantHelper"/>
+			<property name="TakeDelay" value="2"/>	
+			<property name="Class" value=""/>
+		</append>
+		<append xpath="/blocks/block[starts-with(@name,'flashlightCornerDecor')]">
+			<property name="CanPickup" value="true" param1="lanternDecorLightBlockVariantHelper"/>
+			<property name="TakeDelay" value="2"/>	
+			<property name="Class" value=""/>
+		</append>
+
+
+
+</AGFVanillaPlus-LanternPickupPlus>

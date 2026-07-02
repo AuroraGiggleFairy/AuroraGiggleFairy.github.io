@@ -1,0 +1,86 @@
+<zzzAGF-Compatibilities>
+	<!-- VanillaExtended -->
+	<append xpath="/items/item[@name='MashedPotatoes']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='ScrambledMelody']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='FrenchFries']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='BreakfastSandwich']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='FriedShamSandwich']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='TunaFishSandwich']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='BlueberryMuffin']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='FishSticks']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='PastaSalad']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='YuccaFritters']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='MeatySkewers']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='HoneyTea']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='YuccaBluePie']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='BlueberrySmoothie']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='BlueberryIceCream']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='AloeIceCream']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='ChickenSoup']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='ChickenPotPie']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='MushroomPotPie']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<append xpath="/items/item[@name='Hotdog']">
+		<property name="UnlockedBy" value="craftingFood"/>
+	</append>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks')">
+			<set xpath="/items/item[@name='MashedPotatoes']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='ScrambledMelody']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='FrenchFries']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='BreakfastSandwich']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='FriedShamSandwich']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='TunaFishSandwich']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='BlueberryMuffin']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='FishSticks']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='PastaSalad']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='YuccaFritters']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='MeatySkewers']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='YuccaBluePie']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='BlueberrySmoothie']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='BlueberryIceCream']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='AloeIceCream']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='ChickenSoup']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='ChickenPotPie']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='MushroomPotPie']/property[@name='Stacknumber']/@value">50</set>
+			<set xpath="/items/item[@name='Hotdog']/property[@name='Stacknumber']/@value">50</set>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-NoEAC-SignErrorGuard"/>
+    <DisplayName value="AGF No EAC Sign Error Guard"/>
+    <Version value="1.0.0"/>
+    <Description value="Blocks the sign error from interrupting players. Temporary solution."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

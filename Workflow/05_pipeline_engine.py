@@ -17,7 +17,7 @@ import urllib.request
 import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 import xml.etree.ElementTree as ET
 
 # =============================================================
@@ -1217,7 +1217,7 @@ def ensure_notepadpp_closed_for_game_sync(dry_run: bool, log: Logger) -> bool:
 def resolve_publish_gigglepack_action(requested_action: str, dry_run: bool, log: Logger) -> str:
     """Resolve publish-time GigglePack behavior for full-mode runs."""
     action = (requested_action or "finalize").strip().lower()
-    if action in {"finalize", "queue"}:
+    if action in {"finalize", "append-latest", "queue"}:
         return action
 
     if action != "ask":
@@ -1234,6 +1234,7 @@ def resolve_publish_gigglepack_action(requested_action: str, dry_run: bool, log:
 
     prompt = (
         "Publish GigglePack decision: [F] finalize release now, "
+        "[A] append to latest finalized release notes, "
         "or [Q] queue pending changes only (default: Q)"
     )
 
@@ -1246,10 +1247,12 @@ def resolve_publish_gigglepack_action(requested_action: str, dry_run: bool, log:
 
         if response in {"", "q", "queue"}:
             return "queue"
+        if response in {"a", "append", "append-latest"}:
+            return "append-latest"
         if response in {"f", "finalize"}:
             return "finalize"
 
-        log.warn("Invalid publish selection. Type 'F' to finalize or 'Q' to queue.")
+        log.warn("Invalid publish selection. Type 'F' (finalize), 'A' (append-latest), or 'Q' (queue).")
 
 
 def acquire_run_lock() -> bool:
@@ -3044,6 +3047,102 @@ def push_back_pulled_mods(mods_pulled_from_game: List[Tuple[str, str]], dry_run:
             log.info(f"Pushback complete: {mod_name}")
 
 
+def push_staging_mods_to_game(mod_bases: Set[str], dry_run: bool, log: Logger, reason: str) -> None:
+    """Push a targeted set of ActiveBuild mods into the live game folder."""
+    if not mod_bases:
+        log.info(f"Targeted game sync skipped: no ActiveBuild mods changed for {reason}")
+        return
+
+    staging_folders = scan_mod_folders(STAGING)
+    if not staging_folders:
+        log.warn("Targeted game sync skipped: ActiveBuild has no managed mods")
+        return
+
+    targeted_backpack_updates = any(
+        is_backpack_mod(folder_name) and get_base_mod_name(folder_name) in mod_bases
+        for folder_name in staging_folders
+    )
+
+    backpack_mods = sorted([f for f in staging_folders if is_backpack_mod(f)])
+    active_backpack = next((f for f in backpack_mods if BACKPACK_DEFAULT_ACTIVE_TOKEN in f), None)
+    if active_backpack is None and backpack_mods:
+        active_backpack = backpack_mods[0]
+        log.warn(
+            f"Default backpack token '{BACKPACK_DEFAULT_ACTIVE_TOKEN}' not found. "
+            f"Using '{active_backpack}' as active backpack."
+        )
+
+    optionals_backpack_path = os.path.join(GAME_MODS, GAME_OPTIONALS_BACKPACK_DIR)
+    if targeted_backpack_updates:
+        if dry_run:
+            log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_backpack_path}")
+        else:
+            os.makedirs(optionals_backpack_path, exist_ok=True)
+
+        game_folders = scan_mod_folders(GAME_MODS)
+        for game_folder, game_path in game_folders.items():
+            if is_backpack_mod(game_folder) and active_backpack and game_folder != active_backpack:
+                if maybe_remove_dir(game_path, dry_run, log):
+                    log.info(
+                        "Targeted game sync cleanup: removed non-active backpack from game root: "
+                        f"{game_folder}"
+                    )
+
+    synced_root = 0
+    mirrored_backpack_optionals = 0
+    for folder_name, staging_path in sorted(staging_folders.items()):
+        base_name = get_base_mod_name(folder_name)
+        if base_name not in mod_bases:
+            continue
+
+        version = get_modinfo_version(staging_path)
+        if version is None:
+            log.warn(f"Targeted game sync skipped for {folder_name}: unreadable ModInfo.xml")
+            continue
+
+        try:
+            major_version = int((version or "0.0.0").split(".", 1)[0])
+        except Exception:
+            major_version = 0
+
+        if major_version < 1:
+            log.info(
+                f"Targeted game sync skipped for {folder_name}: version {version} is draft-only (major < 1)"
+            )
+            continue
+
+        if is_4modders_mod(folder_name):
+            game_path = os.path.join(GAME_MODS, folder_name)
+            if not os.path.isdir(game_path):
+                log.info(
+                    f"Targeted game sync skipped for {folder_name}: 4Modders mods only push when already present in game root"
+                )
+                continue
+
+        if is_backpack_mod(folder_name):
+            if maybe_copytree(staging_path, os.path.join(optionals_backpack_path, folder_name), dry_run, log):
+                mirrored_backpack_optionals += 1
+                log.info(f"Targeted game sync mirror: backpack optional updated: {folder_name}")
+
+            if active_backpack and folder_name != active_backpack:
+                log.info(
+                    "Targeted game sync skipped for non-active backpack in game root: "
+                    f"{folder_name}"
+                )
+                continue
+
+        destination_path = os.path.join(GAME_MODS, folder_name)
+        if maybe_remove_dir(destination_path, dry_run, log) and maybe_copytree(staging_path, destination_path, dry_run, log):
+            synced_root += 1
+            log.stats.pushed_back_to_game += 1
+            log.info(f"Targeted game sync complete: {folder_name} ({reason})")
+
+    log.info(
+        f"Targeted game sync summary: {synced_root} mod(s) {'would be ' if dry_run else ''}pushed to game root "
+        f"for {reason}; backpack optionals mirrored={mirrored_backpack_optionals}"
+    )
+
+
 def remap_pulled_mods_after_renames(
     mods_pulled_from_game: List[Tuple[str, str]],
     folder_renames: List[Tuple[str, str, str]],
@@ -4109,7 +4208,11 @@ def generate_mod_images(dry_run: bool, log: Logger) -> None:
             log.warn(f"ModImage script failed: {ex}")
 
 
-def copy_mod_images_to_mod_folders(dry_run: bool, log: Logger, mod_dirs: Optional[Tuple[str, ...]] = None) -> None:
+def copy_mod_images_to_mod_folders(
+    dry_run: bool,
+    log: Logger,
+    mod_dirs: Optional[Tuple[str, ...]] = None,
+) -> Set[str]:
     """Copy generated full merged image (<base>_01.png) into each AGF mod folder root.
 
     Thumbnails are intentionally not copied into mod folders.
@@ -4118,9 +4221,10 @@ def copy_mod_images_to_mod_folders(dry_run: bool, log: Logger, mod_dirs: Optiona
         mod_dirs = (STAGING,)
     if not os.path.isdir(IMAGES_GENERATED_ROOT):
         log.warn(f"Generated images folder not found, skipping generated image copy: {IMAGES_GENERATED_ROOT}")
-        return
+        return set()
 
     copied = 0
+    updated_mod_bases: Set[str] = set()
     for mod_dir in mod_dirs:
         if not os.path.isdir(mod_dir):
             continue
@@ -4143,13 +4247,16 @@ def copy_mod_images_to_mod_folders(dry_run: bool, log: Logger, mod_dirs: Optiona
                 try:
                     shutil.copy2(generated_src, generated_dst)
                     copied += 1
+                    updated_mod_bases.add(base_name)
                 except Exception as ex:
                     log.warn(f"Could not copy generated image to {generated_dst}: {ex}")
             else:
                 copied += 1
+                updated_mod_bases.add(base_name)
 
     log.info(f"Generated _01 image copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
     log.info("Thumbnail copy skipped by policy (thumbnails stay only in 00_Images/_generated)")
+    return updated_mod_bases
 
 
 def list_media_images_for_base(base_name: str) -> List[str]:
@@ -4186,15 +4293,16 @@ def copy_mod_media_images_to_mod_folders(
     dry_run: bool,
     log: Logger,
     mod_dirs: Optional[Tuple[str, ...]] = None,
-) -> None:
+) -> Set[str]:
     """Copy only numbered extra media images (_02+) into the root of each mod folder."""
     if mod_dirs is None:
         mod_dirs = (STAGING,)
     if not os.path.isdir(IMAGES_MEDIA_ROOT):
         log.warn(f"Media images folder not found, skipping media copy: {IMAGES_MEDIA_ROOT}")
-        return
+        return set()
 
     copied = 0
+    updated_mod_bases: Set[str] = set()
     for mod_dir in mod_dirs:
         if not os.path.isdir(mod_dir):
             continue
@@ -4236,15 +4344,22 @@ def copy_mod_media_images_to_mod_folders(
                     try:
                         shutil.copy2(media_src, media_dst)
                         copied += 1
+                        updated_mod_bases.add(base_name)
                     except Exception as ex:
                         log.warn(f"Could not copy media image to {media_dst}: {ex}")
                 else:
                     copied += 1
+                    updated_mod_bases.add(base_name)
 
     log.info(f"Mod media copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
+    return updated_mod_bases
 
 
-def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[str, object]:
+def generate_gigglepack_release_artifacts(
+    dry_run: bool,
+    log: Logger,
+    append_to_latest_release: bool = False,
+) -> Dict[str, object]:
     """Create versioned GigglePack zips and release notes for Discord/GitHub usage."""
     log.info("Step 6.5: Generate GigglePack release metadata + changelog outputs")
 
@@ -4306,8 +4421,16 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
     renamed_mods, added_mods, removed_mods = detect_renamed_mods(added_mods, removed_mods)
 
     is_baseline_release = not prev_state
+    append_latest_mode = bool(append_to_latest_release and not is_baseline_release)
+    if append_to_latest_release and is_baseline_release:
+        log.warn(
+            "Append-latest requested but no prior GigglePack release state exists; "
+            "falling back to normal finalize."
+        )
 
-    if is_baseline_release:
+    if append_latest_mode:
+        release_version = prev_version
+    elif is_baseline_release:
         release_version = GIGGLEPACK_BASELINE_VERSION
     elif major_bump_requested:
         prev_major, _, _ = parse_three_part_version(prev_version)
@@ -4323,7 +4446,7 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
 
     has_update = bool(
         is_baseline_release
-        or major_bump_requested
+        or (major_bump_requested and not append_latest_mode)
         or added_mods
         or updated_existing_mods
         or renamed_mods
@@ -4347,7 +4470,10 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
             "discord_path": discord_path,
         }
 
-    previous_release_version = prev_version
+    if append_latest_mode:
+        previous_release_version = str(prev_state.get("previous_gigglepack_version", prev_version)).strip() or prev_version
+    else:
+        previous_release_version = prev_version
 
     versioned_zip_name = f"{GIGGLEPACK_VERSIONED_ZIP_PREFIX}{release_version}.zip"
     versioned_zip_path = os.path.join(ZIP_OUTPUT, versioned_zip_name)
@@ -4445,24 +4571,70 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
             removed_mod_entries = []
             removed_mod_entries_display = []
 
+    def merge_state_entries(
+        existing_entries: object,
+        incoming_entries: List[Dict[str, str]],
+        identity_keys: Tuple[str, ...],
+    ) -> List[Dict[str, str]]:
+        merged: List[Dict[str, str]] = []
+        seen: Set[Tuple[str, ...]] = set()
+
+        if isinstance(existing_entries, list):
+            for entry in existing_entries:
+                if not isinstance(entry, dict):
+                    continue
+                normalized = {str(k): str(v) for k, v in entry.items()}
+                identity = tuple(normalized.get(key, "").strip() for key in identity_keys)
+                if not any(identity):
+                    continue
+                if identity in seen:
+                    continue
+                seen.add(identity)
+                merged.append(normalized)
+
+        for entry in incoming_entries:
+            normalized = {str(k): str(v) for k, v in entry.items()}
+            identity = tuple(normalized.get(key, "").strip() for key in identity_keys)
+            if not any(identity):
+                continue
+            if identity in seen:
+                continue
+            seen.add(identity)
+            merged.append(normalized)
+
+        return merged
+
+    state_new_mod_entries = new_mod_entries_display
+    state_updated_mod_entries = updated_mod_entries_display
+    state_renamed_mod_entries = renamed_mod_entries_display
+    state_removed_mod_entries = removed_mod_entries_display
+
+    if append_latest_mode:
+        state_new_mod_entries = merge_state_entries(prev_state.get("new_mods", []), new_mod_entries_display, ("mod", "to"))
+        state_updated_mod_entries = merge_state_entries(prev_state.get("updated_mods", []), updated_mod_entries_display, ("mod", "from", "to"))
+        state_renamed_mod_entries = merge_state_entries(prev_state.get("renamed_mods", []), renamed_mod_entries_display, ("from_mod", "to_mod", "version"))
+        state_removed_mod_entries = merge_state_entries(prev_state.get("removed_mods", []), removed_mod_entries_display, ("mod", "from"))
+        log.info("Append-latest mode: merged current changes into the latest finalized changelog entry")
+
     new_mod_lines = [
         f"- {mod_download_markdown_link(entry['mod'])} (new: v{entry.get('to_display', entry['to'])})"
-        for entry in new_mod_entries_display
+        for entry in state_new_mod_entries
     ]
     updated_existing_lines = [
         f"- {mod_download_markdown_link(entry['mod'])} "
         f"(v{entry.get('from_display', entry['from'])} -> v{entry.get('to_display', entry['to'])})"
-        for entry in updated_mod_entries_display
+        for entry in state_updated_mod_entries
     ]
     renamed_lines = [
         f"- {mod_download_markdown_link(entry['to_mod'])} "
         f"(renamed from {entry['from_mod']}, v{entry.get('version_display', entry['version'])})"
-        for entry in renamed_mod_entries_display
+        for entry in state_renamed_mod_entries
     ]
     removed_lines = [
         f"- {entry['mod']} (was v{entry.get('from_display', entry['from'])})"
-        for entry in removed_mod_entries_display
+        for entry in state_removed_mod_entries
     ]
+
     if has_update:
         now_dt = dt.datetime.now()
     else:
@@ -4479,10 +4651,10 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
         now_iso=now_display,
         versioned_zip_name=versioned_zip_name,
         previous_release_version=previous_release_version,
-        new_mod_entries=new_mod_entries_display,
-        updated_mod_entries=updated_mod_entries_display,
-        renamed_mod_entries=renamed_mod_entries_display,
-        removed_mod_entries=removed_mod_entries_display,
+        new_mod_entries=state_new_mod_entries,
+        updated_mod_entries=state_updated_mod_entries,
+        renamed_mod_entries=state_renamed_mod_entries,
+        removed_mod_entries=state_removed_mod_entries,
         log=log,
     )
 
@@ -4575,20 +4747,20 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
 
     state_payload = {
         "gigglepack_version": release_version,
-        "previous_gigglepack_version": prev_version,
+        "previous_gigglepack_version": previous_release_version,
         "is_baseline_release": is_baseline_release,
         "released_at": now_iso,
         "mods": giggle_mod_versions,
-        "updated_mods": updated_mod_entries_display,
-        "new_mods": new_mod_entries_display,
-        "renamed_mods": renamed_mod_entries_display,
-        "removed_mods": removed_mod_entries_display,
+        "updated_mods": state_updated_mod_entries,
+        "new_mods": state_new_mod_entries,
+        "renamed_mods": state_renamed_mod_entries,
+        "removed_mods": state_removed_mod_entries,
         "versioned_zip": versioned_zip_name,
         "change_counts": {
-            "new_mods": len(new_mod_entries),
-            "updated_existing_mods": len(updated_mod_entries),
-            "renamed_mods": len(renamed_mod_entries),
-            "removed_mods": len(removed_mod_entries),
+            "new_mods": len(state_new_mod_entries),
+            "updated_existing_mods": len(state_updated_mod_entries),
+            "renamed_mods": len(state_renamed_mod_entries),
+            "removed_mods": len(state_removed_mod_entries),
         },
     }
 
@@ -4597,7 +4769,7 @@ def generate_gigglepack_release_artifacts(dry_run: bool, log: Logger) -> Dict[st
     else:
         os.makedirs(release_meta_dir, exist_ok=True)
         atomic_write_json(state_path, state_payload, ensure_ascii=True, indent=2)
-        if major_bump_requested:
+        if major_bump_requested and not append_latest_mode:
             try:
                 os.remove(marker_path)
                 log.info(f"Consumed major bump marker: {marker_path}")
@@ -5627,8 +5799,24 @@ def run_pipeline(args: argparse.Namespace) -> int:
             normalize_quote_files(csv_rows, all_renames, args.dry_run, log)
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(STAGING,))
             generate_mod_images(args.dry_run, log)
-            copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            image_updated_mod_bases = copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            image_updated_mod_bases.update(
+                copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            )
+            if not ensure_notepadpp_closed_for_game_sync(args.dry_run, log):
+                log_path = log.write_log_file()
+                manifest_path = write_run_manifest(log, args.mode, args.dry_run, 1, log_path)
+                if log_path:
+                    print(f"Log file: {log_path}")
+                if manifest_path:
+                    print(f"Run manifest: {manifest_path}")
+                return 1
+            push_staging_mods_to_game(
+                image_updated_mod_bases,
+                args.dry_run,
+                log,
+                reason="mod image refresh",
+            )
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             update_mod_loaded_references_for_renames(post_sync_renames, args.dry_run, log)
             update_mod_loaded_references_for_renames(all_renames, args.dry_run, log)
@@ -5741,8 +5929,24 @@ def run_pipeline(args: argparse.Namespace) -> int:
             cleanup_legacy_4modders_renames_in_dir(STAGING, args.dry_run, log)
             cleanup_older_versions_in_dir(STAGING, args.dry_run, log)
             generate_mod_images(args.dry_run, log)
-            copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            image_updated_mod_bases = copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            image_updated_mod_bases.update(
+                copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
+            )
+            if not ensure_notepadpp_closed_for_game_sync(args.dry_run, log):
+                log_path = log.write_log_file()
+                manifest_path = write_run_manifest(log, args.mode, args.dry_run, 1, log_path)
+                if log_path:
+                    print(f"Log file: {log_path}")
+                if manifest_path:
+                    print(f"Run manifest: {manifest_path}")
+                return 1
+            push_staging_mods_to_game(
+                image_updated_mod_bases,
+                args.dry_run,
+                log,
+                reason="mod image refresh",
+            )
 
             # 3) Promote finalized ActiveBuild content to ReleaseSource.
             promote_staging_to_publish_ready(args.dry_run, log)
@@ -5795,6 +5999,12 @@ def run_pipeline(args: argparse.Namespace) -> int:
             )
             if publish_gigglepack_action == "finalize":
                 generate_gigglepack_release_artifacts(args.dry_run, log)
+            elif publish_gigglepack_action == "append-latest":
+                generate_gigglepack_release_artifacts(
+                    args.dry_run,
+                    log,
+                    append_to_latest_release=True,
+                )
             else:
                 log.info(
                     "GigglePack finalization skipped for this publish run; "
@@ -5917,11 +6127,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--publish-gigglepack-action",
-        choices=["ask", "finalize", "queue"],
+        choices=["ask", "finalize", "append-latest", "queue"],
         default="finalize",
         help=(
             "Only used by mode=full publish flow: ask before GigglePack finalize, "
-            "always finalize, or queue pending changes only"
+            "always finalize, append to latest finalized release notes, or queue pending changes only"
         ),
     )
     return parser

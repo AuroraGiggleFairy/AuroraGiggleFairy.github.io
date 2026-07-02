@@ -1,76 +1,148 @@
 {
-  "gigglepack_version": "0.10.0",
-  "previous_gigglepack_version": "0.9.0",
+  "gigglepack_version": "0.11.0",
+  "previous_gigglepack_version": "0.10.0",
   "is_baseline_release": false,
-  "released_at": "2026-07-02 00:45:12",
+  "released_at": "2026-07-02 18:10:43",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.0.4",
     "AGF-BackpackPlus-072Slots": "4.0.3",
     "AGF-BackpackPlus-084Slots": "4.0.2",
     "AGF-BackpackPlus-119Slots": "2.0.0",
     "AGF-HUDPlus-1Main": "6.4.0",
+    "AGF-HUDPlus-BMCounter": "3.0.0",
     "AGF-HUDPlus-PurpleBook": "3.0.0",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.0.1",
     "AGF-HUDPluszOther-Weekday": "3.0.3",
-    "AGF-NoEAC-AutoRun": "2.0.2",
+    "AGF-NoEAC-AutoRun": "2.0.3",
     "AGF-NoEAC-CosmeticLockIcon": "3.0.0",
     "AGF-NoEAC-EnhancedAGF": "4.2.0",
     "AGF-NoEAC-GlobalStormTracker": "2.0.1",
     "AGF-NoEAC-ScreamerAlert": "2.2.0",
     "AGF-NoEAC-SignErrorGuard": "1.0.0",
     "AGF-NoEAC-Toolbelt12Slots": "2.1.1",
+    "AGF-VP-AutomobilesRespawn": "4.0.0",
     "AGF-VP-BedrollPlus": "2.0.0",
+    "AGF-VP-BetterEggChance": "3.0.0",
+    "AGF-VP-BreakItGetIt": "2.0.0",
+    "AGF-VP-CraftSewingKits": "2.0.0",
+    "AGF-VP-CraftVitamins": "2.0.0",
     "AGF-VP-FuelBurnPlus": "3.0.0",
     "AGF-VP-LargerStorageOption": "1.0.1",
+    "AGF-VP-MasterTool": "7.0.0",
     "AGF-VP-MaxLevel500": "3.0.0",
     "AGF-VP-ModSlotsPlus": "4.0.0",
     "AGF-VP-PickupLanternsPlus": "3.0.0",
     "AGF-VP-PlayerResetQuests": "3.0.0",
     "AGF-VP-RebundleBundles": "2.0.0",
+    "AGF-VP-RestorePowerAnyTime": "2.0.0",
+    "AGF-VP-ScrapBatts4Acid": "2.0.0",
+    "AGF-VP-ScrapEquipmentFaster": "2.0.0",
     "AGF-VP-SimplifiedStacks": "2.0.1",
+    "AGF-VP-StayLongerAnimalCorpse": "3.0.0",
+    "AGF-VP-StayLongerPlayerBackpack": "3.0.0",
+    "AGF-VP-VehiclePerformance": "2.0.0",
+    "AGF-VP-VehicleStoragePlus": "3.0.0",
+    "AGF-VP-VehiclesExtraSeating": "2.0.0",
+    "AGF-VP-ZombieCorpseLeaveQuicker": "3.0.0",
     "zzzAGF-Special-Compatibilities": "5.0.0"
   },
   "updated_mods": [
     {
-      "mod": "AGF-HUDPlus-1Main",
-      "from": "6.3.1",
-      "to": "6.4.0",
-      "from_display": "6.3.1",
-      "to_display": "6.4.0"
-    },
-    {
-      "mod": "AGF-NoEAC-EnhancedAGF",
-      "from": "4.1.1",
-      "to": "4.2.0",
-      "from_display": "4.1.1",
-      "to_display": "4.2.0"
-    },
-    {
-      "mod": "AGF-NoEAC-ScreamerAlert",
-      "from": "2.1.2",
-      "to": "2.2.0",
-      "from_display": "2.1.2",
-      "to_display": "2.2.0"
+      "mod": "AGF-NoEAC-AutoRun",
+      "from": "2.0.2",
+      "to": "2.0.3",
+      "from_display": "2.0.2",
+      "to_display": "2.0.3"
     }
   ],
   "new_mods": [
     {
-      "mod": "AGF-NoEAC-CosmeticLockIcon",
+      "mod": "AGF-HUDPlus-BMCounter",
       "to": "3.0.0",
       "to_display": "3.0.0"
     },
     {
-      "mod": "zzzAGF-Special-Compatibilities",
-      "to": "5.0.0",
-      "to_display": "5.0.0"
+      "mod": "AGF-VP-AutomobilesRespawn",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
+    },
+    {
+      "mod": "AGF-VP-BetterEggChance",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-BreakItGetIt",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-CraftSewingKits",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-CraftVitamins",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-MasterTool",
+      "to": "7.0.0",
+      "to_display": "7.0.0"
+    },
+    {
+      "mod": "AGF-VP-RestorePowerAnyTime",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-ScrapBatts4Acid",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-ScrapEquipmentFaster",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-VehiclePerformance",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-VehiclesExtraSeating",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-VehicleStoragePlus",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-ZombieCorpseLeaveQuicker",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-StayLongerAnimalCorpse",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-StayLongerPlayerBackpack",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.10.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.11.0.zip",
   "change_counts": {
-    "new_mods": 2,
-    "updated_existing_mods": 3,
+    "new_mods": 16,
+    "updated_existing_mods": 1,
     "renamed_mods": 0,
     "removed_mods": 0
   }

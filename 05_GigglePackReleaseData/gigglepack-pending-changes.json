@@ -1,31 +1,65 @@
 {
-  "computed_at": "2026-07-02T00:10:18",
-  "since_gigglepack_version": "0.9.0",
+  "computed_at": "2026-07-02T17:50:40",
+  "since_gigglepack_version": "0.10.0",
   "new_mods": [
     [
-      "AGF-NoEAC-CosmeticLockIcon",
+      "AGF-HUDPlus-BMCounter",
       "3.0.0"
     ],
     [
-      "zzzAGF-Special-Compatibilities",
-      "5.0.0"
+      "AGF-VP-AutomobilesRespawn",
+      "4.0.0"
+    ],
+    [
+      "AGF-VP-BetterEggChance",
+      "3.0.0"
+    ],
+    [
+      "AGF-VP-BreakItGetIt",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-CraftSewingKits",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-CraftVitamins",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-MasterTool",
+      "7.0.0"
+    ],
+    [
+      "AGF-VP-RestorePowerAnyTime",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-ScrapBatts4Acid",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-ScrapEquipmentFaster",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-VehiclePerformance",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-VehiclesExtraSeating",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-VehicleStoragePlus",
+      "3.0.0"
     ]
   ],
   "updated_mods": [
     [
-      "AGF-HUDPlus-1Main",
-      "6.3.1",
-      "6.4.0"
-    ],
-    [
-      "AGF-NoEAC-EnhancedAGF",
-      "4.1.1",
-      "4.2.0"
-    ],
-    [
-      "AGF-NoEAC-ScreamerAlert",
-      "2.1.2",
-      "2.2.0"
+      "AGF-NoEAC-AutoRun",
+      "2.0.2",
+      "2.0.3"
     ]
   ],
   "renamed_mods": [],

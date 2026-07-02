@@ -1,15 +1,27 @@
-#   GigglePack v0.10.0 - *July 2, 2026 12:45am*
+#   GigglePack v0.11.0 - *July 2, 2026 6:10pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +2 new, ~3 updated, =0 renamed, -0 removed**
+###  **Change summary: +16 new, ~1 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - [AGF-NoEAC-CosmeticLockIcon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip) (new: v3.0.0)
-  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (new: v5.0.0)
+  - [AGF-HUDPlus-BMCounter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip) (new: v3.0.0)
+  - [AGF-VP-AutomobilesRespawn](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip) (new: v4.0.0)
+  - [AGF-VP-BetterEggChance](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BetterEggChance.zip) (new: v3.0.0)
+  - [AGF-VP-BreakItGetIt](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip) (new: v2.0.0)
+  - [AGF-VP-CraftSewingKits](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftSewingKits.zip) (new: v2.0.0)
+  - [AGF-VP-CraftVitamins](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip) (new: v2.0.0)
+  - [AGF-VP-MasterTool](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip) (new: v7.0.0)
+  - [AGF-VP-RestorePowerAnyTime](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RestorePowerAnyTime.zip) (new: v2.0.0)
+  - [AGF-VP-ScrapBatts4Acid](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapBatts4Acid.zip) (new: v2.0.0)
+  - [AGF-VP-ScrapEquipmentFaster](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapEquipmentFaster.zip) (new: v2.0.0)
+  - [AGF-VP-VehiclePerformance](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclePerformance.zip) (new: v2.0.0)
+  - [AGF-VP-VehiclesExtraSeating](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclesExtraSeating.zip) (new: v2.0.0)
+  - [AGF-VP-VehicleStoragePlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehicleStoragePlus.zip) (new: v3.0.0)
+  - [AGF-VP-ZombieCorpseLeaveQuicker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieCorpseLeaveQuicker.zip) (new: v3.0.0)
+  - [AGF-VP-StayLongerAnimalCorpse](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerAnimalCorpse.zip) (new: v3.0.0)
+  - [AGF-VP-StayLongerPlayerBackpack](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerPlayerBackpack.zip) (new: v3.0.0)
 - **Updated existing mods:**
-  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.3.1 -> v6.4.0)
-  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.1.1 -> v4.2.0)
-  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.1.2 -> v2.2.0)
+  - [AGF-NoEAC-AutoRun](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip) (v2.0.2 -> v2.0.3)
 - **Renamed mods:**
   - None
 - **Removed mods:**

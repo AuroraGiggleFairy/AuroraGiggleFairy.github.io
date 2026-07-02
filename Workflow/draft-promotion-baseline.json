@@ -65,9 +65,9 @@
     "version": "6.0.0"
   },
   "AGF-HUDPlus-BMCounter": {
-    "folder": "AGF-HUDPlus-BMCounter-v2.1.3",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.1.3"
+    "folder": "AGF-HUDPlus-BMCounter-v3.0.0",
+    "recorded_at": "2026-07-02T14:17:42",
+    "version": "3.0.0"
   },
   "AGF-HUDPlus-HealthBars": {
     "folder": "AGF-HUDPlus-HealthBars-v5.0.0",
@@ -225,9 +225,9 @@
     "version": "2.1.1"
   },
   "AGF-VP-AutomobilesRespawn": {
-    "folder": "AGF-VP-AutomobilesRespawn-v3.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "3.1.1"
+    "folder": "AGF-VP-AutomobilesRespawn-v4.0.0",
+    "recorded_at": "2026-07-02T17:50:27",
+    "version": "4.0.0"
   },
   "AGF-VP-BedrollPlus": {
     "folder": "AGF-VP-BedrollPlus-v2.0.0",
@@ -235,14 +235,14 @@
     "version": "2.0.0"
   },
   "AGF-VP-BetterEggChance": {
-    "folder": "AGF-VP-BetterEggChance-v2.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.1.1"
+    "folder": "AGF-VP-BetterEggChance-v3.0.0",
+    "recorded_at": "2026-07-02T15:25:35",
+    "version": "3.0.0"
   },
   "AGF-VP-BreakItGetIt": {
-    "folder": "AGF-VP-BreakItGetIt-v1.0.3",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.3"
+    "folder": "AGF-VP-BreakItGetIt-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-BuyTraderVendingMachines": {
     "folder": "AGF-VP-BuyTraderVendingMachines-v3.0.3",
@@ -250,9 +250,9 @@
     "version": "3.0.3"
   },
   "AGF-VP-CraftSewingKits": {
-    "folder": "AGF-VP-CraftSewingKits-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-VP-CraftSewingKits-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-CraftStackEngBattCells": {
     "folder": "AGF-VP-CraftStackEngBattCells-v3.3.1",
@@ -260,9 +260,9 @@
     "version": "3.3.1"
   },
   "AGF-VP-CraftVitamins": {
-    "folder": "AGF-VP-CraftVitamins-v1.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.1.1"
+    "folder": "AGF-VP-CraftVitamins-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-DecorationBlock": {
     "folder": "AGF-VP-DecorationBlock-v3.0.3",
@@ -310,9 +310,9 @@
     "version": "1.0.0"
   },
   "AGF-VP-MasterTool": {
-    "folder": "AGF-VP-MasterTool-v6.1.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "6.1.2"
+    "folder": "AGF-VP-MasterTool-v7.0.0",
+    "recorded_at": "2026-07-02T17:04:41",
+    "version": "7.0.0"
   },
   "AGF-VP-MaxLevel500": {
     "folder": "AGF-VP-MaxLevel500-v3.0.0",
@@ -400,19 +400,19 @@
     "version": "2.0.5"
   },
   "AGF-VP-RestorePowerAnyTime": {
-    "folder": "AGF-VP-RestorePowerAnyTime-v1.0.3",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.3"
+    "folder": "AGF-VP-RestorePowerAnyTime-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-ScrapBatts4Acid": {
-    "folder": "AGF-VP-ScrapBatts4Acid-v1.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.1.1"
+    "folder": "AGF-VP-ScrapBatts4Acid-v2.0.0",
+    "recorded_at": "2026-07-02T15:25:35",
+    "version": "2.0.0"
   },
   "AGF-VP-ScrapEquipmentFaster": {
-    "folder": "AGF-VP-ScrapEquipmentFaster-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-VP-ScrapEquipmentFaster-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-SimplifiedStacks": {
     "folder": "AGF-VP-SimplifiedStacks-v2.0.0",
@@ -425,14 +425,14 @@
     "version": "2.4.1"
   },
   "AGF-VP-StayLongerAnimalCorpse": {
-    "folder": "AGF-VP-StayLongerAnimalCorpse-v2.0.3",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.3"
+    "folder": "AGF-VP-StayLongerAnimalCorpse-v3.0.0",
+    "recorded_at": "2026-07-02T18:10:22",
+    "version": "3.0.0"
   },
   "AGF-VP-StayLongerPlayerBackpack": {
-    "folder": "AGF-VP-StayLongerPlayerBackpack-v2.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.2"
+    "folder": "AGF-VP-StayLongerPlayerBackpack-v3.0.0",
+    "recorded_at": "2026-07-02T18:10:22",
+    "version": "3.0.0"
   },
   "AGF-VP-StayLongerZombieLoot": {
     "folder": "AGF-VP-StayLongerZombieLoot-v2.0.2",
@@ -470,19 +470,19 @@
     "version": "3.0.2"
   },
   "AGF-VP-VehiclePerformance": {
-    "folder": "AGF-VP-VehiclePerformance-v1.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.2"
+    "folder": "AGF-VP-VehiclePerformance-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-VehicleStoragePlus": {
-    "folder": "AGF-VP-VehicleStoragePlus-v2.1.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.1.2"
+    "folder": "AGF-VP-VehicleStoragePlus-v3.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "3.0.0"
   },
   "AGF-VP-VehiclesExtraSeating": {
-    "folder": "AGF-VP-VehiclesExtraSeating-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-VP-VehiclesExtraSeating-v2.0.0",
+    "recorded_at": "2026-07-02T15:13:23",
+    "version": "2.0.0"
   },
   "AGF-VP-WriteStoryOnCrate": {
     "folder": "AGF-VP-WriteStoryOnCrate-v1.0.1",
@@ -500,9 +500,9 @@
     "version": "3.0.1"
   },
   "AGF-VP-ZombieCorpseLeaveQuicker": {
-    "folder": "AGF-VP-ZombieCorpseLeaveQuicker-v2.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.2"
+    "folder": "AGF-VP-ZombieCorpseLeaveQuicker-v3.0.0",
+    "recorded_at": "2026-07-02T18:01:36",
+    "version": "3.0.0"
   },
   "AGF-VP-ZombieLargerHordes": {
     "folder": "AGF-VP-ZombieLargerHordes-v2.0.2",

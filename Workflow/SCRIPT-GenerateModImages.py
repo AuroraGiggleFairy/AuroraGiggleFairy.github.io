@@ -1096,8 +1096,26 @@ def main() -> int:
         signature = build_mod_signature(mod, media_image_path)
         prev = previous_manifest.get(mod.base_name, {}) if isinstance(previous_manifest.get(mod.base_name, {}), dict) else {}
         prev_sig = str(prev.get("signature", ""))
+        full_merged_path = os.path.join(generated_root, f"{mod.base_name}_01.png")
         banner_path = os.path.join(generated_root, f"Thumbnail_{mod.base_name}.png")
-        should_skip = args.changed_only and (signature == prev_sig) and os.path.isfile(banner_path)
+
+        has_full_merged = os.path.isfile(full_merged_path)
+        has_banner = os.path.isfile(banner_path)
+        banner_matches_full_merged = False
+        if has_full_merged and has_banner:
+            try:
+                banner_matches_full_merged = os.path.getmtime(banner_path) >= os.path.getmtime(full_merged_path)
+            except OSError:
+                banner_matches_full_merged = False
+
+        # Keep _01 and Thumbnail paired: if _01 is newer, force regeneration even in changed-only mode.
+        should_skip = (
+            args.changed_only
+            and (signature == prev_sig)
+            and has_full_merged
+            and has_banner
+            and banner_matches_full_merged
+        )
         if should_skip and not args.mod:
             unchanged_count += 1
             next_manifest[mod.base_name] = {

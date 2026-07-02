@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-VP-LargerStorageOption"/>
+    <DisplayName value="AGF VP Larger Storage Option"/>
+    <Version value="1.0.1"/>
+    <Description value="Adds craftable XL storage in multiple shapes, with 3x block health and break-to-pick-up."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

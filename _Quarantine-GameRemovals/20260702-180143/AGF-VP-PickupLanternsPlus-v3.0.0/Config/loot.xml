@@ -1,0 +1,9 @@
+<AGFVanillaPlus-LanternPickupPlus>
+
+<!--Removing the pickupable lanters (old, new, flashlights) from loot as not needed now.-->
+	<!--<remove xpath="//item[@name='lanternOldBlockVariantHelper']"/>--><!--This doesn't currently exist in any loot list-->
+	<remove xpath="//item[@name='lanternDecorLightBlockVariantHelper']"/>
+
+	<!--I used the "//" method in case in future updates these blocks find themselves in other locations-->
+
+</AGFVanillaPlus-LanternPickupPlus>

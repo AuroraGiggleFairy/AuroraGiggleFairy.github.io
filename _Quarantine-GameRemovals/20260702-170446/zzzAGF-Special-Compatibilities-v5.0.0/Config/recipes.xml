@@ -1,0 +1,7 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('VanillaExtended')">
+			<include filename="XUi_InGame/ModPatches/VanillaExtended/recipes.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

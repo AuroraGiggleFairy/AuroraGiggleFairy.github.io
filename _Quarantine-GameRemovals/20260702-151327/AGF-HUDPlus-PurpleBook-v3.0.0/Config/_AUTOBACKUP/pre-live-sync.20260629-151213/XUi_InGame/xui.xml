@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AGF-PurpleBookGenerator>
+	<insertbefore xpath="/xui/window_group[@name='crafting']">
+		<window_group name="schematics" open_backpack_on_open="false" close_compass_on_open="false" stack_panel_y_offset="397">
+			<window name="Schematics"/>
+		</window_group>
+	</insertbefore>
+</AGF-PurpleBookGenerator>

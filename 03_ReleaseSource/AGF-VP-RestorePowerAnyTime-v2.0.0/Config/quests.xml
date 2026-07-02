@@ -1,0 +1,8 @@
+<AGFVanillaPlus-RestorePowerAnyTime>
+
+
+	<remove xpath="//property[@name='allowed_start_hour']"/>
+	<remove xpath="//property[@name='allowed_end_hour']"/>
+
+		
+</AGFVanillaPlus-RestorePowerAnyTime>

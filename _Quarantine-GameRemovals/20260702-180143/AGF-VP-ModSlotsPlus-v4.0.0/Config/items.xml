@@ -1,0 +1,121 @@
+<AGFVanillaPlus-ModSlotsPlus>
+
+<!--Made a few adjustments for version 2.0 as basic items no longer require legendary part at tier 6-->
+
+
+<!--order of the following code matters-->
+
+	<!--(Tier 3 items) auger, chainsaw, auto shotgun, sniper, M60-->	
+		<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='4,4,4,4,4,4']/@value">5,5,5,5,5,6</set>
+	
+	<!--(Tier 2 items) steel items, impact driver, machete, smg, DV, pump shotty, tactical ar, compound bow/crossbows-->	
+		<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='3,3,3,4,4,4']/@value">4,4,4,4,5,6</set>	
+	
+	<!--(Tier 1.5 items) Stun baton, magnum, iron crossbow-->	
+		<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='2,2,3,3,4,4']/@value">3,3,3,4,4,5</set>
+
+	<!--(Tier 1 items) iron tools/weapons, baseball bat, pistol, double barrel, hunting rifle, wooden bow, ak47-->		
+		<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='2,2,2,3,3,4']/@value">3,3,3,4,4,5</set>
+
+	<!--(Tier ? items) claw hammer, rocket launcher, robotics, armors-->		
+		<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='1,1,2,2,3,4']/@value">2,2,3,4,5,6</set> 
+	
+	<!--(Tier 0 items) stone items, bone knife, wrench, pipe weapons, primitive bow-->
+		<!--<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='1,1,1,2,2,3']/@value">1,2,3,3,3,4</set> -->
+
+	
+	<!--primitive armor only has 1 armor slot regardless of tier, and I'm going to leave it that way.-->
+
+		
+</AGFVanillaPlus-ModSlotsPlus>
+<!--notes as of version 1, b313
+
+
+primitive armor
+	<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
+
+
+stone tools
+wrench
+bone knife
+wooden club
+pipe baton
+stone spear
+stone sledge
+leather knuckles
+pipe pistol
+pipe shotgun
+pipe rifle
+pipe machine gun
+primitive bow
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,1,2,2,3" tier="1,2,3,4,5,6"/>
+		
+	
+		
+claw hammer
+rocket launcher
+junk sledge
+junk turret	
+junk drone	
+all armos		
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		
+		
+iron tools
+ratchet		
+hunting knife		
+candy knife		
+baseball bat		
+candy club
+iron spear		
+iron sledge hammer		
+iron knuckles
+pistol
+double barrel shotgun
+hunting rifle
+ak47
+wooden bow
+		
+		<passive_effect name="ModSlots" operation="base_set" value="2,2,2,3,3,4" tier="1,2,3,4,5,6"/>
+		
+
+
+
+
+
+
+stun baton
+magnum
+iron crossbow
+	<passive_effect name="ModSlots" operation="base_set" value="2,2,3,3,4,4" tier="1,2,3,4,5,6"/>
+
+
+
+
+		
+		
+steel tools
+impact driver		
+machete
+steel club
+steel spear
+steel sledgehammer
+steel knuckles
+smg
+desert vulture	
+pump shotgun
+tactical ar
+compound bow
+compound crossbow
+		
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+		
+		
+		
+chainsaw
+auger		
+auto shotgun		
+sniper rifle		
+m60		
+		
+		<passive_effect name="ModSlots" operation="base_set" value="4,4,4,4,4,4" tier="1,2,3,4,5,6"/>-->

@@ -146,11 +146,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--publish-gigglepack-action",
-        choices=["ask", "finalize", "queue"],
+        choices=["ask", "finalize", "append-latest", "queue"],
         default="finalize",
         help=(
             "Only used for --mode full publish runs: ask before GigglePack finalize, "
-            "always finalize, or queue pending changes only"
+            "always finalize, append to latest finalized release notes, or queue pending changes only"
         ),
     )
     add_common_cli_args(parser)

@@ -1,0 +1,13 @@
+<AGFVanillaPlus-VehiclePerformance>
+
+
+<!--just doubled the max health of vehicles-->
+	<set xpath="/items/item[@name='vehicleGyrocopterPlaceable']/effect_group[@name='vehicleGyrocopterPlaceable']/passive_effect[@name='DegradationMax']/@value">7000</set><!--Default 3500-->
+	<set xpath="/items/item[@name='vehicleBicyclePlaceable']/effect_group[@name='vehicleBicyclePlaceable']/passive_effect[@name='DegradationMax']/@value">4000</set><!--Default 1500-->
+	<set xpath="/items/item[@name='vehicleMinibikePlaceable']/effect_group[@name='vehicleMinibikePlaceable']/passive_effect[@name='DegradationMax']/@value">4000</set><!--Default 2000-->
+	<set xpath="/items/item[@name='vehicleMotorcyclePlaceable']/effect_group[@name='vehicleMotorcyclePlaceable']/passive_effect[@name='DegradationMax']/@value">8000</set><!--Default 4000-->
+	<set xpath="/items/item[@name='vehicleTruck4x4Placeable']/effect_group[@name='main']/passive_effect[@name='DegradationMax']/@value">16000</set><!--Default 8000-->
+
+
+
+</AGFVanillaPlus-VehiclePerformance>

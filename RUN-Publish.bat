@@ -14,7 +14,7 @@ if not exist "%PYTHON_EXE%" (
 )
 
 echo Running publish run: update + promote + zips + README.
-echo GigglePack publish gate will ask: finalize now or queue pending changes.
+echo GigglePack publish gate will ask: finalize now, append to latest finalize notes, or queue pending changes.
 echo.
 "%PYTHON_EXE%" "%~dp0SCRIPT-Main.py" --mode full --publish-gigglepack-action ask %*
 set "EXIT_CODE=%ERRORLEVEL%"

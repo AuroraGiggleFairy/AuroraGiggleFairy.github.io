@@ -1368,15 +1368,16 @@ namespace AutoRun
                 return;
             }
 
-            if (activationEdge && !state.VehicleEnabled)
+            if (activationEdge)
             {
-                // Pressing activation key directly enables auto-run and sprint lock.
-                state.VehicleEnabled = true;
-                state.VehicleSprintLocked = true;
-                AutoRunStateStore.SetVehicleIndicator(_player, enabled: true);
+                // Keyboard activation key now acts as a direct toggle.
+                bool enable = !state.VehicleEnabled;
+                state.VehicleEnabled = enable;
+                state.VehicleSprintLocked = enable;
+                AutoRunStateStore.SetVehicleIndicator(_player, enabled: enable);
             }
 
-            if (forwardEdge)
+            if (forwardEdge && !activationEdge)
             {
                 if (activationHeld)
                 {
@@ -1622,15 +1623,16 @@ namespace AutoRun
             bool activationEdge = activationHeld && !state.OnFootWasActivationHeld;
             bool forwardEdge = forwardPressed && !state.OnFootWasForwardPressed;
 
-            if (activationEdge && !state.OnFootEnabled)
+            if (activationEdge)
             {
-                // Pressing activation key directly enables auto-run and sprint lock.
-                state.OnFootEnabled = true;
-                state.OnFootSprintLocked = true;
-                AutoRunStateStore.SetOnFootIndicator(__instance, enabled: true);
+                // Keyboard activation key now acts as a direct toggle.
+                bool enable = !state.OnFootEnabled;
+                state.OnFootEnabled = enable;
+                state.OnFootSprintLocked = enable;
+                AutoRunStateStore.SetOnFootIndicator(__instance, enabled: enable);
             }
 
-            if (forwardEdge)
+            if (forwardEdge && !activationEdge)
             {
                 if (activationHeld)
                 {

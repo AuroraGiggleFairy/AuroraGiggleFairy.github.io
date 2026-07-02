@@ -1,0 +1,9 @@
+<AGFVanillaPlus-CraftVitamins>
+
+
+		<append xpath="/progression/perks/book[@name='perkWasteTreasuresCloth']/effect_group/passive_effect/@tags">,resourceSewingKit</append>
+		
+	
+</AGFVanillaPlus-CraftVitamins>
+
+ 
