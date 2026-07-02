@@ -67,7 +67,9 @@
 
 <details>
 <summary>Show Install Scope & EAC Requirement</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 
 ---
@@ -114,7 +116,9 @@
 
 <details>
 <summary>Show Language Support</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 <b>A. What languages do AGF mods support?</b>
 <ul>
@@ -122,7 +126,9 @@
   <li><i>AGF mods add support for all 13 languages.</i></li>
   <li><i>If you find a translation error, please let AGF know on <a href="https://discord.gg/Vm5eyW6N4r">DISCORD</a>.</i></li>
 </ul>
+
 <br>
+
 </details>
 
 
@@ -131,7 +137,9 @@
 
 <details>
 <summary>Show Installation Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 
 ---
@@ -172,7 +180,9 @@
 >    - *Final folder should look like: `Mods/<ModFolder>/ModInfo.xml`*
 >    - *If the zip creates an extra parent folder, move the mod folder up one level*
 > 4. **Fully restart the server after install**
+
 <br>
+
 </details>
 
 
@@ -181,7 +191,9 @@
 
 <details>
 <summary>Show Removal Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 
 ---
@@ -206,7 +218,9 @@
 >     - If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.
 >     - If you are unsure, check the mod's readme for specific removal notes or ask in AGF's [DISCORD](https://discord.gg/Vm5eyW6N4r).
 > - To remove, simply locate the mod folder and delete it. All done!
+
 <br>
+
 </details>
 
 
@@ -215,7 +229,9 @@
 
 <details>
 <summary>Show Update Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 
 ---
@@ -250,7 +266,9 @@
 > 3. **Carefully delete all AGF mods.** *(don't forget the zzzAGF mod)*
 > 4. **Install the new package as usual.** *(see above)*
 > 5. **THEN** you may turn the game back on.
+
 <br>
+
 </details>
 
 
@@ -259,7 +277,9 @@
 
 <details>
 <summary>Show Backup Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 
 ---
@@ -301,8 +321,10 @@
 > 1. **Undo any mod changes**
 > 2. **Delete the current Game Name folder** *(in "Saves")*
 > 3. **Move your backup folder back into "Saves"**
+
 <br>
- </details>
+
+</details>
 
 <br>
 <br>

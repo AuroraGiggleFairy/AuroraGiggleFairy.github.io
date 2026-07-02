@@ -36,7 +36,9 @@
 
 <details>
 <summary>Show Install Scope & EAC Requirement</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 {{MODTYPE_GUIDE_BODY}}
 
@@ -48,7 +50,9 @@
 
 <details>
 <summary>Show Language Support</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 <b>A. What languages do AGF mods support?</b>
 <ul>
@@ -56,7 +60,9 @@
   <li><i>AGF mods add support for all 13 languages.</i></li>
   <li><i>If you find a translation error, please let AGF know on <a href="https://discord.gg/Vm5eyW6N4r">DISCORD</a>.</i></li>
 </ul>
+
 <br>
+
 </details>
 
 
@@ -65,10 +71,14 @@
 
 <details>
 <summary>Show Installation Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 {{INSTALL_GUIDE_BODY}}
+
 <br>
+
 </details>
 
 
@@ -77,10 +87,14 @@
 
 <details>
 <summary>Show Removal Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 {{REMOVAL_GUIDE_BODY}}
+
 <br>
+
 </details>
 
 
@@ -89,10 +103,14 @@
 
 <details>
 <summary>Show Update Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 {{UPDATE_GUIDE_BODY}}
+
 <br>
+
 </details>
 
 
@@ -101,11 +119,15 @@
 
 <details>
 <summary>Show Backup Guide</summary>
+
 <br>
+
 <b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
 {{BACKUP_GUIDE_BODY}}
+
 <br>
- </details>
+
+</details>
 
 <br>
 <br>
