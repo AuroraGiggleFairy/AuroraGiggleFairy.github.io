@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="AGF-VP-MedicalTreatOthersTreatedInjuries"/>
-	<DisplayName value="You are a physician that can removed already treated injuries."/>
-	<Version value="0.0.1"/>
-	<Description value="If you have perks in physician, you can remove someone else's treated sprain."/>
-	<Author value="AuroraGiggleFairy (AGF)"/>
-	<Website value="https://auroragigglefairy.github.io/"/>
-</xml>

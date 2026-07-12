@@ -1,3 +1,0 @@
-# This is a template for the Localization.txt file for new mods.
-Key,English,Context
-# Add your localization keys below

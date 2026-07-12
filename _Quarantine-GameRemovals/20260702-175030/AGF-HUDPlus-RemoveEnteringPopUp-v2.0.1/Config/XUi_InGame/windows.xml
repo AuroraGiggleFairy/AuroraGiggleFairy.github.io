@@ -1,9 +1,0 @@
-<AGF-HUDPlus-RemoveEnteringPopUp>
-
-
-	<!--Removing the entering area x thing.-->
-		<remove xpath="/windows/window[@name='windowEntering']/rect/label[@name='TextContent']"/>
-		<remove xpath="/windows/window[@name='windowEntering']/rect/grid"/>						
-
-
-</AGF-HUDPlus-RemoveEnteringPopUp>
