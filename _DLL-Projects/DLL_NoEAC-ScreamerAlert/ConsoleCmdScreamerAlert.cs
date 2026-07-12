@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Threading;
 
 public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
 {
+    private const int CapabilityProbeWaitMs = 1200;
+    private const int CapabilityProbePollMs = 40;
+
     public override string[] getCommands()
     {
         return new[] { "agf-sa" };
@@ -217,29 +221,163 @@ public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
 
     private static void HandleList()
     {
-        ICollection<EntityPlayer> players = GameManager.Instance?.World?.Players?.dict?.Values;
-        SdtdConsole.Instance.Output("[ScreamerAlert] playername,id,screamer_alert,enhancedagf");
+        List<EntityPlayer> onlinePlayers = GetOnlinePlayersSnapshot();
+        Dictionary<int, long> baselineCapabilityStamps = CaptureBaselineCapabilityStamps(onlinePlayers);
+        int probeNonce = unchecked((int)DateTime.UtcNow.Ticks);
+        SendCapabilityProbeToPlayers(onlinePlayers, probeNonce);
+        WaitForCapabilityResponses(onlinePlayers, baselineCapabilityStamps);
 
         int total = 0;
-        if (players != null)
+        int index = 0;
+        for (int i = 0; i < onlinePlayers.Count; i++)
         {
-            foreach (EntityPlayer player in players)
+            EntityPlayer player = onlinePlayers[i];
+            if (player == null || player.IsDead())
             {
-                if (player == null || player.IsDead())
+                continue;
+            }
+
+            total++;
+            long baselineStamp = baselineCapabilityStamps.TryGetValue(player.entityId, out long stamp)
+                ? stamp
+                : 0L;
+            bool enhanced = ScreamerAlertHybridRouting.GetCapabilityStampByEntityId(player.entityId) > baselineStamp;
+            if (!enhanced)
+            {
+                // Timeout with no fresh capability hello should read as NO.
+                ScreamerAlertHybridRouting.ClearClientCapabilityByEntityId(player.entityId);
+            }
+
+            string capabilityState = enhanced ? "YES" : "NO";
+            ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForEntityId(player.entityId, ScreamerAlertModeSettings.GetServerDefaultMode());
+            ScreamerAlertMode normalized = NormalizeForOutput(mode, enhanced);
+
+            SdtdConsole.Instance.Output("[ScreamerAlert] " + index + ". id=" + player.entityId + ", " + SafePlayerName(player) + ", sa=" + ModeToken(normalized) + ", enhanced=" + capabilityState);
+            index++;
+        }
+
+        SdtdConsole.Instance.Output("[ScreamerAlert] total online=" + total);
+    }
+
+    private static List<EntityPlayer> GetOnlinePlayersSnapshot()
+    {
+        List<EntityPlayer> result = new List<EntityPlayer>();
+        ICollection<EntityPlayer> players = GameManager.Instance?.World?.Players?.dict?.Values;
+        if (players == null)
+        {
+            return result;
+        }
+
+        foreach (EntityPlayer player in players)
+        {
+            if (player == null || player.IsDead())
+            {
+                continue;
+            }
+
+            result.Add(player);
+        }
+
+        return result;
+    }
+
+    private static Dictionary<int, long> CaptureBaselineCapabilityStamps(List<EntityPlayer> players)
+    {
+        Dictionary<int, long> baselineByEntityId = new Dictionary<int, long>();
+        if (players == null)
+        {
+            return baselineByEntityId;
+        }
+
+        for (int i = 0; i < players.Count; i++)
+        {
+            EntityPlayer player = players[i];
+            if (player == null)
+            {
+                continue;
+            }
+
+            baselineByEntityId[player.entityId] = ScreamerAlertHybridRouting.GetCapabilityStampByEntityId(player.entityId);
+        }
+
+        return baselineByEntityId;
+    }
+
+    private static void SendCapabilityProbeToPlayers(List<EntityPlayer> players, int nonce)
+    {
+        if (players == null || players.Count == 0)
+        {
+            return;
+        }
+
+        ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
+        if (manager == null || !manager.IsServer)
+        {
+            return;
+        }
+
+        for (int i = 0; i < players.Count; i++)
+        {
+            EntityPlayer player = players[i];
+            if (player == null)
+            {
+                continue;
+            }
+
+            ClientInfo targetClient = manager.Clients?.ForEntityId(player.entityId);
+            if (targetClient == null)
+            {
+                continue;
+            }
+
+            try
+            {
+                NetPackageScreamerAlertCapabilityProbe package = NetPackageManager.GetPackage<NetPackageScreamerAlertCapabilityProbe>();
+                targetClient.SendPackage(package.Setup(nonce));
+            }
+            catch
+            {
+            }
+        }
+    }
+
+    private static void WaitForCapabilityResponses(List<EntityPlayer> players, Dictionary<int, long> baselineByEntityId)
+    {
+        if (players == null || players.Count == 0 || baselineByEntityId == null)
+        {
+            return;
+        }
+
+        int waited = 0;
+        while (waited < CapabilityProbeWaitMs)
+        {
+            bool allResponded = true;
+            for (int i = 0; i < players.Count; i++)
+            {
+                EntityPlayer player = players[i];
+                if (player == null)
                 {
                     continue;
                 }
 
-                total++;
-                string capabilityState = GetCapabilityState(player.entityId, out bool enhanced);
-                ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForEntityId(player.entityId, ScreamerAlertModeSettings.GetServerDefaultMode());
-                ScreamerAlertMode normalized = NormalizeForOutput(mode, enhanced);
-
-                SdtdConsole.Instance.Output("[ScreamerAlert] " + SafePlayerName(player) + "," + player.entityId + "," + ModeToken(normalized) + "," + capabilityState);
+                long baseline = baselineByEntityId.TryGetValue(player.entityId, out long stamp)
+                    ? stamp
+                    : 0L;
+                if (ScreamerAlertHybridRouting.GetCapabilityStampByEntityId(player.entityId) <= baseline)
+                {
+                    allResponded = false;
+                    break;
+                }
             }
-        }
 
-        SdtdConsole.Instance.Output("[ScreamerAlert] total online=" + total);
+            if (allResponded)
+            {
+                return;
+            }
+
+            Thread.Sleep(CapabilityProbePollMs);
+            waited += CapabilityProbePollMs;
+        }
     }
 
     private static bool IsSenderAdmin(int senderEntityId)
@@ -355,7 +493,7 @@ public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
         if (client == null)
         {
             enhanced = false;
-            return "UNKNOWN";
+            return "NO";
         }
 
         enhanced = ScreamerAlertHybridRouting.HasClientCapability(client);

@@ -31,6 +31,11 @@ public static class ScreamerAlertHybridRouting
     private static readonly Dictionary<int, string> ModClientByEntityId =
         new Dictionary<int, string>();
 
+    private static readonly Dictionary<int, long> CapabilityStampByEntityId =
+        new Dictionary<int, long>();
+
+    private static long CapabilityStampCounter;
+
     public static void MarkClientCapability(int entityId, string userCombined)
     {
         string normalizedUser = string.IsNullOrEmpty(userCombined)
@@ -48,6 +53,7 @@ public static class ScreamerAlertHybridRouting
         if (entityId >= 0)
         {
             ModClientByEntityId[entityId] = normalizedUser;
+            CapabilityStampByEntityId[entityId] = ++CapabilityStampCounter;
         }
 
         if (string.Equals(normalizedUser, EntityOnlyCapabilityMarker, StringComparison.Ordinal))
@@ -67,14 +73,25 @@ public static class ScreamerAlertHybridRouting
 
     public static void ForgetClientByEntityId(int entityId)
     {
-        if (entityId >= 0 && ModClientByEntityId.TryGetValue(entityId, out string userCombined) && !string.IsNullOrEmpty(userCombined))
+        ClearClientCapabilityByEntityId(entityId);
+        ScoutIncidentStateByEntityId.Remove(entityId);
+        HordeIncidentStateByEntityId.Remove(entityId);
+    }
+
+    public static void ClearClientCapabilityByEntityId(int entityId)
+    {
+        if (entityId < 0)
+        {
+            return;
+        }
+
+        if (ModClientByEntityId.TryGetValue(entityId, out string userCombined) && !string.IsNullOrEmpty(userCombined))
         {
             RemoveUserRef_NoThrow(userCombined);
         }
 
         ModClientByEntityId.Remove(entityId);
-        ScoutIncidentStateByEntityId.Remove(entityId);
-        HordeIncidentStateByEntityId.Remove(entityId);
+        CapabilityStampByEntityId.Remove(entityId);
     }
 
     public static bool HasClientCapability(ClientInfo clientInfo)
@@ -108,6 +125,18 @@ public static class ScreamerAlertHybridRouting
         ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
         ClientInfo clientInfo = manager?.Clients?.ForEntityId(entityId);
         return HasClientCapability(clientInfo);
+    }
+
+    public static long GetCapabilityStampByEntityId(int entityId)
+    {
+        if (entityId < 0)
+        {
+            return 0L;
+        }
+
+        return CapabilityStampByEntityId.TryGetValue(entityId, out long stamp)
+            ? stamp
+            : 0L;
     }
 
     public static void NotifyVanillaPlayersOnScoutSpawn(EntityAlive scoutEntity)

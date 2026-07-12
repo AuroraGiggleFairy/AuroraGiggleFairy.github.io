@@ -3,7 +3,7 @@
   <Name value="AGF-VP-CraftStackEngBattCells" />
   <DisplayName value="AGF Craft and Stack Engine/Battery/Cells" />
   <Version value="3.3.1" />
-  <Description value="Makes engines, batteries, and solar cells stackable and craftable through Electrician progression." />
+  <Description value="Makes engines, batteries, and solar cells stackable and craftable" />
   <Author value="AuroraGiggleFairy (AGF)" />
   <Website value="https://auroragigglefairy.github.io/" />
 </xml>

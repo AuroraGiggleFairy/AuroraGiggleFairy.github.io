@@ -10,6 +10,7 @@
   - C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-NoEAC-AutoRun-v2.0.2/AutoRun.dll
 
 ## Change History
+- 2026-07-11: Added a guard so keyboard AutoRun activation is ignored while the game UI has active text/input focus.
 - 2026-07-02: Updated keyboard activation behavior to toggle AutoRun on/off directly via the activation key.
   - Vehicle path: activation-edge now toggles VehicleEnabled and VehicleSprintLocked.
   - On-foot path: activation-edge now toggles OnFootEnabled and OnFootSprintLocked.

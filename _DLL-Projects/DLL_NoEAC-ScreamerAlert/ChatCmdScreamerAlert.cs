@@ -47,22 +47,14 @@ namespace ScreamerAlert
 
             if (parts.Length == 1 || string.Equals(parts[1], "status", StringComparison.OrdinalIgnoreCase))
             {
-                ScreamerAlertMode playerDefault = NormalizeForOutput(ScreamerAlertModeSettings.GetServerDefaultMode(), enhanced);
-                ScreamerAlertMode current = NormalizeForOutput(ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, playerDefault), enhanced);
-                WhisperToSender(senderEntityId, enhanced
-                    ? Localize("ScreamerAlert_Chat_Status_Enhanced", "[Screamer Alert = {0}] [Change with /agfsa <off|on|count>.]", ModeToken(current))
-                    : Localize("ScreamerAlert_Chat_Status_Baseline", "[Screamer Alert = {0}] [Change with /agfsa <off|on>.]", ModeToken(current)));
+                SendStatusHelpLines(senderEntityId, enhanced);
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
             string arg = parts[1].ToLowerInvariant();
             if (arg == "help")
             {
-                ScreamerAlertMode playerDefault = NormalizeForOutput(ScreamerAlertModeSettings.GetServerDefaultMode(), enhanced);
-                ScreamerAlertMode current = NormalizeForOutput(ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, playerDefault), enhanced);
-                WhisperToSender(senderEntityId, enhanced
-                    ? Localize("ScreamerAlert_Chat_Status_Enhanced", "[Screamer Alert = {0}] [Change with /agfsa <off|on|count>.]", ModeToken(current))
-                    : Localize("ScreamerAlert_Chat_Status_Baseline", "[Screamer Alert = {0}] [Change with /agfsa <off|on>.]", ModeToken(current)));
+                SendStatusHelpLines(senderEntityId, enhanced);
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
@@ -124,6 +116,22 @@ namespace ScreamerAlert
             }
 
             GameManager.Instance?.ChatMessageServer(null, EChatType.Whisper, -1, message, new List<int> { senderEntityId }, EMessageSender.Server);
+        }
+
+        private static void SendStatusHelpLines(int senderEntityId, bool enhanced)
+        {
+            ScreamerAlertMode playerDefault = NormalizeForOutput(ScreamerAlertModeSettings.GetServerDefaultMode(), enhanced);
+            ScreamerAlertMode current = NormalizeForOutput(ScreamerAlertModeSettings.GetModeForEntityId(senderEntityId, playerDefault), enhanced);
+
+            WhisperToSender(senderEntityId, enhanced
+                ? Localize("ScreamerAlert_Chat_Status_Enhanced", "[Screamer Alert = {0}]", ModeToken(current))
+                : Localize("ScreamerAlert_Chat_Status_Baseline", "[Screamer Alert = {0}]", ModeToken(current)));
+
+            WhisperToSender(senderEntityId,
+                Localize("ScreamerAlert_Chat_Options", "[Options: /agfsa <off|on|count>]"));
+
+            WhisperToSender(senderEntityId,
+                Localize("ScreamerAlert_Chat_CountRequiresEnhanced", "[COUNT requires EnhancedAGF]"));
         }
 
         private static ScreamerAlertMode NormalizeForOutput(ScreamerAlertMode mode, bool enhancedAvailable)

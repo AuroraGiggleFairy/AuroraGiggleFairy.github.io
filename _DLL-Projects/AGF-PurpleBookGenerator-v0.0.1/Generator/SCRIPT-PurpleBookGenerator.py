@@ -1192,6 +1192,7 @@ DEFAULT_QUALITYINFO = GAME_CONFIG / "qualityinfo.xml"
 DEFAULT_ITEMS = GAME_CONFIG / "items.xml"
 DEFAULT_BLOCKS = GAME_CONFIG / "blocks.xml"
 DEFAULT_RECIPES = GAME_CONFIG / "recipes.xml"
+DEFAULT_BUFFS = GAME_CONFIG / "buffs.xml"
 DEFAULT_GAME_LOCALIZATION = GAME_CONFIG / "Localization.csv"
 DEFAULT_OUT_MOD = GENERATOR_MOD_DIR.name
 DEFAULT_SEED_WINDOWS = WORKSPACE / "windowBackup.xml"
@@ -1385,6 +1386,27 @@ ARMOR_SETBONUS_ROW_VALUE_OVERRIDES: dict[str, dict[str, str]] = {
     "armorLumberjackOutfit": {
         "7q1": "x2",
         "7q6": "x2",
+    },
+}
+
+# Explicit per-tier q1..q6 values for split-stat/manual set-bonus rows.
+# Hard rule: these are source/authoritative values, never interpolated.
+ARMOR_SETBONUS_ROW_SERIES_OVERRIDES: dict[str, dict[int, list[str]]] = {
+    "armorBikerOutfit": {
+        6: ["1", "2", "3", "4", "5", "6"],
+        7: ["-2%", "-4%", "-6%", "-8%", "-10%", "-20%"],
+    },
+    "armorEnforcerOutfit": {
+        6: ["5%", "10%", "15%", "20%", "25%", "50%"],
+        7: ["5%", "10%", "15%", "20%", "25%", "50%"],
+    },
+    "armorLumberjackOutfit": {
+        6: ["5%", "10%", "15%", "20%", "25%", "30%"],
+        7: ["x2", "x2", "x2", "x2", "x2", "x2"],
+    },
+    "armorPreacherOutfit": {
+        6: ["5%", "10%", "15%", "20%", "25%", "40%"],
+        7: ["5%", "10%", "15%", "20%", "25%", "100%"],
     },
 }
 
@@ -2184,6 +2206,17 @@ def _parse_first_last_numeric(csv_values: str) -> tuple[float, float] | None:
     return nums[0], nums[-1]
 
 
+def _parse_numeric_series(csv_values: str) -> list[float] | None:
+    vals = [s.strip() for s in (csv_values or "").split(",") if s.strip()]
+    if not vals:
+        return None
+    try:
+        nums = [float(v) for v in vals]
+    except ValueError:
+        return None
+    return nums
+
+
 def _format_percent_value(v: float) -> str:
     # items.xml mixes normalized (0.02) and percent (2) notations.
     p = v * 100.0 if abs(v) <= 1.0 else v
@@ -2192,39 +2225,252 @@ def _format_percent_value(v: float) -> str:
     return f"{p:.1f}".rstrip("0").rstrip(".") + "%"
 
 
-def parse_armor_row2_values_from_items(path: Path) -> dict[str, tuple[str, str]]:
-    """Read row2 q1/q6 values from specific armor helmet stats in items.xml."""
-    out: dict[str, tuple[str, str]] = {}
+def _format_plain_value(v: float) -> str:
+    if abs(v - round(v)) < 1e-9:
+        return f"{int(round(v))}"
+    return f"{v:.1f}".rstrip("0").rstrip(".")
+
+
+def parse_armor_value_series_by_item(path: Path) -> dict[str, list[list[float]]]:
+    """Read candidate numeric tier-series for armor piece items from items.xml."""
+    out: dict[str, list[list[float]]] = {}
     try:
         tree = ET.parse(path)
     except (FileNotFoundError, ET.ParseError):
         return out
 
     root = tree.getroot()
-    # grid_name -> (helmet_item_name, passive_effect_name)
-    sources: dict[str, tuple[str, str]] = {
-        "armorFarmerOutfit": ("armorFarmerHelmet", "LootProb"),
-        "armorEnforcerOutfit": ("armorEnforcerHelmet", "BarteringBuying"),
-        "armorRangerOutfit": ("armorRangerHelmet", "BarteringBuying"),
-    }
+    for item in root.findall(".//item"):
+        item_name = (item.get("name") or "").strip()
+        if not item_name.startswith("armor"):
+            continue
 
-    for grid_name, (item_name, effect_name) in sources.items():
-        item = root.find(f".//item[@name='{item_name}']")
-        if item is None:
+        if not (
+            item_name.endswith("Helmet")
+            or item_name.endswith("Outfit")
+            or item_name.endswith("Gloves")
+            or item_name.endswith("Boots")
+        ):
             continue
-        val_pair: tuple[float, float] | None = None
-        for pe in item.findall(".//passive_effect"):
-            if pe.get("name", "") != effect_name:
+
+        candidates: list[list[float]] = []
+        for node in item.findall(".//passive_effect") + item.findall(".//display_value") + item.findall(".//triggered_effect"):
+            series = _parse_numeric_series(node.get("value", ""))
+            if series is None:
                 continue
-            parsed = _parse_first_last_numeric(pe.get("value", ""))
-            if parsed is not None:
-                val_pair = parsed
-                break
-        if val_pair is None:
+            if len(series) < 2:
+                continue
+            if len(series) not in (2, 6):
+                continue
+            candidates.append(series)
+
+        if not candidates:
             continue
-        out[grid_name] = (_format_percent_value(val_pair[0]), _format_percent_value(val_pair[1]))
+
+        deduped: list[list[float]] = []
+        seen: set[tuple[float, ...]] = set()
+        for seq in candidates:
+            key = tuple(seq)
+            if key in seen:
+                continue
+            seen.add(key)
+            deduped.append(seq)
+
+        out[item_name] = deduped
 
     return out
+
+
+def _parse_display_number(text: str) -> tuple[float, bool] | None:
+    t = (text or "").strip()
+    if not t:
+        return None
+    is_percent = t.endswith("%")
+    if is_percent:
+        t = t[:-1].strip()
+    try:
+        return float(t), is_percent
+    except ValueError:
+        return None
+
+
+def _format_value_like(v: float, as_percent: bool) -> str:
+    if as_percent:
+        return _format_percent_value(v)
+    return _format_plain_value(v)
+
+
+def _resolve_armor_row_values_for_display(
+    item_name: str,
+    q1_text: str,
+    q6_text: str,
+) -> list[str] | None:
+    parsed_q1 = _parse_display_number(q1_text)
+    parsed_q6 = _parse_display_number(q6_text)
+    if parsed_q1 is None or parsed_q6 is None:
+        return None
+
+    q1_num, q1_percent = parsed_q1
+    q6_num, q6_percent = parsed_q6
+    if q1_percent != q6_percent:
+        return None
+
+    candidates = ARMOR_VALUE_SERIES_BY_ITEM.get(item_name, [])
+    best: list[float] | None = None
+    best_score = float("inf")
+
+    for seq in candidates:
+        if len(seq) != 6:
+            continue
+        first = _parse_display_number(_format_value_like(seq[0], q1_percent))
+        last = _parse_display_number(_format_value_like(seq[-1], q1_percent))
+        if first is None or last is None:
+            continue
+
+        first_num, _ = first
+        last_num, _ = last
+        score = abs(first_num - q1_num) + abs(last_num - q6_num)
+        if score < best_score:
+            best_score = score
+            best = seq
+
+    if best is None:
+        return None
+
+    return [_format_value_like(v, q1_percent) for v in best]
+
+
+def _armor_piece_item_name_for_row(grid_name: str, row: int) -> str | None:
+    if not (grid_name.startswith("armor") and grid_name.endswith("Outfit")):
+        return None
+    base = grid_name[len("armor") : -len("Outfit")]
+    suffix_by_row = {2: "Helmet", 3: "Outfit", 4: "Gloves", 5: "Boots"}
+    suffix = suffix_by_row.get(row)
+    if suffix is None:
+        return None
+    return f"armor{base}{suffix}"
+
+
+def parse_armor_setbonus_numeric_series_from_buffs(path: Path) -> dict[str, dict[int, list[float]]]:
+    """Read set-bonus q1..q6 numeric series by outfit row from vanilla buffs.xml.
+
+    Output shape:
+    - key: outfit grid name (e.g. armorAssassinOutfit)
+    - value: {6: [q1..q6], 7: [q1..q6]} where row 6 maps to FSBDisplay/FSBDisplay01
+      and row 7 maps to FSBDisplay02 when present.
+    """
+    out: dict[str, dict[int, list[float]]] = {}
+    try:
+        tree = ET.parse(path)
+    except (FileNotFoundError, ET.ParseError):
+        return out
+
+    root = tree.getroot()
+    for buff in root.findall(".//buff"):
+        buff_name = (buff.get("name") or "").strip()
+        m = re.match(r"^buff([A-Za-z0-9_]+)SetBonus$", buff_name)
+        if not m:
+            continue
+        armor_name = m.group(1)
+        outfit_name = f"armor{armor_name}Outfit"
+
+        by_row_q: dict[int, dict[int, float]] = {6: {}, 7: {}}
+
+        for eg in buff.findall(".//effect_group"):
+            q: int | None = None
+            for req in eg.findall(".//requirement"):
+                if req.get("name") != "ArmorGroupLowestQuality" or req.get("operation") != "Equals":
+                    continue
+                try:
+                    q = int((req.get("value") or "").strip())
+                except ValueError:
+                    q = None
+                break
+
+            if q is None or q < 1 or q > 6:
+                continue
+
+            for te in eg.findall("triggered_effect"):
+                if te.get("operation") != "set":
+                    continue
+                cvar = (te.get("cvar") or "").strip()
+                if "FSBDisplay" not in cvar:
+                    continue
+                try:
+                    val = float((te.get("value") or "").strip())
+                except ValueError:
+                    continue
+
+                if cvar.endswith("FSBDisplay02"):
+                    row = 7
+                else:
+                    row = 6
+
+                by_row_q[row][q] = val
+
+        row_series: dict[int, list[float]] = {}
+        for row in (6, 7):
+            q_map = by_row_q[row]
+            if all(q in q_map for q in range(1, 7)):
+                row_series[row] = [q_map[q] for q in range(1, 7)]
+
+        if row_series:
+            out[outfit_name] = row_series
+
+    return out
+
+
+def _resolve_setbonus_row_values_for_display(
+    grid_name: str,
+    row: int,
+    q1_text: str,
+    q6_text: str,
+) -> list[str] | None:
+    # Manual/split-stat rows are always authoritative and never interpolated.
+    manual_rows = ARMOR_SETBONUS_ROW_SERIES_OVERRIDES.get(grid_name, {})
+    if row in manual_rows:
+        vals = manual_rows[row]
+        if len(vals) == 6:
+            return vals
+
+    parsed_q1 = _parse_display_number(q1_text)
+    parsed_q6 = _parse_display_number(q6_text)
+    if parsed_q1 is None or parsed_q6 is None:
+        q1 = (q1_text or "").strip()
+        q6 = (q6_text or "").strip()
+        if q1 and q1 == q6:
+            return [q1, q1, q1, q1, q1, q1]
+        return None
+
+    q1_num, q1_percent = parsed_q1
+    q6_num, q6_percent = parsed_q6
+    if q1_percent != q6_percent:
+        return None
+
+    raw_rows = ARMOR_SETBONUS_NUMERIC_SERIES_BY_OUTFIT.get(grid_name, {})
+    raw_series = raw_rows.get(row)
+    if raw_series is None or len(raw_series) != 6:
+        q1 = (q1_text or "").strip()
+        q6 = (q6_text or "").strip()
+        if q1 and q1 == q6:
+            return [q1, q1, q1, q1, q1, q1]
+        return None
+
+    raw_q1 = raw_series[0]
+    raw_q6 = raw_series[-1]
+    scale_candidates: list[float] = []
+    if abs(raw_q1) > 1e-9:
+        scale_candidates.append(q1_num / raw_q1)
+    if abs(raw_q6) > 1e-9:
+        scale_candidates.append(q6_num / raw_q6)
+    if not scale_candidates:
+        return None
+
+    scale = scale_candidates[-1]
+    if len(scale_candidates) == 2 and abs(scale_candidates[0] - scale_candidates[1]) <= 1e-6:
+        scale = 0.5 * (scale_candidates[0] + scale_candidates[1])
+
+    return [_format_value_like(v * scale, q1_percent) for v in raw_series]
 
 
 def _csv_row_to_line_language_quoted(row: list[str], language_indices: set[int]) -> str:
@@ -2772,7 +3018,8 @@ def _is_uncraftable_item_modifier(name: str, recipe_names: set[str], recipes_loa
 
 # Global cache populated in main()
 ITEM_ICONS: dict[str, ItemIcon] = {}
-ARMOR_ROW2_VALUES: dict[str, tuple[str, str]] = {}
+ARMOR_VALUE_SERIES_BY_ITEM: dict[str, list[list[float]]] = {}
+ARMOR_SETBONUS_NUMERIC_SERIES_BY_OUTFIT: dict[str, dict[int, list[float]]] = {}
 
 
 def resolve_item_icon(item: str) -> ItemIcon:
@@ -4764,37 +5011,10 @@ def _apply_compact_armor_template_to_armors_rect(armors_rect_xml: str) -> str:
         if grid_el.attrib.get("rows") != "7" or grid_el.attrib.get("cols") != "4":
             return
 
+        grid_name = grid_el.attrib.get("name", "")
+
         q_label_pos = {1: "88,-19", 2: "67,-19", 3: "46,-19", 4: "25,-19", 5: "4,-19", 6: "-17,-19"}
         q_header_bg_pos = {1: "44,0", 2: "23,0", 3: "2,0", 4: "-19,0", 5: "-40,0", 6: "-61,0"}
-
-        def _parse_num_text(txt: str) -> tuple[float, str] | None:
-            t = (txt or "").strip()
-            if not t:
-                return None
-            m = re.match(r"^(-?\d+(?:\.\d+)?)(%?)$", t)
-            if not m:
-                return None
-            return float(m.group(1)), m.group(2)
-
-        def _interp(q1_txt: str, q6_txt: str, k: int) -> str:
-            a = (q1_txt or "").strip()
-            b = (q6_txt or "").strip()
-            if not a and not b:
-                return ""
-            if a == b:
-                return a
-            pa = _parse_num_text(a)
-            pb = _parse_num_text(b)
-            if pa is None or pb is None:
-                return ""
-            if pa[1] != pb[1]:
-                return ""
-            val = pa[0] + (pb[0] - pa[0]) * float(k - 1) / 5.0
-            if abs(val - round(val)) < 1e-6:
-                out = str(int(round(val)))
-            else:
-                out = f"{val:.1f}".rstrip("0").rstrip(".")
-            return out + pa[1]
 
         row_entries: list[list[ET.Element]] = []
         for row in range(1, 8):
@@ -4811,6 +5031,16 @@ def _apply_compact_armor_template_to_armors_rect(armors_rect_xml: str) -> str:
             q6_lb = q6_e.find("label")
             q1_text = q1_lb.attrib.get("text", "") if q1_lb is not None else ""
             q6_text = q6_lb.attrib.get("text", "") if q6_lb is not None else ""
+            row_values: list[str] | None = None
+            if row in (2, 3, 4, 5):
+                if grid_name == "armorPrimitiveOutfit":
+                    row_values = ["0%", "0%", "0%", "0%", "0%", "0%"]
+                else:
+                    item_name = _armor_piece_item_name_for_row(grid_name, row)
+                    if item_name is not None:
+                        row_values = _resolve_armor_row_values_for_display(item_name, q1_text, q6_text)
+            elif row in (6, 7):
+                row_values = _resolve_setbonus_row_values_for_display(grid_name, row, q1_text, q6_text)
 
             # Normalize existing q1/q6 geometry for expanded column layout.
             if q1_lb is not None:
@@ -4869,7 +5099,10 @@ def _apply_compact_armor_template_to_armors_rect(armors_rect_xml: str) -> str:
                 else:
                     qk_lb.set("name", f"value{row}q{k}")
                     qk_lb.attrib.pop("text_key", None)
-                    qk_lb.set("text", _interp(q1_text, q6_text, k))
+                    if row_values is not None and len(row_values) == 6:
+                        qk_lb.set("text", row_values[k - 1])
+                    else:
+                        qk_lb.set("text", "")
 
                 q_entries[k] = qk_e
 
@@ -5227,24 +5460,33 @@ def _apply_compact_armor_template_to_armors_rect(armors_rect_xml: str) -> str:
                     icon_armor.set("sprite", type_icon_sprite)
                     icon_armor.attrib.pop("atlas", None)
 
-        # Row2 values sourced from items.xml for specific armors.
-        if gname in ARMOR_ROW2_VALUES:
-            lb_q1 = _entry_label("2q1", grid)
-            lb_q6 = _entry_label("2q6", grid)
-            q1_text, q6_text = ARMOR_ROW2_VALUES[gname]
-            if lb_q1 is not None:
-                lb_q1.set("text", q1_text)
-            if lb_q6 is not None:
-                lb_q6.set("text", q6_text)
+        # Armor stat rows use direct vanilla q1..q6 tier values (no interpolation).
+        for row in (2, 3, 4, 5):
+            item_name = _armor_piece_item_name_for_row(gname, row)
+            if item_name is None:
+                continue
+            lb_q1 = _entry_label(f"{row}q1", grid)
+            lb_q6 = _entry_label(f"{row}q6", grid)
+            if lb_q1 is None or lb_q6 is None:
+                continue
+            resolved = _resolve_armor_row_values_for_display(
+                item_name,
+                lb_q1.attrib.get("text", ""),
+                lb_q6.attrib.get("text", ""),
+            )
+            if resolved is None or len(resolved) != 6:
+                continue
+            lb_q1.set("text", resolved[0])
+            lb_q6.set("text", resolved[5])
 
         # Primitive armor has no crit-resist bonuses; show explicit zeros.
         if gname == "armorPrimitiveOutfit":
             for row in (2, 3, 4, 5):
                 lb_q1 = _entry_label(f"{row}q1", grid)
                 lb_q6 = _entry_label(f"{row}q6", grid)
-                if lb_q1 is not None and not lb_q1.attrib.get("text", "").strip():
+                if lb_q1 is not None:
                     lb_q1.set("text", "0%")
-                if lb_q6 is not None and not lb_q6.attrib.get("text", "").strip():
+                if lb_q6 is not None:
                     lb_q6.set("text", "0%")
 
         # Per-armor row6 value overrides for compact cards.
@@ -5262,6 +5504,23 @@ def _apply_compact_armor_template_to_armors_rect(armors_rect_xml: str) -> str:
                 lb = _entry_label(entry_name, grid)
                 if lb is not None:
                     lb.set("text", value)
+
+        # Resolve set-bonus row edge values from source tiers (no interpolation).
+        for row in (6, 7):
+            lb_q1 = _entry_label(f"{row}q1", grid)
+            lb_q6 = _entry_label(f"{row}q6", grid)
+            if lb_q1 is None or lb_q6 is None:
+                continue
+            resolved = _resolve_setbonus_row_values_for_display(
+                gname,
+                row,
+                lb_q1.attrib.get("text", ""),
+                lb_q6.attrib.get("text", ""),
+            )
+            if resolved is None or len(resolved) != 6:
+                continue
+            lb_q1.set("text", resolved[0])
+            lb_q6.set("text", resolved[5])
 
         # Route set-bonus text through localization keys so values can be
         # maintained in Localization.txt.
@@ -8495,6 +8754,7 @@ def main() -> int:
     ap.add_argument("--items", default=str(DEFAULT_ITEMS))
     ap.add_argument("--blocks", default=str(DEFAULT_BLOCKS))
     ap.add_argument("--recipes", default=str(DEFAULT_RECIPES))
+    ap.add_argument("--buffs", default=str(DEFAULT_BUFFS))
     ap.add_argument("--game-localization", default=str(DEFAULT_GAME_LOCALIZATION))
     ap.add_argument("--seed-windows", default=str(DEFAULT_SEED_WINDOWS))
     ap.add_argument(
@@ -8596,15 +8856,19 @@ def main() -> int:
     items_path = Path(args.items)
     blocks_path = Path(args.blocks)
     recipes_path = Path(args.recipes)
+    buffs_source_path = Path(args.buffs)
     game_loc_path = _resolve_game_localization_path(Path(args.game_localization))
     game_loc_header = _read_localization_header(game_loc_path)
     english_index, lang_indices, loc_header_fields = _localization_schema(game_loc_header)
-    global ITEM_ICONS, ARMOR_ROW2_VALUES
+    global ITEM_ICONS, ARMOR_VALUE_SERIES_BY_ITEM, ARMOR_SETBONUS_NUMERIC_SERIES_BY_OUTFIT
     ITEM_ICONS = parse_items(items_path, tag="item")
     print(f"[ok] parsed {len(ITEM_ICONS)} items from {items_path.name}")
-    ARMOR_ROW2_VALUES = parse_armor_row2_values_from_items(items_path)
-    if ARMOR_ROW2_VALUES:
-        print(f"[ok] parsed armor row2 stat values from {items_path.name}")
+    ARMOR_VALUE_SERIES_BY_ITEM = parse_armor_value_series_by_item(items_path)
+    if ARMOR_VALUE_SERIES_BY_ITEM:
+        print(f"[ok] parsed armor value tier series from {items_path.name}")
+    ARMOR_SETBONUS_NUMERIC_SERIES_BY_OUTFIT = parse_armor_setbonus_numeric_series_from_buffs(buffs_source_path)
+    if ARMOR_SETBONUS_NUMERIC_SERIES_BY_OUTFIT:
+        print(f"[ok] parsed armor set-bonus tier series from {buffs_source_path.name}")
     armor_setbonus_desc_rows = parse_armor_setbonus_desc_rows_from_game_localization(game_loc_path)
     if armor_setbonus_desc_rows:
         print(f"[ok] parsed armor set bonus descriptions from {game_loc_path.name}")

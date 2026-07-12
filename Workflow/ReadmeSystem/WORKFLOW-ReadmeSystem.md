@@ -1,0 +1,95 @@
+# WORKFLOW - ReadmeSystem
+
+## Working methods
+- Update template placeholders first, then wire replacements in the generator.
+- For optional sections, render a full section block string only when body content exists.
+- Keep txt heading extraction resilient by matching multiple heading aliases and using case-insensitive comparisons.
+- Preserve relative/nested bullet indentation in preserved `OTHER DETAILS` content; only flatten list markers where flat output is intentional.
+- Keep helper script behavior aligned with main pipeline behavior.
+- For Harmony dependency output, use `ModReadme-HARMONYWARNING-txt-Snippet.txt` as source of truth with md/default fallback.
+- Keep Harmony dependency wording owned by `{{DEPENDENCIES_BLOCK}}` generation to avoid duplicate warning sections.
+- For ModInfo description sync, if `<Description value="..." />` is missing, insert it from README summary instead of warning-only skip.
+- When auto-inserting missing Description, strip malformed orphan text lines between XML tags in that insertion region.
+- For `.md` snippet files, do not enforce a 72-character wrap limit; keep natural markdown line readability.
+- Changelog method: keep changelog in the mod `README.txt` as a final section (single-file default), not a separate `CHANGELOG.txt` file.
+- Changelog txt format in README: render H1 `CHANGELOG` with `=` wrappers (centered title), and for version sections use H3 as a single 72-char `-` divider with one blank line above and below; keep the version line and grouped bullets as plain txt.
+- For mod one-line summaries, treat `README.txt` as source of truth and sync `ModInfo.xml` `Description` to that summary when the pipeline runs.
+- For the top title-card callout block, drive quote/note spacing from one template placeholder block so intro spacing is deterministic.
+
+## Change history
+- 2026-07-11: Normalized preserved `OTHER DETAILS` list indentation in `05_pipeline_engine.py` so repeated README regeneration no longer accumulates extra bullet nesting or wraps malformed continuation lines into deeper list levels.
+- 2026-07-09: Updated `05_pipeline_engine.py` to stop flattening list markers for preserved `features_detailed_block` in both README generation and migration-prep paths so nested `OTHER DETAILS` bullets (for example Keyboard/Controller sublists) keep indentation across regenerations.
+- 2026-07-08: Updated `sync_modinfo_description_from_summary` in `05_pipeline_engine.py` to self-heal missing `<Description value="..." />` tags by inserting from README summary, with targeted orphan-text cleanup and dry-run/live log messaging.
+- 2026-07-08: Rewired `05_pipeline_engine.py` Harmony warning loading to txt-first (`ModReadme-HARMONYWARNING-txt-Snippet.txt`) with md fallback/default fallback, aligned with `temp/generate_single_readme.ps1`.
+- 2026-07-08: Switched Harmony dependency rendering in `05_pipeline_engine.py` so `format_dependencies_block_for_readme` returns the Harmony warning snippet body for Harmony cases; removed duplicate Harmony placeholder injection in mod README assembly.
+- 2026-07-05: Added text snippet source `Snippets/ModReadme-MODGUIDE-txt-Snippet.txt` for per-mod guide body.
+- 2026-07-05: Removed hardcoded QUICK GUIDE wrapper from `Templates/TEMPLATE-ModReadMes.md`.
+- 2026-07-05: Added empty-quote cleanup in `05_pipeline_engine.py` so blank quote placeholders do not leave extra blank gaps.
+- 2026-07-05: Replaced DEEPER DETAILS template block with optional `{{OTHER_DETAILS_SECTION}}` and made generator render `OTHER DETAILS` only when detailed content exists.
+- 2026-07-05: Updated heading extraction to support both `Deeper Details` and `Other Details` labels.
+- 2026-07-05: Aligned `temp/generate_single_readme.ps1` with optional Other Details section logic.
+- 2026-07-05: Added changelog fallback extraction from markdown headings and txt headings (`Changelog`/`Changelog (latest)`) when marker blocks are missing.
+- 2026-07-05: Changed changelog bootstrap output to txt-native H1/H2 format and removed markdown `# Changelog` output.
+- 2026-07-05: Simplified changelog output to H1 `CHANGELOG` plus plain txt version headings for readability.
+- 2026-07-05: Migrated changelog workflow to single-file output by appending formatted changelog section to `README.txt` and stopping standalone `CHANGELOG.txt` creation in this flow.
+- 2026-07-05: Fixed embedded changelog spacing to enforce exactly 3 blank lines above non-first H1 blocks.
+- 2026-07-05: Added `{{CHANGELOG_BODY}}` to mod README template and switched generator/helper to template-anchored changelog injection, with append fallback for older templates.
+- 2026-07-05: Changelog formatter now supports `include_h1` mode so template provides the title while version sections (`vX.X.X`) are still auto-detected and formatted.
+- 2026-07-05: Preserved `ModReadme-MODGUIDE-txt-Snippet.txt` formatting by injecting a raw short-guide token before wrap and restoring the snippet after conversion in both main generator and preview helper.
+- 2026-07-05: Centered H1 title text directly in source files for `AGF MOD GUIDE` (snippet) and `CHANGELOG` (template) so these headings are source-authored as centered.
+- 2026-07-05: Enforced exactly 3 blank lines above the injected `AGF MOD GUIDE` H1 block during raw token restore in both generator paths.
+- 2026-07-05: Added main README collapsible AGF guide snippet wiring via `Snippets/MainReadme-2-MODGUIDE-md-Snippet.md` and `{{MODGUIDE_MAIN_BODY}}` placeholder.
+- 2026-07-05: Added separate main README collapsible support snippet wiring via `Snippets/MainReadme-4-SUPPORT-md-Snippet.md` and `{{SUPPORT_MAIN_BODY}}` placeholder.
+- 2026-07-05: Updated `Templates/TEMPLATE-MainReadMe.md` to render AGF guide and support as Jekyll-friendly `<details markdown="1">` sections, keeping guide support content separate from the AGF guide body.
+- 2026-07-05: Added main README language-support snippet wiring via `Snippets/MainReadme-LANGUAGE-md-Snippet.md` and `{{LANGUAGE_MAIN_BODY}}` placeholder, replacing inline template HTML content.
+- 2026-07-05: Consolidated `TEMPLATE-MainReadMe.md` TOC/sections to use `AGF Mod Guide` + `Support AuroraGiggleFairy` + `Mod List`, removing separate install scope/language/install/removal/update/backup section blocks from the template.
+- 2026-07-05: Trimmed `Snippets/MainReadme-1-ABOUTME-md-Snippet.md` to identity + experience + philosophy only; support/hosting details stay in `Snippets/MainReadme-4-SUPPORT-md-Snippet.md` and language details stay in `Snippets/MainReadme-LANGUAGE-md-Snippet.md`.
+- 2026-07-05: Simplified `Snippets/MainReadme-1-ABOUTME-md-Snippet.md` to concise identity/mission/contact bullets and aligned `DEFAULT_ABOUTME_MAIN_GUIDE_BODY` fallback text to the same short format.
+- 2026-07-05: Consolidated About AGF to one snippet source (`Snippets/MainReadme-1-ABOUTME-md-Snippet.md`) that contains both short intro lines and the extra-details dropdown content.
+- 2026-07-05: Updated main README section order to About AGF (with extra-details dropdown) -> AGF Mod Guide (dropdown) -> Support AuroraGiggleFairy (dropdown) -> Mod List.
+- 2026-07-05: Extracted Ask-for-Help body from `MainReadme-2-MODGUIDE-md-Snippet.md` into `Snippets/MainReadme-3-ASKFORHELP-md-Snippet.md` (same wording, no B header), and renumbered AGF guide letters accordingly.
+- 2026-07-05: Added review-ready main README section wrapper snippets: `Snippets/MainReadme-2-MODGUIDE-SECTION-md-Snippet.md` and `Snippets/MainReadme-3-ASKFORHELP-SECTION-md-Snippet.md` using `<details markdown="1">` dropdown format.
+- 2026-07-05: Synced EAC-off multiplayer safety practices into both AGF guide snippets (`MainReadme-2-MODGUIDE-md-Snippet.md` and `ModReadme-MODGUIDE-txt-Snippet.txt`) so risk-mitigation guidance is present in guide content, not only in `ModReadme-EAC-md-Snippet.md`/`ModReadme-MODTYPE-md-Snippet.md`.
+- 2026-07-05: Updated main README order to keep About AGF short + extra-details dropdown as one section, inserted a dedicated Ask-for-Help dropdown section immediately after AGF Mod Guide, and renumbered Support/Mod List sections and TOC.
+- 2026-07-05: Wired `Snippets/MainReadme-3-ASKFORHELP-md-Snippet.md` into `TEMPLATE-MainReadMe.md` via new `{{ASKFORHELP_MAIN_BODY}}` placeholder in `05_pipeline_engine.py`.
+- 2026-07-05: Applied snippet naming framework rename for wired sources: `ABOUTME-Main-Guide.md` -> `MainReadme-1-ABOUTME-md-Snippet.md` and `MODGUIDE-Text-Snippet.txt` -> `ModReadme-MODGUIDE-txt-Snippet.txt`, including generator and helper path updates.
+- 2026-07-05: Applied full snippet naming framework normalization across ReadmeSystem snippets and long-guide snippets, and rewired all generator/helper/documentation references.
+- 2026-07-05: Added a consistent Remove Mods safety note after the first warning across active readme sources: never delete `0_TFP_Harmony` because it ships with the game (main guide, short guide, long removal guide, and generator fallback text).
+- 2026-07-05: Added a dedicated `0_TFP_Harmony` section in `ModReadme-MODGUIDE-txt-Snippet.txt` between Remove Mods and EAC with explicit never-delete guidance and Steam verify steps to restore it if missing.
+- 2026-07-05: Aligned `MainReadme-2-MODGUIDE-md-Snippet.md` with the txt guide by adding a dedicated `0_TFP_Harmony` section between Remove Mods and EAC, clarifying Remove Mods step 2 to exclude `0_TFP_Harmony`, and mirroring the same structure in `DEFAULT_MODGUIDE_MAIN_BODY` fallback text.
+- 2026-07-05: Cleanup pass removed unused review wrapper snippets (`MainReadme-2-MODGUIDE-SECTION-md-Snippet.md`, `MainReadme-3-ASKFORHELP-SECTION-md-Snippet.md`) to keep first-4-section main-readme wiring clear.
+- 2026-07-05: Deprecated legacy `ModReadme-SHORTGUIDE-md-Snippet.md`; mod-readme quick-guide generation now uses `ModReadme-MODGUIDE-txt-Snippet.txt` as sole source of truth.
+- 2026-07-05: Moved main-readme section formatting wrappers for sections 2-4 into their snippets (`MainReadme-2/3/4-...`) so `TEMPLATE-MainReadMe.md` acts as section headers + placeholder calls only.
+- 2026-07-05: Renamed mod README short-guide placeholder to `{{MODGUIDE_TEXT_BODY}}` for clearer intent, while keeping legacy `{{SHORT_GUIDE_BODY}}` replacement support in both `05_pipeline_engine.py` and `temp/generate_single_readme.ps1`.
+- 2026-07-05: Added one-time migration mode `--mode migrate-readmes-once` to process ActiveBuild + Draft readmes with safety gating: legacy `README.md` and `ReadableReadMe.txt` are deleted only for mods where both Features Summary and Features Details were successfully detected; emits pre/post migration reports in `Workflow/ReadmeSystem/temp`.
+- 2026-07-05: Normalized `MOD_TYPE_ID` placeholder handling so legacy `0` is treated as `TBD` in CSV normalization and README rendering, preventing invalid-id warning noise and displaying `- Mod Type: TBD` instead of `MISSINGDATA` for placeholder entries.
+- 2026-07-05: Tightened txt section spacing around injected `AGF MOD GUIDE` (and fallback changelog append) by consuming surrounding token newlines and restoring a controlled 3-blank-line boundary in both `05_pipeline_engine.py` and `temp/generate_single_readme.ps1`.
+- 2026-07-05: Updated txt section extraction to ignore full-width divider lines and stop Features/Other Details capture at `AGF MOD GUIDE`, preventing duplicate separators/headings during repeated README regenerations from txt-only sources.
+- 2026-07-05: Made preserved Features/Other Details sanitation idempotent by dedenting, flattening list marker indentation, and merging wrapped continuation lines before reinsertion.
+- 2026-07-05: Corrected header blank-line math for regenerated txt output: non-first H1 blocks now consistently keep 3 blank lines above and 1 below, and section H2 wrappers keep 1 blank line below. Applied by consuming post-wrapper blank input in `_apply_divider_spacing` and restoring 4-newline (`3 blank`) boundaries around injected `AGF MOD GUIDE` and fallback changelog append.
+- 2026-07-05: Added cleanup rule to remove `- Works standalone.` from preserved `FEATURES` and `OTHER DETAILS` content (including malformed lines where extra text was appended after that sentence), while keeping `Dependencies: None, works standalone.` in Mod Scope.
+- 2026-07-05: Added FEATURES-only cleanup to remove pointer bullets (`See this mod's README for full details.` and `See Other Details below for full feature details.`) from per-mod README output while leaving those phrases available for non-README contexts.
+- 2026-07-05: Replaced README FEATURES empty-summary fallback with a mod-description bullet (and `Feature summary coming soon.` if description is missing) so per-mod README FEATURES never need pointer-only lines.
+- 2026-07-05: Updated `Workflow/SCRIPT-GenerateModImages.py` to extract image feature bullets from the `FEATURES` section in `README.txt` (including wrapped-line merge), replacing old markdown marker dependency.
+- 2026-07-05: Added dedicated wording-review ruleset file `Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md` for section-by-section AI README review focus and cross-chat redirection.
+- 2026-07-05: Expanded `WORKFLOW-AI-README-Review.md` with a required code-truth gate and per-pass verification minimums so README claims must be validated against actual config/XML/DLL/script behavior.
+- 2026-07-05: Fixed changelog regeneration list indentation drift by flattening preserved changelog list-marker indentation before formatting in `05_pipeline_engine.py` and aligned `temp/generate_single_readme.ps1` with the same cleanup.
+- 2026-07-05: Fixed changelog cleanup edge-cases by skipping divider artifacts during list flattening and preserving first-bullet indentation in `format_changelog_text`; then reapplied changelog formatting to all Draft/Active `README.txt` files.
+- 2026-07-05: Changed mod image copy destination from mod root to per-mod subfolder `AGF Mod Images (Not Required)` in `05_pipeline_engine.py`; updated `00_Images/workflow.md` to match.
+- 2026-07-05: Added README wording token/effort policy and new-chat bootstrap defaults to `WORKFLOW-AI-README-Review.md` (Ask mode default, Medium production effort, High calibration effort, two-suggestion default output with Recommended line).
+- 2026-07-05: Updated `05_pipeline_engine.py` to source mod descriptions from `README.txt` one-line summary first (fallback to `ModInfo.xml`), and sync `ModInfo.xml` `Description` from that summary during README generation.
+- 2026-07-05: Fixed `format_changelog_text` in `05_pipeline_engine.py` so changelog H3 divider lines are emitted with exactly one blank line above and below during generation.
+- 2026-07-05: Replaced top intro `{{QUOTE}}` + hardcoded NOTE template lines with `{{TITLE_CARD_CALLOUT_BLOCK}}`, and updated `05_pipeline_engine.py` plus `temp/generate_single_readme.ps1` to render deterministic title-card spacing (quote present: 1 blank above quote; quote missing: 2-blank NOTE callout pause).
+
+## Do-not-do notes
+- Do not flatten list-marker indentation for preserved `OTHER DETAILS` content; it collapses nested sublists.
+- Do not keep Harmony warning wired to md-only snippet paths in the main pipeline.
+- Do not render Harmony warning in both `{{DEPENDENCIES_BLOCK}}` and `{{HARMONY_REQUIREMENT_WARNING}}`; choose one owner to prevent duplicate content.
+- Do not treat missing ModInfo Description tag as warning-only final state when README summary exists; insert the tag from summary.
+- Do not hardcode section wrappers in both template and snippet for the same block; this causes duplicate heading wrappers.
+- Do not force a default detailed text line when details are intentionally absent.
+- Do not rely on a single heading label for persisted section extraction.
+- Do not leave quote placeholders unresolved when quote text is empty.
+- Do not overwrite curated README one-line summaries with stale `ModInfo.xml` description text.
+- Do not emit changelog H3 divider lines without one blank line above and below.
+- Do not mix hardcoded intro NOTE lines with dynamic quote placeholders; use the single title-card callout placeholder instead.

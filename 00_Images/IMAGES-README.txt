@@ -5,7 +5,7 @@
 FOLDER LAYOUT
 -------------
 00_Images/
-    banner-layout.json          <- Coordinate/font/color preset used by the generator.
+    modimage-layout.json        <- Coordinate/font/color preset used by the generator.
 
     _template-banner.png        <- YOU CREATE: the frame/background at 1920x1080
                                    This is the one shared template all banners use.
@@ -25,9 +25,9 @@ FOLDER LAYOUT
             ...
 
     _generated/                 <- AUTO-MANAGED by pipeline. Do not edit manually.
-        AGF-HUDPlus-1Main_banner.png      <- Composite: template + mod image + text (820x461)
-        AGF-HUDPlus-1Main_preview_1.png   <- Scaled source image 1 (820x461)
-        AGF-HUDPlus-1Main_preview_2.png   <- Scaled source image 2 (820x461, if exists)
+        AGF-HUDPlus-1Main_01.png          <- Full 1920x1080 composite: template + mod image + text
+        AGF-HUDPlus-1Main_preview_1.png   <- Scaled source image 1
+        AGF-HUDPlus-1Main_preview_2.png   <- Scaled source image 2 (if exists)
         ...
 
 
@@ -42,26 +42,27 @@ NAMING RULES
 
 WHAT THE PIPELINE GENERATES
 -----------------------------
-For each mod that has a source/ subfolder:
+For each mod that has a source image:
 
-  1. banner       - template frame composited with 1.png + mod name/version/description
-                    text drawn over it. Used as the main mod header image in the README.
+  1. _01.png     - Full 1920x1080 composite: template frame composited with the mod
+                   screenshot + mod name/version/description/features text drawn over it.
+                   GitHub README auto-scales this to fit the page for display.
+                   Clicking the image opens the full 1920x1080 version.
 
-  2. preview_N    - each source image scaled down to 820x461 for inline display.
-                    Linked to the full 1920x1080 original so users can click to expand.
+  2. preview_N   - each source image scaled down for inline display (if max_previews > 0).
 
-Mods with NO source subfolder are skipped — their README entry renders as text only,
-exactly as it does today.
+Mods with NO source image are still generated — they get a placeholder overlay on the
+composite.
 
 
-CLICK TO ENLARGE (how it works in GitHub)
-------------------------------------------
-The README will render each image like this:
+READEME IMAGE USAGE (how it works in GitHub)
+---------------------------------------------
+In the README, reference the _01.png directly in a clickable link:
 
-    [![description](00_Images/_generated/AGF-HUDPlus-1Main_preview_1.png)](00_Images/source/AGF-HUDPlus-1Main/1.png)
+    [![Mod Image](00_Images/_generated/AGF-ModName_01.png)](00_Images/_generated/AGF-ModName_01.png)
 
-Clicking the thumbnail opens the full 1920x1080 image in the browser.
-The browser back button returns to the README page.
+GitHub auto-scales the 1920x1080 image to fit the README column width.
+Clicking the image opens it at full 1920x1080 resolution. Browser back returns to README.
 
 
 GENERATION COMMANDS

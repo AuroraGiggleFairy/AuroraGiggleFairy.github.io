@@ -2,25 +2,25 @@
 
 *{{LAST_UPDATED}}*
 
+## **1. About AGF**
+
 {{ABOUTME_MAIN_GUIDE_BODY}}
 
- <br>   
+<br>
 
 ---
 
 
 ## Table of Contents
-- [1. Install Scope & EAC Requirement](#1-install-scope--eac-requirement)
-- [2. Language Support](#2-language-support)
-- [3. Installation Guide](#3-installation-guide)
-- [4. Removal Guide](#4-removal-guide)
-- [5. Update Guide](#5-update-guide)
-- [6. Backup Guide](#6-backup-guide)
-- [7. Mod List](#7-mod-list)
+- [1. About AGF](#1-about-agf)
+- [2. AGF Mod Guide](#2-agf-mod-guide)
+- [3. Ask AuroraGiggleFairy for Help](#3-ask-auroragigglefairy-for-help)
+- [4. Support AuroraGiggleFairy](#4-support-auroragigglefairy)
+- [5. Mod List](#5-mod-list)
   - [A. GIGGLE PACK](#a-giggle-pack)
   - [B. HUD PLUS MODS](#b-hud-plus-mods)
   - [C. BACKPACK PLUS MODS](#c-backpack-plus-mods)
-  - [D. SPECIAL COMPATIBILITY MOD](#d-special-compatibility-mod)
+  - [D. SPECIAL MOD PATCHES](#d-special-mod-patches)
   - [E. VANILLA PLUS MODS](#e-vanilla-plus-mods)
   - [F. NO EAC MODS](#f-no-eac-mods)
   - [G. 4MODDERS MODS](#g-4modders-mods)
@@ -31,110 +31,34 @@
 
 
 
-## **1. Install Scope & EAC Requirement**
+## **2. AGF Mod Guide**
 
+How to install, update, remove, etc.
 
-<details>
-<summary>Show Install Scope & EAC Requirement</summary>
-
-<br>
-
-<b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-{{MODTYPE_GUIDE_BODY}}
-
-</details>
+{{MODGUIDE_MAIN_BODY}}
 
 
 
-## **2. Language Support**
+## **3. Ask AuroraGiggleFairy for Help**
 
-<details>
-<summary>Show Language Support</summary>
+How to get AGF's help directly.
 
-<br>
-
-<b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-<b>A. What languages do AGF mods support?</b>
-<ul>
-  <li>7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.</li>
-  <li><i>AGF mods add support for all 13 languages.</i></li>
-  <li><i>If you find a translation error, please let AGF know on <a href="https://discord.gg/Vm5eyW6N4r">DISCORD</a>.</i></li>
-</ul>
-
-<br>
-
-</details>
+{{ASKFORHELP_MAIN_BODY}}
 
 
 
-## **3. Installation Guide**
+## **4. Support AuroraGiggleFairy**
 
-<details>
-<summary>Show Installation Guide</summary>
+Ways you can support AGF.
 
-<br>
-
-<b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-{{INSTALL_GUIDE_BODY}}
-
-<br>
-
-</details>
-
-
-
-## **4. Removal Guide**
-
-<details>
-<summary>Show Removal Guide</summary>
-
-<br>
-
-<b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-{{REMOVAL_GUIDE_BODY}}
-
-<br>
-
-</details>
-
-
-
-## **5. Update Guide**
-
-<details>
-<summary>Show Update Guide</summary>
-
-<br>
-
-<b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-{{UPDATE_GUIDE_BODY}}
-
-<br>
-
-</details>
-
-
-
-## **6. Backup Guide**
-
-<details>
-<summary>Show Backup Guide</summary>
-
-<br>
-
-<b><a href="#agf-7-days-to-die-mods">(Back to Top)</a></b><br><br>
-{{BACKUP_GUIDE_BODY}}
-
-<br>
-
-</details>
+{{SUPPORT_MAIN_BODY}}
 
 <br>
 <br>
 
 ---
 
-# **7. Mod List**
+# **5. Mod List**
 
 ## 7d2d Version 3.0 is here!
 > *AGF has begun working on updating mods for the new version.*

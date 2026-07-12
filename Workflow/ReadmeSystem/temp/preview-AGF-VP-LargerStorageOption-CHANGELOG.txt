@@ -1,0 +1,19 @@
+﻿========================================================================
+                               CHANGELOG                                
+========================================================================
+
+v1.0.1
+  - Sorting buttons now show on all loot, as expected from vanilla.
+
+------------------------------------------------------------------------
+
+v1.0.0
+  - Updated old code to work for 7d2d version 3.
+  - Fixed old issues of description not showing for variant blocks.
+  - Updated localization description in all languages.
+
+------------------------------------------------------------------------
+
+v0.0.1
+  - Mod first created.
+  - Pulled files from v2.6 backpack mods.

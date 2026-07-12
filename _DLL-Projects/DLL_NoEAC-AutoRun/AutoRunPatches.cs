@@ -32,6 +32,11 @@ namespace AutoRun
 
         public static bool IsActivationPressed(EntityPlayerLocal player)
         {
+            if (IsInputBlockedByActiveUi(player))
+            {
+                return false;
+            }
+
             PlayerAction action = GetActivationAction(player?.playerInput);
             if (action != null)
             {
@@ -53,6 +58,24 @@ namespace AutoRun
 
             // Fallback for cases where injected actions are unavailable.
             return Input.GetKey(KeyCode.Z);
+        }
+
+        private static bool IsInputBlockedByActiveUi(EntityPlayerLocal player)
+        {
+            try
+            {
+                LocalPlayerUI ui = player?.PlayerUI ?? LocalPlayerUI.primaryUI;
+                if (ui?.windowManager != null && ui.windowManager.IsInputActive())
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                // Ignore and fall back to normal input handling.
+            }
+
+            return false;
         }
 
         private static bool IsAnyBoundKeyPressed(PlayerAction action, out bool hasKeyboardBinding)

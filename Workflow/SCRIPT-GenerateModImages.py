@@ -29,6 +29,15 @@ COMPAT_CSV = os.path.join(
 )
 DEFAULT_LAYOUT_PATH = os.path.join(VS_CODE_ROOT, "00_Images", "modimage-layout.json")
 
+# Maps MOD_TYPE_ID → "Label: Explanation" for banner rendering.
+# Label and explanation are split on ": " by the renderer for the two-part layout.
+MOD_TYPE_MAP = {
+    "1": "Server-Side (EAC-Friendly): server install works for all joining players, EAC can be on or off, and it also works in singleplayer.",
+    "2": "Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.",
+    "3": "Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.",
+    "4": "Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.",
+}
+
 
 @dataclass
 class ModMeta:
@@ -88,34 +97,65 @@ def split_beta_from_display_name(display_name: str, version: str) -> Tuple[str, 
     return title, version_text
 
 
-def extract_features(readme_path: str) -> List[str]:
-    if not os.path.isfile(readme_path):
+def extract_features(readme_txt_path: str) -> List[str]:
+    if not os.path.isfile(readme_txt_path):
         return []
     try:
-        with open(readme_path, "r", encoding="utf-8") as f:
-            content = f.read()
+        with open(readme_txt_path, "r", encoding="utf-8") as f:
+            lines = f.read().splitlines()
     except Exception:
         return []
 
-    start = content.find("<!-- FEATURES-SUMMARY START -->")
-    end = content.find("<!-- FEATURES-SUMMARY END -->")
-    if start == -1 or end == -1 or end <= start:
+    divider = "-" * 72
+    start_idx: Optional[int] = None
+    for idx in range(0, max(0, len(lines) - 2)):
+        if (
+            lines[idx].strip() == divider
+            and lines[idx + 1].strip().lower() in {"features", "features summary"}
+            and lines[idx + 2].strip() == divider
+        ):
+            start_idx = idx + 3
+            break
+
+    if start_idx is None:
         return []
 
-    block = content[start + len("<!-- FEATURES-SUMMARY START -->"):end]
-    lines: List[str] = []
-    for raw in block.splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#"):
+    section_lines: List[str] = []
+    idx = start_idx
+    while idx < len(lines):
+        if (
+            idx + 2 < len(lines)
+            and lines[idx].strip() == divider
+            and lines[idx + 1].strip()
+            and lines[idx + 2].strip() == divider
+        ):
+            break
+        section_lines.append(lines[idx].rstrip())
+        idx += 1
+
+    features: List[str] = []
+    current: Optional[str] = None
+    for raw_line in section_lines:
+        stripped = raw_line.strip()
+        if not stripped or re.fullmatch(r"[-=]{10,}", stripped):
             continue
-        line = re.sub(r"^[-*+]\s+", "", line)
-        line = re.sub(r"`+", "", line)
-        line = re.sub(r"\*\*|__|\*|_", "", line)
-        line = re.sub(r"\[(.*?)\]\((.*?)\)", r"\1", line)
-        line = line.strip()
-        if line:
-            lines.append(line)
-    return lines
+
+        bullet_match = re.match(r"^(?:[-*+]\s+|\d+\.\s+)(.+)$", stripped)
+        if bullet_match:
+            if current:
+                features.append(current.strip())
+            current = bullet_match.group(1).strip()
+            continue
+
+        if current:
+            current = f"{current} {stripped}".strip()
+        else:
+            current = stripped
+
+    if current:
+        features.append(current.strip())
+
+    return features
 
 
 def load_compatibility(csv_path: str) -> Dict[str, Dict[str, str]]:
@@ -678,13 +718,21 @@ def get_mods(layout: Dict[str, object], compatibility: Dict[str, Dict[str, str]]
             continue
 
         modinfo = os.path.join(full, "ModInfo.xml")
-        readme = os.path.join(full, "README.md")
+        readme_txt = os.path.join(full, "README.txt")
         base = get_base_mod_name(folder)
         display_name, internal_name, version, desc = parse_modinfo(modinfo, base)
-        feats = extract_features(readme)
+        feats = extract_features(readme_txt)
         compat_row = compatibility.get(internal_name, {})
         tested_version = (compat_row.get("TESTED_GAME_VERSION") or "TBD").strip()
-        mod_type = extract_mod_type(readme)
+
+        # Derive mod type from the CSV MOD_TYPE_ID column rather than parsing
+        # a non-existent README.md. Type 0 or TBD means blank on the banner.
+        mod_type_id = (compat_row.get("MOD_TYPE_ID") or "").strip()
+        if mod_type_id in {"", "0", "TBD"}:
+            mod_type = ""
+        else:
+            mod_type = MOD_TYPE_MAP.get(mod_type_id, "")
+
         mods.append(ModMeta(folder=folder, base_name=base, mod_name=display_name, version=version, description=desc, features=feats, tested_version=tested_version, mod_type=mod_type))
 
     return mods
@@ -1011,10 +1059,6 @@ def generate_for_mod(mod: ModMeta, layout: Dict[str, object], media_image_path: 
     out_full_merged = os.path.join(generated_root, f"{mod.base_name}_01.png")
     base_img.convert("RGB").save(out_full_merged, format="PNG", optimize=True)
 
-    out_banner = os.path.join(generated_root, f"Thumbnail_{mod.base_name}.png")
-    scaled = base_img.resize((int(output["width"]), int(output["height"])), Image.Resampling.LANCZOS)
-    scaled.convert("RGB").save(out_banner, format="PNG", optimize=True)
-
     for name in os.listdir(generated_root):
         if name.startswith(f"{mod.base_name}_preview_") and name.endswith(".png"):
             try:
@@ -1097,24 +1141,12 @@ def main() -> int:
         prev = previous_manifest.get(mod.base_name, {}) if isinstance(previous_manifest.get(mod.base_name, {}), dict) else {}
         prev_sig = str(prev.get("signature", ""))
         full_merged_path = os.path.join(generated_root, f"{mod.base_name}_01.png")
-        banner_path = os.path.join(generated_root, f"Thumbnail_{mod.base_name}.png")
-
         has_full_merged = os.path.isfile(full_merged_path)
-        has_banner = os.path.isfile(banner_path)
-        banner_matches_full_merged = False
-        if has_full_merged and has_banner:
-            try:
-                banner_matches_full_merged = os.path.getmtime(banner_path) >= os.path.getmtime(full_merged_path)
-            except OSError:
-                banner_matches_full_merged = False
 
-        # Keep _01 and Thumbnail paired: if _01 is newer, force regeneration even in changed-only mode.
         should_skip = (
             args.changed_only
             and (signature == prev_sig)
             and has_full_merged
-            and has_banner
-            and banner_matches_full_merged
         )
         if should_skip and not args.mod:
             unchanged_count += 1

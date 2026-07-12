@@ -11,6 +11,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import textwrap
 import threading
 import urllib.error
 import urllib.request
@@ -19,6 +20,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set, Tuple
 import xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape
 
 # =============================================================
 # CONFIG
@@ -56,21 +58,46 @@ MAIN_LOG_MAX_FILES = 10
 README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "Workflow", "ReadmeSystem")
 README_TEMPLATE_ROOT = os.path.join(README_SYSTEM_ROOT, "Templates")
 README_SNIPPETS_ROOT = os.path.join(README_SYSTEM_ROOT, "Snippets")
+README_LONG_GUIDES_ROOT = os.path.join(README_SNIPPETS_ROOT, "LongGuides")
 COMPAT_CSV = os.path.join(README_SYSTEM_ROOT, "Data", "HELPER_ModCompatibility.csv")
-ABOUTME_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ABOUTME-Guide.md")
-ABOUTME_MAIN_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ABOUTME-Main-Guide.md")
-MODTYPE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MODTYPE-Guide.md")
-INSTALL_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "INSTALL-Guide.md")
-REMOVAL_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "REMOVAL-Guide.md")
-UPDATE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "UPDATE-Guide.md")
-BACKUP_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "BACKUP-Guide.md")
+ABOUTME_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-ABOUTME-md-Snippet.md")
+ABOUTME_MAIN_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-1-ABOUTME-md-Snippet.md")
+MODSCOPE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-MODSCOPE-md-Snippet.md")
+HARMONY_REQUIREMENT_WARNING_TXT_SNIPPET_PATH = os.path.join(
+    README_SNIPPETS_ROOT, "ModReadme-HARMONYWARNING-txt-Snippet.txt"
+)
+MODGUIDE_TEXT_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-MODGUIDE-txt-Snippet.txt")
+MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-MODTYPE-md-Snippet.md")
+MODTYPE_GUIDE_TXT_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-MODTYPE-txt-Snippet.txt")
+LANGUAGE_MAIN_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-LANGUAGE-md-Snippet.md")
+MODGUIDE_MAIN_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-2-MODGUIDE-md-Snippet.md")
+ASKFORHELP_MAIN_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-3-ASKFORHELP-md-Snippet.md")
+SUPPORT_MAIN_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-4-SUPPORT-md-Snippet.md")
+INSTALL_GUIDE_SNIPPET_PATH = os.path.join(README_LONG_GUIDES_ROOT, "ModReadme-INSTALL-md-Snippet.md")
+REMOVAL_GUIDE_SNIPPET_PATH = os.path.join(README_LONG_GUIDES_ROOT, "ModReadme-REMOVAL-md-Snippet.md")
+UPDATE_GUIDE_SNIPPET_PATH = os.path.join(README_LONG_GUIDES_ROOT, "ModReadme-UPDATE-md-Snippet.md")
+BACKUP_GUIDE_SNIPPET_PATH = os.path.join(README_LONG_GUIDES_ROOT, "ModReadme-BACKUP-md-Snippet.md")
+HELP_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-HELP-md-Snippet.md")
 ABOUTME_GUIDE_PLACEHOLDER = "{{ABOUTME_GUIDE_BODY}}"
 ABOUTME_MAIN_GUIDE_PLACEHOLDER = "{{ABOUTME_MAIN_GUIDE_BODY}}"
+MODSCOPE_GUIDE_PLACEHOLDER = "{{MODSCOPE_GUIDE_BODY}}"
+HARMONY_REQUIREMENT_WARNING_PLACEHOLDER = "{{HARMONY_REQUIREMENT_WARNING}}"
+SHORT_GUIDE_PLACEHOLDER = "{{MODGUIDE_TEXT_BODY}}"
+LEGACY_SHORT_GUIDE_PLACEHOLDER = "{{SHORT_GUIDE_BODY}}"
 MODTYPE_GUIDE_PLACEHOLDER = "{{MODTYPE_GUIDE_BODY}}"
+LANGUAGE_MAIN_PLACEHOLDER = "{{LANGUAGE_MAIN_BODY}}"
+MODGUIDE_MAIN_PLACEHOLDER = "{{MODGUIDE_MAIN_BODY}}"
+ASKFORHELP_MAIN_PLACEHOLDER = "{{ASKFORHELP_MAIN_BODY}}"
+SUPPORT_MAIN_PLACEHOLDER = "{{SUPPORT_MAIN_BODY}}"
 INSTALL_GUIDE_PLACEHOLDER = "{{INSTALL_GUIDE_BODY}}"
 REMOVAL_GUIDE_PLACEHOLDER = "{{REMOVAL_GUIDE_BODY}}"
 UPDATE_GUIDE_PLACEHOLDER = "{{UPDATE_GUIDE_BODY}}"
 BACKUP_GUIDE_PLACEHOLDER = "{{BACKUP_GUIDE_BODY}}"
+HELP_GUIDE_PLACEHOLDER = "{{HELP_GUIDE_BODY}}"
+OTHER_DETAILS_SECTION_PLACEHOLDER = "{{OTHER_DETAILS_SECTION}}"
+CHANGELOG_BODY_PLACEHOLDER = "{{CHANGELOG_BODY}}"
+TITLE_CARD_CALLOUT_PLACEHOLDER = "{{TITLE_CARD_CALLOUT_BLOCK}}"
+SHORT_GUIDE_RAW_TOKEN = "__AGF_SHORT_GUIDE_RAW_BLOCK__"
 MOD_README_TEMPLATE = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-ModReadMes.md")
 MAIN_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe.md")
 MAIN_MOD_CATEGORY_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe-1ModCategory")
@@ -78,9 +105,8 @@ MAIN_MOD_ENTRY_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-Main
 GIGGLE_PACK_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe-0GigglePack")
 CATEGORY_DESCRIPTIONS_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-CategoryDescriptions.md")
 IMAGES_ROOT = os.path.join(VS_CODE_ROOT, "00_Images")
-IMAGES_SOURCE_ROOT = os.path.join(IMAGES_ROOT, "source")
-IMAGES_MEDIA_ROOT = os.path.join(IMAGES_ROOT, "mod-media")
 IMAGES_GENERATED_ROOT = os.path.join(IMAGES_ROOT, "_generated")
+IMAGES_THUMBNAIL_ROOT = os.path.join(IMAGES_GENERATED_ROOT, "thumbnails")
 DISCORD_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "Discord", "TEMPLATE-DiscordUpdate.md")
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
 
@@ -145,10 +171,10 @@ COMPAT_CSV_FIELD_ORDER = [
 ]
 
 DEFAULT_MOD_TYPE_LINE_BY_ID = {
-    "1": "Server-side (EAC-friendly): Server install works for all joining players; EAC on or off.",
-    "2": "Server-side (EAC Off): EAC off required; server install works for all joining players.",
-    "3": "Server/Client-side (Required): EAC off required; host and joining players must install it.",
-    "4": "Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.",
+    "1": "Server-side (EAC-friendly): Server install works for all joining players; EAC on or off. (Also works in singleplayer.)",
+    "2": "Server-side (EAC Off): EAC off required; server install works for all joining players. (Also works in singleplayer.)",
+    "3": "Server/Client-side (Required): EAC off required; host and joining players must install it. (Also works in singleplayer.)",
+    "4": "Client-side (Only): EAC off required; server install has no effect; install on each player PC. (Also works in singleplayer.)",
 }
 
 MOD_TYPE_COMPAT_BY_ID = {
@@ -189,37 +215,12 @@ DEFAULT_ABOUTME_GUIDE_BODY = """## 1. About AGF
 ---
 ---"""
 
-DEFAULT_ABOUTME_MAIN_GUIDE_BODY = """> - My name is AuroraGiggleFairy (AGF).
-> - I create accessibility-focused, vanilla-enhancing mods for 7 Days to Die.
-> - Goal is to deliver practical, easy-to-use features shaped by community feedback.
-> - Main site and first release source: [auroragigglefairy.github.io](https://auroragigglefairy.github.io/).
-> - Discord is best for latest updates, fastest contact, and becoming a tester: [discord.gg/Vm5eyW6N4r](https://discord.gg/Vm5eyW6N4r).
-> - You may also catch me working on my mods live on [TWITCH](https://www.twitch.tv/AuroraGiggleFairy).
-> - Donations are appreciated, not required: [DONATE HERE](https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC).
->
-> - I started playing 7 Days to Die in Alpha 8.
-> - I started attempting to mod in Alpha 17.
-> - I first published a mod in Alpha 18.
-> - I continue to publish mods regularly.
-> - 7,000+ game hours played.
->
-### Mod Philosophy
-> - Prioritize easy installation and use.
-> - Goal: enhance vanilla gameplay.
-> - Feedback and testing are beneficial.
-> - Detailed notes for individual preference and mod learning.
-> - Accessibility is required.
-> - All 13 languages supported (best effort).
->
-> "The best mods rely on community involvement."
->
-### Language Support
-> - 7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.
-> - AGF mods add support for all 13 languages.
-> - If you find a translation error, please let AGF know on [DISCORD](https://discord.gg/Vm5eyW6N4r).
->
-### **Server Hosting Recommendation**
-> - I recommend **Pingperfect**. They have provided excellent support, and I find their costs affordable and worth the service as a whole. You can support me by signing up through my [Referral Link](https://pingperfect.com/aff.php?aff=1834)."""
+DEFAULT_ABOUTME_MAIN_GUIDE_BODY = """- My name is AuroraGiggleFairy (AGF).
+- Making accessibility-focused and vanilla enhancing mods for 7 Days to Die since 2019.
+
+- I have been modding 7 Days to Die for 7 years.
+- I do my best to prioritize accessibility, user-friendliness, and localization where possible.
+- I provide kind, comprehensive support to players, modders, and server communities, and I rely on community feedback to keep improving my mods."""
 
 DEFAULT_MODTYPE_GUIDE_BODY = """---
 
@@ -250,13 +251,122 @@ DEFAULT_MODTYPE_GUIDE_BODY = """---
 
 ### C. Mod Types
 
-| # | Mod Type | What It Means |
-|---|----------|---------------|
-| 1 | Server-Side (EAC-Friendly) | Server install works for all joining players; EAC on or off. |
-| 2 | Server-Side (EAC Off) | EAC off required; server install works for all joining players. |
-| 3 | Server/Client-Side (Required) | EAC off required; host and joining players must install it. |
-| 4 | Client-Side (Only) | EAC off required; server install has no effect; only the installing player gets the feature. |
+> - Mod Type 1 is **Server-Side (EAC-Friendly)**: server install works for all joining players, EAC can be on or off, and it also works in singleplayer.
+> - Mod Type 2 is **Server-Side (EAC Off)**: EAC off is required, server install works for all joining players, and it also works in singleplayer.
+> - Mod Type 3 is **Server/Client-Side (Required)**: EAC off is required, the host and all joining players must install it, and it also works in singleplayer.
+> - Mod Type 4 is **Client-Side (Only)**: EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.
 """
+
+DEFAULT_MODGUIDE_MAIN_BODY = """### A. Install Mods
+1. Close the game.
+2. In Steam, right-click `7 Days to Die` -> `Manage` -> `Browse local files`, then open `Mods`.
+3. Extract the zip into the `Mods` folder. Make sure it ends up as `Mods/<ModName>/ModInfo.xml`.
+4. Restart the game.
+
+---
+
+### B. Ask AuroraGiggleFairy for Help
+1. Join AGF's Discord: [DISCORD](https://discord.gg/Vm5eyW6N4r).
+     - AGF checks website messages often, but Discord is the fastest and best way to get help.
+2. Find `#help-is-here` under the `NEED HELP?` section.
+     - All questions are welcome, whether you are new or experienced.
+     - This includes mod conflicts, features not working as expected, server or admin issues, translation errors, and other mod-related problems.
+3. Post your help request in `#help-is-here`.
+     - Share a brief message about what is happening.
+     - Attach your latest log file.
+         - Enter the game, then press `F1` to open the console.
+         - Click `Open logs folder` in the top-right.
+         - The correct log file should already be selected. Drag and drop it into `#help-is-here`.
+     - A screenshot can also help.
+         - Use `PrtSc` (Print Screen) or your system screenshot tool, then paste the image into Discord chat.
+     - If preferred, DMs are open and you are welcome to message AGF directly.
+
+---
+
+### C. Backups
+- To create:
+    - Open `%appdata%` -> `Roaming` -> `7DaysToDie` -> `Saves`, then open your World Name folder (for example, `Navezgane`).
+    - Copy your Game Name folder (for example, `MyGame`) to a safe place.
+- To restore:
+    - Copy that saved Game Name folder back into the same World Name folder in `Saves`.
+    - Replace the current folder if asked.
+
+---
+
+### D. Update Mods
+1. Close the game.
+2. Make a backup first (see section C).
+3. Install the new version in `Mods`.
+     - If asked, allow overwrite or replace.
+4. If both old and new folders are there, keep the newer one and delete the older one.
+5. Start the game and confirm your save loads.
+
+---
+
+### E. Remove Mods
+- Warning: Removing a mod from an active save can destroy your saved game. Back up first.
+- Never delete `0_TFP_Harmony`; it comes with the game.
+1. Close the game.
+2. In `Mods`, delete each mod folder you are removing, except `0_TFP_Harmony`.
+
+---
+
+### F. The `0_TFP_Harmony` Mod (Do Not Remove)
+- Never delete `0_TFP_Harmony`; it comes with the game.
+- If it is missing, restore it by verifying game files in Steam:
+    1. In Steam, right-click 7 Days to Die.
+    2. Select Properties.
+    3. Select Installed Files.
+    4. Click Verify integrity of game files and wait for completion.
+
+---
+
+### G. EAC
+- EAC stands for Easy Anti-Cheat and helps protect multiplayer sessions from cheating.
+- Some mods require EAC to be turned off so they can work.
+- How to launch 7 Days to Die with EAC off:
+    1. In Steam Library, select 7 Days to Die.
+    2. Click Play.
+    3. In the launch popup, select Launch game without EAC.
+    4. Click Play.
+- If the launch popup does not appear:
+    1. In Steam Library, select 7 Days to Die.
+    2. Click the gear icon on the right, then click Properties.
+    3. Under Launch Options, open the Selected Launch Option dropdown.
+    4. Choose Ask when starting game or Launch game without EAC."""
+
+DEFAULT_ASKFORHELP_MAIN_BODY = """1. Join AGF's Discord: [DISCORD](https://discord.gg/Vm5eyW6N4r).
+    - AGF checks website messages often, but Discord is the fastest and best way to get help.
+2. Find `#help-is-here` under the `NEED HELP?` section.
+    - All questions are welcome, whether you are new or experienced.
+    - This includes mod conflicts, features not working as expected, server or admin issues, translation errors, and other mod-related problems.
+3. Post your help request in `#help-is-here`.
+    - Share a brief message about what is happening.
+    - Attach your latest log file.
+      - Enter the game, then press `F1` to open the console.
+      - Click `Open logs folder` in the top-right.
+      - The correct log file should already be selected. Drag and drop it into `#help-is-here`.
+    - A screenshot can also help.
+      - Use `PrtSc` (Print Screen) or your system screenshot tool, then paste the image into Discord chat.
+    - If preferred, DMs are open and you are welcome to message AGF directly."""
+
+DEFAULT_LANGUAGE_MAIN_BODY = """### A. What languages do AGF mods support?
+- 7 Days to Die currently supports 13 languages: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Russian, Turkish, Simplified Chinese, and Traditional Chinese.
+- AGF mods add support for all 13 languages.
+- If you find a translation error, please let AGF know on [DISCORD](https://discord.gg/Vm5eyW6N4r)."""
+
+DEFAULT_SUPPORT_MAIN_BODY = """- I have been actively creating and supporting 7 Days to Die mods since Alpha 18 (2019), and I genuinely love doing this work.
+- I spend a lot of time fixing complex issues, keeping everything up to date, and helping players, modders, and server communities.
+- If my work helps you, here are ways to support me:
+    - Help spread my mods by sharing them with others, creating content, or sharing my GitHub link: https://auroragigglefairy.github.io/
+    - Join my Discord to share feedback, keep up with updates, or volunteer as a tester: https://discord.gg/Vm5eyW6N4r
+    - Support me on Twitch: https://www.twitch.tv/auroragigglefairy
+    - Need hosting? Use my PingPerfect Referral Link: https://pingperfect.com/aff.php?aff=1834
+    - Support me directly by donating to my PayPal: https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC
+- I genuinely appreciate your support.
+- Support is always optional and never expected.
+- It encourages me to keep investing time and energy into this work.
+- From the bottom of my heart, thank you."""
 
 DEFAULT_INSTALL_GUIDE_BODY = """---
 
@@ -316,6 +426,7 @@ DEFAULT_REMOVAL_GUIDE_BODY = """---
 
 ### B. How do I remove mods?
 > - The safest approach is to only remove mods when starting a new game.
+> - Never delete `0_TFP_Harmony`; it comes with the game.
 > - ALSO smart to make a backup of the game (see below for instructions if needed).
 >     - If you remove a mod that added new items or features, characters and/or the map may reset, or become permanently unplayable.
 >     - If you are unsure, check the mod's readme for specific removal notes or ask in AGF's [DISCORD](https://discord.gg/Vm5eyW6N4r).
@@ -397,6 +508,41 @@ DEFAULT_BACKUP_GUIDE_BODY = """---
 > 3. **Move your backup folder back into \"Saves\"**
 """
 
+DEFAULT_HELP_GUIDE_BODY = """> 1. **Join AGF's Discord:** [DISCORD](https://discord.gg/Vm5eyW6N4r).
+>    - AGF checks website messages often, but Discord is the fastest and best way to get help.
+> 2. **Find `#help-is-here`** under the `NEED HELP?` section.
+>    - All questions are welcome, whether you are new or experienced.
+>    - This includes mod conflicts, features not working as expected, server or admin issues, translation errors, and other mod-related problems.
+> 3. **Post your help request in `#help-is-here`:**
+>    - Share a brief message about what is happening.
+>    - Attach your latest log file.
+>      - *Enter the game, then press `F1` to open the console.*
+>      - *Click `Open logs folder` in the top-right.*
+>      - *The correct log file should already be selected. Drag and drop it into `#help-is-here`.*
+>    - A screenshot can also help.
+>      - *Use `PrtSc` (Print Screen) or your system screenshot tool, then paste the image into Discord chat.*
+> - *If preferred, DMs are open and you are welcome to message AGF directly.*
+"""
+
+DEFAULT_MODSCOPE_GUIDE_BODY = """- Mod Version: {{MOD_VERSION}}
+- 7d2d Version: {{TESTED_GAME_VERSION}}
+- Website: https://auroragigglefairy.github.io/
+{{MOD_TYPE_BLOCK}}
+- Safe to install on existing game: {{SAFE_TO_INSTALL}}
+- Safe to remove from existing game: {{SAFE_TO_REMOVE}}
+{{DEPENDENCIES_BLOCK}}"""
+
+DEFAULT_HARMONY_REQUIREMENT_WARNING_BODY = """- Harmony requirement details:
+    - Requires 0_TFP_Harmony (built-in game mod).
+    - To check, confirm Mods/0_TFP_Harmony exists in the game folder.
+    - To restore, run Steam Verify integrity of game files."""
+
+DEFAULT_SHORT_GUIDE_BODY = """## A. Install Mods
+> 1. **Close the game.**
+> 2. **In Steam, right-click `7 Days to Die` -> `Manage` -> `Browse local files`, then open `Mods`.**
+> 3. **Extract the zip into the `Mods` folder. Make sure it ends up as `Mods/<ModName>/ModInfo.xml`.**
+> 4. **Restart the game.**"""
+
 
 @dataclass
 class RunTransaction:
@@ -409,27 +555,61 @@ class RunTransaction:
 CURRENT_TRANSACTION: Optional[RunTransaction] = None
 
 
-def load_mod_type_lines_from_modtype_guide(log: "Logger") -> Dict[str, str]:
-    """Load MOD_TYPE_ID wording from the Mod Types table in MODTYPE-Guide.md.
+def _build_mod_type_line(mod_type_name: str, detail_lines: List[str]) -> str:
+    name = (mod_type_name or "").strip()
+    details = [d.strip() for d in detail_lines if (d or "").strip()]
+    if not details:
+        return name
+    return f"{name}: {'; '.join(details)}"
 
-    Expected row format:
-    | 2 | Server-Side (EAC Off) | EAC off required; ... |
-    """
-    if not os.path.isfile(MODTYPE_GUIDE_SNIPPET_PATH):
-        log.warn(
-            "Missing MODTYPE-Guide.md snippet; using built-in MOD_TYPE_ID wording defaults"
-        )
-        return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
 
-    try:
-        with open(MODTYPE_GUIDE_SNIPPET_PATH, "r", encoding="utf-8") as f:
-            text = f.read()
-    except Exception as ex:
-        log.warn(
-            f"Failed to read {MODTYPE_GUIDE_SNIPPET_PATH}: {ex}; using built-in MOD_TYPE_ID wording defaults"
-        )
-        return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
+def _parse_mod_type_lines_from_txt_snippet(text: str) -> Dict[str, str]:
+    parsed: Dict[str, str] = {}
+    current_id = ""
+    current_name = ""
+    current_details: List[str] = []
 
+    def commit_current() -> None:
+        nonlocal current_id, current_name, current_details
+        if current_id and current_name:
+            parsed[current_id] = _build_mod_type_line(current_name, current_details)
+        current_id = ""
+        current_name = ""
+        current_details = []
+
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+
+        header = re.match(r"^MOD\s*TYPE\s+(\d+)\s*$", line, flags=re.IGNORECASE)
+        if header:
+            commit_current()
+            current_id = header.group(1)
+            continue
+
+        if not current_id:
+            continue
+
+        name_match = re.match(r"^-\s*Mod\s*Type\s*:\s*(.+?)\s*$", line, flags=re.IGNORECASE)
+        if name_match:
+            current_name = name_match.group(1).strip()
+            continue
+
+        detail_match = re.match(r"^-\s*(.+?)\s*$", line)
+        if detail_match:
+            detail = detail_match.group(1).strip()
+            if not detail:
+                continue
+            if re.match(r"^Mod\s*Type\s*:", detail, flags=re.IGNORECASE):
+                continue
+            current_details.append(detail)
+
+    commit_current()
+    return parsed
+
+
+def _parse_mod_type_lines_from_md_table(text: str) -> Dict[str, str]:
     parsed: Dict[str, str] = {}
     for raw_line in text.splitlines():
         line = raw_line.strip()
@@ -450,13 +630,129 @@ def load_mod_type_lines_from_modtype_guide(log: "Logger") -> Dict[str, str]:
 
         parsed[mod_type_id] = f"{mod_type_name}: {wording}"
 
-    if not parsed:
-        log.warn(
-            "No MOD_TYPE_ID table rows parsed from MODTYPE-Guide.md; using built-in wording defaults"
+    return parsed
+
+
+def load_mod_type_lines_from_modtype_guide(log: "Logger") -> Dict[str, str]:
+    """Load MOD_TYPE_ID wording map.
+
+    Preferred source:
+    - ModReadme-MODTYPE-txt-Snippet.txt in MOD TYPE N bullet-block format.
+
+    Backward-compatible fallback:
+    - legacy ModReadme-MODTYPE-md-Snippet.md in markdown table format.
+    """
+    if os.path.isfile(MODTYPE_GUIDE_TXT_SNIPPET_PATH):
+        try:
+            with open(MODTYPE_GUIDE_TXT_SNIPPET_PATH, "r", encoding="utf-8") as f:
+                txt = f.read()
+            parsed_txt = _parse_mod_type_lines_from_txt_snippet(txt)
+            if parsed_txt:
+                return parsed_txt
+            log.warn(
+                "No MOD_TYPE entries parsed from ModReadme-MODTYPE-txt-Snippet.txt; "
+                "falling back to md snippet/default wording"
+            )
+        except Exception as ex:
+            log.warn(
+                f"Failed to read {MODTYPE_GUIDE_TXT_SNIPPET_PATH}: {ex}; "
+                "falling back to md snippet/default wording"
+            )
+
+    log.warn(
+        "Missing/invalid mod type snippets; using built-in MOD_TYPE_ID wording defaults"
+    )
+    return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
+
+
+def _parse_mainreadme_mod_type_lines_from_md_snippet(text: str) -> Dict[str, str]:
+    parsed: Dict[str, str] = {}
+    pending_mod_type_id = ""
+
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+
+        # Allow quoted markdown list lines such as: > - Mod Type 1 is **...**: ...
+        line = re.sub(r"^>\s*", "", line)
+
+        # New format support:
+        # MOD TYPE 1
+        # - **Server-Side (EAC-Friendly)**: ...
+        header_match = re.match(r"^MOD\s*TYPE\s*(\d+)\s*$", line, flags=re.IGNORECASE)
+        if header_match:
+            pending_mod_type_id = header_match.group(1)
+            continue
+
+        bullet_sentence_match = re.match(r"^-\s*\*\*(.+?)\*\*\s*:\s*(.+)$", line)
+        if bullet_sentence_match and pending_mod_type_id:
+            mod_type_name = bullet_sentence_match.group(1).strip()
+            wording = bullet_sentence_match.group(2).strip()
+            if mod_type_name and wording:
+                parsed[pending_mod_type_id] = f"{mod_type_name}: {wording}"
+            pending_mod_type_id = ""
+            continue
+
+        sentence_match = re.match(
+            r"^-?\s*Mod\s*Type\s*(\d+)\s*is\s*(.+)$",
+            line,
+            flags=re.IGNORECASE,
         )
-        return dict(DEFAULT_MOD_TYPE_LINE_BY_ID)
+        if not sentence_match:
+            continue
+
+        mod_type_id = sentence_match.group(1)
+        remainder = sentence_match.group(2).strip()
+
+        bold_match = re.match(r"^\*\*(.+?)\*\*\s*:\s*(.+)$", remainder)
+        if bold_match:
+            mod_type_name = bold_match.group(1).strip()
+            wording = bold_match.group(2).strip()
+        else:
+            parts = [p.strip() for p in remainder.split(":", 1)]
+            if len(parts) == 2:
+                mod_type_name, wording = parts
+            else:
+                # If no colon is present, keep the whole sentence as wording.
+                mod_type_name = "Mod Type"
+                wording = remainder
+
+        if not mod_type_name or not wording:
+            continue
+
+        parsed[mod_type_id] = f"{mod_type_name}: {wording}"
 
     return parsed
+
+
+def load_mainreadme_mod_type_lines(log: "Logger") -> Dict[str, str]:
+    """Load MOD_TYPE_ID wording for main README mod cards.
+
+    Preferred source:
+    - MainReadme-MODTYPE-md-Snippet.md sentence-form lines.
+
+    Fallback:
+    - Per-mod MODTYPE map loader (txt snippet + defaults).
+    """
+    if os.path.isfile(MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH):
+        try:
+            with open(MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH, "r", encoding="utf-8") as f:
+                md = f.read()
+            parsed = _parse_mainreadme_mod_type_lines_from_md_snippet(md)
+            if parsed:
+                return parsed
+            log.warn(
+                "No sentence-form MOD TYPE lines parsed from MainReadme-MODTYPE-md-Snippet.md; "
+                "falling back to per-mod MODTYPE source"
+            )
+        except Exception as ex:
+            log.warn(
+                f"Failed to read {MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH}: {ex}; "
+                "falling back to per-mod MODTYPE source"
+            )
+
+    return load_mod_type_lines_from_modtype_guide(log)
 
 
 def load_readme_snippet(
@@ -511,7 +807,7 @@ def load_aboutme_guide_body(log: Optional["Logger"] = None) -> str:
         DEFAULT_ABOUTME_GUIDE_BODY,
         log,
     )
-    
+
 def load_aboutme_main_guide_body(log: Optional["Logger"] = None) -> str:
     return load_readme_snippet(
         ABOUTME_MAIN_GUIDE_SNIPPET_PATH,
@@ -522,10 +818,54 @@ def load_aboutme_main_guide_body(log: Optional["Logger"] = None) -> str:
 
 
 def load_modtype_guide_body(log: Optional["Logger"] = None) -> str:
+    if os.path.isfile(MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH):
+        return load_readme_snippet(
+            MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH,
+            "Mod Type guide",
+            DEFAULT_MODTYPE_GUIDE_BODY,
+            log,
+        )
+
     return load_readme_snippet(
-        MODTYPE_GUIDE_SNIPPET_PATH,
+        MAINREADME_MODTYPE_GUIDE_SNIPPET_PATH,
         "Mod Type guide",
         DEFAULT_MODTYPE_GUIDE_BODY,
+        log,
+    )
+
+
+def load_modguide_main_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        MODGUIDE_MAIN_SNIPPET_PATH,
+        "Main AGF guide",
+        DEFAULT_MODGUIDE_MAIN_BODY,
+        log,
+    )
+
+
+def load_askforhelp_main_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        ASKFORHELP_MAIN_SNIPPET_PATH,
+        "Main ask-for-help guide",
+        DEFAULT_ASKFORHELP_MAIN_BODY,
+        log,
+    )
+
+
+def load_language_main_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        LANGUAGE_MAIN_SNIPPET_PATH,
+        "Main language support guide",
+        DEFAULT_LANGUAGE_MAIN_BODY,
+        log,
+    )
+
+
+def load_support_main_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        SUPPORT_MAIN_SNIPPET_PATH,
+        "Main support guide",
+        DEFAULT_SUPPORT_MAIN_BODY,
         log,
     )
 
@@ -553,6 +893,45 @@ def load_backup_guide_body(log: Optional["Logger"] = None) -> str:
         BACKUP_GUIDE_SNIPPET_PATH,
         "Backup guide",
         DEFAULT_BACKUP_GUIDE_BODY,
+        log,
+    )
+
+
+def load_help_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        HELP_GUIDE_SNIPPET_PATH,
+        "Help guide",
+        DEFAULT_HELP_GUIDE_BODY,
+        log,
+    )
+
+
+def load_modscope_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        MODSCOPE_GUIDE_SNIPPET_PATH,
+        "Mod Scope guide",
+        DEFAULT_MODSCOPE_GUIDE_BODY,
+        log,
+    )
+
+
+def load_harmony_requirement_warning_body(log: Optional["Logger"] = None) -> str:
+    if os.path.isfile(HARMONY_REQUIREMENT_WARNING_TXT_SNIPPET_PATH):
+        return load_readme_snippet(
+            HARMONY_REQUIREMENT_WARNING_TXT_SNIPPET_PATH,
+            "Harmony requirement warning",
+            DEFAULT_HARMONY_REQUIREMENT_WARNING_BODY,
+            log,
+        )
+
+    return DEFAULT_HARMONY_REQUIREMENT_WARNING_BODY
+
+
+def load_short_guide_body(log: Optional["Logger"] = None) -> str:
+    return load_readme_snippet(
+        MODGUIDE_TEXT_SNIPPET_PATH,
+        "Mod guide text",
+        DEFAULT_SHORT_GUIDE_BODY,
         log,
     )
 
@@ -921,6 +1300,8 @@ def run_writeability_preflight(mode: str, dry_run: bool, log: Logger) -> bool:
         probe_dirs.append(PUBLISH_READY)
     if mode in ("package", "full"):
         probe_dirs.extend([ZIP_OUTPUT, GIGGLEPACK_RELEASE_ROOT_DIR])
+    if mode == "migrate-readmes-once":
+        probe_dirs.extend([STAGING, IN_PROGRESS])
 
     seen: set[str] = set()
     failures: List[str] = []
@@ -1494,17 +1875,300 @@ def maybe_move(src: str, dst: str, dry_run: bool, log: Logger) -> bool:
         return False
 
 
+def _ensure_trailing_blank_count(lines: List[str], count: int) -> None:
+    trailing = 0
+    idx = len(lines) - 1
+    while idx >= 0 and lines[idx] == "":
+        trailing += 1
+        idx -= 1
+
+    if trailing < count:
+        lines.extend([""] * (count - trailing))
+    elif trailing > count:
+        del lines[idx + 1 : idx + 1 + (trailing - count)]
+
+
+def _normalize_list_indentation(text: str) -> str:
+    output: List[str] = []
+    for raw_line in text.splitlines():
+        line = raw_line.rstrip()
+        match = re.match(r"^(\s*)(\d+\.\s+|-\s+)(.*)$", line)
+        if not match:
+            output.append(line)
+            continue
+
+        leading = match.group(1).replace("\t", "    ")
+        marker = match.group(2)
+        body = match.group(3)
+        level = max(0, len(leading) // 2)
+        indent = 2 + (level * 2)
+        output.append((" " * indent) + marker + body)
+    return "\n".join(output)
+
+
+def _apply_divider_spacing(text: str, major_divider: str, minor_divider: str) -> str:
+    lines = text.splitlines()
+    output: List[str] = []
+    idx = 0
+
+    while idx < len(lines):
+        line = lines[idx].rstrip()
+
+        if (
+            line == major_divider
+            and idx + 2 < len(lines)
+            and lines[idx + 1].strip()
+            and lines[idx + 2].rstrip() == major_divider
+        ):
+            if output:
+                _ensure_trailing_blank_count(output, 3)
+            output.append(major_divider)
+            output.append(lines[idx + 1].strip())
+            output.append(major_divider)
+            _ensure_trailing_blank_count(output, 1)
+            idx += 3
+            while idx < len(lines) and not lines[idx].strip():
+                idx += 1
+            continue
+
+        if (
+            line == minor_divider
+            and idx + 2 < len(lines)
+            and lines[idx + 1].strip()
+            and lines[idx + 2].rstrip() == minor_divider
+        ):
+            if output:
+                _ensure_trailing_blank_count(output, 2)
+            output.append(minor_divider)
+            output.append(lines[idx + 1].strip())
+            output.append(minor_divider)
+            _ensure_trailing_blank_count(output, 1)
+            idx += 3
+            while idx < len(lines) and not lines[idx].strip():
+                idx += 1
+            continue
+
+        if line in {major_divider, minor_divider}:
+            if output:
+                _ensure_trailing_blank_count(output, 1)
+            output.append(line)
+            _ensure_trailing_blank_count(output, 1)
+            idx += 1
+            while idx < len(lines) and not lines[idx].strip():
+                idx += 1
+            continue
+
+        output.append(line)
+        idx += 1
+
+    while output and output[0] == "":
+        output.pop(0)
+    while output and output[-1] == "":
+        output.pop()
+    return "\n".join(output)
+
+
+def _should_preserve_unwrapped_line(line: str, major_divider: str, minor_divider: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return True
+    if stripped in {major_divider, minor_divider}:
+        return True
+    # Keep URL-only lines intact, but allow prose lines that include links to wrap.
+    if re.fullmatch(r"(?:https?://\S+|www\.\S+)", stripped, re.IGNORECASE):
+        return True
+    # Keep path-only lines intact; mixed prose/path lines should still wrap.
+    if re.fullmatch(r"(?:[A-Za-z]:[\\/].*|%[A-Za-z0-9_]+%)", stripped):
+        return True
+    return False
+
+
+def _wrap_text_to_width(text: str, width: int, major_divider: str, minor_divider: str) -> str:
+    wrapped: List[str] = []
+    lines = text.splitlines()
+    for raw_line in lines:
+        line = raw_line.rstrip()
+        if _should_preserve_unwrapped_line(line, major_divider, minor_divider) or len(line) <= width:
+            wrapped.append(line)
+            continue
+
+        allow_url_breaks = False
+
+        list_match = re.match(r"^(\s*)(\d+\.\s+|-\s+)(.*)$", line)
+        wrapped_lines: List[str] = []
+        if list_match:
+            leading = list_match.group(1)
+            marker = list_match.group(2)
+            body = list_match.group(3).strip()
+            initial_indent = f"{leading}{marker}"
+            subsequent_indent = " " * len(initial_indent)
+            if not body:
+                wrapped.append(line)
+                continue
+            wrapped_lines = textwrap.wrap(
+                body,
+                width=width,
+                initial_indent=initial_indent,
+                subsequent_indent=subsequent_indent,
+                break_long_words=allow_url_breaks,
+                break_on_hyphens=allow_url_breaks,
+            )
+            wrapped.extend(wrapped_lines)
+            continue
+
+        leading_match = re.match(r"^(\s*)", line)
+        leading = leading_match.group(1) if leading_match else ""
+        body = line[len(leading):].strip()
+        if not body:
+            wrapped.append(line)
+            continue
+        wrapped_lines = textwrap.wrap(
+            body,
+            width=width,
+            initial_indent=leading,
+            subsequent_indent=leading,
+            break_long_words=allow_url_breaks,
+            break_on_hyphens=allow_url_breaks,
+        )
+        wrapped.extend(wrapped_lines)
+
+    return "\n".join(wrapped)
+
+
 def markdown_to_text(md: str) -> str:
+    wrap_width = 72
+    major_divider = "=" * wrap_width
+    minor_divider = "-" * wrap_width
+
     md = re.sub(r"```[\s\S]*?```", "", md)
     md = re.sub(r"!\[[^\]]*\]\([^\)]*\)", "", md)
+    md = re.sub(r"<!--[\s\S]*?-->", "", md)
     md = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"\1: \2", md)
-    md = re.sub(r"[`*_~]", "", md)
-    md = re.sub(r"^---+$", "\n" + "=" * 40 + "\n", md, flags=re.MULTILINE)
+    md = re.sub(r"[`*~]", "", md)
+    md = re.sub(r"^[ \t]*---+[ \t]*\r?$", minor_divider, md, flags=re.MULTILINE)
     md = re.sub(r"^#+\s*", "", md, flags=re.MULTILINE)
     md = re.sub(r"^>\s?", "", md, flags=re.MULTILINE)
-    md = re.sub(r"<[^>]+>", "", md)
-    md = re.sub(r"\n{3,}", "\n\n", md)
+    md = re.sub(r"^[ \t]*={3,}[ \t]*\r?$", major_divider, md, flags=re.MULTILINE)
+    md = re.sub(r"^[ \t]*-{3,}[ \t]*\r?$", minor_divider, md, flags=re.MULTILINE)
+    md = _normalize_list_indentation(md)
+    md = _apply_divider_spacing(md, major_divider, minor_divider)
+    md = _wrap_text_to_width(md, wrap_width, major_divider, minor_divider)
+    md = _center_h1_titles(md, wrap_width)
+    md = re.sub(r"\n{5,}", "\n\n\n\n", md)
     return md.strip()
+
+
+def _center_h1_titles(text: str, width: int = 72) -> str:
+    major_divider = "=" * width
+    lines = text.splitlines()
+    output: List[str] = []
+    idx = 0
+
+    while idx < len(lines):
+        current = lines[idx].rstrip()
+        if (
+            current == major_divider
+            and idx + 2 < len(lines)
+            and lines[idx + 2].rstrip() == major_divider
+        ):
+            title = lines[idx + 1].strip()
+            left_pad = max(0, (width - len(title)) // 2)
+            right_pad = max(0, width - len(title) - left_pad)
+            output.append(major_divider)
+            output.append((" " * left_pad) + title + (" " * right_pad))
+            output.append(major_divider)
+            idx += 3
+            continue
+
+        output.append(current)
+        idx += 1
+
+    return "\n".join(output)
+
+
+def format_changelog_text(changelog_block: str, include_h1: bool = True) -> str:
+    wrap_width = 72
+    major_divider = "=" * wrap_width
+    minor_divider = "-" * wrap_width
+
+    raw_lines = [(line or "").rstrip() for line in (changelog_block or "").splitlines()]
+    version_pattern = re.compile(r"^v\d+(?:\.\d+){0,3}(?:\b.*)?$", re.IGNORECASE)
+
+    sections: List[Tuple[str, List[str]]] = []
+    current_title: Optional[str] = None
+    current_body: List[str] = []
+
+    def _push_current() -> None:
+        nonlocal current_title, current_body
+        if current_title is not None:
+            sections.append((current_title, current_body[:]))
+            current_title = None
+            current_body = []
+
+    for raw in raw_lines:
+        stripped = raw.strip()
+        if not stripped:
+            if current_title is not None and current_body and current_body[-1] != "":
+                current_body.append("")
+            continue
+
+        cleaned = re.sub(r"^#+\s*", "", stripped)
+        cleaned = re.sub(r"\[([^\]]+)\]\(([^\)]+)\)", r"\1: \2", cleaned)
+        cleaned = re.sub(r"[`*~]", "", cleaned).strip()
+        if not cleaned:
+            continue
+        if re.fullmatch(r"[=-]{10,}", cleaned):
+            continue
+        if cleaned.lower() == "changelog":
+            continue
+
+        if version_pattern.match(cleaned):
+            _push_current()
+            current_title = cleaned
+            continue
+
+        if current_title is None:
+            current_title = "Notes"
+        current_body.append(cleaned)
+
+    _push_current()
+
+    if not sections:
+        sections = [("Notes", ["- Add changelog entries here."])]
+
+    output: List[str] = []
+    if include_h1:
+        centered_title = _center_h1_titles("\n".join([major_divider, "CHANGELOG", major_divider]), wrap_width).splitlines()[1]
+        output = [major_divider, centered_title, major_divider, ""]
+
+    for idx, (title, body_lines) in enumerate(sections):
+        if idx > 0:
+            # H3 rule: single 72-char divider with one blank line above and below.
+            output.extend(["", minor_divider, ""])
+
+        output.append(title)
+        body_text = "\n".join(body_lines).strip()
+        if not body_text:
+            body_text = "- Add changelog entries here."
+
+        normalized_body_lines: List[str] = []
+        for raw_body_line in body_text.splitlines():
+            stripped_body = raw_body_line.strip()
+            if not stripped_body:
+                normalized_body_lines.append("")
+                continue
+            if re.match(r"^(?:[-*]\s+|\d+\.\s+)", stripped_body):
+                if stripped_body.startswith("* "):
+                    stripped_body = "- " + stripped_body[2:]
+                normalized_body_lines.append("  " + stripped_body)
+            else:
+                normalized_body_lines.append("  - " + stripped_body)
+
+        normalized_body = "\n".join(normalized_body_lines).strip("\n")
+        normalized_body = _wrap_text_to_width(normalized_body, wrap_width, major_divider, minor_divider)
+        output.extend(normalized_body.splitlines())
+
+    return "\n".join(output).strip()
 
 
 def format_blockquote(text: str) -> str:
@@ -1512,6 +2176,147 @@ def format_blockquote(text: str) -> str:
         return ""
     lines = text.splitlines()
     return "\n".join(f"> {line}" if line.strip() else ">" for line in lines)
+
+
+def format_quote_for_readme(text: str) -> str:
+    if not text.strip():
+        return ""
+    normalized = " ".join(line.strip() for line in text.splitlines() if line.strip())
+    if not normalized:
+        return ""
+    if normalized.startswith('"') and normalized.endswith('"') and len(normalized) >= 2:
+        return normalized
+    stripped = normalized.strip('"')
+    return f'"{stripped}"'
+
+
+def build_title_card_callout_block_for_readme(quote_text: str) -> str:
+    """Render the intro callout block with deterministic spacing.
+
+    Rules:
+    - Quote present: one blank line above quote, one blank line between quote and NOTE.
+    - Quote missing: keep a two-blank-line pause before NOTE.
+    - Template owns the single blank line after NOTE before the next section divider.
+    """
+    note_line = "NOTE: AGF Mod Guide and Changelog are further below."
+    if quote_text.strip():
+        return "\n".join([quote_text.strip(), "", note_line])
+    return "\n".join(["", note_line])
+
+
+def _ensure_sentence(text: str) -> str:
+    cleaned = re.sub(r"\s+", " ", text).strip()
+    if not cleaned:
+        return ""
+    return cleaned if re.search(r"[.!?]$", cleaned) else f"{cleaned}."
+
+
+def normalize_safety_value_for_readme(value: str) -> str:
+    normalized = (value or "").strip().lower()
+    if normalized in {"safe", "yes", "y", "true", "1"}:
+        return "Yes (Safe)"
+    if normalized in {"dangerous", "no", "n", "false", "0"}:
+        return "No (Dangerous)"
+    if not normalized or normalized in {"missingdata", "tbd", "none"}:
+        return "Unknown"
+    return str(value).strip()
+
+
+def format_dependencies_block_for_readme(value: str) -> str:
+    raw = (value or "").strip()
+    if has_harmony_dependency(raw):
+        return load_harmony_requirement_warning_body()
+
+    normalized_raw = raw.lower()
+
+    placeholder_tokens = {"", "0", "none", "missingdata", "tbd", "n/a", "na"}
+    if normalized_raw in placeholder_tokens:
+        return "- Dependencies: None, works standalone."
+
+    parts = [part.strip() for part in re.split(r"[;\n|,]+", raw) if part.strip()]
+    cleaned: List[str] = []
+    for part in parts:
+        token = part.strip()
+        token_lower = token.lower()
+        if token_lower in placeholder_tokens:
+            continue
+        if token_lower == "x":
+            cleaned.append("0_TFP_Harmony (built-in game mod)")
+            continue
+        cleaned.append(token)
+
+    if not cleaned:
+        return "- Dependencies: None, works standalone."
+
+    if len(cleaned) == 1:
+        return f"- Dependencies: {cleaned[0]}"
+
+    lines = ["- Dependencies:"]
+    lines.extend(f"  - {part}" for part in cleaned)
+    return "\n".join(lines)
+
+
+def has_harmony_dependency(value: str) -> bool:
+    raw = (value or "").strip()
+    if not raw:
+        return False
+
+    if raw.lower() == "x":
+        return True
+
+    for part in re.split(r"[;\n|,]+", raw):
+        token = part.strip().lower()
+        if not token:
+            continue
+        if token == "x":
+            return True
+        if re.search(r"\b0[_\-\s]*tfp[_\-\s]*harmony\b", token):
+            return True
+        if token == "harmony" or token.startswith("harmony ") or token.endswith(" harmony"):
+            return True
+
+    return False
+
+
+def format_mod_type_block_for_readme(mod_type_line: str) -> str:
+    raw = (mod_type_line or "").strip()
+    if raw in {"0", "TBD"}:
+        return "- Mod Type: TBD"
+    if not raw or raw == "MISSINGDATA":
+        return "- Mod Type: MISSINGDATA"
+
+    type_name = raw
+    details = ""
+    if ":" in raw:
+        type_name, details = raw.split(":", 1)
+        type_name = type_name.strip()
+        details = details.strip()
+
+    lines = [f"- Mod Type: {type_name or raw}"]
+    if not details:
+        return "\n".join(lines)
+
+    detail_lines: List[str] = []
+    details_no_parenthetical = re.sub(r"\([^()]*\)", "", details)
+    for segment in details_no_parenthetical.split(";"):
+        sentence = _ensure_sentence(segment.strip(" ."))
+        if sentence:
+            detail_lines.append(sentence)
+
+    for match in re.finditer(r"\(([^()]*)\)", details):
+        sentence = _ensure_sentence(match.group(1).strip(" ."))
+        if sentence:
+            detail_lines.append(sentence)
+
+    if not detail_lines:
+        sentence = _ensure_sentence(details)
+        if sentence:
+            detail_lines.append(sentence)
+
+    for sentence in detail_lines:
+        lines.append(f"  - {sentence}")
+
+    return "\n".join(lines)
 
 
 def markdown_features_to_html(features_text: str) -> str:
@@ -1552,7 +2357,144 @@ def extract_readme_block(readme_path: str, start_marker: str, end_marker: str) -
     return ""
 
 
-def sanitize_preserved_readme_block(block: str) -> str:
+def _normalize_heading_label(text: str) -> str:
+    label = re.sub(r"^#+\s*", "", text).strip()
+    label = re.sub(r"^\d+\.\s*", "", label).strip()
+    return label.lower()
+
+
+def extract_markdown_section_by_headings(readme_path: str, headings: Tuple[str, ...]) -> str:
+    if not os.path.exists(readme_path):
+        return ""
+    try:
+        with open(readme_path, "r", encoding="utf-8") as f:
+            lines = f.read().splitlines()
+    except Exception:
+        return ""
+
+    heading_set = {_normalize_heading_label(h) for h in headings if h.strip()}
+    start_idx: Optional[int] = None
+    for idx, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith("##") and _normalize_heading_label(stripped) in heading_set:
+            start_idx = idx + 1
+            break
+
+    if start_idx is None:
+        return ""
+
+    collected: List[str] = []
+    for line in lines[start_idx:]:
+        stripped = line.strip()
+        if stripped.startswith("##"):
+            break
+        if stripped in {"---", "=" * 40}:
+            continue
+        collected.append(line.rstrip())
+
+    return "\n".join(collected).strip()
+
+
+def extract_txt_section(readme_path: str, headings: Tuple[str, ...], stop_headings: Tuple[str, ...]) -> str:
+    if not os.path.exists(readme_path):
+        return ""
+    try:
+        with open(readme_path, "r", encoding="utf-8") as f:
+            lines = f.read().splitlines()
+    except Exception:
+        return ""
+
+    heading_set = {h.strip().lower() for h in headings if h.strip()}
+    stop_set = {h.strip().lower() for h in stop_headings if h.strip()}
+
+    start_idx: Optional[int] = None
+    for idx, line in enumerate(lines):
+        if line.strip().lower() in heading_set:
+            start_idx = idx + 1
+            break
+
+    if start_idx is None:
+        return ""
+
+    collected: List[str] = []
+    for line in lines[start_idx:]:
+        stripped = line.strip()
+        lowered = stripped.lower()
+        if lowered in stop_set:
+            break
+        if re.fullmatch(r"[-=]{10,}", stripped):
+            continue
+        collected.append(line.rstrip())
+
+    return "\n".join(collected).strip()
+
+
+def _normalize_preserved_list_indentation(block: str) -> str:
+    """Normalize preserved list indentation without flattening nested bullets."""
+    if not block:
+        return block
+
+    lines = block.splitlines()
+    bullet_match_re = re.compile(r"^(\s*)([-*]|\d+\.)\s+(.*)$")
+
+    normalized_lines: List[str] = []
+    previous_bullet_depth = 0
+    previous_bullet_indent = 0
+    previous_was_label = False
+    for raw_line in lines:
+        line = raw_line.rstrip()
+        stripped = line.strip()
+
+        if not stripped:
+            if normalized_lines and normalized_lines[-1] != "":
+                normalized_lines.append("")
+            previous_was_label = False
+            continue
+
+        if re.fullmatch(r"[-=]{10,}", stripped):
+            if normalized_lines and normalized_lines[-1] != "":
+                normalized_lines.append("")
+            previous_was_label = False
+            continue
+
+        bullet_match = bullet_match_re.match(line)
+        if bullet_match:
+            leading = bullet_match.group(1)
+            marker = bullet_match.group(2)
+            body = bullet_match.group(3).strip()
+            leading_spaces = len(leading)
+            if previous_was_label:
+                depth = 1
+            elif previous_bullet_depth == 0 and leading_spaces > 0:
+                depth = 1 if leading_spaces > previous_bullet_indent else 0
+            elif leading_spaces > previous_bullet_indent:
+                depth = previous_bullet_depth + 1
+            elif leading_spaces < previous_bullet_indent:
+                depth = max(0, previous_bullet_depth - 1)
+            else:
+                depth = previous_bullet_depth
+
+            indent = " " * (2 + depth * 2)
+            normalized_lines.append(f"{indent}{marker} {body}" if body else f"{indent}{marker}")
+            previous_bullet_depth = depth
+            previous_bullet_indent = leading_spaces
+            previous_was_label = False
+            continue
+
+        if normalized_lines and re.match(r"^(\s*)([-*]|\d+\.)\s+", normalized_lines[-1]) and not re.fullmatch(r".*:\s*$", stripped):
+            normalized_lines[-1] = normalized_lines[-1].rstrip() + " " + stripped
+            previous_was_label = False
+            continue
+
+        normalized_lines.append(stripped)
+        previous_was_label = bool(re.fullmatch(r"[^:]+:", stripped))
+        previous_bullet_depth = 0
+        previous_bullet_indent = 0
+
+    return "\n".join(normalized_lines).strip()
+
+
+def sanitize_preserved_readme_block(block: str, flatten_list_markers: bool = False) -> str:
     """Clean malformed legacy markers from preserved README sections."""
     if not block:
         return block
@@ -1560,10 +2502,103 @@ def sanitize_preserved_readme_block(block: str) -> str:
     # Some legacy files contain leftover chevrons right after section markers.
     cleaned = re.sub(r"^[ \t]*>+[ \t]*", "", block)
     cleaned = re.sub(r"^\s*>+\s*$", "", cleaned, flags=re.MULTILINE)
+    # Keep repeated regen idempotent by resetting inherited section indentation.
+    cleaned = textwrap.dedent(cleaned)
+    if flatten_list_markers:
+        cleaned = re.sub(r"(?m)^[ \t]+(?=(?:[-*]\s+|\d+\.\s+))", "", cleaned)
+        bullet_line_re = re.compile(r"^(?:[-*]\s+|\d+\.\s+)")
+        bullet_body_re = re.compile(r"^(?:[-*]\s+|\d+\.\s+)(.*)$")
+        merged_lines: List[str] = []
+        for raw_line in cleaned.splitlines():
+            stripped = raw_line.strip()
+            if not stripped:
+                if merged_lines and merged_lines[-1] != "":
+                    merged_lines.append("")
+                continue
+
+            # Divider artifacts should not be merged into nearby bullets.
+            if re.fullmatch(r"[-=]{10,}", stripped):
+                continue
+
+            if bullet_line_re.match(stripped):
+                # Repair malformed wrapped bullets that were accidentally promoted
+                # to nested list items in previous generations (for example:
+                # '- items' / '- inside) ...').
+                curr_body_match = bullet_body_re.match(stripped)
+                curr_body = (curr_body_match.group(1).strip() if curr_body_match else "")
+                if merged_lines and bullet_line_re.match(merged_lines[-1]):
+                    prev_body_match = bullet_body_re.match(merged_lines[-1].strip())
+                    prev_body = (prev_body_match.group(1).strip() if prev_body_match else "")
+                    prev_tail = prev_body.rstrip()
+                    continuation_cue = bool(
+                        re.search(r"(?:\b(?:and|or|both|with|without|to|for|from|in|on|of|by|than|not)\b|\()$", prev_tail, re.IGNORECASE)
+                    ) or not re.search(r"[.!?]$", prev_tail)
+                    looks_like_fragment = bool(re.match(r"^[a-z0-9]", curr_body))
+                    if looks_like_fragment and len(curr_body) <= 60 and continuation_cue:
+                        merged_lines[-1] = merged_lines[-1].rstrip() + " " + curr_body
+                        continue
+
+                merged_lines.append(stripped)
+                continue
+
+            if merged_lines and bullet_line_re.match(merged_lines[-1]):
+                merged_lines[-1] = merged_lines[-1].rstrip() + " " + stripped
+                continue
+
+            merged_lines.append(stripped)
+
+        cleaned = "\n".join(merged_lines)
+    else:
+        cleaned = _normalize_preserved_list_indentation(cleaned)
     cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
-    if cleaned and not cleaned.startswith("\n"):
-        cleaned = "\n" + cleaned
-    return cleaned
+    return cleaned.strip()
+
+
+def remove_standalone_bullet_line(block: str) -> str:
+    """Remove legacy '- Works standalone.' bullets from preserved README blocks.
+
+    If extra text was accidentally appended on the same line, keep that tail text.
+    """
+    if not block:
+        return block
+
+    cleaned_lines: List[str] = []
+    for raw_line in block.splitlines():
+        line = raw_line.rstrip()
+        match = re.match(r"^(\s*(?:[-*]|\d+\.)\s+)Works standalone\.\s*(.*)$", line)
+        if not match:
+            cleaned_lines.append(line)
+            continue
+
+        trailing = (match.group(2) or "").strip()
+        if trailing:
+            cleaned_lines.append(match.group(1) + trailing)
+
+    return "\n".join(cleaned_lines).strip()
+
+
+def remove_feature_pointer_lines(block: str) -> str:
+    """Remove pointer-only bullets from FEATURES blocks.
+
+    Keep these lines available for other contexts (for example publishing/image
+    surfaces) by only stripping them from per-mod README FEATURES content.
+    """
+    if not block:
+        return block
+
+    pointer_patterns = (
+        re.compile(r"^(\s*(?:[-*]|\d+\.)\s+)See this mod's README for full details\.\s*$", re.IGNORECASE),
+        re.compile(r"^(\s*(?:[-*]|\d+\.)\s+)See Other Details below for full feature details\.\s*$", re.IGNORECASE),
+    )
+
+    cleaned_lines: List[str] = []
+    for raw_line in block.splitlines():
+        line = raw_line.rstrip()
+        if any(pattern.match(line) for pattern in pointer_patterns):
+            continue
+        cleaned_lines.append(line)
+
+    return "\n".join(cleaned_lines).strip()
 
 
 def extract_mod_description_from_modinfo(modinfo_path: str) -> str:
@@ -1578,6 +2613,163 @@ def extract_mod_description_from_modinfo(modinfo_path: str) -> str:
     except Exception:
         return ""
     return ""
+
+
+def extract_one_line_summary_from_readme_txt(readme_txt_path: str) -> str:
+    """Extract the one-line summary from README.txt (line below top H1 wrapper)."""
+    if not os.path.exists(readme_txt_path):
+        return ""
+    try:
+        with open(readme_txt_path, "r", encoding="utf-8") as f:
+            lines = f.read().splitlines()
+    except Exception:
+        return ""
+
+    if not lines:
+        return ""
+
+    start_idx = 0
+    h1_dividers = [
+        i for i, raw in enumerate(lines)
+        if len(raw.strip()) >= 10 and re.fullmatch(r"=+", raw.strip())
+    ]
+    if len(h1_dividers) >= 2 and h1_dividers[1] > h1_dividers[0]:
+        start_idx = h1_dividers[1] + 1
+
+    end_idx = len(lines)
+    for i in range(start_idx, len(lines)):
+        stripped = lines[i].strip()
+        if len(stripped) >= 10 and re.fullmatch(r"-+", stripped):
+            end_idx = i
+            break
+
+    for i in range(start_idx, end_idx):
+        stripped = lines[i].strip()
+        if not stripped:
+            continue
+        if len(stripped) >= 10 and re.fullmatch(r"[=-]+", stripped):
+            continue
+        return re.sub(r"\s+", " ", stripped).strip()
+
+    return ""
+
+
+def resolve_mod_description(mod_path: str, modinfo_path: str) -> str:
+    """Prefer README.txt one-line summary; fall back to ModInfo Description."""
+    readme_summary = extract_one_line_summary_from_readme_txt(os.path.join(mod_path, "README.txt")).strip()
+    if readme_summary:
+        return readme_summary
+    return extract_mod_description_from_modinfo(modinfo_path).strip()
+
+
+def sync_modinfo_description_from_summary(
+    modinfo_path: str,
+    summary: str,
+    dry_run: bool,
+    log: "Logger",
+) -> None:
+    """Sync ModInfo.xml <Description value> to match the README summary when it differs."""
+    summary = (summary or "").strip()
+    if not summary or not os.path.exists(modinfo_path):
+        return
+
+    current = extract_mod_description_from_modinfo(modinfo_path).strip()
+    if current == summary:
+        return
+
+    try:
+        with open(modinfo_path, "r", encoding="utf-8") as f:
+            xml_text = f.read()
+    except Exception as ex:
+        log.warn(f"Could not read ModInfo.xml for description sync ({modinfo_path}): {ex}")
+        return
+
+    escaped_summary = escape(summary, {'"': "&quot;"})
+    updated_text, substitutions = re.subn(
+        r'(<Description\s+value=")[^"]*("\s*/>)',
+        rf'\1{escaped_summary}\2',
+        xml_text,
+        count=1,
+    )
+    if substitutions == 0:
+        lines = xml_text.splitlines()
+        if not lines:
+            log.warn(f"Could not locate Description tag for sync in {modinfo_path}")
+            return
+
+        version_idx = next((i for i, line in enumerate(lines) if "<Version" in line), None)
+        insert_idx: Optional[int] = None
+        removed_orphan_text = False
+
+        if version_idx is not None:
+            insert_idx = version_idx + 1
+            while insert_idx < len(lines):
+                stripped = lines[insert_idx].strip()
+                if not stripped:
+                    insert_idx += 1
+                    continue
+                if stripped.startswith("<"):
+                    break
+                lines.pop(insert_idx)
+                removed_orphan_text = True
+
+        if insert_idx is None:
+            for i, line in enumerate(lines):
+                stripped = line.strip()
+                if stripped.startswith("<Author") or stripped.startswith("<Website") or stripped.startswith("</xml"):
+                    insert_idx = i
+                    break
+
+        if insert_idx is None:
+            insert_idx = len(lines)
+
+        desc_indent = "  "
+        if insert_idx < len(lines):
+            indent_match = re.match(r"^(\s*)<", lines[insert_idx])
+            if indent_match:
+                desc_indent = indent_match.group(1)
+        elif version_idx is not None:
+            indent_match = re.match(r"^(\s*)<", lines[version_idx])
+            if indent_match:
+                desc_indent = indent_match.group(1)
+
+        lines.insert(insert_idx, f'{desc_indent}<Description value="{escaped_summary}" />')
+        updated_text = "\n".join(lines)
+        if xml_text.endswith("\n"):
+            updated_text += "\n"
+
+        if dry_run:
+            msg = (
+                "[DRYRUN] Would insert missing ModInfo Description from README summary for "
+                f"{os.path.basename(os.path.dirname(modinfo_path))}"
+            )
+            if removed_orphan_text:
+                msg += " (and remove malformed orphan text)"
+            log.info(msg)
+            return
+
+        atomic_write_text(modinfo_path, updated_text, encoding="utf-8")
+        msg = (
+            "Inserted missing ModInfo Description from README summary for "
+            f"{os.path.basename(os.path.dirname(modinfo_path))}"
+        )
+        if removed_orphan_text:
+            msg += " and removed malformed orphan text"
+        log.info(msg)
+        return
+
+    if dry_run:
+        log.info(
+            "[DRYRUN] Would sync ModInfo Description from README summary for "
+            f"{os.path.basename(os.path.dirname(modinfo_path))}"
+        )
+        return
+
+    atomic_write_text(modinfo_path, updated_text, encoding="utf-8")
+    log.info(
+        "Synced ModInfo Description from README summary for "
+        f"{os.path.basename(os.path.dirname(modinfo_path))}"
+    )
 
 
 def zip_download_link(zip_name: str) -> str:
@@ -2534,7 +3726,7 @@ def normalize_compat_csv(
             new_row = {fn: "TBD" for fn in fieldnames}
             new_row["MOD_NAME"] = mod
             if "MOD_TYPE_ID" in fieldnames:
-                new_row["MOD_TYPE_ID"] = "0"
+                new_row["MOD_TYPE_ID"] = "TBD"
             new_row["QUOTE_FILE"] = f"{mod}.txt"
             rows.append(new_row)
             log.stats.csv_added_rows += 1
@@ -2543,7 +3735,7 @@ def normalize_compat_csv(
         row["QUOTE_FILE"] = f"{row.get('MOD_NAME', 'TBD')}.txt"
         for fn in fieldnames:
             if not row.get(fn):
-                row[fn] = "0" if fn == "MOD_TYPE_ID" else "TBD"
+                row[fn] = "TBD"
 
     def _is_missing(value: str) -> bool:
         text = str(value or "").strip()
@@ -2570,8 +3762,11 @@ def normalize_compat_csv(
 
         mod_type_id = str(row.get("MOD_TYPE_ID", "") or "").strip()
         if not mod_type_id:
-            row["MOD_TYPE_ID"] = "0"
-            mod_type_id = "0"
+            row["MOD_TYPE_ID"] = "TBD"
+            mod_type_id = "TBD"
+        elif mod_type_id == "0":
+            row["MOD_TYPE_ID"] = "TBD"
+            mod_type_id = "TBD"
         if _is_missing(mod_type_id):
             continue
 
@@ -2812,15 +4007,13 @@ def generate_mod_readmes(
     dry_run: bool,
     log: Logger,
     mod_dirs: Optional[Tuple[str, ...]] = None,
+    legacy_cleanup_allowlist: Optional[Set[str]] = None,
+    delete_legacy_readmes: bool = True,
 ) -> None:
-    log.info("Generate per-mod README.md and ReadableReadMe.txt")
-    aboutme_guide_body = load_aboutme_guide_body(log)
+    log.info("Generate per-mod README.txt")
+    modscope_guide_body = load_modscope_guide_body(log)
+    short_guide_body = load_short_guide_body(log)
     mod_type_line_by_id = load_mod_type_lines_from_modtype_guide(log)
-    modtype_guide_body = load_modtype_guide_body(log)
-    install_guide_body = load_install_guide_body(log)
-    removal_guide_body = load_removal_guide_body(log)
-    update_guide_body = load_update_guide_body(log)
-    backup_guide_body = load_backup_guide_body(log)
 
     if not os.path.exists(MOD_README_TEMPLATE):
         log.error(f"Missing required template: {MOD_README_TEMPLATE}")
@@ -2844,6 +4037,8 @@ def generate_mod_readmes(
             mod_name, mod_version = parse_modinfo(modinfo_path, folder_name)
             mod_display_name = get_modinfo_display_name(modinfo_path, mod_name)
             mod_version_display = format_version_for_display(mod_version, mod_display_name)
+            mod_description = resolve_mod_description(mod_path, modinfo_path)
+            sync_modinfo_description_from_summary(modinfo_path, mod_description, dry_run, log)
             base_name = get_base_mod_name(folder_name)
             zip_name = f"{base_name}.zip"
             download_link = zip_download_link(zip_name)
@@ -2861,13 +4056,19 @@ def generate_mod_readmes(
             if not client_side or client_side == "MISSINGDATA":
                 client_side = compat.get("CLIENT_REQUIRED", "MISSINGDATA")
             mod_type_id = str(compat.get("MOD_TYPE_ID", "MISSINGDATA") or "").strip()
+            if mod_type_id == "0":
+                mod_type_id = "TBD"
             mod_type_line = mod_type_line_by_id.get(mod_type_id)
             if not mod_type_line:
                 if mod_type_id and mod_type_id not in {"MISSINGDATA", "TBD"}:
                     log.warn(f"Invalid MOD_TYPE_ID '{mod_type_id}' for {base_name}; using MISSINGDATA")
-                mod_type_line = "MISSINGDATA"
-            safe_to_install = compat.get("SAFE_TO_INSTALL", "MISSINGDATA")
-            safe_to_remove = compat.get("SAFE_TO_REMOVE", "MISSINGDATA")
+                mod_type_line = "MISSINGDATA" if mod_type_id == "MISSINGDATA" else "TBD"
+            mod_type_block = format_mod_type_block_for_readme(mod_type_line)
+            safe_to_install = normalize_safety_value_for_readme(compat.get("SAFE_TO_INSTALL", "MISSINGDATA"))
+            safe_to_remove = normalize_safety_value_for_readme(compat.get("SAFE_TO_REMOVE", "MISSINGDATA"))
+            dependencies_value = compat.get("DEPENDENCIES", "MISSINGDATA")
+            dependencies_block = format_dependencies_block_for_readme(dependencies_value)
+            harmony_requirement_warning_block = ""
             unique = compat.get("UNIQUE", "MISSINGDATA")
 
             quote_file_name = compat.get("QUOTE_FILE", f"{base_name}.txt")
@@ -2876,27 +4077,37 @@ def generate_mod_readmes(
             if not os.path.exists(quote_file_path) and quote_file_name != f"{base_name}.txt" and os.path.exists(fallback_quote_path):
                 quote_file_path = fallback_quote_path
 
-            quote_md = ""
+            quote_text_rendered = ""
             if os.path.exists(quote_file_path):
                 try:
                     with open(quote_file_path, "r", encoding="utf-8") as f:
                         quote_text = f.read().strip()
                     if quote_text:
-                        quote_md = format_blockquote(quote_text)
+                        quote_text_rendered = format_quote_for_readme(quote_text)
                 except Exception as ex:
                     log.warn(f"Failed reading quote for {folder_name}: {ex}")
 
             readme_content = template
-            readme_content = readme_content.replace(ABOUTME_GUIDE_PLACEHOLDER, aboutme_guide_body)
-            readme_content = readme_content.replace(MODTYPE_GUIDE_PLACEHOLDER, modtype_guide_body)
-            readme_content = readme_content.replace(INSTALL_GUIDE_PLACEHOLDER, install_guide_body)
-            readme_content = readme_content.replace(REMOVAL_GUIDE_PLACEHOLDER, removal_guide_body)
-            readme_content = readme_content.replace(UPDATE_GUIDE_PLACEHOLDER, update_guide_body)
-            readme_content = readme_content.replace(BACKUP_GUIDE_PLACEHOLDER, backup_guide_body)
+            readme_content = readme_content.replace(MODSCOPE_GUIDE_PLACEHOLDER, modscope_guide_body)
+            readme_content = readme_content.replace(SHORT_GUIDE_PLACEHOLDER, SHORT_GUIDE_RAW_TOKEN)
+            # Backward compatibility for older templates.
+            readme_content = readme_content.replace(LEGACY_SHORT_GUIDE_PLACEHOLDER, SHORT_GUIDE_RAW_TOKEN)
             readme_content = readme_content.replace("{{MOD_NAME}}", mod_name)
+            readme_content = readme_content.replace("{{MOD_NAME_UPPER}}", mod_name.upper())
             readme_content = readme_content.replace("{{MOD_VERSION}}", mod_version_display)
+            readme_content = readme_content.replace("{{MOD_DESCRIPTION}}", mod_description)
             readme_content = readme_content.replace("{{DOWNLOAD_LINK}}", download_link)
-            readme_content = readme_content.replace("{{QUOTE}}", quote_md)
+
+            title_card_callout_block = build_title_card_callout_block_for_readme(quote_text_rendered)
+            if TITLE_CARD_CALLOUT_PLACEHOLDER in readme_content:
+                readme_content = readme_content.replace(TITLE_CARD_CALLOUT_PLACEHOLDER, title_card_callout_block)
+            else:
+                # Backward compatibility for older templates that still carry {{QUOTE}} + static NOTE text.
+                if quote_text_rendered:
+                    readme_content = readme_content.replace("{{QUOTE}}", quote_text_rendered)
+                else:
+                    readme_content = readme_content.replace("\n\n{{QUOTE}}\n\n", "\n\n")
+                    readme_content = readme_content.replace("{{QUOTE}}", "")
             readme_content = readme_content.replace("{{TESTED_GAME_VERSION}}", tested_game_version)
             readme_content = readme_content.replace("{{EAC_FRIENDLY}}", eac_friendly)
             readme_content = readme_content.replace("{{SERVER_SIDE_PLAYER}}", server_side_player)
@@ -2904,60 +4115,159 @@ def generate_mod_readmes(
             readme_content = readme_content.replace("{{CLIENT_SIDE}}", client_side)
             readme_content = readme_content.replace("{{MOD_TYPE_ID}}", mod_type_id)
             readme_content = readme_content.replace("{{MOD_TYPE_LINE}}", mod_type_line)
+            readme_content = readme_content.replace("{{MOD_TYPE_BLOCK}}", mod_type_block)
             # Backward compatibility for older templates.
             readme_content = readme_content.replace("{{SERVER_SIDE}}", server_side_player)
             readme_content = readme_content.replace("{{CLIENT_REQUIRED}}", client_side)
             readme_content = readme_content.replace("{{MOD_TYPE}}", mod_type_line)
             readme_content = readme_content.replace("{{SAFE_TO_INSTALL}}", safe_to_install)
             readme_content = readme_content.replace("{{SAFE_TO_REMOVE}}", safe_to_remove)
+            readme_content = readme_content.replace("{{DEPENDENCIES_BLOCK}}", dependencies_block)
+            readme_content = readme_content.replace(
+                HARMONY_REQUIREMENT_WARNING_PLACEHOLDER,
+                harmony_requirement_warning_block,
+            )
             readme_content = readme_content.replace("{{UNIQUE}}", unique)
 
-            readme_path = os.path.join(mod_path, "README.md")
-            features_summary_block = extract_readme_block(readme_path, "<!-- FEATURES-SUMMARY START -->", "<!-- FEATURES-SUMMARY END -->")
-            features_detailed_block = extract_readme_block(readme_path, "<!-- FEATURES-DETAILED START -->", "<!-- FEATURES-DETAILED END -->")
-            changelog_block = extract_readme_block(readme_path, "<!-- CHANGELOG START -->", "<!-- CHANGELOG END -->")
+            readme_md_path = os.path.join(mod_path, "README.md")
+            readme_txt_path = os.path.join(mod_path, "README.txt")
+            features_summary_block = extract_readme_block(readme_md_path, "<!-- FEATURES-SUMMARY START -->", "<!-- FEATURES-SUMMARY END -->")
+            features_detailed_block = extract_readme_block(readme_md_path, "<!-- FEATURES-DETAILED START -->", "<!-- FEATURES-DETAILED END -->")
+            changelog_block = extract_readme_block(readme_md_path, "<!-- CHANGELOG START -->", "<!-- CHANGELOG END -->")
 
-            features_summary_block = sanitize_preserved_readme_block(features_summary_block)
+            if not changelog_block:
+                changelog_block = extract_markdown_section_by_headings(
+                    readme_md_path,
+                    ("Changelog (latest)", "Changelog"),
+                )
+            if not changelog_block:
+                changelog_block = extract_txt_section(
+                    readme_txt_path,
+                    ("Changelog (latest)", "Changelog"),
+                    (
+                        "FEATURES",
+                        "Features",
+                        "OTHER DETAILS",
+                        "Other Details",
+                        "QUICK GUIDE",
+                        "AGF MOD GUIDE",
+                        "A. Install Mods",
+                    ),
+                )
+
+            if not features_summary_block:
+                features_summary_block = extract_markdown_section_by_headings(
+                    readme_md_path,
+                    ("Features Summary", "Features"),
+                )
+            if not features_summary_block:
+                features_summary_block = extract_txt_section(
+                    readme_txt_path,
+                    ("Features", "Features Summary"),
+                    (
+                        "Deeper Details",
+                        "Other Details",
+                        "Features Details",
+                        "QUICK GUIDE",
+                        "AGF MOD GUIDE",
+                        "Full Guide",
+                        "Quick Guide (Install / Help / Backups / Update / Remove / EAC / Support)",
+                        "A. Install Mods",
+                    ),
+                )
+            if not features_detailed_block:
+                features_detailed_block = extract_markdown_section_by_headings(
+                    readme_md_path,
+                    ("Features Details", "Deeper Details", "Other Details"),
+                )
+            if not features_detailed_block:
+                features_detailed_block = extract_txt_section(
+                    readme_txt_path,
+                    ("Deeper Details", "Other Details", "Features Details"),
+                    (
+                        "QUICK GUIDE",
+                        "AGF MOD GUIDE",
+                        "Full Guide",
+                        "Quick Guide (Install / Help / Backups / Update / Remove / EAC / Support)",
+                        "A. Install Mods",
+                    ),
+                )
+
+            features_summary_block = sanitize_preserved_readme_block(features_summary_block, flatten_list_markers=True)
+            features_summary_block = remove_standalone_bullet_line(features_summary_block)
+            features_summary_block = remove_feature_pointer_lines(features_summary_block)
+            # Preserve nested bullets in OTHER DETAILS (for example Keyboard/Controller sub-lists).
             features_detailed_block = sanitize_preserved_readme_block(features_detailed_block)
-            changelog_block = sanitize_preserved_readme_block(changelog_block)
+            features_detailed_block = remove_standalone_bullet_line(features_detailed_block)
+            # Flatten legacy nested list indentation so changelog bullets stay uniform on regen.
+            changelog_block = sanitize_preserved_readme_block(changelog_block, flatten_list_markers=True)
 
-            if features_summary_block:
-                readme_content = re.sub(
-                    r"(<!-- FEATURES-SUMMARY START -->)([\s\S]*?)(<!-- FEATURES-SUMMARY END -->)",
-                    r"\1" + features_summary_block + r"\3",
-                    readme_content,
-                    flags=re.MULTILINE,
-                )
-            if features_detailed_block:
-                readme_content = re.sub(
-                    r"(<!-- FEATURES-DETAILED START -->)([\s\S]*?)(<!-- FEATURES-DETAILED END -->)",
-                    r"\1" + features_detailed_block + r"\3",
-                    readme_content,
-                    flags=re.MULTILINE,
-                )
-            if changelog_block:
-                readme_content = re.sub(
-                    r"(<!-- CHANGELOG START -->)([\s\S]*?)(<!-- CHANGELOG END -->)",
-                    r"\1" + changelog_block + r"\3",
-                    readme_content,
-                    flags=re.MULTILINE,
+            if features_summary_block.strip():
+                features_body = features_summary_block.strip()
+            else:
+                fallback_feature = _ensure_sentence(mod_description) or "Feature summary coming soon."
+                features_body = f"- {fallback_feature}"
+            deeper_details_body = features_detailed_block.strip()
+            other_details_section = ""
+            if deeper_details_body:
+                other_details_section = (
+                    "------------------------------------------------------------\n"
+                    "OTHER DETAILS\n"
+                    "------------------------------------------------------------\n\n"
+                    f"{deeper_details_body}\n"
                 )
 
-            txt_path = os.path.join(mod_path, "ReadableReadMe.txt")
+            readme_content = readme_content.replace("{{FEATURES_BODY}}", features_body)
+            readme_content = readme_content.replace(OTHER_DETAILS_SECTION_PLACEHOLDER, other_details_section)
+            # Backward compatibility for older templates.
+            readme_content = readme_content.replace("{{DEEPER_DETAILS_BODY}}", deeper_details_body)
+            template_has_changelog_placeholder = CHANGELOG_BODY_PLACEHOLDER in readme_content
+
+            changelog_body_content = format_changelog_text(changelog_block, include_h1=False)
+            if template_has_changelog_placeholder:
+                readme_content = readme_content.replace(CHANGELOG_BODY_PLACEHOLDER, changelog_body_content)
+
             txt_content = markdown_to_text(readme_content)
+            if SHORT_GUIDE_RAW_TOKEN in txt_content:
+                short_guide_text = short_guide_body.strip("\r\n")
+                txt_content = re.sub(
+                    rf"(?:\n)*{re.escape(SHORT_GUIDE_RAW_TOKEN)}(?:\n)*",
+                    "\n\n\n\n" + short_guide_text + "\n\n\n\n",
+                    txt_content,
+                    count=1,
+                )
+            if not template_has_changelog_placeholder:
+                changelog_content = format_changelog_text(changelog_block, include_h1=True)
+                if changelog_content:
+                    txt_content = txt_content.rstrip() + "\n\n\n\n" + changelog_content
+            txt_content = txt_content.rstrip() + "\n"
 
             if dry_run:
-                log.info(f"[DRYRUN] Would write README + ReadableReadMe for {folder_name}")
+                log.info(f"[DRYRUN] Would write README.txt for {folder_name}")
             else:
                 try:
-                    atomic_write_text(readme_path, readme_content, encoding="utf-8")
-                    atomic_write_text(txt_path, txt_content, encoding="utf-8")
+                    atomic_write_text(readme_txt_path, txt_content, encoding="utf-8")
+                    legacy_readable_path = os.path.join(mod_path, "ReadableReadMe.txt")
+                    if delete_legacy_readmes:
+                        cleanup_allowed = True
+                        if legacy_cleanup_allowlist is not None:
+                            mod_path_key = os.path.normcase(os.path.abspath(mod_path))
+                            cleanup_allowed = mod_path_key in legacy_cleanup_allowlist
+
+                        if cleanup_allowed:
+                            if os.path.exists(readme_md_path):
+                                os.remove(readme_md_path)
+                            if os.path.exists(legacy_readable_path):
+                                os.remove(legacy_readable_path)
+                        elif os.path.exists(readme_md_path) or os.path.exists(legacy_readable_path):
+                            log.info(
+                                f"Kept legacy README files for {folder_name}: migration checks not met"
+                            )
                 except Exception as ex:
                     log.warn(f"Failed writing README files for {folder_name}: {ex}")
                     continue
 
             log.stats.readmes_written += 1
-            log.stats.readable_txt_written += 1
 
 
 def prep_names_and_readmes_for_dirs(mod_dirs: Tuple[str, ...], dry_run: bool, log: Logger) -> List[Tuple[str, str, str]]:
@@ -2983,6 +4293,197 @@ def prep_names_and_readmes_for_dirs(mod_dirs: Tuple[str, ...], dry_run: bool, lo
     normalize_quote_files(csv_rows, folder_renames, dry_run, log)
     generate_mod_readmes(csv_rows, dry_run, log, mod_dirs=mod_dirs)
     return folder_renames
+
+
+def collect_feature_migration_candidates(
+    mod_dirs: Tuple[str, ...],
+    log: Logger,
+) -> Tuple[Set[str], List[Dict[str, object]]]:
+    """Build allowlist for safe legacy README cleanup based on feature migration readiness.
+
+    A mod is eligible for legacy README deletion only when both feature summary and
+    feature details content can be extracted from existing README sources.
+    """
+    allowlist: Set[str] = set()
+    rows: List[Dict[str, object]] = []
+
+    for mod_dir in mod_dirs:
+        folders = scan_mod_folders(mod_dir)
+        for folder_name, mod_path in folders.items():
+            modinfo_path = os.path.join(mod_path, "ModInfo.xml")
+            if not os.path.exists(modinfo_path):
+                continue
+
+            readme_md_path = os.path.join(mod_path, "README.md")
+            readme_txt_path = os.path.join(mod_path, "README.txt")
+            readable_txt_path = os.path.join(mod_path, "ReadableReadMe.txt")
+            readme_txt_exists = os.path.exists(readme_txt_path)
+            readme_md_exists = os.path.exists(readme_md_path)
+            readable_exists = os.path.exists(readable_txt_path)
+
+            features_summary_block = extract_readme_block(
+                readme_md_path,
+                "<!-- FEATURES-SUMMARY START -->",
+                "<!-- FEATURES-SUMMARY END -->",
+            )
+            features_detailed_block = extract_readme_block(
+                readme_md_path,
+                "<!-- FEATURES-DETAILED START -->",
+                "<!-- FEATURES-DETAILED END -->",
+            )
+
+            if not features_summary_block:
+                features_summary_block = extract_markdown_section_by_headings(
+                    readme_md_path,
+                    ("Features Summary", "Features"),
+                )
+            if not features_summary_block:
+                features_summary_block = extract_txt_section(
+                    readme_txt_path,
+                    ("Features", "Features Summary"),
+                    (
+                        "Deeper Details",
+                        "Other Details",
+                        "Features Details",
+                        "QUICK GUIDE",
+                        "AGF MOD GUIDE",
+                        "Full Guide",
+                        "Quick Guide (Install / Help / Backups / Update / Remove / EAC / Support)",
+                        "A. Install Mods",
+                    ),
+                )
+
+            if not features_detailed_block:
+                features_detailed_block = extract_markdown_section_by_headings(
+                    readme_md_path,
+                    ("Features Details", "Deeper Details", "Other Details"),
+                )
+            if not features_detailed_block:
+                features_detailed_block = extract_txt_section(
+                    readme_txt_path,
+                    ("Deeper Details", "Other Details", "Features Details"),
+                    (
+                        "QUICK GUIDE",
+                        "AGF MOD GUIDE",
+                        "Full Guide",
+                        "Quick Guide (Install / Help / Backups / Update / Remove / EAC / Support)",
+                        "A. Install Mods",
+                    ),
+                )
+
+            features_summary_block = sanitize_preserved_readme_block(features_summary_block, flatten_list_markers=True)
+            features_summary_block = remove_standalone_bullet_line(features_summary_block)
+            features_summary_block = remove_feature_pointer_lines(features_summary_block)
+            # Keep relative list indentation so nested detail bullets do not collapse.
+            features_detailed_block = sanitize_preserved_readme_block(features_detailed_block)
+            features_detailed_block = remove_standalone_bullet_line(features_detailed_block)
+            has_summary = bool(features_summary_block.strip())
+            has_details = bool(features_detailed_block.strip())
+            can_cleanup = has_summary and has_details
+
+            if can_cleanup:
+                allowlist.add(os.path.normcase(os.path.abspath(mod_path)))
+
+            rows.append(
+                {
+                    "lane": mod_dir,
+                    "folder": folder_name,
+                    "path": mod_path,
+                    "readme_md_exists": readme_md_exists,
+                    "readable_txt_exists": readable_exists,
+                    "readme_txt_exists": readme_txt_exists,
+                    "has_features_summary": has_summary,
+                    "has_features_details": has_details,
+                    "eligible_for_legacy_cleanup": can_cleanup,
+                }
+            )
+
+    eligible_count = sum(1 for row in rows if row.get("eligible_for_legacy_cleanup"))
+    log.info(
+        "Feature-migration readiness scan complete: "
+        f"eligible={eligible_count}, ineligible={len(rows) - eligible_count}, total={len(rows)}"
+    )
+    return allowlist, rows
+
+
+def write_feature_migration_report(
+    rows: List[Dict[str, object]],
+    dry_run: bool,
+    log: Logger,
+    report_tag: str = "scan",
+) -> str:
+    report_dir = os.path.join(README_SYSTEM_ROOT, "temp")
+    stamp = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
+    safe_tag = re.sub(r"[^A-Za-z0-9_-]+", "-", (report_tag or "scan")).strip("-") or "scan"
+    report_path = os.path.join(report_dir, f"feature-migration-{safe_tag}-{stamp}.json")
+    payload = {
+        "generated_at": dt.datetime.now().isoformat(timespec="seconds"),
+        "dry_run": dry_run,
+        "total_mods": len(rows),
+        "eligible_for_legacy_cleanup": sum(1 for row in rows if row.get("eligible_for_legacy_cleanup")),
+        "rows": rows,
+    }
+    if dry_run:
+        log.info(f"[DRYRUN] Would write migration report: {report_path}")
+    else:
+        os.makedirs(report_dir, exist_ok=True)
+        atomic_write_json(report_path, payload, ensure_ascii=False, indent=2)
+        log.info(f"Wrote migration report: {report_path}")
+    return report_path
+
+
+def migrate_readmes_one_time(
+    dry_run: bool,
+    log: Logger,
+    target_dirs: Tuple[str, ...],
+) -> None:
+    """One-time migration for Draft/Active README modernization.
+
+    Generates README.txt using the current template flow, but only deletes legacy
+    README.md / ReadableReadMe.txt for mods that pass feature migration checks.
+    """
+    log.info(
+        "One-time README migration: preserving features summary/details and "
+        "conditionally removing legacy README files"
+    )
+
+    folder_renames = rename_mod_folders_to_modinfo(dry_run, log, mod_dirs=target_dirs)
+    csv_rows = normalize_compat_csv(
+        folder_renames,
+        dry_run,
+        log,
+        mod_dirs=target_dirs,
+        prune_to_mods_now=False,
+    )
+    normalize_quote_files(csv_rows, folder_renames, dry_run, log)
+
+    cleanup_allowlist, pre_rows = collect_feature_migration_candidates(target_dirs, log)
+    write_feature_migration_report(pre_rows, dry_run, log, report_tag="pre")
+
+    generate_mod_readmes(
+        csv_rows,
+        dry_run,
+        log,
+        mod_dirs=target_dirs,
+        legacy_cleanup_allowlist=cleanup_allowlist,
+        delete_legacy_readmes=True,
+    )
+
+    post_rows: List[Dict[str, object]] = []
+    for row in pre_rows:
+        mod_path = str(row.get("path", "") or "")
+        post_rows.append(
+            {
+                "lane": row.get("lane", ""),
+                "folder": row.get("folder", ""),
+                "path": mod_path,
+                "legacy_cleanup_was_eligible": bool(row.get("eligible_for_legacy_cleanup", False)),
+                "readme_md_exists_after": os.path.exists(os.path.join(mod_path, "README.md")),
+                "readable_txt_exists_after": os.path.exists(os.path.join(mod_path, "ReadableReadMe.txt")),
+                "readme_txt_exists_after": os.path.exists(os.path.join(mod_path, "README.txt")),
+            }
+        )
+    write_feature_migration_report(post_rows, dry_run, log, report_tag="post")
 
 
 # =============================================================
@@ -4183,29 +5684,8 @@ def maybe_post_discord_release_update(
 
 
 def generate_mod_images(dry_run: bool, log: Logger) -> None:
-    """Invoke SCRIPT-GenerateModImages.py to regenerate mod images from current mod data."""
-    banner_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "SCRIPT-GenerateModImages.py")
-    if not os.path.isfile(banner_script):
-        log.warn(f"ModImage script not found, skipping: {banner_script}")
-        return
-    python_exe = sys.executable
-    cmd = [python_exe, banner_script, "--changed-only"]
-    if dry_run:
-        cmd.append("--dry-run")
-    log.info(f"Generating mod images: {' '.join(cmd)}")
-    if not dry_run:
-        try:
-            result = subprocess.run(cmd, capture_output=True, text=True, check=False)
-            for line in (result.stdout or "").splitlines():
-                if line.strip():
-                    log.info(f"  [modimages] {line}")
-            for line in (result.stderr or "").splitlines():
-                if line.strip():
-                    log.warn(f"  [modimages] {line}")
-            if result.returncode != 0:
-                log.warn(f"ModImage script exited with code {result.returncode}")
-        except Exception as ex:
-            log.warn(f"ModImage script failed: {ex}")
+    """No-op: mod image generation has been disabled."""
+    log.info("Mod image generation disabled (no longer deployed to mod folders)")
 
 
 def copy_mod_images_to_mod_folders(
@@ -4213,146 +5693,9 @@ def copy_mod_images_to_mod_folders(
     log: Logger,
     mod_dirs: Optional[Tuple[str, ...]] = None,
 ) -> Set[str]:
-    """Copy generated full merged image (<base>_01.png) into each AGF mod folder root.
-
-    Thumbnails are intentionally not copied into mod folders.
-    """
-    if mod_dirs is None:
-        mod_dirs = (STAGING,)
-    if not os.path.isdir(IMAGES_GENERATED_ROOT):
-        log.warn(f"Generated images folder not found, skipping generated image copy: {IMAGES_GENERATED_ROOT}")
-        return set()
-
-    copied = 0
-    updated_mod_bases: Set[str] = set()
-    for mod_dir in mod_dirs:
-        if not os.path.isdir(mod_dir):
-            continue
-        for folder_name in sorted(os.listdir(mod_dir)):
-            folder_path = os.path.join(mod_dir, folder_name)
-            if not os.path.isdir(folder_path):
-                continue
-            if not is_agf_mod(folder_name):
-                continue
-
-            base_name = get_base_mod_name(folder_name)
-            generated_name = f"{base_name}_01.png"
-            generated_src = os.path.join(IMAGES_GENERATED_ROOT, generated_name)
-            if not os.path.isfile(generated_src):
-                continue
-
-            generated_dst = os.path.join(folder_path, generated_name)
-            log.info(f"Copy generated _01 -> {os.path.relpath(generated_dst, VS_CODE_ROOT)}")
-            if not dry_run:
-                try:
-                    shutil.copy2(generated_src, generated_dst)
-                    copied += 1
-                    updated_mod_bases.add(base_name)
-                except Exception as ex:
-                    log.warn(f"Could not copy generated image to {generated_dst}: {ex}")
-            else:
-                copied += 1
-                updated_mod_bases.add(base_name)
-
-    log.info(f"Generated _01 image copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
-    log.info("Thumbnail copy skipped by policy (thumbnails stay only in 00_Images/_generated)")
-    return updated_mod_bases
-
-
-def list_media_images_for_base(base_name: str) -> List[str]:
-    if not os.path.isdir(IMAGES_MEDIA_ROOT):
-        return []
-
-    allowed_exts = {".png", ".jpg", ".jpeg", ".webp"}
-    base_lower = base_name.lower()
-    numbered_pattern = re.compile(rf"^{re.escape(base_name)}_(\d+)$", re.IGNORECASE)
-
-    matches: List[Tuple[int, str]] = []
-    for name in os.listdir(IMAGES_MEDIA_ROOT):
-        src_path = os.path.join(IMAGES_MEDIA_ROOT, name)
-        if not os.path.isfile(src_path):
-            continue
-        stem, ext = os.path.splitext(name)
-        if ext.lower() not in allowed_exts:
-            continue
-
-        if stem.lower() == base_lower:
-            matches.append((1, src_path))
-            continue
-
-        numbered_match = numbered_pattern.match(stem)
-        if numbered_match:
-            idx = int(numbered_match.group(1))
-            matches.append((idx, src_path))
-
-    matches.sort(key=lambda item: item[0])
-    return [path for _, path in matches]
-
-
-def copy_mod_media_images_to_mod_folders(
-    dry_run: bool,
-    log: Logger,
-    mod_dirs: Optional[Tuple[str, ...]] = None,
-) -> Set[str]:
-    """Copy only numbered extra media images (_02+) into the root of each mod folder."""
-    if mod_dirs is None:
-        mod_dirs = (STAGING,)
-    if not os.path.isdir(IMAGES_MEDIA_ROOT):
-        log.warn(f"Media images folder not found, skipping media copy: {IMAGES_MEDIA_ROOT}")
-        return set()
-
-    copied = 0
-    updated_mod_bases: Set[str] = set()
-    for mod_dir in mod_dirs:
-        if not os.path.isdir(mod_dir):
-            continue
-        for folder_name in sorted(os.listdir(mod_dir)):
-            folder_path = os.path.join(mod_dir, folder_name)
-            if not os.path.isdir(folder_path):
-                continue
-            if not is_agf_mod(folder_name):
-                continue
-
-            base_name = get_base_mod_name(folder_name)
-            media_sources = list_media_images_for_base(base_name)
-            if not media_sources:
-                continue
-
-            for media_src in media_sources:
-                media_name = os.path.basename(media_src)
-                media_stem, _media_ext = os.path.splitext(media_name)
-                slot_match = re.search(r"_(\d+)$", media_stem)
-                if slot_match:
-                    try:
-                        slot_value = int(slot_match.group(1))
-                    except ValueError:
-                        slot_value = 0
-                    if slot_value <= 1:
-                        continue
-
-                media_dst = os.path.join(folder_path, os.path.basename(media_src))
-                try:
-                    src_stat = os.stat(media_src)
-                    dst_stat = os.stat(media_dst) if os.path.isfile(media_dst) else None
-                    if dst_stat is not None and src_stat.st_size == dst_stat.st_size and int(src_stat.st_mtime) <= int(dst_stat.st_mtime):
-                        continue
-                except OSError:
-                    pass
-
-                log.info(f"Copy media -> {os.path.relpath(media_dst, VS_CODE_ROOT)}")
-                if not dry_run:
-                    try:
-                        shutil.copy2(media_src, media_dst)
-                        copied += 1
-                        updated_mod_bases.add(base_name)
-                    except Exception as ex:
-                        log.warn(f"Could not copy media image to {media_dst}: {ex}")
-                else:
-                    copied += 1
-                    updated_mod_bases.add(base_name)
-
-    log.info(f"Mod media copy: {copied} file(s) {'would be ' if dry_run else ''}updated")
-    return updated_mod_bases
+    """No-op: mod image copying has been disabled."""
+    log.info("Mod image copy disabled (no longer deployed to mod folders)")
+    return set()
 
 
 def generate_gigglepack_release_artifacts(
@@ -4906,6 +6249,66 @@ def render_main_readme_category_block(
     return block.splitlines()
 
 
+def generate_thumbnails(dry_run: bool, log: Logger) -> None:
+    """Generate small Thumbnail_*.png files from the 1920x1080 * _01.png originals.
+
+    Thumbnails are stored in IMAGES_THUMBNAIL_ROOT (00_Images/_generated/thumbnails/)
+    at 640px wide (maintaining aspect ratio) for fast page loading.
+    """
+    log.info("Generating thumbnail images from full-size originals")
+
+    if not os.path.isdir(IMAGES_GENERATED_ROOT):
+        log.warn(f"Images directory not found: {IMAGES_GENERATED_ROOT}")
+        return
+
+    if dry_run:
+        log.info(f"[DRYRUN] Would ensure thumbnails directory exists: {IMAGES_THUMBNAIL_ROOT}")
+    else:
+        os.makedirs(IMAGES_THUMBNAIL_ROOT, exist_ok=True)
+
+    thumbnail_width = 640
+    generated = 0
+    skipped = 0
+
+    for filename in os.listdir(IMAGES_GENERATED_ROOT):
+        if not filename.endswith("_01.png"):
+            continue
+        if not filename.startswith("AGF-") and not filename.startswith("zzzAGF-"):
+            continue
+
+        base_name = get_base_mod_name(filename.replace("_01.png", ""))
+        thumb_filename = f"Thumbnail_{base_name}.png"
+        thumb_path = os.path.join(IMAGES_THUMBNAIL_ROOT, thumb_filename)
+        full_path = os.path.join(IMAGES_GENERATED_ROOT, filename)
+
+        if os.path.isfile(thumb_path):
+            full_mtime = os.path.getmtime(full_path)
+            thumb_mtime = os.path.getmtime(thumb_path)
+            if thumb_mtime >= full_mtime:
+                skipped += 1
+                continue
+
+        if dry_run:
+            log.info(f"[DRYRUN] Would generate thumbnail: {thumb_filename} <- {filename}")
+            generated += 1
+            continue
+
+        try:
+            from PIL import Image
+            img = Image.open(full_path)
+            w, h = img.size
+            if w > thumbnail_width:
+                ratio = thumbnail_width / w
+                new_h = int(h * ratio)
+                img.thumbnail((thumbnail_width, new_h), Image.Resampling.LANCZOS)
+            img.save(thumb_path, "PNG", optimize=True)
+            generated += 1
+        except Exception as ex:
+            log.warn(f"Failed generating thumbnail for {filename}: {ex}")
+
+    log.info(f"Thumbnail generation complete: {generated} generated, {skipped} up-to-date")
+
+
 def build_mod_entry(
     folder_name: str,
     mod_entry_template: Optional[str] = None,
@@ -4918,7 +6321,7 @@ def build_mod_entry(
     name, version = parse_modinfo(modinfo_path, folder_name)
     display_name = get_modinfo_display_name(modinfo_path, name)
     version_display = format_version_for_display(version, display_name)
-    desc = extract_mod_description_from_modinfo(modinfo_path)
+    desc = resolve_mod_description(mod_path, modinfo_path)
     link = zip_download_link(f"{get_base_mod_name(folder_name)}.zip")
 
     features_block = ""
@@ -4931,12 +6334,24 @@ def build_mod_entry(
             features_block = f"<ul><li><em>{mod_type_text}</em></li></ul>\n"
 
     base_mod_name = get_base_mod_name(folder_name)
-    banner_file = f"Thumbnail_{base_mod_name}.png"
-    banner_abs = os.path.join(IMAGES_GENERATED_ROOT, banner_file)
+    repo_base = "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated"
+
+    # Thumbnail image (small) for display on the page
+    thumb_file = f"Thumbnail_{base_mod_name}.png"
+    thumb_abs = os.path.join(IMAGES_THUMBNAIL_ROOT, thumb_file)
+    # Full-size image (1920x1080) for click-to-view
+    full_file = f"{base_mod_name}_01.png"
+    full_abs = os.path.join(IMAGES_GENERATED_ROOT, full_file)
+
     banner_html = ""
-    if os.path.isfile(banner_abs):
-        banner_url = f"https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated/{banner_file}?raw=true"
-        banner_html = f'<a href="{banner_url}"><img src="{banner_url}" width="150"></a>'
+    if os.path.isfile(thumb_abs) and os.path.isfile(full_abs):
+        full_url = f"{repo_base}/{full_file}?raw=true"
+        thumb_url = f"{repo_base}/thumbnails/{thumb_file}?raw=true"
+        banner_html = f'<a href="{full_url}"><img src="{thumb_url}" width="150"></a>'
+    elif os.path.isfile(full_abs):
+        # Fallback: use full-size for both src and href if thumbnail is missing
+        full_url = f"{repo_base}/{full_file}?raw=true"
+        banner_html = f'<a href="{full_url}"><img src="{full_url}" width="150"></a>'
 
     template = re.sub(r"<!--.*?-->", "", (mod_entry_template or DEFAULT_MAIN_README_MOD_ENTRY_TEMPLATE), flags=re.DOTALL).strip("\n")
     entry = template
@@ -5244,11 +6659,9 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
     changelog_html = "".join(detail_bits)
 
     lines.extend([
-        "> <details> <summary><i>Changelog (latest 3 releases)</i></summary>",
-        ">",
-        f"> {changelog_html}",
-        ">",
-        "> </details>",
+        "<details markdown=\"1\"><summary><i>Changelog (latest 3 releases)</i></summary>",
+        changelog_html,
+        "</details>",
     ])
 
     return lines
@@ -5306,7 +6719,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
 
     cat_desc = load_category_descriptions(log)
 
-    mod_type_lines = load_mod_type_lines_from_modtype_guide(log)
+    mod_type_lines = load_mainreadme_mod_type_lines(log)
     _, compat_rows = load_compat_csv()
     compat_map: Dict[str, Dict[str, str]] = {row.get("MOD_NAME", "").strip(): dict(row) for row in compat_rows if row.get("MOD_NAME", "").strip()}
 
@@ -5314,6 +6727,10 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     main_content = main_template.replace("{{LAST_UPDATED}}", now_str)
     main_content = main_content.replace(ABOUTME_MAIN_GUIDE_PLACEHOLDER, load_aboutme_main_guide_body(log))
     main_content = main_content.replace(MODTYPE_GUIDE_PLACEHOLDER, load_modtype_guide_body(log))
+    main_content = main_content.replace(LANGUAGE_MAIN_PLACEHOLDER, load_language_main_body(log))
+    main_content = main_content.replace(MODGUIDE_MAIN_PLACEHOLDER, load_modguide_main_body(log))
+    main_content = main_content.replace(ASKFORHELP_MAIN_PLACEHOLDER, load_askforhelp_main_body(log))
+    main_content = main_content.replace(SUPPORT_MAIN_PLACEHOLDER, load_support_main_body(log))
     main_content = main_content.replace(INSTALL_GUIDE_PLACEHOLDER, load_install_guide_body(log))
     main_content = main_content.replace(REMOVAL_GUIDE_PLACEHOLDER, load_removal_guide_body(log))
     main_content = main_content.replace(UPDATE_GUIDE_PLACEHOLDER, load_update_guide_body(log))
@@ -5392,7 +6809,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
             name, version = parse_modinfo(modinfo_path, mod)
             display_name = get_modinfo_display_name(modinfo_path, name)
             version_display = format_version_for_display(version, display_name)
-            desc = extract_mod_description_from_modinfo(modinfo_path)
+            desc = resolve_mod_description(mod_path, modinfo_path)
             link = zip_download_link(f"{get_base_mod_name(mod)}.zip")
             md.append(f"| {display_name} | {version_display} | [Download]({link}) | {desc} |")
         md.extend(["", "---"])
@@ -5422,9 +6839,9 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "D. SPECIAL COMPATIBILITY MOD",
+            "D. SPECIAL MOD PATCHES",
             updates_in_progress if not special_mods else "",
-            cat_desc.get("SPECIAL", "Compatibility patches between AGF mods and select third-party mods."),
+            cat_desc.get("SPECIAL", "Patches to support other mods and modlets alongside AGF mods."),
         )
     )
     md.append("")
@@ -5608,6 +7025,9 @@ def validate_required_paths(strict: bool, log: Logger, mode: str) -> bool:
     elif mode == "package":
         required_dirs = [PUBLISH_READY]
         required_files = [MOD_README_TEMPLATE, MAIN_TEMPLATE_PATH]
+    elif mode == "migrate-readmes-once":
+        required_dirs = [STAGING, IN_PROGRESS]
+        required_files = [MOD_README_TEMPLATE]
     else:
         required_dirs = [STAGING, PUBLISH_READY, IN_PROGRESS, GAME_MODS]
         required_files = [MOD_README_TEMPLATE, MAIN_TEMPLATE_PATH]
@@ -5799,10 +7219,6 @@ def run_pipeline(args: argparse.Namespace) -> int:
             normalize_quote_files(csv_rows, all_renames, args.dry_run, log)
             generate_mod_readmes(csv_rows, args.dry_run, log, mod_dirs=(STAGING,))
             generate_mod_images(args.dry_run, log)
-            image_updated_mod_bases = copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            image_updated_mod_bases.update(
-                copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            )
             if not ensure_notepadpp_closed_for_game_sync(args.dry_run, log):
                 log_path = log.write_log_file()
                 manifest_path = write_run_manifest(log, args.mode, args.dry_run, 1, log_path)
@@ -5812,7 +7228,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
                     print(f"Run manifest: {manifest_path}")
                 return 1
             push_staging_mods_to_game(
-                image_updated_mod_bases,
+                set(),
                 args.dry_run,
                 log,
                 reason="mod image refresh",
@@ -5847,17 +7263,18 @@ def run_pipeline(args: argparse.Namespace) -> int:
 
         elif args.mode == "prep-work":
             prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
+        elif args.mode == "migrate-readmes-once":
+            migrate_readmes_one_time(args.dry_run, log, target_dirs=(STAGING, IN_PROGRESS))
         elif args.mode == "promote":
             enforce_staging_major_policy(args.dry_run, log)
             prep_names_and_readmes_for_dirs((STAGING,), args.dry_run, log)
             generate_mod_images(args.dry_run, log)
-            copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
             promote_staging_to_publish_ready(args.dry_run, log)
         elif args.mode == "package":
             prep_names_and_readmes_for_dirs((PUBLISH_READY,), args.dry_run, log)
             create_all_zips(args.dry_run, args.workers, log)
             generate_gigglepack_release_artifacts(args.dry_run, log)
+            generate_thumbnails(args.dry_run, log)
             generate_main_readme(args.dry_run, log)
         else:
             log.info(
@@ -5929,10 +7346,6 @@ def run_pipeline(args: argparse.Namespace) -> int:
             cleanup_legacy_4modders_renames_in_dir(STAGING, args.dry_run, log)
             cleanup_older_versions_in_dir(STAGING, args.dry_run, log)
             generate_mod_images(args.dry_run, log)
-            image_updated_mod_bases = copy_mod_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            image_updated_mod_bases.update(
-                copy_mod_media_images_to_mod_folders(args.dry_run, log, mod_dirs=(STAGING,))
-            )
             if not ensure_notepadpp_closed_for_game_sync(args.dry_run, log):
                 log_path = log.write_log_file()
                 manifest_path = write_run_manifest(log, args.mode, args.dry_run, 1, log_path)
@@ -5942,7 +7355,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
                     print(f"Run manifest: {manifest_path}")
                 return 1
             push_staging_mods_to_game(
-                image_updated_mod_bases,
+                set(),
                 args.dry_run,
                 log,
                 reason="mod image refresh",
@@ -6018,6 +7431,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
                 log.action_needed(
                     "GigglePack release remains queued. Re-run publish with --publish-gigglepack-action finalize when ready."
                 )
+            generate_thumbnails(args.dry_run, log)
             generate_main_readme(args.dry_run, log)
 
         # Mark successful completion before the finally block so transactional
@@ -6073,10 +7487,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
             "prep-work",
             "promote",
             "package",
+            "migrate-readmes-once",
             "self-test",
         ],
         default="full",
-        help="Workflow mode: full pipeline, staging sync, prep active-build readmes, promote, or package output",
+        help="Workflow mode: full pipeline, update/sync, one-time readme migration, promote, or package output",
     )
     parser.add_argument("--dry-run", action="store_true", help="Preview actions without writing changes")
     parser.add_argument("--verbose", action="store_true", help="Show INFO logs in console")

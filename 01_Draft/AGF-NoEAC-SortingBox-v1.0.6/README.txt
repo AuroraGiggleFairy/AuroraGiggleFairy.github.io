@@ -1,0 +1,269 @@
+========================================================================
+                          AGF-NOEAC-SORTINGBOX                          
+========================================================================
+
+Auto-sorts items from a crafted Sorting Box into matching nearby
+
+"With permissions, integrated from Kanaverum's original mod and Asylum."
+
+NOTE: AGF Mod Guide and Changelog are further below.
+
+
+------------------------------------------------------------------------
+MOD SCOPE
+------------------------------------------------------------------------
+
+  - Mod Version: 1.0.6
+  - 7d2d Version: 3
+  - Website: https://auroragigglefairy.github.io/
+  - Languages Supported: All 13 game-supported languages.
+  - Mod Type: Server/Client-Side (Required)
+    - EAC off required.
+    - Host and all joining players must install it.
+    - Also works in singleplayer.
+  - Safe to install on existing game: Yes (Safe)
+  - Safe to remove from existing game: No (Dangerous)
+  - Dependencies: Requires 0_TFP_Harmony (built-in game mod).
+    - To check, explore Installed Files and confirm Mods/0_TFP_Harmony
+      exists.
+    - To restore, use Steam Verify: Right click 7 Days to Die ->
+      Properties -> Installed Files -> Verify integrity of game files.
+
+
+------------------------------------------------------------------------
+FEATURES
+------------------------------------------------------------------------
+
+  - Craft a Sorting Box for 10 Forged Iron, place items in it, and
+    matching items auto-sort into nearby storage (25m range).
+  - Sorting rules: it skips containers in use;
+  - Unlocked Sorting Boxes sort into unlocked storages only.
+  - Locked Sorting Boxes sort into unlocked storages and locked storages
+    that share the same keycode.
+
+
+------------------------------------------------------------------------
+OTHER DETAILS
+------------------------------------------------------------------------
+
+  - All Versions:
+      - Uses Sorting Box tagged blocks as source boxes for item
+        distribution.
+      - When a valid Sorting Box interaction finishes, it scans nearby
+        storage and distributes matching items.
+      - Crafting recipe: 10 Forged Iron for the Sorting Box helper item.
+      - Default scan range is 25m horizontal and 25m vertical (25 / 25).
+      - Default range values are editable in robotic-inbox.json.
+      - Distribution skips targets that are currently in use.
+      - Backpacks, vehicles, and non-player storage are ignored.
+      - Sorting rules:
+      - If the Sorting Box is unlocked, it can sort into unlocked
+        storage only.
+      - If the Sorting Box is locked, it can sort into unlocked storage
+        and locked storage only when keycodes/passwords match.
+      - If the target is locked without a keycode/password set, transfer
+        is blocked.
+      - Slot-lock behavior is respected when combining/sorting stacks in
+        target containers.
+      - Temporary notice text can appear on affected containers when
+        distribution is blocked.
+
+Server-Side Use:
+      - Dedicated server install runs the sorting logic for all players.
+      - Main settings file: robotic-inbox.json.
+      - Includes configurable options for range, blocked/success notice
+        timing, and base siphoning protection.
+      - Base siphoning protection helps prevent inbox scans from
+        crossing outside the same LCB area.
+
+Player-Hosted Use:
+      - For player-hosted sessions, host and joining players should
+        install the mod so behavior stays consistent.
+
+F1 Console Commands:
+      - Main aliases: roboticinbox, ri
+      - Show current settings: roboticinbox settings
+      - Set horizontal scan range: roboticinbox horizontal-range <int>
+      - Set vertical scan range: roboticinbox vertical-range <int>
+      - Set success notice time: roboticinbox success-notice-time
+        <float>
+      - Set blocked notice time: roboticinbox blocked-notice-time
+        <float>
+      - Toggle base siphoning protection: roboticinbox
+        base-siphoning-protection
+      - Toggle debug mode: roboticinbox dm
+
+Notes:
+      - This mod does not use chat commands for configuration.
+      - Settings are saved and loaded from robotic-inbox.json.
+
+
+
+========================================================================
+                             AGF MOD GUIDE                              
+========================================================================
+
+------------------------------------------------------------------------
+A. Install Mods
+------------------------------------------------------------------------
+
+  1. Close the game.
+  2. In Steam, right-click 7 Days to Die -> Manage -> Browse local
+     files, then open Mods.
+  3. Extract the zip into the Mods folder. Make sure it ends up as
+     Mods/<ModName>/ModInfo.xml.
+  4. Restart the game.
+
+
+------------------------------------------------------------------------
+B. Ask AuroraGiggleFairy for Help
+------------------------------------------------------------------------
+
+  1. Join AGF's Discord: https://discord.gg/Vm5eyW6N4r.
+    - AGF checks website messages often, but Discord is the fastest and
+      best way to get help.
+  2. Find #ask-for-help-here under the NEED HELP? section.
+    - All questions are welcome, whether you are new or experienced.
+    - This includes mod conflicts, features not working as expected,
+      server or admin issues, translation errors, and other mod-related
+      problems.
+  3. Post your help request in #ask-for-help-here:
+    - Share a brief message about what is happening.
+    - Attach your latest log file.
+      - Enter the game, then press F1 to open the console.
+      - Click Open logs folder in the top-right.
+      - The correct log file should already be selected. Drag and drop
+        it into #ask-for-help-here.
+    - A screenshot can also help.
+      - Use PrtSc (Print Screen) or your system screenshot tool, then
+        paste the image into Discord chat.
+    - If preferred, DMs are open and you are welcome to message AGF
+      directly.
+
+
+------------------------------------------------------------------------
+C. Backups
+------------------------------------------------------------------------
+
+  - To Create:
+    - Open %appdata% -> Roaming -> 7DaysToDie -> Saves, then open your
+      World Name folder (for example, Navezgane).
+    - Copy your Game Name folder (for example, MyGame) to a safe place.
+  - To Restore:
+    - Copy that saved Game Name folder back into the same World Name
+      folder in Saves.
+    - Replace the current folder if asked.
+
+
+------------------------------------------------------------------------
+D. Update Mods
+------------------------------------------------------------------------
+
+  1. Close the game.
+  2. Make a backup first (see section C).
+  3. Install the new version in Mods.
+    - If asked, allow overwrite or replace.
+  4. If both old and new folders are there, keep the newer one and
+     delete the older one.
+  5. Start the game and confirm your save loads.
+
+
+------------------------------------------------------------------------
+E. Remove Mods
+------------------------------------------------------------------------
+
+  - Warning: Removing a mod from an active save can destroy your saved
+    game. Back up first.
+  - Never delete 0_TFP_Harmony; it comes with the game.
+  1. Close the game.
+  2. In Mods, delete each mod folder you are removing, except
+     0_TFP_Harmony.
+
+
+------------------------------------------------------------------------
+F. The 0_TFP_Harmony Mod (Do Not Remove)
+------------------------------------------------------------------------
+
+  - Never delete 0_TFP_Harmony; it comes with the game.
+  - If it is missing, restore it by verifying game files in Steam:
+    1. In Steam, right-click 7 Days to Die.
+    2. Select Properties.
+    3. Select Installed Files.
+    4. Click Verify integrity of game files and wait for completion.
+
+
+------------------------------------------------------------------------
+G. EAC
+------------------------------------------------------------------------
+
+  - EAC stands for Easy Anti-Cheat and helps protect multiplayer
+    sessions from cheating.
+  - Some mods require EAC to be turned off so they can work.
+
+  - How to launch 7 Days to Die with EAC off:
+    1. In Steam Library, select 7 Days to Die.
+    2. Click Play.
+    3. In the launch popup, select Launch game without EAC.
+    4. Click Play.
+
+  - If the launch popup does not appear:
+    1. In Steam Library, select 7 Days to Die.
+    2. Click the gear icon on the right, then click Properties.
+    3. Under Launch Options, open the Selected Launch Option dropdown.
+    4. Choose Ask when starting game or Launch game without EAC.
+    
+  - If you run multiplayer with EAC off, use these safety practices:
+    - Simplest method: keep your server password private and have people
+      ask for it.
+    - If you want tighter security on who joins, use the whitelist
+      system.
+    - Admin tools such as Server Tools have security options.
+    - Talk to other server hosts, for example AGF in Discord:
+      https://discord.gg/Vm5eyW6N4r
+
+
+------------------------------------------------------------------------
+H. Support AuroraGiggleFairy
+------------------------------------------------------------------------
+
+  - I have been actively creating and supporting 7 Days to Die mods
+    since Alpha 18 (2019), and I genuinely love doing this work.
+  - I spend a lot of time fixing complex issues, keeping everything up
+    to date, and helping players, modders, and server communities.
+  - If my work helps you, here are ways to support me:
+    - Help spread my mods by sharing them with others, creating content,
+      or sharing my GitHub link: https://auroragigglefairy.github.io/
+    - Join my Discord to share feedback, keep up with updates, or
+      volunteer as a tester: https://discord.gg/Vm5eyW6N4r
+    - Support me on Twitch: https://www.twitch.tv/auroragigglefairy
+    - Need hosting? Use my PingPerfect Referral Link:
+      https://pingperfect.com/aff.php?aff=1834
+    - Support me directly by donating to my PayPal:
+      https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC
+  - From the bottom of my heart, thank you. <3
+
+
+------------------------------------------------------------------------
+I. AGF Modding Focus
+------------------------------------------------------------------------
+
+  - I have been modding 7 Days to Die for 7 years.
+  - I do my best to prioritize accessibility, user-friendliness, and
+    localization where possible.
+  - I provide kind, comprehensive support to players, modders, and
+    server communities, and I rely on community feedback to keep
+    improving my mods.
+
+
+
+========================================================================
+                               CHANGELOG                                
+========================================================================
+
+v1.0.6
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.5
+    - Updated backpack references due to name change.

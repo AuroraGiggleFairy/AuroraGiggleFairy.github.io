@@ -3,7 +3,7 @@
   <Name value="AGF-VP-BuyTraderVendingMachines" />
   <DisplayName value="AGF Buy Trader Vending Machines" />
   <Version value="3.0.3" />
-  <Description value="Adds daily-restocking vending machines to trader stock once your trader stage is high enough; break to recover." />
+  <Description value="Adds daily-restocking vending machines to trader stock once your trader" />
   <Author value="AuroraGiggleFairy (AGF)" />
   <Website value="https://auroragigglefairy.github.io/" />
 </xml>

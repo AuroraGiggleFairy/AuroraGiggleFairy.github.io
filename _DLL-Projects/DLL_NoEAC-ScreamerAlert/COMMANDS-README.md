@@ -80,7 +80,7 @@ For full command variants and exact response scripting, use TEMP-ScreamerAlert-C
 
 ## Behavior Notes
 
-- COUNT resolves to ON when EnhancedAGF=NO or EnhancedAGF=UNKNOWN for that target.
+- COUNT resolves to ON when EnhancedAGF=NO for that target.
 - set all applies to online players only.
 - default controls baseline behavior for new joiners.
 

@@ -27,61 +27,6 @@ INPROGRESS_DIR = resolve_lane_path(
     os.path.join(WORKSPACE_ROOT, "01_Draft"),
     os.path.join(WORKSPACE_ROOT, "_Mods2.In-Progress"),
 )
-TEMPLATE_README_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Templates",
-    "TEMPLATE-ModReadMes.md",
-)
-ABOUTME_GUIDE_SNIPPET_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Snippets",
-    "ABOUTME-Guide.md",
-)
-MODTYPE_GUIDE_SNIPPET_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Snippets",
-    "MODTYPE-Guide.md",
-)
-INSTALL_GUIDE_SNIPPET_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Snippets",
-    "INSTALL-Guide.md",
-)
-REMOVAL_GUIDE_SNIPPET_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Snippets",
-    "REMOVAL-Guide.md",
-)
-UPDATE_GUIDE_SNIPPET_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Snippets",
-    "UPDATE-Guide.md",
-)
-BACKUP_GUIDE_SNIPPET_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Snippets",
-    "BACKUP-Guide.md",
-)
-ABOUTME_GUIDE_PLACEHOLDER = "{{ABOUTME_GUIDE_BODY}}"
-MODTYPE_GUIDE_PLACEHOLDER = "{{MODTYPE_GUIDE_BODY}}"
-INSTALL_GUIDE_PLACEHOLDER = "{{INSTALL_GUIDE_BODY}}"
-REMOVAL_GUIDE_PLACEHOLDER = "{{REMOVAL_GUIDE_BODY}}"
-UPDATE_GUIDE_PLACEHOLDER = "{{UPDATE_GUIDE_BODY}}"
-BACKUP_GUIDE_PLACEHOLDER = "{{BACKUP_GUIDE_BODY}}"
 COMPAT_CSV_PATH = os.path.join(
     WORKSPACE_ROOT,
     "Workflow",
@@ -96,15 +41,81 @@ TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name 
 VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 
 
-def load_snippet_body(path: str) -> str:
-    if not os.path.exists(path):
-        return ""
+def build_initial_readme_md(mod_name: str, version: str) -> str:
+    return f"""# {mod_name}
+7d2d Version MISSINGDATA
+**Version:** {version}
+[Download]([Add link later])
 
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return f.read().strip()
-    except Exception:
-        return ""
+[Add quote later]
+
+---
+---
+
+## README TABLE OF CONTENTS
+1. About AGF
+2. Need Help?
+3. Install Scope & EAC Requirement
+4. Compatibility
+5. Features Summary
+6. Other Details
+7. Changelog
+
+---
+---
+
+## 1. About AGF
+- My name is AuroraGiggleFairy (AGF).
+- I have been modding 7 Days to Die for 7 years.
+- I do my best to prioritize accessibility, user-friendliness, and localization where possible.
+- I provide kind, comprehensive support to players, modders, and server communities, and I rely on community feedback to keep improving my mods.
+
+---
+---
+
+## 2. Need Help?
+- Join AGF's Discord for support: https://discord.gg/Vm5eyW6N4r
+
+---
+---
+
+## 3. Install Scope & EAC Requirement
+- TBD
+
+---
+---
+
+## 4. Compatibility
+- Last 7d2d Version tested on: MISSINGDATA
+- \"{mod_name}\" is SAFE to install on an existing game: MISSINGDATA
+- \"{mod_name}\" is SAFE to remove from an existing game: MISSINGDATA
+- Unique Details: MISSINGDATA
+
+---
+---
+
+## 5. Features Summary
+<!-- FEATURES-SUMMARY START -->
+- See this mod's README for full details.
+<!-- FEATURES-SUMMARY END -->
+
+---
+---
+
+## 6. Other Details
+<!-- FEATURES-DETAILED START -->
+- Add or remove as needed.
+<!-- FEATURES-DETAILED END -->
+
+---
+---
+
+## 7. Changelog
+<!-- CHANGELOG START -->
+v{version}
+- Mod first created.
+<!-- CHANGELOG END -->
+"""
 
 
 def parse_args() -> argparse.Namespace:
@@ -139,29 +150,6 @@ def is_valid_mod_name(mod_name: str) -> bool:
     return mod_name.startswith("AGF-") or mod_name.startswith("zzzAGF-")
 
 
-def ensure_section_line(content: str, start_marker: str, end_marker: str, line: str, at_start: bool) -> str:
-    pattern = re.compile(
-        rf"({re.escape(start_marker)}\r?\n)(.*?)?(\r?\n{re.escape(end_marker)})",
-        re.DOTALL,
-    )
-    match = pattern.search(content)
-    if not match:
-        return content
-
-    body = match.group(2) or ""
-    lines = body.splitlines()
-    filtered = [ln for ln in lines if ln.strip() != line]
-
-    if at_start:
-        new_body_lines = [line] + filtered
-    else:
-        new_body_lines = filtered + [line]
-
-    new_body = "\r\n".join(new_body_lines)
-    replacement = f"{match.group(1)}{new_body}{match.group(3)}"
-    return content[: match.start()] + replacement + content[match.end() :]
-
-
 def append_compatibility_row(mod_name: str) -> None:
     if not os.path.exists(COMPAT_CSV_PATH):
         return
@@ -191,7 +179,7 @@ def append_compatibility_row(mod_name: str) -> None:
     new_row[mod_name_idx] = mod_name
     if "MOD_TYPE_ID" in fieldnames:
         mod_type_idx = fieldnames.index("MOD_TYPE_ID")
-        new_row[mod_type_idx] = "0"
+        new_row[mod_type_idx] = "TBD"
     if "QUOTE_FILE" in fieldnames:
         quote_idx = fieldnames.index("QUOTE_FILE")
         new_row[quote_idx] = f"{mod_name}.txt"
@@ -258,68 +246,9 @@ def main():
     with open(os.path.join(mod_path, "ModInfo.xml"), "w", encoding="utf-8") as f:
         f.write(TEMPLATE_MODINFO.format(mod_name=mod_name, display_name=display_name, version=version))
 
-    # Create README.md from template
-    if os.path.exists(TEMPLATE_README_PATH):
-        with open(TEMPLATE_README_PATH, "r", encoding="utf-8") as t:
-            readme_content = t.read()
-        readme_content = readme_content.replace(ABOUTME_GUIDE_PLACEHOLDER, load_snippet_body(ABOUTME_GUIDE_SNIPPET_PATH))
-        readme_content = readme_content.replace(MODTYPE_GUIDE_PLACEHOLDER, load_snippet_body(MODTYPE_GUIDE_SNIPPET_PATH))
-        readme_content = readme_content.replace(INSTALL_GUIDE_PLACEHOLDER, load_snippet_body(INSTALL_GUIDE_SNIPPET_PATH))
-        readme_content = readme_content.replace(REMOVAL_GUIDE_PLACEHOLDER, load_snippet_body(REMOVAL_GUIDE_SNIPPET_PATH))
-        readme_content = readme_content.replace(UPDATE_GUIDE_PLACEHOLDER, load_snippet_body(UPDATE_GUIDE_SNIPPET_PATH))
-        readme_content = readme_content.replace(BACKUP_GUIDE_PLACEHOLDER, load_snippet_body(BACKUP_GUIDE_SNIPPET_PATH))
-        # Replace placeholders
-        readme_content = readme_content.replace("{{MOD_NAME}}", mod_name)
-        readme_content = readme_content.replace("{{MOD_VERSION}}", version)
-        readme_content = readme_content.replace("{{DOWNLOAD_LINK}}", "[Add link later]")
-        readme_content = readme_content.replace("{{QUOTE}}", "[Add quote later]")
-        # Set all compatibility fields to MISSINGDATA
-        for field in [
-            "TESTED_GAME_VERSION", "EAC_FRIENDLY", "SERVER_SIDE_PLAYER", "SERVER_SIDE_DEDICATED", "CLIENT_SIDE",
-            "SAFE_TO_INSTALL", "SAFE_TO_REMOVE", "UNIQUE"
-        ]:
-            readme_content = readme_content.replace(f"{{{{{field}}}}}", "MISSINGDATA")
-        # Remove template feature/changelog placeholder lines
-        for remove_line in [
-            '[Add or keep features here. Automation should preserve this section.]',
-            '[Add or keep changelog entries here. Automation should preserve this section.]'
-        ]:
-            readme_content = readme_content.replace(remove_line + '\n', '')
-            readme_content = readme_content.replace('\n' + remove_line, '')
-            readme_content = readme_content.replace(remove_line, '')
-
-        # Enforce default README section lines for newly created mods.
-        readme_content = ensure_section_line(
-            readme_content,
-            "<!-- FEATURES-SUMMARY START -->",
-            "<!-- FEATURES-SUMMARY END -->",
-            "- See this mod's README for full details.",
-            at_start=False,
-        )
-        readme_content = ensure_section_line(
-            readme_content,
-            "<!-- FEATURES-DETAILED START -->",
-            "<!-- FEATURES-DETAILED END -->",
-            "- Works standalone.",
-            at_start=True,
-        )
-
-        # Insert initial changelog entry
-        changelog_marker = "<!-- CHANGELOG START -->"
-        changelog_entry = "v0.0.1\n- Mod first created.\n"
-        if changelog_marker in readme_content:
-            parts = readme_content.split(changelog_marker)
-            before = parts[0] + changelog_marker + "\n"
-            after = parts[1]
-            # Only insert if not already present
-            if changelog_entry not in after:
-                after = changelog_entry + after.lstrip('\n')
-            readme_content = before + after
-        with open(os.path.join(mod_path, "README.md"), "w", encoding="utf-8") as f:
-            f.write(readme_content)
-    else:
-        with open(os.path.join(mod_path, "README.md"), "w", encoding="utf-8") as f:
-            f.write(f"# {mod_name}\n\nVersion: {version}\n")
+    # Create README.md scaffold used by readme migration/publish pipelines.
+    with open(os.path.join(mod_path, "README.md"), "w", encoding="utf-8") as f:
+        f.write(build_initial_readme_md(mod_name, version))
 
     # Create Config and XUi_InGame folders (case sensitive)
     config_path = os.path.join(mod_path, "Config")

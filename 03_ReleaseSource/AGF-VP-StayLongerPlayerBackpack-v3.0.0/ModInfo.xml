@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-  <Name value="AGF-VP-StayLongerPlayerBackpack" />
-  <DisplayName value="AGF Stay Longer Player Backpack" />
-  <Version value="3.0.0" />
-  <Description value="Player death backpack stays for 5 hours instead of 1." />
-  <Author value="AuroraGiggleFairy (AGF)" />
-  <Website value="https://auroragigglefairy.github.io/" />
-</xml>

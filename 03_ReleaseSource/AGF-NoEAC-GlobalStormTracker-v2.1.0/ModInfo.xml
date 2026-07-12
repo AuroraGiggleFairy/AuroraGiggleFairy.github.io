@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-GlobalStormTracker" />
+  <DisplayName value="AGF Global Storm Tracker" />
+  <Version value="2.1.0" />
+  <Description value="Sends a global chat message showing where the storm is and when it ends." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://discord.gg/Vm5eyW6N4r" />
+  <SkipWithAntiCheat value="true" />
+</xml>

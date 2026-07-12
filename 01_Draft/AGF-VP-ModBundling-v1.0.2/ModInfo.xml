@@ -3,7 +3,7 @@
   <Name value="AGF-VP-ModBundling" />
   <DisplayName value="AGF Mod Bundling" />
   <Version value="1.0.2" />
-  <Description value="Bundles non-stackable mod items into a single stackable item to save inventory space." />
+  <Description value="Bundles non-stackable mod items into a single stackable item to save" />
   <Author value="AuroraGiggleFairy (AGF)" />
   <Website value="https://auroragigglefairy.github.io/" />
 </xml>

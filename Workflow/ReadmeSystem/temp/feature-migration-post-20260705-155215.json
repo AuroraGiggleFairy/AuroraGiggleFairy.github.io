@@ -1,0 +1,827 @@
+{
+  "generated_at": "2026-07-05T15:52:15",
+  "dry_run": false,
+  "total_mods": 91,
+  "eligible_for_legacy_cleanup": 0,
+  "rows": [
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-BackpackPlus-060Slots-v4.0.4",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-BackpackPlus-060Slots-v4.0.4",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-BackpackPlus-072Slots-v4.0.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-BackpackPlus-072Slots-v4.0.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-BackpackPlus-084Slots-v4.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-BackpackPlus-084Slots-v4.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-BackpackPlus-119Slots-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-BackpackPlus-119Slots-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-HUDPlus-1Main-v6.4.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-HUDPlus-1Main-v6.4.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-HUDPlus-BMCounter-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-HUDPlus-BMCounter-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-HUDPlus-PurpleBook-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-HUDPlus-PurpleBook-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-HUDPlus-RemoveEnteringPopUp-v2.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-HUDPlus-RemoveEnteringPopUp-v2.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-HUDPluszOther-Weekday-v3.0.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-HUDPluszOther-Weekday-v3.0.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-AutoRun-v2.0.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-AutoRun-v2.0.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-CosmeticLockIcon-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-CosmeticLockIcon-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-EnhancedAGF-v4.2.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-EnhancedAGF-v4.2.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-GlobalStormTracker-v2.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-GlobalStormTracker-v2.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-ScreamerAlert-v2.2.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-ScreamerAlert-v2.2.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-SignErrorGuard-v1.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-SignErrorGuard-v1.0.0",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-NoEAC-Toolbelt12Slots-v2.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-NoEAC-Toolbelt12Slots-v2.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-AutomobilesRespawn-v4.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-AutomobilesRespawn-v4.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-BedrollPlus-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-BedrollPlus-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-BetterEggChance-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-BetterEggChance-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-BreakItGetIt-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-BreakItGetIt-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-CraftSewingKits-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-CraftSewingKits-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-CraftVitamins-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-CraftVitamins-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-FuelBurnPlus-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-FuelBurnPlus-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-LargerStorageOption-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-LargerStorageOption-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-MasterTool-v7.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-MasterTool-v7.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-MaxLevel500-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-MaxLevel500-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-ModSlotsPlus-v4.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-ModSlotsPlus-v4.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-PickupLanternsPlus-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-PickupLanternsPlus-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-PlayerResetQuests-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-PlayerResetQuests-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-RebundleBundles-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-RebundleBundles-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-RestorePowerAnyTime-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-RestorePowerAnyTime-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-ScrapBatts4Acid-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-ScrapBatts4Acid-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-ScrapEquipmentFaster-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-ScrapEquipmentFaster-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-SimplifiedStacks-v2.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-SimplifiedStacks-v2.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-StayLongerAnimalCorpse-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-StayLongerAnimalCorpse-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-StayLongerPlayerBackpack-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-StayLongerPlayerBackpack-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-VehiclePerformance-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-VehiclePerformance-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-VehiclesExtraSeating-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-VehiclesExtraSeating-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-VehicleStoragePlus-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-VehicleStoragePlus-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "AGF-VP-ZombieCorpseLeaveQuicker-v3.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\AGF-VP-ZombieCorpseLeaveQuicker-v3.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild",
+      "folder": "zzzAGF-Special-Compatibilities-v5.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\02_ActiveBuild\\zzzAGF-Special-Compatibilities-v5.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-10IngredientSlots-v1.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-10IngredientSlots-v1.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-AntiCM-v0.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-AntiCM-v0.0.2",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-CustomWindowEnteringDuration-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-CustomWindowEnteringDuration-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-ESCWindowPlus-v0.3.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-ESCWindowPlus-v0.3.2",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-Fix4DestroyBiomeBadge-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-Fix4RemoveItems-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-Fix4RemoveItems-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-ItemTypeIconColor-v2.0.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-ItemTypeIconColor-v2.0.0",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-4Modders-SkillPointCap-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-4Modders-SkillPointCap-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-AudioOptionsPlus-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-AudioOptionsPlus-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-ConsoleOpacityMod-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-ConsoleOpacityMod-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-ExpandedInteractionPrompts-v1.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-FlightAssist-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-FlightAssist-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-LockableWorkstations-v1.2.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-LockableWorkstations-v1.2.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-OpenAllButton-v1.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-OpenAllButton-v1.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-SortingBox-v1.0.6",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-SortingBox-v1.0.6",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-TerrainLeveler-v0.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-TerrainLeveler-v0.0.2",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-NoEAC-VisualEntityTracker-v0.2.0",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-NoEAC-VisualEntityTracker-v0.2.0",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-AdminModdingSupport-v1.0.5",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-AdminModdingSupport-v1.0.5",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-AlternativeRecipes-v1.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-AlternativeRecipes-v1.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-AmmoDisassembly-v1.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-AmmoDisassembly-v1.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-ApiaryPlus-v1.0.4",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-ApiaryPlus-v1.0.4",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-ArcheryFeathersChange-v1.0.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-ArcheryFeathersChange-v1.0.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-ArmorHarvestMods-v2.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-ArmorHarvestMods-v2.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-BuyTraderVendingMachines-v3.0.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-BuyTraderVendingMachines-v3.0.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-CraftStackEngBattCells-v3.3.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-CraftStackEngBattCells-v3.3.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-DecorationBlock-v3.0.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-DecorationBlock-v3.0.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-DewsPlus-v2.4.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-DewsPlus-v2.4.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-DoorsPlus-v3.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-DoorsPlus-v3.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-DrinkableAcid-v2.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-DrinkableAcid-v2.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-DyesPlus-v3.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-DyesPlus-v3.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-FarmingPlus-v5.6.3",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-FarmingPlus-v5.6.3",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-FloraHarvester-v2.3.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-FloraHarvester-v2.3.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-MedicallyTreatOthers-v0.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-MedicallyTreatOthers-v0.0.2",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-MedicalTreatOthersTreatedInjuries-v0.0.2",
+      "legacy_cleanup_was_eligible": false,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-MedicationNoInsectSlow-v1.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-MedicationNoInsectSlow-v1.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-MiningPlus-v1.2.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-MiningPlus-v1.2.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-Mod988-v2.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-Mod988-v2.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-ModBundling-v1.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-ModBundling-v1.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-PaintbrushPlus-v2.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-PaintbrushPlus-v2.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-PlayerVendingMachinesPlus-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-PlayerVendingMachinesPlus-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-PumpkinsPlus-v2.0.5",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-PumpkinsPlus-v2.0.5",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-RecipeRottingFlesh-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-RecipeRottingFlesh-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-RenamesAlphabeticalSort-v2.0.5",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-RenamesAlphabeticalSort-v2.0.5",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-SmeltingPlus-v2.4.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-SmeltingPlus-v2.4.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-TacticalRiflePlus-v2.1.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-TacticalRiflePlus-v2.1.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-TreesPlus-v3.0.2",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-TreesPlus-v3.0.2",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-WriteStoryOnCrate-v1.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-WriteStoryOnCrate-v1.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    },
+    {
+      "lane": "C:\\GitHub\\7D2D-Mods\\01_Draft",
+      "folder": "AGF-VP-XPDeathPenaltyReduction-v2.0.1",
+      "path": "C:\\GitHub\\7D2D-Mods\\01_Draft\\AGF-VP-XPDeathPenaltyReduction-v2.0.1",
+      "legacy_cleanup_was_eligible": true,
+      "readme_md_exists_after": false,
+      "readable_txt_exists_after": false,
+      "readme_txt_exists_after": true
+    }
+  ]
+}

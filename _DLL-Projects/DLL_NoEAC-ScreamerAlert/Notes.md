@@ -16,6 +16,25 @@ Recent update (2026-07-01):
 - COUNT button visibility is now capability-gated via `opt_row_1_num_visible` binding and only appears when EnhancedAGF capability is available.
 - ESC option button presses now apply immediate local selected-state feedback before authoritative reconciliation, so selection changes instantly without close/reopen.
 
+Recent update (2026-07-08):
+- Chat status/help responses now send 3 lines for cleaner one-line chat display:
+   - Line 1: current mode only.
+   - Line 2: options syntax (`/agfsa <off|on|count>`).
+   - Line 3: COUNT requirement note.
+- New localization keys in active mod `Config/Localization.csv`:
+   - ScreamerAlert_Chat_Options
+   - ScreamerAlert_Chat_CountRequiresEnhanced
+- Built `ScreamerAlert.dll` from `_DLL-Projects/DLL_NoEAC-ScreamerAlert` and deployed only these files to live game mod `AGF-NoEAC-ScreamerAlert-v2.2.0`:
+   - `ScreamerAlert.dll`
+   - `Config/Localization.csv`
+- `agf-sa list` readability update:
+   - Removed header row.
+   - Per-player output is now LP-like and id-first: `<index>. id=<entityId>, <playerName>, sa=<mode>, enhanced=<state>`.
+   - `enhanced` now uses robust probe semantics (`YES` if probe reply arrives in wait window, otherwise `NO`).
+   - Added `NetPackageScreamerAlertCapabilityProbe.cs` for server-initiated capability probes.
+   - `agf-sa list` now performs timed probe wait and clears stale capability for non-responders.
+   - Rebuilt DLL for active build deployment testing.
+
 ## 1. What Is Current Right Now
 
 1. The server is authoritative for tracked screamer/horde state.

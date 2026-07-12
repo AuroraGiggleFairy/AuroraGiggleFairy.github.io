@@ -3,7 +3,7 @@
   <Name value="AGF-4Modders-SkillPointCap" />
   <DisplayName value="BETA - AGF Skill Point Cap" />
   <Version value="1.0.1" />
-  <Description value="Adds a configurable level cap for stopping skill point rewards on level-up." />
+  <Description value="Adds a configurable level cap for stopping skill point rewards on" />
   <Author value="AuroraGiggleFairy (AGF)" />
   <Website value="https://auroragigglefairy.github.io/" />
   <SkipWithAntiCheat value="true" />

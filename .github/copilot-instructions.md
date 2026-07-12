@@ -5,6 +5,19 @@
 - Confirm changes as implemented best effort.
 - Do not claim ready to test in game unless live game mod files were actually updated in that run.
 
+## README Wording Workflow Defaults
+- For README wording tasks, follow `Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md` as the source of truth.
+- Work one mod and one section at a time.
+- Default effort pattern:
+  - Medium for normal wording production passes.
+  - High only for workflow calibration turns.
+  - Low only for micro-polish on one to two lines.
+- Default output shape unless user asks otherwise:
+  - Suggestion 1
+  - Suggestion 2
+  - Recommended (short reason)
+- If a substantive claim cannot be verified from source, label it Unverified and avoid hard-claim wording.
+
 ## Lane Safety
 - Do not modify 02_ActiveBuild or 03_ReleaseSource unless explicitly requested.
 - Default deployment target is the live game Mods path only.

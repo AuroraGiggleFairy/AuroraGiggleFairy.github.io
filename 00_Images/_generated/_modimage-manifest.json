@@ -36,38 +36,38 @@
     "media_file": ""
   },
   "AGF-BackpackPlus-060Slots": {
-    "signature": "b6de8f25882a060b57d0ab356c7d7ba650cd7b4291569736b58a3b5dacb17816",
-    "version": "4.0.4",
+    "signature": "68a10e6c72eee8dfd0c9cbfc57223b60bcd63990da3ce3b93422675a100cf398",
+    "version": "4.1.0",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-060Slots_01.png"
   },
   "AGF-BackpackPlus-072Slots": {
-    "signature": "fd8c9a1ad2be0ea500511f0f9ef0e8733a55cfd4e166f7ed02099eb25b418093",
-    "version": "4.0.3",
+    "signature": "ded0af4ff006db7c5860a493f5ef6380333a0f87a64e6b60bc1a827d9e898b49",
+    "version": "4.1.0",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-072Slots_01.png"
   },
   "AGF-BackpackPlus-084Slots": {
-    "signature": "3f87d5c868766d4a10d8642a1959a1f9c203d40a363aa8d9fc714a1fb98e06b3",
-    "version": "4.0.2",
+    "signature": "7a1f357674aa89c3da1994934e24b2c188f984e38e344059a69637a35d093a91",
+    "version": "4.1.0",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-084Slots_01.png"
   },
   "AGF-BackpackPlus-119Slots": {
-    "signature": "a5ec59ddff9abc9f6848c8f864726eff868829fd85be79fa02b58a7f5128d2cd",
-    "version": "2.0.0",
+    "signature": "c28cb23d7eddae0bf770c0953495861af3e5c95c1886dd70c2fa6d3837163023",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "54aad0dd9ec91ac61ad4b380aa03e540c7fb0e60bce22dddfb5c90dfd523e930",
-    "version": "6.4.0",
+    "signature": "439451b3ba626a319a3ca4146fe571c5230533f51264c2ff772b655e39b3685c",
+    "version": "6.5.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
   "AGF-HUDPlus-BMCounter": {
-    "signature": "cca24b6a937d500559f62a9464a540d25bfa4d2e9ffdb4049ff491bc64e9c9bf",
-    "version": "3.0.0",
+    "signature": "d69d80cae33b1d30669ab914107814b26c69b3116051e8a897bdeafec5f1433e",
+    "version": "4.0.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-BMCounter_01.png"
   },
@@ -78,16 +78,16 @@
     "media_file": "AGF-HUDPlus-HealthBars_01.png"
   },
   "AGF-HUDPlus-PurpleBook": {
-    "signature": "e6cc446c7b43ef4fb612c7eef8a6928fc1d64dfb4129e25d31589f03b2a93554",
-    "version": "3.0.0",
+    "signature": "698a026e453a9db9c9ee7c82caefbdfdd8e3fe344cae5e123b3aff0710a63a67",
+    "version": "3.1.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-PurpleBook_01.png"
   },
   "AGF-HUDPlus-RemoveEnteringPopUp": {
-    "signature": "f030ca4ce3e948d20ddb916ddb2ff7be602724a3f76eec41f7b8019af4402c3d",
-    "version": "2.0.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "171fcac1f9e40e2e7200a61bc8740f415dbe03112971ad9238546dc3b312949c",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-HUDPlus-RemoveEnteringPopUp_01.png"
   },
   "AGF-HUDPluszOther-RemoveWrittentormAlerts": {
     "signature": "f303e3043a28af4557a77f7edc26ee07230ee11ea2f156c7fe571bb9c222f40d",
@@ -108,8 +108,8 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "15bba6e7026bf1eaaa35bdf25a61f3f3445dc180cb5e4edb71a1b864c3c2d44c",
-    "version": "3.0.3",
+    "signature": "cb3bed89b2d8b5c92b3e75a2618f9f94c03fd82f39ca38521821d4e3f700942a",
+    "version": "3.1.0",
     "has_media": true,
     "media_file": "AGF-HUDPluszOther-Weekday_01.png"
   },
@@ -120,8 +120,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-AutoRun": {
-    "signature": "f3262fb0fd79b5a9f5cd1729001f003429dabf50ad9cc4cc7a09794cc7a1242c",
-    "version": "2.0.3",
+    "signature": "3740f8cedcbc7f42469e0bb79f5a379af2d43b319263f6b611cfa45173b9cb24",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-AutoRun_01.png"
   },
@@ -132,14 +132,14 @@
     "media_file": ""
   },
   "AGF-NoEAC-CosmeticLockIcon": {
-    "signature": "9e45208a7a868ccb12590e228a91fedb171e7872abe2e2f8b584c4e74dbc585e",
-    "version": "3.0.0",
+    "signature": "8d84ba82545bd380cc458485b7da65fc2472ce4cd9e2435d22a90ef64c0a93cb",
+    "version": "3.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-CosmeticLockIcon_01.png"
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "a37f7f32e8ea8d8e2deaa3e47c1c48e7f2cf9805db580dab086cd90493aeac5c",
-    "version": "4.2.0",
+    "signature": "5e5729e488a5e5b090bcefa77f4866ddc7509fa2b3a9eac861370dc661226c7f",
+    "version": "4.3.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },
@@ -156,8 +156,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-GlobalStormTracker": {
-    "signature": "343220048a10502e112760b5ed9f7c74818cdfec0a33af6da75369c565142677",
-    "version": "2.0.1",
+    "signature": "986c771c93a3d7e9275e80ad6816b2325e28e491ed8701108fd9c513b0371ee1",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-GlobalStormTracker_01.png"
   },
@@ -180,8 +180,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-ScreamerAlert": {
-    "signature": "d8aab4af8d9bf5d2b7a9914566b31935a76fda99d29013a365df2b3c2dc8bedc",
-    "version": "2.2.0",
+    "signature": "31861a9b1e631462249ffdfef1668fe114ef61a1b12adb36485ee26c959e27d0",
+    "version": "2.3.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-ScreamerAlert_01.png"
   },
@@ -192,8 +192,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "afc194973bfe26c26983f20b5030c3051a61df32ac14341e1ac05e59cf1bd461",
-    "version": "2.1.1",
+    "signature": "7c3977d9f2ce833344437d828bd696f2a8c049e2bf502b0b6d12e0dc04e07f65",
+    "version": "2.2.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
   },
@@ -234,28 +234,28 @@
     "media_file": ""
   },
   "AGF-VP-AutomobilesRespawn": {
-    "signature": "cd19635fc0aa58eb68177451a2d3418d82eee2b00efbdf7fbc3c9c6c71942097",
-    "version": "4.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "3f3d58c83cb8c7979ab6490af07ba7c899a2db9b3e847e70fdace05c6c8056b4",
+    "version": "4.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-AutomobilesRespawn_01.png"
   },
   "AGF-VP-BedrollPlus": {
-    "signature": "f1d1f341312a35246f07ab84601c4823889a2f3ef982aa9f0559746694db87a8",
-    "version": "2.0.0",
+    "signature": "6122b16e2523fe91064a010caf91e7d0d7596881b1974b346f918f4fe4d9483b",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-VP-BedrollPlus_01.png"
   },
   "AGF-VP-BetterEggChance": {
-    "signature": "32e25073bc8978d0c16baf14b848343cc6fa2f0c7ada5ba350dda8114342aa06",
-    "version": "3.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "864a36583a08363d84dffa728d5ca6b63e28690931a48559e3c2885c04b8b785",
+    "version": "3.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-BetterEggChance_01.png"
   },
   "AGF-VP-BreakItGetIt": {
-    "signature": "3731b4068c66d8b1573a2becd441e8f86c83343451138b3cde11a54f2ae313d1",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "535b97c9b32d238c3de5b42de4726fbad9124d723de8abb66cc8befaf3fbf4e6",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-BreakItGetIt_01.png"
   },
   "AGF-VP-BuyTraderVendingMachines": {
     "signature": "f157877ba5c47f466d578d7d1f519e651c00f7c92007a4ff2eb3b2e9922e2b5f",
@@ -264,10 +264,10 @@
     "media_file": ""
   },
   "AGF-VP-CraftSewingKits": {
-    "signature": "89574d22916961d31d5b6fbbe2ae25a52d8dd0f446efb07e455654c1b6b43304",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "dc1c96e4852b6a5b2fbf9b2ce8049585dbe98a90c61f103659b5adeeff59e426",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-CraftSewingKits_01.png"
   },
   "AGF-VP-CraftStackEngBattCells": {
     "signature": "7fc7e75b770566850db77ef74dff5b15de235d1fc1072ad44f5e54313bc39a25",
@@ -276,10 +276,10 @@
     "media_file": ""
   },
   "AGF-VP-CraftVitamins": {
-    "signature": "70f7cceac81e3b6ec1dd71194f650f230c9eeda25823c8a0b963370112b30557",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "5c9529507198b386029f53e499ce91d5fdcf43f326f6c6165e0bd9ab17d69a24",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-CraftVitamins_01.png"
   },
   "AGF-VP-DecorationBlock": {
     "signature": "637f0e88a6cbfd3374d04d39df917f514ea2560c35208a4eff3327668759b0f8",
@@ -324,20 +324,20 @@
     "media_file": ""
   },
   "AGF-VP-FuelBurnPlus": {
-    "signature": "51d34aa0ff707f92d5ce36ada998de4db76118a2b64f05594908ba0612a5db59",
-    "version": "3.0.0",
+    "signature": "b8b15702c51ebc837a0109a536b27c9fbaabdb8f29b0cca5a941673fa00a1e65",
+    "version": "3.1.0",
     "has_media": true,
     "media_file": "AGF-VP-FuelBurnPlus_01.png"
   },
   "AGF-VP-MasterTool": {
-    "signature": "3fb9f9db0fb5aece0c5723e04a1ad6159f0c23d6415117249981e7917b4f6c01",
-    "version": "7.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "f50842dc19c8c0af49b4ffc76ee0319fbf538706d87ca75dbfd5216bd17ed9b3",
+    "version": "7.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-MasterTool_01.png"
   },
   "AGF-VP-MaxLevel500": {
-    "signature": "fc9d3e84f5db0e71e515db0d366432a94f70502086e17dd13eb63eabbb32d1ae",
-    "version": "3.0.0",
+    "signature": "1601995e5b976a1fdb26d97994b91a7bb50ec3b9fad24e1a24eaf583dcba90a6",
+    "version": "3.1.0",
     "has_media": false,
     "media_file": ""
   },
@@ -366,8 +366,8 @@
     "media_file": ""
   },
   "AGF-VP-ModSlotsPlus": {
-    "signature": "bb15ba28a03232400e2ec126531e4b72eb250a7aaeb00176bf15df1d92cbb58a",
-    "version": "4.0.0",
+    "signature": "91b206bf36fbc7d6ca7fb20edf57cb193bd738167ad0af45586448b8087ede16",
+    "version": "4.1.0",
     "has_media": true,
     "media_file": "AGF-VP-ModSlotsPlus_01.png"
   },
@@ -378,14 +378,14 @@
     "media_file": ""
   },
   "AGF-VP-PickupLanternsPlus": {
-    "signature": "757442debb426cd38b119406fce7d5f9bb613807802a6e5c3d1d47a1a3910f83",
-    "version": "3.0.0",
+    "signature": "96fe6bed983c9b2282a3c2b7602b485800c67605e81700aa73f726c5a5c948d8",
+    "version": "3.1.0",
     "has_media": true,
     "media_file": "AGF-VP-PickupLanternsPlus_01.png"
   },
   "AGF-VP-PlayerResetQuests": {
-    "signature": "11f38f19940a25a2ef6d678e91842bfb012e6dd6dbfa327c00738f4ba66afc0f",
-    "version": "3.0.0",
+    "signature": "b376a0c823488761286145257220e00c6a832584250b3c1860385c1c8ba4bd57",
+    "version": "3.1.0",
     "has_media": true,
     "media_file": "AGF-VP-PlayerResetQuests_01.png"
   },
@@ -408,8 +408,8 @@
     "media_file": ""
   },
   "AGF-VP-RebundleBundles": {
-    "signature": "1d61fd6546458fb2c332cd38d24e4a5e64f7831bb018942464371c1adf25345b",
-    "version": "2.0.0",
+    "signature": "4dba8f699ab8dff7ad97c9daa95edd0188abc07b4b5c3916ba4fda07b0cedc45",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-VP-RebundleBundles_01.png"
   },
@@ -426,26 +426,26 @@
     "media_file": ""
   },
   "AGF-VP-RestorePowerAnyTime": {
-    "signature": "250a45c76b1666e4130b2b7010cc78a955c75a4fe0b947f380d6464c78a5b361",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "57c38ce144b58de842b3b9b197d6b38fcba6c650ff129a37a4f02ff613cc05c2",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-RestorePowerAnyTime_01.png"
   },
   "AGF-VP-ScrapBatts4Acid": {
-    "signature": "3d2a46dfac7337de37a188513a6cd5ef82cddc0f8b695e30848bdc8d6e8dfc79",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "1546980373cac34acb5953b72ac5281cb3ea85e8a544da52caa888e85286931e",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-ScrapBatts4Acid_01.png"
   },
   "AGF-VP-ScrapEquipmentFaster": {
-    "signature": "c7d0fbdcad269599ac1f5f88507aff9e2bfacf18a6984cce1d80552ea10c64a6",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "334cda85ad64a1ae4b490d04c56c5f1f8eb442a673ae840bc2f30e25665b289c",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-ScrapEquipmentFaster_01.png"
   },
   "AGF-VP-SimplifiedStacks": {
-    "signature": "4197838cea60b4effc8ebbb893321704ea0107739199c3b27eede12e6a5a2e2d",
-    "version": "2.0.1",
+    "signature": "c37a9d149b1f974108a7a5f8c1dc0161bc35d8106bd0ec1b93b246e1eb73c7c5",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-VP-SimplifiedStacks_01.png"
   },
@@ -456,16 +456,16 @@
     "media_file": ""
   },
   "AGF-VP-StayLongerAnimalCorpse": {
-    "signature": "a7d3d586af485000bbadc786f81520623ec601fac9deddb69b88efb077ba9506",
-    "version": "3.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "258eb51c8aadababa4157a64e368e3c09880c4818abbfb0a8cb1e48065c68b46",
+    "version": "3.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-StayLongerAnimalCorpse_01.png"
   },
   "AGF-VP-StayLongerPlayerBackpack": {
-    "signature": "ab76d261e46b3486dde3c658dbf9c31f26a6ff101e55821b6788c084644dce14",
-    "version": "3.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "0ab044fa390078856e35c1d3df370648eb63b498edfaf1e49b201ba6c928de8b",
+    "version": "3.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-StayLongerPlayerBackpack_01.png"
   },
   "AGF-VP-StayLongerZombieLoot": {
     "signature": "3469aec8bf6ef7ea8e6873adcd68ba4d3031704869465154159ee5e311cb5666",
@@ -504,22 +504,22 @@
     "media_file": ""
   },
   "AGF-VP-VehiclePerformance": {
-    "signature": "1cc2d49a6d6d08b8d8d49a9c9d6688e0056fd0acdc5e79a6801fff5ba255664c",
-    "version": "2.0.0",
+    "signature": "7b872d3926875d10ffb93a8a838a95244166641bcc0d9a11ccbb4c2208304d70",
+    "version": "2.1.0",
     "has_media": false,
     "media_file": ""
   },
   "AGF-VP-VehiclesExtraSeating": {
-    "signature": "c67e429eecf39cba265e1559f42b10fd2e2ac52a0837c38bd885074039429865",
-    "version": "2.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "5fb950b6efafbff15887711441b92ced95b131ec4cedab46bb61456a92d8284b",
+    "version": "2.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-VehiclesExtraSeating_01.png"
   },
   "AGF-VP-VehicleStoragePlus": {
-    "signature": "b777c58111ace19a2324193ed5aa682df18c2a2f8ee19c3590b439d4d94385f9",
-    "version": "3.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "52e710b8c8f8541a1f197ff574a45b0c7102be5812608e2e42d664bd76aa38c5",
+    "version": "3.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-VehicleStoragePlus_01.png"
   },
   "AGF-VP-WriteStoryOnCrate": {
     "signature": "7a081f4691d13d968fcce3c58c5cfcda69b29d43c23a103fdae93380d5765d10",
@@ -540,10 +540,10 @@
     "media_file": ""
   },
   "AGF-VP-ZombieCorpseLeaveQuicker": {
-    "signature": "03177128c2edbce7dec25d1d8d12b3c7222a6aa205c01a389d010b7aeecdade4",
-    "version": "3.0.0",
-    "has_media": false,
-    "media_file": ""
+    "signature": "ae6c46991cfc81b18de2f5a0f6e917b1e8349a4cb9b608dfb232c6f66f2dc678",
+    "version": "3.1.0",
+    "has_media": true,
+    "media_file": "AGF-VP-ZombieCorpseLeaveQuicker_01.png"
   },
   "AGF-VP-ZombieLargerHordes": {
     "signature": "71f620ce73ce2e92724b6ec0996b448e44d6d2038f19c7472984de2164e584dd",
@@ -552,21 +552,27 @@
     "media_file": ""
   },
   "zzzAGF-Special-Compatibilities": {
-    "signature": "e8995dc36133d3f2653eb9215804ddad1fe5b02cde2c9714222255c3fefa6afd",
-    "version": "5.0.0",
+    "signature": "490c0fee742198984cb83812694c22268b68cd9a71bd773e4d6bfaa69d29552f",
+    "version": "5.1.0",
     "has_media": false,
     "media_file": ""
   },
   "AGF-NoEAC-SignErrorGuard": {
-    "signature": "2f012c392a49f68839da2f05b3f4ea5ca46eec0121a091b57564869edd13e72d",
-    "version": "1.0.0",
+    "signature": "8fbd29766dd3e9bfbdecb3c0aa657b9ca9d2be488a6d6cd957457d13faed5af9",
+    "version": "1.1.0",
     "has_media": false,
     "media_file": ""
   },
   "AGF-VP-LargerStorageOption": {
-    "signature": "2b824e10930eb6787a1a0f9541b018abc2f64e27f6398225f15bd0e523ad7782",
-    "version": "1.0.1",
+    "signature": "dae79715a9e23c0caf04126ca31c1b066b077e42ae891972320dc51a3e3b6346",
+    "version": "1.1.0",
     "has_media": true,
     "media_file": "AGF-VP-LargerStorageOption_01.png"
+  },
+  "zzzAGF-Special-LocalizationPatches": {
+    "signature": "a4e4a0d8c092109bcbe579e21b0aa1b6847bca40b7ea64fc2d4233b251476c0a",
+    "version": "1.0.0",
+    "has_media": false,
+    "media_file": ""
   }
 }

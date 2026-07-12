@@ -9,6 +9,7 @@ public static class ScreamerAlertEnhancedCapabilityHello
     private const int MaxHelloAttempts = 3;
     private const float FirstRetryDelaySeconds = 3f;
     private const float SecondRetryDelaySeconds = 10f;
+    private const float ProbeCooldownSeconds = 0.2f;
 
     private static bool _resolved;
     private static bool _acknowledged;
@@ -19,6 +20,8 @@ public static class ScreamerAlertEnhancedCapabilityHello
     private static Type _helloPackageType;
     private static MethodInfo _getPackageGenericMethod;
     private static MethodInfo _setupMethod;
+    private static int _lastProbeNonce = int.MinValue;
+    private static float _lastProbeAtRealtime = -1f;
 
     public static void TrySendForLocalPlayerSpawn(int entityId)
     {
@@ -36,6 +39,29 @@ public static class ScreamerAlertEnhancedCapabilityHello
             _lastEntityId = entityId;
         }
 
+        TrySendHello(_lastEntityId);
+    }
+
+    public static void TrySendFromProbe(int entityId, int nonce)
+    {
+        float now = Time.realtimeSinceStartup;
+        if (nonce == _lastProbeNonce && _lastProbeAtRealtime >= 0f && (now - _lastProbeAtRealtime) < ProbeCooldownSeconds)
+        {
+            return;
+        }
+
+        _lastProbeNonce = nonce;
+        _lastProbeAtRealtime = now;
+
+        if (entityId >= 0)
+        {
+            _lastEntityId = entityId;
+        }
+
+        // Probe flow requires a fresh hello even if prior ack state was true.
+        _acknowledged = false;
+        _attemptCount = 0;
+        _nextRetryAtRealtime = -1f;
         TrySendHello(_lastEntityId);
     }
 

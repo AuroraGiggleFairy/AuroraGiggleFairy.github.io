@@ -21,9 +21,7 @@ Quality-of-life HUD enhancements and visual tweaks.
 Increases backpack size. Choose the slot count that fits your needs.
 
 [SPECIAL]
-Compatibility patches between AGF mods and select third-party mods.
-
-Requests can be sent to AGF in [Discord](https://discord.gg/Vm5eyW6N4r).
+Patches to support other mods and modlets alongside AGF mods.
 
 [VP]
 Gameplay tweaks and new features that expand on the base game.

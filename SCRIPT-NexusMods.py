@@ -19,6 +19,7 @@ DEFAULT_CONFIG_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-con
 DEFAULT_TEMPLATE_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "TEMPLATE-NexusModsConfig.json")
 DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-release-plan.json")
 DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-upload-plan.json")
+DEFAULT_MANUAL_PACKET_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ManualPackets")
 DEFAULT_API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"
 DEFAULT_APPLICATION_NAME = "AGF-NexusMods-Automation"
 DEFAULT_APPLICATION_VERSION = "0.1.0"
@@ -853,6 +854,131 @@ def build_file_changelog_summary(changelog_delta: List[Dict[str, object]]) -> st
     return "\n".join(lines).strip()
 
 
+def sanitize_filename(value: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", value or "")
+    cleaned = cleaned.strip("._")
+    return cleaned or "mod"
+
+
+def build_manual_packet_markdown(target: Dict[str, object]) -> str:
+    mod_name = str(target.get("mod_name", "")).strip() or "Unknown Mod"
+    page_url = str(target.get("page_url", "")).strip() or "(not set)"
+    local_version = str(target.get("local_version", "")).strip() or "0.0.0"
+    live_version = str(target.get("live_version", "")).strip() or "unknown"
+    live_file_name = str(target.get("live_latest_file_name", "")).strip() or "(unknown)"
+    live_file_id = safe_int(target.get("live_latest_file_id", 0))
+    tested_game_version = str(target.get("tested_game_version", "")).strip() or "(not detected)"
+    file_category = str(target.get("file_category", "main")).strip() or "main"
+    zip_name = str(target.get("zip_name", "")).strip() or "(missing)"
+    zip_path = str(target.get("zip_path", "")).strip() or "(missing)"
+
+    short_description = normalize_single_line_text(str(target.get("summary", "")).strip())
+    if not short_description:
+        short_description = "(empty - fill manually)"
+
+    full_description = normalize_multiline_text(str(target.get("detailed_description", "")).strip())
+    if not full_description:
+        full_description = "(empty - fill manually)"
+
+    file_notes = normalize_multiline_text(str(target.get("file_description", "")).strip())
+    if not file_notes:
+        file_notes = "(empty - fill manually)"
+
+    changelog_summary = normalize_multiline_text(str(target.get("file_changelog_summary", "")).strip())
+    if not changelog_summary:
+        changelog_summary = "(no delta detected)"
+
+    return f"""# Nexus Manual Update Packet - {mod_name}
+
+Generated: {dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+## 1) General
+- Mod name: {mod_name}
+- Nexus page: {page_url}
+- Local version: {local_version}
+- Live version: {live_version}
+- Live latest file: {live_file_name}
+- Live latest file id: {live_file_id or '(unknown)'}
+- Tested game version: {tested_game_version}
+- File category: {file_category}
+- Zip name: {zip_name}
+- Zip path: {zip_path}
+
+## 2) Short Description (copy/paste)
+UI note: Nexus currently shows a 350 character limit in the short description editor.
+
+Length: {len(short_description)} / 350
+
+```text
+{short_description}
+```
+
+## 3) Full Description (copy/paste)
+UI note: Nexus full description editor is rich text.
+
+```text
+{full_description}
+```
+
+## 4) File Notes / File Description (copy/paste)
+UI note: File description field currently shows a 255 character limit in file edit modal.
+
+Length: {len(file_notes)} / 255
+
+```text
+{file_notes}
+```
+
+## 5) Changelog Delta (copy/paste)
+
+```text
+{changelog_summary}
+```
+
+## 6) Manual Checklist
+- [ ] General section verified (name/category/version)
+- [ ] Short description updated
+- [ ] Full description updated
+- [ ] File details updated (display name/version/category)
+- [ ] File notes updated
+- [ ] Changelog/notes updated for this release
+- [ ] Media (thumbnail/gallery) reviewed and updated manually if needed
+"""
+
+
+def generate_manual_packets(upload_plan: Dict[str, object], output_dir: str, dry_run: bool) -> int:
+    targets = upload_plan.get("prepared_targets", [])
+    if not isinstance(targets, list):
+        return 1
+
+    if not targets:
+        print("No prepared targets available; manual packets were not generated.")
+        return 0
+
+    if dry_run:
+        print(f"[DRYRUN] Would generate {len(targets)} Nexus manual packet files in: {output_dir}")
+        return 0
+
+    os.makedirs(output_dir, exist_ok=True)
+    written = 0
+    for target in targets:
+        if not isinstance(target, dict):
+            continue
+        mod_name = str(target.get("mod_name", "")).strip() or "mod"
+        local_version = str(target.get("local_version", "0.0.0")).strip() or "0.0.0"
+        filename = f"{sanitize_filename(mod_name)}-v{sanitize_filename(local_version)}-NexusManualPacket.md"
+        packet_path = os.path.join(output_dir, filename)
+        packet_text = build_manual_packet_markdown(target)
+        with open(packet_path, "w", encoding="utf-8") as handle:
+            handle.write(packet_text)
+            if not packet_text.endswith("\n"):
+                handle.write("\n")
+        written += 1
+
+    print(f"Generated {written} Nexus manual packet files in: {output_dir}")
+    return 0
+
+
 def discover_live_update_groups(plan: Dict[str, object], config: Dict[str, object], only_updates: bool) -> int:
     env_var_name, api_key = get_env_api_key(config)
     if not api_key:
@@ -1142,9 +1268,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Dedicated Nexus Mods planning and live-check workflow")
     parser.add_argument(
         "--mode",
-        choices=["init-config", "build-plan", "check-live", "discover-groups", "prepare-upload"],
+        choices=["init-config", "build-plan", "check-live", "discover-groups", "prepare-upload", "prepare-manual-docs"],
         default="build-plan",
-        help="Create a config from template, build a local Nexus release plan, run live discovery/checks, or prepare upload payloads",
+        help="Create config, build plan, run live checks, prepare upload payloads, or generate per-mod manual Nexus packet docs",
     )
     parser.add_argument(
         "--config",
@@ -1160,6 +1286,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--upload-plan-output",
         default=DEFAULT_UPLOAD_PLAN_OUTPUT_PATH,
         help="Where to write the prepared Nexus upload plan JSON",
+    )
+    parser.add_argument(
+        "--manual-doc-output-dir",
+        default=DEFAULT_MANUAL_PACKET_DIR,
+        help="Directory where per-mod Nexus manual packet markdown files are written",
     )
     parser.add_argument(
         "--only",
@@ -1213,6 +1344,20 @@ def main() -> int:
         write_json_file(plan_output, plan, args.dry_run)
         if upload_plan:
             write_json_file(os.path.abspath(args.upload_plan_output), upload_plan, args.dry_run)
+        return result
+    if args.mode == "prepare-manual-docs":
+        result, upload_plan = prepare_upload_plan(plan, config, args.only)
+        write_json_file(plan_output, plan, args.dry_run)
+        if upload_plan:
+            write_json_file(os.path.abspath(args.upload_plan_output), upload_plan, args.dry_run)
+            packet_result = generate_manual_packets(
+                upload_plan,
+                os.path.abspath(args.manual_doc_output_dir),
+                args.dry_run,
+            )
+            if result != 0:
+                return result
+            return packet_result
         return result
     return 0
 

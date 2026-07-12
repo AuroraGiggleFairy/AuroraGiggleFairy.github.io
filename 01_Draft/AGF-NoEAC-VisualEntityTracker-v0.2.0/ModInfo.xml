@@ -3,7 +3,7 @@
     <Name value="AGF-NoEAC-VisualEntityTracker"/>
     <DisplayName value="BETA - AGF Visual Entity Tracker"/>
     <Version value="0.2.0"/>
-    <Description value="Accessibility-focused nearby entity tracking for compass visuals (XML baseline + optional DLL extensions)."/>
+    <Description value="Accessibility-focused nearby entity tracking for compass visuals (XML"/>
     <Author value="AuroraGiggleFairy (AGF)"/>
     <Website value="https://auroragigglefairy.github.io/"/>
 </xml>

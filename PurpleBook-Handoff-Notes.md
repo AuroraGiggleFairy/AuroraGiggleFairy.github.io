@@ -1,5 +1,61 @@
 # Purple Book Generator Handoff (2026-05-28)
 
+## Status Update (2026-07-09, hard no-interpolation rule for all armor rows)
+- Change history:
+  - Enforced hard rule: no interpolation anywhere in Purple Book armor value generation.
+  - Added vanilla `buffs.xml` parsing for armor set-bonus q1..q6 tier series (rows 6/7).
+  - Replaced zoom set-bonus q2-q5 interpolation fallback with source-tier resolution.
+  - Added explicit per-tier manual series overrides for split-stat sets:
+    - Biker (Armor Rating + Bike Fuel Use)
+    - Enforcer (.44 Damage + .44 Reload Speed)
+    - Lumberjack (Axe Stamina Cost + Wood Harvest)
+    - Preacher (Crit Resist + Infection Resist)
+  - Primitive armor remains manual: piece rows (2-5) all `0%`; set-bonus rows blank.
+- Working method used:
+  - Source edit only: `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Focus checks:
+    - `armorAssassinOutfit` row6 = `-15%,-30%,-45%,-60%,-75%,-100%`.
+    - Split-stat sets now have explicit q2-q5 tiers with no interpolation artifacts.
+    - `armorPrimitiveOutfit` rows 6/7 remain blank.
+- Do-not-do note:
+  - Never reintroduce interpolation for armor piece rows (2-5) or set-bonus rows (6/7). If a source tier is unknown, stop and ask.
+
+## Status Update (2026-07-09, set-bonus q2-q5 restore + primitive crit zeros)
+- Change history:
+  - Fixed zoom-card q2-q5 filling for armor set-bonus rows (rows 6/7) after armor-piece interpolation removal.
+  - Kept non-interpolated armor-piece sourcing for rows 2-5 from vanilla series.
+  - Enforced Primitive armor piece rows (2-5) to manual `0%` values for q1-q6.
+  - Kept Primitive set-bonus row values blank.
+- Working method used:
+  - Source edit only: `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Focus checks:
+    - `armorPrimitiveOutfit` rows 2-5 = `0%` across q1..q6.
+    - `armorPrimitiveOutfit` set-bonus rows remain blank.
+    - `armorBikerOutfit`, `armorEnforcerOutfit`, `armorLumberjackOutfit`, `armorPreacherOutfit` set-bonus rows now populate q2-q5.
+- Do-not-do note:
+  - Do not reuse armor-piece row blanking logic for rows 6/7 in zoom cards; set-bonus rows must still generate q2-q5.
+
+## Status Update (2026-07-09, armor rows use vanilla tier series)
+- Change history:
+  - Removed generated interpolation for armor stat rows in zoom cards.
+  - Added source-tier parsing from vanilla `items.xml` for armor piece items (`Helmet`, `Outfit`, `Gloves`, `Boots`).
+  - Updated armor row value insertion so rows 2-5 use resolved vanilla q1..q6 values (keeping set-bonus row overrides unchanged).
+  - Preserved all existing layout/formatting and non-armor generation behavior.
+- Working method used:
+  - Source edit only: `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Validation run (no lane/game sync):
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+  - Post-run checks:
+    - Generator completed successfully and wrote expected outputs.
+    - Zoom armor rows 2-5 contain non-blank q2-q5 values across all outfit grids.
+    - Spot checks confirm direct series values (example: `armorAssassinOutfit` row5 = `2%,2%,3%,3%,4%,5%`; `armorNerdOutfit` rows match expected vanilla tiers).
+- Do-not-do note:
+  - Do not reintroduce q2-q5 interpolation for armor piece stat rows; values must come from vanilla tier series only.
+
 ## Status Update (2026-06-28, generator now manages gameevents trigger)
 - Change history:
   - Added generator-managed output for `Config/gameevents.xml` in `SCRIPT-PurpleBookGenerator.py`.

@@ -10,7 +10,10 @@ Use COMMANDS-README.md for player/admin-facing general command guidance.
 Non-EnhancedAGF CHAT Commands (Server Baseline)
 
     Command: /agfsa, /agf-sa, /agfsa help, /agf-sa help, /agfsa status, /agf-sa status
-    Response: [Screamer Alert = <OFF|ON>]
+    Response (multi-line):
+        [Screamer Alert = <OFF|ON>]
+        [Options: /agfsa off, on, count]
+        [COUNT requires EnhancedAGF]
 
     Command: /agfsa on, /agf-sa on
     Response: [Screamer Alert = ON]
@@ -29,7 +32,10 @@ Non-EnhancedAGF CHAT Commands (Server Baseline)
 EnhancedAGF CHAT Commands
 
     Command: /agfsa, /agf-sa, /agfsa help, /agf-sa help, /agfsa status, /agf-sa status
-    Response: [Screamer Alert = <OFF|ON|COUNT>]
+    Response (multi-line):
+        [Screamer Alert = <OFF|ON|COUNT>]
+        [Options: /agfsa off, on, count]
+        [COUNT requires EnhancedAGF]
 
     Command: /agfsa on, /agf-sa on
     Response: [Screamer Alert = ON]
@@ -107,9 +113,11 @@ Admin CONSOLE Commands for Screamer Alert (Full Script Spec)
 
     Command: agf-sa list
     Response (multi-line):
-        [ScreamerAlert] playername,id,screamer_alert,enhancedagf
-        [ScreamerAlert] <playerName>,<entityId>,<OFF|ON|COUNT>,<YES|NO|UNKNOWN>
+        [ScreamerAlert] <index>. id=<entityId>, <playerName>, sa=<OFF|ON|COUNT>, enhanced=<YES|NO>
         [ScreamerAlert] total online=<N>
+    Behavior:
+        - List sends a capability probe and waits briefly for replies.
+        - If no capability hello is received within the probe wait window, enhanced=NO.
 
     Command: agf-sa set <invalidEntityId> <off|on|count|default>
     Response: [ScreamerAlert] invalid entityId. Use numeric entityId or all.
@@ -124,7 +132,7 @@ Admin CONSOLE Commands for Screamer Alert (Full Script Spec)
     Response: [ScreamerAlert] admin permission required.
 
     Notes:
-        COUNT resolves to ON when EnhancedAGF=NO or EnhancedAGF=UNKNOWN for that target.
+        COUNT resolves to ON when enhanced capability is not confirmed.
         set all applies to online players only.
         default controls baseline behavior for new joiners.
         set <entityId|all> default applies the current default value immediately (no persistent default mode).

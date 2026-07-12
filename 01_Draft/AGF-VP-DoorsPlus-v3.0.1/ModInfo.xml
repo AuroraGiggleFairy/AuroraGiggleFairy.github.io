@@ -3,7 +3,7 @@
   <Name value="AGF-VP-DoorsPlus" />
   <DisplayName value="AGF Doors Plus" />
   <Version value="3.0.1" />
-  <Description value="All door models available through one craftable helper per material tier, with recovery on break." />
+  <Description value="All door models available through one craftable helper per material" />
   <Author value="AuroraGiggleFairy (AGF)" />
   <Website value="https://auroragigglefairy.github.io/" />
 </xml>

@@ -44,9 +44,12 @@
 - The generator reads the primary _01 media per mod and rebuilds merged outputs.
 
 ### Mod Folder Inclusion
-- Pipeline copies merged banner image into each mod folder root:
-  - (Not copied by policy)
-- Pipeline also copies matching media images into each mod folder root:
+- Pipeline copies mod image files into each mod subfolder:
+  - AGF Mod Images (Not Required)
+  - Full merged image: AGF-ExampleMod_01.png
+  - Numbered extra images: AGF-ExampleMod_02.png, AGF-ExampleMod_03.png
+- Thumbnails are not copied into mod folders:
+  - Thumbnails stay in 00_Images/_generated only.
   - AGF-ExampleMod_01.png
   - AGF-ExampleMod_02.png
   - AGF-ExampleMod_03.png
@@ -82,6 +85,7 @@
   - changed-only mode must force regeneration when the full merged _01 is newer than its thumbnail
 3. Engine sync step must copy to mod folders:
   - mod-media files matching base_<two_digit_number>
+  - destination folder name: AGF Mod Images (Not Required)
   - must not copy thumbnails into mod folders
 
 ### File/Path Contract
