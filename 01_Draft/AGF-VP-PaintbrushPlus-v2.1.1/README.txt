@@ -40,7 +40,7 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Targets meleeToolPaintTool directly in items.xml.
+        - Targets meleeToolPaintTool directly in items.xml.
       - Enables infinite paint ammo on paint action (Action1) via
         Infinite_ammo=true.
       - Enables hold-to-continue painting behavior by setting
@@ -50,13 +50,70 @@ OTHER DETAILS
       - Sets both paint action ranges (Action0 and Action1) to 6 to
         reduce accidental long-distance painting.
       - Feature set:
-      - Painting no longer consumes paint resources.
+        - Painting no longer consumes paint resources.
       - Holding trigger can continue painting without repeated click
         spam.
       - Painting reach is shortened to keep painting focused on nearby
         surfaces.
       - Overall behavior is tuned for faster, more controlled paint
         workflows.
+
+  - Implementation edits used to make this work:
+          - Targets meleeToolPaintTool directly in items.xml.
+        - Enables infinite paint ammo on paint action (Action1) via
+          Infinite_ammo=true.
+        - Enables hold-to-continue painting behavior by setting
+          BurstRoundCount to 1000.
+        - Sets both paint tool action delays to 0.3 for consistent
+          repeat timing.
+        - Sets both paint action ranges (Action0 and Action1) to 6 to
+          reduce accidental long-distance painting.
+        - Feature set:
+          - Painting no longer consumes paint resources.
+        - Holding trigger can continue painting without repeated click
+          spam.
+        - Painting reach is shortened to keep painting focused on nearby
+          surfaces.
+        - Overall behavior is tuned for faster, more controlled paint
+          workflows.
+
+  - Implementation edits used to make this work:
+          - Targets meleeToolPaintTool directly in items.xml.
+        - Enables infinite paint ammo on paint action (Action1) via
+          Infinite_ammo=true.
+        - Enables hold-to-continue painting behavior by setting
+          BurstRoundCount to 1000.
+        - Sets both paint tool action delays to 0.3 for consistent
+          repeat timing.
+        - Sets both paint action ranges (Action0 and Action1) to 6 to
+          reduce accidental long-distance painting.
+        - Feature set:
+          - Painting no longer consumes paint resources.
+        - Holding trigger can continue painting without repeated click
+          spam.
+        - Painting reach is shortened to keep painting focused on nearby
+          surfaces.
+        - Overall behavior is tuned for faster, more controlled paint
+          workflows.
+
+    - Implementation edits used to make this work:
+            - Targets meleeToolPaintTool directly in items.xml.
+          - Enables infinite paint ammo on paint action (Action1) via
+            Infinite_ammo=true.
+          - Enables hold-to-continue painting behavior by setting
+            BurstRoundCount to 1000.
+          - Sets both paint tool action delays to 0.3 for consistent
+            repeat timing.
+          - Sets both paint action ranges (Action0 and Action1) to 6 to
+            reduce accidental long-distance painting.
+          - Feature set:
+            - Painting no longer consumes paint resources.
+          - Holding trigger can continue painting without repeated click
+            spam.
+          - Painting reach is shortened to keep painting focused on
+            nearby surfaces.
+          - Overall behavior is tuned for faster, more controlled paint
+            workflows.
 
 
 
@@ -221,15 +278,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.1.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.1.0
-    - Updated for 7d2d version 2
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated to V1.0
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

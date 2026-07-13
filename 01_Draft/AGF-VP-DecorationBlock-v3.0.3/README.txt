@@ -41,23 +41,80 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Use agfDecorationsVariantHelper to place from a very large alternate
-    list (5,700+ entries) via SelectAlternates and PlaceAltBlockValue.
-      - The helper is crafted at the workbench, and
-        perkAdvancedEngineering can reduce ingredient count through
-        CraftingIngredientCount.
-      - Core variants inherit from agfDecoMaster, using DecoMaterial by
-        default (500 MaxDamage), with dedicated steel-material variants
-        reaching 5000 MaxDamage.
-      - Secure storage variants use custom agfStorage loot sizing (10 x
-        10) and commonly pair with insecure downgrade/open states.
-      - Functional variants include campfire-class blocks, powered-light
-        blocks, and many powered door/hatch/gate options.
-      - Recovery behavior is built in: destroy returns the helper block,
-        and collapse/fall has a high recovery chance.
+  list (5,700+ entries) via SelectAlternates and PlaceAltBlockValue.
+        - The helper is crafted at the workbench, and
+          perkAdvancedEngineering can reduce ingredient count through
+          CraftingIngredientCount.
+        - Core variants inherit from agfDecoMaster, using DecoMaterial
+          by default (500 MaxDamage), with dedicated steel-material
+          variants reaching 5000 MaxDamage.
+        - Secure storage variants use custom agfStorage loot sizing (10
+          x 10) and commonly pair with insecure downgrade/open states.
+        - Functional variants include campfire-class blocks,
+          powered-light blocks, and many powered door/hatch/gate
+          options.
+        - Recovery behavior is built in: destroy returns the helper
+          block, and collapse/fall has a high recovery chance. NOTE
+        - Localization now covers all supported languages and all blocks
+          used by this mod.
 
-NOTE
-      - Localization now covers all supported languages and all blocks
-        used by this mod.
+  - Use agfDecorationsVariantHelper to place from a very large alternate
+    list (5,700+ entries) via SelectAlternates and PlaceAltBlockValue.
+          - The helper is crafted at the workbench, and
+            perkAdvancedEngineering can reduce ingredient count through
+            CraftingIngredientCount.
+          - Core variants inherit from agfDecoMaster, using DecoMaterial
+            by default (500 MaxDamage), with dedicated steel-material
+            variants reaching 5000 MaxDamage.
+          - Secure storage variants use custom agfStorage loot sizing
+            (10 x 10) and commonly pair with insecure downgrade/open
+            states.
+          - Functional variants include campfire-class blocks,
+            powered-light blocks, and many powered door/hatch/gate
+            options.
+          - Recovery behavior is built in: destroy returns the helper
+            block, and collapse/fall has a high recovery chance. NOTE
+          - Localization now covers all supported languages and all
+            blocks used by this mod.
+
+  - Use agfDecorationsVariantHelper to place from a very large alternate
+    list (5,700+ entries) via SelectAlternates and PlaceAltBlockValue.
+          - The helper is crafted at the workbench, and
+            perkAdvancedEngineering can reduce ingredient count through
+            CraftingIngredientCount.
+          - Core variants inherit from agfDecoMaster, using DecoMaterial
+            by default (500 MaxDamage), with dedicated steel-material
+            variants reaching 5000 MaxDamage.
+          - Secure storage variants use custom agfStorage loot sizing
+            (10 x 10) and commonly pair with insecure downgrade/open
+            states.
+          - Functional variants include campfire-class blocks,
+            powered-light blocks, and many powered door/hatch/gate
+            options.
+          - Recovery behavior is built in: destroy returns the helper
+            block, and collapse/fall has a high recovery chance. NOTE
+          - Localization now covers all supported languages and all
+            blocks used by this mod.
+
+    - Use agfDecorationsVariantHelper to place from a very large
+      alternate list (5,700+ entries) via SelectAlternates and
+      PlaceAltBlockValue.
+            - The helper is crafted at the workbench, and
+              perkAdvancedEngineering can reduce ingredient count
+              through CraftingIngredientCount.
+            - Core variants inherit from agfDecoMaster, using
+              DecoMaterial by default (500 MaxDamage), with dedicated
+              steel-material variants reaching 5000 MaxDamage.
+            - Secure storage variants use custom agfStorage loot sizing
+              (10 x 10) and commonly pair with insecure downgrade/open
+              states.
+            - Functional variants include campfire-class blocks,
+              powered-light blocks, and many powered door/hatch/gate
+              options.
+            - Recovery behavior is built in: destroy returns the helper
+              block, and collapse/fall has a high recovery chance. NOTE
+            - Localization now covers all supported languages and all
+              blocks used by this mod.
 
 
 
@@ -222,47 +279,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v3.0.3
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v3.0.2
-    - Updated to run on V2, only edited to make it run well. (still
-      could
-    be other errors).
-
-------------------------------------------------------------------------
-
-v3.0.1
-    - Taking out of Beta
-    - Added naming Scheme in all languages available so far
-
-------------------------------------------------------------------------
-
-v3.0.0
-    - Updated to V1.0
-
-------------------------------------------------------------------------
-
-v2.0.4
-    - When used standalone, the loot size was too large for existing
-    - windows.xml... so I added the needed windows.xml codes to make it
-    work.
-
-------------------------------------------------------------------------
-
-v2.0.3
-    - Some blocks could not be rotated in all directions, now they
-      should.
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - Added localization name for the variant helper and description.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Updated to A21! :)
-    - README updated to new format.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

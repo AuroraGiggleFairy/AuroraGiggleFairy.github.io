@@ -39,7 +39,7 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds a new item: meleeToolFloraHarvester.
+        - Adds a new item: meleeToolFloraHarvester.
       - Adds a learnable recipe costing 250 resourceYuccaFibers.
       - Adds progression wiring so it unlocks in craftingSeeds at level
         4.
@@ -50,11 +50,66 @@ OTHER DETAILS
       - Sets repair behavior to use Yucca Fibers and configures the tool
         for effectively no normal durability wear.
       - Feature set:
-      - Tool is intended for fast harvesting of flora-style targets
-        (plants/crops).
+        - Tool is intended for fast harvesting of flora-style targets
+          (plants/crops).
       - Living Off the Land reduces stamina use while using this tool.
       - Unlocks through seed progression and is inexpensive to
         craft/repair.
+
+  - Implementation edits used to make this work:
+          - Adds a new item: meleeToolFloraHarvester.
+        - Adds a learnable recipe costing 250 resourceYuccaFibers.
+        - Adds progression wiring so it unlocks in craftingSeeds at
+          level 4.
+        - Adds a perkLivingOffTheLand effect group for this tool tag to
+          reduce stamina use by level.
+        - Adds a custom material (MresourceYuccaFibersAGF) to prevent
+          particle/material issues.
+        - Sets repair behavior to use Yucca Fibers and configures the
+          tool for effectively no normal durability wear.
+        - Feature set:
+          - Tool is intended for fast harvesting of flora-style targets
+            (plants/crops).
+        - Living Off the Land reduces stamina use while using this tool.
+        - Unlocks through seed progression and is inexpensive to
+          craft/repair.
+
+  - Implementation edits used to make this work:
+          - Adds a new item: meleeToolFloraHarvester.
+        - Adds a learnable recipe costing 250 resourceYuccaFibers.
+        - Adds progression wiring so it unlocks in craftingSeeds at
+          level 4.
+        - Adds a perkLivingOffTheLand effect group for this tool tag to
+          reduce stamina use by level.
+        - Adds a custom material (MresourceYuccaFibersAGF) to prevent
+          particle/material issues.
+        - Sets repair behavior to use Yucca Fibers and configures the
+          tool for effectively no normal durability wear.
+        - Feature set:
+          - Tool is intended for fast harvesting of flora-style targets
+            (plants/crops).
+        - Living Off the Land reduces stamina use while using this tool.
+        - Unlocks through seed progression and is inexpensive to
+          craft/repair.
+
+    - Implementation edits used to make this work:
+            - Adds a new item: meleeToolFloraHarvester.
+          - Adds a learnable recipe costing 250 resourceYuccaFibers.
+          - Adds progression wiring so it unlocks in craftingSeeds at
+            level 4.
+          - Adds a perkLivingOffTheLand effect group for this tool tag
+            to reduce stamina use by level.
+          - Adds a custom material (MresourceYuccaFibersAGF) to prevent
+            particle/material issues.
+          - Sets repair behavior to use Yucca Fibers and configures the
+            tool for effectively no normal durability wear.
+          - Feature set:
+            - Tool is intended for fast harvesting of flora-style
+              targets (plants/crops).
+          - Living Off the Land reduces stamina use while using this
+            tool.
+          - Unlocks through seed progression and is inexpensive to
+            craft/repair.
 
 
 
@@ -219,59 +274,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.3.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.3.0
-    - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
-    - Attempted to remove durability for this item.
-
-------------------------------------------------------------------------
-
-v2.2.1
-    - Updated for 2.5 (only changes to purple book).
-
-------------------------------------------------------------------------
-
-v2.2.0
-    - Levels in living off the land now reduces stamina use.
-    - Repairing no longer takes a long time.
-
-------------------------------------------------------------------------
-
-v2.1.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Updated for 7d2d Version 2.
-    - Created a new material for the item to remove particle errors.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated for zoom in feature of HUD
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - updated the window display for the HUD Checklist, if mod is used
-    with the HUD
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - removed the upgrading block feature as I forgot it allows quick
-    upgrading of blocks.
-    - Updated the localization to remove "repairing" information.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the mod
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

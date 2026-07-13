@@ -38,7 +38,7 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Appends a new recipe for foodRottingFlesh.
+        - Appends a new recipe for foodRottingFlesh.
       - Recipe is crafted at the campfire and requires a cooking pot
         (craft_area="campfire", craft_tool="toolCookingPot").
       - Recipe is tied to the Master Chef progression tag
@@ -49,11 +49,68 @@ OTHER DETAILS
         recipe via CraftingIngredientCount for foodRawMeat across level
         range 1 to 3.
       - Feature set:
-      - Adds a direct way to craft rotting flesh from common supplies.
+        - Adds a direct way to craft rotting flesh from common supplies.
       - Keeps crafting in the normal cooking workflow (campfire plus
         cooking pot).
       - Master Chef investment improves recipe efficiency by reducing
         meat requirement as perk level increases.
+
+  - Implementation edits used to make this work:
+          - Appends a new recipe for foodRottingFlesh.
+        - Recipe is crafted at the campfire and requires a cooking pot
+          (craft_area="campfire", craft_tool="toolCookingPot").
+        - Recipe is tied to the Master Chef progression tag
+          (tags="perkMasterChef").
+        - Base ingredients are foodRawMeat x3 and drinkJarRiverWater x1
+          for foodRottingFlesh x1.
+        - Adds a perk scaling effect that lowers raw meat cost on this
+          recipe via CraftingIngredientCount for foodRawMeat across
+          level range 1 to 3.
+        - Feature set:
+          - Adds a direct way to craft rotting flesh from common
+            supplies.
+        - Keeps crafting in the normal cooking workflow (campfire plus
+          cooking pot).
+        - Master Chef investment improves recipe efficiency by reducing
+          meat requirement as perk level increases.
+
+  - Implementation edits used to make this work:
+          - Appends a new recipe for foodRottingFlesh.
+        - Recipe is crafted at the campfire and requires a cooking pot
+          (craft_area="campfire", craft_tool="toolCookingPot").
+        - Recipe is tied to the Master Chef progression tag
+          (tags="perkMasterChef").
+        - Base ingredients are foodRawMeat x3 and drinkJarRiverWater x1
+          for foodRottingFlesh x1.
+        - Adds a perk scaling effect that lowers raw meat cost on this
+          recipe via CraftingIngredientCount for foodRawMeat across
+          level range 1 to 3.
+        - Feature set:
+          - Adds a direct way to craft rotting flesh from common
+            supplies.
+        - Keeps crafting in the normal cooking workflow (campfire plus
+          cooking pot).
+        - Master Chef investment improves recipe efficiency by reducing
+          meat requirement as perk level increases.
+
+    - Implementation edits used to make this work:
+            - Appends a new recipe for foodRottingFlesh.
+          - Recipe is crafted at the campfire and requires a cooking pot
+            (craft_area="campfire", craft_tool="toolCookingPot").
+          - Recipe is tied to the Master Chef progression tag
+            (tags="perkMasterChef").
+          - Base ingredients are foodRawMeat x3 and drinkJarRiverWater
+            x1 for foodRottingFlesh x1.
+          - Adds a perk scaling effect that lowers raw meat cost on this
+            recipe via CraftingIngredientCount for foodRawMeat across
+            level range 1 to 3.
+          - Feature set:
+            - Adds a direct way to craft rotting flesh from common
+              supplies.
+          - Keeps crafting in the normal cooking workflow (campfire plus
+            cooking pot).
+          - Master Chef investment improves recipe efficiency by
+            reducing meat requirement as perk level increases.
 
 
 
@@ -218,10 +275,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the Mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

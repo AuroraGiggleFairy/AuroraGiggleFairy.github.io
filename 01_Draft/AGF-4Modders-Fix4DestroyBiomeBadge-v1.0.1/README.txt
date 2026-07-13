@@ -39,7 +39,17 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Fixes DestroyBiomeBadge behavior so it targets biome equipment only.
-      - Clothing items are no longer removed by this event.
+        - Clothing items are no longer removed by this event.
+
+  - Fixes DestroyBiomeBadge behavior so it targets biome equipment only.
+          - Clothing items are no longer removed by this event.
+
+  - Fixes DestroyBiomeBadge behavior so it targets biome equipment only.
+          - Clothing items are no longer removed by this event.
+
+    - Fixes DestroyBiomeBadge behavior so it targets biome equipment
+      only.
+            - Clothing items are no longer removed by this event.
 
 
 
@@ -204,15 +214,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Mod established to be released.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

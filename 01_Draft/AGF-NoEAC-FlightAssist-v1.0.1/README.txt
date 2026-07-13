@@ -47,31 +47,112 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Harmony patches run on vehicle movement/physics to provide altitude
+  assist for likely flying vehicles (detected from vehicle force
+  properties).
+        - Two control patterns are handled automatically:
+          - BasicPlane: uses Y-lock forward flight mode.
+        - HelicopterLike: cycles between Hover and Y-Lock while assist
+          is active.
+        - Activation uses hotkey Z by default
+          (Config/FlightLevelAssistConfig.txt), and can also use an
+          optional controller action binding.
+        - Assist behavior includes pitch leveling before hard lock,
+          altitude hold, and mode-aware transitions to reduce abrupt
+          movement.
+        - Plane-like Y-lock includes momentum gating and auto-disengage
+          when forward momentum stays too low.
+        - Helicopter-like hover and forward modes include
+          damping/transition logic for smoother stabilization.
+        - Assist is canceled by key safety conditions such as manual
+          pitch input, no fuel, crash-level pitch disruption, driver
+          detach, or conflicting external auto-run state.
+        - Integrates with AGF AutoRun when available for plane-like
+          Y-lock forward hold; falls back to direct forward input when
+          AutoRun is unavailable.
+        - Exposes HUD bindings for assist visibility, mode text (Off,
+          Hover, Y-Lock), mode tooltips, and mode-specific icon
+          visibility.
+
+  - Harmony patches run on vehicle movement/physics to provide altitude
     assist for likely flying vehicles (detected from vehicle force
     properties).
-      - Two control patterns are handled automatically:
-      - BasicPlane: uses Y-lock forward flight mode.
-      - HelicopterLike: cycles between Hover and Y-Lock while assist is
-        active.
-      - Activation uses hotkey Z by default
-        (Config/FlightLevelAssistConfig.txt), and can also use an
-        optional controller action binding.
-      - Assist behavior includes pitch leveling before hard lock,
-        altitude hold, and mode-aware transitions to reduce abrupt
-        movement.
-      - Plane-like Y-lock includes momentum gating and auto-disengage
-        when forward momentum stays too low.
-      - Helicopter-like hover and forward modes include
-        damping/transition logic for smoother stabilization.
-      - Assist is canceled by key safety conditions such as manual pitch
-        input, no fuel, crash-level pitch disruption, driver detach, or
-        conflicting external auto-run state.
-      - Integrates with AGF AutoRun when available for plane-like Y-lock
-        forward hold; falls back to direct forward input when AutoRun is
-        unavailable.
-      - Exposes HUD bindings for assist visibility, mode text (Off,
-        Hover, Y-Lock), mode tooltips, and mode-specific icon
-        visibility.
+          - Two control patterns are handled automatically:
+            - BasicPlane: uses Y-lock forward flight mode.
+          - HelicopterLike: cycles between Hover and Y-Lock while assist
+            is active.
+          - Activation uses hotkey Z by default
+            (Config/FlightLevelAssistConfig.txt), and can also use an
+            optional controller action binding.
+          - Assist behavior includes pitch leveling before hard lock,
+            altitude hold, and mode-aware transitions to reduce abrupt
+            movement.
+          - Plane-like Y-lock includes momentum gating and
+            auto-disengage when forward momentum stays too low.
+          - Helicopter-like hover and forward modes include
+            damping/transition logic for smoother stabilization.
+          - Assist is canceled by key safety conditions such as manual
+            pitch input, no fuel, crash-level pitch disruption, driver
+            detach, or conflicting external auto-run state.
+          - Integrates with AGF AutoRun when available for plane-like
+            Y-lock forward hold; falls back to direct forward input when
+            AutoRun is unavailable.
+          - Exposes HUD bindings for assist visibility, mode text (Off,
+            Hover, Y-Lock), mode tooltips, and mode-specific icon
+            visibility.
+
+  - Harmony patches run on vehicle movement/physics to provide altitude
+    assist for likely flying vehicles (detected from vehicle force
+    properties).
+          - Two control patterns are handled automatically:
+            - BasicPlane: uses Y-lock forward flight mode.
+          - HelicopterLike: cycles between Hover and Y-Lock while assist
+            is active.
+          - Activation uses hotkey Z by default
+            (Config/FlightLevelAssistConfig.txt), and can also use an
+            optional controller action binding.
+          - Assist behavior includes pitch leveling before hard lock,
+            altitude hold, and mode-aware transitions to reduce abrupt
+            movement.
+          - Plane-like Y-lock includes momentum gating and
+            auto-disengage when forward momentum stays too low.
+          - Helicopter-like hover and forward modes include
+            damping/transition logic for smoother stabilization.
+          - Assist is canceled by key safety conditions such as manual
+            pitch input, no fuel, crash-level pitch disruption, driver
+            detach, or conflicting external auto-run state.
+          - Integrates with AGF AutoRun when available for plane-like
+            Y-lock forward hold; falls back to direct forward input when
+            AutoRun is unavailable.
+          - Exposes HUD bindings for assist visibility, mode text (Off,
+            Hover, Y-Lock), mode tooltips, and mode-specific icon
+            visibility.
+
+    - Harmony patches run on vehicle movement/physics to provide
+      altitude assist for likely flying vehicles (detected from vehicle
+      force properties).
+            - Two control patterns are handled automatically:
+              - BasicPlane: uses Y-lock forward flight mode.
+            - HelicopterLike: cycles between Hover and Y-Lock while
+              assist is active.
+            - Activation uses hotkey Z by default
+              (Config/FlightLevelAssistConfig.txt), and can also use an
+              optional controller action binding.
+            - Assist behavior includes pitch leveling before hard lock,
+              altitude hold, and mode-aware transitions to reduce abrupt
+              movement.
+            - Plane-like Y-lock includes momentum gating and
+              auto-disengage when forward momentum stays too low.
+            - Helicopter-like hover and forward modes include
+              damping/transition logic for smoother stabilization.
+            - Assist is canceled by key safety conditions such as manual
+              pitch input, no fuel, crash-level pitch disruption, driver
+              detach, or conflicting external auto-run state.
+            - Integrates with AGF AutoRun when available for plane-like
+              Y-lock forward hold; falls back to direct forward input
+              when AutoRun is unavailable.
+            - Exposes HUD bindings for assist visibility, mode text
+              (Off, Hover, Y-Lock), mode tooltips, and mode-specific
+              icon visibility.
 
 
 
@@ -236,23 +317,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v0.0.3
-    - Forgot what was in version 0.0.2
-    - Allows two flight pattern assists:
-    - Gyrocopter: pressing "x" activates flying forward locked on
-    elevation
-    - Hellicopter: pressing "x" first activates hover, press again
-    activates forwward locked on elevation.
-    - Did a lot to ensure works with any flying vehicle and can
-      determine
-    which flight pattern to use.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

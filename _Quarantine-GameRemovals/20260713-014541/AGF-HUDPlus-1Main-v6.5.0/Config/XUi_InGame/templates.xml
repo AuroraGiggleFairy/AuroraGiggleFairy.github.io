@@ -1,0 +1,103 @@
+<AGF-HUDPlus>
+
+
+	
+
+<!--CRAFTING IMPROVEMENT
+	Feature: 	Crafting and burning times adjusted for easier viewing.
+	
+		Why: 	I like readability and sometimes find it hard to differentiate the crafting time and whats behind it.
+	
+	Default: 	Burn time is  a bright red that for some, is difficult to read.
+				Craft time in crafting queue is white with minimal differentiation of what is behind it.
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete the sections under windows and controls.
+				
+	XML's: 		windows, contols
+	
+	Code:		(windows.xml) Added a line of code of the burning time to adjust the color.
+				(controls.xml) Removed original crafting timer set-up.
+				(controls.xml) Appended a new timer setting that changes the color and adds a background.
+-->
+
+<!--	
+	<!{1}**Removed original crafting timer set-up.**{1}>
+		<remove xpath="/templates/recipe_stack/rect/label[@name='timer']"/>
+		
+	<!{1}**Appended a new timer setting that changes the color and adds a background.**{1}>
+		<append xpath="/templates/recipe_stack/rect">
+			<label depth="4" name="timer" pos="36,-40" width="70" height="22" font_size="20" justify="center" pivot="center" color="252, 140, 3"><!{1}**Thank you Morph3usx for color suggestion.**{1}>
+				<sprite depth="-1" name="timerBackground" pos="-37,12" width="73" height="22" color="0,0,0,255" type="sliced"/>
+			</label>
+		</append>
+
+-->
+
+
+<!--Part of the Map Invites Section to align with the map-->
+
+<set xpath="/templates/invites_entry/rect/@height">37</set>
+<set xpath="/templates/invites_entry/rect/sprite[@name='backgroundMain']/@height">43</set>
+<set xpath="/templates/invites_entry/rect/sprite[@name='background']/@height">39</set>
+<set xpath="/templates/invites_entry/rect/label[@name='Name']/@pos">160,-17</set>
+<set xpath="/templates/invites_entry/rect/label[@name='Name']/@height">25</set>
+<set xpath="/templates/invites_entry/rect/label[@name='Distance']/@pos">312,-17</set>
+<set xpath="/templates/invites_entry/rect/label[@name='Name']/@height">25</set>
+
+
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-060Slots') == false and mod_loaded('AGF-BackpackPlus-072Slots') == false and mod_loaded('AGF-BackpackPlus-084Slots') == false and mod_loaded('AGF-BackpackPlus-119Slots') == false">
+				
+				<append xpath="/templates">
+					<item_stackAGF controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" cell_size="[itemStack:width]">
+						<rect controller="${controller}" style="itemStack, hover" width="${cell_size}" height="${cell_size}" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }" >
+							<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" color="[black]" type="sliced" fillcenter="false"
+								width="${3+cell_size}" height="${3+cell_size}" />
+							<sprite depth="3" name="background" sprite="menu_empty3px" color="{selectionbordercolor}" type="sliced" fillcenter="false"
+								width="${-2+cell_size}" height="${-2+cell_size}" />
+							<sprite depth="2" name="highlightOverlay" color="{backgroundcolor}" pos="0,0" type="sliced"
+								width="${-3+cell_size}" height="${-3+cell_size}" />
+
+							<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored"
+								size="${-2+cell_size},${-2+cell_size}" />
+							<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+							<sprite depth="7" name="itemIcon" width="${-11+cell_size}" height="${-11+cell_size}" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}"
+								pos="${Floor(cell_size/2)},${-Floor(cell_size/2)}" />
+							<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+							<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+
+							<sprite depth="2" name="durabilityBackground" sprite="menu_empty3px" color="185,0,0,255" type="sliced" globalopacitymod="0" visible="{haspermadurability}"
+								width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}" />
+							<sprite depth="4" name="durability" sprite="menu_empty2px" color="[darkGrey]" fill="{removeddurabilityfill}" type="filled" fillspritepad="true" globalopacitymod="0" visible="{hasdurability}"
+								width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}" />
+							<filledsprite depth="5" name="durability" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" globalopacitymod="0" visible="{hasdurability}"
+								width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}" />
+
+							<label depth="8" name="stackValue" height="28" text="{itemcount}" font_size="26" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}"
+								pos="-2,${-Floor(3*cell_size/5)}" width="${-5+cell_size}" />
+							<label depth="8" name="timer" height="24" font_size="24" justify="center" pivot="center" color="[beige]" effect="outline"
+								pos="${Floor(cell_size/2)},${-Floor(cell_size/2)}" width="${-5+cell_size}" effect_distance="1,1" effect_color="0,0,0,255" />
+							<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" visible="{# ishovered and islocked}" foregroundlayer="true"
+								width="${-5+cell_size}" height="${-5+cell_size}" />
+							<sprite depth="13" name="assembleIcon" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true"
+								size="${-35+cell_size},${-35+cell_size}" />
+
+							<sprite depth="14" name="quickswapIcon" size="30,30" sprite="server_refresh" pos="40,-2" foregroundlayer="true" visible="{isQuickSwap}" />
+
+							<button name="rectSlotLock" depth="6" style="press, hover" width="${-2+cell_size}" height="${-2+cell_size}" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+								<sprite name="slotLockOverlayFill" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="true" color="{# userlockedslot ? '255,0,0,150' : '0,255,0,150' }" />
+								<sprite name="slotLockOverlayBorder" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="false" color="{# userlockedslot ? '255,0,0,150' : '0,255,0,150' }" />
+							</button>
+							<sprite depth="6" name="iconSlotLockFill" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="true" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="255,0,0,150" />
+							<sprite depth="6" name="iconSlotLockBorder" width="${-3+cell_size}" height="${-3+cell_size}" sprite="menu_empty3px" type="sliced" fillcenter="false" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="255,0,0,150" />
+						</rect>
+					</item_stackAGF>
+				</append>
+		</if>			
+	</conditional>	
+
+
+
+
+</AGF-HUDPlus>

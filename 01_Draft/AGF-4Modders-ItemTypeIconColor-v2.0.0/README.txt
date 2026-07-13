@@ -41,16 +41,56 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Adds support for ItemTypeIconColor on item classes during
+  ItemClass.Init, with parsed colors cached by item name.
+        - Supports color input as [RRGGBB], [RRGGBBAA], R,G,B, or
+          R,G,B,A.
+        - Applies icon tint logic across major UI item views (trader
+          entries, recipe entries, item info, crafting info, and quest
+          turn-in entries).
+        - Uses unlock-aware behavior: if an item is unlocked and
+          AltItemTypeIconColor exists, alternate tint is used; otherwise
+          ItemTypeIconColor is used.
+        - Includes block fallback support for item-type tint lookup
+          where relevant UI entries resolve a block from the item.
+
+  - Adds support for ItemTypeIconColor on item classes during
     ItemClass.Init, with parsed colors cached by item name.
-      - Supports color input as [RRGGBB], [RRGGBBAA], R,G,B, or R,G,B,A.
-      - Applies icon tint logic across major UI item views (trader
-        entries, recipe entries, item info, crafting info, and quest
-        turn-in entries).
-      - Uses unlock-aware behavior: if an item is unlocked and
-        AltItemTypeIconColor exists, alternate tint is used; otherwise
-        ItemTypeIconColor is used.
-      - Includes block fallback support for item-type tint lookup where
-        relevant UI entries resolve a block from the item.
+          - Supports color input as [RRGGBB], [RRGGBBAA], R,G,B, or
+            R,G,B,A.
+          - Applies icon tint logic across major UI item views (trader
+            entries, recipe entries, item info, crafting info, and quest
+            turn-in entries).
+          - Uses unlock-aware behavior: if an item is unlocked and
+            AltItemTypeIconColor exists, alternate tint is used;
+            otherwise ItemTypeIconColor is used.
+          - Includes block fallback support for item-type tint lookup
+            where relevant UI entries resolve a block from the item.
+
+  - Adds support for ItemTypeIconColor on item classes during
+    ItemClass.Init, with parsed colors cached by item name.
+          - Supports color input as [RRGGBB], [RRGGBBAA], R,G,B, or
+            R,G,B,A.
+          - Applies icon tint logic across major UI item views (trader
+            entries, recipe entries, item info, crafting info, and quest
+            turn-in entries).
+          - Uses unlock-aware behavior: if an item is unlocked and
+            AltItemTypeIconColor exists, alternate tint is used;
+            otherwise ItemTypeIconColor is used.
+          - Includes block fallback support for item-type tint lookup
+            where relevant UI entries resolve a block from the item.
+
+    - Adds support for ItemTypeIconColor on item classes during
+      ItemClass.Init, with parsed colors cached by item name.
+            - Supports color input as [RRGGBB], [RRGGBBAA], R,G,B, or
+              R,G,B,A.
+            - Applies icon tint logic across major UI item views (trader
+              entries, recipe entries, item info, crafting info, and
+              quest turn-in entries).
+            - Uses unlock-aware behavior: if an item is unlocked and
+              AltItemTypeIconColor exists, alternate tint is used;
+              otherwise ItemTypeIconColor is used.
+            - Includes block fallback support for item-type tint lookup
+              where relevant UI entries resolve a block from the item.
 
 
 
@@ -215,22 +255,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.0.0
-    - Updated for 7d2d version 3.0.
-    - Now a standalone mod for modders!
-    - Same feature is also within EnhancedAGF.
-
-------------------------------------------------------------------------
-
-v1.0.3
-    - Changed BACK to NoEAC category after further review.
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - Changed to be in the 4Modders category.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - ReadMe Format Update.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

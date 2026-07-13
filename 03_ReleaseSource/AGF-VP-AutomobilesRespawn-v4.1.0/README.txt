@@ -40,11 +40,12 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - To change growth time, open Config/blocks.xml and search for
-    GrowthRate.
-      - 600 is the default and represents minutes, which is 10 hours.
-    - To change hubcap durability, open the same file and search for
-      MaxDamage.
-      - 2500 is the default hit point value.
+  GrowthRate.
+    - 600 is the default and represents minutes, which is 10 hours.
+
+  - To change hubcap durability, open the same file and search for
+    MaxDamage.
+    - 2500 is the default hit point value.
 
 
 

@@ -1,0 +1,25 @@
+<zzzAGF-Compatibilities>
+	<!-- VanillaExtended -->
+	<setattribute xpath="/recipes/recipe[@name='MashedPotatoes']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='ScrambledMelody']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='FrenchFries']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='BreakfastSandwich']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='FriedShamSandwich']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='TunaFishSandwich']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='BlueberryMuffin']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='FishSticks']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='PastaSalad']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='YuccaFritters']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='MeatySkewers']" name="tags">learnable</setattribute>
+	<!--
+<setattribute xpath="/recipes/recipe[@name='HoneyTea']" name="tags">learnable</setattribute>-->
+	<setattribute xpath="/recipes/recipe[@name='YuccaBluePie']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='BlueberrySmoothie']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='BlueberryIceCream']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='AloeIceCream']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='ChickenSoup']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='ChickenPotPie']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='MushroomPotPie']" name="tags">learnable</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='Hotdog']" name="tags">learnable</setattribute>
+	<remove xpath="/recipes/recipe[@name='HoneyTea']"/>
+</zzzAGF-Compatibilities>

@@ -40,9 +40,9 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Specific XML Edits:
-      - materials.xml adds custom ammo materials (Mammo, Mthrown) that
-        route scrapping through forge_category entries like
-        disa/dthrown.
+        - materials.xml adds custom ammo materials (Mammo, Mthrown) that
+          route scrapping through forge_category entries like
+          disa/dthrown.
       - items.xml appends many ammo/thrown items to use those custom
         materials and sets Weight to 1 for the disassembly flow.
       - items.xml adds disassembly bundle items (disa, dthrown) with
@@ -53,14 +53,78 @@ OTHER DETAILS
         rockets, throwables, darts, and junk turret ammo.
       - recipes.xml also appends bundle-combine recipes so 100 or 1000
         standard disassembly bundles can be crafted into one larger
-        bundle for faster handling.
-
-Usage Notes:
-      - This mod includes a server-side solution for large opening
-        workflows via the x100/x1000 bundle recipes.
+        bundle for faster handling. Usage Notes:
+        - This mod includes a server-side solution for large opening
+          workflows via the x100/x1000 bundle recipes.
       - Optional OpensAll support is a separate client-side-only feature
         and is not required for the server-side batch workflow here.
       - Disassembly bundle outputs follow vanilla scrapping math.
+
+  - Specific XML Edits:
+          - materials.xml adds custom ammo materials (Mammo, Mthrown)
+            that route scrapping through forge_category entries like
+            disa/dthrown.
+        - items.xml appends many ammo/thrown items to use those custom
+          materials and sets Weight to 1 for the disassembly flow.
+        - items.xml adds disassembly bundle items (disa, dthrown) with
+          Action0 class OpenBundle so opening each bundle returns
+          ingredient items.
+        - recipes.xml appends always-unlocked salvageScrap recipes for
+          those bundle items, covering bullets, shells, arrows/bolts,
+          rockets, throwables, darts, and junk turret ammo.
+        - recipes.xml also appends bundle-combine recipes so 100 or 1000
+          standard disassembly bundles can be crafted into one larger
+          bundle for faster handling. Usage Notes:
+          - This mod includes a server-side solution for large opening
+            workflows via the x100/x1000 bundle recipes.
+        - Optional OpensAll support is a separate client-side-only
+          feature and is not required for the server-side batch workflow
+          here.
+        - Disassembly bundle outputs follow vanilla scrapping math.
+
+  - Specific XML Edits:
+          - materials.xml adds custom ammo materials (Mammo, Mthrown)
+            that route scrapping through forge_category entries like
+            disa/dthrown.
+        - items.xml appends many ammo/thrown items to use those custom
+          materials and sets Weight to 1 for the disassembly flow.
+        - items.xml adds disassembly bundle items (disa, dthrown) with
+          Action0 class OpenBundle so opening each bundle returns
+          ingredient items.
+        - recipes.xml appends always-unlocked salvageScrap recipes for
+          those bundle items, covering bullets, shells, arrows/bolts,
+          rockets, throwables, darts, and junk turret ammo.
+        - recipes.xml also appends bundle-combine recipes so 100 or 1000
+          standard disassembly bundles can be crafted into one larger
+          bundle for faster handling. Usage Notes:
+          - This mod includes a server-side solution for large opening
+            workflows via the x100/x1000 bundle recipes.
+        - Optional OpensAll support is a separate client-side-only
+          feature and is not required for the server-side batch workflow
+          here.
+        - Disassembly bundle outputs follow vanilla scrapping math.
+
+    - Specific XML Edits:
+            - materials.xml adds custom ammo materials (Mammo, Mthrown)
+              that route scrapping through forge_category entries like
+              disa/dthrown.
+          - items.xml appends many ammo/thrown items to use those custom
+            materials and sets Weight to 1 for the disassembly flow.
+          - items.xml adds disassembly bundle items (disa, dthrown) with
+            Action0 class OpenBundle so opening each bundle returns
+            ingredient items.
+          - recipes.xml appends always-unlocked salvageScrap recipes for
+            those bundle items, covering bullets, shells, arrows/bolts,
+            rockets, throwables, darts, and junk turret ammo.
+          - recipes.xml also appends bundle-combine recipes so 100 or
+            1000 standard disassembly bundles can be crafted into one
+            larger bundle for faster handling. Usage Notes:
+            - This mod includes a server-side solution for large opening
+              workflows via the x100/x1000 bundle recipes.
+          - Optional OpensAll support is a separate client-side-only
+            feature and is not required for the server-side batch
+            workflow here.
+          - Disassembly bundle outputs follow vanilla scrapping math.
 
 
 
@@ -225,18 +289,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated README and notes in code
-    - Fixed ingredient change for flaming arrows/bolts for v2.5+.
-    - Updated Localization.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Separated from StacksBundlesAmmoPlus now that I understand
-    conditionals.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

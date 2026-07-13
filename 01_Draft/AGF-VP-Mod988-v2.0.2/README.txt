@@ -41,17 +41,59 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Replaces the modularRopeNoose block model with a plain tied-rope
-        model (modularRopeTopTiedPrefab.prefab).
+        - Replaces the modularRopeNoose block model with a plain
+          tied-rope model (modularRopeTopTiedPrefab.prefab).
       - Overrides the same block's icon to modularRopeTiled so
         inventory/UI visuals match the new in-world model.
       - Scope is intentionally minimal: one block target, model swap +
         icon swap only.
       - Feature set:
-      - In-world noose visuals are replaced by plain rope visuals.
+        - In-world noose visuals are replaced by plain rope visuals.
       - Block icon presentation is aligned with the visual replacement.
       - Intended as a lightweight comfort/sensitivity adjustment with no
         gameplay-system overhaul.
+
+  - Implementation edits used to make this work:
+          - Replaces the modularRopeNoose block model with a plain
+            tied-rope model (modularRopeTopTiedPrefab.prefab).
+        - Overrides the same block's icon to modularRopeTiled so
+          inventory/UI visuals match the new in-world model.
+        - Scope is intentionally minimal: one block target, model swap +
+          icon swap only.
+        - Feature set:
+          - In-world noose visuals are replaced by plain rope visuals.
+        - Block icon presentation is aligned with the visual
+          replacement.
+        - Intended as a lightweight comfort/sensitivity adjustment with
+          no gameplay-system overhaul.
+
+  - Implementation edits used to make this work:
+          - Replaces the modularRopeNoose block model with a plain
+            tied-rope model (modularRopeTopTiedPrefab.prefab).
+        - Overrides the same block's icon to modularRopeTiled so
+          inventory/UI visuals match the new in-world model.
+        - Scope is intentionally minimal: one block target, model swap +
+          icon swap only.
+        - Feature set:
+          - In-world noose visuals are replaced by plain rope visuals.
+        - Block icon presentation is aligned with the visual
+          replacement.
+        - Intended as a lightweight comfort/sensitivity adjustment with
+          no gameplay-system overhaul.
+
+    - Implementation edits used to make this work:
+            - Replaces the modularRopeNoose block model with a plain
+              tied-rope model (modularRopeTopTiedPrefab.prefab).
+          - Overrides the same block's icon to modularRopeTiled so
+            inventory/UI visuals match the new in-world model.
+          - Scope is intentionally minimal: one block target, model swap
+            + icon swap only.
+          - Feature set:
+            - In-world noose visuals are replaced by plain rope visuals.
+          - Block icon presentation is aligned with the visual
+            replacement.
+          - Intended as a lightweight comfort/sensitivity adjustment
+            with no gameplay-system overhaul.
 
 
 
@@ -216,15 +258,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Updated to 7d2d Version 2.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated to V1.0
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

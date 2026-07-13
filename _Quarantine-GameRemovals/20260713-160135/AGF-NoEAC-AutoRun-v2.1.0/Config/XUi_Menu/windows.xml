@@ -1,0 +1,9 @@
+<AGF-AutoRun>
+
+<!--To add controller option, the rest are hardcoded-->
+    <insertAfter xpath="/windows/window[@name='optionsController']/rect[@name='tabs']/rect[@name='content']/rect[@name='tabsContents']/rect[@tab_key='xuiOptionsControlsGeneric']/rect[@name='scrollarea']/scrollview/grid/options_combo_intindex[@name='SprintLock']">
+        <options_combo_bool name_localization_prefix="xuiOptionsControls" name="ControllerAutoRun" prefname="OptionsControlsControllerAutoRun" localization_prefix="xuiComboYesNo" />
+    </insertAfter>
+	
+	
+</AGF-AutoRun>

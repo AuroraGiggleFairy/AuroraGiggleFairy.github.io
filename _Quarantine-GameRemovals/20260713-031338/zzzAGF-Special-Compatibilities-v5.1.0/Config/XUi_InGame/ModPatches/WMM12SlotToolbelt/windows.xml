@@ -1,0 +1,18 @@
+<zzzAGF-Compatibilities>
+	<!-- WMM12SlotToolbelt -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+			<!--Lowered & Centered Toolbelt-->
+			<set xpath="/windows/window[@name='windowToolbelt']/@pos">-451,82</set>
+			<!--Toolbelt Slot Numbers Display-->
+			<!--REMOVABILITY = it is safe to delete JUST this section-->
+			<append xpath="/windows/window[@name='windowToolbelt']/rect">
+				<!--adding the slot indicator for 11 and 12-->
+				<sprite depth="19" pos="782,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
+				<label depth="20" name="slot#" pos="782,10" width="14" height="12" text="[DECEA3]11" font_size="12" color="" justify="center"/>
+				<sprite depth="19" pos="857,10" height="13" width="14" color="0,0,0,250" type="sliced" foregroundlayer="true"/>
+				<label depth="20" name="slot#" pos="857,10" width="14" height="12" text="[DECEA3]12" font_size="12" color="" justify="center"/>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

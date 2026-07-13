@@ -40,17 +40,17 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Full shape list:
-      - Writable Crate, Cube, Bevel, Half, Cupboard Ajar, Counter,
-        Cabinet Ajar, Counter Round, Buffet, Sink Round, Hollow Top,
-        Bookcase Cube, Bevel Bookcase, Bookcase, Mortician Drawer.
-    - Storage size without AGF BackpackPlus 72+:
-      - Wood = 10x6 (60 slots)
-      - Iron = 10x8 (80 slots)
-      - Steel = 10x10 (100 slots)
-    - Storage size with AGF BackpackPlus 72/84/119 installed:
-      - Wood = 12x10 (120 slots)
-      - Iron = 12x12 (144 slots)
-      - Steel = 12x14 (168 slots)
+    - Writable Crate, Cube, Bevel, Half, Cupboard Ajar, Counter, Cabinet
+      Ajar, Counter Round, Buffet, Sink Round, Hollow Top, Bookcase
+      Cube, Bevel Bookcase, Bookcase, Mortician Drawer.
+  - Storage size without AGF BackpackPlus 72+:
+    - Wood = 10x6 (60 slots)
+    - Iron = 10x8 (80 slots)
+    - Steel = 10x10 (100 slots)
+  - Storage size with AGF BackpackPlus 72/84/119 installed:
+    - Wood = 12x10 (120 slots)
+    - Iron = 12x12 (144 slots)
+    - Steel = 12x14 (168 slots)
 
 
 

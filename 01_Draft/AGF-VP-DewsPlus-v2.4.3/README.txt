@@ -40,39 +40,141 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Specific XML Edits: blocks.xml removes HeatMapStrength, HeatMapTime,
-    and HeatMapFrequency from cntDewCollector.
-      - blocks.xml adds cntDewCollectorAGF (extends cntDewCollector)
-        with MultiBlockDim set to 2,3,2.
-      - blocks.xml adds cntDewCollectorAGFx5 and cntDewCollectorAGFx25,
-        including adjusted durability/repair values, self-return
-        destroy/fall drops, and bundled output
-        (drinkJarRiverWaterx5/x25, drinkJarBoiledWaterx5/x25).
-      - For 2.6+, blocks.xml requires x5/x25 dew tools on the x5/x25
-        collectors and sets matching FuelTypes values.
-      - blocks.xml replaces vanilla cntDewCollector drop behavior so old
-        placed collectors convert to cntDewCollectorAGF when broken.
-      - recipes.xml renames the vanilla dew collector recipe output to
-        cntDewCollectorAGF and adds workbench combine recipes for x5/x25
-        collectors.
-      - recipes.xml adds x5/x25 dew tool combine recipes under a pre-2.6
-        conditional for compatibility.
-      - recipes.xml adds bulk opening recipes so 500 bundled jars can be
-        opened at once (x5 and x25 bundles).
-      - progression.xml updates crafting workstation unlock tags/display
-        entries for cntDewCollectorAGF, cntDewCollectorAGFx5, and
-        cntDewCollectorAGFx25.
-      - progression.xml conditionally adds pre-2.6 unlock tags/display
-        entries for x5/x25 dew tools.
-      - challenges.xml updates the dew collector placement challenge
-        objective to cntDewCollectorAGF.
-      - items.xml adds x5/x25 bundled water items and pre-2.6 x5/x25 dew
-        tool items.
-
-Usage Notes:
-      - Existing worlds can convert old placed dew collectors by
-        breaking them, which returns the AGF collector block.
+  and HeatMapFrequency from cntDewCollector.
+        - blocks.xml adds cntDewCollectorAGF (extends cntDewCollector)
+          with MultiBlockDim set to 2,3,2.
+        - blocks.xml adds cntDewCollectorAGFx5 and
+          cntDewCollectorAGFx25, including adjusted durability/repair
+          values, self-return destroy/fall drops, and bundled output
+          (drinkJarRiverWaterx5/x25, drinkJarBoiledWaterx5/x25).
+        - For 2.6+, blocks.xml requires x5/x25 dew tools on the x5/x25
+          collectors and sets matching FuelTypes values.
+        - blocks.xml replaces vanilla cntDewCollector drop behavior so
+          old placed collectors convert to cntDewCollectorAGF when
+          broken.
+        - recipes.xml renames the vanilla dew collector recipe output to
+          cntDewCollectorAGF and adds workbench combine recipes for
+          x5/x25 collectors.
+        - recipes.xml adds x5/x25 dew tool combine recipes under a
+          pre-2.6 conditional for compatibility.
+        - recipes.xml adds bulk opening recipes so 500 bundled jars can
+          be opened at once (x5 and x25 bundles).
+        - progression.xml updates crafting workstation unlock
+          tags/display entries for cntDewCollectorAGF,
+          cntDewCollectorAGFx5, and cntDewCollectorAGFx25.
+        - progression.xml conditionally adds pre-2.6 unlock tags/display
+          entries for x5/x25 dew tools.
+        - challenges.xml updates the dew collector placement challenge
+          objective to cntDewCollectorAGF.
+        - items.xml adds x5/x25 bundled water items and pre-2.6 x5/x25
+          dew tool items. Usage Notes:
+        - Existing worlds can convert old placed dew collectors by
+          breaking them, which returns the AGF collector block.
       - x5/x25 collectors are designed for scaled output and pair with
         the matching tool tiers where required.
+
+  - Specific XML Edits: blocks.xml removes HeatMapStrength, HeatMapTime,
+    and HeatMapFrequency from cntDewCollector.
+          - blocks.xml adds cntDewCollectorAGF (extends cntDewCollector)
+            with MultiBlockDim set to 2,3,2.
+          - blocks.xml adds cntDewCollectorAGFx5 and
+            cntDewCollectorAGFx25, including adjusted durability/repair
+            values, self-return destroy/fall drops, and bundled output
+            (drinkJarRiverWaterx5/x25, drinkJarBoiledWaterx5/x25).
+          - For 2.6+, blocks.xml requires x5/x25 dew tools on the x5/x25
+            collectors and sets matching FuelTypes values.
+          - blocks.xml replaces vanilla cntDewCollector drop behavior so
+            old placed collectors convert to cntDewCollectorAGF when
+            broken.
+          - recipes.xml renames the vanilla dew collector recipe output
+            to cntDewCollectorAGF and adds workbench combine recipes for
+            x5/x25 collectors.
+          - recipes.xml adds x5/x25 dew tool combine recipes under a
+            pre-2.6 conditional for compatibility.
+          - recipes.xml adds bulk opening recipes so 500 bundled jars
+            can be opened at once (x5 and x25 bundles).
+          - progression.xml updates crafting workstation unlock
+            tags/display entries for cntDewCollectorAGF,
+            cntDewCollectorAGFx5, and cntDewCollectorAGFx25.
+          - progression.xml conditionally adds pre-2.6 unlock
+            tags/display entries for x5/x25 dew tools.
+          - challenges.xml updates the dew collector placement challenge
+            objective to cntDewCollectorAGF.
+          - items.xml adds x5/x25 bundled water items and pre-2.6 x5/x25
+            dew tool items. Usage Notes:
+          - Existing worlds can convert old placed dew collectors by
+            breaking them, which returns the AGF collector block.
+        - x5/x25 collectors are designed for scaled output and pair with
+          the matching tool tiers where required.
+
+  - Specific XML Edits: blocks.xml removes HeatMapStrength, HeatMapTime,
+    and HeatMapFrequency from cntDewCollector.
+          - blocks.xml adds cntDewCollectorAGF (extends cntDewCollector)
+            with MultiBlockDim set to 2,3,2.
+          - blocks.xml adds cntDewCollectorAGFx5 and
+            cntDewCollectorAGFx25, including adjusted durability/repair
+            values, self-return destroy/fall drops, and bundled output
+            (drinkJarRiverWaterx5/x25, drinkJarBoiledWaterx5/x25).
+          - For 2.6+, blocks.xml requires x5/x25 dew tools on the x5/x25
+            collectors and sets matching FuelTypes values.
+          - blocks.xml replaces vanilla cntDewCollector drop behavior so
+            old placed collectors convert to cntDewCollectorAGF when
+            broken.
+          - recipes.xml renames the vanilla dew collector recipe output
+            to cntDewCollectorAGF and adds workbench combine recipes for
+            x5/x25 collectors.
+          - recipes.xml adds x5/x25 dew tool combine recipes under a
+            pre-2.6 conditional for compatibility.
+          - recipes.xml adds bulk opening recipes so 500 bundled jars
+            can be opened at once (x5 and x25 bundles).
+          - progression.xml updates crafting workstation unlock
+            tags/display entries for cntDewCollectorAGF,
+            cntDewCollectorAGFx5, and cntDewCollectorAGFx25.
+          - progression.xml conditionally adds pre-2.6 unlock
+            tags/display entries for x5/x25 dew tools.
+          - challenges.xml updates the dew collector placement challenge
+            objective to cntDewCollectorAGF.
+          - items.xml adds x5/x25 bundled water items and pre-2.6 x5/x25
+            dew tool items. Usage Notes:
+          - Existing worlds can convert old placed dew collectors by
+            breaking them, which returns the AGF collector block.
+        - x5/x25 collectors are designed for scaled output and pair with
+          the matching tool tiers where required.
+
+    - Specific XML Edits: blocks.xml removes HeatMapStrength,
+      HeatMapTime, and HeatMapFrequency from cntDewCollector.
+            - blocks.xml adds cntDewCollectorAGF (extends
+              cntDewCollector) with MultiBlockDim set to 2,3,2.
+            - blocks.xml adds cntDewCollectorAGFx5 and
+              cntDewCollectorAGFx25, including adjusted
+              durability/repair values, self-return destroy/fall drops,
+              and bundled output (drinkJarRiverWaterx5/x25,
+              drinkJarBoiledWaterx5/x25).
+            - For 2.6+, blocks.xml requires x5/x25 dew tools on the
+              x5/x25 collectors and sets matching FuelTypes values.
+            - blocks.xml replaces vanilla cntDewCollector drop behavior
+              so old placed collectors convert to cntDewCollectorAGF
+              when broken.
+            - recipes.xml renames the vanilla dew collector recipe
+              output to cntDewCollectorAGF and adds workbench combine
+              recipes for x5/x25 collectors.
+            - recipes.xml adds x5/x25 dew tool combine recipes under a
+              pre-2.6 conditional for compatibility.
+            - recipes.xml adds bulk opening recipes so 500 bundled jars
+              can be opened at once (x5 and x25 bundles).
+            - progression.xml updates crafting workstation unlock
+              tags/display entries for cntDewCollectorAGF,
+              cntDewCollectorAGFx5, and cntDewCollectorAGFx25.
+            - progression.xml conditionally adds pre-2.6 unlock
+              tags/display entries for x5/x25 dew tools.
+            - challenges.xml updates the dew collector placement
+              challenge objective to cntDewCollectorAGF.
+            - items.xml adds x5/x25 bundled water items and pre-2.6
+              x5/x25 dew tool items. Usage Notes:
+            - Existing worlds can convert old placed dew collectors by
+              breaking them, which returns the AGF collector block.
+          - x5/x25 collectors are designed for scaled output and pair
+            with the matching tool tiers where required.
 
 
 
@@ -237,126 +339,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.4.3
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.5.1
-    - Corrected a conditional that allowed v2.6 stuff in earlier
-      versions!
-
-------------------------------------------------------------------------
-
-v2.4.1
-    - Corrected a conditional error that prevented games from loading.
-
-------------------------------------------------------------------------
-
-v2.4.0
-    - Updated for 7d2d version 2.6.
-    - Now has x5 and x25 versions of the tools that go into the dew
-    collector.
-    - Naming scheme update.
-    - Updated README format
-
-------------------------------------------------------------------------
-
-v2.3.2
-    - A bulk crafting and open was missing a digit. Only gaining 250
-      water
-    instead of 2,500.
-
-------------------------------------------------------------------------
-
-v2.3.1
-    - updated for 2.5 dew collectors craft at workbench.
-
-------------------------------------------------------------------------
-
-v2.3.0
-    - Removed HEAT production on all dew collectors.
-    - Added a x25 version!
-    - Increased the bundle stack sizes of the larger water bundles from
-      50
-    to 500.
-
-------------------------------------------------------------------------
-
-v2.2.1
-    - Breaking a x5 dew collector returns it to your hands, just like
-      the
-    regular one.
-
-------------------------------------------------------------------------
-
-v2.2.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v2.1.0
-    - If you have 50 jugs, you can open all of them in the crafting
-      menu.
-
-------------------------------------------------------------------------
-
-v2.0.3
-    - updated for 7d2d Version 2
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - changed the bulk murky water icon to be consistent gave this icon
-      a
-    murky water color-ish
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - corrected the Challenge of placing a dew collector.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated for V1.0
-    - New method of x5 due to tools for dews
-
-------------------------------------------------------------------------
-
-v1.1.4
-    - Added in windows.xml to make sure the dew collector is the correct
-    name on the schematic list.
-    - Fixed the sorting of the dew collector types.
-    - Made the x5 dew collector unlock with the regular one.
-
-------------------------------------------------------------------------
-
-v1.1.3
-    - Corrected the name of what gets unlocked for Dew Collector's under
-    progression.xml.
-    - Removed the "third" recipe for a dew collector that was
-    unintentionally there.
-
-------------------------------------------------------------------------
-
-V1.1.2
-    - Added the number "5" to the icon type.
-
-------------------------------------------------------------------------
-
-v1.1.1
-    - Fixed the recipe to the correct x5 dew collector.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Dew collectors now 2x2, except the old ones, which if you destroy,
-    you get the 2x2 version.
-    - changed mod name to DewsPlus
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Created the mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

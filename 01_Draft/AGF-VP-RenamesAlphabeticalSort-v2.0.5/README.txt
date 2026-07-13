@@ -41,30 +41,108 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Primarily a localization pass in Config/Localization.txt that
-        renames many existing item/block/mod entries with
-        sorting-friendly prefixes.
+        - Primarily a localization pass in Config/Localization.txt that
+          renames many existing item/block/mod entries with
+          sorting-friendly prefixes.
       - Prefix/tag patterns are applied consistently across supported
         languages so naming intent stays aligned in all locales.
       - Common pattern examples include: category prefixes such as
         Ammo[-], Ammo-Ingredient[-], Food-Candy[-], Mod-Armor[-],
-        Mod-Vehicle[-], and Admin[-]
-      - grow-state prefixes such as Seed, Growing, and Harvest for
-        planted blocks
-      - armor piece ordering tags like Armor[bbb0xx] to keep sets
-        grouped and ordered together
+        Mod-Vehicle[-], and Admin[-] grow-state prefixes such as Seed,
+        Growing, and Harvest for planted blocks armor piece ordering
+        tags like Armor[bbb0xx] to keep sets grouped and ordered
+        together
       - Small support changes in Config/items.xml adjust item group tags
         to improve Auto Sort behavior for edge cases (foodCornMeal,
         resourceCropCottonPlant, resourceCropAloeLeaf, drinkJarEmpty).
       - Feature set:
-      - Auto Sort groups like-items together more reliably in inventory
-        and containers.
+        - Auto Sort groups like-items together more reliably in
+          inventory and containers.
       - Item names are easier to scan because category/type is shown at
         the front of the name.
       - Food/drink and ingredient overlap is easier to identify from
         naming.
       - This is mostly naming/grouping quality-of-life; gameplay
         mechanics are not the core target of this mod.
+
+  - Implementation edits used to make this work:
+          - Primarily a localization pass in Config/Localization.txt
+            that renames many existing item/block/mod entries with
+            sorting-friendly prefixes.
+        - Prefix/tag patterns are applied consistently across supported
+          languages so naming intent stays aligned in all locales.
+        - Common pattern examples include: category prefixes such as
+          Ammo[-], Ammo-Ingredient[-], Food-Candy[-], Mod-Armor[-],
+          Mod-Vehicle[-], and Admin[-] grow-state prefixes such as Seed,
+          Growing, and Harvest for planted blocks armor piece ordering
+          tags like Armor[bbb0xx] to keep sets grouped and ordered
+          together
+        - Small support changes in Config/items.xml adjust item group
+          tags to improve Auto Sort behavior for edge cases
+          (foodCornMeal, resourceCropCottonPlant, resourceCropAloeLeaf,
+          drinkJarEmpty).
+        - Feature set:
+          - Auto Sort groups like-items together more reliably in
+            inventory and containers.
+        - Item names are easier to scan because category/type is shown
+          at the front of the name.
+        - Food/drink and ingredient overlap is easier to identify from
+          naming.
+        - This is mostly naming/grouping quality-of-life; gameplay
+          mechanics are not the core target of this mod.
+
+  - Implementation edits used to make this work:
+          - Primarily a localization pass in Config/Localization.txt
+            that renames many existing item/block/mod entries with
+            sorting-friendly prefixes.
+        - Prefix/tag patterns are applied consistently across supported
+          languages so naming intent stays aligned in all locales.
+        - Common pattern examples include: category prefixes such as
+          Ammo[-], Ammo-Ingredient[-], Food-Candy[-], Mod-Armor[-],
+          Mod-Vehicle[-], and Admin[-] grow-state prefixes such as Seed,
+          Growing, and Harvest for planted blocks armor piece ordering
+          tags like Armor[bbb0xx] to keep sets grouped and ordered
+          together
+        - Small support changes in Config/items.xml adjust item group
+          tags to improve Auto Sort behavior for edge cases
+          (foodCornMeal, resourceCropCottonPlant, resourceCropAloeLeaf,
+          drinkJarEmpty).
+        - Feature set:
+          - Auto Sort groups like-items together more reliably in
+            inventory and containers.
+        - Item names are easier to scan because category/type is shown
+          at the front of the name.
+        - Food/drink and ingredient overlap is easier to identify from
+          naming.
+        - This is mostly naming/grouping quality-of-life; gameplay
+          mechanics are not the core target of this mod.
+
+    - Implementation edits used to make this work:
+            - Primarily a localization pass in Config/Localization.txt
+              that renames many existing item/block/mod entries with
+              sorting-friendly prefixes.
+          - Prefix/tag patterns are applied consistently across
+            supported languages so naming intent stays aligned in all
+            locales.
+          - Common pattern examples include: category prefixes such as
+            Ammo[-], Ammo-Ingredient[-], Food-Candy[-], Mod-Armor[-],
+            Mod-Vehicle[-], and Admin[-] grow-state prefixes such as
+            Seed, Growing, and Harvest for planted blocks armor piece
+            ordering tags like Armor[bbb0xx] to keep sets grouped and
+            ordered together
+          - Small support changes in Config/items.xml adjust item group
+            tags to improve Auto Sort behavior for edge cases
+            (foodCornMeal, resourceCropCottonPlant,
+            resourceCropAloeLeaf, drinkJarEmpty).
+          - Feature set:
+            - Auto Sort groups like-items together more reliably in
+              inventory and containers.
+          - Item names are easier to scan because category/type is shown
+            at the front of the name.
+          - Food/drink and ingredient overlap is easier to identify from
+            naming.
+          - This is mostly naming/grouping quality-of-life; gameplay
+            mechanics are not the core target of this mod.
 
 
 
@@ -229,55 +307,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.0.5
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.0.4
-    - Raw Meat Bundle takes 5 meat per, not 50!
-
-------------------------------------------------------------------------
-
-v2.0.3
-    - Added the three tiered insulating armor mod.
-    - Added clothing names.
-    - Added empty jar to sort with drinks.
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - Added the missing Honey Tea.
-    - Found an error in one of the translations.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Fun Pimps added full localization for new items, added it to
-    affected items.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Renamed mod from RenamesForAutoSort to RenamesAlphabeticalSort.
-    - Updated to include new things for 7d2d version 2.5.
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - Corrected name changes for a few of the mod items and their
-    schematics
-    - Added the prefix to the SledgeHammer Saga
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated text to represent 7d2d Version 2.
-    - Corrected the Candy Health Bar stuff.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Transfered out of 1Core for standalone modlet
-    - Added more organization to naming conventions
-    - Values of food/water added to appropriate items
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

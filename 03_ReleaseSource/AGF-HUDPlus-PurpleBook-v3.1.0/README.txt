@@ -42,10 +42,10 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Purple Book content is generated from vanilla game data for
-    code-accurate values.
-      - Compatibility requests are welcome in AGF Discord.
-      - zzzAGF-Special-Compatibilities checks loaded mods and applies
-        matching Purple Book compatibility updates when available.
+  code-accurate values.
+  - Compatibility requests are welcome in AGF Discord.
+  - zzzAGF-Special-Compatibilities checks loaded mods and applies
+    matching Purple Book compatibility updates when available.
 
 
 

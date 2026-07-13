@@ -40,27 +40,84 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - traders.xml adds trader stage template agfTier with min="100", then
-    adds an AGFVending item group and injects it into traderGeneral so
-    traders can sell these machines.
-      - blocks.xml adds player versions of trader-restocking vending
-machines:
-      - drink variant helper
-        (cntVendingMachineDrinks_PlayerVariantHelper) snack machine
-        (cntVendingMachineSnacksFull_Player)
-      - These player versions use TraderStageTemplate="agfTier" and
-        EconomicValue="15000".
-      - Break/recovery behavior is added for purchased machines:
-      - Destroy returns the machine item
-      - Fall has a recovery chance (prob=".9")
-      - Localization.txt labels these as Trader Restock vending machines
-        and includes description text that they restock daily and can be
-        picked up by breaking.
-
-Usage Notes:
-      - Trader-managed vending machines are the ones that stock
-        food/drink and reset daily.
+  adds an AGFVending item group and injects it into traderGeneral so
+  traders can sell these machines.
+        - blocks.xml adds player versions of trader-restocking vending
+          machines: drink variant helper
+          (cntVendingMachineDrinks_PlayerVariantHelper) snack machine
+          (cntVendingMachineSnacksFull_Player)
+        - These player versions use TraderStageTemplate="agfTier" and
+          EconomicValue="15000".
+        - Break/recovery behavior is added for purchased machines:
+          - Destroy returns the machine item
+        - Fall has a recovery chance (prob=".9")
+        - Localization.txt labels these as Trader Restock vending
+          machines and includes description text that they restock daily
+          and can be picked up by breaking. Usage Notes:
+        - Trader-managed vending machines are the ones that stock
+          food/drink and reset daily.
       - This mod targets the purchased player versions so you can
         recover them; it is separate from map/world-placed machines.
+
+  - traders.xml adds trader stage template agfTier with min="100", then
+    adds an AGFVending item group and injects it into traderGeneral so
+    traders can sell these machines.
+          - blocks.xml adds player versions of trader-restocking vending
+            machines: drink variant helper
+            (cntVendingMachineDrinks_PlayerVariantHelper) snack machine
+            (cntVendingMachineSnacksFull_Player)
+          - These player versions use TraderStageTemplate="agfTier" and
+            EconomicValue="15000".
+          - Break/recovery behavior is added for purchased machines:
+            - Destroy returns the machine item
+          - Fall has a recovery chance (prob=".9")
+          - Localization.txt labels these as Trader Restock vending
+            machines and includes description text that they restock
+            daily and can be picked up by breaking. Usage Notes:
+          - Trader-managed vending machines are the ones that stock
+            food/drink and reset daily.
+        - This mod targets the purchased player versions so you can
+          recover them; it is separate from map/world-placed machines.
+
+  - traders.xml adds trader stage template agfTier with min="100", then
+    adds an AGFVending item group and injects it into traderGeneral so
+    traders can sell these machines.
+          - blocks.xml adds player versions of trader-restocking vending
+            machines: drink variant helper
+            (cntVendingMachineDrinks_PlayerVariantHelper) snack machine
+            (cntVendingMachineSnacksFull_Player)
+          - These player versions use TraderStageTemplate="agfTier" and
+            EconomicValue="15000".
+          - Break/recovery behavior is added for purchased machines:
+            - Destroy returns the machine item
+          - Fall has a recovery chance (prob=".9")
+          - Localization.txt labels these as Trader Restock vending
+            machines and includes description text that they restock
+            daily and can be picked up by breaking. Usage Notes:
+          - Trader-managed vending machines are the ones that stock
+            food/drink and reset daily.
+        - This mod targets the purchased player versions so you can
+          recover them; it is separate from map/world-placed machines.
+
+    - traders.xml adds trader stage template agfTier with min="100",
+      then adds an AGFVending item group and injects it into
+      traderGeneral so traders can sell these machines.
+            - blocks.xml adds player versions of trader-restocking
+              vending machines: drink variant helper
+              (cntVendingMachineDrinks_PlayerVariantHelper) snack
+              machine (cntVendingMachineSnacksFull_Player)
+            - These player versions use TraderStageTemplate="agfTier"
+              and EconomicValue="15000".
+            - Break/recovery behavior is added for purchased machines:
+              - Destroy returns the machine item
+            - Fall has a recovery chance (prob=".9")
+            - Localization.txt labels these as Trader Restock vending
+              machines and includes description text that they restock
+              daily and can be picked up by breaking. Usage Notes:
+            - Trader-managed vending machines are the ones that stock
+              food/drink and reset daily.
+          - This mod targets the purchased player versions so you can
+            recover them; it is separate from map/world-placed machines.
 
 
 
@@ -225,52 +282,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v3.0.3
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v3.0.2
-    - NOW traer sells the snack one in addition to the variant helper
-    drinks one.
-
-------------------------------------------------------------------------
-
-v3.0.1
-    - Updated names of each vending machine to better state that trader
-    restocks them.
-    - Made the 3 drink vending machines into a variant block and updated
-    the trader sell list.
-
-------------------------------------------------------------------------
-
-v3.0.0
-    - Updated so that your vending machines will be picked up when
-    destroyed.
-    - Corrected localization.
-    - Added description of how to use it.
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - Updated for 7d2d Version 2.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - name change
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - updated to V1 updated the trader stage requirement
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Changed the tier stage of the vending machines to match rare tools
-    - (100).
-    - Added the "energy" and "water" vending machine.
-    - Lowered the "trader stage" requirement to access the vending
-    machines.
-    - Updated the ReadMe file to new format.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

@@ -45,35 +45,35 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Client-side behavior:
-      - This is a client-side enhancement DLL.
-      - Server-only install has no effect and does not require clients
-        to install it.
-      - In multiplayer, only players with local install receive these
-        enhancements.
+    - This is a client-side enhancement DLL.
+    - Server-only install has no effect and does not require clients to
+      install it.
+    - In multiplayer, only players with local install receive these
+      enhancements.
 
-      - HUDPlus-1Main enhancements:
-      - Adds expanded stats display for AGF-HUDPlus-1Main.
-      - Includes stats such as cold resist, core temperature, heat
-        resist, loot stage, inventory slots used, armor resist,
-        explosive resist, crit resist, and current block/entity damage.
+  - HUDPlus-1Main enhancements:
+    - Adds expanded stats display for AGF-HUDPlus-1Main.
+    - Includes stats such as cold resist, core temperature, heat resist,
+      loot stage, inventory slots used, armor resist, explosive resist,
+      crit resist, and current block/entity damage.
 
-      - PurpleBook enhancements:
-      - Keeps PurpleBook Paging Header buttons visible and functional.
+  - PurpleBook enhancements:
+    - Keeps PurpleBook Paging Header buttons visible and functional.
 
-      - ScreamerAlert enhancements:
-      - Adds a dedicated UI location for screamer alerts.
-      - Provides live tracking of screamers and screamer-horde zombies.
-      - Offers an option to show the number of nearby screamers/horde
-        zombies.
+  - ScreamerAlert enhancements:
+    - Adds a dedicated UI location for screamer alerts.
+    - Provides live tracking of screamers and screamer-horde zombies.
+    - Offers an option to show the number of nearby screamers/horde
+      zombies.
 
-      - Ongoing updates:
-      - As AGF updates existing mods or releases more mods, this mod
-        will likely receive additional updates.
+  - Ongoing updates:
+    - As AGF updates existing mods or releases more mods, this mod will
+      likely receive additional updates.
 
-      - Non-AGF support:
-      - When both EnhancedAGF and zzzAGF-Special-Compatibilities are
-        used, features are provided for the following mods: Doom
-        Survival and Dishong Tower Challenge.
+  - Non-AGF support:
+    - When both EnhancedAGF and zzzAGF-Special-Compatibilities are used,
+      features are provided for the following mods: Doom Survival and
+      Dishong Tower Challenge.
 
 
 

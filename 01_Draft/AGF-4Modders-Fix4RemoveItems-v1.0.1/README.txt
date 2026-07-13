@@ -39,9 +39,24 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Fixes RemoveItems behavior so it can be triggered more than once in
+  multiplayer sessions.
+        - Prevents one-time-only behavior that can block repeated event
+          use.
+
+  - Fixes RemoveItems behavior so it can be triggered more than once in
     multiplayer sessions.
-      - Prevents one-time-only behavior that can block repeated event
-        use.
+          - Prevents one-time-only behavior that can block repeated
+            event use.
+
+  - Fixes RemoveItems behavior so it can be triggered more than once in
+    multiplayer sessions.
+          - Prevents one-time-only behavior that can block repeated
+            event use.
+
+    - Fixes RemoveItems behavior so it can be triggered more than once
+      in multiplayer sessions.
+            - Prevents one-time-only behavior that can block repeated
+              event use.
 
 
 
@@ -206,15 +221,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Prepared mod for release.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

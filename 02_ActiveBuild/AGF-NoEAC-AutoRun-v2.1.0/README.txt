@@ -54,21 +54,21 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Keyboard:
-      - Press the rebindable Auto-Run key (default Z) to start or stop.
-      - While Auto-Run is active, pressing Sprint toggles sprint.
-      - Press Forward, Backward, or Esc to stop Auto-Run immediately.
-      - To rebind, go to Options -> Controls -> Keybindings -> Auto-Run.
+    - Press the rebindable Auto-Run key (default Z) to start or stop.
+    - While Auto-Run is active, pressing Sprint toggles sprint.
+    - Press Forward, Backward, or Esc to stop Auto-Run immediately.
+    - To rebind, go to Options -> Controls -> Keybindings -> Auto-Run.
 
-    - Controller (optional in Controller settings):
-      - Double-press Sprint on foot to start.
-      - Double-press Turbo in a vehicle to start.
-      - Press Backward or Menu to stop.
-      - To enable/disable: Options -> Controller -> Options -> Auto-Run.
+  - Controller (optional in Controller settings):
+    - Double-press Sprint on foot to start.
+    - Double-press Turbo in a vehicle to start.
+    - Press Backward or Menu to stop.
+    - To enable/disable: Options -> Controller -> Options -> Auto-Run.
 
-    - While Auto-Run is active, you can open inventory, perks, and other
-      character menus.
-    - A steering-wheel icon appears next to the Sprint icon while
-      Auto-Run is active.
+  - While Auto-Run is active, you can open inventory, perks, and other
+    character menus.
+  - A steering-wheel icon appears next to the Sprint icon while Auto-Run
+    is active.
 
 
 

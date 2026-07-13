@@ -47,21 +47,76 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Expands the vanilla optionsAudio menu from 4 tabs to 6 tabs and
+  inserts two new tab pages: Volume Profiles and Sound Swap.
+        - Volume Profiles includes an overall preset (Off, Low, Medium,
+          High, Default, Custom) and detailed per-category sliders in 5%
+          steps.
+        - Categories include door types, animal pain/death, block
+          building, electrical loops, explosions, gunfire, item
+          interaction, motor tools, player sounds, protected-block
+          dings, spider zombie, surface impact, traders, Twitch sounds,
+          and vehicles.
+        - Sound Swap includes a global animal pain/death preset (All
+          Default, All Swapped, Custom) plus per-animal swap controls
+          (bear, boar, canines, chicken, stag, mountain lion, rabbit,
+          snake, and vulture).
+        - Includes a Silly Sounds toggle for Twitch Integration and
+          localized UI labels/tooltips across all 13 supported
+          languages.
+
+  - Expands the vanilla optionsAudio menu from 4 tabs to 6 tabs and
     inserts two new tab pages: Volume Profiles and Sound Swap.
-      - Volume Profiles includes an overall preset (Off, Low, Medium,
-        High, Default, Custom) and detailed per-category sliders in 5%
-        steps.
-      - Categories include door types, animal pain/death, block
-        building, electrical loops, explosions, gunfire, item
-        interaction, motor tools, player sounds, protected-block dings,
-        spider zombie, surface impact, traders, Twitch sounds, and
-        vehicles.
-      - Sound Swap includes a global animal pain/death preset (All
-        Default, All Swapped, Custom) plus per-animal swap controls
-        (bear, boar, canines, chicken, stag, mountain lion, rabbit,
-        snake, and vulture).
-      - Includes a Silly Sounds toggle for Twitch Integration and
-        localized UI labels/tooltips across all 13 supported languages.
+          - Volume Profiles includes an overall preset (Off, Low,
+            Medium, High, Default, Custom) and detailed per-category
+            sliders in 5% steps.
+          - Categories include door types, animal pain/death, block
+            building, electrical loops, explosions, gunfire, item
+            interaction, motor tools, player sounds, protected-block
+            dings, spider zombie, surface impact, traders, Twitch
+            sounds, and vehicles.
+          - Sound Swap includes a global animal pain/death preset (All
+            Default, All Swapped, Custom) plus per-animal swap controls
+            (bear, boar, canines, chicken, stag, mountain lion, rabbit,
+            snake, and vulture).
+          - Includes a Silly Sounds toggle for Twitch Integration and
+            localized UI labels/tooltips across all 13 supported
+            languages.
+
+  - Expands the vanilla optionsAudio menu from 4 tabs to 6 tabs and
+    inserts two new tab pages: Volume Profiles and Sound Swap.
+          - Volume Profiles includes an overall preset (Off, Low,
+            Medium, High, Default, Custom) and detailed per-category
+            sliders in 5% steps.
+          - Categories include door types, animal pain/death, block
+            building, electrical loops, explosions, gunfire, item
+            interaction, motor tools, player sounds, protected-block
+            dings, spider zombie, surface impact, traders, Twitch
+            sounds, and vehicles.
+          - Sound Swap includes a global animal pain/death preset (All
+            Default, All Swapped, Custom) plus per-animal swap controls
+            (bear, boar, canines, chicken, stag, mountain lion, rabbit,
+            snake, and vulture).
+          - Includes a Silly Sounds toggle for Twitch Integration and
+            localized UI labels/tooltips across all 13 supported
+            languages.
+
+    - Expands the vanilla optionsAudio menu from 4 tabs to 6 tabs and
+      inserts two new tab pages: Volume Profiles and Sound Swap.
+            - Volume Profiles includes an overall preset (Off, Low,
+              Medium, High, Default, Custom) and detailed per-category
+              sliders in 5% steps.
+            - Categories include door types, animal pain/death, block
+              building, electrical loops, explosions, gunfire, item
+              interaction, motor tools, player sounds, protected-block
+              dings, spider zombie, surface impact, traders, Twitch
+              sounds, and vehicles.
+            - Sound Swap includes a global animal pain/death preset (All
+              Default, All Swapped, Custom) plus per-animal swap
+              controls (bear, boar, canines, chicken, stag, mountain
+              lion, rabbit, snake, and vulture).
+            - Includes a Silly Sounds toggle for Twitch Integration and
+              localized UI labels/tooltips across all 13 supported
+              languages.
 
 
 
@@ -226,10 +281,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

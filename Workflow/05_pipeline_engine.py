@@ -2392,7 +2392,7 @@ def extract_markdown_section_by_headings(readme_path: str, headings: Tuple[str, 
             continue
         collected.append(line.rstrip())
 
-    return "\n".join(collected).strip()
+    return "\n".join(collected).strip("\n")
 
 
 def extract_txt_section(readme_path: str, headings: Tuple[str, ...], stop_headings: Tuple[str, ...]) -> str:
@@ -2426,7 +2426,7 @@ def extract_txt_section(readme_path: str, headings: Tuple[str, ...], stop_headin
             continue
         collected.append(line.rstrip())
 
-    return "\n".join(collected).strip()
+    return "\n".join(collected).strip("\n")
 
 
 def _normalize_preserved_list_indentation(block: str) -> str:
@@ -2552,6 +2552,162 @@ def sanitize_preserved_readme_block(block: str, flatten_list_markers: bool = Fal
         cleaned = _normalize_preserved_list_indentation(cleaned)
     cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
     return cleaned.strip()
+
+
+def _flatten_bullet_continuation_lines(block: str) -> str:
+    """Flatten continuation lines that do NOT start with '-' into their bullet line.
+
+    After flattening, every line in the returned block starts with a '-'
+    (or is blank). The indentation of each '-' line is preserved exactly
+    as the user placed it.  No indentation recalculation is performed.
+    """
+    if not block:
+        return block
+
+    result: List[str] = []
+    for raw_line in block.splitlines():
+        stripped = raw_line.strip()
+        if not stripped:
+            if result and result[-1] != "":
+                result.append("")
+            continue
+        # Detect if this line starts with a bullet marker.
+        is_bullet = bool(re.match(r"^\s*-", stripped))
+        if not is_bullet and result:
+            # Continuation of the previous bullet line — merge.
+            result[-1] = result[-1].rstrip() + " " + stripped
+        else:
+            # Preserve original leading whitespace for bullet lines.
+            leading = raw_line[:len(raw_line) - len(raw_line.lstrip())]
+            result.append(leading + stripped)
+
+    return "\n".join(result)
+
+
+def _wrap_preserved_bullet_block(block: str, width: int = 72) -> str:
+    """Wrap bullet lines that exceed *width*, preserving dash indentation.
+
+    Continuation lines are indented to dash-position + 2 (two spaces past
+    the '-' character itself, i.e. one space past the space that follows
+    the '-' character).  Lines that do NOT start with '-' are passed
+    through unchanged.
+    """
+    if not block:
+        return block
+
+    wrapped: List[str] = []
+    for raw_line in block.splitlines():
+        line = raw_line.rstrip()
+        if not line:
+            wrapped.append("")
+            continue
+        if len(line) <= width:
+            wrapped.append(line)
+            continue
+
+        # Identify bullet prefix: leading whitespace + '-' + whitespace.
+        bullet_match = re.match(r"^(\s*)(-\s+)(.*)", line)
+        if bullet_match:
+            leading = bullet_match.group(1)
+            marker = bullet_match.group(2)
+            body = bullet_match.group(3)
+            dash_prefix = leading + marker
+            # dash_position is the column where '-' sits (len of leading).
+            # Continuation indent = dash_position + 2 (one past the space after '-').
+            cont_indent = " " * (len(leading) + 2)
+            wrapped_lines = textwrap.wrap(
+                body,
+                width=width,
+                initial_indent=dash_prefix,
+                subsequent_indent=cont_indent,
+                break_long_words=False,
+                break_on_hyphens=False,
+            )
+            wrapped.extend(wrapped_lines)
+        else:
+            wrapped.append(line)
+
+    return "\n".join(wrapped)
+
+
+def _format_other_details_block(block: str, width: int = 72) -> str:
+    """Flatten continuation lines then wrap long bullet lines.
+
+    Step 1 — Flatten: merge non-bullet continuation lines into their
+    preceding bullet line with a single space separator.
+    Step 2 — Wrap: for bullet lines exceeding *width*, wrap with
+    continuation indent = dash-position + 2.
+
+    If the first bullet line has less than 2 spaces of indent while other
+    bullets have >= 2, the first bullet is padded to 2 spaces to prevent
+    it from being flush-left.
+    """
+    if not block:
+        return block
+    flattened = _flatten_bullet_continuation_lines(block)
+    wrapped = _wrap_preserved_bullet_block(flattened, width)
+    # Ensure the first bullet line has at least 2-space indent if others do.
+    lines = wrapped.splitlines()
+    if lines:
+        first_match = re.match(r"^(-)(\s+.*)", lines[0].strip())
+        if first_match and not lines[0].startswith("  -"):
+            # First line has a bare '-' without indent, but other lines have indent.
+            for line in lines[1:]:
+                if re.match(r"^\s+-", line):
+                    lines[0] = "  " + lines[0].strip()
+                    break
+    return "\n".join(lines)
+
+
+def _reformat_other_details_section(txt_content: str, formatted_body: str) -> str:
+    """Replace the OTHER DETAILS section body in *txt_content* with *formatted_body*.
+
+    Finds "OTHER DETAILS" between two dividers, emits the pre-formatted body in its
+    place including the top divider, then copies all remaining lines as-is.
+    """
+    if not formatted_body:
+        return txt_content
+
+    lines = txt_content.splitlines()
+    output: List[str] = []
+    i = 0
+    found_other_details = False
+
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+
+        if (not found_other_details
+                and stripped == "OTHER DETAILS"
+                and i >= 1
+                and i + 1 < len(lines)
+                and lines[i - 1].strip().startswith("---")
+                and lines[i + 1].strip().startswith("---")):
+            found_other_details = True
+            # The top divider (lines[i - 1]) was already output on the previous
+            # loop iteration, so we do NOT re-emit it here.
+            output.append("OTHER DETAILS")
+            output.append(lines[i + 1])  # bottom divider
+            output.append("")            # blank line
+            for fline in formatted_body.splitlines():
+                output.append(fline)
+            # Ensure 3 blank lines before the next major section divider.
+            _ensure_trailing_blank_count(output, 3)
+            # Skip ALL original body lines until the next divider section.
+            # The original body starts at i+2 (the line after the bottom divider).
+            i += 2
+            while i < len(lines):
+                s = lines[i].strip()
+                if s.startswith("---") or s.startswith("==="):
+                    break
+                i += 1
+            # Continue main loop for remaining content.
+            continue
+
+        output.append(line)
+        i += 1
+
+    return "\n".join(output)
 
 
 def remove_standalone_bullet_line(block: str) -> str:
@@ -4196,9 +4352,18 @@ def generate_mod_readmes(
             features_summary_block = sanitize_preserved_readme_block(features_summary_block, flatten_list_markers=True)
             features_summary_block = remove_standalone_bullet_line(features_summary_block)
             features_summary_block = remove_feature_pointer_lines(features_summary_block)
-            # Preserve nested bullets in OTHER DETAILS (for example Keyboard/Controller sub-lists).
-            features_detailed_block = sanitize_preserved_readme_block(features_detailed_block)
-            features_detailed_block = remove_standalone_bullet_line(features_detailed_block)
+            # OTHER DETAILS: clean without re-indenting, then flatten+wrap preserving user's dash positions.
+            # Do NOT use textwrap.dedent() — it strips the user's manual indentation.
+            features_detailed_block_clean = re.sub(r"^[ \t]*>+[ \t]*", "", features_detailed_block)
+            features_detailed_block_clean = re.sub(r"^\s*>+\s*$", "", features_detailed_block_clean, flags=re.MULTILINE)
+            features_detailed_block_clean = re.sub(r"\n{3,}", "\n\n", features_detailed_block_clean)
+            features_detailed_block_clean = remove_standalone_bullet_line(features_detailed_block_clean)
+            # Strip trailing whitespace per line and leading/trailing blank lines,
+            # but DO NOT strip leading whitespace from the first content line.
+            features_detailed_block_raw = "\n".join(
+                line.rstrip() for line in features_detailed_block_clean.splitlines()
+            ).strip("\n")
+            other_details_formatted = _format_other_details_block(features_detailed_block_raw, width=72)
             # Flatten legacy nested list indentation so changelog bullets stay uniform on regen.
             changelog_block = sanitize_preserved_readme_block(changelog_block, flatten_list_markers=True)
 
@@ -4207,7 +4372,7 @@ def generate_mod_readmes(
             else:
                 fallback_feature = _ensure_sentence(mod_description) or "Feature summary coming soon."
                 features_body = f"- {fallback_feature}"
-            deeper_details_body = features_detailed_block.strip()
+            deeper_details_body = features_detailed_block_raw
             other_details_section = ""
             if deeper_details_body:
                 other_details_section = (
@@ -4241,6 +4406,10 @@ def generate_mod_readmes(
                 if changelog_content:
                     txt_content = txt_content.rstrip() + "\n\n\n\n" + changelog_content
             txt_content = txt_content.rstrip() + "\n"
+
+            # Post-process OTHER DETAILS section with the pre-formatted body.
+            if other_details_formatted:
+                txt_content = _reformat_other_details_section(txt_content, other_details_formatted)
 
             if dry_run:
                 log.info(f"[DRYRUN] Would write README.txt for {folder_name}")

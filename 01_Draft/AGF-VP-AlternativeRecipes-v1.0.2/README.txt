@@ -39,20 +39,61 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Specific XML Edits:
-      - recipes.xml appends a new cobblestoneShapes:VariantHelper recipe
-        (count="1", craft_time="3") using: resourceClayLump x10
-        resourceRockSmall x10
-      - recipes.xml appends a new medicalFirstAidBandage recipe
-        (count="1", tags="learnable") using: medicalAloeCream x1
-        resourceCloth x10
-      - recipes.xml appends a new medicalFirstAidKit recipe (count="1",
-        craft_area="chemistryStation",
-        tags="learnable,chemStationCrafting") using: medicalBloodBag x1
-        drinkJarBeer x1 resourceCloth x50 resourceSewingKit x1
+        - recipes.xml appends a new cobblestoneShapes:VariantHelper
+          recipe (count="1", craft_time="3") using: resourceClayLump x10
+          resourceRockSmall x10 recipes.xml appends a new
+          medicalFirstAidBandage recipe (count="1", tags="learnable")
+          using: medicalAloeCream x1 resourceCloth x10
+        - recipes.xml appends a new medicalFirstAidKit recipe
+          (count="1", craft_area="chemistryStation",
+          tags="learnable,chemStationCrafting") using: medicalBloodBag
+          x1 drinkJarBeer x1 resourceCloth x50 resourceSewingKit x1
+          Usage Notes:
+        - These are alternative recipe paths; original vanilla crafting
+          paths remain available.
 
-Usage Notes:
-      - These are alternative recipe paths; original vanilla crafting
-        paths remain available.
+  - Specific XML Edits:
+          - recipes.xml appends a new cobblestoneShapes:VariantHelper
+            recipe (count="1", craft_time="3") using: resourceClayLump
+            x10 resourceRockSmall x10 recipes.xml appends a new
+            medicalFirstAidBandage recipe (count="1", tags="learnable")
+            using: medicalAloeCream x1 resourceCloth x10
+          - recipes.xml appends a new medicalFirstAidKit recipe
+            (count="1", craft_area="chemistryStation",
+            tags="learnable,chemStationCrafting") using: medicalBloodBag
+            x1 drinkJarBeer x1 resourceCloth x50 resourceSewingKit x1
+            Usage Notes:
+          - These are alternative recipe paths; original vanilla
+            crafting paths remain available.
+
+  - Specific XML Edits:
+          - recipes.xml appends a new cobblestoneShapes:VariantHelper
+            recipe (count="1", craft_time="3") using: resourceClayLump
+            x10 resourceRockSmall x10 recipes.xml appends a new
+            medicalFirstAidBandage recipe (count="1", tags="learnable")
+            using: medicalAloeCream x1 resourceCloth x10
+          - recipes.xml appends a new medicalFirstAidKit recipe
+            (count="1", craft_area="chemistryStation",
+            tags="learnable,chemStationCrafting") using: medicalBloodBag
+            x1 drinkJarBeer x1 resourceCloth x50 resourceSewingKit x1
+            Usage Notes:
+          - These are alternative recipe paths; original vanilla
+            crafting paths remain available.
+
+    - Specific XML Edits:
+            - recipes.xml appends a new cobblestoneShapes:VariantHelper
+              recipe (count="1", craft_time="3") using: resourceClayLump
+              x10 resourceRockSmall x10 recipes.xml appends a new
+              medicalFirstAidBandage recipe (count="1",
+              tags="learnable") using: medicalAloeCream x1 resourceCloth
+              x10
+            - recipes.xml appends a new medicalFirstAidKit recipe
+              (count="1", craft_area="chemistryStation",
+              tags="learnable,chemStationCrafting") using:
+              medicalBloodBag x1 drinkJarBeer x1 resourceCloth x50
+              resourceSewingKit x1 Usage Notes:
+            - These are alternative recipe paths; original vanilla
+              crafting paths remain available.
 
 
 
@@ -217,15 +258,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated README and Code Notes.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Transported from 1Core, in goal to remove the 1Core requirement.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

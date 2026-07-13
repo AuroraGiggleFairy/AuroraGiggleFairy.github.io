@@ -38,11 +38,33 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Config/entityclasses.xml
-      - Sets ExpDeficitPerDeathPercentage for playerMale to .1 (10% per
-        death).
-      - Sets ExpDeficitMaxPercentage for playerMale to .3 (30% max).
-      - Vanilla comparison noted in config comments: per-death value .25
-        and max .5.
+        - Sets ExpDeficitPerDeathPercentage for playerMale to .1 (10%
+          per death).
+        - Sets ExpDeficitMaxPercentage for playerMale to .3 (30% max).
+        - Vanilla comparison noted in config comments: per-death value
+          .25 and max .5.
+
+  - Config/entityclasses.xml
+          - Sets ExpDeficitPerDeathPercentage for playerMale to .1 (10%
+            per death).
+          - Sets ExpDeficitMaxPercentage for playerMale to .3 (30% max).
+          - Vanilla comparison noted in config comments: per-death value
+            .25 and max .5.
+
+  - Config/entityclasses.xml
+          - Sets ExpDeficitPerDeathPercentage for playerMale to .1 (10%
+            per death).
+          - Sets ExpDeficitMaxPercentage for playerMale to .3 (30% max).
+          - Vanilla comparison noted in config comments: per-death value
+            .25 and max .5.
+
+    - Config/entityclasses.xml
+            - Sets ExpDeficitPerDeathPercentage for playerMale to .1
+              (10% per death).
+            - Sets ExpDeficitMaxPercentage for playerMale to .3 (30%
+              max).
+            - Vanilla comparison noted in config comments: per-death
+              value .25 and max .5.
 
 
 
@@ -207,16 +229,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated for 7d2d Version 2.
-    - Renamed to XPDeathPenaltyReduction.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

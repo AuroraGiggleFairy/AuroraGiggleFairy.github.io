@@ -1,0 +1,76 @@
+﻿<zzzAGF-Compatibilities>
+	<!-- DishongTowerChallenge -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main') and mod_loaded('AGF-HUDPlus-BMCounter')">
+			<append xpath="/windows/window[@name='windowCompass']">
+				<rect name="floorLevel" controller="PlayerStats, EnhancedAGF" pos="70,-87" width="380">
+					<label depth="6" name="TextContent" pos="0,0" font_size="60" color="[white]" justify="center" text="{PlayerFloorLevelDTC}" height="35" width="380" style="outline" effect="outline" effect_distance="1,1" effect_color="[black]"/>
+					<!--{Hard Coded to read Localization}-->
+				</rect>
+			</append>
+			<set xpath="/windows/window[@name='windowTargetBar']/rect[1]/@pos">-199,-142</set>
+			<set xpath="/windows/window[@name='windowTargetBar']/rect[2]/@pos">-267,-142</set>
+		</if>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+			<append xpath="/windows/window[@name='windowCompass']">
+				<rect name="floorLevel" controller="PlayerStats, EnhancedAGF" pos="70,-53" width="380">
+					<label depth="6" name="TextContent" pos="0,0" font_size="60" color="[white]" justify="center" text="{PlayerFloorLevelDTC}" height="35" width="380" style="outline" effect="outline" effect_distance="1,1" effect_color="[black]"/>
+					<!--{Hard Coded to read Localization}-->
+				</rect>
+			</append>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main') and mod_loaded('AGF-NoEAC-EnhancedAGF')">
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[6]"/>
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[5]"/>
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/conditional"/>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/sprite[1]/@height">76</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[1]/@pos">107,-14</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[1]/@height">38</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[1]/@width">80</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[1]/@font_size">26</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[2]/@pos">107,-48</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[2]/@height">38</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[2]/@width">80</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[2]/@font_size">26</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[3]/@pos">187,-14</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[3]/@height">38</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[3]/@width">125</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[3]/@font_size">26</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[4]/@pos">187,-48</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[4]/@height">38</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[4]/@width">125</set>
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[4]/@font_size">26</set>
+			<append xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']">
+				<rect name="nightDay" controller="PlayerStats, EnhancedAGF" pos="14,-9">
+					<sprite depth="8" name="Night" color="210,235,52" sprite="ui_game_symbol_twitch_special" width="40" height="40" visible="{PlayerIsNight}" tooltip_key="goZMNight"/>
+					<sprite depth="8" name="Day" pos="0,-2" color="230,138,18" sprite="ui_game_symbol_hot" width="40" height="40" visible="{PlayerIsDay}" tooltip_key="goZMDay"/>
+				</rect>
+			</append>
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='Location']/sprite"/>
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='Location']/label"/>
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='Location']/grid"/>
+			<append xpath="/windows/window[@name='windowCompass']/rect[@name='Location']">
+				<rect name="statsExtra1" controller="PlayerStats, EnhancedAGF" pos="0,6" width="250" height="76" pivot="center">
+					<sprite depth="2" name="background" color="0,0,0,210" type="sliced" sprite="ui_game_header_fill" foregroundlayer="true"/>
+					<sprite depth="2" name="coldIcon" pos="18,-18" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_cold" color="201, 201, 201" foregroundlayer="true" tooltip_key="statHypothermalResist"/>
+					<label depth="15" name="coldResist" pos="48,-21" width="56" height="20" pivot="center" justify="center" text="[00ffff]{PlayerColdResist}" font_size="18" tooltip_key="statHypothermalResist"/>
+					<sprite depth="2" name="tempIcon" pos="106,-18" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_temperature" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiBuffStatCoreTemp"/>
+					<label depth="15" name="coreTemp" pos="136,-21" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerCoreTemp}" font_size="18" tooltip_key="xuiBuffStatCoreTemp"/>
+					<sprite depth="2" name="hotIcon" pos="190,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_hot" color="201, 201, 201" foregroundlayer="true" tooltip_key="statHyperthermalResist"/>
+					<label depth="15" name="hotResist" pos="222,-21" width="56" height="20" pivot="center" justify="center" text="[ff8000]{PlayerHeatResist}" font_size="18" tooltip_key="statHyperthermalResist"/>
+				</rect>
+			</append>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/@pos">0,-36</set>
+			<remove xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/sprite[@name='background']"/>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/sprite[@name='elevationIcon']/@pos">18,-15</set>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/sprite[@name='elevationIcon']/@depth">10</set>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/label[@name='elevation']/@pos">48,-17</set>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/sprite[@name='lootStageIcon']/@depth">10</set>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/sprite[@name='inventorySlotsIcon']/@depth">10</set>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/sprite[@name='inventorySlotsIcon']/@pos">190,-15</set>
+			<set xpath="/windows/window[@name='windowCompass']//rect[@name='extraStats2']/label[@name='inventorySlots']/@pos">222,-17</set>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

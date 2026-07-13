@@ -37,13 +37,41 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Expands the ingredient panel in the crafting info window from 5
+  visible rows to 10 visible rows.
+        - Adds rows 6 through 10 so recipes with larger requirements can
+          be fully displayed without truncation.
+        - Adjusts ingredient panel layout values (row count, position,
+          and row height) so the expanded list fits cleanly.
+        - Compatible with Vanilla UI, AGF HUDPlus 1Main, and AGF
+          BackpackPlus.
+
+  - Expands the ingredient panel in the crafting info window from 5
     visible rows to 10 visible rows.
-      - Adds rows 6 through 10 so recipes with larger requirements can
-        be fully displayed without truncation.
-      - Adjusts ingredient panel layout values (row count, position, and
-        row height) so the expanded list fits cleanly.
-      - Compatible with Vanilla UI, AGF HUDPlus 1Main, and AGF
-        BackpackPlus.
+          - Adds rows 6 through 10 so recipes with larger requirements
+            can be fully displayed without truncation.
+          - Adjusts ingredient panel layout values (row count, position,
+            and row height) so the expanded list fits cleanly.
+          - Compatible with Vanilla UI, AGF HUDPlus 1Main, and AGF
+            BackpackPlus.
+
+  - Expands the ingredient panel in the crafting info window from 5
+    visible rows to 10 visible rows.
+          - Adds rows 6 through 10 so recipes with larger requirements
+            can be fully displayed without truncation.
+          - Adjusts ingredient panel layout values (row count, position,
+            and row height) so the expanded list fits cleanly.
+          - Compatible with Vanilla UI, AGF HUDPlus 1Main, and AGF
+            BackpackPlus.
+
+    - Expands the ingredient panel in the crafting info window from 5
+      visible rows to 10 visible rows.
+            - Adds rows 6 through 10 so recipes with larger requirements
+              can be fully displayed without truncation.
+            - Adjusts ingredient panel layout values (row count,
+              position, and row height) so the expanded list fits
+              cleanly.
+            - Compatible with Vanilla UI, AGF HUDPlus 1Main, and AGF
+              BackpackPlus.
 
 
 
@@ -208,15 +236,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated backpack references due to name change.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Created the mod for 7d2d version 2, with conditionals.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

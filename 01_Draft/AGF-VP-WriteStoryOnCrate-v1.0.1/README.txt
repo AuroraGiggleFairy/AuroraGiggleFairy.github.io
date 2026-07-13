@@ -37,21 +37,76 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Config/blocks.xml
-      - Adds agfMessageCrate (player-placeable) and
-        agfMessageCrateInsecure.
-      - Both use TEFeatureSignable with:
-      - FontSize=45
-      - LineCount=8
-      - LineWidth=0.6 agfMessageCrate includes TEFeatureLockable and
-        downgrades to agfMessageCrateInsecure.
-      - Both crate variants use TEFeatureStorage with loot list
-        agfMessageCrate.
+        - Adds agfMessageCrate (player-placeable) and
+          agfMessageCrateInsecure.
+        - Both use TEFeatureSignable with:
+          - FontSize=45
+        - LineCount=8
+        - LineWidth=0.6 agfMessageCrate includes TEFeatureLockable and
+          downgrades to agfMessageCrateInsecure.
+        - Both crate variants use TEFeatureStorage with loot list
+          agfMessageCrate.
 
-      - Config/loot.xml
-      - Defines loot container agfMessageCrate with size 6,6 (36 slots).
+        - Config/loot.xml
+        - Defines loot container agfMessageCrate with size 6,6 (36
+          slots).
 
-      - Config/recipes.xml
-      - Adds recipe: agfMessageCrate x1 from resourceLeather x7.
+        - Config/recipes.xml
+        - Adds recipe: agfMessageCrate x1 from resourceLeather x7.
+
+  - Config/blocks.xml
+          - Adds agfMessageCrate (player-placeable) and
+            agfMessageCrateInsecure.
+          - Both use TEFeatureSignable with:
+            - FontSize=45
+          - LineCount=8
+          - LineWidth=0.6 agfMessageCrate includes TEFeatureLockable and
+            downgrades to agfMessageCrateInsecure.
+          - Both crate variants use TEFeatureStorage with loot list
+            agfMessageCrate.
+
+          - Config/loot.xml
+          - Defines loot container agfMessageCrate with size 6,6 (36
+            slots).
+
+          - Config/recipes.xml
+          - Adds recipe: agfMessageCrate x1 from resourceLeather x7.
+
+  - Config/blocks.xml
+          - Adds agfMessageCrate (player-placeable) and
+            agfMessageCrateInsecure.
+          - Both use TEFeatureSignable with:
+            - FontSize=45
+          - LineCount=8
+          - LineWidth=0.6 agfMessageCrate includes TEFeatureLockable and
+            downgrades to agfMessageCrateInsecure.
+          - Both crate variants use TEFeatureStorage with loot list
+            agfMessageCrate.
+
+          - Config/loot.xml
+          - Defines loot container agfMessageCrate with size 6,6 (36
+            slots).
+
+          - Config/recipes.xml
+          - Adds recipe: agfMessageCrate x1 from resourceLeather x7.
+
+    - Config/blocks.xml
+            - Adds agfMessageCrate (player-placeable) and
+              agfMessageCrateInsecure.
+            - Both use TEFeatureSignable with:
+              - FontSize=45
+            - LineCount=8
+            - LineWidth=0.6 agfMessageCrate includes TEFeatureLockable
+              and downgrades to agfMessageCrateInsecure.
+            - Both crate variants use TEFeatureStorage with loot list
+              agfMessageCrate.
+
+            - Config/loot.xml
+            - Defines loot container agfMessageCrate with size 6,6 (36
+              slots).
+
+            - Config/recipes.xml
+            - Adds recipe: agfMessageCrate x1 from resourceLeather x7.
 
 
 
@@ -216,10 +271,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made this mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

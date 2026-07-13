@@ -41,32 +41,113 @@ FEATURES
 OTHER DETAILS
 ------------------------------------------------------------------------
 
+  - Specific XML Edits: item_modifiers.xml adds four tiered harvest mods:
+  modArmorFarmer modArmorMiner modArmorScavenger modArmorLumberjack
+  item_modifiers.xml sets installable_tags="armor" and uses blocked_tags
+  checks so same-type armor-set bonuses and similar harvest checks do
+  not stack.
+        - item_modifiers.xml enables quality scaling
+          (ShowQuality="true") and tier-based effect values for harvest,
+          stamina, block damage, loot/XP, and related harvesting
+          bonuses.
+        - recipes.xml adds workbench recipes for all four mods
+          (craft_time="30") and scales ingredient counts by tier using
+          CraftingIngredientCount passive effects.
+        - progression.xml wires the mods into craftingArmor unlock
+          displays and unlock tags at level 11+ (with higher-tier
+          scaling entries also updated).
+        - items.xml adds compatibility tags to lumberjack/miner armor
+          pieces for stack-prevention checks and sets
+          resourceArmorCraftingKit material/tags/weight support.
+        - materials.xml defines MArmorCraftingKit with forge-category
+          scrapping support.
+        - ui_display.xml adds custom display groups (modFarmer,
+          modMiner, modScavenger, modLumberjack) so stat lines show
+          correctly in UI. Usage Notes:
+        - These mods are designed to move harvesting-style bonuses onto
+          armor mods while preserving non-stacking behavior with
+          matching set mechanics.
+
   - Specific XML Edits: item_modifiers.xml adds four tiered harvest
     mods: modArmorFarmer modArmorMiner modArmorScavenger
     modArmorLumberjack item_modifiers.xml sets installable_tags="armor"
     and uses blocked_tags checks so same-type armor-set bonuses and
     similar harvest checks do not stack.
-      - item_modifiers.xml enables quality scaling (ShowQuality="true")
-        and tier-based effect values for harvest, stamina, block damage,
-        loot/XP, and related harvesting bonuses.
-      - recipes.xml adds workbench recipes for all four mods
-        (craft_time="30") and scales ingredient counts by tier using
-        CraftingIngredientCount passive effects.
-      - progression.xml wires the mods into craftingArmor unlock
-        displays and unlock tags at level 11+ (with higher-tier scaling
-        entries also updated).
-      - items.xml adds compatibility tags to lumberjack/miner armor
-        pieces for stack-prevention checks and sets
-        resourceArmorCraftingKit material/tags/weight support.
-      - materials.xml defines MArmorCraftingKit with forge-category
-        scrapping support.
-      - ui_display.xml adds custom display groups (modFarmer, modMiner,
-        modScavenger, modLumberjack) so stat lines show correctly in UI.
+          - item_modifiers.xml enables quality scaling
+            (ShowQuality="true") and tier-based effect values for
+            harvest, stamina, block damage, loot/XP, and related
+            harvesting bonuses.
+          - recipes.xml adds workbench recipes for all four mods
+            (craft_time="30") and scales ingredient counts by tier using
+            CraftingIngredientCount passive effects.
+          - progression.xml wires the mods into craftingArmor unlock
+            displays and unlock tags at level 11+ (with higher-tier
+            scaling entries also updated).
+          - items.xml adds compatibility tags to lumberjack/miner armor
+            pieces for stack-prevention checks and sets
+            resourceArmorCraftingKit material/tags/weight support.
+          - materials.xml defines MArmorCraftingKit with forge-category
+            scrapping support.
+          - ui_display.xml adds custom display groups (modFarmer,
+            modMiner, modScavenger, modLumberjack) so stat lines show
+            correctly in UI. Usage Notes:
+          - These mods are designed to move harvesting-style bonuses
+            onto armor mods while preserving non-stacking behavior with
+            matching set mechanics.
 
-Usage Notes:
-      - These mods are designed to move harvesting-style bonuses onto
-        armor mods while preserving non-stacking behavior with matching
-        set mechanics.
+  - Specific XML Edits: item_modifiers.xml adds four tiered harvest
+    mods: modArmorFarmer modArmorMiner modArmorScavenger
+    modArmorLumberjack item_modifiers.xml sets installable_tags="armor"
+    and uses blocked_tags checks so same-type armor-set bonuses and
+    similar harvest checks do not stack.
+          - item_modifiers.xml enables quality scaling
+            (ShowQuality="true") and tier-based effect values for
+            harvest, stamina, block damage, loot/XP, and related
+            harvesting bonuses.
+          - recipes.xml adds workbench recipes for all four mods
+            (craft_time="30") and scales ingredient counts by tier using
+            CraftingIngredientCount passive effects.
+          - progression.xml wires the mods into craftingArmor unlock
+            displays and unlock tags at level 11+ (with higher-tier
+            scaling entries also updated).
+          - items.xml adds compatibility tags to lumberjack/miner armor
+            pieces for stack-prevention checks and sets
+            resourceArmorCraftingKit material/tags/weight support.
+          - materials.xml defines MArmorCraftingKit with forge-category
+            scrapping support.
+          - ui_display.xml adds custom display groups (modFarmer,
+            modMiner, modScavenger, modLumberjack) so stat lines show
+            correctly in UI. Usage Notes:
+          - These mods are designed to move harvesting-style bonuses
+            onto armor mods while preserving non-stacking behavior with
+            matching set mechanics.
+
+    - Specific XML Edits: item_modifiers.xml adds four tiered harvest
+      mods: modArmorFarmer modArmorMiner modArmorScavenger
+      modArmorLumberjack item_modifiers.xml sets
+      installable_tags="armor" and uses blocked_tags checks so same-type
+      armor-set bonuses and similar harvest checks do not stack.
+            - item_modifiers.xml enables quality scaling
+              (ShowQuality="true") and tier-based effect values for
+              harvest, stamina, block damage, loot/XP, and related
+              harvesting bonuses.
+            - recipes.xml adds workbench recipes for all four mods
+              (craft_time="30") and scales ingredient counts by tier
+              using CraftingIngredientCount passive effects.
+            - progression.xml wires the mods into craftingArmor unlock
+              displays and unlock tags at level 11+ (with higher-tier
+              scaling entries also updated).
+            - items.xml adds compatibility tags to lumberjack/miner
+              armor pieces for stack-prevention checks and sets
+              resourceArmorCraftingKit material/tags/weight support.
+            - materials.xml defines MArmorCraftingKit with
+              forge-category scrapping support.
+            - ui_display.xml adds custom display groups (modFarmer,
+              modMiner, modScavenger, modLumberjack) so stat lines show
+              correctly in UI. Usage Notes:
+            - These mods are designed to move harvesting-style bonuses
+              onto armor mods while preserving non-stacking behavior
+              with matching set mechanics.
 
 
 
@@ -231,57 +312,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.1.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.1.0
-    - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
-
-------------------------------------------------------------------------
-
-v2.0.4
-    - Updated the README and code organization / notes.
-    - Harvest mods scrap into 3 armor kits.
-
-------------------------------------------------------------------------
-
-v2.0.3
-    - Added the word "Harvest" in the mod item's title for easier
-      finding
-    and sorting.
-    - Corrected the lumberjack UI display stat on stamina use of axe.
-    - Removed extra space in one localization title.
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - Corrected that the filled in area (purple book) for crafting tier
-      6
-    armors is full.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Correct a UI thingy
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Localization Updates.
-    - UI display updates.
-    - Now have tiers following bonuses accordingly.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the mod
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

@@ -36,11 +36,28 @@ FEATURES
 OTHER DETAILS
 ------------------------------------------------------------------------
 
+  - Edits the interactionPrompt window label font size in XUi/windows.xml.
+        - Changes prompt font size from the default 34 down to 30.
+        - This affects the central interaction prompt text shown when
+          targeting interactable objects.
+
   - Edits the interactionPrompt window label font size in
     XUi/windows.xml.
-      - Changes prompt font size from the default 34 down to 30.
-      - This affects the central interaction prompt text shown when
-        targeting interactable objects.
+          - Changes prompt font size from the default 34 down to 30.
+          - This affects the central interaction prompt text shown when
+            targeting interactable objects.
+
+  - Edits the interactionPrompt window label font size in
+    XUi/windows.xml.
+          - Changes prompt font size from the default 34 down to 30.
+          - This affects the central interaction prompt text shown when
+            targeting interactable objects.
+
+    - Edits the interactionPrompt window label font size in
+      XUi/windows.xml.
+            - Changes prompt font size from the default 34 down to 30.
+            - This affects the central interaction prompt text shown
+              when targeting interactable objects.
 
 
 
@@ -205,10 +222,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Just made it.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

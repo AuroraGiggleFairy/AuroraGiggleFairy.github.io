@@ -40,21 +40,20 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Specific XML Edits:
-      - items.xml changes Block Replace Tool (meleeToolBlockReplaceTool)
-        Action1 delay from default 0.83 to 0.1.
+        - items.xml changes Block Replace Tool
+          (meleeToolBlockReplaceTool) Action1 delay from default 0.83 to
+          0.1.
       - items.xml adds two dev-only XP books: levelUp100k gives 100k XP
         on use.
       - levelUp1m gives 1M XP on use.
       - blocks.xml adds dev-only test blocks tuned for simple baseline
-harvest checks (10 items without perk/ability modifiers):
-agfTestButcherBlock (butcher-style harvest set).
-      - agfTestSalvageBlock (salvage parts/resources set).
-      - agfTestMiningBlock (ore/mining test drops).
-      - agfTestWoodBlock (wood/lumber test drops).
-
-Usage Notes:
-      - Added books and test blocks are marked CreativeMode=Dev
-        (admin/dev menu use).
+        harvest checks (10 items without perk/ability modifiers):
+        agfTestButcherBlock (butcher-style harvest set).
+        - agfTestSalvageBlock (salvage parts/resources set).
+        - agfTestMiningBlock (ore/mining test drops).
+        - agfTestWoodBlock (wood/lumber test drops). Usage Notes:
+        - Added books and test blocks are marked CreativeMode=Dev
+          (admin/dev menu use).
       - XP books are intended for admin support workflows where staff
         need to grant either 100k or 1M XP to players.
       - XP gain still respects your server XP multiplier settings.
@@ -62,6 +61,75 @@ Usage Notes:
         normal survival progression.
       - Test block harvest values are set so baseline no-perk/no-ability
         checks stay simple and consistent.
+
+  - Specific XML Edits:
+          - items.xml changes Block Replace Tool
+            (meleeToolBlockReplaceTool) Action1 delay from default 0.83
+            to 0.1.
+        - items.xml adds two dev-only XP books: levelUp100k gives 100k
+          XP on use.
+        - levelUp1m gives 1M XP on use.
+        - blocks.xml adds dev-only test blocks tuned for simple baseline
+          harvest checks (10 items without perk/ability modifiers):
+          agfTestButcherBlock (butcher-style harvest set).
+          - agfTestSalvageBlock (salvage parts/resources set).
+          - agfTestMiningBlock (ore/mining test drops).
+          - agfTestWoodBlock (wood/lumber test drops). Usage Notes:
+          - Added books and test blocks are marked CreativeMode=Dev
+            (admin/dev menu use).
+        - XP books are intended for admin support workflows where staff
+          need to grant either 100k or 1M XP to players.
+        - XP gain still respects your server XP multiplier settings.
+        - Test blocks are intended for controlled admin/modding tests,
+          not normal survival progression.
+        - Test block harvest values are set so baseline
+          no-perk/no-ability checks stay simple and consistent.
+
+  - Specific XML Edits:
+          - items.xml changes Block Replace Tool
+            (meleeToolBlockReplaceTool) Action1 delay from default 0.83
+            to 0.1.
+        - items.xml adds two dev-only XP books: levelUp100k gives 100k
+          XP on use.
+        - levelUp1m gives 1M XP on use.
+        - blocks.xml adds dev-only test blocks tuned for simple baseline
+          harvest checks (10 items without perk/ability modifiers):
+          agfTestButcherBlock (butcher-style harvest set).
+          - agfTestSalvageBlock (salvage parts/resources set).
+          - agfTestMiningBlock (ore/mining test drops).
+          - agfTestWoodBlock (wood/lumber test drops). Usage Notes:
+          - Added books and test blocks are marked CreativeMode=Dev
+            (admin/dev menu use).
+        - XP books are intended for admin support workflows where staff
+          need to grant either 100k or 1M XP to players.
+        - XP gain still respects your server XP multiplier settings.
+        - Test blocks are intended for controlled admin/modding tests,
+          not normal survival progression.
+        - Test block harvest values are set so baseline
+          no-perk/no-ability checks stay simple and consistent.
+
+    - Specific XML Edits:
+            - items.xml changes Block Replace Tool
+              (meleeToolBlockReplaceTool) Action1 delay from default
+              0.83 to 0.1.
+          - items.xml adds two dev-only XP books: levelUp100k gives 100k
+            XP on use.
+          - levelUp1m gives 1M XP on use.
+          - blocks.xml adds dev-only test blocks tuned for simple
+            baseline harvest checks (10 items without perk/ability
+            modifiers): agfTestButcherBlock (butcher-style harvest set).
+            - agfTestSalvageBlock (salvage parts/resources set).
+            - agfTestMiningBlock (ore/mining test drops).
+            - agfTestWoodBlock (wood/lumber test drops). Usage Notes:
+            - Added books and test blocks are marked CreativeMode=Dev
+              (admin/dev menu use).
+          - XP books are intended for admin support workflows where
+            staff need to grant either 100k or 1M XP to players.
+          - XP gain still respects your server XP multiplier settings.
+          - Test blocks are intended for controlled admin/modding tests,
+            not normal survival progression.
+          - Test block harvest values are set so baseline
+            no-perk/no-ability checks stay simple and consistent.
 
 
 
@@ -226,30 +294,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.5
-    - Corrected that all harvest blocks output is 10 without perks.
-
-------------------------------------------------------------------------
-
-v1.0.4
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.3
-    - Updated Readme and Code Notes.
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - Added a few more test blocks.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated to 7d2d Version 2
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Transferred out of previous 1Core mod to this standalone modlet.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

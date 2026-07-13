@@ -42,12 +42,12 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - How to unlock and find the Master Tool quest:
-      - Finish Tier 6 trader progression.
-      - Talk to a trader and open the special mod-job dialogue option.
-      - Select the Master Tool buried-supplies quest from that list.
-      - Complete the quest to receive the Master Tool schematic.
-      - Read the schematic, then craft the tool at a workbench.
-    - Contains insertions for the PurpleBook mod.
+    - Finish Tier 6 trader progression.
+    - Talk to a trader and open the special mod-job dialogue option.
+    - Select the Master Tool buried-supplies quest from that list.
+    - Complete the quest to receive the Master Tool schematic.
+    - Read the schematic, then craft the tool at a workbench.
+  - Contains insertions for the PurpleBook mod.
 
 
 

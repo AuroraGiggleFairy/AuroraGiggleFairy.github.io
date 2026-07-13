@@ -39,8 +39,8 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Config/recipes.xml adds x5 and x25 crafting recipes for oak,
-        mountain pine, and winter pine tree seeds.
+        - Config/recipes.xml adds x5 and x25 crafting recipes for oak,
+          mountain pine, and winter pine tree seeds.
       - Config/recipes.xml includes both direct x25 crafting from base
         seeds and x25 crafting from five x5 seeds.
       - Config/recipes.xml adds conditional seedStation recipe variants
@@ -59,6 +59,78 @@ OTHER DETAILS
         stages.
       - FarmingPlus seed-station crafting support is conditionally
         available when that mod is loaded.
+
+  - Implementation edits used to make this work:
+          - Config/recipes.xml adds x5 and x25 crafting recipes for oak,
+            mountain pine, and winter pine tree seeds.
+        - Config/recipes.xml includes both direct x25 crafting from base
+          seeds and x25 crafting from five x5 seeds.
+        - Config/recipes.xml adds conditional seedStation recipe
+          variants when AGF-VP-FarmingPlus is loaded.
+        - Config/blocks.xml adds x5 and x25 planted tree block chains
+          for oak, mountain pine, and winter pine across growth stages.
+        - Config/blocks.xml sets higher MaxDamage and wood harvest
+          counts for x5 and x25 tree variants relative to base trees.
+        - Config/blocks.xml adds DisplayInfo="Name" on configured tree
+          growth stages so tree name/stage text is shown while planted.
+        - Config/blocks.xml adds seed-group/icon presentation properties
+          for tree seed items to align with AGF seed grouping patterns.
+        - Feature set: x5 and x25 tree seed variants are craftable.
+        - Planted x5 and x25 trees have scaled durability and wood
+          yield.
+        - Tree name/stage display is enabled on configured planted
+          growth stages.
+        - FarmingPlus seed-station crafting support is conditionally
+          available when that mod is loaded.
+
+  - Implementation edits used to make this work:
+          - Config/recipes.xml adds x5 and x25 crafting recipes for oak,
+            mountain pine, and winter pine tree seeds.
+        - Config/recipes.xml includes both direct x25 crafting from base
+          seeds and x25 crafting from five x5 seeds.
+        - Config/recipes.xml adds conditional seedStation recipe
+          variants when AGF-VP-FarmingPlus is loaded.
+        - Config/blocks.xml adds x5 and x25 planted tree block chains
+          for oak, mountain pine, and winter pine across growth stages.
+        - Config/blocks.xml sets higher MaxDamage and wood harvest
+          counts for x5 and x25 tree variants relative to base trees.
+        - Config/blocks.xml adds DisplayInfo="Name" on configured tree
+          growth stages so tree name/stage text is shown while planted.
+        - Config/blocks.xml adds seed-group/icon presentation properties
+          for tree seed items to align with AGF seed grouping patterns.
+        - Feature set: x5 and x25 tree seed variants are craftable.
+        - Planted x5 and x25 trees have scaled durability and wood
+          yield.
+        - Tree name/stage display is enabled on configured planted
+          growth stages.
+        - FarmingPlus seed-station crafting support is conditionally
+          available when that mod is loaded.
+
+    - Implementation edits used to make this work:
+            - Config/recipes.xml adds x5 and x25 crafting recipes for
+              oak, mountain pine, and winter pine tree seeds.
+          - Config/recipes.xml includes both direct x25 crafting from
+            base seeds and x25 crafting from five x5 seeds.
+          - Config/recipes.xml adds conditional seedStation recipe
+            variants when AGF-VP-FarmingPlus is loaded.
+          - Config/blocks.xml adds x5 and x25 planted tree block chains
+            for oak, mountain pine, and winter pine across growth
+            stages.
+          - Config/blocks.xml sets higher MaxDamage and wood harvest
+            counts for x5 and x25 tree variants relative to base trees.
+          - Config/blocks.xml adds DisplayInfo="Name" on configured tree
+            growth stages so tree name/stage text is shown while
+            planted.
+          - Config/blocks.xml adds seed-group/icon presentation
+            properties for tree seed items to align with AGF seed
+            grouping patterns.
+          - Feature set: x5 and x25 tree seed variants are craftable.
+          - Planted x5 and x25 trees have scaled durability and wood
+            yield.
+          - Tree name/stage display is enabled on configured planted
+            growth stages.
+          - FarmingPlus seed-station crafting support is conditionally
+            available when that mod is loaded.
 
 
 
@@ -223,49 +295,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v3.0.2
-    - Added a potential fix to where trees would keep coming back even
-    after destroying them.
-
-------------------------------------------------------------------------
-
-v3.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v3.0.0
-    - Added x25 versions.
-    - Modified seeds naming and icons to match FarmingPlus scheme.
-    - Added a recipe version for the seedstation IF FarmingPlus is
-    installed.
-    - Renamed to TreesPlus
-    - Names and stages of planted trees now show like crops.
-
-------------------------------------------------------------------------
-
-v2.0.3
-    - updated localization for a naming scheme.
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - Updated to work with 7d2d Version 2.
-    - added code required to lumberjack benefits.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Sometimes you would get the wrong tree side type. Now fixed.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated for V1.0
-    - Updated block models
-    - Reduced crafting time of x5 seeds
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Created this mod (As CompactTrees)
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

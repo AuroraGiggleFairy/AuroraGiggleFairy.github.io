@@ -44,8 +44,9 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Config/XUi/windows.xml sets forge input grid rows to 3, updates
-        window sizing/positions, and appends numeric labels 1, 2, 3.
+        - Config/XUi/windows.xml sets forge input grid rows to 3,
+          updates window sizing/positions, and appends numeric labels 1,
+          2, 3.
       - Config/XUi/controls.xml sets forge material table columns to 3,
         changes material label justification to right, and inserts a
         spacer label.
@@ -74,7 +75,7 @@ OTHER DETAILS
         materials (unit_glass, unit_stone, unit_clay, unit_iron,
         unit_brass, unit_lead).
       - Feature set:
-      - Forge input window displays three smelting rows.
+        - Forge input window displays three smelting rows.
       - Sand smelting output matches the configured 1:5 unit behavior.
       - 1:1 forge unit conversion recipes are available for clay, glass,
         and stone.
@@ -86,6 +87,149 @@ OTHER DETAILS
         same 30000 forge capacity.
       - Workstation progression and conditional recipe paths are defined
         for supported game versions and optional related AGF mods.
+
+  - Implementation edits used to make this work:
+          - Config/XUi/windows.xml sets forge input grid rows to 3,
+            updates window sizing/positions, and appends numeric labels
+            1, 2, 3.
+        - Config/XUi/controls.xml sets forge material table columns to
+          3, changes material label justification to right, and inserts
+          a spacer label.
+        - Config/XUi_Common/styles.xml updates reserve name/weight
+          widths and adds style workstation.agf used by the spacer
+          label.
+        - Config/items.xml sets resourceCrushedSand Weight to 5.
+        - Config/recipes.xml sets recipe resourceCrushedSand ingredient
+          unit_glass count to 5.
+        - Config/recipes.xml adds always-unlocked forge recipes for 1:1
+          unit conversion of unit_clay, unit_glass, and unit_stone.
+        - Config/items.xml adds advanced smelting items
+          resourceScrapIronAdvSmelt, resourceScrapBrassAdvSmelt, and
+          resourceScrapLeadAdvSmelt.
+        - These advanced items use Stacknumber 6000 and
+          UnlockedBy="craftingWorkstations".
+        - Config/recipes.xml adds workbench recipes (craft_time 4, count
+          6000, craft_exp_gain 0) for advanced iron, brass, and lead
+          smelting items.
+        - Brass advanced smelt includes recipes using raw brass,
+          radiators, and coins, plus a conditional brass bundle recipe
+          when AGF-VP-MiningPlus is loaded.
+        - Config/progression.xml appends advanced smelt items to
+          workstation progression and uses game-version conditionals for
+          1.2.0-1.2.4 and 1.2.5+ unlock entry paths.
+        - Config/items.xml appends forge icon/economy properties for
+          unit materials (unit_glass, unit_stone, unit_clay, unit_iron,
+          unit_brass, unit_lead).
+        - Feature set:
+          - Forge input window displays three smelting rows.
+        - Sand smelting output matches the configured 1:5 unit behavior.
+        - 1:1 forge unit conversion recipes are available for clay,
+          glass, and stone.
+        - Normal metal smelting is 1:1, so filling 30000 forge capacity
+          takes five full 6000 stacks.
+        - Advanced smelting recipes convert those five full stacks
+          (30000 total) into one 6000 advanced stack.
+        - The advanced stack smelts at 1:5, so that one stack fills the
+          same 30000 forge capacity.
+        - Workstation progression and conditional recipe paths are
+          defined for supported game versions and optional related AGF
+          mods.
+
+  - Implementation edits used to make this work:
+          - Config/XUi/windows.xml sets forge input grid rows to 3,
+            updates window sizing/positions, and appends numeric labels
+            1, 2, 3.
+        - Config/XUi/controls.xml sets forge material table columns to
+          3, changes material label justification to right, and inserts
+          a spacer label.
+        - Config/XUi_Common/styles.xml updates reserve name/weight
+          widths and adds style workstation.agf used by the spacer
+          label.
+        - Config/items.xml sets resourceCrushedSand Weight to 5.
+        - Config/recipes.xml sets recipe resourceCrushedSand ingredient
+          unit_glass count to 5.
+        - Config/recipes.xml adds always-unlocked forge recipes for 1:1
+          unit conversion of unit_clay, unit_glass, and unit_stone.
+        - Config/items.xml adds advanced smelting items
+          resourceScrapIronAdvSmelt, resourceScrapBrassAdvSmelt, and
+          resourceScrapLeadAdvSmelt.
+        - These advanced items use Stacknumber 6000 and
+          UnlockedBy="craftingWorkstations".
+        - Config/recipes.xml adds workbench recipes (craft_time 4, count
+          6000, craft_exp_gain 0) for advanced iron, brass, and lead
+          smelting items.
+        - Brass advanced smelt includes recipes using raw brass,
+          radiators, and coins, plus a conditional brass bundle recipe
+          when AGF-VP-MiningPlus is loaded.
+        - Config/progression.xml appends advanced smelt items to
+          workstation progression and uses game-version conditionals for
+          1.2.0-1.2.4 and 1.2.5+ unlock entry paths.
+        - Config/items.xml appends forge icon/economy properties for
+          unit materials (unit_glass, unit_stone, unit_clay, unit_iron,
+          unit_brass, unit_lead).
+        - Feature set:
+          - Forge input window displays three smelting rows.
+        - Sand smelting output matches the configured 1:5 unit behavior.
+        - 1:1 forge unit conversion recipes are available for clay,
+          glass, and stone.
+        - Normal metal smelting is 1:1, so filling 30000 forge capacity
+          takes five full 6000 stacks.
+        - Advanced smelting recipes convert those five full stacks
+          (30000 total) into one 6000 advanced stack.
+        - The advanced stack smelts at 1:5, so that one stack fills the
+          same 30000 forge capacity.
+        - Workstation progression and conditional recipe paths are
+          defined for supported game versions and optional related AGF
+          mods.
+
+    - Implementation edits used to make this work:
+            - Config/XUi/windows.xml sets forge input grid rows to 3,
+              updates window sizing/positions, and appends numeric
+              labels 1, 2, 3.
+          - Config/XUi/controls.xml sets forge material table columns to
+            3, changes material label justification to right, and
+            inserts a spacer label.
+          - Config/XUi_Common/styles.xml updates reserve name/weight
+            widths and adds style workstation.agf used by the spacer
+            label.
+          - Config/items.xml sets resourceCrushedSand Weight to 5.
+          - Config/recipes.xml sets recipe resourceCrushedSand
+            ingredient unit_glass count to 5.
+          - Config/recipes.xml adds always-unlocked forge recipes for
+            1:1 unit conversion of unit_clay, unit_glass, and
+            unit_stone.
+          - Config/items.xml adds advanced smelting items
+            resourceScrapIronAdvSmelt, resourceScrapBrassAdvSmelt, and
+            resourceScrapLeadAdvSmelt.
+          - These advanced items use Stacknumber 6000 and
+            UnlockedBy="craftingWorkstations".
+          - Config/recipes.xml adds workbench recipes (craft_time 4,
+            count 6000, craft_exp_gain 0) for advanced iron, brass, and
+            lead smelting items.
+          - Brass advanced smelt includes recipes using raw brass,
+            radiators, and coins, plus a conditional brass bundle recipe
+            when AGF-VP-MiningPlus is loaded.
+          - Config/progression.xml appends advanced smelt items to
+            workstation progression and uses game-version conditionals
+            for 1.2.0-1.2.4 and 1.2.5+ unlock entry paths.
+          - Config/items.xml appends forge icon/economy properties for
+            unit materials (unit_glass, unit_stone, unit_clay,
+            unit_iron, unit_brass, unit_lead).
+          - Feature set:
+            - Forge input window displays three smelting rows.
+          - Sand smelting output matches the configured 1:5 unit
+            behavior.
+          - 1:1 forge unit conversion recipes are available for clay,
+            glass, and stone.
+          - Normal metal smelting is 1:1, so filling 30000 forge
+            capacity takes five full 6000 stacks.
+          - Advanced smelting recipes convert those five full stacks
+            (30000 total) into one 6000 advanced stack.
+          - The advanced stack smelts at 1:5, so that one stack fills
+            the same 30000 forge capacity.
+          - Workstation progression and conditional recipe paths are
+            defined for supported game versions and optional related AGF
+            mods.
 
 
 
@@ -250,60 +394,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.4.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.4.0
-    - Removed as the purple book conditional within windows.xml as it is
-    now within the purple book mod.
-
-------------------------------------------------------------------------
-
-v2.3.0
-    - Now works appropriately with version 2.5 (and previous game
-    versions).
-    - Updated progression.xml and windows.xml.
-
-------------------------------------------------------------------------
-
-v2.2.2
-    - Added hopefully a clearer description of what the 1:5 metals are.
-
-------------------------------------------------------------------------
-
-v2.2.1
-    - Added conditional for if someone has Mining Plus installed or not.
-
-------------------------------------------------------------------------
-
-v2.2.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v2.1.2
-    - expanded possible ways of crafting the adv smelt stacks, like from
-    radiators and bundled stacks.
-
-------------------------------------------------------------------------
-
-v2.1.1
-    - Had the ratio numbers written in reverse.... facepalm
-
-------------------------------------------------------------------------
-
-v2.1.0
-    - added advanced smelting metals
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Removed the tint color on the "units"
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated to V1.0
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

@@ -1,0 +1,186 @@
+# Full Description Example (BBCode) — AGF - V3 - VP - Larger Storage Option
+
+*Copy the BBCode below into Nexus Mods → General → Full description.*
+
+---
+
+[size=6][b]AGF - V3 - VP - Larger Storage Option[/b][/size]
+
+Adds larger writable storage with 15 shapes, 3x health, break-to-pickup.
+
+[heading]Mod Scope[/heading]
+[list]
+[*][b]7d2d Version:[/b] 3
+[*][b]Languages Supported:[/b] All 13 game-supported languages.
+[*][b]Mod Type:[/b] Server-Side (EAC-Friendly)
+[list]
+[*]Server install works for all joining players.
+[*]EAC can be on or off.
+[*]Also works in singleplayer.
+[/list]
+[*][b]Safe to install on existing game:[/b] Yes (Safe)
+[*][b]Safe to remove from existing game:[/b] No (Dangerous)
+[*][b]Dependencies:[/b] None, works standalone.
+[/list]
+
+[hr]
+
+[heading]Features[/heading]
+[list]
+[*]Adds extra-large craftable storage with 15 shape options.
+[*]Follows material progression from wood to iron to steel.
+[*]Includes 3x block health and break-to-pickup behavior.
+[*]Becomes even larger when paired with AGF BackpackPlus 72+.
+[/list]
+
+[hr]
+
+[heading]Other Details[/heading]
+[list]
+[*][b]Full shape list:[/b] Writable Crate, Cube, Bevel, Half, Cupboard Ajar, Counter, Cabinet Ajar, Counter Round, Buffet, Sink Round, Hollow Top, Bookcase Cube, Bevel Bookcase, Bookcase, Mortician Drawer.
+[*][b]Storage size without AGF BackpackPlus 72+:[/b]
+[list]
+[*]Wood = 10x6 (60 slots)
+[*]Iron = 10x8 (80 slots)
+[*]Steel = 10x10 (100 slots)
+[/list]
+[*][b]Storage size with AGF BackpackPlus 72/84/119 installed:[/b]
+[list]
+[*]Wood = 12x10 (120 slots)
+[*]Iron = 12x12 (144 slots)
+[*]Steel = 12x14 (168 slots)
+[/list]
+[/list]
+
+[hr]
+
+[heading]AGF Mod Guide[/heading]
+
+[b]A. Install Mods[/b]
+[list=1]
+[*]Close the game.
+[*]In Steam, right-click 7 Days to Die -> Manage -> Browse local files, then open Mods.
+[*]Extract the zip into the Mods folder. Make sure it ends up as Mods/<ModName>/ModInfo.xml.
+[*]Restart the game.
+[/list]
+
+[b]B. Ask AuroraGiggleFairy for Help[/b]
+[list=1]
+[*]Join AGF's Discord: [url=https://discord.gg/Vm5eyW6N4r]https://discord.gg/Vm5eyW6N4r[/url].
+[list]
+[*]AGF checks website messages often, but Discord is the fastest and best way to get help.
+[/list]
+[*]Find #ask-for-help-here under the NEED HELP? section.
+[list]
+[*]All questions are welcome, whether you are new or experienced.
+[*]This includes mod conflicts, features not working as expected, server or admin issues, translation errors, and other mod-related problems.
+[/list]
+[*]Post your help request in #ask-for-help-here:
+[list]
+[*]Share a brief message about what is happening.
+[*]Attach your latest log file.
+[list]
+[*]Enter the game, then press F1 to open the console.
+[*]Click Open logs folder in the top-right.
+[*]The correct log file should already be selected. Drag and drop it into #ask-for-help-here.
+[/list]
+[*]A screenshot can also help.
+[list]
+[*]Use PrtSc (Print Screen) or your system screenshot tool, then paste the image into Discord chat.
+[/list]
+[*]If preferred, DMs are open and you are welcome to message AGF directly.
+[/list]
+[/list]
+
+[b]C. Backups[/b]
+[list]
+[*][b]To Create:[/b] Open %appdata% -> Roaming -> 7DaysToDie -> Saves, then open your World Name folder (for example, Navezgane). Copy your Game Name folder (for example, MyGame) to a safe place.
+[*][b]To Restore:[/b] Copy that saved Game Name folder back into the same World Name folder in Saves. Replace the current folder if asked.
+[/list]
+
+[b]D. Update Mods[/b]
+[list=1]
+[*]Close the game.
+[*]Make a backup first (see section C).
+[*]Install the new version in Mods.
+[list]
+[*]If asked, allow overwrite or replace.
+[/list]
+[*]If both old and new folders are there, keep the newer one and delete the older one.
+[*]Start the game and confirm your save loads.
+[/list]
+
+[b]E. Remove Mods[/b]
+[list]
+[*]Warning: Removing a mod from an active save can destroy your saved game. Back up first.
+[*]Never delete 0_TFP_Harmony; it comes with the game.
+[/list]
+[list=1]
+[*]Close the game.
+[*]In Mods, delete each mod folder you are removing, except 0_TFP_Harmony.
+[/list]
+
+[b]F. The 0_TFP_Harmony Mod (Do Not Remove)[/b]
+[list]
+[*]Never delete 0_TFP_Harmony; it comes with the game.
+[*]If it is missing, restore it by verifying game files in Steam:
+[list=1]
+[*]In Steam, right-click 7 Days to Die.
+[*]Select Properties.
+[*]Select Installed Files.
+[*]Click Verify integrity of game files and wait for completion.
+[/list]
+[/list]
+
+[b]G. EAC[/b]
+[list]
+[*]EAC stands for Easy Anti-Cheat and helps protect multiplayer sessions from cheating.
+[*]Some mods require EAC to be turned off so they can work.
+[*][b]How to launch 7 Days to Die with EAC off:[/b]
+[list=1]
+[*]In Steam Library, select 7 Days to Die.
+[*]Click Play.
+[*]In the launch popup, select Launch game without EAC.
+[*]Click Play.
+[/list]
+[*][b]If the launch popup does not appear:[/b]
+[list=1]
+[*]In Steam Library, select 7 Days to Die.
+[*]Click the gear icon on the right, then click Properties.
+[*]Under Launch Options, open the Selected Launch Option dropdown.
+[*]Choose Ask when starting game or Launch game without EAC.
+[/list]
+[*][b]If you run multiplayer with EAC off, use these safety practices:[/b]
+[list]
+[*]Simplest method: keep your server password private and have people ask for it.
+[*]If you want tighter security on who joins, use the whitelist system.
+[*]Admin tools such as Server Tools have security options.
+[*]Talk to other server hosts, for example AGF in Discord: [url=https://discord.gg/Vm5eyW6N4r]https://discord.gg/Vm5eyW6N4r[/url]
+[/list]
+[/list]
+
+[b]H. Support AuroraGiggleFairy[/b]
+[list]
+[*]I have been actively creating and supporting 7 Days to Die mods since Alpha 18 (2019), and I genuinely love doing this work.
+[*]I spend a lot of time fixing complex issues, keeping everything up to date, and helping players, modders, and server communities.
+[*]If my work helps you, here are ways to support me:
+[list]
+[*]Help spread my mods by sharing them with others, creating content, or sharing my GitHub link: [url=https://auroragigglefairy.github.io/]https://auroragigglefairy.github.io/[/url]
+[*]Join my Discord to share feedback, keep up with updates, or volunteer as a tester: [url=https://discord.gg/Vm5eyW6N4r]https://discord.gg/Vm5eyW6N4r[/url]
+[*]Support me on Twitch: [url=https://www.twitch.tv/auroragigglefairy]https://www.twitch.tv/auroragigglefairy[/url]
+[*]Need hosting? Use my PingPerfect Referral Link: [url=https://pingperfect.com/aff.php?aff=1834]https://pingperfect.com/aff.php?aff=1834[/url]
+[*]Support me directly by donating to my PayPal: [url=https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC]https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC[/url]
+[/list]
+[*]From the bottom of my heart, thank you. [img]https://static.nexusmods.com/mods/130/images/emoji/200x200/2764.png[/img]
+[/list]
+
+[b]I. AGF Modding Focus[/b]
+[list]
+[*]I have been modding 7 Days to Die for 7 years.
+[*]I do my best to prioritize accessibility, user-friendliness, and localization where possible.
+[*]I provide kind, comprehensive support to players, modders, and server communities, and I rely on community feedback to keep improving my mods.
+[/list]
+
+[hr]
+
+[i]This mod is part of the AGF (AuroraGiggleFairy) collection. For the full catalog, visit [url=https://auroragigglefairy.github.io/]https://auroragigglefairy.github.io/[/url][/i]

@@ -39,7 +39,7 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Reuses vanilla resourceAcid (no separate acid item added).
+        - Reuses vanilla resourceAcid (no separate acid item added).
       - Sets acid HoldType for drinking use and swaps mesh to bottled
         water visuals.
       - Tags acid as drinks and adds an Eat action with drink
@@ -54,7 +54,7 @@ OTHER DETAILS
       - Adds god-mode integration in buffs.xml so enabling god mode
         clears acid duration state.
       - Drink ACID for a stacked "fun but dangerous" effect package:
-      - Lose about 30% water.
+        - Lose about 30% water.
       - Take heavy damage over time (about 120 HP total: large hit on
         start + ticking damage).
       - Trippy screen effect.
@@ -69,6 +69,106 @@ OTHER DETAILS
       - Re-drinking extends duration, capped at 63 second duration
         (effectively about 3 drinks).
       - Entering god mode clears the acid duration and ends the effect.
+
+  - Implementation edits used to make this work:
+          - Reuses vanilla resourceAcid (no separate acid item added).
+        - Sets acid HoldType for drinking use and swaps mesh to bottled
+          water visuals.
+        - Tags acid as drinks and adds an Eat action with drink
+          timing/sound.
+        - Applies buffDrankAcid on use and drives duration through CVar
+          logic (+23 per drink, clamped to 63).
+        - Adds custom buffDrankAcid in buffs.xml with timer/display CVar
+          handling and auto-removal at 0.
+        - Implements buff-side effects in buffs.xml: water loss, damage
+          ticks, trippy/infected screen effects, movement/jump buffs,
+          danceoff audio, celebration kill effect, and silly alt sounds.
+        - Adds god-mode integration in buffs.xml so enabling god mode
+          clears acid duration state.
+        - Drink ACID for a stacked "fun but dangerous" effect package:
+          - Lose about 30% water.
+        - Take heavy damage over time (about 120 HP total: large hit on
+          start + ticking damage).
+        - Trippy screen effect.
+        - "Painting" style screen effect.
+        - Fast buff: faster walk/run, plus vehicle torque/speed boost.
+        - Jump buff: higher jumps, lower jump stamina cost, and
+          temporary leg-protection buff.
+        - Danceoff music loop while active, with record-scratch ending
+          sound.
+        - Celebration buff (kills can pop confetti).
+        - Silly sounds while active.
+        - Re-drinking extends duration, capped at 63 second duration
+          (effectively about 3 drinks).
+        - Entering god mode clears the acid duration and ends the
+          effect.
+
+  - Implementation edits used to make this work:
+          - Reuses vanilla resourceAcid (no separate acid item added).
+        - Sets acid HoldType for drinking use and swaps mesh to bottled
+          water visuals.
+        - Tags acid as drinks and adds an Eat action with drink
+          timing/sound.
+        - Applies buffDrankAcid on use and drives duration through CVar
+          logic (+23 per drink, clamped to 63).
+        - Adds custom buffDrankAcid in buffs.xml with timer/display CVar
+          handling and auto-removal at 0.
+        - Implements buff-side effects in buffs.xml: water loss, damage
+          ticks, trippy/infected screen effects, movement/jump buffs,
+          danceoff audio, celebration kill effect, and silly alt sounds.
+        - Adds god-mode integration in buffs.xml so enabling god mode
+          clears acid duration state.
+        - Drink ACID for a stacked "fun but dangerous" effect package:
+          - Lose about 30% water.
+        - Take heavy damage over time (about 120 HP total: large hit on
+          start + ticking damage).
+        - Trippy screen effect.
+        - "Painting" style screen effect.
+        - Fast buff: faster walk/run, plus vehicle torque/speed boost.
+        - Jump buff: higher jumps, lower jump stamina cost, and
+          temporary leg-protection buff.
+        - Danceoff music loop while active, with record-scratch ending
+          sound.
+        - Celebration buff (kills can pop confetti).
+        - Silly sounds while active.
+        - Re-drinking extends duration, capped at 63 second duration
+          (effectively about 3 drinks).
+        - Entering god mode clears the acid duration and ends the
+          effect.
+
+    - Implementation edits used to make this work:
+            - Reuses vanilla resourceAcid (no separate acid item added).
+          - Sets acid HoldType for drinking use and swaps mesh to
+            bottled water visuals.
+          - Tags acid as drinks and adds an Eat action with drink
+            timing/sound.
+          - Applies buffDrankAcid on use and drives duration through
+            CVar logic (+23 per drink, clamped to 63).
+          - Adds custom buffDrankAcid in buffs.xml with timer/display
+            CVar handling and auto-removal at 0.
+          - Implements buff-side effects in buffs.xml: water loss,
+            damage ticks, trippy/infected screen effects, movement/jump
+            buffs, danceoff audio, celebration kill effect, and silly
+            alt sounds.
+          - Adds god-mode integration in buffs.xml so enabling god mode
+            clears acid duration state.
+          - Drink ACID for a stacked "fun but dangerous" effect package:
+            - Lose about 30% water.
+          - Take heavy damage over time (about 120 HP total: large hit
+            on start + ticking damage).
+          - Trippy screen effect.
+          - "Painting" style screen effect.
+          - Fast buff: faster walk/run, plus vehicle torque/speed boost.
+          - Jump buff: higher jumps, lower jump stamina cost, and
+            temporary leg-protection buff.
+          - Danceoff music loop while active, with record-scratch ending
+            sound.
+          - Celebration buff (kills can pop confetti).
+          - Silly sounds while active.
+          - Re-drinking extends duration, capped at 63 second duration
+            (effectively about 3 drinks).
+          - Entering god mode clears the acid duration and ends the
+            effect.
 
 
 
@@ -233,22 +333,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - updated for 7d2d Version 2.0
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated and fixed for V1.0
-    - Got a more accurate description of what happens
-    - Accounted for god mode
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the Mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

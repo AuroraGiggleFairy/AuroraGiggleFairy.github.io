@@ -38,13 +38,13 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Compatibility requests: use AGF Discord in #compatibility-request.
-      - Current 3.0 compatibility targets:
-        - WMM12SlotToolbelt
-        - 15SlotToolbelt
-        - Dewtas18SlotToolbelt
-        - DishongTowerChallenge
-        - VanillaExtended
-        - V2_OakravenAmmoPress
+  - Current 3.0 compatibility list:
+    - WMM12SlotToolbelt
+    - 15SlotToolbelt
+    - Dewtas18SlotToolbelt
+    - DishongTowerChallenge
+    - VanillaExtended
+    - V2_OakravenAmmoPress
 
 
 

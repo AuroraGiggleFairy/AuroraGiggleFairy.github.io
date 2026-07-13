@@ -47,29 +47,28 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Detects Screamers and Screamer hordes within 120 meters.
-      - Sends private chat alerts for qualifying enemies within 120
-        meters.
-      - If a player installs EnhancedAGF locally, live on-screen alerts
-        are shown instead of private chat messages.
-      - COUNT mode requires EnhancedAGF locally; without it, COUNT
-        resolves to ON.
+  - Sends private chat alerts for qualifying enemies within 120 meters.
+  - If a player installs EnhancedAGF locally, live on-screen alerts are
+    shown instead of private chat messages.
+  - COUNT mode requires EnhancedAGF locally; without it, COUNT resolves
+    to ON.
+  - See the Commands README for full command details and examples.
 
-Player Commands:
-      - /agfsa: Show current alert setting.
-      - /agfsa on: Turn alerts on.
-      - /agfsa off: Turn alerts off.
-      - /agfsa count: Set COUNT mode. Requires local EnhancedAGF;
-        otherwise resolves to ON.
+  - Player Commands:
+    - /agfsa: Show current alert setting.
+    - /agfsa on: Turn alerts on.
+    - /agfsa off: Turn alerts off.
+    - /agfsa count: Set COUNT mode. Requires local EnhancedAGF;
+      otherwise resolves to ON.
 
-Admin Console Commands (F1):
-      - agf-sa help: Show admin command usage.
-      - agf-sa default <off|on|count>: Set the default mode for new
-        joining players.
-      - agf-sa set <entityId|all> <off|on|count|default>: Set mode for
-        one online player or all online players.
-      - agf-sa list: List online players with entityId, mode, and
-        EnhancedAGF capability state.
-      - See the Commands README for full command details and examples.
+  - Admin Console Commands (F1):
+    - agf-sa help: Show admin command usage.
+    - agf-sa default <off|on|count>: Set the default mode for new
+      joining players.
+    - agf-sa set <entityId|all> <off|on|count|default>: Set mode for one
+      online player or all online players.
+    - agf-sa list: List online players with entityId, mode, and
+      EnhancedAGF capability state.
 
 
 

@@ -38,14 +38,44 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Config/items.xml sets gunMGT2TacticalAR BurstRoundCount from
-        default 3 to 1000.
+        - Config/items.xml sets gunMGT2TacticalAR BurstRoundCount from
+          default 3 to 1000.
       - Config/items.xml sets gunMGT2TacticalAR MagazineSize from 30 to
         36.
       - Feature set:
-      - Tactical rifle burst behavior is changed from default 3-round
-        burst settings.
+        - Tactical rifle burst behavior is changed from default 3-round
+          burst settings.
       - Tactical rifle magazine size is 36 instead of 30.
+
+  - Implementation edits used to make this work:
+          - Config/items.xml sets gunMGT2TacticalAR BurstRoundCount from
+            default 3 to 1000.
+        - Config/items.xml sets gunMGT2TacticalAR MagazineSize from 30
+          to 36.
+        - Feature set:
+          - Tactical rifle burst behavior is changed from default
+            3-round burst settings.
+        - Tactical rifle magazine size is 36 instead of 30.
+
+  - Implementation edits used to make this work:
+          - Config/items.xml sets gunMGT2TacticalAR BurstRoundCount from
+            default 3 to 1000.
+        - Config/items.xml sets gunMGT2TacticalAR MagazineSize from 30
+          to 36.
+        - Feature set:
+          - Tactical rifle burst behavior is changed from default
+            3-round burst settings.
+        - Tactical rifle magazine size is 36 instead of 30.
+
+    - Implementation edits used to make this work:
+            - Config/items.xml sets gunMGT2TacticalAR BurstRoundCount
+              from default 3 to 1000.
+          - Config/items.xml sets gunMGT2TacticalAR MagazineSize from 30
+            to 36.
+          - Feature set:
+            - Tactical rifle burst behavior is changed from default
+              3-round burst settings.
+          - Tactical rifle magazine size is 36 instead of 30.
 
 
 
@@ -210,20 +240,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.1.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.1.0
-    - Updated for 7d2d version 2.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated to version 1.0
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Created the Mod
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

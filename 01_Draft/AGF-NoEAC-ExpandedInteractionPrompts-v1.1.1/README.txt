@@ -48,23 +48,84 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Uses Harmony patches to expand activation prompts for
+  BlockWorkstation, BlockCampfire, BlockForge, BlockLoot,
+  BlockSecureLoot, BlockSecureLootSigned, TEFeatureStorage, and
+  vehicle-focused interaction text.
+        - Workstation and campfire prompts show queue state (Crafting,
+          Needs Fuel, Start Fire) plus output slot usage (used/total or
+          Empty).
+        - Forge prompts also include smelting input usage (Smelting
+          x/y), then crafting state, then output slot usage.
+        - Storage prompts append slot usage for regular loot, secure
+          loot, signed secure loot, and composite storage-backed player
+          containers.
+        - Vehicle prompts show seat count and lock state for everyone;
+          storage slot usage is shown only to owners/allowed users.
+        - If LockableWorkstations is active and the prompt is
+          denied/jammed, extra details are suppressed for compatibility.
+        - Includes a safer prompt-formatting patch to reduce format
+          issues and preserve prompt output stability.
+
+  - Uses Harmony patches to expand activation prompts for
     BlockWorkstation, BlockCampfire, BlockForge, BlockLoot,
     BlockSecureLoot, BlockSecureLootSigned, TEFeatureStorage, and
     vehicle-focused interaction text.
-      - Workstation and campfire prompts show queue state (Crafting,
-        Needs Fuel, Start Fire) plus output slot usage (used/total or
-        Empty).
-      - Forge prompts also include smelting input usage (Smelting x/y),
-        then crafting state, then output slot usage.
-      - Storage prompts append slot usage for regular loot, secure loot,
-        signed secure loot, and composite storage-backed player
-        containers.
-      - Vehicle prompts show seat count and lock state for everyone;
-        storage slot usage is shown only to owners/allowed users.
-      - If LockableWorkstations is active and the prompt is
-        denied/jammed, extra details are suppressed for compatibility.
-      - Includes a safer prompt-formatting patch to reduce format issues
-        and preserve prompt output stability.
+          - Workstation and campfire prompts show queue state (Crafting,
+            Needs Fuel, Start Fire) plus output slot usage (used/total
+            or Empty).
+          - Forge prompts also include smelting input usage (Smelting
+            x/y), then crafting state, then output slot usage.
+          - Storage prompts append slot usage for regular loot, secure
+            loot, signed secure loot, and composite storage-backed
+            player containers.
+          - Vehicle prompts show seat count and lock state for everyone;
+            storage slot usage is shown only to owners/allowed users.
+          - If LockableWorkstations is active and the prompt is
+            denied/jammed, extra details are suppressed for
+            compatibility.
+          - Includes a safer prompt-formatting patch to reduce format
+            issues and preserve prompt output stability.
+
+  - Uses Harmony patches to expand activation prompts for
+    BlockWorkstation, BlockCampfire, BlockForge, BlockLoot,
+    BlockSecureLoot, BlockSecureLootSigned, TEFeatureStorage, and
+    vehicle-focused interaction text.
+          - Workstation and campfire prompts show queue state (Crafting,
+            Needs Fuel, Start Fire) plus output slot usage (used/total
+            or Empty).
+          - Forge prompts also include smelting input usage (Smelting
+            x/y), then crafting state, then output slot usage.
+          - Storage prompts append slot usage for regular loot, secure
+            loot, signed secure loot, and composite storage-backed
+            player containers.
+          - Vehicle prompts show seat count and lock state for everyone;
+            storage slot usage is shown only to owners/allowed users.
+          - If LockableWorkstations is active and the prompt is
+            denied/jammed, extra details are suppressed for
+            compatibility.
+          - Includes a safer prompt-formatting patch to reduce format
+            issues and preserve prompt output stability.
+
+    - Uses Harmony patches to expand activation prompts for
+      BlockWorkstation, BlockCampfire, BlockForge, BlockLoot,
+      BlockSecureLoot, BlockSecureLootSigned, TEFeatureStorage, and
+      vehicle-focused interaction text.
+            - Workstation and campfire prompts show queue state
+              (Crafting, Needs Fuel, Start Fire) plus output slot usage
+              (used/total or Empty).
+            - Forge prompts also include smelting input usage (Smelting
+              x/y), then crafting state, then output slot usage.
+            - Storage prompts append slot usage for regular loot, secure
+              loot, signed secure loot, and composite storage-backed
+              player containers.
+            - Vehicle prompts show seat count and lock state for
+              everyone; storage slot usage is shown only to
+              owners/allowed users.
+            - If LockableWorkstations is active and the prompt is
+              denied/jammed, extra details are suppressed for
+              compatibility.
+            - Includes a safer prompt-formatting patch to reduce format
+              issues and preserve prompt output stability.
 
 
 
@@ -229,34 +290,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.1.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Added compatibility for the lockable workstations, if you can't
-    access the station, you do not see the extra stats.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Forge also showing smelting status in prompt.
-    - Storages showing slots used.
-    - Vehicles showing seats, locked status, and slots used.
-    - New localizations.
-    - Simply appends to existing localization, doesn't rewrite over
-    original.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Workstation prompts detect number of output slots used.
-    - Workstation prompts detect if crafting, needs fuel or to be turned
-    on.
-    - Ready for publish.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

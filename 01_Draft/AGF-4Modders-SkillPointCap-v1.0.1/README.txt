@@ -43,12 +43,36 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Adds a dedicated progression.xml attribute for skill-point reward
+  limits.
+        - Lets you set a separate level cap for when level-ups stop
+          giving skill points.
+        - In multiplayer, joining players must have this installed, and
+          the server XML configuration is authoritative over client
+          settings.
+
+  - Adds a dedicated progression.xml attribute for skill-point reward
     limits.
-      - Lets you set a separate level cap for when level-ups stop giving
-        skill points.
-      - In multiplayer, joining players must have this installed, and
-        the server XML configuration is authoritative over client
-        settings.
+          - Lets you set a separate level cap for when level-ups stop
+            giving skill points.
+          - In multiplayer, joining players must have this installed,
+            and the server XML configuration is authoritative over
+            client settings.
+
+  - Adds a dedicated progression.xml attribute for skill-point reward
+    limits.
+          - Lets you set a separate level cap for when level-ups stop
+            giving skill points.
+          - In multiplayer, joining players must have this installed,
+            and the server XML configuration is authoritative over
+            client settings.
+
+    - Adds a dedicated progression.xml attribute for skill-point reward
+      limits.
+            - Lets you set a separate level cap for when level-ups stop
+              giving skill points.
+            - In multiplayer, joining players must have this installed,
+              and the server XML configuration is authoritative over
+              client settings.
 
 
 
@@ -213,21 +237,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Established functioning method and reduction of exploits by making
-    it into an attribute.
-
-------------------------------------------------------------------------
-
-v0.1.0
-    - Added server over-ride any client mismatch in configuration
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

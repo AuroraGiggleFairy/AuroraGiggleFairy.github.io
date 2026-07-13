@@ -336,10 +336,10 @@
     "media_file": "AGF-VP-MasterTool_01.png"
   },
   "AGF-VP-MaxLevel500": {
-    "signature": "1601995e5b976a1fdb26d97994b91a7bb50ec3b9fad24e1a24eaf583dcba90a6",
+    "signature": "1ac2d05ec752b395a70dda38f49de57067ebe8a3cc6739f5f830bbb76f84f577",
     "version": "3.1.0",
-    "has_media": false,
-    "media_file": ""
+    "has_media": true,
+    "media_file": "AGF-VP-MaxLevel500_01.png"
   },
   "AGF-VP-MedicationNoInsectSlow": {
     "signature": "28fe396fd7fcd202e75042d173db384c9b866a1f7642a8782db2c49e7d7820be",
@@ -552,10 +552,10 @@
     "media_file": ""
   },
   "zzzAGF-Special-Compatibilities": {
-    "signature": "490c0fee742198984cb83812694c22268b68cd9a71bd773e4d6bfaa69d29552f",
+    "signature": "9e548f1183336b3d333eb68c2880bb626397821c5422dcc2e20961fa0c41d329",
     "version": "5.1.0",
-    "has_media": false,
-    "media_file": ""
+    "has_media": true,
+    "media_file": "zzzAGF-Special-Compatibilities_01.png"
   },
   "AGF-NoEAC-SignErrorGuard": {
     "signature": "8fbd29766dd3e9bfbdecb3c0aa657b9ca9d2be488a6d6cd957457d13faed5af9",
@@ -570,9 +570,9 @@
     "media_file": "AGF-VP-LargerStorageOption_01.png"
   },
   "zzzAGF-Special-LocalizationPatches": {
-    "signature": "a4e4a0d8c092109bcbe579e21b0aa1b6847bca40b7ea64fc2d4233b251476c0a",
+    "signature": "14fbfd0958038fab34f2a713f81117c0f63d866520877fdc8b4f771d914a1d80",
     "version": "1.0.0",
-    "has_media": false,
-    "media_file": ""
+    "has_media": true,
+    "media_file": "zzzAGF-Special-LocalizationPatches_01.png"
   }
 }

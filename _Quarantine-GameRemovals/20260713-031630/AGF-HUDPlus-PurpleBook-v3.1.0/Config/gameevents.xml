@@ -1,0 +1,45 @@
+<AGF-HUDPlus>
+
+	<append xpath="/gameevents/action_sequence[@name='game_first_spawn']">
+
+		<action class="AddBuff">
+			<property name="buff_name" value="agfRecalculate" />
+		</action>
+	</append>
+
+	<append xpath="/gameevents/action_sequence[@name='game_on_spawn']">
+
+		<action class="AddBuff">
+			<property name="buff_name" value="agfRecalculate" />
+		</action>
+	</append>
+
+	<append xpath="/gameevents/action_sequence[@name='game_on_respawn_none']">
+
+		<action class="AddBuff">
+			<property name="buff_name" value="agfRecalculate" />
+		</action>
+	</append>
+
+	<append xpath="/gameevents/action_sequence[@name='game_on_respawn_default']">
+
+		<action class="AddBuff">
+			<property name="buff_name" value="agfRecalculate" />
+		</action>
+	</append>
+
+	<append xpath="/gameevents/action_sequence[@name='game_on_respawn_injured']">
+
+		<action class="AddBuff">
+			<property name="buff_name" value="agfRecalculate" />
+		</action>
+	</append>
+
+	<append xpath="/gameevents/action_sequence[@name='game_on_respawn_permanent']">
+
+		<action class="AddBuff">
+			<property name="buff_name" value="agfRecalculate" />
+		</action>
+	</append>
+
+</AGF-HUDPlus>

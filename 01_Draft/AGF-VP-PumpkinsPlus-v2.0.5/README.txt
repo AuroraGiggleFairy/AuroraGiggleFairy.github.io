@@ -42,8 +42,8 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds thrownAmmoMolotovJacks, a pumpkin-themed throwable with
-        molotov-style burning behavior.
+        - Adds thrownAmmoMolotovJacks, a pumpkin-themed throwable with
+          molotov-style burning behavior.
       - Throw item setup includes custom pumpkin icon/mesh/hand mesh,
         throw animation tuning, and explosive burn properties.
       - On impact, it applies buffBurningMolotov area effects with
@@ -61,13 +61,98 @@ OTHER DETAILS
       - Adds custom material entry Mjackolantern for pumpkin-themed
         material categorization.
       - Feature set:
-      - Adds a throwable pumpkin variant that behaves like a
-        molotov-style fire bomb.
+        - Adds a throwable pumpkin variant that behaves like a
+          molotov-style fire bomb.
       - Adds a cosmetic jack-o-lantern head mod for helmet visuals.
       - Supports bundling/unbundling of the jack-o-lantern mod for
         storage/collection.
       - Keeps all additions focused on thematic utility/cosmetic
         gameplay rather than broad system overhaul.
+
+  - Implementation edits used to make this work:
+          - Adds thrownAmmoMolotovJacks, a pumpkin-themed throwable with
+            molotov-style burning behavior.
+        - Throw item setup includes custom pumpkin icon/mesh/hand mesh,
+          throw animation tuning, and explosive burn properties.
+        - On impact, it applies buffBurningMolotov area effects with
+          duration handling tied to molotov-related progression checks.
+        - Adds recipe: 1 thrownAmmoMolotovCocktail + 1 foodCropPumpkin
+          -> 1 thrownAmmoMolotovJacks.
+        - Adds wearable head cosmetic mod modJackOHead in
+          item_modifiers.xml (head installable visual attachment).
+        - Cosmetic mod attaches a jack-o-lantern prefab to third-person
+          head view and removes/cleans it on equip-stop or first-person
+          handling.
+        - Adds recipe: 1 decoPumpkinJackOLantern -> 1 modJackOHead.
+        - Adds optional collector bundle item modJackOHeadBundle plus
+          1-to-1 bundle recipe (modJackOHead -> modJackOHeadBundle).
+        - Adds custom material entry Mjackolantern for pumpkin-themed
+          material categorization.
+        - Feature set:
+          - Adds a throwable pumpkin variant that behaves like a
+            molotov-style fire bomb.
+        - Adds a cosmetic jack-o-lantern head mod for helmet visuals.
+        - Supports bundling/unbundling of the jack-o-lantern mod for
+          storage/collection.
+        - Keeps all additions focused on thematic utility/cosmetic
+          gameplay rather than broad system overhaul.
+
+  - Implementation edits used to make this work:
+          - Adds thrownAmmoMolotovJacks, a pumpkin-themed throwable with
+            molotov-style burning behavior.
+        - Throw item setup includes custom pumpkin icon/mesh/hand mesh,
+          throw animation tuning, and explosive burn properties.
+        - On impact, it applies buffBurningMolotov area effects with
+          duration handling tied to molotov-related progression checks.
+        - Adds recipe: 1 thrownAmmoMolotovCocktail + 1 foodCropPumpkin
+          -> 1 thrownAmmoMolotovJacks.
+        - Adds wearable head cosmetic mod modJackOHead in
+          item_modifiers.xml (head installable visual attachment).
+        - Cosmetic mod attaches a jack-o-lantern prefab to third-person
+          head view and removes/cleans it on equip-stop or first-person
+          handling.
+        - Adds recipe: 1 decoPumpkinJackOLantern -> 1 modJackOHead.
+        - Adds optional collector bundle item modJackOHeadBundle plus
+          1-to-1 bundle recipe (modJackOHead -> modJackOHeadBundle).
+        - Adds custom material entry Mjackolantern for pumpkin-themed
+          material categorization.
+        - Feature set:
+          - Adds a throwable pumpkin variant that behaves like a
+            molotov-style fire bomb.
+        - Adds a cosmetic jack-o-lantern head mod for helmet visuals.
+        - Supports bundling/unbundling of the jack-o-lantern mod for
+          storage/collection.
+        - Keeps all additions focused on thematic utility/cosmetic
+          gameplay rather than broad system overhaul.
+
+    - Implementation edits used to make this work:
+            - Adds thrownAmmoMolotovJacks, a pumpkin-themed throwable
+              with molotov-style burning behavior.
+          - Throw item setup includes custom pumpkin icon/mesh/hand
+            mesh, throw animation tuning, and explosive burn properties.
+          - On impact, it applies buffBurningMolotov area effects with
+            duration handling tied to molotov-related progression
+            checks.
+          - Adds recipe: 1 thrownAmmoMolotovCocktail + 1 foodCropPumpkin
+          -> 1 thrownAmmoMolotovJacks.
+          - Adds wearable head cosmetic mod modJackOHead in
+            item_modifiers.xml (head installable visual attachment).
+          - Cosmetic mod attaches a jack-o-lantern prefab to
+            third-person head view and removes/cleans it on equip-stop
+            or first-person handling.
+          - Adds recipe: 1 decoPumpkinJackOLantern -> 1 modJackOHead.
+          - Adds optional collector bundle item modJackOHeadBundle plus
+            1-to-1 bundle recipe (modJackOHead -> modJackOHeadBundle).
+          - Adds custom material entry Mjackolantern for pumpkin-themed
+            material categorization.
+          - Feature set:
+            - Adds a throwable pumpkin variant that behaves like a
+              molotov-style fire bomb.
+          - Adds a cosmetic jack-o-lantern head mod for helmet visuals.
+          - Supports bundling/unbundling of the jack-o-lantern mod for
+            storage/collection.
+          - Keeps all additions focused on thematic utility/cosmetic
+            gameplay rather than broad system overhaul.
 
 
 
@@ -232,39 +317,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v2.0.5
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v2.0.4
-    - updated to put helmet cosmetic mod as a MOD instead of a dye color
-    due to 7d2d changes.
-
-------------------------------------------------------------------------
-
-v2.0.3
-    - updated for 7d2d Version 2
-
-------------------------------------------------------------------------
-
-v2.0.2
-    - updated localization and colors to fit with other VP theme
-
-------------------------------------------------------------------------
-
-v2.0.1
-    - Drop mesh of the pumpkin helmet is now a jack-o-lantern. LOL
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated to work with V1
-    - Change the hold type of molo-jack-ovs (not in your hand directly,
-    but shows throwing animation)
-
-------------------------------------------------------------------------
-
-v1.2.0
-    - Added bundle version of mod
-    - Updated ReadMe to my new format.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

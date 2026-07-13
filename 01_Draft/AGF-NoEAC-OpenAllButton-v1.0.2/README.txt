@@ -45,14 +45,44 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - This is a client-side UI button addition only; it does not require
+  other joining players to install it.
+        - Simply adds an "Open All" button for bundled items.
+        - It opens one at a time rapid fire until all are opened or if
+          you run out of inventory space.
+        - It can be stopped by either closing the window or pushing the
+          stop opening button.
+        - Again, if there isn't room for more, it will stop and not
+          allow you to open more.
+
+  - This is a client-side UI button addition only; it does not require
     other joining players to install it.
-      - Simply adds an "Open All" button for bundled items.
-      - It opens one at a time rapid fire until all are opened or if you
-        run out of inventory space.
-      - It can be stopped by either closing the window or pushing the
-        stop opening button.
-      - Again, if there isn't room for more, it will stop and not allow
-        you to open more.
+          - Simply adds an "Open All" button for bundled items.
+          - It opens one at a time rapid fire until all are opened or if
+            you run out of inventory space.
+          - It can be stopped by either closing the window or pushing
+            the stop opening button.
+          - Again, if there isn't room for more, it will stop and not
+            allow you to open more.
+
+  - This is a client-side UI button addition only; it does not require
+    other joining players to install it.
+          - Simply adds an "Open All" button for bundled items.
+          - It opens one at a time rapid fire until all are opened or if
+            you run out of inventory space.
+          - It can be stopped by either closing the window or pushing
+            the stop opening button.
+          - Again, if there isn't room for more, it will stop and not
+            allow you to open more.
+
+    - This is a client-side UI button addition only; it does not require
+      other joining players to install it.
+            - Simply adds an "Open All" button for bundled items.
+            - It opens one at a time rapid fire until all are opened or
+              if you run out of inventory space.
+            - It can be stopped by either closing the window or pushing
+              the stop opening button.
+            - Again, if there isn't room for more, it will stop and not
+              allow you to open more.
 
 
 
@@ -217,18 +247,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated OpenAll to be accessible only when Open is.
-    - Corrected localization handling.
-    - Put auto-stop in place when selecting another button to prevent
-    crashes.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

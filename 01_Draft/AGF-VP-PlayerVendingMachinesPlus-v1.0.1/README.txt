@@ -39,7 +39,7 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds a direct crafting recipe for cntVendingMachine.
+        - Adds a direct crafting recipe for cntVendingMachine.
       - Recipe cost is 10 resourceForgedIron, 10-second craft time, 0
         craft XP, with packMuleCrafting tag.
       - Sets vending machine block EconomicValue to 100 (aligned with
@@ -47,20 +47,92 @@ OTHER DETAILS
       - Sets vending machine block drop count to 1 so breaking the
         placed machine returns it.
       - Adds anti-exploit/cleanup properties on the vending machine
-block:
-      - SellableToTrader=false
+        block:
+        - SellableToTrader=false
       - NoScrapping=true
       - Updates trader item counts for cntVendingMachine to 1,4 so
         traders can stock multiple at once.
       - Feature set:
-      - Players can craft vending machines cheaply and quickly for
-        trade-base setup.
+        - Players can craft vending machines cheaply and quickly for
+          trade-base setup.
       - Vending machines are easier to source from traders (up to 4 at a
         time).
       - Value and sell/scrap restrictions reduce abuse paths while
         keeping placement flexible.
       - Placed machines are recoverable when broken, reducing accidental
         loss.
+
+  - Implementation edits used to make this work:
+          - Adds a direct crafting recipe for cntVendingMachine.
+        - Recipe cost is 10 resourceForgedIron, 10-second craft time, 0
+          craft XP, with packMuleCrafting tag.
+        - Sets vending machine block EconomicValue to 100 (aligned with
+          magazine-level value target).
+        - Sets vending machine block drop count to 1 so breaking the
+          placed machine returns it.
+        - Adds anti-exploit/cleanup properties on the vending machine
+          block:
+          - SellableToTrader=false
+        - NoScrapping=true
+        - Updates trader item counts for cntVendingMachine to 1,4 so
+          traders can stock multiple at once.
+        - Feature set:
+          - Players can craft vending machines cheaply and quickly for
+            trade-base setup.
+        - Vending machines are easier to source from traders (up to 4 at
+          a time).
+        - Value and sell/scrap restrictions reduce abuse paths while
+          keeping placement flexible.
+        - Placed machines are recoverable when broken, reducing
+          accidental loss.
+
+  - Implementation edits used to make this work:
+          - Adds a direct crafting recipe for cntVendingMachine.
+        - Recipe cost is 10 resourceForgedIron, 10-second craft time, 0
+          craft XP, with packMuleCrafting tag.
+        - Sets vending machine block EconomicValue to 100 (aligned with
+          magazine-level value target).
+        - Sets vending machine block drop count to 1 so breaking the
+          placed machine returns it.
+        - Adds anti-exploit/cleanup properties on the vending machine
+          block:
+          - SellableToTrader=false
+        - NoScrapping=true
+        - Updates trader item counts for cntVendingMachine to 1,4 so
+          traders can stock multiple at once.
+        - Feature set:
+          - Players can craft vending machines cheaply and quickly for
+            trade-base setup.
+        - Vending machines are easier to source from traders (up to 4 at
+          a time).
+        - Value and sell/scrap restrictions reduce abuse paths while
+          keeping placement flexible.
+        - Placed machines are recoverable when broken, reducing
+          accidental loss.
+
+    - Implementation edits used to make this work:
+            - Adds a direct crafting recipe for cntVendingMachine.
+          - Recipe cost is 10 resourceForgedIron, 10-second craft time,
+            0 craft XP, with packMuleCrafting tag.
+          - Sets vending machine block EconomicValue to 100 (aligned
+            with magazine-level value target).
+          - Sets vending machine block drop count to 1 so breaking the
+            placed machine returns it.
+          - Adds anti-exploit/cleanup properties on the vending machine
+            block:
+            - SellableToTrader=false
+          - NoScrapping=true
+          - Updates trader item counts for cntVendingMachine to 1,4 so
+            traders can stock multiple at once.
+          - Feature set:
+            - Players can craft vending machines cheaply and quickly for
+              trade-base setup.
+          - Vending machines are easier to source from traders (up to 4
+            at a time).
+          - Value and sell/scrap restrictions reduce abuse paths while
+            keeping placement flexible.
+          - Placed machines are recoverable when broken, reducing
+            accidental loss.
 
 
 
@@ -225,10 +297,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Just made the mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

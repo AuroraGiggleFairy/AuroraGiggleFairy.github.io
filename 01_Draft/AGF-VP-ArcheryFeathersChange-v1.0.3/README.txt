@@ -38,25 +38,70 @@ FEATURES
 OTHER DETAILS
 ------------------------------------------------------------------------
 
-  - Specific XML Edits:
-      - recipes.xml removes resourceScrapPolymers from recipes with
-        names containing Arrow or Bolt.
-      - recipes.xml appends resourceFeather ingredients to advanced
-arrow/bolt single and bundle recipes:
-      - Flaming, Exploding, and Steel AP arrows
-      - Flaming, Exploding, and Steel AP crossbow bolts
-      - recipes.xml adds a workbench recipe to craft feathers from
-plastic:
-      - resourceFeather x1 from resourceScrapPolymers x2
-        (craft_time="1", craft_area="workbench")
-      - items.xml includes a conditional section for
-        AGF-VP-AmmoDisassembly that updates disassembly bundle outputs
-        (single, 100, and 1000 variants) so archery disassembly returns
-        feathers instead of plastic.
+  - Specific XML Edits: recipes.xml removes resourceScrapPolymers from
+  recipes with names containing Arrow or Bolt.
+        - recipes.xml appends resourceFeather ingredients to advanced
+          arrow/bolt single and bundle recipes:
+        - Flaming, Exploding, and Steel AP arrows
+      - Flaming, Exploding, and Steel AP crossbow bolts recipes.xml adds
+        a workbench recipe to craft feathers from plastic:
+        resourceFeather x1 from resourceScrapPolymers x2
+        (craft_time="1", craft_area="workbench") items.xml includes a
+        conditional section for AGF-VP-AmmoDisassembly that updates
+        disassembly bundle outputs (single, 100, and 1000 variants) so
+        archery disassembly returns feathers instead of plastic. Usage
+        Notes:
+        - This mod changes advanced archery to feather-based crafting
+          while keeping a conversion path from plastic to feathers.
 
-Usage Notes:
-      - This mod changes advanced archery to feather-based crafting
-        while keeping a conversion path from plastic to feathers.
+  - Specific XML Edits: recipes.xml removes resourceScrapPolymers from
+    recipes with names containing Arrow or Bolt.
+          - recipes.xml appends resourceFeather ingredients to advanced
+            arrow/bolt single and bundle recipes:
+          - Flaming, Exploding, and Steel AP arrows
+        - Flaming, Exploding, and Steel AP crossbow bolts recipes.xml
+          adds a workbench recipe to craft feathers from plastic:
+          resourceFeather x1 from resourceScrapPolymers x2
+          (craft_time="1", craft_area="workbench") items.xml includes a
+          conditional section for AGF-VP-AmmoDisassembly that updates
+          disassembly bundle outputs (single, 100, and 1000 variants) so
+          archery disassembly returns feathers instead of plastic. Usage
+          Notes:
+          - This mod changes advanced archery to feather-based crafting
+            while keeping a conversion path from plastic to feathers.
+
+  - Specific XML Edits: recipes.xml removes resourceScrapPolymers from
+    recipes with names containing Arrow or Bolt.
+          - recipes.xml appends resourceFeather ingredients to advanced
+            arrow/bolt single and bundle recipes:
+          - Flaming, Exploding, and Steel AP arrows
+        - Flaming, Exploding, and Steel AP crossbow bolts recipes.xml
+          adds a workbench recipe to craft feathers from plastic:
+          resourceFeather x1 from resourceScrapPolymers x2
+          (craft_time="1", craft_area="workbench") items.xml includes a
+          conditional section for AGF-VP-AmmoDisassembly that updates
+          disassembly bundle outputs (single, 100, and 1000 variants) so
+          archery disassembly returns feathers instead of plastic. Usage
+          Notes:
+          - This mod changes advanced archery to feather-based crafting
+            while keeping a conversion path from plastic to feathers.
+
+    - Specific XML Edits: recipes.xml removes resourceScrapPolymers from
+      recipes with names containing Arrow or Bolt.
+            - recipes.xml appends resourceFeather ingredients to
+              advanced arrow/bolt single and bundle recipes:
+            - Flaming, Exploding, and Steel AP arrows
+          - Flaming, Exploding, and Steel AP crossbow bolts recipes.xml
+            adds a workbench recipe to craft feathers from plastic:
+            resourceFeather x1 from resourceScrapPolymers x2
+            (craft_time="1", craft_area="workbench") items.xml includes
+            a conditional section for AGF-VP-AmmoDisassembly that
+            updates disassembly bundle outputs (single, 100, and 1000
+            variants) so archery disassembly returns feathers instead of
+            plastic. Usage Notes:
+            - This mod changes advanced archery to feather-based
+              crafting while keeping a conversion path from plastic to
+              feathers.
 
 
 
@@ -221,23 +266,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.3
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - Updated README and code organization.
-    - Corrected the cloths amounts given back from the 100's and 1000's
-    for flaming arrows/bolts.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Corrected a change to flaming arrows / bolts for 7d2d v2.5+.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Separated from StacksBundlesAmmoPlus now that I understand
-    conditionals.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

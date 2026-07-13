@@ -41,12 +41,11 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Focuses on mods that are not yet fully localized.
-      - Use AGF Discord channel #localization-requests for patch
-        requests.
-      - Current 3.0 localization support targets:
-        - BDub's Vehicles
-        - IZY's Weapons
-        - GSVanillaCookBook
+  - Use AGF Discord channel #localization-requests for patch requests.
+  - Current 3.0 localization support list:
+    - BDub's Vehicles
+    - IZY's Weapons
+    - GSVanillaCookBook
 
 
 

@@ -36,12 +36,36 @@ FEATURES
 OTHER DETAILS
 ------------------------------------------------------------------------
 
+  - Replaces the default BuffPopoutList UI block in HUDLeftStatBars with a
+  smaller custom version.
+        - Uses these reduced values (default -> this mod): panel height
+          46
+          -> 23, icon size 40x40 -> 20x20, text font 28 -> 18, and text area height 40 -> 20.
+        - Keeps buff pop-up behavior while reducing on-screen footprint.
+
   - Replaces the default BuffPopoutList UI block in HUDLeftStatBars with
     a smaller custom version.
-      - Uses these reduced values (default -> this mod): panel height 46
-        -> 23, icon size 40x40 -> 20x20, text font 28 -> 18, and text
-        area height 40 -> 20.
-      - Keeps buff pop-up behavior while reducing on-screen footprint.
+          - Uses these reduced values (default -> this mod): panel
+            height 46
+          -> 23, icon size 40x40 -> 20x20, text font 28 -> 18, and text area height 40 -> 20.
+          - Keeps buff pop-up behavior while reducing on-screen
+            footprint.
+
+  - Replaces the default BuffPopoutList UI block in HUDLeftStatBars with
+    a smaller custom version.
+          - Uses these reduced values (default -> this mod): panel
+            height 46
+          -> 23, icon size 40x40 -> 20x20, text font 28 -> 18, and text area height 40 -> 20.
+          - Keeps buff pop-up behavior while reducing on-screen
+            footprint.
+
+    - Replaces the default BuffPopoutList UI block in HUDLeftStatBars
+      with a smaller custom version.
+            - Uses these reduced values (default -> this mod): panel
+              height 46
+          -> 23, icon size 40x40 -> 20x20, text font 28 -> 18, and text area height 40 -> 20.
+            - Keeps buff pop-up behavior while reducing on-screen
+              footprint.
 
 
 
@@ -206,10 +230,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Just made it.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

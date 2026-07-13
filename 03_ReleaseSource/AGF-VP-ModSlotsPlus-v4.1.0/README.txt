@@ -39,8 +39,8 @@ FEATURES
 OTHER DETAILS
 ------------------------------------------------------------------------
 
-  - On existing saves, mod-slot changes apply only to newly crafted or
-    newly found items; existing items keep their current slot counts.
+- On existing saves, mod-slot changes apply only to newly crafted or
+  newly found items; existing items keep their current slot counts.
 
 
 

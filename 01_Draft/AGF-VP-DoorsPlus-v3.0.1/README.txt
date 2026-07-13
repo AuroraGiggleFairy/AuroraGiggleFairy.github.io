@@ -41,37 +41,143 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Adds AGF helper recipes in recipes.xml for:
+  miscwoodDoorVariantHelperAGF miscironDoorVariantHelperAGF
+  miscsteelDoorVariantHelperAGF (workbench)
+  miscpoweredDoorVariantHelperAGF (workbench, learnable, perk-scaled
+  ingredient reduction)
+        - Wood-tier AGF variants are normalized to 1000 HP in the AGF
+          upgrade chain.
+        - Wood door helper crafting cost is 10 wood.
+        - Powered door helper base crafting cost is 10 forged steel, 10
+          springs, 10 mechanical parts, and 10 electrical parts (with
+          perk-based reductions).
+        - Upgrade requirements in the AGF chain are:
+          - Wood -> Iron: 10 forged iron, 5 upgrade hits.
+        - Iron -> Steel: 10 forged steel, 5 upgrade hits.
+        - Destroyed doors drop their matching helper item (count 1), and
+          fall events also drop it at 75% chance for recovery.
+        - Wires powered helper unlocks through progression.xml under
+          electrician progression, including recipe-tag unlock and
+          display entry integration.
+        - Updates challenge tracking in challenges.xml so the door
+          placement challenge targets AGF door helper placement.
+        - Extends allowed upgrade item behavior in items.xml so
+          door-upgrade actions accept the helper-driven door variant
+          flow.
+        - Keeps legacy/older door blocks present for save compatibility
+          while providing current AGF helper-driven variant systems.
+        - Uses variant-helper block architecture (SelectAlternates +
+          large PlaceAltBlockValue sets) for broad in-game door
+          selection from crafted helpers.
+        - Includes plain/clean variants (in addition to
+          barricaded/reinforced-style options) so visual style choices
+          are available alongside functional tiers.
+        - Entirely standalone and server side.
+
+  - Adds AGF helper recipes in recipes.xml for:
     miscwoodDoorVariantHelperAGF miscironDoorVariantHelperAGF
     miscsteelDoorVariantHelperAGF (workbench)
-      - miscpoweredDoorVariantHelperAGF (workbench, learnable,
-        perk-scaled ingredient reduction)
-      - Wood-tier AGF variants are normalized to 1000 HP in the AGF
-        upgrade chain.
-      - Wood door helper crafting cost is 10 wood.
-      - Powered door helper base crafting cost is 10 forged steel, 10
-        springs, 10 mechanical parts, and 10 electrical parts (with
-        perk-based reductions).
-      - Upgrade requirements in the AGF chain are:
-      - Wood -> Iron: 10 forged iron, 5 upgrade hits.
-      - Iron -> Steel: 10 forged steel, 5 upgrade hits.
-      - Destroyed doors drop their matching helper item (count 1), and
-        fall events also drop it at 75% chance for recovery.
-      - Wires powered helper unlocks through progression.xml under
-        electrician progression, including recipe-tag unlock and display
-        entry integration.
-      - Updates challenge tracking in challenges.xml so the door
-        placement challenge targets AGF door helper placement.
-      - Extends allowed upgrade item behavior in items.xml so
-        door-upgrade actions accept the helper-driven door variant flow.
-      - Keeps legacy/older door blocks present for save compatibility
-        while providing current AGF helper-driven variant systems.
-      - Uses variant-helper block architecture (SelectAlternates + large
-        PlaceAltBlockValue sets) for broad in-game door selection from
-        crafted helpers.
-      - Includes plain/clean variants (in addition to
-        barricaded/reinforced-style options) so visual style choices are
-        available alongside functional tiers.
-      - Entirely standalone and server side.
+    miscpoweredDoorVariantHelperAGF (workbench, learnable, perk-scaled
+    ingredient reduction)
+          - Wood-tier AGF variants are normalized to 1000 HP in the AGF
+            upgrade chain.
+          - Wood door helper crafting cost is 10 wood.
+          - Powered door helper base crafting cost is 10 forged steel,
+            10 springs, 10 mechanical parts, and 10 electrical parts
+            (with perk-based reductions).
+          - Upgrade requirements in the AGF chain are:
+            - Wood -> Iron: 10 forged iron, 5 upgrade hits.
+          - Iron -> Steel: 10 forged steel, 5 upgrade hits.
+          - Destroyed doors drop their matching helper item (count 1),
+            and fall events also drop it at 75% chance for recovery.
+          - Wires powered helper unlocks through progression.xml under
+            electrician progression, including recipe-tag unlock and
+            display entry integration.
+          - Updates challenge tracking in challenges.xml so the door
+            placement challenge targets AGF door helper placement.
+          - Extends allowed upgrade item behavior in items.xml so
+            door-upgrade actions accept the helper-driven door variant
+            flow.
+          - Keeps legacy/older door blocks present for save
+            compatibility while providing current AGF helper-driven
+            variant systems.
+          - Uses variant-helper block architecture (SelectAlternates +
+            large PlaceAltBlockValue sets) for broad in-game door
+            selection from crafted helpers.
+          - Includes plain/clean variants (in addition to
+            barricaded/reinforced-style options) so visual style choices
+            are available alongside functional tiers.
+          - Entirely standalone and server side.
+
+  - Adds AGF helper recipes in recipes.xml for:
+    miscwoodDoorVariantHelperAGF miscironDoorVariantHelperAGF
+    miscsteelDoorVariantHelperAGF (workbench)
+    miscpoweredDoorVariantHelperAGF (workbench, learnable, perk-scaled
+    ingredient reduction)
+          - Wood-tier AGF variants are normalized to 1000 HP in the AGF
+            upgrade chain.
+          - Wood door helper crafting cost is 10 wood.
+          - Powered door helper base crafting cost is 10 forged steel,
+            10 springs, 10 mechanical parts, and 10 electrical parts
+            (with perk-based reductions).
+          - Upgrade requirements in the AGF chain are:
+            - Wood -> Iron: 10 forged iron, 5 upgrade hits.
+          - Iron -> Steel: 10 forged steel, 5 upgrade hits.
+          - Destroyed doors drop their matching helper item (count 1),
+            and fall events also drop it at 75% chance for recovery.
+          - Wires powered helper unlocks through progression.xml under
+            electrician progression, including recipe-tag unlock and
+            display entry integration.
+          - Updates challenge tracking in challenges.xml so the door
+            placement challenge targets AGF door helper placement.
+          - Extends allowed upgrade item behavior in items.xml so
+            door-upgrade actions accept the helper-driven door variant
+            flow.
+          - Keeps legacy/older door blocks present for save
+            compatibility while providing current AGF helper-driven
+            variant systems.
+          - Uses variant-helper block architecture (SelectAlternates +
+            large PlaceAltBlockValue sets) for broad in-game door
+            selection from crafted helpers.
+          - Includes plain/clean variants (in addition to
+            barricaded/reinforced-style options) so visual style choices
+            are available alongside functional tiers.
+          - Entirely standalone and server side.
+
+    - Adds AGF helper recipes in recipes.xml for:
+      miscwoodDoorVariantHelperAGF miscironDoorVariantHelperAGF
+      miscsteelDoorVariantHelperAGF (workbench)
+      miscpoweredDoorVariantHelperAGF (workbench, learnable, perk-scaled
+      ingredient reduction)
+            - Wood-tier AGF variants are normalized to 1000 HP in the
+              AGF upgrade chain.
+            - Wood door helper crafting cost is 10 wood.
+            - Powered door helper base crafting cost is 10 forged steel,
+              10 springs, 10 mechanical parts, and 10 electrical parts
+              (with perk-based reductions).
+            - Upgrade requirements in the AGF chain are:
+              - Wood -> Iron: 10 forged iron, 5 upgrade hits.
+            - Iron -> Steel: 10 forged steel, 5 upgrade hits.
+            - Destroyed doors drop their matching helper item (count 1),
+              and fall events also drop it at 75% chance for recovery.
+            - Wires powered helper unlocks through progression.xml under
+              electrician progression, including recipe-tag unlock and
+              display entry integration.
+            - Updates challenge tracking in challenges.xml so the door
+              placement challenge targets AGF door helper placement.
+            - Extends allowed upgrade item behavior in items.xml so
+              door-upgrade actions accept the helper-driven door variant
+              flow.
+            - Keeps legacy/older door blocks present for save
+              compatibility while providing current AGF helper-driven
+              variant systems.
+            - Uses variant-helper block architecture (SelectAlternates +
+              large PlaceAltBlockValue sets) for broad in-game door
+              selection from crafted helpers.
+            - Includes plain/clean variants (in addition to
+              barricaded/reinforced-style options) so visual style
+              choices are available alongside functional tiers.
+            - Entirely standalone and server side.
 
 
 
@@ -236,35 +342,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v3.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v3.0.
-    - Completely revamped and redone.
-    - Modified original doorsplus to ensure safe updating.
-    - Old door blocks renamed to Obsolete in each language.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Rework and revamp for doors plus (works with 2.5)
-    - Allow players to craft the individual door types outside of the
-    variant helper.
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - added carBattery to level 55 in case of utilizing stackable
-    batteries mod.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - added "zzz" to name to make last in mod load order
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Transferred the code from 1Core to this standalone modlet.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

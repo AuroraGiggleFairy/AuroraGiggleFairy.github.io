@@ -38,8 +38,8 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds 3 new bundle items: resourceClayLumpBundle,
-        resourceCrushedSandBundle, and resourceScrapBrassBundle.
+        - Adds 3 new bundle items: resourceClayLumpBundle,
+          resourceCrushedSandBundle, and resourceScrapBrassBundle.
       - Each new bundle extends vanilla bundle behavior and unpacks into
         6000 of its base resource.
       - Adds matching crafting recipes (6000 input -> 1 bundle, 2s craft
@@ -47,15 +47,75 @@ OTHER DETAILS
       - Extends perkArtOfMiningPallets recipe-tag unlock list so the
         mining book perk unlocks these 3 bundle recipes.
       - Increases sand gain from mining blocks:
-      - terrStone now drops resourceCrushedSand x2 on harvest (default
-        was 0).
+        - terrStone now drops resourceCrushedSand x2 on harvest (default
+          was 0).
       - terrGravel sand drop count is set to 11 (default was 8).
       - Feature set:
-      - Mining-book bundle functionality now includes Clay, Sand, and
-        Brass for easier bulk storage/handling.
+        - Mining-book bundle functionality now includes Clay, Sand, and
+          Brass for easier bulk storage/handling.
       - Sand generation from normal stone/gravel mining is slightly
         increased.
       - Changes are intentionally lightweight and vanilla-adjacent.
+
+  - Implementation edits used to make this work:
+          - Adds 3 new bundle items: resourceClayLumpBundle,
+            resourceCrushedSandBundle, and resourceScrapBrassBundle.
+        - Each new bundle extends vanilla bundle behavior and unpacks
+          into 6000 of its base resource.
+        - Adds matching crafting recipes (6000 input -> 1 bundle, 2s
+          craft time, 0 craft XP).
+        - Extends perkArtOfMiningPallets recipe-tag unlock list so the
+          mining book perk unlocks these 3 bundle recipes.
+        - Increases sand gain from mining blocks:
+          - terrStone now drops resourceCrushedSand x2 on harvest
+            (default was 0).
+        - terrGravel sand drop count is set to 11 (default was 8).
+        - Feature set:
+          - Mining-book bundle functionality now includes Clay, Sand,
+            and Brass for easier bulk storage/handling.
+        - Sand generation from normal stone/gravel mining is slightly
+          increased.
+        - Changes are intentionally lightweight and vanilla-adjacent.
+
+  - Implementation edits used to make this work:
+          - Adds 3 new bundle items: resourceClayLumpBundle,
+            resourceCrushedSandBundle, and resourceScrapBrassBundle.
+        - Each new bundle extends vanilla bundle behavior and unpacks
+          into 6000 of its base resource.
+        - Adds matching crafting recipes (6000 input -> 1 bundle, 2s
+          craft time, 0 craft XP).
+        - Extends perkArtOfMiningPallets recipe-tag unlock list so the
+          mining book perk unlocks these 3 bundle recipes.
+        - Increases sand gain from mining blocks:
+          - terrStone now drops resourceCrushedSand x2 on harvest
+            (default was 0).
+        - terrGravel sand drop count is set to 11 (default was 8).
+        - Feature set:
+          - Mining-book bundle functionality now includes Clay, Sand,
+            and Brass for easier bulk storage/handling.
+        - Sand generation from normal stone/gravel mining is slightly
+          increased.
+        - Changes are intentionally lightweight and vanilla-adjacent.
+
+    - Implementation edits used to make this work:
+            - Adds 3 new bundle items: resourceClayLumpBundle,
+              resourceCrushedSandBundle, and resourceScrapBrassBundle.
+          - Each new bundle extends vanilla bundle behavior and unpacks
+            into 6000 of its base resource.
+          - Adds matching crafting recipes (6000 input -> 1 bundle, 2s
+            craft time, 0 craft XP).
+          - Extends perkArtOfMiningPallets recipe-tag unlock list so the
+            mining book perk unlocks these 3 bundle recipes.
+          - Increases sand gain from mining blocks:
+            - terrStone now drops resourceCrushedSand x2 on harvest
+              (default was 0).
+          - terrGravel sand drop count is set to 11 (default was 8).
+          - Feature set:
+            - Mining-book bundle functionality now includes Clay, Sand,
+              and Brass for easier bulk storage/handling.
+          - Sand generation from normal stone/gravel mining is slightly
+            increased.
+          - Changes are intentionally lightweight and vanilla-adjacent.
 
 
 
@@ -220,21 +280,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.2.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.2.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Updated for Version 2, mostly to connect with AGF HUD V2 updates.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

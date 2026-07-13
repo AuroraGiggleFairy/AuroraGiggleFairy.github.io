@@ -44,8 +44,8 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds a new seedStation workstation block and crafting area
-        (seedStation) for organized seed workflows.
+        - Adds a new seedStation workstation block and crafting area
+          (seedStation) for organized seed workflows.
       - Adds progression wiring so advanced farming unlocks at seed
         crafting level 20 (including station access and x5/x25 lines).
       - Adds trader + loot integration so farming additions can be
@@ -57,14 +57,14 @@ OTHER DETAILS
       - Adds compatibility conditionals (notably bee flower behavior by
         game version) to keep updates safer across versions.
       - Feature set:
-      - Birdnest and Beehives now plantable for eggs, feathers, and
-        honey.
+        - Birdnest and Beehives now plantable for eggs, feathers, and
+          honey.
       - Naturally discovered through traders and loot.
       - Unlocks at seed crafting level 20.
       - A new "Seed Station" that offers faster seed crafting and
         organization.
       - x5 farming at seed crafting level 20:
-      - Combine 5 normal seeds into 1 x5 seed recipe.
+        - Combine 5 normal seeds into 1 x5 seed recipe.
       - One x5 seed is designed to cover the same planting output as 5
         normal seeds.
       - Most x5 seeds (except mushrooms and bird nests) are paired with
@@ -73,9 +73,112 @@ OTHER DETAILS
         by 70%.
       - x25 variants are also available.
       - Replant variants are available for each seed:
-      - Replants itself.
+        - Replants itself.
       - Harvests no extra seed copies.
       - Can be scrapped to convert back close to 1:1.
+
+  - Implementation edits used to make this work:
+          - Adds a new seedStation workstation block and crafting area
+            (seedStation) for organized seed workflows.
+        - Adds progression wiring so advanced farming unlocks at seed
+          crafting level 20 (including station access and x5/x25 lines).
+        - Adds trader + loot integration so farming additions can be
+          naturally discovered.
+        - Adds large recipe sets for normal, x5, x25, and replant
+          variants (including station-specific and inventory paths).
+        - Adds UI category display groups for seed station tabs: normal,
+          x5, x25, and replants.
+        - Adds compatibility conditionals (notably bee flower behavior
+          by game version) to keep updates safer across versions.
+        - Feature set:
+          - Birdnest and Beehives now plantable for eggs, feathers, and
+            honey.
+        - Naturally discovered through traders and loot.
+        - Unlocks at seed crafting level 20.
+        - A new "Seed Station" that offers faster seed crafting and
+          organization.
+        - x5 farming at seed crafting level 20:
+          - Combine 5 normal seeds into 1 x5 seed recipe.
+        - One x5 seed is designed to cover the same planting output as 5
+          normal seeds.
+        - Most x5 seeds (except mushrooms and bird nests) are paired
+          with x5 farm plot usage.
+        - Level 3 Living Off the Land reduces seed-station crafting time
+          by 70%.
+        - x25 variants are also available.
+        - Replant variants are available for each seed:
+          - Replants itself.
+        - Harvests no extra seed copies.
+        - Can be scrapped to convert back close to 1:1.
+
+  - Implementation edits used to make this work:
+          - Adds a new seedStation workstation block and crafting area
+            (seedStation) for organized seed workflows.
+        - Adds progression wiring so advanced farming unlocks at seed
+          crafting level 20 (including station access and x5/x25 lines).
+        - Adds trader + loot integration so farming additions can be
+          naturally discovered.
+        - Adds large recipe sets for normal, x5, x25, and replant
+          variants (including station-specific and inventory paths).
+        - Adds UI category display groups for seed station tabs: normal,
+          x5, x25, and replants.
+        - Adds compatibility conditionals (notably bee flower behavior
+          by game version) to keep updates safer across versions.
+        - Feature set:
+          - Birdnest and Beehives now plantable for eggs, feathers, and
+            honey.
+        - Naturally discovered through traders and loot.
+        - Unlocks at seed crafting level 20.
+        - A new "Seed Station" that offers faster seed crafting and
+          organization.
+        - x5 farming at seed crafting level 20:
+          - Combine 5 normal seeds into 1 x5 seed recipe.
+        - One x5 seed is designed to cover the same planting output as 5
+          normal seeds.
+        - Most x5 seeds (except mushrooms and bird nests) are paired
+          with x5 farm plot usage.
+        - Level 3 Living Off the Land reduces seed-station crafting time
+          by 70%.
+        - x25 variants are also available.
+        - Replant variants are available for each seed:
+          - Replants itself.
+        - Harvests no extra seed copies.
+        - Can be scrapped to convert back close to 1:1.
+
+    - Implementation edits used to make this work:
+            - Adds a new seedStation workstation block and crafting area
+              (seedStation) for organized seed workflows.
+          - Adds progression wiring so advanced farming unlocks at seed
+            crafting level 20 (including station access and x5/x25
+            lines).
+          - Adds trader + loot integration so farming additions can be
+            naturally discovered.
+          - Adds large recipe sets for normal, x5, x25, and replant
+            variants (including station-specific and inventory paths).
+          - Adds UI category display groups for seed station tabs:
+            normal, x5, x25, and replants.
+          - Adds compatibility conditionals (notably bee flower behavior
+            by game version) to keep updates safer across versions.
+          - Feature set:
+            - Birdnest and Beehives now plantable for eggs, feathers,
+              and honey.
+          - Naturally discovered through traders and loot.
+          - Unlocks at seed crafting level 20.
+          - A new "Seed Station" that offers faster seed crafting and
+            organization.
+          - x5 farming at seed crafting level 20:
+            - Combine 5 normal seeds into 1 x5 seed recipe.
+          - One x5 seed is designed to cover the same planting output as
+            5 normal seeds.
+          - Most x5 seeds (except mushrooms and bird nests) are paired
+            with x5 farm plot usage.
+          - Level 3 Living Off the Land reduces seed-station crafting
+            time by 70%.
+          - x25 variants are also available.
+          - Replant variants are available for each seed:
+            - Replants itself.
+          - Harvests no extra seed copies.
+          - Can be scrapped to convert back close to 1:1.
 
 
 
@@ -240,150 +343,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v5.6.3
-    - Reduced the xp gain per crop harvested from 10 down to 1. Removes
-    massive xp gain loophole.
-
-------------------------------------------------------------------------
-
-v5.6.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v5.6.1
-    - Several Replants were scrapping into fibers, fixed it.
-
-------------------------------------------------------------------------
-
-v5.6.0
-    - Now you can craft seeds that replant themselves.
-    - Updated README format.
-
-------------------------------------------------------------------------
-
-v5.5.0
-    - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
-
-------------------------------------------------------------------------
-
-v5.4.0
-    - If playing 7d2d version 2.5, will NO LONGER be able to craft bee
-    flower seeds.
-    - Still safe to update AND does work with previous versions.
-    - Existing Bee Flower Seeds can be planted and grown, but will no
-    longer drop seeds.
-    - Bee flower no longer findable at traders and loot.
-
-------------------------------------------------------------------------
-
-v5.3.1
-    - Max Damage of seed station is now 500 (increased).
-    - Breaking the seed station returns it to your inventory.
-    - Icon fixed to show which recipes have to be done at the seed
-    station.
-
-------------------------------------------------------------------------
-
-v5.3.0
-    - Now can craft x5 and x25 variants directly from inventory.
-
-------------------------------------------------------------------------
-
-v5.2.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v5.1.1
-    - Changed how the seeds alphabetically sort themselves.
-
-------------------------------------------------------------------------
-
-v5.1.0
-    - changed beeflower ingredients to require crops, not the seeds.
-      Also
-    changed the amount.
-    - Reduced crafting time of beeflower and birdnest to match other
-    crops.
-    - Added Seed Workbench (aka hydroponic farm block), required to
-      craft
-    x5 farming.
-    - Station has categories for regular seeds/farm plots and another
-      for
-    x5 variants.
-    - Added x25 varients along with multiple recipes to obtain them.
-    - Made categories at seed station for single, x5, and x25 variants.
-    - Updated sorting orders for both in menus and alphabetical ordering
-    in inventories/storages.
-
-------------------------------------------------------------------------
-
-v5.0.1
-    - Fixed an error that allowed crazy farming of Hops.
-
-------------------------------------------------------------------------
-
-v5.0.0
-    - Updated for 7d2d Version 2.
-    - Removed my previous seed collecting system.
-    - Updated purple book adjustments.
-    - Reduced probability of finding nest or beeflower in world and
-    traders.
-    - reduced how much eggs, feathers, and honey you get per "crop" for
-    better gameplay.
-    - Updated the code to better access vanilla code to account for
-    possible game updates.
-
-------------------------------------------------------------------------
-
-v4.0.0
-    - Updated to fit zooming features on HUD.
-
-------------------------------------------------------------------------
-
-v3.1.0
-    - Updated the windows section to work with HUD update.
-    - Updated added seeds and x5 seeds to appropriately work with Farmer
-    - Armor.
-    - You now only find 1 honey with bee's, unless you get the extra
-      from
-    farmer armor.
-    - Changed crafting time of birdnest and beehive from 20 to 3
-      seconds.
-    - Changed birdnest's cornmeal ingredient count from 5 to 25.
-    - World crops have an additional seed drop chance with the farmer
-    armor seed bonus, at half the chance.
-
-------------------------------------------------------------------------
-
-v3.0.0
-    - Updated to V1
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Updated the Bee Flower progression blocks to use a better model
-    since
-    - A20! came out.
-    - REVAMPED the seed drop chance on player planted crops.
-    - Removed the recipe of 3 seeds per flower at max Living Off the
-    - Land.
-    - Returned the x5 versions of crops and farmplots from my A19 mods.
-
-------------------------------------------------------------------------
-
-v1.2.0
-    - World crops 10% seed drop.
-    - Increased seed drop chance.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Tier 3 of living off the land actually reduces seed requirements
-      for
-    planting.
-    - Updated ReadMe to new format.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

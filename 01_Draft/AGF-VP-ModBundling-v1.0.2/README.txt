@@ -37,9 +37,9 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds a large set of bundle items for mods (Bundle item variants)
-        across armor, gun, melee, vehicle, robotic drone, and
-        utility/radiation mod categories.
+        - Adds a large set of bundle items for mods (Bundle item
+          variants) across armor, gun, melee, vehicle, robotic drone,
+          and utility/radiation mod categories.
       - Each bundle item uses OpenBundle behavior on use and returns
         exactly 1 matching original mod item.
       - Bundle items are configured with stack size 50, non-sellable
@@ -51,12 +51,81 @@ OTHER DETAILS
         commented out rather than active (maintained for easier future
         toggling/reference).
       - Feature set:
-      - Lets players compress many different mod items into stackable
-        bundle versions to reduce storage clutter.
+        - Lets players compress many different mod items into stackable
+          bundle versions to reduce storage clutter.
       - Keeps conversion simple and reversible: craft a bundle, then
         open it back into the original mod.
       - Focuses on inventory quality-of-life and organization, not stat
         or combat balance changes.
+
+  - Implementation edits used to make this work:
+          - Adds a large set of bundle items for mods (Bundle item
+            variants) across armor, gun, melee, vehicle, robotic drone,
+            and utility/radiation mod categories.
+        - Each bundle item uses OpenBundle behavior on use and returns
+          exactly 1 matching original mod item.
+        - Bundle items are configured with stack size 50, non-sellable
+          trader behavior, and bundle-themed icon/model presentation.
+        - Adds matching recipes for each bundle item, using simple
+          1-to-1 conversion (1 mod -> 1 bundle) with 0 craft time and 0
+          craft XP.
+        - Current config includes 92 bundle item/recipe definitions.
+        - Several legacy or removed-game-version entries are
+          intentionally commented out rather than active (maintained for
+          easier future toggling/reference).
+        - Feature set:
+          - Lets players compress many different mod items into
+            stackable bundle versions to reduce storage clutter.
+        - Keeps conversion simple and reversible: craft a bundle, then
+          open it back into the original mod.
+        - Focuses on inventory quality-of-life and organization, not
+          stat or combat balance changes.
+
+  - Implementation edits used to make this work:
+          - Adds a large set of bundle items for mods (Bundle item
+            variants) across armor, gun, melee, vehicle, robotic drone,
+            and utility/radiation mod categories.
+        - Each bundle item uses OpenBundle behavior on use and returns
+          exactly 1 matching original mod item.
+        - Bundle items are configured with stack size 50, non-sellable
+          trader behavior, and bundle-themed icon/model presentation.
+        - Adds matching recipes for each bundle item, using simple
+          1-to-1 conversion (1 mod -> 1 bundle) with 0 craft time and 0
+          craft XP.
+        - Current config includes 92 bundle item/recipe definitions.
+        - Several legacy or removed-game-version entries are
+          intentionally commented out rather than active (maintained for
+          easier future toggling/reference).
+        - Feature set:
+          - Lets players compress many different mod items into
+            stackable bundle versions to reduce storage clutter.
+        - Keeps conversion simple and reversible: craft a bundle, then
+          open it back into the original mod.
+        - Focuses on inventory quality-of-life and organization, not
+          stat or combat balance changes.
+
+    - Implementation edits used to make this work:
+            - Adds a large set of bundle items for mods (Bundle item
+              variants) across armor, gun, melee, vehicle, robotic
+              drone, and utility/radiation mod categories.
+          - Each bundle item uses OpenBundle behavior on use and returns
+            exactly 1 matching original mod item.
+          - Bundle items are configured with stack size 50, non-sellable
+            trader behavior, and bundle-themed icon/model presentation.
+          - Adds matching recipes for each bundle item, using simple
+            1-to-1 conversion (1 mod -> 1 bundle) with 0 craft time and
+            0 craft XP.
+          - Current config includes 92 bundle item/recipe definitions.
+          - Several legacy or removed-game-version entries are
+            intentionally commented out rather than active (maintained
+            for easier future toggling/reference).
+          - Feature set:
+            - Lets players compress many different mod items into
+              stackable bundle versions to reduce storage clutter.
+          - Keeps conversion simple and reversible: craft a bundle, then
+            open it back into the original mod.
+          - Focuses on inventory quality-of-life and organization, not
+            stat or combat balance changes.
 
 
 
@@ -221,18 +290,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.2
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Updated language to show 7d2d version 2.
-    - Removed the bundling of the mods that were removed between 7d2d
-    version 1 and 2.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Took out of 1Core and made standalone
-    - Also updated contents for v1.0.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

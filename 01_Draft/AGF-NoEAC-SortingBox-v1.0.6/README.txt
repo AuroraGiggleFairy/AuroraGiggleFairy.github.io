@@ -47,8 +47,8 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - All Versions:
-      - Uses Sorting Box tagged blocks as source boxes for item
-        distribution.
+        - Uses Sorting Box tagged blocks as source boxes for item
+          distribution.
       - When a valid Sorting Box interaction finishes, it scans nearby
         storage and distributes matching items.
       - Crafting recipe: 10 Forged Iron for the Sorting Box helper item.
@@ -57,8 +57,8 @@ OTHER DETAILS
       - Distribution skips targets that are currently in use.
       - Backpacks, vehicles, and non-player storage are ignored.
       - Sorting rules:
-      - If the Sorting Box is unlocked, it can sort into unlocked
-        storage only.
+        - If the Sorting Box is unlocked, it can sort into unlocked
+          storage only.
       - If the Sorting Box is locked, it can sort into unlocked storage
         and locked storage only when keycodes/passwords match.
       - If the target is locked without a keycode/password set, transfer
@@ -66,22 +66,18 @@ OTHER DETAILS
       - Slot-lock behavior is respected when combining/sorting stacks in
         target containers.
       - Temporary notice text can appear on affected containers when
-        distribution is blocked.
-
-Server-Side Use:
-      - Dedicated server install runs the sorting logic for all players.
+        distribution is blocked. Server-Side Use:
+        - Dedicated server install runs the sorting logic for all
+          players.
       - Main settings file: robotic-inbox.json.
       - Includes configurable options for range, blocked/success notice
         timing, and base siphoning protection.
       - Base siphoning protection helps prevent inbox scans from
-        crossing outside the same LCB area.
-
-Player-Hosted Use:
-      - For player-hosted sessions, host and joining players should
-        install the mod so behavior stays consistent.
-
-F1 Console Commands:
-      - Main aliases: roboticinbox, ri
+        crossing outside the same LCB area. Player-Hosted Use:
+        - For player-hosted sessions, host and joining players should
+          install the mod so behavior stays consistent. F1 Console
+          Commands:
+        - Main aliases: roboticinbox, ri
       - Show current settings: roboticinbox settings
       - Set horizontal scan range: roboticinbox horizontal-range <int>
       - Set vertical scan range: roboticinbox vertical-range <int>
@@ -91,11 +87,152 @@ F1 Console Commands:
         <float>
       - Toggle base siphoning protection: roboticinbox
         base-siphoning-protection
-      - Toggle debug mode: roboticinbox dm
-
-Notes:
-      - This mod does not use chat commands for configuration.
+      - Toggle debug mode: roboticinbox dm Notes:
+        - This mod does not use chat commands for configuration.
       - Settings are saved and loaded from robotic-inbox.json.
+
+  - All Versions:
+          - Uses Sorting Box tagged blocks as source boxes for item
+            distribution.
+        - When a valid Sorting Box interaction finishes, it scans nearby
+          storage and distributes matching items.
+        - Crafting recipe: 10 Forged Iron for the Sorting Box helper
+          item.
+        - Default scan range is 25m horizontal and 25m vertical (25 /
+          25).
+        - Default range values are editable in robotic-inbox.json.
+        - Distribution skips targets that are currently in use.
+        - Backpacks, vehicles, and non-player storage are ignored.
+        - Sorting rules:
+          - If the Sorting Box is unlocked, it can sort into unlocked
+            storage only.
+        - If the Sorting Box is locked, it can sort into unlocked
+          storage and locked storage only when keycodes/passwords match.
+        - If the target is locked without a keycode/password set,
+          transfer is blocked.
+        - Slot-lock behavior is respected when combining/sorting stacks
+          in target containers.
+        - Temporary notice text can appear on affected containers when
+          distribution is blocked. Server-Side Use:
+          - Dedicated server install runs the sorting logic for all
+            players.
+        - Main settings file: robotic-inbox.json.
+        - Includes configurable options for range, blocked/success
+          notice timing, and base siphoning protection.
+        - Base siphoning protection helps prevent inbox scans from
+          crossing outside the same LCB area. Player-Hosted Use:
+          - For player-hosted sessions, host and joining players should
+            install the mod so behavior stays consistent. F1 Console
+            Commands:
+          - Main aliases: roboticinbox, ri
+        - Show current settings: roboticinbox settings
+        - Set horizontal scan range: roboticinbox horizontal-range <int>
+        - Set vertical scan range: roboticinbox vertical-range <int>
+        - Set success notice time: roboticinbox success-notice-time
+          <float>
+        - Set blocked notice time: roboticinbox blocked-notice-time
+          <float>
+        - Toggle base siphoning protection: roboticinbox
+          base-siphoning-protection
+        - Toggle debug mode: roboticinbox dm Notes:
+          - This mod does not use chat commands for configuration.
+        - Settings are saved and loaded from robotic-inbox.json.
+
+  - All Versions:
+          - Uses Sorting Box tagged blocks as source boxes for item
+            distribution.
+        - When a valid Sorting Box interaction finishes, it scans nearby
+          storage and distributes matching items.
+        - Crafting recipe: 10 Forged Iron for the Sorting Box helper
+          item.
+        - Default scan range is 25m horizontal and 25m vertical (25 /
+          25).
+        - Default range values are editable in robotic-inbox.json.
+        - Distribution skips targets that are currently in use.
+        - Backpacks, vehicles, and non-player storage are ignored.
+        - Sorting rules:
+          - If the Sorting Box is unlocked, it can sort into unlocked
+            storage only.
+        - If the Sorting Box is locked, it can sort into unlocked
+          storage and locked storage only when keycodes/passwords match.
+        - If the target is locked without a keycode/password set,
+          transfer is blocked.
+        - Slot-lock behavior is respected when combining/sorting stacks
+          in target containers.
+        - Temporary notice text can appear on affected containers when
+          distribution is blocked. Server-Side Use:
+          - Dedicated server install runs the sorting logic for all
+            players.
+        - Main settings file: robotic-inbox.json.
+        - Includes configurable options for range, blocked/success
+          notice timing, and base siphoning protection.
+        - Base siphoning protection helps prevent inbox scans from
+          crossing outside the same LCB area. Player-Hosted Use:
+          - For player-hosted sessions, host and joining players should
+            install the mod so behavior stays consistent. F1 Console
+            Commands:
+          - Main aliases: roboticinbox, ri
+        - Show current settings: roboticinbox settings
+        - Set horizontal scan range: roboticinbox horizontal-range <int>
+        - Set vertical scan range: roboticinbox vertical-range <int>
+        - Set success notice time: roboticinbox success-notice-time
+          <float>
+        - Set blocked notice time: roboticinbox blocked-notice-time
+          <float>
+        - Toggle base siphoning protection: roboticinbox
+          base-siphoning-protection
+        - Toggle debug mode: roboticinbox dm Notes:
+          - This mod does not use chat commands for configuration.
+        - Settings are saved and loaded from robotic-inbox.json.
+
+    - All Versions:
+            - Uses Sorting Box tagged blocks as source boxes for item
+              distribution.
+          - When a valid Sorting Box interaction finishes, it scans
+            nearby storage and distributes matching items.
+          - Crafting recipe: 10 Forged Iron for the Sorting Box helper
+            item.
+          - Default scan range is 25m horizontal and 25m vertical (25 /
+            25).
+          - Default range values are editable in robotic-inbox.json.
+          - Distribution skips targets that are currently in use.
+          - Backpacks, vehicles, and non-player storage are ignored.
+          - Sorting rules:
+            - If the Sorting Box is unlocked, it can sort into unlocked
+              storage only.
+          - If the Sorting Box is locked, it can sort into unlocked
+            storage and locked storage only when keycodes/passwords
+            match.
+          - If the target is locked without a keycode/password set,
+            transfer is blocked.
+          - Slot-lock behavior is respected when combining/sorting
+            stacks in target containers.
+          - Temporary notice text can appear on affected containers when
+            distribution is blocked. Server-Side Use:
+            - Dedicated server install runs the sorting logic for all
+              players.
+          - Main settings file: robotic-inbox.json.
+          - Includes configurable options for range, blocked/success
+            notice timing, and base siphoning protection.
+          - Base siphoning protection helps prevent inbox scans from
+            crossing outside the same LCB area. Player-Hosted Use:
+            - For player-hosted sessions, host and joining players
+              should install the mod so behavior stays consistent. F1
+              Console Commands:
+            - Main aliases: roboticinbox, ri
+          - Show current settings: roboticinbox settings
+          - Set horizontal scan range: roboticinbox horizontal-range
+            <int>
+          - Set vertical scan range: roboticinbox vertical-range <int>
+          - Set success notice time: roboticinbox success-notice-time
+            <float>
+          - Set blocked notice time: roboticinbox blocked-notice-time
+            <float>
+          - Toggle base siphoning protection: roboticinbox
+            base-siphoning-protection
+          - Toggle debug mode: roboticinbox dm Notes:
+            - This mod does not use chat commands for configuration.
+          - Settings are saved and loaded from robotic-inbox.json.
 
 
 
@@ -260,10 +397,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.6
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.5
-    - Updated backpack references due to name change.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

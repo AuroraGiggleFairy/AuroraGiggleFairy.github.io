@@ -40,29 +40,96 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - items.xml updates stack behavior: smallEngine stack size set to 500
-      - carBattery converted to non-quality stackable battery (stack
-        500)
-      - solarCell converted to non-quality stackable cell (stack 500)
-      - items.xml also adds carBatteryCharge (Rechargeable Battery) for
-        battery-bank use.
-      - blocks.xml changes battery bank slot item to carBatteryCharge
-        and adjusts battery/solar bank output-per-stack values.
-      - recipes.xml adds/adjusts workbench crafting for key items:
-        engine (smallEngine) solar bank (solarbank) solar cell
-        (solarCell)
-      - rechargeable battery conversion (carBattery -> carBatteryCharge)
-      - progression.xml ties unlocks to craftingElectrician
-progression:
-engine at Electrician level 45+ solar bank at level 80+ solar cell
-at level 100
-      - battery recipe placement adjusted into Electrician progression
-        tiers
-
-Usage Notes:
-      - Existing battery banks should be refit with Rechargeable Battery
-        items (carBatteryCharge) for this system.
+  carBattery converted to non-quality stackable battery (stack 500)
+        - solarCell converted to non-quality stackable cell (stack 500)
+        - items.xml also adds carBatteryCharge (Rechargeable Battery)
+          for battery-bank use.
+        - blocks.xml changes battery bank slot item to carBatteryCharge
+          and adjusts battery/solar bank output-per-stack values.
+        - recipes.xml adds/adjusts workbench crafting for key items:
+          engine (smallEngine) solar bank (solarbank) solar cell
+          (solarCell)
+        - rechargeable battery conversion (carBattery ->
+          carBatteryCharge) progression.xml ties unlocks to
+          craftingElectrician progression: engine at Electrician level
+          45+ solar bank at level 80+ solar cell at level 100
+        - battery recipe placement adjusted into Electrician progression
+          tiers Usage Notes:
+        - Existing battery banks should be refit with Rechargeable
+          Battery items (carBatteryCharge) for this system.
       - Stacking for car batteries and solar cells is partially enabled
         by removing their quality-tier behavior in this setup.
+
+  - items.xml updates stack behavior: smallEngine stack size set to 500
+    carBattery converted to non-quality stackable battery (stack 500)
+          - solarCell converted to non-quality stackable cell (stack
+            500)
+          - items.xml also adds carBatteryCharge (Rechargeable Battery)
+            for battery-bank use.
+          - blocks.xml changes battery bank slot item to
+            carBatteryCharge and adjusts battery/solar bank
+            output-per-stack values.
+          - recipes.xml adds/adjusts workbench crafting for key items:
+            engine (smallEngine) solar bank (solarbank) solar cell
+            (solarCell)
+          - rechargeable battery conversion (carBattery ->
+            carBatteryCharge) progression.xml ties unlocks to
+            craftingElectrician progression: engine at Electrician level
+            45+ solar bank at level 80+ solar cell at level 100
+          - battery recipe placement adjusted into Electrician
+            progression tiers Usage Notes:
+          - Existing battery banks should be refit with Rechargeable
+            Battery items (carBatteryCharge) for this system.
+        - Stacking for car batteries and solar cells is partially
+          enabled by removing their quality-tier behavior in this setup.
+
+  - items.xml updates stack behavior: smallEngine stack size set to 500
+    carBattery converted to non-quality stackable battery (stack 500)
+          - solarCell converted to non-quality stackable cell (stack
+            500)
+          - items.xml also adds carBatteryCharge (Rechargeable Battery)
+            for battery-bank use.
+          - blocks.xml changes battery bank slot item to
+            carBatteryCharge and adjusts battery/solar bank
+            output-per-stack values.
+          - recipes.xml adds/adjusts workbench crafting for key items:
+            engine (smallEngine) solar bank (solarbank) solar cell
+            (solarCell)
+          - rechargeable battery conversion (carBattery ->
+            carBatteryCharge) progression.xml ties unlocks to
+            craftingElectrician progression: engine at Electrician level
+            45+ solar bank at level 80+ solar cell at level 100
+          - battery recipe placement adjusted into Electrician
+            progression tiers Usage Notes:
+          - Existing battery banks should be refit with Rechargeable
+            Battery items (carBatteryCharge) for this system.
+        - Stacking for car batteries and solar cells is partially
+          enabled by removing their quality-tier behavior in this setup.
+
+    - items.xml updates stack behavior: smallEngine stack size set to
+      500 carBattery converted to non-quality stackable battery (stack
+      500)
+            - solarCell converted to non-quality stackable cell (stack
+              500)
+            - items.xml also adds carBatteryCharge (Rechargeable
+              Battery) for battery-bank use.
+            - blocks.xml changes battery bank slot item to
+              carBatteryCharge and adjusts battery/solar bank
+              output-per-stack values.
+            - recipes.xml adds/adjusts workbench crafting for key items:
+              engine (smallEngine) solar bank (solarbank) solar cell
+              (solarCell)
+            - rechargeable battery conversion (carBattery ->
+              carBatteryCharge) progression.xml ties unlocks to
+              craftingElectrician progression: engine at Electrician
+              level 45+ solar bank at level 80+ solar cell at level 100
+            - battery recipe placement adjusted into Electrician
+              progression tiers Usage Notes:
+            - Existing battery banks should be refit with Rechargeable
+              Battery items (carBatteryCharge) for this system.
+          - Stacking for car batteries and solar cells is partially
+            enabled by removing their quality-tier behavior in this
+            setup.
 
 
 
@@ -227,55 +294,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v3.3.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v3.3.0
-    - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
-
-------------------------------------------------------------------------
-
-v3.2.0
-    - Updated for 7d2d version 2.5 (still works with previous versions).
-    - Update was specifically how it modifies the purple book mod if you
-    use it.
-
-------------------------------------------------------------------------
-
-v3.1.1
-    - added missing tooltips for the purple book.
-
-------------------------------------------------------------------------
-
-v3.1.0
-    - Will now only apply purple book edits if you have my purple book
-    installed.
-
-------------------------------------------------------------------------
-
-v3.0.1
-    - Updated to work with 7d2d Version 2.
-
-------------------------------------------------------------------------
-
-v3.0.0
-    - Renamed to CraftStackEngBattCells.
-    - Updated HUD Checklist to incorporate changes with both checklist
-      and
-    zoomed.
-    - Craft solarbanks and solar cells at appropriate levels of
-    progression.
-
-------------------------------------------------------------------------
-
-v2.0.0
-    - Made it compatible with zoom in features of the HUDPlus.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Transferred code out of 1Core to this standalone modlet.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

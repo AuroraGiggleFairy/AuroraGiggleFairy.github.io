@@ -48,19 +48,15 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Hybrid Mod Description:
-      - Works standalone as server-only, or as server+client for full UI
-        features.
+        - Works standalone as server-only, or as server+client for full
+          UI features.
       - Players can join without client install; client install is
-        optional for enhanced lock UI and syncing.
-
-All Versions:
-      - Placed workstations, collectors, generators, and ranged defenses
-        are lockable.
+        optional for enhanced lock UI and syncing. All Versions:
+        - Placed workstations, collectors, generators, and ranged
+          defenses are lockable.
       - Locked interaction plays locked feedback and respects
-        owner/allowed-user permissions.
-
-Server-Side Use:
-      - Commands target the focused supported block within 5 meters.
+        owner/allowed-user permissions. Server-Side Use:
+        - Commands target the focused supported block within 5 meters.
       - Server-only users can lock, unlock, check status, and manage
         keypad codes via chat commands.
       - Server-only installs do not show the client lock-status UI
@@ -68,51 +64,222 @@ Server-Side Use:
       - Chat command for server-side-only users: /agf-lw
         <lock|unlock|code set <code>|code clear|code use <code>>.
       - Chat command to check current target lock state: /agf-lw status.
-
-Client-Side Use:
-      - Shows lock status in UI prompts (Secured, Accessible, Access
-        Denied).
+        Client-Side Use:
+        - Shows lock status in UI prompts (Secured, Accessible, Access
+          Denied).
       - Supports storage-style lock editing flow and synced lock-state
         updates.
       - Client-side installs can use both chat commands and F1 console
         commands.
       - Console command (F1): agf-lw <lock|unlock|code set <code>|code
         clear|code use <code>>.
-      - Status command: /agf-lw status or agf-lw status.
-
-Chat Commands:
-      - Main alias: /agf-lw
+      - Status command: /agf-lw status or agf-lw status. Chat Commands:
+        - Main alias: /agf-lw
       - Status: /agf-lw status
       - Lock: /agf-lw lock
       - Unlock: /agf-lw unlock
       - Set keypad code: /agf-lw code set <code>
       - Clear keypad code: /agf-lw code clear
       - Use keypad code for access: /agf-lw code use <code>
-      - Help: /agf-lw help
-
-F1 Console Commands (client install required):
-      - Main alias: agf-lw
+      - Help: /agf-lw help F1 Console Commands (client install
+        required):
+        - Main alias: agf-lw
       - Status: agf-lw status
       - Lock: agf-lw lock
       - Unlock: agf-lw unlock
       - Set keypad code: agf-lw code set <code>
       - Clear keypad code: agf-lw code clear
       - Use keypad code for access: agf-lw code use <code>
-      - Help: agf-lw help
-
-Command Notes:
-      - If you do not install the client side, use chat commands only.
+      - Help: agf-lw help Command Notes:
+        - If you do not install the client side, use chat commands only.
       - Focused-block commands require an in-world player and a valid
         lockable target in range.
       - Console/telnet cannot use focused-block lock commands.
       - Legacy aliases also work: lw, lockws, lockableworkstations.
-
-Admin Behavior:
-      - Admins can run the same agf-lw commands to manage any focused
-        supported block, including blocks they do not own.
+        Admin Behavior:
+        - Admins can run the same agf-lw commands to manage any focused
+          supported block, including blocks they do not own.
       - Admins can still open locked supported blocks (access-denied
         checks explicitly allow admins).
       - Non-admin players can manage owned or ACL-allowed workstations.
+
+  - Hybrid Mod Description:
+          - Works standalone as server-only, or as server+client for
+            full UI features.
+        - Players can join without client install; client install is
+          optional for enhanced lock UI and syncing. All Versions:
+          - Placed workstations, collectors, generators, and ranged
+            defenses are lockable.
+        - Locked interaction plays locked feedback and respects
+          owner/allowed-user permissions. Server-Side Use:
+          - Commands target the focused supported block within 5 meters.
+        - Server-only users can lock, unlock, check status, and manage
+          keypad codes via chat commands.
+        - Server-only installs do not show the client lock-status UI
+          overlays.
+        - Chat command for server-side-only users: /agf-lw
+          <lock|unlock|code set <code>|code clear|code use <code>>.
+        - Chat command to check current target lock state: /agf-lw
+          status. Client-Side Use:
+          - Shows lock status in UI prompts (Secured, Accessible, Access
+            Denied).
+        - Supports storage-style lock editing flow and synced lock-state
+          updates.
+        - Client-side installs can use both chat commands and F1 console
+          commands.
+        - Console command (F1): agf-lw <lock|unlock|code set <code>|code
+          clear|code use <code>>.
+        - Status command: /agf-lw status or agf-lw status. Chat
+          Commands:
+          - Main alias: /agf-lw
+        - Status: /agf-lw status
+        - Lock: /agf-lw lock
+        - Unlock: /agf-lw unlock
+        - Set keypad code: /agf-lw code set <code>
+        - Clear keypad code: /agf-lw code clear
+        - Use keypad code for access: /agf-lw code use <code>
+        - Help: /agf-lw help F1 Console Commands (client install
+          required):
+          - Main alias: agf-lw
+        - Status: agf-lw status
+        - Lock: agf-lw lock
+        - Unlock: agf-lw unlock
+        - Set keypad code: agf-lw code set <code>
+        - Clear keypad code: agf-lw code clear
+        - Use keypad code for access: agf-lw code use <code>
+        - Help: agf-lw help Command Notes:
+          - If you do not install the client side, use chat commands
+            only.
+        - Focused-block commands require an in-world player and a valid
+          lockable target in range.
+        - Console/telnet cannot use focused-block lock commands.
+        - Legacy aliases also work: lw, lockws, lockableworkstations.
+          Admin Behavior:
+          - Admins can run the same agf-lw commands to manage any
+            focused supported block, including blocks they do not own.
+        - Admins can still open locked supported blocks (access-denied
+          checks explicitly allow admins).
+        - Non-admin players can manage owned or ACL-allowed
+          workstations.
+
+  - Hybrid Mod Description:
+          - Works standalone as server-only, or as server+client for
+            full UI features.
+        - Players can join without client install; client install is
+          optional for enhanced lock UI and syncing. All Versions:
+          - Placed workstations, collectors, generators, and ranged
+            defenses are lockable.
+        - Locked interaction plays locked feedback and respects
+          owner/allowed-user permissions. Server-Side Use:
+          - Commands target the focused supported block within 5 meters.
+        - Server-only users can lock, unlock, check status, and manage
+          keypad codes via chat commands.
+        - Server-only installs do not show the client lock-status UI
+          overlays.
+        - Chat command for server-side-only users: /agf-lw
+          <lock|unlock|code set <code>|code clear|code use <code>>.
+        - Chat command to check current target lock state: /agf-lw
+          status. Client-Side Use:
+          - Shows lock status in UI prompts (Secured, Accessible, Access
+            Denied).
+        - Supports storage-style lock editing flow and synced lock-state
+          updates.
+        - Client-side installs can use both chat commands and F1 console
+          commands.
+        - Console command (F1): agf-lw <lock|unlock|code set <code>|code
+          clear|code use <code>>.
+        - Status command: /agf-lw status or agf-lw status. Chat
+          Commands:
+          - Main alias: /agf-lw
+        - Status: /agf-lw status
+        - Lock: /agf-lw lock
+        - Unlock: /agf-lw unlock
+        - Set keypad code: /agf-lw code set <code>
+        - Clear keypad code: /agf-lw code clear
+        - Use keypad code for access: /agf-lw code use <code>
+        - Help: /agf-lw help F1 Console Commands (client install
+          required):
+          - Main alias: agf-lw
+        - Status: agf-lw status
+        - Lock: agf-lw lock
+        - Unlock: agf-lw unlock
+        - Set keypad code: agf-lw code set <code>
+        - Clear keypad code: agf-lw code clear
+        - Use keypad code for access: agf-lw code use <code>
+        - Help: agf-lw help Command Notes:
+          - If you do not install the client side, use chat commands
+            only.
+        - Focused-block commands require an in-world player and a valid
+          lockable target in range.
+        - Console/telnet cannot use focused-block lock commands.
+        - Legacy aliases also work: lw, lockws, lockableworkstations.
+          Admin Behavior:
+          - Admins can run the same agf-lw commands to manage any
+            focused supported block, including blocks they do not own.
+        - Admins can still open locked supported blocks (access-denied
+          checks explicitly allow admins).
+        - Non-admin players can manage owned or ACL-allowed
+          workstations.
+
+    - Hybrid Mod Description:
+            - Works standalone as server-only, or as server+client for
+              full UI features.
+          - Players can join without client install; client install is
+            optional for enhanced lock UI and syncing. All Versions:
+            - Placed workstations, collectors, generators, and ranged
+              defenses are lockable.
+          - Locked interaction plays locked feedback and respects
+            owner/allowed-user permissions. Server-Side Use:
+            - Commands target the focused supported block within 5
+              meters.
+          - Server-only users can lock, unlock, check status, and manage
+            keypad codes via chat commands.
+          - Server-only installs do not show the client lock-status UI
+            overlays.
+          - Chat command for server-side-only users: /agf-lw
+            <lock|unlock|code set <code>|code clear|code use <code>>.
+          - Chat command to check current target lock state: /agf-lw
+            status. Client-Side Use:
+            - Shows lock status in UI prompts (Secured, Accessible,
+              Access Denied).
+          - Supports storage-style lock editing flow and synced
+            lock-state updates.
+          - Client-side installs can use both chat commands and F1
+            console commands.
+          - Console command (F1): agf-lw <lock|unlock|code set
+            <code>|code clear|code use <code>>.
+          - Status command: /agf-lw status or agf-lw status. Chat
+            Commands:
+            - Main alias: /agf-lw
+          - Status: /agf-lw status
+          - Lock: /agf-lw lock
+          - Unlock: /agf-lw unlock
+          - Set keypad code: /agf-lw code set <code>
+          - Clear keypad code: /agf-lw code clear
+          - Use keypad code for access: /agf-lw code use <code>
+          - Help: /agf-lw help F1 Console Commands (client install
+            required):
+            - Main alias: agf-lw
+          - Status: agf-lw status
+          - Lock: agf-lw lock
+          - Unlock: agf-lw unlock
+          - Set keypad code: agf-lw code set <code>
+          - Clear keypad code: agf-lw code clear
+          - Use keypad code for access: agf-lw code use <code>
+          - Help: agf-lw help Command Notes:
+            - If you do not install the client side, use chat commands
+              only.
+          - Focused-block commands require an in-world player and a
+            valid lockable target in range.
+          - Console/telnet cannot use focused-block lock commands.
+          - Legacy aliases also work: lw, lockws, lockableworkstations.
+            Admin Behavior:
+            - Admins can run the same agf-lw commands to manage any
+              focused supported block, including blocks they do not own.
+          - Admins can still open locked supported blocks (access-denied
+            checks explicitly allow admins).
+          - Non-admin players can manage owned or ACL-allowed
+            workstations.
 
 
 
@@ -277,33 +444,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.2.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.2.0
-    - Attempt to create as "hybrid" server/client side mod.
-
-------------------------------------------------------------------------
-
-v1.1.1
-    - Attempt to fix the final issue with persisting lock status for ALL
-    clients after server restart.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Added locks to generators and ranged defenses.
-    - Dedicated servers should now maintain lock status of these blocks
-    appropriately.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Released beginning functioning
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

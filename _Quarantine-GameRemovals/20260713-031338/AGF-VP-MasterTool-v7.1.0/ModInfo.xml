@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-MasterTool" />
+  <DisplayName value="AGF Master Tool" />
+  <Version value="7.1.0" />
+  <Description value="Adds the endgame Master Tool, an all-in-one harvesting item." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

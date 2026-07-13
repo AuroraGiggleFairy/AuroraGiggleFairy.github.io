@@ -39,23 +39,75 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Specific XML Edits: blocks.xml removes HeatMapStrength, HeatMapTime,
-    and HeatMapFrequency from cntApiary.
-      - blocks.xml adds new block cntApiaryAGF that extends cntApiary
-        and sets MultiBlockDim to 2,2,1 (vanilla is 3,2,1).
-      - blocks.xml removes old cntApiary drop entries and replaces
-        destroy/fall drops so old apiaries return cntApiaryAGF.
-      - recipes.xml renames the craftable apiary recipe from cntApiary
-        to cntApiaryAGF.
-      - progression.xml unlocks cntApiaryAGF at craftingWorkstations
-        level 30+ and updates the displayed unlock entry to the new
-        block.
-      - XUi/windows.xml includes a conditional compatibility set for
-        AGF-HUDPlus-PurpleBook so tooltip text points to cntApiaryAGF
-        when that mod is loaded.
+  and HeatMapFrequency from cntApiary.
+        - blocks.xml adds new block cntApiaryAGF that extends cntApiary
+          and sets MultiBlockDim to 2,2,1 (vanilla is 3,2,1).
+        - blocks.xml removes old cntApiary drop entries and replaces
+          destroy/fall drops so old apiaries return cntApiaryAGF.
+        - recipes.xml renames the craftable apiary recipe from cntApiary
+          to cntApiaryAGF.
+        - progression.xml unlocks cntApiaryAGF at craftingWorkstations
+          level 30+ and updates the displayed unlock entry to the new
+          block.
+        - XUi/windows.xml includes a conditional compatibility set for
+          AGF-HUDPlus-PurpleBook so tooltip text points to cntApiaryAGF
+          when that mod is loaded. Usage Notes:
+        - Existing placed vanilla 3x2x1 apiaries should be broken to get
+          the 2x2x1 apiary block.
 
-Usage Notes:
-      - Existing placed vanilla 3x2x1 apiaries should be broken to get
-        the 2x2x1 apiary block.
+  - Specific XML Edits: blocks.xml removes HeatMapStrength, HeatMapTime,
+    and HeatMapFrequency from cntApiary.
+          - blocks.xml adds new block cntApiaryAGF that extends
+            cntApiary and sets MultiBlockDim to 2,2,1 (vanilla is
+            3,2,1).
+          - blocks.xml removes old cntApiary drop entries and replaces
+            destroy/fall drops so old apiaries return cntApiaryAGF.
+          - recipes.xml renames the craftable apiary recipe from
+            cntApiary to cntApiaryAGF.
+          - progression.xml unlocks cntApiaryAGF at craftingWorkstations
+            level 30+ and updates the displayed unlock entry to the new
+            block.
+          - XUi/windows.xml includes a conditional compatibility set for
+            AGF-HUDPlus-PurpleBook so tooltip text points to
+            cntApiaryAGF when that mod is loaded. Usage Notes:
+          - Existing placed vanilla 3x2x1 apiaries should be broken to
+            get the 2x2x1 apiary block.
+
+  - Specific XML Edits: blocks.xml removes HeatMapStrength, HeatMapTime,
+    and HeatMapFrequency from cntApiary.
+          - blocks.xml adds new block cntApiaryAGF that extends
+            cntApiary and sets MultiBlockDim to 2,2,1 (vanilla is
+            3,2,1).
+          - blocks.xml removes old cntApiary drop entries and replaces
+            destroy/fall drops so old apiaries return cntApiaryAGF.
+          - recipes.xml renames the craftable apiary recipe from
+            cntApiary to cntApiaryAGF.
+          - progression.xml unlocks cntApiaryAGF at craftingWorkstations
+            level 30+ and updates the displayed unlock entry to the new
+            block.
+          - XUi/windows.xml includes a conditional compatibility set for
+            AGF-HUDPlus-PurpleBook so tooltip text points to
+            cntApiaryAGF when that mod is loaded. Usage Notes:
+          - Existing placed vanilla 3x2x1 apiaries should be broken to
+            get the 2x2x1 apiary block.
+
+    - Specific XML Edits: blocks.xml removes HeatMapStrength,
+      HeatMapTime, and HeatMapFrequency from cntApiary.
+            - blocks.xml adds new block cntApiaryAGF that extends
+              cntApiary and sets MultiBlockDim to 2,2,1 (vanilla is
+              3,2,1).
+            - blocks.xml removes old cntApiary drop entries and replaces
+              destroy/fall drops so old apiaries return cntApiaryAGF.
+            - recipes.xml renames the craftable apiary recipe from
+              cntApiary to cntApiaryAGF.
+            - progression.xml unlocks cntApiaryAGF at
+              craftingWorkstations level 30+ and updates the displayed
+              unlock entry to the new block.
+            - XUi/windows.xml includes a conditional compatibility set
+              for AGF-HUDPlus-PurpleBook so tooltip text points to
+              cntApiaryAGF when that mod is loaded. Usage Notes:
+            - Existing placed vanilla 3x2x1 apiaries should be broken to
+              get the 2x2x1 apiary block.
 
 
 
@@ -220,29 +272,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.4
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.3
-    - Updated readme and code notes.
-
-------------------------------------------------------------------------
-
-v1.0.2
-    - Fun Pimps added full localization for new items, added it to
-    affected items.
-
-------------------------------------------------------------------------
-
-v1.0.1
-    - Corrected how it displays under the vanilla crafting workstations
-    section.
-    - And actually updated the modinfo.xml. facepalm
-    - Other readme updates... more facepalm
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Created the mod.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

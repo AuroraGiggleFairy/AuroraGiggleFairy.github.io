@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-AutoRun" />
+  <DisplayName value="AGF Auto Run" />
+  <Version value="2.1.0" />
+  <Description value="Auto-Run for keyboard and controller, configurable in the Options menu." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

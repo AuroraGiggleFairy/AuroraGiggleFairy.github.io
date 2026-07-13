@@ -38,12 +38,43 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Loads Config/ConsoleOpacity.xml on mod initialization and reads the
+  <Opacity> value.
+        - Opacity values are clamped between 0.0 and 1.0 for safe
+          limits.
+        - Applies configured opacity to the console Scroll View
+          background each time the console opens.
+        - Keeps important console controls readable by using a slightly
+          higher alpha on CommandField and full alpha on CloseButton.
+
+  - Loads Config/ConsoleOpacity.xml on mod initialization and reads the
     <Opacity> value.
-      - Opacity values are clamped between 0.0 and 1.0 for safe limits.
-      - Applies configured opacity to the console Scroll View background
-        each time the console opens.
-      - Keeps important console controls readable by using a slightly
-        higher alpha on CommandField and full alpha on CloseButton.
+          - Opacity values are clamped between 0.0 and 1.0 for safe
+            limits.
+          - Applies configured opacity to the console Scroll View
+            background each time the console opens.
+          - Keeps important console controls readable by using a
+            slightly higher alpha on CommandField and full alpha on
+            CloseButton.
+
+  - Loads Config/ConsoleOpacity.xml on mod initialization and reads the
+    <Opacity> value.
+          - Opacity values are clamped between 0.0 and 1.0 for safe
+            limits.
+          - Applies configured opacity to the console Scroll View
+            background each time the console opens.
+          - Keeps important console controls readable by using a
+            slightly higher alpha on CommandField and full alpha on
+            CloseButton.
+
+    - Loads Config/ConsoleOpacity.xml on mod initialization and reads
+      the <Opacity> value.
+            - Opacity values are clamped between 0.0 and 1.0 for safe
+              limits.
+            - Applies configured opacity to the console Scroll View
+              background each time the console opens.
+            - Keeps important console controls readable by using a
+              slightly higher alpha on CommandField and full alpha on
+              CloseButton.
 
 
 
@@ -208,5 +239,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

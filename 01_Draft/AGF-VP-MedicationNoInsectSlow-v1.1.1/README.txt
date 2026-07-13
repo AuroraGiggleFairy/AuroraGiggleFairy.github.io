@@ -47,8 +47,8 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Implementation edits used to make this work:
-      - Adds a new item: medicalInsectCream (Bee Gone Cream) with
-        primary self-use and secondary use-on-other actions.
+        - Adds a new item: medicalInsectCream (Bee Gone Cream) with
+          primary self-use and secondary use-on-other actions.
       - Adds campfire recipe (toolCookingPot required): 4 Aloe, 4
         Blueberries, 4 Potatoes, 1 Boiled Water.
       - Adds progression unlock in craftingMedical at level 10.
@@ -69,13 +69,108 @@ OTHER DETAILS
       - Adds God-mode cleanup for Bee Gone Cream timer CVar to prevent
         stale state.
       - Feature set:
-      - Craft or loot Bee Gone Cream as a dedicated anti-slow
-        medication.
+        - Craft or loot Bee Gone Cream as a dedicated anti-slow
+          medication.
       - Use it on yourself or teammates.
       - Active effect clears current insect slow and prevents new
         Bee/Insect swarm slows while duration remains.
       - Steroids now provide the same anti-slow protection for
         consistency.
+
+  - Implementation edits used to make this work:
+          - Adds a new item: medicalInsectCream (Bee Gone Cream) with
+            primary self-use and secondary use-on-other actions.
+        - Adds campfire recipe (toolCookingPot required): 4 Aloe, 4
+          Blueberries, 4 Potatoes, 1 Boiled Water.
+        - Adds progression unlock in craftingMedical at level 10.
+        - Adds custom buff buffInsectCream with timed duration handling
+          (about 3 minutes per use, capped at 543 seconds total).
+        - Buff logic removes current buffInjurySlow and keeps clearing
+          it while active.
+        - Adds noSlowAGF CVar protection while Bee Gone Cream or
+          Steroids are active.
+        - Adds insect attack requirements so Bee/Insect swarm slow
+          effects only apply when noSlowAGF is not active.
+        - Extends buffDrugSteroids to also remove/prevent slow and to
+          share the same noSlowAGF protection logic.
+        - Adds loot/trader integration (medical loot groups plus trader
+          medicine group), modeled similar to Aloe Cream availability.
+        - Adds UI display wiring for dStopsSlows and duration on Bee
+          Gone Cream, plus dStopsSlows display on Steroids.
+        - Adds God-mode cleanup for Bee Gone Cream timer CVar to prevent
+          stale state.
+        - Feature set:
+          - Craft or loot Bee Gone Cream as a dedicated anti-slow
+            medication.
+        - Use it on yourself or teammates.
+        - Active effect clears current insect slow and prevents new
+          Bee/Insect swarm slows while duration remains.
+        - Steroids now provide the same anti-slow protection for
+          consistency.
+
+  - Implementation edits used to make this work:
+          - Adds a new item: medicalInsectCream (Bee Gone Cream) with
+            primary self-use and secondary use-on-other actions.
+        - Adds campfire recipe (toolCookingPot required): 4 Aloe, 4
+          Blueberries, 4 Potatoes, 1 Boiled Water.
+        - Adds progression unlock in craftingMedical at level 10.
+        - Adds custom buff buffInsectCream with timed duration handling
+          (about 3 minutes per use, capped at 543 seconds total).
+        - Buff logic removes current buffInjurySlow and keeps clearing
+          it while active.
+        - Adds noSlowAGF CVar protection while Bee Gone Cream or
+          Steroids are active.
+        - Adds insect attack requirements so Bee/Insect swarm slow
+          effects only apply when noSlowAGF is not active.
+        - Extends buffDrugSteroids to also remove/prevent slow and to
+          share the same noSlowAGF protection logic.
+        - Adds loot/trader integration (medical loot groups plus trader
+          medicine group), modeled similar to Aloe Cream availability.
+        - Adds UI display wiring for dStopsSlows and duration on Bee
+          Gone Cream, plus dStopsSlows display on Steroids.
+        - Adds God-mode cleanup for Bee Gone Cream timer CVar to prevent
+          stale state.
+        - Feature set:
+          - Craft or loot Bee Gone Cream as a dedicated anti-slow
+            medication.
+        - Use it on yourself or teammates.
+        - Active effect clears current insect slow and prevents new
+          Bee/Insect swarm slows while duration remains.
+        - Steroids now provide the same anti-slow protection for
+          consistency.
+
+    - Implementation edits used to make this work:
+            - Adds a new item: medicalInsectCream (Bee Gone Cream) with
+              primary self-use and secondary use-on-other actions.
+          - Adds campfire recipe (toolCookingPot required): 4 Aloe, 4
+            Blueberries, 4 Potatoes, 1 Boiled Water.
+          - Adds progression unlock in craftingMedical at level 10.
+          - Adds custom buff buffInsectCream with timed duration
+            handling (about 3 minutes per use, capped at 543 seconds
+            total).
+          - Buff logic removes current buffInjurySlow and keeps clearing
+            it while active.
+          - Adds noSlowAGF CVar protection while Bee Gone Cream or
+            Steroids are active.
+          - Adds insect attack requirements so Bee/Insect swarm slow
+            effects only apply when noSlowAGF is not active.
+          - Extends buffDrugSteroids to also remove/prevent slow and to
+            share the same noSlowAGF protection logic.
+          - Adds loot/trader integration (medical loot groups plus
+            trader medicine group), modeled similar to Aloe Cream
+            availability.
+          - Adds UI display wiring for dStopsSlows and duration on Bee
+            Gone Cream, plus dStopsSlows display on Steroids.
+          - Adds God-mode cleanup for Bee Gone Cream timer CVar to
+            prevent stale state.
+          - Feature set:
+            - Craft or loot Bee Gone Cream as a dedicated anti-slow
+              medication.
+          - Use it on yourself or teammates.
+          - Active effect clears current insect slow and prevents new
+            Bee/Insect swarm slows while duration remains.
+          - Steroids now provide the same anti-slow protection for
+            consistency.
 
 
 
@@ -240,17 +335,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.1.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.1.0
-    - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Made the mod (beginning with 7d2d v2.5)
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

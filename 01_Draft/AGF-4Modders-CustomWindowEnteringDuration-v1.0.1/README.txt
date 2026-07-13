@@ -38,11 +38,28 @@ FEATURES
 OTHER DETAILS
 ------------------------------------------------------------------------
 
+  - Adds a config option for the "Entering Area" pop-up display duration.
+        - Edit Config/windowEnteringDuration.xml to set your preferred
+          time.
+        - Default value is 3.0 seconds.
+
   - Adds a config option for the "Entering Area" pop-up display
     duration.
-      - Edit Config/windowEnteringDuration.xml to set your preferred
-        time.
-      - Default value is 3.0 seconds.
+          - Edit Config/windowEnteringDuration.xml to set your preferred
+            time.
+          - Default value is 3.0 seconds.
+
+  - Adds a config option for the "Entering Area" pop-up display
+    duration.
+          - Edit Config/windowEnteringDuration.xml to set your preferred
+            time.
+          - Default value is 3.0 seconds.
+
+    - Adds a config option for the "Entering Area" pop-up display
+      duration.
+            - Edit Config/windowEnteringDuration.xml to set your
+              preferred time.
+            - Default value is 3.0 seconds.
 
 
 
@@ -207,15 +224,13 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
-
-------------------------------------------------------------------------
-
-v1.0.0
-    - Prepared for intial release.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Notes
+    - Add changelog entries here.

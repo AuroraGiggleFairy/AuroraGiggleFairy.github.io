@@ -20,6 +20,11 @@ DEFAULT_TEMPLATE_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "TEMPLATE-Ne
 DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-release-plan.json")
 DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-upload-plan.json")
 DEFAULT_MANUAL_PACKET_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ManualPackets")
+DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ModDetails")
+AGF_COLOR_LINE = "#5F5980"
+AGF_COLOR_HEADING = "#8DB580"
+AGF_COLOR_HIGHLIGHT = "#DDCDFA"
+AGF_DIVIDER = "[color=#5F5980]──────────────────────────────────────────────────────────────[/color]"
 DEFAULT_API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"
 DEFAULT_APPLICATION_NAME = "AGF-NexusMods-Automation"
 DEFAULT_APPLICATION_VERSION = "0.1.0"
@@ -1264,11 +1269,301 @@ def prepare_upload_plan(plan: Dict[str, object], config: Dict[str, object], only
     )
 
 
+def parse_readme_sections(readme_text: str) -> Dict[str, str]:
+    """Extract MOD SCOPE, FEATURES, OTHER DETAILS, and AGF MOD GUIDE from a standard AGF README."""
+    sections: Dict[str, str] = {}
+    if not readme_text:
+        return sections
+    text = normalize_multiline_text(readme_text)
+    scope_match = re.search(
+        r"MOD SCOPE\s*[-=]+\s*(.*?)(?=\n\s*[-=]+\s*\n\s*(?:FEATURES|OTHER DETAILS))",
+        text, re.IGNORECASE | re.DOTALL
+    )
+    if scope_match:
+        sections["mod_scope"] = scope_match.group(1).strip()
+    features_match = re.search(
+        r"FEATURES\s*[-=]+\s*(.*?)(?=\n\s*[-=]+\s*\n\s*(?:OTHER DETAILS|AGF MOD GUIDE))",
+        text, re.IGNORECASE | re.DOTALL
+    )
+    if features_match:
+        sections["features"] = features_match.group(1).strip()
+    other_match = re.search(
+        r"OTHER DETAILS\s*[-=]+\s*(.*?)(?=\n\s*[-=]+\s*\n\s*(?:AGF MOD GUIDE))",
+        text, re.IGNORECASE | re.DOTALL
+    )
+    if other_match:
+        sections["other_details"] = other_match.group(1).strip()
+    guide_match = re.search(
+        r"AGF MOD GUIDE\s*[-=]+\s*(.*?)(?:\n\s*[-=]+\s*\n\s*(?:CHANGELOG)|$)",
+        text, re.IGNORECASE | re.DOTALL
+    )
+    if guide_match:
+        sections["mod_guide"] = guide_match.group(1).strip()
+    return sections
+
+
+def sanitize_scope_label(text: str) -> str:
+    """Format a MOD SCOPE entry line to BBCode with highlighted labels."""
+    stripped = text.strip().lstrip("- ")
+    if ":" in stripped:
+        label, value = stripped.split(":", 1)
+        label = label.strip()
+        value = value.strip()
+        if label == "Mod Version":
+            return ""
+        if label in ("Mod Type", "Website"):
+            return f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label}:[/b][/color] {value}"
+        return f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label}:[/b][/color] {value}[/*]"
+    return ""
+
+
+def generate_bbcode_full_description(
+    plan_entry: Dict[str, object],
+    sections: Dict[str, str]
+) -> str:
+    """Generate a branded BBCode full description for a mod."""
+    game_ver = str(plan_entry.get("tested_game_version", ""))
+    mod_name_code = str(plan_entry.get("mod_name", ""))
+    mod_name_display = mod_name_code.replace("-", " ").title()
+    description = str(plan_entry.get("description", ""))
+    one_liner = description.split(".")[0] + "." if "." in description else description
+
+    lines: List[str] = []
+
+    def w(text: str = "") -> None:
+        lines.append(text)
+
+    w(AGF_DIVIDER)
+    w(AGF_DIVIDER)
+    w(f"[color={AGF_COLOR_HEADING}][size=6][b]AGF - V{game_ver} - {mod_name_display}[/b][/size][/color]")
+    w()
+    w(f"[size=4]{one_liner}[/size]")
+    w()
+    w(AGF_DIVIDER)
+
+    # MOD SCOPE
+    scope = sections.get("mod_scope", "")
+    if scope:
+        w(f"[color={AGF_COLOR_HEADING}][heading][size=5][b]Mod Scope[/b][/size][/heading][/color]")
+        w("[list]")
+        sub_items = False
+        for line in scope.splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("- Mod Version:"):
+                continue
+            if ":" in stripped.lstrip("- "):
+                label, value = stripped.lstrip("- ").split(":", 1)
+                label_s = label.strip()
+                value_s = value.strip()
+                if label_s == "Mod Type":
+                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}")
+                    sub_items = True
+                elif label_s == "Website":
+                    continue
+                else:
+                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}[/*]")
+            elif stripped.startswith("- ") and sub_items:
+                w(f"[*]{stripped.lstrip('- ')}[/*]")
+        if sub_items:
+            pass  # sub-list handled by manual rendering
+        w("[/list]")
+        w()
+        w(AGF_DIVIDER)
+
+    # FEATURES
+    features = sections.get("features", "")
+    if features:
+        w(f"[color={AGF_COLOR_HEADING}][heading][size=5][b]Features[/b][/size][/heading][/color]")
+        w("[list]")
+        for line in features.splitlines():
+            bullet = line.strip().lstrip("- ")
+            if bullet:
+                w(f"[*][size=4]{bullet}[/size][/*]")
+        w("[/list]")
+        w()
+        w(AGF_DIVIDER)
+
+    # OTHER DETAILS (compact single-bullet format)
+    other = sections.get("other_details", "")
+    if other:
+        w(f"[color={AGF_COLOR_HEADING}][heading][size=4][b]Other Details[/b][/size][/heading][/color]")
+        w("[list]")
+        current_bullet = ""
+        for raw_line in other.splitlines():
+            stripped = raw_line.strip()
+            if not stripped:
+                continue
+            if stripped.startswith("- ") or stripped.startswith("-"):
+                content = stripped.lstrip("- ")
+                if content.startswith("- "):
+                    current_bullet += (" " + content.lstrip("- "))
+                elif current_bullet:
+                    w(f"[*][size=3]{current_bullet.strip()}[/size][/*]")
+                    current_bullet = content
+                else:
+                    current_bullet = content
+        if current_bullet:
+            w(f"[*][size=3]{current_bullet.strip()}[/size][/*]")
+        w("[/list]")
+        w()
+        w(AGF_DIVIDER)
+
+    # ASK AURORAGIGGLEFAIRY FOR HELP (standalone before Mod Guide)
+    w(AGF_DIVIDER)
+    w(f"[color={AGF_COLOR_HEADING}][heading][size=5][b]Ask AuroraGiggleFairy for Help[/b][/size][/heading][/color]")
+    w("[list=1]")
+    w("[*]Join AGF's [url=https://discord.gg/Vm5eyW6N4r]Discord[/url].")
+    w("[list]")
+    w("[*]AGF checks website messages often, but Discord is the fastest and best way to get help.[/*]")
+    w("[/list]")
+    w("[/*]")
+    w("[*]Find [color=#DDCDFA][b]#ask-for-help-here[/b][/color] under the [color=#DDCDFA][b]NEED HELP?[/b][/color] section.")
+    w("[list]")
+    w("[*]All questions are welcome, whether you are new or experienced.[/*]")
+    w("[*]This includes mod conflicts, features not working as expected, server or admin issues, translation errors, and other mod-related problems.[/*]")
+    w("[/list]")
+    w("[/*]")
+    w("[*]Post your help request in [color=#DDCDFA][b]#ask-for-help-here[/b][/color]:")
+    w("[list]")
+    w("[*]Share a brief message about what is happening.[/*]")
+    w("[*]Attach your latest log file.")
+    w("[list]")
+    w("[*]Enter the game, then press [color=#DDCDFA][b]F1[/b][/color] to open the console.[/*]")
+    w("[*]Click [color=#DDCDFA][b]Open logs folder[/b][/color] in the top-right.[/*]")
+    w("[*]The correct log file should already be selected. Drag and drop it into [color=#DDCDFA][b]#ask-for-help-here[/b][/color].[/*]")
+    w("[/list]")
+    w("[/*]")
+    w("[*]A screenshot can also help.")
+    w("[list]")
+    w("[*]Use [color=#DDCDFA][b]PrtSc[/b][/color] (Print Screen) or your system screenshot tool, then paste the image into Discord chat.[/*]")
+    w("[/list]")
+    w("[/*]")
+    w("[*]If preferred, DMs are open and you are welcome to message AGF directly.[/*]")
+    w("[/list]")
+    w("[/*]")
+    w("[/list]")
+    w()
+    w(AGF_DIVIDER)
+    w(AGF_DIVIDER)
+
+    # AGF MOD GUIDE
+    w(f"[color={AGF_COLOR_HEADING}][heading][size=5][b]AGF Mod Guide[/b][/size][/heading][/color]")
+    guide = sections.get("mod_guide", "")
+    if guide:
+        section_letters: List[str] = []
+        current_section_lines: List[str] = []
+        for line in guide.splitlines():
+            stripped = line.strip()
+            if re.match(r"^[A-Z]\.\s", stripped):
+                if section_letters:
+                    section_letters[-1] = "\n".join(current_section_lines)
+                section_letters.append(stripped)
+                current_section_lines = [stripped]
+            elif stripped:
+                current_section_lines.append(stripped)
+        if section_letters:
+            section_letters[-1] = "\n".join(current_section_lines)
+
+        for section_block in section_letters:
+            block_lines = section_block.splitlines()
+            if not block_lines:
+                continue
+            header = block_lines[0]
+            letter = header[0]
+            title = re.sub(r"^[A-Z]\.\s+", "", header)
+            w()
+            w(f"[color={AGF_COLOR_HEADING}][b][size=4]{letter}. {title}[/size][/b][/color]")
+
+            body_lines = block_lines[1:]
+            numbered = any(line.strip().startswith(("1.", "2.", "3.", "4.", "5.", "6.")) for line in body_lines)
+            if numbered:
+                w("[list=1]")
+            else:
+                w("[list]")
+            for body_line in body_lines:
+                bl = body_line.strip()
+                if not bl or re.match(r"^[A-Z]\.\s", bl):
+                    continue
+                if bl.startswith("- Warning:"):
+                    w(f"[*][b]Warning:[/b]{bl[len('- Warning:'):]}[/*]")
+                elif bl.startswith("- "):
+                    w(f"[*]{bl[2:]}[/*]")
+                elif bl.startswith(("1.", "2.", "3.", "4.", "5.", "6.")):
+                    w(f"[*]{bl.split('.', 1)[1].strip()}[/*]")
+                elif bl:
+                    w(f"[*]{bl}[/*]")
+            if numbered:
+                w("[/list]")
+            else:
+                w("[/list]")
+
+    w()
+    w(AGF_DIVIDER)
+    w(AGF_DIVIDER)
+
+    # SUPPORT
+    w(f"[color={AGF_COLOR_HEADING}][heading][size=5][b]Support AuroraGiggleFairy[/b][/size][/heading][/color]")
+    w("[list]")
+    w("[*]I have been actively creating and supporting 7 Days to Die mods since Alpha 18 (2019), and I genuinely love doing this work.[/*]")
+    w("[*]I spend a lot of time fixing complex issues, keeping everything up to date, and helping players, modders, and server communities.[/*]")
+    w("[*]If my work helps you, here are ways to support me:")
+    w("[list]")
+    w("[*]Help spread my mods by sharing them with others, creating content, or sharing my [url=https://auroragigglefairy.github.io/]GitHub page[/url].[/*]")
+    w("[*]Join my [url=https://discord.gg/Vm5eyW6N4r]Discord[/url] to share feedback, keep up with updates, or volunteer as a tester.[/*]")
+    w("[*]Support me on [url=https://www.twitch.tv/auroragigglefairy]Twitch[/url].[/*]")
+    w("[*]Need hosting? Use my [url=https://pingperfect.com/aff.php?aff=1834]PingPerfect Referral Link[/url].[/*]")
+    w("[*]Support me directly by donating to my [url=https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC]PayPal[/url].[/*]")
+    w("[/list]")
+    w("[/*]")
+    w("[*]From the bottom of my heart, thank you. [img]https://static.nexusmods.com/mods/130/images/emoji/200x200/2764.png[/img][/*]")
+    w("[/list]")
+    w()
+    w(AGF_DIVIDER)
+    w()
+    w(f"[i][size=3]This mod is part of [color={AGF_COLOR_HIGHLIGHT}][b]The Giggle Pack[/b][/color]. For the full catalog, visit [url=https://auroragigglefairy.github.io/]https://auroragigglefairy.github.io/[/url][/size][/i]")
+    return "\n".join(lines)
+
+
+def generate_bbcode_packets(plan: Dict[str, object], output_dir: str, dry_run: bool) -> int:
+    """Generate branded BBCode Nexus Mod Details packets for all mods in the release plan."""
+    mods = plan.get("mods", [])
+    if not isinstance(mods, list):
+        return 1
+    if dry_run:
+        print(f"[DRYRUN] Would generate {len(mods)} BBCode packet files in: {output_dir}")
+        return 0
+    os.makedirs(output_dir, exist_ok=True)
+    written = 0
+    for entry in mods:
+        if not isinstance(entry, dict):
+            continue
+        mod_name = str(entry.get("mod_name", ""))
+        version = str(entry.get("version", "0.0.0"))
+        readable_path = str(entry.get("readable_readme_path", ""))
+        readme_path = str(entry.get("readme_path", ""))
+        readme_text = load_text_file(readable_path) or load_text_file(readme_path)
+        if not readme_text:
+            print(f"  [SKIP] {mod_name}: no README found")
+            continue
+        sections = parse_readme_sections(readme_text)
+        bbcode = generate_bbcode_full_description(entry, sections)
+        filename = f"{sanitize_filename(mod_name)}-v{sanitize_filename(version)}-NexusModDetails.md"
+        filepath = os.path.join(output_dir, filename)
+        with open(filepath, "w", encoding="utf-8") as handle:
+            handle.write(bbcode)
+            if not bbcode.endswith("\n"):
+                handle.write("\n")
+        written += 1
+        print(f"  [GENERATED] {filename}")
+    print(f"Generated {written} BBCode packet files in: {output_dir}")
+    return 0
+
+
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Dedicated Nexus Mods planning and live-check workflow")
     parser.add_argument(
         "--mode",
-        choices=["init-config", "build-plan", "check-live", "discover-groups", "prepare-upload", "prepare-manual-docs"],
+        choices=["init-config", "build-plan", "check-live", "discover-groups", "prepare-upload", "prepare-manual-docs", "generate-bbcode"],
         default="build-plan",
         help="Create config, build plan, run live checks, prepare upload payloads, or generate per-mod manual Nexus packet docs",
     )
@@ -1345,6 +1640,9 @@ def main() -> int:
         if upload_plan:
             write_json_file(os.path.abspath(args.upload_plan_output), upload_plan, args.dry_run)
         return result
+    if args.mode == "generate-bbcode":
+        bbcode_output = os.path.join(RELEASE_META_DIR, "NexusMods", "ModDetails")
+        return generate_bbcode_packets(plan, bbcode_output, args.dry_run)
     if args.mode == "prepare-manual-docs":
         result, upload_plan = prepare_upload_plan(plan, config, args.only)
         write_json_file(plan_output, plan, args.dry_run)

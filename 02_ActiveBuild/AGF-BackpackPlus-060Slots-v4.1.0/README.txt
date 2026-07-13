@@ -40,16 +40,16 @@ OTHER DETAILS
 ------------------------------------------------------------------------
 
   - Inventory cell size remains at vanilla size (67x67, no shrinking).
-      - Pack Mule encumbrance relief per rank: 6, 12, 18, 24, 30 (full
-        encumbrance unlock at max rank).
-      - Encumbrance movement penalty multiplier is set to 0.0155
-        (default 0.026) to preserve vanilla-style mobility behavior.
-      - Vanilla mobility baseline: with all encumbrance slots filled,
-        mobility is about 53% (about 23% with heavy armor).
-      - Buffs, Twitch integration, and dropped backpack size are all
-        accounted for.
-      - Pack Mule localization is updated with an appended AGF detail
-        line, with best effort for all game-supported languages.
+  - Pack Mule encumbrance relief per rank: 6, 12, 18, 24, 30 (full
+    encumbrance unlock at max rank).
+  - Encumbrance movement penalty multiplier is set to 0.0155 (default
+    0.026) to preserve vanilla-style mobility behavior.
+  - Vanilla mobility baseline: with all encumbrance slots filled,
+    mobility is about 53% (about 23% with heavy armor).
+  - Buffs, Twitch integration, and dropped backpack size are all
+    accounted for.
+  - Pack Mule localization is updated with an appended AGF detail line,
+    with best effort for all game-supported languages.
 
 
 
