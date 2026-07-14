@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-RestorePowerAnyTime" />
+  <DisplayName value="AGF Restore Power Any Time" />
+  <Version value="2.1.1" />
+  <Description value="Restore Power quests can now be done at any time of day or night." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

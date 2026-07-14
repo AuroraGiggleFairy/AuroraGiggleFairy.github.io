@@ -10,6 +10,7 @@ STEP_SCRIPTS: List[Tuple[str, str]] = [
     ("sync-work", os.path.join(WORKFLOW_DIR, "01_sync_work.py")),
     ("promote", os.path.join(WORKFLOW_DIR, "02_promote.py")),
     ("package", os.path.join(WORKFLOW_DIR, "03_package.py")),
+    ("nexus", os.path.join(WORKFLOW_DIR, "06_nexus.py")),
 ]
 
 

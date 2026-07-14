@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-VehiclePerformance" />
+  <DisplayName value="AGF Vehicle Performance" />
+  <Version value="2.1.1" />
+  <Description value="Server-focused vehicle tuning boosts speed, accel, brakes, and handling." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

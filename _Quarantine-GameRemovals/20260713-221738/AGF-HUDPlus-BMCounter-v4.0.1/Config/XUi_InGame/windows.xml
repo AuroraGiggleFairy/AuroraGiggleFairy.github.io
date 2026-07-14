@@ -1,0 +1,21 @@
+﻿<AGF-HUDPlus-BMCounter>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+			<append xpath="/windows/window[@name='windowCompass']">
+				<rect name="counterBM" pos="70,-53" width="380">
+					<label depth="3" pos="0,-4" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# max(0, gamestat('BloodMoonDay') - day) == 0 ? localization('agfBloodMoonTonight') : max(0, gamestat('BloodMoonDay') - day)}[-]" width="380" style="outline" font_size="22" justify="center" height="24" visible="{showtime}"/>
+				</rect>
+			</append>
+		</if>
+		<else>
+			<insertAfter xpath="/windows/window[@name='windowCompass']/sprite/label">
+				<label depth="3" pos="0,-26" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# max(0, gamestat('BloodMoonDay') - day) == 0 ? localization('agfBloodMoonTonight') : max(0, gamestat('BloodMoonDay') - day)}[-]" width="300" style="outline" font_size="22" justify="center" pivot="center" height="24" visible="{showtime}"/>
+			</insertAfter>
+			<set xpath="/windows/window[@name='windowTargetBar']/rect[@pos='-200,-85']/@pos">-200,-110</set>
+			<set xpath="/windows/window[@name='windowTargetBar']/rect[@pos='-267,-85']/@pos">-267,-110</set>
+		</else>
+	</conditional>
+
+
+</AGF-HUDPlus-BMCounter>

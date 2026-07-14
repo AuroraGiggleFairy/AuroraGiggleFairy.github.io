@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-SimplifiedStacks" />
+  <DisplayName value="AGF Simplified Stacks" />
+  <Version value="2.1.1" />
+  <Description value="Simplified stack sizes to reduce inventory clutter with vanilla feel." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

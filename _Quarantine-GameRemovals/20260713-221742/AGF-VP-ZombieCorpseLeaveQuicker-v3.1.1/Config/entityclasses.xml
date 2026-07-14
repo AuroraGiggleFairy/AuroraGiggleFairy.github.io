@@ -1,0 +1,11 @@
+<AGFVanillaPlus-ZombieCorpseLeaveQuicker>
+
+
+<!--Zombie Bodies disappear more quickly for performance reasons-->
+		<set xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath'][@value='30']/@value">10</set><!--DEFAULT is 30 seconds.-->
+
+
+
+</AGFVanillaPlus-ZombieCorpseLeaveQuicker>
+
+

@@ -1,0 +1,211 @@
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+[color=#8DB580][size=6][b]AGF - V3 - HUDPlus - 1Main[/b][/size][/color]
+
+[size=4]Comprehensive HUD overhaul with cleaner stats, wider compass, and menus.[/size]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+
+[heading][color=#8DB580][size=5][b]Mod Scope[/b][/size][/color][/heading]
+
+[list]
+[*][color=#DDCDFA][b]7d2d Version:[/b][/color] 3[/*]
+[*][color=#DDCDFA][b]Languages Supported:[/b][/color] All 13 game-supported languages.[/*]
+[*][color=#DDCDFA][b]Mod Type:[/b][/color] Server-Side (EAC-Friendly)
+[list]
+[*]Server install works for all joining players.[/*]
+[*]EAC can be on or off.[/*]
+[*]Also works in singleplayer.[/*]
+[/list]
+[/*]
+[*][color=#DDCDFA][b]Safe to install on existing game:[/b][/color] Yes (Safe)[/*]
+[*][color=#DDCDFA][b]Safe to remove from existing game:[/b][/color] Yes (Safe)[/*]
+[*][color=#DDCDFA][b]Dependencies:[/b][/color] None, works standalone.[/*]
+[/list]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+[heading][color=#8DB580][size=5][b]Features[/b][/size][/color][/heading]
+
+[list]
+[*][size=4]Makes the HUD and menus easier to read.[/size][/*]
+[*][size=4]Improves layout for compass, toolbelt, map, trader windows, chat, and timers.[/size][/*]
+[*][size=4]Adds quick visual hints: clearer slot markers, color hints, centered crafting slots, and always-visible date/time/location.[/size][/*]
+[/list]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+[heading][color=#8DB580][size=4][b]Other Details[/b][/size][/color][/heading]
+
+[list]
+[*]Displays health, stamina, food, water, level, XP, and elevation in a compact, easy-to-read format.[/*]
+[*]Lockable inventory slots are clearly marked for quick identification.[/*]
+[*]Compass is wider and features a visible center mark.[/*]
+[*]Toolbelt is lowered for better backpack mod compatibility, with numbered slots for convenience.[/*]
+[*]Chat messages are easier to read with updated backgrounds.[/*]
+[*]Map details are displayed in a dedicated section beside the map, with clear labels.[/*]
+[*]Crafting and burning timers are visually clearer and easier to read.[/*]
+[*]Date, time, outdoor temperature, and the location display are visible on all menus.[/*]
+[*]Storm visual alerts now appear below the location display, freeing space for other mods.[/*]
+[*]Trader dialogue, including quest selection, is easier to read with updated backgrounds.[/*]
+[*]Simple color-coding for interactive prompts (the text that appears when looking at loot, workstations, etc.) for quick recognition.[/*]
+[*]Centered crafting slots.[/*]
+[*]Schematics, magazines, and books are color-coded to show whether they have been read.[/*]
+[*]The NoEAC-EnhancedAGF provides even more visual features if also installed.[/*]
+[*]Vehicle stats display has been updated for clearer, easier at-a-glance reading.[/*]
+[*]AGF visual style for Health Bars when activated.
+[/*]
+[/list]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+[heading][color=#8DB580][size=5][b]Ask AuroraGiggleFairy for Help[/b][/size][/color][/heading]
+
+[list=1]
+[*]Join AGF's [url=https://discord.gg/Vm5eyW6N4r]Discord[/url].
+[list]
+[*]AGF checks website messages often, but Discord is the fastest and best way to get help.[/*]
+[/list]
+[/*]
+[*]Find [color=#DDCDFA][b]#ask-for-help-here[/b][/color] under the [color=#DDCDFA][b]NEED HELP?[/b][/color] section.
+[list]
+[*]All questions are welcome, whether you are new or experienced.[/*]
+[*]This includes mod conflicts, features not working as expected, server or admin issues, translation errors, and other mod-related problems.[/*]
+[/list]
+[/*]
+[*]Post your help request in [color=#DDCDFA][b]#ask-for-help-here[/b][/color]:
+[list]
+[*]Share a brief message about what is happening.[/*]
+[*]Attach your latest log file.
+[list]
+[*]Enter the game, then press [color=#DDCDFA][b]F1[/b][/color] to open the console.[/*]
+[*]Click [color=#DDCDFA][b]Open logs folder[/b][/color] in the top-right.[/*]
+[*]The correct log file should already be selected. Drag and drop it into [color=#DDCDFA][b]#ask-for-help-here[/b][/color].[/*]
+[/list]
+[/*]
+[*]A screenshot can also help.
+[list]
+[*]Use [color=#DDCDFA][b]PrtSc[/b][/color] (Print Screen) or your system screenshot tool, then paste the image into Discord chat.[/*]
+[/list]
+[/*]
+[*]If preferred, DMs are open and you are welcome to message AGF directly.[/*]
+[/list]
+[/*]
+[/list]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+[heading][color=#8DB580][size=5][b]AGF Mod Guide[/b][/size][/color][/heading]
+
+
+[color=#8DB580][b][size=4]A. Install Mods[/size][/b][/color]
+[list=1]
+[*]Close the game.[/*]
+[*]In Steam, right-click [color=#DDCDFA][b]7 Days to Die[/b][/color] -> [color=#DDCDFA][b]Manage[/b][/color] -> [color=#DDCDFA][b]Browse local files[/b][/color], then open [color=#DDCDFA][b]Mods[/b][/color].[/*]
+[*]Extract the zip into the Mods folder. Make sure it ends up as [color=#DDCDFA][b]Mods/<ModName>/ModInfo.xml[/b][/color].[/*]
+[*]Restart the game.[/*]
+[/list]
+
+
+[color=#8DB580][b][size=4]B. Backups[/size][/b][/color]
+[list]
+[*][b]To Create:[/b] Open [color=#DDCDFA][b]%appdata%[/b][/color] -> [color=#DDCDFA][b]Roaming[/b][/color] -> [color=#DDCDFA][b]7DaysToDie[/b][/color] -> [color=#DDCDFA][b]Saves[/b][/color], then open your World Name folder (for example, Navezgane). Copy your Game Name folder (for example, MyGame) to a safe place.[/*]
+[*][b]To Restore:[/b] Copy that saved Game Name folder back into the same World Name folder in [color=#DDCDFA][b]Saves[/b][/color]. Replace the current folder if asked.[/*]
+[/list]
+
+
+[color=#8DB580][b][size=4]C. Update Mods[/size][/b][/color]
+[list=1]
+[*]Close the game.[/*]
+[*]Make a backup first (see section B).[/*]
+[*]Install the new version in Mods.
+[list]
+[*]If asked, allow overwrite or replace.[/*]
+[/list]
+[/*]
+[*]If both old and new folders are there, keep the newer one and delete the older one.[/*]
+[*]Start the game and confirm your save loads.[/*]
+[/list]
+
+
+[color=#8DB580][b][size=4]D. Remove Mods[/size][/b][/color]
+[list]
+[*][b]Warning:[/b] Removing a mod from an active save can destroy your saved game. Back up first.[/*]
+[*]Never delete [color=#DDCDFA][b]0_TFP_Harmony[/b][/color]; it comes with the game.[/*]
+[/list]
+[list=1]
+[*]Close the game.[/*]
+[*]In Mods, delete each mod folder you are removing, except [color=#DDCDFA][b]0_TFP_Harmony[/b][/color].[/*]
+[/list]
+
+
+[color=#8DB580][b][size=4]E. The 0_TFP_Harmony Mod (Do Not Remove)[/size][/b][/color]
+[list]
+[*]Never delete [color=#DDCDFA][b]0_TFP_Harmony[/b][/color]; it comes with the game.[/*]
+[*]If it is missing, restore it by verifying game files in Steam:
+[list=1]
+[*]In Steam, right-click [color=#DDCDFA][b]7 Days to Die[/b][/color].[/*]
+[*]Select [color=#DDCDFA][b]Properties[/b][/color].[/*]
+[*]Select [color=#DDCDFA][b]Installed Files[/b][/color].[/*]
+[*]Click [color=#DDCDFA][b]Verify integrity of game files[/b][/color] and wait for completion.[/*]
+[/list]
+[/*]
+[/list]
+
+
+[color=#8DB580][b][size=4]F. EAC[/size][/b][/color]
+[list]
+[*]EAC stands for Easy Anti-Cheat and helps protect multiplayer sessions from cheating.[/*]
+[*]Some mods require EAC to be turned off so they can work.[/*]
+[*][color=#DDCDFA][b]How to launch 7 Days to Die with EAC off:[/b][/color]
+[list=1]
+[*]In Steam Library, select 7 Days to Die.[/*]
+[*]Click Play.[/*]
+[*]In the launch popup, select Launch game without EAC.[/*]
+[*]Click Play.[/*]
+[/list]
+[/*]
+[*][color=#DDCDFA][b]If the launch popup does not appear:[/b][/color]
+[list=1]
+[*]In Steam Library, select 7 Days to Die.[/*]
+[*]Click the gear icon on the right, then click Properties.[/*]
+[*]Under Launch Options, open the Selected Launch Option dropdown.[/*]
+[*]Choose Ask when starting game or Launch game without EAC.[/*]
+[/list]
+[/*]
+[*][color=#DDCDFA][b]If you run multiplayer with EAC off, use these safety practices:[/b][/color]
+[list]
+[*]Simplest method: keep your server password private and have people ask for it.[/*]
+[*]If you want tighter security on who joins, use the whitelist system.[/*]
+[*]Admin tools such as Server Tools have security options.[/*]
+[*]Talk to other server hosts, for example AGF in [url=https://discord.gg/Vm5eyW6N4r]Discord[/url].[/*]
+[/list]
+[/*]
+[/list]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+[heading][color=#8DB580][size=5][b]Support AuroraGiggleFairy[/b][/size][/color][/heading]
+
+[list]
+[*]I have been actively creating and supporting 7 Days to Die mods since Alpha 18 (2019), and I genuinely love doing this work.[/*]
+[*]I spend a lot of time fixing complex issues, keeping everything up to date, and helping players, modders, and server communities.[/*]
+[*]If my work helps you, here are ways to support me:
+[list]
+[*]Help spread my mods by sharing them with others, creating content, or sharing my [url=https://auroragigglefairy.github.io/]GitHub page[/url].[/*]
+[*]Join my [url=https://discord.gg/Vm5eyW6N4r]Discord[/url] to share feedback, keep up with updates, or volunteer as a tester.[/*]
+[*]Support me on [url=https://www.twitch.tv/auroragigglefairy]Twitch[/url].[/*]
+[*]Need hosting? Use my [url=https://pingperfect.com/aff.php?aff=1834]PingPerfect Referral Link[/url].[/*]
+[*]Support me directly by donating to my [url=https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC]PayPal[/url].[/*]
+[/list]
+[/*]
+[*]From the bottom of my heart, thank you. [img]https://static.nexusmods.com/mods/130/images/emoji/200x200/2764.png[/img][/*]
+[/list]
+
+[color=#5F5980]──────────────────────────────────────────────────────────────[/color]
+
+[i]This mod is part of [color=#DDCDFA][b]The Giggle Pack[/b][/color]. For the full catalog, visit [url=https://auroragigglefairy.github.io/]https://auroragigglefairy.github.io/[/url][/i]

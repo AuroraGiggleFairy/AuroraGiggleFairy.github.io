@@ -1,0 +1,31 @@
+<AGFVanillaPlus-MasterTool>
+
+
+<!--Creates a new 'main menu' option to select with trader dialog-->
+	<insertafter xpath="/dialogs/dialog[@id='trader']/statement[@id='start']/response_entry[@id='specialjobshave']">
+		<response_entry id="modjobshave" />
+	</insertafter>
+
+<!--Creates what happens after you click on the response mentioned above-->
+	<insertafter xpath="/dialogs/dialog[@id='trader']/statement[@id='currentjobsspecial']">
+			<statement id="currentjobsmods" text="SOMETHINGHERE" nextstatementid="start" >
+				<quest_entry type="modjob" listindex="0" />
+				<quest_entry type="modjob" listindex="1" />
+				<quest_entry type="modjob" listindex="2" />
+				<quest_entry type="modjob" listindex="3" />
+				<quest_entry type="modjob" listindex="4" />
+				<response_entry id="nevermind" />
+			</statement>
+	</insertafter>
+
+<!--The factors involving showing, hiding, and deciding what will appear next for the response mentioned in the first section-->
+	<insertafter xpath="/dialogs/dialog[@id='trader']/response[@id='specialjobshave']">
+			<response id="modjobshave" text="modjobsname" nextstatementid="currentjobsmods" >
+				<requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" tag="modjob" /><!--Hidden if a different "modjob" is already active for players-->
+				<requirement type="CheckCVar" id="MTJobUnlocked" value="1" requirementtype="Hide" /><!--Hidden unless MTJobUnlocked is level 1-->
+			</response>
+	</insertafter>
+
+
+
+</AGFVanillaPlus-MasterTool>

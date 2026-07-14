@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-VehicleStoragePlus" />
+  <DisplayName value="AGF Vehicle Storage Plus" />
+  <Version value="3.1.1" />
+  <Description value="Increases vehicle storage, adding +2 or more rows depending on vehicle." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

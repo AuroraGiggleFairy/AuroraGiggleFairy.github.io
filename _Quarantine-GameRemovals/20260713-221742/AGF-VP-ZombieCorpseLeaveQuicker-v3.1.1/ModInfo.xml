@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-ZombieCorpseLeaveQuicker" />
+  <DisplayName value="AGF Zombie Corpse Leave Quicker" />
+  <Version value="3.1.1" />
+  <Description value="Zombie corpses despawn in 10 seconds instead of 30 for game performance." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

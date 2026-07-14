@@ -1,0 +1,23 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('WMM12SlotToolbelt')">
+			<include filename="ModPatches/WMM12SlotToolbelt/windows.xml"/>
+		</if>
+		<if cond="mod_loaded('15SlotToolbelt')">
+			<include filename="ModPatches/15SlotToolbelt/windows.xml"/>
+		</if>
+		<if cond="mod_loaded('Dewtas18SlotToolbelt')">
+			<include filename="ModPatches/Dewtas18SlotToolbelt/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('DishongTowerChallenge')">
+			<include filename="ModPatches/DishongTowerChallenge/windows.xml"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('VanillaExtended')">
+			<include filename="ModPatches/VanillaExtended/windows.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -1,10 +1,12 @@
 import argparse
 import datetime as dt
+import hashlib
 import json
 import os
 import re
 import shutil
 import sys
+import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -34,6 +36,10 @@ DEFAULT_DOWNLOAD_BASE_URL = (
     "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips"
 )
 AGF_PREFIXES = ("AGF-", "zzzAGF-")
+
+# Upload polling defaults
+UPLOAD_POLL_INTERVAL_SEC = 5
+UPLOAD_MAX_POLL_ATTEMPTS = 30
 
 
 def load_json_file(path: str) -> Dict[str, object]:
@@ -94,8 +100,8 @@ def extract_game_version_from_text(text: str) -> str:
     if not normalized:
         return ""
     for line in normalized.splitlines()[:20]:
-        stripped = line.strip()
-        match = re.match(r"^7d2d\s+Version\s+(.+?)\s*$", stripped, re.IGNORECASE)
+        stripped = line.strip().lstrip("- ")
+        match = re.match(r"7d2d\s+Version\s*:?\s*(.+?)\s*$", stripped, re.IGNORECASE)
         if match:
             return normalize_single_line_text(match.group(1))
     return ""
@@ -217,8 +223,7 @@ def gather_release_mods() -> Dict[str, Dict[str, str]]:
     mods: Dict[str, Dict[str, str]] = {}
     for folder_name, folder_path in scan_mod_folders(RELEASE_SOURCE_DIR).items():
         modinfo_path = os.path.join(folder_path, "ModInfo.xml")
-        readme_path = os.path.join(folder_path, "README.md")
-        readable_readme_path = os.path.join(folder_path, "ReadableReadMe.txt")
+        readme_txt_path = os.path.join(folder_path, "README.txt")
         mod_name, version, description = parse_modinfo(modinfo_path, folder_name)
         base_name = get_base_mod_name(folder_name)
         mods[base_name] = {
@@ -228,8 +233,8 @@ def gather_release_mods() -> Dict[str, Dict[str, str]]:
             "mod_name": mod_name,
             "version": version,
             "description": description,
-            "readme_path": readme_path if os.path.isfile(readme_path) else "",
-            "readable_readme_path": readable_readme_path if os.path.isfile(readable_readme_path) else "",
+            "readme_path": readme_txt_path if os.path.isfile(readme_txt_path) else "",
+            "readable_readme_path": "",
         }
     return mods
 
@@ -487,11 +492,19 @@ def request_json(url: str, headers: Dict[str, str], method: str = "GET", body: O
     if payload is not None:
         request_headers["content-type"] = "application/json"
     request = urllib.request.Request(url, headers=request_headers, method=method, data=payload)
-    with urllib.request.urlopen(request, timeout=20) as response:
+    with urllib.request.urlopen(request, timeout=60) as response:
         response_bytes = response.read()
     if not response_bytes:
         return {}
     return json.loads(response_bytes.decode("utf-8"))
+
+
+def request_binary(url: str, headers: Dict[str, str], method: str = "PUT", data: Optional[bytes] = None) -> Tuple[int, bytes]:
+    """Make a binary request and return (status_code, response_body)."""
+    request_headers = dict(headers)
+    request = urllib.request.Request(url, headers=request_headers, method=method, data=data)
+    with urllib.request.urlopen(request, timeout=120) as response:
+        return response.getcode(), response.read()
 
 
 def fetch_nexus_mod_info(
@@ -835,7 +848,19 @@ def build_changelog_delta(readme_path: str, from_version: str, to_version: str) 
             continue
         if compare_versions(version, to_version) > 0:
             continue
-        bullets = [line.strip() for line in lines if line.strip().startswith("-")]
+        # Extract bullet lines, excluding separator lines (just dashes/hyphens)
+        bullets: List[str] = []
+        for line in lines:
+            stripped = line.strip()
+            if not stripped:
+                continue
+            # Skip separator lines like "---" or "----" etc
+            if re.match(r"^-{2,}$", stripped):
+                continue
+            if stripped.startswith("- "):
+                bullet_text = normalize_single_line_text(stripped[2:])
+                if bullet_text:
+                    bullets.append(bullet_text)
         delta.append({"version": version, "bullets": bullets})
     return delta
 
@@ -1179,11 +1204,6 @@ def run_live_check(plan: Dict[str, object], config: Dict[str, object]) -> int:
 
 def prepare_upload_plan(plan: Dict[str, object], config: Dict[str, object], only: str) -> Tuple[int, Dict[str, object]]:
     env_var_name, api_key = get_env_api_key(config)
-    if not api_key:
-        print(f"Missing Nexus API key. Set environment variable {env_var_name}.")
-        return 1, {}
-
-    headers = build_request_headers(config, api_key)
     mods = plan.get("mods", [])
     if not isinstance(mods, list):
         return 1, {}
@@ -1209,11 +1229,19 @@ def prepare_upload_plan(plan: Dict[str, object], config: Dict[str, object], only
             continue
 
         try:
-            live = resolve_live_state_for_entry(entry, config, headers)
-            entry["live"] = live
+            # Live state is optional — without API key, use "0.0.0" so all changelog shows
+            if api_key:
+                headers = build_request_headers(config, api_key)
+                live = resolve_live_state_for_entry(entry, config, headers)
+                entry["live"] = live
+                live_version = str(live.get("version", "0.0.0"))
+            else:
+                entry["live"] = {}
+                live_version = "0.0.0"
             local_version = str(entry.get("version", "0.0.0"))
-            live_version = str(live.get("version", "0.0.0"))
-            selected_chain = live.get("selected_legacy_chain")
+            selected_chain = None
+            if api_key and 'live' in entry and isinstance(entry.get('live'), dict):
+                selected_chain = entry['live'].get("selected_legacy_chain")
             latest_file_id = 0
             latest_file_name = ""
             if isinstance(selected_chain, dict):
@@ -1324,7 +1352,14 @@ def generate_bbcode_full_description(
     """Generate a branded BBCode full description for a mod."""
     game_ver = str(plan_entry.get("tested_game_version", ""))
     mod_name_code = str(plan_entry.get("mod_name", ""))
-    mod_name_display = mod_name_code.replace("-", " ").title()
+    # Strip AGF- prefix then split on hyphens and rejoin with " - "
+    clean = mod_name_code
+    if clean.startswith("AGF-"):
+        clean = clean[4:]
+    if clean.startswith("zzzAGF-"):
+        clean = clean[7:]
+    parts = [p for p in clean.split("-") if p]
+    mod_name_display = " - ".join(parts)
     description = str(plan_entry.get("description", ""))
     one_liner = description.split(".")[0] + "." if "." in description else description
 
@@ -1543,6 +1578,13 @@ def generate_bbcode_packets(plan: Dict[str, object], output_dir: str, dry_run: b
         readme_path = str(entry.get("readme_path", ""))
         readme_text = load_text_file(readable_path) or load_text_file(readme_path)
         if not readme_text:
+            # Fallback: check for README.txt in the mod folder
+            folder_path = str(entry.get("folder_path", "") or "")
+            if folder_path:
+                txt_path = os.path.join(folder_path, "README.txt")
+                if os.path.isfile(txt_path):
+                    readme_text = load_text_file(txt_path)
+        if not readme_text:
             print(f"  [SKIP] {mod_name}: no README found")
             continue
         sections = parse_readme_sections(readme_text)
@@ -1559,13 +1601,449 @@ def generate_bbcode_packets(plan: Dict[str, object], output_dir: str, dry_run: b
     return 0
 
 
+# ---------------------------------------------------------------------------
+# Upload Automation (v3 API)
+# ---------------------------------------------------------------------------
+
+def create_upload_session(
+    api_base_url: str,
+    headers: Dict[str, str],
+    size_bytes: int,
+    filename: str,
+    dry_run: bool,
+) -> Optional[Dict[str, object]]:
+    """POST /uploads — create an upload session, get presigned_url + upload_id."""
+    if dry_run:
+        print(f"[DRYRUN] Would create upload session: filename={filename}, size={size_bytes} bytes")
+        print(f"[DRYRUN]   POST {api_base_url}/uploads")
+        return {"id": "dryrun-uuid", "presigned_url": "https://dryrun.example.com/upload"}
+
+    url = f"{api_base_url}/uploads"
+    body = {"size_bytes": size_bytes, "filename": filename}
+    payload = request_json(url, headers, method="POST", body=body)
+    data = extract_data_payload(payload)
+    if not isinstance(data, dict):
+        print(f"[ERROR] Failed to create upload session: unexpected response")
+        return None
+    upload_id = str(data.get("id", "")).strip()
+    presigned_url = str(data.get("presigned_url", "")).strip()
+    if not upload_id or not presigned_url:
+        print(f"[ERROR] Upload response missing id or presigned_url")
+        return None
+    print(f"[UPLOAD] Created upload session: id={upload_id}")
+    return {"id": upload_id, "presigned_url": presigned_url}
+
+
+def upload_file_to_presigned_url(presigned_url: str, file_path: str, dry_run: bool) -> bool:
+    """PUT to presigned URL — upload using PowerShell with all signed headers."""
+    if dry_run:
+        print(f"[DRYRUN] Would PUT file to presigned URL: {file_path} ({os.path.getsize(file_path)} bytes)")
+        return True
+
+    print(f"[UPLOAD] Uploading {file_path} to presigned URL ...")
+    try:
+        import subprocess
+        import tempfile
+        
+        filename = os.path.basename(file_path)
+        
+        ps_file = tempfile.mktemp(suffix=".ps1", prefix="nexus_upload_")
+        ps_content = (
+            'param([string]$url, [string]$file)\n'
+            'try {\n'
+            '  $bytes = [System.IO.File]::ReadAllBytes($file)\n'
+            '  $req = [System.Net.HttpWebRequest]::Create($url)\n'
+            '  $req.Method = "PUT"\n'
+            '  $req.ContentType = "application/octet-stream"\n'
+            '  $req.Headers["Content-Disposition"] = \'attachment; filename="' + filename + '"\'\n'
+            '  $req.ContentLength = $bytes.Length\n'
+            '  $req.AutomaticDecompression = [System.Net.DecompressionMethods]::None\n'
+            '  $req.Accept = $null\n'
+            '  $req.UserAgent = $null\n'
+            '  [System.Net.ServicePointManager]::Expect100Continue = $false\n'
+            '  $stream = $req.GetRequestStream()\n'
+            '  $stream.Write($bytes, 0, $bytes.Length)\n'
+            '  $stream.Close()\n'
+            '  $resp = $req.GetResponse()\n'
+            '  Write-Output ("HTTP:" + [int]$resp.StatusCode)\n'
+            '  $resp.Close()\n'
+            '} catch [System.Net.WebException] {\n'
+            '  try { $resp = $_.Exception.Response; Write-Output ("ERROR:" + [int]$resp.StatusCode) } catch { Write-Output ("ERROR:" + $_.Exception.Message) }\n'
+            '} catch {\n'
+            '  Write-Output ("ERROR:" + $_.Exception.Message)\n'
+            '}\n'
+        )
+        with open(ps_file, "w", encoding="ascii") as f:
+            f.write(ps_content)
+        
+        result = subprocess.run(
+            ["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ps_file, "-url", presigned_url, "-file", file_path],
+            capture_output=True, timeout=120
+        )
+        try:
+            os.remove(ps_file)
+        except:
+            pass
+        
+        stdout = result.stdout.decode("utf-8", errors="replace") if result.stdout else ""
+        stderr = result.stderr.decode("utf-8", errors="replace") if result.stderr else ""
+
+        for line in stdout.splitlines():
+            line = line.strip()
+            if line.startswith("HTTP:"):
+                status_code = int(line.split(":")[1])
+                if 200 <= status_code < 300:
+                    print(f"[UPLOAD] File uploaded successfully (HTTP {status_code})")
+                    return True
+                else:
+                    print(f"[ERROR] File upload failed (HTTP {status_code})")
+                    return False
+            elif line.startswith("ERROR:"):
+                error_msg = line[6:].strip()
+                print(f"[ERROR] File upload failed: {error_msg[:200]}")
+                return False
+
+        if stderr.strip():
+            print(f"[ERROR] Upload script error: {stderr[:200]}")
+            return False
+        print(f"[ERROR] File upload failed: no response received")
+        return False
+    except subprocess.TimeoutExpired:
+        print(f"[ERROR] File upload timed out")
+        return False
+    except Exception as ex:
+        print(f"[ERROR] File upload exception: {ex}")
+        return False
+
+
+def finalise_upload(api_base_url: str, headers: Dict[str, str], upload_id: str, dry_run: bool) -> bool:
+    """POST /uploads/{id}/finalise — close the upload session."""
+    if dry_run:
+        print(f"[DRYRUN] Would finalise upload: id={upload_id}")
+        print(f"[DRYRUN]   POST {api_base_url}/uploads/{upload_id}/finalise")
+        return True
+
+    url = f"{api_base_url}/uploads/{upload_id}/finalise"
+    payload = request_json(url, headers, method="POST")
+    data = extract_data_payload(payload)
+    if not isinstance(data, dict):
+        print(f"[ERROR] Failed to finalise upload")
+        return False
+    print(f"[UPLOAD] Finalised upload: id={upload_id}")
+    return True
+
+
+def poll_upload_available(api_base_url: str, headers: Dict[str, str], upload_id: str, dry_run: bool) -> bool:
+    """GET /uploads/{id} — poll until state is 'available'."""
+    if dry_run:
+        print(f"[DRYRUN] Would poll upload state: id={upload_id}")
+        return True
+
+    url = f"{api_base_url}/uploads/{upload_id}"
+    for attempt in range(1, UPLOAD_MAX_POLL_ATTEMPTS + 1):
+        try:
+            payload = request_json(url, headers)
+            data = extract_data_payload(payload)
+            if isinstance(data, dict):
+                state = str(data.get("state", "")).strip()
+                print(f"[UPLOAD] Poll attempt {attempt}/{UPLOAD_MAX_POLL_ATTEMPTS}: state={state}")
+                if state == "available":
+                    return True
+                if state == "created":
+                    time.sleep(UPLOAD_POLL_INTERVAL_SEC)
+                    continue
+                print(f"[ERROR] Unexpected upload state: {state}")
+                return False
+        except Exception as ex:
+            print(f"[ERROR] Poll exception: {ex}")
+        time.sleep(UPLOAD_POLL_INTERVAL_SEC)
+
+    print(f"[ERROR] Upload did not become available after {UPLOAD_MAX_POLL_ATTEMPTS} polls")
+    return False
+
+
+def create_mod_file_version(
+    api_base_url: str,
+    headers: Dict[str, str],
+    mod_file_id: str,
+    upload_id: str,
+    name: str,
+    version: str,
+    file_category: str,
+    description: Optional[str],
+    dry_run: bool,
+) -> bool:
+    """POST /mod-files/{id}/versions — create the new version on the mod file."""
+    if dry_run:
+        print(f"[DRYRUN] Would create mod file version:")
+        print(f"[DRYRUN]   POST {api_base_url}/mod-files/{mod_file_id}/versions")
+        print(f"[DRYRUN]   upload_id={upload_id}, name={name}, version={version}, category={file_category}")
+        if description:
+            print(f"[DRYRUN]   description length={len(description)}")
+        return True
+
+    url = f"{api_base_url}/mod-files/{mod_file_id}/versions"
+    body: Dict[str, object] = {
+        "upload_id": upload_id,
+        "name": name,
+        "version": version,
+        "file_category": file_category,
+        "primary_mod_manager_download": True,
+        "allow_mod_manager_download": True,
+        "archive_existing_file": True,
+    }
+    if description:
+        body["description"] = description
+
+    payload = request_json(url, headers, method="POST", body=body)
+    data = extract_data_payload(payload)
+    if not isinstance(data, dict):
+        print(f"[ERROR] Failed to create mod file version")
+        return False
+
+    created_version = data.get("version", {})
+    if isinstance(created_version, dict):
+        version_id = str(created_version.get("id", "")).strip()
+        print(f"[UPLOAD] Created mod file version: id={version_id or 'unknown'}")
+    else:
+        print(f"[UPLOAD] Mod file version created successfully")
+    return True
+
+
+def run_upload_pipeline(
+    plan: Dict[str, object],
+    config: Dict[str, object],
+    only: str,
+    dry_run: bool,
+) -> int:
+    """
+    Full upload pipeline for each mod:
+      1. Prepare upload (resolve live state, changelog delta)
+      2. Create upload session
+      3. Upload .zip to presigned URL
+      4. Finalise upload
+      5. Poll until available
+      6. Create mod file version (with changelog as description)
+    """
+    env_var_name, api_key = get_env_api_key(config)
+    mods = plan.get("mods", [])
+    if not isinstance(mods, list):
+        return 1
+
+    # In dry-run mode, build targets from plan data without API calls
+    if dry_run:
+        targets: List[Dict[str, object]] = []
+        for entry in mods:
+            if not isinstance(entry, dict):
+                continue
+            action = str(entry.get("action", ""))
+            if only != "all" and action != only:
+                continue
+            if action != "update":
+                continue
+            zip_path = str(entry.get("zip_path", ""))
+            if not os.path.isfile(zip_path):
+                print(f"[MISSING ZIP] {str(entry.get('mod_name', ''))}: {zip_path}")
+                continue
+            # Find the readme path - try readme_path, readable_readme_path, or README.txt in the mod folder
+            readme_source = str(entry.get("readme_path", "") or "")
+            if not readme_source:
+                readme_source = str(entry.get("readable_readme_path", "") or "")
+            if not readme_source:
+                folder_path = str(entry.get("folder_path", "") or "")
+                if folder_path:
+                    txt_path = os.path.join(folder_path, "README.txt")
+                    if os.path.isfile(txt_path):
+                        readme_source = txt_path
+            targets.append({
+                "mod_name": entry.get("mod_name", ""),
+                "zip_path": zip_path,
+                "local_version": entry.get("version", "0.0.0"),
+                "file_category": entry.get("file_category", "main"),
+                "page_url": entry.get("page_url", ""),
+                "tested_game_version": entry.get("tested_game_version", ""),
+                "zip_name": entry.get("zip_name", ""),
+                "changelog_delta": build_changelog_delta(
+                    readme_source,
+                    "0.0.0",
+                    str(entry.get("version", "0.0.0")),
+                ),
+            })
+        if not targets:
+            print("No mods to upload (dry-run).")
+            return 0
+        print(f"=== NEXUS UPLOAD PIPELINE (DRY RUN) ===")
+        for t in targets:
+            version = str(t.get("local_version", "0.0.0"))
+            print(f"  [DRYRUN] {t['mod_name']} v{version} | zip={t['zip_path']}")
+            print(f"  [DRYRUN]   Would upload zip as new version, with changelog for v{version} only")
+        print(f"\n  Note: In a live run, the Nexus API is queried to determine which changelog")
+        print(f"  entries are newer than the live version. Only those entries would be included.")
+        return 0
+
+    # Live mode requires API key
+    if not api_key:
+        print(f"Missing Nexus API key. Set environment variable {env_var_name}.")
+        return 1
+
+    headers = build_request_headers(config, api_key)
+    api_base_url = get_api_base_url(config)
+
+    # Step 1: Use prepare_upload_plan to get targets
+    result, upload_plan = prepare_upload_plan(plan, config, only)
+    if result != 0:
+        return result
+
+    targets = upload_plan.get("prepared_targets", [])
+    if not isinstance(targets, list) or not targets:
+        print("No mods to upload.")
+        return 0
+
+    print("\n=== NEXUS UPLOAD PIPELINE ===")
+    failures = 0
+    for target in targets:
+        if not isinstance(target, dict):
+            continue
+
+        mod_name = str(target.get("mod_name", ""))
+        zip_path = str(target.get("zip_path", ""))
+        local_version = str(target.get("local_version", "0.0.0"))
+        file_category = str(target.get("file_category", "main"))
+        selected_chain = target.get("selected_legacy_chain")
+
+        # Get this mod's live data from the plan (populated by prepare_upload_plan -> resolve_live_state_for_entry)
+        mod_entry = None
+        entry_live = {}
+        for entry in mods:
+            if isinstance(entry, dict) and str(entry.get("mod_name", "")) == mod_name:
+                mod_entry = entry
+                entry_live = entry.get("live", {})
+                if not isinstance(entry_live, dict):
+                    entry_live = {}
+                break
+
+        update_groups = entry_live.get("update_groups", [])
+        if not isinstance(update_groups, list):
+            update_groups = []
+
+        # Determine the mod_file_id to create the version on
+        # Prefer update_group_id from config, then first active update group from live API
+        mod_file_id = ""
+        if mod_entry:
+            mod_file_id = str(mod_entry.get("update_group_id", "")).strip()
+        if not mod_file_id and update_groups:
+            mod_file_id = str(update_groups[0].get("id", "")).strip()
+        if not mod_file_id:
+            # Fall back: check the selected_legacy_chain
+            pass
+
+        if not mod_file_id:
+            print(f"[SKIP] {mod_name}: no update group id or mod file id found. Run 'discover-groups' first.")
+            print(f"  To fix: add 'update_group_id' to the mod's config entry.")
+            failures += 1
+            continue
+
+        if not os.path.isfile(zip_path):
+            print(f"[MISSING ZIP] {mod_name}: {zip_path}")
+            failures += 1
+            continue
+
+        # Read PublishHelp display name from the plan's pre-generated data
+        # Format: "AGF - V{ver} - {mod_name_cleaned}"
+        # where mod_name_cleaned = base_name without AGF- prefix, hyphens split and rejoined with " - "
+        tested_ver = str(target.get('tested_game_version', '')).strip()
+        mod_name_clean = mod_name
+        if mod_name_clean.startswith('AGF-'):
+            mod_name_clean = mod_name_clean[4:]  # Remove "AGF-" prefix
+        # Split on hyphens and rejoin with " - " for proper display
+        mod_name_clean = ' - '.join(part for part in mod_name_clean.split('-') if part)
+        if tested_ver:
+            display_name = f"AGF - V{tested_ver} - {mod_name_clean}"
+        else:
+            display_name = f"AGF - {mod_name_clean}"
+
+        # File description for Nexus (file notes / file options -> Description field)
+        file_description_text = str(target.get('file_description', '')).strip()
+        if not file_description_text:
+            file_description_text = str(target.get('description', '')).strip()
+
+        # Build changelog text for Nexus (just the bullet lines, no version headers or dash prefixes)
+        changelog_delta = target.get("changelog_delta", [])
+        if isinstance(changelog_delta, list) and changelog_delta:
+            changelog_lines: List[str] = []
+            for block in changelog_delta:
+                bullets = block.get("bullets", [])
+                if isinstance(bullets, list):
+                    for bullet in bullets:
+                        bt = str(bullet).strip()
+                        if bt:
+                            changelog_lines.append(bt)
+            description_text = "\n".join(changelog_lines) if changelog_lines else None
+        else:
+            description_text = None
+
+        print(f"\n--- Processing: {mod_name} v{local_version} ---")
+
+        # Step 2: Create upload session
+        file_size = os.path.getsize(zip_path)
+        zip_basename = os.path.basename(zip_path)
+        session = create_upload_session(api_base_url, headers, file_size, zip_basename, dry_run)
+        if session is None:
+            failures += 1
+            continue
+
+        upload_id = session.get("id", "")
+        presigned_url = session.get("presigned_url", "")
+
+        # Step 3: Upload file
+        if not upload_file_to_presigned_url(presigned_url, zip_path, dry_run):
+            failures += 1
+            continue
+
+        # Step 4: Finalise
+        if not finalise_upload(api_base_url, headers, upload_id, dry_run):
+            failures += 1
+            continue
+
+        # Step 5: Poll until available
+        if not poll_upload_available(api_base_url, headers, upload_id, dry_run):
+            failures += 1
+            continue
+
+        # Step 6: Create mod file version - pass file_description as API description (file notes)
+        api_description = file_description_text if file_description_text else description_text
+        if not create_mod_file_version(
+            api_base_url,
+            headers,
+            mod_file_id,
+            upload_id,
+            display_name,
+            local_version,
+            file_category,
+            api_description,
+            dry_run,
+        ):
+            failures += 1
+            continue
+
+        print(f"[SUCCESS] {mod_name} v{local_version} uploaded successfully!")
+        page_url = str(target.get("page_url", "")).strip()
+        if page_url and not dry_run:
+            print(f"          Page: {page_url}")
+
+    return 0 if failures == 0 else 1
+
+
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Dedicated Nexus Mods planning and live-check workflow")
     parser.add_argument(
         "--mode",
-        choices=["init-config", "build-plan", "check-live", "discover-groups", "prepare-upload", "prepare-manual-docs", "generate-bbcode"],
+        choices=[
+            "init-config", "build-plan", "check-live", "discover-groups",
+            "prepare-upload", "prepare-manual-docs", "generate-bbcode", "upload",
+        ],
         default="build-plan",
-        help="Create config, build plan, run live checks, prepare upload payloads, or generate per-mod manual Nexus packet docs",
+        help="Create config, build plan, run live checks, prepare upload payloads, generate docs, or upload directly",
     )
     parser.add_argument(
         "--config",
@@ -1596,7 +2074,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Preview file writes without changing files",
+        help="Preview file writes or upload operations without making changes",
     )
     return parser
 
@@ -1621,6 +2099,10 @@ def main() -> int:
 
     plan = build_release_plan(config)
     plan["config_path"] = config_path
+
+    # For upload mode, the pipeline handles its own plan output
+    if args.mode == "upload":
+        return run_upload_pipeline(plan, config, args.only, args.dry_run)
 
     plan_output = os.path.abspath(args.plan_output)
     write_json_file(plan_output, plan, args.dry_run)
