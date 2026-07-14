@@ -25,6 +25,7 @@ from xml.sax.saxutils import escape
 # =============================================================
 # CONFIG
 # =============================================================
+WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
 VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANE_DRAFT_PREFERRED = os.path.join(VS_CODE_ROOT, "01_Draft")
 LANE_ACTIVE_BUILD_PREFERRED = os.path.join(VS_CODE_ROOT, "02_ActiveBuild")
@@ -5853,8 +5854,28 @@ def maybe_post_discord_release_update(
 
 
 def generate_mod_images(dry_run: bool, log: Logger) -> None:
-    """No-op: mod image generation has been disabled."""
-    log.info("Mod image generation disabled (no longer deployed to mod folders)")
+    """Generate _01.png composite mod images into 00_Images/_generated/."""
+    image_script = os.path.join(WORKFLOW_DIR, "SCRIPT-GenerateModImages.py")
+    if not os.path.isfile(image_script):
+        log.warn(f"Image generation script not found: {image_script}")
+        return
+
+    cmd = [sys.executable, image_script, "--changed-only"]
+    if dry_run:
+        cmd.append("--dry-run")
+
+    log.info(f"Generating mod images: {' '.join(cmd)}")
+    try:
+        result = subprocess.run(cmd, check=False, capture_output=True, text=True)
+        for line in (result.stdout or "").splitlines():
+            log.info(f"[ImageGen] {line}")
+        for line in (result.stderr or "").splitlines():
+            if line.strip():
+                log.warn(f"[ImageGen] {line}")
+        if result.returncode != 0:
+            log.warn(f"Image generation script exited with code {result.returncode}")
+    except Exception as ex:
+        log.warn(f"Failed to run image generation script: {ex}")
 
 
 def copy_mod_images_to_mod_folders(

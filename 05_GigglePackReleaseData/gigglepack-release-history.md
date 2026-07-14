@@ -1,5 +1,59 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.12.2 (July 13, 2026 10:39pm)
+### Summary: +0 new, ~42 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-BackpackPlus-060Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip) (v4.1.0 -> v4.1.1)
+  - [AGF-BackpackPlus-072Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip) (v4.1.0 -> v4.1.1)
+  - [AGF-BackpackPlus-084Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip) (v4.1.0 -> v4.1.1)
+  - [AGF-BackpackPlus-119Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.5.1 -> v6.5.2)
+  - [AGF-HUDPlus-BMCounter](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip) (v4.0.0 -> v4.0.1)
+  - [AGF-HUDPlus-PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-HUDPlus-RemoveEnteringPopUp](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-RemoveEnteringPopUp.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-HUDPluszOther-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPluszOther-Weekday.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-NoEAC-AutoRun](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-NoEAC-CosmeticLockIcon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.3.0 -> v4.3.1)
+  - [AGF-NoEAC-GlobalStormTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.3.0 -> v2.3.1)
+  - [AGF-NoEAC-SignErrorGuard](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SignErrorGuard.zip) (v1.1.0 -> v1.1.1)
+  - [AGF-NoEAC-Toolbelt12Slots](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip) (v2.2.1 -> v2.2.2)
+  - [AGF-VP-AutomobilesRespawn](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AutomobilesRespawn.zip) (v4.1.0 -> v4.1.1)
+  - [AGF-VP-BedrollPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BedrollPlus.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-BetterEggChance](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BetterEggChance.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-BreakItGetIt](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-CraftSewingKits](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftSewingKits.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-CraftVitamins](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-FuelBurnPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-LargerStorageOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip) (v1.1.0 -> v1.1.1)
+  - [AGF-VP-MasterTool](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip) (v7.1.0 -> v7.1.1)
+  - [AGF-VP-MaxLevel500](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MaxLevel500.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-ModSlotsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip) (v4.1.0 -> v4.1.1)
+  - [AGF-VP-PickupLanternsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PickupLanternsPlus.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-PlayerResetQuests](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PlayerResetQuests.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-RebundleBundles](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-RestorePowerAnyTime](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RestorePowerAnyTime.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-ScrapBatts4Acid](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapBatts4Acid.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-ScrapEquipmentFaster](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ScrapEquipmentFaster.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-SimplifiedStacks](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-StayLongerAnimalCorpse](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerAnimalCorpse.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-StayLongerPlayerBackpack](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-StayLongerPlayerBackpack.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-VehiclePerformance](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclePerformance.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-VehicleStoragePlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehicleStoragePlus.zip) (v3.1.0 -> v3.1.1)
+  - [AGF-VP-VehiclesExtraSeating](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-VehiclesExtraSeating.zip) (v2.1.0 -> v2.1.1)
+  - [AGF-VP-ZombieCorpseLeaveQuicker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ZombieCorpseLeaveQuicker.zip) (v3.1.0 -> v3.1.1)
+  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (v5.1.0 -> v5.1.1)
+  - [zzzAGF-Special-LocalizationPatches](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-LocalizationPatches.zip) (v1.0.0 -> v1.0.1)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.12.1 (July 13, 2026 5:20pm)
 ### Summary: +0 new, ~2 updated, =0 renamed, -0 removed
 - **New Mods**

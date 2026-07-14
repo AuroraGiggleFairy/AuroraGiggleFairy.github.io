@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-07-13T03:13:41.785177",
-  "mode": "update",
+  "timestamp": "2026-07-13T22:39:03.392086",
+  "mode": "full",
   "dry_run": false,
   "exit_code": 0,
-  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260713-031341.log",
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260713-223903.log",
   "stats": {
     "scanned_workspace_mods": 42,
     "scanned_game_mods": 38,
     "synced_pull_from_game": 0,
-    "synced_push_to_game": 13,
+    "synced_push_to_game": 4,
     "sync_conflicts": 0,
     "moved_to_publish_ready": 0,
     "moved_to_in_progress": 0,
@@ -21,13 +21,15 @@
     "readmes_written": 134,
     "readable_txt_written": 0,
     "pushed_back_to_game": 0,
-    "mod_zips_created": 0,
-    "pack_zips_created": 0,
+    "mod_zips_created": 42,
+    "pack_zips_created": 6,
     "promoted_to_publish_ready": 0,
-    "warnings": 0,
+    "warnings": 1,
     "errors": 0
   },
-  "action_needed": [],
+  "action_needed": [
+    "GigglePack release remains queued. Re-run publish with --publish-gigglepack-action finalize when ready."
+  ],
   "mod_changes": [
     "none"
   ]
