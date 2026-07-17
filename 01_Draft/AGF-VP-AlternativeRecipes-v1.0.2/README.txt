@@ -258,17 +258,15 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.2
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Updated README and Code Notes.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Transported from 1Core, in goal to remove the 1Core requirement.

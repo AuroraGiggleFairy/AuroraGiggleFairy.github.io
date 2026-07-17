@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.12.2",
-  "previous_gigglepack_version": "0.12.1",
+  "gigglepack_version": "0.13.0",
+  "previous_gigglepack_version": "0.12.2",
   "is_baseline_release": false,
-  "released_at": "2026-07-13 22:39:41",
+  "released_at": "2026-07-17 09:47:05",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
@@ -12,7 +12,9 @@
     "AGF-HUDPlus-BMCounter": "4.0.1",
     "AGF-HUDPlus-PurpleBook": "3.1.1",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
+    "AGF-HUDPlus-Weekday": "3.1.2",
     "AGF-HUDPluszOther-Weekday": "3.1.1",
+    "AGF-NoEAC-AudioOptionsPlus": "2.0.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
     "AGF-NoEAC-EnhancedAGF": "4.3.1",
@@ -26,10 +28,12 @@
     "AGF-VP-BreakItGetIt": "2.1.1",
     "AGF-VP-CraftSewingKits": "2.1.1",
     "AGF-VP-CraftVitamins": "2.1.1",
+    "AGF-VP-FloraHarvester": "3.0.0",
     "AGF-VP-FuelBurnPlus": "3.1.1",
     "AGF-VP-LargerStorageOption": "1.1.1",
     "AGF-VP-MasterTool": "7.1.1",
     "AGF-VP-MaxLevel500": "3.1.1",
+    "AGF-VP-Mod988": "3.0.0",
     "AGF-VP-ModSlotsPlus": "4.1.1",
     "AGF-VP-PickupLanternsPlus": "3.1.1",
     "AGF-VP-PlayerResetQuests": "3.1.1",
@@ -44,312 +48,44 @@
     "AGF-VP-VehicleStoragePlus": "3.1.1",
     "AGF-VP-VehiclesExtraSeating": "2.1.1",
     "AGF-VP-ZombieCorpseLeaveQuicker": "3.1.1",
+    "zzzAGF-Requested-LootStaysOnEmpty": "1.0.3",
     "zzzAGF-Special-Compatibilities": "5.1.1",
     "zzzAGF-Special-LocalizationPatches": "1.0.1"
   },
-  "updated_mods": [
+  "updated_mods": [],
+  "new_mods": [
     {
-      "mod": "AGF-BackpackPlus-060Slots",
-      "from": "4.1.0",
-      "to": "4.1.1",
-      "from_display": "4.1.0",
-      "to_display": "4.1.1"
+      "mod": "AGF-HUDPlus-Weekday",
+      "to": "3.1.2",
+      "to_display": "3.1.2"
     },
     {
-      "mod": "AGF-BackpackPlus-072Slots",
-      "from": "4.1.0",
-      "to": "4.1.1",
-      "from_display": "4.1.0",
-      "to_display": "4.1.1"
+      "mod": "AGF-NoEAC-AudioOptionsPlus",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
     },
     {
-      "mod": "AGF-BackpackPlus-084Slots",
-      "from": "4.1.0",
-      "to": "4.1.1",
-      "from_display": "4.1.0",
-      "to_display": "4.1.1"
+      "mod": "AGF-VP-FloraHarvester",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
     },
     {
-      "mod": "AGF-BackpackPlus-119Slots",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
+      "mod": "AGF-VP-Mod988",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
     },
     {
-      "mod": "AGF-HUDPlus-1Main",
-      "from": "6.5.1",
-      "to": "6.5.2",
-      "from_display": "6.5.1",
-      "to_display": "6.5.2"
-    },
-    {
-      "mod": "AGF-HUDPlus-BMCounter",
-      "from": "4.0.0",
-      "to": "4.0.1",
-      "from_display": "4.0.0",
-      "to_display": "4.0.1"
-    },
-    {
-      "mod": "AGF-HUDPlus-PurpleBook",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-HUDPlus-RemoveEnteringPopUp",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-HUDPluszOther-Weekday",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-NoEAC-AutoRun",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-NoEAC-CosmeticLockIcon",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-NoEAC-EnhancedAGF",
-      "from": "4.3.0",
-      "to": "4.3.1",
-      "from_display": "4.3.0",
-      "to_display": "4.3.1"
-    },
-    {
-      "mod": "AGF-NoEAC-GlobalStormTracker",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-NoEAC-ScreamerAlert",
-      "from": "2.3.0",
-      "to": "2.3.1",
-      "from_display": "2.3.0",
-      "to_display": "2.3.1"
-    },
-    {
-      "mod": "AGF-NoEAC-SignErrorGuard",
-      "from": "1.1.0",
-      "to": "1.1.1",
-      "from_display": "1.1.0",
-      "to_display": "1.1.1"
-    },
-    {
-      "mod": "AGF-NoEAC-Toolbelt12Slots",
-      "from": "2.2.1",
-      "to": "2.2.2",
-      "from_display": "2.2.1",
-      "to_display": "2.2.2"
-    },
-    {
-      "mod": "AGF-VP-AutomobilesRespawn",
-      "from": "4.1.0",
-      "to": "4.1.1",
-      "from_display": "4.1.0",
-      "to_display": "4.1.1"
-    },
-    {
-      "mod": "AGF-VP-BedrollPlus",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-BetterEggChance",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-BreakItGetIt",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-CraftSewingKits",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-CraftVitamins",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-FuelBurnPlus",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-LargerStorageOption",
-      "from": "1.1.0",
-      "to": "1.1.1",
-      "from_display": "1.1.0",
-      "to_display": "1.1.1"
-    },
-    {
-      "mod": "AGF-VP-MasterTool",
-      "from": "7.1.0",
-      "to": "7.1.1",
-      "from_display": "7.1.0",
-      "to_display": "7.1.1"
-    },
-    {
-      "mod": "AGF-VP-MaxLevel500",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-ModSlotsPlus",
-      "from": "4.1.0",
-      "to": "4.1.1",
-      "from_display": "4.1.0",
-      "to_display": "4.1.1"
-    },
-    {
-      "mod": "AGF-VP-PickupLanternsPlus",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-PlayerResetQuests",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-RebundleBundles",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-RestorePowerAnyTime",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-ScrapBatts4Acid",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-ScrapEquipmentFaster",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-SimplifiedStacks",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-StayLongerAnimalCorpse",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-StayLongerPlayerBackpack",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-VehiclePerformance",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-VehicleStoragePlus",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "AGF-VP-VehiclesExtraSeating",
-      "from": "2.1.0",
-      "to": "2.1.1",
-      "from_display": "2.1.0",
-      "to_display": "2.1.1"
-    },
-    {
-      "mod": "AGF-VP-ZombieCorpseLeaveQuicker",
-      "from": "3.1.0",
-      "to": "3.1.1",
-      "from_display": "3.1.0",
-      "to_display": "3.1.1"
-    },
-    {
-      "mod": "zzzAGF-Special-Compatibilities",
-      "from": "5.1.0",
-      "to": "5.1.1",
-      "from_display": "5.1.0",
-      "to_display": "5.1.1"
-    },
-    {
-      "mod": "zzzAGF-Special-LocalizationPatches",
-      "from": "1.0.0",
-      "to": "1.0.1",
-      "from_display": "1.0.0",
-      "to_display": "1.0.1"
+      "mod": "zzzAGF-Requested-LootStaysOnEmpty",
+      "to": "1.0.3",
+      "to_display": "1.0.3"
     }
   ],
-  "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.12.2.zip",
+  "versioned_zip": "AGF-GigglePack-v0.13.0.zip",
   "change_counts": {
-    "new_mods": 0,
-    "updated_existing_mods": 42,
+    "new_mods": 5,
+    "updated_existing_mods": 0,
     "renamed_mods": 0,
     "removed_mods": 0
   }

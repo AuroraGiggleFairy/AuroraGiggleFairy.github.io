@@ -266,17 +266,23 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.3
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.2
+    - Updated README and code organization.
+    - Corrected the cloths amounts given back from the 100's and 1000's
+    for flaming arrows/bolts.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Corrected a change to flaming arrows / bolts for 7d2d v2.5+.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Separated from StacksBundlesAmmoPlus now that I understand
+    conditionals.

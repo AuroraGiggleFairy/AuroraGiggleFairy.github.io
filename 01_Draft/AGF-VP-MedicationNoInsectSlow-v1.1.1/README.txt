@@ -335,17 +335,17 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.1.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.1.0
+    - Removed windows.xml as the purple book conditional is now within
+      the
+    purple book mod.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Made the mod (beginning with 7d2d v2.5)

@@ -394,17 +394,60 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v2.4.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v2.4.0
+    - Removed as the purple book conditional within windows.xml as it is
+    now within the purple book mod.
+
+------------------------------------------------------------------------
+
+v2.3.0
+    - Now works appropriately with version 2.5 (and previous game
+    versions).
+    - Updated progression.xml and windows.xml.
+
+------------------------------------------------------------------------
+
+v2.2.2
+    - Added hopefully a clearer description of what the 1:5 metals are.
+
+------------------------------------------------------------------------
+
+v2.2.1
+    - Added conditional for if someone has Mining Plus installed or not.
+
+------------------------------------------------------------------------
+
+v2.2.0
+    - Will now only apply purple book edits if you have my purple book
+    installed.
+
+------------------------------------------------------------------------
+
+v2.1.2
+    - expanded possible ways of crafting the adv smelt stacks, like from
+    radiators and bundled stacks.
+
+------------------------------------------------------------------------
+
+v2.1.1
+    - Had the ratio numbers written in reverse.... facepalm
+
+------------------------------------------------------------------------
+
+v2.1.0
+    - added advanced smelting metals
+
+------------------------------------------------------------------------
+
+v2.0.1
+    - Removed the tint color on the "units"
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Updated to V1.0

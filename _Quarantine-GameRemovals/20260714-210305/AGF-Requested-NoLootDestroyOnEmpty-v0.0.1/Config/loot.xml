@@ -1,0 +1,5 @@
+<AGF-NoDestroyLoot>
+
+ <removeattribute xpath="//@destroy_on_close"/>
+
+</AGF-NoDestroyLoot>

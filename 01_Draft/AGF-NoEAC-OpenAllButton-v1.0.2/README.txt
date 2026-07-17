@@ -247,17 +247,18 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.2
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Updated OpenAll to be accessible only when Open is.
+    - Corrected localization handling.
+    - Put auto-stop in place when selecting another button to prevent
+    crashes.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Made the mod.

@@ -1,5 +1,22 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.13.0 (July 17, 2026 9:47am)
+### Summary: +5 new, ~0 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-HUDPlus-Weekday](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-Weekday.zip) (new: v3.1.2)
+  - [AGF-NoEAC-AudioOptionsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip) (new: v2.0.0)
+  - [AGF-VP-FloraHarvester](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip) (new: v3.0.0)
+  - [AGF-VP-Mod988](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-Mod988.zip) (new: v3.0.0)
+  - [zzzAGF-Requested-LootStaysOnEmpty](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip) (new: v1.0.3)
+- **Updated Existing Mods**
+  - None
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.12.2 (July 13, 2026 10:39pm)
 ### Summary: +0 new, ~42 updated, =0 renamed, -0 removed
 - **New Mods**

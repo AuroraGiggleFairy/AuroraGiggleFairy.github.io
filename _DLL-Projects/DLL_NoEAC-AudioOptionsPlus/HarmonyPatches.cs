@@ -13,6 +13,63 @@ namespace AudioOptionsPlus;
 internal static class AudioOptionsPlusConfig
 {
     private static readonly object Sync = new object();
+    private enum UiSnapshotValueType
+    {
+        String,
+        Float,
+        Int
+    }
+
+    private struct UiSnapshotValue
+    {
+        public UiSnapshotValueType Type;
+        public string StringValue;
+        public float FloatValue;
+        public int IntValue;
+    }
+
+    private static readonly Dictionary<string, UiSnapshotValue> UiSessionSnapshot = new Dictionary<string, UiSnapshotValue>(StringComparer.Ordinal);
+    private static bool UiSessionActive;
+    private static readonly string[] UiSessionKeys =
+    {
+        "AudioOptionsPlus.AugerChainsawMultiplier",
+        "AudioOptionsPlus.ImpactHarvestSurfaceMultiplier",
+        "AudioOptionsPlus.GunFireMultiplier",
+        "AudioOptionsPlus.ExplosionsMultiplier",
+        "AudioOptionsPlus.VehiclesNoHornMultiplier",
+        "AudioOptionsPlus.ElectricalBlockLoopsMultiplier",
+        "AudioOptionsPlus.CraftingCompleteUiMultiplier",
+        "AudioOptionsPlus.SpiderZombieMultiplier",
+        "AudioOptionsPlus.AnimalPainDeathMultiplier",
+        "AudioOptionsPlus.PlaceUpgradeRepairMultiplier",
+        "AudioOptionsPlus.ProtectionDingsMultiplier",
+        "AudioOptionsPlus.InteractionPromptsMultiplier",
+        "AudioOptionsPlus.TwitchMultiplier",
+        "AudioOptionsPlus.WeatherStormMultiplier",
+        "AudioOptionsPlus.ThunderMultiplier",
+        "AudioOptionsPlus.WeatherAlertMultiplier",
+        "AudioOptionsPlus.DoorsHatchesVaultsCellarsBridgeMultiplier",
+        "AudioOptionsPlus.TraderBobMultiplier",
+        "AudioOptionsPlus.TraderHughMultiplier",
+        "AudioOptionsPlus.TraderJenMultiplier",
+        "AudioOptionsPlus.TraderJoelMultiplier",
+        "AudioOptionsPlus.TraderRektMultiplier",
+        "AudioOptionsPlus.PlayerMadeSoundsMultiplier",
+        "AudioOptionsPlus.SoundSwap.SillySoundsEnabled",
+        "AudioOptionsPlus.SoundSwap.Enabled",
+        "AudioOptionsPlus.SoundSwap.PlayerMode",
+        "AudioOptionsPlus.SoundSwap.BearMode",
+        "AudioOptionsPlus.SoundSwap.BoarMode",
+        "AudioOptionsPlus.SoundSwap.ChickenMode",
+        "AudioOptionsPlus.SoundSwap.RabbitMode",
+        "AudioOptionsPlus.SoundSwap.SnakeMode",
+        "AudioOptionsPlus.SoundSwap.StagMode",
+        "AudioOptionsPlus.SoundSwap.VultureMode",
+        "AudioOptionsPlus.SoundSwap.WolfMode",
+        "AudioOptionsPlus.SoundSwap.DireWolfMode",
+        "AudioOptionsPlus.SoundSwap.MountainLionMode",
+        "AudioOptionsPlus.SoundSwap.ZombieDogMode"
+    };
 
     internal sealed class SoundRule
     {
@@ -37,6 +94,9 @@ internal static class AudioOptionsPlusConfig
     public static float ProtectionDingsMultiplier { get; private set; } = -1f;
     public static float InteractionPromptsMultiplier { get; private set; } = -1f;
     public static float TwitchMultiplier { get; private set; } = -1f;
+    public static float WeatherStormMultiplier { get; private set; } = -1f;
+    public static float ThunderMultiplier { get; private set; } = -1f;
+    public static float WeatherAlertMultiplier { get; private set; } = -1f;
     public static float DoorsHatchesVaultsCellarsBridgeMultiplier { get; private set; } = -1f;
     public static float TraderBobMultiplier { get; private set; } = -1f;
     public static float TraderHughMultiplier { get; private set; } = -1f;
@@ -113,6 +173,9 @@ internal static class AudioOptionsPlusConfig
             ProtectionDingsMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.ProtectionDingsMultiplier", -1f), -1f, 1f);
             InteractionPromptsMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.InteractionPromptsMultiplier", PlayerPrefs.GetFloat("AudioOptionsPlus.UpgradeMultiplier", -1f)), -1f, 1f);
             TwitchMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.TwitchMultiplier", -1f), -1f, 1f);
+            WeatherStormMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.WeatherStormMultiplier", -1f), -1f, 1f);
+            ThunderMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.ThunderMultiplier", -1f), -1f, 1f);
+            WeatherAlertMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.WeatherAlertMultiplier", -1f), -1f, 1f);
             DoorsHatchesVaultsCellarsBridgeMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.DoorsHatchesVaultsCellarsBridgeMultiplier", -1f), -1f, 1f);
             TraderBobMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.TraderBobMultiplier", -1f), -1f, 1f);
             TraderHughMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.TraderHughMultiplier", -1f), -1f, 1f);
@@ -135,6 +198,243 @@ internal static class AudioOptionsPlusConfig
             SoundSwapMountainLionMode = NormalizeSoundSwapMode(PlayerPrefs.GetString("AudioOptionsPlus.SoundSwap.MountainLionMode", "None"));
             SoundSwapZombieDogMode = NormalizeSoundSwapMode(PlayerPrefs.GetString("AudioOptionsPlus.SoundSwap.ZombieDogMode", "None"));
         }
+    }
+
+    public static void BeginOptionsUiSession()
+    {
+        lock (Sync)
+        {
+            CaptureCurrentValuesToSnapshot();
+
+            UiSessionActive = true;
+        }
+    }
+
+    public static void MarkOptionsUiSaved()
+    {
+        lock (Sync)
+        {
+            if (!UiSessionActive)
+            {
+                return;
+            }
+
+            CaptureCurrentValuesToSnapshot();
+        }
+    }
+
+    public static void EndOptionsUiSession()
+    {
+        lock (Sync)
+        {
+            if (!UiSessionActive)
+            {
+                return;
+            }
+
+            if (HasPendingUiChanges_NoLock())
+            {
+                RestoreSnapshotValues_NoLock();
+                PlayerPrefs.Save();
+                Load();
+                AudioOptionsPlusRuntime.RefreshRuntimeAfterSettingsChange();
+            }
+
+            UiSessionSnapshot.Clear();
+            UiSessionActive = false;
+        }
+    }
+
+    public static bool HasPendingUiChanges()
+    {
+        lock (Sync)
+        {
+            if (!UiSessionActive)
+            {
+                return false;
+            }
+
+            return HasPendingUiChanges_NoLock();
+        }
+    }
+
+    public static bool TryGetUiSessionBool(string key, out bool value)
+    {
+        lock (Sync)
+        {
+            value = false;
+
+            if (!UiSessionActive || !UiSessionSnapshot.TryGetValue(key, out UiSnapshotValue snapshot))
+            {
+                return false;
+            }
+
+            switch (snapshot.Type)
+            {
+                case UiSnapshotValueType.Int:
+                    value = snapshot.IntValue != 0;
+                    return true;
+                case UiSnapshotValueType.Float:
+                    value = Math.Abs(snapshot.FloatValue) > 0.0001f;
+                    return true;
+                default:
+                    value = !string.IsNullOrEmpty(snapshot.StringValue)
+                        && !string.Equals(snapshot.StringValue, "0", StringComparison.Ordinal)
+                        && !string.Equals(snapshot.StringValue, "false", StringComparison.OrdinalIgnoreCase)
+                        && !string.Equals(snapshot.StringValue, "none", StringComparison.OrdinalIgnoreCase);
+                    return true;
+            }
+        }
+    }
+
+    public static bool TryGetUiSessionString(string key, out string value)
+    {
+        lock (Sync)
+        {
+            value = null;
+
+            if (!UiSessionActive || !UiSessionSnapshot.TryGetValue(key, out UiSnapshotValue snapshot))
+            {
+                return false;
+            }
+
+            switch (snapshot.Type)
+            {
+                case UiSnapshotValueType.Int:
+                    value = snapshot.IntValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                case UiSnapshotValueType.Float:
+                    value = snapshot.FloatValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                default:
+                    value = snapshot.StringValue ?? string.Empty;
+                    return true;
+            }
+        }
+    }
+
+    private static bool HasPendingUiChanges_NoLock()
+    {
+        for (int i = 0; i < UiSessionKeys.Length; i++)
+        {
+            string key = UiSessionKeys[i];
+            if (!UiSessionSnapshot.TryGetValue(key, out UiSnapshotValue snapshot))
+            {
+                if (PlayerPrefs.HasKey(key))
+                {
+                    return true;
+                }
+
+                continue;
+            }
+
+            if (!PlayerPrefs.HasKey(key))
+            {
+                return true;
+            }
+
+            switch (snapshot.Type)
+            {
+                case UiSnapshotValueType.Float:
+                    if (Math.Abs(PlayerPrefs.GetFloat(key, 0f) - snapshot.FloatValue) > 0.0001f)
+                    {
+                        return true;
+                    }
+
+                    break;
+                case UiSnapshotValueType.Int:
+                    if (PlayerPrefs.GetInt(key, 0) != snapshot.IntValue)
+                    {
+                        return true;
+                    }
+
+                    break;
+                default:
+                    if (!string.Equals(PlayerPrefs.GetString(key, string.Empty), snapshot.StringValue, StringComparison.Ordinal))
+                    {
+                        return true;
+                    }
+
+                    break;
+            }
+        }
+
+        return false;
+    }
+
+    private static void CaptureCurrentValuesToSnapshot()
+    {
+        UiSessionSnapshot.Clear();
+        for (int i = 0; i < UiSessionKeys.Length; i++)
+        {
+            string key = UiSessionKeys[i];
+            if (!PlayerPrefs.HasKey(key))
+            {
+                continue;
+            }
+
+            UiSnapshotValueType type = GetUiSnapshotValueType(key);
+            UiSnapshotValue value = new UiSnapshotValue
+            {
+                Type = type
+            };
+
+            switch (type)
+            {
+                case UiSnapshotValueType.Float:
+                    value.FloatValue = PlayerPrefs.GetFloat(key, 0f);
+                    break;
+                case UiSnapshotValueType.Int:
+                    value.IntValue = PlayerPrefs.GetInt(key, 0);
+                    break;
+                default:
+                    value.StringValue = PlayerPrefs.GetString(key, string.Empty);
+                    break;
+            }
+
+            UiSessionSnapshot[key] = value;
+        }
+    }
+
+    private static void RestoreSnapshotValues_NoLock()
+    {
+        for (int i = 0; i < UiSessionKeys.Length; i++)
+        {
+            string key = UiSessionKeys[i];
+            if (!UiSessionSnapshot.TryGetValue(key, out UiSnapshotValue snapshot))
+            {
+                PlayerPrefs.DeleteKey(key);
+                continue;
+            }
+
+            switch (snapshot.Type)
+            {
+                case UiSnapshotValueType.Float:
+                    PlayerPrefs.SetFloat(key, snapshot.FloatValue);
+                    break;
+                case UiSnapshotValueType.Int:
+                    PlayerPrefs.SetInt(key, snapshot.IntValue);
+                    break;
+                default:
+                    PlayerPrefs.SetString(key, snapshot.StringValue ?? string.Empty);
+                    break;
+            }
+        }
+    }
+
+    private static UiSnapshotValueType GetUiSnapshotValueType(string key)
+    {
+        if (key.IndexOf("Multiplier", StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            return UiSnapshotValueType.Float;
+        }
+
+        if (key.EndsWith("Enabled", StringComparison.OrdinalIgnoreCase) || key.EndsWith("SillySoundsEnabled", StringComparison.OrdinalIgnoreCase))
+        {
+            return UiSnapshotValueType.Int;
+        }
+
+        return UiSnapshotValueType.String;
     }
 
     public static string NormalizeSoundSwapMode(string raw)
@@ -180,6 +480,9 @@ internal static class AudioOptionsPlusConfig
             PlayerPrefs.SetFloat("AudioOptionsPlus.ProtectionDingsMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.InteractionPromptsMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.TwitchMultiplier", -1f);
+            PlayerPrefs.SetFloat("AudioOptionsPlus.WeatherStormMultiplier", -1f);
+            PlayerPrefs.SetFloat("AudioOptionsPlus.ThunderMultiplier", -1f);
+            PlayerPrefs.SetFloat("AudioOptionsPlus.WeatherAlertMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.DoorsHatchesVaultsCellarsBridgeMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderBobMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderHughMultiplier", -1f);
@@ -207,6 +510,9 @@ internal static class AudioOptionsPlusConfig
         float protectionDings,
         float interactionPrompts,
         float twitch,
+        float weatherStorm,
+        float thunder,
+        float weatherAlert,
         float doorsHatchesVaultsCellarsBridge,
         float traderBob,
         float traderHugh,
@@ -230,6 +536,9 @@ internal static class AudioOptionsPlusConfig
             PlayerPrefs.SetFloat("AudioOptionsPlus.ProtectionDingsMultiplier", Mathf.Clamp01(protectionDings));
             PlayerPrefs.SetFloat("AudioOptionsPlus.InteractionPromptsMultiplier", Mathf.Clamp01(interactionPrompts));
             PlayerPrefs.SetFloat("AudioOptionsPlus.TwitchMultiplier", Mathf.Clamp01(twitch));
+            PlayerPrefs.SetFloat("AudioOptionsPlus.WeatherStormMultiplier", Mathf.Clamp01(weatherStorm));
+            PlayerPrefs.SetFloat("AudioOptionsPlus.ThunderMultiplier", Mathf.Clamp01(thunder));
+            PlayerPrefs.SetFloat("AudioOptionsPlus.WeatherAlertMultiplier", Mathf.Clamp01(weatherAlert));
             PlayerPrefs.SetFloat("AudioOptionsPlus.DoorsHatchesVaultsCellarsBridgeMultiplier", Mathf.Clamp01(doorsHatchesVaultsCellarsBridge));
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderBobMultiplier", Mathf.Clamp01(traderBob));
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderHughMultiplier", Mathf.Clamp01(traderHugh));
@@ -302,6 +611,9 @@ internal static class AudioOptionsPlusConfig
         PlayerPrefs.SetFloat("AudioOptionsPlus.ProtectionDingsMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.InteractionPromptsMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.TwitchMultiplier", -1f);
+        PlayerPrefs.SetFloat("AudioOptionsPlus.WeatherStormMultiplier", -1f);
+        PlayerPrefs.SetFloat("AudioOptionsPlus.ThunderMultiplier", -1f);
+        PlayerPrefs.SetFloat("AudioOptionsPlus.WeatherAlertMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.DoorsHatchesVaultsCellarsBridgeMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.TraderBobMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.TraderHughMultiplier", -1f);
@@ -377,6 +689,8 @@ internal static class AudioOptionsPlusRuntime
 
     private static readonly Dictionary<int, float> OriginalVolumesBySourceId = new Dictionary<int, float>();
     private static readonly Dictionary<int, float> ForcedSourceVolumesById = new Dictionary<int, float>();
+    private static readonly Dictionary<int, float> EnvironmentBaseVolumesBySourceId = new Dictionary<int, float>();
+    private static readonly Dictionary<int, float> EnvironmentLastAppliedVolumesBySourceId = new Dictionary<int, float>();
     private static readonly FieldInfo SequenceOnEntityField = typeof(Audio.Manager).GetField("sequenceOnEntity", BindingFlags.Static | BindingFlags.NonPublic);
     private static readonly FieldInfo PlayingOnEntityField = typeof(Audio.Manager).GetField("playingOnEntity", BindingFlags.Static | BindingFlags.NonPublic);
     private static readonly FieldInfo LoopingOnEntityField = typeof(Audio.Manager).GetField("loopingOnEntity", BindingFlags.Static | BindingFlags.NonPublic);
@@ -395,6 +709,8 @@ internal static class AudioOptionsPlusRuntime
     {
         OriginalVolumesBySourceId.Clear();
         ForcedSourceVolumesById.Clear();
+        EnvironmentBaseVolumesBySourceId.Clear();
+        EnvironmentLastAppliedVolumesBySourceId.Clear();
         ApplyBuiltInSillySoundsSetting();
         if (_entityAudioContext != null)
         {
@@ -423,6 +739,7 @@ internal static class AudioOptionsPlusRuntime
         OriginalVolumesBySourceId.Clear();
         ForcedSourceVolumesById.Clear();
         ApplyBuiltInSillySoundsSetting();
+        ApplyActiveEnvironmentOverrides();
     }
 
     private static void ApplyBuiltInSillySoundsSetting()
@@ -637,11 +954,7 @@ internal static class AudioOptionsPlusRuntime
             ? (_soundGroupContext.Peek() ?? string.Empty)
             : string.Empty;
 
-        string contextBasis = (_soundBasisContext != null && _soundBasisContext.Count > 0)
-            ? (_soundBasisContext.Peek() ?? string.Empty)
-            : string.Empty;
-
-        string basis = contextBasis.Length > 0 ? contextBasis : (contextGroup.Length > 0 ? contextGroup : clipName);
+        string basis = contextGroup.Length > 0 ? contextGroup : clipName;
         return TryResolveSoundSwap(contextEntity, basis, out string replacement)
             ? replacement
             : clipName;
@@ -663,6 +976,213 @@ internal static class AudioOptionsPlusRuntime
         {
             farSource.volume = farOverride;
         }
+    }
+
+    public static void ApplyEnvironmentRainOverride(EnvironmentAudioManager manager)
+    {
+        if (!AudioOptionsPlusConfig.Enabled || manager == null)
+        {
+            return;
+        }
+
+        List<AudioSource> rainSources = manager.rainAudioSources;
+        if (rainSources == null)
+        {
+            return;
+        }
+
+        float multiplier = AudioOptionsPlusConfig.WeatherStormMultiplier;
+        for (int i = 0; i < rainSources.Count; i++)
+        {
+            AudioSource source = rainSources[i];
+            if (source == null)
+            {
+                continue;
+            }
+
+            if (multiplier < 0f)
+            {
+                RestoreEnvironmentSource(source);
+            }
+            else
+            {
+                ApplyEnvironmentSourceAbsolute(source, multiplier, "RainAudioSource", AudioObject.Trigger.Rain, 0f, affectedByEnv: true);
+            }
+        }
+    }
+
+    public static void ApplyEnvironmentAudioObjectOverride(AudioObject audioObject)
+    {
+        if (!AudioOptionsPlusConfig.Enabled || audioObject == null)
+        {
+            return;
+        }
+
+        float multiplier = -1f;
+        switch (audioObject.trigger)
+        {
+            case AudioObject.Trigger.Thunder:
+                multiplier = AudioOptionsPlusConfig.ThunderMultiplier;
+                break;
+            case AudioObject.Trigger.Wind:
+            case AudioObject.Trigger.Snow:
+                multiplier = AudioOptionsPlusConfig.WeatherStormMultiplier;
+                break;
+        }
+
+        if (multiplier < 0f
+            && AudioOptionsPlusConfig.WeatherStormMultiplier >= 0f
+            && audioObject.trigger != AudioObject.Trigger.Thunder
+            && IsKnownStormWeatherOwner(audioObject.name ?? string.Empty))
+        {
+            multiplier = AudioOptionsPlusConfig.WeatherStormMultiplier;
+        }
+
+        if (multiplier < 0f)
+        {
+            RestoreEnvironmentAudioObjectSources(audioObject);
+            return;
+        }
+
+        AudioSource currentSource = audioObject.currentAudioSrc;
+        if (currentSource != null)
+        {
+            ApplyEnvironmentSourceAbsolute(currentSource, multiplier, audioObject.name ?? string.Empty, audioObject.trigger, audioObject.minWind, audioObject.affectedByEnv);
+        }
+
+        List<AudioSource> runtimeSources = audioObject.runtimeAudioSrcs;
+        if (runtimeSources == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < runtimeSources.Count; i++)
+        {
+            AudioSource source = runtimeSources[i];
+            if (source == null)
+            {
+                continue;
+            }
+
+            ApplyEnvironmentSourceAbsolute(source, multiplier, audioObject.name ?? string.Empty, audioObject.trigger, audioObject.minWind, audioObject.affectedByEnv);
+        }
+    }
+
+    private static void ApplyEnvironmentSourceAbsolute(AudioSource source, float multiplier, string ownerName, AudioObject.Trigger trigger, float minWind, bool affectedByEnv)
+    {
+        if (source == null)
+        {
+            return;
+        }
+
+        int sourceId = source.GetInstanceID();
+        float currentVolume = source.volume;
+
+        if (!EnvironmentBaseVolumesBySourceId.TryGetValue(sourceId, out float baseVolume))
+        {
+            baseVolume = currentVolume;
+        }
+        else if (!EnvironmentLastAppliedVolumesBySourceId.TryGetValue(sourceId, out float lastApplied)
+            || Mathf.Abs(currentVolume - lastApplied) > 0.0001f)
+        {
+            // Vanilla recomputed the source volume since our last pass, so refresh the base.
+            baseVolume = currentVolume;
+        }
+
+        EnvironmentBaseVolumesBySourceId[sourceId] = baseVolume;
+
+        float finalVolume = Mathf.Clamp01(baseVolume * Mathf.Clamp01(multiplier));
+        source.volume = finalVolume;
+        EnvironmentLastAppliedVolumesBySourceId[sourceId] = finalVolume;
+    }
+
+    private static void RestoreEnvironmentAudioObjectSources(AudioObject audioObject)
+    {
+        if (audioObject == null)
+        {
+            return;
+        }
+
+        RestoreEnvironmentSource(audioObject.currentAudioSrc);
+
+        List<AudioSource> runtimeSources = audioObject.runtimeAudioSrcs;
+        if (runtimeSources == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < runtimeSources.Count; i++)
+        {
+            RestoreEnvironmentSource(runtimeSources[i]);
+        }
+    }
+
+    private static void RestoreEnvironmentSource(AudioSource source)
+    {
+        if (source == null)
+        {
+            return;
+        }
+
+        int sourceId = source.GetInstanceID();
+        if (EnvironmentBaseVolumesBySourceId.TryGetValue(sourceId, out float baseVolume))
+        {
+            source.volume = Mathf.Clamp01(baseVolume);
+        }
+
+        EnvironmentBaseVolumesBySourceId.Remove(sourceId);
+        EnvironmentLastAppliedVolumesBySourceId.Remove(sourceId);
+    }
+
+    private static void ApplyActiveEnvironmentOverrides()
+    {
+        try
+        {
+            EnvironmentAudioManager manager = EnvironmentAudioManager.Instance;
+            if (manager == null)
+            {
+                return;
+            }
+
+            ApplyEnvironmentRainOverride(manager);
+            ApplyEnvironmentBiomeOverrides(manager.fromBiomeLoops);
+            ApplyEnvironmentBiomeOverrides(manager.toBiomeLoops);
+        }
+        catch
+        {
+            // Best-effort refresh only; normal environment hooks continue to enforce future updates.
+        }
+    }
+
+    private static void ApplyEnvironmentBiomeOverrides(AudioBiome biome)
+    {
+        AudioTrigger[] triggers = biome?.triggers;
+        if (triggers == null)
+        {
+            return;
+        }
+
+        for (int triggerIndex = 0; triggerIndex < triggers.Length; triggerIndex++)
+        {
+            List<AudioObject> sounds = triggers[triggerIndex]?.sound;
+            if (sounds == null)
+            {
+                continue;
+            }
+
+            for (int soundIndex = 0; soundIndex < sounds.Count; soundIndex++)
+            {
+                ApplyEnvironmentAudioObjectOverride(sounds[soundIndex]);
+            }
+        }
+    }
+
+    private static bool IsKnownStormWeatherOwner(string ownerName)
+    {
+        string owner = ownerName ?? string.Empty;
+        return owner.StartsWith("Wind_Gusts_", StringComparison.OrdinalIgnoreCase)
+            || owner.StartsWith("Wind_GustsSnow_", StringComparison.OrdinalIgnoreCase)
+            || owner.IndexOf("Wind_Gusts", StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     public static void ApplyToSource(AudioSource source, AudioClip explicitClip = null)
@@ -1823,7 +2343,33 @@ internal static class AudioOptionsPlusRuntime
             return true;
         }
 
-        // 14) Doors / Hatches / Vaults / Cellars / Bridge.
+        // 14) Thunder / lightning.
+        if (AudioOptionsPlusConfig.ThunderMultiplier >= 0f
+            && MatchesAny(clip, source, group, "thunder", "lightning")
+            && !MatchesAny(clip, source, group, "twitch_weather_"))
+        {
+            absoluteVolume = AudioOptionsPlusConfig.ThunderMultiplier;
+            return true;
+        }
+
+        // 14b) Weather alert UI sound.
+        if (AudioOptionsPlusConfig.WeatherAlertMultiplier >= 0f
+            && MatchesAny(clip, source, group, "ui_weather_alert"))
+        {
+            absoluteVolume = AudioOptionsPlusConfig.WeatherAlertMultiplier;
+            return true;
+        }
+
+        // 15) Weather ambience.
+        if (AudioOptionsPlusConfig.WeatherStormMultiplier >= 0f
+            && MatchesAny(clip, source, group, "weather", "storm", "rain", "wind", "gust", "blizzard", "snowstorm", "sandstorm", "duststorm", "fog")
+            && !MatchesAny(clip, source, group, "thunder", "lightning", "twitch_weather_"))
+        {
+            absoluteVolume = AudioOptionsPlusConfig.WeatherStormMultiplier;
+            return true;
+        }
+
+        // 16) Doors / Hatches / Vaults / Cellars / Bridge.
         if (AudioOptionsPlusConfig.DoorsHatchesVaultsCellarsBridgeMultiplier >= 0f
             && MatchesAny(clip, source, group, "door", "hatch", "vault", "cellar", "bridge", "garage", "manhole", "rollup_gate", "gate_chainlink", "gate_wood_large"))
         {
@@ -1831,7 +2377,7 @@ internal static class AudioOptionsPlusRuntime
             return true;
         }
 
-        // 15-19) Trader-specific categories.
+        // 17-21) Trader-specific categories.
         if (AudioOptionsPlusConfig.TraderBobMultiplier >= 0f && MatchesAny(clip, source, group, "trader_bob_"))
         {
             absoluteVolume = AudioOptionsPlusConfig.TraderBobMultiplier;
@@ -1862,7 +2408,7 @@ internal static class AudioOptionsPlusRuntime
             return true;
         }
 
-        // 20) Player-made sounds.
+        // 21) Player-made sounds.
         bool isLocalPlayerEntityContext = contextEntity is EntityPlayer entityPlayer && IsLocalOrPrimaryPlayer(entityPlayer);
         bool isLocalPlayerSourceContext = IsAttachedToLocalPlayer(sourceObject);
         if (AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier >= 0f
@@ -2348,10 +2894,10 @@ internal static class Patch_Audio_Manager_Play_Entity
     }
 }
 
-[HarmonyPatch(typeof(Audio.Manager), nameof(Audio.Manager.Play), new[] { typeof(Vector3), typeof(string), typeof(int), typeof(bool) })]
+[HarmonyPatch(typeof(Audio.Manager), nameof(Audio.Manager.Play), new[] { typeof(Vector3), typeof(string), typeof(int), typeof(bool), typeof(float) })]
 internal static class Patch_Audio_Manager_Play_Position
 {
-    private static void Prefix(Vector3 position, ref string soundGroupName, int entityId, ref bool wantHandle)
+    private static void Prefix(Vector3 position, ref string soundGroupName, int entityId, ref bool wantHandle, ref float _volumeScale)
     {
         string originalSoundGroupName = soundGroupName;
         Entity contextEntity = null;
@@ -2369,6 +2915,7 @@ internal static class Patch_Audio_Manager_Play_Position
 
         soundGroupName = AudioOptionsPlusRuntime.ResolveSoundSwapForGroup(contextEntity, soundGroupName);
         AudioOptionsPlusRuntime.BeginEntityAudioContext(contextEntity, soundGroupName, originalSoundGroupName);
+        _volumeScale = AudioOptionsPlusRuntime.ScaleManagerPlayVolume(contextEntity, soundGroupName, _volumeScale);
     }
 
     private static void Postfix()
@@ -2471,6 +3018,522 @@ internal static class Patch_Audio_Handle_SetVolume
     private static void Postfix(AudioSource ___nearSource, AudioSource ___farSource)
     {
         AudioOptionsPlusRuntime.EnforceOnHandleSources(___nearSource, ___farSource);
+    }
+}
+
+[HarmonyPatch(typeof(EnvironmentAudioManager), "IncrementRainVolumes")]
+internal static class Patch_EnvironmentAudioManager_IncrementRainVolumes_AudioOptionsPlus
+{
+    private static void Postfix(EnvironmentAudioManager __instance)
+    {
+        AudioOptionsPlusRuntime.ApplyEnvironmentRainOverride(__instance);
+    }
+}
+
+[HarmonyPatch(typeof(AudioObject), nameof(AudioObject.Play))]
+internal static class Patch_AudioObject_Play_AudioOptionsPlus
+{
+    private static void Postfix(AudioObject __instance)
+    {
+        AudioOptionsPlusRuntime.ApplyEnvironmentAudioObjectOverride(__instance);
+    }
+}
+
+[HarmonyPatch(typeof(AudioObject), nameof(AudioObject.SetValue))]
+internal static class Patch_AudioObject_SetValue_AudioOptionsPlus
+{
+    private static void Postfix(AudioObject __instance)
+    {
+        AudioOptionsPlusRuntime.ApplyEnvironmentAudioObjectOverride(__instance);
+    }
+}
+
+[HarmonyPatch(typeof(AudioObject), nameof(AudioObject.SetVolume))]
+internal static class Patch_AudioObject_SetVolume_AudioOptionsPlus
+{
+    private static void Postfix(AudioObject __instance)
+    {
+        AudioOptionsPlusRuntime.ApplyEnvironmentAudioObjectOverride(__instance);
+    }
+}
+
+[HarmonyPatch(typeof(AudioObject), nameof(AudioObject.Update))]
+internal static class Patch_AudioObject_Update_AudioOptionsPlus
+{
+    private static void Postfix(AudioObject __instance)
+    {
+        AudioOptionsPlusRuntime.ApplyEnvironmentAudioObjectOverride(__instance);
+    }
+}
+
+internal static class AudioOptionsPlusUiTrace
+{
+    // Keep diagnostics available for targeted debugging, but disabled in normal gameplay.
+    private static bool Enabled => false;
+
+    internal static void TraceMessage(string message)
+    {
+        if (!Enabled)
+        {
+            return;
+        }
+
+        Console.WriteLine(message);
+    }
+
+    internal static bool IsAopOptionId(string id)
+    {
+        return !string.IsNullOrEmpty(id) && (id.StartsWith("OptionAOP", StringComparison.OrdinalIgnoreCase) || id.StartsWith("AOP", StringComparison.OrdinalIgnoreCase));
+    }
+
+    internal static void TraceOptionEvent(XUiC_OptionEntryAbs option, string stage)
+    {
+        if (!Enabled)
+        {
+            return;
+        }
+
+        if (option == null)
+        {
+            return;
+        }
+
+        string id = option.ViewComponent?.ID ?? string.Empty;
+        if (!IsAopOptionId(id))
+        {
+            return;
+        }
+
+        bool changed = SafeBool(() => option.IsChanged);
+        bool isDefault = SafeBool(() => option.IsDefault);
+        bool active = option.ViewComponent?.IsActiveInHierarchy ?? false;
+        string parentType = option.parentOptionsDialog?.GetType().Name ?? "<none>";
+
+        Console.WriteLine("[AOPTRACE] " + stage + " id=" + id + " changed=" + changed + " default=" + isDefault + " active=" + active + " parent=" + parentType);
+    }
+
+    internal static void TraceDialogState(XUiC_OptionsDialogBase dialog, string stage)
+    {
+        if (!Enabled)
+        {
+            return;
+        }
+
+        XUiC_OptionsAudio optionsAudio = dialog as XUiC_OptionsAudio;
+        if (optionsAudio == null)
+        {
+            return;
+        }
+
+        XUiC_OptionEntryAbs[] all = dialog.AllOptions ?? Array.Empty<XUiC_OptionEntryAbs>();
+        int totalAop = 0;
+        int changedAop = 0;
+        int defaultAop = 0;
+
+        for (int i = 0; i < all.Length; i++)
+        {
+            XUiC_OptionEntryAbs opt = all[i];
+            string id = opt?.ViewComponent?.ID ?? string.Empty;
+            if (!IsAopOptionId(id))
+            {
+                continue;
+            }
+
+            totalAop++;
+
+            bool changed = SafeBool(() => opt.IsChanged);
+            bool isDefault = SafeBool(() => opt.IsDefault);
+
+            if (changed)
+            {
+                changedAop++;
+            }
+
+            if (isDefault)
+            {
+                defaultAop++;
+            }
+        }
+
+        bool pending = XUiC_AudioOptions.HasPendingChangesUsingOptionsAudio(optionsAudio);
+        Console.WriteLine("[AOPTRACE] " + stage + " unsaved=" + dialog.UnsavedChanges + " aop_total=" + totalAop + " aop_changed=" + changedAop + " aop_default=" + defaultAop + " pending_cfg=" + pending);
+    }
+
+    private static bool SafeBool(Func<bool> getter)
+    {
+        try
+        {
+            return getter();
+        }
+        catch
+        {
+            return false;
+        }
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "saveChanges")]
+internal static class Patch_OptionsDialogBase_SaveChanges_AudioOptionsPlus
+{
+    private static void Prefix(XUiC_OptionsDialogBase __instance)
+    {
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "saveChanges.Prefix");
+    }
+
+    private static void Postfix(XUiC_OptionsDialogBase __instance)
+    {
+        XUiC_OptionsAudio optionsAudio = __instance as XUiC_OptionsAudio;
+        if (optionsAudio != null)
+        {
+            // Deterministic fallback: ensure AOP values are persisted on dialog save even if any custom option delegate missed binding.
+            XUiC_AudioOptions.ApplyUsingOptionsAudio(optionsAudio);
+            AudioOptionsPlusConfig.MarkOptionsUiSaved();
+        }
+
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "saveChanges.Postfix");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "discardChanges")]
+internal static class Patch_OptionsDialogBase_DiscardChanges_AudioOptionsPlus
+{
+    private static void Prefix(XUiC_OptionsDialogBase __instance)
+    {
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "discardChanges.Prefix");
+    }
+
+    private static void Postfix(XUiC_OptionsDialogBase __instance)
+    {
+        if (__instance is XUiC_OptionsAudio)
+        {
+            // Deterministic fallback: restore AOP UI from config on discard path.
+            XUiC_AudioOptions.ReloadAllOpenControllers();
+        }
+
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "discardChanges.Postfix");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "OnOpen")]
+internal static class Patch_OptionsDialogBase_OnOpen_AudioOptionsPlus
+{
+    private static void Postfix(XUiC_OptionsDialogBase __instance)
+    {
+        if (__instance is XUiC_OptionsAudio)
+        {
+            AudioOptionsPlusConfig.BeginOptionsUiSession();
+        }
+
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "OnOpen.Postfix");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "OnClose")]
+internal static class Patch_OptionsDialogBase_OnClose_AudioOptionsPlus
+{
+    private static void Prefix(XUiC_OptionsDialogBase __instance)
+    {
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "OnClose.Prefix");
+
+        if (__instance is XUiC_OptionsAudio)
+        {
+            AudioOptionsPlusConfig.EndOptionsUiSession();
+        }
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "resetToDefaults")]
+internal static class Patch_OptionsDialogBase_ResetToDefaults_AudioOptionsPlus
+{
+    private static void Prefix(XUiC_OptionsDialogBase __instance)
+    {
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "resetToDefaults.Prefix");
+    }
+
+    private static void Postfix(XUiC_OptionsDialogBase __instance)
+    {
+        if (!(__instance is XUiC_OptionsAudio))
+        {
+            return;
+        }
+
+        XUiC_AudioOptions.ResetAllOpenControllersToDefaults();
+        __instance.SetChanged();
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "resetToDefaults.Postfix");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "updateUnsavedState")]
+internal static class Patch_OptionsDialogBase_UpdateUnsavedState_AudioOptionsPlus
+{
+    private static void Postfix(XUiC_OptionsDialogBase __instance)
+    {
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "updateUnsavedState.Postfix");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "Event_SettingChanged")]
+internal static class Patch_OptionsDialogBase_EventSettingChanged_AudioOptionsPlus
+{
+    private static void Prefix(XUiC_OptionsDialogBase __instance, XUiC_OptionEntryAbs _sender)
+    {
+        AudioOptionsPlusUiTrace.TraceOptionEvent(_sender, "Event_SettingChanged.Prefix");
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "Event_SettingChanged.Prefix");
+    }
+
+    private static void Postfix(XUiC_OptionsDialogBase __instance, XUiC_OptionEntryAbs _sender)
+    {
+        AudioOptionsPlusUiTrace.TraceOptionEvent(_sender, "Event_SettingChanged.Postfix");
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "Event_SettingChanged.Postfix");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsAudio), "Init")]
+internal static class Patch_XUiC_OptionsAudio_Init_AudioOptionsPlusCustom
+{
+    private static readonly string[] AopCustomOptionNames =
+    {
+        "AOPVolumeProfilesOverallVolumePreset",
+        "AOPVolumeProfilesMotorTools",
+        "AOPVolumeProfilesSurfaceImpact",
+        "AOPVolumeProfilesGunFire",
+        "AOPVolumeProfilesExplosions",
+        "AOPVolumeProfilesVehicles",
+        "AOPVolumeProfilesElectrical",
+        "AOPVolumeProfilesCraftingCompleteSound",
+        "AOPVolumeProfilesSpiderZombie",
+        "AOPVolumeProfilesAnimalPainDeath",
+        "AOPVolumeProfilesBlockBuilding",
+        "AOPVolumeProfilesProtectedBlockDings",
+        "AOPVolumeProfilesItemInteractionSounds",
+        "AOPVolumeProfilesTwitchSounds",
+        "AOPVolumeProfilesWeather",
+        "AOPVolumeProfilesThunder",
+        "AOPVolumeProfilesWeatherAlert",
+        "AOPVolumeProfilesAllDoorTypes",
+        "AOPVolumeProfilesTraderBob",
+        "AOPVolumeProfilesTraderHugh",
+        "AOPVolumeProfilesTraderJen",
+        "AOPVolumeProfilesTraderJoel",
+        "AOPVolumeProfilesTraderRekt",
+        "AOPVolumeProfilesPlayerCharacterSounds",
+        "AOPSoundSwap1SillySoundsEnabled",
+        "AOPSoundSwapAnimalPainDeathSoundPreset",
+        "AOPSoundSwapBear",
+        "AOPSoundSwapBoar",
+        "AOPSoundSwapCanines",
+        "AOPSoundSwapChicken",
+        "AOPSoundSwapStag",
+        "AOPSoundSwapMountainLion",
+        "AOPSoundSwapRabbit",
+        "AOPSoundSwapSnake",
+        "AOPSoundSwapVulture"
+    };
+
+    private static void Postfix(XUiC_OptionsAudio __instance)
+    {
+        BindAllCustomOptions(__instance);
+    }
+
+    internal static void BindAllCustomOptions(XUiC_OptionsAudio instance)
+    {
+        if (instance == null)
+        {
+            return;
+        }
+
+        Dictionary<string, XUiC_OptionEntryCustom> optionMap = BuildCustomOptionMap(instance);
+
+        for (int i = 0; i < AopCustomOptionNames.Length; i++)
+        {
+            BindCustomOption(instance, AopCustomOptionNames[i], optionMap);
+        }
+    }
+
+    private static Dictionary<string, XUiC_OptionEntryCustom> BuildCustomOptionMap(XUiC_OptionsAudio instance)
+    {
+        Dictionary<string, XUiC_OptionEntryCustom> map = new Dictionary<string, XUiC_OptionEntryCustom>(StringComparer.OrdinalIgnoreCase);
+
+        void AddOption(XUiC_OptionEntryCustom option)
+        {
+            string id = option?.ViewComponent?.ID;
+            if (!string.IsNullOrEmpty(id) && !map.ContainsKey(id))
+            {
+                map[id] = option;
+            }
+        }
+
+        XUiC_OptionEntryCustom[] localOptions = instance.GetChildrenByType<XUiC_OptionEntryCustom>() ?? Array.Empty<XUiC_OptionEntryCustom>();
+        for (int i = 0; i < localOptions.Length; i++)
+        {
+            AddOption(localOptions[i]);
+        }
+
+        XUiC_OptionEntryCustom[] rootOptions = instance.windowGroup?.Controller?.GetChildrenByType<XUiC_OptionEntryCustom>() ?? Array.Empty<XUiC_OptionEntryCustom>();
+        for (int i = 0; i < rootOptions.Length; i++)
+        {
+            AddOption(rootOptions[i]);
+        }
+
+        return map;
+    }
+
+    private static void BindCustomOption(XUiC_OptionsAudio instance, string name, Dictionary<string, XUiC_OptionEntryCustom> optionMap)
+    {
+        string optionId = "Option" + name;
+
+        XUiC_OptionEntryCustom option = null;
+        if (optionMap != null)
+        {
+            optionMap.TryGetValue(optionId, out option);
+            if (option == null)
+            {
+                optionMap.TryGetValue(name, out option);
+            }
+        }
+
+        if (option == null)
+        {
+            XUiController controller =
+                instance.GetChildById(optionId)
+                ?? instance.GetChildById(name)
+                ?? instance.windowGroup?.Controller?.GetChildById(optionId)
+                ?? instance.windowGroup?.Controller?.GetChildById(name);
+
+            option = (controller as XUiC_OptionEntryCustom) ?? controller?.GetChildByType<XUiC_OptionEntryCustom>();
+        }
+
+        if (option == null)
+        {
+            AudioOptionsPlusUiTrace.TraceMessage("[AudioOptionsPlus] OptionEntryCustom bind failed: " + optionId);
+            return;
+        }
+
+        AudioOptionsPlusUiTrace.TraceMessage("[AudioOptionsPlus] OptionEntryCustom bound: " + option.ViewComponent?.ID + " (" + name + ")");
+
+        bool isSoundSwapOption = name.StartsWith("AOPSoundSwap", StringComparison.OrdinalIgnoreCase);
+
+        option.GetSettingValue = () =>
+        {
+            if (isSoundSwapOption)
+            {
+                XUiC_AudioOptionsPlusSoundSwap.ReloadAllOpenControllers();
+            }
+            else
+            {
+                XUiC_AudioOptions.ReloadAllOpenControllers();
+            }
+        };
+        option.DiscardChanges = () =>
+        {
+            if (isSoundSwapOption)
+            {
+                XUiC_AudioOptionsPlusSoundSwap.ReloadAllOpenControllers();
+            }
+            else
+            {
+                XUiC_AudioOptions.ReloadAllOpenControllers();
+            }
+        };
+        option.ApplyChanges = _ =>
+        {
+            bool applied = isSoundSwapOption
+                ? XUiC_AudioOptionsPlusSoundSwap.ApplyUsingOptionsAudio(instance)
+                : (XUiC_AudioOptions.ApplyUsingOptionsAudio(instance) || XUiC_AudioOptions.ApplyAllOpenControllersToConfig());
+
+            if (applied)
+            {
+                AudioOptionsPlusConfig.MarkOptionsUiSaved();
+            }
+        };
+        option.ResetDefaults = () =>
+        {
+            if (isSoundSwapOption)
+            {
+                XUiC_AudioOptionsPlusSoundSwap.ResetUsingOptionsAudio(instance);
+            }
+            else if (!XUiC_AudioOptions.ResetUsingOptionsAudio(instance))
+            {
+                XUiC_AudioOptions.ResetAllOpenControllersToDefaults();
+            }
+        };
+        option.IsChangedDelegate = () => isSoundSwapOption
+            ? XUiC_AudioOptionsPlusSoundSwap.HasPendingChangeForOption(instance, name)
+            : XUiC_AudioOptions.HasPendingChangeForOption(instance, name);
+        option.IsDefaultDelegate = () =>
+        {
+            return isSoundSwapOption
+                ? XUiC_AudioOptionsPlusSoundSwap.IsAtDefaultsUsingOptionsAudio(instance)
+                : XUiC_AudioOptions.IsAtDefaultsUsingOptionsAudio(instance);
+        };
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsAudio), "OnOpen")]
+internal static class Patch_XUiC_OptionsAudio_OnOpen_AudioOptionsPlusCustom
+{
+    private static void Postfix(XUiC_OptionsAudio __instance)
+    {
+        Patch_XUiC_OptionsAudio_Init_AudioOptionsPlusCustom.BindAllCustomOptions(__instance);
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance, "OptionsAudio.OnOpen.AfterBind");
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionsDialogBase), "Update")]
+internal static class Patch_OptionsDialogBase_Update_AudioOptionsPlus
+{
+    private static int _lastPendingCheckFrame = -1;
+
+    private static void Postfix(XUiC_OptionsDialogBase __instance)
+    {
+        if (!(__instance is XUiC_OptionsAudio))
+        {
+            return;
+        }
+
+        // Fast path: once options are already marked unsaved, no extra polling work is needed.
+        if (__instance.UnsavedChanges)
+        {
+            return;
+        }
+
+        // Throttle fallback polling to at most once per frame for this patch.
+        int frame = Time.frameCount;
+        if (_lastPendingCheckFrame == frame)
+        {
+            return;
+        }
+        _lastPendingCheckFrame = frame;
+
+        if (AudioOptionsPlusConfig.HasPendingUiChanges())
+        {
+            __instance.SetChanged();
+            AudioOptionsPlusUiTrace.TraceDialogState(__instance, "Update.PendingUiChanges");
+        }
+    }
+}
+
+[HarmonyPatch(typeof(XUiC_OptionEntryCustom), "SelectionChanged")]
+internal static class Patch_XUiC_OptionEntryCustom_SelectionChanged_AudioOptionsPlus
+{
+    private static void Postfix(XUiC_OptionEntryCustom __instance)
+    {
+        if (__instance == null || !(__instance.parentOptionsDialog is XUiC_OptionsAudio))
+        {
+            return;
+        }
+
+        string id = __instance.ViewComponent?.ID ?? string.Empty;
+        if (!id.StartsWith("OptionAOP", StringComparison.OrdinalIgnoreCase))
+        {
+            return;
+        }
+
+        AudioOptionsPlusUiTrace.TraceOptionEvent(__instance, "OptionEntryCustom.SelectionChanged.Postfix");
+
+        // Deterministic fallback: mark options dialog changed whenever an AOP custom option selection changes.
+        __instance.parentOptionsDialog.SetChanged();
+        AudioOptionsPlusUiTrace.TraceDialogState(__instance.parentOptionsDialog, "OptionEntryCustom.SelectionChanged.AfterSetChanged");
     }
 }
 

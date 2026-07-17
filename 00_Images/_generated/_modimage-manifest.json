@@ -108,16 +108,16 @@
     "media_file": ""
   },
   "AGF-HUDPluszOther-Weekday": {
-    "signature": "1055ae0676eecb81311e39ec5ec8f23117143c6b00562c9070ad335035e70e0d",
+    "signature": "83006afd556c35e5f452ad90f39bd982e958f077f86249f622a295a99e6d4d31",
     "version": "3.1.1",
     "has_media": true,
     "media_file": "AGF-HUDPluszOther-Weekday_01.png"
   },
   "AGF-NoEAC-AudioOptionsPlus": {
-    "signature": "16c554a42edadf03761c028d13b98c637e5eacad3d43d562ead1e56e5a886104",
-    "version": "1.0.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "9092a863ac46a5e2bc5ed6799feff5d3606d8cfbc439458c1d295f2b978c6463",
+    "version": "2.0.0",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-AudioOptionsPlus_01.png"
   },
   "AGF-NoEAC-AutoRun": {
     "signature": "e1351edead4c6f62bc0c8cba70bfb8eac095e4e539d8ecaf825990acce785630",
@@ -318,10 +318,10 @@
     "media_file": ""
   },
   "AGF-VP-FloraHarvester": {
-    "signature": "ae57dd74dbb5d049596a47bdc552570a7ccff89c7dcd9e188cf2a6dcdd7fd53b",
-    "version": "2.3.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "f7c165a348ba494fb9cb735fa168b12a62de9b804bedc19bb8e1afdd7a8cff67",
+    "version": "3.0.0",
+    "has_media": true,
+    "media_file": "AGF-VP-FloraHarvester_01.png"
   },
   "AGF-VP-FuelBurnPlus": {
     "signature": "d88f2e39b952b2402aaa78d204b03dbec4e9d06eb8d020e28c7cabef48652273",
@@ -354,10 +354,10 @@
     "media_file": ""
   },
   "AGF-VP-Mod988": {
-    "signature": "0e4af12796e003d8ec63723fe2c8b9feb408598634cf4dde5f6d3053e5b6df99",
-    "version": "2.0.2",
-    "has_media": false,
-    "media_file": ""
+    "signature": "2437fa434e272f3b509bfab02c5b5431d731a581d19a3acd2b3da0b45821d9ac",
+    "version": "3.0.0",
+    "has_media": true,
+    "media_file": "AGF-VP-Mod988_01.png"
   },
   "AGF-VP-ModBundling": {
     "signature": "f05bbebfae5944451362c0cc025aac653f8843014498c48781a262a369c9ffe9",
@@ -574,5 +574,17 @@
     "version": "1.0.1",
     "has_media": true,
     "media_file": "zzzAGF-Special-LocalizationPatches_01.png"
+  },
+  "AGF-HUDPlus-Weekday": {
+    "signature": "4f1d37ba946877faeae5faeb12c81bcecdac1ce93f0fe69d3de1bdf76b252957",
+    "version": "3.1.2",
+    "has_media": true,
+    "media_file": "AGF-HUDPlus-Weekday_01.png"
+  },
+  "zzzAGF-Requested-LootStaysOnEmpty": {
+    "signature": "42b1b1b6684792c1abaa9171cb03b78d9b3b21ffc3c737f0b2b484ce5588e576",
+    "version": "1.0.3",
+    "has_media": false,
+    "media_file": ""
   }
 }

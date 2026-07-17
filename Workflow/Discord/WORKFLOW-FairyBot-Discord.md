@@ -1,6 +1,6 @@
 # Fairy Bot Discord Workflow
 
-Last updated: 2026-07-11
+Last updated: 2026-07-15
 
 ## Scope
 
@@ -98,7 +98,41 @@ Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'python|py' } | Se
 - Do not rebuild VCN/subnet repeatedly once fairy-vcn + fairy-public-subnet already exist.
 - Do not expect shape availability messages to override image architecture compatibility filters.
 
+## Hosting Options (researched 2026-07-15)
+
+### Oracle OCI (current attempt)
+- VCN `fairy-vcn` and subnet `fairy-public-subnet` already created.
+- **Always Free shapes exhausted** across all 3 ADs in home region — A1.Flex (4 OCPU / 24GB) and E2.1.Micro (1 OCPU / 1GB) both out of capacity. Cannot switch regions.
+- Upgraded to **PAYG account** — still hitting Out of Capacity on A1.Flex. PAYG gives higher priority but region is saturated.
+- **Cheapest paid Oracle shape:** VM.Standard.E2.1 at ~$18/month (1 OCPU, 8GB RAM) — provisions reliably since it's not free-tier.
+- **Oracle Cloud Shell workaround:** Write a retry script using `oci compute instance launch` in a loop across AD-1/2/3 every 60 seconds until a slot opens.
+- Bot needs very little: Python Discord bot with yt-dlp, polling every 120s. 512MB RAM is overkill.
+
+### Gravel Host (recommended alternative)
+- **gravelhost.com** — dedicated Discord bot hosting.
+- **$2.50/month** — 512MB RAM, 1 CPU core, 24/7 uptime, auto-restarts, web panel.
+- No infrastructure management — upload bot files, set env vars, click start.
+- Setup steps:
+  1. Create account at gravelhost.com
+  2. Create a Python bot node ($2.50/mo)
+  3. Upload: SCRIPT-DiscordReactionRolesMulti.py, reaction-role-panels.json, streamer-watchlist.json, requirements-discord-tools.txt
+  4. Set env var: AGF_DISCORD_BOT_TOKEN
+  5. Startup command: `python SCRIPT-DiscordReactionRolesMulti.py --watchlist streamer-watchlist.json`
+  6. Click start
+- No SSH, no systemd, no capacity fighting.
+
+### Other Cheap Alternatives (not pursued)
+- **Hetzner CX11** — ~€3.29/month (1 vCPU, 2GB RAM, 20GB SSD)
+- **Vultr** — $2.50/month (1 vCPU, 512MB, 10GB)
+- **DigitalOcean** — $4/month (1 vCPU, 512MB, 10GB)
+- **AWS EC2 t4g.nano** — ~$3.20/month (ARM, 2 vCPU, 512MB)
+
 ## Change History
+
+### 2026-07-15
+
+- Added hosting options section (Oracle paid shapes, Gravel Host, other cheap VPS alternatives).
+- Updated notes after Oracle PAYG upgrade still yielded Out of Capacity.
 
 ### 2026-07-11
 
@@ -114,9 +148,11 @@ Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'python|py' } | Se
 
 ## Resume Checklist
 
-1. Decide immediate path:
-   - Local machine always-on for now, or
-   - Oracle VM retry when target shape capacity is available.
+1. Decide hosting path:
+   - **Gravel Host ($2.50/mo)** — upload bot files, click start, done.
+   - **Oracle VM.Standard.E2.1 ($18/mo)** — provisions reliably, needs SSH + systemd setup.
+   - **Oracle A1.Flex retry** — run Cloud Shell retry script across AD-1/2/3 until capacity opens.
+   - **Local machine** — bot runs only while your PC is on.
 2. Confirm runtime config values:
    - Workflow/Discord/reaction-role-panels.json
    - Workflow/Discord/streamer-watchlist.json

@@ -312,17 +312,57 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v2.1.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v2.1.0
+    - Removed windows.xml as the purple book conditional is now within
+      the
+    purple book mod.
+
+------------------------------------------------------------------------
+
+v2.0.4
+    - Updated the README and code organization / notes.
+    - Harvest mods scrap into 3 armor kits.
+
+------------------------------------------------------------------------
+
+v2.0.3
+    - Added the word "Harvest" in the mod item's title for easier
+      finding
+    and sorting.
+    - Corrected the lumberjack UI display stat on stamina use of axe.
+    - Removed extra space in one localization title.
+
+------------------------------------------------------------------------
+
+v2.0.2
+    - Corrected that the filled in area (purple book) for crafting tier
+      6
+    armors is full.
+
+------------------------------------------------------------------------
+
+v2.0.1
+    - Correct a UI thingy
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Localization Updates.
+    - UI display updates.
+    - Now have tiers following bonuses accordingly.
+
+------------------------------------------------------------------------
+
+v1.1.0
+    - Will now only apply purple book edits if you have my purple book
+    installed.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Made the mod

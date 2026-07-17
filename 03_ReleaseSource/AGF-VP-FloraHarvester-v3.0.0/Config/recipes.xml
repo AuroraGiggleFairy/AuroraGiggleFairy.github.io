@@ -1,0 +1,16 @@
+<AGFVanillaPlus-FloraHarvester>
+
+
+<append xpath="/recipes">
+
+	<recipe name="meleeToolFloraHarvester" count="1" tags="learnable">
+		<ingredient name="resourceYuccaFibers" count="250"/>
+	</recipe>
+
+</append>	
+
+	
+	
+</AGFVanillaPlus-FloraHarvester>
+
+

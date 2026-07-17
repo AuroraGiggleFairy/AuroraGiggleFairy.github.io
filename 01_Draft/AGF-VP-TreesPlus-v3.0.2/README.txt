@@ -295,17 +295,49 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v3.0.2
+    - Added a potential fix to where trees would keep coming back even
+    after destroying them.
+
+------------------------------------------------------------------------
+
+v3.0.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v3.0.0
+    - Added x25 versions.
+    - Modified seeds naming and icons to match FarmingPlus scheme.
+    - Added a recipe version for the seedstation IF FarmingPlus is
+    installed.
+    - Renamed to TreesPlus
+    - Names and stages of planted trees now show like crops.
+
+------------------------------------------------------------------------
+
+v2.0.3
+    - updated localization for a naming scheme.
+
+------------------------------------------------------------------------
+
+v2.0.2
+    - Updated to work with 7d2d Version 2.
+    - added code required to lumberjack benefits.
+
+------------------------------------------------------------------------
+
+v2.0.1
+    - Sometimes you would get the wrong tree side type. Now fixed.
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Updated for V1.0
+    - Updated block models
+    - Reduced crafting time of x5 seeds
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Created this mod (As CompactTrees)

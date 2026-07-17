@@ -289,17 +289,18 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.2
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Updated README and notes in code
+    - Fixed ingredient change for flaming arrows/bolts for v2.5+.
+    - Updated Localization.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Separated from StacksBundlesAmmoPlus now that I understand
+    conditionals.

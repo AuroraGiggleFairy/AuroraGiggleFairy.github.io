@@ -290,17 +290,34 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.1.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.1.0
+    - Added compatibility for the lockable workstations, if you can't
+    access the station, you do not see the extra stats.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Forge also showing smelting status in prompt.
+    - Storages showing slots used.
+    - Vehicles showing seats, locked status, and slots used.
+    - New localizations.
+    - Simply appends to existing localization, doesn't rewrite over
+    original.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Workstation prompts detect number of output slots used.
+    - Workstation prompts detect if crafting, needs fuel or to be turned
+    on.
+    - Ready for publish.
+
+------------------------------------------------------------------------
+
+v0.0.1
+    - Mod first created.

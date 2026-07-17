@@ -342,17 +342,35 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v3.0.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v3.0.
+    - Completely revamped and redone.
+    - Modified original doorsplus to ensure safe updating.
+    - Old door blocks renamed to Obsolete in each language.
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Rework and revamp for doors plus (works with 2.5)
+    - Allow players to craft the individual door types outside of the
+    variant helper.
+
+------------------------------------------------------------------------
+
+v1.0.2
+    - added carBattery to level 55 in case of utilizing stackable
+    batteries mod.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - added "zzz" to name to make last in mod load order
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Transferred the code from 1Core to this standalone modlet.

@@ -278,17 +278,15 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v2.1.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v2.1.0
+    - Updated for 7d2d version 2
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Updated to V1.0

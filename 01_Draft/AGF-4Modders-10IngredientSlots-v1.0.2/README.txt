@@ -236,17 +236,15 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.2
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Updated backpack references due to name change.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Created the mod for 7d2d version 2, with conditionals.

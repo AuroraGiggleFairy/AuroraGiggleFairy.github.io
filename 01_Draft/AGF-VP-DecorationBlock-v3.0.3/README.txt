@@ -279,17 +279,47 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v3.0.3
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v3.0.2
+    - Updated to run on V2, only edited to make it run well. (still
+      could
+    be other errors).
+
+------------------------------------------------------------------------
+
+v3.0.1
+    - Taking out of Beta
+    - Added naming Scheme in all languages available so far
+
+------------------------------------------------------------------------
+
+v3.0.0
+    - Updated to V1.0
+
+------------------------------------------------------------------------
+
+v2.0.4
+    - When used standalone, the loot size was too large for existing
+    windows.xml... so I added the needed windows.xml codes to make it
+    work.
+
+------------------------------------------------------------------------
+
+v2.0.3
+    - Some blocks could not be rotated in all directions, now they
+      should.
+
+------------------------------------------------------------------------
+
+v2.0.2
+    - Added localization name for the variant helper and description.
+
+------------------------------------------------------------------------
+
+v2.0.1
+    - Updated to A21! :)
+    - README updated to new format.

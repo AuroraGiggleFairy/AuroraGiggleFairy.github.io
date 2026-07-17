@@ -317,17 +317,39 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v2.0.5
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v2.0.4
+    - updated to put helmet cosmetic mod as a MOD instead of a dye color
+    due to 7d2d changes.
+
+------------------------------------------------------------------------
+
+v2.0.3
+    - updated for 7d2d Version 2
+
+------------------------------------------------------------------------
+
+v2.0.2
+    - updated localization and colors to fit with other VP theme
+
+------------------------------------------------------------------------
+
+v2.0.1
+    - Drop mesh of the pumpkin helmet is now a jack-o-lantern. LOL
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Updated to work with V1
+    - Change the hold type of molo-jack-ovs (not in your hand directly,
+    but shows throwing animation)
+
+------------------------------------------------------------------------
+
+v1.2.0
+    - Added bundle version of mod
+    - Updated ReadMe to my new format.

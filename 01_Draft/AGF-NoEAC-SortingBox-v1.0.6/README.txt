@@ -397,17 +397,10 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.6
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.5
+    - Updated backpack references due to name change.

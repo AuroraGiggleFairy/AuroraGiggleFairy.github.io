@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-NoEAC-AudioOptionsPlus" />
+  <DisplayName value="AGF Audio Options Plus" />
+  <Version value="2.0.0" />
+  <Description value="Adds audio tabs for custom volume controls and animal pain sounds." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

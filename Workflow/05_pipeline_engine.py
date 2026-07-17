@@ -117,6 +117,7 @@ BACKPACK_DEFAULT_ACTIVE_TOKEN = "084Slots"
 GAME_OPTIONALS_BACKPACK_DIR = ".Optionals-Backpack"
 GAME_OPTIONALS_HUDPLUS_DIR = ".Optionals-HUDPlus"
 GAME_OPTIONALS_4MODDERS_DIR = ".Optionals-4Modders"
+GAME_OPTIONALS_REQUESTED_DIR = ".Optionals-Requested"
 RELEASE_META_DIR_NAME = ".release"
 GIGGLEPACK_RELEASE_DATA_DIR = "GigglePack"
 GIGGLEPACK_RELEASE_ROOT_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
@@ -1350,6 +1351,10 @@ def is_hudpluszother_mod(folder: str) -> bool:
 
 def is_4modders_mod(folder: str) -> bool:
     return folder.startswith("AGF-4Modders-")
+
+
+def is_requested_mod(folder: str) -> bool:
+    return folder.startswith("AGF-Requested-") or folder.startswith("zzzAGF-Requested-")
 
 
 def get_base_mod_name(name: str) -> str:
@@ -3171,6 +3176,11 @@ def sync_workspace_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]
                 f"Skipping game-root auto-sync for optional 4Modders mod: {ws_folder} / {game_folder}"
             )
             continue
+        if is_requested_mod(ws_folder) or is_requested_mod(game_folder):
+            log.info(
+                f"Skipping game-root auto-sync for optional Requested mod: {ws_folder} / {game_folder}"
+            )
+            continue
 
         ws_ver = get_modinfo_version(ws_path)
         game_ver = get_modinfo_version(game_path)
@@ -3239,6 +3249,19 @@ def sync_workspace_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]
             continue
         if maybe_copytree(ws_path, os.path.join(optionals_4modders_path, folder), dry_run, log):
             log.info(f"sync mirror: 4Modders optional updated: {folder}")
+
+    # Mirror Requested mods into game optionals folder in full mode as non-root installs.
+    optionals_requested_path = os.path.join(GAME_MODS, GAME_OPTIONALS_REQUESTED_DIR)
+    if dry_run:
+        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_requested_path}")
+    else:
+        os.makedirs(optionals_requested_path, exist_ok=True)
+
+    for folder, ws_path in workspace_sources.items():
+        if not is_requested_mod(folder):
+            continue
+        if maybe_copytree(ws_path, os.path.join(optionals_requested_path, folder), dry_run, log):
+            log.info(f"sync mirror: Requested optional updated: {folder}")
 
     return mods_pulled_from_game
 
@@ -4705,6 +4728,14 @@ def push_back_pulled_mods(mods_pulled_from_game: List[Tuple[str, str]], dry_run:
                 )
                 continue
 
+        if is_requested_mod(pushed_folder_name):
+            existing_game_root_path = os.path.join(GAME_MODS, pushed_folder_name)
+            if not os.path.isdir(existing_game_root_path):
+                log.info(
+                    f"Pushback skipped for {mod_name}: Requested mods only push when already present in game root"
+                )
+                continue
+
         if mod_name != pushed_folder_name:
             old_game_path = os.path.join(GAME_MODS, mod_name)
             if maybe_remove_dir(old_game_path, dry_run, log):
@@ -4787,6 +4818,14 @@ def push_staging_mods_to_game(mod_bases: Set[str], dry_run: bool, log: Logger, r
             if not os.path.isdir(game_path):
                 log.info(
                     f"Targeted game sync skipped for {folder_name}: 4Modders mods only push when already present in game root"
+                )
+                continue
+
+        if is_requested_mod(folder_name):
+            game_path = os.path.join(GAME_MODS, folder_name)
+            if not os.path.isdir(game_path):
+                log.info(
+                    f"Targeted game sync skipped for {folder_name}: Requested mods only push when already present in game root"
                 )
                 continue
 
@@ -4941,6 +4980,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
         if is_hudpluszother_mod(folder):
             continue
         if is_4modders_mod(folder):
+            continue
+        if is_requested_mod(folder):
             continue
         allowed_staging_root[folder] = path
 
@@ -5098,14 +5139,17 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     optionals_backpack_path = os.path.join(GAME_MODS, GAME_OPTIONALS_BACKPACK_DIR)
     optionals_hudplus_path = os.path.join(GAME_MODS, GAME_OPTIONALS_HUDPLUS_DIR)
     optionals_4modders_path = os.path.join(GAME_MODS, GAME_OPTIONALS_4MODDERS_DIR)
+    optionals_requested_path = os.path.join(GAME_MODS, GAME_OPTIONALS_REQUESTED_DIR)
     if dry_run:
         log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_backpack_path}")
         log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_hudplus_path}")
         log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_4modders_path}")
+        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_requested_path}")
     else:
         os.makedirs(optionals_backpack_path, exist_ok=True)
         os.makedirs(optionals_hudplus_path, exist_ok=True)
         os.makedirs(optionals_4modders_path, exist_ok=True)
+        os.makedirs(optionals_requested_path, exist_ok=True)
 
     cleanup_legacy_4modders_replacements_with_suffixes(
         optionals_hudplus_path,
@@ -5127,6 +5171,10 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
         if is_4modders_mod(folder):
             if maybe_copytree(st_path, os.path.join(optionals_4modders_path, folder), dry_run, log):
                 log.info(f"sync-work mirror: 4Modders optional updated: {folder}")
+            continue
+        if is_requested_mod(folder):
+            if maybe_copytree(st_path, os.path.join(optionals_requested_path, folder), dry_run, log):
+                log.info(f"sync-work mirror: Requested optional updated: {folder}")
 
     # Remove stale optionals entries that no longer match ActiveBuild folder names.
     expected_backpack = {folder for folder in staging_folders if is_backpack_mod(folder)}
@@ -5136,11 +5184,13 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
         if is_hudplus_mod(folder) or is_hudpluszother_mod(folder)
     }
     expected_4modders = {folder for folder in staging_folders if is_4modders_mod(folder)}
+    expected_requested = {folder for folder in staging_folders if is_requested_mod(folder)}
 
     optionals_cleanup_targets = (
         (optionals_backpack_path, expected_backpack, GAME_OPTIONALS_BACKPACK_DIR),
         (optionals_hudplus_path, expected_hudplus, GAME_OPTIONALS_HUDPLUS_DIR),
         (optionals_4modders_path, expected_4modders, GAME_OPTIONALS_4MODDERS_DIR),
+        (optionals_requested_path, expected_requested, GAME_OPTIONALS_REQUESTED_DIR),
     )
     for optionals_dir, expected_names, label in optionals_cleanup_targets:
         if not os.path.isdir(optionals_dir):
@@ -5237,11 +5287,13 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
         if is_hudplus_mod(folder) or is_hudpluszother_mod(folder)
     }
     final_expected_4modders = {folder for folder in final_staging_folders if is_4modders_mod(folder)}
+    final_expected_requested = {folder for folder in final_staging_folders if is_requested_mod(folder)}
 
     final_optionals_cleanup_targets = (
         (optionals_backpack_path, final_expected_backpack, GAME_OPTIONALS_BACKPACK_DIR),
         (optionals_hudplus_path, final_expected_hudplus, GAME_OPTIONALS_HUDPLUS_DIR),
         (optionals_4modders_path, final_expected_4modders, GAME_OPTIONALS_4MODDERS_DIR),
+        (optionals_requested_path, final_expected_requested, GAME_OPTIONALS_REQUESTED_DIR),
     )
     for optionals_dir, expected_names, label in final_optionals_cleanup_targets:
         if not os.path.isdir(optionals_dir):
@@ -5586,6 +5638,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     modders_mods = [f for f in all_folders if f.startswith("AGF-4Modders-")]
     vp_mods = [f for f in all_folders if f.startswith("AGF-VP-")]
     special_mods = [f for f in all_folders if f.startswith("zzzAGF-Special")]
+    requested_mods = [f for f in all_folders if f.startswith("AGF-Requested-") or f.startswith("zzzAGF-Requested-")]
 
     backpackplus_84 = next((f for f in backpackplus_mods if "84Slots" in f), None)
 
@@ -5598,6 +5651,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
         ".Optionals-HUDPlus": hudplus_mods + hudpluszother_mods,
         ".Optionals-NoEAC": noeac_mods,
         ".Optionals-4Modders": modders_mods,
+        ".Optionals-Requested": requested_mods,
     }
     giggle_optionals = {k: v for k, v in giggle_optionals.items() if v}
     packs.append(("00_GigglePack_All", giggle_root, giggle_optionals or None))
@@ -5612,6 +5666,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     packs.append(("00_HUDPluszOther_All", hudpluszother_mods, None))
     packs.append(("00_NoEAC_All", noeac_mods, None))
     packs.append(("00_4Modders_All", modders_mods, None))
+    packs.append(("00_Requested_All", requested_mods, None))
 
     vp_all_root = vp_mods + special_mods
     vp_all_optionals = {".Optionals-NoEAC": noeac_mods}
@@ -6934,6 +6989,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     modders_mods = [f for f in all_mods if f.startswith("AGF-4Modders-")]
     vp_mods = [f for f in all_mods if f.startswith("AGF-VP-")]
     special_mods = [f for f in all_mods if f.startswith("zzzAGF-Special")]
+    requested_mods = [f for f in all_mods if f.startswith("AGF-Requested-") or f.startswith("zzzAGF-Requested-")]
 
     updates_in_progress = "Updates are in progress."
 
@@ -7089,7 +7145,22 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "H. AGF-7d2d-v2.6-GigglePack-Final",
+            "H. REQUESTED MODS",
+            category_download_line(requested_mods, "Download All Requested Mods", "00_Requested_All.zip"),
+            cat_desc.get("REQUESTED", "Community-requested modifications and standalone features."),
+        )
+    )
+    md.append("")
+    if requested_mods:
+        for mod in requested_mods:
+            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
+
+    md.extend(
+        render_main_readme_category_block(
+            category_template,
+            "I. AGF-7d2d-v2.6-GigglePack-Final",
             f"[**⬇️ Download AGF 7D2D v2.6 Final**]({zip_download_link(LEGACY_FINAL_GIGGLEPACK_ZIP)})",
             cat_desc.get(
                 LEGACY_FINAL_CATEGORY_KEY,

@@ -280,17 +280,21 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.2.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.2.0
+    - Will now only apply purple book edits if you have my purple book
+    installed.
+
+------------------------------------------------------------------------
+
+v1.1.0
+    - Updated for Version 2, mostly to connect with AGF HUD V2 updates.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Made the mod.

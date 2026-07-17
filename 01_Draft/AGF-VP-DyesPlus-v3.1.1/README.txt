@@ -270,17 +270,32 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v3.1.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v3.1.0
+    - Updated for 7d2d version 2.
+
+------------------------------------------------------------------------
+
+v3.0.0
+    - Turned my original version of orange into the bright orange.
+    - Updated the modifier tags to represent V1.0 method.
+    - Removed item overides specific to clothing as that is not used any
+    longer.
+    - Fully removed the bundling code, as the code was only kept to
+    prevent errors with installing the update
+
+------------------------------------------------------------------------
+
+v2.0.2
+    - DISCOVERED BUG: IF you apply the invisible dye, do it from within
+    the inventory and not while wearing, so that buffs from mods apply
+    correct.
+    - Updated ReadMe File to my new format.
+    - removed an accidental pasted in line.
+    - Newer dyes were changing skin color instead of clothes for a few
+    items, now fixed.
+    - All dyes show up under "science" crafting category.

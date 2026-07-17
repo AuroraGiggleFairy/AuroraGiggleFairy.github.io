@@ -333,17 +333,22 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v2.0.2
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v2.0.1
+    - updated for 7d2d Version 2.0
+
+------------------------------------------------------------------------
+
+v2.0.0
+    - Updated and fixed for V1.0
+    - Got a more accurate description of what happens
+    - Accounted for god mode
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Made the Mod.

@@ -255,17 +255,15 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.3
+    - Changed BACK to NoEAC category after further review.
+
+------------------------------------------------------------------------
+
+v1.0.2
+    - Changed to be in the 4Modders category.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - ReadMe Format Update.

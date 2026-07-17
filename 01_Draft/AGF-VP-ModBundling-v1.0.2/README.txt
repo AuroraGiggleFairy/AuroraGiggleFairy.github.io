@@ -290,17 +290,18 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.2
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Updated language to show 7d2d version 2.
+    - Removed the bundling of the mods that were removed between 7d2d
+    version 1 and 2.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Took out of 1Core and made standalone
+    - Also updated contents for v1.0.

@@ -237,17 +237,21 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Established functioning method and reduction of exploits by making
+    it into an attribute.
+
+------------------------------------------------------------------------
+
+v0.1.0
+    - Added server over-ride any client mismatch in configuration
+
+------------------------------------------------------------------------
+
+v0.0.1
+    - Mod first created.

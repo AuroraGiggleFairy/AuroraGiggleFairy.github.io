@@ -1,12 +1,20 @@
 using System;
+using System.Reflection;
 using UnityEngine.Scripting;
 using AudioOptionsPlus;
+using System.Collections.Generic;
 
 [Preserve]
 public class XUiC_AudioOptionsPlusSoundSwap : XUiController
 {
-    private const string ToggleOn = "xuiOptionsAudioAOPSwapSettingSwapped";
-    private const string ToggleOff = "xuiOptionsAudioAOPSwapSettingDefault";
+    private static readonly List<XUiC_AudioOptionsPlusSoundSwap> LiveControllers = new List<XUiC_AudioOptionsPlusSoundSwap>();
+    private static readonly MethodInfo InvokeValueChangedMethod = typeof(XUiController).GetMethod("invokeValueChanged", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+    private static readonly MethodInfo SetChangedMethod = typeof(XUiC_OptionsDialogBase).GetMethod("SetChanged", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+    private const string ToggleOn = "Swapped";
+    private const string ToggleOff = "Default";
+    private const string LegacyToggleOn = "xuiOptionsAudioAOPSwapSettingSwapped";
+    private const string LegacyToggleOff = "xuiOptionsAudioAOPSwapSettingDefault";
     private const string SillySoundsOn = "xuiOptionsAudioAOPSoundSwap1SillySoundsSettingOn";
     private const string SillySoundsOff = "xuiOptionsAudioAOPSoundSwap1SillySoundsSettingOff";
     private const string PresetAll = "All";
@@ -34,6 +42,7 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
     public override void Init()
     {
         base.Init();
+        RegisterInstance(this);
         ResolveControls();
 
         foreach (XUiC_ComboBoxList<string> combo in GetCombos())
@@ -54,6 +63,44 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
         _caninesTouched = false;
         RefreshFromConfig();
         _isReady = true;
+    }
+
+    public override void OnClose()
+    {
+        base.OnClose();
+        UnregisterInstance(this);
+    }
+
+    public override void Cleanup()
+    {
+        base.Cleanup();
+        UnregisterInstance(this);
+    }
+
+    private static void RegisterInstance(XUiC_AudioOptionsPlusSoundSwap controller)
+    {
+        if (controller != null && !LiveControllers.Contains(controller))
+        {
+            LiveControllers.Add(controller);
+        }
+    }
+
+    private static void UnregisterInstance(XUiC_AudioOptionsPlusSoundSwap controller)
+    {
+        if (controller != null)
+        {
+            LiveControllers.Remove(controller);
+        }
+    }
+
+    public void ReloadFromConfigForUi()
+    {
+        _isReady = false;
+        EnsureControlsResolved();
+        _caninesTouched = false;
+        RefreshFromConfig();
+        _isReady = true;
+        RefreshBindingsSelfAndChildren();
     }
 
     private void OnAnyValueChanged(XUiController _sender, string _oldValue, string _newValue)
@@ -90,6 +137,52 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
         }
 
         Persist();
+
+        MarkOptionsEntryDirty(sender);
+    }
+
+    private static void MarkOptionsEntryDirty(XUiController source)
+    {
+        if (source == null)
+        {
+            return;
+        }
+
+        if (InvokeValueChangedMethod == null)
+        {
+            XUiC_OptionsDialogBase optionsDialogFallback = source.windowGroup?.Controller as XUiC_OptionsDialogBase;
+            if (optionsDialogFallback != null && SetChangedMethod != null)
+            {
+                try
+                {
+                    SetChangedMethod.Invoke(optionsDialogFallback, null);
+                }
+                catch
+                {
+                }
+            }
+
+            return;
+        }
+
+        try
+        {
+            InvokeValueChangedMethod.Invoke(source, null);
+        }
+        catch
+        {
+            XUiC_OptionsDialogBase optionsDialogFallback = source.windowGroup?.Controller as XUiC_OptionsDialogBase;
+            if (optionsDialogFallback != null && SetChangedMethod != null)
+            {
+                try
+                {
+                    SetChangedMethod.Invoke(optionsDialogFallback, null);
+                }
+                catch
+                {
+                }
+            }
+        }
     }
 
     private void Persist()
@@ -125,6 +218,301 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
             zombieDogEnabled);
 
         RefreshBindingsSelfAndChildren();
+    }
+
+    private void ApplyAllUiValuesToConfig()
+    {
+        EnsureControlsResolved();
+
+        bool legacyWolfEnabled = string.Equals(AudioOptionsPlusConfig.NormalizeSoundSwapMode(AudioOptionsPlusConfig.SoundSwapWolfMode), ModeBoth, StringComparison.OrdinalIgnoreCase);
+        bool legacyDireWolfEnabled = string.Equals(AudioOptionsPlusConfig.NormalizeSoundSwapMode(AudioOptionsPlusConfig.SoundSwapDireWolfMode), ModeBoth, StringComparison.OrdinalIgnoreCase);
+        bool legacyZombieDogEnabled = string.Equals(AudioOptionsPlusConfig.NormalizeSoundSwapMode(AudioOptionsPlusConfig.SoundSwapZombieDogMode), ModeBoth, StringComparison.OrdinalIgnoreCase);
+
+        bool caninesEnabled = IsOn(_caninesMode);
+        bool wolfEnabled = _caninesTouched ? caninesEnabled : legacyWolfEnabled;
+        bool direWolfEnabled = _caninesTouched ? caninesEnabled : legacyDireWolfEnabled;
+        bool zombieDogEnabled = _caninesTouched ? caninesEnabled : legacyZombieDogEnabled;
+
+        AudioOptionsPlusConfig.SetUiSoundSwapSettings(
+            IsSillyOn(_sillySoundsEnabled),
+            IsOn(_bearMode),
+            IsOn(_boarMode),
+            IsOn(_chickenMode),
+            IsOn(_rabbitMode),
+            IsOn(_snakeMode),
+            IsOn(_stagMode),
+            IsOn(_vultureMode),
+            wolfEnabled,
+            direWolfEnabled,
+            IsOn(_mountainLionMode),
+            zombieDogEnabled);
+    }
+
+    private void ResetUiToDefaults()
+    {
+        _suppressEvents = true;
+        try
+        {
+            Set(_sillySoundsEnabled, SillySoundsOff);
+            foreach (XUiC_ComboBoxList<string> combo in GetAnimalCombos())
+            {
+                Set(combo, ToggleOff);
+            }
+
+            if (_preset != null)
+            {
+                _preset.Value = PresetNone;
+            }
+
+            _caninesTouched = true;
+        }
+        finally
+        {
+            _suppressEvents = false;
+        }
+    }
+
+    private bool HasPendingChangesAgainstConfig()
+    {
+        EnsureControlsResolved();
+
+        return !string.Equals(_sillySoundsEnabled?.Value ?? SillySoundsOff, GetSnapshotSillySoundsValue(), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_bearMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.BearMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_boarMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.BoarMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_chickenMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.ChickenMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_rabbitMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.RabbitMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_snakeMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.SnakeMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_stagMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.StagMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_vultureMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.VultureMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_mountainLionMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.MountainLionMode"), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(_caninesMode?.Value ?? ToggleOff, ResolveSnapshotCaninesToggle(), StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(NormalizePreset(_preset?.Value), ResolveSnapshotPresetFromAnimals(), StringComparison.OrdinalIgnoreCase);
+    }
+
+    private bool IsAtDefaultValues()
+    {
+        if (!string.Equals(_sillySoundsEnabled?.Value ?? SillySoundsOff, SillySoundsOff, StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
+        foreach (XUiC_ComboBoxList<string> combo in GetAnimalCombos())
+        {
+            if (!string.Equals(combo?.Value ?? ToggleOff, ToggleOff, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+        }
+
+        return string.Equals(_preset?.Value ?? PresetNone, PresetNone, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private bool HasPendingChangeForOption(string optionName)
+    {
+        EnsureControlsResolved();
+
+        switch (optionName)
+        {
+            case "AOPSoundSwap1SillySoundsEnabled":
+                return !string.Equals(_sillySoundsEnabled?.Value ?? SillySoundsOff, GetSnapshotSillySoundsValue(), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapAnimalPainDeathSoundPreset":
+                return !string.Equals(NormalizePreset(_preset?.Value), ResolveSnapshotPresetFromAnimals(), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapBear":
+                return !string.Equals(_bearMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.BearMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapBoar":
+                return !string.Equals(_boarMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.BoarMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapChicken":
+                return !string.Equals(_chickenMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.ChickenMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapRabbit":
+                return !string.Equals(_rabbitMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.RabbitMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapSnake":
+                return !string.Equals(_snakeMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.SnakeMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapStag":
+                return !string.Equals(_stagMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.StagMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapVulture":
+                return !string.Equals(_vultureMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.VultureMode"), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapCanines":
+                return !string.Equals(_caninesMode?.Value ?? ToggleOff, ResolveSnapshotCaninesToggle(), StringComparison.OrdinalIgnoreCase);
+            case "AOPSoundSwapMountainLion":
+                return !string.Equals(_mountainLionMode?.Value ?? ToggleOff, GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.MountainLionMode"), StringComparison.OrdinalIgnoreCase);
+            default:
+                return HasPendingChangesAgainstConfig();
+        }
+    }
+
+    private static string GetSnapshotSillySoundsValue()
+    {
+        if (AudioOptionsPlusConfig.TryGetUiSessionBool("AudioOptionsPlus.SoundSwap.SillySoundsEnabled", out bool enabled))
+        {
+            return enabled ? SillySoundsOn : SillySoundsOff;
+        }
+
+        AudioOptionsPlusConfig.Load();
+        return AudioOptionsPlusConfig.SillySoundsEnabled ? SillySoundsOn : SillySoundsOff;
+    }
+
+    private static string GetSnapshotToggleForKey(string playerPrefsKey)
+    {
+        if (AudioOptionsPlusConfig.TryGetUiSessionString(playerPrefsKey, out string mode))
+        {
+            return ToToggle(mode);
+        }
+
+        AudioOptionsPlusConfig.Load();
+
+        switch (playerPrefsKey)
+        {
+            case "AudioOptionsPlus.SoundSwap.BearMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapBearMode);
+            case "AudioOptionsPlus.SoundSwap.BoarMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapBoarMode);
+            case "AudioOptionsPlus.SoundSwap.ChickenMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapChickenMode);
+            case "AudioOptionsPlus.SoundSwap.RabbitMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapRabbitMode);
+            case "AudioOptionsPlus.SoundSwap.SnakeMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapSnakeMode);
+            case "AudioOptionsPlus.SoundSwap.StagMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapStagMode);
+            case "AudioOptionsPlus.SoundSwap.VultureMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapVultureMode);
+            case "AudioOptionsPlus.SoundSwap.MountainLionMode":
+                return ToToggle(AudioOptionsPlusConfig.SoundSwapMountainLionMode);
+            default:
+                return ToggleOff;
+        }
+    }
+
+    private static string ResolveSnapshotCaninesToggle()
+    {
+        string wolf = GetSnapshotModeForKey("AudioOptionsPlus.SoundSwap.WolfMode", AudioOptionsPlusConfig.SoundSwapWolfMode);
+        string direWolf = GetSnapshotModeForKey("AudioOptionsPlus.SoundSwap.DireWolfMode", AudioOptionsPlusConfig.SoundSwapDireWolfMode);
+        string zombieDog = GetSnapshotModeForKey("AudioOptionsPlus.SoundSwap.ZombieDogMode", AudioOptionsPlusConfig.SoundSwapZombieDogMode);
+
+        bool anyOn = string.Equals(wolf, ModeBoth, StringComparison.OrdinalIgnoreCase)
+            || string.Equals(direWolf, ModeBoth, StringComparison.OrdinalIgnoreCase)
+            || string.Equals(zombieDog, ModeBoth, StringComparison.OrdinalIgnoreCase);
+
+        return anyOn ? ToggleOn : ToggleOff;
+    }
+
+    private string ResolveSnapshotPresetFromAnimals()
+    {
+        bool anyOn = false;
+        bool anyOff = false;
+
+        string[] values =
+        {
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.BearMode"),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.BoarMode"),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.ChickenMode"),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.RabbitMode"),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.SnakeMode"),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.StagMode"),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.VultureMode"),
+            ResolveSnapshotCaninesToggle(),
+            GetSnapshotToggleForKey("AudioOptionsPlus.SoundSwap.MountainLionMode")
+        };
+
+        for (int i = 0; i < values.Length; i++)
+        {
+            if (string.Equals(values[i], ToggleOn, StringComparison.OrdinalIgnoreCase))
+            {
+                anyOn = true;
+            }
+            else
+            {
+                anyOff = true;
+            }
+
+            if (anyOn && anyOff)
+            {
+                return PresetCustom;
+            }
+        }
+
+        return anyOn ? PresetAll : PresetNone;
+    }
+
+    private static XUiC_AudioOptionsPlusSoundSwap ResolveForOptionsAudio(XUiC_OptionsAudio optionsAudio)
+    {
+        for (int i = LiveControllers.Count - 1; i >= 0; i--)
+        {
+            XUiC_AudioOptionsPlusSoundSwap controller = LiveControllers[i];
+            if (controller == null)
+            {
+                LiveControllers.RemoveAt(i);
+                continue;
+            }
+
+            return controller;
+        }
+
+        if (optionsAudio == null)
+        {
+            return null;
+        }
+
+        XUiC_AudioOptionsPlusSoundSwap byType = optionsAudio.GetChildByType<XUiC_AudioOptionsPlusSoundSwap>();
+        if (byType != null)
+        {
+            RegisterInstance(byType);
+        }
+
+        return byType;
+    }
+
+    public static bool ApplyUsingOptionsAudio(XUiC_OptionsAudio optionsAudio)
+    {
+        XUiC_AudioOptionsPlusSoundSwap controller = ResolveForOptionsAudio(optionsAudio);
+        if (controller == null)
+        {
+            return false;
+        }
+
+        controller.ApplyAllUiValuesToConfig();
+        controller.ReloadFromConfigForUi();
+        return true;
+    }
+
+    public static bool ResetUsingOptionsAudio(XUiC_OptionsAudio optionsAudio)
+    {
+        XUiC_AudioOptionsPlusSoundSwap controller = ResolveForOptionsAudio(optionsAudio);
+        if (controller == null)
+        {
+            return false;
+        }
+
+        controller.ResetUiToDefaults();
+        controller.RefreshBindingsSelfAndChildren();
+        return true;
+    }
+
+    public static bool HasPendingChangeForOption(XUiC_OptionsAudio optionsAudio, string optionName)
+    {
+        XUiC_AudioOptionsPlusSoundSwap controller = ResolveForOptionsAudio(optionsAudio);
+        return controller != null && controller.HasPendingChangeForOption(optionName);
+    }
+
+    public static bool IsAtDefaultsUsingOptionsAudio(XUiC_OptionsAudio optionsAudio)
+    {
+        XUiC_AudioOptionsPlusSoundSwap controller = ResolveForOptionsAudio(optionsAudio);
+        return controller == null || controller.IsAtDefaultValues();
+    }
+
+    public static void ReloadAllOpenControllers()
+    {
+        for (int i = LiveControllers.Count - 1; i >= 0; i--)
+        {
+            XUiC_AudioOptionsPlusSoundSwap controller = LiveControllers[i];
+            if (controller == null)
+            {
+                LiveControllers.RemoveAt(i);
+                continue;
+            }
+
+            controller.ReloadFromConfigForUi();
+        }
     }
 
     private void RefreshFromConfig()
@@ -187,8 +575,7 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
 
     private static bool IsOn(XUiC_ComboBoxList<string> combo)
     {
-        string value = combo?.Value ?? ToggleOff;
-        return string.Equals(value, ToggleOn, StringComparison.OrdinalIgnoreCase);
+        return string.Equals(NormalizeToggleValue(combo?.Value), ToggleOn, StringComparison.OrdinalIgnoreCase);
     }
 
     private static bool IsSillyOn(XUiC_ComboBoxList<string> combo)
@@ -353,6 +740,16 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
         return anyOn ? ToggleOn : ToggleOff;
     }
 
+    private static string GetSnapshotModeForKey(string playerPrefsKey, string currentMode)
+    {
+        if (AudioOptionsPlusConfig.TryGetUiSessionString(playerPrefsKey, out string snapshotMode))
+        {
+            return AudioOptionsPlusConfig.NormalizeSoundSwapMode(snapshotMode);
+        }
+
+        return AudioOptionsPlusConfig.NormalizeSoundSwapMode(currentMode);
+    }
+
     private bool IsAnimalCombo(XUiController sender)
     {
         if (sender == null)
@@ -379,14 +776,24 @@ public class XUiC_AudioOptionsPlusSoundSwap : XUiController
             return;
         }
 
-        string value = combo.Value ?? string.Empty;
-        if (string.Equals(value, ToggleOn, StringComparison.OrdinalIgnoreCase)
-            || string.Equals(value, ToggleOff, StringComparison.OrdinalIgnoreCase))
+        combo.Value = NormalizeToggleValue(combo.Value);
+    }
+
+    private static string NormalizeToggleValue(string raw)
+    {
+        if (string.Equals(raw, ToggleOn, StringComparison.OrdinalIgnoreCase)
+            || string.Equals(raw, LegacyToggleOn, StringComparison.OrdinalIgnoreCase))
         {
-            return;
+            return ToggleOn;
         }
 
-        combo.Value = ToggleOff;
+        if (string.Equals(raw, ToggleOff, StringComparison.OrdinalIgnoreCase)
+            || string.Equals(raw, LegacyToggleOff, StringComparison.OrdinalIgnoreCase))
+        {
+            return ToggleOff;
+        }
+
+        return ToggleOff;
     }
 
     private void EnsureControlsResolved()

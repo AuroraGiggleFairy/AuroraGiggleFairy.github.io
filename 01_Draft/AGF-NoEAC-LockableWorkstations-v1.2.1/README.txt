@@ -444,17 +444,33 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.2.1
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.2.0
+    - Attempt to create as "hybrid" server/client side mod.
+
+------------------------------------------------------------------------
+
+v1.1.1
+    - Attempt to fix the final issue with persisting lock status for ALL
+    clients after server restart.
+
+------------------------------------------------------------------------
+
+v1.1.0
+    - Added locks to generators and ranged defenses.
+    - Dedicated servers should now maintain lock status of these blocks
+    appropriately.
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Released beginning functioning
+
+------------------------------------------------------------------------
+
+v0.0.1
+    - Mod first created.

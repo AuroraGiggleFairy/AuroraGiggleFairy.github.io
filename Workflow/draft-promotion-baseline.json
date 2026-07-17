@@ -105,9 +105,9 @@
     "version": "3.0.0"
   },
   "AGF-NoEAC-AudioOptionsPlus": {
-    "folder": "AGF-NoEAC-AudioOptionsPlus-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-NoEAC-AudioOptionsPlus-v2.0.0",
+    "recorded_at": "2026-07-17T09:46:34",
+    "version": "2.0.0"
   },
   "AGF-NoEAC-AutoRun": {
     "folder": "AGF-NoEAC-AutoRun-v2.0.0",
@@ -193,6 +193,11 @@
     "folder": "AGF-PurpleBookGenerator-v0.0.1",
     "recorded_at": "2026-06-15T02:20:47",
     "version": "0.0.1"
+  },
+  "AGF-Requested-NoLootDestroyOnEmpty": {
+    "folder": "AGF-Requested-NoLootDestroyOnEmpty-v1.0.0",
+    "recorded_at": "2026-07-14T21:01:43",
+    "version": "1.0.0"
   },
   "AGF-VP-AdminModdingSupport": {
     "folder": "AGF-VP-AdminModdingSupport-v1.0.5",
@@ -295,9 +300,9 @@
     "version": "5.6.3"
   },
   "AGF-VP-FloraHarvester": {
-    "folder": "AGF-VP-FloraHarvester-v2.3.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.3.1"
+    "folder": "AGF-VP-FloraHarvester-v3.0.0",
+    "recorded_at": "2026-07-14T19:01:40",
+    "version": "3.0.0"
   },
   "AGF-VP-FuelBurnPlus": {
     "folder": "AGF-VP-FuelBurnPlus-v3.0.0",
@@ -508,6 +513,11 @@
     "folder": "AGF-VP-ZombieLargerHordes-v2.0.2",
     "recorded_at": "2026-06-15T02:20:47",
     "version": "2.0.2"
+  },
+  "zzzAGF-Requested-NoLootDestroyOnEmpty": {
+    "folder": "zzzAGF-Requested-NoLootDestroyOnEmpty-v1.0.2",
+    "recorded_at": "2026-07-14T21:05:20",
+    "version": "1.0.2"
   },
   "zzzAGF-Special-Compatibilities": {
     "folder": "zzzAGF-Special-Compatibilities-v5.0.0",

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="zzzAGF-Requested-NoLootDestroyOnEmpty"/>
+    <DisplayName value="AGF Loot Destroy On Empty"/>
+    <Version value="1.0.1"/>
+    <Description value="Loot stays after emptying."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

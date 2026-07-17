@@ -1,0 +1,76 @@
+<AGF-AudioOptionsPlus>
+	<insertafter xpath="/windows/window[@name='optionsAudio']/rect[@name='tabs']/rect[@name='content']/rect[@name='tabsContents']/rect[@tab_key='xuiOptionsAudioGame']">
+		<rect controller="TabSelectorTab" tab_key="xuiOptionsAudioAOPVolumeProfiles">
+			<rect name="scrollarea" width="1200" height="750" on_scroll="true" gamepad_selectable="false" snap="false">
+			
+				<options_scrollbar/>
+				
+				<scrollview clippingsoftness="0,10" anchor_top="#parent,1,0" anchor_bottom="buttons,1,10">
+					<rect controller="AudioOptions, AudioOptionsPlus">
+					
+						<grid cols="1" cell_width="700" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-20">
+							<options_combo_custom name="AOPVolumeProfilesOverallVolumePreset" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesOverallVolumePreset" type="ComboBoxList`1[System.String]" values="Off,Low,Medium,High,Default,Custom" localization_prefix="xuiOptionsAudioAOPVolumeProfilesOverallVolumePreset" value_wrap="false" tooltip_key="xuiOptionsAudioAOPVolumeProfilesOverallVolumePresetTooltip"/>
+						</grid>
+						
+						<grid cols="1" cell_width="700" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-110">
+							<options_combo_custom name="AOPVolumeProfilesWeather" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesWeather" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesWeatherTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesThunder" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesThunder" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesThunderTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesSurfaceImpact" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesSurfaceImpact" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesSurfaceImpactTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesProtectedBlockDings" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesProtectedBlockDings" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesProtectedBlockDingsTooltip"/>
+							<rect/>
+							<options_combo_custom name="AOPVolumeProfilesGunFire" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesGunFire" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesGunFireTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesExplosions" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesExplosions" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesExplosionsTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesVehicles" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesVehicles" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesVehiclesTooltip"/>
+							<rect/>
+							<options_combo_custom name="AOPVolumeProfilesWeather" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesWeather" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesWeatherTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesThunder" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesThunder" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesThunderTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesElectrical" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesElectrical" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesElectricalTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesAllDoorTypes" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesAllDoorTypes" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesAllDoorTypesTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesBlockBuilding" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesBlockBuilding" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesBlockBuildingTooltip"/>
+							<rect/>
+							<options_combo_custom name="AOPVolumeProfilesCraftingCompleteSound" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesCraftingCompleteSound" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesCraftingCompleteSoundTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesItemInteractionSounds" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesItemInteractionSounds" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesItemInteractionSoundsTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesTwitchSounds" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesTwitchSounds" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesTwitchSoundsTooltip"/>
+							<rect/>
+							<options_combo_custom name="AOPVolumeProfilesSpiderZombie" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesSpiderZombie" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesSpiderZombieTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesAnimalPainDeath" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesAnimalPainDeath" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesAnimalPainDeathTooltip"/>
+							<rect/>
+							<options_combo_custom name="AOPVolumeProfilesPlayerCharacterSounds" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesPlayerCharacterSounds" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesPlayerCharacterSoundsTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesTraderBob" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesTraderBob" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesTraderBobTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesTraderHugh" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesTraderHugh" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesTraderHughTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesTraderJen" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesTraderJen" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesTraderJenTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesTraderJoel" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesTraderJoel" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesTraderJoelTooltip"/>
+							<options_combo_custom name="AOPVolumeProfilesTraderRekt" name_localization_prefix="xuiOptionsAudio" prefname="AOPVolumeProfilesTraderRekt" type="ComboBoxFloat" value_min="0" value_max="1" value_increment="0.05" format_string="0%" tooltip_key="xuiOptionsAudioAOPVolumeProfilesTraderRektTooltip"/>
+						</grid>
+					</rect>
+				</scrollview>
+			</rect>
+		</rect>
+		<rect controller="TabSelectorTab" tab_key="xuiOptionsAudioAOPSoundSwap">
+			<rect name="scrollarea" width="1200" height="750" on_scroll="true" gamepad_selectable="false" snap="false">
+				<options_scrollbar/>
+				
+				<scrollview clippingsoftness="0,10" anchor_top="#parent,1,0" anchor_bottom="buttons,1,10">
+					<rect controller="AudioOptionsPlusSoundSwap, AudioOptionsPlus">
+					
+						<grid cols="1" cell_width="700" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-20">
+							<options_combo_custom name="AOPSoundSwapAnimalPainDeathSoundPreset" name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapAnimalPainDeathSoundPreset" type="ComboBoxList`1[System.String]" values="None,All,Custom" localization_prefix="xuiOptionsAudioAOPSoundSwapAnimalPainDeathSoundPreset" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapAnimalPainDeathSoundPresetTooltip"/>
+						</grid>
+
+						<grid cols="1" cell_width="700" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-110">
+							<options_combo_custom name="AOPSoundSwapBear"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapBear" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapBearTooltip"/>
+							<options_combo_custom name="AOPSoundSwapBoar"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapBoar" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapBoarTooltip"/>
+							<options_combo_custom name="AOPSoundSwapCanines"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapCanines" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapCaninesTooltip"/>
+							<options_combo_custom name="AOPSoundSwapChicken"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapChicken" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapChickenTooltip"/>
+							<options_combo_custom name="AOPSoundSwapStag"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapStag" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapStagTooltip"/>
+							<options_combo_custom name="AOPSoundSwapMountainLion"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapMountainLion" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapMountainLionTooltip"/>
+							<options_combo_custom name="AOPSoundSwapRabbit"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapRabbit" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapRabbitTooltip"/>
+							<options_combo_custom name="AOPSoundSwapSnake"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapSnake" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapSnakeTooltip"/>
+							<options_combo_custom name="AOPSoundSwapVulture"  name_localization_prefix="xuiOptionsAudio" prefname="AOPSoundSwapVulture" type="ComboBoxList`1[System.String]" values="Default,Swapped" localization_prefix="xuiOptionsAudioAOPSwapSetting" value_wrap="false" tooltip_key="xuiOptionsAudioAOPSoundSwapVultureTooltip"/>
+						</grid>
+					</rect>
+				</scrollview>
+			</rect>
+		</rect>
+	</insertafter>
+</AGF-AudioOptionsPlus>

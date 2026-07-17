@@ -4,7 +4,7 @@ create_new_mod.py
 Script to automate creation of a new mod folder with correct naming and initial files.
 - Prompts for mod name (e.g., AGF-BackpackPlus-84Slots or zzzAGF-Special-Compatibilities)
 - Creates folder as [mod name]-v1.0.0
-- Generates ModInfo.xml and README.md with mod name and version
+- Generates ModInfo.xml and README.txt with mod name and version
 """
 import csv
 import argparse
@@ -41,80 +41,210 @@ TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name 
 VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 
 
-def build_initial_readme_md(mod_name: str, version: str) -> str:
-    return f"""# {mod_name}
-7d2d Version MISSINGDATA
-**Version:** {version}
-[Download]([Add link later])
+def build_initial_readme_txt(mod_name: str, version: str) -> str:
+    display_name = mod_name.upper()
+    sep = "=" * 72
+    sub_sep = "-" * 72
+    return f"""{sep}
+{display_name:^72}
+{sep}
 
-[Add quote later]
+Add mod description here.
 
----
----
+NOTE: AGF Mod Guide and Changelog are further below.
 
-## README TABLE OF CONTENTS
-1. About AGF
-2. Need Help?
-3. Install Scope & EAC Requirement
-4. Compatibility
-5. Features Summary
-6. Other Details
-7. Changelog
 
----
----
+{sub_sep}
+MOD SCOPE
+{sub_sep}
 
-## 1. About AGF
-- My name is AuroraGiggleFairy (AGF).
-- I have been modding 7 Days to Die for 7 years.
-- I do my best to prioritize accessibility, user-friendliness, and localization where possible.
-- I provide kind, comprehensive support to players, modders, and server communities, and I rely on community feedback to keep improving my mods.
+  - Mod Version: {version}
+  - 7d2d Version: MISSINGDATA
+  - Website: https://auroragigglefairy.github.io/
+  - Mod Type: MISSINGDATA (Server-Side/EAC-Friendly or Client-Side/NoEAC)
+  - Safe to install on existing game: MISSINGDATA
+  - Safe to remove from existing game: MISSINGDATA
+  - Dependencies: None, works standalone.
 
----
----
 
-## 2. Need Help?
-- Join AGF's Discord for support: https://discord.gg/Vm5eyW6N4r
+{sub_sep}
+FEATURES
+{sub_sep}
 
----
----
+  - Add feature descriptions here.
 
-## 3. Install Scope & EAC Requirement
-- TBD
 
----
----
+{sub_sep}
+OTHER DETAILS
+{sub_sep}
 
-## 4. Compatibility
-- Last 7d2d Version tested on: MISSINGDATA
-- \"{mod_name}\" is SAFE to install on an existing game: MISSINGDATA
-- \"{mod_name}\" is SAFE to remove from an existing game: MISSINGDATA
-- Unique Details: MISSINGDATA
+  - Add other details here.
 
----
----
 
-## 5. Features Summary
-<!-- FEATURES-SUMMARY START -->
-- See this mod's README for full details.
-<!-- FEATURES-SUMMARY END -->
 
----
----
+{sep}
+                         AGF MOD GUIDE                         
+{sep}
 
-## 6. Other Details
-<!-- FEATURES-DETAILED START -->
-- Add or remove as needed.
-<!-- FEATURES-DETAILED END -->
+{sub_sep}
+A. Install Mods
+{sub_sep}
 
----
----
+  1. Close the game.
+  2. In Steam, right-click 7 Days to Die -> Manage -> Browse local
+     files, then open Mods.
+  3. Extract the zip into the Mods folder. Make sure it ends up as
+     Mods/<ModName>/ModInfo.xml.
+  4. Restart the game.
 
-## 7. Changelog
-<!-- CHANGELOG START -->
-v{version}
-- Mod first created.
-<!-- CHANGELOG END -->
+
+{sub_sep}
+B. Ask AuroraGiggleFairy for Help
+{sub_sep}
+
+  1. Join AGF's Discord: https://discord.gg/Vm5eyW6N4r.
+    - AGF checks website messages often, but Discord is the fastest and
+      best way to get help.
+  2. Find #ask-for-help-here under the NEED HELP? section.
+    - All questions are welcome, whether you are new or experienced.
+    - This includes mod conflicts, features not working as expected,
+      server or admin issues, translation errors, and other mod-related
+      problems.
+  3. Post your help request in #ask-for-help-here:
+    - Share a brief message about what is happening.
+    - Attach your latest log file.
+      - Enter the game, then press F1 to open the console.
+      - Click Open logs folder in the top-right.
+      - The correct log file should already be selected. Drag and drop
+        it into #ask-for-help-here.
+    - A screenshot can also help.
+      - Use PrtSc (Print Screen) or your system screenshot tool, then
+        paste the image into Discord chat.
+    - If preferred, DMs are open and you are welcome to message AGF
+      directly.
+
+
+{sub_sep}
+C. Backups
+{sub_sep}
+
+  - To Create:
+    - Open %appdata% -> Roaming -> 7DaysToDie -> Saves, then open your
+      World Name folder (for example, Navezgane).
+    - Copy your Game Name folder (for example, MyGame) to a safe place.
+  - To Restore:
+    - Copy that saved Game Name folder back into the same World Name
+      folder in Saves.
+    - Replace the current folder if asked.
+
+
+{sub_sep}
+D. Update Mods
+{sub_sep}
+
+  1. Close the game.
+  2. Make a backup first (see section C).
+  3. Install the new version in Mods.
+    - If asked, allow overwrite or replace.
+  4. If both old and new folders are there, keep the newer one and
+     delete the older one.
+  5. Start the game and confirm your save loads.
+
+
+{sub_sep}
+E. Remove Mods
+{sub_sep}
+
+  - Warning: Removing a mod from an active save can destroy your saved
+    game. Back up first.
+  - Never delete 0_TFP_Harmony; it comes with the game.
+  1. Close the game.
+  2. In Mods, delete each mod folder you are removing, except
+     0_TFP_Harmony.
+
+
+{sub_sep}
+F. The 0_TFP_Harmony Mod (Do Not Remove)
+{sub_sep}
+
+  - Never delete 0_TFP_Harmony; it comes with the game.
+  - If it is missing, restore it by verifying game files in Steam:
+    1. In Steam, right-click 7 Days to Die.
+    2. Select Properties.
+    3. Select Installed Files.
+    4. Click Verify integrity of game files and wait for completion.
+
+
+{sub_sep}
+G. EAC
+{sub_sep}
+
+  - EAC stands for Easy Anti-Cheat and helps protect multiplayer
+    sessions from cheating.
+  - Some mods require EAC to be turned off so they can work.
+
+  - How to launch 7 Days to Die with EAC off:
+    1. In Steam Library, select 7 Days to Die.
+    2. Click Play.
+    3. In the launch popup, select Launch game without EAC.
+    4. Click Play.
+
+  - If the launch popup does not appear:
+    1. In Steam Library, select 7 Days to Die.
+    2. Click the gear icon on the right, then click Properties.
+    3. Under Launch Options, open the Selected Launch Option dropdown.
+    4. Choose Ask when starting game or Launch game without EAC.
+    
+  - If you run multiplayer with EAC off, use these safety practices:
+    - Simplest method: keep your server password private and have people
+      ask for it.
+    - If you want tighter security on who joins, use the whitelist
+      system.
+    - Admin tools such as Server Tools have security options.
+    - Talk to other server hosts, for example AGF in Discord:
+      https://discord.gg/Vm5eyW6N4r
+
+
+{sub_sep}
+H. Support AuroraGiggleFairy
+{sub_sep}
+
+  - I have been actively creating and supporting 7 Days to Die mods
+    since Alpha 18 (2019), and I genuinely love doing this work.
+  - I spend a lot of time fixing complex issues, keeping everything up
+    to date, and helping players, modders, and server communities.
+  - If my work helps you, here are ways to support me:
+    - Help spread my mods by sharing them with others, creating content,
+      or sharing my GitHub link: https://auroragigglefairy.github.io/
+    - Join my Discord to share feedback, keep up with updates, or
+      volunteer as a tester: https://discord.gg/Vm5eyW6N4r
+    - Support me on Twitch: https://www.twitch.tv/auroragigglefairy
+    - Need hosting? Use my PingPerfect Referral Link:
+      https://pingperfect.com/aff.php?aff=1834
+    - Support me directly by donating to my PayPal:
+      https://www.paypal.com/donate/?hosted_button_id=3B7BCQAZ6KHXC
+  - From the bottom of my heart, thank you. <3
+
+
+{sub_sep}
+I. AGF Modding Focus
+{sub_sep}
+
+  - I have been modding 7 Days to Die for 7 years.
+  - I do my best to prioritize accessibility, user-friendliness, and
+    localization where possible.
+  - I provide kind, comprehensive support to players, modders, and
+    server communities, and I rely on community feedback to keep
+    improving my mods.
+
+
+
+{sep}
+                            CHANGELOG                            
+{sep}
+
+v0.0.1
+      - Initial creation of this mod.
 """
 
 
@@ -246,9 +376,9 @@ def main():
     with open(os.path.join(mod_path, "ModInfo.xml"), "w", encoding="utf-8") as f:
         f.write(TEMPLATE_MODINFO.format(mod_name=mod_name, display_name=display_name, version=version))
 
-    # Create README.md scaffold used by readme migration/publish pipelines.
-    with open(os.path.join(mod_path, "README.md"), "w", encoding="utf-8") as f:
-        f.write(build_initial_readme_md(mod_name, version))
+    # Create README.txt scaffold used by readme migration/publish pipelines.
+    with open(os.path.join(mod_path, "README.txt"), "w", encoding="utf-8") as f:
+        f.write(build_initial_readme_txt(mod_name, version))
 
     # Create Config and XUi_InGame folders (case sensitive)
     config_path = os.path.join(mod_path, "Config")
@@ -262,8 +392,8 @@ def main():
 
     print(f"Created new mod folder: {folder_name}")
     print(f"Location: {mod_path}")
-    print("You can now edit ModInfo.xml, README.md, and Config files as needed.")
+    print("You can now edit ModInfo.xml, README.txt, and Config files as needed.")
+
 
 if __name__ == "__main__":
     main()
-

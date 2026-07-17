@@ -294,17 +294,30 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.5
+    - Corrected that all harvest blocks output is 10 without perks.
+
+------------------------------------------------------------------------
+
+v1.0.4
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.3
+    - Updated Readme and Code Notes.
+
+------------------------------------------------------------------------
+
+v1.0.2
+    - Added a few more test blocks.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Updated to 7d2d Version 2
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Transferred out of previous 1Core mod to this standalone modlet.

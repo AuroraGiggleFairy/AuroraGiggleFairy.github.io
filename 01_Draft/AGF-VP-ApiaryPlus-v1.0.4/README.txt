@@ -272,17 +272,29 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Notes
-    - Add changelog entries here.
+v1.0.4
+    - ReadMe Format Update.
+
+------------------------------------------------------------------------
+
+v1.0.3
+    - Updated readme and code notes.
+
+------------------------------------------------------------------------
+
+v1.0.2
+    - Fun Pimps added full localization for new items, added it to
+    affected items.
+
+------------------------------------------------------------------------
+
+v1.0.1
+    - Corrected how it displays under the vanilla crafting workstations
+    section.
+    - And actually updated the modinfo.xml. facepalm
+    - Other readme updates... more facepalm
+
+------------------------------------------------------------------------
+
+v1.0.0
+    - Created the mod.
