@@ -89,7 +89,7 @@
                               </if>
                            </conditional>
                            <conditional>
-                              <if cond="mod_loaded('AGF-NoEAC-VisualEntityTracker')">
+                              <if cond="mod_loaded('AGF-HUDPlus-VisualEntityTracker')">
                                  <entry name="entityTracker">
                                     <rect name="agfOptionsTracker" controller="VisualEntityTrackerOptions, NoEACVisualEntityTracker" pos="0,0" width="280" height="120" disableautobackground="true">
                                        <label name="optionsTrackerTitle" pos="0,-5" depth="10" width="280" height="28" font_size="26" justify="center" color="[textBoldingColor]" effect="outline" effect_color="0,0,0,255" effect_distance="1,1" text_key="windowESC_color_options_tracker_title" visible="{opt_row_2_visible}"/>
@@ -191,7 +191,7 @@
                               </if>
                            </conditional>
                            <conditional>
-                              <if cond="mod_loaded('AGF-NoEAC-VisualEntityTracker')">
+                              <if cond="mod_loaded('AGF-HUDPlus-VisualEntityTracker')">
                                  <entry name="entityTracker">
                                     <rect name="agfOptionsTracker" controller="VisualEntityTrackerOptions, NoEACVisualEntityTracker" pos="0,0" width="280" height="120" disableautobackground="true">
                                        <label name="optionsTrackerTitle" pos="0,-5" depth="10" width="280" height="28" font_size="26" justify="center" color="[textBoldingColorHV]" effect="outline" effect_color="0,0,0,255" effect_distance="1,1" text_key="windowESC_highvisibility_options_tracker_title" visible="{opt_row_2_visible}"/>

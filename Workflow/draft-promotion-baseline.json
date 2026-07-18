@@ -84,6 +84,11 @@
     "recorded_at": "2026-06-15T03:01:34",
     "version": "2.0.0"
   },
+  "AGF-HUDPlus-VisualEntityTracker": {
+    "folder": "AGF-HUDPlus-VisualEntityTracker-v1.0.0",
+    "recorded_at": "2026-07-18T03:06:13",
+    "version": "1.0.0"
+  },
   "AGF-HUDPluszOther-RemoveWrittentormAlerts": {
     "folder": "AGF-HUDPluszOther-RemoveWrittentormAlerts-v2.0.1",
     "recorded_at": "2026-06-15T02:20:47",

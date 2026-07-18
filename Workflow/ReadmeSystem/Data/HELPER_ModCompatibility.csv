@@ -16,7 +16,6 @@ AGF-NoEAC-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requir
 AGF-NoEAC-ScreamerAlert,2,3,SAFE,TBD,None,AGF-NoEAC-ScreamerAlert.txt,No,Yes,Yes,None,x
 AGF-NoEAC-SignErrorGuard,4,3,SAFE,TBD,TBD,AGF-NoEAC-SignErrorGuard.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-TerrainLeveler,TBD,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required,x
-AGF-NoEAC-VisualEntityTracker,2,3,SAFE,TBD,Players can join without it; install locally for full features.,AGF-NoEAC-VisualEntityTracker.txt,No,Yes,Yes,None,x
 AGF-VP-MedicallyTreatOthers,1,3,SAFE,TBD,TBD,AGF-VP-MedicallyTreatOthers.txt,Yes,Yes,Yes,None,0
 AGF-VP-MedicalTreatOthersTreatedInjuries,1,3,SAFE,TBD,TBD,AGF-VP-MedicalTreatOthersTreatedInjuries.txt,Yes,Yes,Yes,None,0
 zzzAGF-Requested-LootStaysOnEmpty,TBD,TBD,TBD,TBD,TBD,zzzAGF-Requested-LootStaysOnEmpty.txt,TBD,TBD,TBD,TBD,TBD
@@ -31,6 +30,7 @@ AGF-HUDPlus-1Main,1,3,SAFE,SAFE,None,AGF-HUDPlus-1Main.txt,Yes,Yes,Yes,None,0
 AGF-HUDPlus-BMCounter,1,3,SAFE,SAFE,None,AGF-HUDPlus-BMCounter.txt,Yes,Yes,Yes,None,0
 AGF-HUDPlus-PurpleBook,1,3,SAFE,SAFE,None,AGF-HUDPlus-PurpleBook.txt,Yes,Yes,Yes,None,0
 AGF-HUDPlus-RemoveEnteringPopUp,1,3,SAFE,SAFE,None,AGF-HUDPlus-RemoveEnteringPopUp.txt,Yes,Yes,Yes,None,0
+AGF-HUDPlus-VisualEntityTracker,1,3,SAFE,SAFE,None,AGF-HUDPlus-VisualEntityTracker.txt,Yes,Yes,Yes,None,0
 AGF-HUDPluszOther-SmallerInteractionPrompt,1,3,SAFE,SAFE,None,AGF-HUDPluszOther-SmallerInteractionPrompt.txt,Yes,Yes,Yes,None,0
 AGF-HUDPluszOther-TinyBuffsPopUp,1,3,SAFE,SAFE,None,AGF-HUDPluszOther-TinyBuffsPopUp.txt,Yes,Yes,Yes,None,0
 AGF-HUDPluszOther-Weekday,1,3,SAFE,SAFE,None,AGF-HUDPluszOther-Weekday.txt,Yes,Yes,Yes,None,0

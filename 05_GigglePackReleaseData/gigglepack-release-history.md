@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.14.0 (July 18, 2026 3:21am)
+### Summary: +1 new, ~0 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-HUDPlus-VisualEntityTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip) (new: v1.0.0)
+- **Updated Existing Mods**
+  - None
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.13.0 (July 17, 2026 9:47am)
 ### Summary: +5 new, ~0 updated, =0 renamed, -0 removed
 - **New Mods**

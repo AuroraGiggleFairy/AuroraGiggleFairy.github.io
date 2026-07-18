@@ -6984,7 +6984,6 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     all_mods = collect_publishready_folders()
     backpackplus_mods = [f for f in all_mods if f.startswith("AGF-BackpackPlus-")]
     hudplus_mods = [f for f in all_mods if f.startswith("AGF-HUDPlus-")]
-    hudpluszother_mods = [f for f in all_mods if f.startswith("AGF-HUDPluszOther-")]
     noeac_mods = [f for f in all_mods if f.startswith("AGF-NoEAC-")]
     modders_mods = [f for f in all_mods if f.startswith("AGF-4Modders-")]
     vp_mods = [f for f in all_mods if f.startswith("AGF-VP-")]
@@ -7041,24 +7040,6 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
             md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
     else:
         md.append("*Updates are in progress.*")
-
-    if hudpluszother_mods:
-        md.extend([
-            "---", "", "<br>", "",
-            f"### **Optional HUDPlus Tweaks** - [Download All]({zip_download_link('00_HUDPluszOther_All.zip')})", "",
-            "| Display Name | Version | Download | Description |",
-            "|---|---|---|---|",
-        ])
-        for mod in hudpluszother_mods:
-            mod_path = os.path.join(PUBLISH_READY, mod)
-            modinfo_path = os.path.join(mod_path, "ModInfo.xml")
-            name, version = parse_modinfo(modinfo_path, mod)
-            display_name = get_modinfo_display_name(modinfo_path, name)
-            version_display = format_version_for_display(version, display_name)
-            desc = resolve_mod_description(mod_path, modinfo_path)
-            link = zip_download_link(f"{get_base_mod_name(mod)}.zip")
-            md.append(f"| {display_name} | {version_display} | [Download]({link}) | {desc} |")
-        md.extend(["", "---"])
 
     md.extend(
         render_main_readme_category_block(

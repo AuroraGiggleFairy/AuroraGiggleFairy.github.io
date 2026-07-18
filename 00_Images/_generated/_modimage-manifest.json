@@ -586,5 +586,11 @@
     "version": "1.0.3",
     "has_media": false,
     "media_file": ""
+  },
+  "AGF-HUDPlus-VisualEntityTracker": {
+    "signature": "909f89daf60da8cd7b75579029fb59e100a6387945472996da2a0ba5453e11c6",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "AGF-HUDPlus-VisualEntityTracker_01.png"
   }
 }

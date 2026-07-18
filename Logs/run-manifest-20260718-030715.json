@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-07-18T03:07:15.869611",
+  "mode": "full",
+  "dry_run": false,
+  "exit_code": 0,
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260718-030715.log",
+  "stats": {
+    "scanned_workspace_mods": 47,
+    "scanned_game_mods": 40,
+    "synced_pull_from_game": 1,
+    "synced_push_to_game": 3,
+    "sync_conflicts": 0,
+    "moved_to_publish_ready": 0,
+    "moved_to_in_progress": 0,
+    "renamed_folders": 1,
+    "csv_added_rows": 0,
+    "csv_removed_rows": 0,
+    "quote_files_created": 0,
+    "quote_files_renamed": 0,
+    "quote_files_blanked_none": 0,
+    "readmes_written": 142,
+    "readable_txt_written": 0,
+    "pushed_back_to_game": 1,
+    "mod_zips_created": 47,
+    "pack_zips_created": 7,
+    "promoted_to_publish_ready": 0,
+    "warnings": 3,
+    "errors": 0
+  },
+  "action_needed": [
+    "GigglePack release remains queued. Re-run publish with --publish-gigglepack-action finalize when ready."
+  ],
+  "mod_changes": [
+    "AGF-HUDPlus-1Main-v6.5.2 | pushed to game",
+    "AGF-HUDPlus-BMCounter-v4.0.1 | pushed to game",
+    "AGF-HUDPlus-Weekday-v3.1.2 | pushed to game"
+  ]
+}
