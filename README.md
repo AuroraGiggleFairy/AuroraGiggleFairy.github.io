@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*July 18, 2026, 3:21 AM EST*
+*July 18, 2026, 3:27 AM EST*
 
 ## **1. About AGF**
 
@@ -286,6 +286,7 @@ Provides visual compass cues for nearby entities within 25m.
 <td valign="top">
 <b>AGF Weekday</b> &nbsp;·&nbsp; v3.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-Weekday.zip">Download</a><br>
 Adds the weekday name next to the in-game day number.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
 

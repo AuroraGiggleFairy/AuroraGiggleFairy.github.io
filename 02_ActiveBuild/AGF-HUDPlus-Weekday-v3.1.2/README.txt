@@ -13,12 +13,15 @@ MOD SCOPE
 ------------------------------------------------------------------------
 
   - Mod Version: 3.1.2
-  - 7d2d Version: TBD
+  - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
-  - Mod Type: TBD
-  - Safe to install on existing game: Unknown
-  - Safe to remove from existing game: Unknown
+  - Mod Type: Server-Side (EAC-Friendly)
+    - Server install works for all joining players.
+    - EAC can be on or off.
+    - Also works in singleplayer.
+  - Safe to install on existing game: Yes (Safe)
+  - Safe to remove from existing game: Yes (Safe)
   - Dependencies: None, works standalone.
 
 
