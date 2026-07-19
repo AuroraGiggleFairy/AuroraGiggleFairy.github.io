@@ -13,7 +13,7 @@ NOTE: AGF Mod Guide and Changelog are further below.
 MOD SCOPE
 ------------------------------------------------------------------------
 
-  - Mod Version: 6.5.3
+  - Mod Version: 6.5.4
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
