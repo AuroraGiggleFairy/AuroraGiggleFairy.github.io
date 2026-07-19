@@ -232,11 +232,6 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v6.5.4
-    - Settled on Book read or not color method.
-
-------------------------------------------------------------------------
-
 v6.5.3
     - Fix for Screamer Alert to be server-side.
     - Fixes to automation and readme generations.
