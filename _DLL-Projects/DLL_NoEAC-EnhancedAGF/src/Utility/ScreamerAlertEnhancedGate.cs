@@ -6,8 +6,7 @@ public static class ScreamerAlertEnhancedGate
 
     public static bool IsScreamerPresentLocally()
     {
-        return AccessTools.TypeByName("ScreamerAlertsController") != null
-            && AccessTools.TypeByName("ScreamerAlertManager") != null;
+        return AccessTools.TypeByName("ScreamerAlertManager") != null;
     }
 
     public static bool IsServerScreamerDetected()

@@ -43,6 +43,15 @@ namespace ScreamerAlert
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
 
+            if (parts.Length >= 3
+                && string.Equals(parts[1], "proto", StringComparison.OrdinalIgnoreCase)
+                && string.Equals(parts[2], "hello", StringComparison.OrdinalIgnoreCase))
+            {
+                ScreamerAlertHybridRouting.MarkClientCapability(senderEntityId, data.ClientInfo?.InternalId?.CombinedString);
+                ScreamerAlertVanillaProtocol.ForceRefresh(senderEntityId);
+                return ModEvents.EModEventResult.StopHandlersAndVanilla;
+            }
+
             bool enhanced = IsEnhancedAvailableForEntity(senderEntityId);
 
             if (parts.Length == 1 || string.Equals(parts[1], "status", StringComparison.OrdinalIgnoreCase))
@@ -65,6 +74,8 @@ namespace ScreamerAlert
                 {
                     return ModEvents.EModEventResult.StopHandlersAndVanilla;
                 }
+
+                ScreamerAlertVanillaProtocol.ForceRefresh(senderEntityId);
 
                 if (enhanced)
                 {
@@ -91,6 +102,7 @@ namespace ScreamerAlert
             {
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
+            ScreamerAlertVanillaProtocol.ForceRefresh(senderEntityId);
 
             if (nextMode == ScreamerAlertMode.Off)
             {

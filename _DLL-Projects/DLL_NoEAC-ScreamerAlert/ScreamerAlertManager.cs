@@ -108,30 +108,9 @@ public class ScreamerAlertManager : MonoBehaviour
                 ScreamerAlertsController.Instance.hordeAlertEndTime = 0f;
             }
 
-            // Sync tracked screamer/horde IDs and positions to enhanced-capable clients.
-            var pkg = new NetPackageScreamerAlertSync(
-                persistentScreamerIds,
-                persistentHordeZombieIds,
-                string.Empty,
-                ScreamerAlertsController.Instance.screamerHordeAlertMessage,
-                ScreamerAlertsController.Instance.hordeAlertPosition,
-                ScreamerAlertsController.Instance.hordeAlertEndTime
-            );
-
-            var clients = connectionManager.Clients?.List;
-            if (clients == null)
-            {
-                return;
-            }
-
-            for (int i = 0; i < clients.Count; i++)
-            {
-                ClientInfo clientInfo = clients[i];
-                if (ScreamerAlertHybridRouting.HasClientCapability(clientInfo))
-                {
-                    clientInfo.SendPackage(pkg);
-                }
-            }
+            // Preserve exact server-side ID attribution and publish only the
+            // player-specific results through a built-in game package.
+            ScreamerAlertVanillaProtocol.PublishToEnhancedClients();
         }
     }
 

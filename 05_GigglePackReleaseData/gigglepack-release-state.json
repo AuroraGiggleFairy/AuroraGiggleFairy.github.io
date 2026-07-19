@@ -1,28 +1,28 @@
 {
-  "gigglepack_version": "0.14.0",
-  "previous_gigglepack_version": "0.13.0",
+  "gigglepack_version": "0.14.1",
+  "previous_gigglepack_version": "0.14.0",
   "is_baseline_release": false,
-  "released_at": "2026-07-18 03:21:51",
+  "released_at": "2026-07-18 22:52:13",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
     "AGF-BackpackPlus-084Slots": "4.1.1",
     "AGF-BackpackPlus-119Slots": "2.1.1",
-    "AGF-HUDPlus-1Main": "6.5.2",
+    "AGF-HUDPlus-1Main": "6.5.3",
     "AGF-HUDPlus-BMCounter": "4.0.1",
     "AGF-HUDPlus-PurpleBook": "3.1.1",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
     "AGF-HUDPlus-VisualEntityTracker": "1.0.0",
-    "AGF-HUDPlus-Weekday": "3.1.2",
+    "AGF-HUDPlus-Weekday": "3.1.3",
     "AGF-HUDPluszOther-Weekday": "3.1.1",
     "AGF-NoEAC-AudioOptionsPlus": "2.0.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
     "AGF-NoEAC-EnhancedAGF": "4.3.1",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
-    "AGF-NoEAC-ScreamerAlert": "2.3.1",
+    "AGF-NoEAC-ScreamerAlert": "2.3.2",
     "AGF-NoEAC-SignErrorGuard": "1.1.1",
-    "AGF-NoEAC-Toolbelt12Slots": "2.2.2",
+    "AGF-NoEAC-Toolbelt12Slots": "2.2.3",
     "AGF-VP-AutomobilesRespawn": "4.1.1",
     "AGF-VP-BedrollPlus": "2.1.1",
     "AGF-VP-BetterEggChance": "3.1.1",
@@ -53,20 +53,43 @@
     "zzzAGF-Special-Compatibilities": "5.1.1",
     "zzzAGF-Special-LocalizationPatches": "1.0.1"
   },
-  "updated_mods": [],
-  "new_mods": [
+  "updated_mods": [
     {
-      "mod": "AGF-HUDPlus-VisualEntityTracker",
-      "to": "1.0.0",
-      "to_display": "1.0.0"
+      "mod": "AGF-HUDPlus-1Main",
+      "from": "6.5.2",
+      "to": "6.5.3",
+      "from_display": "6.5.2",
+      "to_display": "6.5.3"
+    },
+    {
+      "mod": "AGF-HUDPlus-Weekday",
+      "from": "3.1.2",
+      "to": "3.1.3",
+      "from_display": "3.1.2",
+      "to_display": "3.1.3"
+    },
+    {
+      "mod": "AGF-NoEAC-ScreamerAlert",
+      "from": "2.3.1",
+      "to": "2.3.2",
+      "from_display": "2.3.1",
+      "to_display": "2.3.2"
+    },
+    {
+      "mod": "AGF-NoEAC-Toolbelt12Slots",
+      "from": "2.2.2",
+      "to": "2.2.3",
+      "from_display": "2.2.2",
+      "to_display": "2.2.3"
     }
   ],
+  "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.14.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.14.1.zip",
   "change_counts": {
-    "new_mods": 1,
-    "updated_existing_mods": 0,
+    "new_mods": 0,
+    "updated_existing_mods": 4,
     "renamed_mods": 0,
     "removed_mods": 0
   }

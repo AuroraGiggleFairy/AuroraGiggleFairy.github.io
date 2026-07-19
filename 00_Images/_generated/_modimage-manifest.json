@@ -60,8 +60,8 @@
     "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "3d489d18cfaeb049e80264c489c6d4b618aac25557046325fa056e99bdd1bdd3",
-    "version": "6.5.2",
+    "signature": "37490cc13ad9ae6f90e1da5caeff5528ea4ce8fa9451af9023b0dc2b0b449fa2",
+    "version": "6.5.3",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
@@ -180,8 +180,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-ScreamerAlert": {
-    "signature": "3bb7d0f585fec9333d4c6a65e96b37578b37f6e35ecbde3b021ccabbbac70774",
-    "version": "2.3.1",
+    "signature": "6c67ad3c5d1f79b5a6c8bdbdf6f33eedb9d475ce8d29b1ceb793f9edea2fb51c",
+    "version": "2.3.2",
     "has_media": true,
     "media_file": "AGF-NoEAC-ScreamerAlert_01.png"
   },
@@ -192,8 +192,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "cc2bc543796980c8f33601da2787bc142ee8f90e5d95e70020dc44b0cf17ab3a",
-    "version": "2.2.2",
+    "signature": "d2753fc14ed230430020d25ecefc56c26bd9f0d74781d75f8efac5559a3aaa30",
+    "version": "2.2.3",
     "has_media": true,
     "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
   },
@@ -576,8 +576,8 @@
     "media_file": "zzzAGF-Special-LocalizationPatches_01.png"
   },
   "AGF-HUDPlus-Weekday": {
-    "signature": "848c593240ebdc0dad4196c6da022a60ca7c4a0314218e729fca067ee82e7554",
-    "version": "3.1.2",
+    "signature": "995fb394601ea26675ab27a76b2ee1bc5fca464f4ec5f4d5f4ce88471c65060b",
+    "version": "3.1.3",
     "has_media": true,
     "media_file": "AGF-HUDPlus-Weekday_01.png"
   },

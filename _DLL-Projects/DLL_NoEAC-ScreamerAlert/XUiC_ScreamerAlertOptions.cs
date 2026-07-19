@@ -323,13 +323,7 @@ public class XUiC_ScreamerAlertOptions : XUiController
             return true;
         }
 
-        NetPackageScreamerAlertModeRequest package = NetPackageManager.GetPackage<NetPackageScreamerAlertModeRequest>();
-        if (package == null)
-        {
-            return false;
-        }
-
-        manager.SendToServer(package.Setup(localPlayer.entityId, requestedMode, queryOnly: false));
+        SendModeCommand(localPlayer.entityId, requestedMode);
         return true;
     }
 
@@ -352,11 +346,18 @@ public class XUiC_ScreamerAlertOptions : XUiController
             return;
         }
 
-        NetPackageScreamerAlertModeRequest package = NetPackageManager.GetPackage<NetPackageScreamerAlertModeRequest>();
-        if (package != null)
-        {
-            manager.SendToServer(package.Setup(localPlayer.entityId, ScreamerAlertMode.On, queryOnly: true));
-        }
+        SendModeCommand(localPlayer.entityId, null);
+    }
+
+    private static void SendModeCommand(int entityId, ScreamerAlertMode? mode)
+    {
+        string token = !mode.HasValue
+            ? "status"
+            : mode.Value == ScreamerAlertMode.Off
+                ? "off"
+                : mode.Value == ScreamerAlertMode.OnWithNumbers ? "count" : "on";
+
+        GameManager.Instance?.ChatMessageServer(null, EChatType.Global, entityId, "/agfsa " + token, null, EMessageSender.SenderIdAsPlayer);
     }
 
     private void RefreshModeCache()

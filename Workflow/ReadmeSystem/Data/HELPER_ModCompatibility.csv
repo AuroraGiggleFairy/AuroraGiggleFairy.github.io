@@ -5,6 +5,7 @@ AGF-4Modders-ESCWindowPlus,1,3,SAFE,TBD,None,AGF-4Modders-ESCWindowPlus.txt,Yes,
 AGF-4Modders-Fix4DestroyBiomeBadge,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4DestroyBiomeBadge.txt,No,TBD,TBD,TBD,x
 AGF-4Modders-Fix4RemoveItems,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4RemoveItems.txt,No,TBD,TBD,TBD,x
 AGF-4Modders-ItemTypeIconColor,TBD,TBD,TBD,TBD,TBD,AGF-4Modders-ItemTypeIconColor.txt,TBD,TBD,TBD,TBD,x
+AGF-HUDPluszOther-Weekday,TBD,TBD,TBD,TBD,TBD,AGF-HUDPluszOther-Weekday.txt,TBD,TBD,TBD,TBD,TBD
 AGF-NoEAC-AudioOptionsPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-AudioOptionsPlus.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-AutoRun,4,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-NoEAC-AutoRun.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-ConsoleOpacityMod,TBD,3,SAFE,TBD,None,AGF-NoEAC-ConsoleOpacityMod.txt,No,TBD,TBD,TBD,x
@@ -33,12 +34,11 @@ AGF-HUDPlus-VisualEntityTracker,1,3,SAFE,SAFE,None,AGF-HUDPlus-VisualEntityTrack
 AGF-HUDPlus-Weekday,1,3,SAFE,SAFE,None,AGF-HUDPlus-Weekday.txt,Yes,Yes,Yes,None,0
 AGF-HUDPluszOther-SmallerInteractionPrompt,1,3,SAFE,SAFE,None,AGF-HUDPluszOther-SmallerInteractionPrompt.txt,Yes,Yes,Yes,None,0
 AGF-HUDPluszOther-TinyBuffsPopUp,1,3,SAFE,SAFE,None,AGF-HUDPluszOther-TinyBuffsPopUp.txt,Yes,Yes,Yes,None,0
-AGF-HUDPluszOther-Weekday,1,3,SAFE,SAFE,None,AGF-HUDPluszOther-Weekday.txt,Yes,Yes,Yes,None,0
 AGF-NoEAC-EnhancedAGF,4,3,SAFE,SAFE,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-EnhancedAGF.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-ExpandedInteractionPrompts,4,3,SAFE,SAFE,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-ExpandedInteractionPrompts.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-LockableWorkstations,2,3,SAFE,DANGEROUS,Players can join without it; install locally for full features.,AGF-NoEAC-LockableWorkstations.txt,No,Yes,Yes,None,x
 AGF-NoEAC-SortingBox,3,3,SAFE,DANGEROUS,Player Hosted game requires client install.,AGF-NoEAC-SortingBox.txt,No,No,No,Required,x
-AGF-NoEAC-Toolbelt12Slots,4,3,SAFE,DANGEROUS,None,AGF-NoEAC-Toolbelt12Slots.txt,No,N/A,N/A,Only,x
+AGF-NoEAC-Toolbelt12Slots,3,3,SAFE,DANGEROUS,None,AGF-NoEAC-Toolbelt12Slots.txt,No,No,No,Required,x
 AGF-VP-AdminModdingSupport,1,3,SAFE,DANGEROUS,None,AGF-VP-AdminModdingSupport.txt,Yes,Yes,Yes,None,0
 AGF-VP-AlternativeRecipes,1,3,SAFE,SAFE,None,AGF-VP-AlternativeRecipes.txt,Yes,Yes,Yes,None,0
 AGF-VP-AmmoDisassembly,1,3,SAFE,DANGEROUS,None,AGF-VP-AmmoDisassembly.txt,Yes,Yes,Yes,None,0

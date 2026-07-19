@@ -16,6 +16,7 @@ public class ModAPI : IModApi
             if (entityId >= 0)
             {
                 ScreamerAlertHybridRouting.ForgetClientByEntityId(entityId);
+                ScreamerAlertVanillaProtocol.ForgetPlayer(entityId);
             }
         });
         ModEvents.ChatMessage.RegisterHandler((ref ModEvents.SChatMessageData data) =>

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-07-18T22:52:14.356249",
+  "mode": "full",
+  "dry_run": false,
+  "exit_code": 0,
+  "log_path": "C:\\GitHub\\7D2D-Mods\\Logs\\main-script-live-20260718-225214.log",
+  "stats": {
+    "scanned_workspace_mods": 47,
+    "scanned_game_mods": 43,
+    "synced_pull_from_game": 4,
+    "synced_push_to_game": 1,
+    "sync_conflicts": 0,
+    "moved_to_publish_ready": 0,
+    "moved_to_in_progress": 0,
+    "renamed_folders": 4,
+    "csv_added_rows": 1,
+    "csv_removed_rows": 0,
+    "quote_files_created": 0,
+    "quote_files_renamed": 0,
+    "quote_files_blanked_none": 0,
+    "readmes_written": 142,
+    "readable_txt_written": 0,
+    "pushed_back_to_game": 4,
+    "mod_zips_created": 48,
+    "pack_zips_created": 7,
+    "promoted_to_publish_ready": 5,
+    "warnings": 2,
+    "errors": 0
+  },
+  "action_needed": [],
+  "mod_changes": [
+    "AGF-HUDPlus-1Main-v6.5.2 | pulled from game",
+    "AGF-HUDPlus-1Main-v6.5.3 | promoted (updated)",
+    "AGF-HUDPlus-Weekday-v3.1.2 | pulled from game",
+    "AGF-HUDPlus-Weekday-v3.1.3 | promoted (updated)",
+    "AGF-NoEAC-EnhancedAGF-v4.3.1 | promoted (refresh)",
+    "AGF-NoEAC-ScreamerAlert-v2.3.1 | pulled from game",
+    "AGF-NoEAC-ScreamerAlert-v2.3.2 | promoted (updated)",
+    "AGF-NoEAC-SignErrorGuard-v1.1.1 | pushed to game",
+    "AGF-NoEAC-Toolbelt12Slots-v2.2.2 | pulled from game",
+    "AGF-NoEAC-Toolbelt12Slots-v2.2.3 | promoted (updated)"
+  ]
+}

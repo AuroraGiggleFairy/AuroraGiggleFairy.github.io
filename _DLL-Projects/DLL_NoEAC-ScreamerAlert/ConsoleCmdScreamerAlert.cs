@@ -1,13 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Threading;
 
 public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
 {
-    private const int CapabilityProbeWaitMs = 1200;
-    private const int CapabilityProbePollMs = 40;
-
     public override string[] getCommands()
     {
         return new[] { "agf-sa" };
@@ -222,10 +218,6 @@ public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
     private static void HandleList()
     {
         List<EntityPlayer> onlinePlayers = GetOnlinePlayersSnapshot();
-        Dictionary<int, long> baselineCapabilityStamps = CaptureBaselineCapabilityStamps(onlinePlayers);
-        int probeNonce = unchecked((int)DateTime.UtcNow.Ticks);
-        SendCapabilityProbeToPlayers(onlinePlayers, probeNonce);
-        WaitForCapabilityResponses(onlinePlayers, baselineCapabilityStamps);
 
         int total = 0;
         int index = 0;
@@ -238,15 +230,7 @@ public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
             }
 
             total++;
-            long baselineStamp = baselineCapabilityStamps.TryGetValue(player.entityId, out long stamp)
-                ? stamp
-                : 0L;
-            bool enhanced = ScreamerAlertHybridRouting.GetCapabilityStampByEntityId(player.entityId) > baselineStamp;
-            if (!enhanced)
-            {
-                // Timeout with no fresh capability hello should read as NO.
-                ScreamerAlertHybridRouting.ClearClientCapabilityByEntityId(player.entityId);
-            }
+            bool enhanced = ScreamerAlertHybridRouting.HasClientCapabilityByEntityId(player.entityId);
 
             string capabilityState = enhanced ? "YES" : "NO";
             ScreamerAlertMode mode = ScreamerAlertModeSettings.GetModeForEntityId(player.entityId, ScreamerAlertModeSettings.GetServerDefaultMode());
@@ -279,105 +263,6 @@ public class ConsoleCmdScreamerAlert : ConsoleCmdAbstract
         }
 
         return result;
-    }
-
-    private static Dictionary<int, long> CaptureBaselineCapabilityStamps(List<EntityPlayer> players)
-    {
-        Dictionary<int, long> baselineByEntityId = new Dictionary<int, long>();
-        if (players == null)
-        {
-            return baselineByEntityId;
-        }
-
-        for (int i = 0; i < players.Count; i++)
-        {
-            EntityPlayer player = players[i];
-            if (player == null)
-            {
-                continue;
-            }
-
-            baselineByEntityId[player.entityId] = ScreamerAlertHybridRouting.GetCapabilityStampByEntityId(player.entityId);
-        }
-
-        return baselineByEntityId;
-    }
-
-    private static void SendCapabilityProbeToPlayers(List<EntityPlayer> players, int nonce)
-    {
-        if (players == null || players.Count == 0)
-        {
-            return;
-        }
-
-        ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
-        if (manager == null || !manager.IsServer)
-        {
-            return;
-        }
-
-        for (int i = 0; i < players.Count; i++)
-        {
-            EntityPlayer player = players[i];
-            if (player == null)
-            {
-                continue;
-            }
-
-            ClientInfo targetClient = manager.Clients?.ForEntityId(player.entityId);
-            if (targetClient == null)
-            {
-                continue;
-            }
-
-            try
-            {
-                NetPackageScreamerAlertCapabilityProbe package = NetPackageManager.GetPackage<NetPackageScreamerAlertCapabilityProbe>();
-                targetClient.SendPackage(package.Setup(nonce));
-            }
-            catch
-            {
-            }
-        }
-    }
-
-    private static void WaitForCapabilityResponses(List<EntityPlayer> players, Dictionary<int, long> baselineByEntityId)
-    {
-        if (players == null || players.Count == 0 || baselineByEntityId == null)
-        {
-            return;
-        }
-
-        int waited = 0;
-        while (waited < CapabilityProbeWaitMs)
-        {
-            bool allResponded = true;
-            for (int i = 0; i < players.Count; i++)
-            {
-                EntityPlayer player = players[i];
-                if (player == null)
-                {
-                    continue;
-                }
-
-                long baseline = baselineByEntityId.TryGetValue(player.entityId, out long stamp)
-                    ? stamp
-                    : 0L;
-                if (ScreamerAlertHybridRouting.GetCapabilityStampByEntityId(player.entityId) <= baseline)
-                {
-                    allResponded = false;
-                    break;
-                }
-            }
-
-            if (allResponded)
-            {
-                return;
-            }
-
-            Thread.Sleep(CapabilityProbePollMs);
-            waited += CapabilityProbePollMs;
-        }
     }
 
     private static bool IsSenderAdmin(int senderEntityId)

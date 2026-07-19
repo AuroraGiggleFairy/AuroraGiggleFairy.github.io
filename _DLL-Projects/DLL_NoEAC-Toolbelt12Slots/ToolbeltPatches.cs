@@ -126,7 +126,10 @@ namespace Toolbelt12Slots
 				{
 					TryRestoreStoredSlotBinding(installed.Slot11, slot11: true);
 				}
-				LogInstalledAction("Slot11", installed.Slot11);
+				if (createdSlot11)
+				{
+					LogInstalledAction("Slot11", installed.Slot11);
+				}
 			}
 
 			bool createdSlot12 = false;
@@ -153,7 +156,10 @@ namespace Toolbelt12Slots
 				{
 					TryRestoreStoredSlotBinding(installed.Slot12, slot11: false);
 				}
-				LogInstalledAction("Slot12", installed.Slot12);
+				if (createdSlot12)
+				{
+					LogInstalledAction("Slot12", installed.Slot12);
+				}
 			}
 
 			EnforceInventorySlotOrder(actions, installed);
