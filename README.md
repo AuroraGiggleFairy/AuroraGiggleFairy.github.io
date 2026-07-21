@@ -1,4 +1,4 @@
-﻿# AGF 7 Days to Die Mods
+# AGF 7 Days to Die Mods
 
 *July 18, 2026, 11:00 PM EST*
 
