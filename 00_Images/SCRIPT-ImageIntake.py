@@ -17,7 +17,9 @@ except Exception as ex:
 
 IMAGES_ROOT = Path(__file__).resolve().parent
 VS_CODE_ROOT = IMAGES_ROOT.parent
-MEDIA_ROOT = IMAGES_ROOT / "mod-media"
+IMAGE_WORKFLOW_ROOT = IMAGES_ROOT / "01_ImageWorkflow"
+PRIMARY_IMAGE_SOURCES_ROOT = IMAGE_WORKFLOW_ROOT / "PrimaryImageSources"
+FINAL_IMAGES_ROOT = IMAGES_ROOT / "02_ImagesFinal"
 GENERATE_SCRIPT = VS_CODE_ROOT / "Workflow" / "SCRIPT-GenerateModImages.py"
 
 TARGET_W = 1920
@@ -136,7 +138,8 @@ def build_output_filename(base_name: str, slot: int) -> str:
 def choose_output_path(base_name: str, slot: int) -> Optional[Path]:
     while True:
         file_name = build_output_filename(base_name, slot)
-        out_path = MEDIA_ROOT / file_name
+        output_root = PRIMARY_IMAGE_SOURCES_ROOT if slot == 1 else FINAL_IMAGES_ROOT
+        out_path = output_root / file_name
         if not out_path.exists():
             return out_path
 
@@ -234,7 +237,8 @@ def main() -> int:
     print("AGF Image Intake")
     print("- Large full-screen capture: crop/fill to 16:9 then resize to 1920x1080")
     print("- Custom capture size: fit/center on black 1920x1080 canvas")
-    print("- Output folder is fixed: 00_Images/mod-media")
+    print("- Slot 01 source folder: 00_Images/01_ImageWorkflow/PrimaryImageSources")
+    print("- Slot 02+ final folder: 00_Images/02_ImagesFinal")
     print("- Source image auto order: clipboard image -> latest detected screenshot")
     print("- Slot 01 saves as the primary image (used by merged generation)")
     print("- Slots 02+ save as numbered images for additional media posts")
@@ -284,7 +288,7 @@ def main() -> int:
         print("This is a numbered extra media image for additional posts.")
 
     print()
-    if prompt_yes_no("Regenerate merged banner + GitHub thumbnail now", default_yes=True):
+    if slot == 1 and prompt_yes_no("Regenerate merged banner + thumbnail for this mod now?", default_yes=True):
         exit_code = run_merge_generation(base_name)
         if exit_code != 0:
             print(f"Merge generation exited with code {exit_code}")

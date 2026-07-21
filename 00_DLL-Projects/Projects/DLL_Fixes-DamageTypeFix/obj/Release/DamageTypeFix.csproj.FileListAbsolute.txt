@@ -1,0 +1,4 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DamageTypeFix\obj\Release\DamageTypeFix.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DamageTypeFix\obj\Release\DamageTypeFix.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DamageTypeFix\obj\Release\DamageTypeFix.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DamageTypeFix\obj\Release\DamageTypeFix.sourcelink.json

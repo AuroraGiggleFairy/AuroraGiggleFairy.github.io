@@ -230,7 +230,7 @@ class CSharpQualityServer:
                         "properties": {
                             "project_path": {
                                 "type": "string",
-                                "description": "Path to project folder (e.g., '_DLL-Projects/MyMod')"
+                                "description": "Path to project folder (e.g., '00_DLL-Projects/Projects/MyMod')"
                             }
                         },
                         "required": ["project_path"]
@@ -417,12 +417,12 @@ class CSharpQualityServer:
         }
     
     def _find_dll_projects(self, args: Dict) -> Dict:
-        dll_dir = os.path.join(WORKSPACE_ROOT, "_DLL-Projects")
+        dll_dir = os.path.join(WORKSPACE_ROOT, "00_DLL-Projects", "Projects")
         if not os.path.exists(dll_dir):
             return {
                 "content": [{"type": "text", "text": json.dumps({
                     "found": False,
-                    "message": "_DLL-Projects directory not found. Your C# projects may be elsewhere."
+                    "message": "00_DLL-Projects/Projects directory not found. Your C# projects may be elsewhere."
                 }, indent=2)}]
             }
         

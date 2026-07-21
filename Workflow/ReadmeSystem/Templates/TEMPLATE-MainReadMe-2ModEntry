@@ -21,7 +21,7 @@
     {{MOD_BANNER}}
         The mod's banner image as a self-linking anchor+img tag (150px wide), or empty string if no banner exists.
         Clicking opens the full-size image. Example:
-        <a href="00_Images/_generated/AGF-HUDPlus-1Main_banner.png"><img src="00_Images/_generated/AGF-HUDPlus-1Main_banner.png" width="150"></a>
+        <a href="00_Images/02_ImagesFinal/AGF-HUDPlus-1Main_01.png"><img src="00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-HUDPlus-1Main.png" width="150"></a>
 
     {{MOD_FEATURES_BLOCK}}
         Mod type/compatibility line from HELPER_ModCompatibility.csv (MOD_TYPE_ID).

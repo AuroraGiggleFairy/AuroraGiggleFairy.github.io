@@ -26,7 +26,7 @@
 
 ## Purple Book Generator Source of Truth
 - Edit only this file for Purple Book generator logic:
-  - _DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py
+  - 00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py
 
 ## Purple Book Run Workflow
 - Use validation runs without lane sync by default:

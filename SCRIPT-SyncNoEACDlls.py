@@ -10,7 +10,8 @@ from typing import Dict, List, Optional, Tuple
 
 
 WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
-DLL_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "_DLL-Projects")
+DLL_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "00_DLL-Projects", "Projects")
+LEGACY_DLL_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "_DLL-Projects")
 LEGACY_NOEAC_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "_NoEAC-Projects")
 ACTIVE_BUILD_DIR = os.path.join(WORKSPACE_ROOT, "02_ActiveBuild")
 RELEASE_SOURCE_DIR = os.path.join(WORKSPACE_ROOT, "03_ReleaseSource")
@@ -94,8 +95,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--game-mods", default=DEFAULT_GAME_MODS_DIR, help="Path to game Mods folder")
     parser.add_argument("--map-file", default=DEFAULT_MAP_PATH, help="Optional JSON overrides file")
     parser.add_argument("--apply", action="store_true", help="Copy DLLs when source is newer")
-    parser.add_argument("--suggest-renames", action="store_true", help="Print recommended _DLL-Projects folder renames")
-    parser.add_argument("--apply-renames", action="store_true", help="Apply safe _DLL-Projects folder renames")
+    parser.add_argument("--suggest-renames", action="store_true", help="Print recommended 00_DLL-Projects subfolder renames")
+    parser.add_argument("--apply-renames", action="store_true", help="Apply safe 00_DLL-Projects subfolder renames")
     parser.add_argument("--no-hash", action="store_true", help="Skip SHA256 comparison and use timestamps only")
     parser.add_argument("--verbose", action="store_true", help="Print additional debug details")
     return parser.parse_args()
@@ -145,17 +146,26 @@ def load_override_file(path: str) -> Tuple[Dict[str, str], Dict[str, str], Dict[
 
 def collect_csproj_projects(root_dir: str) -> List[ProjectInfo]:
     projects: List[ProjectInfo] = []
-    excluded_parts = ("\\Decompiled DLLs\\", "\\.vscode\\")
+    excluded_dir_names = {
+        ".git",
+        ".idea",
+        ".vs",
+        ".vscode",
+        "BuildTemp",
+        "Decompiled DLLs",
+        "References",
+        "_build-temp",
+        "_Decompiled DLLs",
+        "bin",
+        "obj",
+    }
 
-    for dirpath, _, filenames in os.walk(root_dir):
+    for dirpath, dirnames, filenames in os.walk(root_dir):
+        dirnames[:] = [name for name in dirnames if name not in excluded_dir_names]
         for filename in filenames:
             if not filename.lower().endswith(".csproj"):
                 continue
             project_path = os.path.join(dirpath, filename)
-            normalized_path = project_path.replace("/", "\\")
-            if any(part in normalized_path for part in excluded_parts):
-                continue
-
             project_dir = os.path.dirname(project_path)
             project_name = os.path.splitext(filename)[0]
             assembly_name = project_name
@@ -294,6 +304,7 @@ def suggest_rename(
     mod_base: str,
     rename_overrides: Dict[str, str],
     category_overrides: Dict[str, str],
+    projects_root: str,
 ) -> Optional[Tuple[str, str]]:
     source_name = project.project_folder_name
     if project.project_key in rename_overrides:
@@ -307,8 +318,8 @@ def suggest_rename(
     if normalize_key(source_name) == normalize_key(target_name):
         return None
 
-    source_path = os.path.join(DLL_PROJECTS_DIR, source_name)
-    target_path = os.path.join(DLL_PROJECTS_DIR, target_name)
+    source_path = os.path.join(projects_root, source_name)
+    target_path = os.path.join(projects_root, target_name)
     if os.path.exists(target_path):
         return None
 
@@ -318,7 +329,18 @@ def suggest_rename(
 def main() -> int:
     args = parse_args()
 
-    projects_root = DLL_PROJECTS_DIR if os.path.isdir(DLL_PROJECTS_DIR) else LEGACY_NOEAC_PROJECTS_DIR
+    projects_root = next(
+        (
+            path
+            for path in (
+                DLL_PROJECTS_DIR,
+                LEGACY_DLL_PROJECTS_DIR,
+                LEGACY_NOEAC_PROJECTS_DIR,
+            )
+            if os.path.isdir(path)
+        ),
+        DLL_PROJECTS_DIR,
+    )
 
     if not os.path.isdir(projects_root):
         print(f"DLL projects folder not found: {DLL_PROJECTS_DIR}")
@@ -335,8 +357,6 @@ def main() -> int:
     category_overrides = dict(DEFAULT_PROJECT_CATEGORY_OVERRIDES)
     category_overrides.update(file_categories)
 
-    global DLL_PROJECTS_DIR
-    DLL_PROJECTS_DIR = projects_root
     projects = collect_csproj_projects(projects_root)
     mod_bases = collect_noeac_mod_bases()
 
@@ -394,7 +414,7 @@ def main() -> int:
             print(f"[OK] {project.project_folder_name} -> {mod_base} | {target_dll_name}")
             skip_count += 1
 
-        rename_plan = suggest_rename(project, mod_base, rename_overrides, category_overrides)
+        rename_plan = suggest_rename(project, mod_base, rename_overrides, category_overrides, projects_root)
         if rename_plan:
             rename_actions.append(rename_plan)
 

@@ -1,0 +1,4 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-windowEnteringDuration\obj\Release\windowEnteringDuration.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-windowEnteringDuration\obj\Release\windowEnteringDuration.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-windowEnteringDuration\obj\Release\windowEnteringDuration.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-windowEnteringDuration\windowEnteringDuration.dll

@@ -18,7 +18,7 @@ Three locations are in play at all times:
 |----------|------|
 | `7D2D-Mods/` workspace | Primary workspace: all lanes, helper files, scripts, DLL projects |
 | Game Mods folder | Live testing: what the game actually loads |
-| `_DLL-Projects/` subfolder | DLL mod source code, lives inside the workspace |
+| `00_DLL-Projects/` subfolder | DLL mod source code, lives inside the workspace |
 
 There is also a separate **new mod creation script** that bootstraps a new mod and wires it into some of the same helper files used by the main workflow. That means the main workflow should be compatible with mods created by that setup script and avoid duplicating or breaking its setup work.
 The current expectation is that the new-mod creation script mainly **creates the initial entry/setup**, and the update workflow should then apply the normal ongoing synchronization, README generation, helper-file reconciliation, and other maintenance behavior.

@@ -1,0 +1,16 @@
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.csproj.AssemblyReference.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.csproj.CoreCompileInputs.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.sourcelink.json
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.pdb
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\AudioOptionsPlus.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AudioOptionsPlus\AudioOptionsPlus.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\obj\Release\AudioOptionsPlus.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\AudioOptionsPlus.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AudioOptionsPlus\AudioOptionsPlus.pdb

@@ -9,7 +9,7 @@ from typing import Dict, List, Tuple
 
 VS_CODE_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
-MOD_MEDIA_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "mod-media")
+FINAL_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "02_ImagesFinal")
 PUBLISH_HELP_DIR = os.path.join(
     VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "PublishHelp"
 )
@@ -685,14 +685,13 @@ def gather_mod_data() -> Dict[str, Dict[str, object]]:
 
 # Paths for mod images and zips
 ZIP_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
-GENERATED_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "_generated")
-TEMPLATE_BANNER = os.path.join(VS_CODE_ROOT, "00_Images", "_template-banner.png")
-FALLBACK_TEMPLATE = os.path.join(VS_CODE_ROOT, "00_Images", "7d2dTemplateImage.png")
+TEMPLATE_BANNER = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow", "Assets", "_template-banner.png")
+FALLBACK_TEMPLATE = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow", "Assets", "7d2dTemplateImage.png")
 
 
 def copy_mod_images(mod_name: str, target_dir: str) -> int:
     copied = 0
-    gen_01 = os.path.join(GENERATED_IMAGES_DIR, f"{mod_name}_01.png")
+    gen_01 = os.path.join(FINAL_IMAGES_DIR, f"{mod_name}_01.png")
     if os.path.isfile(gen_01):
         dst = os.path.join(target_dir, f"{mod_name}_01.png")
         shutil.copy2(gen_01, dst)
@@ -703,11 +702,11 @@ def copy_mod_images(mod_name: str, target_dir: str) -> int:
             dst = os.path.join(target_dir, f"{mod_name}_01.png")
             shutil.copy2(template_src, dst)
             copied += 1
-    if os.path.isdir(MOD_MEDIA_DIR):
+    if os.path.isdir(FINAL_IMAGES_DIR):
         slot = 2
         while True:
             img_name = f"{mod_name}_{slot:02d}.png"
-            src = os.path.join(MOD_MEDIA_DIR, img_name)
+            src = os.path.join(FINAL_IMAGES_DIR, img_name)
             if not os.path.isfile(src):
                 break
             dst = os.path.join(target_dir, img_name)
@@ -810,7 +809,7 @@ def main() -> int:
             img_count = 0
             slot = 1
             while True:
-                if os.path.isfile(os.path.join(MOD_MEDIA_DIR, f"{mod_name}_{slot:02d}.png")):
+                if os.path.isfile(os.path.join(FINAL_IMAGES_DIR, f"{mod_name}_{slot:02d}.png")):
                     img_count += 1
                     slot += 1
                 else:

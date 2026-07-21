@@ -1,0 +1,8 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\obj\Release\optionsAGF.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\obj\Release\optionsAGF.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\obj\Release\optionsAGF.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\obj\Release\optionsAGF.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\obj\Release\optionsAGF.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\obj\Release\optionsAGF.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\optionsAGF.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-optionsAGF\optionsAGF.pdb

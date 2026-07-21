@@ -1,0 +1,16 @@
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.csproj.AssemblyReference.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.csproj.CoreCompileInputs.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.sourcelink.json
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\bin\Release\net48\StormTracker.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\bin\Release\net48\StormTracker.pdb
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\bin\Release\net48\StormTracker.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\bin\Release\net48\StormTracker.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\obj\Release\net48\StormTracker.pdb

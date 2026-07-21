@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"name": "DLL Projects",
+			"path": "Projects"
+		},
+		{
+			"name": "DLL Generators",
+			"path": "Generators"
+		},
+		{
+			"name": "Installed Game Mods",
+			"path": "../../../Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods"
+		}
+	],
+	"settings": {
+		"files.watcherExclude": {
+			"**/BuildTemp/**": true,
+			"**/GeneratedFiles/**": true,
+			"**/bin/**": true,
+			"**/obj/**": true
+		},
+		"search.exclude": {
+			"**/BuildTemp/**": true,
+			"**/GeneratedFiles/**": true,
+			"**/bin/**": true,
+			"**/obj/**": true
+		}
+	}
+}

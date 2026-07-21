@@ -1,7 +1,7 @@
 # BMCounter Blood Moon Source Workflow
 
 ## Working Methods
-- Use decompiled v3 assembly under `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp_7d2dv3` to verify value sources.
+- Use decompiled v3 assembly under `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp_7d2dv3` to verify value sources.
 - For XML patch `<conditional>` blocks, only these relevant condition functions are available: `gamepref(...)` and `serverinfo(...)` (plus non-data helpers).
 - For runtime XUi binding expressions (`{...}` or `{# ...}`), use NCalc functions from `BindingNcalcFunctions`, including `gamestat(...)`, `gamepref(...)`, `serverinfoint(...)`, `serverinfobool(...)`, `serverinfostring(...)`, and `cvar(...)`.
 - Prefer `gamestat('BloodMoonDay')` for next blood moon tracking; it reflects runtime scheduling logic.

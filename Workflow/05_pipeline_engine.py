@@ -106,7 +106,7 @@ MAIN_MOD_ENTRY_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-Main
 GIGGLE_PACK_TEMPLATE_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-MainReadMe-0GigglePack")
 CATEGORY_DESCRIPTIONS_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-CategoryDescriptions.md")
 IMAGES_ROOT = os.path.join(VS_CODE_ROOT, "00_Images")
-IMAGES_GENERATED_ROOT = os.path.join(IMAGES_ROOT, "_generated")
+IMAGES_GENERATED_ROOT = os.path.join(IMAGES_ROOT, "02_ImagesFinal")
 IMAGES_THUMBNAIL_ROOT = os.path.join(IMAGES_GENERATED_ROOT, "thumbnails")
 DISCORD_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "Discord", "TEMPLATE-DiscordUpdate.md")
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
@@ -5909,7 +5909,7 @@ def maybe_post_discord_release_update(
 
 
 def generate_mod_images(dry_run: bool, log: Logger) -> None:
-    """Generate _01.png composite mod images into 00_Images/_generated/."""
+    """Generate _01.png composite mod images into 00_Images/02_ImagesFinal/."""
     image_script = os.path.join(WORKFLOW_DIR, "SCRIPT-GenerateModImages.py")
     if not os.path.isfile(image_script):
         log.warn(f"Image generation script not found: {image_script}")
@@ -6497,7 +6497,7 @@ def render_main_readme_category_block(
 def generate_thumbnails(dry_run: bool, log: Logger) -> None:
     """Generate small Thumbnail_*.png files from the 1920x1080 * _01.png originals.
 
-    Thumbnails are stored in IMAGES_THUMBNAIL_ROOT (00_Images/_generated/thumbnails/)
+    Thumbnails are stored in IMAGES_THUMBNAIL_ROOT (00_Images/02_ImagesFinal/thumbnails/)
     at 640px wide (maintaining aspect ratio) for fast page loading.
     """
     log.info("Generating thumbnail images from full-size originals")
@@ -6579,7 +6579,7 @@ def build_mod_entry(
             features_block = f"<ul><li><em>{mod_type_text}</em></li></ul>\n"
 
     base_mod_name = get_base_mod_name(folder_name)
-    repo_base = "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/_generated"
+    repo_base = "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal"
 
     # Thumbnail image (small) for display on the page
     thumb_file = f"Thumbnail_{base_mod_name}.png"

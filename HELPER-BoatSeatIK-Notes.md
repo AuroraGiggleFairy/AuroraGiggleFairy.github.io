@@ -5,11 +5,11 @@ Purpose: persistent reference for seat/IK tuning on boat seats (especially mirro
 ## Confirmed Engine Behavior (Decompiled)
 
 Source references:
-- `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp/VPSeat.cs`
-- `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp/VPSteering.cs`
-- `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp/VehiclePart.cs`
-- `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp/Vehicle.cs`
-- `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp/IKController.cs`
+- `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp/VPSeat.cs`
+- `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp/VPSteering.cs`
+- `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp/VehiclePart.cs`
+- `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp/Vehicle.cs`
+- `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp/IKController.cs`
 
 ### 1) Seat IK targets are local to player rig space
 - `VPSeat` initializes IK targets for hands/feet from seat properties.

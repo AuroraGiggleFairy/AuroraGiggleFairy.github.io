@@ -1,0 +1,8 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\bin\Release\net48\ConsoleOpacityMod.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\bin\Release\net48\ConsoleOpacityMod.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-ConsoleOpacityMod\obj\Release\net48\ConsoleOpacityMod.pdb

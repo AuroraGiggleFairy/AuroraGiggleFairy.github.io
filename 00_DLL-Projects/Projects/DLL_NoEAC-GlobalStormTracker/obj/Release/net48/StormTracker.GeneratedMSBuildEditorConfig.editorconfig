@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = StormTracker
+build_property.ProjectDir = c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-GlobalStormTracker\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

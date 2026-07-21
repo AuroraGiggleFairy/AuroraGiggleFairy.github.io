@@ -1,0 +1,16 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\SignErrorGuard.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-SignErrorGuard\SignErrorGuard.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\obj\Release\SignErrorGuard.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\SignErrorGuard.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SignErrorGuard\SignErrorGuard.pdb

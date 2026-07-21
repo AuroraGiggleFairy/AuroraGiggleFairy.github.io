@@ -1,0 +1,16 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\AutoRun.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-AutoRun\AutoRun.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\obj\Release\AutoRun.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\AutoRun.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-AutoRun\AutoRun.pdb

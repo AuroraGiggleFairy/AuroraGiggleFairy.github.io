@@ -12,9 +12,9 @@
     - Preacher (Crit Resist + Infection Resist)
   - Primitive armor remains manual: piece rows (2-5) all `0%`; set-bonus rows blank.
 - Working method used:
-  - Source edit only: `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Source edit only: `00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
   - Validation run (no lane/game sync):
-    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
   - Focus checks:
     - `armorAssassinOutfit` row6 = `-15%,-30%,-45%,-60%,-75%,-100%`.
     - Split-stat sets now have explicit q2-q5 tiers with no interpolation artifacts.
@@ -29,9 +29,9 @@
   - Enforced Primitive armor piece rows (2-5) to manual `0%` values for q1-q6.
   - Kept Primitive set-bonus row values blank.
 - Working method used:
-  - Source edit only: `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Source edit only: `00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
   - Validation run (no lane/game sync):
-    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
   - Focus checks:
     - `armorPrimitiveOutfit` rows 2-5 = `0%` across q1..q6.
     - `armorPrimitiveOutfit` set-bonus rows remain blank.
@@ -46,9 +46,9 @@
   - Updated armor row value insertion so rows 2-5 use resolved vanilla q1..q6 values (keeping set-bonus row overrides unchanged).
   - Preserved all existing layout/formatting and non-armor generation behavior.
 - Working method used:
-  - Source edit only: `_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
+  - Source edit only: `00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`.
   - Validation run (no lane/game sync):
-    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
+    - `c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe c:/GitHub/7D2D-Mods/00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild`
   - Post-run checks:
     - Generator completed successfully and wrote expected outputs.
     - Zoom armor rows 2-5 contain non-blank q2-q5 values across all outfit grids.

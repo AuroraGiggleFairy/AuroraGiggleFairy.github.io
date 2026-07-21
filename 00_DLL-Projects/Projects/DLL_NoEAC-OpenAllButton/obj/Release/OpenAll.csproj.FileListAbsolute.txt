@@ -1,0 +1,3 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-OpenAllButton\obj\Release\OpenAll.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-OpenAllButton\obj\Release\OpenAll.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-OpenAllButton\obj\Release\OpenAll.csproj.CoreCompileInputs.cache

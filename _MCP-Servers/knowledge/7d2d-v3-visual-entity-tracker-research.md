@@ -3,7 +3,7 @@
 Research date: 2026-07-18  
 Primary mod reviewed: `01_Draft/AGF-NoEAC-VisualEntityTracker-v0.2.0`  
 Vanilla XML reviewed: `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Config`  
-Decompiled C# reviewed: `_DLL-Projects/_Decompiled DLLs/Decompiled_AssemblyCSharp_7d2dv3`
+Decompiled C# reviewed: `00_DLL-Projects/References/Decompiled-DLLs/Decompiled_AssemblyCSharp_7d2dv3`
 
 ## Current draft mod behavior
 

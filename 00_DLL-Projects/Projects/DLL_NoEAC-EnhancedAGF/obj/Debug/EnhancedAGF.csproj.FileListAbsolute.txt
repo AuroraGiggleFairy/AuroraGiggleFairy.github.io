@@ -1,0 +1,8 @@
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\obj\Debug\EnhancedAGF.csproj.AssemblyReference.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\obj\Debug\EnhancedAGF.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\obj\Debug\EnhancedAGF.csproj.CoreCompileInputs.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\obj\Debug\EnhancedAGF.sourcelink.json
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\obj\Debug\EnhancedAGF.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\obj\Debug\EnhancedAGF.pdb
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\EnhancedAGF.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-EnhancedAGF\EnhancedAGF.pdb

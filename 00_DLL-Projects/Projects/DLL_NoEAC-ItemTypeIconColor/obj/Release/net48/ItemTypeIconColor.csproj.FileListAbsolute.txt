@@ -1,0 +1,10 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\bin\Release\net48\ItemTypeIconColor.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\bin\Release\net48\ItemTypeIconColor.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.AssemblyInfoInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.AssemblyInfo.cs
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-ItemTypeIconColor\obj\Release\net48\ItemTypeIconColor.pdb

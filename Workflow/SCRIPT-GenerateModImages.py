@@ -27,7 +27,7 @@ COMPAT_CSV = os.path.join(
     "Data",
     "HELPER_ModCompatibility.csv",
 )
-DEFAULT_LAYOUT_PATH = os.path.join(VS_CODE_ROOT, "00_Images", "modimage-layout.json")
+DEFAULT_LAYOUT_PATH = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow", "modimage-layout.json")
 
 # Maps MOD_TYPE_ID → "Label: Explanation" for banner rendering.
 # Label and explanation are split on ": " by the renderer for the two-part layout.
@@ -1110,13 +1110,12 @@ def main() -> int:
         return 0
 
     paths = layout.get("paths", {})
-    media_root_value = str(paths.get("media_root", "00_Images/mod-media"))
+    media_root_value = str(paths.get("media_root", "00_Images/01_ImageWorkflow/PrimaryImageSources"))
     media_root = resolve_path(VS_CODE_ROOT, media_root_value)
-    legacy_source_root = resolve_path(VS_CODE_ROOT, str(paths.get("source_root", ""))) if paths.get("source_root") else ""
-    generated_root = resolve_path(VS_CODE_ROOT, str(paths.get("generated_root", "00_Images/_generated")))
-    manifest_value = str(paths.get("manifest", "00_Images/_generated/_modimage-manifest.json"))
+    generated_root = resolve_path(VS_CODE_ROOT, str(paths.get("generated_root", "00_Images/02_ImagesFinal")))
+    manifest_value = str(paths.get("manifest", "00_Images/01_ImageWorkflow/Data/_modimage-manifest.json"))
     manifest_path = resolve_path(VS_CODE_ROOT, manifest_value)
-    media_status_value = str(paths.get("media_status_csv", "00_Images/media-status.csv"))
+    media_status_value = str(paths.get("media_status_csv", "00_Images/01_ImageWorkflow/Data/media-status.csv"))
     media_status_path = resolve_path(VS_CODE_ROOT, media_status_value)
 
     os.makedirs(media_root, exist_ok=True)
@@ -1129,7 +1128,7 @@ def main() -> int:
     media_status_rows: List[Dict[str, str]] = []
     unchanged_count = 0
     for mod in mods:
-        media_image_path = resolve_media_image_path(media_root, mod.base_name, legacy_source_root)
+        media_image_path = resolve_media_image_path(media_root, mod.base_name, "")
         media_status_rows.append(
             {
                 "MOD_NAME": mod.base_name,

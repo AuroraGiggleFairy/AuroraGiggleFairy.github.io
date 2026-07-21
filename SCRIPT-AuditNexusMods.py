@@ -1,4 +1,4 @@
-"""Audit all 42 release source mods against Nexus to discover which are published.
+"""Audit all release source mods against Nexus to discover which are published.
 
 Outputs a markdown report showing:
 - Mod name + local version
@@ -7,7 +7,7 @@ Outputs a markdown report showing:
 - Version comparison (local vs nexus)
 - Config status
 """
-import json, os, re, sys, urllib.error, urllib.request, xml.etree.ElementTree as ET
+import getpass, json, os, re, sys, urllib.error, urllib.request, xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Tuple
 
 # ── Paths ────────────────────────────────────────────────────────────────
@@ -16,10 +16,10 @@ RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
 CONFIG_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "nexusmods-config.json")
 
 # ── API setup ────────────────────────────────────────────────────────────
-API_KEY = "QLV3WFNzwrhPIb9BjF8w0m5NNayDMr39mbsmwyYERCDHTeWo8q3QVwFFnA==--AOHf4YnXy3B/1iHA--e0jolD5B97SkjHfCyEQlLA=="
+API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"
 HEADERS = {
     "accept": "application/json",
-    "apikey": API_KEY,
+    "apikey": "",
     "Application-Name": "AGF-NexusMods-Automation",
     "Application-Version": "0.1.0",
     "User-Agent": "AGF-NexusMods-Automation/0.1.0",
@@ -41,6 +41,21 @@ def get_base_mod_name(name: str) -> str:
 def parse_version_from_folder(folder: str) -> str:
     m = re.search(r"-v(\d+(?:\.\d+)+)$", folder)
     return m.group(1) if m else "?"
+
+
+def parse_local_version(folder_path: str, folder_name: str) -> str:
+    """Read the authoritative version from ModInfo.xml, with folder-name fallback."""
+    modinfo_path = os.path.join(folder_path, "ModInfo.xml")
+    try:
+        root = ET.parse(modinfo_path).getroot()
+        for child in root:
+            if child.tag.lower() == "version":
+                version = child.attrib.get("value", "").strip()
+                if version:
+                    return version
+    except (OSError, ET.ParseError):
+        pass
+    return parse_version_from_folder(folder_name)
 
 
 def parse_version_parts(version: str) -> Tuple[int, int, int]:
@@ -194,6 +209,20 @@ def generate_search_keywords(name: str) -> List[str]:
 # ── Main audit ───────────────────────────────────────────────────────────
 
 def main():
+    api_key = os.getenv(API_KEY_ENV_VAR, "").strip()
+    if not api_key:
+        print("Nexus API key is not configured.")
+        print("Paste it below for this check only; it will not be displayed or saved.")
+        try:
+            api_key = getpass.getpass("Nexus API key: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\nVersion check cancelled.")
+            return 1
+    if not api_key:
+        print("No API key entered; version check cancelled.")
+        return 1
+    HEADERS["apikey"] = api_key
+
     # Load config
     config = json.load(open(CONFIG_PATH, "r")) if os.path.isfile(CONFIG_PATH) else {"mods": {}}
     config_mods = config.get("mods", {})
@@ -210,7 +239,7 @@ def main():
             continue
         
         base_name = get_base_mod_name(entry)
-        local_version = parse_version_from_folder(entry)
+        local_version = parse_local_version(fp, entry)
         
         # Check config
         config_entry = config_mods.get(base_name, {})

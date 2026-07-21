@@ -23,6 +23,7 @@ DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmod
 DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-upload-plan.json")
 DEFAULT_MANUAL_PACKET_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ManualPackets")
 DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ModDetails")
+DEFAULT_PRIVATE_API_KEY_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexus-api-key.private.txt")
 AGF_COLOR_LINE = "#5F5980"
 AGF_COLOR_HEADING = "#8DB580"
 AGF_COLOR_HIGHLIGHT = "#DDCDFA"
@@ -591,6 +592,21 @@ def fetch_group_versions(api_base_url: str, group_id: str, headers: Dict[str, st
     return [version for version in versions if isinstance(version, dict)]
 
 
+def select_latest_group_version(versions: List[Dict[str, object]]) -> Optional[Dict[str, object]]:
+    """Select the newest usable mod-file version returned by Nexus."""
+    usable = [version for version in versions if str(version.get("version", "")).strip()]
+    if not usable:
+        return None
+    return max(
+        usable,
+        key=lambda version: (
+            parse_version_parts(str(version.get("version", "0.0.0"))),
+            str(version.get("uploaded_at", "")),
+            safe_int(version.get("position", 0)),
+        ),
+    )
+
+
 def fetch_legacy_mod_files(
     api_v1_base_url: str,
     game_domain: str,
@@ -744,7 +760,15 @@ def print_legacy_chain_candidates(mod_name: str, candidates: List[Dict[str, obje
 
 def get_env_api_key(config: Dict[str, object]) -> Tuple[str, str]:
     env_var_name = str(config.get("api_key_env_var", DEFAULT_API_KEY_ENV_VAR)).strip() or DEFAULT_API_KEY_ENV_VAR
-    return env_var_name, os.getenv(env_var_name, "").strip()
+    api_key = os.getenv(env_var_name, "").strip()
+    if api_key:
+        return env_var_name, api_key
+    try:
+        with open(DEFAULT_PRIVATE_API_KEY_PATH, "r", encoding="utf-8") as handle:
+            api_key = handle.read().strip()
+    except OSError:
+        api_key = ""
+    return env_var_name, api_key
 
 
 def build_group_line(group: Dict[str, object]) -> str:
@@ -762,6 +786,7 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
     mod_name = str(entry.get("mod_name", ""))
     game_domain = str(entry.get("game_domain", "7daystodie"))
     nexus_mod_id = safe_int(entry.get("nexus_mod_id", 0))
+    configured_group_id = str(entry.get("update_group_id", "")).strip()
     legacy_latest_file_id = safe_int(entry.get("legacy_latest_file_id", 0))
     legacy_name_hint = str(entry.get("legacy_name_hint", "")).strip()
 
@@ -772,6 +797,7 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
     update_groups_error = ""
     legacy_candidates: List[Dict[str, object]] = []
     selected_legacy_chain: Optional[Dict[str, object]] = None
+    selected_group_version: Optional[Dict[str, object]] = None
 
     if live_mod_id:
         try:
@@ -781,7 +807,17 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
             if group_ex.code == 403:
                 raise
 
-    if not update_groups:
+    group_id = configured_group_id
+    if not group_id and update_groups:
+        active_group = next((group for group in update_groups if bool(group.get("is_active", False))), update_groups[0])
+        group_id = str(active_group.get("id", "")).strip()
+    if group_id:
+        group_versions = fetch_group_versions(api_base_url, group_id, headers)
+        selected_group_version = select_latest_group_version(group_versions)
+        if selected_group_version:
+            live_version = str(selected_group_version.get("version", "")).strip() or live_version
+
+    if not selected_group_version and not update_groups:
         legacy_payload = fetch_legacy_mod_files(api_v1_base_url, game_domain, nexus_mod_id, headers)
         legacy_candidates = summarize_legacy_file_chains(legacy_payload, mod_name)
         selected_legacy_chain = select_legacy_chain_candidate(
@@ -804,6 +840,7 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
         "page_summary": str(payload.get("summary", "")).strip(),
         "update_groups": update_groups,
         "update_groups_error": update_groups_error,
+        "selected_group_version": selected_group_version,
         "legacy_chain_candidates": legacy_candidates,
         "selected_legacy_chain": selected_legacy_chain,
     }
@@ -1118,44 +1155,18 @@ def run_live_check(plan: Dict[str, object], config: Dict[str, object]) -> int:
             continue
 
         mod_name = str(entry.get("mod_name", ""))
-        game_domain = str(entry.get("game_domain", "7daystodie"))
         nexus_mod_id = safe_int(entry.get("nexus_mod_id", 0))
         local_version = str(entry.get("version", "0.0.0"))
         configured_group_id = str(entry.get("update_group_id", "")).strip()
-        legacy_latest_file_id = safe_int(entry.get("legacy_latest_file_id", 0))
-        legacy_name_hint = str(entry.get("legacy_name_hint", "")).strip()
 
         try:
-            payload = fetch_nexus_mod_info(api_base_url, api_v1_base_url, game_domain, nexus_mod_id, headers)
-            live_version = str(payload.get("version", "0.0.0"))
-            live_mod_id = str(payload.get("id", payload.get("mod_id", ""))).strip()
-            update_groups: List[Dict[str, object]] = []
-            update_groups_error = ""
-            legacy_candidates: List[Dict[str, object]] = []
-            selected_legacy_chain: Optional[Dict[str, object]] = None
-
-            if live_mod_id:
-                try:
-                    update_groups = fetch_mod_update_groups(api_base_url, live_mod_id, headers)
-                except urllib.error.HTTPError as group_ex:
-                    update_groups_error = f"HTTP {group_ex.code}"
-                    if group_ex.code == 403:
-                        raise
-
-            if not update_groups:
-                legacy_payload = fetch_legacy_mod_files(api_v1_base_url, game_domain, nexus_mod_id, headers)
-                legacy_candidates = summarize_legacy_file_chains(legacy_payload, mod_name)
-                selected_legacy_chain = select_legacy_chain_candidate(
-                    legacy_candidates,
-                    preferred_latest_file_id=legacy_latest_file_id,
-                    preferred_name_hint=legacy_name_hint,
-                )
-                if selected_legacy_chain:
-                    live_version = (
-                        str(selected_legacy_chain.get("latest_mod_version", "")).strip()
-                        or str(selected_legacy_chain.get("latest_version", "")).strip()
-                        or live_version
-                    )
+            live = resolve_live_state_for_entry(entry, config, headers)
+            live_version = str(live.get("version", "0.0.0"))
+            live_mod_id = str(live.get("mod_id", "")).strip()
+            update_groups = live.get("update_groups", [])
+            if not isinstance(update_groups, list):
+                update_groups = []
+            selected_legacy_chain = live.get("selected_legacy_chain")
 
             matching_group = next(
                 (group for group in update_groups if str(group.get("id", "")).strip() == configured_group_id),
@@ -1176,16 +1187,8 @@ def run_live_check(plan: Dict[str, object], config: Dict[str, object]) -> int:
             elif selected_legacy_chain:
                 group_note = f" | legacy_file_id={safe_int(selected_legacy_chain.get('latest_file_id', 0))}"
 
-            entry["live"] = {
-                "mod_id": live_mod_id,
-                "mod_name": str(payload.get("name", "")).strip(),
-                "version": live_version,
-                "update_groups": update_groups,
-                "update_groups_error": update_groups_error,
-                "matching_update_group": matching_group,
-                "legacy_chain_candidates": legacy_candidates,
-                "selected_legacy_chain": selected_legacy_chain,
-            }
+            live["matching_update_group"] = matching_group
+            entry["live"] = live
             print(
                 f"[{status}] {mod_name}: local v{local_version} | nexus v{live_version} | mod_id={nexus_mod_id}{group_note}"
             )

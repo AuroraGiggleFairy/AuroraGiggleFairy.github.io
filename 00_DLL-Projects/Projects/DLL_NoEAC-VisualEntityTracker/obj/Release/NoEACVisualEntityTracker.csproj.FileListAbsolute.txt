@@ -1,0 +1,16 @@
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.csproj.AssemblyReference.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.csproj.CoreCompileInputs.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.sourcelink.json
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.pdb
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\NoEACVisualEntityTracker.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-VisualEntityTracker\NoEACVisualEntityTracker.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\obj\Release\NoEACVisualEntityTracker.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\NoEACVisualEntityTracker.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-VisualEntityTracker\NoEACVisualEntityTracker.pdb

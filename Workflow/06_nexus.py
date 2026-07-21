@@ -496,39 +496,38 @@ def main() -> int:
     os.makedirs(PUBLISHHELP_DIR, exist_ok=True)
     print("  PublishHelp directory recreated.")
 
-    # Constants for image source directories
-    GENERATED_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "_generated")
-    MODMEDIA_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "mod-media")
+    # Final merged and numbered images share one publish-ready directory.
+    FINAL_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "02_ImagesFinal")
 
     # Stage 1: Copy images into each mod's PublishHelp folder
-    #   - _01.png comes from _generated
-    #   - _02+, _03+, etc. come from mod-media (but NOT the _01 from mod-media)
+    #   - _01.png is the generated merged image
+    #   - _02+, _03+, etc. are additional final media
     print("\n--- Stage 1: Copying mod images ---")
     for m in mods:
         base_name = m["base_name"]
         help_dir = os.path.join(PUBLISHHELP_DIR, base_name)
         os.makedirs(help_dir, exist_ok=True)
 
-        # Copy _01.png from _generated
-        gen_01 = os.path.join(GENERATED_IMAGES_DIR, f"{base_name}_01.png")
+        # Copy generated merged _01.png.
+        gen_01 = os.path.join(FINAL_IMAGES_DIR, f"{base_name}_01.png")
         if os.path.isfile(gen_01):
             shutil.copy2(gen_01, os.path.join(help_dir, f"{base_name}_01.png"))
-            print(f"  [Image_01] {base_name} (from _generated)")
+            print(f"  [Image_01] {base_name} (from 02_ImagesFinal)")
         else:
-            print(f"  [SKIP_01] {base_name}: no _01.png in _generated")
+            print(f"  [SKIP_01] {base_name}: no _01.png in 02_ImagesFinal")
 
-        # Copy _02+, _03+, etc. from mod-media (skip _01)
-        if os.path.isdir(MODMEDIA_IMAGES_DIR):
-            for filename in sorted(os.listdir(MODMEDIA_IMAGES_DIR)):
+        # Copy _02+, _03+, etc. from the same final directory (skip _01).
+        if os.path.isdir(FINAL_IMAGES_DIR):
+            for filename in sorted(os.listdir(FINAL_IMAGES_DIR)):
                 if not filename.startswith(base_name):
                     continue
-                # Skip _01 since it came from _generated
+                # Skip _01 since it was copied above.
                 if filename == f"{base_name}_01.png":
                     continue
-                src = os.path.join(MODMEDIA_IMAGES_DIR, filename)
+                src = os.path.join(FINAL_IMAGES_DIR, filename)
                 if os.path.isfile(src):
                     shutil.copy2(src, os.path.join(help_dir, filename))
-                    print(f"  [Image] {base_name}: {filename} (from mod-media)")
+                    print(f"  [Image] {base_name}: {filename} (from 02_ImagesFinal)")
 
 
     # Stage 2: Generate BBCode FullDesc.md directly (moved from SCRIPT-NexusMods.py)

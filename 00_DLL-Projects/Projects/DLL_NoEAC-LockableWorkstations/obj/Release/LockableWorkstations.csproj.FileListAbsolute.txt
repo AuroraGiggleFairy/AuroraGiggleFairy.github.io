@@ -1,0 +1,14 @@
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.csproj.AssemblyReference.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.csproj.CoreCompileInputs.cache
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.sourcelink.json
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\obj\Release\AGFLockableWorkstations.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\obj\Release\AGFLockableWorkstations.pdb
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\AGFLockableWorkstations.dll
+C:\GitHub\7D2D-Mods\00_DLL-Projects\DLL_NoEAC-LockableWorkstations\AGFLockableWorkstations.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-LockableWorkstations\obj\Release\LockableWorkstations.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-LockableWorkstations\obj\Release\AGFLockableWorkstations.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-LockableWorkstations\obj\Release\AGFLockableWorkstations.pdb

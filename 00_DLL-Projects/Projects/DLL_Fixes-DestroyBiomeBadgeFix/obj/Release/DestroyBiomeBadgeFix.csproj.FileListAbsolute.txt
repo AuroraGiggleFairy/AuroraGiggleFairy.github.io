@@ -1,0 +1,4 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DestroyBiomeBadgeFix\obj\Release\DestroyBiomeBadgeFix.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DestroyBiomeBadgeFix\obj\Release\DestroyBiomeBadgeFix.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DestroyBiomeBadgeFix\obj\Release\DestroyBiomeBadgeFix.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_Fixes-DestroyBiomeBadgeFix\DestroyBiomeBadgeFix.dll

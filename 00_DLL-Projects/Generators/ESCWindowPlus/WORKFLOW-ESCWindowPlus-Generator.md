@@ -1,0 +1,145 @@
+# ESCWindowPlus Generator Workflow
+
+## Location
+- This generator lives at `00_DLL-Projects/Generators/ESCWindowPlus/` (moved here on 2026-07-21 from `01_Draft/AGF-4Modders-ESCWindowPlus-v0.3.2/_Generator/`).
+- The live/draft mod itself (game-ready `Config/`, `Links/`, `ModInfo.xml`, etc.) stays in `01_Draft/AGF-4Modders-ESCWindowPlus-v0.3.2/`.
+- As of this move, the generator writes self-contained outputs under its own `_Generator/GeneratedFiles/` folder instead of writing directly into a mod's `Config/`/`Links/` folders. Pushing to a mod is now always an explicit copy step (see Push semantics below).
+
+## Working Methods
+- Primary generator script: `_Generator/Code/SCRIPT-GenerateESCMenu.py`
+- Non-technical run path: `_Generator/3-GenerateESCWindow.bat` (uses --easy)
+- Source-of-truth workflow:
+	- This generator (under `00_DLL-Projects/Generators/ESCWindowPlus/`) is the single source of truth. There is no longer a separate Draft-vs-DLL-support copy to keep in sync.
+- Push semantics for generator requests:
+	- When user says "push to game", copy all files from `_Generator/GeneratedFiles/` into the target mod folder (e.g. `01_Draft/AGF-4Modders-ESCWindowPlus-v0.3.2/`), preserving the `Config/`, `Config/XUi_InGame/`, and `Links/` structure (not a partial subset).
+- v3.0 defaults expected by script (all now under `_Generator/GeneratedFiles/`):
+	- Localization target: `GeneratedFiles/Config/Localization.csv`
+	- XUi windows target: `GeneratedFiles/Config/XUi_InGame/windows.xml`
+	- XUi template target: `GeneratedFiles/Config/XUi_InGame/templates.xml`
+- Legacy compatibility: if templates.xml is missing and default path is used, generator falls back to `GeneratedFiles/Config/XUi_InGame/xui.xml`.
+- Localization generation/merge writes UTF-8 CSV and keeps language columns quoted.
+
+## Change History
+Note: entries below predate the 2026-07-21 relocation to `00_DLL-Projects/Generators/ESCWindowPlus/` and use paths valid at the time (e.g. `_Generator/` relative to the old Draft mod location, and the now-deleted `00_DLL-Projects/Support/ESCWindowPlus/...-backup-20260701-111344/` folder). They are kept as a historical record and are not rewritten.
+- 2026-07-01:
+	- Updated generator defaults from old paths to v3.0 paths (XUi_InGame + Localization.csv).
+	- Added KeepLoaded column support to generated full-header CSV output.
+	- Added KeepLoaded to merge bootstrap header when creating a new localization file.
+	- Added templates.xml default with legacy xui.xml fallback behavior.
+	- Updated _Generator/Code/README-ESCMenu-Generator.md path examples to match v3.0 defaults.
+	- Filled _Generator/2-EditESCMenuConfig.txt for Dishong migration baseline:
+		- Disabled admin window and server join sections.
+		- Limited enabled player pages to 3 (Rules, Tips 1, Tips 2).
+		- Switched links to local/client mode with single Discord entry.
+		- Applied deterministic non-HC colors using game style-derived greys (darkestGrey/darkGrey/mediumGrey mappings).
+	- Ran _Generator/3-GenerateESCWindow.bat and validated outputs:
+		- windows.xml and xui.xml parse pass.
+		- No duplicate window names in generated windows.xml.
+		- windowESCAdmin and serverjoinrulesdialog absent in generated windows.xml.
+		- Localization mojibake check passed (mojibake_count = 0).
+	- Live deploy sync completed to AGF-ESCWindow-Dishong-v1.0.1:
+		- Created backup at Mods/temp/BACKUP-AGF-ESCWindow-Dishong-v1.0.1-20260701-112738.
+		- Removed outdated live Config/XUi folder.
+		- Synced generated files into live folder: Config/Localization.csv, Config/XUi_InGame/*, Links/discord.xml.
+		- Live validation passed: windows.xml parse pass, xui.xml parse pass, mojibake_count = 0.
+	- Generator updates for v3 xui + color sync + mode selector layering:
+		- Added v3 path normalization for xui append nodes (`/xui/ruleset` -> `/xui`) and updated admin binding logic to support both old and new path forms.
+		- Added styles sync pass so `_Generator/2-EditESCMenuConfig.txt` color values update `Config/XUi_InGame/styles.xml` style_entry values during generation.
+		- Fixed text-override color merge to write canonical theme keys used by generator internals.
+		- Added mode selector visibility normalization for top `tabButtons` grid (rows=2/cols=1, 170x46) to avoid header overlap by raising Y/depth.
+	- Live deploy refresh after generator fixes:
+		- Created backup at Mods/temp/BACKUP-AGF-ESCWindow-Dishong-v1.0.1-20260701-114814.
+		- Synced latest generated outputs to live AGF-ESCWindow-Dishong-v1.0.1.
+		- Verified live outputs include v3 xui append path, updated style colors, raised mode selector tab grid, XML parse pass, and mojibake_count = 0.
+	- Follow-up UI/content corrections from in-game review:
+		- Disabled Options section from text config (`showOptionsSection: false`) and regenerated.
+		- Fixed mode selector handling to keep authored Y position and only enforce foreground depth (avoid header overlap without vertical repositioning).
+		- Updated Rules page to 2-column mode with auto split.
+		- Updated Discord link target to HellsJanitor invite (`https://discord.gg/GTQecRSMjM`).
+		- Updated title/subtitle/page-title colors away from AGF twilight palette (title/page title yellow, subtitle orange).
+	- Live deploy after follow-up corrections:
+		- Created backup at Mods/temp/BACKUP-AGF-ESCWindow-Dishong-v1.0.1-20260701-115501.
+		- Synced latest generated outputs to live AGF-ESCWindow-Dishong-v1.0.1.
+		- Verified live: XML parse pass, options hidden, mode selector depth/position correct, Rules column-2 labels present, title color entries matched, Discord link matched, mojibake_count = 0.
+	- Body token workflow correction:
+		- Replaced hardcoded inline body color tags (`[ede100]...[-]`, `[c26700]...[-]`) in `_Generator/2-EditESCMenuConfig.txt` with the intended token format (`==...==` highlight, `**...**` bold) without changing section formatting/layout.
+		- Regenerated via `_Generator/3-GenerateESCWindow.bat` successfully.
+		- Verified config body sections no longer contain direct `[ede100]/[c26700]` tags.
+	- HV lock + top mode button layering fix:
+		- Updated generator style sync to leave `*HV` style entries untouched by default (`update_hv_entries=False`), so easy-mode regenerates no longer drift high-visibility colors.
+		- Updated top mode tab button XML generation to use `foregroundlayer="true"` and higher depth.
+		- Updated mode selector grid normalization to enforce higher depth (`220`) without changing intended Y placement.
+		- Regenerated and verified `windows.xml` now has top mode selector grid/button depth 220 with foreground rendering enabled.
+	- Live deploy after HV lock/layering fix:
+		- Created backup at Mods/temp/BACKUP-AGF-ESCWindow-Dishong-v1.0.1-20260701-120823.
+		- Synced latest generated outputs to live AGF-ESCWindow-Dishong-v1.0.1.
+		- Verified live: windows.xml parse pass, xui.xml parse pass, top mode selector grid depth 220 present, top mode button depth/foregroundlayer fix present, mojibake_count = 0.
+	- v3 root draw-order fix (non-depth root cause):
+		- Identified that top mode buttons were behind header/body because root tabs emitted `tabsHeader` before `tabsContents`; in v3 sibling draw order this can render contents over the mode buttons.
+		- Added generator normalization to reorder outer tabs children so root `tabsContents` is emitted before root `tabsHeader` (buttons draw last/on top).
+		- Regenerated and verified draft `windows.xml` now places root tabs header after root tabs contents.
+	- Live deploy after v3 draw-order fix:
+		- Created backup at Mods/temp/BACKUP-AGF-ESCWindow-Dishong-v1.0.1-20260701-121516.
+		- Synced latest generated outputs to live AGF-ESCWindow-Dishong-v1.0.1.
+		- Verified live: XML parse pass for windows/xui, root tabs contents line appears before root tabs header line, top mode selector grid present, mojibake_count = 0.
+	- Root TabSelector regression deep-dive + correction:
+		- Restored draft windows baseline from known-good backup (`00_DLL-Projects/Support/ESCWindowPlus/AGF-4Modders-ESCWindowPlus-v0.3.2-backup-20260701-111344/Config/XUi_InGame/windows.xml`) before regenerating, to remove persisted malformed incremental state.
+		- Disabled unsafe generator root reorder routine (`_reorder_root_mode_tabs_for_overlay`) so root order follows source template structure.
+		- Disabled unsafe regex page-header normalization (`_ensure_pages_headers`) that could cross root/nested TabSelector boundaries and inject duplicated stray `tabsContents`/page blocks.
+		- Regenerated and verified clean root structure for `windowESC`: root `tabsHeader` (top mode selector, `pos="-525,438"`) before root `tabsContents`, with no duplicated root-level `tabsContents` blocks.
+	- Live deploy after root-order correction:
+		- Created backup at Mods/temp/BACKUP-AGF-ESCWindow-Dishong-v1.0.1-20260701-122935.
+		- Synced generated files to live AGF-ESCWindow-Dishong-v1.0.1: `Config/Localization.csv`, `Config/XUi_InGame/*`, `Links/discord.xml`.
+		- Verified live: `windows.xml` parse pass, `xui.xml` parse pass, root mode selector grid signature present once (`pos="-525,438"`), mojibake_count = 0.
+	- Non-admin top mode button recovery (scope-locked, admin untouched):
+		- Fixed generator normalization so main `windowESC` root mode selector remains at baseline interaction layer (`depth="12"`, `foregroundlayer="false"`) instead of forced high-layer values.
+		- Scoped `update_mode_selector_visibility` to normalize only inside `windowESC` and keep canonical root mode grid values (`pos="-525,438"`, `depth="12"`).
+		- Regenerated via `SCRIPT-GenerateESCMenu.py --easy` and verified draft output:
+			- `Config/XUi_InGame/windows.xml` root mode button now matches known-good backup attributes.
+			- XML parse check passed for `windows.xml` and `xui.xml`.
+	- Core wrapper container migration (panel -> rect):
+		- Converted `windowESC` mode `core` wrappers from `<panel name="core">` to `<rect name="core">` in generated output.
+		- Updated generator links insertion logic to support both panel and rect core containers, preventing links block regression after migration.
+		- Verified generated draft and live `windows.xml` parse pass after conversion.
+	- Universal no-panel migration for generated UI wrappers:
+		- Updated generator scroll-wrapper emission to use `<rect ...>`/`</rect>` in all tab-content generation paths (including snippet helpers), removing remaining `<panel ...>` output usage.
+		- Regenerated outputs and prepared live deploy for validation.
+	- Draft/DLL generator alignment + deploy semantics:
+		- Confirmed Draft and DLL-support generator files were out of sync.
+		- Synced Draft generator file into DLL support copy so both match.
+		- Standardized deployment expectation: generator "push to game" means push all generated outputs to live working mod folder.
+	- Options toggle re-enabled + regenerate (draft run):
+		- Set `_Generator/2-EditESCMenuConfig.txt` `showOptionsSection: true` and regenerated via `SCRIPT-GenerateESCMenu.py --easy`.
+		- Verified generator reported `Windows options updates: optionsVisibilityMain=2` and draft XML parse pass.
+		- Screamer Alert options rendering remains runtime-gated by `mod_loaded('AGF-NoEAC-ScreamerAlert')` and wired to `ScreamerAlertOptions, ScreamerAlert` controller in generated windows.
+	- Full generated-output live push + screamer mode mechanics audit:
+		- Regenerated from Draft source and pushed full generated set to live working mod folder: `Config/Localization.csv`, `Config/XUi_InGame/*.xml`, and `Links/*.xml`.
+		- Verified live parity/hash matches draft for generated set and XML/mojibake validation passed.
+		- Confirmed current ESC Screamer buttons are locally wired (controller bindings + mode writes) but do not send authoritative server mode updates; chat/console commands remain the server-authoritative mode-switch path.
+	- COUNT visibility binding update + live deployment:
+		- Updated generator options template so `btnScreamerNum` uses dedicated visibility binding `opt_row_1_num_visible` (instead of always sharing row visibility).
+		- Regenerated Draft outputs and pushed full generated ESC output set to live.
+		- Rebuilt and deployed live `ScreamerAlert.dll` with server-authoritative ESC mode request/ack handling.
+	- COUNT mod-loaded gating update:
+		- Updated ESC options template so `btnScreamerNum` is wrapped in `mod_loaded('AGF-NoEAC-EnhancedAGF')` conditional in both Full Color and High Visibility generated sections.
+		- Regenerated and full-synced generated ESC files to live; XML parse and mojibake validation passed.
+- 2026-07-21: Workspace reorganization move.
+	- Relocated `_Generator/` from `01_Draft/AGF-4Modders-ESCWindowPlus-v0.3.2/_Generator/` to `00_DLL-Projects/Generators/ESCWindowPlus/_Generator/`; this doc moved alongside it.
+	- Deleted the now-redundant `00_DLL-Projects/Support/ESCWindowPlus/AGF-4Modders-ESCWindowPlus-v0.3.2-backup-20260701-111344/` folder; the generator here is the sole source of truth going forward (no more Draft/DLL-support copy pair).
+	- Updated `SCRIPT-GenerateESCMenu.py` default output paths from `PROJECT_ROOT/Config,Links` (the mod folder) to `GENERATOR_DIR/GeneratedFiles/Config,Links` (self-contained inside the generator). Pushing outputs to a live/draft mod is now always an explicit copy step.
+
+## Do-Not-Do Notes
+- Do not reintroduce Config/XUi defaults for windows/xui targets in this generator.
+- Do not emit Localization.txt as default output for v3.0 workflows.
+- Do not remove KeepLoaded from generated localization headers.
+- Do not hard-fail on templates path when legacy xui.xml exists and default xui path was used.
+- Do not inject hardcoded inline color tags into body text in `_Generator/2-EditESCMenuConfig.txt`; use `**bold**` and `==highlight==` tokens so color rendering remains theme-driven.
+- Do not update `*HV` style entries from routine easy-mode style sync unless explicitly requested; keep high-visibility palette stable.
+- Do not force root mode selector to high-layer values (`depth=220`/`foregroundlayer=true`) in main window generation; keep baseline interaction-layer settings.
+- Do not use `<panel ...>` wrappers in generated ESCWindow UI output; emit `<rect ...>` wrappers instead.
+- Do not perform partial live sync after generator runs when a push was requested.
+- Do not treat local-only ESC Screamer button writes as full multiplayer mode sync; authoritative mode changes must flow through server path (chat command or dedicated server sync package).
+- Do not expose `btnScreamerNum` without EnhancedAGF mod-loaded gating in generated windows; keep COUNT button under `mod_loaded('AGF-NoEAC-EnhancedAGF')`.
+- Do not reorder root `TabSelector` children for overlay fixes.
+- Root mode selector child order is function-critical and must remain `tabsHeader` then `tabsContents`.
+- Do not use broad regex transforms that can span across nested and root `TabSelector` blocks; scope edits to explicit target containers only.

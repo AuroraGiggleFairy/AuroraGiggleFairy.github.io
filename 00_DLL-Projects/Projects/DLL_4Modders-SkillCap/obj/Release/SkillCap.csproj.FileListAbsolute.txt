@@ -1,0 +1,8 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\obj\Release\SkillCap.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\obj\Release\SkillCap.GeneratedMSBuildEditorConfig.editorconfig
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\obj\Release\SkillCap.csproj.CoreCompileInputs.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\obj\Release\SkillCap.sourcelink.json
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\obj\Release\AGFSkillCap.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\obj\Release\AGFSkillCap.pdb
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\AGFSkillCap.dll
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_4Modders-SkillCap\AGFSkillCap.pdb

@@ -1,0 +1,2 @@
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SortingBox\RoboticInbox\src\obj\Release\RoboticInbox.csproj.AssemblyReference.cache
+c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-SortingBox\RoboticInbox\src\obj\Release\RoboticInbox.csproj.CoreCompileInputs.cache

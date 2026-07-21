@@ -46,12 +46,13 @@ GENERATED_DIR = r"c:\GitHub\7D2D-Mods\_GeneratedCompat"
 WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
 SOURCE_PB_GENERATOR_SCRIPT = os.path.join(
     WORKSPACE_ROOT,
-    "_DLL-Projects",
+    "00_DLL-Projects",
+    "Generators",
     "AGF-PurpleBookGenerator-v0.0.1",
     "Generator",
     "SCRIPT-PurpleBookGenerator.py",
 )
-GENERATOR_OUT_BASE_DIR = os.path.join(WORKSPACE_ROOT, "_DLL-Projects")
+GENERATOR_OUT_BASE_DIR = os.path.join(WORKSPACE_ROOT, "00_DLL-Projects", "Generators")
 FULLGEN_COMPARE_VANILLA_OUT_MOD = "AGF-PurpleBookGenerator-v0.0.1/temp/fullgen-compare/vanilla"
 FULLGEN_COMPARE_DUMP_OUT_MOD = "AGF-PurpleBookGenerator-v0.0.1/temp/fullgen-compare/dump"
 
