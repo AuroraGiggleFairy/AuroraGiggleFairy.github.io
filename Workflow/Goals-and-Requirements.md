@@ -62,8 +62,8 @@ The current expectation is that the new-mod creation script mainly **creates the
 This is the most fragile part. When `Name` in `ModInfo.xml` changes:
 
 - The **folder name** must be updated to match.
-- The entry in **`Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv`** must be updated.
-- The **quote file** in `_Quotes/` must be renamed to match.
+- The entry in **`05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv`** must be updated.
+- The **quote file** in `05_GigglePackReleaseData/ReadmeSystem/Quotes/` must be renamed to match.
 - Any **README references** must reflect the new name.
 - This must work whether the name change happens in the workspace lane OR in the game folder.
 - Old folder names must be cleaned up after rename.
@@ -157,7 +157,7 @@ Publish readiness is a **manual decision** you make. The workflow should support
 ## Future / Planned Scope
 
 - **Images:** Mod screenshots and banners as part of the release package.
-- **Nexus Mods:** Automated or semi-automated publishing via `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py`.
+- **Nexus Mods:** Automated or semi-automated publishing via `06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py`.
 - **Other sites:** Additional publishing targets beyond GitHub and Nexus.
 - **Git integration:** Possible later, but intentionally deferred until the workflow is proven stable.
 

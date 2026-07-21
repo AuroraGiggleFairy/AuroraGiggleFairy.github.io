@@ -181,12 +181,12 @@
 
 ## Chat Redirect Use
 - To re-focus in a new chat, use:
-  - Follow Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md using the Quick Start and User-Defined 3-Step Flow.
+  - Follow 05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md using the Quick Start and User-Defined 3-Step Flow.
 - Redirect phrase for the 3-step flow:
-  - Follow Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md using the Execution Contract (User-Defined 3-Step Flow): review code + current sections, provide suggestions for Summary/FEATURES/OTHER DETAILS, then wait for DONE before changelog/version bump.
+  - Follow 05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md using the Execution Contract (User-Defined 3-Step Flow): review code + current sections, provide suggestions for Summary/FEATURES/OTHER DETAILS, then wait for DONE before changelog/version bump.
 
 ## New Chat Bootstrap
 - Preferred first message for normal README wording passes:
-  - Follow Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md. Wording review only, one mod and one section at a time, default to Medium effort, and output Suggestion 1, Suggestion 2, and Recommended in a txt boxed format with 72-character wrapping.
+  - Follow 05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md. Wording review only, one mod and one section at a time, default to Medium effort, and output Suggestion 1, Suggestion 2, and Recommended in a txt boxed format with 72-character wrapping.
 - Preferred first message when refining workflow/rules in that turn:
-  - Follow Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md. Wording review only, one mod and one section at a time, use High effort for calibration, output Suggestion 1, Suggestion 2, Recommended, and Workflow Delta (Keep/Add/Adjust/Remove).
+  - Follow 05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md. Wording review only, one mod and one section at a time, use High effort for calibration, output Suggestion 1, Suggestion 2, Recommended, and Workflow Delta (Keep/Add/Adjust/Remove).

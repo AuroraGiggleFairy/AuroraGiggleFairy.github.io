@@ -102,7 +102,7 @@ Compare current `03_ReleaseSource` GigglePack mod versions against `gigglepack-r
 
 ### Step 6 — Rebuild main `README.md`
 
-Regenerate `README.md` from `Workflow/ReadmeSystem/Templates/TEMPLATE-MainReadMe.md` and current `03_ReleaseSource` state.
+Regenerate `README.md` from `05_GigglePackReleaseData/ReadmeSystem/Templates/TEMPLATE-MainReadMe.md` and current `03_ReleaseSource` state.
 
 Each category section follows: section header → Download All link → individually listed mods.
 
@@ -156,7 +156,7 @@ Log file: Logs/SCRIPT-Main-2026-04-30-2100.log
 |---|---|
 | Auto-decide readiness | Publish is always a manual trigger |
 | Push to GitHub | Git operations stay manual |
-| Upload to NexusMods | `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py` is a separate manual step |
+| Upload to NexusMods | `06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py` is a separate manual step |
 | Delete old versioned GigglePack zips | Manual cleanup only |
 | Post Discord if no GigglePack change | No change = no post |
 

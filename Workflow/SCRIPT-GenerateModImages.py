@@ -22,9 +22,8 @@ VS_CODE_ROOT = os.path.dirname(WORKFLOW_DIR)
 RELEASE_SOURCE = os.path.join(VS_CODE_ROOT, "02_ActiveBuild")
 COMPAT_CSV = os.path.join(
     VS_CODE_ROOT,
-    "Workflow",
+    "05_GigglePackReleaseData",
     "ReadmeSystem",
-    "Data",
     "HELPER_ModCompatibility.csv",
 )
 DEFAULT_LAYOUT_PATH = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow", "modimage-layout.json")

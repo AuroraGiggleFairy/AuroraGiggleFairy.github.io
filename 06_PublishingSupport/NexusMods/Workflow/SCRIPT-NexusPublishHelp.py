@@ -6,11 +6,13 @@ import sys
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Tuple
 
+sys.dont_write_bytecode = True  # never leave a __pycache__ behind
 
-NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.normpath(os.path.join(NEXUS_DATA_DIR, "..", ".."))
+NEXUS_WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
+NEXUS_ROOT_DIR = os.path.dirname(NEXUS_WORKFLOW_DIR)
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(NEXUS_ROOT_DIR))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
-PUBLISH_HELP_DIR = os.path.join(NEXUS_DATA_DIR, "PublishHelp")
+PUBLISH_HELP_DIR = os.path.join(NEXUS_ROOT_DIR, "PublishHelp")
 DEFAULT_DOWNLOAD_BASE_URL = (
     "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips"
 )

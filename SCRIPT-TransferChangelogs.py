@@ -6,7 +6,7 @@ Formats changelog to match the BackpackPlus style with --- separators.
 import os, re, subprocess
 
 DRAFT_DIR = r"c:\GitHub\7D2D-Mods\01_Draft"
-X2_DIR = r"c:\GitHub\7D2D-Mods\_x2.6"
+X2_DIR = r"c:\GitHub\7D2D-Mods\90_Archive\old-game-versions\_x2.6"
 WORKSPACE = r"c:\GitHub\7D2D-Mods"
 
 # Handle mods that were renamed between versions

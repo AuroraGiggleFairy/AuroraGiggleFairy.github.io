@@ -12,18 +12,23 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Tuple
 
+sys.dont_write_bytecode = True  # never leave a __pycache__ behind
 
-NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.dirname(os.path.dirname(NEXUS_DATA_DIR))
+# This script and its config/plan/template files live in NexusMods/Workflow/.
+# The API key and generated ManualPackets/ModDetails output stay one level up,
+# directly under NexusMods/, alongside PublishHelp/.
+NEXUS_WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
+NEXUS_ROOT_DIR = os.path.dirname(NEXUS_WORKFLOW_DIR)
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(NEXUS_ROOT_DIR))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
 ZIP_OUTPUT_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
-DEFAULT_CONFIG_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")
-DEFAULT_TEMPLATE_PATH = os.path.join(NEXUS_DATA_DIR, "TEMPLATE-NexusModsConfig.json")
-DEFAULT_PLAN_OUTPUT_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-release-plan.json")
-DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-upload-plan.json")
-DEFAULT_MANUAL_PACKET_DIR = os.path.join(NEXUS_DATA_DIR, "ManualPackets")
-DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(NEXUS_DATA_DIR, "ModDetails")
-DEFAULT_PRIVATE_API_KEY_PATH = os.path.join(NEXUS_DATA_DIR, "nexus-api-key.private.txt")
+DEFAULT_CONFIG_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "nexusmods-config.json")
+DEFAULT_TEMPLATE_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "TEMPLATE-NexusModsConfig.json")
+DEFAULT_PLAN_OUTPUT_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "nexusmods-release-plan.json")
+DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "nexusmods-upload-plan.json")
+DEFAULT_MANUAL_PACKET_DIR = os.path.join(NEXUS_ROOT_DIR, "ManualPackets")
+DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(NEXUS_ROOT_DIR, "ModDetails")
+DEFAULT_PRIVATE_API_KEY_PATH = os.path.join(NEXUS_ROOT_DIR, "nexus-api-key.private.txt")
 AGF_COLOR_LINE = "#5F5980"
 AGF_COLOR_HEADING = "#8DB580"
 AGF_COLOR_HIGHLIGHT = "#DDCDFA"
@@ -2126,7 +2131,7 @@ def main() -> int:
             write_json_file(os.path.abspath(args.upload_plan_output), upload_plan, args.dry_run)
         return result
     if args.mode == "generate-bbcode":
-        bbcode_output = os.path.join(NEXUS_DATA_DIR, "ModDetails")
+        bbcode_output = os.path.join(NEXUS_ROOT_DIR, "ModDetails")
         return generate_bbcode_packets(plan, bbcode_output, args.dry_run)
     if args.mode == "prepare-manual-docs":
         result, upload_plan = prepare_upload_plan(plan, config, args.only)

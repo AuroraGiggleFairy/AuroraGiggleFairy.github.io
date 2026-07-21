@@ -4,6 +4,7 @@ setlocal
 cd /d "%~dp0"
 
 set "PYTHON_EXE=%~dp0.venv\Scripts\python.exe"
+set "PYTHONDONTWRITEBYTECODE=1"
 
 if not exist "%PYTHON_EXE%" (
     echo ERROR: Python environment not found at "%PYTHON_EXE%"

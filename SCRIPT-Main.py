@@ -37,7 +37,7 @@ def add_common_cli_args(parser: argparse.ArgumentParser) -> None:
         "--enforce-agf-csv",
         action=argparse.BooleanOptionalAction,
         default=True,
-           help="Fail if Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv contains non-AGF rows",
+           help="Fail if 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv contains non-AGF rows",
     )
     parser.add_argument(
         "--preflight-write-check",

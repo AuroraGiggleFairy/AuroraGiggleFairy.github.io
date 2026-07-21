@@ -86,8 +86,8 @@ Process each drifted mod in order. For each:
 **Name + version drift (combined):**
 1. Check collision guard
 2. Rename folder to `{new_name}-v{new_ver}`
-3. Update `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv`: rename `MOD_NAME` key old → new
-4. Rename `_Quotes/{old_name}.txt` → `_Quotes/{new_name}.txt` (if exists)
+3. Update `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv`: rename `MOD_NAME` key old → new
+4. Rename `05_GigglePackReleaseData/ReadmeSystem/Quotes/{old_name}.txt` → `05_GigglePackReleaseData/ReadmeSystem/Quotes/{new_name}.txt` (if exists)
 5. Scan all `*.xml` in `01_Draft/**` and `02_ActiveBuild/**` for `mod_loaded('old_name')` and replace with `mod_loaded('new_name')`. Record which files were updated and how many occurrences.
 6. Record rename event in the pending changes file (see Step 6)
 
@@ -133,14 +133,14 @@ After sync, check the game folder for orphans: folders whose base name is absent
 
 | Condition | Action |
 |---|---|
-| Orphan base name is in `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv` | Remove from game. Log: `Removed orphan from game: AGF-VP-FooBar-v1.2.0 (known managed mod)` |
+| Orphan base name is in `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv` | Remove from game. Log: `Removed orphan from game: AGF-VP-FooBar-v1.2.0 (known managed mod)` |
 | Orphan base name not in CSV | Warn only. Log: `Unknown mod in game folder (not managed): SomeExternalMod-v1.0.0` |
 
 ---
 
 ### Step 7 — CSV reconcile
 
-Update `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv` to reflect the current workspace state:
+Update `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv` to reflect the current workspace state:
 - Add a new row for any mod in `01_Draft` or `02_ActiveBuild` that has no CSV entry
 - Update the `VERSION` field for all known mods to match current `ModInfo.xml`
 - Do not remove rows for mods that were deleted (removals stay for publish-time changelog tracking)

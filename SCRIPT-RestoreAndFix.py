@@ -1,7 +1,7 @@
 import os, re, subprocess, sys
 
 draft = r'c:\GitHub\7D2D-Mods\01_Draft'
-x2 = r'c:\GitHub\7D2D-Mods\_x2.6'
+x2 = r'c:\GitHub\7D2D-Mods\90_Archive\old-game-versions\_x2.6'
 workspace = r'c:\GitHub\7D2D-Mods'
 
 # Step 1: Restore all README.txt files from git

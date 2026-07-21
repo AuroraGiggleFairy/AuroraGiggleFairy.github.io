@@ -27,14 +27,9 @@ INPROGRESS_DIR = resolve_lane_path(
     os.path.join(WORKSPACE_ROOT, "01_Draft"),
     os.path.join(WORKSPACE_ROOT, "_Mods2.In-Progress"),
 )
-COMPAT_CSV_PATH = os.path.join(
-    WORKSPACE_ROOT,
-    "Workflow",
-    "ReadmeSystem",
-    "Data",
-    "HELPER_ModCompatibility.csv",
-)
-QUOTES_DIR = os.path.join(WORKSPACE_ROOT, "_Quotes")
+README_SYSTEM_DIR = os.path.join(WORKSPACE_ROOT, "05_GigglePackReleaseData", "ReadmeSystem")
+COMPAT_CSV_PATH = os.path.join(README_SYSTEM_DIR, "HELPER_ModCompatibility.csv")
+QUOTES_DIR = os.path.join(README_SYSTEM_DIR, "Quotes")
 TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name value=\"{mod_name}\"/>\n    <DisplayName value=\"{display_name}\"/>\n    <Version value=\"{version}\"/>\n    <Description value=\"\"/>\n    <Author value=\"AuroraGiggleFairy (AGF)\"/>\n    <Website value=\"https://auroragigglefairy.github.io/\"/>\n</xml>\n'''
 
 
@@ -366,10 +361,10 @@ def main():
     os.makedirs(INPROGRESS_DIR, exist_ok=True)
     os.makedirs(mod_path)
 
-    # Add entry to Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv
+    # Add entry to 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv
     # (without duplicating existing MOD_NAME rows)
     append_compatibility_row(mod_name)
-    # Create default quote file in _Quotes if it does not exist yet
+    # Create default quote file in ReadmeSystem/Quotes if it does not exist yet
     ensure_quote_file(mod_name)
 
     # Create ModInfo.xml

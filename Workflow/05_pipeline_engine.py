@@ -52,15 +52,15 @@ STAGING = resolve_lane_path(LANE_ACTIVE_BUILD_PREFERRED, LANE_ACTIVE_BUILD_LEGAC
 PUBLISH_READY = resolve_lane_path(LANE_RELEASE_SOURCE_PREFERRED, LANE_RELEASE_SOURCE_LEGACY)
 GAME_MODS = r"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods"
 ZIP_OUTPUT = resolve_lane_path(LANE_DOWNLOAD_ZIPS_PREFERRED, LANE_DOWNLOAD_ZIPS_LEGACY)
-QUOTES_DIR = os.path.join(VS_CODE_ROOT, "_Quotes")
+README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "ReadmeSystem")
+QUOTES_DIR = os.path.join(README_SYSTEM_ROOT, "Quotes")
 LOGS_DIR = os.path.join(VS_CODE_ROOT, "Logs")
 MAIN_LOG_MAX_FILES = 10
 
-README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "Workflow", "ReadmeSystem")
 README_TEMPLATE_ROOT = os.path.join(README_SYSTEM_ROOT, "Templates")
 README_SNIPPETS_ROOT = os.path.join(README_SYSTEM_ROOT, "Snippets")
 README_LONG_GUIDES_ROOT = os.path.join(README_SNIPPETS_ROOT, "LongGuides")
-COMPAT_CSV = os.path.join(README_SYSTEM_ROOT, "Data", "HELPER_ModCompatibility.csv")
+COMPAT_CSV = os.path.join(README_SYSTEM_ROOT, "HELPER_ModCompatibility.csv")
 ABOUTME_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-ABOUTME-md-Snippet.md")
 ABOUTME_MAIN_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "MainReadme-1-ABOUTME-md-Snippet.md")
 MODSCOPE_GUIDE_SNIPPET_PATH = os.path.join(README_SNIPPETS_ROOT, "ModReadme-MODSCOPE-md-Snippet.md")
@@ -7760,7 +7760,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--enforce-agf-csv",
         action=argparse.BooleanOptionalAction,
         default=True,
-        help="Fail if Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv contains non-AGF rows",
+        help="Fail if 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv contains non-AGF rows",
     )
     parser.add_argument(
         "--preflight-write-check",

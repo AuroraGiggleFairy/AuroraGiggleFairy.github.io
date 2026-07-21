@@ -10,11 +10,13 @@ Outputs a markdown report showing:
 import getpass, json, os, re, sys, urllib.error, urllib.request, xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Tuple
 
+sys.dont_write_bytecode = True  # never leave a __pycache__ behind
+
 # ── Paths ────────────────────────────────────────────────────────────────
-NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.dirname(os.path.dirname(NEXUS_DATA_DIR))
+NEXUS_WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(NEXUS_WORKFLOW_DIR)))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
-CONFIG_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")
+CONFIG_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "nexusmods-config.json")
 
 # ── API setup ────────────────────────────────────────────────────────────
 API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"

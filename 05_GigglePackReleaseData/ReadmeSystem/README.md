@@ -15,7 +15,9 @@ This folder centralizes README authoring assets for the workspace.
 - Category descriptions:
   - `Templates/TEMPLATE-CategoryDescriptions.md`
 - Compatibility metadata CSV:
-  - `Data/HELPER_ModCompatibility.csv`
+  - `HELPER_ModCompatibility.csv`
+- Per-mod title-card quotes:
+  - `Quotes/<mod-name>.txt`
 - Canonical guide snippets:
   - `Snippets/ModReadme-ABOUTME-md-Snippet.md`
   - `Snippets/MainReadme-1-ABOUTME-md-Snippet.md` (main README About section; includes short lines + extra-details dropdown)

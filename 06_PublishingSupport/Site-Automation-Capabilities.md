@@ -11,13 +11,13 @@ This file is the quick control panel:
 ## Current Site Coverage
 
 1. Nexus Mods
-- Detailed capability sheet: 06_PublishingSupport/NexusMods/Nexus-Automation-Capabilities.md
+- Detailed capability sheet: 06_PublishingSupport/NexusMods/Workflow/Nexus-Automation-Capabilities.md
 - Status: API supports upload sessions and file creation/versioning for existing mods.
 - Endpoint policy: use latest mod-files/mod-file-versions routes first, then legacy fallback only when needed.
 - Gap: New mod-page creation endpoint is not present in the local v3 OpenAPI snapshot.
 
 2. The Mod Network
-- Detailed capability sheet: 06_PublishingSupport/ModNetwork/ModNetwork-Automation-Capabilities.md
+- Detailed capability sheet: 06_PublishingSupport/ModNetwork/Workflow/ModNetwork-Automation-Capabilities.md
 - Status: Existing script supports publish/update and page metadata patching.
 - Gap: Image upload automation is not currently wired in script.
 

@@ -266,7 +266,7 @@ An "orphan" is a game folder whose base name is not present in the current works
 
 | Condition | Action |
 |---|---|
-| Orphan base name IS in workspace CSV (`Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv`) | **Remove from game.** It was a known workspace mod; it was either renamed or deleted. |
+| Orphan base name IS in workspace CSV (`05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv`) | **Remove from game.** It was a known workspace mod; it was either renamed or deleted. |
 | Orphan base name is NOT in workspace CSV | **Warn only. Do not touch.** It's an externally placed mod not managed by this workflow. |
 
 The CSV is the roster of "mods this workflow manages." Anything in game whose base name is in the CSV but missing from workspace lanes is our responsibility to clean up.
@@ -278,8 +278,8 @@ The CSV is the roster of "mods this workflow manages." Anything in game whose ba
 | Artifact | Change |
 |---|---|
 | Workspace folder | `{old_name}-v{ver}` → `{new_name}-v{ver}` |
-| `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv` | `MOD_NAME` key: old → new |
-| `_Quotes/{old_name}.txt` | Renamed to `{new_name}.txt` |
+| `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv` | `MOD_NAME` key: old → new |
+| `05_GigglePackReleaseData/ReadmeSystem/Quotes/{old_name}.txt` | Renamed to `{new_name}.txt` |
 | All `*.xml` in 01_Draft, 02_ActiveBuild | `mod_loaded('old_name')` → `mod_loaded('new_name')` (03_ReleaseSource excluded — overwritten on publish) |
 | `05_GigglePackReleaseData/` change log | Rename event: `old_name → new_name` |
 | `README.md` + category zips | Regenerated from workspace state — no manual keying |

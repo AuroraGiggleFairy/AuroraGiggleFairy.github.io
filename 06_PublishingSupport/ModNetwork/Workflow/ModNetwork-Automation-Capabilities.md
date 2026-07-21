@@ -3,8 +3,8 @@
 Last updated: 2026-06-29
 Primary evidence:
 - Local notes: 06_PublishingSupport/ModNetwork/Api Informaiton.txt
-- Local mapping guide: 06_PublishingSupport/ModNetwork/FieldMapping.txt
-- Current script: 06_PublishingSupport/ModNetwork/SCRIPT-ModNetwork.py
+- Local mapping guide: 06_PublishingSupport/ModNetwork/Workflow/FieldMapping.txt
+- Current script: 06_PublishingSupport/ModNetwork/Workflow/SCRIPT-ModNetwork.py
 
 ## Capability Matrix
 
@@ -76,4 +76,4 @@ Primary evidence:
 - missing tmn_game_id
 - invalid/missing tmn_slug for update intent
 - invalid page_url format
-3. Write execution receipts to 06_PublishingSupport/ModNetwork/modnetwork-upload-results.json.
+3. Write execution receipts to 06_PublishingSupport/ModNetwork/Workflow/modnetwork-upload-results.json.

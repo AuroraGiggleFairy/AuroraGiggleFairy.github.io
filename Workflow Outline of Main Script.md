@@ -70,12 +70,12 @@ Use only `SCRIPT-Main.py` with one of these modes:
 4. Test in game.
 5. When ready to release, bump version in `ModInfo.xml` and run `SCRIPT-Main.py --mode promote`.
 6. Run `SCRIPT-Main.py --mode package`.
-7. Handle Nexus Mods publishing or update planning separately with `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py`.
+7. Handle Nexus Mods publishing or update planning separately with `06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py`.
 
 ### Nexus Mods Workflow Boundary
 
 - `SCRIPT-Main.py` remains responsible for workspace sync, release prep, zips, README output, and GigglePack release notes.
-- `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py` is the separate workflow for Nexus Mods planning and live version checks.
+- `06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py` is the separate workflow for Nexus Mods planning and live version checks.
 - Keep Nexus work separate so you can edit that script independently and run targeted update-only passes without touching the main packaging workflow.
 
 ---
@@ -135,9 +135,9 @@ Use only `SCRIPT-Main.py` with one of these modes:
 ### Individual README Data Contract
 
 - Identity and version come from each mod's `ModInfo.xml` (`Name` and `Version`).
-- Compatibility fields come from `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv` by `MOD_NAME` (base mod name, no version suffix).
+- Compatibility fields come from `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv` by `MOD_NAME` (base mod name, no version suffix).
 - `TESTED_GAME_VERSION` is the source for the README line `Last 7d2d Version tested on:`.
-- Quotes come from `_Quotes/<MOD_NAME>.txt` (or `QUOTE_FILE` in CSV when provided).
+- Quotes come from `05_GigglePackReleaseData/ReadmeSystem/Quotes/<MOD_NAME>.txt` (or `QUOTE_FILE` in CSV when provided).
 - If a mod exists but has no CSV row yet, README generation still runs with `MISSINGDATA` defaults and logs a warning.
 - Existing `FEATURES` and `CHANGELOG` blocks are preserved when regenerating README files.
 
@@ -147,7 +147,7 @@ Use only `SCRIPT-Main.py` with one of these modes:
 - If the folder name does not match the `Name` in `ModInfo.xml`, rename the folder to match (if the name is valid).
 - If you rename a folder, update all references in the CSV and quote files (see below).
 
-### Update `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv`
+### Update `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv`
 - The CSV is the **source of truth** for all mod compatibility and quote info.
 - All lookups, updates, and file names use the **base mod name** (folder name with version removed, e.g., `AGF-BackpackPlus-60Slots`), not the versioned folder name. This ensures version changes don’t break anything.
 - If a folder was renamed, update the `MOD_NAME` in the CSV to the new base mod name.
@@ -158,15 +158,15 @@ Use only `SCRIPT-Main.py` with one of these modes:
 - If you hit an error reading or writing the CSV, log a warning and keep going.
 
 ### Quote Files
-- For every mod in the CSV, make sure there is a quote file in `_Quotes/` (named with the **base mod name**: `MOD_NAME.txt`).
+- For every mod in the CSV, make sure there is a quote file in `05_GigglePackReleaseData/ReadmeSystem/Quotes/` (named with the **base mod name**: `MOD_NAME.txt`).
 - If a mod is renamed, rename its quote file to match the new base mod name.
 - Never delete quote files—only create or rename them.
 - The `QUOTE_FILE` column in the CSV must always match the actual quote file name (using the base mod name).
 - If a quote file contains only `None`, blank it out (do not delete).
 
 ### README.md and ReadableReadMe.txt
-- For each mod, create a `README.md` from the template `Workflow/ReadmeSystem/Templates/TEMPLATE-ModReadMes.md`:
-   - Fill in **all fields** (`MOD_NAME`, `MOD_VERSION`, `DOWNLOAD_LINK`, and all compatibility/metadata fields such as TESTED_GAME_VERSION, EAC_FRIENDLY, SERVER_SIDE, CLIENT_REQUIRED, SAFE_TO_INSTALL, SAFE_TO_REMOVE, UNIQUE, etc.) **from `Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv` using the base mod name**.
+- For each mod, create a `README.md` from the template `05_GigglePackReleaseData/ReadmeSystem/Templates/TEMPLATE-ModReadMes.md`:
+   - Fill in **all fields** (`MOD_NAME`, `MOD_VERSION`, `DOWNLOAD_LINK`, and all compatibility/metadata fields such as TESTED_GAME_VERSION, EAC_FRIENDLY, SERVER_SIDE, CLIENT_REQUIRED, SAFE_TO_INSTALL, SAFE_TO_REMOVE, UNIQUE, etc.) **from `05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv` using the base mod name**.
   - Insert the contents of the quote file (looked up by base mod name) as a Markdown blockquote for `{{QUOTE}}`.
 - After updating `README.md`, create `ReadableReadMe.txt` in the same folder by converting the Markdown to plain text (remove formatting, links, blockquotes, and convert dividers).
 - Do this for both `_Mods1.PublishReady` and `_Mods2.In-Progress`.
@@ -296,7 +296,7 @@ Use only `SCRIPT-Main.py` with one of these modes:
 
 **Why:** To keep your main documentation up to date and ready to publish or distribute with your mod pack.
 
-1. After all zipping is complete, update the main `README.md` in the workspace root using the template `Workflow/ReadmeSystem/Templates/TEMPLATE-MainReadMe.md`.
+1. After all zipping is complete, update the main `README.md` in the workspace root using the template `05_GigglePackReleaseData/ReadmeSystem/Templates/TEMPLATE-MainReadMe.md`.
 2. Fill in the mod list and all placeholders dynamically, so the README always reflects the current state of all mods and categories.
 3. The script enforces consistent formatting for all category headers and special sections in README.md, including a single divider (`---`), blank line, `<br>`, blank line, and the section header. This applies to all main categories and the HUDPluszOther table section, ensuring a clean and professional appearance.
 4. If updating the README fails, log a warning and continue.

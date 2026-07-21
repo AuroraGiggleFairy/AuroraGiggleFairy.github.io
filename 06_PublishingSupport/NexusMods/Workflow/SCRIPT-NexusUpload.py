@@ -15,6 +15,8 @@ import os
 import subprocess
 import sys
 
+sys.dont_write_bytecode = True  # never leave a __pycache__ behind
+
 NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 NEXUS_SCRIPT = os.path.join(NEXUS_DATA_DIR, "SCRIPT-NexusMods.py")
 NEXUS_CONFIG = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")

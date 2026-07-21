@@ -1,10 +1,11 @@
 @echo off
 setlocal
 
-set "REPO_ROOT=%~dp0..\.."
+set "REPO_ROOT=%~dp0..\..\.."
 cd /d "%REPO_ROOT%"
 
 set "PYTHON_EXE=%REPO_ROOT%\.venv\Scripts\python.exe"
+set "PYTHONDONTWRITEBYTECODE=1"
 
 if not exist "%PYTHON_EXE%" (
     echo ERROR: Python environment not found at "%PYTHON_EXE%"
@@ -14,7 +15,7 @@ if not exist "%PYTHON_EXE%" (
     exit /b 1
 )
 
-set "API_KEY_FILE=%~dp0nexus-api-key.private.txt"
+set "API_KEY_FILE=%~dp0..\nexus-api-key.private.txt"
 
 if not exist "%API_KEY_FILE%" (
     echo Paste your Nexus API key into the Notepad window, save it, then close Notepad.

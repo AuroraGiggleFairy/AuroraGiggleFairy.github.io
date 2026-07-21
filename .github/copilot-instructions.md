@@ -6,7 +6,7 @@
 - Do not claim ready to test in game unless live game mod files were actually updated in that run.
 
 ## README Wording Workflow Defaults
-- For README wording tasks, follow `Workflow/ReadmeSystem/WORKFLOW-AI-README-Review.md` as the source of truth.
+- For README wording tasks, follow `05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md` as the source of truth.
 - Work one mod and one section at a time.
 - Default effort pattern:
   - Medium for normal wording production passes.

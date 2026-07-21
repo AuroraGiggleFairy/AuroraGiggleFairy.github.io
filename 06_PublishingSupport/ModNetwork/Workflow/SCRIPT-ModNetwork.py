@@ -17,8 +17,8 @@ Field sources (see FieldMapping.txt for full documentation):
   long_description README.md sections 3, 4+5+6, 7, 1+2  →  HTML
   install text    README.md sections 9–13  →  HTML  (How To Install tab)
   changelog       README.md last 3 version blocks  →  HTML
-    game_version    Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv TESTED_GAME_VERSION
-    mod_side        Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv MOD_TYPE_ID  →  mapped
+    game_version    05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv TESTED_GAME_VERSION
+  mod_side        05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv MOD_TYPE_ID  →  mapped
   requirements    Static: "None."
   release_type    Static: "stable"  (or config override)
   file            04_DownloadZips/{base_mod_name}.zip
@@ -40,6 +40,8 @@ import uuid
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Tuple
 
+sys.dont_write_bytecode = True  # never leave a __pycache__ behind
+
 try:
     import markdown as markdown_lib
     MARKDOWN_AVAILABLE = True
@@ -54,17 +56,16 @@ except ImportError:
 # Paths and constants
 # ---------------------------------------------------------------------------
 
-MODNETWORK_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.dirname(os.path.dirname(MODNETWORK_DATA_DIR))
+MODNETWORK_WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(MODNETWORK_WORKFLOW_DIR)))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
 ZIP_OUTPUT_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
-DEFAULT_CONFIG_PATH = os.path.join(MODNETWORK_DATA_DIR, "modnetwork-config.json")
-DEFAULT_PLAN_OUTPUT_PATH = os.path.join(MODNETWORK_DATA_DIR, "modnetwork-plan.json")
+DEFAULT_CONFIG_PATH = os.path.join(MODNETWORK_WORKFLOW_DIR, "modnetwork-config.json")
+DEFAULT_PLAN_OUTPUT_PATH = os.path.join(MODNETWORK_WORKFLOW_DIR, "modnetwork-plan.json")
 COMPAT_CSV_PATH = os.path.join(
     VS_CODE_ROOT,
-    "Workflow",
+    "05_GigglePackReleaseData",
     "ReadmeSystem",
-    "Data",
     "HELPER_ModCompatibility.csv",
 )
 
@@ -76,7 +77,7 @@ DEFAULT_REQUIREMENTS = "None."
 DEFAULT_RELEASE_TYPE = "stable"
 CHANGELOG_KEEP_COUNT = 3
 
-# Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv MOD_TYPE_ID → TMN mod_side
+# 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv MOD_TYPE_ID → TMN mod_side
 # 0 = TBD/Unknown → needs manual review
 # 1 = Server-Side (EAC-Friendly)
 # 2 = Server-Side (EAC Off)
@@ -156,7 +157,7 @@ def normalize_intent(raw) -> str:
 # ---------------------------------------------------------------------------
 
 def load_compat_csv() -> Dict[str, Dict[str, str]]:
-    """Load Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv keyed by MOD_NAME."""
+    """Load 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv keyed by MOD_NAME."""
     result: Dict[str, Dict[str, str]] = {}
     if not os.path.isfile(COMPAT_CSV_PATH):
         return result
@@ -617,7 +618,7 @@ def build_plan(config: Dict) -> Dict:
 
         if not compat_row:
             notes = list(notes) + [
-                "Not found in Workflow/ReadmeSystem/Data/HELPER_ModCompatibility.csv."
+                "Not found in 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv."
             ]
             summary["missing_compat"] += 1
 
