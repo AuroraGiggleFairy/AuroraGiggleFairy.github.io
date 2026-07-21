@@ -16,19 +16,12 @@ import xml.etree.ElementTree as ET
 
 WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
 VS_CODE_ROOT = os.path.normpath(os.path.join(WORKFLOW_DIR, ".."))
-NEXUS_CONFIG = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "nexusmods-config.json"
-)
+NEXUS_DATA_DIR = os.path.join(VS_CODE_ROOT, "06_PublishingSupport", "NexusMods")
+NEXUS_CONFIG = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
-PUBLISHHELP_DIR = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "PublishHelp"
-)
-MODDETAILS_DIR = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "ModDetails"
-)
-TEMPLATE_DETAILS_PATH = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "TEMPLATE-Details.md"
-)
+PUBLISHHELP_DIR = os.path.join(NEXUS_DATA_DIR, "PublishHelp")
+MODDETAILS_DIR = os.path.join(NEXUS_DATA_DIR, "ModDetails")
+TEMPLATE_DETAILS_PATH = os.path.join(NEXUS_DATA_DIR, "TEMPLATE-Details.md")
 NEXUS_MODGUIDE_PATH = os.path.join(
     VS_CODE_ROOT, "Workflow", "ReadmeSystem", "Snippets", "Nexus-MODGUIDE-md-Snippet.md"
 )
@@ -496,42 +489,12 @@ def main() -> int:
     os.makedirs(PUBLISHHELP_DIR, exist_ok=True)
     print("  PublishHelp directory recreated.")
 
-    # Final merged and numbered images share one publish-ready directory.
-    FINAL_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "02_ImagesFinal")
+    # Images are NOT copied into PublishHelp — upload them to Nexus directly
+    # from 00_Images/02_ImagesFinal instead. PublishHelp only holds the
+    # text/zip artifacts below (see WORKSPACE-ORGANIZATION-PLAN.md Progress Log).
 
-    # Stage 1: Copy images into each mod's PublishHelp folder
-    #   - _01.png is the generated merged image
-    #   - _02+, _03+, etc. are additional final media
-    print("\n--- Stage 1: Copying mod images ---")
-    for m in mods:
-        base_name = m["base_name"]
-        help_dir = os.path.join(PUBLISHHELP_DIR, base_name)
-        os.makedirs(help_dir, exist_ok=True)
-
-        # Copy generated merged _01.png.
-        gen_01 = os.path.join(FINAL_IMAGES_DIR, f"{base_name}_01.png")
-        if os.path.isfile(gen_01):
-            shutil.copy2(gen_01, os.path.join(help_dir, f"{base_name}_01.png"))
-            print(f"  [Image_01] {base_name} (from 02_ImagesFinal)")
-        else:
-            print(f"  [SKIP_01] {base_name}: no _01.png in 02_ImagesFinal")
-
-        # Copy _02+, _03+, etc. from the same final directory (skip _01).
-        if os.path.isdir(FINAL_IMAGES_DIR):
-            for filename in sorted(os.listdir(FINAL_IMAGES_DIR)):
-                if not filename.startswith(base_name):
-                    continue
-                # Skip _01 since it was copied above.
-                if filename == f"{base_name}_01.png":
-                    continue
-                src = os.path.join(FINAL_IMAGES_DIR, filename)
-                if os.path.isfile(src):
-                    shutil.copy2(src, os.path.join(help_dir, filename))
-                    print(f"  [Image] {base_name}: {filename} (from 02_ImagesFinal)")
-
-
-    # Stage 2: Generate BBCode FullDesc.md directly (moved from SCRIPT-NexusMods.py)
-    print("\n--- Stage 2: BBCode Full Descriptions ---")
+    # Stage 1: Generate BBCode FullDesc.md directly (moved from SCRIPT-NexusMods.py)
+    print("\n--- Stage 1: BBCode Full Descriptions ---")
     game_ver = "3"
     for m in mods:
         base_name = m["base_name"]
@@ -556,8 +519,8 @@ def main() -> int:
         print(f"  [FullDesc] {base_name}")
     print("  BBCode Full Description generation complete.")
 
-    # Stage 3: Generate Details.md from template
-    print("\n--- Stage 3: Generating Details.md ---")
+    # Stage 2: Generate Details.md from template
+    print("\n--- Stage 2: Generating Details.md ---")
     template_text = ""
     if os.path.isfile(TEMPLATE_DETAILS_PATH):
         with open(TEMPLATE_DETAILS_PATH, "r", encoding="utf-8") as f:

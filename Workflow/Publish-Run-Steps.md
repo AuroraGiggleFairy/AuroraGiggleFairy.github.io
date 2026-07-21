@@ -156,7 +156,7 @@ Log file: Logs/SCRIPT-Main-2026-04-30-2100.log
 |---|---|
 | Auto-decide readiness | Publish is always a manual trigger |
 | Push to GitHub | Git operations stay manual |
-| Upload to NexusMods | `SCRIPT-NexusMods.py` is a separate manual step |
+| Upload to NexusMods | `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py` is a separate manual step |
 | Delete old versioned GigglePack zips | Manual cleanup only |
 | Post Discord if no GigglePack change | No change = no post |
 

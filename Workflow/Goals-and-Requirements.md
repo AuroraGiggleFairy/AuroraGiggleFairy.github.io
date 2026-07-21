@@ -157,7 +157,7 @@ Publish readiness is a **manual decision** you make. The workflow should support
 ## Future / Planned Scope
 
 - **Images:** Mod screenshots and banners as part of the release package.
-- **Nexus Mods:** Automated or semi-automated publishing via `SCRIPT-NexusMods.py`.
+- **Nexus Mods:** Automated or semi-automated publishing via `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py`.
 - **Other sites:** Additional publishing targets beyond GitHub and Nexus.
 - **Git integration:** Possible later, but intentionally deferred until the workflow is proven stable.
 

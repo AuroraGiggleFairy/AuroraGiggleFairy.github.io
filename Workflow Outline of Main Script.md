@@ -70,12 +70,12 @@ Use only `SCRIPT-Main.py` with one of these modes:
 4. Test in game.
 5. When ready to release, bump version in `ModInfo.xml` and run `SCRIPT-Main.py --mode promote`.
 6. Run `SCRIPT-Main.py --mode package`.
-7. Handle Nexus Mods publishing or update planning separately with `SCRIPT-NexusMods.py`.
+7. Handle Nexus Mods publishing or update planning separately with `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py`.
 
 ### Nexus Mods Workflow Boundary
 
 - `SCRIPT-Main.py` remains responsible for workspace sync, release prep, zips, README output, and GigglePack release notes.
-- `SCRIPT-NexusMods.py` is the separate workflow for Nexus Mods planning and live version checks.
+- `06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py` is the separate workflow for Nexus Mods planning and live version checks.
 - Keep Nexus work separate so you can edit that script independently and run targeted update-only passes without touching the main packaging workflow.
 
 ---

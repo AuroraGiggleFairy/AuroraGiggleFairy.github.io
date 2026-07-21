@@ -15,11 +15,9 @@ import os
 import subprocess
 import sys
 
-VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
-NEXUS_SCRIPT = os.path.join(VS_CODE_ROOT, "SCRIPT-NexusMods.py")
-NEXUS_CONFIG = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "nexusmods-config.json"
-)
+NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+NEXUS_SCRIPT = os.path.join(NEXUS_DATA_DIR, "SCRIPT-NexusMods.py")
+NEXUS_CONFIG = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")
 API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"
 
 

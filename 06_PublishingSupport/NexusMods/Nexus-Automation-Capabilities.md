@@ -2,8 +2,8 @@
 
 Last updated: 2026-06-29
 Primary evidence:
-- Local OpenAPI snapshot: 05_GigglePackReleaseData/NexusMods/nexusAPI.txt (openapi 3.0.3, info.version 3.0.0)
-- Current script: SCRIPT-NexusMods.py
+- Local OpenAPI snapshot: 06_PublishingSupport/NexusMods/nexusAPI.txt (openapi 3.0.3, info.version 3.0.0)
+- Current script: 06_PublishingSupport/NexusMods/SCRIPT-NexusMods.py
 
 ## Quick Yes/No Matrix
 

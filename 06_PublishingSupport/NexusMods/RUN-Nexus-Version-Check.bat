@@ -36,7 +36,7 @@ echo Checking every local release version against Nexus Mods.
 echo This is read-only: it will not upload or change any mods.
 echo.
 
-"%PYTHON_EXE%" "%REPO_ROOT%\SCRIPT-AuditNexusMods.py"
+"%PYTHON_EXE%" "%~dp0SCRIPT-AuditNexusMods.py"
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.

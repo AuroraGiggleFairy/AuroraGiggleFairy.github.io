@@ -7,12 +7,10 @@ import xml.etree.ElementTree as ET
 from typing import Dict, List, Tuple
 
 
-VS_CODE_ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.normpath(os.path.join(NEXUS_DATA_DIR, "..", ".."))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
-FINAL_IMAGES_DIR = os.path.join(VS_CODE_ROOT, "00_Images", "02_ImagesFinal")
-PUBLISH_HELP_DIR = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "PublishHelp"
-)
+PUBLISH_HELP_DIR = os.path.join(NEXUS_DATA_DIR, "PublishHelp")
 DEFAULT_DOWNLOAD_BASE_URL = (
     "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips"
 )
@@ -683,37 +681,9 @@ def gather_mod_data() -> Dict[str, Dict[str, object]]:
     return mods
 
 
-# Paths for mod images and zips
+# Path for mod release zips. Images are NOT copied into PublishHelp — upload
+# them to Nexus directly from 00_Images/02_ImagesFinal instead.
 ZIP_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
-TEMPLATE_BANNER = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow", "Assets", "_template-banner.png")
-FALLBACK_TEMPLATE = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow", "Assets", "7d2dTemplateImage.png")
-
-
-def copy_mod_images(mod_name: str, target_dir: str) -> int:
-    copied = 0
-    gen_01 = os.path.join(FINAL_IMAGES_DIR, f"{mod_name}_01.png")
-    if os.path.isfile(gen_01):
-        dst = os.path.join(target_dir, f"{mod_name}_01.png")
-        shutil.copy2(gen_01, dst)
-        copied += 1
-    else:
-        template_src = TEMPLATE_BANNER if os.path.isfile(TEMPLATE_BANNER) else FALLBACK_TEMPLATE
-        if os.path.isfile(template_src):
-            dst = os.path.join(target_dir, f"{mod_name}_01.png")
-            shutil.copy2(template_src, dst)
-            copied += 1
-    if os.path.isdir(FINAL_IMAGES_DIR):
-        slot = 2
-        while True:
-            img_name = f"{mod_name}_{slot:02d}.png"
-            src = os.path.join(FINAL_IMAGES_DIR, img_name)
-            if not os.path.isfile(src):
-                break
-            dst = os.path.join(target_dir, img_name)
-            shutil.copy2(src, dst)
-            copied += 1
-            slot += 1
-    return copied
 
 
 def generate_publish_help() -> int:
@@ -723,7 +693,6 @@ def generate_publish_help() -> int:
         return 1
 
     total = len(mods)
-    image_total = 0
     zip_total = 0
     details_total = 0
     bbcode_total = 0
@@ -738,10 +707,6 @@ def generate_publish_help() -> int:
         version = str(entry.get("version", "0.0.0"))
         target_dir = os.path.join(PUBLISH_HELP_DIR, mod_name)
         os.makedirs(target_dir, exist_ok=True)
-
-        mod_image_count = copy_mod_images(mod_name, target_dir)
-        if mod_image_count > 0:
-            image_total += mod_image_count
 
         zip_name = f"{mod_name}.zip"
         src_zip = os.path.join(ZIP_DIR, zip_name)
@@ -772,8 +737,7 @@ def generate_publish_help() -> int:
             print(f"  [SKIP FullDesc] {mod_name}: no README found")
             skipped += 1
 
-        img_note = f" ({mod_image_count} image{'s' if mod_image_count != 1 else ''})" if mod_image_count > 0 else ""
-        print(f"  [OK] {mod_name} v{version}{img_note}")
+        print(f"  [OK] {mod_name} v{version}")
 
     print()
     print("=== PublishHelp Generation Complete ===")
@@ -781,7 +745,6 @@ def generate_publish_help() -> int:
     print(f"Details files:  {details_total}")
     print(f"FullDesc files: {bbcode_total}")
     print(f"Zips copied:    {zip_total}")
-    print(f"Images copied:  {image_total}")
     if skipped:
         print(f"Skipped:        {skipped} (no README)")
     print(f"Output folder:  {PUBLISH_HELP_DIR}")
@@ -791,7 +754,7 @@ def generate_publish_help() -> int:
 def main() -> int:
     import argparse
     parser = argparse.ArgumentParser(
-        description="Generate Nexus PublishHelp folder structure with Details, FullDesc, and images."
+        description="Generate Nexus PublishHelp folder structure with Details, FullDesc, and the release zip."
     )
     parser.add_argument(
         "--dry-run",
@@ -806,16 +769,7 @@ def main() -> int:
         for mod_name in sorted(mods.keys()):
             entry = mods[mod_name]
             version = str(entry.get("version", "0.0.0"))
-            img_count = 0
-            slot = 1
-            while True:
-                if os.path.isfile(os.path.join(FINAL_IMAGES_DIR, f"{mod_name}_{slot:02d}.png")):
-                    img_count += 1
-                    slot += 1
-                else:
-                    break
-            img_note = f" ({img_count} images)" if img_count else ""
-            print(f"  [DRYRUN] {mod_name} v{version}{img_note}")
+            print(f"  [DRYRUN] {mod_name} v{version}")
         return 0
 
     return generate_publish_help()

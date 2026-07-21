@@ -11,9 +11,10 @@ import getpass, json, os, re, sys, urllib.error, urllib.request, xml.etree.Eleme
 from typing import Dict, List, Optional, Tuple
 
 # ── Paths ────────────────────────────────────────────────────────────────
-VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
+NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(NEXUS_DATA_DIR))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
-CONFIG_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "NexusMods", "nexusmods-config.json")
+CONFIG_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")
 
 # ── API setup ────────────────────────────────────────────────────────────
 API_KEY_ENV_VAR = "AGF_NEXUSMODS_API_KEY"

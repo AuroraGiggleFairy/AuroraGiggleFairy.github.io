@@ -13,17 +13,17 @@ import xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Tuple
 
 
-VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
+NEXUS_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(NEXUS_DATA_DIR))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
 ZIP_OUTPUT_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
-RELEASE_META_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
-DEFAULT_CONFIG_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-config.json")
-DEFAULT_TEMPLATE_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "TEMPLATE-NexusModsConfig.json")
-DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-release-plan.json")
-DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexusmods-upload-plan.json")
-DEFAULT_MANUAL_PACKET_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ManualPackets")
-DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(RELEASE_META_DIR, "NexusMods", "ModDetails")
-DEFAULT_PRIVATE_API_KEY_PATH = os.path.join(RELEASE_META_DIR, "NexusMods", "nexus-api-key.private.txt")
+DEFAULT_CONFIG_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-config.json")
+DEFAULT_TEMPLATE_PATH = os.path.join(NEXUS_DATA_DIR, "TEMPLATE-NexusModsConfig.json")
+DEFAULT_PLAN_OUTPUT_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-release-plan.json")
+DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(NEXUS_DATA_DIR, "nexusmods-upload-plan.json")
+DEFAULT_MANUAL_PACKET_DIR = os.path.join(NEXUS_DATA_DIR, "ManualPackets")
+DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(NEXUS_DATA_DIR, "ModDetails")
+DEFAULT_PRIVATE_API_KEY_PATH = os.path.join(NEXUS_DATA_DIR, "nexus-api-key.private.txt")
 AGF_COLOR_LINE = "#5F5980"
 AGF_COLOR_HEADING = "#8DB580"
 AGF_COLOR_HIGHLIGHT = "#DDCDFA"
@@ -2126,7 +2126,7 @@ def main() -> int:
             write_json_file(os.path.abspath(args.upload_plan_output), upload_plan, args.dry_run)
         return result
     if args.mode == "generate-bbcode":
-        bbcode_output = os.path.join(RELEASE_META_DIR, "NexusMods", "ModDetails")
+        bbcode_output = os.path.join(NEXUS_DATA_DIR, "ModDetails")
         return generate_bbcode_packets(plan, bbcode_output, args.dry_run)
     if args.mode == "prepare-manual-docs":
         result, upload_plan = prepare_upload_plan(plan, config, args.only)

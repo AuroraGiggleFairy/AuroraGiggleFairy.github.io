@@ -1,15 +1,16 @@
 # DLL Projects - decompiled/build artifacts (not pushed)
 82_WorkspaceData/References/Decompiled-DLLs/
-00_DLL-Projects/BuildTemp/
+00_DLL-Projects/**/obj/
+00_DLL-Projects/**/bin/
 
 # Generator self-contained output caches (not pushed)
 00_DLL-Projects/Generators/**/GeneratedFiles/
 
 # Nexus publish help files - generated per-mod copy/paste packets (not pushed)
-05_GigglePackReleaseData/NexusMods/PublishHelp/
+06_PublishingSupport/NexusMods/PublishHelp/
 
 # Private local Nexus API key (never commit)
-05_GigglePackReleaseData/NexusMods/nexus-api-key.private.txt
+06_PublishingSupport/NexusMods/nexus-api-key.private.txt
 
 .history/**/nexus-api-key.private_*.txt
 .history/

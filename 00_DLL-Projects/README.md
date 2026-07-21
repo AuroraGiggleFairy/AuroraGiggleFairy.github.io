@@ -10,14 +10,20 @@ here, while assembled mods continue through `01_Draft`, `02_ActiveBuild`, and
 
 ```text
 00_DLL-Projects/
-|-- Projects/       C# DLL projects
-|-- Generators/     DLL-adjacent source generators
-|-- Support/        project-specific retained support material
-|-- References/     research and local-only decompiled references
-|-- Tools/          DLL-development utilities and templates
-`-- BuildTemp/      local-only build scratch
+|-- Projects/                       C# DLL projects (each with its own .csproj)
+|-- Generators/                     DLL-adjacent source generators
+|-- Directory.Build.props           shared MSBuild settings (Steam dir, Harmony DLL path)
+`-- README.md
 ```
 
+There is intentionally no shared `BuildTemp/` folder. Each project builds its
+own `obj/`/`bin/` output directly inside its own folder under `Projects/`
+(standard MSBuild default behavior) - these are gitignored
+(`00_DLL-Projects/**/obj/`, `00_DLL-Projects/**/bin/`) rather than swept into
+one shared scratch location.
+
+`Support/`, `Tools/`, and `References/` (empty) were removed during the
+2026-07-20/21 reorg - see `WORKSPACE-ORGANIZATION-PLAN.md` Progress Log.
 Discord server administration now lives under `20_DiscordManagement/ServerPlan`.
 
 ## DLL synchronization
@@ -30,7 +36,8 @@ python SCRIPT-SyncNoEACDlls.py
 
 Use `--apply` only after reviewing the preview and closing the game. The sync
 tool discovers the `Projects/DLL_*` project folders and excludes generators,
-support material, references, and build scratch data.
+build output (`obj`/`bin`), and other non-project directories while walking
+the tree.
 
 ## Folder move troubleshooting
 

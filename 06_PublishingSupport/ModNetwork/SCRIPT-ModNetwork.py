@@ -54,12 +54,12 @@ except ImportError:
 # Paths and constants
 # ---------------------------------------------------------------------------
 
-VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
+MODNETWORK_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(MODNETWORK_DATA_DIR))
 RELEASE_SOURCE_DIR = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
 ZIP_OUTPUT_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
-RELEASE_META_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
-DEFAULT_CONFIG_PATH = os.path.join(RELEASE_META_DIR, "ModNetwork", "modnetwork-config.json")
-DEFAULT_PLAN_OUTPUT_PATH = os.path.join(RELEASE_META_DIR, "ModNetwork", "modnetwork-plan.json")
+DEFAULT_CONFIG_PATH = os.path.join(MODNETWORK_DATA_DIR, "modnetwork-config.json")
+DEFAULT_PLAN_OUTPUT_PATH = os.path.join(MODNETWORK_DATA_DIR, "modnetwork-plan.json")
 COMPAT_CSV_PATH = os.path.join(
     VS_CODE_ROOT,
     "Workflow",
