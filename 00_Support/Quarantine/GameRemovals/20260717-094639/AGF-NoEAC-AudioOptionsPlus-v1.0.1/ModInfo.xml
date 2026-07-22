@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-  <Name value="AGF-NoEAC-AudioOptionsPlus" />
-  <DisplayName value="AGF Audio Options Plus" />
-  <Version value="2.0.0" />
-  <Description value="Adds two audio menu tabs: per-category volume profiles and animal" />
-  <Author value="AuroraGiggleFairy (AGF)" />
-  <Website value="https://auroragigglefairy.github.io/" />
-</xml>

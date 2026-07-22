@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-  <Name value="AGF-VP-VehiclesExtraSeating" />
-  <DisplayName value="AGF Vehicle Extra Seating." />
-  <Version value="2.1.1" />
-  <Description value="Adds seats: bikes seat 3; 4x4 seats 5, upto 8 with Expanded Seating." />
-  <Author value="AuroraGiggleFairy (AGF)" />
-  <Website value="https://auroragigglefairy.github.io/" />
-</xml>

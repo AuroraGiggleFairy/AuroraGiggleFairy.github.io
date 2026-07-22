@@ -1,24 +1,24 @@
 {
-  "gigglepack_version": "0.14.2",
-  "previous_gigglepack_version": "0.14.1",
+  "gigglepack_version": "0.14.3",
+  "previous_gigglepack_version": "0.14.2",
   "is_baseline_release": false,
-  "released_at": "2026-07-18 23:00:30",
+  "released_at": "2026-07-22 03:11:50",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
     "AGF-BackpackPlus-084Slots": "4.1.1",
     "AGF-BackpackPlus-119Slots": "2.1.1",
-    "AGF-HUDPlus-1Main": "6.5.4",
+    "AGF-HUDPlus-1Main": "6.5.5",
     "AGF-HUDPlus-BMCounter": "4.0.1",
     "AGF-HUDPlus-PurpleBook": "3.1.1",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
-    "AGF-HUDPlus-VisualEntityTracker": "1.0.0",
+    "AGF-HUDPlus-VisualEntityTracker": "1.0.1",
     "AGF-HUDPlus-Weekday": "3.1.3",
     "AGF-HUDPluszOther-Weekday": "3.1.1",
     "AGF-NoEAC-AudioOptionsPlus": "2.0.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
-    "AGF-NoEAC-EnhancedAGF": "4.3.1",
+    "AGF-NoEAC-EnhancedAGF": "4.3.2",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
     "AGF-NoEAC-ScreamerAlert": "2.3.2",
     "AGF-NoEAC-SignErrorGuard": "1.1.1",
@@ -56,19 +56,33 @@
   "updated_mods": [
     {
       "mod": "AGF-HUDPlus-1Main",
-      "from": "6.5.3",
-      "to": "6.5.4",
-      "from_display": "6.5.3",
-      "to_display": "6.5.4"
+      "from": "6.5.4",
+      "to": "6.5.5",
+      "from_display": "6.5.4",
+      "to_display": "6.5.5"
+    },
+    {
+      "mod": "AGF-HUDPlus-VisualEntityTracker",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "AGF-NoEAC-EnhancedAGF",
+      "from": "4.3.1",
+      "to": "4.3.2",
+      "from_display": "4.3.1",
+      "to_display": "4.3.2"
     }
   ],
   "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.14.2.zip",
+  "versioned_zip": "AGF-GigglePack-v0.14.3.zip",
   "change_counts": {
     "new_mods": 0,
-    "updated_existing_mods": 1,
+    "updated_existing_mods": 3,
     "renamed_mods": 0,
     "removed_mods": 0
   }

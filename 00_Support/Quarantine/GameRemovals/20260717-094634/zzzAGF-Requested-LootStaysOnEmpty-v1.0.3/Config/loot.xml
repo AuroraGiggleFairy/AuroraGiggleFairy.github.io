@@ -1,5 +1,0 @@
-<AGF-LootStaysOnEmpty>
-
-	<removeattribute xpath="//@destroy_on_close" />
-	
-</AGF-LootStaysOnEmpty>

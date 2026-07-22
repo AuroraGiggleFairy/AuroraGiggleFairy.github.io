@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-  <Name value="AGF-VP-FuelBurnPlus" />
-  <DisplayName value="AGF Fuel Burn Plus" />
-  <Version value="3.1.1" />
-  <Description value="Craft fuel items with burn times of 10, 60, 600, and 6,000 minutes." />
-  <Author value="AuroraGiggleFairy (AGF)" />
-  <Website value="https://auroragigglefairy.github.io/" />
-</xml>

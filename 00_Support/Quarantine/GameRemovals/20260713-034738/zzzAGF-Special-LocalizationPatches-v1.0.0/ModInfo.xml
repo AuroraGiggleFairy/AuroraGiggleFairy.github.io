@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xml>
-  <Name value="zzzAGF-Special-LocalizationPatches" />
-  <DisplayName value="AGF Special Localization Patches" />
-  <Version value="1.0.0" />
-  <Description value="Full 13-language localization support for partially localized modlets." />
-  <Author value="AuroraGiggleFairy (AGF)" />
-  <Website value="https://auroragigglefairy.github.io/" />
-</xml>

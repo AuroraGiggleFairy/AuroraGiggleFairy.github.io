@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-    <Name value="AGF-VP-LargerStorageOption"/>
-    <DisplayName value="AGF VP Larger Storage Option"/>
-    <Version value="1.1.0"/>
-    <Description value="Adds larger writable storage with 15 shapes, 3x health, break-to-pickup."/>
-    <Author value="AuroraGiggleFairy (AGF)"/>
-    <Website value="https://auroragigglefairy.github.io/"/>
-</xml>
