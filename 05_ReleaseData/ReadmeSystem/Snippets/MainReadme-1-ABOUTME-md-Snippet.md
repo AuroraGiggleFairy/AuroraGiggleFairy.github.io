@@ -2,3 +2,4 @@
 - I have been modding 7 Days to Die for 7 years.
 - I do my best to prioritize accessibility, user-friendliness, and localization where possible.
 - I provide kind, comprehensive support to players, modders, and server communities, and I rely on community feedback to keep improving my mods.
+- Find me on [Twitch](https://www.twitch.tv/auroragigglefairy) and [Discord](https://discord.gg/Vm5eyW6N4r).
