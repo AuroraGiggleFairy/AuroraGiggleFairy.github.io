@@ -10,7 +10,7 @@
 
 Read this section first in any new session to know what's real vs. still just proposed below.
 
-> **Git state (2026-07-21):** all reorg work below is committed and pushed - `origin/main` is up to date at `1bd4c50d` (no divergence). The large checkpoint landed as `9c0dd5f9` ("Reorganize workspace: 00_Images and 00_DLL-Projects restructure, Discord domain split, repo cleanup"), followed by a small `1bd4c50d` fixup (see below). Earlier drafts of this log understated what `9c0dd5f9` actually did - the entries below reflect what's really on disk, verified directly against the filesystem, not just the commit message.
+> **Git state (2026-07-22, updated):** `origin/main` last known push point varies by earlier commits; **large uncommitted stack** now covers `05_ReleaseData` rename, **`00_Support` nest** (Automation/WorkspaceData/Archive/Quarantine/Temp), `DiscordManagement` rename, root loose-file triage, and path rewires. See `WORKSPACE-ORGANIZATION-Handoff.md`. Do not treat older "committed and pushed at 1bd4c50d" notes below as current for uncommitted later work.
 
 ### Completed
 
@@ -65,17 +65,25 @@ Read this section first in any new session to know what's real vs. still just pr
   - Archived `Workflow/ModReadmeStuff/` (a stale June 17 discussion/notes file proposing a per-mod README section reorder that was never adopted, plus 2 example files) -> `90_Archive/notes/ModReadmeStuff/` via `git mv` - the first occupant of the `notes/` subfolder the Section 9 design anticipated. Documented in `90_Archive/README.md`.
   - Fixed every path reference this broke: `05_pipeline_engine.py` (`QUOTES_DIR`, `README_SYSTEM_ROOT`, `COMPAT_CSV`, plus one CLI help string), `SCRIPT-MakeNewMod.py`, `Workflow/06_nexus.py` (2 Nexus snippet paths), `Workflow/SCRIPT-GenerateModImages.py`, `06_PublishingSupport/ModNetwork/Workflow/SCRIPT-ModNetwork.py` (path constant plus descriptive comments), and `SCRIPT-Main.py`'s help text. Also updated prose references across `.github/copilot-instructions.md`, `Workflow/Goals-and-Requirements.md`, `Workflow/Update-Run-Steps.md`, `Workflow/Rename-Scenario-Matrix.md`, `Workflow/Publish-Run-Steps.md`, both copies of `Workflow Outline of Main Script.md`, and `ReadmeSystem`'s own `README.md`/`WORKFLOW-AI-README-Review.md`. Left dated changelog-style entries in `WORKFLOW-ReadmeSystem.md`, `WORKFLOW-MakeNewMod.md`, and old `.log` files pointing at the old path untouched, since those are historical records of what was true on that date, not live instructions.
   - `Workflow/06_nexus.py` and the numbered pipeline scripts (`01_sync_work.py` through `06_nexus.py`) stayed in `Workflow/` untouched - out of scope for this pass.
+- **Later same-day / follow-on uncommitted work (condensed — filesystem is source of truth):** `05_GigglePackReleaseData` → `05_ReleaseData` (+ `GigglePack/` subfolder); `Workflow/` → `80_Automation/workflow/`; `_MCP-Servers/` → `80_Automation/mcp-servers/`; `_GeneratedCompat/` → `82_WorkspaceData/GeneratedCompat/`; quarantine/rollback → `91_Quarantine/`; Discord folder → `20_DiscordManagement/Automation/`; MCP README + workspace `files.exclude`.
+- **Root loose-file triage executed from canvas notes (2026-07-22, not yet committed):** blank canvas rows = follow suggestions; notes = user decisions.
+  - **Deleted:** RoleSelectorBot, ModImageIntake, empty GenerateModBanners, PickInProgressToGame, FinalCheck, CheckRemainingIssues, CleanupStrays, Fix/Transfer/Restore changelog scripts, MigrateFeatureSections, README.txt, PrePublish-Check.bat, SCRIPT-Main.bat, Publish-AppendLatest.bat, root PurpleBookGenerator shim.
+  - **Moved:** ReactionRolesMulti → `20_DiscordManagement/Automation/`; PushUpdatedDLLs + HELPER → `00_DLL-Projects/Tools/`; GenPurpleBookCompat + PurpleBook notes → PurpleBook generator folder; BoatSeatIK → `82_WorkspaceData/Research/`; ESC link XMLs → `ESCWindowPlus/Links/`; MakeNewMod → `80_Automation/mod-tools/` + root `RUN-MakeNewMod.bat`; dry-run bats → `80_Automation/launchers/`.
+  - **Kept at root:** README.md, RUN-Update, RUN-Publish, RUN-Publish-NoGigglePack, SCRIPT-Main.py, org-plan docs.
+  - **Path repair:** re-applied pipeline/`SCRIPT-Main`/ImageIntake/MakeNewMod/PushUpdatedDLLs/GenPurpleBookCompat constants for `80_Automation/workflow`, `05_ReleaseData`, `91_Quarantine`, `GeneratedCompat`; banners now call `SCRIPT-GenerateModImages.py`.
+- **`00_Support` nest + Discord rename (Idea A, 2026-07-22, not yet committed):**
+  - Locked layout: machinery under `00_Support/{Automation,WorkspaceData,Archive,Quarantine,Temp}`; `DiscordManagement/` stays unnumbered at root (same workspace, different animal).
+  - Moved `80_Automation` → `00_Support/Automation`, `82_WorkspaceData` → `00_Support/WorkspaceData`, `90_Archive` → `00_Support/Archive`, `91_Quarantine` → `00_Support/Quarantine`, `99_Temp` → `00_Support/Temp`; renamed `20_DiscordManagement` → `DiscordManagement`.
+  - Rewired runtime paths (root `RUN-*.bat`, Automation launchers, `00_dispatch`/`05_pipeline_engine`/`03_package`/`06_nexus`/`SCRIPT-GenerateModImages`, MakeNewMod, ImageIntake, GenPurpleBookCompat, Discord reaction-role defaults + intake config JSON, `.gitignore`).
+  - Validated: dispatch/engine `VS_CODE_ROOT` resolve to repo root; logs/quarantine parents exist; `00_dispatch.py --help` runs.
 
 ### Deliberately not touched yet (needs a decision or a foundation first)
 
-- **`21_DiscordBot` creation** and the rest of the Discord domain split: resolving `SCRIPT-DiscordRoleSelectorBot.py` vs. `SCRIPT-DiscordReactionRolesMulti.py`, classifying `SCRIPT-DiscordModImageIntake.py` (bot feature vs. admin utility) - decision-heavy, see Section 11 below. All three scripts are still loose in the repo root.
-- **Root script clutter is reduced but not resolved**: the Nexus/ModNetwork scripts moved out (see above), but the repo root still has ~26 other loose `SCRIPT-*.py`/`RUN-*.bat`/`HELPER-*` files (DLL sync, generators, diagnostics, repairs, notes/logs like `AGFDiscord.txt`, `BJAYLog.txt`). None of Phase 1's full script registry work has started.
-- **`05_GigglePackReleaseData`** now holds `Discord/`, the GigglePack release-state files, and `ReadmeSystem/` (`ModNetwork/` and `NexusMods/` moved into `06_PublishingSupport` - see above; `ReadmeSystem/` moved in from `Workflow/` - see the `ReadmeSystem` reorganization entry above). `80_Automation`, the script registry, and a centralized path module (Section 12) still don't exist - those remain needed before the *rest* of the root scripts can move.
-- **`06_PublishingSupport/7DaysToDieMods/`** is an empty placeholder only - no site automation, config, or docs exist for it yet.
-- **`_x2.6/` archival is done** (moved to `90_Archive/old-game-versions/_x2.6/` - see above). `_Quarantine-GameRemovals/` and `_TransactionRollback/` are still exactly where they were, on purpose - see the `91_Quarantine` note above for why that one's a different, unresolved decision, not just an unfinished move.
-- `_GeneratedCompat/`, `_MCP-Servers/` - two more loose root folders spotted during the `90_Archive` work (see above) that plausibly belong in `82_WorkspaceData` or `80_Automation`, but haven't been moved. (`_Quotes/` was a third - now resolved, see the `ReadmeSystem` Progress Log entry above.)
-- `81_Documentation` / further `82_WorkspaceData` consolidation beyond the Decompiled-DLLs move.
-- Previously logged latent bug (`SCRIPT-Main.py` / `Workflow/03_package.py` referencing a root `SCRIPT-GenerateModBanners.py` that allegedly didn't exist) **appears resolved** - `SCRIPT-GenerateModBanners.py` now exists in the root alongside `Workflow/SCRIPT-GenerateModImages.py`. Not independently re-verified end-to-end (no dry run executed), so treat as likely-fixed rather than confirmed.
+- MCP permanent home (parked under `00_Support/Automation/mcp-servers/`).
+- `21_DiscordBot` domain (ReactionRolesMulti already under `DiscordManagement/Automation`).
+- Untracking committed quarantine / `obj`/`bin` junk (`git rm --cached`) — needs explicit confirmation.
+- `06_PublishingSupport/7DaysToDieMods/` empty placeholder; `81_Documentation` not created.
+- Centralized path module / script registry (Section 12) still not built.
 
 ---
 

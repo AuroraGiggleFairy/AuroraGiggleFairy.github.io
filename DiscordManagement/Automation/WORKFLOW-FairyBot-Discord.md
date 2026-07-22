@@ -9,8 +9,8 @@ This workflow tracks the Fairy Discord bot setup and related Discord server plan
 ## Current Snapshot
 
 - Local planning/config updates were completed in:
-  - 20_DiscordManagement/ServerPlan/discord_server_plan.json
-  - 20_DiscordManagement/ServerPlan/AuroraTwilight-Discord-Management.md
+  - DiscordManagement/ServerPlan/discord_server_plan.json
+  - DiscordManagement/ServerPlan/AuroraTwilight-Discord-Management.md
   - Workflow/Discord/mod-image-intake-config.json
 - Runtime bot script for roles + live announcements:
   - SCRIPT-DiscordReactionRolesMulti.py
@@ -25,11 +25,11 @@ This workflow tracks the Fairy Discord bot setup and related Discord server plan
 ### 1) Plan and docs source of truth
 
 - Discord structure source of truth:
-  - 20_DiscordManagement/ServerPlan/discord_server_plan.json
+  - DiscordManagement/ServerPlan/discord_server_plan.json
 - Human-facing matrix mirror:
-  - 20_DiscordManagement/ServerPlan/AuroraTwilight-Discord-Management.md
+  - DiscordManagement/ServerPlan/AuroraTwilight-Discord-Management.md
 - Apply script (when intentionally applying to Discord):
-  - 20_DiscordManagement/ServerPlan/apply_discord_server_plan.py
+  - DiscordManagement/ServerPlan/apply_discord_server_plan.py
 
 ### 2) Bot run method (local)
 

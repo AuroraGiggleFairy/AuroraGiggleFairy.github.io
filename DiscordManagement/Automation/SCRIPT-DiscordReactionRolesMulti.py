@@ -773,12 +773,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Discord multi-panel reaction role bot")
     parser.add_argument(
         "--config",
-        default=os.path.join("Workflow", "Discord", "reaction-role-panels.json"),
+        default=os.path.join("DiscordManagement", "Automation", "reaction-role-panels.json"),
         help="Path to reaction role panel config JSON",
     )
     parser.add_argument(
         "--watchlist",
-        default=os.path.join("Workflow", "Discord", "streamer-watchlist.json"),
+        default=os.path.join("DiscordManagement", "Automation", "streamer-watchlist.json"),
         help="Path to streamer watchlist JSON",
     )
     parser.add_argument("--discord-bot-token", default="", help=f"Bot token or env {DISCORD_BOT_TOKEN_ENV_VAR}")

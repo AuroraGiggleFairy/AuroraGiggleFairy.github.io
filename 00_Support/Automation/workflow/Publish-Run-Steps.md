@@ -13,9 +13,9 @@ Only `AGF-` / `zzzAGF-` prefixed mods are managed in workspace and game-folder s
 
 **Trigger:**
 ```
-python SCRIPT-Main.py --mode full
+python 00_Support/Automation/workflow/00_dispatch.py --mode full
 # or the chain runner:
-python Workflow/04_run_chain.py
+python 00_Support/Automation/workflow/04_run_chain.py
 # optional preflight confidence check before publish:
 RUN-PrePublish-Check.bat
 ```
@@ -145,7 +145,7 @@ GigglePack v1.4.4 → v1.5.0
 Main README.md: rebuilt
 Discord post: sent  (or: skipped — AGF_DISCORD_WEBHOOK_URL not set)
 
-Log file: Logs/SCRIPT-Main-2026-04-30-2100.log
+Log file: 00_Support/Automation/Logs/main-script-*.log
 ```
 
 ---

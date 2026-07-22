@@ -1,5 +1,5 @@
 # DLL Projects - decompiled/build artifacts (not pushed)
-82_WorkspaceData/References/Decompiled-DLLs/
+00_Support/WorkspaceData/References/Decompiled-DLLs/
 00_DLL-Projects/**/obj/
 00_DLL-Projects/**/bin/
 
@@ -17,4 +17,11 @@
 __pycache__/
 
 # Disposable experiments and short-lived files (see WORKSPACE-ORGANIZATION-PLAN.md)
-99_Temp/
+00_Support/Temp/
+
+# Pipeline run logs / manifests (new files; existing tracked logs may remain until untracked)
+00_Support/Automation/Logs/
+
+# Quarantine / rollback safety nets (pipeline-managed; not curated content)
+00_Support/Quarantine/GameRemovals/
+00_Support/Quarantine/TransactionRollback/

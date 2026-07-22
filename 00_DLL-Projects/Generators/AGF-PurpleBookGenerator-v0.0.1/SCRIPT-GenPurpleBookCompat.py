@@ -42,8 +42,8 @@ HANDWRITTEN_COMPAT_DIR = (
     r"c:\GitHub\7D2D-Mods\02_ActiveBuild\zzzAGF-Special-Compatibilities-v4.1.1"
     r"\Config\XUi\ModPatches"
 )
-GENERATED_DIR = r"c:\GitHub\7D2D-Mods\_GeneratedCompat"
-WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
+GENERATED_DIR = r"c:\GitHub\7D2D-Mods\00_Support\WorkspaceData\GeneratedCompat"
+WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 SOURCE_PB_GENERATOR_SCRIPT = os.path.join(
     WORKSPACE_ROOT,
     "00_DLL-Projects",
@@ -781,7 +781,7 @@ def _rollup_vehicle_family(plan: RolledPlan, new_items: dict[str, Item],
 
 
 # ---------------------------------------------------------------------------
-# Draft writer: emit review YAML + Localization.txt to _GeneratedCompat
+# Draft writer: emit review YAML + Localization.txt to 00_Support/WorkspaceData/GeneratedCompat
 # ---------------------------------------------------------------------------
 
 import yaml  # type: ignore
@@ -2550,7 +2550,7 @@ def main(argv: Iterable[str]) -> int:
     ap.add_argument("--cross-check", action="store_true",
                     help="Compare delta vs. existing handwritten compat windows.xml.")
     ap.add_argument("--draft", action="store_true",
-                    help="Write a review YAML + Localization.txt draft to _GeneratedCompat/<ModName>.")
+                    help="Write a review YAML + Localization.txt draft to 00_Support/WorkspaceData/GeneratedCompat/<ModName>.")
     ap.add_argument("--target", required=False,
                     help="Comma-separated list of mod folder names under "
                          f"{MODS_DIR}.  If omitted with --all, runs every "

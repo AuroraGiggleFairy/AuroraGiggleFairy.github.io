@@ -4,7 +4,7 @@
 - Reference guide for menu lifecycle/hook details:
   - `00_DLL-Projects/Projects/DLL_NoEAC-AudioOptionsPlus/MCP-7D2D-Menu-Influence-Guide.md`
 - Keep x2.6 files as read-only reference only:
-  - `90_Archive/old-game-versions/_x2.6/AGF-NoEAC-AudioOptionsPlus-v1.0.1/...`
+  - `00_Support/Archive/old-game-versions/_x2.6/AGF-NoEAC-AudioOptionsPlus-v1.0.1/...`
 - Apply active XML UI edits in live mod folder only:
   - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods/AGF-NoEAC-AudioOptionsPlus-v1.0.1/Config/XUi_Menu/windows.xml`
 - Use the AutoRun mod patch pattern as the vanilla-flow reference for v3 menu patch paths:

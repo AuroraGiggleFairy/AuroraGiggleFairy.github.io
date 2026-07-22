@@ -26,7 +26,7 @@ from xml.sax.saxutils import escape
 # CONFIG
 # =============================================================
 WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 LANE_DRAFT_PREFERRED = os.path.join(VS_CODE_ROOT, "01_Draft")
 LANE_ACTIVE_BUILD_PREFERRED = os.path.join(VS_CODE_ROOT, "02_ActiveBuild")
 LANE_RELEASE_SOURCE_PREFERRED = os.path.join(VS_CODE_ROOT, "03_ReleaseSource")
@@ -52,9 +52,9 @@ STAGING = resolve_lane_path(LANE_ACTIVE_BUILD_PREFERRED, LANE_ACTIVE_BUILD_LEGAC
 PUBLISH_READY = resolve_lane_path(LANE_RELEASE_SOURCE_PREFERRED, LANE_RELEASE_SOURCE_LEGACY)
 GAME_MODS = r"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods"
 ZIP_OUTPUT = resolve_lane_path(LANE_DOWNLOAD_ZIPS_PREFERRED, LANE_DOWNLOAD_ZIPS_LEGACY)
-README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "ReadmeSystem")
+README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "05_ReleaseData", "ReadmeSystem")
 QUOTES_DIR = os.path.join(README_SYSTEM_ROOT, "Quotes")
-LOGS_DIR = os.path.join(VS_CODE_ROOT, "Logs")
+LOGS_DIR = os.path.join(VS_CODE_ROOT, "00_Support", "Automation", "Logs")
 MAIN_LOG_MAX_FILES = 10
 
 README_TEMPLATE_ROOT = os.path.join(README_SYSTEM_ROOT, "Templates")
@@ -108,7 +108,9 @@ CATEGORY_DESCRIPTIONS_PATH = os.path.join(README_TEMPLATE_ROOT, "TEMPLATE-Catego
 IMAGES_ROOT = os.path.join(VS_CODE_ROOT, "00_Images")
 IMAGES_GENERATED_ROOT = os.path.join(IMAGES_ROOT, "02_ImagesFinal")
 IMAGES_THUMBNAIL_ROOT = os.path.join(IMAGES_GENERATED_ROOT, "thumbnails")
-DISCORD_TEMPLATE_PATH = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "Discord", "TEMPLATE-DiscordUpdate.md")
+DISCORD_TEMPLATE_PATH = os.path.join(
+    VS_CODE_ROOT, "05_ReleaseData", "GigglePack", "Discord", "TEMPLATE-DiscordUpdate.md"
+)
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
 
 AGF_PREFIXES = ("AGF-", "zzzAGF-")
@@ -120,16 +122,16 @@ GAME_OPTIONALS_4MODDERS_DIR = ".Optionals-4Modders"
 GAME_OPTIONALS_REQUESTED_DIR = ".Optionals-Requested"
 RELEASE_META_DIR_NAME = ".release"
 GIGGLEPACK_RELEASE_DATA_DIR = "GigglePack"
-GIGGLEPACK_RELEASE_ROOT_DIR = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData")
+GIGGLEPACK_RELEASE_ROOT_DIR = os.path.join(VS_CODE_ROOT, "05_ReleaseData", GIGGLEPACK_RELEASE_DATA_DIR)
 GIGGLEPACK_PENDING_CHANGES_PATH = os.path.join(
     GIGGLEPACK_RELEASE_ROOT_DIR,
     "gigglepack-pending-changes.json",
 )
 RUN_LOCK_PATH = os.path.join(VS_CODE_ROOT, ".script-main.lock")
 RUN_MANIFEST_MAX_FILES = 20
-GAME_REMOVALS_QUARANTINE_DIR = os.path.join(VS_CODE_ROOT, "_Quarantine-GameRemovals")
-TRANSACTION_ROLLBACK_DIR = os.path.join(VS_CODE_ROOT, "_TransactionRollback")
-DRAFT_PROMOTION_BASELINE_PATH = os.path.join(VS_CODE_ROOT, "Workflow", "draft-promotion-baseline.json")
+GAME_REMOVALS_QUARANTINE_DIR = os.path.join(VS_CODE_ROOT, "00_Support", "Quarantine", "GameRemovals")
+TRANSACTION_ROLLBACK_DIR = os.path.join(VS_CODE_ROOT, "00_Support", "Quarantine", "TransactionRollback")
+DRAFT_PROMOTION_BASELINE_PATH = os.path.join(WORKFLOW_DIR, "draft-promotion-baseline.json")
 GIGGLEPACK_CANONICAL_ZIP = "00_GigglePack_All.zip"
 GIGGLEPACK_VERSIONED_ZIP_PREFIX = "AGF-GigglePack-v"
 LEGACY_FINAL_GIGGLEPACK_ZIP = "AGF-7d2d-v2.6-GigglePack-Final.zip"
@@ -7305,7 +7307,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
     run_success = False
 
     log = Logger(verbose=args.verbose, dry_run=args.dry_run)
-    log.info("Starting SCRIPT-Main automation pipeline")
+    log.info("Starting workflow automation pipeline")
     log.info(f"Selected mode: {args.mode}")
     log.info("Scope policy: only AGF-/zzzAGF-prefixed mods are managed in workspace and game folders")
     if args.dry_run:
@@ -7760,7 +7762,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--enforce-agf-csv",
         action=argparse.BooleanOptionalAction,
         default=True,
-        help="Fail if 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv contains non-AGF rows",
+        help="Fail if 05_ReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv contains non-AGF rows",
     )
     parser.add_argument(
         "--preflight-write-check",

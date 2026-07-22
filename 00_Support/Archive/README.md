@@ -1,6 +1,6 @@
-# 90_Archive
+# Archive (under 00_Support)
 
-Known inactive material retained for reference. Distinct from `91_Quarantine` (temporary automated safety-holding data) - everything here was moved in deliberately and is meant to stay.
+Known inactive material retained for reference. Distinct from `00_Support/Quarantine` (temporary automated safety-holding data) - everything here was moved in deliberately and is meant to stay.
 
 Every archived item should have an entry below stating: original path, archived date, last known purpose, its replacement (if any), and whether it's safe to delete later.
 
@@ -30,4 +30,4 @@ Every archived item should have an entry below stating: original path, archived 
 
 ---
 
-See `WORKSPACE-ORGANIZATION-PLAN.md` Section 9 (`90_Archive`) for the full domain definition, and its Progress Log for how this folder was created.
+See `WORKSPACE-ORGANIZATION-PLAN.md` / handoff for domain intent. Current path: `00_Support/Archive/` (formerly `90_Archive`).

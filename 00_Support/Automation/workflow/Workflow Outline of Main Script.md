@@ -2,7 +2,7 @@
 
 ## How to Use This Outline
 
-This outline is the **master reference** for both humans and AI. The main script (SCRIPT-Main.py) must follow this outline exactly. If the script and this outline ever diverge, **this outline is the source of truth**. Every step is written for beginners, with clear instructions, conditions, and references to files and templates. If you are an AI, use this outline to repair or regenerate the script as needed.
+This outline is the **master reference** for both humans and AI. The workflow entry (`00_dispatch.py`) and pipeline engine must follow this outline exactly. If the script and this outline ever diverge, **this outline is the source of truth**. Every step is written for beginners, with clear instructions, conditions, and references to files and templates. If you are an AI, use this outline to repair or regenerate the script as needed.
 
 ### Script Mapping
 
@@ -11,11 +11,13 @@ Steps in this outline are grouped under the numbered script that owns them:
 | Script | File | What it does |
 |--------|------|--------------|
 | Reference | (Section A) | Lane model, folder roles, modes overview |
-| **01** | `Workflow/01_sync_work.py` | Sync game and active mods (Steps 1–2) |
-| **02** | `Workflow/02_promote.py` | Promote tested mods to release (Steps 3–5) |
-| **03** | `Workflow/03_package.py` | Package release files (Steps 6–9) |
-| **04** | `Workflow/04_run_chain.py` | Run 01 → 02 → 03 in sequence (Step 10) |
-| **05** | `Workflow/05_pipeline_engine.py` | Full pipeline engine (implements all steps) |
+| **00** | `00_Support/Automation/workflow/00_dispatch.py` | Entry dispatcher (modes → chain/engine) |
+| **01** | `00_Support/Automation/workflow/01_sync_work.py` | Sync game and active mods (Steps 1–2) |
+| **02** | `00_Support/Automation/workflow/02_promote.py` | Promote tested mods to release (Steps 3–5) |
+| **03** | `00_Support/Automation/workflow/03_package.py` | Package release files (Steps 6–9) |
+| **04** | `00_Support/Automation/workflow/04_run_chain.py` | Run 01 → 02 → 03 → 06 in sequence |
+| **05** | `00_Support/Automation/workflow/05_pipeline_engine.py` | Full pipeline engine (implements all steps) |
+| **06** | `00_Support/Automation/workflow/06_nexus.py` | Nexus PublishHelp generation |
 
 ---
 
@@ -56,7 +58,7 @@ Steps in this outline are grouped under the numbered script that owns them:
 
 ### Script Modes (Single Script Entry Point)
 
-Use only `SCRIPT-Main.py` with one of these modes:
+Use only `00_Support/Automation/workflow/00_dispatch.py` with one of these modes:
 
 1. `--mode sync-work`
    - Syncs `02_ActiveBuild` and game Mods by version.
@@ -79,15 +81,15 @@ Use only `SCRIPT-Main.py` with one of these modes:
 
 1. Build in `01_Draft`.
 2. Move/copy to `02_ActiveBuild` when ready to test.
-3. Run `SCRIPT-Main.py --mode sync-work`.
+3. Run `00_Support/Automation/workflow/00_dispatch.py --mode sync-work`.
 4. Test in game.
-5. When ready to release, bump version in `ModInfo.xml` and run `SCRIPT-Main.py --mode promote`.
-6. Run `SCRIPT-Main.py --mode package`.
+5. When ready to release, bump version in `ModInfo.xml` and run `00_Support/Automation/workflow/00_dispatch.py --mode promote`.
+6. Run `00_Support/Automation/workflow/00_dispatch.py --mode package`.
 7. Handle Nexus Mods publishing or update planning separately with `06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py`.
 
 ### Nexus Mods Workflow Boundary
 
-- `SCRIPT-Main.py` remains responsible for workspace sync, release prep, zips, README output, and GigglePack release notes.
+- `00_Support/Automation/workflow/00_dispatch.py` is the entry dispatcher; `05_pipeline_engine.py` does the heavy work for sync, release prep, zips, README output, and GigglePack release notes.
 - `06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py` is the separate workflow for Nexus Mods planning and live version checks.
 - Keep Nexus work separate so you can edit that script independently and run targeted update-only passes without touching the main packaging workflow.
 
@@ -345,7 +347,7 @@ Use only `SCRIPT-Main.py` with one of these modes:
 
 ## Script 04 — `04_run_chain.py`: Run the Full Chain (01 → 02 → 03)
 
-> **Default entry point** when you run `SCRIPT-Main.py` with no `--mode` flag.
+> **Default entry point** when you run `00_Support/Automation/workflow/00_dispatch.py` with no `--mode` flag.
 > Calls 01, then 02, then 03 in sequence. Stops on the first failure unless `--continue-on-error` is set.
 
 ---

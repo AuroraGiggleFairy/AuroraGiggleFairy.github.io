@@ -18,11 +18,11 @@ except Exception as ex:
 
 
 WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.dirname(WORKFLOW_DIR)
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(WORKFLOW_DIR)))
 RELEASE_SOURCE = os.path.join(VS_CODE_ROOT, "02_ActiveBuild")
 COMPAT_CSV = os.path.join(
     VS_CODE_ROOT,
-    "05_GigglePackReleaseData",
+    "05_ReleaseData",
     "ReadmeSystem",
     "HELPER_ModCompatibility.csv",
 )

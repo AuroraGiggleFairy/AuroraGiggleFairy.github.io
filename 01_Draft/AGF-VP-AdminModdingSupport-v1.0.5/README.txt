@@ -294,6 +294,7 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
+
 v1.0.5
     - Corrected that all harvest blocks output is 10 without perks.
 

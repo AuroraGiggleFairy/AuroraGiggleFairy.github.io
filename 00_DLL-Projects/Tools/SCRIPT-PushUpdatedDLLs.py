@@ -9,14 +9,14 @@ from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
 
-WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
+WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DLL_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "00_DLL-Projects", "Projects")
 LEGACY_DLL_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "_DLL-Projects")
 LEGACY_NOEAC_PROJECTS_DIR = os.path.join(WORKSPACE_ROOT, "_NoEAC-Projects")
 ACTIVE_BUILD_DIR = os.path.join(WORKSPACE_ROOT, "02_ActiveBuild")
 RELEASE_SOURCE_DIR = os.path.join(WORKSPACE_ROOT, "03_ReleaseSource")
 DRAFT_DIR = os.path.join(WORKSPACE_ROOT, "01_Draft")
-DEFAULT_MAP_PATH = os.path.join(WORKSPACE_ROOT, "HELPER_NoEACDllSync.json")
+DEFAULT_MAP_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "HELPER_NoEACDllSync.json")
 DEFAULT_GAME_MODS_DIR = r"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods"
 
 

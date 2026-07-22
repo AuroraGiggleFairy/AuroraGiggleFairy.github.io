@@ -5,8 +5,8 @@ import sys
 
 WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
 ENGINE_SCRIPT = os.path.join(WORKFLOW_DIR, "05_pipeline_engine.py")
-VS_CODE_ROOT = os.path.dirname(WORKFLOW_DIR)
-BANNER_SCRIPT = os.path.join(VS_CODE_ROOT, "SCRIPT-GenerateModBanners.py")
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(WORKFLOW_DIR)))
+BANNER_SCRIPT = os.path.join(WORKFLOW_DIR, "SCRIPT-GenerateModImages.py")
 
 
 def add_common_cli_args(parser: argparse.ArgumentParser) -> None:

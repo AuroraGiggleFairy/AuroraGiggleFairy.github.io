@@ -1,9 +1,11 @@
 @echo off
 setlocal
 
-cd /d "%~dp0"
+REM Repo root is three levels up from 00_Support/Automation/launchers/
+set "REPO_ROOT=%~dp0..\..\..\"
+cd /d "%REPO_ROOT%"
 
-set "PYTHON_EXE=%~dp0.venv\Scripts\python.exe"
+set "PYTHON_EXE=%REPO_ROOT%.venv\Scripts\python.exe"
 
 if not exist "%PYTHON_EXE%" (
     echo ERROR: Python environment not found at "%PYTHON_EXE%"
@@ -15,7 +17,7 @@ if not exist "%PYTHON_EXE%" (
 
 echo Running full publish run in DRY-RUN mode: no files will be changed.
 echo.
-"%PYTHON_EXE%" "%~dp0SCRIPT-Main.py" --mode full --dry-run --verbose %*
+"%PYTHON_EXE%" "%REPO_ROOT%00_Support\Automation\workflow\00_dispatch.py" --mode full --dry-run --verbose %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.

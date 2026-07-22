@@ -10,8 +10,11 @@ from typing import List
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_RELEASE_TEXT_PATH = os.path.join(SCRIPT_DIR, "discord-post.txt")
 if not os.path.isfile(DEFAULT_RELEASE_TEXT_PATH):
-    # Backward compatibility if this script is moved back to repo root.
-    DEFAULT_RELEASE_TEXT_PATH = os.path.join(SCRIPT_DIR, "05_GigglePackReleaseData", "Discord", "discord-post.txt")
+    # Backward compatibility for older release-data layouts.
+    DEFAULT_RELEASE_TEXT_PATH = os.path.join(
+        SCRIPT_DIR, "..", "..", "..", "05_ReleaseData", "GigglePack", "Discord", "discord-post.txt"
+    )
+    DEFAULT_RELEASE_TEXT_PATH = os.path.normpath(DEFAULT_RELEASE_TEXT_PATH)
 DISCORD_WEBHOOK_ENV_VAR = "AGF_DISCORD_WEBHOOK_URL"
 SECTION_HEADER_PATTERN = re.compile(r"^-\s\*\*.+:\*\*\s*$")
 

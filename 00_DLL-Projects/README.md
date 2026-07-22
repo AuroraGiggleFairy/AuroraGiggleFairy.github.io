@@ -24,14 +24,14 @@ one shared scratch location.
 
 `Support/`, `Tools/`, and `References/` (empty) were removed during the
 2026-07-20/21 reorg - see `WORKSPACE-ORGANIZATION-PLAN.md` Progress Log.
-Discord server administration now lives under `20_DiscordManagement/ServerPlan`.
+Discord server administration now lives under `DiscordManagement/ServerPlan`.
 
 ## DLL synchronization
 
 Preview DLL synchronization from the repository root with:
 
 ```bat
-python SCRIPT-SyncNoEACDlls.py
+python 00_DLL-Projects\Tools\SCRIPT-PushUpdatedDLLs.py
 ```
 
 Use `--apply` only after reviewing the preview and closing the game. The sync

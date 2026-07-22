@@ -20,12 +20,12 @@ Only `AGF-` / `zzzAGF-` prefixed mods are managed by this workflow.
 ## Trigger
 
 ```
-python SCRIPT-Main.py --mode update
+python 00_Support/Automation/workflow/00_dispatch.py --mode update
 # or double-click:
 RUN-Update.bat
 
 # safety check harness:
-python SCRIPT-Main.py --mode self-test
+python 00_Support/Automation/workflow/00_dispatch.py --mode self-test
 # one-click pre-publish confidence check:
 RUN-PrePublish-Check.bat
 ```
@@ -214,7 +214,7 @@ No publish actions taken. Run with --mode package to build a release.
 If nothing changed at all:
 ```
 
-Each run also writes a machine-readable manifest at `Logs/run-manifest-*.json`.
+Each run also writes a machine-readable manifest at `00_Support/Automation/Logs/run-manifest-*.json`.
 === Update Run Complete — Nothing to do ===
 All 17 mods are already in sync. No drift detected.
 ```

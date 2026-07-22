@@ -21,7 +21,7 @@ echo Running: update + promote + zips + README + GigglePack.
 echo GigglePack publish gate will ask: finalize now, append to
 echo latest finalize notes, or queue pending changes.
 echo.
-"%PYTHON_EXE%" "%~dp0SCRIPT-Main.py" --mode full --publish-gigglepack-action ask %*
+"%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\00_dispatch.py" --mode full --publish-gigglepack-action ask %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 if %EXIT_CODE% neq 0 (
@@ -36,7 +36,7 @@ echo ============================================================
 echo  STEP 6 — Generating Nexus PublishHelp files
 echo ============================================================
 echo.
-"%PYTHON_EXE%" "%~dp0Workflow\06_nexus.py"
+"%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\06_nexus.py"
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.

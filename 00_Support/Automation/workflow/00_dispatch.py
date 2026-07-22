@@ -4,11 +4,11 @@ import subprocess
 import sys
 from typing import List
 
-VS_CODE_ROOT = os.path.dirname(os.path.abspath(__file__))
-WORKFLOW_DIR = os.path.join(VS_CODE_ROOT, "Workflow")
+WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
+VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(WORKFLOW_DIR)))
 CHAIN_SCRIPT = os.path.join(WORKFLOW_DIR, "04_run_chain.py")
 ENGINE_SCRIPT = os.path.join(WORKFLOW_DIR, "05_pipeline_engine.py")
-BANNER_SCRIPT = os.path.join(VS_CODE_ROOT, "SCRIPT-GenerateModBanners.py")
+BANNER_SCRIPT = os.path.join(WORKFLOW_DIR, "SCRIPT-GenerateModImages.py")
 
 
 def add_common_cli_args(parser: argparse.ArgumentParser) -> None:
@@ -37,7 +37,7 @@ def add_common_cli_args(parser: argparse.ArgumentParser) -> None:
         "--enforce-agf-csv",
         action=argparse.BooleanOptionalAction,
         default=True,
-           help="Fail if 05_GigglePackReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv contains non-AGF rows",
+           help="Fail if 05_ReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv contains non-AGF rows",
     )
     parser.add_argument(
         "--preflight-write-check",
@@ -80,7 +80,7 @@ def run_chain(args: argparse.Namespace) -> int:
     if args.continue_on_error:
         command.append("--continue-on-error")
 
-    print(f"[SCRIPT-Main] Launching workflow chain: {' '.join(command)}")
+    print(f"[00_dispatch] Launching workflow chain: {' '.join(command)}")
     return int(subprocess.run(command, check=False).returncode)
 
 
@@ -92,7 +92,7 @@ def run_single_mode(args: argparse.Namespace) -> int:
         command = [sys.executable, BANNER_SCRIPT]
         if args.dry_run:
             command.append("--dry-run")
-        print(f"[SCRIPT-Main] Running single mode 'banners': {' '.join(command)}")
+        print(f"[00_dispatch] Running single mode 'banners': {' '.join(command)}")
         return int(subprocess.run(command, check=False).returncode)
 
     if not os.path.isfile(ENGINE_SCRIPT):
@@ -103,40 +103,40 @@ def run_single_mode(args: argparse.Namespace) -> int:
     append_common_flags(command, args)
     command.extend(["--publish-gigglepack-action", args.publish_gigglepack_action])
 
-    print(f"[SCRIPT-Main] Running single mode '{args.mode}': {' '.join(command)}")
+    print(f"[00_dispatch] Running single mode '{args.mode}': {' '.join(command)}")
     engine_exit = int(subprocess.run(command, check=False).returncode)
 
     if args.mode == "update" and os.path.isfile(BANNER_SCRIPT):
         banner_cmd = [sys.executable, BANNER_SCRIPT, "--changed-only"]
         if args.dry_run:
             banner_cmd.append("--dry-run")
-        print(f"[SCRIPT-Main] Generating update media (post-engine): {' '.join(banner_cmd)}")
+        print(f"[00_dispatch] Generating update media (post-engine): {' '.join(banner_cmd)}")
         banner_exit = int(subprocess.run(banner_cmd, check=False).returncode)
         if banner_exit != 0:
-            print(f"[SCRIPT-Main] Banner generation failed ({banner_exit})")
+            print(f"[00_dispatch] Banner generation failed ({banner_exit})")
 
     if args.mode == "package" and os.path.isfile(BANNER_SCRIPT):
         banner_cmd = [sys.executable, BANNER_SCRIPT]
         if args.dry_run:
             banner_cmd.append("--dry-run")
-        print(f"[SCRIPT-Main] Generating package media (post-engine): {' '.join(banner_cmd)}")
+        print(f"[00_dispatch] Generating package media (post-engine): {' '.join(banner_cmd)}")
         banner_exit = int(subprocess.run(banner_cmd, check=False).returncode)
         if banner_exit != 0:
-            print(f"[SCRIPT-Main] Banner generation failed ({banner_exit})")
+            print(f"[00_dispatch] Banner generation failed ({banner_exit})")
 
     return engine_exit
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Main starter script for the AGF workflow."
+        description="Workflow entry dispatcher (step 00): routes modes to the numbered pipeline scripts."
     )
     parser.add_argument(
         "--mode",
         choices=["full", "update", "sync-work", "prep-work", "promote", "package", "self-test", "banners"],
         help=(
             "Run one specific part only. "
-            "If omitted, SCRIPT-Main runs everything in order: sync-work -> promote -> package."
+            "If omitted, 00_dispatch runs everything in order: sync-work -> promote -> package."
         ),
     )
     parser.add_argument(

@@ -34,7 +34,7 @@ echo a new GigglePack release or Discord notification.
 echo.
 echo ======================================================================
 echo.
-"%PYTHON_EXE%" "%~dp0SCRIPT-Main.py" --mode full --publish-gigglepack-action queue %*
+"%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\00_dispatch.py" --mode full --publish-gigglepack-action queue %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.

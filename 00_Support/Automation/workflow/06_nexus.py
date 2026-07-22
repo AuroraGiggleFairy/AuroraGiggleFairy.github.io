@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 sys.dont_write_bytecode = True  # never leave a __pycache__ behind
 
 WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
-VS_CODE_ROOT = os.path.normpath(os.path.join(WORKFLOW_DIR, ".."))
+VS_CODE_ROOT = os.path.normpath(os.path.join(WORKFLOW_DIR, "..", "..", ".."))
 # NEXUS_ROOT_DIR holds the API key + generated output (PublishHelp/ModDetails).
 # NEXUS_WORKFLOW_DIR holds the scripts/config/templates (06_PublishingSupport/NexusMods/Workflow).
 NEXUS_ROOT_DIR = os.path.join(VS_CODE_ROOT, "06_PublishingSupport", "NexusMods")
@@ -28,7 +28,7 @@ PUBLISHHELP_DIR = os.path.join(NEXUS_ROOT_DIR, "PublishHelp")
 MODDETAILS_DIR = os.path.join(NEXUS_ROOT_DIR, "ModDetails")
 TEMPLATE_DETAILS_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "TEMPLATE-Details.md")
 NEXUS_MODGUIDE_PATH = os.path.join(
-    VS_CODE_ROOT, "05_GigglePackReleaseData", "ReadmeSystem", "Snippets", "Nexus-MODGUIDE-md-Snippet.md"
+    VS_CODE_ROOT, "05_ReleaseData", "ReadmeSystem", "Snippets", "Nexus-MODGUIDE-md-Snippet.md"
 )
 
 AGF_PREFIXES = ("AGF-", "zzzAGF-")
@@ -192,7 +192,7 @@ def load_mod_type_map() -> dict:
       MOD TYPE 1
       Server-Side (EAC-Friendly): full description...
     Maps the label before ':' (e.g. 'Server-Side (EAC-Friendly)') to the full description line."""
-    snippet_path = os.path.join(VS_CODE_ROOT, "05_GigglePackReleaseData", "ReadmeSystem", "Snippets", "Nexus-MODTYPE-md-Snippet.md")
+    snippet_path = os.path.join(VS_CODE_ROOT, "05_ReleaseData", "ReadmeSystem", "Snippets", "Nexus-MODTYPE-md-Snippet.md")
     mod_type_map = {}
     if not os.path.isfile(snippet_path):
         return mod_type_map
