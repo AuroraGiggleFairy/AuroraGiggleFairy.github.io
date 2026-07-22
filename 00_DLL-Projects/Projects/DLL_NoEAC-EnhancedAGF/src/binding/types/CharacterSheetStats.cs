@@ -49,7 +49,7 @@ public class CharacterLootStage : Binding
 
 public class CharacterCoreTemp : Binding
 {
-    private const float RefreshIntervalSeconds = 0.1f;
+    private const float RefreshIntervalSeconds = 0.15f;
     private float nextRefreshTime;
     private string cachedValue = "";
 

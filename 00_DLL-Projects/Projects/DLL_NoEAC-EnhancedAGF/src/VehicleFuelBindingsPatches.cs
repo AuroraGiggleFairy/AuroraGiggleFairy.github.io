@@ -159,6 +159,11 @@ public static class VehicleFuelBindingsPatches
         return false;
     }
 
+    private const float VehicleBindingForceRefreshIntervalSeconds = 0.1f;
+    private static float nextVehicleBindingForceRefreshTime;
+    private static int vehicleForceRefreshFrame = -1;
+    private static int lastVehicleAttitudeFrame = -1;
+
     [HarmonyPatch(typeof(XUiC_HUDStatBar), "Update")]
     [HarmonyPostfix]
     private static void HudStatBarUpdatePostfix(XUiC_HUDStatBar __instance)
@@ -168,6 +173,14 @@ public static class VehicleFuelBindingsPatches
             return;
         }
 
+        // Multiple vehicle HUDStatBars exist; attitude/needle work only needs to run once per frame.
+        int frame = Time.frameCount;
+        if (frame == lastVehicleAttitudeFrame)
+        {
+            return;
+        }
+
+        lastVehicleAttitudeFrame = frame;
         EntityPlayerLocal localPlayer = __instance.localPlayer ?? __instance.xui?.playerUI?.entityPlayer;
         ApplyVehicleAttitudeIndicator(__instance, localPlayer);
     }
@@ -187,12 +200,26 @@ public static class VehicleFuelBindingsPatches
         }
 
         EntityPlayerLocal localPlayer = __instance.localPlayer ?? __instance.xui?.playerUI?.entityPlayer;
-        if (localPlayer?.AttachedToEntity is EntityVehicle)
+        if (!(localPlayer?.AttachedToEntity is EntityVehicle))
         {
-            // Keep vehicle HUD bindings hot while mounted so AGF speed bindings do not stall
-            // behind fuel-only refresh triggers.
-            __result = true;
+            return;
         }
+
+        // Keep vehicle HUD bindings hot while mounted, but at ~10Hz across all vehicle bars together.
+        int frame = Time.frameCount;
+        if (frame != vehicleForceRefreshFrame)
+        {
+            float now = Time.realtimeSinceStartup;
+            if (now < nextVehicleBindingForceRefreshTime)
+            {
+                return;
+            }
+
+            nextVehicleBindingForceRefreshTime = now + VehicleBindingForceRefreshIntervalSeconds;
+            vehicleForceRefreshFrame = frame;
+        }
+
+        __result = true;
     }
 
     private static bool TryResolveVehicleWindowBinding(Vehicle vehicle, EntityVehicle entityVehicle, string bindingName, out string value)

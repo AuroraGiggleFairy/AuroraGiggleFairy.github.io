@@ -121,7 +121,7 @@ namespace StatControllers
         /// <returns>The found <see cref="Binding"/>, otherwise <see langword="null"/></returns>
         public static Binding GetBinding(string bindingName)
         {
-            if (supportedBindings.TryGetValue(bindingName, out Binding binding))
+            if (TryGetBinding(bindingName, out Binding binding))
             {
                 return binding;
             }
@@ -130,6 +130,20 @@ namespace StatControllers
             Logging.Error(TAG, message);
 
             return null;
+        }
+
+        /// <summary>
+        /// Silent lookup used by Harmony injectors so unknown binding names do not spam the console.
+        /// </summary>
+        public static bool TryGetBinding(string bindingName, out Binding binding)
+        {
+            if (string.IsNullOrEmpty(bindingName))
+            {
+                binding = null;
+                return false;
+            }
+
+            return supportedBindings.TryGetValue(bindingName, out binding);
         }
 
         /// <summary>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj": {}
+    "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj": {}
   },
   "projects": {
-    "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj": {
+    "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj",
+        "projectUniqueName": "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj",
         "projectName": "EnhancedAGF",
-        "projectPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj",
-        "packagesPath": "C:\\Users\\rft30\\.nuget\\packages\\",
-        "outputPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\obj\\",
+        "projectPath": "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\EnhancedAGF.csproj",
+        "packagesPath": "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\277da22db18345eaf4d526b1c06158d8\\nuget",
+        "outputPath": "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-EnhancedAGF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

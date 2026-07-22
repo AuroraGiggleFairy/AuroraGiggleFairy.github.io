@@ -60,8 +60,8 @@
     "media_file": "AGF-BackpackPlus-119Slots_01.png"
   },
   "AGF-HUDPlus-1Main": {
-    "signature": "04e8ba3669836d0927526fda1fa478fb94a60fffa8dc278177e7fb36b16ef70b",
-    "version": "6.5.4",
+    "signature": "325635f206e35a2fcdfb549ed2ac48e7b40c218eaf17147eb28bfc2aaa5236ba",
+    "version": "6.5.5",
     "has_media": true,
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
@@ -138,8 +138,8 @@
     "media_file": "AGF-NoEAC-CosmeticLockIcon_01.png"
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "780d25f2c153bbcce1ccb34525c9aececa7777984bf2b5a3a9ecb7dc687dd701",
-    "version": "4.3.1",
+    "signature": "5e5af92cf2739cfba9dfee28bcb3ba7bccf5907a3cfd4582971dd2ad563caea4",
+    "version": "4.3.2",
     "has_media": true,
     "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },
@@ -588,8 +588,8 @@
     "media_file": ""
   },
   "AGF-HUDPlus-VisualEntityTracker": {
-    "signature": "909f89daf60da8cd7b75579029fb59e100a6387945472996da2a0ba5453e11c6",
-    "version": "1.0.0",
+    "signature": "0a7378fd7457efc8f9d03aaae92c5530dce9ee92b0974eef9e2f8b6b2c1052aa",
+    "version": "1.0.1",
     "has_media": true,
     "media_file": "AGF-HUDPlus-VisualEntityTracker_01.png"
   }

@@ -26,7 +26,7 @@ public class XUiC_PlayerStats : XUiController
     }
 
     private string TAG = typeof(XUiC_PlayerStats).ToString();
-    private const float ChangePollIntervalSeconds = 0.05f;
+    private const float ChangePollIntervalSeconds = 0.15f;
     private static readonly HashSet<string> FalseWhenNoPlayerBindings = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
     {
         "PlayerIsDay",

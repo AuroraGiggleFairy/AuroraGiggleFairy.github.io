@@ -17,7 +17,7 @@ using UnityEngine;
 
 public class BagUsedSlots : Binding
 {
-    private const float RefreshIntervalSeconds = 0.1f;
+    private const float RefreshIntervalSeconds = 0.15f;
     private float nextRefreshTime;
     private string cachedValue = "0";
 
@@ -41,7 +41,7 @@ public class BagUsedSlots : Binding
 
 public class BagCarryCapacity : Binding
 {
-    private const float RefreshIntervalSeconds = 0.1f;
+    private const float RefreshIntervalSeconds = 0.15f;
     private float nextRefreshTime;
     private string cachedValue = "0";
 
@@ -65,7 +65,7 @@ public class BagCarryCapacity : Binding
 
 public class BagMaxCarryCapacity : Binding
 {
-    private const float RefreshIntervalSeconds = 0.1f;
+    private const float RefreshIntervalSeconds = 0.15f;
     private float nextRefreshTime;
     private string cachedValue = "0";
 
@@ -89,7 +89,7 @@ public class BagMaxCarryCapacity : Binding
 
 public class BagSize: Binding
 {
-    private const float RefreshIntervalSeconds = 0.1f;
+    private const float RefreshIntervalSeconds = 0.15f;
     private float nextRefreshTime;
     private string cachedValue = "0";
 

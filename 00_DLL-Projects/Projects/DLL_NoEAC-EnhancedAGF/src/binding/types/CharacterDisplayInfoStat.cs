@@ -18,7 +18,7 @@ using System.Collections.Generic;
 
 public class CharacterDisplayInfoStat : Binding
 {
-    private const float RefreshIntervalSeconds = 0.1f;
+    private const float RefreshIntervalSeconds = 0.15f;
     protected DisplayInfoEntry displayInfoEntry;
     private int displayInfoIndex;
 

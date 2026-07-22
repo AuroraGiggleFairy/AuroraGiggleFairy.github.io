@@ -23,6 +23,7 @@ public class ModAPI : IModApi
             {
                 ScreamerAlertEnhancedCapabilityHello.TickRetry();
                 ScreamerAlertEnhancedState.Tick();
+                PlayerBindingInjectorPatches.Tick();
             });
             Logging.Inform("EnhancedAGF Harmony patches registered.");
         }

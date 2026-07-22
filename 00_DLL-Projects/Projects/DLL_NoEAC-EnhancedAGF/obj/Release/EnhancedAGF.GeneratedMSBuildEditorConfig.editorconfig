@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = PlayerStatController
-build_property.ProjectDir = c:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-EnhancedAGF\
+build_property.ProjectDir = C:\GitHub\7D2D-Mods\00_DLL-Projects\Projects\DLL_NoEAC-EnhancedAGF\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
