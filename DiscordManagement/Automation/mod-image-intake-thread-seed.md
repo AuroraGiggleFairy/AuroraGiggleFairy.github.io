@@ -157,15 +157,6 @@ Need an image or a collection of images that fit a 1920x1080 or similar 16:9 rat
 
 ---
 
-## Help! Send image for mod AGF-HUDPluszOther-Weekday-v2.1.2
-
-```md
-See image below for mod details.
-Need an image or a collection of images that fit a 1920x1080 or similar 16:9 ratio.
-```
-
----
-
 ## Help! Send image for mod AGF-NoEAC-AudioOptionsPlus-v1.0.1
 
 ```md

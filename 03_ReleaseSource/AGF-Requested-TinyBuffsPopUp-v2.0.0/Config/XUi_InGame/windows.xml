@@ -1,0 +1,19 @@
+<AGF-Requested-TinyBuffsPopUp>
+
+	<!-- Half-size buff popouts. Must keep vanilla item structure (rect + BarContent)
+	     or XUiC_BuffPopoutList.Init throws NRE and toolbelt fails to load. -->
+	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect[@controller='BuffPopoutList']"/>
+
+	<append xpath="/windows/window[@name='HUDLeftStatBars']">
+		<!-- Y = vanilla 132 minus most of the half-height cut, leaving a few px of gap -->
+		<rect name="hud" pos="90,118" side="left" controller="BuffPopoutList" pivot="BottomLeft">
+			<rect width="168" height="23" name="item" pivot="center" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true">
+				<sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="23" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
+				<filledsprite depth="4" pos="-80,0" name="BarContent" color="0,0,0,0" size="160,20" pivot="Left" type="filled"/>
+				<sprite depth="5" name="Icon" size="20,20" pos="-54,0" pivot="center" color="[transparent]"/>
+				<label depth="6" name="TextContent" pos="-37,0" font_size="14" color="[white]" justify="center" size="118,20" pivot="left"/>
+			</rect>
+		</rect>
+	</append>
+
+</AGF-Requested-TinyBuffsPopUp>

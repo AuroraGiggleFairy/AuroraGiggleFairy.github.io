@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Standalone compact Biker card demo: 4 columns, 7 equal-height rows. -->
+<!-- Column widths: 24 | 167 | 33 | 33 (sum 257). Row height: 20 for all 7 rows. -->
+<xui_example>
+
+    <!-- True grid playground: 4 cols x 7 rows -->
+    <!-- Note: XUi grid uses uniform cell width; this is for raw grid behavior testing. -->
+    <rect name="armorCard_4col7row_playground_grid" pos="560,0" width="256" height="154">
+
+
+        <grid name="playgroundGrid4x7" depth="8" pos="0,0" rows="7" cols="4" cell_width="64" cell_height="22" repeat_content="true" arrangement="horizontal">
+
+            <entry name="row1-icon">
+                <sprite depth="4" name="backgroundMain" pos="0,0" width="256" height="154" color="[darkGrey]" sprite="menu_empty" type="sliced" fillcenter="true" />
+                <sprite depth="9" name="borderOuterTop" foregroundlayer="true" sprite="menu_empty" pos="-1,1" width="258" height="2" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="9" name="borderOuterBottom" foregroundlayer="true" sprite="menu_empty" pos="-1,-154" width="258" height="2" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="9" name="borderOuterLeft" foregroundlayer="true" sprite="menu_empty" pos="-1,1" width="2" height="156" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="9" name="borderOuterRight" foregroundlayer="true" sprite="menu_empty" pos="255,1" width="2" height="156" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="7" name="borderDividerHeader" foregroundlayer="true" sprite="menu_empty" pos="0,-21" width="256" height="2" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="7" name="borderDividerSetBonus" foregroundlayer="true" sprite="menu_empty" pos="0,-109" width="256" height="2" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="7" name="borderDividerColDescQ1" foregroundlayer="true" sprite="menu_empty" pos="151,0" width="2" height="154" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="7" name="borderDividerColQ1Q6" foregroundlayer="true" sprite="menu_empty" pos="203,0" width="2" height="154" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite depth="5" name="headerBackground" pos="0,0" width="256" height="22" color="[black]" sprite="menu_empty" type="sliced" fillcenter="true" />
+                <sprite depth="8" name="iconArmor" pos="2,-2" width="18" height="18" sprite="ui_game_symbol_light_armor2" color="[iconColor]" foregroundlayer="true" />
+            </entry>
+            <entry name="row1-description">
+                <label depth="8" name="TypeArmor" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="" text_key="AGFarmorBikerOutfit" color="222, 206, 163" font_size="16" />
+            </entry>
+            <entry name="row1-q1">
+                <sprite depth="6" name="q1Background" pos="25,0" width="50" height="22" color="156, 136, 103" sprite="menu_empty" type="sliced" fillcenter="true" />
+                <label depth="8" name="qualityTier1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="1" color="[black]" font_size="16" />
+            </entry>
+            <entry name="row1-q6">
+                <sprite depth="6" name="q6Background" pos="13,0" width="50" height="22" color="164, 42, 204" sprite="menu_empty" type="sliced" fillcenter="true" />
+                <label depth="8" name="qualityTier6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="6" color="[black]" font_size="16" />
+            </entry>
+
+            <entry name="row2-icon">
+                <sprite depth="8" name="cellBorderDescriptionsRow" foregroundlayer="true" sprite="menu_empty" pos="0,0" width="0" height="0" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite name="itemIcon" depth="9" pos="2,-2" size="18,18" foregroundlayer="true" atlas="ItemIconAtlas" sprite="armorBikerHelmet" color="" tooltip_key="armorBikerHelmet" />
+            </entry>
+            <entry name="row2-description">
+                <label depth="9" name="stat2" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="" text_key="statStunResist" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row2-q1">
+                <label depth="9" name="value2q1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="2%" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row2-q6">
+                <label depth="9" name="value2q6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="20%" color="[white]" font_size="16" />
+            </entry>
+
+            <entry name="row3-icon">
+                <sprite name="itemIcon" depth="9" pos="2,-2" size="18,18" foregroundlayer="true" atlas="ItemIconAtlas" sprite="armorBikerOutfit" color="" tooltip_key="armorBikerOutfit" />
+            </entry>
+            <entry name="row3-description">
+                <label depth="9" name="stat3" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="" text_key="statMaxHealthBonus" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row3-q1">
+                <label depth="9" name="value3q1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="2" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row3-q6">
+                <label depth="9" name="value3q6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="20" color="[white]" font_size="16" />
+            </entry>
+
+            <entry name="row4-icon">
+                <sprite name="itemIcon" depth="9" pos="2,-2" size="18,18" foregroundlayer="true" atlas="ItemIconAtlas" sprite="armorBikerGloves" color="" tooltip_key="armorBikerGloves" />
+            </entry>
+            <entry name="row4-description">
+                <label depth="9" name="stat4" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="" text_key="statEntityMeleeWeaponDamage" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row4-q1">
+                <label depth="9" name="value4q1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="10%" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row4-q6">
+                <label depth="9" name="value4q6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="60%" color="[white]" font_size="16" />
+            </entry>
+
+            <entry name="row5-icon">
+                <sprite name="itemIcon" depth="9" pos="2,-2" size="18,18" foregroundlayer="true" atlas="ItemIconAtlas" sprite="armorBikerBoots" color="" tooltip_key="armorBikerBoots" />
+            </entry>
+            <entry name="row5-description">
+                <label depth="9" name="stat5" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="Reduced Melee Stamina" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row5-q1">
+                <label depth="9" name="value5q1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="-2%" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row5-q6">
+                <label depth="9" name="value5q6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="-20%" color="[white]" font_size="16" />
+            </entry>
+
+            <entry name="row6-icon">
+                <sprite depth="8" name="cellBorderSetBonusRow" foregroundlayer="true" sprite="menu_empty" pos="0,0" width="0" height="0" color="[black]" globalopacity="false" fillcenter="true" type="sliced" />
+                <sprite name="itemIcon" depth="9" pos="3,-12" width="16" height="16" foregroundlayer="true" sprite="ui_game_symbol_defense" color="228,228,228" tooltip_key="armorBikerOutfit" />
+            </entry>
+            <entry name="row6-description">
+                <label depth="9" name="setbonus6" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="Armor Rating" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row6-q1">
+                <label depth="9" name="value6q1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="1%" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row6-q6">
+                <label depth="9" name="value6q6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="6%" color="[white]" font_size="16" />
+            </entry>
+
+            <entry name="row7-icon">
+            </entry>
+            <entry name="row7-description">
+                <label depth="9" name="setbonus7" pos="24,-11" width="124" height="18" justify="center" pivot="center" text="Fuel Use" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row7-q1">
+                <label depth="9" name="value7q1" pos="50,-11" width="48" height="18" justify="center" pivot="center" text="2%" color="[white]" font_size="16" />
+            </entry>
+            <entry name="row7-q6">
+                <label depth="9" name="value7q6" pos="38,-11" width="48" height="18" justify="center" pivot="center" text="20%" color="[white]" font_size="16" />
+            </entry>
+        </grid>
+    </rect>
+</xui_example>

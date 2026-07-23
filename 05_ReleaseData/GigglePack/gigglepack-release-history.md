@@ -1,5 +1,29 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.15.0 (July 23, 2026 4:07pm)
+### Summary: +12 new, ~0 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-Requested-SmallerInteractionPrompt](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-SmallerInteractionPrompt.zip) (new: v2.0.0)
+  - [AGF-Requested-TinyBuffsPopUp](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-TinyBuffsPopUp.zip) (new: v2.0.0)
+  - [AGF-VP-AdminModdingSupport](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AdminModdingSupport.zip) (new: v2.0.0)
+  - [AGF-VP-AlternativeRecipes](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AlternativeRecipes.zip) (new: v2.0.0)
+  - [AGF-VP-AmmoDisassembly](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip) (new: v2.0.0)
+  - [AGF-VP-ArcheryFeathersChange](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ArcheryFeathersChange.zip) (new: v2.0.0)
+  - [AGF-VP-DrinkableAcid](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip) (new: v3.0.0)
+  - [AGF-VP-DyesPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip) (new: v4.0.0)
+  - [AGF-VP-MiningPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip) (new: v2.0.0)
+  - [AGF-VP-PaintbrushPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PaintbrushPlus.zip) (new: v3.0.0)
+  - [AGF-VP-RecipeRottingFlesh](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RecipeRottingFlesh.zip) (new: v2.0.0)
+  - [AGF-VP-TacticalRiflePlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TacticalRiflePlus.zip) (new: v3.0.0)
+- **Updated Existing Mods**
+  - None
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.14.4 (July 22, 2026 9:19pm)
 ### Summary: +0 new, ~3 updated, =0 renamed, -0 removed
 - **New Mods**

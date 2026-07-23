@@ -8096,9 +8096,17 @@ def _sort_grid_entries_by_name(grid: ET.Element) -> None:
 
 
 def _ensure_grid_capacity(grid: ET.Element) -> None:
+    """Grow unlock grids to fit entries without changing designed layout width.
+
+    Cols and pos stay as authored in the purple book template (even left/right
+    gaps). When entries exceed rows*cols, only rows increase so icons wrap
+    within the existing horizontal bounds instead of expanding off-screen.
+    """
     entries = grid.findall("./entry")
     if not entries:
         return
+
+    count = len(entries)
 
     try:
         rows = int(grid.attrib.get("rows", "1"))
@@ -8112,22 +8120,9 @@ def _ensure_grid_capacity(grid: ET.Element) -> None:
         cols = 1
     cols = max(1, cols)
 
-    needed_cols = max(cols, math.ceil(len(entries) / rows))
-    if needed_cols != cols:
-        grid.set("cols", str(needed_cols))
-
-        if rows == 1 and (grid.attrib.get("name") or "") in {
-            "unlockVehiclesGrid",
-            "unlockDroneGrid",
-            "unlockMiscGrid",
-        }:
-            try:
-                cell_width = int(grid.attrib.get("cell_width", "94"))
-            except ValueError:
-                cell_width = 94
-            _old_x, y = _parse_pos_xy(grid.attrib.get("pos", "0,0"), 0, 0)
-            centered_x = max(0, (WIN_WIDTH - needed_cols * cell_width) // 2)
-            grid.set("pos", f"{centered_x},{y}")
+    needed_rows = max(rows, math.ceil(count / cols))
+    if needed_rows != rows:
+        grid.set("rows", str(needed_rows))
 
 
 def _apply_unlock_review_ledger_to_unlockables_tab(

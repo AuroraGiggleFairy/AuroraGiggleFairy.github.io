@@ -94,21 +94,6 @@
     "recorded_at": "2026-06-15T02:20:47",
     "version": "2.0.1"
   },
-  "AGF-HUDPluszOther-SmallerInteractionPrompt": {
-    "folder": "AGF-HUDPluszOther-SmallerInteractionPrompt-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
-  },
-  "AGF-HUDPluszOther-TinyBuffsPopUp": {
-    "folder": "AGF-HUDPluszOther-TinyBuffsPopUp-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
-  },
-  "AGF-HUDPluszOther-Weekday": {
-    "folder": "AGF-HUDPluszOther-Weekday-v3.0.0",
-    "recorded_at": "2026-06-15T03:01:34",
-    "version": "3.0.0"
-  },
   "AGF-NoEAC-AudioOptionsPlus": {
     "folder": "AGF-NoEAC-AudioOptionsPlus-v2.0.0",
     "recorded_at": "2026-07-17T09:46:34",
@@ -169,11 +154,6 @@
     "recorded_at": "2026-06-16T03:42:40",
     "version": "2.0.0"
   },
-  "AGF-NoEAC-SignErrorGuard": {
-    "folder": "AGF-NoEAC-SignErrorGuard-v1.0.0",
-    "recorded_at": "2026-06-26T17:57:27",
-    "version": "1.0.0"
-  },
   "AGF-NoEAC-SortingBox": {
     "folder": "AGF-NoEAC-SortingBox-v1.0.6",
     "recorded_at": "2026-06-15T02:20:47",
@@ -204,20 +184,30 @@
     "recorded_at": "2026-07-14T21:01:43",
     "version": "1.0.0"
   },
+  "AGF-Requested-SmallerInteractionPrompt": {
+    "folder": "AGF-Requested-SmallerInteractionPrompt-v2.0.0",
+    "recorded_at": "2026-07-22T23:20:21",
+    "version": "2.0.0"
+  },
+  "AGF-Requested-TinyBuffsPopUp": {
+    "folder": "AGF-Requested-TinyBuffsPopUp-v2.0.0",
+    "recorded_at": "2026-07-22T23:20:21",
+    "version": "2.0.0"
+  },
   "AGF-VP-AdminModdingSupport": {
-    "folder": "AGF-VP-AdminModdingSupport-v1.0.5",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.5"
+    "folder": "AGF-VP-AdminModdingSupport-v2.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "2.0.0"
   },
   "AGF-VP-AlternativeRecipes": {
-    "folder": "AGF-VP-AlternativeRecipes-v1.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.2"
+    "folder": "AGF-VP-AlternativeRecipes-v2.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "2.0.0"
   },
   "AGF-VP-AmmoDisassembly": {
-    "folder": "AGF-VP-AmmoDisassembly-v1.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.2"
+    "folder": "AGF-VP-AmmoDisassembly-v2.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "2.0.0"
   },
   "AGF-VP-ApiaryPlus": {
     "folder": "AGF-VP-ApiaryPlus-v1.0.4",
@@ -225,9 +215,9 @@
     "version": "1.0.4"
   },
   "AGF-VP-ArcheryFeathersChange": {
-    "folder": "AGF-VP-ArcheryFeathersChange-v1.0.3",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.3"
+    "folder": "AGF-VP-ArcheryFeathersChange-v2.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "2.0.0"
   },
   "AGF-VP-ArmorHarvestMods": {
     "folder": "AGF-VP-ArmorHarvestMods-v2.1.1",
@@ -290,14 +280,14 @@
     "version": "3.0.1"
   },
   "AGF-VP-DrinkableAcid": {
-    "folder": "AGF-VP-DrinkableAcid-v2.0.2",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.2"
+    "folder": "AGF-VP-DrinkableAcid-v3.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "3.0.0"
   },
   "AGF-VP-DyesPlus": {
-    "folder": "AGF-VP-DyesPlus-v3.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "3.1.1"
+    "folder": "AGF-VP-DyesPlus-v4.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "4.0.0"
   },
   "AGF-VP-FarmingPlus": {
     "folder": "AGF-VP-FarmingPlus-v5.6.3",
@@ -345,9 +335,9 @@
     "version": "1.1.1"
   },
   "AGF-VP-MiningPlus": {
-    "folder": "AGF-VP-MiningPlus-v1.2.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.2.1"
+    "folder": "AGF-VP-MiningPlus-v2.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "2.0.0"
   },
   "AGF-VP-Mod988": {
     "folder": "AGF-VP-Mod988-v2.0.2",
@@ -365,9 +355,9 @@
     "version": "4.0.0"
   },
   "AGF-VP-PaintbrushPlus": {
-    "folder": "AGF-VP-PaintbrushPlus-v2.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.1.1"
+    "folder": "AGF-VP-PaintbrushPlus-v3.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "3.0.0"
   },
   "AGF-VP-PickupLanternsPlus": {
     "folder": "AGF-VP-PickupLanternsPlus-v3.0.0",
@@ -400,9 +390,9 @@
     "version": "2.0.0"
   },
   "AGF-VP-RecipeRottingFlesh": {
-    "folder": "AGF-VP-RecipeRottingFlesh-v1.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.1"
+    "folder": "AGF-VP-RecipeRottingFlesh-v2.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "2.0.0"
   },
   "AGF-VP-RenamesAlphabeticalSort": {
     "folder": "AGF-VP-RenamesAlphabeticalSort-v2.0.5",
@@ -450,9 +440,9 @@
     "version": "2.0.2"
   },
   "AGF-VP-TacticalRiflePlus": {
-    "folder": "AGF-VP-TacticalRiflePlus-v2.1.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.1.1"
+    "folder": "AGF-VP-TacticalRiflePlus-v3.0.0",
+    "recorded_at": "2026-07-23T15:34:17",
+    "version": "3.0.0"
   },
   "AGF-VP-TraderAlwaysOpen": {
     "folder": "AGF-VP-TraderAlwaysOpen-v2.0.2",

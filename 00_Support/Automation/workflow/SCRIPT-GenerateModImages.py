@@ -96,6 +96,20 @@ def split_beta_from_display_name(display_name: str, version: str) -> Tuple[str, 
     return title, version_text
 
 
+def _is_readme_divider(line: str) -> bool:
+    return bool(re.fullmatch(r"[-=]{10,}", (line or "").strip()))
+
+
+def _is_readme_section_banner(lines: List[str], idx: int) -> bool:
+    """True for ---/=== title banners (OTHER DETAILS, AGF MOD GUIDE, etc.)."""
+    if idx + 2 >= len(lines):
+        return False
+    mid = lines[idx + 1].strip()
+    if not mid:
+        return False
+    return _is_readme_divider(lines[idx]) and _is_readme_divider(lines[idx + 2])
+
+
 def extract_features(readme_txt_path: str) -> List[str]:
     if not os.path.isfile(readme_txt_path):
         return []
@@ -105,13 +119,11 @@ def extract_features(readme_txt_path: str) -> List[str]:
     except Exception:
         return []
 
-    divider = "-" * 72
     start_idx: Optional[int] = None
     for idx in range(0, max(0, len(lines) - 2)):
         if (
-            lines[idx].strip() == divider
+            _is_readme_section_banner(lines, idx)
             and lines[idx + 1].strip().lower() in {"features", "features summary"}
-            and lines[idx + 2].strip() == divider
         ):
             start_idx = idx + 3
             break
@@ -122,12 +134,11 @@ def extract_features(readme_txt_path: str) -> List[str]:
     section_lines: List[str] = []
     idx = start_idx
     while idx < len(lines):
-        if (
-            idx + 2 < len(lines)
-            and lines[idx].strip() == divider
-            and lines[idx + 1].strip()
-            and lines[idx + 2].strip() == divider
-        ):
+        # Stop at the next section banner. Without OTHER DETAILS the next
+        # block is the === AGF MOD GUIDE === equals banner (not --- dashes).
+        if _is_readme_section_banner(lines, idx):
+            break
+        if lines[idx].strip().upper() == "AGF MOD GUIDE":
             break
         section_lines.append(lines[idx].rstrip())
         idx += 1
@@ -136,7 +147,7 @@ def extract_features(readme_txt_path: str) -> List[str]:
     current: Optional[str] = None
     for raw_line in section_lines:
         stripped = raw_line.strip()
-        if not stripped or re.fullmatch(r"[-=]{10,}", stripped):
+        if not stripped or _is_readme_divider(stripped):
             continue
 
         bullet_match = re.match(r"^(?:[-*+]\s+|\d+\.\s+)(.+)$", stripped)
@@ -146,10 +157,10 @@ def extract_features(readme_txt_path: str) -> List[str]:
             current = bullet_match.group(1).strip()
             continue
 
+        # Wrapped bullet continuation only — never treat orphan lines
+        # (leaked section titles) as features.
         if current:
             current = f"{current} {stripped}".strip()
-        else:
-            current = stripped
 
     if current:
         features.append(current.strip())

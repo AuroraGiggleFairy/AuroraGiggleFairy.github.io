@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-Requested-SmallerInteractionPrompt" />
+  <DisplayName value="AGF Smaller Interaction Prompt" />
+  <Version value="2.0.0" />
+  <Description value="Makes the interaction prompt text 12% smaller on screen." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

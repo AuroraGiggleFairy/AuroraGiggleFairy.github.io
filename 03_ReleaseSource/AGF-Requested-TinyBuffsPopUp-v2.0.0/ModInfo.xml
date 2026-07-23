@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-Requested-TinyBuffsPopUp" />
+  <DisplayName value="AGF Tiny Buffs Pop Up" />
+  <Version value="2.0.0" />
+  <Description value="Makes buff pop-up notifications about half the vanilla size." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

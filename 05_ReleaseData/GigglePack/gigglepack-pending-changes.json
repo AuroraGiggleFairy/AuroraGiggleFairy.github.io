@@ -1,18 +1,57 @@
 {
-  "computed_at": "2026-07-18T03:13:39",
-  "since_gigglepack_version": "0.13.0",
+  "computed_at": "2026-07-23T16:04:48",
+  "since_gigglepack_version": "0.14.4",
   "new_mods": [
     [
-      "AGF-HUDPlus-VisualEntityTracker",
-      "1.0.0"
+      "AGF-Requested-SmallerInteractionPrompt",
+      "2.0.0"
+    ],
+    [
+      "AGF-Requested-TinyBuffsPopUp",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-AdminModdingSupport",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-AlternativeRecipes",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-AmmoDisassembly",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-ArcheryFeathersChange",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-DrinkableAcid",
+      "3.0.0"
+    ],
+    [
+      "AGF-VP-DyesPlus",
+      "4.0.0"
+    ],
+    [
+      "AGF-VP-MiningPlus",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-PaintbrushPlus",
+      "3.0.0"
+    ],
+    [
+      "AGF-VP-RecipeRottingFlesh",
+      "2.0.0"
+    ],
+    [
+      "AGF-VP-TacticalRiflePlus",
+      "3.0.0"
     ]
   ],
   "updated_mods": [],
   "renamed_mods": [],
-  "removed_mods": [
-    [
-      "AGF-HUDPluszOther-Weekday",
-      "3.1.1"
-    ]
-  ]
+  "removed_mods": []
 }

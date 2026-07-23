@@ -473,33 +473,6 @@
       ]
     },
     {
-      "base_name": "AGF-HUDPluszOther-Weekday",
-      "folder_name": "AGF-HUDPluszOther-Weekday-v2.1.1",
-      "mod_name": "AGF-HUDPluszOther-Weekday",
-      "version": "2.1.1",
-      "description": "Adds the weekday name next to the in-game day number on the HUD.",
-      "readme_path": "c:\\GitHub\\7D2D-Mods\\03_ReleaseSource\\AGF-HUDPluszOther-Weekday-v2.1.1\\README.md",
-      "zip_path": "c:\\GitHub\\7D2D-Mods\\04_DownloadZips\\AGF-HUDPluszOther-Weekday.zip",
-      "zip_name": "AGF-HUDPluszOther-Weekday.zip",
-      "intent": "review",
-      "action": "review",
-      "tmn_slug": "",
-      "tmn_mod_id": "",
-      "page_url": "",
-      "mod_side": "server",
-      "game_version": "2.6",
-      "release_type": "stable",
-      "tmn_category": "",
-      "tmn_thumbnail_path": "",
-      "tmn_screenshot_paths": [],
-      "long_description_override": "",
-      "install_description_override": "",
-      "tmn_game_id": 1,
-      "notes": [
-        "Intent is 'review'; set to 'publish' or 'update' to include in upload."
-      ]
-    },
-    {
       "base_name": "AGF-NoEAC-AudioOptionsPlus",
       "folder_name": "AGF-NoEAC-AudioOptionsPlus-v1.0.1",
       "mod_name": "AGF-NoEAC-AudioOptionsPlus",

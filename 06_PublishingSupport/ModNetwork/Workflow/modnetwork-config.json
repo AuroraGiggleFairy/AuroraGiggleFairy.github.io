@@ -243,20 +243,6 @@
       "long_description_override": "",
       "install_description_override": ""
     },
-    "AGF-HUDPluszOther-Weekday": {
-      "intent": "review",
-      "tmn_slug": "",
-      "tmn_mod_id": "",
-      "page_url": "",
-      "tmn_category": "",
-      "tmn_thumbnail_path": "",
-      "tmn_screenshot_paths": [],
-      "mod_side_override": "",
-      "game_version_override": "",
-      "release_type_override": "",
-      "long_description_override": "",
-      "install_description_override": ""
-    },
     "AGF-NoEAC-AudioOptionsPlus": {
       "intent": "review",
       "tmn_slug": "",

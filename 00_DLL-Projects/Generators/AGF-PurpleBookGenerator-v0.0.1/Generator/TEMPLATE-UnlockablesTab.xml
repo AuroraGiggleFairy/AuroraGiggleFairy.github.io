@@ -750,7 +750,7 @@
                   </entry>
                 </grid>
                 <label name="unlockAllSectionLabel5" depth="3" justify="left" pos="1054,-338" width="308" height="26" foregroundlayer="true" color="232,232,232,255" text_key="agfUnlockMisc" font_size="22" />
-                <grid name="unlockAllSectionGrid5" depth="3" rows="2" cols="7" pos="1048,-359" cell_width="44" cell_height="44" repeat_content="false" arrangement="horizontal" controller="MapStats">
+                <grid name="unlockAllSectionGrid5" depth="3" rows="3" cols="7" pos="1048,-359" cell_width="44" cell_height="44" repeat_content="false" arrangement="horizontal" controller="MapStats">
                   <entry name="resourceLockPickBundle">
                     <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true" />
                     <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false" />
@@ -1550,7 +1550,7 @@
                 </grid>
               </rect>
               <rect name="unlockMisc" controller="TabSelectorTab" tab_key="agfUnlockMisc">
-                <grid name="unlockMiscGrid" depth="3" rows="1" cols="12" pos="131,-92" cell_width="94" cell_height="94" repeat_content="false" arrangement="horizontal" controller="MapStats">
+                <grid name="unlockMiscGrid" depth="3" rows="2" cols="12" pos="131,-92" cell_width="94" cell_height="94" repeat_content="false" arrangement="horizontal" controller="MapStats">
                   <entry name="resourceLockPickBundle">
                     <sprite depth="2" name="background" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[darkGrey]" type="sliced" fillcenter="true" />
                     <sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[black]" type="sliced" fillcenter="false" />

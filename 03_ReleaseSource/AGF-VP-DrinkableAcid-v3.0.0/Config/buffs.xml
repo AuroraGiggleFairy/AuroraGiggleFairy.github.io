@@ -1,0 +1,88 @@
+<AGFVanillaPlus-DrinkableAcid>
+
+<append xpath="/buffs">
+	<buff name="buffDrankAcid" name_key="buffDrankAcid" description_key="buffDrankAcidDesc" icon="ui_game_symbol_twitch_vision_effects"  icon_color="221, 205, 250">
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<update_rate value="1"/>
+		<display_value value=".buffDrankAcidDisplay"/>
+		<display_value_format value="time"/>
+
+	<!--duration stuff and display stuff-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrankAcidDuration" operation="subtract" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrankAcidDisplay" operation="set" value="@$buffDrankAcidDuration"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrankAcidDisplay" operation="divide" value="@$MetabolismDuration"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrankAcid">
+				<requirement name="CVarCompare" cvar="$buffDrankAcidDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrankAcidDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrankAcidDuration" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrankAcidDisplay" operation="set" value="-15"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrankAcidDisplay" operation="set" value="0"/>
+		</effect_group>
+		
+	<!--Lose about 30% water on drink (old WaterLossPerStaminaPointGained -.3 actually reduced water cost)-->	
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Water" operation="multiply" value="0.7"/>
+		</effect_group>	
+
+	<!--Roughly 120 HP damage over the duration-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddHealth" health="-50" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddHealth" health="-3" />
+			<passive_effect name="BuffBlink" operation="base_set" value="2" tags="buffDrankAcid"/>
+		</effect_group>	
+
+	<!--Twitch's Trippy screen effect (slightly under full so Painting can still read)-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.75" fade="1" effect_name="Trippy"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Trippy"/>
+		</effect_group>
+		
+	<!--Twitch's "Painting" effect (Infected screen)-->	
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="1" effect_name="Infected"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Infected"/>
+		</effect_group>		
+		
+	<!--Fast: Twitch used RunSpeed base_set 1.5, but vanilla run base is 1.6 so sprint felt unchanged/slower. Use perc_add so walk+run clearly speed up.-->
+		<effect_group>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="0.45"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="0.5"/>
+
+			<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value="0.15"/>
+			<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value="0.25"/>
+
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="1" tags="running"/>
+		</effect_group>	
+		
+	<!--Twitch's Jump Buff-->	
+		<effect_group>
+			<passive_effect name="JumpStrength" operation="perc_add" value="1.2"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+
+			<triggered_effect trigger="onSelfJump" action="PlaySound" sound="twitch_jump" play_in_head="false"/>
+		</effect_group>
+		
+	<!--Dance: use vanilla twitch_buffDance (same music path Twitch uses).-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="twitch_buffDance"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="twitch_buffDance"/>
+		</effect_group>
+	</buff>
+</append>
+
+
+<!--God mode ENDS the acid drinking buff-->
+	<append xpath="/buffs/buff[@name='god']/effect_group">
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar="$buffDrankAcidDuration"/>	
+	</append>
+
+
+</AGFVanillaPlus-DrinkableAcid>

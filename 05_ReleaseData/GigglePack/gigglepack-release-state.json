@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.14.4",
-  "previous_gigglepack_version": "0.14.3",
+  "gigglepack_version": "0.15.0",
+  "previous_gigglepack_version": "0.14.4",
   "is_baseline_release": false,
-  "released_at": "2026-07-22 21:19:07",
+  "released_at": "2026-07-23 16:07:33",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
@@ -14,37 +14,47 @@
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
     "AGF-HUDPlus-VisualEntityTracker": "1.0.1",
     "AGF-HUDPlus-Weekday": "3.1.3",
-    "AGF-HUDPluszOther-Weekday": "3.1.1",
     "AGF-NoEAC-AudioOptionsPlus": "2.0.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
     "AGF-NoEAC-EnhancedAGF": "4.3.2",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
     "AGF-NoEAC-ScreamerAlert": "2.3.2",
-    "AGF-NoEAC-SignErrorGuard": "1.1.1",
     "AGF-NoEAC-Toolbelt12Slots": "2.2.3",
+    "AGF-Requested-SmallerInteractionPrompt": "2.0.0",
+    "AGF-Requested-TinyBuffsPopUp": "2.0.0",
+    "AGF-VP-AdminModdingSupport": "2.0.0",
+    "AGF-VP-AlternativeRecipes": "2.0.0",
+    "AGF-VP-AmmoDisassembly": "2.0.0",
+    "AGF-VP-ArcheryFeathersChange": "2.0.0",
     "AGF-VP-AutomobilesRespawn": "4.1.1",
     "AGF-VP-BedrollPlus": "2.1.1",
     "AGF-VP-BetterEggChance": "3.1.1",
     "AGF-VP-BreakItGetIt": "2.1.1",
     "AGF-VP-CraftSewingKits": "2.1.1",
     "AGF-VP-CraftVitamins": "2.1.2",
+    "AGF-VP-DrinkableAcid": "3.0.0",
+    "AGF-VP-DyesPlus": "4.0.0",
     "AGF-VP-FloraHarvester": "3.0.1",
     "AGF-VP-FuelBurnPlus": "3.1.1",
     "AGF-VP-LargerStorageOption": "1.1.1",
     "AGF-VP-MasterTool": "7.1.1",
     "AGF-VP-MaxLevel500": "3.1.1",
+    "AGF-VP-MiningPlus": "2.0.0",
     "AGF-VP-Mod988": "3.0.0",
     "AGF-VP-ModSlotsPlus": "4.1.1",
+    "AGF-VP-PaintbrushPlus": "3.0.0",
     "AGF-VP-PickupLanternsPlus": "3.1.1",
     "AGF-VP-PlayerResetQuests": "3.1.1",
     "AGF-VP-RebundleBundles": "2.1.1",
+    "AGF-VP-RecipeRottingFlesh": "2.0.0",
     "AGF-VP-RestorePowerAnyTime": "2.1.1",
     "AGF-VP-ScrapBatts4Acid": "2.1.1",
     "AGF-VP-ScrapEquipmentFaster": "2.1.1",
     "AGF-VP-SimplifiedStacks": "2.1.1",
     "AGF-VP-StayLongerAnimalCorpse": "3.1.1",
     "AGF-VP-StayLongerPlayerBackpack": "3.1.1",
+    "AGF-VP-TacticalRiflePlus": "3.0.0",
     "AGF-VP-VehiclePerformance": "2.1.1",
     "AGF-VP-VehicleStoragePlus": "3.1.1",
     "AGF-VP-VehiclesExtraSeating": "2.1.1",
@@ -53,36 +63,75 @@
     "zzzAGF-Special-Compatibilities": "5.1.1",
     "zzzAGF-Special-LocalizationPatches": "1.0.1"
   },
-  "updated_mods": [
+  "updated_mods": [],
+  "new_mods": [
     {
-      "mod": "AGF-HUDPlus-PurpleBook",
-      "from": "3.1.1",
-      "to": "3.2.0",
-      "from_display": "3.1.1",
-      "to_display": "3.2.0"
+      "mod": "AGF-Requested-SmallerInteractionPrompt",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
     },
     {
-      "mod": "AGF-VP-CraftVitamins",
-      "from": "2.1.1",
-      "to": "2.1.2",
-      "from_display": "2.1.1",
-      "to_display": "2.1.2"
+      "mod": "AGF-Requested-TinyBuffsPopUp",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
     },
     {
-      "mod": "AGF-VP-FloraHarvester",
-      "from": "3.0.0",
-      "to": "3.0.1",
-      "from_display": "3.0.0",
-      "to_display": "3.0.1"
+      "mod": "AGF-VP-AdminModdingSupport",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-AlternativeRecipes",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-AmmoDisassembly",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-ArcheryFeathersChange",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-DrinkableAcid",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-DyesPlus",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
+    },
+    {
+      "mod": "AGF-VP-MiningPlus",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-PaintbrushPlus",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
+    },
+    {
+      "mod": "AGF-VP-RecipeRottingFlesh",
+      "to": "2.0.0",
+      "to_display": "2.0.0"
+    },
+    {
+      "mod": "AGF-VP-TacticalRiflePlus",
+      "to": "3.0.0",
+      "to_display": "3.0.0"
     }
   ],
-  "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.14.4.zip",
+  "versioned_zip": "AGF-GigglePack-v0.15.0.zip",
   "change_counts": {
-    "new_mods": 0,
-    "updated_existing_mods": 3,
+    "new_mods": 12,
+    "updated_existing_mods": 0,
     "renamed_mods": 0,
     "removed_mods": 0
   }
