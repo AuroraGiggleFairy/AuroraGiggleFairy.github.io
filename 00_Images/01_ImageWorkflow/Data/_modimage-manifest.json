@@ -78,8 +78,8 @@
     "media_file": "AGF-HUDPlus-HealthBars_01.png"
   },
   "AGF-HUDPlus-PurpleBook": {
-    "signature": "eec0e0cb186d7cb7e8d86f6f3d6bcd6652d30e7360f663c20ff46f9840b7b0a2",
-    "version": "3.1.1",
+    "signature": "1726f6c329d2acc47cfd682e01328525ae7ba82004099f4fa51e9669f0bffd0b",
+    "version": "3.2.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-PurpleBook_01.png"
   },
@@ -276,8 +276,8 @@
     "media_file": ""
   },
   "AGF-VP-CraftVitamins": {
-    "signature": "d8b026fc0b16096fb2e808beb71d45fc076eea5bfe104091d518a0d784f0771e",
-    "version": "2.1.1",
+    "signature": "9f5d59678b1955a65a0f12596ef532be0c8d4d75f4ac0c41694d0efed653a691",
+    "version": "2.1.2",
     "has_media": true,
     "media_file": "AGF-VP-CraftVitamins_01.png"
   },
@@ -318,8 +318,8 @@
     "media_file": ""
   },
   "AGF-VP-FloraHarvester": {
-    "signature": "f7c165a348ba494fb9cb735fa168b12a62de9b804bedc19bb8e1afdd7a8cff67",
-    "version": "3.0.0",
+    "signature": "da2f38180dd39055e37b578d304d784c0d75fb4b1154d38f62bc1759807dad8b",
+    "version": "3.0.1",
     "has_media": true,
     "media_file": "AGF-VP-FloraHarvester_01.png"
   },

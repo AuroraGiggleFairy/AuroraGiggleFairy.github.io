@@ -1,0 +1,121 @@
+﻿=> <rect name="checklistElectrician" depth="3" pos="1210,-110" width="50" height="558" controller="MapStats">
+=> <rect name="checklistWorkstations" depth="3" pos="1270,-110" width="50" height="600" controller="MapStats">
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="30" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck6)}" />
+=> <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="cntChickenCoop" color="" tooltip_key="cntChickenCoop" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="30" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck14)}" />
+=> <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolChickenCoopLamp" color="" tooltip_key="toolChickenCoopLamp" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="30" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck18)}" />
+=> <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolChickenCoopRun" color="" tooltip_key="toolChickenCoopRun" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="30" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck24)}" />
+=> <label depth="3" name="checkunlock" pos="0,-3" width="25" height="16" justify="center" text="24" color="[black]" font_size="16" />
+=> <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolChickenCoopNestingBox" color="" tooltip_key="toolChickenCoopNestingBox" />
+=> <sprite name="itemtypeicon" depth="8" pos="26,-5" width="10" height="10" sprite="ui_game_symbol_forge" foregroundlayer="true" color="" />
+=> <sprite name="itemtypeicon" depth="8" pos="26,-5" width="10" height="10" sprite="ui_game_symbol_forge" foregroundlayer="true" color="" />
+=> <sprite name="itemtypeicon" depth="8" pos="26,-5" width="10" height="10" sprite="ui_game_symbol_forge" foregroundlayer="true" color="" />
+=> <rect name="checklistFood" depth="3" pos="1330,-110" width="50" height="631" controller="MapStats">
+=> <label depth="3" name="checkunlock" pos="0,-3" width="25" height="16" justify="center" text="6" color="[black]" font_size="16" />
+=> <rect name="Section6" pos="0,-150" width="50" height="61">
+=> <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="50" height="63" color="[darkGrey]" type="sliced" fillcenter="true" />
+=> <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" width="50" height="63" color="[black]" type="sliced" fillcenter="false" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="61" fillcenter="true" type="filled" fill="{cvar(craftingFoodCheck11)}" />
+=> <sprite name="itemIcon" depth="3" pos="26,-10" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinBread" color="" tooltip_key="foodPumpkinBread" />
+=> <sprite name="itemIcon" depth="3" pos="2,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodBlueberryPie" color="" tooltip_key="foodBlueberryPie" />
+=> <sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodChickenNuggets" color="" tooltip_key="foodChickenNuggets" />
+=> <rect name="Section7" pos="0,-211" width="50" height="30">
+=> <label depth="3" name="checkunlock" pos="0,-3" width="25" height="16" justify="center" text="14" color="[black]" font_size="16" />
+=> <rect name="Section8" pos="0,-241" width="50" height="30">
+=> <label depth="3" name="checkunlock" pos="0,-3" width="25" height="16" justify="center" text="18" color="[black]" font_size="16" />
+=> <sprite name="itemIcon" depth="3" pos="31,-4" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinCheesecake" color="" tooltip_key="foodPumpkinCheesecake" />
+=> <sprite name="itemIcon" depth="3" pos="31,-15" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodRoadrunnerChickenJerky" color="" tooltip_key="foodRoadrunnerChickenJerky" />
+=> <rect name="Section9" pos="0,-271" width="50" height="30">
+=> <rect name="Section10" pos="0,-301" width="50" height="30">
+=> <sprite name="itemIcon" depth="3" pos="31,-4" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSteakAndPotato" color="" tooltip_key="foodSteakAndPotato" />
+=> <sprite name="itemIcon" depth="3" pos="31,-15" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodAshChickenStew" color="" tooltip_key="foodAshChickenStew" />
+=> <rect name="Section11" pos="0,-331" width="50" height="30">
+=> <rect name="Section12" pos="0,-361" width="50" height="30">
+=> <rect name="Section13" pos="0,-391" width="50" height="30">
+=> <rect name="Section14" pos="0,-421" width="50" height="30">
+=> <rect name="Section15" pos="0,-451" width="50" height="30">
+=> <rect name="Section16" pos="0,-481" width="50" height="30">
+=> <rect name="Section17" pos="0,-511" width="50" height="30">
+=> <sprite depth="2" name="backgroundBorder" sprite="menu_empty3px" pos="2,-2" width="21" height="18" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="19" height="16" color="156, 136, 103" type="sliced" fillcenter="true" />
+=> <rect name="Section18" pos="0,-541" width="50" height="30">
+=> <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="50" height="32" color="[darkGrey]" type="sliced" fillcenter="true" />
+=> <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" width="50" height="32" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="backgroundBorder" sprite="menu_empty3px" pos="2,-2" width="21" height="18" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="19" height="16" color="156, 136, 103" type="sliced" fillcenter="true" />
+=> <rect name="Section19" pos="0,-571" width="50" height="30">
+=> <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="50" height="32" color="[darkGrey]" type="sliced" fillcenter="true" />
+=> <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" width="50" height="32" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="backgroundBorder" sprite="menu_empty3px" pos="2,-2" width="21" height="18" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="19" height="16" color="156, 136, 103" type="sliced" fillcenter="true" />
+=> <sprite name="itemIcon" depth="3" pos="31,-4" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSpaghetti" color="" tooltip_key="foodSpaghetti" />
+=> <sprite name="itemIcon" depth="3" pos="31,-15" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodChickenWings" color="" tooltip_key="foodChickenWings" />
+=> <rect name="Section20" pos="0,-601" width="50" height="30">
+=> <sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="50" height="32" color="[darkGrey]" type="sliced" fillcenter="true" />
+=> <sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" width="50" height="32" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="backgroundBorder" sprite="menu_empty3px" pos="2,-2" width="21" height="18" color="[black]" type="sliced" fillcenter="false" />
+=> <sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="19" height="16" color="156, 136, 103" type="sliced" fillcenter="true" />
+=> </rect>
+=> </rect>
+=> </rect>
+=> </rect>
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck6)}" />
+=> <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="cntChickenCoop" color="" tooltip_key="cntChickenCoop" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck14)}" />
+=> <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolChickenCoopLamp" color="" tooltip_key="toolChickenCoopLamp" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck18)}" />
+=> <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolChickenCoopRun" color="" tooltip_key="toolChickenCoopRun" />
+=> <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck24)}" />
+=> <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="24" color="[black]" font_size="26" />
+=> <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolChickenCoopNestingBox" color="" tooltip_key="toolChickenCoopNestingBox" />
+=> <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="6" color="[black]" font_size="26" />
+=> <sprite name="itemIcon" depth="3" pos="0,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinBread" color="" tooltip_key="foodPumpkinBread" />
+=> <sprite name="itemIcon" depth="3" pos="50,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodBlueberryPie" color="" tooltip_key="foodBlueberryPie" />
+=> <sprite name="itemIcon" depth="3" pos="100,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodChickenNuggets" color="" tooltip_key="foodChickenNuggets" />
+=> <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="14" color="[black]" font_size="26" />
+=> <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="18" color="[black]" font_size="26" />
+=> <sprite name="itemIcon" depth="3" pos="20,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinCheesecake" color="" tooltip_key="foodPumpkinCheesecake" />
+=> <sprite name="itemIcon" depth="3" pos="80,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodRoadrunnerChickenJerky" color="" tooltip_key="foodRoadrunnerChickenJerky" />
+=> <sprite name="itemIcon" depth="3" pos="20,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSteakAndPotato" color="" tooltip_key="foodSteakAndPotato" />
+=> <sprite name="itemIcon" depth="3" pos="80,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodAshChickenStew" color="" tooltip_key="foodAshChickenStew" />
+=> <sprite name="itemIcon" depth="3" pos="20,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSpaghetti" color="" tooltip_key="foodSpaghetti" />
+=> <sprite name="itemIcon" depth="3" pos="80,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodChickenWings" color="" tooltip_key="foodChickenWings" />
+<= <rect name="checklistWorkstations" depth="3" pos="1210,-110" width="50" height="480" controller="MapStats">
+<= <rect name="checklistElectrician" depth="3" pos="1270,-110" width="50" height="558" controller="MapStats">
+<= <rect name="checklistFood" depth="3" pos="1330,-110" width="50" height="600" controller="MapStats">
+<= <rect name="Section6" pos="0,-150" width="50" height="30">
+<= <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="50" height="30" fillcenter="true" type="filled" fill="{cvar(craftingFoodCheck11)}" />
+<= <sprite name="itemIcon" depth="3" pos="31,-4" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinBread" color="" tooltip_key="foodPumpkinBread" />
+<= <sprite name="itemIcon" depth="3" pos="31,-15" size="11,11" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodBlueberryPie" color="" tooltip_key="foodBlueberryPie" />
+<= <rect name="Section7" pos="0,-180" width="50" height="30">
+<= <rect name="Section8" pos="0,-210" width="50" height="30">
+<= <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinCheesecake" color="" tooltip_key="foodPumpkinCheesecake" />
+<= <rect name="Section9" pos="0,-240" width="50" height="30">
+<= <rect name="Section10" pos="0,-270" width="50" height="30">
+<= <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSteakAndPotato" color="" tooltip_key="foodSteakAndPotato" />
+<= <rect name="Section11" pos="0,-300" width="50" height="30">
+<= <rect name="Section12" pos="0,-330" width="50" height="30">
+<= <rect name="Section13" pos="0,-360" width="50" height="30">
+<= <rect name="Section14" pos="0,-390" width="50" height="30">
+<= <rect name="Section15" pos="0,-420" width="50" height="30">
+<= <rect name="Section16" pos="0,-450" width="50" height="30">
+<= <sprite name="itemIcon" depth="3" pos="26,-5" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSpaghetti" color="" tooltip_key="foodSpaghetti" />
+<= <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck48)}" />
+<= <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="48" color="[black]" font_size="26" />
+<= <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceWaterFilter" color="" tooltip_key="toolDewFilter" />
+<= <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck50)}" />
+<= <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="50" color="[black]" font_size="26" />
+<= <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="chemistryStation" color="" tooltip_key="chemistryStation" />
+<= <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck56)}" />
+<= <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="56" color="[black]" font_size="26" />
+<= <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolApiarySmoker" color="" tooltip_key="toolApiarySmoker" />
+<= <filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck75)}" />
+<= <label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="75" color="[black]" font_size="26" />
+<= <sprite name="itemIcon" depth="3" pos="42,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="toolForgeCrucible" color="" tooltip_key="toolForgeCrucible" />
+<= <sprite name="itemIcon" depth="3" pos="20,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinBread" color="" tooltip_key="foodPumpkinBread" />
+<= <sprite name="itemIcon" depth="3" pos="80,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodBlueberryPie" color="" tooltip_key="foodBlueberryPie" />
+<= <sprite name="itemIcon" depth="3" pos="50,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPumpkinCheesecake" color="" tooltip_key="foodPumpkinCheesecake" />
+<= <sprite name="itemIcon" depth="3" pos="50,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSteakAndPotato" color="" tooltip_key="foodSteakAndPotato" />
+<= <sprite name="itemIcon" depth="3" pos="50,-25" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSpaghetti" color="" tooltip_key="foodSpaghetti" />

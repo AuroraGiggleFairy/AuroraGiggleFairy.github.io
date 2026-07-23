@@ -1,4 +1,4 @@
-#   GigglePack v0.14.3 - *July 22, 2026 3:11am*
+#   GigglePack v0.14.4 - *July 22, 2026 9:19pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
@@ -6,9 +6,9 @@
 - **New mods:**
   - None
 - **Updated existing mods:**
-  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.5.4 -> v6.5.5)
-  - [AGF-HUDPlus-VisualEntityTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip) (v1.0.0 -> v1.0.1)
-  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.3.1 -> v4.3.2)
+  - [AGF-HUDPlus-PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip) (v3.1.1 -> v3.2.0)
+  - [AGF-VP-CraftVitamins](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip) (v2.1.1 -> v2.1.2)
+  - [AGF-VP-FloraHarvester](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip) (v3.0.0 -> v3.0.1)
 - **Renamed mods:**
   - None
 - **Removed mods:**

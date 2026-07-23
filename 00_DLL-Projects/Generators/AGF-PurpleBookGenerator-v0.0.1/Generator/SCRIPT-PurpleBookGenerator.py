@@ -3488,7 +3488,12 @@ def emit_qsection_single(w: W, skill: str, level: int, items: list[str],
                     slot_gap = max(0, max_gap)
             group_w = m * icon_size + (m - 1) * slot_gap
             start_x = (cell_width - group_w) // 2
-            top_pad = max(0, (section_height - icon_size) // 2)
+            # Center within the space below the top-left level chip (30px
+            # tall) rather than the whole cell, so a single row of icons
+            # doesn't crowd/overlap the chip and sits a bit lower instead.
+            chip_h = 30
+            extra = max(0, (section_height - chip_h) - icon_size)
+            top_pad = chip_h + extra // 2
             y_positions = [-top_pad] * m
             x_positions = [start_x + j * (icon_size + slot_gap) for j in range(m)]
         else:
@@ -3858,8 +3863,9 @@ def emit_compact_strip(w: W, sk: Skill, x: int) -> None:
             for i in range(len(row.unlock_levels)):
                 items_here = row.level_items[i] if i < len(row.level_items) else row.items
                 n = max(1, len(items_here))
-                if food_compact and n <= 2:
-                    total_h += 30  # compact side-by-side row (Food only)
+                if food_compact:
+                    sec_h, _ = _food_compact_layout(n)
+                    total_h += sec_h
                 else:
                     total_h += _nontiered_height(n)
     # y=-110 places the strip directly below the 100px tab buttons (which
@@ -3924,6 +3930,45 @@ def _nontiered_height(n: int) -> int:
         return 136
     rows = (n + 2) // 2
     return 10 + rows * 25 + 6
+
+
+def _food_compact_layout(n: int) -> tuple[int, list[tuple[int, int, int]]]:
+    """Compact Food-strip icon layout for one unlock-level chip.
+
+    n=1 keeps the original full-size centered icon; n=2 keeps the original
+    stacked pair. n>=3 (new items added by a game update landing in the same
+    unlock level as an existing pair) packs into a 2-column grid at the same
+    small icon size as the n=2 case, so extra items shrink to fit instead of
+    growing the row far taller than its neighbors in the compact strip.
+
+    Returns (section_height, [(x, y, size), ...]) with one tuple per item.
+    """
+    if n <= 0:
+        return 30, []
+    if n == 1:
+        return 30, [(26, -5, 21)]
+    if n == 2:
+        return 30, [(31, -4, 11), (31, -15, 11)]
+    cols = 2
+    rows = math.ceil(n / cols)
+    icon_size = 11
+    row_gap = 3
+    col_gap = 2
+    area_left, area_w = 24, 26
+    content_h = rows * icon_size + (rows - 1) * row_gap
+    sec_h = max(30, content_h + 4)
+    top_pad = max(2, (sec_h - content_h) // 2)
+    positions: list[tuple[int, int, int]] = []
+    idx = 0
+    for r in range(rows):
+        row_count = min(cols, n - idx)
+        row_w = row_count * icon_size + max(0, row_count - 1) * col_gap
+        row_x = area_left + max(0, (area_w - row_w) // 2)
+        y = -(top_pad + r * (icon_size + row_gap))
+        for c in range(row_count):
+            positions.append((row_x + c * (icon_size + col_gap), y, icon_size))
+            idx += 1
+    return sec_h, positions
 
 
 def _emit_icon_grid(w: W, items: list[str], names: list[str]) -> int:
@@ -4098,11 +4143,14 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
         items = list(row.items)
     names = list(row.level_names[li]) if li < len(row.level_names) else list(row.name_keys)
     n = max(1, len(items))
-    # Compact layout for Food: 22-px tall row, chip + up to 2 icons side-by-side
-    # at 14x14. Keeps one container per unlock level so organization is intact.
-    food_compact = (sk.name == "craftingFood" and n <= 2)
+    # Compact layout for Food: chip + icons packed into the narrow right cell.
+    # Keeps one container per unlock level so organization is intact; extra
+    # items (n>=3, e.g. a game update adding a new item to an existing level)
+    # shrink to fit via _food_compact_layout instead of falling back to the
+    # much taller generic icon grid.
+    food_compact = (sk.name == "craftingFood")
     if food_compact:
-        sec_h = 30
+        sec_h, icon_positions = _food_compact_layout(n)
         w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=50, height=sec_h)
         w.leaf("sprite", depth=1, name="backgroundSection", sprite="menu_empty3px",
                width=50, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
@@ -4143,7 +4191,7 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
                 w.leaf("sprite", name="itemtypeicon", depth=8,
                        pos=f"{ix},{iy}", width=10, height=10,
                        sprite=ic.type_icon, foregroundlayer="true", color="")
-        else:
+        elif n == 2:
             # n=2 vertical stack inset from borders. Sprites have variable
             # built-in padding so use a conservative 11x11 with 4px top/bottom.
             # Container 30 tall: top icon y=-4..-15, bottom icon y=-15..-26.
@@ -4157,6 +4205,26 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
                 ix, iy = cascade[i]
                 ov = FOOD_ICON_OVERRIDES.get(ic.sprite) or FOOD_ICON_OVERRIDES.get(it) or {}
                 sz = ov.get("size", sz_default)
+                ix += ov.get("dx", 0); iy += ov.get("dy", 0)
+                w.leaf("sprite", name="itemIcon", depth=3,
+                       pos=f"{ix},{iy}", size=f"{sz},{sz}",
+                       foregroundlayer="true", atlas="ItemIconAtlas",
+                       sprite=ic.sprite, color=ic.tint, tooltip_key=tip)
+                if ic.type_icon:
+                    w.leaf("sprite", name="itemtypeicon", depth=8,
+                           pos=f"{ix},{iy}", width=8, height=8,
+                           sprite=ic.type_icon, foregroundlayer="true", color="")
+        else:
+            # n>=3: shrink-to-fit grid from _food_compact_layout so extra
+            # items (e.g. a game update adding a 3rd item to an existing
+            # unlock level) pack into the same small footprint instead of
+            # falling back to the much taller generic icon grid.
+            for i, it in enumerate(items):
+                ix, iy, sz_base = icon_positions[i] if i < len(icon_positions) else (31, -15, 11)
+                tip = TOOLTIP_OVERRIDES.get(it) or (it if it in ITEM_ICONS else (names[i] if i < len(names) and names[i] else it))
+                ic = resolve_item_icon(it)
+                ov = FOOD_ICON_OVERRIDES.get(ic.sprite) or FOOD_ICON_OVERRIDES.get(it) or {}
+                sz = ov.get("size", sz_base)
                 ix += ov.get("dx", 0); iy += ov.get("dy", 0)
                 w.leaf("sprite", name="itemIcon", depth=3,
                        pos=f"{ix},{iy}", size=f"{sz},{sz}",
@@ -4292,9 +4360,12 @@ def emit_zoomed_view(w: W, sk: Skill, all_skills: list[Skill]) -> None:
         total_grid_h = food_rows * 100
         total_grid_w = food_cols * cell_width
     elif workstations_mode:
-        # Forge Ahead: flatten to 16 single-slot containers and render as
-        # 4 columns x 4 rows. Container width matches the former 3-up row
-        # container width used by levels 16/20/26.
+        # Forge Ahead: flatten to N single-slot containers and render as
+        # 4 columns x however many rows are needed to fit every unlock slot
+        # (grows automatically as new workstation unlocks are added by game
+        # updates, instead of silently truncating at a fixed 16). Container
+        # width matches the former 3-up row container width used by levels
+        # 16/20/26.
         for row in sk.display:
             if row.is_tiered:
                 continue
@@ -4304,7 +4375,7 @@ def emit_zoomed_view(w: W, sk: Skill, all_skills: list[Skill]) -> None:
                     items = list(row.items)
                 names = list(row.level_names[i]) if i < len(row.level_names) else list(row.name_keys)
                 workstations_slots.append((lvl, items, names))
-        workstations_slots = workstations_slots[:workstations_cols * workstations_rows]
+        workstations_rows = max(1, math.ceil(len(workstations_slots) / workstations_cols))
         cell_width = workstations_cell_w
         total_grid_h = workstations_rows * 100
         total_grid_w = workstations_cols * cell_width

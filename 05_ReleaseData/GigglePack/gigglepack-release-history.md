@@ -1,5 +1,20 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.14.4 (July 22, 2026 9:19pm)
+### Summary: +0 new, ~3 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip) (v3.1.1 -> v3.2.0)
+  - [AGF-VP-CraftVitamins](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip) (v2.1.1 -> v2.1.2)
+  - [AGF-VP-FloraHarvester](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip) (v3.0.0 -> v3.0.1)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.14.3 (July 22, 2026 3:11am)
 ### Summary: +0 new, ~3 updated, =0 renamed, -0 removed
 - **New Mods**
