@@ -1,0 +1,10 @@
+<configs>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']">
+		<display_entry icon="miningMachine" name_key="Automated Harvest" has_quality="false" unlock_level="80" >
+			<unlock_entry item="miningMachine,oilPumpjack" unlock_tier="1" />
+		</display_entry>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="miningMachine,oilPumpjack"/>
+		</effect_group>
+	</append>
+</configs>

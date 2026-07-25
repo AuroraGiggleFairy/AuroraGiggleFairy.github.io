@@ -1,0 +1,12 @@
+<configs>
+	<append xpath="/Sounds">
+		<SoundDataNode name="miner_harvesting">
+			<AudioSource name="#@modfolder:Resources/resources.unity3d?miner_harvesting"/>
+			<AudioClip ClipName="#@modfolder:Resources/resources.unity3d?miner_harvesting"/>
+		</SoundDataNode>
+		<SoundDataNode name="pumpjack_harvesting">
+			<AudioSource name="#@modfolder:Resources/resources.unity3d?pumpjack_harvesting"/>
+			<AudioClip ClipName="#@modfolder:Resources/resources.unity3d?pumpjack_harvesting"/>
+		</SoundDataNode>
+	</append>
+</configs>

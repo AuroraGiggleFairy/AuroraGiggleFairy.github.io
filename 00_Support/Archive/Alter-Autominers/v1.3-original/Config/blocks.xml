@@ -1,0 +1,90 @@
+﻿<configs>
+	<append xpath="/blocks">
+		<block name="autominerTemplate">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="miningMachine"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Class" value="Workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="TakeDelay" value="30"/>
+			<property name="Weight" value="0"/>
+			<property name="UnlockedBy" value="craftingHarvestingTools"/>
+			<property name="MaxDamage" value="2000"/>
+			<property name="PlacementDistance" value="25"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="AllowedRotations" value="Basic90"/>
+			<property name="Model" value="#@modfolder:Resources/resources.unity3d?oilPumpPrefab"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Science,TCScience"/>
+			<property name="TraderStageTemplate" value="midTier1"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedSteel" count="50" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="25" tag="salvageHarvest"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_miningmachine"/>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="50"/>
+				<property name="resourceMechanicalParts" value="25"/>
+			</property>
+		</block>
+		<block name="oilPumpjack">
+			<property name="Extends" value="autominerTemplate" param1="CustomIcon"/>
+			<property class="Workstation">
+				<property name="Autominer"/>
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="oilPumpjack"/>
+			</property>
+			<property name="Autominer"/>
+			<property class="MiningData">
+				<property name="terrOreOilDeposit" value="resourceOilShale"/>
+			</property>
+			<property name="TakeOverride" value="oilPumpjack"/>
+			<property name="AutominerCanBuildOn" value="terrOreOilDeposit"/>
+			<property name="BlockCheckOffset" value="0,-1,3"/>
+			<property name="DescriptionKey" value="oilPumpjackDesc"/>
+			<property name="Model" value="#@modfolder:Resources/resources.unity3d?oilPumpPrefab"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="MultiBlockDim" value="3,7,9"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+		</block>
+		<block name="miningMachine">
+			<property name="Extends" value="autominerTemplate" param1="CustomIcon"/>
+			<property class="Workstation">
+				<property name="Autominer"/>
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="miningMachine"/>
+			</property>
+			<property class="MiningData">
+				<property name="terrOreIron" value="resourceScrapIron"/>
+				<property name="terrOrePotassiumNitrate" value="resourcePotassiumNitratePowder"/>
+				<property name="terrOreLead" value="resourceScrapLead"/>
+				<property name="terrOreCoal" value="resourceCoal"/>
+				<property name="terrTopSoil" value="resourceClayLump"/>
+				<property name="terrDirt" value="resourceClayLump"/>
+				<property name="terrForestGround" value="resourceClayLump"/>
+				<property name="terrBurntForestGround" value="resourceClayLump"/>
+				<property name="terrStone" value="resourceRockSmall"/>
+				<property name="terrSandStone" value="resourceRockSmall"/>
+			</property>
+			<property name="EconomicValue" value="2000"/>
+			<property name="BlockCheckOffset" value="0,-1,3"/>
+			<property name="DescriptionKey" value="miningMachineDesc"/>
+			<property name="Model" value="#@modfolder:Resources/resources.unity3d?minerPrefab"/>
+			<property name="BlockCheckOffset" value="0,-1,0"/>
+			<property name="MultiBlockDim" value="3,6,8"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+		</block>
+	</append>
+</configs>

@@ -198,13 +198,13 @@
     "media_file": "AGF-VP-AdminModdingSupport_01.png"
   },
   "AGF-VP-AlternativeRecipes": {
-    "signature": "5b024d0b659795393a90066480c7342560308db4aa789a825257da17f6875852",
+    "signature": "b2d3991913fca30db013daf1d284fb524969bc9ce6308801b3ac3c53a3412159",
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-VP-AlternativeRecipes_01.png"
   },
   "AGF-VP-AmmoDisassembly": {
-    "signature": "d5e783057f5bcdbd883d1255ceaa896b3a4218d9121fedbaa65a626d91b1b635",
+    "signature": "4f4a73e30ed11e12e546d52e6602d25177028ab57d9761c23023ea23fba2c691",
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-VP-AmmoDisassembly_01.png"
@@ -216,7 +216,7 @@
     "media_file": ""
   },
   "AGF-VP-ArcheryFeathersChange": {
-    "signature": "b8f19c28bd122dfbf43307f9024cf8d24e3cb82e2a98b848397b79262597dd88",
+    "signature": "833f75b081081b4bb5ae976a9ed5ee5755f6e2373afe28e8bf0903f444ef9d98",
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-VP-ArcheryFeathersChange_01.png"
@@ -294,13 +294,13 @@
     "media_file": ""
   },
   "AGF-VP-DrinkableAcid": {
-    "signature": "92642c77cb0c900f05f6dc6a1f26f9daa0076f5bd705116a495194dfb590a7fd",
+    "signature": "15c1c6ae2c2f752431612ba2beb15650b03cf0bffa42d3e7a23ea48c95240fff",
     "version": "3.0.0",
     "has_media": true,
     "media_file": "AGF-VP-DrinkableAcid_01.png"
   },
   "AGF-VP-DyesPlus": {
-    "signature": "9f402515d9aef8274454f7170ee7bfb949110974f410561d3c09c21d7cb19896",
+    "signature": "5a15be09724d19525f497b5d19a568702f9ae19eb848dc6f1169fb9b42e148ea",
     "version": "4.0.0",
     "has_media": true,
     "media_file": "AGF-VP-DyesPlus_01.png"
@@ -342,7 +342,7 @@
     "media_file": ""
   },
   "AGF-VP-MiningPlus": {
-    "signature": "df9cf35177915c2f2a1577014fa39affe41b399bf1224c1c5144ee156801ef15",
+    "signature": "1196c46796aef90819ab752f87eaebe83111deb148f5143b9d85b6d8f37082c9",
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-VP-MiningPlus_01.png"
@@ -366,7 +366,7 @@
     "media_file": "AGF-VP-ModSlotsPlus_01.png"
   },
   "AGF-VP-PaintbrushPlus": {
-    "signature": "b34e58bbbff9aecabb7abe5c3e98c4ec3326f79e31955c4f5bad3822d94c4ed6",
+    "signature": "5c546f0c9a98718a44d93885604482d58e4c4a20dd3de70620a1f3b23bf3c247",
     "version": "3.0.0",
     "has_media": false,
     "media_file": ""
@@ -408,7 +408,7 @@
     "media_file": "AGF-VP-RebundleBundles_01.png"
   },
   "AGF-VP-RecipeRottingFlesh": {
-    "signature": "1b1854cc696ceff6e361e25b1ef4b5021cc167ad314f0088c715cf2fb171baf5",
+    "signature": "ba485a99359e04b1f98c9fa38fcbce791593a88e78a0bcbcc643fc163fbd3be2",
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-VP-RecipeRottingFlesh_01.png"
@@ -468,7 +468,7 @@
     "media_file": ""
   },
   "AGF-VP-TacticalRiflePlus": {
-    "signature": "92936706835cc6378e4bfa97c9a4b1f8433e0930920a4077f1f50b69b5d6a234",
+    "signature": "64746928c009e461ec7a6a9c854d9b650550bbeff0d92ee08a279eb0dc805cbd",
     "version": "3.0.0",
     "has_media": true,
     "media_file": "AGF-VP-TacticalRiflePlus_01.png"
@@ -570,7 +570,7 @@
     "media_file": "AGF-HUDPlus-Weekday_01.png"
   },
   "zzzAGF-Requested-LootStaysOnEmpty": {
-    "signature": "950062758a63afe01a32269e84e6008f9a89652f42dc18487321db52a4bcf8b2",
+    "signature": "509641db9d0cd2d2124e12b4c5776fcdfc7dd3925230d08b6f81a527eb46b38f",
     "version": "1.0.3",
     "has_media": false,
     "media_file": ""

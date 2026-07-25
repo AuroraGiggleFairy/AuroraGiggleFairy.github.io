@@ -1,0 +1,21 @@
+<configs>
+	<append xpath="/xui/ruleset">
+		<window_group name="workstation_oilPumpjack" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+			<window name="windowCraftingListWorkstation" />
+			<window name="windowCraftingQueueWorkstationFuel" />
+		</window_group>	
+		<window_group name="workstation_miningMachine" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+			<window name="windowCraftingQueueWorkstationFuel" />
+		</window_group>
+	</append>
+</configs>

@@ -1,92 +1,92 @@
 # Nexus Mods Automation Capabilities
 
-Last updated: 2026-06-29
+Last updated: 2026-07-25
 Primary evidence:
-- Local OpenAPI snapshot: 06_PublishingSupport/NexusMods/nexusAPI.txt (openapi 3.0.3, info.version 3.0.0)
-- Current script: 06_PublishingSupport/NexusMods/Workflow/SCRIPT-NexusMods.py
+- Local OpenAPI snapshot: `06_PublishingSupport/NexusMods/nexusAPI.txt` (openapi 3.0.3, info.version 3.0.0)
+- Scripts under `06_PublishingSupport/NexusMods/Workflow/`
 
 ## Quick Yes/No Matrix
 
 1. Create a brand new mod page?
-- No. Manual required.
+- No. Manual required once, then add the Nexus ID to `nexusmods-config.json`.
 
-2. Upload mod file binary?
-- Yes.
-- API supports upload sessions and file creation/versioning.
-- Current repo automation: planning/check flow exists, full execute-upload flow is not wired yet.
+2. Update an existing mod with a new file version?
+- Yes (existing pages only — cannot create new mod pages).
+- API: upload session → PUT → finalise → `POST /mod-files/{id}/versions`
+- Wired: `SCRIPT-NexusUpdate.py` / `RUN-Nexus-Update.bat`
+- Gate: requires existing `nexus_mod_id`, resolvable file group, zip in `04_DownloadZips`, and local version newer than Nexus
 
-3. Upload or modify images?
+3. Append changelog entries for a version?
+- Yes (Experimental).
+- API: `POST /mods/{id}/changelogs` (additive only)
+- Wired: after a successful file-version create in the upload pipeline
+
+4. Upload or modify images?
 - No confirmed endpoint in current local Nexus snapshot.
-- Treat as manual for now.
+- Treat as manual.
 
-4. Edit page-level text areas (short description/main body/changelog sections on page)?
-- No confirmed endpoint in current local Nexus snapshot.
-- Treat as manual for now.
+5. Edit page-level text areas (short description / main body)?
+- No confirmed write endpoint for mod page body/summary in current local snapshot.
+- Treat as manual. File-version `description` is only the file note.
 
-5. Read live mod/file/version state for checks and planning?
+6. Read live mod/file/version state for checks and planning?
 - Yes.
-- Current repo automation: Yes.
+- Wired: `SCRIPT-AuditNexusMods.py` / `RUN-Nexus-Status.bat` writes `Nexus-Status.md` + `.json`
+- Discovery: GraphQL author/name list first, then v1 `search=` fallback (old `name=` returns HTTP 422)
+- Matching uses PublishHelp `Details.md` titles (`AGF - V3 - Category - Name`)
+- Also: `--mode check-live` / `discover-groups`
+
+## Day-to-day workflow (minimal Nexus site work)
+
+1. Finish normal publish so `03_ReleaseSource` + `04_DownloadZips` are current.
+2. Run `RUN-Nexus-Status.bat` → reviews Nexus and saves high-confidence IDs into config; open `Nexus-Status.md`.
+3. For mods still listed as First Upload Needed: create the page once on the site, then re-run Status.
+4. Update: `RUN-Nexus-Update.bat` (optional single-mod pilot arg). Prefer one mod first. Validates before live write.
+
+Policy: automate file version + changelog. Leave page body/images alone unless you care enough to fix them manually.
 
 ## New-First Endpoint Policy
 
-1. The script should use latest routes first:
-- GET /mods/{id}/files
-- GET /mod-files/{id}/versions
+1. Prefer latest routes:
+- `GET /mods/{id}/files`
+- `GET /mod-files/{id}/versions`
+- `POST /mod-files/{id}/versions`
+- `POST /mods/{id}/changelogs`
+- `POST /uploads` (+ finalise / poll)
 
-2. Legacy fallback is only for compatibility:
-- GET /mods/{id}/file-update-groups
-- GET /file-update-groups/{id}/versions
-- v1 chain fallback: /games/{game_domain}/mods/{id}/files.json
+2. Legacy fallback only for compatibility:
+- `GET /mods/{id}/file-update-groups`
+- `GET /file-update-groups/{id}/versions`
+- v1: `/games/{game_domain}/mods/{id}/files.json` and search
 
-## Available Data Fields (What You Can Actually Send)
+## Available Write Fields (file/version)
 
-1. Upload session fields
-- filename: string
-- size_bytes: integer
+Create mod file version (`POST /mod-files/{id}/versions`):
+- `upload_id`, `name` (max 50, charset-limited), `version` (max 50), `description` (nullable)
+- `file_category`: main | optional | miscellaneous
+- `primary_mod_manager_download`, `allow_mod_manager_download`, `show_requirements_pop_up`
+- `archive_existing_file`, `previous_version_id`, `update_mod_version`
 
-2. Create mod file fields (POST /mod-files)
-- upload_id: uuid string
-- mod_id: string
-- name: string, max 50, pattern ^[a-zA-Z0-9 _'().-]+$
-- version: string, max 50, pattern ^[a-zA-Z0-9.-]+$
-- description: string (nullable)
-- file_category: main | optional | miscellaneous
-- primary_mod_manager_download: boolean
-- allow_mod_manager_download: boolean
-- show_requirements_pop_up: boolean
+Changelog append (`POST /mods/{id}/changelogs`):
+- `version` + `entries[]` (1–50 strings). Additive; repeats append more lines.
 
-3. Create mod file version fields (POST /mod-files/{id}/versions)
-- upload_id: uuid string
-- name: string, max 50, pattern ^[a-zA-Z0-9 _'().-]+$
-- version: string, max 50, pattern ^[a-zA-Z0-9.-]+$
-- description: string (nullable)
-- file_category: main | optional | miscellaneous
-- primary_mod_manager_download: boolean
-- allow_mod_manager_download: boolean
-- show_requirements_pop_up: boolean
-- archive_existing_file: boolean
-- previous_version_id: string (nullable)
+Upload session:
+- `filename`, `size_bytes`
 
 ## Box-By-Box Practical Mapping
 
-1. Short description
-- Page-level short description: manual (no confirmed write endpoint).
-- Closest API field: file/version description (text string).
+1. Short description / main page body / images
+- Manual (no confirmed write endpoint).
 
-2. Main section (long body)
-- Manual (no confirmed page-body write endpoint).
+2. Mod file notes
+- Supported via file/version `description`.
 
-3. Changelog section
-- Manual as a page section.
-- Closest API field: file/version description (text string), if you choose to place release notes there.
+3. Changelog section on the mod page
+- Supported via `POST /mods/{id}/changelogs` (wired after upload).
 
-4. Mod file notes
-- Supported via description on file/version create endpoints.
-- Format contract in schema: string. Markdown/HTML rendering behavior is not defined in schema.
-
-5. Images (thumbnail/gallery/banner)
-- Manual (no confirmed image upload/update endpoint in current local snapshot).
+4. Version number users see on the page
+- Prefer `update_mod_version: true` when creating a new file version.
 
 ## Stability Note
 
-Many v3 routes are tagged Experimental. Keep live writes behind explicit run modes and dry-run checks.
+Many v3 routes are tagged Experimental. Keep live writes behind dry-run validation and explicit confirm bats. Prefer single-mod pilot uploads before batch.

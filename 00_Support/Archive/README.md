@@ -28,6 +28,19 @@ Every archived item should have an entry below stating: original path, archived 
 - **Replacement:** superseded by the current, actively maintained `05_GigglePackReleaseData/ReadmeSystem/Templates/TEMPLATE-ModReadMes.md` and its change history in `05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-ReadmeSystem.md` - the proposed reordering was never adopted into the live template.
 - **Safe to delete later:** likely yes - it's a stale planning discussion, not referenced by any script. Kept for now rather than deleted immediately (archive first, delete later).
 
+## `Alter-Autominers`
+
+- **Original path:** Nexus Autominers 4324 v1.3 by Alter (`Downloads\...\Alter_Autominers`), plus live test folder `Mods\Alter_Autominers-7d2dv3` (+ zip)
+- **Archived:** 2026-07-23
+- **Last known purpose:** consolidated third-party Autominers work (not an AGF mod). Contains:
+  - `Alter_Autominers-7d2dv3/` — last live-tested package moved out of the game Mods folder
+  - `Alter_Autominers-7d2dv3.zip` — zip from the live Mods folder
+  - `v1.3-original/` — pristine Nexus v1.3 baseline
+  - `v1.4-updated/` — port package + `Source/` used for the rebuild
+  - `Decompiled-DLL/` — decompiled original `Autominers.dll` sources (moved from `WorkspaceData/References/Decompiled-DLLs/Autominers`)
+- **Replacement:** none — external/community request only; do **not** promote into `01_Draft` / `02_ActiveBuild` / `00_DLL-Projects`.
+- **Safe to delete later:** yes, once no longer needed locally.
+
 ---
 
 See `WORKSPACE-ORGANIZATION-PLAN.md` / handoff for domain intent. Current path: `00_Support/Archive/` (formerly `90_Archive`).

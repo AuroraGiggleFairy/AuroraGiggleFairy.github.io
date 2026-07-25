@@ -2,7 +2,7 @@
                           AGF-VP-DRINKABLEACID                          
 ========================================================================
 
-AGF MOD GUIDE
+Drink acid for risky fun with buffs, damage, and trippy screen effects.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

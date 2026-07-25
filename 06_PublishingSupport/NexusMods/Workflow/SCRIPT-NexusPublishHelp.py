@@ -100,6 +100,56 @@ def parse_modinfo(modinfo_path: str, fallback_name: str) -> Tuple[str, str, str]
     return mod_name, mod_version, description
 
 
+def is_invalid_short_description(value: str) -> bool:
+    text = normalize_single_line_text(value)
+    if not text:
+        return True
+    upper = text.upper()
+    return upper in {
+        "AGF MOD GUIDE",
+        "ADD MOD DESCRIPTION HERE.",
+        "ADD MOD DESCRIPTION HERE",
+        "MISSINGDATA",
+    } or upper.startswith("NOTE:")
+
+
+def extract_readme_one_line_summary(readme_text: str) -> str:
+    """README.txt one-liner under the title banner is the source of truth for short desc."""
+    if not readme_text:
+        return ""
+    lines = readme_text.splitlines()
+    h1_dividers = [
+        i for i, raw in enumerate(lines)
+        if len(raw.strip()) >= 10 and re.fullmatch(r"=+", raw.strip())
+    ]
+    start_idx = h1_dividers[1] + 1 if len(h1_dividers) >= 2 else 0
+    end_idx = len(lines)
+    for i in range(start_idx, len(lines)):
+        stripped = lines[i].strip()
+        if len(stripped) >= 10 and re.fullmatch(r"-+", stripped):
+            end_idx = i
+            break
+    for i in range(start_idx, end_idx):
+        stripped = normalize_single_line_text(lines[i])
+        if not stripped or re.fullmatch(r"[=-]+", stripped):
+            continue
+        if is_invalid_short_description(stripped):
+            continue
+        return stripped
+    return ""
+
+
+def resolve_publish_description(readme_text: str, modinfo_description: str) -> str:
+    """Prefer README one-liner; fall back to ModInfo Description only if README is missing/invalid."""
+    readme_summary = extract_readme_one_line_summary(readme_text)
+    if readme_summary:
+        return readme_summary
+    modinfo_summary = normalize_single_line_text(modinfo_description)
+    if modinfo_summary and not is_invalid_short_description(modinfo_summary):
+        return modinfo_summary
+    return ""
+
+
 def extract_game_version_from_text(text: str) -> str:
     normalized = normalize_multiline_text(text)
     if not normalized:
@@ -462,7 +512,8 @@ def _bbcode_features(text: str) -> str:
         if s.startswith("- "):
             bullet = s[2:]
             if bullet:
-                lines.append(f"[*][size=4]{bullet}[/size][/*]")
+                # Match Mod Scope list items: no per-bullet size override.
+                lines.append(f"[*]{bullet}[/*]")
     lines.append("[/list]")
     return "\n".join(lines)
 

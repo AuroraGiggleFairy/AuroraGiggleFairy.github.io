@@ -1,0 +1,39 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="miningMachine" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedEngineering">
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMechanicalParts" count="100"/>
+			<ingredient name="resourceSpring" count="50"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="smallEngine" count="3"/>
+		</recipe> 
+		<recipe name="oilPumpjack" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkAdvancedEngineering">
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMechanicalParts" count="100"/>
+			<ingredient name="resourceSpring" count="50"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="smallEngine" count="3"/>
+		</recipe>
+		<recipe name="resourceOilShale" count="5" craft_time="5" is_trackable="false" craft_area="oilPumpjack">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+		<recipe name="resourceCoal" count="5" craft_time="5" is_trackable="false" craft_area="miningMachine">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+		<recipe name="resourceScrapIron" count="5" craft_time="5" is_trackable="false" craft_area="miningMachine">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+		<recipe name="resourcePotassiumNitratePowder" count="5" is_trackable="false" craft_time="5" craft_area="miningMachine">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+		<recipe name="resourceScrapLead" count="5" craft_time="5" is_trackable="false" craft_area="miningMachine">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+		<recipe name="resourceClayLump" count="5" craft_time="5" is_trackable="false" craft_area="miningMachine">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+		<recipe name="resourceRockSmall" count="5" craft_time="5" is_trackable="false" craft_area="miningMachine">
+			<ingredient name="ammoGasCan" count="1"/>
+		</recipe>
+	</append>
+</configs>

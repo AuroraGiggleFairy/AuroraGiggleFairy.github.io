@@ -2,7 +2,7 @@
                        AGF-VP-RECIPEROTTINGFLESH                        
 ========================================================================
 
-AGF MOD GUIDE
+Campfire recipe for rotting flesh from raw meat and murky water.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

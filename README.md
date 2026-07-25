@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*July 23, 2026, 4:07 PM EST*
+*July 25, 2026, 4:14 AM EST*
 
 ## **1. About AGF**
 
@@ -417,7 +417,7 @@ Faster hold-to-use Block Replace, Dev XP books, harvest test blocks.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-AlternativeRecipes_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-AlternativeRecipes.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Alternative Recipes</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AlternativeRecipes.zip">Download</a><br>
-AGF MOD GUIDE
+Alt recipes for cobblestone from clay/stone and first aid from cloth.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -427,7 +427,7 @@ AGF MOD GUIDE
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-AmmoDisassembly_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-AmmoDisassembly.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Ammo Disassembly</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">Download</a><br>
-AGF MOD GUIDE
+Scrap ammo into ingredient bundles; combine into x100 or x1000 packs.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -437,7 +437,7 @@ AGF MOD GUIDE
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-ArcheryFeathersChange_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-ArcheryFeathersChange.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Archery Feathers Change</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ArcheryFeathersChange.zip">Download</a><br>
-AGF MOD GUIDE
+Feathers replace plastic in archery ammo; craft feathers from plastic.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -507,7 +507,7 @@ Unlocks vitamin crafting at Medical 30, matching herbal antibiotics.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-DrinkableAcid_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-DrinkableAcid.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Drinkable Acid</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">Download</a><br>
-AGF MOD GUIDE
+Drink acid for risky fun with buffs, damage, and trippy screen effects.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -517,7 +517,7 @@ AGF MOD GUIDE
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-DyesPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-DyesPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Dyes Plus</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">Download</a><br>
-AGF MOD GUIDE
+Adds 27 dyes; craft any dye for 15 paint, or scrap to swap colors.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -577,7 +577,7 @@ Raises the max player level cap from 300 to 500.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-MiningPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-MiningPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Mining Plus</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">Download</a><br>
-AGF MOD GUIDE
+Mining perk unlocks clay/sand bundles; slightly more sand from mining.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -607,7 +607,7 @@ Rebalances mod slots: fewer tier-up losses, max slots raised to 6.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-PaintbrushPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-PaintbrushPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Paintbrush Plus</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PaintbrushPlus.zip">Download</a><br>
-AGF MOD GUIDE
+Painting costs no paint, with fast hold-to-paint and reduced reach.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -647,7 +647,7 @@ Unlocking a bundle recipe lets you rebundle full stacks of that item.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-RecipeRottingFlesh_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-RecipeRottingFlesh.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Recipe Rotting Flesh</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RecipeRottingFlesh.zip">Download</a><br>
-AGF MOD GUIDE
+Campfire recipe for rotting flesh from raw meat and murky water.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -717,7 +717,7 @@ Player dropped backpack after death stays for 5 hours instead of 1.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-TacticalRiflePlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-TacticalRiflePlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Tactical Rifle Plus</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TacticalRiflePlus.zip">Download</a><br>
-AGF MOD GUIDE
+Tactical Rifle is full-auto with magazine raised from 30 to 36.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -914,6 +914,7 @@ Makes buff pop-up notifications about half the vanilla size.
 <td valign="top">
 <b>AGF Loot Stays On Empty</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip">Download</a><br>
 Loot stays after emptying.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
 

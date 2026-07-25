@@ -2,7 +2,7 @@
                        AGF-VP-ALTERNATIVERECIPES                        
 ========================================================================
 
-AGF MOD GUIDE
+Alt recipes for cobblestone from clay/stone and first aid from cloth.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

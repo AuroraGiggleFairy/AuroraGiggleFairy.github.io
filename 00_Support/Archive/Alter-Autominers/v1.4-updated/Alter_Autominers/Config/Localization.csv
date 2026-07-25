@@ -1,0 +1,12 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+oilPumpjack,blocks,Block,,,,"Oil Pumpjack",,,,,,,,,,,,,
+oilPumpjackDesc,blocks,Block,,,,"Build an Oil Pumpjack on top of a vein of Oil Shale ore to slowly mine it over time.\nNeeds fuel to work.",,,,,,,,,,,,,
+miningMachine,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+miningMachineDesc,blocks,Block,,,,"Build a Mining Machine on top of a vein of Potassium Nitrate, Lead, Coal or Iron ore to slowly mine it over time.\nNeeds fuel to work.",,,,,,,,,,,,,
+miningMachine_Iron,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+miningMachine_PotassiumNitrate,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+miningMachine_Lead,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+miningMachine_Coal,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+miningMachine_Clay,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+miningMachine_Rock,blocks,Block,,,,"Mining Machine",,,,,,,,,,,,,
+lblContextActionMHarvest,UI,Tooltip,,,,"Harvest",,,,,,,,,,,,,

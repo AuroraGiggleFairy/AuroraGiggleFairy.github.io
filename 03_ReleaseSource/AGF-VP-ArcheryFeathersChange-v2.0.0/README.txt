@@ -2,7 +2,7 @@
                       AGF-VP-ARCHERYFEATHERSCHANGE                      
 ========================================================================
 
-AGF MOD GUIDE
+Feathers replace plastic in archery ammo; craft feathers from plastic.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

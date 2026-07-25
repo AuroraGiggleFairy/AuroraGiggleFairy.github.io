@@ -29,6 +29,7 @@ DEFAULT_UPLOAD_PLAN_OUTPUT_PATH = os.path.join(NEXUS_WORKFLOW_DIR, "nexusmods-up
 DEFAULT_MANUAL_PACKET_DIR = os.path.join(NEXUS_ROOT_DIR, "ManualPackets")
 DEFAULT_BBCODE_OUTPUT_DIR = os.path.join(NEXUS_ROOT_DIR, "ModDetails")
 DEFAULT_PRIVATE_API_KEY_PATH = os.path.join(NEXUS_ROOT_DIR, "nexus-api-key.private.txt")
+PUBLISHHELP_DIR = os.path.join(NEXUS_ROOT_DIR, "PublishHelp")
 AGF_COLOR_LINE = "#5F5980"
 AGF_COLOR_HEADING = "#8DB580"
 AGF_COLOR_HIGHLIGHT = "#DDCDFA"
@@ -351,8 +352,12 @@ def build_release_plan(config: Dict[str, object]) -> Dict[str, object]:
         if not isinstance(config_entry, dict):
             config_entry = {}
 
-        intent = normalize_intent(config_entry.get("intent", "review"))
         nexus_mod_id = safe_int(config_entry.get("nexus_mod_id", 0))
+        # Existing Nexus pages are always treated as updates (API cannot create new mod pages).
+        default_intent = "update" if nexus_mod_id > 0 else "review"
+        intent = normalize_intent(config_entry.get("intent", default_intent))
+        if nexus_mod_id > 0 and intent == "review":
+            intent = "update"
         action, notes = resolve_action(intent, nexus_mod_id)
 
         zip_path = zip_paths.get(base_name, "")
@@ -392,7 +397,13 @@ def build_release_plan(config: Dict[str, object]) -> Dict[str, object]:
         generated_overview = build_feature_driven_overview(base_summary, feature_bullets, tested_game_version)
         brief_overview = brief_overview_override or generated_overview or base_summary
         detailed_description = detailed_description_override or readable_readme_body or markdown_readme_body or description_override or release_entry["description"]
-        file_description = file_description_override or (
+        publishhelp = parse_publishhelp_details(base_name)
+        publishhelp_file_name = str(publishhelp.get("file_name", "")).strip()
+        publishhelp_file_description = normalize_multiline_text(
+            str(publishhelp.get("file_description", "")).strip()
+        )
+        # Prefer PublishHelp Details.md "File Details" description (includes Mod Type).
+        file_description = file_description_override or publishhelp_file_description or (
             f"{normalize_single_line_text(release_entry['description']).rstrip('.')}. Last tested on 7d2d Version {tested_game_version}."
             if tested_game_version and normalize_single_line_text(release_entry["description"])
             else description_override or release_entry["description"]
@@ -413,6 +424,8 @@ def build_release_plan(config: Dict[str, object]) -> Dict[str, object]:
             "brief_overview": brief_overview,
             "detailed_description": detailed_description,
             "file_description": file_description,
+            "publishhelp_file_name": publishhelp_file_name,
+            "publishhelp_details_path": str(publishhelp.get("path", "")),
             "tested_game_version": tested_game_version,
             "intent": intent,
             "action": action,
@@ -851,6 +864,58 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
     }
 
 
+def parse_publishhelp_details(mod_name: str) -> Dict[str, object]:
+    """Read file name/description/changelog from PublishHelp/<mod>/Details.md."""
+    details_path = os.path.join(PUBLISHHELP_DIR, mod_name, "Details.md")
+    result: Dict[str, object] = {
+        "path": details_path,
+        "file_name": "",
+        "file_version": "",
+        "file_description": "",
+        "changelog_blocks": [],
+    }
+    if not mod_name or not os.path.isfile(details_path):
+        return result
+
+    text = load_text_file(details_path)
+    if not text:
+        return result
+
+    file_section_match = re.search(
+        r"(?ms)^##\s*2\)\s*File Details\s*\n(.*?)(?=^##\s*\d|\Z)",
+        text,
+    )
+    if file_section_match:
+        text_blocks = re.findall(r"```text\s*\n(.*?)```", file_section_match.group(1), re.DOTALL)
+        if len(text_blocks) >= 1:
+            result["file_name"] = normalize_single_line_text(text_blocks[0])
+        if len(text_blocks) >= 2:
+            result["file_version"] = normalize_single_line_text(text_blocks[1])
+        if len(text_blocks) >= 3:
+            result["file_description"] = normalize_multiline_text(text_blocks[2].strip())
+
+    changelog_section_match = re.search(
+        r"(?ms)^##\s*3\)\s*Changelog\s*\n(.*?)(?=^##\s*\d|\Z)",
+        text,
+    )
+    changelog_blocks: List[Tuple[str, List[str]]] = []
+    if changelog_section_match:
+        for match in re.finditer(
+            r"(?ms)^###\s*v(\d+(?:\.\d+)+)\s*\n```text\s*\n(.*?)```",
+            changelog_section_match.group(1),
+        ):
+            version = match.group(1).strip()
+            bullets = [
+                normalize_single_line_text(line)
+                for line in match.group(2).splitlines()
+                if normalize_single_line_text(line)
+            ]
+            if version and bullets:
+                changelog_blocks.append((version, bullets))
+    result["changelog_blocks"] = changelog_blocks
+    return result
+
+
 def extract_changelog_blocks(readme_path: str) -> List[Tuple[str, List[str]]]:
     text = load_text_file(readme_path)
     if not text:
@@ -882,29 +947,79 @@ def extract_changelog_blocks(readme_path: str) -> List[Tuple[str, List[str]]]:
     return blocks
 
 
-def build_changelog_delta(readme_path: str, from_version: str, to_version: str) -> List[Dict[str, object]]:
-    blocks = extract_changelog_blocks(readme_path)
+def bullets_from_readme_changelog_lines(lines: List[str]) -> List[str]:
+    """Turn README changelog lines into full bullets, joining wrapped continuations."""
+    bullets: List[str] = []
+    current = ""
+    for line in lines:
+        stripped = line.strip()
+        if not stripped or re.match(r"^-{2,}$", stripped):
+            if current:
+                bullets.append(normalize_single_line_text(current))
+                current = ""
+            continue
+        if stripped.startswith("- "):
+            if current:
+                bullets.append(normalize_single_line_text(current))
+            current = stripped[2:]
+            continue
+        if current:
+            # Wrapped continuation (e.g. "performance." on the next indented line).
+            current = f"{current} {stripped}"
+    if current:
+        bullets.append(normalize_single_line_text(current))
+    return bullets
+
+
+def filter_changelog_delta(
+    blocks: List[Tuple[str, List[str]]],
+    from_version: str,
+    to_version: str,
+    *,
+    lines_are_bullets: bool = False,
+) -> List[Dict[str, object]]:
+    """Keep changelog versions strictly after from_version up through to_version."""
     delta: List[Dict[str, object]] = []
     for version, lines in blocks:
         if compare_versions(version, from_version) <= 0:
             continue
         if compare_versions(version, to_version) > 0:
             continue
-        # Extract bullet lines, excluding separator lines (just dashes/hyphens)
-        bullets: List[str] = []
-        for line in lines:
-            stripped = line.strip()
-            if not stripped:
-                continue
-            # Skip separator lines like "---" or "----" etc
-            if re.match(r"^-{2,}$", stripped):
-                continue
-            if stripped.startswith("- "):
-                bullet_text = normalize_single_line_text(stripped[2:])
-                if bullet_text:
-                    bullets.append(bullet_text)
-        delta.append({"version": version, "bullets": bullets})
+        if lines_are_bullets:
+            bullets = [normalize_single_line_text(item) for item in lines if normalize_single_line_text(item)]
+        else:
+            bullets = bullets_from_readme_changelog_lines(lines)
+        if bullets:
+            delta.append({"version": version, "bullets": bullets})
     return delta
+
+
+def build_changelog_delta(readme_path: str, from_version: str, to_version: str) -> List[Dict[str, object]]:
+    blocks = extract_changelog_blocks(readme_path)
+    return filter_changelog_delta(blocks, from_version, to_version, lines_are_bullets=False)
+
+
+def build_changelog_delta_for_mod(
+    mod_name: str,
+    readme_path: str,
+    from_version: str,
+    to_version: str,
+) -> List[Dict[str, object]]:
+    """Prefer PublishHelp Details.md changelog (already unwrapped), else README."""
+    publishhelp = parse_publishhelp_details(mod_name)
+    help_blocks = publishhelp.get("changelog_blocks", [])
+    if isinstance(help_blocks, list) and help_blocks:
+        typed_blocks: List[Tuple[str, List[str]]] = []
+        for item in help_blocks:
+            if not isinstance(item, tuple) or len(item) != 2:
+                continue
+            version, bullets = item
+            if isinstance(bullets, list):
+                typed_blocks.append((str(version), [str(b) for b in bullets]))
+        delta = filter_changelog_delta(typed_blocks, from_version, to_version, lines_are_bullets=True)
+        if delta:
+            return delta
+    return build_changelog_delta(readme_path, from_version, to_version)
 
 
 def build_file_changelog_summary(changelog_delta: List[Dict[str, object]]) -> str:
@@ -1256,11 +1371,24 @@ def prepare_upload_plan(plan: Dict[str, object], config: Dict[str, object], only
                 latest_file_id = safe_int(selected_chain.get("latest_file_id", 0))
                 latest_file_name = str(selected_chain.get("latest_file_name", "")).strip()
 
-            changelog_delta = build_changelog_delta(str(entry.get("readme_path", "")), live_version, local_version)
+            changelog_delta = build_changelog_delta_for_mod(
+                mod_name,
+                str(entry.get("readme_path", "")),
+                live_version,
+                local_version,
+            )
             file_size_bytes = os.path.getsize(zip_path)
             brief_overview = str(entry.get("brief_overview", "")).strip()
             detailed_description = normalize_multiline_text(str(entry.get("detailed_description", "")))
-            file_description = normalize_multiline_text(str(entry.get("file_description", "")))
+            # Refresh from PublishHelp at prepare-time so File Details stay authoritative.
+            publishhelp = parse_publishhelp_details(mod_name)
+            publishhelp_file_name = str(publishhelp.get("file_name", "")).strip() or str(
+                entry.get("publishhelp_file_name", "")
+            ).strip()
+            file_description = normalize_multiline_text(
+                str(publishhelp.get("file_description", "")).strip()
+                or str(entry.get("file_description", "")).strip()
+            )
             tested_game_version = normalize_single_line_text(str(entry.get("tested_game_version", "")))
             file_changelog_summary = build_file_changelog_summary(changelog_delta)
             upload_target = {
@@ -1281,6 +1409,7 @@ def prepare_upload_plan(plan: Dict[str, object], config: Dict[str, object], only
                 "brief_overview": brief_overview,
                 "detailed_description": detailed_description,
                 "file_description": file_description,
+                "publishhelp_file_name": publishhelp_file_name,
                 "tested_game_version": tested_game_version,
                 "file_changelog_summary": file_changelog_summary,
                 "changelog_delta": changelog_delta,
@@ -1421,7 +1550,7 @@ def generate_bbcode_full_description(
         for line in features.splitlines():
             bullet = line.strip().lstrip("- ")
             if bullet:
-                w(f"[*][size=4]{bullet}[/size][/*]")
+                w(f"[*]{bullet}[/*]")
         w("[/list]")
         w()
         w(AGF_DIVIDER)
@@ -1770,6 +1899,147 @@ def poll_upload_available(api_base_url: str, headers: Dict[str, str], upload_id:
     return False
 
 
+FILE_NAME_MAX_LEN = 50
+FILE_NAME_PATTERN = re.compile(r"^[a-zA-Z0-9 _'().-]+$")
+FILE_VERSION_PATTERN = re.compile(r"^[a-zA-Z0-9.-]+$")
+
+
+def build_publishhelp_display_name(mod_name: str, tested_game_version: str = "3") -> str:
+    """Match SCRIPT-NexusPublishHelp / PublishHelp Details.md page+file title wording."""
+    parts = mod_name.split("-", 2)
+    if len(parts) >= 3:
+        name_part = parts[2].replace("-", " ")
+        name_display = f"{parts[1]} - {name_part}"
+    else:
+        name_display = mod_name.replace("-", " ")
+    game = re.sub(r"[^a-zA-Z0-9.-]+", "", str(tested_game_version or "3")).strip() or "3"
+    return f"AGF - V{game} - {name_display}"
+
+
+def build_safe_file_name(mod_name: str, version: str, tested_game_version: str = "") -> str:
+    """Build a Nexus file name from PublishHelp wording, fitting maxLength=50 + charset."""
+    # PublishHelp uses titles like: AGF - V3 - NoEAC - Toolbelt12Slots
+    # Version is a separate Nexus field, so keep it out of the name when possible.
+    game = str(tested_game_version or "3").strip() or "3"
+    primary = build_publishhelp_display_name(mod_name, game)
+    version_clean = re.sub(r"[^a-zA-Z0-9.-]+", "", version or "").strip() or "0.0.0"
+
+    candidates = [
+        primary,
+        re.sub(r"\s*-\s*", " ", primary).strip(),  # shorter spacing if needed
+        f"{primary} {version_clean}",
+    ]
+
+    # Progressive shortening: drop leading "AGF - V3 - " pieces if still too long.
+    short_body = primary
+    if short_body.upper().startswith("AGF - V"):
+        short_body = re.sub(r"^AGF\s*-\s*V\d+\s*-\s*", "", short_body, flags=re.IGNORECASE).strip()
+        candidates.append(f"AGF {short_body}")
+        candidates.append(short_body)
+
+    for candidate in candidates:
+        cleaned = re.sub(r"[^a-zA-Z0-9 _'().-]+", " ", candidate)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        if cleaned and len(cleaned) <= FILE_NAME_MAX_LEN and FILE_NAME_PATTERN.fullmatch(cleaned):
+            return cleaned
+
+    fallback = re.sub(r"[^a-zA-Z0-9 _'().-]+", "", primary).strip()
+    fallback = re.sub(r"\s+", " ", fallback)
+    return fallback[:FILE_NAME_MAX_LEN].rstrip(" .-_")
+
+
+def validate_file_version_fields(name: str, version: str) -> List[str]:
+    errors: List[str] = []
+    if not name:
+        errors.append("file name is empty")
+    elif len(name) > FILE_NAME_MAX_LEN:
+        errors.append(f"file name length {len(name)} > {FILE_NAME_MAX_LEN}")
+    elif not FILE_NAME_PATTERN.fullmatch(name):
+        errors.append(f"file name has invalid characters: {name!r}")
+    if not version:
+        errors.append("version is empty")
+    elif len(version) > FILE_NAME_MAX_LEN:
+        errors.append(f"version length {len(version)} > {FILE_NAME_MAX_LEN}")
+    elif not FILE_VERSION_PATTERN.fullmatch(version):
+        errors.append(f"version has invalid characters: {version!r}")
+    return errors
+
+
+def changelog_entries_from_delta(changelog_delta: object) -> List[str]:
+    entries: List[str] = []
+    if not isinstance(changelog_delta, list):
+        return entries
+    for block in changelog_delta:
+        if not isinstance(block, dict):
+            continue
+        bullets = block.get("bullets", [])
+        if not isinstance(bullets, list):
+            continue
+        for bullet in bullets:
+            text = str(bullet).strip()
+            if text:
+                entries.append(text)
+    # API allows max 50 entries
+    return entries[:50]
+
+
+def resolve_upload_file_name(mod_name: str, local_version: str, tested_ver: str, preferred_name: str = "") -> str:
+    """Prefer PublishHelp File Details name; fall back to safe generated name."""
+    candidate = normalize_single_line_text(preferred_name)
+    if candidate and not validate_file_version_fields(candidate, local_version):
+        return candidate
+    publishhelp_name = str(parse_publishhelp_details(mod_name).get("file_name", "")).strip()
+    if publishhelp_name and not validate_file_version_fields(publishhelp_name, local_version):
+        return publishhelp_name
+    return build_safe_file_name(mod_name, local_version, tested_ver)
+
+
+def append_changelog_delta(
+    api_base_url: str,
+    headers: Dict[str, str],
+    mod_id: str,
+    changelog_delta: object,
+    dry_run: bool,
+) -> bool:
+    """Append every version block in the delta (oldest first) so Nexus gets the full span."""
+    if not isinstance(changelog_delta, list) or not changelog_delta:
+        print("[CHANGELOG] No changelog entries to append.")
+        return True
+
+    blocks = [block for block in changelog_delta if isinstance(block, dict)]
+    blocks.sort(key=lambda block: version_sort_key(str(block.get("version", "0.0.0"))))
+
+    for block in blocks:
+        version = str(block.get("version", "")).strip()
+        bullets = block.get("bullets", [])
+        entries = [str(item).strip() for item in bullets if str(item).strip()] if isinstance(bullets, list) else []
+        if not version or not entries:
+            continue
+        if not add_mod_changelog_entries(api_base_url, headers, mod_id, version, entries, dry_run):
+            return False
+    return True
+
+
+def version_sort_key(version: str) -> Tuple[int, ...]:
+    parts = re.findall(r"\d+", str(version or "0"))
+    return tuple(int(part) for part in parts) if parts else (0,)
+
+
+def resolve_mod_file_id(mod_entry: Optional[Dict[str, object]], entry_live: Dict[str, object]) -> str:
+    if mod_entry:
+        configured = str(mod_entry.get("update_group_id", "")).strip()
+        if configured:
+            return configured
+    update_groups = entry_live.get("update_groups", [])
+    if isinstance(update_groups, list) and update_groups:
+        active = next((group for group in update_groups if isinstance(group, dict) and bool(group.get("is_active", False))), None)
+        chosen = active if isinstance(active, dict) else (
+            update_groups[0] if isinstance(update_groups[0], dict) else {}
+        )
+        return str(chosen.get("id", "")).strip()
+    return ""
+
+
 def create_mod_file_version(
     api_base_url: str,
     headers: Dict[str, str],
@@ -1782,6 +2052,12 @@ def create_mod_file_version(
     dry_run: bool,
 ) -> bool:
     """POST /mod-files/{id}/versions — create the new version on the mod file."""
+    field_errors = validate_file_version_fields(name, version)
+    if field_errors:
+        for err in field_errors:
+            print(f"[ERROR] Invalid file version fields: {err}")
+        return False
+
     if dry_run:
         print(f"[DRYRUN] Would create mod file version:")
         print(f"[DRYRUN]   POST {api_base_url}/mod-files/{mod_file_id}/versions")
@@ -1799,6 +2075,7 @@ def create_mod_file_version(
         "primary_mod_manager_download": True,
         "allow_mod_manager_download": True,
         "archive_existing_file": True,
+        "update_mod_version": True,
     }
     if description:
         body["description"] = description
@@ -1818,208 +2095,261 @@ def create_mod_file_version(
     return True
 
 
+def add_mod_changelog_entries(
+    api_base_url: str,
+    headers: Dict[str, str],
+    mod_id: str,
+    version: str,
+    entries: List[str],
+    dry_run: bool,
+) -> bool:
+    """POST /mods/{id}/changelogs — append changelog entries for a version (additive)."""
+    cleaned = [str(item).strip() for item in entries if str(item).strip()]
+    if not cleaned:
+        print("[CHANGELOG] No changelog entries to append.")
+        return True
+    if not mod_id:
+        print("[ERROR] Cannot append changelog: missing mod id")
+        return False
+    if not FILE_VERSION_PATTERN.fullmatch(version or ""):
+        print(f"[ERROR] Cannot append changelog: invalid version {version!r}")
+        return False
+
+    if dry_run:
+        print(f"[DRYRUN] Would append {len(cleaned)} changelog entries:")
+        print(f"[DRYRUN]   POST {api_base_url}/mods/{mod_id}/changelogs")
+        print(f"[DRYRUN]   version={version}")
+        for item in cleaned[:5]:
+            print(f"[DRYRUN]   - {item[:120]}")
+        if len(cleaned) > 5:
+            print(f"[DRYRUN]   ... ({len(cleaned) - 5} more)")
+        return True
+
+    url = f"{api_base_url}/mods/{mod_id}/changelogs"
+    body = {"version": version, "entries": cleaned[:50]}
+    try:
+        payload = request_json(url, headers, method="POST", body=body)
+        data = extract_data_payload(payload)
+        if not isinstance(data, dict):
+            print("[ERROR] Failed to append changelog entries")
+            return False
+        print(f"[CHANGELOG] Appended {len(cleaned)} entries for v{version}")
+        return True
+    except urllib.error.HTTPError as ex:
+        print(f"[ERROR] Changelog append failed: HTTP {ex.code}")
+        try:
+            detail = ex.read().decode("utf-8", errors="replace")
+            if detail:
+                print(f"          {detail[:300]}")
+        except Exception:
+            pass
+        return False
+
+
+def filter_plan_mods_by_name(plan: Dict[str, object], mod_filter: str) -> None:
+    """In-place filter plan mods to a single base name when --mod is set."""
+    wanted = (mod_filter or "").strip()
+    if not wanted:
+        return
+    mods = plan.get("mods", [])
+    if not isinstance(mods, list):
+        return
+    plan["mods"] = [
+        entry for entry in mods
+        if isinstance(entry, dict) and str(entry.get("mod_name", "")).strip() == wanted
+    ]
+
+
+def persist_update_group_to_config(config_path: str, mod_name: str, update_group_id: str, update_group_name: str = "") -> None:
+    """Write a discovered update_group_id back into nexusmods-config.json."""
+    if not config_path or not os.path.isfile(config_path) or not update_group_id:
+        return
+    try:
+        with open(config_path, "r", encoding="utf-8") as handle:
+            config = json.load(handle)
+    except Exception:
+        return
+    if not isinstance(config, dict):
+        return
+    mods = config.get("mods", {})
+    if not isinstance(mods, dict):
+        return
+    entry = mods.get(mod_name)
+    if not isinstance(entry, dict):
+        return
+    current = str(entry.get("update_group_id", "") or "").strip()
+    if current == update_group_id:
+        return
+    entry["update_group_id"] = update_group_id
+    if update_group_name:
+        entry["update_group_name"] = update_group_name
+    try:
+        with open(config_path, "w", encoding="utf-8") as handle:
+            json.dump(config, handle, indent=2, ensure_ascii=True)
+            handle.write("\n")
+        print(f"  [CONFIG] Saved update_group_id={update_group_id} for {mod_name}")
+    except OSError as ex:
+        print(f"  [CONFIG WARN] Could not save update_group_id for {mod_name}: {ex}")
+
+
 def run_upload_pipeline(
     plan: Dict[str, object],
     config: Dict[str, object],
     only: str,
     dry_run: bool,
+    mod_filter: str = "",
 ) -> int:
     """
-    Full upload pipeline for each mod:
-      1. Prepare upload (resolve live state, changelog delta)
-      2. Create upload session
-      3. Upload .zip to presigned URL
-      4. Finalise upload
-      5. Poll until available
-      6. Create mod file version (with changelog as description)
+    Update existing Nexus mod pages with a newer file version.
+    Cannot create brand-new mod pages (that stays manual).
+
+    Steps per mod:
+      1. Resolve live version / file group
+      2. Skip if local is not newer
+      3. Validate name/version/mod_file_id/zip
+      4. Create upload session → PUT zip → finalise → poll
+      5. Create mod file version
+      6. Append changelog entries
     """
     env_var_name, api_key = get_env_api_key(config)
+    filter_plan_mods_by_name(plan, mod_filter)
     mods = plan.get("mods", [])
     if not isinstance(mods, list):
         return 1
+    if mod_filter and not mods:
+        print(f"No plan entry matched --mod {mod_filter!r}")
+        return 1
 
-    # In dry-run mode, build targets from plan data without API calls
-    if dry_run:
-        targets: List[Dict[str, object]] = []
-        for entry in mods:
-            if not isinstance(entry, dict):
-                continue
-            action = str(entry.get("action", ""))
-            if only != "all" and action != only:
-                continue
-            if action != "update":
-                continue
-            zip_path = str(entry.get("zip_path", ""))
-            if not os.path.isfile(zip_path):
-                print(f"[MISSING ZIP] {str(entry.get('mod_name', ''))}: {zip_path}")
-                continue
-            # Find the readme path - try readme_path, readable_readme_path, or README.txt in the mod folder
-            readme_source = str(entry.get("readme_path", "") or "")
-            if not readme_source:
-                readme_source = str(entry.get("readable_readme_path", "") or "")
-            if not readme_source:
-                folder_path = str(entry.get("folder_path", "") or "")
-                if folder_path:
-                    txt_path = os.path.join(folder_path, "README.txt")
-                    if os.path.isfile(txt_path):
-                        readme_source = txt_path
-            targets.append({
-                "mod_name": entry.get("mod_name", ""),
-                "zip_path": zip_path,
-                "local_version": entry.get("version", "0.0.0"),
-                "file_category": entry.get("file_category", "main"),
-                "page_url": entry.get("page_url", ""),
-                "tested_game_version": entry.get("tested_game_version", ""),
-                "zip_name": entry.get("zip_name", ""),
-                "changelog_delta": build_changelog_delta(
-                    readme_source,
-                    "0.0.0",
-                    str(entry.get("version", "0.0.0")),
-                ),
-            })
-        if not targets:
-            print("No mods to upload (dry-run).")
-            return 0
-        print(f"=== NEXUS UPLOAD PIPELINE (DRY RUN) ===")
-        for t in targets:
-            version = str(t.get("local_version", "0.0.0"))
-            print(f"  [DRYRUN] {t['mod_name']} v{version} | zip={t['zip_path']}")
-            print(f"  [DRYRUN]   Would upload zip as new version, with changelog for v{version} only")
-        print(f"\n  Note: In a live run, the Nexus API is queried to determine which changelog")
-        print(f"  entries are newer than the live version. Only those entries would be included.")
-        return 0
+    mode_label = "DRY RUN / VALIDATE" if dry_run else "LIVE"
+    print(f"=== NEXUS UPDATE PIPELINE ({mode_label}) ===")
+    print("Updates existing Nexus pages only. New pages must be created manually on the site.")
+    if mod_filter:
+        print(f"Filter: --mod {mod_filter}")
 
-    # Live mode requires API key
     if not api_key:
-        print(f"Missing Nexus API key. Set environment variable {env_var_name}.")
+        print(f"Missing Nexus API key. Set environment variable {env_var_name} or nexus-api-key.private.txt.")
         return 1
 
     headers = build_request_headers(config, api_key)
     api_base_url = get_api_base_url(config)
+    config_path = str(plan.get("config_path", "") or DEFAULT_CONFIG_PATH)
 
-    # Step 1: Use prepare_upload_plan to get targets
     result, upload_plan = prepare_upload_plan(plan, config, only)
-    if result != 0:
-        return result
-
     targets = upload_plan.get("prepared_targets", [])
     if not isinstance(targets, list) or not targets:
-        print("No mods to upload.")
-        return 0
+        print("No configured mods with update intent / Nexus IDs to process.")
+        print("Run RUN-Nexus-Status.bat first so discovered IDs are saved into config.")
+        return 0 if result == 0 else result
 
-    print("\n=== NEXUS UPLOAD PIPELINE ===")
+    ready = 0
+    skipped = 0
+    blocked = 0
     failures = 0
+
     for target in targets:
         if not isinstance(target, dict):
             continue
 
         mod_name = str(target.get("mod_name", ""))
+        if mod_filter and mod_name != mod_filter:
+            continue
         zip_path = str(target.get("zip_path", ""))
         local_version = str(target.get("local_version", "0.0.0"))
+        live_version = str(target.get("live_version", "0.0.0"))
         file_category = str(target.get("file_category", "main"))
-        selected_chain = target.get("selected_legacy_chain")
+        nexus_mod_id = safe_int(target.get("nexus_mod_id", 0))
 
-        # Get this mod's live data from the plan (populated by prepare_upload_plan -> resolve_live_state_for_entry)
         mod_entry = None
-        entry_live = {}
+        entry_live: Dict[str, object] = {}
         for entry in mods:
             if isinstance(entry, dict) and str(entry.get("mod_name", "")) == mod_name:
                 mod_entry = entry
-                entry_live = entry.get("live", {})
-                if not isinstance(entry_live, dict):
-                    entry_live = {}
+                live_obj = entry.get("live", {})
+                entry_live = live_obj if isinstance(live_obj, dict) else {}
                 break
 
-        update_groups = entry_live.get("update_groups", [])
-        if not isinstance(update_groups, list):
-            update_groups = []
-
-        # Determine the mod_file_id to create the version on
-        # Prefer update_group_id from config, then first active update group from live API
-        mod_file_id = ""
-        if mod_entry:
-            mod_file_id = str(mod_entry.get("update_group_id", "")).strip()
-        if not mod_file_id and update_groups:
-            mod_file_id = str(update_groups[0].get("id", "")).strip()
-        if not mod_file_id:
-            # Fall back: check the selected_legacy_chain
-            pass
-
-        if not mod_file_id:
-            print(f"[SKIP] {mod_name}: no update group id or mod file id found. Run 'discover-groups' first.")
-            print(f"  To fix: add 'update_group_id' to the mod's config entry.")
-            failures += 1
+        # Only push when local is newer than Nexus.
+        if compare_versions(local_version, live_version) <= 0:
+            skipped += 1
+            print(f"[SKIP] {mod_name}: local v{local_version} is not newer than Nexus v{live_version}")
             continue
 
-        if not os.path.isfile(zip_path):
-            print(f"[MISSING ZIP] {mod_name}: {zip_path}")
-            failures += 1
-            continue
+        mod_file_id = resolve_mod_file_id(mod_entry, entry_live)
+        live_mod_id = str(entry_live.get("mod_id", "")).strip() or str(nexus_mod_id)
+        if mod_file_id and mod_entry is not None and not str(mod_entry.get("update_group_id", "")).strip():
+            group_name = ""
+            for group in entry_live.get("update_groups", []) if isinstance(entry_live.get("update_groups"), list) else []:
+                if isinstance(group, dict) and str(group.get("id", "")).strip() == mod_file_id:
+                    group_name = str(group.get("name", "")).strip()
+                    break
+            persist_update_group_to_config(config_path, mod_name, mod_file_id, group_name)
 
-        # Read PublishHelp display name from the plan's pre-generated data
-        # Format: "AGF - V{ver} - {mod_name_cleaned}"
-        # where mod_name_cleaned = base_name without AGF- prefix, hyphens split and rejoined with " - "
-        tested_ver = str(target.get('tested_game_version', '')).strip()
-        mod_name_clean = mod_name
-        if mod_name_clean.startswith('AGF-'):
-            mod_name_clean = mod_name_clean[4:]  # Remove "AGF-" prefix
-        # Split on hyphens and rejoin with " - " for proper display
-        mod_name_clean = ' - '.join(part for part in mod_name_clean.split('-') if part)
-        if tested_ver:
-            display_name = f"AGF - V{tested_ver} - {mod_name_clean}"
-        else:
-            display_name = f"AGF - {mod_name_clean}"
-
-        # File description for Nexus (file notes / file options -> Description field)
-        file_description_text = str(target.get('file_description', '')).strip()
+        tested_ver = str(target.get("tested_game_version", "")).strip()
+        preferred_name = str(target.get("publishhelp_file_name", "")).strip()
+        display_name = resolve_upload_file_name(mod_name, local_version, tested_ver, preferred_name)
+        file_description_text = str(target.get("file_description", "")).strip()
         if not file_description_text:
-            file_description_text = str(target.get('description', '')).strip()
-
-        # Build changelog text for Nexus (just the bullet lines, no version headers or dash prefixes)
+            file_description_text = str(
+                parse_publishhelp_details(mod_name).get("file_description", "")
+            ).strip() or str(target.get("description", "")).strip()
         changelog_delta = target.get("changelog_delta", [])
-        if isinstance(changelog_delta, list) and changelog_delta:
-            changelog_lines: List[str] = []
+        problems: List[str] = []
+        if nexus_mod_id <= 0:
+            problems.append("missing nexus_mod_id (page must already exist on Nexus)")
+        if not mod_file_id:
+            problems.append("missing update_group_id / mod file id (could not discover file chain)")
+        if not os.path.isfile(zip_path):
+            problems.append(f"missing zip: {zip_path or '(empty)'}")
+        problems.extend(validate_file_version_fields(display_name, local_version))
+        if problems:
+            blocked += 1
+            print(f"[BLOCKED] {mod_name}: local v{local_version} -> Nexus v{live_version}")
+            for problem in problems:
+                print(f"           - {problem}")
+            continue
+
+        ready += 1
+        print(f"\n--- {'Would update' if dry_run else 'Updating'}: {mod_name} v{live_version} -> v{local_version} ---")
+        print(f"  file_name={display_name!r}")
+        print(f"  file_description={file_description_text!r}")
+        print(f"  mod_file_id={mod_file_id}")
+        print(f"  changelog versions: {len(changelog_delta) if isinstance(changelog_delta, list) else 0}")
+        if isinstance(changelog_delta, list):
             for block in changelog_delta:
+                if not isinstance(block, dict):
+                    continue
+                version = str(block.get("version", "")).strip()
                 bullets = block.get("bullets", [])
-                if isinstance(bullets, list):
-                    for bullet in bullets:
-                        bt = str(bullet).strip()
-                        if bt:
-                            changelog_lines.append(bt)
-            description_text = "\n".join(changelog_lines) if changelog_lines else None
-        else:
-            description_text = None
+                if not isinstance(bullets, list):
+                    continue
+                print(f"    v{version}:")
+                for bullet in bullets:
+                    print(f"      - {bullet}")
 
-        print(f"\n--- Processing: {mod_name} v{local_version} ---")
+        if dry_run:
+            print(f"  zip={zip_path}")
+            continue
 
-        # Step 2: Create upload session
         file_size = os.path.getsize(zip_path)
         zip_basename = os.path.basename(zip_path)
-        session = create_upload_session(api_base_url, headers, file_size, zip_basename, dry_run)
+        session = create_upload_session(api_base_url, headers, file_size, zip_basename, False)
         if session is None:
             failures += 1
             continue
 
-        upload_id = session.get("id", "")
-        presigned_url = session.get("presigned_url", "")
+        upload_id = str(session.get("id", ""))
+        presigned_url = str(session.get("presigned_url", ""))
 
-        # Step 3: Upload file
-        if not upload_file_to_presigned_url(presigned_url, zip_path, dry_run):
+        if not upload_file_to_presigned_url(presigned_url, zip_path, False):
+            failures += 1
+            continue
+        if not finalise_upload(api_base_url, headers, upload_id, False):
+            failures += 1
+            continue
+        if not poll_upload_available(api_base_url, headers, upload_id, False):
             failures += 1
             continue
 
-        # Step 4: Finalise
-        if not finalise_upload(api_base_url, headers, upload_id, dry_run):
-            failures += 1
-            continue
-
-        # Step 5: Poll until available
-        if not poll_upload_available(api_base_url, headers, upload_id, dry_run):
-            failures += 1
-            continue
-
-        # Step 6: Create mod file version - pass file_description as API description (file notes)
-        api_description = file_description_text if file_description_text else description_text
         if not create_mod_file_version(
             api_base_url,
             headers,
@@ -2028,18 +2358,33 @@ def run_upload_pipeline(
             display_name,
             local_version,
             file_category,
-            api_description,
-            dry_run,
+            file_description_text or None,
+            False,
         ):
             failures += 1
             continue
 
-        print(f"[SUCCESS] {mod_name} v{local_version} uploaded successfully!")
+        if not append_changelog_delta(
+            api_base_url,
+            headers,
+            live_mod_id,
+            changelog_delta,
+            False,
+        ):
+            failures += 1
+            print(f"[WARN] {mod_name}: file version updated, but changelog append failed.")
+            continue
+
+        print(f"[SUCCESS] {mod_name} updated to v{local_version}")
         page_url = str(target.get("page_url", "")).strip()
-        if page_url and not dry_run:
+        if page_url:
             print(f"          Page: {page_url}")
 
-    return 0 if failures == 0 else 1
+    print()
+    print(f"Ready/updated: {ready} | Already current (skipped): {skipped} | Blocked: {blocked} | Failed: {failures}")
+    if dry_run:
+        print("Dry-run only — no Nexus pages were changed.")
+    return 0 if failures == 0 and blocked == 0 else 1
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
@@ -2080,6 +2425,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Filter the printed plan summary by action",
     )
     parser.add_argument(
+        "--mod",
+        default="",
+        help="Optional single base mod name filter for upload mode (e.g. AGF-NoEAC-Toolbelt12Slots)",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Preview file writes or upload operations without making changes",
@@ -2110,7 +2460,8 @@ def main() -> int:
 
     # For upload mode, the pipeline handles its own plan output
     if args.mode == "upload":
-        return run_upload_pipeline(plan, config, args.only, args.dry_run)
+        return run_upload_pipeline(plan, config, args.only, args.dry_run, mod_filter=str(args.mod or ""))
+
 
     plan_output = os.path.abspath(args.plan_output)
     write_json_file(plan_output, plan, args.dry_run)

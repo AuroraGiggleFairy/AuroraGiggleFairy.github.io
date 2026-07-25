@@ -2779,6 +2779,24 @@ def extract_mod_description_from_modinfo(modinfo_path: str) -> str:
     return ""
 
 
+def is_invalid_mod_description(value: str) -> bool:
+    """True for placeholders / section titles that must never be used as the one-liner."""
+    text = re.sub(r"\s+", " ", str(value or "")).strip()
+    if not text:
+        return True
+    upper = text.upper()
+    if upper in {
+        "AGF MOD GUIDE",
+        "ADD MOD DESCRIPTION HERE.",
+        "ADD MOD DESCRIPTION HERE",
+        "MISSINGDATA",
+    }:
+        return True
+    if upper.startswith("NOTE:"):
+        return True
+    return False
+
+
 def extract_one_line_summary_from_readme_txt(readme_txt_path: str) -> str:
     """Extract the one-line summary from README.txt (line below top H1 wrapper)."""
     if not os.path.exists(readme_txt_path):
@@ -2813,7 +2831,10 @@ def extract_one_line_summary_from_readme_txt(readme_txt_path: str) -> str:
             continue
         if len(stripped) >= 10 and re.fullmatch(r"[=-]+", stripped):
             continue
-        return re.sub(r"\s+", " ", stripped).strip()
+        candidate = re.sub(r"\s+", " ", stripped).strip()
+        if is_invalid_mod_description(candidate):
+            continue
+        return candidate
 
     return ""
 
@@ -2821,9 +2842,12 @@ def extract_one_line_summary_from_readme_txt(readme_txt_path: str) -> str:
 def resolve_mod_description(mod_path: str, modinfo_path: str) -> str:
     """Prefer README.txt one-line summary; fall back to ModInfo Description."""
     readme_summary = extract_one_line_summary_from_readme_txt(os.path.join(mod_path, "README.txt")).strip()
-    if readme_summary:
+    if readme_summary and not is_invalid_mod_description(readme_summary):
         return readme_summary
-    return extract_mod_description_from_modinfo(modinfo_path).strip()
+    modinfo_summary = extract_mod_description_from_modinfo(modinfo_path).strip()
+    if modinfo_summary and not is_invalid_mod_description(modinfo_summary):
+        return modinfo_summary
+    return ""
 
 
 def sync_modinfo_description_from_summary(
@@ -2834,7 +2858,7 @@ def sync_modinfo_description_from_summary(
 ) -> None:
     """Sync ModInfo.xml <Description value> to match the README summary when it differs."""
     summary = (summary or "").strip()
-    if not summary or not os.path.exists(modinfo_path):
+    if not summary or is_invalid_mod_description(summary) or not os.path.exists(modinfo_path):
         return
 
     current = extract_mod_description_from_modinfo(modinfo_path).strip()

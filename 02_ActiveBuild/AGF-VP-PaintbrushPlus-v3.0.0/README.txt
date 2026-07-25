@@ -2,7 +2,7 @@
                          AGF-VP-PAINTBRUSHPLUS                          
 ========================================================================
 
-AGF MOD GUIDE
+Painting costs no paint, with fast hold-to-paint and reduced reach.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

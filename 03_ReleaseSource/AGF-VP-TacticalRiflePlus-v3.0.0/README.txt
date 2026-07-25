@@ -2,7 +2,7 @@
                         AGF-VP-TACTICALRIFLEPLUS                        
 ========================================================================
 
-AGF MOD GUIDE
+Tactical Rifle is full-auto with magazine raised from 30 to 36.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

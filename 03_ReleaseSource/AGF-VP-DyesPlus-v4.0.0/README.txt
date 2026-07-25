@@ -2,7 +2,7 @@
                             AGF-VP-DYESPLUS                             
 ========================================================================
 
-AGF MOD GUIDE
+Adds 27 dyes; craft any dye for 15 paint, or scrap to swap colors.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

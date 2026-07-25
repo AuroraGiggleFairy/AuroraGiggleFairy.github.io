@@ -1,32 +1,30 @@
 # 06_PublishingSupport
 
-Publishing tooling and per-site data, grouped by destination site. Each site folder keeps only its "reference material" (API docs, secrets, generated output) at its own root; everything about *how* the automation works - scripts, config, plans, templates, capability docs - lives one level down in that site's `Workflow/` subfolder.
+Publishing tooling and per-site data, grouped by destination site.
+
+Pattern for each site:
+- **Site root** = what you use day to day (status, launchers, PublishHelp, secrets/reference)
+- **`Workflow/`** = behind-the-scenes scripts, config, templates, plans
 
 ```text
 06_PublishingSupport/
 |-- NexusMods/
-|   |-- nexusAPI.txt                 local OpenAPI snapshot (reference)
-|   |-- nexus-api-key.private.txt    gitignored secret
-|   |-- PublishHelp/                 gitignored generated output (Details.md/FullDesc.md/zip per mod)
-|   `-- Workflow/                    scripts, config, plans, templates, capability doc
+|   |-- README.md                    what to open / run for Nexus
+|   |-- Nexus-Status.md              live ReleaseSource vs Nexus picture
+|   |-- RUN-Nexus-Status/Update*.bat day-to-day launchers
+|   |-- PublishHelp/                 generated copy/paste packets
+|   |-- nexusAPI.txt / api key       reference + secret
+|   `-- Workflow/                    scripts, config, status JSON, templates, plans
 |-- ModNetwork/
-|   |-- Api Informaiton.txt          API notes (reference)
-|   `-- Workflow/                    script, config, plan, field-mapping notes, capability doc
-|-- 7DaysToDieMods/                  placeholder - no automation exists for this site yet
-`-- Site-Automation-Capabilities.md  cross-site overview of what's automated vs. manual
+|   |-- Api Informaiton.txt
+|   `-- Workflow/
+|-- 7DaysToDieMods/                  placeholder
+`-- Site-Automation-Capabilities.md
 ```
 
 ## NexusMods
 
-Root (`06_PublishingSupport/NexusMods/`): `nexusAPI.txt`, `nexus-api-key.private.txt` (gitignored secret), `PublishHelp/` (gitignored generated output).
-
-`Workflow/`:
-- `SCRIPT-NexusMods.py` - planning/audit/bbcode-generation modes (see its `--help`).
-- `SCRIPT-NexusUpload.py` - standalone upload wrapper, run independently and manually.
-- `SCRIPT-AuditNexusMods.py` - read-only version check against live Nexus data (also runnable via `RUN-Nexus-Version-Check.bat`).
-- `SCRIPT-NexusPublishHelp.py` - generates local copy/paste publish packets (used by `Workflow/06_nexus.py` at the repo root - not to be confused with this `Workflow/` subfolder).
-- `nexusmods-config.json`, `nexusmods-release-plan.json`, `nexusmods-upload-plan.json`, the two `TEMPLATE-*` files, `Nexus-Automation-Capabilities.md`, `FullDesc copy.md`.
-- `PublishHelp/<mod>/` only ever contains `Details.md`, `FullDesc.md`, and the release zip - images are intentionally **not** copied in here. Upload images to Nexus directly from `00_Images/02_ImagesFinal/`.
+Open [`NexusMods/README.md`](NexusMods/README.md). Start with `Nexus-Status.md` and `RUN-Nexus-Status.bat`.
 
 ## ModNetwork
 

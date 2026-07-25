@@ -2,7 +2,7 @@
                            AGF-VP-MININGPLUS                            
 ========================================================================
 
-AGF MOD GUIDE
+Mining perk unlocks clay/sand bundles; slightly more sand from mining.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

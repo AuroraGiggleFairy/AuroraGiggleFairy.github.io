@@ -1,5 +1,5 @@
 {
-  "api_base_url": "https://api.nexusmods.com/v2",
+  "api_base_url": "https://api.nexusmods.com/v3",
   "game_domain": "7daystodie",
   "api_key_env_var": "AGF_NEXUSMODS_API_KEY",
   "application_name": "AGF-NexusMods-Automation",

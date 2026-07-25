@@ -2,7 +2,7 @@
                          AGF-VP-AMMODISASSEMBLY                         
 ========================================================================
 
-AGF MOD GUIDE
+Scrap ammo into ingredient bundles; combine into x100 or x1000 packs.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

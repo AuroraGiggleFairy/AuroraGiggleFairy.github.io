@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="Alter_Autominers"/>
+	<DisplayName value="Alter Autominers"/>
+	<Version value="1.4.0"/>
+	<Description value="Mining Machine and Oil Pumpjack workstations. Updated for the current game version from Alter's abandoned Autominers v1.3. Requires EAC off (Harmony)."/>
+	<Author value="Alter"/>
+	<Website value=""/>
+	<SkipWithAntiCheat value="true"/>
+</xml>

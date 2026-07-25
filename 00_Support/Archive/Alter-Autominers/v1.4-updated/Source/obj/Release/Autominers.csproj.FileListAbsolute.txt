@@ -1,0 +1,8 @@
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\obj\Release\Autominers.csproj.AssemblyReference.cache
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\obj\Release\Autominers.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\obj\Release\Autominers.csproj.CoreCompileInputs.cache
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\obj\Release\Autominers.sourcelink.json
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\bin\Autominers.dll
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\bin\Autominers.pdb
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\obj\Release\Autominers.dll
+C:\GitHub\7D2D-Mods\00_Support\Archive\Alter_Autominers-v1.4-updated\Source\obj\Release\Autominers.pdb

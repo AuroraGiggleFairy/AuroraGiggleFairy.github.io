@@ -1,0 +1,12 @@
+Key,English
+oilPumpjack,Oil Pumpjack
+oilPumpjackDesc,"Build an Oil Pumpjack on top of a vein of Oil Shale ore to slowly mine it over time.\nNeeds fuel to work."
+miningMachineDesc,"Build a Mining Machine on top of a vein of Potassium Nitrate, Lead, Coal or Iron ore to slowly mine it over time.\nNeeds fuel to work." 
+miningMachine,Mining Machine
+miningMachine_Iron,Mining Machine
+miningMachine_PotassiumNitrate,Mining Machine
+miningMachine_Lead,Mining Machine
+miningMachine_Coal,Mining Machine
+miningMachine_Clay,Mining Machine
+miningMachine_Rock,Mining Machine
+lblContextActionMHarvest,Harvest
