@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.15.0",
-  "previous_gigglepack_version": "0.14.4",
+  "gigglepack_version": "0.16.0",
+  "previous_gigglepack_version": "0.15.0",
   "is_baseline_release": false,
-  "released_at": "2026-07-23 16:07:33",
+  "released_at": "2026-07-25 18:46:45",
   "mods": {
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
@@ -19,6 +19,7 @@
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
     "AGF-NoEAC-EnhancedAGF": "4.3.2",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
+    "AGF-NoEAC-OpenAllButton": "2.0.0",
     "AGF-NoEAC-ScreamerAlert": "2.3.2",
     "AGF-NoEAC-Toolbelt12Slots": "2.2.3",
     "AGF-Requested-SmallerInteractionPrompt": "2.0.0",
@@ -66,71 +67,16 @@
   "updated_mods": [],
   "new_mods": [
     {
-      "mod": "AGF-Requested-SmallerInteractionPrompt",
+      "mod": "AGF-NoEAC-OpenAllButton",
       "to": "2.0.0",
       "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-Requested-TinyBuffsPopUp",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-AdminModdingSupport",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-AlternativeRecipes",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-AmmoDisassembly",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-ArcheryFeathersChange",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-DrinkableAcid",
-      "to": "3.0.0",
-      "to_display": "3.0.0"
-    },
-    {
-      "mod": "AGF-VP-DyesPlus",
-      "to": "4.0.0",
-      "to_display": "4.0.0"
-    },
-    {
-      "mod": "AGF-VP-MiningPlus",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-PaintbrushPlus",
-      "to": "3.0.0",
-      "to_display": "3.0.0"
-    },
-    {
-      "mod": "AGF-VP-RecipeRottingFlesh",
-      "to": "2.0.0",
-      "to_display": "2.0.0"
-    },
-    {
-      "mod": "AGF-VP-TacticalRiflePlus",
-      "to": "3.0.0",
-      "to_display": "3.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.15.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.16.0.zip",
   "change_counts": {
-    "new_mods": 12,
+    "new_mods": 1,
     "updated_existing_mods": 0,
     "renamed_mods": 0,
     "removed_mods": 0

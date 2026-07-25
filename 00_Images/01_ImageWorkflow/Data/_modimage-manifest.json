@@ -168,10 +168,10 @@
     "media_file": ""
   },
   "AGF-NoEAC-OpenAllButton": {
-    "signature": "9d850349eed53e3f6dc3d9c32cba40a3b401661c994525eba27312c6126d1d05",
-    "version": "1.0.2",
-    "has_media": false,
-    "media_file": ""
+    "signature": "e28c71cf9dc239da2697e05829aab583241905e4893141b55b5bb42346473354",
+    "version": "2.0.0",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-OpenAllButton_01.png"
   },
   "AGF-NoEAC-ScreamerAlert": {
     "signature": "6c67ad3c5d1f79b5a6c8bdbdf6f33eedb9d475ce8d29b1ceb793f9edea2fb51c",

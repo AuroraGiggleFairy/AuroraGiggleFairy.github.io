@@ -1,7 +1,12 @@
 {
-  "computed_at": "2026-07-25T04:14:50",
+  "computed_at": "2026-07-25T17:25:00",
   "since_gigglepack_version": "0.15.0",
-  "new_mods": [],
+  "new_mods": [
+    [
+      "AGF-NoEAC-OpenAllButton",
+      "2.0.0"
+    ]
+  ],
   "updated_mods": [],
   "renamed_mods": [],
   "removed_mods": []

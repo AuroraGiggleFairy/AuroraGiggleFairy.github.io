@@ -2,7 +2,7 @@
                         AGF-NOEAC-OPENALLBUTTON                         
 ========================================================================
 
-Adds an Open All button that rapidly opens bundled items without
+Adds an Open All button that rapidly opens bundled item stacks.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.
@@ -12,7 +12,7 @@ NOTE: AGF Mod Guide and Changelog are further below.
 MOD SCOPE
 ------------------------------------------------------------------------
 
-  - Mod Version: 1.0.2
+  - Mod Version: 2.0.0
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
@@ -34,55 +34,10 @@ MOD SCOPE
 FEATURES
 ------------------------------------------------------------------------
 
-  - Players who install it get an "Open All" button on eligible bundled
-    items.
-  - "Open All" rapidly opens one at a time until done, inventory fills,
-    or you stop it.
-
-
-------------------------------------------------------------------------
-OTHER DETAILS
-------------------------------------------------------------------------
-
-  - This is a client-side UI button addition only; it does not require
-  other joining players to install it.
-        - Simply adds an "Open All" button for bundled items.
-        - It opens one at a time rapid fire until all are opened or if
-          you run out of inventory space.
-        - It can be stopped by either closing the window or pushing the
-          stop opening button.
-        - Again, if there isn't room for more, it will stop and not
-          allow you to open more.
-
-  - This is a client-side UI button addition only; it does not require
-    other joining players to install it.
-          - Simply adds an "Open All" button for bundled items.
-          - It opens one at a time rapid fire until all are opened or if
-            you run out of inventory space.
-          - It can be stopped by either closing the window or pushing
-            the stop opening button.
-          - Again, if there isn't room for more, it will stop and not
-            allow you to open more.
-
-  - This is a client-side UI button addition only; it does not require
-    other joining players to install it.
-          - Simply adds an "Open All" button for bundled items.
-          - It opens one at a time rapid fire until all are opened or if
-            you run out of inventory space.
-          - It can be stopped by either closing the window or pushing
-            the stop opening button.
-          - Again, if there isn't room for more, it will stop and not
-            allow you to open more.
-
-    - This is a client-side UI button addition only; it does not require
-      other joining players to install it.
-            - Simply adds an "Open All" button for bundled items.
-            - It opens one at a time rapid fire until all are opened or
-              if you run out of inventory space.
-            - It can be stopped by either closing the window or pushing
-              the stop opening button.
-            - Again, if there isn't room for more, it will stop and not
-              allow you to open more.
+  - Adds an "Open All" button for bundled items.
+  - Rapidly opens the stack one at a time until it is empty.
+  - Stops early when inventory cannot fit more, so loot is not dropped.
+  - You can stop it early by clicking it again, or closing the window.
 
 
 
@@ -246,6 +201,11 @@ I. AGF Modding Focus
 ========================================================================
                                CHANGELOG                                
 ========================================================================
+
+v2.0.0
+    - Updated for 7d2d version 3.
+
+------------------------------------------------------------------------
 
 v1.0.2
     - ReadMe Format Update.

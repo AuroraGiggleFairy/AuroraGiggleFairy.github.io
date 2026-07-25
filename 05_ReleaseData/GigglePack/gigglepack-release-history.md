@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.16.0 (July 25, 2026 6:46pm)
+### Summary: +1 new, ~0 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-OpenAllButton](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip) (new: v2.0.0)
+- **Updated Existing Mods**
+  - None
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.15.0 (July 23, 2026 4:07pm)
 ### Summary: +12 new, ~0 updated, =0 renamed, -0 removed
 - **New Mods**

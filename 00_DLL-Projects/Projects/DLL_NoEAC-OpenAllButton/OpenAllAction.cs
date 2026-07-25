@@ -94,8 +94,8 @@ public static class XUiController_OnClose_OpenAllQueueCancelPatch
     }
 }
 
-[HarmonyPatch(typeof(XUiController), "OnPressed")]
-public static class XUiController_OnPressed_OpenAllQueueCancelPatch
+[HarmonyPatch(typeof(XUiController), "Pressed")]
+public static class XUiController_Pressed_OpenAllQueueCancelPatch
 {
     public static void Prefix(XUiController __instance, int _mouseButton)
     {
@@ -170,12 +170,12 @@ public static class XUiC_BackpackWindow_BtnSort_OnPress_OpenAllQueueCancelPatch
     }
 }
 
-[HarmonyPatch(typeof(XUiC_VehicleContainer), "btnSort_OnPress")]
-public static class XUiC_VehicleContainer_btnSort_OnPress_OpenAllQueueCancelPatch
+[HarmonyPatch(typeof(XUiC_BagContainer), "btnSort_OnPress")]
+public static class XUiC_BagContainer_btnSort_OnPress_OpenAllQueueCancelPatch
 {
     public static void Prefix()
     {
-        OpenAllActionQueue.CancelAll("vehicle sort pressed");
+        OpenAllActionQueue.CancelAll("bag/container sort pressed");
     }
 }
 
@@ -763,7 +763,7 @@ public static class OpenAllActionHelpers
             if (current is XUiC_ItemActionList ||
                 current is XUiC_ItemStackGrid ||
                 current is XUiC_BackpackWindow ||
-                current is XUiC_VehicleContainer ||
+                current is XUiC_BagContainer ||
                 current is XUiC_ContainerStandardControls)
             {
                 return true;
@@ -815,6 +815,7 @@ public static class OpenAllActionHelpers
             return 0;
         }
 
+        // Match vanilla OpenBundle: outputs always go to player backpack/toolbelt.
         EntityPlayerLocal player = GameManager.Instance?.World?.GetPrimaryPlayer();
         if (player == null)
         {
