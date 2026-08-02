@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.17.0 (August 2, 2026 7:51pm)
+### Summary: +1 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-4Modders-Fix4DestroyBiomeBadge](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip) (new: v2.0.0)
+- **Updated Existing Mods**
+  - [zzzAGF-Requested-LootStaysOnEmpty](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip) (v1.0.3 -> v1.0.4)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.16.0 (July 25, 2026 6:46pm)
 ### Summary: +1 new, ~0 updated, =0 renamed, -0 removed
 - **New Mods**

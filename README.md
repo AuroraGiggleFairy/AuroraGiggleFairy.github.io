@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*July 25, 2026, 6:46 PM EST*
+*August 2, 2026, 7:51 PM EST*
 
 ## **1. About AGF**
 
@@ -196,7 +196,7 @@ Ways you can support AGF.
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.16.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.17.0)**
 
 All AGF mods in one convenient download.
 
@@ -211,7 +211,7 @@ Non-EAC mods are inside optional folders within the pack.
 ---
 
 <details markdown="1"><summary><i>Changelog (latest 3 releases)</i></summary>
-<ul><li>GigglePack v0.16.0 - July 25, 2026 6:46pm<ul><li>Change summary: +1 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">AGF-NoEAC-OpenAllButton</a> (new: v2.0.0)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.15.0 - July 23, 2026 4:07pm<ul><li>Change summary: +12 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-SmallerInteractionPrompt.zip">AGF-Requested-SmallerInteractionPrompt</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-TinyBuffsPopUp.zip">AGF-Requested-TinyBuffsPopUp</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AdminModdingSupport.zip">AGF-VP-AdminModdingSupport</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AlternativeRecipes.zip">AGF-VP-AlternativeRecipes</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">AGF-VP-AmmoDisassembly</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ArcheryFeathersChange.zip">AGF-VP-ArcheryFeathersChange</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">AGF-VP-DrinkableAcid</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">AGF-VP-DyesPlus</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">AGF-VP-MiningPlus</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PaintbrushPlus.zip">AGF-VP-PaintbrushPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RecipeRottingFlesh.zip">AGF-VP-RecipeRottingFlesh</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TacticalRiflePlus.zip">AGF-VP-TacticalRiflePlus</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.14.4 - July 22, 2026 9:19pm<ul><li>Change summary: +0 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-PurpleBook.zip">AGF-HUDPlus-PurpleBook</a> (v3.1.1 -&gt; v3.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftVitamins.zip">AGF-VP-CraftVitamins</a> (v2.1.1 -&gt; v2.1.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip">AGF-VP-FloraHarvester</a> (v3.0.0 -&gt; v3.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+<ul><li>GigglePack v0.17.0 - August 2, 2026 7:51pm<ul><li>Change summary: +1 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">AGF-4Modders-Fix4DestroyBiomeBadge</a> (new: v2.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip">zzzAGF-Requested-LootStaysOnEmpty</a> (v1.0.3 -&gt; v1.0.4)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.16.0 - July 25, 2026 6:46pm<ul><li>Change summary: +1 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">AGF-NoEAC-OpenAllButton</a> (new: v2.0.0)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.15.0 - July 23, 2026 4:07pm<ul><li>Change summary: +12 new, ~0 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-SmallerInteractionPrompt.zip">AGF-Requested-SmallerInteractionPrompt</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-TinyBuffsPopUp.zip">AGF-Requested-TinyBuffsPopUp</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AdminModdingSupport.zip">AGF-VP-AdminModdingSupport</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AlternativeRecipes.zip">AGF-VP-AlternativeRecipes</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">AGF-VP-AmmoDisassembly</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ArcheryFeathersChange.zip">AGF-VP-ArcheryFeathersChange</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">AGF-VP-DrinkableAcid</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">AGF-VP-DyesPlus</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">AGF-VP-MiningPlus</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-PaintbrushPlus.zip">AGF-VP-PaintbrushPlus</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RecipeRottingFlesh.zip">AGF-VP-RecipeRottingFlesh</a> (new: v2.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-TacticalRiflePlus.zip">AGF-VP-TacticalRiflePlus</a> (new: v3.0.0)</li></ul></li><li>Updated existing mods:<ul><li>None</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 </details>
 
 ---
@@ -869,7 +869,7 @@ Sends private chat alerts for Screamers and Screamer hordes within 120m.
 
 ## **G. 4MODDERS MODS**
 
-Updates are in progress.
+[**⬇️ Download All 4Modders Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_4Modders_All.zip)
 
 Modder resources and niche mods.
 
@@ -881,7 +881,15 @@ Read each description before installing.
 
 ---
 
-*Updates are in progress.*
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-4Modders-Fix4DestroyBiomeBadge_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-4Modders-Fix4DestroyBiomeBadge.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Fix DestroyBiomeBadge</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip">Download</a><br>
+Prevents DestroyBiomeBadge from accidentally removing clothing items.
+</td>
+</tr></table>
+
+---
 
 ---
 
@@ -922,8 +930,8 @@ Makes buff pop-up notifications about half the vanilla size.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/zzzAGF-Requested-LootStaysOnEmpty_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_zzzAGF-Requested-LootStaysOnEmpty.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Loot Stays On Empty</b> &nbsp;·&nbsp; v1.0.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip">Download</a><br>
-Loot stays after emptying.
+<b>AGF Loot Stays On Empty</b> &nbsp;·&nbsp; v1.0.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip">Download</a><br>
+Loot stays after emptying, except airdrops and buried supplies.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>

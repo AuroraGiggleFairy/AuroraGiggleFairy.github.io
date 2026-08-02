@@ -2,7 +2,7 @@
                    ZZZAGF-REQUESTED-LOOTSTAYSONEMPTY                    
 ========================================================================
 
-Loot stays after emptying.
+Loot stays after emptying, except airdrops and buried supplies.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.
@@ -12,7 +12,7 @@ NOTE: AGF Mod Guide and Changelog are further below.
 MOD SCOPE
 ------------------------------------------------------------------------
 
-  - Mod Version: 1.0.3
+  - Mod Version: 1.0.4
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
@@ -30,6 +30,7 @@ FEATURES
 ------------------------------------------------------------------------
 
   - Loot stays after emptying.
+  - Except for air drops and buried supplies.
 
 
 
@@ -193,6 +194,11 @@ I. AGF Modding Focus
 ========================================================================
                                CHANGELOG                                
 ========================================================================
+
+v1.0.4
+    - Allows air drops and buried supplies to destroy on empty.
+
+------------------------------------------------------------------------
 
 v1.0.3
     - Take 3.

@@ -1,10 +1,9 @@
 ========================================================================
-                   AGF-4MODDERS-FIX4DESTROYBIOMEBADGE                   
+                   ZZZAGF-REQUESTED-LOOTSTAYSONEMPTY                    
 ========================================================================
 
-Prevents DestroyBiomeBadge from accidentally removing clothing items.
+Loot stays after emptying, except airdrops and buried supplies.
 
-"Original request by Frantic_Dan for his amazing mods."
 
 NOTE: AGF Mod Guide and Changelog are further below.
 
@@ -13,43 +12,25 @@ NOTE: AGF Mod Guide and Changelog are further below.
 MOD SCOPE
 ------------------------------------------------------------------------
 
-  - Mod Version: 1.0.1-BETA
+  - Mod Version: 1.0.4
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
-  - Mod Type: TBD
+  - Mod Type: Server-Side (EAC-Friendly)
+    - Server install works for all joining players.
+    - EAC can be on or off.
+    - Also works in singleplayer.
   - Safe to install on existing game: Yes (Safe)
-  - Safe to remove from existing game: Unknown
-  - Dependencies: Requires 0_TFP_Harmony (built-in game mod).
-    - To check, explore Installed Files and confirm Mods/0_TFP_Harmony
-      exists.
-    - To restore, use Steam Verify: Right click 7 Days to Die ->
-      Properties -> Installed Files -> Verify integrity of game files.
+  - Safe to remove from existing game: Yes (Safe)
+  - Dependencies: None, works standalone.
 
 
 ------------------------------------------------------------------------
 FEATURES
 ------------------------------------------------------------------------
 
-  - Prevents DestroyBiomeBadge from removing clothing items.
-
-
-------------------------------------------------------------------------
-OTHER DETAILS
-------------------------------------------------------------------------
-
-  - Fixes DestroyBiomeBadge behavior so it targets biome equipment only.
-        - Clothing items are no longer removed by this event.
-
-  - Fixes DestroyBiomeBadge behavior so it targets biome equipment only.
-          - Clothing items are no longer removed by this event.
-
-  - Fixes DestroyBiomeBadge behavior so it targets biome equipment only.
-          - Clothing items are no longer removed by this event.
-
-    - Fixes DestroyBiomeBadge behavior so it targets biome equipment
-      only.
-            - Clothing items are no longer removed by this event.
+  - Loot stays after emptying.
+  - Except for air drops and buried supplies.
 
 
 
@@ -214,15 +195,20 @@ I. AGF Modding Focus
                                CHANGELOG                                
 ========================================================================
 
-v1.0.1
-    - ReadMe Format Update.
+v1.0.4
+    - Allows air drops and buried supplies to destroy on empty.
+
+------------------------------------------------------------------------
+
+v1.0.3
+    - Take 3.
+
+------------------------------------------------------------------------
+
+v1.0.2
+    - Some automation errors fixed.
 
 ------------------------------------------------------------------------
 
 v1.0.0
-    - Mod established to be released.
-
-------------------------------------------------------------------------
-
-v0.0.1
-    - Mod first created.
+    - Created the mod by request.

@@ -1,9 +1,10 @@
 {
-  "gigglepack_version": "0.16.0",
-  "previous_gigglepack_version": "0.15.0",
+  "gigglepack_version": "0.17.0",
+  "previous_gigglepack_version": "0.16.0",
   "is_baseline_release": false,
-  "released_at": "2026-07-25 18:46:45",
+  "released_at": "2026-08-02 19:51:09",
   "mods": {
+    "AGF-4Modders-Fix4DestroyBiomeBadge": "2.0.0",
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
     "AGF-BackpackPlus-084Slots": "4.1.1",
@@ -60,24 +61,32 @@
     "AGF-VP-VehicleStoragePlus": "3.1.1",
     "AGF-VP-VehiclesExtraSeating": "2.1.1",
     "AGF-VP-ZombieCorpseLeaveQuicker": "3.1.1",
-    "zzzAGF-Requested-LootStaysOnEmpty": "1.0.3",
+    "zzzAGF-Requested-LootStaysOnEmpty": "1.0.4",
     "zzzAGF-Special-Compatibilities": "5.1.1",
     "zzzAGF-Special-LocalizationPatches": "1.0.1"
   },
-  "updated_mods": [],
+  "updated_mods": [
+    {
+      "mod": "zzzAGF-Requested-LootStaysOnEmpty",
+      "from": "1.0.3",
+      "to": "1.0.4",
+      "from_display": "1.0.3",
+      "to_display": "1.0.4"
+    }
+  ],
   "new_mods": [
     {
-      "mod": "AGF-NoEAC-OpenAllButton",
+      "mod": "AGF-4Modders-Fix4DestroyBiomeBadge",
       "to": "2.0.0",
       "to_display": "2.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.16.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.17.0.zip",
   "change_counts": {
     "new_mods": 1,
-    "updated_existing_mods": 0,
+    "updated_existing_mods": 1,
     "renamed_mods": 0,
     "removed_mods": 0
   }

@@ -1,0 +1,88 @@
+---
+description: High-quality 7D2D/AGF localization — use when creating, reviewing, or fixing Localization.csv/txt
+globs: "**/Localization.*"
+alwaysApply: false
+---
+
+# Localization Quality Method
+
+Use for AGF mods or assisting other mods’ `Localization.csv` / `Localization.txt`.
+
+## Goals
+
+1. Accurate meaning vs English (gameplay intent, not word-for-word)
+2. Natural phrasing per language
+3. Match vanilla 7D2D glossary and UI prompt style
+4. Match AGF CSV format
+5. Clean encoding (no mojibake)
+
+## Format & references
+
+AGF header:
+
+```
+Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+```
+
+- Quote text fields; Context usually `""`; fill all 13 languages; no blank section rows
+- File/Type often blank; use `items,Item` / `ui,label` only if the mod already does
+- Vanilla glossary: `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Config\Localization.csv`
+- Format examples: any AGF mod `Config/Localization.csv` in this repo
+
+## Process (in order)
+
+1. **Setup** — Full AGF header first. Keep keys and `{0}`/`{1}` exact. Fix English only when meaning is wrong. Do not rename author keys.
+2. **Translate for meaning** — Gameplay intent over calques. Resolve ambiguous English from in-game use. Short UI labels; complete item descs (effect + requirements).
+3. **Vanilla glossary** — Match official terms: stations, XP abbrevs (EP/EXP/PE/PD/DP), ammo (ES Saeta, FR Carreau, TR Arbalet Oku, SCH 弩箭 vs TCH 十字弓箭), Hold/Press phrasing.
+4. **Consistency** — One mechanic → one word family per language. Names/descs share roots. Keep SCH/TCH vanilla distinctions; align paired prompt spacing.
+5. **Accuracy vs English** — Every key: same action, requirements, and numbers/placeholders. No Amount→Progress (or similar) unless user approves editorial drift.
+6. **Quality polish** — Only after meaning is solid: natural phrasing, less redundancy. Never “improve” by changing meaning.
+7. **Structural + encoding check** — All langs filled; placeholders present; 20 columns; valid quoting; UTF-8; no mojibake.
+8. **English-speaker report** — Always end localization work with the required report below (user does not need to ask).
+
+## Mojibake check
+
+Scan translated cells for encoding corruption before finishing:
+- Classic mojibake: `Ã`, `Â`, `â€™`, `â€`, `ðŸ`, `ï»¿`, `�`
+- Double-encoded UTF-8 (e.g. `Ã©` instead of `é`, `Ã¤` instead of `ä`)
+- Replacement characters or mixed scripts in a single token that should be one language
+- If found: fix source encoding (save UTF-8) and re-translate/restore the correct characters; do not leave “close enough” garbled text
+
+## Required English-speaker report
+
+User mainly verifies English. After any localization create/complete/review/fix pass, **always** include this report unprompted:
+
+1. **Meaning check** — Do all languages still mean the English line? List any keys that drifted or needed interpretation.
+2. **Low confidence** — Which keys/languages were guessed or are weaker? Be specific; say “none” only if truly confident.
+3. **Vanilla glossary** — Any mismatches vs official game terms? List fixes made or remaining gaps.
+4. **Mojibake / encoding** — Any corruption found? Clean or still present?
+5. **Structure** — Placeholders, empty cells, column count: OK or not?
+6. **Open risks** — Generic key collisions, ambiguous English (`Hold {0} for {1}` purpose vs duration), or anything needing author/user decision.
+
+Keep it concise; use key names. Do not bury issues under “looks good.”
+
+## Review vs edit
+
+- **Review / pass** → report only; no edits unless asked; still include the required report
+- **Fix / improve / apply** → edit the file; then include the required report
+- Ship meaning fixes before polish
+
+## Definition of Done
+
+- [ ] AGF header + all 13 languages
+- [ ] Vanilla glossary aligned
+- [ ] Meaning matches English per key
+- [ ] Consistent terms within each language
+- [ ] Placeholders/columns valid
+- [ ] No mojibake; UTF-8 clean
+- [ ] No unapproved English meaning changes; keys unchanged
+- [ ] Required English-speaker report delivered
+
+## Anti-patterns
+
+- Literal swaps that miss intent (`dressage` for taming, `Cıvata` for bolt, XP “exchange” for share)
+- Inventing station/ammo names vanilla already has
+- Dropping requirements or placeholders
+- Polishing before meaning/glossary passes
+- Shipping mojibake or non-UTF-8 output
+- Finishing without the English-speaker report

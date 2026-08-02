@@ -3,32 +3,38 @@ using GameEvent.SequenceActions;
 
 namespace AGFProjects.DestroyBiomeBadgeFix
 {
-    [HarmonyPatch(typeof(ActionRemoveItems), "HandleItemValueChange")]
-    public class Patch_ActionRemoveItems_HandleItemValueChange
-    {
-        static bool Prefix(ref ItemValue itemValue, EntityPlayer player, ActionRemoveItems __instance)
-        {
-            var items = player.equipment.GetItems();
-            int slotIndex = -1;
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (items[i] != null && items[i].Equals(itemValue))
-                {
-                    slotIndex = i;
-                    break;
-                }
-            }
-            var slotEnum = (EquipmentSlots)slotIndex;
-            if (slotEnum == EquipmentSlots.BiomeBadge ||
-                slotEnum == EquipmentSlots.BiomeBadge2 ||
-                slotEnum == EquipmentSlots.BiomeBadge3 ||
-                slotEnum == EquipmentSlots.BiomeBadge4)
-            {
-                // Allow clearing for badge slots
-                return true;
-            }
-            // Prevent clearing for non-badge slots
-            return false;
-        }
-    }
+	/// <summary>
+	/// Vanilla ActionBaseItemAction treats BiomeBadge as equipment slots j &gt;= 4.
+	/// That range also includes ClothingHead..ClothingFeet (8-11), so DestroyBiomeBadge
+	/// (and any RemoveItems with BiomeBadge) clears worn clothing. Block only clothing slots.
+	/// </summary>
+	[HarmonyPatch(typeof(ActionRemoveItems), "HandleItemValueChange")]
+	public class Patch_ActionRemoveItems_HandleItemValueChange
+	{
+		static bool Prefix(ref ItemValue itemValue, EntityPlayer player)
+		{
+			if (itemValue == null || itemValue.IsEmpty())
+			{
+				return true;
+			}
+
+			ItemValue[] items = player.equipment.GetItems();
+			for (int i = 0; i < items.Length; i++)
+			{
+				if (items[i] == null || items[i].IsEmpty() || !items[i].Equals(itemValue))
+				{
+					continue;
+				}
+
+				if (i >= (int)EquipmentSlots.ClothingHead && i <= (int)EquipmentSlots.ClothingFeet)
+				{
+					return false;
+				}
+
+				break;
+			}
+
+			return true;
+		}
+	}
 }

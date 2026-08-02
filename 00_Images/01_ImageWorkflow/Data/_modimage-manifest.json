@@ -18,8 +18,8 @@
     "media_file": ""
   },
   "AGF-4Modders-Fix4DestroyBiomeBadge": {
-    "signature": "fead76524b9a68852b859b01b3861fded455929a6f892bac9269f56d9972d598",
-    "version": "1.0.1",
+    "signature": "db7dc81019fe2b7b4e83a14fd3afd82ad4eea603ed5e5417cf7243290e7949b2",
+    "version": "2.0.0",
     "has_media": false,
     "media_file": ""
   },
@@ -570,8 +570,8 @@
     "media_file": "AGF-HUDPlus-Weekday_01.png"
   },
   "zzzAGF-Requested-LootStaysOnEmpty": {
-    "signature": "509641db9d0cd2d2124e12b4c5776fcdfc7dd3925230d08b6f81a527eb46b38f",
-    "version": "1.0.3",
+    "signature": "74e42340ed33f668afcbe7f8de356a58e2f02f1ca6b957ece35238076c24aa2a",
+    "version": "1.0.4",
     "has_media": false,
     "media_file": ""
   },

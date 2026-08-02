@@ -25,3 +25,6 @@ __pycache__/
 # Quarantine / rollback safety nets (pipeline-managed; not curated content)
 00_Support/Quarantine/GameRemovals/
 00_Support/Quarantine/TransactionRollback/
+
+# Local streaming dump (full Streamer.bot install + large assets; not pushed)
+StreamingManagement/Streaming/

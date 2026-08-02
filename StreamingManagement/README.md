@@ -25,7 +25,9 @@ together going forward, for example:
 
 ```text
 StreamingManagement/
-`-- README.md     # this file
+|-- README.md       # this file
+|-- StreamerBot/    # Streamer.bot actions, commands, and config exports
+`-- Emotes/         # Emote assets and related files
 ```
 
 Structure will grow as we decide what to add.

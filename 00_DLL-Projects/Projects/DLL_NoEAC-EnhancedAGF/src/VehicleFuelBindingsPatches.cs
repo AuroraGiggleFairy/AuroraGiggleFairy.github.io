@@ -147,8 +147,8 @@ public static class VehicleFuelBindingsPatches
         }
 
         EntityPlayerLocal localPlayerForVehicle = __instance.localPlayer ?? __instance.xui?.playerUI?.entityPlayer;
-        EntityVehicle entityVehicle = (localPlayerForVehicle?.AttachedToEntity as EntityVehicle) ?? __instance.vehicle;
-        Vehicle vehicle = entityVehicle?.GetVehicle();
+        EntityVehicle entityVehicle = ResolveLiveHudVehicle(localPlayerForVehicle, __instance.vehicle);
+        Vehicle vehicle = entityVehicle != null ? entityVehicle.GetVehicle() : null;
 
         if (!TryResolveVehicleWindowBinding(vehicle, entityVehicle, _bindingName, out _value))
         {
@@ -716,6 +716,30 @@ public static class VehicleFuelBindingsPatches
         }
     }
 
+    // Unity destroyed entities are not C# null; entity?.transform still calls get_transform and can throw.
+    private static bool TryGetLiveVehicleTransform(EntityVehicle entityVehicle, out Transform transform)
+    {
+        transform = null;
+        if (entityVehicle == null)
+        {
+            return false;
+        }
+
+        transform = entityVehicle.transform;
+        return transform != null;
+    }
+
+    private static EntityVehicle ResolveLiveHudVehicle(EntityPlayerLocal localPlayer, EntityVehicle fallback)
+    {
+        EntityVehicle attached = localPlayer?.AttachedToEntity as EntityVehicle;
+        if (attached != null)
+        {
+            return attached;
+        }
+
+        return fallback != null ? fallback : null;
+    }
+
     private static float GetCurrentSpeed(Vehicle vehicle, EntityVehicle entityVehicle)
     {
         float speedFromVehicleForward = Mathf.Abs(vehicle?.CurrentForwardVelocity ?? 0f);
@@ -729,9 +753,9 @@ public static class VehicleFuelBindingsPatches
             Vector3 rbVelocity = entityVehicle.GetRBVelocity();
 
             speedFromEntityVector = Mathf.Max(velocityPerSecond.magnitude, rbVelocity.magnitude);
-            if (entityVehicle.transform != null)
+            if (TryGetLiveVehicleTransform(entityVehicle, out Transform transform))
             {
-                Vector3 forward = entityVehicle.transform.forward;
+                Vector3 forward = transform.forward;
                 speedFromEntityForward = Mathf.Max(Mathf.Abs(Vector3.Dot(velocityPerSecond, forward)), Mathf.Abs(Vector3.Dot(rbVelocity, forward)));
             }
         }
@@ -745,9 +769,9 @@ public static class VehicleFuelBindingsPatches
         float reverseFromEntityVelocity = 0f;
         float reverseFromEntityRb = 0f;
 
-        if (entityVehicle != null && entityVehicle.transform != null)
+        if (entityVehicle != null && TryGetLiveVehicleTransform(entityVehicle, out Transform transform))
         {
-            Vector3 forward = entityVehicle.transform.forward;
+            Vector3 forward = transform.forward;
             float forwardFromVelocity = Vector3.Dot(entityVehicle.GetVelocityPerSecond(), forward);
             float forwardFromRb = Vector3.Dot(entityVehicle.GetRBVelocity(), forward);
             reverseFromEntityVelocity = Mathf.Max(0f, 0f - forwardFromVelocity);
@@ -769,12 +793,12 @@ public static class VehicleFuelBindingsPatches
 
     private static float GetVehiclePitchDegrees(EntityVehicle entityVehicle)
     {
-        if (entityVehicle?.transform == null)
+        if (!TryGetLiveVehicleTransform(entityVehicle, out Transform transform))
         {
             return 0f;
         }
 
-        return NormalizeSignedDegrees(entityVehicle.transform.eulerAngles.x);
+        return NormalizeSignedDegrees(transform.eulerAngles.x);
     }
 
     private static float GetVehiclePitchDegreesForDisplay(EntityVehicle entityVehicle)
@@ -785,12 +809,12 @@ public static class VehicleFuelBindingsPatches
 
     private static float GetVehicleRollDegrees(EntityVehicle entityVehicle)
     {
-        if (entityVehicle?.transform == null)
+        if (!TryGetLiveVehicleTransform(entityVehicle, out Transform transform))
         {
             return 0f;
         }
 
-        return NormalizeSignedDegrees(entityVehicle.transform.eulerAngles.z);
+        return NormalizeSignedDegrees(transform.eulerAngles.z);
     }
 
     private static float NormalizeSignedDegrees(float eulerDegrees)
@@ -811,7 +835,7 @@ public static class VehicleFuelBindingsPatches
 
     private static float GetVehicleGroundClearanceMeters(EntityVehicle entityVehicle)
     {
-        if (entityVehicle?.transform == null)
+        if (!TryGetLiveVehicleTransform(entityVehicle, out Transform transform))
         {
             lastGroundClearanceWorldY = float.NaN;
             lastGroundClearanceReferenceY = float.NaN;
@@ -824,7 +848,7 @@ public static class VehicleFuelBindingsPatches
         Vector3 worldPos = entityVehicle.position;
         if (!IsFinite(worldPos.x) || !IsFinite(worldPos.y) || !IsFinite(worldPos.z))
         {
-            worldPos = entityVehicle.transform.position;
+            worldPos = transform.position;
         }
         float referenceY = GetVehicleGroundReferenceY(entityVehicle, worldPos.y);
         // Some vehicle bounds providers return non-world values; keep reference close to actual world Y.
@@ -2163,10 +2187,12 @@ public static class VehicleFuelBindingsPatches
             return;
         }
 
-        EntityVehicle entityVehicle = (localPlayer?.AttachedToEntity as EntityVehicle) ?? statBar.vehicle;
-        float pitchDegrees = GetVehiclePitchDegreesForDisplay(entityVehicle);
+        // Prefer the live mounted vehicle; ignore destroyed leftovers on the stat bar (exit/pickup).
+        EntityVehicle entityVehicle = ResolveLiveHudVehicle(localPlayer, statBar.vehicle);
+        float pitchDegrees = entityVehicle != null ? GetVehiclePitchDegreesForDisplay(entityVehicle) : 0f;
 
         // No-roll attitude: move the horizon vertically while keeping aircraft reference fixed.
+        // When not mounted / vehicle destroyed, pitchDegrees is 0 so gauges return to neutral.
         float yOffset = Mathf.Clamp(0f - (pitchDegrees * PitchPixelsPerDegree), 0f - PitchMaxPixelOffset, PitchMaxPixelOffset);
         Transform horizonMover =
             FindFromSelfOrAncestors(rootTransform, "vehiclePitchViewport/vehiclePitchHorizonMover") ??
@@ -2206,7 +2232,7 @@ public static class VehicleFuelBindingsPatches
             return;
         }
 
-        Vehicle vehicle = entityVehicle?.GetVehicle();
+        Vehicle vehicle = entityVehicle != null ? entityVehicle.GetVehicle() : null;
         float current = GetCurrentSpeed(vehicle, entityVehicle);
         float max = vehicle?.MaxPossibleSpeed ?? 0f;
         float normalized = max > 0f ? Mathf.Clamp01(current / max) : 0f;

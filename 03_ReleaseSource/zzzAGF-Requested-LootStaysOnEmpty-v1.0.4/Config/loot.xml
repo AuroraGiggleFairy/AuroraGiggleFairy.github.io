@@ -1,0 +1,10 @@
+<AGF-LootStaysOnEmpty>
+
+	<!-- Order of these lines matters! -->
+
+	<removeattribute xpath="//@destroy_on_close" />
+
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='airDrop']" name="destroy_on_close">empty</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='buriedTreasure']" name="destroy_on_close">empty</setattribute>
+	
+</AGF-LootStaysOnEmpty>

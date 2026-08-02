@@ -1,9 +1,9 @@
 {
-  "computed_at": "2026-07-25T17:25:00",
-  "since_gigglepack_version": "0.15.0",
+  "computed_at": "2026-07-31T13:07:16",
+  "since_gigglepack_version": "0.16.0",
   "new_mods": [
     [
-      "AGF-NoEAC-OpenAllButton",
+      "AGF-4Modders-Fix4DestroyBiomeBadge",
       "2.0.0"
     ]
   ],

@@ -1,12 +1,12 @@
-#   GigglePack v0.16.0 - *July 25, 2026 6:46pm*
+#   GigglePack v0.17.0 - *August 2, 2026 7:51pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +1 new, ~0 updated, =0 renamed, -0 removed**
+###  **Change summary: +1 new, ~1 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - [AGF-NoEAC-OpenAllButton](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip) (new: v2.0.0)
+  - [AGF-4Modders-Fix4DestroyBiomeBadge](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip) (new: v2.0.0)
 - **Updated existing mods:**
-  - None
+  - [zzzAGF-Requested-LootStaysOnEmpty](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Requested-LootStaysOnEmpty.zip) (v1.0.3 -> v1.0.4)
 - **Renamed mods:**
   - None
 - **Removed mods:**
