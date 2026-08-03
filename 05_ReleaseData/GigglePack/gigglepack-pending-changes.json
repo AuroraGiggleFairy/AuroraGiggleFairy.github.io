@@ -1,16 +1,7 @@
 {
-  "computed_at": "2026-08-03T00:51:39",
-  "since_gigglepack_version": "0.17.0",
-  "new_mods": [
-    [
-      "AGF-NoEAC-SmeltTimerOption",
-      "1.0.0"
-    ],
-    [
-      "AGF-VP-SmeltingPlus",
-      "3.0.0"
-    ]
-  ],
+  "computed_at": "2026-08-03T01:11:40",
+  "since_gigglepack_version": "0.18.0",
+  "new_mods": [],
   "updated_mods": [],
   "renamed_mods": [],
   "removed_mods": []

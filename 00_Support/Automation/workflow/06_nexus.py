@@ -377,7 +377,8 @@ def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, descrip
             else:
                 feat_current = stripped
         if feat_current:
-            w(f"[*][size=4]{feat_current.strip()}[/size][/*]")
+            # Match prior feature bullets: no per-bullet size override.
+            w(f"[*]{feat_current.strip()}[/*]")
         w("[/list]")
         # Only add separator divider when OTHER DETAILS follows (otherwise MODGUIDE snippet provides its own dividers)
         if other:
