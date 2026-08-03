@@ -2103,10 +2103,15 @@ def add_mod_changelog_entries(
     entries: List[str],
     dry_run: bool,
 ) -> bool:
-    """POST /mods/{id}/changelogs — append changelog entries for a version (additive)."""
+    """POST /mods/{id}/changelogs — append changelog text for a version (additive).
+
+    Nexus schema AddModChangelogEntriesRequest requires:
+      - version (string)
+      - changelog (string)  — the copy/paste text from PublishHelp Details.md
+    """
     cleaned = [str(item).strip() for item in entries if str(item).strip()]
     if not cleaned:
-        print("[CHANGELOG] No changelog entries to append.")
+        print("[CHANGELOG] No changelog text to append.")
         return True
     if not mod_id:
         print("[ERROR] Cannot append changelog: missing mod id")
@@ -2115,25 +2120,28 @@ def add_mod_changelog_entries(
         print(f"[ERROR] Cannot append changelog: invalid version {version!r}")
         return False
 
+    # API takes one changelog string (max 65535), matching Details.md ```text``` blocks.
+    changelog_text = "\n".join(cleaned)
+    if len(changelog_text) > 65535:
+        print(f"[ERROR] Changelog text too long for v{version}: {len(changelog_text)} / 65535")
+        return False
+
     if dry_run:
-        print(f"[DRYRUN] Would append {len(cleaned)} changelog entries:")
+        print(f"[DRYRUN] Would append changelog text for v{version}:")
         print(f"[DRYRUN]   POST {api_base_url}/mods/{mod_id}/changelogs")
-        print(f"[DRYRUN]   version={version}")
-        for item in cleaned[:5]:
-            print(f"[DRYRUN]   - {item[:120]}")
-        if len(cleaned) > 5:
-            print(f"[DRYRUN]   ... ({len(cleaned) - 5} more)")
+        preview = changelog_text if len(changelog_text) <= 240 else changelog_text[:240] + "…"
+        print(f"[DRYRUN]   changelog={preview!r}")
         return True
 
     url = f"{api_base_url}/mods/{mod_id}/changelogs"
-    body = {"version": version, "entries": cleaned[:50]}
+    body = {"version": version, "changelog": changelog_text}
     try:
         payload = request_json(url, headers, method="POST", body=body)
         data = extract_data_payload(payload)
         if not isinstance(data, dict):
-            print("[ERROR] Failed to append changelog entries")
+            print("[ERROR] Failed to append changelog")
             return False
-        print(f"[CHANGELOG] Appended {len(cleaned)} entries for v{version}")
+        print(f"[CHANGELOG] Appended changelog for v{version} ({len(changelog_text)} chars)")
         return True
     except urllib.error.HTTPError as ex:
         print(f"[ERROR] Changelog append failed: HTTP {ex.code}")

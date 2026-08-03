@@ -1,16 +1,16 @@
 @echo off
 setlocal
 
-set "CANVAS=%USERPROFILE%\.cursor\projects\c-GitHub-7D2D-Mods\canvases\player-reports-checklist.canvas.tsx"
+set "REPORTS=%~dp0Player-Reports.md"
 
-if not exist "%CANVAS%" (
-    echo ERROR: Player reports canvas not found:
-    echo   %CANVAS%
+if not exist "%REPORTS%" (
+    echo ERROR: Player reports table not found:
+    echo   %REPORTS%
     echo.
     pause
     exit /b 1
 )
 
-echo Opening player reports checklist in Cursor...
-cursor "%CANVAS%"
+echo Opening Player-Reports.md in Cursor...
+cursor "%REPORTS%"
 exit /b %ERRORLEVEL%

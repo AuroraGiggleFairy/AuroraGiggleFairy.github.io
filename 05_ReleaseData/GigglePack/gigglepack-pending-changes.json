@@ -1,10 +1,14 @@
 {
-  "computed_at": "2026-07-31T13:07:16",
-  "since_gigglepack_version": "0.16.0",
+  "computed_at": "2026-08-03T00:51:39",
+  "since_gigglepack_version": "0.17.0",
   "new_mods": [
     [
-      "AGF-4Modders-Fix4DestroyBiomeBadge",
-      "2.0.0"
+      "AGF-NoEAC-SmeltTimerOption",
+      "1.0.0"
+    ],
+    [
+      "AGF-VP-SmeltingPlus",
+      "3.0.0"
     ]
   ],
   "updated_mods": [],

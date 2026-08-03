@@ -3580,12 +3580,60 @@ def enforce_staging_major_policy(dry_run: bool, log: Logger) -> None:
                 log.warn(f"Could not hash compare lane-policy tie for {base_name}: {ex}")
 
 
+def migrate_draft_promotion_baseline_for_renames(
+    folder_renames: List[Tuple[str, str, str]],
+    dry_run: bool,
+    log: "Logger",
+) -> None:
+    """Move draft-promotion baseline keys when a Draft folder is renamed.
+
+    Rename runs before Draft→ActiveBuild promotion. Keep the *old* baseline
+    version so a rename+bump (e.g. Foo-v0.0.1 → Bar-v1.0.0) still counts as a
+    major increase vs baseline.
+    """
+    if not folder_renames:
+        return
+
+    baseline = load_draft_promotion_baseline(log)
+    changed = False
+
+    for old_folder, new_folder, _mod_dir in folder_renames:
+        old_base = get_base_mod_name(old_folder)
+        new_base = get_base_mod_name(new_folder)
+        if not old_base or not new_base or old_base == new_base:
+            continue
+
+        old_entry = baseline.get(old_base)
+        if not isinstance(old_entry, dict):
+            continue
+
+        old_ver = str(old_entry.get("version", "0.0.0") or "0.0.0")
+        baseline[new_base] = {
+            "folder": new_folder,
+            "version": old_ver,
+            "recorded_at": dt.datetime.now().isoformat(timespec="seconds"),
+            "migrated_from": old_base,
+            "migrated_from_version": old_ver,
+        }
+        baseline.pop(old_base, None)
+        changed = True
+        log.info(
+            f"Draft baseline migrated: {old_base} v{old_ver} -> {new_base} "
+            f"(kept baseline version {old_ver} for major-bump detection)"
+        )
+
+    if changed:
+        save_draft_promotion_baseline(baseline, dry_run, log)
+
+
 def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
     """Promote Draft mods into ActiveBuild only on major-version upgrade.
 
     Rules:
     - Draft major < 1 never promotes to ActiveBuild.
-    - If no ActiveBuild copy exists and draft major >= 1, add it.
+    - If no ActiveBuild copy exists and draft major >= 1:
+      - promote on first baseline sighting, or when draft major > baseline major
+      - otherwise hold (supports lane-reset: baseline matches draft until next major)
     - If ActiveBuild exists, promote only when draft major > active major.
     - Minor/patch-only updates in Draft are intentionally held in Draft.
     """
@@ -3629,7 +3677,6 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
             draft_major = 0
 
         # Keep baseline in sync while the mod is still draft-only (major < 1).
-        # This ensures the first v1 major bump is recognized as promotable.
         if draft_major < 1:
             if baseline_major is None or baseline_ver != draft_ver:
                 baseline[base_name] = {
@@ -3638,23 +3685,43 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
                     "recorded_at": dt.datetime.now().isoformat(timespec="seconds"),
                 }
                 baseline_changed = True
-                if baseline_major is None:
-                    log.info(
-                        f"Draft baseline recorded for {draft_folder} v{draft_ver} "
-                        "while draft-only (major < 1)"
-                    )
-                else:
-                    log.info(
-                        f"Draft baseline updated for {draft_folder} v{draft_ver} "
-                        "while draft-only (major < 1)"
-                    )
+                log.info(
+                    f"Draft baseline recorded for {draft_folder} v{draft_ver} "
+                    "while draft-only (major < 1)"
+                )
             log.info(
                 f"Draft sync skipped for {draft_folder}: version {draft_ver} is draft-only (major < 1)"
             )
             continue
 
-        # First sighting in Draft records current version and waits for a future major bump.
+        has_staging = base_name in staging_by_base
+        remove_draft_after_sync = False
+
+        # First sighting at major >= 1 with no ActiveBuild: promote now.
+        # (Covers brand-new v1 mods. Rename+0→1 is handled via baseline migration.)
+        if baseline_major is None and not has_staging:
+            dest = os.path.join(STAGING, draft_folder)
+            if maybe_copytree(draft_path, dest, dry_run, log):
+                log.info(
+                    f"Draft promotion add: {draft_folder} v{draft_ver} "
+                    "(first sighting at major >= 1, no ActiveBuild copy)"
+                )
+                remove_draft_after_sync = True
+                if remove_draft_after_sync and maybe_remove_dir(draft_path, dry_run, log):
+                    baseline[base_name] = {
+                        "folder": draft_folder,
+                        "version": draft_ver,
+                        "recorded_at": dt.datetime.now().isoformat(timespec="seconds"),
+                    }
+                    baseline_changed = True
+                    log.info(
+                        f"Draft promotion cleanup: removed {draft_folder} v{draft_ver} from Draft "
+                        "after syncing to ActiveBuild"
+                    )
+            continue
+
         if baseline_major is None:
+            # First sighting while ActiveBuild already has this base: record and hold.
             baseline[base_name] = {
                 "folder": draft_folder,
                 "version": draft_ver,
@@ -3663,7 +3730,7 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
             baseline_changed = True
             log.info(
                 f"Draft baseline recorded for {draft_folder} v{draft_ver}; "
-                "will promote after a future major bump"
+                "ActiveBuild already present — waiting for a future major bump"
             )
             continue
 
@@ -3674,9 +3741,8 @@ def sync_draft_to_staging_latest(dry_run: bool, log: Logger) -> None:
             )
             continue
 
-        remove_draft_after_sync = False
-
-        if base_name not in staging_by_base:
+        # draft_major > baseline_major
+        if not has_staging:
             dest = os.path.join(STAGING, draft_folder)
             if maybe_copytree(draft_path, dest, dry_run, log):
                 log.info(f"Draft promotion add: {draft_folder} v{draft_ver} (no existing ActiveBuild copy)")
@@ -7425,6 +7491,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
                 return 1
             pre_promote_draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             update_mod_loaded_references_for_renames(pre_promote_draft_renames, args.dry_run, log)
+            migrate_draft_promotion_baseline_for_renames(pre_promote_draft_renames, args.dry_run, log)
 
             # 0.5) Ensure ActiveBuild includes latest Draft copies before game sync.
             sync_draft_to_staging_latest(args.dry_run, log)
@@ -7575,6 +7642,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
                 return 1
             pre_promote_draft_renames = rename_mod_folders_to_modinfo(args.dry_run, log, mod_dirs=(IN_PROGRESS,))
             update_mod_loaded_references_for_renames(pre_promote_draft_renames, args.dry_run, log)
+            migrate_draft_promotion_baseline_for_renames(pre_promote_draft_renames, args.dry_run, log)
 
             # 0.5) Ensure ActiveBuild includes latest Draft copies before game sync.
             sync_draft_to_staging_latest(args.dry_run, log)

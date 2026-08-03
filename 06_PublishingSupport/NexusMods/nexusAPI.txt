@@ -351,10 +351,10 @@ paths:
         color: orange
       summary: Add changelog entries for a mod version
       description: |
-        Appends changelog entries for a version of a mod.
+        Appends changelog text for a version of a mod.
 
-        This is additive only: repeated calls for the same version append further entries rather
-        than replacing existing ones.
+        This is additive only: repeated calls for the same version append further text rather
+        than replacing what's already there.
       operationId: addModChangelogEntries
       parameters:
       - name: id
@@ -1353,6 +1353,9 @@ paths:
 
         ### Next steps
         * Call `PUT` with your file data to the returned `presigned_url`. Recommended for files up to 100 MiB.
+           * âš ï¸ You must send a `Content-Disposition` header of `attachment; filename="<filename>"`, using the `filename`
+             from your request. This value is part of the presigned URL signature, so the upload is rejected if the
+             header is missing or does not match.
         * Once all data is uploaded, [finalise the upload](#tag/uploads/operation/finaliseUpload).
       operationId: createUpload
       requestBody:
@@ -2155,35 +2158,30 @@ components:
       type: object
       required:
       - version
-      - entries
+      - changelog
       properties:
         version:
           type: string
           description: The version string these entries apply to.
           maxLength: 50
           pattern: "^[a-zA-Z0-9.-]+$"
-        entries:
-          type: array
-          description: Changelog entries to add, in display order.
-          items:
-            type: string
-            minLength: 1
-          minItems: 1
-          maxItems: 50
+        changelog:
+          type: string
+          description: The changelog text to add for this version.
+          minLength: 1
+          maxLength: 65535
     AddModChangelogEntriesSuccess:
       type: object
       required:
       - version
-      - entries
+      - changelog
       properties:
         version:
           type: string
           description: The version string these entries apply to.
-        entries:
-          type: array
-          description: The created entries, in order.
-          items:
-            type: string
+        changelog:
+          type: string
+          description: The changelog text that was added for this version.
     MoveModFileVersionsRequest:
       type: object
       required:

@@ -68,7 +68,7 @@ Create mod file version (`POST /mod-files/{id}/versions`):
 - `archive_existing_file`, `previous_version_id`, `update_mod_version`
 
 Changelog append (`POST /mods/{id}/changelogs`):
-- `version` + `entries[]` (1–50 strings). Additive; repeats append more lines.
+- `version` + `changelog` (single string, 1–65535 chars). Additive; repeats append more text.
 
 Upload session:
 - `filename`, `size_bytes`

@@ -154,6 +154,11 @@
     "recorded_at": "2026-06-16T03:42:40",
     "version": "2.0.0"
   },
+  "AGF-NoEAC-SmeltTimerOption": {
+    "folder": "AGF-NoEAC-SmeltTimerOption-v1.0.0",
+    "recorded_at": "2026-08-03T00:51:34",
+    "version": "1.0.0"
+  },
   "AGF-NoEAC-SortingBox": {
     "folder": "AGF-NoEAC-SortingBox-v1.0.6",
     "recorded_at": "2026-06-15T02:20:47",
@@ -420,9 +425,9 @@
     "version": "2.0.0"
   },
   "AGF-VP-SmeltingPlus": {
-    "folder": "AGF-VP-SmeltingPlus-v2.4.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.4.1"
+    "folder": "AGF-VP-SmeltingPlus-v3.0.0",
+    "recorded_at": "2026-08-03T00:44:55",
+    "version": "3.0.0"
   },
   "AGF-VP-StayLongerAnimalCorpse": {
     "folder": "AGF-VP-StayLongerAnimalCorpse-v3.0.0",

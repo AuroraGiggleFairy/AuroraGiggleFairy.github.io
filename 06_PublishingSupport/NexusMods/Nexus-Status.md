@@ -1,18 +1,19 @@
 # Nexus Status Report
 
-Generated: 07-25-2026 4:19 AM
+Generated: 08-02-2026 7:54 PM
 
 ## Summary
 
-- Total: **58**
-- Needs Update: **0**
+- Total: **60**
+- Needs Update: **1**
 - Matches: **58**
-- First Upload Needed: **0**
+- First Upload Needed: **1**
 
 ## Status
 
 | Mod | Local | Nexus | Status |
 |---|---|---|---|
+| `zzzAGF-Requested-LootStaysOnEmpty` | 1.0.4 | 1.0.3 | Needs Update |
 | `AGF-BackpackPlus-060Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-072Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-084Slots` | 4.1.1 | 4.1.1 | Matches |
@@ -28,6 +29,7 @@ Generated: 07-25-2026 4:19 AM
 | `AGF-NoEAC-CosmeticLockIcon` | 3.1.1 | 3.1.1 | Matches |
 | `AGF-NoEAC-EnhancedAGF` | 4.3.2 | 4.3.2 | Matches |
 | `AGF-NoEAC-GlobalStormTracker` | 2.1.1 | 2.1.1 | Matches |
+| `AGF-NoEAC-OpenAllButton` | 2.0.0 | 2.0.0 | Matches |
 | `AGF-NoEAC-ScreamerAlert` | 2.3.2 | 2.3.2 | Matches |
 | `AGF-NoEAC-Toolbelt12Slots` | 2.2.3 | 2.2.3 | Matches |
 | `AGF-Requested-SmallerInteractionPrompt` | 2.0.0 | 2.0.0 | Matches |
@@ -68,6 +70,6 @@ Generated: 07-25-2026 4:19 AM
 | `AGF-VP-VehicleStoragePlus` | 3.1.1 | 3.1.1 | Matches |
 | `AGF-VP-VehiclesExtraSeating` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-VP-ZombieCorpseLeaveQuicker` | 3.1.1 | 3.1.1 | Matches |
-| `zzzAGF-Requested-LootStaysOnEmpty` | 1.0.3 | 1.0.3 | Matches |
 | `zzzAGF-Special-Compatibilities` | 5.1.1 | 5.1.1 | Matches |
 | `zzzAGF-Special-LocalizationPatches` | 1.0.1 | 1.0.1 | Matches |
+| `AGF-4Modders-Fix4DestroyBiomeBadge` | 2.0.0 | - | First Upload Needed |

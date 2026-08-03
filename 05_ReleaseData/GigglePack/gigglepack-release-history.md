@@ -1,5 +1,19 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.18.0 (August 3, 2026 1:05am)
+### Summary: +2 new, ~0 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-SmeltTimerOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SmeltTimerOption.zip) (new: v1.0.0)
+  - [AGF-VP-SmeltingPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SmeltingPlus.zip) (new: v3.0.0)
+- **Updated Existing Mods**
+  - None
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.17.0 (August 2, 2026 7:51pm)
 ### Summary: +1 new, ~1 updated, =0 renamed, -0 removed
 - **New Mods**

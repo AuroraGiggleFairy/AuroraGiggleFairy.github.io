@@ -444,10 +444,10 @@
     "media_file": "AGF-VP-SimplifiedStacks_01.png"
   },
   "AGF-VP-SmeltingPlus": {
-    "signature": "2d8419c6cb5a6af2608accbf86ec69cb1ef6b171a95252bb45b96e81bdf6ce02",
-    "version": "2.4.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "d1492846820694bd8a66ccbb179f248c5aa145a46ab35860a242e4b6929e268b",
+    "version": "3.0.0",
+    "has_media": true,
+    "media_file": "AGF-VP-SmeltingPlus_01.png"
   },
   "AGF-VP-StayLongerAnimalCorpse": {
     "signature": "5ffcf3e770bec002e1c2e6053860d04d48be7225118a15a1ab08991d1de2f52f",
@@ -592,5 +592,11 @@
     "version": "2.0.0",
     "has_media": true,
     "media_file": "AGF-Requested-TinyBuffsPopUp_01.png"
+  },
+  "AGF-NoEAC-SmeltTimerOption": {
+    "signature": "00f56b943f441a10b75b688d3671fef1418b199403e32e077ffa65e2d28d5207",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-SmeltTimerOption_01.png"
   }
 }

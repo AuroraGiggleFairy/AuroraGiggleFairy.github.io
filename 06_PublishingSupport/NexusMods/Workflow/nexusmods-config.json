@@ -933,6 +933,22 @@
       "file_description_override": "",
       "summary_override": "",
       "description_override": ""
+    },
+    "AGF-NoEAC-OpenAllButton": {
+      "intent": "update",
+      "nexus_mod_id": 11641,
+      "update_group_id": "7713327",
+      "update_group_name": "AGF - V3 - NoEAC - OpenAllButton",
+      "file_category": "main",
+      "legacy_latest_file_id": 0,
+      "legacy_name_hint": "",
+      "page_url": "https://www.nexusmods.com/7daystodie/mods/11641",
+      "tested_game_version_override": "",
+      "brief_overview_override": "",
+      "detailed_description_override": "",
+      "file_description_override": "",
+      "summary_override": "",
+      "description_override": ""
     }
   }
 }

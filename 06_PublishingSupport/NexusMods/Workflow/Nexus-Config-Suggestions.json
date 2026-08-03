@@ -1,5 +1,5 @@
 {
-  "generated_at": "07-25-2026 4:19 AM",
+  "generated_at": "08-02-2026 7:54 PM",
   "high_confidence_threshold": 0.8,
   "mods": {
     "AGF-BackpackPlus-060Slots": {
@@ -137,6 +137,28 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10748"
       }
     },
+    "AGF-NoEAC-OpenAllButton": {
+      "action": "add",
+      "score": 1.0,
+      "live_name": "AGF - V3 - NoEAC - OpenAllButton",
+      "live_version": "2.0.0",
+      "config": {
+        "intent": "update",
+        "nexus_mod_id": 11641,
+        "update_group_id": "7713327",
+        "update_group_name": "AGF - V3 - NoEAC - OpenAllButton",
+        "file_category": "main",
+        "legacy_latest_file_id": 0,
+        "legacy_name_hint": "",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11641",
+        "tested_game_version_override": "",
+        "brief_overview_override": "",
+        "detailed_description_override": "",
+        "file_description_override": "",
+        "summary_override": "",
+        "description_override": ""
+      }
+    },
     "AGF-NoEAC-ScreamerAlert": {
       "action": "patch_update_group",
       "score": 1.0,
@@ -156,135 +178,57 @@
       }
     },
     "AGF-Requested-SmallerInteractionPrompt": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - Requested - SmallerInteractionPrompt",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11617,
         "update_group_id": "7709718",
         "update_group_name": "AGF - V3 - Requested - SmallerInteractionPrompt",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11617",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11617"
       }
     },
     "AGF-Requested-TinyBuffsPopUp": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - Requested - TinyBuffsPopUp",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11618,
         "update_group_id": "7709727",
         "update_group_name": "AGF - V3 - Requested - TinyBuffsPopUp",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11618",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11618"
       }
     },
     "AGF-VP-AdminModdingSupport": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - AdminModdingSupport",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11619,
         "update_group_id": "7709733",
         "update_group_name": "AGF - V3 - VP - AdminModdingSupport",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11619",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11619"
       }
     },
     "AGF-VP-AlternativeRecipes": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - AlternativeRecipes",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11620,
         "update_group_id": "7709772",
         "update_group_name": "AGF VP AlternativeRecipes",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11620",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11620"
       }
     },
     "AGF-VP-AmmoDisassembly": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - AmmoDisassembly",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11622,
         "update_group_id": "7709820",
         "update_group_name": "AGF - V3 - VP - AmmoDisassembly",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11622",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11622"
       }
     },
     "AGF-VP-ArcheryFeathersChange": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - ArcheryFeathersChange",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11621,
         "update_group_id": "7709787",
         "update_group_name": "AGF - V3 - VP - ArcheryFeathersChange",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11621",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11621"
       }
     },
     "AGF-VP-AutomobilesRespawn": {
@@ -342,47 +286,21 @@
       }
     },
     "AGF-VP-DrinkableAcid": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - DrinkableAcid",
-      "live_version": "3.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11623,
         "update_group_id": "7709823",
         "update_group_name": "AGF - V3 - VP - DrinkableAcid",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11623",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11623"
       }
     },
     "AGF-VP-DyesPlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - DyesPlus",
-      "live_version": "4.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11624,
         "update_group_id": "7709829",
         "update_group_name": "AGF - V3 - VP - DyesPlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11624",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11624"
       }
     },
     "AGF-VP-FloraHarvester": {
@@ -431,25 +349,12 @@
       }
     },
     "AGF-VP-MiningPlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - MiningPlus",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11625,
         "update_group_id": "7709832",
         "update_group_name": "AGF - V3 - VP - MiningPlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11625",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11625"
       }
     },
     "AGF-VP-Mod988": {
@@ -471,25 +376,12 @@
       }
     },
     "AGF-VP-PaintbrushPlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - PaintbrushPlus",
-      "live_version": "3.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11626,
         "update_group_id": "7709841",
         "update_group_name": "AGF - V3 - VP - PaintbrushPlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11626",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11626"
       }
     },
     "AGF-VP-PickupLanternsPlus": {
@@ -520,25 +412,12 @@
       }
     },
     "AGF-VP-RecipeRottingFlesh": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - RecipeRottingFlesh",
-      "live_version": "2.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11627,
         "update_group_id": "7709853",
         "update_group_name": "AGF - V3 - VP - RecipeRottingFlesh",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11627",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11627"
       }
     },
     "AGF-VP-RestorePowerAnyTime": {
@@ -596,25 +475,12 @@
       }
     },
     "AGF-VP-TacticalRiflePlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - TacticalRiflePlus",
-      "live_version": "3.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11628,
         "update_group_id": "7709862",
         "update_group_name": "AGF - V3 - VP - TacticalRiflePlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11628",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11628"
       }
     },
     "AGF-VP-VehiclePerformance": {
@@ -654,25 +520,12 @@
       }
     },
     "zzzAGF-Requested-LootStaysOnEmpty": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - Requested - LootStaysOnEmpty",
-      "live_version": "1.0.3",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11629,
         "update_group_id": "7709871",
         "update_group_name": "AGF - V3 - Requested - LootStaysOnEmpty",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11629",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11629"
       }
     },
     "zzzAGF-Special-Compatibilities": {
