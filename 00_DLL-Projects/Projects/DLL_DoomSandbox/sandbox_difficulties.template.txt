@@ -1,0 +1,868 @@
+Doom Sandbox Difficulty Presets
+===============================
+Fill one DIFFICULTY block per preset. These become Difficulty-group sandbox presets.
+Legal values must match Choices in sandbox_options.txt (Locked tabs are NOT listed —
+those are forced the same for every difficulty).
+
+Fields:
+  Name: <display name>           shown in the preset spinner (e.g. Be Gentle!)
+  Rating: <int>                  1 = easiest, higher = harder (difficulty_rating)
+  Default: true|false            optional; only one should be true (new-game pick)
+  Description: <text>            shown under the preset
+  Icon: <path>                   optional; blank = shared Doom art / vanilla fallback
+
+Real preset blocks start after the long ==== divider below.
+Do not put example DIFFICULTY lines in this header — they get loaded as presets.
+
+Per-option rows (editable tabs only):
+  Name | Value
+
+Copy a whole DIFFICULTY block to add another tier. Leave a value blank to mean
+"use worksheet Default from sandbox_options.txt".
+
+====================================================================================================
+DIFFICULTY: Can I Play, Daddy?
+Rating: 1
+Default: false
+Description: Casual mode for easy combat
+Icon: #@modfolder:UIAtlases/doomguy_god.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | -1 health and armour
+Skill Gain Level Cap | 60
+Enemy Health | 90%
+Enemy Projectile Speed | 80%
+Hitscanner Accuracy | 6 degrees
+Game stage modifier | none
+Loot stage modifier | +16LS
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 100%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 100%
+Thirst Multiplier | 100%
+Infection Rate | 100%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Default
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Default
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 100%
+Blood Moon Block Damage | 100%
+Zombie Feral Sense | Day
+Allow Zombie Digging | No
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | 5%
+Blood Moon Frequency | 7 days
+Blood Moon Range | 0 days
+Blood Moon Count | 10
+Blood Moon Warning | Morning
+Air Drops | 3-7
+Air Drop Random Time | none
+Storm Frequency | 100%
+Storm Warning | Yes
+Heatmap Sensitivity | Disabled
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | 20
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 100%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 100%
+Apiary Time | 100%
+Apiary Input | 100%
+Chicken Coop Time | 100%
+Chicken Coop Input | 100%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 100%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 100%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 100%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+DIFFICULTY: Be Gentle!
+Rating: 2
+Default: false
+Description: Casual mode for easy combat
+Icon: #@modfolder:UIAtlases/doomguy_5.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | -1 health and armour
+Skill Gain Level Cap | 60
+Enemy Health | 100%
+Enemy Projectile Speed | 100%
+Hitscanner Accuracy | 5 degrees
+Game stage modifier | none
+Loot stage modifier | +16LS
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 100%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 100%
+Thirst Multiplier | 100%
+Infection Rate | 100%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Default
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Default
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 100%
+Blood Moon Block Damage | 100%
+Zombie Feral Sense | Day
+Allow Zombie Digging | No
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | 5%
+Blood Moon Frequency | 7 days
+Blood Moon Range | 0 days
+Blood Moon Count | 12
+Blood Moon Warning | Morning
+Air Drops | 3-7
+Air Drop Random Time | none
+Storm Frequency | 100%
+Storm Warning | Yes
+Heatmap Sensitivity | Disabled
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | 20
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 100%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 100%
+Apiary Time | 100%
+Apiary Input | 100%
+Chicken Coop Time | 100%
+Chicken Coop Input | 100%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 100%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 100%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 100%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+DIFFICULTY: Bring It On!
+Rating: 3
+Default: true
+Description: Standard Doom difficulty
+Icon: #@modfolder:UIAtlases/doomguy_4.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | No Modifier
+Skill Gain Level Cap | 60
+Enemy Health | 110%
+Enemy Projectile Speed | 120%
+Hitscanner Accuracy | 4.5 degrees
+Game stage modifier | +4GS
+Loot stage modifier | +12LS
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 100%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 100%
+Thirst Multiplier | 100%
+Infection Rate | 100%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Default
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Default
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 100%
+Blood Moon Block Damage | 100%
+Zombie Feral Sense | Day
+Allow Zombie Digging | No
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | 5%
+Blood Moon Frequency | 7 days
+Blood Moon Range | 0 days
+Blood Moon Count | 16
+Blood Moon Warning | Morning
+Air Drops | 3-7
+Air Drop Random Time | None
+Storm Frequency | 150%
+Storm Warning | Yes
+Heatmap Sensitivity | Disabled
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | 20
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 100%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 100%
+Apiary Time | 100%
+Apiary Input | 100%
+Chicken Coop Time | 100%
+Chicken Coop Input | 100%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 100%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 100%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 100%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+DIFFICULTY: Hurt Me Plenty!
+Rating: 4
+Default: false
+Description: You have a rough idea of how to play this mod, Rip and Tear!
+Icon: #@modfolder:UIAtlases/doomguy_3.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | No Modifier
+Skill Gain Level Cap | 60
+Enemy Health | 120%
+Enemy Projectile Speed | 140%
+Hitscanner Accuracy | 4 degrees
+Game stage modifier | +8GS
+Loot stage modifier | +8LS
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 100%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 100%
+Thirst Multiplier | 100%
+Infection Rate | 100%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Normal
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Normal
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 100%
+Blood Moon Block Damage | 100%
+Zombie Feral Sense | Day
+Allow Zombie Digging | No
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | 5%
+Blood Moon Frequency | 7 days
+Blood Moon Range | 0 days
+Blood Moon Count | 16
+Blood Moon Warning | Morning
+Air Drops | 3-7
+Air Drop Random Time | None
+Storm Frequency | 200%
+Storm Warning | Yes
+Heatmap Sensitivity | Disabled
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | 20
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 100%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 100%
+Apiary Time | 100%
+Apiary Input | 100%
+Chicken Coop Time | 100%
+Chicken Coop Input | 100%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 100%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 100%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 100%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+DIFFICULTY: Ultra-Violence!
+Rating: 5
+Default: false
+Description: You have the skills to dodge fireballs and take cover!
+Icon: #@modfolder:UIAtlases/doomguy_2.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | No Modifier
+Skill Gain Level Cap | 60
+Enemy Health | 130%
+Enemy Projectile Speed | 160%
+Hitscanner Accuracy | 3.5 degrees
+Game stage modifier | +12GS
+Loot stage modifier | +4LS
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 100%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 100%
+Thirst Multiplier | 100%
+Infection Rate | 100%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Normal
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Normal
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 100%
+Blood Moon Block Damage | 100%
+Zombie Feral Sense | Day
+Allow Zombie Digging | No
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | 5%
+Blood Moon Frequency | 7 days
+Blood Moon Range | 0 days
+Blood Moon Count | 24
+Blood Moon Warning | Morning
+Air Drops | 3-7
+Air Drop Random Time | None
+Storm Frequency | 300%
+Storm Warning | Yes
+Heatmap Sensitivity | Disabled
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | 20
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 100%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 100%
+Apiary Time | 100%
+Apiary Input | 100%
+Chicken Coop Time | 100%
+Chicken Coop Input | 100%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 100%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 100%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 100%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+DIFFICULTY: I am Death Incarnate!
+Rating: 6
+Default: false
+Description: You're one of the best if you can take on this challenge!
+Icon: #@modfolder:UIAtlases/doomguy_1.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | +1 health and armour
+Skill Gain Level Cap | 50
+Enemy Health | 140%
+Enemy Projectile Speed | 180%
+Hitscanner Accuracy | 3 degrees
+Game stage modifier | +16GS
+Loot stage modifier | none
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 100%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 100%
+Thirst Multiplier | 100%
+Infection Rate | 100%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Fast
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Fast
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 100%
+Blood Moon Block Damage | 100%
+Zombie Feral Sense | All
+Allow Zombie Digging | No
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | 5%
+Blood Moon Frequency | 7 days
+Blood Moon Range | 0 days
+Blood Moon Count | 24
+Blood Moon Warning | Morning
+Air Drops | 7
+Air Drop Random Time | None
+Storm Frequency | 400%
+Storm Warning | Yes
+Heatmap Sensitivity | Disabled
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | 20
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 100%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 100%
+Apiary Time | 100%
+Apiary Input | 100%
+Chicken Coop Time | 100%
+Chicken Coop Input | 100%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 100%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 100%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 100%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+DIFFICULTY: Nightmare!
+Rating: 7
+Default: false
+Description: Are you sure? This skill level isn't even remotely fair!
+Icon: #@modfolder:UIAtlases/doomguy_0.png
+====================================================================================================
+
+--- TAB: Doom ---
+Player Damage Taken | +1 health and armour
+Skill Gain Level Cap | 50
+Enemy Health | 150%
+Enemy Projectile Speed | 200%
+Hitscanner Accuracy | 2.5 degrees
+Game stage modifier | +16GS
+Loot stage modifier | none
+Starter Skill Points | 1
+
+--- TAB: General ---
+XP Multiplier | 75%
+Show XP | All
+Level Health/Stam Bonus | Yes
+Skill Gain Rate | 1
+Drop On Death | None
+Drop On Quit | None
+Hunger Multiplier | 125%
+Thirst Multiplier | 125%
+Infection Rate | 125%
+Infection Chance | 100%
+Allow Newbie Coat | Yes
+Stack Size Multiplier | 100%
+
+--- TAB: Entities ---
+Day Enemy Density | Default
+Day Biome Enemy Respawn | Very Fast
+Day Biome Animal Density | Default
+Day Biome Animal Respawn | Default
+Night Enemy Density | Default
+Night Biome Enemy Respawn | Very Fast
+Night Biome Animal Density | Default
+Night Biome Animal Respawn | Default
+Entity Block Damage | 125%
+Blood Moon Block Damage | 125%
+Zombie Feral Sense | All
+Allow Zombie Digging | Yes
+
+--- TAB: World ---
+Biome GameStage | Default
+Workstations in the Wild | none
+Blood Moon Frequency | 5 days
+Blood Moon Range | 4 days
+Blood Moon Count | 32
+Blood Moon Warning | Morning
+Air Drops | Disabled
+Air Drop Random Time | None
+Storm Frequency | 500%
+Storm Warning | Yes
+Heatmap Sensitivity | Very Low
+24 Day Cycle | 60
+Day Light Length | 16
+Mark Air Drops | Yes
+Allow Map | Yes
+Allow Compass | Yes
+Allow Screen Markers | Yes
+Show Location Info | Yes
+Show Day/Time | Yes
+
+--- TAB: Resources ---
+Loot Max Tier | 6
+Biome LootStage | Default
+POI Tier LootStage | Default
+Loot Respawn Days | Disabled
+Loot Time | 100%
+Global Loot Abundance | 100%
+Food Abundance | 100%
+Drink Abundance | 100%
+Medical Abundance | 100%
+Ammo Abundance | 100%
+Resource Abundance | 100%
+Armor Abundance | 100%
+Melee Abundance | 100%
+Ranged Abundance | 100%
+Dukes Abundance | 100%
+Magazines Abundance | 100%
+Book Abundance | 100%
+Treasure Map Chance | 100%
+Mining Output | 100%
+Crop Output | 100%
+Seed Drop Output | 100%
+Harvesting Output | 100%
+Crop Growth | 125%
+
+--- TAB: Crafting ---
+Crafting Max Tier | 6
+Backpack Crafting | Yes
+Workstation Crafting | Yes
+Crafting Time | 100%
+Crafting Input | 100%
+Scrapping Output | 100%
+Dew Collector Time | 125%
+Apiary Time | 125%
+Apiary Input | 150%
+Chicken Coop Time | 125%
+Chicken Coop Input | 150%
+Item Degradation | Default
+
+--- TAB: Traders ---
+Vending Machines Enabled | Yes
+Vending Item Abundance | Default
+Trader Reset Interval | Never/10000
+Traders Buy Price | 125%
+
+--- TAB: Misc ---
+Vehicle Fuel Usage | 125%
+Vehicle Entity Damage | 100%
+Vehicle Block Damage | 100%
+Vehicle Self Damage | 125%
+Electrical Output | 100%
+Celebrate Kills | No
+
+====================================================================================================
+# More Doom-named stubs (copy Hurt Me Plenty block, rename, set Rating):
+#   I'm Too Young To Die  → Rating 2
+#   Ultra-Violence        → Rating 4
+#   Nightmare!            → Rating 5
+====================================================================================================

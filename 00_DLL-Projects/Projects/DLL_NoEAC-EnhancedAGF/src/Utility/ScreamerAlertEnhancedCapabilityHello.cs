@@ -37,10 +37,22 @@ public static class ScreamerAlertEnhancedCapabilityHello
         if (player == null || player.entityId < 0) return;
         _entityId = player.entityId;
 
+        ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
+
         if (player.Buffs != null
             && player.Buffs.HasCustomVar(ProtocolCVar)
             && player.Buffs.GetCustomVar(ProtocolCVar) >= 2f)
         {
+            _serverDetected = true;
+            ScreamerAlertEnhancedGate.MarkServerScreamerDetected();
+        }
+        else if (manager != null
+            && manager.IsServer
+            && !GameManager.IsDedicatedServer
+            && ScreamerAlertEnhancedGate.IsScreamerPresentLocally())
+        {
+            // SP / listen-host: ScreamerAlert is local. Do not wait for Protocol CVar
+            // published through Clients.List (local host is often absent from that list).
             _serverDetected = true;
             ScreamerAlertEnhancedGate.MarkServerScreamerDetected();
         }

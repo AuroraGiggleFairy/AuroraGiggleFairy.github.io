@@ -1,0 +1,116 @@
+﻿TYPE EAIRangedAttackTarget
+FIELD Int32 itemActionType
+FIELD Int32 startAnimType
+FIELD Single releaseDelay
+FIELD Single baseCooldown
+FIELD Single cooldown
+FIELD EntityAlive entityTarget
+FIELD Single attackDuration
+FIELD Single elapsedTime
+FIELD Single minRange
+FIELD Single maxRange
+FIELD Single unreachableRange
+FIELD String soundStartName
+FIELD String soundReleaseName
+FIELD State state
+FIELD Single stateTime
+FIELD Single painHitsFelt
+METHOD Void Init(EntityAlive _theEntity)
+METHOD Void SetData(Dictionary`2 data)
+METHOD Boolean CanExecute()
+METHOD Void Start()
+METHOD Boolean Continue()
+METHOD Void Update()
+METHOD Void Reset()
+METHOD Boolean InRange()
+METHOD String ToString()
+METHOD Void .ctor()
+--- BODY Init ---
+stfld System.Single EAIRangedAttackTarget::cooldown
+stfld System.Single EAIRangedAttackTarget::attackDuration
+--- BODY SetData ---
+ldstr itemType
+ldstr startAnimType
+ldstr releaseDelay
+ldflda System.Single EAIRangedAttackTarget::releaseDelay
+ldstr cooldown
+ldflda System.Single EAIRangedAttackTarget::baseCooldown
+ldstr duration
+ldflda System.Single EAIRangedAttackTarget::attackDuration
+ldstr minRange
+ldstr maxRange
+ldstr unreachableRange
+ldstr sndStart
+ldstr sndRelease
+  IL_0000: ldarg.0
+  IL_0001: ldarg.1
+  IL_0002: call System.Void EAIBase::SetData(System.Collections.Generic.Dictionary`2<System.String,System.String>)
+  IL_0007: ldarg.0
+  IL_0008: ldarg.1
+  IL_0009: ldstr "itemType"
+  IL_000e: ldarg.0
+  IL_000f: ldflda System.Int32 EAIRangedAttackTarget::itemActionType
+  IL_0014: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Int32&)
+  IL_0019: ldarg.0
+  IL_001a: ldarg.1
+  IL_001b: ldstr "startAnimType"
+  IL_0020: ldarg.0
+  IL_0021: ldflda System.Int32 EAIRangedAttackTarget::startAnimType
+  IL_0026: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Int32&)
+  IL_002b: ldarg.0
+  IL_002c: ldarg.1
+  IL_002d: ldstr "releaseDelay"
+  IL_0032: ldarg.0
+  IL_0033: ldflda System.Single EAIRangedAttackTarget::releaseDelay
+  IL_0038: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Single&)
+  IL_003d: ldarg.0
+  IL_003e: ldarg.1
+  IL_003f: ldstr "cooldown"
+  IL_0044: ldarg.0
+  IL_0045: ldflda System.Single EAIRangedAttackTarget::baseCooldown
+  IL_004a: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Single&)
+  IL_004f: ldarg.0
+  IL_0050: ldarg.1
+  IL_0051: ldstr "duration"
+  IL_0056: ldarg.0
+  IL_0057: ldflda System.Single EAIRangedAttackTarget::attackDuration
+  IL_005c: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Single&)
+  IL_0061: ldarg.0
+  IL_0062: ldarg.1
+  IL_0063: ldstr "minRange"
+  IL_0068: ldarg.0
+  IL_0069: ldflda System.Single EAIRangedAttackTarget::minRange
+  IL_006e: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Single&)
+  IL_0073: ldarg.0
+  IL_0074: ldarg.1
+  IL_0075: ldstr "maxRange"
+  IL_007a: ldarg.0
+  IL_007b: ldflda System.Single EAIRangedAttackTarget::maxRange
+  IL_0080: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Single&)
+  IL_0085: ldarg.0
+  IL_0086: ldarg.1
+  IL_0087: ldstr "unreachableRange"
+  IL_008c: ldarg.0
+  IL_008d: ldflda System.Single EAIRangedAttackTarget::unreachableRange
+  IL_0092: call System.Void EAIBase::GetData(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String,System.Single&)
+  IL_0097: ldarg.1
+  IL_0098: ldstr "sndStart"
+  IL_009d: ldarg.0
+  IL_009e: ldflda System.String EAIRangedAttackTarget::soundStartName
+  IL_00a3: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.String>::TryGetValue(!0,!1&)
+  IL_00a8: pop
+  IL_00a9: ldarg.1
+  IL_00aa: ldstr "sndRelease"
+  IL_00af: ldarg.0
+  IL_00b0: ldflda System.String EAIRangedAttackTarget::soundReleaseName
+  IL_00b5: callvirt System.Boolean System.Collections.Generic.Dictionary`2<System.String,System.String>::TryGetValue(!0,!1&)
+  IL_00ba: pop
+  IL_00bb: ret
+--- BODY CanExecute ---
+ldfld System.Single EAIRangedAttackTarget::cooldown
+ldfld System.Single EAIRangedAttackTarget::cooldown
+stfld System.Single EAIRangedAttackTarget::cooldown
+--- BODY Update ---
+ldfld System.Single EAIRangedAttackTarget::attackDuration
+ldfld System.Single EAIRangedAttackTarget::releaseDelay
+

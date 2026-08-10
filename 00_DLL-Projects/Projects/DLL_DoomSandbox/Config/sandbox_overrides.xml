@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sandbox_overrides>
+	<!--
+		Difficulty presets are owned by Config/sandbox_difficulties.txt (loaded by DoomSandbox.dll).
+		Leave this file empty of <preset> entries unless you intentionally add Modded-group extras.
+		Group for worksheet difficulties is forced to sandboxPresetGroupDifficulty.
+	-->
+</sandbox_overrides>

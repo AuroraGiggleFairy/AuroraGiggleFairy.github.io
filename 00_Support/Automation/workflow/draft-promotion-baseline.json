@@ -129,6 +129,11 @@
     "recorded_at": "2026-06-15T02:20:47",
     "version": "1.0.1"
   },
+  "AGF-NoEAC-FuelAutoShutOff": {
+    "folder": "AGF-NoEAC-FuelAutoShutOff-v1.0.0",
+    "recorded_at": "2026-08-10T13:51:26",
+    "version": "1.0.0"
+  },
   "AGF-NoEAC-GlobalStormTracker": {
     "folder": "AGF-NoEAC-GlobalStormTracker-v2.0.0",
     "recorded_at": "2026-06-16T03:42:40",

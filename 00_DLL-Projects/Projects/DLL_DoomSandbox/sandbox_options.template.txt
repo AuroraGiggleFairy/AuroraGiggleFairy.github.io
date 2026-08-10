@@ -1,0 +1,218 @@
+Doom Sandbox Options Worksheet
+==============================
+Edit this file. Whatever remains is what DoomSandbox should implement.
+
+- Delete a row = that option is removed
+- Change Name / Default / Choices / Does = that option is rewritten
+- Add a row under a tab = new option on that tab
+- Add a new TAB section = new sandbox tab
+- Single-choice rows = forced/locked (put under Locked / Locked 2)
+
+Format: Name | Default | Choices | Does
+
+====================================================================================================
+TAB: Doom
+====================================================================================================
+Player Damage Taken | No Modifier | -1 health and armour, No Modifier, +1 health and armour | Flat modifier to damage player takes to health and armour
+Skill Gain Level Cap | 60 | 10, 20, 30, 40, 50, 60 | At what level does the player get their last skill point
+Enemy Health | 100% | 90%, 100%, 110%, 120%, 130%, 140%, 150% | Enemy max HP multiplier
+Enemy Projectile Speed | 100% | 80%, 100%, 120%, 140%, 160%, 180%, 200% | Speed of demon fireball/projectile attacks
+Hitscanner Accuracy | 4.5 degrees | 6 degrees, 5.5 degrees, 5 degrees, 4.5 degrees, 4 degrees, 3.5 degrees, 3 degrees, 2.5 degrees | Spread for Former Human hitscan attacks
+Game stage modifier | none | none, +4GS, +8GS, +12GS, +16GS | Flat game stage add
+Loot stage modifier | none | +16LS, +12LS, +8LS, +4LS, none | Flat loot stage add
+Starter Skill Points | 1 | none, 1 | Skill points given at character start
+Fast Monsters | No | No, Yes | Doubles enemy ranged attack rate (halves shot cooldown)
+
+====================================================================================================
+TAB: General
+====================================================================================================
+XP Multiplier | 100% | none, 25%, 50%, 75%, 100% | Experience gain rate
+Show XP | All | All, Bar Only, Notifications Only, None | How XP feedback is shown
+Level Health/Stam Bonus | Yes | No, Yes | Level-up health/stamina bonuses applied
+Skill Gain Rate | 1 | 1, 2, 3, 4, 5 | Skill progression speed multiplier index
+Drop On Death | None | None, All, Toolbelt, Backpack, Delete All | What drops as a backpack on death
+Drop On Quit | None | None, All, Toolbelt, Backpack | What drops when quitting to menu
+Hunger Multiplier | 100% | 100%, 125%, 150%, 175%, 200% | The rate at which the players food drains
+Thirst Multiplier | 100% | 100%, 125%, 150%, 175%, 200% | The rate at which the players water drains
+Infection Rate | 100% | 100%, 125%, 150%, 200%, 300% | Infection build-up speed
+Infection Chance | 100% | 100%, 125%, 150%, 200%, 300% | Chance to get Infected
+Allow Newbie Coat | Yes | No, Yes | Starting protective newbie coat allowed
+Stack Size Multiplier | 100% | 25%, 50%, 75%, 100% | Global item stack size multiplier
+
+====================================================================================================
+TAB: Entities
+====================================================================================================
+Day Enemy Density | Default | Default, Medium, High, Very High | How densely biomes spawn enemies during the day
+Day Biome Enemy Respawn | Default | Default, Normal, Fast, Very Fast | Enemy respawn delay in biomes during the day
+Day Biome Animal Density | Default | Default, Medium, High, Very High | How densely biomes spawn animals during the day
+Day Biome Animal Respawn | Default | Default, Normal, Fast, Very Fast | Animal respawn delay in biomes during the day
+Night Enemy Density | Default | Default, Medium, High, Very High | How densely biomes spawn enemies during the night
+Night Biome Enemy Respawn | Default | Default, Normal, Fast, Very Fast | Enemy respawn delay in biomes during the night
+Night Biome Animal Density | Default | Default, Medium, High, Very High | How densely biomes spawn animals during the night
+Night Biome Animal Respawn | Default | Default, Normal, Fast, Very Fast | Animal respawn delay in biomes during the night
+Entity Block Damage | 100% | 100%, 125%, 150%, 200%, 250%, 300% | Damage enemies deal to blocks
+Blood Moon Block Damage | 100% | 100%, 125%, 150%, 200%, 250%, 300% | Damage blood-moon enemies deal to blocks
+Zombie Feral Sense | Day | Day, All | When ferals get enhanced sensing
+Allow Zombie Digging | No | No, Yes | Zombies can dig through terrain
+
+====================================================================================================
+TAB: World
+====================================================================================================
+Biome GameStage | Default | Default (100%), High (150%), Very High (200%) | Multiplies biome game stage contribution
+Workstations in the Wild | 5% | none, 5% | Chance/rate of finding workstations in world
+Blood Moon Frequency | 7 days | Disabled, 1 day, 2 days, 3 days, 4 days, 5 days, 6 days, 7 days, 8 days, 9 days, 10 days, 14 days, 20 days, 30 days | Days between blood moons (Disabled = off)
+Blood Moon Range | 0 days | 0 days, 1 day, 2 days, 3 days, 4 days, 7 days, 10 days, 14 days, 20 days | Random day variance around blood moon schedule
+Blood Moon Count | 16 | 10, 12, 16, 24, 32 | How many BM enemies per player/wave scaling base
+Blood Moon Warning | Morning | Disabled, Morning, Evening | When blood moon warning appears
+Air Drops | 3-7 | Disabled, 3-7, 7 | How often supply crates drop (day patterns)
+Air Drop Random Time | none | none, Morning, MidDay, Evening, Night, All Day, Any | Time-of-day window for airdrops
+Storm Frequency | 100% | 100%, 150%, 200%, 300%, 400%, 500% | How often storms occur
+Storm Warning | Yes | No, Yes | Show storm warnings
+Heatmap Sensitivity | Disabled | Disabled (0%), Very Low (25%), Low (50%) | Heatmap / activity attraction sensitivity
+24 Day Cycle | 60 | 60, 90, 120 | Real-time minutes for a full day/night cycle (not in-game hours). 60 is vanilla pace; larger = slower days.
+Day Light Length | 16 | Always Night, 4, 6, 8, 10, 12, 14, 16, Always Day | Hours of daylight (16 ~ night near 8PM; vanilla default 18 ~ night near 10PM)
+Mark Air Drops | Yes | No, Yes | Show airdrop markers on map/compass
+Allow Map | Yes | No, Yes | Player map enabled
+Allow Compass | Yes | No, Yes | Compass UI enabled
+Allow Screen Markers | Yes | No, Yes | On-screen waypoint/icons enabled
+Show Location Info | Yes | No, Yes, Name Only | Location / entering-area text (v3.1: Name Only added)
+Show Day/Time | Yes | No, Yes | Day and time HUD display
+
+====================================================================================================
+TAB: Resources
+====================================================================================================
+Loot Max Tier | 6 | 1, 2, 3, 4, 5, 6 | Highest loot quality tier allowed
+Biome LootStage | Default | Very Low (25%), Low (50%), Default (100%) | Multiplies biome loot stage
+POI Tier LootStage | Default | Very Low (25%), Low (50%), Default (100%) | Multiplies POI-tier loot stage
+Loot Respawn Days | 20 | Disabled, 20, 30, 40, 50 | Days before containers can refill
+Loot Time | 100% | 100%, 125%, 150%, 200%, 300% | Container search / loot open speed
+Global Loot Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Overall loot quantity multiplier
+Food Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Food loot quantity
+Drink Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Drink loot quantity
+Medical Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Medical loot quantity
+Ammo Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Ammo loot quantity
+Resource Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Resource/material loot quantity
+Armor Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Armor loot quantity
+Melee Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Melee weapon loot quantity
+Ranged Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Ranged weapon loot quantity
+Dukes Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Duke's Casino Token loot quantity
+Magazines Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Crafting magazine loot quantity
+Book Abundance | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Book loot quantity
+Treasure Map Chance | 100% | none, 25%, 50%, 60%, 70%, 80%, 90%, 100% | Chance to find treasure maps
+Mining Output | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Yield from mining
+Crop Output | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Yield from harvested crops
+Seed Drop Output | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Seed drop amount from harvesting
+Harvesting Output | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | General foraging/harvest yield
+Crop Growth | 100% | 100%, 150%, 200%, 300% | How fast planted crops grow
+
+====================================================================================================
+TAB: Crafting
+====================================================================================================
+Crafting Max Tier | 6 | 1, 2, 3, 4, 5, 6 | Highest craftable item tier (QUALITY!!) :P
+Backpack Crafting | Yes | No, Yes, Limited, Workbench Only | Whether crafting from backpack is allowed
+Workstation Crafting | Yes | No, Yes | Crafting at workstations enabled
+Crafting Time | 100% | 100%, 125%, 150%, 200%, 300% | Craft duration multiplier
+Crafting Input | 100% | 100%, 125%, 150%, 200%, 300% | Ingredient cost multiplier
+Scrapping Output | 100% | none, 25%, 50%, 75%, 100% | Materials returned from scrapping
+Dew Collector Time | 100% | 100%, 125%, 150%, 200%, 300% | Dew collector fill speed
+Apiary Time | 100% | 100%, 125%, 150%, 200%, 300% | Apiary production speed
+Apiary Input | 100% | 100%, 150%, 200%, 300% | Apiary input consumption
+Chicken Coop Time | 100% | 100%, 125%, 150%, 200%, 300% | Chicken coop production speed
+Chicken Coop Input | 100% | 100%, 150%, 200%, 300% | Chicken coop input consumption
+Item Degradation | Default | Default (100%), High (150%), Very High (200%) | How fast items wear from use
+
+====================================================================================================
+TAB: Traders
+====================================================================================================
+Vending Machines Enabled | Yes | No, Yes | Vending machines enabled
+Vending Item Abundance | Default | Very Low (25%), Low (50%), Default (100%) | How much stock vending machines carry
+Vending Reset Interval | 7 days | Never/10000, Default, 1 day, 2 days, 3 days, 4 days, 5 days, 6 days, 7 days, 14 days | Days between vending restocks (Never = stay empty forever if spawned empty)
+Trader Reset Interval | Never/10000 | Never/10000, Default, 1 day, 2 days, 3 days, 4 days, 5 days, 6 days, 7 days, 14 days | Days between trader inventory resets
+Traders Buy Price | 100% | 100%, 125%, 150%, 175%, 200%, 300%, 400% | Price when traders buy from you (does this affect vending machines?)
+
+
+====================================================================================================
+TAB: Misc
+====================================================================================================
+Vehicle Fuel Usage | 100% | 100%, 125%, 150%, 200%, 250%, 300% | Vehicle fuel consumption rate
+Vehicle Entity Damage | 100% | none, 25%, 35%, 50%, 65%, 75%, 85%, 100% | Vehicle damage to entities
+Vehicle Block Damage | 100% | 100%, 125%, 150%, 200%, 250%, 300% | Vehicle damage to blocks
+Vehicle Self Damage | 100% | 100%, 125%, 150%, 200%, 250%, 300% | Damage vehicles take when colliding/hitting
+Electrical Output | 100% | 25%, 50%, 75%, 100% | Generator / electrical power output
+Celebrate Kills | No | No, Yes, Headshot Only | Silly celebrate animation on kills
+
+====================================================================================================
+TAB: Locked
+====================================================================================================
+Ranged Damage | 100% | 100% | Player ranged damage multiplier
+Melee Damage | 100% | 100% | Player melee damage multiplier
+Block Damage | 100% | 100% | Player damage to blocks
+Terrain Damage | 100% | 100% | Player damage to terrain
+Headshot Multiplier | none | none | No bonus headshot damage (all hit locations equal)
+Walk Speed | 100% | 100% | Player walk speed
+Run Speed | 100% | 100% | Player run speed
+Crouch Speed | 100% | 100% | Player crouch speed
+Crouch Run Speed | 100% | 100% | Crouch-run movement speed (v3.1)
+Jump Height | 100% | 100% | Jump height (also affects fall damage inverse)
+Stamina Usage | none | none | How fast stamina is consumed
+Skill Gain Amount | 1 | 1 | Skill points gained per level
+Death Penalty | Injured | Injured | Penalty applied on death
+Lose Items Death Type | None | None | Which inventory is affected by lose-on-death
+Lose Items Death Count | none | none | How many items can be lost on death
+Degrade Items On Death | None | None | Whether death degrades item durability
+Degrade Amount On Death | none | none | How much durability is lost on death
+Encumbrance Modifier | Disabled | Disabled | Inventory weight / encumbrance strictness
+Jar Refund | none | none | Empty jar refund chance (Locked). ggs JarRefund should be 0 after apply.
+Enemy Spawn | Yes | Yes | Master toggle for enemy spawning (disables many entity options when No)
+Max Enemy Type | Elites | Elites | Highest enemy tier allowed to spawn (Elites just in case this messes with my custom spawning)
+Entity Damage | 100% | 100% | Damage enemies deal to the player
+Headshot Mode | None | None | Restricts kills to headshots / finisher rules
+Entity Health Bars | No | No | Show enemy health bars
+Show Entity Damage | No | No | Show floating damage numbers on entities
+Zombie Day Speed | Walk | Walk | Daytime zombie movement speed class
+Zombie Night Speed | Walk | Walk | Nighttime zombie movement speed class
+Zombie Feral Speed | Walk | Walk | Feral zombie movement speed class
+Zombie Blood Moon Speed | Walk | Walk | Blood moon zombie movement speed class
+Zombie AI Smell Mode | Walk | Walk | Smell/detection aggressiveness for AI
+Zombie Rage Chance | none | none | Chance zombies enter rage behavior
+Zombies Eat Animals | No | No | Zombies can target/eat animal corpses
+Biome Progression | Yes | Yes | Biome difficulty progression enabled
+Temperature Survival | Yes | Yes | Temperature/env survival effects enabled
+Max Tech Type | Tech3 | Tech3 | Highest loot/item tech tier (vanilla int 4 = Tech3). Was wrongly applying as none.
+Loot Bag Chance | 100% | 100% | Chance enemies drop loot bags
+
+====================================================================================================
+TAB: Locked 2
+====================================================================================================
+Crafting Progression | Yes | Yes | Magazine/crafting unlock progression enabled
+Magazine Points | 1 | 1 | Points gained per magazine read
+Smelter Type | Smelter | Smelter | Forge uses classic smelter vs recipe mode
+Crafting Output | 100% | 100% | Crafted item output quantity
+Dew Collector Output | 100% | 100% | Dew collector yield
+Dew Collector Input | none | none | Dew collector filter/input consumption
+Apiary Output | 100% | 100% | Apiary yield
+Chicken Coop Output | 100% | 100% | Chicken coop yield
+Full Chicken Stress Event | Angry Chicken | Angry Chicken | What happens at full chicken stress
+Item Repair Types | Repair Only | Repair Only | Allowed repair methods
+Max Degrade Amount | none | none | Cap on durability loss per hit/use
+Trading Enabled | No | No | Master toggle for trader NPCs
+Trader Hours | Always Open | Always Open | When traders are open
+Trader Protection | Claimable | Claimable | Trader area claim/protection rules
+Trading Dialog | No | No | Trader conversation dialog enabled
+Global TraderStage | Default | Default (100%) | Multiplies trader inventory stage
+Trader Max Tier | 1 | 1 | Highest tier traders can sell
+Trader Item Abundance | Very Low (25%) | Very Low (25%) | How much stock traders carry
+Traders Sell Price | none | none | Price when traders sell to you
+Trader Buy Limit | none | none | How many of an item you can sell per reset
+Challenges Enabled | Yes | Yes | Challenge system enabled
+Quests Enabled | No | No | Quest system enabled
+Intro Challenges Enabled | Yes | Yes | Tutorial/intro challenges enabled
+Intro Quest Enabled | No | No | Intro quest enabled
+Trader to Trader Quests | No | No | Trader-to-trader quests enabled
+Buried Quests Enabled | No | No | Buried supplies quests enabled
+POI Quests Enabled | No | No | Clear/POI quests enabled
+Quests per Tier | none | none | Quests required to advance quest tier
+Quests per Day | none | none | Daily quest progression limit
+# Gravity kept at 100% always (player movement). Projectile Speed borrows Silly Sounds instead.
+# Big Heads / Tiny Zombies borrowed by Hitscan / Skill Cap (forced neutral in apply).
+# Black and White slot borrowed by Fast Monsters (B&W visual forced off in apply).

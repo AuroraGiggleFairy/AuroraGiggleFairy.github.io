@@ -1,0 +1,35 @@
+---
+description: 7D2D v3.1 screamer/heatmap researched knowledge — use for screamer, scout, heat map, campfire bait questions
+alwaysApply: false
+---
+
+# Screamer / Heatmap Knowledge (v3.1)
+
+Full research note:
+
+`00_Support/WorkspaceData/Research/7D2D-v3.1-Screamer-Heatmap-System.md`
+
+Decompile source: `00_Support/WorkspaceData/References/Decompiled-DLLs/Decompiled_AssemblyCSharp_7d2d.v3.1/`
+
+## Official description (screamer spawning)
+
+Assuming default sandbox Heatmap Sensitivity, within an 80×80 block area (5×5 chunks), 5 lit campfires can trigger a screamer check almost immediately, with a 20% chance of spawning. On a fail, the next check takes about 4–7 minutes; on a success, about 22–25 minutes. Higher game stage changes which screamers can appear (normal → more screamers → feral → radiated). Each screamer can summon up to 25 zombies total, at 5 per scream. A scream has a 12% chance of spawning another screamer. (63 torches have similar results.) Additional heat sources in the same area do not increase the spawn chance. However, more screamer checks can run if heat is built about 100+ blocks away, since that uses a separate heat area.
+
+Heatmap Sensitivity changes how many sources are needed for that same near-immediate check (one heat wave to 25); it does not change the 20% chance or cooldowns:
+
+- Very High (2×): 3 campfires (32 torches)
+- High (1.5×): 4 campfires (42 torches)
+- Default (1×): 5 campfires (63 torches)
+- Low (0.5×): 10 campfires (125 torches)
+- Disabled (0×): no heatmap / no heat-based screamers
+
+
+## Quick facts
+
+- Heat is an area score (not LOS); walls/windows do not block it
+- Threshold **25**, spawn roll **20%**; check wipes heat and starts cooldown (heat ignored during cooldown)
+- Fail lockout **240s**; success **1320s**; then rebuild to 25
+- 1 campfire alone usually caps ~24 (decay); needs stacked heat / forge / explosions / higher sensitivity
+- GS tables: &lt;45 Scouts1, 45–84 Scouts2, 85–124 Feral, ≥125 Radiated
+- 25 summoned zombies is **lifetime per scout**, not concurrent / not refreshed by kills
+- Prefer the research note over re-deriving from memory when answering screamer/heatmap questions

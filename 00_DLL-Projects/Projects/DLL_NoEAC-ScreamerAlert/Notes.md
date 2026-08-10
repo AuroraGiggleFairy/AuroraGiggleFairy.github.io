@@ -169,6 +169,7 @@ Note:
 2. When localization templates include commas, keep fields properly quoted in CSV.
 3. Keep horde/scout token parsing order correct in any downstream chat classifier logic.
 4. Do not rely on authoritative ack timing alone for in-menu visual selection updates; keep immediate UI selected-state application on button press.
+5. SP / listen-host primary player is often absent from `Clients.List`. `ScreamerAlertVanillaProtocol` must apply Protocol/count CVars locally via `Buffs.SetCustomVar(..., _netSync: false)` for that player; remote clients still use `ClientInfo.SendPackage`. Do not mark remote players enhanced just because EnhancedAGF exists on the host.
 
 ## 8. Source-of-Truth File Map
 

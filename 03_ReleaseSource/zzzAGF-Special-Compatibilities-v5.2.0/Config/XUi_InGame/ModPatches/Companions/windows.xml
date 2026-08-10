@@ -1,0 +1,109 @@
+<zzzAGF-Compatibilities>
+	<!-- Companions (CrystalHellHusbandry) x AGF-HUDPlus-1Main -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+			<!-- Restore HUDPlus chat background while keeping Companions Chat/Companions tabs -->
+			<remove xpath="/windows/window[@name='chatoutput']"/>
+			<append xpath="/windows">
+				<window name="chatoutput" pos="20, -250" depth="-1" width="500" height="286" anchor="LeftTop" controller="ChatOutput" fadeout_wait_time="5" fadeout_duration="2">
+
+					<rect name="chatTabs" pos="8,-4" width="484" height="34">
+						<rect pos="0,0" width="242" height="34">
+							<button name="tab_chat" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label pos="0,-5" depth="3" text="Chat" width="242" height="28" justify="center" font_size="24"/>
+						</rect>
+						<rect pos="242,0" width="242" height="34">
+							<button name="tab_companions" sprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+							<label pos="0,-5" depth="3" text="Companions" width="242" height="28" justify="center" font_size="24"/>
+						</rect>
+					</rect>
+
+					<rect name="chatContent" pos="0,0" width="500" height="210">
+						<textlist name="txtOutput" pos="8,-214" width="484" height="170" list_style="chat" pivot="bottomleft" depth="2" font_size="26" crispness="Never" effect="outline" effect_distance="1,1" effect_color="[black]" on_press="true" prefix_first_line="   " support_urls="Chat,DiscordMessageButton" snap="false" gamepad_selectable="false">
+							<sprite depth="-1" name="border" pos="-8,172" width="500" height="178" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false"/>
+							<sprite depth="-2" color="[darkGrey]" pos="-8,172" width="500" height="178" type="sliced" globalopacitymod=".95"/>
+						</textlist>
+					</rect>
+
+					<rect name="companionContent" pos="0,0" width="500" height="248">
+						<textlist name="txtCompanionOutput" pos="12,-270" width="476" height="225" list_style="chat" pivot="bottomleft" depth="2" font_size="25" line_spacing="4" crispness="Never" effect="outline" effect_distance="1,1" effect_color="[black]" on_press="true" prefix_first_line="" snap="false" gamepad_selectable="false">
+							<sprite depth="-1" name="border" pos="-12,227" width="500" height="233" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false"/>
+							<sprite depth="-2" color="[darkGrey]" pos="-12,227" width="500" height="233" type="sliced" globalopacitymod=".95"/>
+						</textlist>
+					</rect>
+
+				</window>
+			</append>
+
+			<!-- Equal gaps from screenshot: partyEnd~223px, bars 288-516, dayStart~518 → shift left ~23 UI -->
+			<remove xpath="/windows/window[@name='windowCompanionFollowHud']"/>
+			<append xpath="/windows">
+				<window name="windowCompanionFollowHud" pos="214,-8" width="186" height="230" anchor="LeftTop" depth="-20" controller="CompanionFollowHud, CHHusbandry" visible="{hudvisible}">
+					<rect pos="0,0" width="186" height="230">
+						<label depth="3" text="Companions" font_size="18" justify="center" pos="0,-4" width="186" height="20" />
+
+						<rect pos="8,-28" width="170" height="34" visible="{row1_visible}">
+							<sprite depth="1" name="border1" color="0,0,0,128" type="sliced" />
+							<sprite depth="2" name="background1" color="0,0,0,140" height="34" type="sliced" />
+							<filledsprite depth="3" name="barHealthMax1" color="110,110,110,128" width="169" height="34" type="filled" fill="1" />
+							<filledsprite depth="5" name="barHealth1" color="255,0,0,128" width="167" height="34" type="filled" fill="{row1_fill}" />
+							<sprite depth="8" name="borderFront1" color="0,0,0,255" width="170" height="34" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="defenseicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_defense" visible="{row1_guardvisible}"/>
+							<sprite depth="4" name="vehicleicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_minibike" visible="{row1_vehiclevisible}"/>
+							<label depth="6" text="{row1_name}" pos="6,-17" font_size="18" color="[white]" justify="left" pivot="left" width="100" height="18" />
+							<label depth="6" text="{row1_health}" pos="164,-17" font_size="18" color="[white]" justify="right" pivot="right" width="65" height="18" />
+						</rect>
+
+						<rect pos="8,-66" width="170" height="34" visible="{row2_visible}">
+							<sprite depth="1" name="border2" color="0,0,0,128" type="sliced" />
+							<sprite depth="2" name="background2" color="0,0,0,140" height="34" type="sliced" />
+							<filledsprite depth="3" name="barHealthMax2" color="110,110,110,128" width="169" height="34" type="filled" fill="1" />
+							<filledsprite depth="5" name="barHealth2" color="255,0,0,128" width="167" height="34" type="filled" fill="{row2_fill}" />
+							<sprite depth="8" name="borderFront2" color="0,0,0,255" width="170" height="34" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="defenseicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_defense" visible="{row2_guardvisible}"/>
+							<sprite depth="4" name="vehicleicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_minibike" visible="{row2_vehiclevisible}"/>
+							<label depth="6" text="{row2_name}" pos="6,-17" font_size="18" color="[white]" justify="left" pivot="left" width="100" height="18" />
+							<label depth="6" text="{row2_health}" pos="164,-17" font_size="18" color="[white]" justify="right" pivot="right" width="65" height="18" />
+						</rect>
+
+						<rect pos="8,-104" width="170" height="34" visible="{row3_visible}">
+							<sprite depth="1" name="border3" color="0,0,0,128" type="sliced" />
+							<sprite depth="2" name="background3" color="0,0,0,140" height="34" type="sliced" />
+							<filledsprite depth="3" name="barHealthMax3" color="110,110,110,128" width="169" height="34" type="filled" fill="1" />
+							<filledsprite depth="5" name="barHealth3" color="255,0,0,128" width="167" height="34" type="filled" fill="{row3_fill}" />
+							<sprite depth="8" name="borderFront3" color="0,0,0,255" width="170" height="34" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="defenseicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_defense" visible="{row3_guardvisible}"/>
+							<sprite depth="4" name="vehicleicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_minibike" visible="{row3_vehiclevisible}"/>
+							<label depth="6" text="{row3_name}" pos="6,-17" font_size="18" color="[white]" justify="left" pivot="left" width="100" height="18" />
+							<label depth="6" text="{row3_health}" pos="164,-17" font_size="18" color="[white]" justify="right" pivot="right" width="65" height="18" />
+						</rect>
+
+						<rect pos="8,-142" width="170" height="34" visible="{row4_visible}">
+							<sprite depth="1" name="border4" color="0,0,0,128" type="sliced" />
+							<sprite depth="2" name="background4" color="0,0,0,140" height="34" type="sliced" />
+							<filledsprite depth="3" name="barHealthMax4" color="110,110,110,128" width="169" height="34" type="filled" fill="1" />
+							<filledsprite depth="5" name="barHealth4" color="255,0,0,128" width="167" height="34" type="filled" fill="{row4_fill}" />
+							<sprite depth="8" name="borderFront4" color="0,0,0,255" width="170" height="34" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="defenseicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_defense" visible="{row4_guardvisible}"/>
+							<sprite depth="4" name="vehicleicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_minibike" visible="{row4_vehiclevisible}"/>
+							<label depth="6" text="{row4_name}" pos="6,-17" font_size="18" color="[white]" justify="left" pivot="left" width="100" height="18" />
+							<label depth="6" text="{row4_health}" pos="164,-17" font_size="18" color="[white]" justify="right" pivot="right" width="65" height="18" />
+						</rect>
+
+						<rect pos="8,-180" width="170" height="34" visible="{row5_visible}">
+							<sprite depth="1" name="border5" color="0,0,0,128" type="sliced" />
+							<sprite depth="2" name="background5" color="0,0,0,140" height="34" type="sliced" />
+							<filledsprite depth="3" name="barHealthMax5" color="110,110,110,128" width="169" height="34" type="filled" fill="1" />
+							<filledsprite depth="5" name="barHealth5" color="255,0,0,128" width="167" height="34" type="filled" fill="{row5_fill}" />
+							<sprite depth="8" name="borderFront5" color="0,0,0,255" width="170" height="34" type="sliced" fillcenter="false" />
+							<sprite depth="4" name="defenseicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_defense" visible="{row5_guardvisible}"/>
+							<sprite depth="4" name="vehicleicon" style="icon32px" pos="-8,-1" sprite="ui_game_symbol_minibike" visible="{row5_vehiclevisible}"/>
+							<label depth="6" text="{row5_name}" pos="6,-17" font_size="18" color="[white]" justify="left" pivot="left" width="100" height="18" />
+							<label depth="6" text="{row5_health}" pos="164,-17" font_size="18" color="[white]" justify="right" pivot="right" width="65" height="18" />
+						</rect>
+					</rect>
+				</window>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

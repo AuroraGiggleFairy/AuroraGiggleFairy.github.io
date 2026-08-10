@@ -1,8 +1,29 @@
 {
-  "computed_at": "2026-08-03T01:11:40",
+  "computed_at": "2026-08-10T13:51:51",
   "since_gigglepack_version": "0.18.0",
-  "new_mods": [],
-  "updated_mods": [],
+  "new_mods": [
+    [
+      "AGF-NoEAC-FuelAutoShutOff",
+      "1.0.0"
+    ]
+  ],
+  "updated_mods": [
+    [
+      "AGF-NoEAC-EnhancedAGF",
+      "4.3.2",
+      "4.3.3"
+    ],
+    [
+      "AGF-NoEAC-ScreamerAlert",
+      "2.3.2",
+      "2.3.3"
+    ],
+    [
+      "zzzAGF-Special-Compatibilities",
+      "5.1.1",
+      "5.2.0"
+    ]
+  ],
   "renamed_mods": [],
   "removed_mods": []
 }

@@ -1,0 +1,35 @@
+---
+description: 7D2D v3.1 blocks.xml Extends/param1/dropextendsoff/SortOrder researched knowledge — use for block flattening, decoration blocks, VariantHelpers, CustomIcon
+alwaysApply: false
+---
+
+# blocks.xml Extends / Flatten (v3.1)
+
+Full research note:
+
+`00_Support/WorkspaceData/Research/7D2D-v3.1-BlocksXml-Extends-Flatten.md`
+
+Engine truth: decompiled `BlocksFromXml`, `DynamicProperties.CopyFrom`, `Block`/`ItemClass` sort+icon init.
+
+## Quick facts
+
+- `Extends` copies the **already-loaded parent** properties, then child properties overwrite
+- `Extends param1="A,B"` is an **exclusion** list (not include). Always also excludes `CreativeMode`
+- Unset `CreativeMode` ⇒ enum default `All` (visible). Hidden/Dev/Player children must set it themselves
+- `<dropextendsoff />` skips parent drop copy; otherwise parent drops merge in if same-event drop `name` not already on child
+- Multi-level = copy resolved parent snapshot (not a live prototype chain)
+- Tint variants: Extends + `CustomIcon` (base sprite) + `CustomIconTint`/`TintColor` + `SortOrder2`
+- New block names need `CustomIcon` (or shipped icon named exactly like the block) — `GetIconName()` falls back to block name
+- Creative sort key = string concat `SortOrder1`+`SortOrder2`, `CompareOrdinal` (zero-pad; letter buckets `B`/`U`/`S`/`M`)
+- VariantHelper: `SelectAlternates=true` + `PlaceAltBlockValue` CSV; usually `SortOrder1=U200`
+- `param1` on non-Extends properties is a secondary arg (`Model`, `ImposterExchange`, `CanPickup`), not an exclusion
+- Parent block must appear earlier in XML than child
+
+## Flatten checklist
+
+1. Exclude `CreativeMode` + Extends `param1` list from parent props
+2. Overlay child props; merge drops unless `dropextendsoff`
+3. Always set `CustomIcon`, `CreativeMode`, `SortOrder1`/`SortOrder2` on mod clones
+4. Use `DecorationBlockPlus/flatten_blocks.py` (fixed for engine Extends/param1/CreativeMode/drops)
+
+Prefer the research note over re-deriving when answering blocks.xml inheritance / flatten questions.

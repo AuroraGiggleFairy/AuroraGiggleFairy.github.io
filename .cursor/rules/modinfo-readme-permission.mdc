@@ -1,0 +1,24 @@
+---
+description: Never edit ModInfo.xml or README files without explicit user permission
+alwaysApply: true
+---
+
+# ModInfo / README Edit Permission
+
+Do **not** create, edit, rename-driven rewrite, delete, or sync `ModInfo.xml` / `modinfo.xml` or README files (`README.txt`, `README.md`, `ReadableReadMe.txt`, or similarly named readme files) unless the user **directly requests** that change or **explicitly grants permission** in the current conversation.
+
+## Allowed without extra permission
+
+- Reading those files for context
+- Code / DLL / Config XML / localization / source changes that do **not** modify ModInfo or README
+
+## Not allowed unless asked
+
+- Version bumps in ModInfo
+- Changelog or "Mod Version" edits in README
+- Copying ModInfo/README between ActiveBuild, ReleaseSource, game Mods, or draft folders as part of deploy
+- "While I'm here" packaging/docs updates alongside a code fix
+
+## If a task seems to require it
+
+Stop and ask. Do not silently include ModInfo/README edits in a broader fix or deploy.

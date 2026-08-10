@@ -132,8 +132,8 @@
     "media_file": "AGF-NoEAC-CosmeticLockIcon_01.png"
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "5e5af92cf2739cfba9dfee28bcb3ba7bccf5907a3cfd4582971dd2ad563caea4",
-    "version": "4.3.2",
+    "signature": "89f66b2a13430f90801b77352fab12ca6a90d5084c4a7a24a6dae654b9d15b47",
+    "version": "4.3.3",
     "has_media": true,
     "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },
@@ -174,8 +174,8 @@
     "media_file": "AGF-NoEAC-OpenAllButton_01.png"
   },
   "AGF-NoEAC-ScreamerAlert": {
-    "signature": "6c67ad3c5d1f79b5a6c8bdbdf6f33eedb9d475ce8d29b1ceb793f9edea2fb51c",
-    "version": "2.3.2",
+    "signature": "ca96f3296a79b78248cc77e7296d0574841432893468b30c119e3ad23797882d",
+    "version": "2.3.3",
     "has_media": true,
     "media_file": "AGF-NoEAC-ScreamerAlert_01.png"
   },
@@ -546,8 +546,8 @@
     "media_file": ""
   },
   "zzzAGF-Special-Compatibilities": {
-    "signature": "b3e4b8e2e995d25eaeae50cb2894280b46ec07ea6167d06e4e5daaa62b85e2c8",
-    "version": "5.1.1",
+    "signature": "83324469748d6c9f73bc1b9d5d39c42b841ff3f0a4f75634378724588590c90b",
+    "version": "5.2.0",
     "has_media": true,
     "media_file": "zzzAGF-Special-Compatibilities_01.png"
   },
@@ -598,5 +598,11 @@
     "version": "1.0.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-SmeltTimerOption_01.png"
+  },
+  "AGF-NoEAC-FuelAutoShutOff": {
+    "signature": "e10d85f5eafc4aca2c4aa13601cb51b77edb68f8c2eb2f26838de15768435415",
+    "version": "1.0.0",
+    "has_media": false,
+    "media_file": ""
   }
 }

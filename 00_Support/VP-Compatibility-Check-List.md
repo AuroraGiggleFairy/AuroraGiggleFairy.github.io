@@ -18,7 +18,6 @@ Sorted by status, then short name.
 | 1 | BuyTraderVendingMachines | AGF-VP-BuyTraderVendingMachines-v3.0.3 | pass | Ready for testing. Copied to game Mods. |
 | 2 | CraftStackEngBattCells | AGF-VP-CraftStackEngBattCells-v3.3.1 | pass | Leave as-is for now (Draft only). Paths look OK; test with DoorsPlus later. |
 | 3 | DoorsPlus | AGF-VP-DoorsPlus-v3.0.1 | pass | Leave as-is for now (Draft only). |
-| 4 | SmeltingPlus | AGF-VP-SmeltingPlus-v2.4.1 | pass | Fixed forge templates xpaths: `/controls`→`/templates`, `@columns`→`@cols`. Recopied to game Mods. Confirm 3rd forge slot + material row layout. |
 
 ---
 
@@ -35,3 +34,4 @@ Sorted by status, then short name.
 - **2026-07-23** — AlternativeRecipes marked Done. AdminModdingSupport: reverted LMB/Action0 speed + full-auto; Action1 Delay `.1` only.
 - **2026-07-23** — AmmoDisassembly: fixed missing/wrong OpenBundle ingredients vs vanilla; scrap ratio left as-is (vanilla math). AdminModdingSupport marked Done (hold-fire BurstRoundCount `0` + Action1 Delay `.1`).
 - **2026-07-23** — Cleared 10 Done mods from queue (Admin through TacticalRiflePlus). Remaining: BuyTrader, CraftStack, DoorsPlus, SmeltingPlus.
+- **2026-08-03** — Removed SmeltingPlus (official update). Remaining: BuyTrader, CraftStack, DoorsPlus.

@@ -3,7 +3,7 @@
 	
 <!--Doors Plus!-->
 		<!--important to allow upgrading doors with my variant versions-->
-		<append xpath="/items/item/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,miscwoodDoorVariantHelper,miscironDoorVariantHelper,miscsteelDoorVariantHelper</append>
+		<append xpath="/items/item/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,miscwoodDoorVariantHelper,miscironDoorVariantHelper,miscsteelDoorVariantHelper,miscwoodDoorVariantHelperAGF,miscironDoorVariantHelperAGF,miscsteelDoorVariantHelperAGF,miscpoweredDoorVariantHelperAGF</append>
 
 
 </AGFVanillaPlus-DoorsPlus>

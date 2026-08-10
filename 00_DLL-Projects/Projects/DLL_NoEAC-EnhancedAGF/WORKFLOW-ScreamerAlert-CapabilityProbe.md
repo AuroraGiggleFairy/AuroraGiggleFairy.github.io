@@ -16,6 +16,7 @@ Working methods:
 - Deploy to active build only (when requested) and verify SHA256 hash match.
 
 Change history:
+- 2026-08-10: SP / listen-host no longer waits for Protocol CVar before MarkLocalHostCapability when ScreamerAlert is present locally. Stamped chat suppress now keeps content brackets like [Screamer Alert].
 - 2026-07-08: Added probe-specific hello method so server capability probes can force a fresh hello even when prior ack state was true.
 - 2026-07-08: Added probe nonce dedupe/cooldown to avoid burst duplicate sends.
 - 2026-07-08: Rebuilt EnhancedAGF.dll for active build deployment.

@@ -5,7 +5,11 @@ using HarmonyLib;
 [HarmonyPatch]
 public static class ScreamerAlertEnhancedChatPatches
 {
-    private static readonly Regex BbTagRegex = new Regex(@"\[[^\]]*\]", RegexOptions.Compiled);
+    // Strip BB color/style tags only. Stamped chat wraps alert text in content brackets
+    // like [Screamer Alert]; a naive \[[^\]]*\] strip would erase the alert words themselves.
+    private static readonly Regex BbColorOrCloseTagRegex = new Regex(
+        @"\[(?:-|/[A-Za-z]+|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8}|white|black|red|green|blue|yellow|cyan|magenta)\]",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
     [HarmonyPatch(typeof(GameManager), "ChatMessageServer")]
     [HarmonyPrefix]
@@ -69,8 +73,20 @@ public static class ScreamerAlertEnhancedChatPatches
 
     private static bool IsScreamerStatusLine(string message)
     {
-        return !string.IsNullOrEmpty(message)
-            && message.IndexOf("[ScreamerAlert]", StringComparison.OrdinalIgnoreCase) >= 0;
+        if (string.IsNullOrEmpty(message))
+        {
+            return false;
+        }
+
+        // Legacy ack marker and current localized status/set replies.
+        if (message.IndexOf("[ScreamerAlert]", StringComparison.OrdinalIgnoreCase) >= 0
+            || message.IndexOf("[Screamer Alert", StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            return true;
+        }
+
+        string normalized = NormalizeAlertText(message);
+        return IsModeOrStatusResponse(normalized);
     }
 
     private static bool TryClassifyAlert(string message, out bool isHorde)
@@ -79,6 +95,12 @@ public static class ScreamerAlertEnhancedChatPatches
 
         string normalizedMessage = NormalizeAlertText(message);
         if (string.IsNullOrEmpty(normalizedMessage))
+        {
+            return false;
+        }
+
+        // "/agfsa" status and set replies contain "Screamer Alert = ..."; do not hide them as spawn alerts.
+        if (IsModeOrStatusResponse(normalizedMessage))
         {
             return false;
         }
@@ -120,8 +142,10 @@ public static class ScreamerAlertEnhancedChatPatches
         }
 
         string withoutCount = ScreamerAlertModeSettings.StripNumberSuffix(message);
-        string withoutTags = BbTagRegex.Replace(withoutCount, string.Empty);
-        return withoutTags.Trim();
+        string withoutColor = BbColorOrCloseTagRegex.Replace(withoutCount, string.Empty);
+        // Unwrap remaining [content] brackets used by stamped chat templates.
+        string unwrapped = Regex.Replace(withoutColor, @"\[([^\]]+)\]", "$1");
+        return unwrapped.Trim();
     }
 
     private static bool TextEquals(string left, string right)
@@ -136,6 +160,29 @@ public static class ScreamerAlertEnhancedChatPatches
         return !string.IsNullOrEmpty(source)
             && !string.IsNullOrEmpty(text)
             && source.IndexOf(text, StringComparison.OrdinalIgnoreCase) >= 0;
+    }
+
+    private static bool IsModeOrStatusResponse(string normalizedMessage)
+    {
+        if (string.IsNullOrEmpty(normalizedMessage))
+        {
+            return false;
+        }
+
+        string lower = normalizedMessage.ToLowerInvariant();
+        if (lower.Contains("screamer alert") && lower.Contains("="))
+        {
+            return true;
+        }
+
+        return lower.Contains("options:")
+            || lower.Contains("count requires enhancedagf")
+            || lower.Contains("count needs enhancedagf")
+            || lower.Contains("is now set to")
+            || lower.Contains("mode set to")
+            || lower.Contains("mode=")
+            || lower.Contains("is currently")
+            || lower.Contains("capability=enhancedagf");
     }
 
     private static bool IsCapabilityAckLine(string message)
@@ -237,10 +284,9 @@ public static class ScreamerAlertEnhancedChatPatches
                 nextMode = ScreamerAlertMode.On;
             }
         }
-        else if (lower.Contains("count requires enhancedagf") || lower.Contains("count needs enhancedagf") || lower.Contains("non-enhancedagf players use on"))
-        {
-            nextMode = ScreamerAlertMode.On;
-        }
+
+        // Do NOT treat help text like "[COUNT requires EnhancedAGF]" as a mode change.
+        // /agfsa status sends that as line 3 and it must not overwrite OFF/COUNT to ON.
 
         if (nextMode.HasValue)
         {

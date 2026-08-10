@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.18.0",
-  "previous_gigglepack_version": "0.17.0",
+  "gigglepack_version": "0.19.0",
+  "previous_gigglepack_version": "0.18.0",
   "is_baseline_release": false,
-  "released_at": "2026-08-03 01:05:53",
+  "released_at": "2026-08-10 16:00:39",
   "mods": {
     "AGF-4Modders-Fix4DestroyBiomeBadge": "2.0.0",
     "AGF-BackpackPlus-060Slots": "4.1.1",
@@ -18,10 +18,11 @@
     "AGF-NoEAC-AudioOptionsPlus": "2.0.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
-    "AGF-NoEAC-EnhancedAGF": "4.3.2",
+    "AGF-NoEAC-EnhancedAGF": "4.3.3",
+    "AGF-NoEAC-FuelAutoShutOff": "1.0.0",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
     "AGF-NoEAC-OpenAllButton": "2.0.0",
-    "AGF-NoEAC-ScreamerAlert": "2.3.2",
+    "AGF-NoEAC-ScreamerAlert": "2.3.3",
     "AGF-NoEAC-SmeltTimerOption": "1.0.0",
     "AGF-NoEAC-Toolbelt12Slots": "2.2.3",
     "AGF-Requested-SmallerInteractionPrompt": "2.0.0",
@@ -64,28 +65,45 @@
     "AGF-VP-VehiclesExtraSeating": "2.1.1",
     "AGF-VP-ZombieCorpseLeaveQuicker": "3.1.1",
     "zzzAGF-Requested-LootStaysOnEmpty": "1.0.4",
-    "zzzAGF-Special-Compatibilities": "5.1.1",
+    "zzzAGF-Special-Compatibilities": "5.2.0",
     "zzzAGF-Special-LocalizationPatches": "1.0.1"
   },
-  "updated_mods": [],
-  "new_mods": [
+  "updated_mods": [
     {
-      "mod": "AGF-NoEAC-SmeltTimerOption",
-      "to": "1.0.0",
-      "to_display": "1.0.0"
+      "mod": "AGF-NoEAC-EnhancedAGF",
+      "from": "4.3.2",
+      "to": "4.3.3",
+      "from_display": "4.3.2",
+      "to_display": "4.3.3"
     },
     {
-      "mod": "AGF-VP-SmeltingPlus",
-      "to": "3.0.0",
-      "to_display": "3.0.0"
+      "mod": "AGF-NoEAC-ScreamerAlert",
+      "from": "2.3.2",
+      "to": "2.3.3",
+      "from_display": "2.3.2",
+      "to_display": "2.3.3"
+    },
+    {
+      "mod": "zzzAGF-Special-Compatibilities",
+      "from": "5.1.1",
+      "to": "5.2.0",
+      "from_display": "5.1.1",
+      "to_display": "5.2.0"
+    }
+  ],
+  "new_mods": [
+    {
+      "mod": "AGF-NoEAC-FuelAutoShutOff",
+      "to": "1.0.0",
+      "to_display": "1.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.18.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.19.0.zip",
   "change_counts": {
-    "new_mods": 2,
-    "updated_existing_mods": 0,
+    "new_mods": 1,
+    "updated_existing_mods": 3,
     "renamed_mods": 0,
     "removed_mods": 0
   }

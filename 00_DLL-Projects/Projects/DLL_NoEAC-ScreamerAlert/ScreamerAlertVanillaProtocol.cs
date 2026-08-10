@@ -26,61 +26,44 @@ public static class ScreamerAlertVanillaProtocol
     {
         ConnectionManager manager = SingletonMonoBehaviour<ConnectionManager>.Instance;
         World world = GameManager.Instance?.World;
-        var clients = manager?.Clients?.List;
-        if (manager == null || !manager.IsServer || world == null || clients == null)
+        if (manager == null || !manager.IsServer || world == null)
         {
             return;
         }
 
-        for (int i = 0; i < clients.Count; i++)
+        bool publishedLocalHost = false;
+        var clients = manager.Clients?.List;
+        if (clients != null)
         {
-            ClientInfo client = clients[i];
-            if (client == null)
+            for (int i = 0; i < clients.Count; i++)
             {
-                continue;
-            }
+                ClientInfo client = clients[i];
+                if (client == null)
+                {
+                    continue;
+                }
 
-            EntityPlayer player = world.GetEntity(client.entityId) as EntityPlayer;
-            if (player == null || player.IsDead())
-            {
-                continue;
-            }
+                EntityPlayer player = world.GetEntity(client.entityId) as EntityPlayer;
+                if (player == null || player.IsDead())
+                {
+                    continue;
+                }
 
-            if (!LastStateByEntityId.TryGetValue(player.entityId, out PublishedState state))
-            {
-                state = new PublishedState();
-                LastStateByEntityId[player.entityId] = state;
-            }
+                bool isLocalHostPlayer = IsLocalHostPlayer(player);
+                if (isLocalHostPlayer)
+                {
+                    publishedLocalHost = true;
+                }
 
-            if (!state.ProtocolSent)
-            {
-                SendValue(client, player, ProtocolCVar, Version);
-                state.ProtocolSent = true;
+                PublishPlayerState(player, isLocalHostPlayer ? null : client);
             }
+        }
 
-            if (!ScreamerAlertHybridRouting.HasClientCapability(client))
-            {
-                continue;
-            }
-
-            int scoutCount = CountTrackedInRange(player, ScreamerAlertManager.Instance?.persistentScreamerIds, true);
-            int hordeCount = CountTrackedInRange(player, ScreamerAlertManager.Instance?.persistentHordeZombieIds, false);
-            int mode = (int)ResolveMode(player.entityId);
-            if (state.ScoutCount != scoutCount)
-            {
-                SendValue(client, player, ScoutCountCVar, scoutCount);
-                state.ScoutCount = scoutCount;
-            }
-            if (state.HordeCount != hordeCount)
-            {
-                SendValue(client, player, HordeCountCVar, hordeCount);
-                state.HordeCount = hordeCount;
-            }
-            if (state.Mode != mode)
-            {
-                SendValue(client, player, ModeCVar, mode);
-                state.Mode = mode;
-            }
+        // SP / listen-host: primary player is often not present in Clients.List.
+        // Apply Protocol + counts directly so EnhancedAGF can unlock UI without net ClientInfo.
+        if (!publishedLocalHost)
+        {
+            PublishToLocalHostPlayer(world);
         }
     }
 
@@ -94,13 +77,108 @@ public static class ScreamerAlertVanillaProtocol
         LastStateByEntityId.Remove(entityId);
     }
 
-    private static void SendValue(ClientInfo client, EntityPlayer player, string name, float value)
+    private static void PublishToLocalHostPlayer(World world)
     {
+        if (GameManager.IsDedicatedServer || world == null)
+        {
+            return;
+        }
+
+        EntityPlayer localPlayer = world.GetPrimaryPlayer();
+        if (localPlayer == null || localPlayer.IsDead() || localPlayer.entityId < 0)
+        {
+            return;
+        }
+
+        PublishPlayerState(localPlayer, null);
+    }
+
+    private static void PublishPlayerState(EntityPlayer player, ClientInfo client)
+    {
+        if (player == null || player.IsDead())
+        {
+            return;
+        }
+
+        if (!LastStateByEntityId.TryGetValue(player.entityId, out PublishedState state))
+        {
+            state = new PublishedState();
+            LastStateByEntityId[player.entityId] = state;
+        }
+
+        if (!state.ProtocolSent)
+        {
+            SetValue(client, player, ProtocolCVar, Version);
+            state.ProtocolSent = true;
+        }
+
+        if (client != null)
+        {
+            if (!ScreamerAlertHybridRouting.HasClientCapability(client))
+            {
+                return;
+            }
+        }
+        else if (!ScreamerAlertHybridRouting.HasClientCapabilityByEntityId(player.entityId))
+        {
+            return;
+        }
+
+        int scoutCount = CountTrackedInRange(player, ScreamerAlertManager.Instance?.persistentScreamerIds, true);
+        int hordeCount = CountTrackedInRange(player, ScreamerAlertManager.Instance?.persistentHordeZombieIds, false);
+        int mode = (int)ResolveMode(player.entityId);
+        if (state.ScoutCount != scoutCount)
+        {
+            SetValue(client, player, ScoutCountCVar, scoutCount);
+            state.ScoutCount = scoutCount;
+        }
+        if (state.HordeCount != hordeCount)
+        {
+            SetValue(client, player, HordeCountCVar, hordeCount);
+            state.HordeCount = hordeCount;
+        }
+        if (state.Mode != mode)
+        {
+            SetValue(client, player, ModeCVar, mode);
+            state.Mode = mode;
+        }
+    }
+
+    private static void SetValue(ClientInfo client, EntityPlayer player, string name, float value)
+    {
+        if (client == null)
+        {
+            ApplyLocalValue(player, name, value);
+            return;
+        }
+
         NetPackageModifyCVar package = NetPackageManager.GetPackage<NetPackageModifyCVar>();
         if (package != null)
         {
             client.SendPackage(package.Setup(player, name, value, CVarOperation.set));
         }
+    }
+
+    private static void ApplyLocalValue(EntityPlayer player, string name, float value)
+    {
+        if (player?.Buffs == null || string.IsNullOrEmpty(name))
+        {
+            return;
+        }
+
+        // Local-only write: do not net-sync (listen-host / SP path).
+        player.Buffs.SetCustomVar(name, value, false, CVarOperation.set);
+    }
+
+    private static bool IsLocalHostPlayer(EntityPlayer player)
+    {
+        if (GameManager.IsDedicatedServer || player == null)
+        {
+            return false;
+        }
+
+        EntityPlayer primary = GameManager.Instance?.World?.GetPrimaryPlayer();
+        return primary != null && primary.entityId == player.entityId;
     }
 
     private static int CountTrackedInRange(EntityPlayer player, HashSet<int> trackedIds, bool requireScout)

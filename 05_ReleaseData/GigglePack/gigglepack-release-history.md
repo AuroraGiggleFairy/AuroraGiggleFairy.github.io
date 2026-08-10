@@ -1,5 +1,20 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.19.0 (August 10, 2026 4:00pm)
+### Summary: +1 new, ~3 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-FuelAutoShutOff](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FuelAutoShutOff.zip) (new: v1.0.0)
+- **Updated Existing Mods**
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.3.2 -> v4.3.3)
+  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.3.2 -> v2.3.3)
+  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (v5.1.1 -> v5.2.0)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.18.0 (August 3, 2026 1:05am)
 ### Summary: +2 new, ~0 updated, =0 renamed, -0 removed
 - **New Mods**

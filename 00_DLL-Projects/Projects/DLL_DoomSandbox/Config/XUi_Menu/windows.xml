@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<!-- Extra slots per tab so Locked (~69) can fit when not split. -->
+	<set xpath="//window[@name='sandboxOptions']//grid[@rows='30' and @cols='2']/@rows">40</set>
+	<set xpath="//window[@name='sandboxOptions']//rect[@name='tabsContents']/@repeat_count">12</set>
+	<set xpath="//window[@name='sandboxOptions']//grid[@name='tabButtons']/@rows">3</set>
+</configs>

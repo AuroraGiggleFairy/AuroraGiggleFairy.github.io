@@ -1,0 +1,177 @@
+﻿"""
+Flatten vanilla blocks.xml and extract player-door models for DoorsPlus.
+
+v3.1 vanilla doors are CompositeTileEntity (not DoorSecure). After flatten,
+select Place=Door / BlockTag=Door blocks, promote TEFeatureDoor sounds, and
+normalize Class to DoorSecure for the AGF generator.
+"""
+
+from __future__ import annotations
+
+import copy
+import shutil
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+from flatten_blocks import (
+    build_all_block_names,
+    flatten_block,
+    flatten_document,
+    reset_flatten_state,
+    should_emit_block,
+)
+
+GAME_BLOCKS = Path(
+    r"c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Config\blocks.xml"
+)
+INPUT_FILE = "blocks.xml"
+OUTPUT_FILE = "blocks_flattened.xml"
+DOORSECURE_FILE = "blocks_doorsecure.xml"
+
+COLORS = [
+    "ArmyGreen",
+    "Blue",
+    "Brown",
+    "Green",
+    "Grey",
+    "Orange",
+    "Pink",
+    "Purple",
+    "Red",
+    "White",
+    "Yellow",
+    "Oak",
+    "Black",
+]
+
+SKIP_NAME_SUBSTR = (
+    "VariantHelper",
+    "LootHelper",
+    "planted",
+    "Shapes",
+)
+
+# Dev/test door models (e.g. elevatorTest) ΓÇö do not ship in DoorsPlus.
+SKIP_TEST_NAME_SUBSTR = (
+    "test",
+    "debug",
+    "prototype",
+    "dummy",
+    "placeholder",
+)
+
+
+def split_main_color(name: str) -> tuple[str, str]:
+    for color in sorted(COLORS, key=len, reverse=True):
+        if name.endswith(color):
+            return (name[: -len(color)], color)
+    return (name, "")
+
+
+def prop_value(block: ET.Element, name: str) -> str | None:
+    for prop in block.findall("property"):
+        if prop.get("name") == name:
+            return prop.get("value")
+    return None
+
+
+def is_door_block(flat: ET.Element) -> bool:
+    name = flat.get("name") or ""
+    if any(s in name for s in SKIP_NAME_SUBSTR):
+        return False
+    name_l = name.lower()
+    if any(s in name_l for s in SKIP_TEST_NAME_SUBSTR):
+        return False
+    place = prop_value(flat, "Place")
+    tag = prop_value(flat, "BlockTag")
+    return place == "Door" or tag == "Door"
+
+
+def extract_door_sounds(block: ET.Element) -> dict[str, str]:
+    sounds: dict[str, str] = {}
+    # Already-flat sounds
+    for key in ("OpenSound", "CloseSound", "LockedSound"):
+        val = prop_value(block, key)
+        if val:
+            sounds[key] = val
+    # CompositeFeatures / TEFeatureDoor
+    for prop in block.findall("property"):
+        if prop.get("class") != "CompositeFeatures":
+            continue
+        for feat in prop:
+            if feat.get("class") != "TEFeatureDoor":
+                continue
+            for sp in feat.findall("property"):
+                n = sp.get("name")
+                v = sp.get("value")
+                if n in ("OpenSound", "CloseSound", "LockedSound") and v:
+                    sounds[n] = v
+    return sounds
+
+
+def convert_to_doorsecure(flat: ET.Element) -> ET.Element:
+    """Normalize a flattened vanilla door into DoorSecure-shaped XML."""
+    block = copy.deepcopy(flat)
+    sounds = extract_door_sounds(block)
+
+    # Remove Class + CompositeFeatures (AGF uses DoorSecure / PoweredDoor).
+    for prop in list(block.findall("property")):
+        if prop.get("name") == "Class" or prop.get("class") == "CompositeFeatures":
+            block.remove(prop)
+
+    ET.SubElement(block, "property", {"name": "Class", "value": "DoorSecure"})
+    for key, val in sounds.items():
+        # Avoid duplicates if flat sound already existed and wasn't removed
+        if prop_value(block, key) is None:
+            ET.SubElement(block, "property", {"name": key, "value": val})
+
+    # Match existing DoorsPlus place behavior.
+    if prop_value(block, "PlaceEverywhere") is None:
+        ET.SubElement(block, "property", {"name": "PlaceEverywhere", "value": "true"})
+
+    return block
+
+
+def refresh_blocks_xml_from_game() -> None:
+    shutil.copy2(GAME_BLOCKS, INPUT_FILE)
+    print(f"Copied game blocks.xml -> {INPUT_FILE}")
+
+
+def main() -> None:
+    refresh_blocks_xml_from_game()
+    tree = ET.parse(INPUT_FILE)
+    root = tree.getroot()
+
+    all_blocks_root = flatten_document(root, filter_blocks=True)
+    ET.indent(all_blocks_root, space="    ")
+    ET.ElementTree(all_blocks_root).write(
+        OUTPUT_FILE, encoding="utf-8", xml_declaration=True
+    )
+
+    reset_flatten_state(root)
+    all_names = build_all_block_names(root)
+    door_blocks: list[ET.Element] = []
+    for block in root.iter("block"):
+        if not should_emit_block(block, all_names):
+            continue
+        flat = flatten_block(block)
+        if not is_door_block(flat):
+            continue
+        door_blocks.append(convert_to_doorsecure(flat))
+
+    door_blocks.sort(key=lambda b: split_main_color(b.get("name", "")))
+    door_root = ET.Element("blocks", root.attrib)
+    for b in door_blocks:
+        door_root.append(b)
+    ET.indent(door_root, space="    ")
+    ET.ElementTree(door_root).write(
+        DOORSECURE_FILE, encoding="utf-8", xml_declaration=True
+    )
+
+    print(f"Flattened blocks written to {OUTPUT_FILE}")
+    print(f"Door models written to {DOORSECURE_FILE} ({len(door_blocks)})")
+
+
+if __name__ == "__main__":
+    main()
+
