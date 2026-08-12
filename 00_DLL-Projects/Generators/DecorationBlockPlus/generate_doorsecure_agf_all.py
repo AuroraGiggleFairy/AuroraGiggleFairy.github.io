@@ -132,9 +132,13 @@ powered_helper = 'miscpoweredDoorVariantHelperAGF'
 
 SHAPE_GRID_COLS = 12
 # One blank look per helper so Destroy returns the matching door helper.
-# Sections 1 (wood) and 3 (steel): keep whole section on consecutive slots, pad only at section end.
-# Other sections: pad after each color-heavy model family so rows stay aligned.
-COMPACT_SECTIONS = {1, 3}
+# Compact: pad only at section end (no Boarded/Plain split, no per-family pads).
+# Boarded-then-Plain: all Boarded in section first, pad, then all Plain (no per-family pads).
+# Other sections: pad after color-heavy families; Boarded row(s) then Plain per family.
+COMPACT_SECTIONS = {1, 3, 5, 9, 10, 15}
+BOARD_PLAIN_SECTIONS = {}
+# Insert one full empty grid row before these sections (after padding prior section).
+BLANK_ROW_BEFORE_SECTIONS = {6, 7, 12}
 COLOR_FAMILY_PAD_MIN = 6  # pad after a family if it used this many alts (color sets)
 
 def strip_agf_tier(name):
@@ -184,20 +188,32 @@ def build_padded_place_alts(sorted_blocks, tier_token):
 
         if prev_section is not None and section != prev_section:
             pad()
+            if section in BLANK_ROW_BEFORE_SECTIONS:
+                out.extend(['__SPACER__'] * SHAPE_GRID_COLS)
             family_count = 0
         elif (
             prev_family is not None
             and family != prev_family
             and prev_section not in COMPACT_SECTIONS
+            and prev_section not in BOARD_PLAIN_SECTIONS
             and family_count >= COLOR_FAMILY_PAD_MIN
         ):
             pad()
             family_count = 0
         elif (
+            # Whole-section Boarded row(s) then Plain row(s).
+            prev_section == section
+            and prev_section in BOARD_PLAIN_SECTIONS
+            and prev_clean == 0
+            and clean == 1
+        ):
+            pad()
+        elif (
             # Color families: finish all Boarded on their row(s), then Plain on the next.
             prev_family == family
             and prev_section == section
             and prev_section not in COMPACT_SECTIONS
+            and prev_section not in BOARD_PLAIN_SECTIONS
             and prev_clean == 0
             and clean == 1
         ):
@@ -216,15 +232,21 @@ def build_padded_place_alts(sorted_blocks, tier_token):
     return out
 
 def make_shape_spacer_block(name, helper_drop, sort1):
-    """Blank shape-menu spacer: weak, invisible icon, breaks into the door helper."""
+    """Blank shape-menu spacer: empty CustomIcon in UI; placeable wood cube in-world.
+
+    Matches the old blankAGF pattern (Shape=New + Cube.fbx + wood texture 241).
+    Do not use Shape=Cube (NRE) or Shape=Invisible (unseen / non-hittable).
+    CustomIcon must be empty (value="") so the shape menu shows a blank tile.
+    """
     block = ET.Element('block', {'name': name})
-    ET.SubElement(block, 'property', {'name': 'Class', 'value': 'Block'})
     ET.SubElement(block, 'property', {'name': 'CreativeMode', 'value': 'None'})
-    ET.SubElement(block, 'property', {'name': 'CustomIcon', 'value': 'miscDoorShapeSpacerAGF'})
+    ET.SubElement(block, 'property', {'name': 'CustomIcon', 'value': ''})
     ET.SubElement(block, 'property', {'name': 'DescriptionKey', 'value': 'miscDoorShapeSpacerAGFDesc'})
     ET.SubElement(block, 'property', {'name': 'Material', 'value': 'Mwood_weak'})
-    ET.SubElement(block, 'property', {'name': 'Shape', 'value': 'Cube'})
-    ET.SubElement(block, 'property', {'name': 'Texture', 'value': '1'})
+    ET.SubElement(block, 'property', {'name': 'Shape', 'value': 'New'})
+    ET.SubElement(block, 'property', {'name': 'Model', 'value': '@:Shapes/Cube.fbx'})
+    ET.SubElement(block, 'property', {'name': 'Texture', 'value': '241'})
+    ET.SubElement(block, 'property', {'name': 'WaterFlow', 'value': 'permitted'})
     ET.SubElement(block, 'property', {'name': 'MaxDamage', 'value': '5'})
     ET.SubElement(block, 'property', {'name': 'EconomicValue', 'value': '1'})
     ET.SubElement(block, 'property', {'name': 'SellableToTrader', 'value': 'false'})
@@ -288,6 +310,13 @@ def is_powered_twin_door_name(name):
     """Vanilla *_Powered models duplicate unpowered meshes; skip (AGF Powered tier covers it)."""
     return '_Powered' in (name or '')
 
+def is_porta_potty_unit_name(name):
+    """Full porta-potty cabinets — keep only portaPottyDoor* in DoorsPlus."""
+    n = (name or '').lower()
+    if 'portapottydoor' in n:
+        return False
+    return 'portapotty' in n
+
 def make_helper_block(name, extends, icon, place_values, sort1, sort2):
     block = ET.Element('block', {'name': name})
     ET.SubElement(block, 'property', {'name': 'Extends', 'value': extends, 'param1': 'CustomIconTint'})
@@ -322,7 +351,7 @@ def main():
     # 1. Generate AGF variants
     for block in root.findall('block'):
         orig_name = block.get('name')
-        if is_test_door_name(orig_name) or is_powered_twin_door_name(orig_name):
+        if is_test_door_name(orig_name) or is_powered_twin_door_name(orig_name) or is_porta_potty_unit_name(orig_name):
             continue
         customicon = orig_name
         for prop in block.findall('property'):
@@ -345,10 +374,11 @@ def main():
                         pass
                 new_props.append(new_p)
             return new_props
+        # Upgrade chain stops at Steel. Powered is a standalone steel-quality tier.
         variants = [
             ('Wood', 'Mwood_regular', '1000', 'resourceWood', '10', 'Iron', 'resourceForgedIron', '10', '5', 'miscwoodDoorVariantHelper'),
             ('Iron', 'Mmetal', '5000', 'resourceForgedIron', '10', 'Steel', 'resourceForgedSteel', '10', '5', 'miscironDoorVariantHelper'),
-            ('Steel', 'Msteel', '15000', 'resourceForgedSteel', '10', 'Powered', 'resourceForgedSteel', '10', '5', 'miscsteelDoorVariantHelper'),
+            ('Steel', 'Msteel', '15000', 'resourceForgedSteel', '10', None, None, None, None, 'miscsteelDoorVariantHelper'),
             ('Powered', 'Msteel', '15000', 'resourceForgedSteel', '10', None, None, None, None, 'miscpoweredDoorVariantHelper')
         ]
         for idx, (mat, matval, maxdmg, repitem, repcount, upg_to, upg_item, upg_count, upg_hits, helper_name) in enumerate(variants):
@@ -578,6 +608,12 @@ def main():
         except Exception:
             sort2_n = 0
         # Boarded (clean=0) of a family before Plain (clean=1), then by color.
+        # Compact: keep each color as Boarded then Plain (B,P,B,P…) on one row.
+        # Boarded-then-Plain sections: all Boarded in the section before any Plain.
+        if step1 in BOARD_PLAIN_SECTIONS:
+            return (group, step1, clean, step2, sort2_n, name)
+        if step1 in COMPACT_SECTIONS:
+            return (group, step1, step2, sort2_n, clean, name)
         return (group, step1, step2, clean, sort2_n, name)
 
     blocks.sort(key=get_sort_order)

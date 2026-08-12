@@ -22,7 +22,10 @@ public class ModAPI : IModApi
             ModEvents.GameUpdate.RegisterHandler((ref ModEvents.SGameUpdateData _) =>
             {
                 ScreamerAlertEnhancedCapabilityHello.TickRetry();
-                ScreamerAlertEnhancedState.Tick();
+                if (ScreamerAlertEnhancedGate.IsScreamerInPlay())
+                {
+                    ScreamerAlertEnhancedState.Tick();
+                }
                 PlayerBindingInjectorPatches.Tick();
             });
             Logging.Inform("EnhancedAGF Harmony patches registered.");

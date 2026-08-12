@@ -64,6 +64,14 @@ SKIP_TEST_NAME_SUBSTR = (
 SKIP_POWERED_TWIN_MARKER = "_Powered"
 
 
+def is_porta_potty_unit_name(name: str) -> bool:
+    """Full porta-potty cabinets — DoorsPlus keeps only portaPottyDoor*."""
+    n = (name or "").lower()
+    if "portapottydoor" in n:
+        return False
+    return "portapotty" in n
+
+
 def split_main_color(name: str) -> tuple[str, str]:
     for color in sorted(COLORS, key=len, reverse=True):
         if name.endswith(color):
@@ -83,6 +91,8 @@ def is_door_block(flat: ET.Element) -> bool:
     if any(s in name for s in SKIP_NAME_SUBSTR):
         return False
     if SKIP_POWERED_TWIN_MARKER in name:
+        return False
+    if is_porta_potty_unit_name(name):
         return False
     name_l = name.lower()
     if any(s in name_l for s in SKIP_TEST_NAME_SUBSTR):

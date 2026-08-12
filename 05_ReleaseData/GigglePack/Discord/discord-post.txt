@@ -1,14 +1,12 @@
-#   GigglePack v0.19.0 - *August 10, 2026 4:00pm*
+#   GigglePack v0.19.1 - *August 11, 2026 9:52pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +1 new, ~3 updated, =0 renamed, -0 removed**
+###  **Change summary: +0 new, ~1 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - [AGF-NoEAC-FuelAutoShutOff](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FuelAutoShutOff.zip) (new: v1.0.0)
+  - None
 - **Updated existing mods:**
-  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.3.2 -> v4.3.3)
-  - [AGF-NoEAC-ScreamerAlert](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip) (v2.3.2 -> v2.3.3)
-  - [zzzAGF-Special-Compatibilities](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip) (v5.1.1 -> v5.2.0)
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.3.3 -> v4.3.4)
 - **Renamed mods:**
   - None
 - **Removed mods:**

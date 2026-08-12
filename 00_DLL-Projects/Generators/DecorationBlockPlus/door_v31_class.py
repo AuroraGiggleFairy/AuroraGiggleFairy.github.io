@@ -13,6 +13,43 @@ def prop_value(block: ET.Element, name: str) -> str | None:
     return None
 
 
+def normalize_composite_door_features(block: ET.Element) -> bool:
+    """Ensure CompositeFeatures match working doors: empty TEFeatureDoor, sounded
+    TEFeatureDoor, then TEFeatureLockable.
+
+    Vanilla elevatorDoorDouble (and copies) omit the empty TEFeatureDoor and put
+    Lockable first — activate then toggles lock instead of opening.
+    """
+    features = None
+    for prop in block.findall("property"):
+        if prop.get("class") == "CompositeFeatures":
+            features = prop
+            break
+    if features is None:
+        return False
+
+    sounds: dict[str, str] = {}
+    for child in list(features):
+        cls = child.get("class")
+        if cls == "TEFeatureDoor":
+            for sp in child.findall("property"):
+                n, v = sp.get("name"), sp.get("value")
+                if n and v:
+                    sounds[n] = v
+            features.remove(child)
+        elif cls == "TEFeatureLockable":
+            features.remove(child)
+
+    # Rebuild in the working order used by oldWoodDoor / elevatorDoor.
+    ET.SubElement(features, "property", {"class": "TEFeatureDoor"})
+    door_feat = ET.SubElement(features, "property", {"class": "TEFeatureDoor"})
+    for key in ("OpenSound", "CloseSound", "LockedSound"):
+        if key in sounds:
+            ET.SubElement(door_feat, "property", {"name": key, "value": sounds[key]})
+    ET.SubElement(features, "property", {"class": "TEFeatureLockable"})
+    return True
+
+
 def ensure_composite_door(block: ET.Element) -> ET.Element:
     """
     If block uses removed DoorSecure (or flat Open/Close sounds without
@@ -37,6 +74,7 @@ def ensure_composite_door(block: ET.Element) -> ET.Element:
     elif cls == "DoorSecure" or (not has_features and sounds):
         target_class = "CompositeTileEntity"
     elif cls == "CompositeTileEntity" and has_features:
+        normalize_composite_door_features(block)
         return block
     elif cls is None and sounds and not has_features:
         target_class = "CompositeTileEntity"
@@ -64,6 +102,8 @@ def ensure_composite_door(block: ET.Element) -> ET.Element:
         for key, val in sounds.items():
             ET.SubElement(door_feat, "property", {"name": key, "value": val})
         ET.SubElement(features, "property", {"class": "TEFeatureLockable"})
+    else:
+        normalize_composite_door_features(block)
 
     return block
 

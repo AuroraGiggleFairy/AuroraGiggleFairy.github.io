@@ -26,17 +26,16 @@ public static class ScreamerAlertEnhancedBindingsPatch
     {
         try
         {
-            _controllerType = AccessTools.TypeByName("ScreamerAlertsController");
+            _controllerType = ScreamerAlertEnhancedGate.FindLoadedType("ScreamerAlertsController");
             if (_controllerType == null)
             {
-                Logging.Inform("ScreamerAlertEnhancedBindings", "ScreamerAlertsController not found; enhanced runtime patch not installed.");
                 return;
             }
 
             _scoutMessageField = AccessTools.Field(_controllerType, "screamerAlertMessage");
             _hordeMessageField = AccessTools.Field(_controllerType, "screamerHordeAlertMessage");
 
-            _managerType = AccessTools.TypeByName("ScreamerAlertManager");
+            _managerType = ScreamerAlertEnhancedGate.FindLoadedType("ScreamerAlertManager");
             _managerInstanceField = _managerType != null ? AccessTools.Field(_managerType, "Instance") : null;
             _persistentScreamerIdsField = _managerType != null ? AccessTools.Field(_managerType, "persistentScreamerIds") : null;
             _syncedScreamerIdsField = _managerType != null ? AccessTools.Field(_managerType, "syncedScreamerIds") : null;

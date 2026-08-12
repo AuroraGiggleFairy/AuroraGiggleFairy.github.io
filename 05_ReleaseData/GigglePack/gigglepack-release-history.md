@@ -1,5 +1,18 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.19.1 (August 11, 2026 9:52pm)
+### Summary: +0 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-NoEAC-EnhancedAGF](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip) (v4.3.3 -> v4.3.4)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.19.0 (August 10, 2026 4:00pm)
 ### Summary: +1 new, ~3 updated, =0 renamed, -0 removed
 - **New Mods**

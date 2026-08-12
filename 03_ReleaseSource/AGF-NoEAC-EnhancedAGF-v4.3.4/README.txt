@@ -12,7 +12,7 @@ NOTE: AGF Mod Guide and Changelog are further below.
 MOD SCOPE
 ------------------------------------------------------------------------
 
-  - Mod Version: 4.3.3
+  - Mod Version: 4.3.4
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
@@ -237,6 +237,12 @@ I. AGF Modding Focus
 ========================================================================
                                CHANGELOG                                
 ========================================================================
+
+v4.3.4
+    - No longer tries to connect to ScreamerAlert mod when it is not
+    installed.
+
+------------------------------------------------------------------------
 
 v4.3.3
     - Made a fix for working with screamer alert mod.

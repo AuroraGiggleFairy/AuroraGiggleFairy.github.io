@@ -11,7 +11,8 @@ public static class ScreamerAlertEnhancedCommands
 
         try
         {
-            if (!ScreamerAlertEnhancedGate.ShouldProcessClientHooks())
+            if (!ScreamerAlertEnhancedGate.ShouldProcessClientHooks()
+                || !ScreamerAlertEnhancedGate.IsScreamerInPlay())
             {
                 return false;
             }

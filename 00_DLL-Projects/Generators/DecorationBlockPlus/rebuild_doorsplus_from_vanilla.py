@@ -49,14 +49,47 @@ def white_base(name: str) -> str:
     return name
 
 
+def is_porta_potty_unit_name(name: str) -> bool:
+    """Full porta-potty cabinets — keep only portaPottyDoor*."""
+    n = (name or "").lower()
+    if "portapottydoor" in n:
+        return False
+    return "portapotty" in n
+
+
 def classify_sort_section(name: str) -> int:
-    """Map unknown door bases into plan sections 4/5/6."""
+    """Map unknown door bases into plan sections (see ShapeMenu-Order.md)."""
     n = name.lower()
-    if any(k in n for k in ("garage", "rollup")):
-        return 5  # Garages
-    if any(k in n for k in ("gate", "fence")):
-        return 4  # Gates
-    return 6  # Decorative (last)
+    if "rollup" in n:
+        return 7
+    if "garage" in n:
+        return 6
+    if "woodenfence" in n:
+        return 4
+    if any(k in n for k in ("gate", "chainlink")) or (
+        "fence" in n and "woodenfence" not in n
+    ):
+        return 5
+    if "bathroomstall" in n:
+        return 15
+    if "portapotty" in n:
+        return 16
+    if any(k in n for k in ("jail", "elevator", "trailer")):
+        return 14
+    # Screen doors (not *NoScreen* sliding) share glass row
+    if ("screen" in n and "noscreen" not in n) or "glass" in n:
+        return 9
+    if "sliding" in n:
+        return 10
+    if "commercial" in n:
+        return 13
+    if any(k in n for k in ("closet", "pantry", "armoire", "tallcabinet")):
+        return 12
+    if "interior" in n:
+        return 11
+    if any(k in n for k in ("exterior", "french")):
+        return 8
+    return 8
 
 
 def refresh_sort_csv(door_xml: Path) -> None:
@@ -86,7 +119,13 @@ def refresh_sort_csv(door_xml: Path) -> None:
             pass
 
     # Drop vanilla powered twins (AGF Powered tier covers them).
-    rows = [r for r in rows if "_Powered" not in (r.get("Name") or "")]
+    # Drop full porta-potty cabinets (doors only).
+    rows = [
+        r
+        for r in rows
+        if "_Powered" not in (r.get("Name") or "")
+        and not is_porta_potty_unit_name(r.get("Name") or "")
+    ]
     existing = {r["Name"]: r for r in rows}
     max_step2 = {}
     for row in rows:
@@ -99,7 +138,7 @@ def refresh_sort_csv(door_xml: Path) -> None:
 
     added = []
     for base in bases:
-        if "_Powered" in base:
+        if "_Powered" in base or is_porta_potty_unit_name(base):
             continue
         if base in existing:
             continue
@@ -171,47 +210,44 @@ def convert_legacy_doorsecure(legacy_text: str) -> str:
 
 
 
-def apply_spacer_localization(loc_path: Path) -> None:
-    """Shared spacer label/desc: single ASCII space in every language cell."""
-    import csv
-    space = " "
-    langs = [
-        "english", "german", "spanish", "french", "italian", "japanese", "koreana",
-        "polish", "brazilian", "russian", "turkish", "schinese", "tchinese",
-    ]
-    keys = [
-        "miscDoorShapeSpacerAGF",
-        "miscDoorShapeSpacerAGFDesc",
-    ]
-    with loc_path.open(encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f)
-        header = list(reader.fieldnames or [])
-        rows = [
-            r for r in reader
-            if not str(r.get("Key", "")).startswith("miscDoorShapeSpacer")
-        ]
+def apply_spacer_localization(loc_path: Path, blocks_path: Path | None = None) -> None:
+    """One loc row per spacer block name; every language cell is a quoted ASCII space.
 
-    def space_row(key: str) -> dict:
-        r = {h: "" for h in header}
-        r["Key"] = key
-        if "File" in r:
-            r["File"] = "blocks"
-        if "Type" in r:
-            r["Type"] = "Block"
-        if "Context / Alternate Text" in r:
-            r["Context / Alternate Text"] = '""'
-        for lang in langs:
-            if lang in r:
-                r[lang] = space
-        return r
+    Required CSV form (14 text columns after KeepLoaded, including Context):
+      key,blocks,Block,,,," "," "," "," "," "," "," "," "," "," "," "," "," "," "
 
-    for key in keys:
-        rows.append(space_row(key))
-    with loc_path.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_MINIMAL)
-        w.writeheader()
-        for r in rows:
-            w.writerow({h: r.get(h, "") for h in header})
+    Shape UI falls back to the raw block name when Key != block name, so shared
+    keys alone are not enough — each miscDoorShapeSpacer* needs its own row.
+    """
+    spacer_names: list[str] = []
+    src = blocks_path if blocks_path and blocks_path.exists() else DOORSPLUS / "Config" / "blocks.xml"
+    if src.exists():
+        spacer_names = sorted(
+            set(re.findall(r'<block name="(miscDoorShapeSpacer[^"]+)"', src.read_text(encoding="utf-8")))
+        )
+
+    keys = list(spacer_names)
+    # Shared description key referenced by every spacer block.
+    if "miscDoorShapeSpacerAGFDesc" not in keys:
+        keys.append("miscDoorShapeSpacerAGFDesc")
+
+    # english + Context / Alternate Text + 12 other languages = 14 quoted spaces
+    quoted_spaces = ",".join(['" "'] * 14)
+
+    def spacer_line(key: str) -> str:
+        return f"{key},blocks,Block,,,,{quoted_spaces}"
+
+    text = loc_path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    if not lines:
+        raise RuntimeError(f"Empty localization file: {loc_path}")
+    kept = [ln for ln in lines if not ln.startswith("miscDoorShapeSpacer")]
+    # Drop trailing blank lines so append is clean
+    while kept and not kept[-1].strip():
+        kept.pop()
+    kept.extend(spacer_line(k) for k in keys)
+    loc_path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+    print(f"Spacer localization: {len(spacer_names)} block keys + desc -> {loc_path}")
 
 
 
@@ -261,7 +297,7 @@ def install_into_doorsplus() -> None:
     print(f"Wrote {blocks_path} ({blocks_path.stat().st_size} bytes)")
 
     loc_path.write_text(LOC_OUT.read_text(encoding="utf-8"), encoding="utf-8", newline="\n")
-    apply_spacer_localization(loc_path)
+    apply_spacer_localization(loc_path, blocks_path)
     print(f"Wrote {loc_path} ({loc_path.stat().st_size} bytes)")
 
 
@@ -288,6 +324,8 @@ def summarize() -> None:
 
 def main() -> None:
     run("flatten_blocks_doorsecure.py")
+    # Editable order doc → CSV + COMPACT_SECTIONS, then append any brand-new models.
+    run("sync_doorsplus_shape_order.py")
     refresh_sort_csv(HERE / "blocks_doorsecure.xml")
     run("generate_doorsecure_agf_all.py")
     run("generate_agf_localization.py")

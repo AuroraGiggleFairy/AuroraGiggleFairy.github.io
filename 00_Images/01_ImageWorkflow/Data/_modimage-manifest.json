@@ -132,8 +132,8 @@
     "media_file": "AGF-NoEAC-CosmeticLockIcon_01.png"
   },
   "AGF-NoEAC-EnhancedAGF": {
-    "signature": "89f66b2a13430f90801b77352fab12ca6a90d5084c4a7a24a6dae654b9d15b47",
-    "version": "4.3.3",
+    "signature": "f52c102694adc28180e4b9f5b1a7cb2b04232cc13b664f5390de87858eb4ddef",
+    "version": "4.3.4",
     "has_media": true,
     "media_file": "AGF-NoEAC-EnhancedAGF_01.png"
   },

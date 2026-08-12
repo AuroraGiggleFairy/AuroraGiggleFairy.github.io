@@ -15,7 +15,8 @@ public static class ScreamerAlertEnhancedChatPatches
     [HarmonyPrefix]
     private static bool ChatMessageServerPrefix(ref string _msg)
     {
-        if (!ScreamerAlertEnhancedGate.ShouldProcessClientHooks())
+        if (!ScreamerAlertEnhancedGate.ShouldProcessClientHooks()
+            || !ScreamerAlertEnhancedGate.IsScreamerInPlay())
         {
             return true;
         }
@@ -47,6 +48,16 @@ public static class ScreamerAlertEnhancedChatPatches
             return true;
         }
 
+        if (!ScreamerAlertEnhancedGate.IsScreamerInPlay())
+        {
+            if (LooksLikeScreamerServerLine(_message))
+            {
+                ScreamerAlertEnhancedGate.MarkServerScreamerDetected();
+            }
+
+            return true;
+        }
+
         if (!TryClassifyAlert(_message, out bool isHorde))
         {
             if (IsScreamerStatusLine(_message))
@@ -69,6 +80,17 @@ public static class ScreamerAlertEnhancedChatPatches
 
         // Enhanced clients render screamer alerts via UI, not chat.
         return false;
+    }
+
+    private static bool LooksLikeScreamerServerLine(string message)
+    {
+        if (string.IsNullOrEmpty(message))
+        {
+            return false;
+        }
+
+        return message.IndexOf("[ScreamerAlert]", StringComparison.OrdinalIgnoreCase) >= 0
+            || message.IndexOf("[Screamer Alert", StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     private static bool IsScreamerStatusLine(string message)

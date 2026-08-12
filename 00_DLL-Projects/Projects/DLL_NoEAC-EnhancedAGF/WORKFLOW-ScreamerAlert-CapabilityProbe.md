@@ -16,12 +16,15 @@ Working methods:
 - Deploy to active build only (when requested) and verify SHA256 hash match.
 
 Change history:
+- 2026-08-11: Do not handshake or Harmony-scan for ScreamerAlert when it is not installed. Cache local presence via ModManager (no AccessTools.TypeByName in GameUpdate). Host without local ScreamerAlert ignores leftover Protocol CVars and never sends `/agfsa proto hello`.
 - 2026-08-10: SP / listen-host no longer waits for Protocol CVar before MarkLocalHostCapability when ScreamerAlert is present locally. Stamped chat suppress now keeps content brackets like [Screamer Alert].
 - 2026-07-08: Added probe-specific hello method so server capability probes can force a fresh hello even when prior ack state was true.
 - 2026-07-08: Added probe nonce dedupe/cooldown to avoid burst duplicate sends.
 - 2026-07-08: Rebuilt EnhancedAGF.dll for active build deployment.
 
 Do-not-do notes:
+- Do not call AccessTools.TypeByName for missing ScreamerAlert types on a hot path; HarmonyX logs "Could not find type named ..." and that becomes console spam.
+- Do not send `/agfsa proto hello` unless ScreamerAlert is local (host) or Protocol CVar proves the remote server has it.
 - Do not depend on command-only hello flow for capability certainty; probe flow requires a fresh-response path.
 - Do not keep _acknowledged=true during probe-triggered hello; that blocks fresh responses.
 - Do not deploy to live game folders when the request is active-build-only.
