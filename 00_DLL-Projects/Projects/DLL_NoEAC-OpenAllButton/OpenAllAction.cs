@@ -1,6 +1,5 @@
 using HarmonyLib;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
@@ -512,20 +511,30 @@ public static class OpenAllActionHelpers
 {
     private const string OpenLocalizationKey = "lblContextActionOpen";
     private const string OpenDisplayText = "Open";
-    private const string OpenAllLocalizationKey = "lblContextActionOpenAll";
-    private const string OpenAllDisplayText = "Open All";
     private static readonly FieldInfo ItemActionEntriesField = typeof(XUiC_ItemActionList).GetField("itemActionEntries", BindingFlags.NonPublic | BindingFlags.Instance);
     private static readonly PropertyInfo BaseItemActionEntryItemControllerProperty = typeof(BaseItemActionEntry).GetProperty("ItemController", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
     private static readonly PropertyInfo BaseItemActionEntryActionNameProperty = typeof(BaseItemActionEntry).GetProperty("ActionName", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
     private static readonly FieldInfo BaseItemActionEntryActionNameField = typeof(BaseItemActionEntry).GetField("actionName", BindingFlags.NonPublic | BindingFlags.Instance)
         ?? typeof(BaseItemActionEntry).GetField("_actionName", BindingFlags.NonPublic | BindingFlags.Instance)
         ?? typeof(BaseItemActionEntry).GetField("ActionName", BindingFlags.NonPublic | BindingFlags.Instance);
-    private static readonly PropertyInfo ItemClassActionsProperty = typeof(ItemClass).GetProperty("Actions", BindingFlags.Public | BindingFlags.Instance);
 
     public static bool HasOpenAllEntry(XUiC_ItemActionList actionList)
     {
-        return FindEntryByActionName(actionList, OpenAllLocalizationKey) != null
-            || FindEntryByActionName(actionList, OpenAllDisplayText) != null;
+        List<BaseItemActionEntry> entries = GetEntries(actionList);
+        if (entries == null)
+        {
+            return false;
+        }
+
+        for (int index = 0; index < entries.Count; index++)
+        {
+            if (entries[index] is ItemActionEntryOpenAll)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static void PlaceOpenAllEntryBelowOpen(XUiC_ItemActionList actionList, BaseItemActionEntry openAllEntry, BaseItemActionEntry openEntry)
@@ -608,34 +617,46 @@ public static class OpenAllActionHelpers
         }
     }
 
-    public static BaseItemActionEntry FindOpenEntry(XUiC_ItemActionList actionList, ItemClass itemClass = null)
+    public static BaseItemActionEntry FindOpenEntry(XUiC_ItemActionList actionList)
     {
-        BaseItemActionEntry keyEntry = FindEntryByActionName(actionList, OpenLocalizationKey);
-        if (keyEntry != null)
-        {
-            return keyEntry;
-        }
-
-        BaseItemActionEntry displayEntry = FindEntryByActionName(actionList, OpenDisplayText);
-        if (displayEntry != null)
-        {
-            return displayEntry;
-        }
-
         List<BaseItemActionEntry> entries = GetEntries(actionList);
         if (entries == null || entries.Count == 0)
         {
             return null;
         }
 
-        foreach (BaseItemActionEntry entry in entries)
+        for (int index = 0; index < entries.Count; index++)
         {
-            if (entry == null)
+            BaseItemActionEntry entry = entries[index];
+            if (entry == null || entry is ItemActionEntryOpenAll)
             {
                 continue;
             }
 
-            if (entry is ItemActionEntryOpenAll)
+            if (IsVanillaOpenUseAction(entry))
+            {
+                return entry;
+            }
+        }
+
+        for (int index = 0; index < entries.Count; index++)
+        {
+            BaseItemActionEntry entry = entries[index];
+            if (entry == null || entry is ItemActionEntryOpenAll)
+            {
+                continue;
+            }
+
+            if (ActionNameMatches(entry.ActionName, OpenLocalizationKey, OpenDisplayText))
+            {
+                return entry;
+            }
+        }
+
+        for (int index = 0; index < entries.Count; index++)
+        {
+            BaseItemActionEntry entry = entries[index];
+            if (entry == null || entry is ItemActionEntryOpenAll)
             {
                 continue;
             }
@@ -644,22 +665,6 @@ public static class OpenAllActionHelpers
             if (!string.IsNullOrEmpty(typeName) && typeName.IndexOf("Open", StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 return entry;
-            }
-
-            if (!string.IsNullOrEmpty(entry.ActionName) && entry.ActionName.IndexOf("Open", StringComparison.OrdinalIgnoreCase) >= 0)
-            {
-                return entry;
-            }
-        }
-
-        if (HasOpenItemAction(itemClass))
-        {
-            foreach (BaseItemActionEntry entry in entries)
-            {
-                if (entry != null && string.Equals(entry.GetType().Name, "ItemActionEntryUse", StringComparison.OrdinalIgnoreCase))
-                {
-                    return entry;
-                }
             }
         }
 
@@ -728,31 +733,31 @@ public static class OpenAllActionHelpers
         return BaseItemActionEntryItemControllerProperty.GetValue(entry, null) as XUiC_ItemStack;
     }
 
+    public static bool IsVanillaOpenUseAction(BaseItemActionEntry entry)
+    {
+        return entry is ItemActionEntryUse useEntry
+            && useEntry.consumeType == ItemActionEntryUse.ConsumeType.Open;
+    }
+
     public static bool IsOpenAction(BaseItemActionEntry entry)
     {
-        if (entry == null)
+        if (entry == null || entry is ItemActionEntryOpenAll)
         {
             return false;
         }
 
-        if (entry is ItemActionEntryOpenAll)
+        if (IsVanillaOpenUseAction(entry))
         {
-            return false;
+            return true;
         }
 
-        if (string.Equals(entry.ActionName, OpenLocalizationKey, StringComparison.OrdinalIgnoreCase) ||
-            string.Equals(entry.ActionName, OpenDisplayText, StringComparison.OrdinalIgnoreCase))
+        if (ActionNameMatches(entry.ActionName, OpenLocalizationKey, OpenDisplayText))
         {
             return true;
         }
 
         string entryType = entry.GetType().Name;
-        if (!string.IsNullOrEmpty(entryType) && entryType.IndexOf("Open", StringComparison.OrdinalIgnoreCase) >= 0)
-        {
-            return true;
-        }
-
-        return !string.IsNullOrEmpty(entry.ActionName) && entry.ActionName.IndexOf("Open", StringComparison.OrdinalIgnoreCase) >= 0;
+        return !string.IsNullOrEmpty(entryType) && entryType.IndexOf("Open", StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     public static bool IsInventoryOrContainerController(XUiController controller)
@@ -1244,28 +1249,39 @@ public static class OpenAllActionHelpers
         return false;
     }
 
-    private static BaseItemActionEntry FindEntryByActionName(XUiC_ItemActionList actionList, string actionName)
+    private static bool ActionNameMatches(string actionName, string localizationKey, string englishText)
     {
-        List<BaseItemActionEntry> entries = GetEntries(actionList);
-        if (entries == null || string.IsNullOrEmpty(actionName))
+        if (string.IsNullOrEmpty(actionName))
+        {
+            return false;
+        }
+
+        if (string.Equals(actionName, localizationKey, StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(actionName, englishText, StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
+        string localized = TryGetLocalized(localizationKey);
+        return !string.IsNullOrEmpty(localized) && string.Equals(actionName, localized, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static string TryGetLocalized(string localizationKey)
+    {
+        if (string.IsNullOrEmpty(localizationKey))
         {
             return null;
         }
 
-        foreach (BaseItemActionEntry entry in entries)
+        try
         {
-            if (entry == null || entry is ItemActionEntryOpenAll)
-            {
-                continue;
-            }
-
-            if (actionName.Equals(entry.ActionName, StringComparison.OrdinalIgnoreCase))
-            {
-                return entry;
-            }
+            string resolved = Localization.Get(localizationKey);
+            return string.IsNullOrEmpty(resolved) ? null : resolved;
         }
-
-        return null;
+        catch
+        {
+            return null;
+        }
     }
 
     private static List<BaseItemActionEntry> GetEntries(XUiC_ItemActionList actionList)
@@ -1282,35 +1298,5 @@ public static class OpenAllActionHelpers
     {
         List<BaseItemActionEntry> entries = GetEntries(actionList);
         return entries?.Count ?? 0;
-    }
-
-    private static bool HasOpenItemAction(ItemClass itemClass)
-    {
-        if (itemClass == null || ItemClassActionsProperty == null)
-        {
-            return false;
-        }
-
-        object actionsObject = ItemClassActionsProperty.GetValue(itemClass, null);
-        if (!(actionsObject is IEnumerable actionCollection))
-        {
-            return false;
-        }
-
-        foreach (object action in actionCollection)
-        {
-            if (action == null)
-            {
-                continue;
-            }
-
-            string typeName = action.GetType().Name;
-            if (!string.IsNullOrEmpty(typeName) && typeName.IndexOf("Open", StringComparison.OrdinalIgnoreCase) >= 0)
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

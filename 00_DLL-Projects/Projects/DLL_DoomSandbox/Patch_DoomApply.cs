@@ -67,15 +67,14 @@ namespace DoomSandbox
 		}
 
 		/// <summary>
-		/// Player Damage Taken: flat ±1 to health damage and Doom armour pool (Stamina).
-		/// Armour drain matches Doom buffs: only while Stamina &gt;= 0.4, never below that floor
-		/// (residual stamina is reserved for sprinting after armour is destroyed).
+		/// Player Damage Taken: flat ±1 to incoming hit strength only.
+		/// DoomArmour splits that strength into health vs stamina armour; do not touch stamina here.
+		/// Skip while buffInvulnerability is active (resist zeroes the hit after this Prefix).
 		/// </summary>
 		[HarmonyPatch(typeof(EntityPlayer), nameof(EntityPlayer.DamageEntity))]
 		public static class Patch_PlayerFlatDamage
 		{
-			/// <summary>Matches Doom buffs.xml StatCompareCurrent Stamina GTE 0.4 armour gate.</summary>
-			const float ArmourStaminaFloor = 0.4f;
+			const string InvulnerabilityBuff = "buffInvulnerability";
 
 			public static void Prefix(EntityPlayer __instance, ref int _strength)
 			{
@@ -83,31 +82,10 @@ namespace DoomSandbox
 				if (flat == 0)
 					return;
 
+				if (__instance?.Buffs != null && __instance.Buffs.HasBuff(InvulnerabilityBuff))
+					return;
+
 				_strength = Math.Max(0, _strength + flat);
-
-				try
-				{
-					var stamina = __instance?.Stats?.Stamina;
-					if (stamina == null)
-						return;
-
-					float current = stamina.Value;
-					if (flat > 0)
-					{
-						// Harder: extra armour drain, but never erase the sprint reserve.
-						if (current >= ArmourStaminaFloor)
-							stamina.Value = Math.Max(ArmourStaminaFloor, current - flat);
-					}
-					else
-					{
-						// Easier: reduce armour loss / restore pool (unchanged semantics).
-						stamina.Value = Math.Max(0f, current - flat);
-					}
-				}
-				catch (Exception ex)
-				{
-					DoomLog.Error("Player armour flat apply failed: " + ex.Message);
-				}
 			}
 		}
 

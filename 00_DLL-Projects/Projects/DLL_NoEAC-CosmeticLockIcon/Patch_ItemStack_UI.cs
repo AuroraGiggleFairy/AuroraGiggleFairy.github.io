@@ -28,7 +28,7 @@ public class Patch_ItemStack_UI
 		{
 			if (ArmorIconUIHarmonyPatches.IsCosmeticUnlocked(entityPlayerLocal, itemClassArmor))
 			{
-				_value = __instance.altitemtypeiconcolorFormatter.Format(itemClassArmor.AltItemTypeIconColor);
+				_value = CosmeticLockIconUiHelpers.FormatXuiRgbaColor(__instance, itemClassArmor.AltItemTypeIconColor);
 				__result = true;
 				return false;
 			}

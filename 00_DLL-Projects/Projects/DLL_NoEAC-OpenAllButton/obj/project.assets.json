@@ -8,17 +8,17 @@
     ".NETFramework,Version=v4.8": []
   },
   "packageFolders": {
-    "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3b3e9fdfc7186cc5d7bee5eb71271285\\nuget": {},
+    "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6726fbecbe224d2ef99eecd72eaec015\\nuget": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\OpenAll.csproj",
+      "projectUniqueName": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\OpenAll.csproj",
       "projectName": "OpenAll",
-      "projectPath": "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\OpenAll.csproj",
-      "packagesPath": "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\3b3e9fdfc7186cc5d7bee5eb71271285\\nuget",
-      "outputPath": "C:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\obj\\",
+      "projectPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\OpenAll.csproj",
+      "packagesPath": "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6726fbecbe224d2ef99eecd72eaec015\\nuget",
+      "outputPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -104,6 +104,11 @@
     "recorded_at": "2026-06-21T15:50:24",
     "version": "2.0.0"
   },
+  "AGF-NoEAC-CombatGlitchMitigations": {
+    "folder": "AGF-NoEAC-CombatGlitchMitigations-v0.0.1",
+    "recorded_at": "2026-08-22T16:06:08",
+    "version": "0.0.1"
+  },
   "AGF-NoEAC-ConsoleOpacityMod": {
     "folder": "AGF-NoEAC-ConsoleOpacityMod-v1.0.1",
     "recorded_at": "2026-06-15T02:20:47",
@@ -148,6 +153,11 @@
     "folder": "AGF-NoEAC-LockableWorkstations-v1.2.1",
     "recorded_at": "2026-06-15T02:20:47",
     "version": "1.2.1"
+  },
+  "AGF-NoEAC-MapPlus": {
+    "folder": "AGF-NoEAC-MapPlus-v1.0.0",
+    "recorded_at": "2026-08-22T16:06:08",
+    "version": "1.0.0"
   },
   "AGF-NoEAC-OpenAllButton": {
     "folder": "AGF-NoEAC-OpenAllButton-v2.0.0",

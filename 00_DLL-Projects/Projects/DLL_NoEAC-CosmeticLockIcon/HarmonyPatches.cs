@@ -73,6 +73,7 @@ public static class HarmonyPatches
 
 	public static void ApplyPatches()
 	{
+		GameCompat.Initialize();
 		var harmony = new Harmony("com.agfprojects.cosmeticlockicon");
 		harmony.PatchAll(Assembly.GetExecutingAssembly());
 	}

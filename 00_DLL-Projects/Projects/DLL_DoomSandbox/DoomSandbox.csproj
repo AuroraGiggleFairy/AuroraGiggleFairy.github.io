@@ -19,10 +19,12 @@
     <Compile Remove="_decomp_sky\**" />
     <Compile Remove="_decomp_air\**" />
     <Compile Remove="_decomp_ai\**" />
+    <Compile Remove="Disassembled\**" />
     <None Include="_decomp\**" />
     <None Include="_decomp_sky\**" />
     <None Include="_decomp_air\**" />
     <None Include="_decomp_ai\**" />
+    <None Include="Disassembled\**" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony">

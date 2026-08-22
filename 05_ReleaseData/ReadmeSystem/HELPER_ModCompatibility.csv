@@ -7,11 +7,13 @@ AGF-4Modders-Fix4RemoveItems,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4RemoveItems.tx
 AGF-4Modders-ItemTypeIconColor,TBD,TBD,TBD,TBD,TBD,AGF-4Modders-ItemTypeIconColor.txt,TBD,TBD,TBD,TBD,x
 AGF-NoEAC-AudioOptionsPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-AudioOptionsPlus.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-AutoRun,4,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-NoEAC-AutoRun.txt,No,N/A,N/A,Only,x
+AGF-NoEAC-CombatGlitchMitigations,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-CombatGlitchMitigations.txt,TBD,TBD,TBD,TBD,TBD
 AGF-NoEAC-ConsoleOpacityMod,TBD,3,SAFE,TBD,None,AGF-NoEAC-ConsoleOpacityMod.txt,No,TBD,TBD,TBD,x
 AGF-NoEAC-CosmeticLockIcon,3,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-NoEAC-CosmeticLockIcon.txt,No,No,No,Required,x
 AGF-NoEAC-FlightAssist,4,3,SAFE,TBD,Updates Incoming.,AGF-NoEAC-FlightAssist.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-FuelAutoShutOff,2,3,SAFE,TBD,Clients do not need this; local install has no effect,AGF-NoEAC-FuelAutoShutOff.txt,No,Yes,Yes,None,x
 AGF-NoEAC-GlobalStormTracker,2,3,SAFE,TBD,Clients do not need this; local install has no effect,AGF-NoEAC-GlobalStormTracker.txt,No,Yes,Yes,None,x
+AGF-NoEAC-MapPlus,3,3,SAFE,TBD,TBD,AGF-NoEAC-MapPlus.txt,No,No,No,Required,1
 AGF-NoEAC-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-OpenAllButton.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-ScreamerAlert,2,3,SAFE,TBD,None,AGF-NoEAC-ScreamerAlert.txt,No,Yes,Yes,None,x
 AGF-NoEAC-TerrainLeveler,TBD,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required,x

@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.19.1",
-  "previous_gigglepack_version": "0.19.0",
+  "gigglepack_version": "0.20.0",
+  "previous_gigglepack_version": "0.19.2",
   "is_baseline_release": false,
-  "released_at": "2026-08-11 21:52:29",
+  "released_at": "2026-08-22 16:09:24",
   "mods": {
     "AGF-4Modders-Fix4DestroyBiomeBadge": "2.0.0",
     "AGF-BackpackPlus-060Slots": "4.1.1",
@@ -10,7 +10,7 @@
     "AGF-BackpackPlus-084Slots": "4.1.1",
     "AGF-BackpackPlus-119Slots": "2.1.1",
     "AGF-HUDPlus-1Main": "6.5.5",
-    "AGF-HUDPlus-BMCounter": "4.0.1",
+    "AGF-HUDPlus-BMCounter": "4.0.2",
     "AGF-HUDPlus-PurpleBook": "3.2.0",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
     "AGF-HUDPlus-VisualEntityTracker": "1.0.1",
@@ -21,10 +21,11 @@
     "AGF-NoEAC-EnhancedAGF": "4.3.4",
     "AGF-NoEAC-FuelAutoShutOff": "1.0.0",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
-    "AGF-NoEAC-OpenAllButton": "2.0.0",
+    "AGF-NoEAC-MapPlus": "1.0.0",
+    "AGF-NoEAC-OpenAllButton": "2.0.1",
     "AGF-NoEAC-ScreamerAlert": "2.3.3",
     "AGF-NoEAC-SmeltTimerOption": "1.0.0",
-    "AGF-NoEAC-Toolbelt12Slots": "2.2.3",
+    "AGF-NoEAC-Toolbelt12Slots": "2.2.4",
     "AGF-Requested-SmallerInteractionPrompt": "2.0.0",
     "AGF-Requested-TinyBuffsPopUp": "2.0.0",
     "AGF-VP-AdminModdingSupport": "2.0.0",
@@ -70,20 +71,33 @@
   },
   "updated_mods": [
     {
-      "mod": "AGF-NoEAC-EnhancedAGF",
-      "from": "4.3.3",
-      "to": "4.3.4",
-      "from_display": "4.3.3",
-      "to_display": "4.3.4"
+      "mod": "AGF-HUDPlus-BMCounter",
+      "from": "4.0.1",
+      "to": "4.0.2",
+      "from_display": "4.0.1",
+      "to_display": "4.0.2"
+    },
+    {
+      "mod": "AGF-NoEAC-Toolbelt12Slots",
+      "from": "2.2.3",
+      "to": "2.2.4",
+      "from_display": "2.2.3",
+      "to_display": "2.2.4"
     }
   ],
-  "new_mods": [],
+  "new_mods": [
+    {
+      "mod": "AGF-NoEAC-MapPlus",
+      "to": "1.0.0",
+      "to_display": "1.0.0"
+    }
+  ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.19.1.zip",
+  "versioned_zip": "AGF-GigglePack-v0.20.0.zip",
   "change_counts": {
-    "new_mods": 0,
-    "updated_existing_mods": 1,
+    "new_mods": 1,
+    "updated_existing_mods": 2,
     "renamed_mods": 0,
     "removed_mods": 0
   }

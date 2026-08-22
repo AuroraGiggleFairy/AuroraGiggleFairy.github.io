@@ -66,8 +66,8 @@
     "media_file": "AGF-HUDPlus-1Main_01.png"
   },
   "AGF-HUDPlus-BMCounter": {
-    "signature": "68f01510494bb5d2fa66cd3ff1c17cfbb2cc24d705106a945b65971758f66459",
-    "version": "4.0.1",
+    "signature": "6493560ce836ad7b2060acab2a31e6bbba8e96ede4e0f9bed7ff390a5a85ed7b",
+    "version": "4.0.2",
     "has_media": true,
     "media_file": "AGF-HUDPlus-BMCounter_01.png"
   },
@@ -168,8 +168,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-OpenAllButton": {
-    "signature": "e28c71cf9dc239da2697e05829aab583241905e4893141b55b5bb42346473354",
-    "version": "2.0.0",
+    "signature": "2a3832e9207bb199a157c310cb1201ed8e7c706afeeb36e8ecbb1e0217487380",
+    "version": "2.0.1",
     "has_media": true,
     "media_file": "AGF-NoEAC-OpenAllButton_01.png"
   },
@@ -186,8 +186,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-Toolbelt12Slots": {
-    "signature": "9be66a6eac097cf79e813cc79d5595a50858a3b22bf970ad8717c7762d54de6c",
-    "version": "2.2.3",
+    "signature": "5dad48c7803e27f8bc34fdb65249bcdd19053a56f494460467d3e390a821d9fd",
+    "version": "2.2.4",
     "has_media": true,
     "media_file": "AGF-NoEAC-Toolbelt12Slots_01.png"
   },
@@ -601,6 +601,12 @@
   },
   "AGF-NoEAC-FuelAutoShutOff": {
     "signature": "e10d85f5eafc4aca2c4aa13601cb51b77edb68f8c2eb2f26838de15768435415",
+    "version": "1.0.0",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-MapPlus": {
+    "signature": "6cf9ae20e5364a35b4018252afe147db3547516940bde128dd6c68bac11509ce",
     "version": "1.0.0",
     "has_media": false,
     "media_file": ""

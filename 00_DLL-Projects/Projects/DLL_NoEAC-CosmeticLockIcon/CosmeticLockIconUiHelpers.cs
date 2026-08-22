@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using UnityEngine;
 
 public static class CosmeticLockIconUiHelpers
 {
@@ -8,6 +9,12 @@ public static class CosmeticLockIconUiHelpers
 	private static readonly object CacheLock = new object();
 	private static readonly Dictionary<string, MemberInfo> MemberCache = new Dictionary<string, MemberInfo>(StringComparer.Ordinal);
 	private static readonly HashSet<string> MissingMemberCache = new HashSet<string>(StringComparer.Ordinal);
+	private static readonly Dictionary<Type, MethodInfo> FormatMethodCache = new Dictionary<Type, MethodInfo>();
+	private static readonly string[] TintFormatterFieldNames = new string[]
+	{
+		"altitemtypeiconcolorFormatter",
+		"iconTypeIconTintFormatter"
+	};
 
 	private static string BuildCacheKey(Type type, string memberName)
 	{
@@ -126,6 +133,23 @@ public static class CosmeticLockIconUiHelpers
 		return null;
 	}
 
+	public static string FormatXuiRgbaColor(Color32 color)
+	{
+		return color.r + "," + color.g + "," + color.b + "," + color.a;
+	}
+
+	public static string FormatXuiRgbaColor(object controller, Color32 color)
+	{
+		GameCompat.Initialize();
+		string formatted;
+		if (TryFormatWithControllerFormatter(controller, color, out formatted))
+		{
+			return formatted;
+		}
+
+		return FormatXuiRgbaColor(color);
+	}
+
 	public static EntityPlayerLocal GetEntityPlayerLocal(object controller)
 	{
 		if (controller == null)
@@ -134,12 +158,18 @@ public static class CosmeticLockIconUiHelpers
 		}
 
 		XUiController xuiController = controller as XUiController;
-		if (xuiController != null && xuiController.xui != null && xuiController.xui.playerUI != null)
+		if (xuiController != null)
 		{
-			EntityPlayerLocal fastPlayer = xuiController.xui.playerUI.entityPlayer;
-			if (fastPlayer != null)
+			try
 			{
-				return fastPlayer;
+				EntityPlayerLocal fastPlayer = TryGetPlayerFromXuiController(xuiController);
+				if (fastPlayer != null)
+				{
+					return fastPlayer;
+				}
+			}
+			catch
+			{
 			}
 		}
 
@@ -162,5 +192,85 @@ public static class CosmeticLockIconUiHelpers
 		}
 
 		return GetMemberValue(playerUI, "entityPlayer", "_entityPlayer", "localPlayer", "LocalPlayer") as EntityPlayerLocal;
+	}
+
+	private static EntityPlayerLocal TryGetPlayerFromXuiController(XUiController controller)
+	{
+		if (controller == null || controller.xui == null || controller.xui.playerUI == null)
+		{
+			return null;
+		}
+
+		return controller.xui.playerUI.entityPlayer;
+	}
+
+	private static bool TryFormatWithControllerFormatter(object controller, Color32 color, out string formatted)
+	{
+		formatted = null;
+		if (controller == null)
+		{
+			return false;
+		}
+
+		object formatter = GetMemberValue(controller, TintFormatterFieldNames);
+		if (formatter == null)
+		{
+			return false;
+		}
+
+		MethodInfo formatMethod = ResolveFormatMethod(formatter.GetType());
+		if (formatMethod == null)
+		{
+			return false;
+		}
+
+		try
+		{
+			formatted = formatMethod.Invoke(formatter, new object[] { color }) as string;
+			return !string.IsNullOrEmpty(formatted);
+		}
+		catch
+		{
+			formatted = null;
+			return false;
+		}
+	}
+
+	private static MethodInfo ResolveFormatMethod(Type formatterType)
+	{
+		if (formatterType == null)
+		{
+			return null;
+		}
+
+		lock (CacheLock)
+		{
+			MethodInfo cached;
+			if (FormatMethodCache.TryGetValue(formatterType, out cached))
+			{
+				return cached;
+			}
+
+			MethodInfo[] methods = formatterType.GetMethods(BindingFlags.Instance | BindingFlags.Public);
+			MethodInfo found = null;
+			for (int i = 0; i < methods.Length; i++)
+			{
+				MethodInfo method = methods[i];
+				if (method.Name != "Format" || method.ReturnType != typeof(string))
+				{
+					continue;
+				}
+
+				ParameterInfo[] parameters = method.GetParameters();
+				if (parameters.Length == 1 && (parameters[0].ParameterType == typeof(Color32) || parameters[0].ParameterType == typeof(Color)))
+				{
+					found = method;
+					break;
+				}
+			}
+
+			FormatMethodCache[formatterType] = found;
+			return found;
+		}
 	}
 }

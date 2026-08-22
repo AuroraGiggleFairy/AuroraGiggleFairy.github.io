@@ -7,6 +7,7 @@ public class ModAPI : IModApi
 	{
 		try
 		{
+			GameCompat.Initialize();
 			new Harmony("com.agfprojects.cosmeticlockicon").PatchAll();
 			Console.WriteLine("CosmeticLockIcon: Harmony patches registered.");
 		}

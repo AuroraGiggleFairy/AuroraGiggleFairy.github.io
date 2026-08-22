@@ -28,7 +28,7 @@ public class Patch_CraftingInfoWindow_CosmeticIcon
                     }
                     if (isTintBinding)
                     {
-                        value = __instance.altitemtypeiconcolorFormatter.Format(itemClassArmor.AltItemTypeIconColor);
+                        value = CosmeticLockIconUiHelpers.FormatXuiRgbaColor(__instance, itemClassArmor.AltItemTypeIconColor);
                         __result = true;
                         return false;
                     }
