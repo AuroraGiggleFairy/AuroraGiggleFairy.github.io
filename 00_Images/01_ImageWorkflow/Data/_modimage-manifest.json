@@ -600,10 +600,10 @@
     "media_file": "AGF-NoEAC-SmeltTimerOption_01.png"
   },
   "AGF-NoEAC-FuelAutoShutOff": {
-    "signature": "36e723ca1f14483eb3185bfd53c56942ffed81476bd7deb336dec61bb4ee423f",
+    "signature": "6b668fc9435a4af952de6527e0eb065064623580b8894615a3e11d63605b621b",
     "version": "1.0.0",
-    "has_media": false,
-    "media_file": ""
+    "has_media": true,
+    "media_file": "AGF-NoEAC-FuelAutoShutOff_01.png"
   },
   "AGF-NoEAC-MapPlus": {
     "signature": "0be9a564fb5b0dec1dcf9ff9e5882552e152223ef68cedb0f0d72757d177e221",

@@ -27,6 +27,7 @@ echo   [YES] Promote ActiveBuild -^> ReleaseSource (images + readme regeneration
 echo   [YES] Create all mod/category zips
 echo   [YES] Generate thumbnails
 echo   [YES] Update main README.md
+echo   [YES] Generate Nexus PublishHelp files
 echo.
 echo   [NO]  GigglePack version bump (version stays unchanged)
 echo   [NO]  Discord GigglePack release message
@@ -36,6 +37,21 @@ echo.
 echo ======================================================================
 echo.
 "%PYTHON_EXE%" "%REPO_ROOT%00_Support\Automation\workflow\00_dispatch.py" --mode full --dry-run --verbose --publish-gigglepack-action queue %*
+set "EXIT_CODE=%ERRORLEVEL%"
+
+if %EXIT_CODE% neq 0 (
+    echo.
+    echo Dry-run (no-GigglePack) exited with code %EXIT_CODE%.
+    pause
+    exit /b %EXIT_CODE%
+)
+
+echo.
+echo ============================================================
+echo  STEP 6 — Nexus PublishHelp (dry-run)
+echo ============================================================
+echo.
+"%PYTHON_EXE%" "%REPO_ROOT%00_Support\Automation\workflow\06_nexus.py" --dry-run
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.
