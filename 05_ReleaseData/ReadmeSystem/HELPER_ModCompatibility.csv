@@ -13,7 +13,7 @@ AGF-NoEAC-CosmeticLockIcon,3,3,SAFE,TBD,"May only require client install, ignore
 AGF-NoEAC-FlightAssist,4,3,SAFE,TBD,Updates Incoming.,AGF-NoEAC-FlightAssist.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-FuelAutoShutOff,2,3,SAFE,TBD,Clients do not need this; local install has no effect,AGF-NoEAC-FuelAutoShutOff.txt,No,Yes,Yes,None,x
 AGF-NoEAC-GlobalStormTracker,2,3,SAFE,TBD,Clients do not need this; local install has no effect,AGF-NoEAC-GlobalStormTracker.txt,No,Yes,Yes,None,x
-AGF-NoEAC-MapPlus,3,3,SAFE,TBD,TBD,AGF-NoEAC-MapPlus.txt,No,No,No,Required,x
+AGF-NoEAC-MapPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-MapPlus.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-OpenAllButton.txt,No,N/A,N/A,Only,x
 AGF-NoEAC-ScreamerAlert,2,3,SAFE,TBD,None,AGF-NoEAC-ScreamerAlert.txt,No,Yes,Yes,None,x
 AGF-NoEAC-TerrainLeveler,TBD,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required,x

@@ -265,9 +265,26 @@ def parse_args() -> argparse.Namespace:
 
 
 def to_display_name(name: str) -> str:
-    s = name.replace('-', ' ')
-    s = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
-    s = re.sub(r'(?<=[A-Z])(?=[A-Z][a-z])', ' ', s)
+    s = name
+    if s.startswith("zzzAGF-Special-"):
+        s = "AGF-Special-" + s[len("zzzAGF-Special-"):]
+    elif s.startswith("zzzAGF-Requested-"):
+        s = "AGF-" + s[len("zzzAGF-Requested-"):]
+    else:
+        for prefix in (
+            "AGF-NoEAC-",
+            "AGF-HUDPluszOther-",
+            "AGF-HUDPlus-",
+            "AGF-VP-",
+            "AGF-4Modders-",
+            "AGF-Requested-",
+        ):
+            if s.startswith(prefix):
+                s = "AGF-" + s[len(prefix):]
+                break
+    s = s.replace("-", " ")
+    s = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", s)
+    s = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", s)
     return s.strip()
 
 

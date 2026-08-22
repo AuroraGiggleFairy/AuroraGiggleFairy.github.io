@@ -1,25 +1,25 @@
 # Nexus Status Report
 
-Generated: 08-02-2026 7:54 PM
+Generated: 08-22-2026 4:34 PM
 
 ## Summary
 
-- Total: **60**
-- Needs Update: **1**
-- Matches: **58**
-- First Upload Needed: **1**
+- Total: **64**
+- Needs Update: **2**
+- Matches: **59**
+- First Upload Needed: **3**
 
 ## Status
 
 | Mod | Local | Nexus | Status |
 |---|---|---|---|
-| `zzzAGF-Requested-LootStaysOnEmpty` | 1.0.4 | 1.0.3 | Needs Update |
+| `AGF-HUDPlus-BMCounter` | 4.0.2 | 4.0.1 | Needs Update |
+| `AGF-NoEAC-Toolbelt12Slots` | 2.2.4 | 2.2.3 | Needs Update |
 | `AGF-BackpackPlus-060Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-072Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-084Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-119Slots` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-HUDPlus-1Main` | 6.5.5 | 6.5.5 | Matches |
-| `AGF-HUDPlus-BMCounter` | 4.0.1 | 4.0.1 | Matches |
 | `AGF-HUDPlus-PurpleBook` | 3.2.0 | 3.2.0 | Matches |
 | `AGF-HUDPlus-RemoveEnteringPopUp` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-HUDPlus-VisualEntityTracker` | 1.0.1 | 1.0.1 | Matches |
@@ -27,11 +27,11 @@ Generated: 08-02-2026 7:54 PM
 | `AGF-NoEAC-AudioOptionsPlus` | 2.0.0 | 2.0.0 | Matches |
 | `AGF-NoEAC-AutoRun` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-NoEAC-CosmeticLockIcon` | 3.1.1 | 3.1.1 | Matches |
-| `AGF-NoEAC-EnhancedAGF` | 4.3.2 | 4.3.2 | Matches |
+| `AGF-NoEAC-EnhancedAGF` | 4.3.4 | 4.3.4 | Matches |
 | `AGF-NoEAC-GlobalStormTracker` | 2.1.1 | 2.1.1 | Matches |
-| `AGF-NoEAC-OpenAllButton` | 2.0.0 | 2.0.0 | Matches |
-| `AGF-NoEAC-ScreamerAlert` | 2.3.2 | 2.3.2 | Matches |
-| `AGF-NoEAC-Toolbelt12Slots` | 2.2.3 | 2.2.3 | Matches |
+| `AGF-NoEAC-OpenAllButton` | 2.0.1 | 2.0.1 | Matches |
+| `AGF-NoEAC-ScreamerAlert` | 2.3.3 | 2.3.3 | Matches |
+| `AGF-NoEAC-SmeltTimerOption` | 1.0.0 | 1.0.0 | Matches |
 | `AGF-Requested-SmallerInteractionPrompt` | 2.0.0 | 2.0.0 | Matches |
 | `AGF-Requested-TinyBuffsPopUp` | 2.0.0 | 2.0.0 | Matches |
 | `AGF-VP-AdminModdingSupport` | 2.0.0 | 2.0.0 | Matches |
@@ -63,6 +63,7 @@ Generated: 08-02-2026 7:54 PM
 | `AGF-VP-ScrapBatts4Acid` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-VP-ScrapEquipmentFaster` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-VP-SimplifiedStacks` | 2.1.1 | 2.1.1 | Matches |
+| `AGF-VP-SmeltingPlus` | 3.0.0 | 3.0.0 | Matches |
 | `AGF-VP-StayLongerAnimalCorpse` | 3.1.1 | 3.1.1 | Matches |
 | `AGF-VP-StayLongerPlayerBackpack` | 3.1.1 | 3.1.1 | Matches |
 | `AGF-VP-TacticalRiflePlus` | 3.0.0 | 3.0.0 | Matches |
@@ -70,6 +71,9 @@ Generated: 08-02-2026 7:54 PM
 | `AGF-VP-VehicleStoragePlus` | 3.1.1 | 3.1.1 | Matches |
 | `AGF-VP-VehiclesExtraSeating` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-VP-ZombieCorpseLeaveQuicker` | 3.1.1 | 3.1.1 | Matches |
-| `zzzAGF-Special-Compatibilities` | 5.1.1 | 5.1.1 | Matches |
+| `zzzAGF-Requested-LootStaysOnEmpty` | 1.0.4 | 1.0.4 | Matches |
+| `zzzAGF-Special-Compatibilities` | 5.2.0 | 5.2.0 | Matches |
 | `zzzAGF-Special-LocalizationPatches` | 1.0.1 | 1.0.1 | Matches |
 | `AGF-4Modders-Fix4DestroyBiomeBadge` | 2.0.0 | - | First Upload Needed |
+| `AGF-NoEAC-FuelAutoShutOff` | 1.0.0 | - | First Upload Needed |
+| `AGF-NoEAC-MapPlus` | 1.0.0 | - | First Upload Needed |

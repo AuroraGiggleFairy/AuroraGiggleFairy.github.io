@@ -17,9 +17,10 @@ MOD SCOPE
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
-  - Mod Type: Server/Client-Side (Required)
+  - Mod Type: Client-Side (Only)
     - EAC off required.
-    - Host and all joining players must install it.
+    - Server install has no effect.
+    - Install on each player PC.
     - Also works in singleplayer.
   - Safe to install on existing game: Yes (Safe)
   - Safe to remove from existing game: Unknown

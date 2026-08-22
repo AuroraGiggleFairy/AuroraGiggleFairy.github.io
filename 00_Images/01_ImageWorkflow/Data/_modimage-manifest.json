@@ -552,7 +552,7 @@
     "media_file": "zzzAGF-Special-Compatibilities_01.png"
   },
   "AGF-VP-LargerStorageOption": {
-    "signature": "65d659183acf8ead1d37a473e6a4b669e2f88fb5f5befd323935f5149b6a9ecb",
+    "signature": "61f8cf545bd09e093a86395373a036eaee877a89681183f851ff2e7283b54710",
     "version": "1.1.1",
     "has_media": true,
     "media_file": "AGF-VP-LargerStorageOption_01.png"
@@ -594,19 +594,19 @@
     "media_file": "AGF-Requested-TinyBuffsPopUp_01.png"
   },
   "AGF-NoEAC-SmeltTimerOption": {
-    "signature": "00f56b943f441a10b75b688d3671fef1418b199403e32e077ffa65e2d28d5207",
+    "signature": "88969a5bb24f4a7f16dcdd4036a80e75b792e2f344236fe37b8416a26c307915",
     "version": "1.0.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-SmeltTimerOption_01.png"
   },
   "AGF-NoEAC-FuelAutoShutOff": {
-    "signature": "e10d85f5eafc4aca2c4aa13601cb51b77edb68f8c2eb2f26838de15768435415",
+    "signature": "36e723ca1f14483eb3185bfd53c56942ffed81476bd7deb336dec61bb4ee423f",
     "version": "1.0.0",
     "has_media": false,
     "media_file": ""
   },
   "AGF-NoEAC-MapPlus": {
-    "signature": "ee78e6eb1b381bbd30fc5c4b356c4bd865e21076fc40474a22ce1bc98c29702d",
+    "signature": "0be9a564fb5b0dec1dcf9ff9e5882552e152223ef68cedb0f0d72757d177e221",
     "version": "1.0.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-MapPlus_01.png"

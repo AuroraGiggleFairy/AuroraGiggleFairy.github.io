@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
     <Name value="AGF-NoEAC-MapPlus"/>
-    <DisplayName value="AGF No EAC Map Plus"/>
+    <DisplayName value="AGF Map Plus"/>
     <Version value="1.0.0"/>
     <Description value="Hover the cursor on the map to see location names and POI bounds."/>
     <Author value="AuroraGiggleFairy (AGF)"/>

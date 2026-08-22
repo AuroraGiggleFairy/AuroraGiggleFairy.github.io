@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*August 22, 2026, 4:31 PM EST*
+*August 22, 2026, 4:44 PM EST*
 
 ## **1. About AGF**
 
@@ -546,7 +546,7 @@ Craft fuel items with burn times of 10, 60, 600, and 6,000 minutes.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-LargerStorageOption_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-LargerStorageOption.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF VP Larger Storage Option</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
+<b>AGF Larger Storage Option</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
 Adds larger writable storage with 15 shapes, 3x health, break-to-pickup.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -835,7 +835,7 @@ Client-side enhancement add-on for AGF mods when EAC is off.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-FuelAutoShutOff_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-FuelAutoShutOff.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF No EAC Fuel Auto Shut Off</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FuelAutoShutOff.zip">Download</a><br>
+<b>AGF Fuel Auto Shut Off</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FuelAutoShutOff.zip">Download</a><br>
 Fuel burning stops when crafting and smelting are finished.
 <ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -855,9 +855,9 @@ Sends a global chat message showing where the storm is and when it ends.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-MapPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-MapPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF No EAC Map Plus</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">Download</a><br>
+<b>AGF Map Plus</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">Download</a><br>
 Hover the cursor on the map to see location names and POI bounds.
-<ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
+<ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
 
@@ -885,7 +885,7 @@ Sends private chat alerts for Screamers and Screamer hordes within 120m.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-SmeltTimerOption_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-SmeltTimerOption.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF No EAC Smelt Timer Option</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SmeltTimerOption.zip">Download</a><br>
+<b>AGF Smelt Timer Option</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SmeltTimerOption.zip">Download</a><br>
 Lets you switch forge smelt timer between one item and full stack.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>

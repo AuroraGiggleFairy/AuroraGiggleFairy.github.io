@@ -949,6 +949,38 @@
       "file_description_override": "",
       "summary_override": "",
       "description_override": ""
+    },
+    "AGF-NoEAC-SmeltTimerOption": {
+      "intent": "update",
+      "nexus_mod_id": 11824,
+      "update_group_id": "7753134",
+      "update_group_name": "AGF - V3 - NoEAC - SmeltTimerOption",
+      "file_category": "main",
+      "legacy_latest_file_id": 0,
+      "legacy_name_hint": "",
+      "page_url": "https://www.nexusmods.com/7daystodie/mods/11824",
+      "tested_game_version_override": "",
+      "brief_overview_override": "",
+      "detailed_description_override": "",
+      "file_description_override": "",
+      "summary_override": "",
+      "description_override": ""
+    },
+    "AGF-VP-SmeltingPlus": {
+      "intent": "update",
+      "nexus_mod_id": 11825,
+      "update_group_id": "7753143",
+      "update_group_name": "AGF - V3 - VP - SmeltingPlus",
+      "file_category": "main",
+      "legacy_latest_file_id": 0,
+      "legacy_name_hint": "",
+      "page_url": "https://www.nexusmods.com/7daystodie/mods/11825",
+      "tested_game_version_override": "",
+      "brief_overview_override": "",
+      "detailed_description_override": "",
+      "file_description_override": "",
+      "summary_override": "",
+      "description_override": ""
     }
   }
 }
