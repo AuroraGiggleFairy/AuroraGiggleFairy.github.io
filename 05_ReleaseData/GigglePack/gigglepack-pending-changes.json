@@ -1,24 +1,8 @@
 {
-  "computed_at": "2026-08-22T16:06:23",
-  "since_gigglepack_version": "0.19.2",
-  "new_mods": [
-    [
-      "AGF-NoEAC-MapPlus",
-      "1.0.0"
-    ]
-  ],
-  "updated_mods": [
-    [
-      "AGF-HUDPlus-BMCounter",
-      "4.0.1",
-      "4.0.2"
-    ],
-    [
-      "AGF-NoEAC-Toolbelt12Slots",
-      "2.2.3",
-      "2.2.4"
-    ]
-  ],
+  "computed_at": "2026-08-22T16:31:46",
+  "since_gigglepack_version": "0.20.0",
+  "new_mods": [],
+  "updated_mods": [],
   "renamed_mods": [],
   "removed_mods": []
 }

@@ -606,9 +606,9 @@
     "media_file": ""
   },
   "AGF-NoEAC-MapPlus": {
-    "signature": "6cf9ae20e5364a35b4018252afe147db3547516940bde128dd6c68bac11509ce",
+    "signature": "ee78e6eb1b381bbd30fc5c4b356c4bd865e21076fc40474a22ce1bc98c29702d",
     "version": "1.0.0",
-    "has_media": false,
-    "media_file": ""
+    "has_media": true,
+    "media_file": "AGF-NoEAC-MapPlus_01.png"
   }
 }

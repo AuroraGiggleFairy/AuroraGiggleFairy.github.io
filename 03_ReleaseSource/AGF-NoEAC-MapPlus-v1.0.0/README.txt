@@ -2,6 +2,10 @@
                            AGF-NOEAC-MAPPLUS                            
 ========================================================================
 
+Hover the cursor on the map to see location names and POI bounds.
+
+"Thanks to Morph3usx for this idea!"
+
 NOTE: AGF Mod Guide and Changelog are further below.
 
 
@@ -19,14 +23,21 @@ MOD SCOPE
     - Also works in singleplayer.
   - Safe to install on existing game: Yes (Safe)
   - Safe to remove from existing game: Unknown
-  - Dependencies: 1
+  - Dependencies: Requires 0_TFP_Harmony (built-in game mod).
+    - To check, explore Installed Files and confirm Mods/0_TFP_Harmony
+      exists.
+    - To restore, use Steam Verify: Right click 7 Days to Die ->
+      Properties -> Installed Files -> Verify integrity of game files.
 
 
 ------------------------------------------------------------------------
 FEATURES
 ------------------------------------------------------------------------
 
-  - Add feature descriptions here.
+  - Hover the cursor on the map to see location names.
+  - Fog of war is respected.
+  - POIs only show their name after you have been there.
+  - Hover also outlines that POI's boundaries.
 
 
 

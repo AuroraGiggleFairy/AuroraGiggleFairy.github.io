@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*August 22, 2026, 4:09 PM EST*
+*August 22, 2026, 4:31 PM EST*
 
 ## **1. About AGF**
 
@@ -856,7 +856,7 @@ Sends a global chat message showing where the storm is and when it ends.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-MapPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-MapPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF No EAC Map Plus</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">Download</a><br>
-
+Hover the cursor on the map to see location names and POI bounds.
 <ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>

@@ -3,7 +3,7 @@
     <Name value="AGF-NoEAC-MapPlus"/>
     <DisplayName value="AGF No EAC Map Plus"/>
     <Version value="1.0.0"/>
-    <Description value=""/>
+    <Description value="Hover the cursor on the map to see location names and POI bounds."/>
     <Author value="AuroraGiggleFairy (AGF)"/>
     <Website value="https://auroragigglefairy.github.io/"/>
 </xml>
