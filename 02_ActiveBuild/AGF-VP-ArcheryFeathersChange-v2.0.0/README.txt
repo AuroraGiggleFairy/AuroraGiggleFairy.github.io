@@ -208,7 +208,7 @@ v1.0.3
 v1.0.2
     - Updated README and code organization.
     - Corrected the cloths amounts given back from the 100's and 1000's
-    for flaming arrows/bolts.
+      for flaming arrows/bolts.
 
 ------------------------------------------------------------------------
 
@@ -219,4 +219,4 @@ v1.0.1
 
 v1.0.0
     - Separated from StacksBundlesAmmoPlus now that I understand
-    conditionals.
+      conditionals.

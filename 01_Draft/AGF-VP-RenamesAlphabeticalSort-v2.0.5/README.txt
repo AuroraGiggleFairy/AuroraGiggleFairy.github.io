@@ -332,7 +332,7 @@ v2.0.2
 
 v2.0.1
     - Fun Pimps added full localization for new items, added it to
-    affected items.
+      affected items.
 
 ------------------------------------------------------------------------
 
@@ -344,7 +344,7 @@ v2.0.0
 
 v1.0.2
     - Corrected name changes for a few of the mod items and their
-    schematics
+      schematics
     - Added the prefix to the SledgeHammer Saga
 
 ------------------------------------------------------------------------

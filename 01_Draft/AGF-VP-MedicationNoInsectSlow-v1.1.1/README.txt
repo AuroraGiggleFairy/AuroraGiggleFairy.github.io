@@ -4,9 +4,10 @@
 
 Adds Bee Gone Cream to clear and prevent insect slow effects; steroids
 
-"Thanks to "Go-go, Godzilla" for the name idea. Thanks to "Go-go,
-Godzilla", B19JAY, mandy_tj, 13ubblegum_ and Asher_Gamess for
-brainstorming support. You can check out B19JAY and his crew here:
+"Thanks to "Go-go, Godzilla" for the name idea.
+Thanks to "Go-go, Godzilla", B19JAY, mandy_tj, 13ubblegum_ and
+Asher_Gamess for brainstorming support.
+You can check out B19JAY and his crew here:
 https://www.twitch.tv/b19jay"
 
 NOTE: AGF Mod Guide and Changelog are further below.
@@ -342,8 +343,7 @@ v1.1.1
 
 v1.1.0
     - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
+      the purple book mod.
 
 ------------------------------------------------------------------------
 

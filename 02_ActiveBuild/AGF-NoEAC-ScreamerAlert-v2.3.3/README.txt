@@ -281,8 +281,7 @@ v2.1.0
     - Admin chat commands available.
     - Commands ReadMe is available.
     - Set up to if EnhancedAGF is installed, you get UI support instead
-      of
-    a chat alert.
+      of a chat alert.
     - Updated Readme for updated functions.
 
 ------------------------------------------------------------------------

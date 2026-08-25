@@ -4,7 +4,7 @@ Rebuild DoorsPlus from current vanilla blocks.xml:
   2) refresh sort CSV for new models
   3) generate AGF variants + helpers
   4) generate Boarded/Plain localization
-  5) install into 01_Draft/AGF-VP-DoorsPlus-v3.0.1
+  5) install into 02_ActiveBuild/AGF-VP-DoorsPlus-v4.0.0
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-DOORSPLUS = Path(r"c:\GitHub\7D2D-Mods\01_Draft\AGF-VP-DoorsPlus-v3.0.1")
+DOORSPLUS = Path(r"c:\GitHub\7D2D-Mods\02_ActiveBuild\AGF-VP-DoorsPlus-v4.0.0")
 SORT_CSV = HERE / "doorsecure_sortTypeSummary.csv"
 AGF_ALL = HERE / "blocks_doorsecure_agf_all.xml"
 LOC_OUT = HERE / "Localization.csv"
@@ -171,45 +171,6 @@ def refresh_sort_csv(door_xml: Path) -> None:
         print("  new:", ", ".join(added[:30]), ("..." if len(added) > 30 else ""))
 
 
-def convert_legacy_doorsecure(legacy_text: str) -> str:
-    """Rewrite legacy append DoorSecure blocks to CompositeTileEntity."""
-    import xml.etree.ElementTree as ET
-    from door_v31_class import ensure_composite_door
-
-    # Wrap fragments so ElementTree can parse multiple top-level appends.
-    wrapped = f"<root>{legacy_text}</root>"
-    try:
-        root = ET.fromstring(wrapped)
-    except ET.ParseError as e:
-        raise SystemExit(f"Failed parsing legacy blocks for DoorSecure conversion: {e}") from e
-
-    converted = 0
-    for block in root.iter("block"):
-        before = None
-        for prop in block.findall("property"):
-            if prop.get("name") == "Class":
-                before = prop.get("value")
-                break
-        ensure_composite_door(block)
-        after = None
-        for prop in block.findall("property"):
-            if prop.get("name") == "Class":
-                after = prop.get("value")
-                break
-        if before == "DoorSecure" and after != "DoorSecure":
-            converted += 1
-
-    # Serialize children only (preserve original root wrappers outside).
-    parts: list[str] = []
-    for child in list(root):
-        parts.append(ET.tostring(child, encoding="unicode"))
-    # Also keep any leading non-element text? legacy usually starts with comment/root tag.
-    # Our draft starts with <AGF...> then appends — parse may fail if root tag included.
-    print(f"Legacy DoorSecure -> CompositeTileEntity conversions: {converted}")
-    return "".join(parts)
-
-
-
 def apply_spacer_localization(loc_path: Path, blocks_path: Path | None = None) -> None:
     """One loc row per spacer block name; every language cell is a quoted ASCII space.
 
@@ -254,45 +215,19 @@ def apply_spacer_localization(loc_path: Path, blocks_path: Path | None = None) -
 def install_into_doorsplus() -> None:
     blocks_path = DOORSPLUS / "Config" / "blocks.xml"
     loc_path = DOORSPLUS / "Config" / "Localization.csv"
-    text = blocks_path.read_text(encoding="utf-8")
-
-    # Keep everything before the final AGF append; replace that append.
-    matches = list(re.finditer(r'<append xpath="/blocks">', text))
-    if len(matches) < 4:
-        raise SystemExit(f"Expected >=4 append sections, found {len(matches)}")
-    agf_start = matches[-1].start()
-
-    # Find matching closing append for the last one: last </append> before root close
-    # Use the final </append> in file.
-    closes = [m.start() for m in re.finditer(r"</append>", text)]
-    if not closes:
-        raise SystemExit("No </append> found")
-    agf_end = closes[-1] + len("</append>")
-
-    legacy_raw = text[:agf_start]
-    # Split off XML root open so we only convert append bodies + keep wrapper.
-    root_open_m = re.match(
-        r'(?s)(\s*<AGFVanillaPlus-DoorsPlus>\s*)(.*)$', legacy_raw
-    )
-    if not root_open_m:
-        raise SystemExit("Expected <AGFVanillaPlus-DoorsPlus> root on legacy prefix")
-    root_open, legacy_body = root_open_m.group(1), root_open_m.group(2)
-    legacy_body = convert_legacy_doorsecure(legacy_body).rstrip() + "\n\n"
-    legacy = root_open + legacy_body
 
     agf_blocks = AGF_ALL.read_text(encoding="utf-8").rstrip() + "\n"
     # Sanity: AGF output must not still emit removed DoorSecure.
     if 'value="DoorSecure"' in agf_blocks or "value='DoorSecure'" in agf_blocks:
         raise SystemExit("AGF output still contains DoorSecure — generator not patched?")
 
-    new_agf = (
+    # Current All Doors append only. Do not keep leftover helper or AGF* sections.
+    out = (
+        "<AGFVanillaPlus-DoorsPlus>\n\n"
         '<append xpath="/blocks">\n'
         + agf_blocks
         + "</append>\n\n\n\n\n\n</AGFVanillaPlus-DoorsPlus>\n"
     )
-
-    # Drop any trailing root after agf_end from legacy rebuild
-    out = legacy + new_agf
     blocks_path.write_text(out, encoding="utf-8", newline="\n")
     print(f"Wrote {blocks_path} ({blocks_path.stat().st_size} bytes)")
 

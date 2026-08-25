@@ -245,7 +245,7 @@ v2.1.0
 
 v2.0.0
     - Made a single one that accounts for multiple blood moon fixed
-    frequencies in one.
+      frequencies in one.
     - Adjusted to handle other HUDPlus features conditionally.
 
 ------------------------------------------------------------------------

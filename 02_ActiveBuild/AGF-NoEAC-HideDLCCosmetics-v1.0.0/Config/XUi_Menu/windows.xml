@@ -1,0 +1,31 @@
+<AGF-HideDLCCosmetics>
+	<insertAfter xpath="/windows/window[@name='optionsGeneral']/rect[@name='tabs']/rect[@name='content']/rect[@name='tabsContents']/rect[@tab_key='xuiOptionsGeneralCrosshairs']">
+		<rect controller="TabSelectorTab" tab_key="xuiOptionsGeneralHideDlc">
+			<rect name="scrollarea" width="1200" height="750" on_scroll="true" gamepad_selectable="false" snap="false">
+				<options_scrollbar />
+				<scrollview clippingsoftness="0,10" anchor_top="#parent,1,0" anchor_bottom="buttons,1,10">
+					<rect controller="HideDlcCosmeticsOptions, HideDLCCosmetics">
+						<grid cols="1" cell_width="1150" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-20">
+							<options_combo_custom name="HideDlcCosmeticList" name_localization_prefix="xuiOptionsGeneral" prefname="HideDlcCosmeticList" type="ComboBoxList`1[System.String]" values="Show,Unpurchased,AllDlc" localization_prefix="xuiOptionsGeneralHideDlcCosmeticList" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcCosmeticListTooltip"/>
+						</grid>
+						<grid cols="1" cell_width="1150" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-110">
+							<options_combo_custom name="HideDlcPreset" name_localization_prefix="xuiOptionsGeneral" prefname="HideDlcPreset" type="ComboBoxList`1[System.String]" values="ShowAll,HideAll,Custom" localization_prefix="xuiOptionsGeneralHideDlcPreset" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcPresetTooltip"/>
+						</grid>
+						<grid cols="1" cell_width="1150" cell_height="45" repeat_content="false" arrangement="horizontal" pos="8,-155">
+							<options_combo_custom name="BeachwearSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcBeachwearSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcBeachwearSetTooltip" width="1000"/>
+							<options_combo_custom name="BigBeakSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcBigBeakSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcBigBeakSetTooltip" width="1000"/>
+							<options_combo_custom name="ButcherSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcButcherSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcButcherSetTooltip" width="1000"/>
+							<options_combo_custom name="ClassicSurvivorSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcClassicSurvivorSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcClassicSurvivorSetTooltip" width="1000"/>
+							<options_combo_custom name="DesertSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcDesertSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcDesertSetTooltip" width="1000"/>
+							<options_combo_custom name="HellreaverSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcHellreaverSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcHellreaverSetTooltip" width="1000"/>
+							<options_combo_custom name="HoarderSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcHoarderSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcHoarderSetTooltip" width="1000"/>
+							<options_combo_custom name="HolidayHatsSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcHolidayHatsSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcHolidayHatsSetTooltip" width="1000"/>
+							<options_combo_custom name="PirateSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcPirateSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcPirateSetTooltip" width="1000"/>
+							<options_combo_custom name="MarauderSet" name_localization_prefix="xuiOptionsGeneralHideDlc" prefname="HideDlcMarauderSet" type="ComboBoxList`1[System.String]" values="Show,Hide" localization_prefix="xuiOptionsGeneralHideDlcValue" value_wrap="false" tooltip_key="xuiOptionsGeneralHideDlcMarauderSetTooltip" width="1000"/>
+						</grid>
+					</rect>
+				</scrollview>
+			</rect>
+		</rect>
+	</insertAfter>
+</AGF-HideDLCCosmetics>

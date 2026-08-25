@@ -213,7 +213,7 @@ v0.3.0
 
 v0.2.0
     - Added the use of the styles.xml for simplification and
-    compatibility.
+      compatibility.
 
 ------------------------------------------------------------------------
 

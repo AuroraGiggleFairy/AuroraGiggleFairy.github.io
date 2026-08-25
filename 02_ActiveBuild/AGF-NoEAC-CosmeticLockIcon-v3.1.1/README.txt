@@ -212,8 +212,7 @@ v3.1.0
 
 v3.0.0
     - Added a magnitude/star guard so cosmetic icon/tint overrides are
-      not
-    applied to those armor entries.
+      not applied to those armor entries.
     - Updated UI patch access paths for current game API compatibility.
 
 ------------------------------------------------------------------------
@@ -225,7 +224,7 @@ v1.0.2
 
 v1.0.1
     - The Crafting Window was not showing the appropriate
-    itemtypeicon/altitemtypeicon.
+      itemtypeicon/altitemtypeicon.
 
 ------------------------------------------------------------------------
 

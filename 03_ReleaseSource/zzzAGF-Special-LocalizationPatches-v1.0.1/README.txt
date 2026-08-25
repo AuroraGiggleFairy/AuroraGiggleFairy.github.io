@@ -218,5 +218,5 @@ v1.0.1
 v1.0.0
     - Created this mod.
     - Moved GSVanillaCookBook localization support from
-    zzzAGF-Special-Compatibilities.
+      zzzAGF-Special-Compatibilities.
     - Utilizing the latest Readme Overhaul.

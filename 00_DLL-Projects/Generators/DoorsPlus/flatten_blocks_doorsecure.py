@@ -10,8 +10,13 @@ from __future__ import annotations
 
 import copy
 import shutil
+import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+_FLATTEN_DIR = Path(__file__).resolve().parent.parent / "DecorationBlock"
+if str(_FLATTEN_DIR) not in sys.path:
+    sys.path.insert(0, str(_FLATTEN_DIR))
 
 from flatten_blocks import (
     build_all_block_names,

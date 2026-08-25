@@ -216,4 +216,4 @@ v1.0.1
 
 v1.0.0
     - Separated from StacksBundlesAmmoPlus now that I understand
-    conditionals.
+      conditionals.

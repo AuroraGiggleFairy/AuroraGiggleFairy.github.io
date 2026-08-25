@@ -1,5 +1,20 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.21.0 (August 25, 2026 5:43pm)
+### Summary: +2 new, ~2 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-HideDLCCosmetics](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip) (new: v1.0.0)
+  - [AGF-VP-DoorsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip) (new: v4.0.0)
+- **Updated Existing Mods**
+  - [AGF-NoEAC-AudioOptionsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip) (v2.0.0 -> v2.1.0)
+  - [AGF-VP-ModSlotsPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip) (v4.1.1 -> v4.1.2)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.20.0 (August 22, 2026 4:09pm)
 ### Summary: +1 new, ~2 updated, =0 renamed, -0 removed
 - **New Mods**

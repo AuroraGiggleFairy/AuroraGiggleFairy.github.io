@@ -10,7 +10,7 @@ Matches 7D2D v3.1 engine behavior from BlocksFromXml / DynamicProperties:
     when the same event+name is not already on the child
 
 Decoration-oriented output still strips Extends, drops, RepairItems, and
-UpgradeBlock from the final XML (intentional for DecorationBlockPlus).
+UpgradeBlock from the final XML (intentional for DecorationBlock).
 
 See: 00_Support/WorkspaceData/Research/7D2D-v3.1-BlocksXml-Extends-Flatten.md
 """
@@ -307,7 +307,8 @@ def build_all_block_names(blocks_root: ET.Element) -> set[str]:
 
 def should_emit_block(block: ET.Element, all_block_names: set[str]) -> bool:
     name = block.get("name", "")
-    if "master" in name or "LootHelper" in name or "VariantHelper" in name:
+    nl = name.lower()
+    if "master" in nl or "loothelper" in nl or "varianthelper" in nl:
         return False
     if any(
         elem.tag == "property" and elem.get("class") == "TrapDoor" for elem in block
@@ -321,8 +322,11 @@ def should_emit_block(block: ET.Element, all_block_names: set[str]) -> bool:
         return False
     if name.endswith("POI") and name[:-3] in all_block_names:
         return False
-    if "player" in name and name.replace("player", "") in all_block_names:
-        return False
+    if "player" in nl:
+        for token in ("_Player", "_player", "Player", "player"):
+            cand = name.replace(token, "")
+            if cand != name and cand in all_block_names:
+                return False
     return True
 
 

@@ -30,6 +30,6 @@ Engine truth: decompiled `BlocksFromXml`, `DynamicProperties.CopyFrom`, `Block`/
 1. Exclude `CreativeMode` + Extends `param1` list from parent props
 2. Overlay child props; merge drops unless `dropextendsoff`
 3. Always set `CustomIcon`, `CreativeMode`, `SortOrder1`/`SortOrder2` on mod clones
-4. Use `DecorationBlockPlus/flatten_blocks.py` (fixed for engine Extends/param1/CreativeMode/drops)
+4. Use `DecorationBlock/flatten_blocks.py` (fixed for engine Extends/param1/CreativeMode/drops)
 
 Prefer the research note over re-deriving when answering blocks.xml inheritance / flatten questions.

@@ -297,7 +297,7 @@ I. AGF Modding Focus
 
 v3.0.2
     - Added a potential fix to where trees would keep coming back even
-    after destroying them.
+      after destroying them.
 
 ------------------------------------------------------------------------
 
@@ -310,7 +310,7 @@ v3.0.0
     - Added x25 versions.
     - Modified seeds naming and icons to match FarmingPlus scheme.
     - Added a recipe version for the seedstation IF FarmingPlus is
-    installed.
+      installed.
     - Renamed to TreesPlus
     - Names and stages of planted trees now show like crops.
 

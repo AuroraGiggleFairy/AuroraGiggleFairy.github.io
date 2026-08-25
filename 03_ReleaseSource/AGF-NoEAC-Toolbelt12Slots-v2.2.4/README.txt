@@ -218,9 +218,9 @@ v2.2.2
 
 v2.2.1
     - When in creative mode, clicking the trash can deletes slots 11 and
-    12 appropriately now.
+      12 appropriately now.
     - When first starting the game, keybinds for slot 11 and 12 do not
-    function immediately, they do now.
+      function immediately, they do now.
 
 ------------------------------------------------------------------------
 
@@ -238,9 +238,9 @@ v2.1.1
 
 v2.1.0
     - Added menu customization hotkey for keyboard and controller for
-    slots 11 and 12.
+      slots 11 and 12.
     - Restructed and cleaned the .dll code to work smoothly with vanilla
-    function.
+      function.
     - Fixed errors, added 2 images.
     - Updated Readme information.
 

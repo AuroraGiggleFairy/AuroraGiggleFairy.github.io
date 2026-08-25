@@ -326,12 +326,11 @@ v0.0.3
     - Forgot what was in version 0.0.2
     - Allows two flight pattern assists:
     - Gyrocopter: pressing "x" activates flying forward locked on
-    elevation
+      elevation
     - Hellicopter: pressing "x" first activates hover, press again
-    activates forwward locked on elevation.
+      activates forwward locked on elevation.
     - Did a lot to ensure works with any flying vehicle and can
-      determine
-    which flight pattern to use.
+      determine which flight pattern to use.
 
 ------------------------------------------------------------------------
 

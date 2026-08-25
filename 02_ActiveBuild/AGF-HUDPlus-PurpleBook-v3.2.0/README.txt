@@ -225,7 +225,7 @@ v3.1.0
     - Updated mod descriptions and details.
     - Images no longer within mod folders due to constraints.
     - Armor stats for qualities 2 - 5 are now pulled from the vanilla
-    files directly as originally intended.
+      files directly as originally intended.
 
 ------------------------------------------------------------------------
 
@@ -239,10 +239,9 @@ v3.0.0
     - Updated visual layout of the entire thing.
     - Added the "Overview" button instead of "ALL" button.
     - All is now automatically generated pulling from the game data
-      itself
-    for accuracy.
+      itself for accuracy.
     - If client has EnhancedAGF, they get the real paging header for
-    purple book.
+      purple book.
 
 ------------------------------------------------------------------------
 
@@ -258,11 +257,11 @@ v2.0.1
 
 v2.0.0
     - Revamped the UI code to be easier to create compatibilities with
-    other mods. (Still more to do.)
+      other mods. (Still more to do.)
     - Updated Readme to some format changes AGF is making.
     - Changed the green fill in color a litte.
     - Sucessfuly prevented the grey division lines from appearing in the
-    green.
+      green.
 
 ------------------------------------------------------------------------
 
@@ -271,7 +270,7 @@ v1.1.0
     - updated changes to the foods tabs.
     - checks 7d2d game version of 2.5 and before.
     - if mod user updates game from 2.4 to 2.5, will remove the unused
-    cvars.
+      cvars.
     - Added the new schematic for vehicle storages under the unlocks
       tab.
 

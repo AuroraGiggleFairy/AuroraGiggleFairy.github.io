@@ -218,5 +218,4 @@ v1.0.1
 
 v1.0.0
     - Just made the mod, starting for 7d2d v2.5. (Includes updated
-      README
-    and Code Notes formatting.)
+      README and Code Notes formatting.)

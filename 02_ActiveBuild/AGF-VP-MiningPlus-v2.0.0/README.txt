@@ -207,7 +207,7 @@ v1.2.1
 
 v1.2.0
     - Will now only apply purple book edits if you have my purple book
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 

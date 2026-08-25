@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.20.0",
-  "previous_gigglepack_version": "0.19.2",
+  "gigglepack_version": "0.21.0",
+  "previous_gigglepack_version": "0.20.0",
   "is_baseline_release": false,
-  "released_at": "2026-08-22 16:09:24",
+  "released_at": "2026-08-25 17:43:05",
   "mods": {
     "AGF-4Modders-Fix4DestroyBiomeBadge": "2.0.0",
     "AGF-BackpackPlus-060Slots": "4.1.1",
@@ -15,12 +15,13 @@
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
     "AGF-HUDPlus-VisualEntityTracker": "1.0.1",
     "AGF-HUDPlus-Weekday": "3.1.3",
-    "AGF-NoEAC-AudioOptionsPlus": "2.0.0",
+    "AGF-NoEAC-AudioOptionsPlus": "2.1.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
     "AGF-NoEAC-CosmeticLockIcon": "3.1.1",
     "AGF-NoEAC-EnhancedAGF": "4.3.4",
     "AGF-NoEAC-FuelAutoShutOff": "1.0.0",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
+    "AGF-NoEAC-HideDLCCosmetics": "1.0.0",
     "AGF-NoEAC-MapPlus": "1.0.0",
     "AGF-NoEAC-OpenAllButton": "2.0.1",
     "AGF-NoEAC-ScreamerAlert": "2.3.3",
@@ -38,6 +39,7 @@
     "AGF-VP-BreakItGetIt": "2.1.1",
     "AGF-VP-CraftSewingKits": "2.1.1",
     "AGF-VP-CraftVitamins": "2.1.2",
+    "AGF-VP-DoorsPlus": "4.0.0",
     "AGF-VP-DrinkableAcid": "3.0.0",
     "AGF-VP-DyesPlus": "4.0.0",
     "AGF-VP-FloraHarvester": "3.0.1",
@@ -47,7 +49,7 @@
     "AGF-VP-MaxLevel500": "3.1.1",
     "AGF-VP-MiningPlus": "2.0.0",
     "AGF-VP-Mod988": "3.0.0",
-    "AGF-VP-ModSlotsPlus": "4.1.1",
+    "AGF-VP-ModSlotsPlus": "4.1.2",
     "AGF-VP-PaintbrushPlus": "3.0.0",
     "AGF-VP-PickupLanternsPlus": "3.1.1",
     "AGF-VP-PlayerResetQuests": "3.1.1",
@@ -71,32 +73,37 @@
   },
   "updated_mods": [
     {
-      "mod": "AGF-HUDPlus-BMCounter",
-      "from": "4.0.1",
-      "to": "4.0.2",
-      "from_display": "4.0.1",
-      "to_display": "4.0.2"
+      "mod": "AGF-NoEAC-AudioOptionsPlus",
+      "from": "2.0.0",
+      "to": "2.1.0",
+      "from_display": "2.0.0",
+      "to_display": "2.1.0"
     },
     {
-      "mod": "AGF-NoEAC-Toolbelt12Slots",
-      "from": "2.2.3",
-      "to": "2.2.4",
-      "from_display": "2.2.3",
-      "to_display": "2.2.4"
+      "mod": "AGF-VP-ModSlotsPlus",
+      "from": "4.1.1",
+      "to": "4.1.2",
+      "from_display": "4.1.1",
+      "to_display": "4.1.2"
     }
   ],
   "new_mods": [
     {
-      "mod": "AGF-NoEAC-MapPlus",
+      "mod": "AGF-NoEAC-HideDLCCosmetics",
       "to": "1.0.0",
       "to_display": "1.0.0"
+    },
+    {
+      "mod": "AGF-VP-DoorsPlus",
+      "to": "4.0.0",
+      "to_display": "4.0.0"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.20.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.21.0.zip",
   "change_counts": {
-    "new_mods": 1,
+    "new_mods": 2,
     "updated_existing_mods": 2,
     "renamed_mods": 0,
     "removed_mods": 0

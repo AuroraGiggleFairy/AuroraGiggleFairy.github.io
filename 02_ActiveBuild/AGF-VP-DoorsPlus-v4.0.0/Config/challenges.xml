@@ -1,0 +1,8 @@
+<AGFVanillaPlus-DoorsPlus>
+
+	<!-- placeDoor: vanilla oldWoodDoor OR any door from the AGF variant helpers.
+	     ChallengeObjectiveBlockPlace also matches PlaceAltBlockValue on the expected
+	     block. miscDoorChallengeHelperAGF is a hidden SelectAlternates list. -->
+	<set xpath="/challenges/challenge[@name='placeDoor']/objective/@block">miscDoorChallengeHelperAGF</set>
+
+</AGFVanillaPlus-DoorsPlus>

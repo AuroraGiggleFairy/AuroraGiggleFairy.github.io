@@ -28,6 +28,14 @@ Every archived item should have an entry below stating: original path, archived 
 - **Replacement:** superseded by the current, actively maintained `05_GigglePackReleaseData/ReadmeSystem/Templates/TEMPLATE-ModReadMes.md` and its change history in `05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-ReadmeSystem.md` - the proposed reordering was never adopted into the live template.
 - **Safe to delete later:** likely yes - it's a stale planning discussion, not referenced by any script. Kept for now rather than deleted immediately (archive first, delete later).
 
+## `AGF-VP-DecorationBlock-v3.0.3-ExcelBaseline-20260822`
+
+- **Original path:** `01_Draft/AGF-VP-DecorationBlock-v3.0.3/`
+- **Archived:** 2026-08-22
+- **Last known purpose:** snapshot of the last Excel-made Decoration Block pack (v3.0.3) before the v3.1 generator rewrite. Use this when you need the old helper order, clone XML, or localization.
+- **Replacement:** live work stays in `01_Draft/AGF-VP-DecorationBlock-v3.0.3/`. Generator work stays in `00_DLL-Projects/Generators/DecorationBlock/`. An older game-version copy also exists at `old-game-versions/_x2.6/AGF-VP-DecorationBlock-v3.0.3/` (Localization.txt / Config/XUi, not this Draft snapshot).
+- **Safe to delete later:** no — this is the Excel baseline for the rewrite.
+
 ## `Alter-Autominers`
 
 - **Original path:** Nexus Autominers 4324 v1.3 by Alter (`Downloads\...\Alter_Autominers`), plus live test folder `Mods\Alter_Autominers-7d2dv3` (+ zip)

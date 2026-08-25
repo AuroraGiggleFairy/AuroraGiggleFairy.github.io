@@ -286,8 +286,7 @@ v3.0.3
 
 v3.0.2
     - Updated to run on V2, only edited to make it run well. (still
-      could
-    be other errors).
+      could be other errors).
 
 ------------------------------------------------------------------------
 
@@ -304,8 +303,8 @@ v3.0.0
 
 v2.0.4
     - When used standalone, the loot size was too large for existing
-    windows.xml... so I added the needed windows.xml codes to make it
-    work.
+      windows.xml... so I added the needed windows.xml codes to make it
+      work.
 
 ------------------------------------------------------------------------
 

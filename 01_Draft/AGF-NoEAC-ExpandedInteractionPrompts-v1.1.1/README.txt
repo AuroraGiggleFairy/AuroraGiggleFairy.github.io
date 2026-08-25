@@ -297,7 +297,7 @@ v1.1.1
 
 v1.1.0
     - Added compatibility for the lockable workstations, if you can't
-    access the station, you do not see the extra stats.
+      access the station, you do not see the extra stats.
 
 ------------------------------------------------------------------------
 
@@ -307,14 +307,14 @@ v1.0.1
     - Vehicles showing seats, locked status, and slots used.
     - New localizations.
     - Simply appends to existing localization, doesn't rewrite over
-    original.
+      original.
 
 ------------------------------------------------------------------------
 
 v1.0.0
     - Workstation prompts detect number of output slots used.
     - Workstation prompts detect if crafting, needs fuel or to be turned
-    on.
+      on.
     - Ready for publish.
 
 ------------------------------------------------------------------------

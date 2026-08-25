@@ -224,7 +224,7 @@ v2.3.0
     - Added a 6,000m burn time item.
     - Removed the xp gain from crafting these.... exploitative.
     - Did special hidden localization naming thing to sort these
-    appropriately.
+      appropriately.
     - Added description for fuel items.
 
 ------------------------------------------------------------------------

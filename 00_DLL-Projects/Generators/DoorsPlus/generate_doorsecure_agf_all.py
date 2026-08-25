@@ -340,6 +340,26 @@ def make_helper_block(name, extends, icon, place_values, sort1, sort2):
     ET.SubElement(block, 'property', {'name': 'SortOrder2', 'value': sort2})
     return block
 
+
+def make_challenge_helper(place_values):
+    """Hidden helper: placeDoor challenge matches vanilla oldWoodDoor OR any AGF door.
+
+    ChallengeObjectiveBlockPlace counts a place if the name equals expectedBlock
+    or is in that block's PlaceAltBlockValue list. This block is CreativeMode=None
+    so it never appears in crafting / shape menus.
+    """
+    block = ET.Element('block', {'name': 'miscDoorChallengeHelperAGF'})
+    ET.SubElement(block, 'property', {'name': 'Extends', 'value': 'oldWoodDoor', 'param1': 'CustomIconTint'})
+    ET.SubElement(block, 'property', {'name': 'CreativeMode', 'value': 'None'})
+    ET.SubElement(block, 'property', {'name': 'CustomIcon', 'value': 'oldWoodDoor'})
+    ET.SubElement(block, 'property', {'name': 'SelectAlternates', 'value': 'true'})
+    ET.SubElement(block, 'property', {'name': 'PlaceAltBlockValue', 'value': ','.join(place_values)})
+    return block
+
+
+def real_door_alts(names):
+    return [n for n in names if n and not n.startswith('miscDoorShapeSpacer')]
+
 def main():
     tree = ET.parse(INPUT_FILE)
     root = tree.getroot()
@@ -642,6 +662,12 @@ def main():
         make_helper_block('miscsteelDoorVariantHelperAGF', 'vaultDoor01', 'vaultDoor01', steel_doors, 'U102', '0003'),
         make_helper_block('miscpoweredDoorVariantHelperAGF', 'vaultDoor01', 'vaultDoor01', powered_doors, 'U103', '0004'),
     ]
+    challenge_alts = ['oldWoodDoor']
+    for alt_list in (wood_doors, iron_doors, steel_doors, powered_doors):
+        for name in real_door_alts(alt_list):
+            if name not in challenge_alts:
+                challenge_alts.append(name)
+    helpers.append(make_challenge_helper(challenge_alts))
     # 5. Alphabetize <property> elements by 'name' within each <block>
     def sort_block_properties(block):
         # Only sort direct <property> children, leave others (like <drop>, <UpgradeBlock>) untouched

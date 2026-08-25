@@ -220,10 +220,10 @@ v1.0.1
 
 v1.0.1
     - Updated to account for stack size changes made to some ammo
-    production resources.
+      production resources.
 
 ------------------------------------------------------------------------
 
 v1.0.0
     - Separated from StacksBundlesAmmoPlus now that I understand
-    conditionals.
+      conditionals.

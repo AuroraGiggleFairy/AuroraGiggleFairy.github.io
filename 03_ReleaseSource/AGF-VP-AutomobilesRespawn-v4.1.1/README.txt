@@ -244,7 +244,7 @@ v3.1.0
 
 v3.0.1
     - Implemented necessary code to ensure safe update on existing games
-    using previous version of mod.
+      using previous version of mod.
 
 ------------------------------------------------------------------------
 
@@ -252,17 +252,16 @@ v3.0.0
     - A rework for better coding and additional features.
     - Randomness is applied where appropriate.
     - The "plant" is a hubcap, drive over able AND will take up space to
-    prevent building in its respawn.
+      prevent building in its respawn.
     - Removed the tip for now. I like having it to inform new players on
-    my server, but it isn't working as intended.
+      my server, but it isn't working as intended.
     - Updated localization.
 
 ------------------------------------------------------------------------
 
 v2.0.3
     - Removed airConditioner, decoCarRadiatorFlat and radiatorHouse01
-      from
-    activating the message alert.
+      from activating the message alert.
     - Significantly reduce the frequency of the message alert.
 
 ------------------------------------------------------------------------

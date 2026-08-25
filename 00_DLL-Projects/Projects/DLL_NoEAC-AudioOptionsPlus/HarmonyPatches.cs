@@ -55,6 +55,7 @@ internal static class AudioOptionsPlusConfig
         "AudioOptionsPlus.TraderJoelMultiplier",
         "AudioOptionsPlus.TraderRektMultiplier",
         "AudioOptionsPlus.PlayerMadeSoundsMultiplier",
+        "AudioOptionsPlus.ProgressionSoundsMultiplier",
         "AudioOptionsPlus.SoundSwap.SillySoundsEnabled",
         "AudioOptionsPlus.SoundSwap.Enabled",
         "AudioOptionsPlus.SoundSwap.PlayerMode",
@@ -104,6 +105,7 @@ internal static class AudioOptionsPlusConfig
     public static float TraderJoelMultiplier { get; private set; } = -1f;
     public static float TraderRektMultiplier { get; private set; } = -1f;
     public static float PlayerMadeSoundsMultiplier { get; private set; } = -1f;
+    public static float ProgressionSoundsMultiplier { get; private set; } = -1f;
     public static bool SillySoundsEnabled { get; private set; } = false;
     public static bool SoundSwapEnabled { get; private set; } = false;
     public static string SoundSwapPlayerMode { get; private set; } = "None";
@@ -183,6 +185,7 @@ internal static class AudioOptionsPlusConfig
             TraderJoelMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.TraderJoelMultiplier", -1f), -1f, 1f);
             TraderRektMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.TraderRektMultiplier", -1f), -1f, 1f);
             PlayerMadeSoundsMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.PlayerMadeSoundsMultiplier", -1f), -1f, 1f);
+            ProgressionSoundsMultiplier = Mathf.Clamp(PlayerPrefs.GetFloat("AudioOptionsPlus.ProgressionSoundsMultiplier", -1f), -1f, 1f);
             SillySoundsEnabled = PlayerPrefs.GetInt("AudioOptionsPlus.SoundSwap.SillySoundsEnabled", 0) != 0;
             SoundSwapEnabled = PlayerPrefs.GetInt("AudioOptionsPlus.SoundSwap.Enabled", 0) != 0;
             SoundSwapPlayerMode = NormalizeSoundSwapMode(PlayerPrefs.GetString("AudioOptionsPlus.SoundSwap.PlayerMode", "None"));
@@ -490,6 +493,7 @@ internal static class AudioOptionsPlusConfig
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderJoelMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderRektMultiplier", -1f);
             PlayerPrefs.SetFloat("AudioOptionsPlus.PlayerMadeSoundsMultiplier", -1f);
+            PlayerPrefs.SetFloat("AudioOptionsPlus.ProgressionSoundsMultiplier", -1f);
             PlayerPrefs.Save();
             Load();
             AudioOptionsPlusRuntime.RefreshRuntimeAfterSettingsChange();
@@ -519,7 +523,8 @@ internal static class AudioOptionsPlusConfig
         float traderJen,
         float traderJoel,
         float traderRekt,
-        float playerMadeSounds)
+        float playerMadeSounds,
+        float progressionSounds)
     {
         lock (Sync)
         {
@@ -546,6 +551,7 @@ internal static class AudioOptionsPlusConfig
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderJoelMultiplier", Mathf.Clamp01(traderJoel));
             PlayerPrefs.SetFloat("AudioOptionsPlus.TraderRektMultiplier", Mathf.Clamp01(traderRekt));
             PlayerPrefs.SetFloat("AudioOptionsPlus.PlayerMadeSoundsMultiplier", Mathf.Clamp01(playerMadeSounds));
+            PlayerPrefs.SetFloat("AudioOptionsPlus.ProgressionSoundsMultiplier", Mathf.Clamp01(progressionSounds));
             PlayerPrefs.Save();
             Load();
             AudioOptionsPlusRuntime.RefreshRuntimeAfterSettingsChange();
@@ -621,6 +627,7 @@ internal static class AudioOptionsPlusConfig
         PlayerPrefs.SetFloat("AudioOptionsPlus.TraderJoelMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.TraderRektMultiplier", -1f);
         PlayerPrefs.SetFloat("AudioOptionsPlus.PlayerMadeSoundsMultiplier", -1f);
+        PlayerPrefs.SetFloat("AudioOptionsPlus.ProgressionSoundsMultiplier", -1f);
         PlayerPrefs.SetInt("AudioOptionsPlus.SoundSwap.SillySoundsEnabled", 0);
         PlayerPrefs.SetInt("AudioOptionsPlus.SoundSwap.Enabled", 0);
         PlayerPrefs.SetString("AudioOptionsPlus.SoundSwap.PlayerMode", "None");
@@ -921,6 +928,64 @@ internal static class AudioOptionsPlusRuntime
         float finalVolume = Mathf.Clamp01(original * overrideVolume);
         source.volume = finalVolume;
         ForcedSourceVolumesById[sourceId] = finalVolume;
+    }
+
+    public static void ApplyToSourceForGroup(AudioSource source, string soundGroupName)
+    {
+        if (!AudioOptionsPlusConfig.Enabled || source == null)
+        {
+            return;
+        }
+
+        string clip = source.clip != null ? (source.clip.name ?? string.Empty) : string.Empty;
+        string sourceName = source.name ?? string.Empty;
+        string group = soundGroupName ?? string.Empty;
+        Entity contextEntity = (_entityAudioContext != null && _entityAudioContext.Count > 0)
+            ? _entityAudioContext.Peek()
+            : null;
+
+        if (!TryResolveCategoryOverride(clip, sourceName, group, contextEntity, out float overrideVolume, source))
+        {
+            return;
+        }
+
+        int sourceId = source.GetInstanceID();
+        if (!OriginalVolumesBySourceId.ContainsKey(sourceId))
+        {
+            OriginalVolumesBySourceId[sourceId] = source.volume;
+        }
+
+        float original = OriginalVolumesBySourceId[sourceId];
+        float finalVolume = Mathf.Clamp01(original * overrideVolume);
+        source.volume = finalVolume;
+        ForcedSourceVolumesById[sourceId] = finalVolume;
+    }
+
+    public static Entity ResolveEntityFromId(int entityId)
+    {
+        try
+        {
+            World world = GameManager.Instance?.World;
+            if (world == null)
+            {
+                return null;
+            }
+
+            if (entityId >= 0)
+            {
+                Entity entity = world.GetEntity(entityId);
+                if (entity != null)
+                {
+                    return entity;
+                }
+            }
+
+            return world.GetPrimaryPlayer();
+        }
+        catch
+        {
+            return null;
+        }
     }
 
     public static string ResolveSoundSwapForGroup(Entity entity, string soundGroupName)
@@ -2329,7 +2394,7 @@ internal static class AudioOptionsPlusRuntime
             && (MatchesAny(clip, source, group, "_grab", "_place", "open_", "close_", "_open", "_close", "_click", "_craft")
                 || MatchesAny(clip, source, group, "itemneedsrepair", "missingitemtorepair", "craft_place_item", "craft_repair_item", "ui_trader_inv_reset", "ui_trader_purchase", "item_pickup", "item_plant_pickup", "pickup_meat"))
             && !MatchesAny(clip, source, group, "door", "hatch", "vault", "cellar", "bridge", "garage", "manhole", "rollup_gate", "gate_chainlink", "gate_wood_large")
-            && !MatchesAny(clip, source, group, "ui_menu_", "ui_hover", "ui_tab", "ui_waypoint_", "ui_skill_purchase", "ui_weather_alert", "ui_challenge_", "ui_loot_", "ui_vending_purchase", "tooltip_popup", "buttonclick", "map_zoom_"))
+            && !MatchesAny(clip, source, group, "ui_menu_", "ui_hover", "ui_tab", "ui_waypoint_", "ui_skill_purchase", "ui_weather_alert", "ui_challenge_", "ui_loot_", "ui_vending_purchase", "ui_mag_read", "read_", "nerd_outfit_perk", "recipe_unlocked", "tooltip_popup", "buttonclick", "map_zoom_"))
         {
             absoluteVolume = AudioOptionsPlusConfig.InteractionPromptsMultiplier;
             return true;
@@ -2408,14 +2473,23 @@ internal static class AudioOptionsPlusRuntime
             return true;
         }
 
-        // 21) Player-made sounds.
+        // 21) Progression sounds (perk/skill/character, books, magazines, reading bonuses).
+        if (AudioOptionsPlusConfig.ProgressionSoundsMultiplier >= 0f
+            && MatchesAny(clip, source, group, "ui_skill_purchase", "levelup", "read_", "ui_mag_read", "nerd_outfit_perk", "recipe_unlocked"))
+        {
+            absoluteVolume = AudioOptionsPlusConfig.ProgressionSoundsMultiplier;
+            return true;
+        }
+
+        // 22) Player-made sounds.
         bool isLocalPlayerEntityContext = contextEntity is EntityPlayer entityPlayer && IsLocalOrPrimaryPlayer(entityPlayer);
         bool isLocalPlayerSourceContext = IsAttachedToLocalPlayer(sourceObject);
         if (AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier >= 0f
             && (MatchesAny(clip, source, group, "player", "playermale", "playerfemale", "playerspawn", "playerland", "player_death_stinger", "player1jump", "player2jump", "player1land", "player2land", "landsoft", "landhard", "landthump", "a_")
                 || MatchesAny(clip, source, group, "player1", "player2")
                 || ((isLocalPlayerEntityContext || isLocalPlayerSourceContext)
-                    && MatchesAny(clip, source, group, "runloop", "footstep", "step", "heelstep", "barestep", "swing", "swinglight", "swingheavy", "swoosh", "slowswoosh", "fpv_motion_light", "fpv_motion_heavy", "holster", "unholster", "equip", "weapon_holster", "weapon_unholster", "generic_holster", "generic_unholster"))))
+                    && MatchesAny(clip, source, group, "runloop", "footstep", "step", "heelstep", "barestep", "swing", "swinglight", "swingheavy", "swoosh", "slowswoosh", "fpv_motion_light", "fpv_motion_heavy", "holster", "unholster", "equip", "weapon_holster", "weapon_unholster", "generic_holster", "generic_unholster")))
+            && !MatchesAny(clip, source, group, "levelup"))
         {
             absoluteVolume = AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier;
             return true;
@@ -2951,6 +3025,59 @@ internal static class Patch_Audio_Manager_PlaySequence
     }
 }
 
+[HarmonyPatch(typeof(Audio.Manager), nameof(Audio.Manager.PlayInsidePlayerHead), new[] { typeof(string), typeof(int) })]
+internal static class Patch_Audio_Manager_PlayInsidePlayerHead_Begin_AudioOptionsPlus
+{
+    private static void Prefix(string soundGroupNameBegin, int entityID)
+    {
+        Entity entity = AudioOptionsPlusRuntime.ResolveEntityFromId(entityID);
+        AudioOptionsPlusRuntime.BeginEntityAudioContext(entity, soundGroupNameBegin);
+    }
+
+    private static void Postfix(string soundGroupNameBegin, int entityID)
+    {
+        Entity entity = AudioOptionsPlusRuntime.ResolveEntityFromId(entityID);
+        AudioOptionsPlusRuntime.ApplyToActiveEntityGroupSources(entity, soundGroupNameBegin);
+        AudioOptionsPlusRuntime.EndEntityAudioContext();
+    }
+
+    private static void Finalizer()
+    {
+        AudioOptionsPlusRuntime.EndEntityAudioContext();
+    }
+}
+
+[HarmonyPatch(typeof(Audio.Manager), nameof(Audio.Manager.PlayInsidePlayerHead), new[] { typeof(string), typeof(int), typeof(float), typeof(bool), typeof(bool) })]
+internal static class Patch_Audio_Manager_PlayInsidePlayerHead_AudioOptionsPlus
+{
+    private static void Prefix(string soundGroupName, int entityID)
+    {
+        Entity entity = AudioOptionsPlusRuntime.ResolveEntityFromId(entityID);
+        AudioOptionsPlusRuntime.BeginEntityAudioContext(entity, soundGroupName);
+    }
+
+    private static void Postfix(string soundGroupName, int entityID)
+    {
+        Entity entity = AudioOptionsPlusRuntime.ResolveEntityFromId(entityID);
+        AudioOptionsPlusRuntime.ApplyToActiveEntityGroupSources(entity, soundGroupName);
+        AudioOptionsPlusRuntime.EndEntityAudioContext();
+    }
+
+    private static void Finalizer()
+    {
+        AudioOptionsPlusRuntime.EndEntityAudioContext();
+    }
+}
+
+[HarmonyPatch(typeof(Audio.PlayAndCleanup), MethodType.Constructor, new[] { typeof(GameObject), typeof(AudioSource), typeof(float), typeof(float), typeof(bool), typeof(bool), typeof(string) })]
+internal static class Patch_PlayAndCleanup_Ctor_AudioOptionsPlus
+{
+    private static void Postfix(AudioSource _source, string soundGroupName)
+    {
+        AudioOptionsPlusRuntime.ApplyToSourceForGroup(_source, soundGroupName);
+    }
+}
+
 [HarmonyPatch(typeof(Audio.Manager), nameof(Audio.Manager.LoadAudio), new[] { typeof(bool), typeof(float), typeof(string), typeof(string) })]
 internal static class Patch_Audio_Manager_LoadAudio
 {
@@ -3317,6 +3444,7 @@ internal static class Patch_XUiC_OptionsAudio_Init_AudioOptionsPlusCustom
         "AOPVolumeProfilesTraderJoel",
         "AOPVolumeProfilesTraderRekt",
         "AOPVolumeProfilesPlayerCharacterSounds",
+        "AOPVolumeProfilesProgressionSounds",
         "AOPSoundSwap1SillySoundsEnabled",
         "AOPSoundSwapAnimalPainDeathSoundPreset",
         "AOPSoundSwapBear",

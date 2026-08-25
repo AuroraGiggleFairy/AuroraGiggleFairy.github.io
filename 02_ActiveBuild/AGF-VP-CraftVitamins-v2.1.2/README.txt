@@ -226,8 +226,7 @@ v1.1.1
 
 v1.1.0
     - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
+      the purple book mod.
 
 ------------------------------------------------------------------------
 

@@ -239,7 +239,7 @@ v1.2.3
 
 v1.2.2
     - Fun Pimps added full localization for new items, added it to
-    affected items.
+      affected items.
 
 ------------------------------------------------------------------------
 
@@ -255,11 +255,10 @@ v1.2.0
     - End table lamp now stacks to 500 correctly.
     - New items have updated stack sizes.
     - beeswax is updated to 50 instead of 10, however needs to be
-    monitored for breaking duke economy.
+      monitored for breaking duke economy.
     - Raw meat bundle stacks at 50.
     - Added a LARGER raw meat bundle that accounts for all 500 of raw
-      meat
-    stack size.
+      meat stack size.
 
 ------------------------------------------------------------------------
 
@@ -270,13 +269,13 @@ v1.1.1
 
 v1.1.0
     - Re-evaluated 7d2d version 2's use of resources and modified stack
-    sizes for a variety of items.
+      sizes for a variety of items.
     - Increased gun powder stacks to 6000 and updated bundle
-    functioning/localization.
+      functioning/localization.
     - Majority of ammo ingredients now stack to 6,000.
 
 ------------------------------------------------------------------------
 
 v1.0.0
     - Separated from StacksBundlesAmmoPlus now that I understand
-    conditionals.
+      conditionals.

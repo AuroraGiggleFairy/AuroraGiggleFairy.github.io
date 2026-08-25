@@ -211,13 +211,13 @@ v2.4.1
 
 v2.4.0
     - Removed as the purple book conditional within windows.xml as it is
-    now within the purple book mod.
+      now within the purple book mod.
 
 ------------------------------------------------------------------------
 
 v2.3.0
     - Now works appropriately with version 2.5 (and previous game
-    versions).
+      versions).
     - Updated progression.xml and windows.xml.
 
 ------------------------------------------------------------------------
@@ -234,13 +234,13 @@ v2.2.1
 
 v2.2.0
     - Will now only apply purple book edits if you have my purple book
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 
 v2.1.2
     - expanded possible ways of crafting the adv smelt stacks, like from
-    radiators and bundled stacks.
+      radiators and bundled stacks.
 
 ------------------------------------------------------------------------
 

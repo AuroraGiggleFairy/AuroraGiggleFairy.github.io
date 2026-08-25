@@ -244,7 +244,7 @@ v1.0.1
 
 v1.0.0
     - Established functioning method and reduction of exploits by making
-    it into an attribute.
+      it into an attribute.
 
 ------------------------------------------------------------------------
 

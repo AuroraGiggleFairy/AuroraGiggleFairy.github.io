@@ -301,15 +301,14 @@ v3.3.1
 
 v3.3.0
     - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
+      the purple book mod.
 
 ------------------------------------------------------------------------
 
 v3.2.0
     - Updated for 7d2d version 2.5 (still works with previous versions).
     - Update was specifically how it modifies the purple book mod if you
-    use it.
+      use it.
 
 ------------------------------------------------------------------------
 
@@ -320,7 +319,7 @@ v3.1.1
 
 v3.1.0
     - Will now only apply purple book edits if you have my purple book
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 
@@ -332,10 +331,9 @@ v3.0.1
 v3.0.0
     - Renamed to CraftStackEngBattCells.
     - Updated HUD Checklist to incorporate changes with both checklist
-      and
-    zoomed.
+      and zoomed.
     - Craft solarbanks and solar cells at appropriate levels of
-    progression.
+      progression.
 
 ------------------------------------------------------------------------
 

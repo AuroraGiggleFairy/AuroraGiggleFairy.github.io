@@ -221,7 +221,7 @@ v1.0.1
     - Updated OpenAll to be accessible only when Open is.
     - Corrected localization handling.
     - Put auto-stop in place when selecting another button to prevent
-    crashes.
+      crashes.
 
 ------------------------------------------------------------------------
 

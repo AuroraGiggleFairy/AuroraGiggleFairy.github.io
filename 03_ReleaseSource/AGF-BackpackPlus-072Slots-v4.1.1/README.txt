@@ -273,7 +273,7 @@ v3.2.0
 
 v3.1.0
     - When you break an insecure large storage, the block itself (not
-    items inside) return to your inventory.
+      items inside) return to your inventory.
     - Added several more block shape options.
     - Updated Localization
 
@@ -281,8 +281,7 @@ v3.1.0
 
 v3.0.0
     - Now utilizing conditionals in coding for this mod to work with
-      both
-    versions 2.1 and 2.2+.
+      both versions 2.1 and 2.2+.
     - DO NOT ROLLBACK VERSIONS though, that will cause errors.
 
 ------------------------------------------------------------------------
@@ -295,7 +294,7 @@ v2.4.1
 v2.4.0
     - Updated for Version 2.2.
     - Lockable Slots from update work with storage containers and
-    vehicles.
+      vehicles.
     - Potentially fixed label width of storages to fit inbetween icons.
 
 ------------------------------------------------------------------------
@@ -329,7 +328,7 @@ v2.2.1
 v2.2.0
     - Updated for V1.0 (b325)
     - Vanilla, New Lockable Slots system, I just changed entirely how it
-    appears for ease of use
+      appears for ease of use
 
 ------------------------------------------------------------------------
 
@@ -340,10 +339,9 @@ v2.1.1
 
 v2.1.0
     - Added multiple common shapes that are paintable to the large
-      chests
-    options
+      chests options
     - Turned the wood/iron/steel into variant blocks with those new
-    shapes.
+      shapes.
 
 ------------------------------------------------------------------------
 
@@ -351,7 +349,7 @@ v2.0.0
     - Updated for V1.0
     - Removed previous version of storage blocks
     - Created the new player storage system with one that goes up to 168
-    slots
+      slots
     - Mobility effect from capacity follows vanilla
     - Localization updated
     - Added effects on capacity from twitch interaction
@@ -376,7 +374,7 @@ v1.2.8
 v1.2.7
     - skipped 1.2.6 to make it even with the other sized one.
     - Corrected a width change of the text letting you know you are
-    comparing items. Now it fits correctly.
+      comparing items. Now it fits correctly.
     - Correct text of descriptions that were going beyond the
       background.
 
@@ -385,4 +383,4 @@ v1.2.7
 v1.2.5
     - Due to change in A21.1, updated the column size of "unlocked-by"
     - Buff info panel on the character view screen now matches width of
-    backpack
+      backpack

@@ -1,8 +1,28 @@
 {
-  "computed_at": "2026-08-22T17:11:24",
+  "computed_at": "2026-08-25T17:37:28",
   "since_gigglepack_version": "0.20.0",
-  "new_mods": [],
-  "updated_mods": [],
+  "new_mods": [
+    [
+      "AGF-NoEAC-HideDLCCosmetics",
+      "1.0.0"
+    ],
+    [
+      "AGF-VP-DoorsPlus",
+      "4.0.0"
+    ]
+  ],
+  "updated_mods": [
+    [
+      "AGF-NoEAC-AudioOptionsPlus",
+      "2.0.0",
+      "2.1.0"
+    ],
+    [
+      "AGF-VP-ModSlotsPlus",
+      "4.1.1",
+      "4.1.2"
+    ]
+  ],
   "renamed_mods": [],
   "removed_mods": []
 }

@@ -108,8 +108,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-AudioOptionsPlus": {
-    "signature": "a01f28ed0796f7adbe352f20b210e5ad8822111b4478162d9746904fb9da2dfc",
-    "version": "2.0.0",
+    "signature": "bf3d71699972ee53d20f177461b3e78d111e6326014871e277a2e804615c3db6",
+    "version": "2.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-AudioOptionsPlus_01.png"
   },
@@ -288,10 +288,10 @@
     "media_file": ""
   },
   "AGF-VP-DoorsPlus": {
-    "signature": "7f4d1c4cc4ffcbea547a9bc6dcbd26dfa4f8528876516ff081d0a4af94762ac9",
-    "version": "3.0.1",
-    "has_media": false,
-    "media_file": ""
+    "signature": "6fc55fb678f5bf3df0256ee6d21a33c77e56a81dc03660ff133a71865301c8a4",
+    "version": "4.0.0",
+    "has_media": true,
+    "media_file": "AGF-VP-DoorsPlus_01.png"
   },
   "AGF-VP-DrinkableAcid": {
     "signature": "15c1c6ae2c2f752431612ba2beb15650b03cf0bffa42d3e7a23ea48c95240fff",
@@ -360,8 +360,8 @@
     "media_file": ""
   },
   "AGF-VP-ModSlotsPlus": {
-    "signature": "1a4fc6db456cee4693ac64b79a711e4cfab53b8174f047a065b762aab0040230",
-    "version": "4.1.1",
+    "signature": "022206ec923f11616a25d4d1f9562f50847655d809a7f4aca8a0aacd8d3410a1",
+    "version": "4.1.2",
     "has_media": true,
     "media_file": "AGF-VP-ModSlotsPlus_01.png"
   },
@@ -610,5 +610,11 @@
     "version": "1.0.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-MapPlus_01.png"
+  },
+  "AGF-NoEAC-HideDLCCosmetics": {
+    "signature": "f70e44461c7611011396f7376c25988d7748ab7ed73cd76d34c1bfd89b1f48ab",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-HideDLCCosmetics_01.png"
   }
 }

@@ -213,8 +213,7 @@ v2.3.1
 
 v2.3.0
     - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
+      the purple book mod.
     - Attempted to remove durability for this item.
 
 ------------------------------------------------------------------------
@@ -232,7 +231,7 @@ v2.2.0
 
 v2.1.0
     - Will now only apply purple book edits if you have my purple book
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 
@@ -249,13 +248,13 @@ v2.0.0
 
 v1.0.2
     - updated the window display for the HUD Checklist, if mod is used
-    with the HUD
+      with the HUD
 
 ------------------------------------------------------------------------
 
 v1.0.1
     - removed the upgrading block feature as I forgot it allows quick
-    upgrading of blocks.
+      upgrading of blocks.
     - Updated the localization to remove "repairing" information.
 
 ------------------------------------------------------------------------

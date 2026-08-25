@@ -456,14 +456,14 @@ v1.2.0
 
 v1.1.1
     - Attempt to fix the final issue with persisting lock status for ALL
-    clients after server restart.
+      clients after server restart.
 
 ------------------------------------------------------------------------
 
 v1.1.0
     - Added locks to generators and ranged defenses.
     - Dedicated servers should now maintain lock status of these blocks
-    appropriately.
+      appropriately.
 
 ------------------------------------------------------------------------
 

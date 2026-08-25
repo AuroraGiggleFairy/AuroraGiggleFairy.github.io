@@ -59,6 +59,7 @@ public class XUiC_AudioOptions : XUiController
     private XUiC_ComboBoxFloat _traderJoel;
     private XUiC_ComboBoxFloat _traderRekt;
     private XUiC_ComboBoxFloat _playerMadeSounds;
+    private XUiC_ComboBoxFloat _progressionSounds;
     private XUiC_ComboBoxFloat[] _categoryCombos;
     private XUiC_ComboBoxList<string>[] _animalSwapCombos;
 
@@ -369,6 +370,7 @@ public class XUiC_AudioOptions : XUiController
             Set(_traderJoel, AudioOptionsPlusConfig.TraderJoelMultiplier);
             Set(_traderRekt, AudioOptionsPlusConfig.TraderRektMultiplier);
             Set(_playerMadeSounds, AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier);
+            Set(_progressionSounds, AudioOptionsPlusConfig.ProgressionSoundsMultiplier);
 
             if (_overallPreset != null)
             {
@@ -466,7 +468,8 @@ public class XUiC_AudioOptions : XUiController
                 _traderJen,
                 _traderJoel,
                 _traderRekt,
-                _playerMadeSounds
+                _playerMadeSounds,
+                _progressionSounds
             };
         }
 
@@ -848,6 +851,8 @@ public class XUiC_AudioOptions : XUiController
                 return !Nearly(GetValue(_traderRekt), NormalizeConfigUiValue(AudioOptionsPlusConfig.TraderRektMultiplier));
             case "AOPVolumeProfilesPlayerCharacterSounds":
                 return !Nearly(GetValue(_playerMadeSounds), NormalizeConfigUiValue(AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier));
+            case "AOPVolumeProfilesProgressionSounds":
+                return !Nearly(GetValue(_progressionSounds), NormalizeConfigUiValue(AudioOptionsPlusConfig.ProgressionSoundsMultiplier));
             case "AOPSoundSwapAnimalPainDeathSoundPreset":
                 return !string.Equals(NormalizeSwapPreset(_animalSwapPreset?.Value), ResolveSwapPresetFromConfig(), StringComparison.OrdinalIgnoreCase);
             case "AOPSoundSwapBear":
@@ -898,12 +903,13 @@ public class XUiC_AudioOptions : XUiController
         float joel = NormalizeConfigUiValue(AudioOptionsPlusConfig.TraderJoelMultiplier);
         float rekt = NormalizeConfigUiValue(AudioOptionsPlusConfig.TraderRektMultiplier);
         float player = NormalizeConfigUiValue(AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier);
+        float progression = NormalizeConfigUiValue(AudioOptionsPlusConfig.ProgressionSoundsMultiplier);
 
-        if (NearlyAll(0f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player)) return PresetOff;
-        if (NearlyAll(0.25f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player)) return PresetLow;
-        if (NearlyAll(0.5f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player)) return PresetMedium;
-        if (NearlyAll(0.75f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player)) return PresetHigh;
-        if (NearlyAll(1f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player)) return PresetDefault;
+        if (NearlyAll(0f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player, progression)) return PresetOff;
+        if (NearlyAll(0.25f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player, progression)) return PresetLow;
+        if (NearlyAll(0.5f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player, progression)) return PresetMedium;
+        if (NearlyAll(0.75f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player, progression)) return PresetHigh;
+        if (NearlyAll(1f, auger, impact, gun, explosions, vehicles, electrical, crafting, spider, animal, place, ding, interaction, twitch, weather, thunder, weatherAlert, doors, bob, hugh, jen, joel, rekt, player, progression)) return PresetDefault;
         return PresetCustom;
     }
 
@@ -973,7 +979,8 @@ public class XUiC_AudioOptions : XUiController
             GetValue(_traderJen),
             GetValue(_traderJoel),
             GetValue(_traderRekt),
-            GetValue(_playerMadeSounds));
+            GetValue(_playerMadeSounds),
+            GetValue(_progressionSounds));
         PersistSwapSettings();
     }
 
@@ -1042,7 +1049,8 @@ public class XUiC_AudioOptions : XUiController
             !Nearly(GetValue(_traderJen), NormalizeConfigUiValue(AudioOptionsPlusConfig.TraderJenMultiplier)) ||
             !Nearly(GetValue(_traderJoel), NormalizeConfigUiValue(AudioOptionsPlusConfig.TraderJoelMultiplier)) ||
             !Nearly(GetValue(_traderRekt), NormalizeConfigUiValue(AudioOptionsPlusConfig.TraderRektMultiplier)) ||
-            !Nearly(GetValue(_playerMadeSounds), NormalizeConfigUiValue(AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier));
+            !Nearly(GetValue(_playerMadeSounds), NormalizeConfigUiValue(AudioOptionsPlusConfig.PlayerMadeSoundsMultiplier)) ||
+            !Nearly(GetValue(_progressionSounds), NormalizeConfigUiValue(AudioOptionsPlusConfig.ProgressionSoundsMultiplier));
 
         bool swapChanged =
             !string.Equals(_bearSwap?.Value ?? SwapDefault, ToSwapValue(AudioOptionsPlusConfig.SoundSwapBearMode), StringComparison.OrdinalIgnoreCase) ||
@@ -1205,6 +1213,7 @@ public class XUiC_AudioOptions : XUiController
         _traderJoel = ResolveFloatCombo("AOPVolumeProfilesTraderJoel");
         _traderRekt = ResolveFloatCombo("AOPVolumeProfilesTraderRekt");
         _playerMadeSounds = ResolveFloatCombo("AOPVolumeProfilesPlayerCharacterSounds");
+        _progressionSounds = ResolveFloatCombo("AOPVolumeProfilesProgressionSounds");
         _categoryCombos = null;
         _animalSwapCombos = null;
 
@@ -1232,6 +1241,7 @@ public class XUiC_AudioOptions : XUiController
         LogMissingControl("AOPVolumeProfilesTraderJoel", _traderJoel);
         LogMissingControl("AOPVolumeProfilesTraderRekt", _traderRekt);
         LogMissingControl("AOPVolumeProfilesPlayerCharacterSounds", _playerMadeSounds);
+        LogMissingControl("AOPVolumeProfilesProgressionSounds", _progressionSounds);
     }
 
     private XUiC_ComboBoxList<string> ResolveStringListCombo(string id)

@@ -358,7 +358,7 @@ v2.4.1
 v2.4.0
     - Updated for 7d2d version 2.6.
     - Now has x5 and x25 versions of the tools that go into the dew
-    collector.
+      collector.
     - Naming scheme update.
     - Updated README format
 
@@ -366,8 +366,7 @@ v2.4.0
 
 v2.3.2
     - A bulk crafting and open was missing a digit. Only gaining 250
-      water
-    instead of 2,500.
+      water instead of 2,500.
 
 ------------------------------------------------------------------------
 
@@ -380,21 +379,19 @@ v2.3.0
     - Removed HEAT production on all dew collectors.
     - Added a x25 version!
     - Increased the bundle stack sizes of the larger water bundles from
-      50
-    to 500.
+      50 to 500.
 
 ------------------------------------------------------------------------
 
 v2.2.1
     - Breaking a x5 dew collector returns it to your hands, just like
-      the
-    regular one.
+      the regular one.
 
 ------------------------------------------------------------------------
 
 v2.2.0
     - Will now only apply purple book edits if you have my purple book
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 
@@ -411,8 +408,7 @@ v2.0.3
 
 v2.0.2
     - changed the bulk murky water icon to be consistent gave this icon
-      a
-    murky water color-ish
+      a murky water color-ish
 
 ------------------------------------------------------------------------
 
@@ -429,7 +425,7 @@ v2.0.0
 
 v1.1.4
     - Added in windows.xml to make sure the dew collector is the correct
-    name on the schematic list.
+      name on the schematic list.
     - Fixed the sorting of the dew collector types.
     - Made the x5 dew collector unlock with the regular one.
 
@@ -437,9 +433,9 @@ v1.1.4
 
 v1.1.3
     - Corrected the name of what gets unlocked for Dew Collector's under
-    progression.xml.
+      progression.xml.
     - Removed the "third" recipe for a dew collector that was
-    unintentionally there.
+      unintentionally there.
     - V1.1.2
     - Added the number "5" to the icon type.
 
@@ -452,7 +448,7 @@ v1.1.1
 
 v1.1.0
     - Dew collectors now 2x2, except the old ones, which if you destroy,
-    you get the 2x2 version.
+      you get the 2x2 version.
     - changed mod name to DewsPlus
 
 ------------------------------------------------------------------------

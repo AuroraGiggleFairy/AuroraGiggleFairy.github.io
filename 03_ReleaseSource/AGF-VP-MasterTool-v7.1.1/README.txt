@@ -244,8 +244,7 @@ v6.1.1
 
 v6.1.0
     - Removed windows.xml as the purple book conditional is now within
-      the
-    purple book mod.
+      the purple book mod.
 
 ------------------------------------------------------------------------
 
@@ -257,9 +256,9 @@ v6.0.1
 
 v6.0.0
     - Improved and fixed method of doing the final quest (works on
-    dedicated servers)
+      dedicated servers)
     - Will now only apply purple book edits if you have my purple book
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 
@@ -285,7 +284,7 @@ v4.0.0
 
 v3.0.1
     - Now useable underwater without causing red errors. (Coding details
-    on the fix under mastertool in items.xml)
+      on the fix under mastertool in items.xml)
 
 ------------------------------------------------------------------------
 
@@ -298,8 +297,7 @@ v3.0.0
 
 v2.1.0
     - updated the recipe for Master Tool 2nd option of getting schamtic
-      is
-    using 50 notes
+      is using 50 notes
 
 ------------------------------------------------------------------------
 
@@ -312,5 +310,5 @@ v2.0.0
 
 v1.1.1
     - Master tool with maxed out mother lode was making you lose XP! Now
-    it doesn't.
+      it doesn't.
     - Updated Readme to new format.

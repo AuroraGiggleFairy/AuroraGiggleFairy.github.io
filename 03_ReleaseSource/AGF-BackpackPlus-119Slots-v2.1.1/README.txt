@@ -247,7 +247,7 @@ v1.2.2
 
 v1.1.0
     - When you break an insecure large storage, the block itself (not
-    items inside) return to your inventory.
+      items inside) return to your inventory.
     - Added several more block shape options.
     - Updated Localization
 

@@ -1,11 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <AGFVanillaPlus-DecorationBlock>
-
-
-	<append xpath="/lootcontainers">
-
-		<lootcontainer  name="agfStorage" count="0" size="10,10" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" ></lootcontainer>
-		
-	</append>
-	
-	
+	<!-- No loot containers here. Deco uses vanilla writable lists, or Larger Storage Option *Large lists via the blocks.xml conditional. -->
 </AGFVanillaPlus-DecorationBlock>

@@ -144,6 +144,11 @@
     "recorded_at": "2026-06-16T03:42:40",
     "version": "2.0.0"
   },
+  "AGF-NoEAC-HideDLCCosmetics": {
+    "folder": "AGF-NoEAC-HideDLCCosmetics-v1.0.0",
+    "recorded_at": "2026-08-25T16:46:37",
+    "version": "1.0.0"
+  },
   "AGF-NoEAC-ItemTypeIconColor": {
     "folder": "AGF-NoEAC-ItemTypeIconColor-v1.0.3",
     "recorded_at": "2026-06-15T02:20:47",
@@ -295,9 +300,9 @@
     "version": "2.4.3"
   },
   "AGF-VP-DoorsPlus": {
-    "folder": "AGF-VP-DoorsPlus-v3.0.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "3.0.1"
+    "folder": "AGF-VP-DoorsPlus-v4.0.0",
+    "recorded_at": "2026-08-22T18:55:50",
+    "version": "4.0.0"
   },
   "AGF-VP-DrinkableAcid": {
     "folder": "AGF-VP-DrinkableAcid-v3.0.0",

@@ -5,8 +5,9 @@
 Adds throwable pumpkin molotovs and a wearable jack-o-lantern helmet
 
 "This mod idea came from a collection of friends/twitch viewers/discord
-peeps, and other insane people like AGF. (Lots of mechanics ideas came
-from IceRogue) (Molo-Jack-Ovs' name came from ProfSeatbelt)"
+peeps, and other insane people like AGF.
+(Lots of mechanics ideas came from IceRogue)
+(Molo-Jack-Ovs' name came from ProfSeatbelt)"
 
 NOTE: AGF Mod Guide and Changelog are further below.
 
@@ -324,7 +325,7 @@ v2.0.5
 
 v2.0.4
     - updated to put helmet cosmetic mod as a MOD instead of a dye color
-    due to 7d2d changes.
+      due to 7d2d changes.
 
 ------------------------------------------------------------------------
 
@@ -346,7 +347,7 @@ v2.0.1
 v2.0.0
     - Updated to work with V1
     - Change the hold type of molo-jack-ovs (not in your hand directly,
-    but shows throwing animation)
+      but shows throwing animation)
 
 ------------------------------------------------------------------------
 

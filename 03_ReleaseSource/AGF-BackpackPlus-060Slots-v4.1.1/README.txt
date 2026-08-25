@@ -275,7 +275,7 @@ v3.2.0
 
 v3.1.0
     - When you break an insecure large storage, the block itself (not
-    items inside) return to your inventory.
+      items inside) return to your inventory.
     - Added several more block shape options.
     - Updated Localization
 
@@ -283,8 +283,7 @@ v3.1.0
 
 v3.0.0
     - Now utilizing conditionals in coding for this mod to work with
-      both
-    versions 2.1 and 2.2+.
+      both versions 2.1 and 2.2+.
     - DO NOT ROLLBACK VERSIONS though, that will cause errors.
 
 ------------------------------------------------------------------------
@@ -292,7 +291,7 @@ v3.0.0
 v2.4.0
     - Updated for 7d2d version 2.2
     - Lockable slots share same style across backpack, storages, and
-    vehicles.
+      vehicles.
 
 ------------------------------------------------------------------------
 

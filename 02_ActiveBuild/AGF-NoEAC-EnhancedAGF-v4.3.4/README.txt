@@ -240,7 +240,7 @@ I. AGF Modding Focus
 
 v4.3.4
     - No longer tries to connect to ScreamerAlert mod when it is not
-    installed.
+      installed.
 
 ------------------------------------------------------------------------
 
@@ -316,7 +316,7 @@ v3.1.0
 
 v3.0.0
     - This ONLY provides a .dll that will enhance other AGF mods if they
-    are installed.
+      are installed.
 
 ------------------------------------------------------------------------
 
@@ -330,11 +330,10 @@ v2.0.0
     - Updated for 7d2d version 2.5+.
     - Actual xml changes are within AGF HUDPlus-1Main.
     - This allows a server using my HUD with EAC turned off, can have
-    enhanced patch installed locally and WORK.
+      enhanced patch installed locally and WORK.
 
 ------------------------------------------------------------------------
 
 v1.0.0
     - Pulled from old Alpha 21 version and updated with newest systems
-      for
-    7d2d version 2+
+      for 7d2d version 2+

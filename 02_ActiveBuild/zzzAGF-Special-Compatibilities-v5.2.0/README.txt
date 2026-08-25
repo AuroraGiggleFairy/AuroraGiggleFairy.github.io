@@ -268,7 +268,7 @@ v4.0.0
 
     - v.3.0.0
     - Set up conditionals so this single patch can account for multiple
-    other hud mods out there.
+      other hud mods out there.
 
 ------------------------------------------------------------------------
 

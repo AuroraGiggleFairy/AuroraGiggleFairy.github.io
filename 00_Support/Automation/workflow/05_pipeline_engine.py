@@ -1991,9 +1991,44 @@ def _should_preserve_unwrapped_line(line: str, major_divider: str, minor_divider
     return False
 
 
+def _merge_hanging_list_continuations(lines: List[str], major_divider: str, minor_divider: str) -> List[str]:
+    """Rejoin hanging wrap tails onto their parent list item before wrapping.
+
+    Changelog bullets are wrapped in format_changelog_text, then the whole
+    README is wrapped again. Indent normalization can lengthen the dashed
+    line without moving the continuation, which leaves tails like
+    "and similar." on their own line. Merge those tails first so wrap sees
+    one bullet again.
+    """
+    list_re = re.compile(r"^(\s*)(\d+\.\s+|-\s+)(.*)$")
+    merged: List[str] = []
+    for raw_line in lines:
+        line = raw_line.rstrip()
+        stripped = line.strip()
+        if not stripped:
+            merged.append(line)
+            continue
+        if stripped in {major_divider, minor_divider}:
+            merged.append(line)
+            continue
+        is_list = bool(list_re.match(line))
+        leading = len(line) - len(line.lstrip())
+        if (
+            not is_list
+            and leading > 0
+            and merged
+            and merged[-1].strip()
+            and list_re.match(merged[-1])
+        ):
+            merged[-1] = merged[-1].rstrip() + " " + stripped
+            continue
+        merged.append(line)
+    return merged
+
+
 def _wrap_text_to_width(text: str, width: int, major_divider: str, minor_divider: str) -> str:
     wrapped: List[str] = []
-    lines = text.splitlines()
+    lines = _merge_hanging_list_continuations(text.splitlines(), major_divider, minor_divider)
     for raw_line in lines:
         line = raw_line.rstrip()
         if _should_preserve_unwrapped_line(line, major_divider, minor_divider) or len(line) <= width:
@@ -2189,13 +2224,15 @@ def format_blockquote(text: str) -> str:
 def format_quote_for_readme(text: str) -> str:
     if not text.strip():
         return ""
-    normalized = " ".join(line.strip() for line in text.splitlines() if line.strip())
-    if not normalized:
+    # Keep author line breaks from the quote file. Wrapping still happens later
+    # per line at 72 characters; do not join lines into one paragraph.
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if not lines:
         return ""
-    if normalized.startswith('"') and normalized.endswith('"') and len(normalized) >= 2:
-        return normalized
-    stripped = normalized.strip('"')
-    return f'"{stripped}"'
+    body = "\n".join(lines)
+    if body.startswith('"') and body.endswith('"') and len(body) >= 2:
+        return body
+    return f'"{body}"'
 
 
 def build_title_card_callout_block_for_readme(quote_text: str) -> str:

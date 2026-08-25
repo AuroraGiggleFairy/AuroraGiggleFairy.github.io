@@ -284,13 +284,13 @@ v1.0.3
 
 v1.0.2
     - Fun Pimps added full localization for new items, added it to
-    affected items.
+      affected items.
 
 ------------------------------------------------------------------------
 
 v1.0.1
     - Corrected how it displays under the vanilla crafting workstations
-    section.
+      section.
     - And actually updated the modinfo.xml. facepalm
     - Other readme updates... more facepalm
 

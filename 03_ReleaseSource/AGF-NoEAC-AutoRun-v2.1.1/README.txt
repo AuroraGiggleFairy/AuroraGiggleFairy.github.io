@@ -243,7 +243,7 @@ v2.1.0
     - Updated mod descriptions and details.
     - Images no longer within mod folders due to constraints.
     - Pressing auto-run key while in a search/text box will properly
-    ignore auto-run.
+      ignore auto-run.
 
 ------------------------------------------------------------------------
 

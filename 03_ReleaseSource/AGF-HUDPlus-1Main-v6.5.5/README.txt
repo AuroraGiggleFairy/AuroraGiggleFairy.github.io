@@ -234,7 +234,7 @@ I. AGF Modding Focus
 
 v6.5.5
     - Updated how EnhancedAGF adds additional features with less pull on
-    performance.
+      performance.
 
 ------------------------------------------------------------------------
 
@@ -259,7 +259,7 @@ v6.5.0
 
 v6.4.0
     - Updated to work with new features in EnhancedAGF and compatibility
-    patch for DishongTowerChallenge.
+      patch for DishongTowerChallenge.
 
 ------------------------------------------------------------------------
 
@@ -270,7 +270,7 @@ v6.3.1
 
 v6.3.0
     - MAJOR ERROR fix, 5th crafting slot no longer xml capable, causes
-    many errors.
+      many errors.
     - Localization correction.
     - Removed weird files.
 
@@ -284,7 +284,7 @@ v6.2.0
 v6.1.0
     - Added support between AGF HUDPlus and AutoRun.
     - Brought the conditional of HUDPlus with toolbelt 12 slots to this
-    windows.xml.
+      windows.xml.
 
 ------------------------------------------------------------------------
 
@@ -361,7 +361,7 @@ v5.4.0
 
 v5.3.2
     - Updating some names for sections in the code for better
-    compatibility and modding.
+      compatibility and modding.
 
 ------------------------------------------------------------------------
 
@@ -372,21 +372,18 @@ v5.3.1
 
 v5.3.0
     - Enhanced Patch xml code is within the HUDPlus, allowing for a
-      unique
-    situation:
+      unique situation:
     - If server has my HUD, anyone joining will enjoy the HUD.
     - If server has EAC turned off and a player joining has enhanced
-      patch
-    locally installed, they will enjoy the enhanced HUD.
+      patch locally installed, they will enjoy the enhanced HUD.
     - Clarification: Enhanced Patch does NOT have to be installed on
-    server, just the HUD and EAC off.
+      server, just the HUD and EAC off.
     - No one will be required to download anything, only optional if
-      they
-    want the extra features.
+      they want the extra features.
     - Enhanced patch offers cold resist, heat resist, core temp,
     - elevation, loot stage, used inventory slots, armor, explosion
     - resist, crit resist, entity / block damage with current equipped
-    item, and mobility.
+      item, and mobility.
 
 ------------------------------------------------------------------------
 
@@ -402,23 +399,22 @@ v5.2.1
 
 v5.2.0
     - Updated to allow working with 7d2d version 2.5. (Still works with
-    versions 2.0 through 2.4)
+      versions 2.0 through 2.4)
 
 ------------------------------------------------------------------------
 
 v5.1.0
     - Updated method of checking if someone has the "enhanced patch"
-    installed or not.
+      installed or not.
     - The coding changes of the enhanced patch at now within this file's
-    code.
+      code.
     - When showing the amounts of food or water, also shows the max
-      amount
-    to be considered full.
+      amount to be considered full.
     - Removed the excess files in early attempt at utilizing the new
-    conditional system.
+      conditional system.
     - Finally removed the stats that display while on the death screen.
     - The location/skulls in the menus, its background was light grey
-    instead of dark.
+      instead of dark.
 
 ------------------------------------------------------------------------
 
@@ -429,7 +425,7 @@ v5.0.2
 
 v5.0.1
     - Left out a conditional format associated with storages and my
-    backpacks conflicting. Now fixed.
+      backpacks conflicting. Now fixed.
 
 ------------------------------------------------------------------------
 
@@ -437,32 +433,31 @@ v5.0.0
     - Localization fixes
     - Updated to utilize conditional formatting (big deal!).
     - Updated to account for version 2.2 regardless if you are using 2.2
-    or 2.1.
+      or 2.1.
     - Significant simplification and re-orginization of Main Hud, addons
-    and options.
+      and options.
     - Purple Book is now standalone along with several other features in
-    their own modlets.
+      their own modlets.
     - Default keeps the POI Entered popup. (There is now an optional
-    remove modlet)
+      remove modlet)
     - Default keeps the written weather alert. (There is now an optional
-    remove modlet)
+      remove modlet)
 
 ------------------------------------------------------------------------
 
 v4.1.2
     - Added the new/missing stage loot cap icon under the location
-    markers.
+      markers.
     - Fixed that chat input section when your message is more than one
-    line to maintain the background.
+      line to maintain the background.
     - Lots of visual errors and missplaced backgrounds/borders in purple
-    book, even some things that were 1 pixel off.....
+      book, even some things that were 1 pixel off.....
     - Updated the text about what to click to zoom in, for the magazines
-    and armors.
+      and armors.
     - When zoomed into magazines, the ones that are finished now
-      maintain
-    the green background when completed.
+      maintain the green background when completed.
     - Under Armors, updated the sneak effectiveness numbers as they were
-    buffed in v2.0.
+      buffed in v2.0.
     - Updated the descriptions of some of the armors.
     - Added more details in zoomed armors that are needed, like what are
     - "fitness" items.
@@ -472,17 +467,17 @@ v4.1.2
 
 v4.1.1
     - Renamed a bit hopefully for better understanding the difference
-    between one with or without purple book.
+      between one with or without purple book.
 
 ------------------------------------------------------------------------
 
 v4.1.0
     - Updated for V2!
     - Had to rework aspects of purple book due to more stable "button"
-    system.
+      system.
     - Fixed an error since the inception of Purple Book, lol.
     - Purple book's "zoom in feature" are now buttons in a header to
-    easily swap between them.
+      easily swap between them.
 
 ------------------------------------------------------------------------
 
@@ -493,37 +488,34 @@ v4.0.0
     - Lots of corrections and cleaning up of both UI of the purple book
     - AND in the xml code.
     - Edited parts of code to be display changes to checklist made by
-      any
-    updated AGF mods.
+      any updated AGF mods.
 
 ------------------------------------------------------------------------
 
 v3.5.0
     - centered a few things that I can't believe weren't centered long
-    ago!!!
+      ago!!!
     - Added under the purple book's tab, a row showing the completed
-      books
-    series for easier finding the cursor's spot for tooltip
+      books series for easier finding the cursor's spot for tooltip
     - Updated information in the purple book's header to encourgae using
-    cursor hover OR clicking to zoom where apprioriate
+      cursor hover OR clicking to zoom where apprioriate
 
 ------------------------------------------------------------------------
 
 v3.4.0
     - Made some minor adjustments to a few things
     - Made some of the hard edges of my sections with a squared
-      background
-    have curved corners
+      background have curved corners
     - Changed the Elevation Icon
     - Other changes are related to compatibility with additional HUD
-    options
+      options
     - A zoom in feature of the Armor's Tab!!!
 
 ------------------------------------------------------------------------
 
 v3.3.4
     - Fixed the buff pop up section, where other languages it would go
-    over
+      over
     - the icon. (Just Vanilla Code, now updated to changes fun pimps
       made)
 
@@ -531,7 +523,7 @@ v3.3.4
 
 v3.3.3
     - Under the crafting checklist, workstation section background goes
-    green when maxed out, appropriately.
+      green when maxed out, appropriately.
     - (Thanks Snakie)
 
 ------------------------------------------------------------------------
@@ -539,7 +531,7 @@ v3.3.3
 v3.3.2
     - Organized the code for the checklist (purple book)
     - On the Armors Tab, I rearranged armor types of light, medium, and
-    heavy in alphabetical order
+      heavy in alphabetical order
     - Added specific names to specific entries of checklists so that
     - Master Tool will be compatible
 
@@ -547,8 +539,7 @@ v3.3.2
 
 v3.3.1
     - Added some naming scheme for crafting list, to make compatible
-      with
-    other VP mods of mine.
+      with other VP mods of mine.
 
 ------------------------------------------------------------------------
 
@@ -563,38 +554,38 @@ V3.3.0
 
 v3.2.2
     - Correct Localization issues where a few were placed in a different
-    mod of mine... facepalm LOL!
+      mod of mine... facepalm LOL!
 
 ------------------------------------------------------------------------
 
 v3.2.1
     - Fixed an error that would occur when you have more than 3 shared
-    waypoints in your shared list.
+      waypoints in your shared list.
 
 ------------------------------------------------------------------------
 
 v3.2.0
     - Crafting Checklist now visually indicates where you are with
-    crafting levels.
+      crafting levels.
 
 ------------------------------------------------------------------------
 
 v3.1.1
     - Finished the armor page
     - corrected some checklist checking, thought it wasn't running up
-    performance. I had put the wrong value in, now fixed!
+      performance. I had put the wrong value in, now fixed!
 
 ------------------------------------------------------------------------
 
 v3.1.0
     - Modified the altIconType color for read books to be green with
-    slight transparency.
+      slight transparency.
 
 ------------------------------------------------------------------------
 
 v3.0.0
     - Added a "purple book" icon to show magazines on one page books on
-    one page unlocks on one page and armor details
+      one page unlocks on one page and armor details
 
 ------------------------------------------------------------------------
 
@@ -607,8 +598,7 @@ v2.1.0
 
 v2.0.3
     - fixed the remaining interaction prompts for dew collectors added
-      one
-    I missed
+      one I missed
 
 ------------------------------------------------------------------------
 
@@ -619,14 +609,14 @@ v2.0.2
 
 v2.0.1
     - Added the missing interaction prompts for dew collectors... But in
-    beta, not all languages are present.
+      beta, not all languages are present.
 
 ------------------------------------------------------------------------
 
 V2.0.0
     - Updated for 7d2d Version 1.0
     - Instead of making a separate addon, placing the skulls/location as
-    part of the compass area.
+      part of the compass area.
     - Added the "sprinting" notification
     - Keeping the vanilla location/skulls box in place
 
@@ -639,8 +629,7 @@ V1.9.3
 
 v1.9.2
     - The word "level" no longer disappears permanently when using the
-      F7
-    key.
+      F7 key.
     - In the menu display of skulls, if it was only biome skulls, they
-    were tiny. Now they are the right size.
+      were tiny. Now they are the right size.
     - Started tracking changes
