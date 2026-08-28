@@ -1,0 +1,29 @@
+<zzzAGF-Compatibilities>
+	<!-- Outback overwrote playerBackpack loot size with 10,10 (no vanilla filter). Restore the AGF size. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">12,12</set>
+		</if>
+		<else>
+			<conditional>
+				<if cond="mod_loaded('AGF-BackpackPlus-084Slots')">
+					<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,12</set>
+				</if>
+				<else>
+					<conditional>
+						<if cond="mod_loaded('AGF-BackpackPlus-072Slots')">
+							<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,12</set>
+						</if>
+						<else>
+							<conditional>
+								<if cond="mod_loaded('AGF-BackpackPlus-060Slots')">
+									<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>
+								</if>
+							</conditional>
+						</else>
+					</conditional>
+				</else>
+			</conditional>
+		</else>
+	</conditional>
+</zzzAGF-Compatibilities>

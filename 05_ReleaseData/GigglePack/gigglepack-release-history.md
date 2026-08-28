@@ -1,5 +1,19 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.21.1 (August 27, 2026 11:32pm)
+### Summary: +0 new, ~2 updated, =0 renamed, -0 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-VisualEntityTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip) (v1.0.1 -> v1.1.0)
+  - [AGF-NoEAC-CosmeticLockIcon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip) (v3.1.1 -> v3.1.2)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.21.0 (August 25, 2026 5:43pm)
 ### Summary: +2 new, ~2 updated, =0 renamed, -0 removed
 - **New Mods**

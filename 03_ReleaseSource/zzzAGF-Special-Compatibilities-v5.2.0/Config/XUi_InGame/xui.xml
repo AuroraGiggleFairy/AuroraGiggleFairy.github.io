@@ -1,0 +1,7 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('V3_OutbackRoadies')">
+			<include filename="ModPatches/V3-OutbackRoadies/xui.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

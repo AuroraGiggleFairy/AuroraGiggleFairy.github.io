@@ -1,0 +1,7 @@
+<zzzAGF-Compatibilities>
+	<conditional>
+		<if cond="mod_loaded('V3_OutbackRoadies')">
+			<include filename="XUi_InGame/ModPatches/V3-OutbackRoadies/loot.xml"/>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -1637,7 +1637,12 @@ def extract_base_name(text: str) -> str:
     if not text:
         return ""
     name = re.sub(r"^\[ddcdfa\](?:Deco|AGF) \[-\]", "", text)
-    name = re.sub(r" \[[0-9a-fA-F]{6}\]\([^)]*\)\[-\]\s*$", "", name)
+    tag = re.compile(r"\s*\[[0-9a-fA-F]{6}\]\([^)]*\)\[-\]\s*$")
+    while True:
+        nxt = tag.sub("", name).strip()
+        if nxt == name:
+            break
+        name = nxt
     return name.strip()
 
 
@@ -2372,11 +2377,16 @@ FAMILY_LOOK: dict[str, tuple[str, str]] = {
 
 # First matching needle in source or family wins. Specific tokens before short ones.
 LOOK_RULES: tuple[tuple[tuple[str, ...], str, str], ...] = (
+    (("cntoldwestchest",), "Old West", "Chests"),
+    (("cntcoffinwildwest",), "Old West", "Coffins"),
+    (("wildwestwagon",), "Old West", "Wagons"),
+    (("horseshoe", "cowskull"), "Old West", "Props"),
     (("toaster", "dishwasher", "hoodrange", "microwave", "walloven", "gasrange",
       "charcoalgrill", "gasgrill", "coffeemaker", "cookingpot", "woodburningstove",
       "stovemodern", "stoveold", "sodafountain"), "Kitchen", "Appliances"),
-    (("minibeverage", "watercooler", "cntfridge", "retrofridge", "cntfreezer",
-      "icemachine"), "Kitchen", "Coolers"),
+    (("cntfreezer", "icemachine"), "Store", "Coolers"),
+    (("minibeverage", "watercooler", "cntfridge", "retrofridge"),
+     "Kitchen", "Coolers"),
     (("sinkkitchen", "countermountedsink", "utilitysink"), "Kitchen", "Sinks"),
     (("cnttoilet", "urinal", "bathstall", "bathroomstall", "portapotty",
       "drinkingfountain", "clawfoot", "cntbathtub", "showerhandle", "showerhead",
@@ -2394,7 +2404,7 @@ LOOK_RULES: tuple[tuple[tuple[str, ...], str, str], ...] = (
      "Furniture", "Cabinets"),
     (("cntgunsafe", "cntfootlocker", "cntdesksafe", "cntwallsafe", "cntatms"),
      "Storage", "Safes"),
-    (("cntwoodenchest", "cntoldwestchest", "cnthardenedchest", "cntlootchest",
+    (("cntwoodenchest", "cnthardenedchest", "cntlootchest",
       "cntburied", "introburied", "cntcasket", "cntcoffin", "cntmunitions",
       "militarygoods"), "Storage", "Chests"),
     (("cnttrash", "bintrash", "cntdomedtrash", "cntdumpster", "rubbish", "garbage_decor",
@@ -2420,7 +2430,7 @@ LOOK_RULES: tuple[tuple[tuple[str, ...], str, str], ...] = (
      "Vehicles", "Cars"),
     (("cntservicetruck", "cntboxtruck", "cntsemitruck", "semiflatbed", "cntfiretruck",
       "cntarmytruck", "cntfarmtruck", "cntbusschool", "cntbuscity", "cntbusshuttle",
-      "cntambulance", "backhoe", "excavator", "tractor", "forklift", "wildwestwagon"),
+      "cntambulance", "backhoe", "excavator", "tractor", "forklift"),
      "Vehicles", "Trucks"),
     (("lantern", "streetlight", "tablelamp", "desklamp", "ceilinglight",
       "candelabra", "chandelier", "fluorescent", "industriallight", "lightporch",
@@ -2446,8 +2456,8 @@ LOOK_RULES: tuple[tuple[tuple[str, ...], str, str], ...] = (
       "bollard", "parkingblock", "parkingmeter", "barrier", "barbed", "ironwrought",
       "logwall"), "Structure", "Fences"),
     (("ibeam", "bandit", "helipad", "concreteplate"), "Structure", "Beams"),
-    (("haybale", "cnttrough", "horseshoe", "driftwood", "resourcerock", "ore",
-      "rock0", "cinderblock", "firewood", "cowskull"), "Outdoor", "Farm / Nature"),
+    (("haybale", "cnttrough", "driftwood", "resourcerock", "ore",
+      "rock0", "cinderblock", "firewood"), "Outdoor", "Farm / Nature"),
     (("decometal", "swingset", "basketball", "bleachers", "decobenchpress",
       "stationarybike", "decotreadmill", "decoweight", "shootingrange"),
      "Outdoor", "Recreation"),

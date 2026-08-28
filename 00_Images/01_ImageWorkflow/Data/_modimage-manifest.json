@@ -126,8 +126,8 @@
     "media_file": ""
   },
   "AGF-NoEAC-CosmeticLockIcon": {
-    "signature": "ea0191289be1d089897e204328368f02930628b6e3ccbb6e7339df60458d936f",
-    "version": "3.1.1",
+    "signature": "c0403f4db5aad67b69fe944162bebf72f718aa9a685336de5c6568a386051c58",
+    "version": "3.1.2",
     "has_media": true,
     "media_file": "AGF-NoEAC-CosmeticLockIcon_01.png"
   },
@@ -576,8 +576,8 @@
     "media_file": ""
   },
   "AGF-HUDPlus-VisualEntityTracker": {
-    "signature": "13ffa95a9de2384e4baff78fb9fc9da80b31542bda56cf18b7b9ce3d1d0115e1",
-    "version": "1.0.1",
+    "signature": "102fabec49dd21cbac54ed6999a1a0b5f54f7cdfa4ac9163d3622a65940fe92a",
+    "version": "1.1.0",
     "has_media": true,
     "media_file": "AGF-HUDPlus-VisualEntityTracker_01.png"
   },

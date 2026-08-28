@@ -2,11 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Reflection;
 using System.Text.RegularExpressions;
+using HarmonyLib;
 using SandboxOpt = global::SandboxOptions.SandboxOptions;
 using SandboxOptBase = global::SandboxOptions.BaseSandboxOption;
 using SandboxOptManager = global::SandboxOptions.SandboxOptionManager;
 using SandboxOptPreset = global::SandboxOptions.SandboxOptionPreset;
+using SandboxValueSet = global::SandboxOptions.SandboxOptionValueSet;
 
 namespace DoomSandbox
 {
@@ -293,7 +296,7 @@ namespace DoomSandbox
 					int count = vs.GetValueCount();
 					for (int i = 0; i < count; i++)
 					{
-						string display = vs.GetDisplayAtIndex(i);
+						string display = SandboxValueSetCompat.GetDisplayAtIndex(vs, i);
 						if (ChoiceEquals(display, wanted))
 							return i;
 					}
@@ -341,6 +344,63 @@ namespace DoomSandbox
 			if (string.IsNullOrEmpty(a) || string.IsNullOrEmpty(b))
 				return false;
 			return string.Equals(a.Trim(), b.Trim(), StringComparison.OrdinalIgnoreCase);
+		}
+
+		/// <summary>
+		/// 3.0/3.1: GetDisplayAtIndex(int). 3.2: GetDisplayAtIndex(int, string languageName = null).
+		/// Direct calls bind one signature at compile time and throw MissingMethodException on the other.
+		/// </summary>
+		static class SandboxValueSetCompat
+		{
+			static MethodInfo _getDisplay;
+			static int _argCount = -1;
+
+			public static string GetDisplayAtIndex(object valueSet, int index)
+			{
+				if (valueSet == null)
+					return null;
+
+				Resolve();
+				if (_getDisplay == null)
+					return null;
+
+				try
+				{
+					object result = _argCount >= 2
+						? _getDisplay.Invoke(valueSet, new object[] { index, null })
+						: _getDisplay.Invoke(valueSet, new object[] { index });
+					return result as string;
+				}
+				catch
+				{
+					return null;
+				}
+			}
+
+			static void Resolve()
+			{
+				if (_argCount >= 0)
+					return;
+
+				// Bind on the abstract base so Invoke uses virtual dispatch on Float/Int/Bool sets.
+				var type = typeof(SandboxValueSet);
+				MethodInfo two = AccessTools.Method(type, "GetDisplayAtIndex", new[] { typeof(int), typeof(string) });
+				MethodInfo one = AccessTools.Method(type, "GetDisplayAtIndex", new[] { typeof(int) });
+				if (two != null)
+				{
+					_getDisplay = two;
+					_argCount = 2;
+				}
+				else if (one != null)
+				{
+					_getDisplay = one;
+					_argCount = 1;
+				}
+				else
+				{
+					_argCount = 0;
+				}
+			}
 		}
 
 		static short ClampRating(short rating)

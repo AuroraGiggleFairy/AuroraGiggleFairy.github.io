@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*August 25, 2026, 5:43 PM EST*
+*August 27, 2026, 11:32 PM EST*
 
 ## **1. About AGF**
 
@@ -196,7 +196,7 @@ Ways you can support AGF.
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.21.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.21.1)**
 
 All AGF mods in one convenient download.
 
@@ -211,7 +211,7 @@ Non-EAC mods are inside optional folders within the pack.
 ---
 
 <details markdown="1"><summary><i>Changelog (latest 3 releases)</i></summary>
-<ul><li>GigglePack v0.21.0 - August 25, 2026 5:43pm<ul><li>Change summary: +2 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">AGF-VP-DoorsPlus</a> (new: v4.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip">AGF-NoEAC-AudioOptionsPlus</a> (v2.0.0 -&gt; v2.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (v4.1.1 -&gt; v4.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.20.0 - August 22, 2026 4:09pm<ul><li>Change summary: +1 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">AGF-NoEAC-MapPlus</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip">AGF-HUDPlus-BMCounter</a> (v4.0.1 -&gt; v4.0.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v2.2.3 -&gt; v2.2.4)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.19.2 - August 21, 2026 5:55am<ul><li>Change summary: +0 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">AGF-NoEAC-OpenAllButton</a> (v2.0.0 -&gt; v2.0.1)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+<ul><li>GigglePack v0.21.1 - August 27, 2026 11:32pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.0.1 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (v3.1.1 -&gt; v3.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.21.0 - August 25, 2026 5:43pm<ul><li>Change summary: +2 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">AGF-VP-DoorsPlus</a> (new: v4.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip">AGF-NoEAC-AudioOptionsPlus</a> (v2.0.0 -&gt; v2.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (v4.1.1 -&gt; v4.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.20.0 - August 22, 2026 4:09pm<ul><li>Change summary: +1 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">AGF-NoEAC-MapPlus</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip">AGF-HUDPlus-BMCounter</a> (v4.0.1 -&gt; v4.0.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v2.2.3 -&gt; v2.2.4)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 </details>
 
 ---
@@ -275,7 +275,7 @@ Removes the Entering popup.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-HUDPlus-VisualEntityTracker_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-HUDPlus-VisualEntityTracker.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Visual Entity Tracker</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">Download</a><br>
+<b>AGF Visual Entity Tracker</b> &nbsp;·&nbsp; v1.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">Download</a><br>
 Provides visual compass cues for nearby entities within 25m.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -825,7 +825,7 @@ Auto-Run for keyboard and controller, configurable in the Options menu.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-CosmeticLockIcon_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-CosmeticLockIcon.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Armor Cosmetic Locked Icon</b> &nbsp;·&nbsp; v3.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">Download</a><br>
+<b>AGF Armor Cosmetic Locked Icon</b> &nbsp;·&nbsp; v3.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">Download</a><br>
 Shows a scrap icon on armor pieces whose cosmetics are still locked.
 <ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
 </td>

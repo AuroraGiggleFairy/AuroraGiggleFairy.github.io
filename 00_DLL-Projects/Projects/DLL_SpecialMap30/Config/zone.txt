@@ -1,0 +1,7 @@
+# Interior MAP30 coordinates (same space as doomlevels.xml start=).
+# Inclusive X/Z box. Y is ignored. Edit and restart to tweak.
+map=MAP30
+minX=39
+maxX=44
+minZ=57
+maxZ=61

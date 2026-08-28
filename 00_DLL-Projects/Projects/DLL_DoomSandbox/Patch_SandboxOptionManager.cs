@@ -292,8 +292,15 @@ namespace DoomSandbox
 	{
 		public static void Postfix(SandboxOptManager __instance)
 		{
-			// CreateOverrides strips IsModded then reloads XML; re-seed after that pass via LoadPresetFromXml too.
-			DoomSandboxRebuilder.EnsureBeGentlePreset(__instance);
+			try
+			{
+				// CreateOverrides strips IsModded then reloads XML; re-seed after that pass via LoadPresetFromXml too.
+				DoomSandboxRebuilder.EnsureBeGentlePreset(__instance);
+			}
+			catch (Exception ex)
+			{
+				DoomLog.Error("RemoveOverrides re-seed failed: " + ex);
+			}
 		}
 	}
 
@@ -302,7 +309,14 @@ namespace DoomSandbox
 	{
 		public static void Postfix(SandboxOptManager __instance)
 		{
-			DoomSandboxRebuilder.EnsureBeGentlePreset(__instance);
+			try
+			{
+				DoomSandboxRebuilder.EnsureBeGentlePreset(__instance);
+			}
+			catch (Exception ex)
+			{
+				DoomLog.Error("LoadPresetFromXml re-seed failed: " + ex);
+			}
 		}
 	}
 
