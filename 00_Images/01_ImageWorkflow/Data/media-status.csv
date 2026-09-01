@@ -1,5 +1,6 @@
 MOD_NAME,HAS_IMAGE_PREPARED,IMAGE_FILE
 AGF-4Modders-Fix4DestroyBiomeBadge,No,
+AGF-4Modders-Fix4PerkPageReset,No,
 AGF-BackpackPlus-060Slots,Yes,AGF-BackpackPlus-060Slots_01.png
 AGF-BackpackPlus-072Slots,Yes,AGF-BackpackPlus-072Slots_01.png
 AGF-BackpackPlus-084Slots,Yes,AGF-BackpackPlus-084Slots_01.png
@@ -19,9 +20,11 @@ AGF-NoEAC-GlobalStormTracker,Yes,AGF-NoEAC-GlobalStormTracker_01.png
 AGF-NoEAC-HideDLCCosmetics,Yes,AGF-NoEAC-HideDLCCosmetics_01.png
 AGF-NoEAC-MapPlus,Yes,AGF-NoEAC-MapPlus_01.png
 AGF-NoEAC-OpenAllButton,Yes,AGF-NoEAC-OpenAllButton_01.png
+AGF-NoEAC-PartyGroupPlus,No,
 AGF-NoEAC-ScreamerAlert,Yes,AGF-NoEAC-ScreamerAlert_01.png
 AGF-NoEAC-SmeltTimerOption,Yes,AGF-NoEAC-SmeltTimerOption_01.png
 AGF-NoEAC-Toolbelt12Slots,Yes,AGF-NoEAC-Toolbelt12Slots_01.png
+AGF-NoEAC-VisualEntityTrackerAddon,No,
 AGF-Requested-SmallerInteractionPrompt,Yes,AGF-Requested-SmallerInteractionPrompt_01.png
 AGF-Requested-TinyBuffsPopUp,Yes,AGF-Requested-TinyBuffsPopUp_01.png
 AGF-VP-AdminModdingSupport,Yes,AGF-VP-AdminModdingSupport_01.png
@@ -62,6 +65,7 @@ AGF-VP-VehiclePerformance,No,
 AGF-VP-VehiclesExtraSeating,Yes,AGF-VP-VehiclesExtraSeating_01.png
 AGF-VP-VehicleStoragePlus,Yes,AGF-VP-VehicleStoragePlus_01.png
 AGF-VP-ZombieCorpseLeaveQuicker,Yes,AGF-VP-ZombieCorpseLeaveQuicker_01.png
+AGF-VPS-SortingCart,No,
 zzzAGF-Requested-LootStaysOnEmpty,No,
 zzzAGF-Special-Compatibilities,Yes,zzzAGF-Special-Compatibilities_01.png
 zzzAGF-Special-LocalizationPatches,Yes,zzzAGF-Special-LocalizationPatches_01.png

@@ -1,0 +1,201 @@
+<zzzAGF-Compatibilities>
+	<!-- Outback last-writer on vanilla land speed/hop/water. Keep those. Re-apply VP accel/brakes/hills.
+	     Do not set velocityMax. Do not touch gyro, balloons, or tilt. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-VehiclePerformance')">
+			<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='brakeTorque']/@value">5000</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='upAngleMax']/@value">80</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='motorTorque_turbo']/@value">900,300,1150,300</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='brakeTorque']/@value">6000</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='upAngleMax']/@value">80</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='motorTorque_turbo']/@value">5000,500,6000,650</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='upAngleMax']/@value">90</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@name='upAngleMax']/@value">90</set>
+
+			<!-- Poco vehicles share Outback 4x4 speed. Apply VP 4x4 torque/brakes/hills only. -->
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBuggy']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBuggy']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBuggy']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCar']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCar']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCar']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoTruck']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoTruck']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoTruck']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoNux']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoNux']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoNux']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleBuggy']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleBuggy']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleBuggy']/property[@name='upAngleMax']/@value">90</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@name='motorTorque_turbo']/@value">6000,1500,7500,2000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@name='brakeTorque']/@value">10000</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@name='upAngleMax']/@value">90</set>
+
+			<!-- Spider Rider is minibike-class. Keep Outback speed. Apply minibike VP torque/brakes/hills. -->
+			<set xpath="/vehicles/vehicle[@name='vehicleSpiderRider']/property[@name='motorTorque_turbo']/@value">900,300,1150,300</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleSpiderRider']/property[@name='brakeTorque']/@value">6000</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleSpiderRider']/property[@name='upAngleMax']/@value">80</set>
+
+			<!-- Poco exits: mirror L/R, push first point farther so a rolling vehicle does not overlap the player. -->
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@class='seat2']/property[@name='exit']/@value">-2.2,0,-0.8 ~ 2.2,0,-2 ~ -2.2,0,-2.8 ~ -.4,0,-3.6 ~ .4,0,3 ~ -.4,2.4,-1</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoCar']/property[@class='seat3']/property[@name='exit']/@value">2.2,0,-0.8 ~ -2.2,0,-2 ~ 2.2,0,-2.8 ~ .4,0,-3.6 ~ -.4,0,3 ~ .4,2.4,-1</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBuggy']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBuggy']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCar']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCar']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@class='seat0']/property[@name='exit']/@value">-2.6,0,0 ~ 2.6,0,-1 ~ -.5,0,-5.5 ~ -.5,0,3.5 ~ -.5,2.8,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@class='seat1']/property[@name='exit']/@value">2.6,0,0 ~ -2.6,0,-1 ~ .5,0,-5.5 ~ .5,0,3.5 ~ .5,2.8,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@class='seat2']/property[@name='exit']/@value">-2.6,0,-2.5 ~ -2.6,0,-5.5 ~ 2.6,0,-5.5 ~ -.5,0,-6 ~ .5,0,3.5 ~ -.5,2.8,-2</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBus']/property[@class='seat3']/property[@name='exit']/@value">2.6,0,-2.5 ~ 2.6,0,-5.5 ~ -2.6,0,-5.5 ~ .5,0,-6 ~ -.5,0,3.5 ~ .5,2.8,-2</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoTruck']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoTruck']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoNux']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoNux']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@class='seat2']/property[@name='exit']/@value">-2.2,0,-1.2 ~ -2.2,0,-3 ~ 2.2,0,-3 ~ -.4,0,-3.6 ~ .4,0,3 ~ -.4,2.4,-1</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoRaceCar']/property[@class='seat3']/property[@name='exit']/@value">2.2,0,-1.2 ~ 2.2,0,-3 ~ -2.2,0,-3 ~ .4,0,-3.6 ~ -.4,0,3 ~ .4,2.4,-1</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleBuggy']/property[@class='seat0']/property[@name='exit']/@value">-2.2,0,0 ~ 2.2,0,-1 ~ -.4,0,-3.6 ~ -.4,0,3 ~ -.4,2.4,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleBuggy']/property[@class='seat1']/property[@name='exit']/@value">2.2,0,0 ~ -2.2,0,-1 ~ .4,0,-3.6 ~ .4,0,3 ~ .4,2.4,0</set>
+
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@class='seat0']/property[@name='exit']/@value">-2.4,0,0 ~ 2.4,0,-1 ~ -.5,0,-6.5 ~ -.5,0,3.5 ~ -.5,2.6,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@class='seat1']/property[@name='exit']/@value">2.4,0,0 ~ -2.4,0,-1 ~ .5,0,-6.5 ~ .5,0,3.5 ~ .5,2.6,0</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@class='seat2']/property[@name='exit']/@value">-2.4,0,-2 ~ -2.4,0,-6.5 ~ 2.4,0,-6.5 ~ -.5,0,-7 ~ .5,0,3.5 ~ -.5,2.6,-2</set>
+			<set xpath="/vehicles/vehicle[@name='vehiclePocoBattleCrane']/property[@class='seat3']/property[@name='exit']/@value">2.4,0,-2 ~ 2.4,0,-6.5 ~ -2.4,0,-6.5 ~ .5,0,-7 ~ -.5,0,3.5 ~ .5,2.6,-2</set>
+		</if>
+	</conditional>
+
+	<!-- Outback appends a second bicycle seat1 after Extra Seating. Rebuild AGF vanilla seats last. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-VehiclesExtraSeating')">
+			<remove xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@class='seat1']"/>
+			<remove xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@class='seat2']"/>
+			<append xpath="/vehicles/vehicle[@name='vehicleBicycle']">
+				<property class="seat1">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="21"/>
+					<property name="position" value="0, .1, -.1"/>
+					<property name="rotation" value="6, 0, 0"/>
+					<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>
+					<property name="IKFootLPosition" value="-0.15, .3, -.50"/>
+					<property name="IKFootLRotation" value="-8, 0, 0"/>
+					<property name="IKFootRPosition" value="0.15, .3, -.50"/>
+					<property name="IKFootRRotation" value="-8, 0, 0"/>
+				</property>
+				<property class="seat2">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="21"/>
+					<property name="position" value="0, .9, -1"/>
+					<property name="rotation" value="45, 0, 0"/>
+					<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>
+					<property name="IKFootLPosition" value="0, -1, -1.1"/>
+					<property name="IKFootLRotation" value="55, 0, 0"/>
+					<property name="IKFootRPosition" value="-.20, -1, 1"/>
+					<property name="IKFootRRotation" value="-40, 0, 0"/>
+					<property name="IKHandRPosition" value="0.2, 2.8, 1.9"/>
+					<property name="IKHandRRotation" value="0, 100, -230"/>
+				</property>
+			</append>
+
+			<remove xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='seat1']/property[@name='mod']"/>
+			<remove xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='seat2']"/>
+			<append xpath="/vehicles/vehicle[@name='vehicleMinibike']">
+				<property class="seat2">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="21"/>
+					<property name="position" value="0, .48, -1.15"/>
+					<property name="rotation" value="27, 0, 0"/>
+					<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>
+					<property name="IKFootLPosition" value="-.1, .4, 0"/>
+					<property name="IKFootLRotation" value="-10, 0, 0"/>
+					<property name="IKFootRPosition" value=".1, .4, 0"/>
+					<property name="IKFootRRotation" value="-10, 0, 0"/>
+					<property name="IKHandRPosition" value="0.2, 2.8, 1.9"/>
+					<property name="IKHandRRotation" value="0, 100, -230"/>
+				</property>
+			</append>
+
+			<remove xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='seat1']/property[@name='mod']"/>
+			<remove xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='seat2']"/>
+			<append xpath="/vehicles/vehicle[@name='vehicleMotorcycle']">
+				<property class="seat2">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="21"/>
+					<property name="position" value="0, .6, -1.6"/>
+					<property name="rotation" value="27, 0, 0"/>
+					<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>
+					<property name="IKFootLPosition" value="-.25, .4, 0"/>
+					<property name="IKFootLRotation" value="-10, 0, 0"/>
+					<property name="IKFootRPosition" value=".25, .4, 0"/>
+					<property name="IKFootRRotation" value="-10, 0, 0"/>
+					<property name="IKHandRPosition" value="0.2, 2.8, 1.9"/>
+					<property name="IKHandRRotation" value="0, 100, -230"/>
+				</property>
+			</append>
+
+			<!-- Pose 21 seats are Extra Seating extras. Pose 44/45 are vanilla Expanded Seating tailgate seats. -->
+			<remove xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@class='seat4'][property[@name='pose'][@value='21']]"/>
+			<remove xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@class='seat5'][property[@name='pose'][@value='21']]"/>
+			<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@class='seat5'][property[@name='pose'][@value='45']]/@class">seat7</set>
+			<set xpath="/vehicles/vehicle[@name='vehicleTruck4x4']/property[@class='seat4'][property[@name='pose'][@value='44']]/@class">seat6</set>
+			<append xpath="/vehicles/vehicle[@name='vehicleTruck4x4']">
+				<property class="seat4">
+					<property name="class" value="Seat"/>
+					<property name="pose" value="21"/>
+					<property name="position" value=".327, .609, -2"/>
+					<property name="rotation" value="-14, 90, 0"/>
+					<property name="exit" value="1.1,0,-3.2 ~ 2,0,-2 ~ -2,0,-2.2 ~ .5,0,-3.6 ~ -.5,0,3 ~ .3,1.4,-2"/>
+					<property name="IKFootLPosition" value="-.1, .6, .6"/>
+					<property name="IKFootLRotation" value="-60, 0, 0"/>
+					<property name="IKFootRPosition" value=".1, .6, .6"/>
+					<property name="IKFootRRotation" value="-60, 0, 0"/>
+					<property name="IKHandLPosition" value="-1, 1.5, -.8"/>
+					<property name="IKHandLRotation" value="0, 0, 0"/>
+					<property name="IKHandRPosition" value="1, 1.5, -1"/>
+					<property name="IKHandRRotation" value="180, 0, 0"/>
+				</property>
+				<property class="seat5">
+					<property name="class" value="Seat"/>
+					<property name="mod" value="seat"/>
+					<property name="pose" value="21"/>
+					<property name="position" value="-.26, .609, -2.5"/>
+					<property name="rotation" value="-14, -90, 0"/>
+					<property name="exit" value="1.1,0,-3.2 ~ 2,0,-2 ~ -2,0,-2.2 ~ .5,0,-3.6 ~ -.5,0,3 ~ .3,1.4,-2"/>
+					<property name="IKFootLPosition" value="-.1, .6, .6"/>
+					<property name="IKFootLRotation" value="-60, 0, 0"/>
+					<property name="IKFootRPosition" value=".1, .8, 0"/>
+					<property name="IKFootRRotation" value="0, 30, 0"/>
+					<property name="IKHandLPosition" value="-.1, .4, 0"/>
+					<property name="IKHandLRotation" value="0, 90, 0"/>
+					<property name="IKHandRPosition" value="1, 1.5, -1"/>
+					<property name="IKHandRRotation" value="180, 0, 0"/>
+				</property>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -28,3 +28,8 @@ __pycache__/
 
 # Local streaming dump (full Streamer.bot install + large assets; not pushed)
 StreamingManagement/Streaming/
+
+# Friend installer: webhook URL and local run logs (never commit)
+00_Support/FriendModInstaller/INSTALL-DISCORD-WEBHOOK.txt
+00_Support/FriendModInstaller/INSTALL-ONEDRIVE.txt
+00_Support/FriendModInstaller/INSTALL-LOG.txt

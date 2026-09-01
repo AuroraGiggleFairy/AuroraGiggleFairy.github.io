@@ -56,7 +56,7 @@ MOD SCOPE
   - Mod Version: {version}
   - 7d2d Version: MISSINGDATA
   - Website: https://auroragigglefairy.github.io/
-  - Mod Type: MISSINGDATA (Server-Side/EAC-Friendly or Client-Side/NoEAC)
+  - Mod Type: MISSINGDATA (Server-Side/EAC-Friendly, VPS, or Client-Side/NoEAC)
   - Safe to install on existing game: MISSINGDATA
   - Safe to remove from existing game: MISSINGDATA
   - Dependencies: None, works standalone.
@@ -275,6 +275,7 @@ def to_display_name(name: str) -> str:
             "AGF-NoEAC-",
             "AGF-HUDPluszOther-",
             "AGF-HUDPlus-",
+            "AGF-VPS-",
             "AGF-VP-",
             "AGF-4Modders-",
             "AGF-Requested-",
@@ -321,7 +322,7 @@ def append_compatibility_row(mod_name: str) -> None:
     new_row[mod_name_idx] = mod_name
     if "MOD_TYPE_ID" in fieldnames:
         mod_type_idx = fieldnames.index("MOD_TYPE_ID")
-        new_row[mod_type_idx] = "TBD"
+        new_row[mod_type_idx] = "5" if mod_name.startswith("AGF-VPS-") else "TBD"
     if "QUOTE_FILE" in fieldnames:
         quote_idx = fieldnames.index("QUOTE_FILE")
         new_row[quote_idx] = f"{mod_name}.txt"

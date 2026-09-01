@@ -14,7 +14,8 @@ public static class HideDlcCatalog
 		new HideDlcPack("classicSurvivor", "ClassicSurvivorSet"),
 		new HideDlcPack("holidayHats", "HolidayHatsSet"),
 		new HideDlcPack("beachwear", "BeachwearSet"),
-		new HideDlcPack("bigBeak", "BigBeakSet")
+		new HideDlcPack("bigBeak", "BigBeakSet"),
+		new HideDlcPack("workingStiff", "WorkingStiffSet")
 	};
 
 	private static readonly Dictionary<ItemClass, string> PackKeyByItem = new Dictionary<ItemClass, string>();
@@ -32,7 +33,8 @@ public static class HideDlcCatalog
 		{ "groupSnowmanHat", "holidayHats" },
 		{ "groupTreeHat", "holidayHats" },
 		{ "groupBeach", "beachwear" },
-		{ "groupBigbeak", "bigBeak" }
+		{ "groupBigbeak", "bigBeak" },
+		{ "groupWorkingStiff", "workingStiff" }
 	};
 
 	public static bool TryGetPack(string key, out HideDlcPack pack)
@@ -192,6 +194,8 @@ public static class HideDlcCatalog
 				return "beachwear";
 			case EntitlementSetEnum.HenpocalypseCosmetic:
 				return "bigBeak";
+			case EntitlementSetEnum.WorkingStiffCosmetic:
+				return "workingStiff";
 			default:
 				return null;
 		}

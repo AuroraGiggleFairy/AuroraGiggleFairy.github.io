@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*August 27, 2026, 11:32 PM EST*
+*September 1, 2026, 9:36 AM EST*
 
 ## **1. About AGF**
 
@@ -26,9 +26,10 @@
   - [C. BACKPACK PLUS MODS](#c-backpack-plus-mods)
   - [D. SPECIAL MOD PATCHES](#d-special-mod-patches)
   - [E. VANILLA PLUS MODS](#e-vanilla-plus-mods)
-  - [F. NO EAC MODS](#f-no-eac-mods)
-  - [G. 4MODDERS MODS](#g-4modders-mods)
-  - [H. REQUESTED MODS](#h-requested-mods)
+  - [F. VPS MODS](#f-vps-mods)
+  - [G. NO EAC MODS](#g-no-eac-mods)
+  - [H. 4MODDERS MODS](#h-4modders-mods)
+  - [I. REQUESTED MODS](#i-requested-mods)
 
 <br>
 
@@ -196,7 +197,7 @@ Ways you can support AGF.
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.21.1)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.22.0)**
 
 All AGF mods in one convenient download.
 
@@ -211,7 +212,7 @@ Non-EAC mods are inside optional folders within the pack.
 ---
 
 <details markdown="1"><summary><i>Changelog (latest 3 releases)</i></summary>
-<ul><li>GigglePack v0.21.1 - August 27, 2026 11:32pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.0.1 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (v3.1.1 -&gt; v3.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.21.0 - August 25, 2026 5:43pm<ul><li>Change summary: +2 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">AGF-VP-DoorsPlus</a> (new: v4.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip">AGF-NoEAC-AudioOptionsPlus</a> (v2.0.0 -&gt; v2.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (v4.1.1 -&gt; v4.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.20.0 - August 22, 2026 4:09pm<ul><li>Change summary: +1 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">AGF-NoEAC-MapPlus</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-BMCounter.zip">AGF-HUDPlus-BMCounter</a> (v4.0.1 -&gt; v4.0.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v2.2.3 -&gt; v2.2.4)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+<ul><li>GigglePack v0.22.0 - September 1, 2026 9:36am<ul><li>Change summary: +4 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4PerkPageReset.zip">AGF-4Modders-Fix4PerkPageReset</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">AGF-NoEAC-PartyGroupPlus</a> (new: v1.1.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip">AGF-NoEAC-VisualEntityTrackerAddon</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">AGF-VPS-SortingCart</a> (new: v2.0.1)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.1.0 -&gt; v1.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (v1.0.0 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">AGF-VP-DyesPlus</a> (v4.0.0 -&gt; v4.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.21.1 - August 27, 2026 11:32pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.0.1 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (v3.1.1 -&gt; v3.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.21.0 - August 25, 2026 5:43pm<ul><li>Change summary: +2 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">AGF-VP-DoorsPlus</a> (new: v4.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AudioOptionsPlus.zip">AGF-NoEAC-AudioOptionsPlus</a> (v2.0.0 -&gt; v2.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-ModSlotsPlus.zip">AGF-VP-ModSlotsPlus</a> (v4.1.1 -&gt; v4.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 </details>
 
 ---
@@ -275,7 +276,7 @@ Removes the Entering popup.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-HUDPlus-VisualEntityTracker_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-HUDPlus-VisualEntityTracker.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Visual Entity Tracker</b> &nbsp;·&nbsp; v1.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">Download</a><br>
+<b>AGF Visual Entity Tracker</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">Download</a><br>
 Provides visual compass cues for nearby entities within 25m.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -526,8 +527,8 @@ Drink acid for risky fun with buffs, damage, and trippy screen effects.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-DyesPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-DyesPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Dyes Plus</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">Download</a><br>
-Adds 27 dyes; craft any dye for 15 paint, or scrap to swap colors.
+<b>AGF Dyes Plus</b> &nbsp;·&nbsp; v4.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">Download</a><br>
+Adds 36 dyes; craft any dye for 15 paint, or scrap to swap colors.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -788,7 +789,34 @@ Zombie corpses despawn in 10 seconds instead of 30 for game performance.
 
 <br>
 
-## **F. NO EAC MODS**
+## **F. VPS MODS**
+
+[**⬇️ Download All VP Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_VP_All.zip)
+
+Vanilla Plus Special. Server-Side (EAC Varies): dedicated EAC can be on or off. Singleplayer and player-hosted: EAC off required.
+
+*[(Back to Top)](#agf-7-days-to-die-mods)*
+
+---
+
+---
+
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-SortingCart_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-SortingCart.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Sorting Cart</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">Download</a><br>
+Auto-sorts like items from a Sorting Cart into nearby storage.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
+</td>
+</tr></table>
+
+---
+
+---
+
+<br>
+
+## **G. NO EAC MODS**
 
 [**⬇️ Download All NoEAC Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_NoEAC_All.zip)
 
@@ -865,7 +893,7 @@ Sends a global chat message showing where the storm is and when it ends.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-HideDLCCosmetics_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-HideDLCCosmetics.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Hide DLC Cosmetics</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">Download</a><br>
+<b>AGF Hide DLC Cosmetics</b> &nbsp;·&nbsp; v1.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">Download</a><br>
 Adds an in-game option to hide DLC cosmetics from your view.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -888,6 +916,16 @@ Hover the cursor on the map to see location names and POI bounds.
 <b>AGF Open All Button</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-OpenAllButton.zip">Download</a><br>
 Adds an Open All button that rapidly opens bundled item stacks.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-PartyGroupPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-PartyGroupPlus.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>BETA - AGF Party Group Plus</b> &nbsp;·&nbsp; v1.1.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">Download</a><br>
+Unlimited party size, admin force-party options, 192 player colors.
+<ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
 
@@ -922,12 +960,22 @@ Lets you switch forge smelt timer between one item and full stack.
 </tr></table>
 
 ---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-VisualEntityTrackerAddon_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-VisualEntityTrackerAddon.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Visual Entity Tracker Addon</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip">Download</a><br>
+Per-player on/off addon for AGF Visual Entity Tracker mod.
+<ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
 
 ---
 
 <br>
 
-## **G. 4MODDERS MODS**
+## **H. 4MODDERS MODS**
 
 [**⬇️ Download All 4Modders Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_4Modders_All.zip)
 
@@ -950,12 +998,22 @@ Prevents DestroyBiomeBadge from accidentally removing clothing items.
 </tr></table>
 
 ---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-4Modders-Fix4PerkPageReset_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-4Modders-Fix4PerkPageReset.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Fix4Perk Page Reset</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4PerkPageReset.zip">Download</a><br>
+Stops a perk buy from resetting a multi-page perk back to page 1.
+<ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
 
 ---
 
 <br>
 
-## **H. REQUESTED MODS**
+## **I. REQUESTED MODS**
 
 [**⬇️ Download All Requested Mods**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_Requested_All.zip)
 
@@ -1002,7 +1060,7 @@ Loot stays after emptying, except airdrops and buried supplies.
 
 <br>
 
-## **I. AGF-7d2d-v2.6-GigglePack-Final**
+## **J. AGF-7d2d-v2.6-GigglePack-Final**
 
 [**⬇️ Download AGF 7D2D v2.6 Final**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-7d2d-v2.6-GigglePack-Final.zip)
 

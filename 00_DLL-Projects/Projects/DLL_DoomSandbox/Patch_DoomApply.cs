@@ -67,25 +67,101 @@ namespace DoomSandbox
 		}
 
 		/// <summary>
-		/// Player Damage Taken: flat ±1 to incoming hit strength only.
-		/// DoomArmour splits that strength into health vs stamina armour; do not touch stamina here.
-		/// Skip while buffInvulnerability is active (resist zeroes the hit after this Prefix).
+		/// Player Damage Taken: ±1 to remaining health AND ±1 to the doomArmour CVar,
+		/// after DoomArmour's green 40% / blue 60% split. Do not add to the pre-split total.
+		/// Health and armour are floored at 0 so a −1 never heals. Incoming 0 (BFG, etc.)
+		/// is left alone so we do not invent damage. −1 armour only refunds what this hit spent.
+		/// Skip while buffInvulnerability is active.
 		/// </summary>
-		[HarmonyPatch(typeof(EntityPlayer), nameof(EntityPlayer.DamageEntity))]
+		internal static class PlayerFlatDamageState
+		{
+			public const string InvulnerabilityBuff = "buffInvulnerability";
+			public const string PoolVar = "doomArmour";
+			public const string PctVar = ".doomArmourPct";
+			public const string ArmourHarmonyId = "com.doommod.armour";
+
+			[ThreadStatic] public static bool Apply;
+			[ThreadStatic] public static float ArmourBefore;
+		}
+
+		[HarmonyPatch(typeof(EntityAlive), "damageEntityLocal")]
+		[HarmonyPriority(Priority.First)]
+		[HarmonyBefore(PlayerFlatDamageState.ArmourHarmonyId)]
+		public static class Patch_PlayerFlatDamage_Capture
+		{
+			public static void Prefix(EntityAlive __instance, int _strength)
+			{
+				PlayerFlatDamageState.Apply = false;
+				PlayerFlatDamageState.ArmourBefore = 0f;
+
+				if (Mathf.RoundToInt(DoomSandboxRuntime.PlayerDamageFlat) == 0)
+					return;
+				if (_strength <= 0)
+					return;
+				if (!(__instance is EntityPlayer player))
+					return;
+				if (player.Buffs != null && player.Buffs.HasBuff(PlayerFlatDamageState.InvulnerabilityBuff))
+					return;
+
+				if (player.Buffs != null)
+					PlayerFlatDamageState.ArmourBefore = Mathf.Max(0f, player.Buffs.GetCustomVar(PlayerFlatDamageState.PoolVar));
+				PlayerFlatDamageState.Apply = true;
+			}
+		}
+
+		[HarmonyPatch(typeof(EntityAlive), "damageEntityLocal")]
+		[HarmonyAfter(PlayerFlatDamageState.ArmourHarmonyId)]
 		public static class Patch_PlayerFlatDamage
 		{
-			const string InvulnerabilityBuff = "buffInvulnerability";
-
-			public static void Prefix(EntityPlayer __instance, ref int _strength)
+			public static void Prefix(EntityAlive __instance, ref int _strength)
 			{
+				if (!PlayerFlatDamageState.Apply)
+					return;
+				PlayerFlatDamageState.Apply = false;
+
 				int flat = Mathf.RoundToInt(DoomSandboxRuntime.PlayerDamageFlat);
 				if (flat == 0)
 					return;
 
-				if (__instance?.Buffs != null && __instance.Buffs.HasBuff(InvulnerabilityBuff))
+				_strength = Math.Max(0, _strength + flat);
+
+				var player = __instance as EntityPlayer;
+				if (player == null)
 					return;
 
-				_strength = Math.Max(0, _strength + flat);
+				ApplyArmourFlat(player, flat, PlayerFlatDamageState.ArmourBefore);
+			}
+
+			static void ApplyArmourFlat(EntityPlayer player, int flat, float armourBefore)
+			{
+				var buffs = player.Buffs;
+				if (buffs == null)
+					return;
+
+				float held = Mathf.Max(0f, buffs.GetCustomVar(PlayerFlatDamageState.PoolVar));
+				float next;
+				if (flat > 0)
+				{
+					next = Mathf.Max(0f, held - flat);
+				}
+				else
+				{
+					float spent = armourBefore - held;
+					if (spent <= 0f)
+						return;
+					next = Mathf.Min(armourBefore, held + (-flat));
+				}
+
+				float max = 0f;
+				if (player.Stats?.Stamina != null)
+					max = player.Stats.Stamina.ModifiedMax;
+				next = Mathf.Clamp(next, 0f, max);
+				if (Mathf.Abs(next - held) < 0.0001f)
+					return;
+
+				buffs.SetCustomVar(PlayerFlatDamageState.PoolVar, next, true, CVarOperation.set, true);
+				float pct = max <= 0f ? 0f : next / max;
+				buffs.SetCustomVar(PlayerFlatDamageState.PctVar, pct, false, CVarOperation.set, false);
 			}
 		}
 

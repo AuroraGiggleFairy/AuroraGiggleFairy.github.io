@@ -79,18 +79,6 @@ DEFAULT_OPTIONS_INNER_TEMPLATE = """
             </entry>
         </if>
     </conditional>
-    <conditional>
-        <if cond="mod_loaded('AGF-NoEAC-VisualEntityTracker')">
-            <entry name="entityTracker">
-                <rect name="agfOptionsTracker" controller="VisualEntityTrackerOptions, NoEACVisualEntityTracker" pos="0,0" width="280" height="120" disableautobackground="true">
-                    <label name="optionsTrackerTitle" pos="0,-5" depth="10" width="280" height="28" font_size="26" justify="center" color="[textBoldingColor]" effect="outline" effect_color="0,0,0,255" effect_distance="1,1" text_key="windowESC_color_options_tracker_title" visible="{opt_row_2_visible}" />
-                    <sprite name="optionsDivider" pos="-5,5" depth="10" width="290" height="5" sprite="menu_empty3px" color="[panelBorderColor]" type="sliced" fillcenter="false" globalopacity="false" />
-                    <simplebutton name="btnVetOff" pos="50,-41" depth="11" width="84" height="32" font_size="24" sprite="ui_game_header_fill" bordercolor="[pageTabButtonBorderColor]" defaultcolor="[pageTabButtonBackgroundColor]" selectedsprite="menu_empty3px" selectedcolor="[pageTabButtonSelectedColor]" selected="{opt_row_2_off_selected_visible}" caption_key="windowESC_color_options_tracker_off" tooltip_key="windowESC_options_tracker_tooltip_off" visible="{opt_row_2_visible}" gamepad_selectable="false" foregroundlayer="false" on_press="true" />
-                    <simplebutton name="btnVetOn" pos="146,-41" depth="11" width="84" height="32" font_size="24" sprite="ui_game_header_fill" bordercolor="[pageTabButtonBorderColor]" defaultcolor="[pageTabButtonBackgroundColor]" selectedsprite="menu_empty3px" selectedcolor="[pageTabButtonSelectedColor]" selected="{opt_row_2_on_selected_visible}" caption_key="windowESC_color_options_tracker_on" tooltip_key="windowESC_options_tracker_tooltip_on" visible="{opt_row_2_visible}" gamepad_selectable="false" foregroundlayer="false" on_press="true" />
-                </rect>
-            </entry>
-        </if>
-    </conditional>
     <entry name="END">
         <sprite name="optionsDivider" pos="-5,15" depth="10" width="290" height="5" sprite="menu_empty3px" color="[panelBorderColor]" type="sliced" fillcenter="false" globalopacity="false" />
     </entry>

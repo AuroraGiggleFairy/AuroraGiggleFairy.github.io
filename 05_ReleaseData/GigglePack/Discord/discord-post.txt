@@ -1,13 +1,17 @@
-#   GigglePack v0.21.1 - *August 27, 2026 11:32pm*
+#   GigglePack v0.22.0 - *September 1, 2026 9:36am*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
 ## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-###  **Change summary: +0 new, ~2 updated, =0 renamed, -0 removed**
+###  **Change summary: +4 new, ~3 updated, =0 renamed, -0 removed**
 - **New mods:**
-  - None
+  - [AGF-4Modders-Fix4PerkPageReset](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4PerkPageReset.zip) (new: v1.0.0)
+  - [AGF-NoEAC-PartyGroupPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip) (new: v1.1.1-BETA)
+  - [AGF-NoEAC-VisualEntityTrackerAddon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip) (new: v1.0.0)
+  - [AGF-VPS-SortingCart](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip) (new: v2.0.1)
 - **Updated existing mods:**
-  - [AGF-HUDPlus-VisualEntityTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip) (v1.0.1 -> v1.1.0)
-  - [AGF-NoEAC-CosmeticLockIcon](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip) (v3.1.1 -> v3.1.2)
+  - [AGF-HUDPlus-VisualEntityTracker](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip) (v1.1.0 -> v1.1.1)
+  - [AGF-NoEAC-HideDLCCosmetics](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip) (v1.0.0 -> v1.1.0)
+  - [AGF-VP-DyesPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip) (v4.0.0 -> v4.1.0)
 - **Renamed mods:**
   - None
 - **Removed mods:**

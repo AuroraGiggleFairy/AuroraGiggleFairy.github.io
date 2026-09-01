@@ -30,4 +30,9 @@
 			<include filename="ModPatches/V3-OutbackRoadies/windows.xml"/>
 		</if>
 	</conditional>
+	<conditional>
+		<if cond="mod_loaded('0-SCore_sphereii')">
+			<include filename="ModPatches/0-SCore_sphereii/windows.xml"/>
+		</if>
+	</conditional>
 </zzzAGF-Compatibilities>

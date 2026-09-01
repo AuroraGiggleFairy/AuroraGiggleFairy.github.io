@@ -6,6 +6,7 @@
 2 Server-side (EAC Off): EAC off required; server install works for all joining players.
 3 Server/Client-side (Required): EAC off required; host and joining players must install it.
 4 Client-side (Only): EAC off required; server install has no effect; only the installing player gets the feature.
+5 Server-side (EAC Varies): Server install works for all joining players; dedicated EAC on or off; otherwise EAC off required.
 
 
 ### Legend

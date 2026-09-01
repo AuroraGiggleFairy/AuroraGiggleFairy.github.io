@@ -22,3 +22,9 @@ MOD TYPE 4
     - Server install has no effect.
     - Install on each player PC.
     - Also works in singleplayer.
+
+MOD TYPE 5
+  - Mod Type: Server-Side (EAC Varies)
+    - Server install works for all joining players.
+    - Dedicated server: EAC can be on or off.
+    - Singleplayer and player-hosted: EAC off required.

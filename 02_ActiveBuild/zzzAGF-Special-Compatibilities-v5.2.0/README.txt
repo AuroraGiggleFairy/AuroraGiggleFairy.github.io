@@ -46,6 +46,7 @@ OTHER DETAILS
     - VanillaExtended
     - V2_OakravenAmmoPress
     - Companions
+    - Outback Roadies
 
 
 
@@ -209,6 +210,11 @@ I. AGF Modding Focus
 ========================================================================
                                CHANGELOG                                
 ========================================================================
+
+v5.3.0
+    - Outback Roadies added!
+
+------------------------------------------------------------------------
 
 v5.2.0
     - Added compatibility with the Companions mod.

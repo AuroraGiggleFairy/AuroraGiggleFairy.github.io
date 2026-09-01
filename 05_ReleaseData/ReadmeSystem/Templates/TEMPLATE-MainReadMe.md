@@ -22,9 +22,10 @@
   - [C. BACKPACK PLUS MODS](#c-backpack-plus-mods)
   - [D. SPECIAL MOD PATCHES](#d-special-mod-patches)
   - [E. VANILLA PLUS MODS](#e-vanilla-plus-mods)
-  - [F. NO EAC MODS](#f-no-eac-mods)
-  - [G. 4MODDERS MODS](#g-4modders-mods)
-  - [H. REQUESTED MODS](#h-requested-mods)
+  - [F. VPS MODS](#f-vps-mods)
+  - [G. NO EAC MODS](#g-no-eac-mods)
+  - [H. 4MODDERS MODS](#h-4modders-mods)
+  - [I. REQUESTED MODS](#i-requested-mods)
 
 <br>
 

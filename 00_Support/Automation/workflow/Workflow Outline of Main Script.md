@@ -245,7 +245,7 @@ Use only `00_Support/Automation/workflow/00_dispatch.py` with one of these modes
    - No optionals.
 
    **GigglePack_All**
-   - Root: All `AGF-HUDPlus*`, all `AGF-VP-*`, all `zzzAGF-Special*`, and the one `AGF-BackpackPlus-84Slots-*` mod.
+   - Root: All `AGF-HUDPlus*`, all `AGF-VP-*`, all `AGF-VPS-*`, all `zzzAGF-Special*`, and the one `AGF-BackpackPlus-84Slots-*` mod.
    - `.Optionals-BackpackPlus`: All `AGF-BackpackPlus-*` mods.
    - `.Optionals-HUDPlus`: All `AGF-HUDPlus*` and all `AGF-HUDPluszOther-*` mods.
    - `.Optionals-NoEAC`: All `AGF-NoEAC-*` mods.
@@ -264,8 +264,9 @@ Use only `00_Support/Automation/workflow/00_dispatch.py` with one of these modes
    - No optionals.
 
    **VP_All**
-   - Root: All `AGF-VP-*` and all `zzzAGF-Special*` mods.
+   - Root: All `AGF-VP-*`, all `AGF-VPS-*`, and all `zzzAGF-Special*` mods.
    - `.Optionals-NoEAC`: All `AGF-NoEAC-*` mods.
+   - No `00_VPS_All`. Classify `AGF-VPS-*` before `AGF-VP-*` (`AGF-VPS-` also starts with `AGF-VP-`).
 
 3. **How optionals work:**
    - Optionals are folders inside the zip (like `.Optionals-BackpackPlus`) that contain extra mods for that pack.

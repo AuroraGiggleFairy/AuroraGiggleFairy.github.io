@@ -284,6 +284,18 @@
 			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='Location']//label[@name='MessageContent']"/>
 		</if>
 	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-NoEAC-ScreamerAlert') and mod_loaded('AGF-NoEAC-EnhancedAGF')">
+			<!-- ScreamerAlert appends to windowCompass before Outback deletes it. Restore the EnhancedAGF banner on AGF compass. -->
+			<append xpath="/windows/window[@name='windowCompass']">
+				<rect name="AGFEnhancedScreamerAlertRect" pos="-250,-4" controller="EnhancedScreamerAlerts, EnhancedAGF" visible="{screameralertsvisible}">
+					<sprite depth="2" name="Background" pos="125,-131" width="250" height="98" sprite="ui_game_header_fill" color="0,0,0,180" type="sliced" pivot="center"/>
+					<label depth="3" name="ScreamerAlert" pos="125,-113" font_size="28" color="[white]" style="outline" text="{screameralert}" pivot="center" justify="center" width="250" height="38"/>
+					<label depth="3" name="ScreamerHordeAlert" pos="125,-149" font_size="28" color="[white]" style="outline" text="{screamerhordealert}" pivot="center" justify="center" width="250" height="38"/>
+				</rect>
+			</append>
+		</if>
+	</conditional>
 
 	<!-- AGF backpack window sizes. Outback resized leftover windowBackpack to 10x6; used window is windowBackpackAGF. -->
 	<conditional>
@@ -333,6 +345,64 @@
 				</else>
 			</conditional>
 		</else>
+	</conditional>
+
+	<!-- Outback sets windowLooting to 10x10 for dropped backpack. That clips XL storage (up to 12x14) and 72+ dropped bags. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-LargerStorageOption') or mod_loaded('AGF-BackpackPlus-060Slots') or mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_width">56</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_height">56</set>
+			<setattribute xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/item_stackAGF" name="cell_size">56</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-LargerStorageOption') and (mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots'))">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='header']/rect[@controller='ContainerStandardControls']/@visible">true</set>
+		</if>
+	</conditional>
+
+	<!-- Outback forge group uses windowThreeForgeInput. SmeltingPlus / SmeltTimer still xpath leftover windowForgeInput. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SmeltingPlus')">
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/@height">280</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/sprite[@name='backgroundMain']/@pos">0,-46</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/sprite[@name='backgroundMain']/@height">229</set>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/sprite[@name='backgroundMain']" name="width">228</setattribute>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']/@pos">0,-46</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']/@height">228</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']/grid/@pos">3,-3</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/@pos">78,-49</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/@height">224</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/grid/@rows">6</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/grid/@cell_height">38</set>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/sprite" name="pos">-1,0</setattribute>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/sprite" name="width">149</setattribute>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/sprite" name="height">225</setattribute>
+			<append xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']">
+				<label depth="10" pos="7,-13" height="64" width="64" color="255,255,255,120" text="1" font_size="54" justify="center"/>
+				<label depth="10" pos="7,-88" height="64" width="64" color="255,255,255,120" text="2" font_size="54" justify="center"/>
+				<label depth="10" pos="7,-163" height="64" width="64" color="255,255,255,120" text="3" font_size="54" justify="center"/>
+			</append>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-NoEAC-SmeltTimerOption')">
+			<insertafter xpath="/windows/window[@name='windowThreeForgeInput']/rect[contains(@style,'header.panel')]">
+				<rect name="smeltTimerModeBar" depth="5" pos="0,-46" width="228" height="32" controller="SmeltTimerModeBar, SmeltTimerTotal">
+					<sprite depth="1" name="modeBarBg" sprite="menu_empty3px" color="[darkGrey]" type="sliced" fillcenter="true" width="228" height="32"/>
+					<sprite depth="2" name="modeBarBorder" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="228" height="32" foregroundlayer="true"/>
+					<sprite depth="3" name="modeBarClock" width="22" height="22" pos="6,-5" sprite="ui_game_symbol_clock" color="[beige]" foregroundlayer="true" tooltip_key="xuiSmeltTimerClockTooltip"/>
+					<simplebutton name="btnSmeltTimerSingle" depth="3" pos="34,-5" width="94" height="22" font_size="16" caption_key="xuiSmeltTimerSingle" tooltip_key="xuiSmeltTimerSingleTooltip" bordercolor="12,12,12" defaultcolor="58,58,58" selectedsprite="menu_empty" selectedcolor="74,33,150" foregroundlayer="false" selected="{smelttimer_single_selected}" sound="[paging_click]"/>
+					<simplebutton name="btnSmeltTimerTotal" depth="3" pos="130,-5" width="94" height="22" font_size="16" caption_key="xuiSmeltTimerTotal" tooltip_key="xuiSmeltTimerTotalTooltip" bordercolor="12,12,12" defaultcolor="58,58,58" selectedsprite="menu_empty" selectedcolor="74,33,150" foregroundlayer="false" selected="{smelttimer_total_selected}" sound="[paging_click]"/>
+				</rect>
+			</insertafter>
+		</if>
 	</conditional>
 
 	<conditional>

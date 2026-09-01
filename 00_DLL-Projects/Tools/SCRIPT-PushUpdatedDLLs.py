@@ -34,7 +34,7 @@ DEFAULT_PROJECT_RENAME_OVERRIDES: Dict[str, str] = {
     "roboticinboxagffiles": "SortingBox",
 }
 
-VALID_CATEGORIES = {"NoEAC", "Fixes", "Security", "4Modders"}
+VALID_CATEGORIES = {"NoEAC", "VPS", "Fixes", "Security", "4Modders"}
 
 DEFAULT_PROJECT_CATEGORY_OVERRIDES: Dict[str, str] = {
     "anticm": "Security",
@@ -61,7 +61,8 @@ def mod_base_from_folder(folder_name: str) -> str:
 
 
 def mod_short_name(mod_base: str) -> str:
-    return re.sub(r"^AGF-NoEAC-", "", mod_base, flags=re.IGNORECASE)
+    text = re.sub(r"^AGF-VPS-", "", mod_base, flags=re.IGNORECASE)
+    return re.sub(r"^AGF-NoEAC-", "", text, flags=re.IGNORECASE)
 
 
 def file_sha256(path: str) -> str:
@@ -218,7 +219,7 @@ def collect_noeac_mod_bases() -> Dict[str, str]:
             full = os.path.join(lane, name)
             if not os.path.isdir(full):
                 continue
-            if not name.startswith("AGF-NoEAC-"):
+            if not (name.startswith("AGF-NoEAC-") or name.startswith("AGF-VPS-")):
                 continue
             base = mod_base_from_folder(name)
             key = normalize_key(mod_short_name(base))
@@ -442,7 +443,7 @@ def main() -> int:
 
     if args.verbose:
         print(f"Projects scanned: {len(projects)}")
-        print(f"NoEAC mod bases discovered: {len(mod_bases)}")
+        print(f"DLL mod bases discovered: {len(mod_bases)}")
 
     return 0
 

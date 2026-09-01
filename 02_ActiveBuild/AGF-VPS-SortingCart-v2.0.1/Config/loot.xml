@@ -1,0 +1,25 @@
+<config>
+
+
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-LargerStorageOption')">
+			<append xpath="/lootcontainers">
+				<!-- PLAYER cntSortingCart-->
+				<lootcontainer name="playerSortingCart" count="0" size="12,14" sound_open="UseActions/crate_iron_open" sound_close="UseActions/crate_iron_close" loot_quality_template="qualBaseTemplate">
+					<item name="cobweb" count="0" />
+				</lootcontainer>
+			</append>
+		</if>
+		<else>
+			<append xpath="/lootcontainers">
+				<!-- PLAYER cntSortingCart-->
+				<lootcontainer name="playerSortingCart" count="0" size="9,10" sound_open="UseActions/crate_iron_open" sound_close="UseActions/crate_iron_close" loot_quality_template="qualBaseTemplate">
+					<item name="cobweb" count="0" />
+				</lootcontainer>
+			</append>
+		</else>
+	</conditional>
+
+		
+	
+</config>

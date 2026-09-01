@@ -40,4 +40,12 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+  <PropertyGroup>
+    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-NoEAC-HideDLCCosmetics-v1.0.0</ActiveBuildDir>
+    <GameModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-HideDLCCosmetics-v1.0.0</GameModDir>
+  </PropertyGroup>
+  <Target Name="CopyToModFolders" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ActiveBuildDir)" SkipUnchangedFiles="true" Condition="Exists('$(ActiveBuildDir)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="true" Condition="Exists('$(GameModDir)')" />
+  </Target>
 </Project>

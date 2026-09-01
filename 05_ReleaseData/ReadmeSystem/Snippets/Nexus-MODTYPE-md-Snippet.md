@@ -9,3 +9,6 @@ Server/Client-Side (Required): EAC off is required, the host and all joining pla
 
 MOD TYPE 4
 Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.
+
+MOD TYPE 5
+Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.

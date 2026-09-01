@@ -5,6 +5,52 @@ using UnityEngine;
 
 namespace DamageTypeFix
 {
+	internal static class BfgPlayerIgnore
+	{
+		static readonly FastTags<TagGroup.Global> BfgTag = FastTags<TagGroup.Global>.Parse("perkBFGExpert");
+
+		public static bool IsBfg(DamageSource source)
+		{
+			ItemClass itemClass = source?.AttackingItem?.ItemClass;
+			if (itemClass == null)
+			{
+				return false;
+			}
+
+			if (!itemClass.ItemTags.IsEmpty && itemClass.ItemTags.Test_AnySet(BfgTag))
+			{
+				return true;
+			}
+
+			string name = itemClass.Name;
+			return !string.IsNullOrEmpty(name)
+				&& (name.IndexOf("BFG", StringComparison.OrdinalIgnoreCase) >= 0
+					|| name.StartsWith("DummyBFG", StringComparison.OrdinalIgnoreCase));
+		}
+	}
+
+	/// <summary>
+	/// BFG must deal 0 to players: health and DoomArmour pool.
+	/// DoomArmour.DamageSplit spends armour in damageEntityLocal before Electrical resist
+	/// zeroes remaining health, so strength must be 0 before that Prefix.
+	/// </summary>
+	[HarmonyPatch(typeof(EntityAlive), nameof(EntityAlive.DamageEntity))]
+	internal static class Patch_EntityAlive_DamageEntity_BfgPlayers
+	{
+		private static void Prefix(EntityAlive __instance, DamageSource _damageSource, ref int _strength)
+		{
+			if (_strength <= 0 || !(__instance is EntityPlayer))
+			{
+				return;
+			}
+
+			if (BfgPlayerIgnore.IsBfg(_damageSource))
+			{
+				_strength = 0;
+			}
+		}
+	}
+
 	/// <summary>
 	/// Restores item XML Explosion.DamageType when ExplosionData arrives as default Heat.
 	/// Heat explosions are treated specially by entity damage rules; BFG ammo uses Electrical

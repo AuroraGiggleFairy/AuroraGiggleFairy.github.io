@@ -24,6 +24,11 @@
     "recorded_at": "2026-07-31T13:06:32",
     "version": "2.0.0"
   },
+  "AGF-4Modders-Fix4PerkPageReset": {
+    "folder": "AGF-4Modders-Fix4PerkPageReset-v1.0.0",
+    "recorded_at": "2026-08-28T12:59:27",
+    "version": "1.0.0"
+  },
   "AGF-4Modders-Fix4RemoveItems": {
     "folder": "AGF-4Modders-Fix4RemoveItems-v1.0.1",
     "recorded_at": "2026-06-15T02:20:47",
@@ -169,6 +174,11 @@
     "recorded_at": "2026-07-25T17:24:50",
     "version": "2.0.0"
   },
+  "AGF-NoEAC-PartyGroupPlus": {
+    "folder": "AGF-NoEAC-PartyGroupPlus-v1.0.0",
+    "recorded_at": "2026-08-29T00:24:26",
+    "version": "1.0.0"
+  },
   "AGF-NoEAC-ScreamerAlert": {
     "folder": "AGF-NoEAC-ScreamerAlert-v2.0.0",
     "recorded_at": "2026-06-16T03:42:40",
@@ -178,11 +188,6 @@
     "folder": "AGF-NoEAC-SmeltTimerOption-v1.0.0",
     "recorded_at": "2026-08-03T00:51:34",
     "version": "1.0.0"
-  },
-  "AGF-NoEAC-SortingBox": {
-    "folder": "AGF-NoEAC-SortingBox-v1.0.6",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "1.0.6"
   },
   "AGF-NoEAC-TerrainLeveler": {
     "folder": "AGF-NoEAC-TerrainLeveler-v0.0.2",
@@ -194,10 +199,10 @@
     "recorded_at": "2026-06-16T03:42:40",
     "version": "2.0.0"
   },
-  "AGF-NoEAC-VisualEntityTracker": {
-    "folder": "AGF-NoEAC-VisualEntityTracker-v0.2.0",
-    "recorded_at": "2026-06-26T17:57:27",
-    "version": "0.2.0"
+  "AGF-NoEAC-VisualEntityTrackerAddon": {
+    "folder": "AGF-NoEAC-VisualEntityTrackerAddon-v1.0.0",
+    "recorded_at": "2026-08-28T16:41:43",
+    "version": "1.0.0"
   },
   "AGF-PurpleBookGenerator": {
     "folder": "AGF-PurpleBookGenerator-v0.0.1",
@@ -533,6 +538,11 @@
     "folder": "AGF-VP-ZombieLargerHordes-v2.0.2",
     "recorded_at": "2026-06-15T02:20:47",
     "version": "2.0.2"
+  },
+  "AGF-VPS-SortingCart": {
+    "folder": "AGF-VPS-SortingCart-v2.0.0",
+    "recorded_at": "2026-08-30T04:01:45",
+    "version": "2.0.0"
   },
   "zzzAGF-Requested-NoLootDestroyOnEmpty": {
     "folder": "zzzAGF-Requested-NoLootDestroyOnEmpty-v1.0.2",

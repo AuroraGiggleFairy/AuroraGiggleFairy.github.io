@@ -172,6 +172,7 @@ COMPAT_CSV_FIELD_ORDER = [
     "SERVER_SIDE_PLAYER",
     "SERVER_SIDE_DEDICATED",
     "CLIENT_SIDE",
+    "DEPENDENCIES",
 ]
 
 DEFAULT_MOD_TYPE_LINE_BY_ID = {
@@ -179,6 +180,7 @@ DEFAULT_MOD_TYPE_LINE_BY_ID = {
     "2": "Server-side (EAC Off): EAC off required; server install works for all joining players. (Also works in singleplayer.)",
     "3": "Server/Client-side (Required): EAC off required; host and joining players must install it. (Also works in singleplayer.)",
     "4": "Client-side (Only): EAC off required; server install has no effect; install on each player PC. (Also works in singleplayer.)",
+    "5": "Server-Side (EAC Varies): Server install works for all joining players; dedicated EAC on or off; otherwise EAC off required.",
 }
 
 MOD_TYPE_COMPAT_BY_ID = {
@@ -205,6 +207,12 @@ MOD_TYPE_COMPAT_BY_ID = {
         "SERVER_SIDE_PLAYER": "N/A",
         "SERVER_SIDE_DEDICATED": "N/A",
         "CLIENT_SIDE": "Only",
+    },
+    "5": {
+        "EAC_FRIENDLY": "Dedicated",
+        "SERVER_SIDE_PLAYER": "Yes",
+        "SERVER_SIDE_DEDICATED": "Yes",
+        "CLIENT_SIDE": "None",
     },
 }
 
@@ -1359,6 +1367,19 @@ def is_requested_mod(folder: str) -> bool:
     return folder.startswith("AGF-Requested-") or folder.startswith("zzzAGF-Requested-")
 
 
+def is_vps_mod(folder: str) -> bool:
+    return folder.startswith("AGF-VPS-")
+
+
+def is_vp_mod(folder: str) -> bool:
+    # AGF-VPS- also startswith AGF-VP-. Check VPS first.
+    return folder.startswith("AGF-VP-") and not is_vps_mod(folder)
+
+
+def is_noeac_mod(folder: str) -> bool:
+    return folder.startswith("AGF-NoEAC-")
+
+
 def get_base_mod_name(name: str) -> str:
     return re.sub(r"-v\d+\.\d+(\.\d+)*$", "", name)
 
@@ -2269,36 +2290,43 @@ def normalize_safety_value_for_readme(value: str) -> str:
 
 def format_dependencies_block_for_readme(value: str) -> str:
     raw = (value or "").strip()
-    if has_harmony_dependency(raw):
-        return load_harmony_requirement_warning_body()
-
-    normalized_raw = raw.lower()
-
     placeholder_tokens = {"", "0", "none", "missingdata", "tbd", "n/a", "na"}
-    if normalized_raw in placeholder_tokens:
-        return "- Dependencies: None, works standalone."
-
     parts = [part.strip() for part in re.split(r"[;\n|,]+", raw) if part.strip()]
-    cleaned: List[str] = []
+
+    extra: List[str] = []
+    saw_harmony = False
     for part in parts:
-        token = part.strip()
-        token_lower = token.lower()
+        token_lower = part.lower()
         if token_lower in placeholder_tokens:
             continue
-        if token_lower == "x":
-            cleaned.append("0_TFP_Harmony (built-in game mod)")
+        if is_harmony_dependency_token(part):
+            saw_harmony = True
             continue
-        cleaned.append(token)
+        extra.append(part)
 
-    if not cleaned:
-        return "- Dependencies: None, works standalone."
+    extra_lines = [f"  - Also requires {part}." for part in extra]
 
-    if len(cleaned) == 1:
-        return f"- Dependencies: {cleaned[0]}"
+    if saw_harmony:
+        harmony_body = load_harmony_requirement_warning_body()
+        if extra_lines:
+            return harmony_body.rstrip("\n") + "\n" + "\n".join(extra_lines)
+        return harmony_body
 
-    lines = ["- Dependencies:"]
-    lines.extend(f"  - {part}" for part in cleaned)
-    return "\n".join(lines)
+    if len(extra) == 1:
+        return f"- Dependencies: {extra[0]}"
+    if extra:
+        return "- Dependencies:\n" + "\n".join(f"  - {part}" for part in extra)
+
+    return "- Dependencies: None, works standalone."
+
+
+def is_harmony_dependency_token(token: str) -> bool:
+    token_lower = (token or "").strip().lower()
+    if token_lower == "x":
+        return True
+    if re.search(r"\b0[_\-\s]*tfp[_\-\s]*harmony\b", token_lower):
+        return True
+    return token_lower == "harmony" or token_lower.startswith("harmony ") or token_lower.endswith(" harmony")
 
 
 def has_harmony_dependency(value: str) -> bool:
@@ -2310,14 +2338,7 @@ def has_harmony_dependency(value: str) -> bool:
         return True
 
     for part in re.split(r"[;\n|,]+", raw):
-        token = part.strip().lower()
-        if not token:
-            continue
-        if token == "x":
-            return True
-        if re.search(r"\b0[_\-\s]*tfp[_\-\s]*harmony\b", token):
-            return True
-        if token == "harmony" or token.startswith("harmony ") or token.endswith(" harmony"):
+        if is_harmony_dependency_token(part):
             return True
 
     return False
@@ -3980,6 +4001,8 @@ def normalize_compat_csv(
         fieldnames.insert(insert_at, "TESTED_GAME_VERSION")
     if "QUOTE_FILE" not in fieldnames:
         fieldnames.append("QUOTE_FILE")
+    if "DEPENDENCIES" not in fieldnames:
+        fieldnames.append("DEPENDENCIES")
 
     compatibility_fields = [
         "EAC_FRIENDLY",
@@ -5760,21 +5783,22 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
 
 
 def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str], Optional[Dict[str, List[str]]]]]:
-    backpackplus_mods = [f for f in all_folders if f.startswith("AGF-BackpackPlus-")]
-    hudplus_mods = [f for f in all_folders if f.startswith("AGF-HUDPlus-")]
-    hudpluszother_mods = [f for f in all_folders if f.startswith("AGF-HUDPluszOther-")]
-    noeac_mods = [f for f in all_folders if f.startswith("AGF-NoEAC-")]
-    modders_mods = [f for f in all_folders if f.startswith("AGF-4Modders-")]
-    vp_mods = [f for f in all_folders if f.startswith("AGF-VP-")]
+    backpackplus_mods = [f for f in all_folders if is_backpack_mod(f)]
+    hudplus_mods = [f for f in all_folders if is_hudplus_mod(f)]
+    hudpluszother_mods = [f for f in all_folders if is_hudpluszother_mod(f)]
+    noeac_mods = [f for f in all_folders if is_noeac_mod(f)]
+    modders_mods = [f for f in all_folders if is_4modders_mod(f)]
+    vps_mods = [f for f in all_folders if is_vps_mod(f)]
+    vp_mods = [f for f in all_folders if is_vp_mod(f)]
     special_mods = [f for f in all_folders if f.startswith("zzzAGF-Special")]
-    requested_mods = [f for f in all_folders if f.startswith("AGF-Requested-") or f.startswith("zzzAGF-Requested-")]
+    requested_mods = [f for f in all_folders if is_requested_mod(f)]
 
     backpackplus_84 = next((f for f in backpackplus_mods if "84Slots" in f), None)
 
     packs: List[Tuple[str, List[str], Optional[Dict[str, List[str]]]]] = []
     packs.append(("00_BackpackPlus_All", backpackplus_mods, None))
 
-    giggle_root = hudplus_mods + vp_mods + special_mods + ([backpackplus_84] if backpackplus_84 else [])
+    giggle_root = hudplus_mods + vp_mods + vps_mods + special_mods + ([backpackplus_84] if backpackplus_84 else [])
     giggle_optionals = {
         ".Optionals-BackpackPlus": backpackplus_mods,
         ".Optionals-HUDPlus": hudplus_mods + hudpluszother_mods,
@@ -5797,7 +5821,7 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     packs.append(("00_4Modders_All", modders_mods, None))
     packs.append(("00_Requested_All", requested_mods, None))
 
-    vp_all_root = vp_mods + special_mods
+    vp_all_root = vp_mods + vps_mods + special_mods
     vp_all_optionals = {".Optionals-NoEAC": noeac_mods}
     vp_all_optionals = {k: v for k, v in vp_all_optionals.items() if v}
     packs.append(("00_VP_All", vp_all_root, vp_all_optionals or None))
@@ -7111,13 +7135,14 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     main_content = main_content.replace(BACKUP_GUIDE_PLACEHOLDER, load_backup_guide_body(log))
 
     all_mods = collect_publishready_folders()
-    backpackplus_mods = [f for f in all_mods if f.startswith("AGF-BackpackPlus-")]
-    hudplus_mods = [f for f in all_mods if f.startswith("AGF-HUDPlus-")]
-    noeac_mods = [f for f in all_mods if f.startswith("AGF-NoEAC-")]
-    modders_mods = [f for f in all_mods if f.startswith("AGF-4Modders-")]
-    vp_mods = [f for f in all_mods if f.startswith("AGF-VP-")]
+    backpackplus_mods = [f for f in all_mods if is_backpack_mod(f)]
+    hudplus_mods = [f for f in all_mods if is_hudplus_mod(f)]
+    noeac_mods = [f for f in all_mods if is_noeac_mod(f)]
+    modders_mods = [f for f in all_mods if is_4modders_mod(f)]
+    vps_mods = [f for f in all_mods if is_vps_mod(f)]
+    vp_mods = [f for f in all_mods if is_vp_mod(f)]
     special_mods = [f for f in all_mods if f.startswith("zzzAGF-Special")]
-    requested_mods = [f for f in all_mods if f.startswith("AGF-Requested-") or f.startswith("zzzAGF-Requested-")]
+    requested_mods = [f for f in all_mods if is_requested_mod(f)]
 
     updates_in_progress = "Updates are in progress."
 
@@ -7211,7 +7236,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         render_main_readme_category_block(
             category_template,
             "E. VANILLA PLUS MODS",
-            category_download_line(vp_mods, "Download All VP Mods", "00_VP_All.zip"),
+            category_download_line(vp_mods + vps_mods, "Download All VP Mods", "00_VP_All.zip"),
             cat_desc.get("VP", "Gameplay tweaks and new features that expand on the base game."),
         )
     )
@@ -7225,7 +7250,25 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "F. NO EAC MODS",
+            "F. VPS MODS",
+            category_download_line(vp_mods + vps_mods, "Download All VP Mods", "00_VP_All.zip"),
+            cat_desc.get(
+                "VPS",
+                "Vanilla Plus Special. Server-Side (EAC Varies): dedicated EAC can be on or off. Singleplayer and player-hosted: EAC off required.",
+            ),
+        )
+    )
+    md.append("")
+    if vps_mods:
+        for mod in vps_mods:
+            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+    else:
+        md.append("*Updates are in progress.*")
+
+    md.extend(
+        render_main_readme_category_block(
+            category_template,
+            "G. NO EAC MODS",
             category_download_line(noeac_mods, "Download All NoEAC Mods", "00_NoEAC_All.zip"),
             cat_desc.get("NOEAC", "Game enhancements that require a DLL. EAC must be off."),
         )
@@ -7240,7 +7283,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "G. 4MODDERS MODS",
+            "H. 4MODDERS MODS",
             category_download_line(modders_mods, "Download All 4Modders Mods", "00_4Modders_All.zip"),
             cat_desc.get("4MODDERS", "Modder resources and niche mods. Read each description before installing."),
         )
@@ -7255,7 +7298,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "H. REQUESTED MODS",
+            "I. REQUESTED MODS",
             category_download_line(requested_mods, "Download All Requested Mods", "00_Requested_All.zip"),
             cat_desc.get("REQUESTED", "Community-requested modifications and standalone features."),
         )
@@ -7270,7 +7313,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "I. AGF-7d2d-v2.6-GigglePack-Final",
+            "J. AGF-7d2d-v2.6-GigglePack-Final",
             f"[**⬇️ Download AGF 7D2D v2.6 Final**]({zip_download_link(LEGACY_FINAL_GIGGLEPACK_ZIP)})",
             cat_desc.get(
                 LEGACY_FINAL_CATEGORY_KEY,
@@ -7369,6 +7412,29 @@ def run_self_tests(log: Logger) -> bool:
             "combined drift is planned",
             ("AGF-VP-CombinedOld-v1.0.0", "AGF-VP-CombinedNew-v1.0.1") in planned_names,
         )
+
+    packs = {
+        name: (roots, optionals)
+        for name, roots, optionals in build_pack_definitions(
+            [
+                "AGF-VP-BedrollPlus-v2.0.0",
+                "AGF-VPS-SortingBox-v1.0.6",
+                "AGF-NoEAC-AutoRun-v2.0.0",
+            ]
+        )
+    }
+    vp_roots, vp_optionals = packs["00_VP_All"]
+    giggle_roots, giggle_optionals = packs["00_GigglePack_All"]
+    giggle_optionals = giggle_optionals or {}
+    vp_optionals = vp_optionals or {}
+    record("is_vp_mod excludes VPS", is_vp_mod("AGF-VPS-SortingBox-v1.0.6") is False)
+    record("is_vps_mod matches VPS", is_vps_mod("AGF-VPS-SortingBox-v1.0.6") is True)
+    record("no VPS_All pack", "00_VPS_All" not in packs)
+    record("VP pack still includes VP mods", "AGF-VP-BedrollPlus-v2.0.0" in vp_roots)
+    record("VPS goes in VP pack root", "AGF-VPS-SortingBox-v1.0.6" in vp_roots)
+    record("VPS goes in gigglepack root", "AGF-VPS-SortingBox-v1.0.6" in giggle_roots)
+    record("VPS is not a gigglepack optional", ".Optionals-VPS" not in giggle_optionals)
+    record("VPS is not a VP pack optional", ".Optionals-VPS" not in vp_optionals)
 
     log.info(f"self-test summary: passed={passed}, failed={failed}")
     return failed == 0

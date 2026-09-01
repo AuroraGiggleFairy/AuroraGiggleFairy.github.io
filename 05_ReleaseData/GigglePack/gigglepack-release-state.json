@@ -1,10 +1,11 @@
 {
-  "gigglepack_version": "0.21.1",
-  "previous_gigglepack_version": "0.21.0",
+  "gigglepack_version": "0.22.0",
+  "previous_gigglepack_version": "0.21.1",
   "is_baseline_release": false,
-  "released_at": "2026-08-27 23:32:03",
+  "released_at": "2026-09-01 09:36:46",
   "mods": {
     "AGF-4Modders-Fix4DestroyBiomeBadge": "2.0.0",
+    "AGF-4Modders-Fix4PerkPageReset": "1.0.0",
     "AGF-BackpackPlus-060Slots": "4.1.1",
     "AGF-BackpackPlus-072Slots": "4.1.1",
     "AGF-BackpackPlus-084Slots": "4.1.1",
@@ -13,7 +14,7 @@
     "AGF-HUDPlus-BMCounter": "4.0.2",
     "AGF-HUDPlus-PurpleBook": "3.2.0",
     "AGF-HUDPlus-RemoveEnteringPopUp": "2.1.1",
-    "AGF-HUDPlus-VisualEntityTracker": "1.1.0",
+    "AGF-HUDPlus-VisualEntityTracker": "1.1.1",
     "AGF-HUDPlus-Weekday": "3.1.3",
     "AGF-NoEAC-AudioOptionsPlus": "2.1.0",
     "AGF-NoEAC-AutoRun": "2.1.1",
@@ -21,12 +22,14 @@
     "AGF-NoEAC-EnhancedAGF": "4.3.4",
     "AGF-NoEAC-FuelAutoShutOff": "1.0.0",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
-    "AGF-NoEAC-HideDLCCosmetics": "1.0.0",
+    "AGF-NoEAC-HideDLCCosmetics": "1.1.0",
     "AGF-NoEAC-MapPlus": "1.0.0",
     "AGF-NoEAC-OpenAllButton": "2.0.1",
+    "AGF-NoEAC-PartyGroupPlus": "1.1.1",
     "AGF-NoEAC-ScreamerAlert": "2.3.3",
     "AGF-NoEAC-SmeltTimerOption": "1.0.0",
     "AGF-NoEAC-Toolbelt12Slots": "2.2.4",
+    "AGF-NoEAC-VisualEntityTrackerAddon": "1.0.0",
     "AGF-Requested-SmallerInteractionPrompt": "2.0.0",
     "AGF-Requested-TinyBuffsPopUp": "2.0.0",
     "AGF-VP-AdminModdingSupport": "2.0.0",
@@ -41,7 +44,7 @@
     "AGF-VP-CraftVitamins": "2.1.2",
     "AGF-VP-DoorsPlus": "4.0.0",
     "AGF-VP-DrinkableAcid": "3.0.0",
-    "AGF-VP-DyesPlus": "4.0.0",
+    "AGF-VP-DyesPlus": "4.1.0",
     "AGF-VP-FloraHarvester": "3.0.1",
     "AGF-VP-FuelBurnPlus": "3.1.1",
     "AGF-VP-LargerStorageOption": "1.1.1",
@@ -67,6 +70,7 @@
     "AGF-VP-VehicleStoragePlus": "3.1.1",
     "AGF-VP-VehiclesExtraSeating": "2.1.1",
     "AGF-VP-ZombieCorpseLeaveQuicker": "3.1.1",
+    "AGF-VPS-SortingCart": "2.0.1",
     "zzzAGF-Requested-LootStaysOnEmpty": "1.0.4",
     "zzzAGF-Special-Compatibilities": "5.2.0",
     "zzzAGF-Special-LocalizationPatches": "1.0.1"
@@ -74,26 +78,54 @@
   "updated_mods": [
     {
       "mod": "AGF-HUDPlus-VisualEntityTracker",
-      "from": "1.0.1",
+      "from": "1.1.0",
+      "to": "1.1.1",
+      "from_display": "1.1.0",
+      "to_display": "1.1.1"
+    },
+    {
+      "mod": "AGF-NoEAC-HideDLCCosmetics",
+      "from": "1.0.0",
       "to": "1.1.0",
-      "from_display": "1.0.1",
+      "from_display": "1.0.0",
       "to_display": "1.1.0"
     },
     {
-      "mod": "AGF-NoEAC-CosmeticLockIcon",
-      "from": "3.1.1",
-      "to": "3.1.2",
-      "from_display": "3.1.1",
-      "to_display": "3.1.2"
+      "mod": "AGF-VP-DyesPlus",
+      "from": "4.0.0",
+      "to": "4.1.0",
+      "from_display": "4.0.0",
+      "to_display": "4.1.0"
     }
   ],
-  "new_mods": [],
+  "new_mods": [
+    {
+      "mod": "AGF-4Modders-Fix4PerkPageReset",
+      "to": "1.0.0",
+      "to_display": "1.0.0"
+    },
+    {
+      "mod": "AGF-NoEAC-PartyGroupPlus",
+      "to": "1.1.1",
+      "to_display": "1.1.1-BETA"
+    },
+    {
+      "mod": "AGF-NoEAC-VisualEntityTrackerAddon",
+      "to": "1.0.0",
+      "to_display": "1.0.0"
+    },
+    {
+      "mod": "AGF-VPS-SortingCart",
+      "to": "2.0.1",
+      "to_display": "2.0.1"
+    }
+  ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.21.1.zip",
+  "versioned_zip": "AGF-GigglePack-v0.22.0.zip",
   "change_counts": {
-    "new_mods": 0,
-    "updated_existing_mods": 2,
+    "new_mods": 4,
+    "updated_existing_mods": 3,
     "renamed_mods": 0,
     "removed_mods": 0
   }

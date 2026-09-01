@@ -35,6 +35,7 @@ MOD_TYPE_MAP = {
     "2": "Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.",
     "3": "Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.",
     "4": "Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.",
+    "5": "Server-Side (EAC Varies): server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.",
 }
 
 

@@ -28,6 +28,9 @@ Gameplay tweaks and new features that expand on the base game.
 
 All Server-side (EAC-Friendly)!
 
+[VPS]
+Vanilla Plus Special. Server-Side (EAC Varies): dedicated EAC can be on or off. Singleplayer and player-hosted: EAC off required.
+
 [NOEAC]
 Game enhancements that require a DLL. EAC must be off.
 

@@ -30,4 +30,97 @@
 			</conditional>
 		</else>
 	</conditional>
+
+	<!-- VET tags vanilla entities by name. Outback-added animals/zombies have their own Tags and never got agfVet*. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-VisualEntityTracker')">
+			<!-- Re-apply the 25m scanner. Outback's playerMale edits sit after VET; a missed onSelfEnteredGame leaves zero compass icons, including vanilla zombies. -->
+			<append xpath="/entity_classes/entity_class[@name='playerMale']">
+				<effect_group>
+					<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffZAlert"/>
+					<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffZAlert"/>
+				</effect_group>
+			</append>
+
+			<!-- Species icons only. Remaining land wildlife stay on generic animal_tracker until discussed. -->
+			<append xpath="/entity_classes/entity_class[@name='animalCassowary']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalTassydevil']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBigTassydevil']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalPlatypus']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalKoala']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBigKoala']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalFrillneck']/property[@name='Tags']/@value">,agfVetOutbackHostile</append>
+
+			<append xpath="/entity_classes/entity_class[@name='animalKangaroo']/property[@name='Tags']/@value">,agfVetOutbackKangaroo</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBloodMoonKangaroo']/property[@name='Tags']/@value">,agfVetOutbackKangaroo</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBloodMoonBossKangaroo']/property[@name='Tags']/@value">,agfVetOutbackKangaroo</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBloodMoonKoala']/property[@name='Tags']/@value">,agfVetBearHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBloodMoonBossKoala']/property[@name='Tags']/@value">,agfVetBearHostile</append>
+
+			<append xpath="/entity_classes/entity_class[@name='animalMagpie']/property[@name='Tags']/@value">,agfVetOutbackMagpie</append>
+			<append xpath="/entity_classes/entity_class[@name='animalEagle']/property[@name='Tags']/@value">,agfVetVultureHostile</append>
+			<append xpath="/entity_classes/entity_class[@name='animalBat']/property[@name='Tags']/@value">,agfVetVultureHostile</append>
+
+			<append xpath="/entity_classes/entity_class[starts-with(@name,'animalSpider') and not(contains(@name,'Quest'))]/property[@name='Tags']/@value">,agfVetSpiderHostile</append>
+			<append xpath="/entity_classes/entity_class[starts-with(@name,'animalFlyingSpider')]/property[@name='Tags']/@value">,agfVetSpiderHostile</append>
+			<append xpath="/entity_classes/entity_class[starts-with(@name,'animalBloodMoonSpider')]/property[@name='Tags']/@value">,agfVetSpiderHostile</append>
+			<append xpath="/entity_classes/entity_class[starts-with(@name,'animalBloodMoonFlyingSpider')]/property[@name='Tags']/@value">,agfVetSpiderHostile</append>
+
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonChicken']/property[@name='Tags']/@value">,agfVetChickenTimid</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonRabbit']/property[@name='Tags']/@value">,agfVetRabbitTimid</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonBoar']/property[@name='Tags']/@value">,agfVetOutbackTameBoar</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonSnake']/property[@name='Tags']/@value">,agfVetOutbackTameSnake</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonzombieDog']/property[@name='Tags']/@value">,agfVetOutbackTameWolf</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonDireWolf']/property[@name='Tags']/@value">,agfVetOutbackTameWolf</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonCoyote']/property[@name='Tags']/@value">,agfVetOutbackTameWolf</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonJeerkoa']/property[@name='Tags']/@value">,agfVetOutbackTameWolf</append>
+			<append xpath="/entity_classes/entity_class[@name='npcAnimalSummonSkippy']/property[@name='Tags']/@value">,agfVetOutbackTameKangaroo</append>
+
+			<append xpath="/entity_classes/entity_class[@name='npcTomClarkDPistol']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcDemolitionDaveM60']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcMommaAK47']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcBusinessManTRifle']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcMarleneSMG']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcBikerMagnumDPistol']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcBurntSRifle']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+			<append xpath="/entity_classes/entity_class[@name='npcMoeAShotgun']/property[@name='Tags']/@value">,agfVetOutbackHireable</append>
+
+			<append xpath="/entity_classes/entity_class[@name='zombieMiniRancher']/property[@name='Tags']/@value">,agfVetZombieRegular</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieMiniRancherFeral']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieMiniRancherRadiated']/property[@name='Tags']/@value">,agfVetZombieRadiated</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieMiniRancherCharged']/property[@name='Tags']/@value">,agfVetZombieCharged</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieMiniRancherInfernal']/property[@name='Tags']/@value">,agfVetZombieInfernal</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieBurntRadiatedMini']/property[@name='Tags']/@value">,agfVetZombieRadiated</append>
+
+			<append xpath="/entity_classes/entity_class[@name='zombieOakChargedNurse']/property[@name='Tags']/@value">,agfVetZombieCharged</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunterCharged']/property[@name='Tags']/@value">,agfVetZombieCharged</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossChargedNurse']/property[@name='Tags']/@value">,agfVetZombieCharged</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunterCharged']/property[@name='Tags']/@value">,agfVetZombieCharged</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBigFootCharged']/property[@name='Tags']/@value">,agfVetZombieCharged</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakInfernalNurse']/property[@name='Tags']/@value">,agfVetZombieInfernal</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunterInfernal']/property[@name='Tags']/@value">,agfVetZombieInfernal</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossInfernalNurse']/property[@name='Tags']/@value">,agfVetZombieInfernal</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunterInfernal']/property[@name='Tags']/@value">,agfVetZombieInfernal</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBigFootInfernal']/property[@name='Tags']/@value">,agfVetZombieInfernal</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakRadNurse']/property[@name='Tags']/@value">,agfVetZombieRadiated</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossRadNurse']/property[@name='Tags']/@value">,agfVetZombieRadiated</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakSirenHead']/property[@name='Tags']/@value">,agfVetZombieRadiated</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakNurse']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakFireNurse']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter1']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter2']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter3']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter4']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakHeadHunter5']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossNurse']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossFireNurse']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunter1']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunter2']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunter3']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunter4']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBossHeadHunter5']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBigFoot']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+			<append xpath="/entity_classes/entity_class[@name='zombieOakBigFootSnow']/property[@name='Tags']/@value">,agfVetZombieFeral</append>
+		</if>
+	</conditional>
 </zzzAGF-Compatibilities>

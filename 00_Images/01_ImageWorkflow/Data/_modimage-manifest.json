@@ -300,8 +300,8 @@
     "media_file": "AGF-VP-DrinkableAcid_01.png"
   },
   "AGF-VP-DyesPlus": {
-    "signature": "5a15be09724d19525f497b5d19a568702f9ae19eb848dc6f1169fb9b42e148ea",
-    "version": "4.0.0",
+    "signature": "d96a2b79c78046cfaef36a46143e07347069dc8b482d31ad9a343c1ec405dddd",
+    "version": "4.1.0",
     "has_media": true,
     "media_file": "AGF-VP-DyesPlus_01.png"
   },
@@ -576,8 +576,8 @@
     "media_file": ""
   },
   "AGF-HUDPlus-VisualEntityTracker": {
-    "signature": "102fabec49dd21cbac54ed6999a1a0b5f54f7cdfa4ac9163d3622a65940fe92a",
-    "version": "1.1.0",
+    "signature": "ab54f387719b9a8652ee5988369abdf6885ea8e6fae6746f40d15aaad37f393a",
+    "version": "1.1.1",
     "has_media": true,
     "media_file": "AGF-HUDPlus-VisualEntityTracker_01.png"
   },
@@ -612,9 +612,33 @@
     "media_file": "AGF-NoEAC-MapPlus_01.png"
   },
   "AGF-NoEAC-HideDLCCosmetics": {
-    "signature": "f70e44461c7611011396f7376c25988d7748ab7ed73cd76d34c1bfd89b1f48ab",
-    "version": "1.0.0",
+    "signature": "8410dbd99aace39f926cb5f214d142c6c87807aab70def21e2513343097dfc9a",
+    "version": "1.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-HideDLCCosmetics_01.png"
+  },
+  "AGF-4Modders-Fix4PerkPageReset": {
+    "signature": "bdcef17aefc37dcdfcca6c04c6c4806fa57a2cbc05f8f77794fbdd523e198b13",
+    "version": "1.0.0",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-VisualEntityTrackerAddon": {
+    "signature": "6a15a9bc2de1debc10e91c1ddd06f24bcb8bf096710c4cc69f99e9821f4e0c88",
+    "version": "1.0.0",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-NoEAC-PartyGroupPlus": {
+    "signature": "9145d735e81b9b397c0b54a206ab528f83a288bf70e7f0d26741f3a048d6885f",
+    "version": "1.1.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-VPS-SortingCart": {
+    "signature": "b4383473b19557cb3ab09d65d58b92a25759a4e24c2afeecf095d0770731acb4",
+    "version": "2.0.1",
+    "has_media": false,
+    "media_file": ""
   }
 }

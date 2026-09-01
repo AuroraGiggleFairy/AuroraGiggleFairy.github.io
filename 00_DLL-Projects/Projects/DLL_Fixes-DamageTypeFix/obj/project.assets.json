@@ -8,7 +8,7 @@
     ".NETFramework,Version=v4.8": []
   },
   "packageFolders": {
-    "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\9f29129dae45034f276c2af6557e12c0\\nuget": {},
+    "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\04708620cc3cbfc99ef9b168b7d2ac5e\\nuget": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -17,7 +17,7 @@
       "projectUniqueName": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_Fixes-DamageTypeFix\\DamageTypeFix.csproj",
       "projectName": "DamageTypeFix",
       "projectPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_Fixes-DamageTypeFix\\DamageTypeFix.csproj",
-      "packagesPath": "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\9f29129dae45034f276c2af6557e12c0\\nuget",
+      "packagesPath": "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\04708620cc3cbfc99ef9b168b7d2ac5e\\nuget",
       "outputPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_Fixes-DamageTypeFix\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
