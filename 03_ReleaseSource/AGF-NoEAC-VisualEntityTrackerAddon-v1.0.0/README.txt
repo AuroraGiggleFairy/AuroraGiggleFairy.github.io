@@ -2,7 +2,7 @@
                    AGF-NOEAC-VISUALENTITYTRACKERADDON                   
 ========================================================================
 
-Per-player on/off addon for AGF Visual Entity Tracker mod.
+Lets players toggle Visual Entity Tracker. Requires the VET mod.
 
 
 NOTE: AGF Mod Guide and Changelog are further below.

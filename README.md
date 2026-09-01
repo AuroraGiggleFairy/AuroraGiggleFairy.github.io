@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*September 1, 2026, 9:36 AM EST*
+*September 1, 2026, 9:54 AM EST*
 
 ## **1. About AGF**
 
@@ -964,7 +964,7 @@ Lets you switch forge smelt timer between one item and full stack.
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-VisualEntityTrackerAddon_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-VisualEntityTrackerAddon.png?raw=true" width="150"></a></td>
 <td valign="top">
 <b>AGF Visual Entity Tracker Addon</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip">Download</a><br>
-Per-player on/off addon for AGF Visual Entity Tracker mod.
+Lets players toggle Visual Entity Tracker. Requires the VET mod.
 <ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
