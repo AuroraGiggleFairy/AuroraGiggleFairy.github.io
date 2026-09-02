@@ -1,8 +1,23 @@
 {
-  "computed_at": "2026-09-01T09:54:39",
+  "computed_at": "2026-09-01T23:11:35",
   "since_gigglepack_version": "0.22.0",
-  "new_mods": [],
-  "updated_mods": [],
+  "new_mods": [
+    [
+      "AGF-NoEAC-GyroFlightModes",
+      "1.0.0"
+    ],
+    [
+      "AGF-VPS-HonkOpensYourDoors",
+      "1.0.0"
+    ]
+  ],
+  "updated_mods": [
+    [
+      "AGF-NoEAC-MapPlus",
+      "1.0.0",
+      "1.1.0"
+    ]
+  ],
   "renamed_mods": [],
   "removed_mods": []
 }

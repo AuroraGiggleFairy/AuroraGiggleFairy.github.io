@@ -1,5 +1,19 @@
 # GigglePack Release Changelog
 
+## GigglePack v0.23.0 (September 1, 2026 11:15pm)
+### Summary: +2 new, ~1 updated, =0 renamed, -0 removed
+- **New Mods**
+  - [AGF-NoEAC-GyroFlightModes](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GyroFlightModes.zip) (new: v1.0.0)
+  - [AGF-VPS-HonkOpensYourDoors](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-HonkOpensYourDoors.zip) (new: v1.0.0)
+- **Updated Existing Mods**
+  - [AGF-NoEAC-MapPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip) (v1.0.0 -> v1.1.0)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - None
+
+---
+
 ## GigglePack v0.22.0 (September 1, 2026 9:36am)
 ### Summary: +4 new, ~3 updated, =0 renamed, -0 removed
 - **New Mods**

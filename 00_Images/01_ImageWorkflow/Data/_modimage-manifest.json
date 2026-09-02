@@ -606,8 +606,8 @@
     "media_file": "AGF-NoEAC-FuelAutoShutOff_01.png"
   },
   "AGF-NoEAC-MapPlus": {
-    "signature": "0be9a564fb5b0dec1dcf9ff9e5882552e152223ef68cedb0f0d72757d177e221",
-    "version": "1.0.0",
+    "signature": "3ec41496c4aed0dc891b58f5a060cbfefc20dbd71f13fbe6cb79acfe586fde6e",
+    "version": "1.1.0",
     "has_media": true,
     "media_file": "AGF-NoEAC-MapPlus_01.png"
   },
@@ -640,5 +640,17 @@
     "version": "2.0.1",
     "has_media": false,
     "media_file": ""
+  },
+  "AGF-NoEAC-GyroFlightModes": {
+    "signature": "1d978cc415a8195c6d0296a848f2d8c61472106b9c1de81c15923846d1846115",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "AGF-NoEAC-GyroFlightModes_01.png"
+  },
+  "AGF-VPS-HonkOpensYourDoors": {
+    "signature": "7b8100b8117521e43704a8dc7af83a1717525fdb110a3f35ab59a906e913103d",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "AGF-VPS-HonkOpensYourDoors_01.png"
   }
 }

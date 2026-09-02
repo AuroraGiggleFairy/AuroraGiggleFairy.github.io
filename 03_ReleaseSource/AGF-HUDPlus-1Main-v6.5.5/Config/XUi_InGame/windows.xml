@@ -779,14 +779,6 @@
 	<!-- EnhancedAGF-only overlays and text replacements. -->
 	<conditional>
 		<if cond="mod_loaded('AGF-NoEAC-EnhancedAGF')">
-			<remove xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]/label[2]"/>
-			<append xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]">
-				<label depth="3" pos="15,-3" width="350" font_size="26" text="{fuel}%   ({agfVehicleFuelCurrentWithMax})" justify="right" color="[selectedColor]"/>
-			</append>
-			<remove xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]/label[2]"/>
-			<append xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]">
-				<label depth="3" pos="15,-3" width="350" font_size="26" text="{agfVehicleDurabilityPercent}%   ({agfVehicleDurabilityCurrentWithMax})" justify="right" color="[selectedColor]"/>
-			</append>
 			<!-- UPDATE THIS: vehicleStatsBase node is unresolved in 3.0 baseline -->
 			<remove xpath="/windows/window[@name='HUDRightStatBars']/rect[2]"/>
 			<append xpath="/windows/window[@name='HUDRightStatBars']">

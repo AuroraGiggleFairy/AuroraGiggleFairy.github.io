@@ -1,8 +1,8 @@
 {
-  "gigglepack_version": "0.22.0",
-  "previous_gigglepack_version": "0.21.1",
+  "gigglepack_version": "0.23.0",
+  "previous_gigglepack_version": "0.22.0",
   "is_baseline_release": false,
-  "released_at": "2026-09-01 09:36:46",
+  "released_at": "2026-09-01 23:15:15",
   "mods": {
     "AGF-4Modders-Fix4DestroyBiomeBadge": "2.0.0",
     "AGF-4Modders-Fix4PerkPageReset": "1.0.0",
@@ -22,8 +22,9 @@
     "AGF-NoEAC-EnhancedAGF": "4.3.4",
     "AGF-NoEAC-FuelAutoShutOff": "1.0.0",
     "AGF-NoEAC-GlobalStormTracker": "2.1.1",
+    "AGF-NoEAC-GyroFlightModes": "1.0.0",
     "AGF-NoEAC-HideDLCCosmetics": "1.1.0",
-    "AGF-NoEAC-MapPlus": "1.0.0",
+    "AGF-NoEAC-MapPlus": "1.1.0",
     "AGF-NoEAC-OpenAllButton": "2.0.1",
     "AGF-NoEAC-PartyGroupPlus": "1.1.1",
     "AGF-NoEAC-ScreamerAlert": "2.3.3",
@@ -70,6 +71,7 @@
     "AGF-VP-VehicleStoragePlus": "3.1.1",
     "AGF-VP-VehiclesExtraSeating": "2.1.1",
     "AGF-VP-ZombieCorpseLeaveQuicker": "3.1.1",
+    "AGF-VPS-HonkOpensYourDoors": "1.0.0",
     "AGF-VPS-SortingCart": "2.0.1",
     "zzzAGF-Requested-LootStaysOnEmpty": "1.0.4",
     "zzzAGF-Special-Compatibilities": "5.2.0",
@@ -77,55 +79,31 @@
   },
   "updated_mods": [
     {
-      "mod": "AGF-HUDPlus-VisualEntityTracker",
-      "from": "1.1.0",
-      "to": "1.1.1",
-      "from_display": "1.1.0",
-      "to_display": "1.1.1"
-    },
-    {
-      "mod": "AGF-NoEAC-HideDLCCosmetics",
+      "mod": "AGF-NoEAC-MapPlus",
       "from": "1.0.0",
       "to": "1.1.0",
       "from_display": "1.0.0",
       "to_display": "1.1.0"
-    },
-    {
-      "mod": "AGF-VP-DyesPlus",
-      "from": "4.0.0",
-      "to": "4.1.0",
-      "from_display": "4.0.0",
-      "to_display": "4.1.0"
     }
   ],
   "new_mods": [
     {
-      "mod": "AGF-4Modders-Fix4PerkPageReset",
+      "mod": "AGF-NoEAC-GyroFlightModes",
       "to": "1.0.0",
       "to_display": "1.0.0"
     },
     {
-      "mod": "AGF-NoEAC-PartyGroupPlus",
-      "to": "1.1.1",
-      "to_display": "1.1.1-BETA"
-    },
-    {
-      "mod": "AGF-NoEAC-VisualEntityTrackerAddon",
+      "mod": "AGF-VPS-HonkOpensYourDoors",
       "to": "1.0.0",
       "to_display": "1.0.0"
-    },
-    {
-      "mod": "AGF-VPS-SortingCart",
-      "to": "2.0.1",
-      "to_display": "2.0.1"
     }
   ],
   "renamed_mods": [],
   "removed_mods": [],
-  "versioned_zip": "AGF-GigglePack-v0.22.0.zip",
+  "versioned_zip": "AGF-GigglePack-v0.23.0.zip",
   "change_counts": {
-    "new_mods": 4,
-    "updated_existing_mods": 3,
+    "new_mods": 2,
+    "updated_existing_mods": 1,
     "renamed_mods": 0,
     "removed_mods": 0
   }

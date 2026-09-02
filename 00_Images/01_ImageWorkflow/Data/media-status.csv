@@ -17,6 +17,7 @@ AGF-NoEAC-CosmeticLockIcon,Yes,AGF-NoEAC-CosmeticLockIcon_01.png
 AGF-NoEAC-EnhancedAGF,Yes,AGF-NoEAC-EnhancedAGF_01.png
 AGF-NoEAC-FuelAutoShutOff,Yes,AGF-NoEAC-FuelAutoShutOff_01.png
 AGF-NoEAC-GlobalStormTracker,Yes,AGF-NoEAC-GlobalStormTracker_01.png
+AGF-NoEAC-GyroFlightModes,Yes,AGF-NoEAC-GyroFlightModes_01.png
 AGF-NoEAC-HideDLCCosmetics,Yes,AGF-NoEAC-HideDLCCosmetics_01.png
 AGF-NoEAC-MapPlus,Yes,AGF-NoEAC-MapPlus_01.png
 AGF-NoEAC-OpenAllButton,Yes,AGF-NoEAC-OpenAllButton_01.png
@@ -65,6 +66,7 @@ AGF-VP-VehiclePerformance,No,
 AGF-VP-VehiclesExtraSeating,Yes,AGF-VP-VehiclesExtraSeating_01.png
 AGF-VP-VehicleStoragePlus,Yes,AGF-VP-VehicleStoragePlus_01.png
 AGF-VP-ZombieCorpseLeaveQuicker,Yes,AGF-VP-ZombieCorpseLeaveQuicker_01.png
+AGF-VPS-HonkOpensYourDoors,Yes,AGF-VPS-HonkOpensYourDoors_01.png
 AGF-VPS-SortingCart,No,
 zzzAGF-Requested-LootStaysOnEmpty,No,
 zzzAGF-Special-Compatibilities,Yes,zzzAGF-Special-Compatibilities_01.png

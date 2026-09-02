@@ -17,8 +17,10 @@ namespace MapPlus
 		public const string BoundsFillId = "poiBoundsFill";
 		public const string UnexploredLocKey = "xuiMapPlusUnexplored";
 		public const string NotVisitedLocKey = "xuiMapPlusNotVisited";
+		public const string TierFormatKey = "xuiMapPlusPoiTier";
 		const int MinBoundsPixels = 8;
 		const int BoundsOutset = 3;
+		const string TierColorTag = "[FF0000]";
 		static readonly Color32 PoiOrange = new Color32(255, 153, 0, 255);
 		static readonly Color32 PoiOrangeFill = new Color32(255, 153, 0, 50);
 
@@ -67,7 +69,7 @@ namespace MapPlus
 
 				BindViews(mapArea);
 				PrefabInstance prefab = null;
-				string next = Resolve(mapArea, worldPos, out prefab);
+				string next = FormatDisplay(Resolve(mapArea, worldPos, out prefab), prefab);
 				if (next != CurrentDisplayName)
 				{
 					CurrentDisplayName = next;
@@ -115,6 +117,43 @@ namespace MapPlus
 			}
 
 			return GetBiomeName(worldPos);
+		}
+
+		static string FormatDisplay(string name, PrefabInstance prefab)
+		{
+			if (string.IsNullOrEmpty(name) || IsPlaceholderName(name))
+			{
+				return name ?? string.Empty;
+			}
+
+			if (XUiC_Location.ShowLocation != XUiC_Location.ShowLocationInfoTypes.Yes)
+			{
+				return name;
+			}
+
+			int tier = prefab?.prefab != null ? prefab.prefab.DifficultyTier : 0;
+			if (tier <= 0)
+			{
+				return name;
+			}
+
+			return name + " " + TierColorTag + FormatTierMarker(tier) + "[-]";
+		}
+
+		static string FormatTierMarker(int tier)
+		{
+			string format = Localization.Get(TierFormatKey);
+			if (string.IsNullOrEmpty(format) || format.IndexOf("{0}") < 0)
+			{
+				format = "(T{0})";
+			}
+
+			return string.Format(format, tier);
+		}
+
+		static bool IsPlaceholderName(string displayName)
+		{
+			return displayName == Localization.Get(UnexploredLocKey) || displayName == Localization.Get(NotVisitedLocKey);
 		}
 
 		static string GetBiomeName(Vector3 worldPos)

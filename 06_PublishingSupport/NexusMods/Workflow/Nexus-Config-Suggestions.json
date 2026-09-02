@@ -1,5 +1,5 @@
 {
-  "generated_at": "08-22-2026 4:34 PM",
+  "generated_at": "09-01-2026 9:58 AM",
   "high_confidence_threshold": 0.8,
   "mods": {
     "AGF-BackpackPlus-060Slots": {
@@ -128,6 +128,28 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10747"
       }
     },
+    "AGF-NoEAC-FuelAutoShutOff": {
+      "action": "add",
+      "score": 1.0,
+      "live_name": "AGF - V3 - NoEAC - FuelAutoShutOff",
+      "live_version": "1.0.0",
+      "config": {
+        "intent": "update",
+        "nexus_mod_id": 12148,
+        "update_group_id": "7846842",
+        "update_group_name": "AGF - V3 - NoEAC - FuelAutoShutOff",
+        "file_category": "main",
+        "legacy_latest_file_id": 0,
+        "legacy_name_hint": "",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12148",
+        "tested_game_version_override": "",
+        "brief_overview_override": "",
+        "detailed_description_override": "",
+        "file_description_override": "",
+        "summary_override": "",
+        "description_override": ""
+      }
+    },
     "AGF-NoEAC-GlobalStormTracker": {
       "action": "patch_update_group",
       "score": 1.0,
@@ -135,6 +157,50 @@
         "update_group_id": "7552094",
         "update_group_name": "AGF NoEAC GlobalStormTracker",
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10748"
+      }
+    },
+    "AGF-NoEAC-HideDLCCosmetics": {
+      "action": "add",
+      "score": 1.0,
+      "live_name": "AGF - V3 - NoEAC - HideDLCCosmetics",
+      "live_version": "1.0.0",
+      "config": {
+        "intent": "update",
+        "nexus_mod_id": 12209,
+        "update_group_id": "7862436",
+        "update_group_name": "AGF - V3 - NoEAC - HideDLCCosmetics",
+        "file_category": "main",
+        "legacy_latest_file_id": 0,
+        "legacy_name_hint": "",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12209",
+        "tested_game_version_override": "",
+        "brief_overview_override": "",
+        "detailed_description_override": "",
+        "file_description_override": "",
+        "summary_override": "",
+        "description_override": ""
+      }
+    },
+    "AGF-NoEAC-MapPlus": {
+      "action": "add",
+      "score": 1.0,
+      "live_name": "AGF - V3 - NoEAC - MapPlus",
+      "live_version": "11.0.0",
+      "config": {
+        "intent": "update",
+        "nexus_mod_id": 12147,
+        "update_group_id": "7846788",
+        "update_group_name": "AGF - V3 - NoEAC - MapPlus",
+        "file_category": "main",
+        "legacy_latest_file_id": 0,
+        "legacy_name_hint": "",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12147",
+        "tested_game_version_override": "",
+        "brief_overview_override": "",
+        "detailed_description_override": "",
+        "file_description_override": "",
+        "summary_override": "",
+        "description_override": ""
       }
     },
     "AGF-NoEAC-OpenAllButton": {
@@ -156,25 +222,12 @@
       }
     },
     "AGF-NoEAC-SmeltTimerOption": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - NoEAC - SmeltTimerOption",
-      "live_version": "1.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11824,
         "update_group_id": "7753134",
         "update_group_name": "AGF - V3 - NoEAC - SmeltTimerOption",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11824",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11824"
       }
     },
     "AGF-NoEAC-Toolbelt12Slots": {
@@ -292,6 +345,28 @@
         "update_group_id": "7661618",
         "update_group_name": "AGF - V3 - VP - CraftVitamins",
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11309"
+      }
+    },
+    "AGF-VP-DoorsPlus": {
+      "action": "add",
+      "score": 1.0,
+      "live_name": "AGF - V3 - VP - DoorsPlus",
+      "live_version": "4.0.0",
+      "config": {
+        "intent": "update",
+        "nexus_mod_id": 12208,
+        "update_group_id": "7862424",
+        "update_group_name": "AGF - V3 - VP - DoorsPlus",
+        "file_category": "main",
+        "legacy_latest_file_id": 0,
+        "legacy_name_hint": "",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12208",
+        "tested_game_version_override": "",
+        "brief_overview_override": "",
+        "detailed_description_override": "",
+        "file_description_override": "",
+        "summary_override": "",
+        "description_override": ""
       }
     },
     "AGF-VP-DrinkableAcid": {
@@ -466,25 +541,12 @@
       }
     },
     "AGF-VP-SmeltingPlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - SmeltingPlus",
-      "live_version": "3.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 11825,
         "update_group_id": "7753143",
         "update_group_name": "AGF - V3 - VP - SmeltingPlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11825",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11825"
       }
     },
     "AGF-VP-StayLongerAnimalCorpse": {

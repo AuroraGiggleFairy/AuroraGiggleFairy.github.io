@@ -149,6 +149,11 @@
     "recorded_at": "2026-06-16T03:42:40",
     "version": "2.0.0"
   },
+  "AGF-NoEAC-GyroFlightModes": {
+    "folder": "AGF-NoEAC-GyroFlightModes-v1.0.0",
+    "recorded_at": "2026-09-01T23:11:17",
+    "version": "1.0.0"
+  },
   "AGF-NoEAC-HideDLCCosmetics": {
     "folder": "AGF-NoEAC-HideDLCCosmetics-v1.0.0",
     "recorded_at": "2026-08-25T16:46:37",
@@ -538,6 +543,11 @@
     "folder": "AGF-VP-ZombieLargerHordes-v2.0.2",
     "recorded_at": "2026-06-15T02:20:47",
     "version": "2.0.2"
+  },
+  "AGF-VPS-HonkOpensYourDoors": {
+    "folder": "AGF-VPS-HonkOpensYourDoors-v1.0.0",
+    "recorded_at": "2026-09-01T23:11:17",
+    "version": "1.0.0"
   },
   "AGF-VPS-SortingCart": {
     "folder": "AGF-VPS-SortingCart-v2.0.0",

@@ -1,4 +1,10 @@
 <AGF-EnhancedAGF>
-
-
+	<remove xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]/label[2]"/>
+	<append xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]">
+		<label depth="3" pos="15,-3" width="350" font_size="26" text="{agfVehicleFuelPercent}%   ({agfVehicleFuelCurrentWithMax})" justify="right" color="[selectedColor]"/>
+	</append>
+	<remove xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]/label[2]"/>
+	<append xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]">
+		<label depth="3" pos="15,-3" width="350" font_size="26" text="{agfVehicleDurabilityPercent}%   ({agfVehicleDurabilityCurrentWithMax})" justify="right" color="[selectedColor]"/>
+	</append>
 </AGF-EnhancedAGF>
