@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AGF-LawnTractorV3Fix>
-	<set xpath="/items/item[@name='vehicleLawnTractorPlaceable']/property[@name='Meshfile']/@value">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?LawnMowerDriveable.prefab</set>
+	<set xpath="/items/item[@name='vehicleLawnTractorPlaceable']/property[@name='Meshfile']/@value">#@modfolder(OcbLawnMowing):Resources/LawnMowers.unity3d?LawnMowerDriveable.prefab</set>
 </AGF-LawnTractorV3Fix>

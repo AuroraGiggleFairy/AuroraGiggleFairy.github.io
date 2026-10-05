@@ -11,8 +11,7 @@ using HarmonyLib;
 internal static class OcbLegacyXml
 {
 	private const string OriginalModName = "OcbLawnMowing";
-	private static string companionModName = "zzzzAGF-LawnTractorV3Fix";
-	private static string fixedBundle = "#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d";
+	private static string fixedBundle = "#@modfolder(OcbLawnMowing):Resources/LawnMowers.unity3d";
 
 	private static readonly Dictionary<string, string> EmptyScope = new Dictionary<string, string>();
 	private static readonly Stack<Dictionary<string, string>> TemplateScopes = new Stack<Dictionary<string, string>>();
@@ -34,12 +33,6 @@ internal static class OcbLegacyXml
 
 	public static void Install(Harmony harmony, Mod companionMod)
 	{
-		if (companionMod != null && !string.IsNullOrEmpty(companionMod.Name))
-		{
-			companionModName = companionMod.Name;
-			fixedBundle = "#@modfolder(" + companionModName + "):Resources/LawnMowers.unity3d";
-		}
-
 		harmony.Patch(
 			AccessTools.Method(typeof(XmlPatcher), "singlePatch"),
 			new HarmonyMethod(typeof(OcbLegacyXml), nameof(Prefix)));
@@ -197,7 +190,7 @@ internal static class OcbLegacyXml
 			foreach (XAttribute attribute in node.Attributes())
 			{
 				string value = attribute.Value;
-				if (string.IsNullOrEmpty(value) || value.IndexOf("LawnMowers.unity3d", StringComparison.Ordinal) < 0 || value.IndexOf("modfolder(" + companionModName + ")", StringComparison.Ordinal) >= 0)
+				if (string.IsNullOrEmpty(value) || value.IndexOf("LawnMowers.unity3d", StringComparison.Ordinal) < 0 || value.IndexOf("modfolder(" + OriginalModName + ")", StringComparison.Ordinal) >= 0)
 				{
 					continue;
 				}
