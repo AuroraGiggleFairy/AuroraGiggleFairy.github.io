@@ -15,7 +15,7 @@ namespace SortingCart
 			return block != null && block.Tags.Test_AnySet(CartTag);
 		}
 
-		public static bool TryAsContainer(TileEntity entity, out ITileEntityLootable storage)
+		public static bool TryAsContainer(TileEntity entity, out StorageBox storage)
 		{
 			storage = null;
 			if (entity == null)
@@ -25,11 +25,19 @@ namespace SortingCart
 
 			if (entity is TileEntityComposite composite)
 			{
-				storage = composite.GetFeature<TEFeatureStorage>();
-				return storage != null;
+				storage = StorageBox.FromFeature(composite.GetFeature<TEFeatureStorage>());
+				if (storage != null)
+				{
+					return true;
+				}
 			}
 
-			storage = entity as ITileEntityLootable;
+			if (GameVersion.UseV33)
+			{
+				return false;
+			}
+
+			storage = StorageBox.TryLegacy(entity);
 			return storage != null;
 		}
 
@@ -51,29 +59,15 @@ namespace SortingCart
 			return lockable != null;
 		}
 
-		public static bool IsPlayerStorage(ITileEntityLootable storage)
-		{
-			return storage != null && storage.bPlayerStorage;
-		}
-
-		public static bool IsSlotLocked(ITileEntityLootable storage, int index)
-		{
-			return storage != null
-				&& storage.HasSlotLocksSupport
-				&& storage.SlotLocks != null
-				&& index >= 0
-				&& index < storage.SlotLocks.Length
-				&& storage.SlotLocks[index];
-		}
-
 		public static bool IsBagSlotLocked(Bag bag, int index)
 		{
-			if (bag == null || bag.LockedSlots == null)
+			PackedBoolArray locks = BagAccess.LockedSlots(bag);
+			if (locks == null)
 			{
 				return false;
 			}
 
-			return index >= 0 && index < bag.LockedSlots.Length && bag.LockedSlots[index];
+			return index >= 0 && index < locks.Length && locks[index];
 		}
 
 		public static bool IsInUse(TileEntity tileEntity)
@@ -88,8 +82,8 @@ namespace SortingCart
 				return true;
 			}
 
-			return TryAsContainer(tileEntity, out ITileEntityLootable storage)
-				&& storage is ILockTarget lockTarget
+			return TryAsContainer(tileEntity, out StorageBox storage)
+				&& storage.AsLockTarget() is ILockTarget lockTarget
 				&& LockManager.Instance.IsLockedServer(lockTarget);
 		}
 
@@ -146,7 +140,7 @@ namespace SortingCart
 			return !string.IsNullOrEmpty(sourceHash) && sourceHash.Equals(targetHash);
 		}
 
-		public static void MarkModified(TileEntity tileEntity, ITileEntityLootable storage)
+		public static void MarkModified(TileEntity tileEntity, StorageBox storage)
 		{
 			storage?.SetModified();
 			if (tileEntity is TileEntityComposite composite)

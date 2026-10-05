@@ -11,6 +11,14 @@ Full research note:
 
 Decompile source: `00_Support/WorkspaceData/References/Decompiled-DLLs/Decompiled_AssemblyCSharp_7d2d.v3.1/`
 
+## Even simpler description (screamer spawning)
+
+Default Heatmap Sensitivity: 5 campfires (63 torches) is max. On average, screamers spawn once every 45 minutes. Each screamer summons 5 zombies per scream, up to 25, with a 12% chance of one being another screamer.
+
+## Simple description (screamer spawning)
+
+With default Heatmap Sensitivity, 5 campfires (63 torches) is max. Each check has a 20% chance of spawning screamer(s). On a fail, 4-7 minutes wait. On a success, 22-25 minutes wait. On average, once every 45 minutes. Each screamer summons 5 zombies per scream, up to 25, with a 12% chance of one being another screamer.
+
 ## Official description (screamer spawning)
 
 Assuming default sandbox Heatmap Sensitivity, within an 80×80 block area (5×5 chunks), 5 lit campfires can trigger a screamer check almost immediately, with a 20% chance of spawning. On a fail, the next check takes about 4–7 minutes; on a success, about 22–25 minutes. Higher game stage changes which screamers can appear (normal → more screamers → feral → radiated). Each screamer can summon up to 25 zombies total, at 5 per scream. A scream has a 12% chance of spawning another screamer. (63 torches have similar results.) Additional heat sources in the same area do not increase the spawn chance. However, more screamer checks can run if heat is built about 100+ blocks away, since that uses a separate heat area.

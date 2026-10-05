@@ -15,9 +15,10 @@ Steps in this outline are grouped under the numbered script that owns them:
 | **01** | `00_Support/Automation/workflow/01_sync_work.py` | Sync game and active mods (Steps 1–2) |
 | **02** | `00_Support/Automation/workflow/02_promote.py` | Promote tested mods to release (Steps 3–5) |
 | **03** | `00_Support/Automation/workflow/03_package.py` | Package release files (Steps 6–9) |
-| **04** | `00_Support/Automation/workflow/04_run_chain.py` | Run 01 → 02 → 03 → 06 in sequence |
+| **04** | `00_Support/Automation/workflow/04_run_chain.py` | Run 01 → 02 → 03 → 06 → 06b in sequence |
 | **05** | `00_Support/Automation/workflow/05_pipeline_engine.py` | Full pipeline engine (implements all steps) |
 | **06** | `00_Support/Automation/workflow/06_nexus.py` | Nexus PublishHelp generation |
+| **06b** | `00_Support/Automation/workflow/06_7dtdmods.py` | 7DaysToDieMods PublishHelp + missing satellite repos |
 
 ---
 

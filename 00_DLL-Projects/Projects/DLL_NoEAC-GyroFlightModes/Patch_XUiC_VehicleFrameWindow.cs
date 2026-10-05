@@ -55,13 +55,75 @@ namespace GyroFlightModes
 			XUiC_SimpleButton btnOriginal = window.GetChildById("btnFlightModeOriginal") as XUiC_SimpleButton;
 			XUiC_SimpleButton btnHeli = window.GetChildById("btnFlightModeHeli") as XUiC_SimpleButton;
 			EntityVehicle vehicle = window.Vehicle;
-			if (!GyroFlightModesApi.IsGyro(vehicle))
+			bool isGyro = GyroFlightModesApi.IsGyro(vehicle);
+			ApplyGyroOnlyLayout(window, isGyro);
+			if (!isGyro)
 			{
 				RefreshSelected(btnOriginal, btnHeli, GyroFlightMode.Original);
 				return;
 			}
 
 			RefreshSelected(btnOriginal, btnHeli, GyroFlightModesApi.ReadMode(vehicle));
+		}
+
+		private static bool layoutShifted;
+
+		private static void ApplyGyroOnlyLayout(XUiC_VehicleFrameWindow window, bool isGyro)
+		{
+			XUiController row = window.GetChildById("flightModeRow");
+			if (row?.ViewComponent != null)
+			{
+				row.ViewComponent.IsVisible = isGyro;
+			}
+
+			if (isGyro == layoutShifted)
+			{
+				return;
+			}
+
+			XUiController cosmetic = window.GetChildById("cosmeticparts");
+			XUiController parts = window.GetChildById("parts");
+			if (cosmetic?.Parent == null)
+			{
+				return;
+			}
+
+			XUiController cosmeticHeader = null;
+			XUiController modifierHeader = null;
+			foreach (XUiController child in cosmetic.Parent.Children)
+			{
+				if (child?.ViewComponent == null || child.ViewComponent.ID != "header")
+				{
+					continue;
+				}
+
+				if (cosmeticHeader == null)
+				{
+					cosmeticHeader = child;
+				}
+				else if (modifierHeader == null)
+				{
+					modifierHeader = child;
+				}
+			}
+
+			int delta = isGyro ? -34 : 34;
+			Nudge(cosmeticHeader, delta);
+			Nudge(cosmetic, delta);
+			Nudge(modifierHeader, delta);
+			Nudge(parts, delta);
+			layoutShifted = isGyro;
+		}
+
+		private static void Nudge(XUiController controller, int deltaY)
+		{
+			if (controller?.ViewComponent == null)
+			{
+				return;
+			}
+
+			Vector2i pos = controller.ViewComponent.Position;
+			controller.ViewComponent.Position = new Vector2i(pos.x, pos.y + deltaY);
 		}
 
 		internal static void RefreshSelected(XUiC_SimpleButton btnOriginal, XUiC_SimpleButton btnHeli, GyroFlightMode mode)

@@ -8,50 +8,50 @@ For full command variants and exact response scripting, use TEMP-VisualEntityTra
 
 ### Quick Use
 
-1. /agfvet
-2. /agfvet on
-3. /agfvet off
+1. /agfet
+2. /agfet on
+3. /agfet off
 
-### 1. /agfvet
+### 1. /agfet
 
 - Shows current Visual Entity Tracker mode and available options.
-- Aliases: /agf-vet, /agfvet help, /agf-vet help, /agfvet status, /agf-vet status
+- Aliases: /agf-et, /agfet help, /agf-et help, /agfet status, /agf-et status
 
-### 2. /agfvet on
+### 2. /agfet on
 
 - Enables Visual Entity Tracker.
-- Alias: /agf-vet on
+- Alias: /agf-et on
 
-### 3. /agfvet off
+### 3. /agfet off
 
 - Disables Visual Entity Tracker.
-- Alias: /agf-vet off
+- Alias: /agf-et off
 
 ## Admin Console Commands
 
 ### Quick Use
 
-1. agf-vet
-2. agf-vet default <off|on>
-3. agf-vet set <entityId|all> <off|on|default>
-4. agf-vet list
+1. agf-et
+2. agf-et default <off|on>
+3. agf-et set <entityId|all> <off|on|default>
+4. agf-et list
 
-### 1. agf-vet
+### 1. agf-et
 
 - Shows admin usage/help plus the current default value.
-- Aliases: agf-vet, agf-vet help, agf-vet default
+- Aliases: agf-et, agf-et help, agf-et default
 
-### 2. agf-vet default <off|on>
+### 2. agf-et default <off|on>
 
 - Sets the default used for first-time joining players.
 
-### 3. agf-vet set <entityId|all> <off|on|default>
+### 3. agf-et set <entityId|all> <off|on|default>
 
 - Sets Visual Entity Tracker mode for one online player by entityId, or for all online players.
 - Using default applies the current default setting immediately.
 - all applies to currently online players.
 
-### 4. agf-vet list
+### 4. agf-et list
 
 - Lists online players and their Visual Entity Tracker state.
 - Includes: player name, entityId, and mode.
@@ -59,12 +59,12 @@ For full command variants and exact response scripting, use TEMP-VisualEntityTra
 ## Admin Error Handling
 
 - Invalid admin command usage returns support/help messages with expected syntax.
-- Example: agf-vet default banana -> invalid option. Use: agf-vet default <off|on>.
+- Example: agf-et default banana -> invalid option. Use: agf-et default <off|on>.
 
 ## Behavior Notes
 
-- /agfvet and /agf-vet are both valid chat command roots.
-- /agfvet with no argument is treated as status.
-- /agfvet help and /agfvet status use the same status response path.
+- /agfet and /agf-et are both valid chat command roots.
+- /agfet with no argument is treated as status.
+- /agfet help and /agfet status use the same status response path.
 - set all applies to online players only.
 - default controls baseline behavior for new joiners.

@@ -16,6 +16,9 @@
     <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
     <HarmonyDll Condition="'$(HarmonyDll)'==''">$(MSBuildProjectDirectory)\..\..\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
     <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-VPS-HonkOpensYourDoors-v0.0.1</DraftModDir>
+    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-VPS-HonkOpensYourDoors-v1.0.0</ActiveBuildDir>
+    <ReleaseSourceDir>$(MSBuildProjectDirectory)\..\..\..\03_ReleaseSource\AGF-VPS-HonkOpensYourDoors-v1.0.0</ReleaseSourceDir>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-VPS-HonkOpensYourDoors-v1.0.0</GameModDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>
@@ -40,7 +43,10 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <Target Name="CopyToDraft" AfterTargets="Build" Condition="Exists('$(DraftModDir)')">
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="true" />
+  <Target Name="CopyToModFolders" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="true" Condition="Exists('$(DraftModDir)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ActiveBuildDir)" SkipUnchangedFiles="true" Condition="Exists('$(ActiveBuildDir)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ReleaseSourceDir)" SkipUnchangedFiles="true" Condition="Exists('$(ReleaseSourceDir)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="true" Condition="Exists('$(GameModDir)')" />
   </Target>
 </Project>

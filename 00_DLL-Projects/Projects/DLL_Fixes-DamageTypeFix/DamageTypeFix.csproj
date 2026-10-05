@@ -14,6 +14,8 @@
     <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom\7DaysToDie.exe')">C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom</SevenDaysToDieDir>
     <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
     <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <CustomParticleLoaderDll Condition="Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom\Mods\0-CustomParticleLoader\CustomParticleLoader.dll')">C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom\Mods\0-CustomParticleLoader\CustomParticleLoader.dll</CustomParticleLoaderDll>
+    <CustomParticleLoaderDll Condition="'$(CustomParticleLoaderDll)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods\0-CustomParticleLoader\CustomParticleLoader.dll')">C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods\0-CustomParticleLoader\CustomParticleLoader.dll</CustomParticleLoaderDll>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -30,6 +32,10 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CustomParticleLoader">
+      <HintPath>$(CustomParticleLoaderDll)</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

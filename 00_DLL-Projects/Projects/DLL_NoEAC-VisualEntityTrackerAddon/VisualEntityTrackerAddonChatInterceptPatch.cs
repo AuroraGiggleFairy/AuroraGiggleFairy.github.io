@@ -54,6 +54,6 @@ public static class VisualEntityTrackerAddonChatInterceptPatch
         int separatorIndex = withoutSlash.IndexOf(' ');
         string root = separatorIndex >= 0 ? withoutSlash.Substring(0, separatorIndex) : withoutSlash;
         root = root.Trim().ToLowerInvariant();
-        return root == "agf-vet" || root == "agfvet";
+        return root == "agfet" || root == "agf-et" || root == "agfvet" || root == "agf-vet";
     }
 }

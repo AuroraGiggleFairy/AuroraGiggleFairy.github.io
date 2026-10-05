@@ -30,7 +30,7 @@ python 00_DLL-Projects/Generators/DecorationBlock/patch_helper_catalog.py 00_DLL
 4. Before any catalog-wide CSV write, merge `edits_v1` from `deco-helper-block-list.canvas.data.json` (cat1/cat2/sort overlays). Canvas edits are the working list until the user asks to bake.
 5. **Never** bump the canvas edits state key (`edits_v1`). Bumping it hides the user's Category 1/2 and sort work.
 6. The canvas **Sort** button regroups by Category 1, then Category 2, then current order, and rewrites SortOrder1 1…N in `edits_v1`. Category 1/2 stay. Do not run a CSV-only reorder that ignores canvas overlays.
-7. Tell the user to reopen the canvas. Do not open it for them.
+7. After the script write, header-only StrReplace on the `.canvas.tsx` so Cursor shows the Open chip above chat. Do not markdown-link the canvas. Do not Read the 2MB file.
 
 `--dry-run` first only if the range/filter is ambiguous.
 
@@ -46,7 +46,8 @@ python 00_DLL-Projects/Generators/DecorationBlock/patch_helper_catalog.py 00_DLL
 | `add_child` | `parent`, `name` |
 | `set_cat` | `parent`, `child`; select with `ids` [] **or** `filter_parent` / `filter_child` + `from`/`to` (1-based in that filtered list) **or** `family` **or** `name_contains`; optional `needles` [] prepends LOOK_RULES |
 | `rename` | `english` + same selectors as `set_cat` (usually one `id`). Keeps `[hex](Kind)[-]` unless the new string already has tags. English loc only. |
-| `reorder_by_category` | **do not use on CSV alone**; canvas Sort button rewrites numbers from merged cats. This op stays a no-op so a CSV-only run cannot wipe overlay categories |
+| `set_kind` | `kind` (`loot` / `plain` / `campfire` / …) + same selectors as `set_cat`. Rewrites the English kind tag and the CSV `Kind` column. |
+| `apply_excel_support` | `xlsx` path. Excel row order + Category/Category2 for **existing helper rows only**. Does not add Excel-only blocks. Campfire twins stay first (`Kitchen/Campfires`). v3-only items keep current cats and follow same-family Excel items. Writes `helper_look.csv` + canvas `edits_v1`. Do **not** click canvas Sort after (that regroups by category). |
 
 `from`/`to` are **row numbers in the current filtered list**, not raw `00092` unless they said catalog/unfiltered (omit `filter_parent`).
 

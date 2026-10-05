@@ -17,17 +17,18 @@ public class Patch_QuestTurnInEntry_UI
 		{
 			return true;
 		}
-		ItemClass itemClass = item.itemValue.ItemClass;
+		ItemValue itemValue = ItemStacks.Value(item);
+		ItemClass itemClass = itemValue?.ItemClass;
 		EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
 		string icon;
-		if (isIconBinding && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(itemClass, entityPlayerLocal, bindingName, out icon, item.itemValue))
+		if (isIconBinding && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(itemClass, entityPlayerLocal, bindingName, out icon, itemValue))
 		{
 			value = icon;
 			__result = true;
 			return false;
 		}
 		ItemClassArmor itemClassArmor = itemClass as ItemClassArmor;
-		if (isTintBinding && itemClassArmor != null && itemClassArmor.IsCosmetic && entityPlayerLocal != null && !ArmorIconUIHarmonyPatches.HasMagnitudeIndicator(itemClassArmor, item.itemValue))
+		if (isTintBinding && itemClassArmor != null && itemClassArmor.IsCosmetic && entityPlayerLocal != null && !ArmorIconUIHarmonyPatches.HasMagnitudeIndicator(itemClassArmor, itemValue))
 		{
 			if (ArmorIconUIHarmonyPatches.IsCosmeticUnlocked(entityPlayerLocal, itemClassArmor))
 			{

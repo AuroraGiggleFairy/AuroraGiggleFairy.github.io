@@ -1,7 +1,6 @@
 ---
-description: High-quality 7D2D/AGF localization — use when creating, reviewing, or fixing Localization.csv/txt
-globs: "**/Localization.*"
-alwaysApply: false
+description: High-quality 7D2D/AGF localization — always on; most mods touch Localization.csv
+alwaysApply: true
 ---
 
 # Localization Quality Method

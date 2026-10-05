@@ -20,7 +20,8 @@ VS_CODE_ROOT = IMAGES_ROOT.parent
 IMAGE_WORKFLOW_ROOT = IMAGES_ROOT / "01_ImageWorkflow"
 PRIMARY_IMAGE_SOURCES_ROOT = IMAGE_WORKFLOW_ROOT / "PrimaryImageSources"
 FINAL_IMAGES_ROOT = IMAGES_ROOT / "02_ImagesFinal"
-GENERATE_SCRIPT = VS_CODE_ROOT / "00_Support" / "Automation" / "workflow" / "SCRIPT-GenerateModImages.py"
+WORKFLOW_DIR = VS_CODE_ROOT / "00_Support" / "Automation" / "workflow"
+GENERATE_SCRIPT = WORKFLOW_DIR / "SCRIPT-GenerateModImages.py"
 
 TARGET_W = 1920
 TARGET_H = 1080

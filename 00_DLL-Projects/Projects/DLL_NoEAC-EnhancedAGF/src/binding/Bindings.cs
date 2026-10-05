@@ -100,6 +100,8 @@ namespace StatControllers
 
             AddNewBinding(new BagUsedSlots(304, "PlayerBagUsedSlots"));
             AddNewBinding(new BagSize(305, "PlayerBagSize"));
+            AddNewBinding(new BagUsedSlotsColor(308, "PlayerBagUsedColor"));
+            AddNewBinding(new BagIcon(309, "PlayerBagIcon"));
             AddNewBinding(new BagCarryCapacity(306, "PlayerCarryCapacity"));
             AddNewBinding(new BagMaxCarryCapacity(307, "PlayerMaxCarryCapacity"));
 
@@ -109,9 +111,16 @@ namespace StatControllers
                     AddNewBinding(new PlayerIsNight(403, "PlayerIsNight"));
                     AddNewBinding(new PlayerCurrentAmmoIcon(404, "PlayerCurrentAmmoIcon"));
                     AddNewBinding(new PlayerCurrentAmmoCount(405, "PlayerCurrentAmmoCount"));
-                    AddNewBinding(new DoomGuyIcon(406, "DoomGuyIcon"));
                     AddNewBinding(new PlayerCurrentAmmoVisible(407, "PlayerCurrentAmmoVisible"));
     }
+
+        /// <summary>
+        /// Dan HUD only. Called once from mod startup when that mod is loaded.
+        /// </summary>
+        public static void RegisterDoomHudBindings()
+        {
+            AddNewBinding(new DoomGuyIcon(406, "DoomGuyIcon"));
+        }
 
         /// <summary>
         /// Finds the BindingType that contains the bindingName <br/>

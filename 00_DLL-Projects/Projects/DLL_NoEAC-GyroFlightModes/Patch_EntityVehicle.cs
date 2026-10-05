@@ -36,6 +36,23 @@ namespace GyroFlightModes
 		}
 	}
 
+	// Place and world-load assign the vehicle item after the first control setup.
+	// Re-read the item then, or a picked-up heli gyro comes back as the original mode.
+	[HarmonyPatch(typeof(Vehicle), nameof(Vehicle.SetItemValue))]
+	internal static class Patch_Vehicle_SetItemValue
+	{
+		public static void Postfix(Vehicle __instance)
+		{
+			EntityVehicle vehicle = __instance?.entity;
+			if (vehicle == null || !GyroControlApplier.HasControlTable(vehicle))
+			{
+				return;
+			}
+
+			GyroFlightModesApi.ApplySavedMode(vehicle);
+		}
+	}
+
 	[HarmonyPatch(typeof(EntityVehicle), "InitLocalActivationCommands")]
 	internal static class Patch_EntityVehicle_InitLocalActivationCommands
 	{

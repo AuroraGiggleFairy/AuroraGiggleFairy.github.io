@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
@@ -54,13 +55,13 @@ namespace SortingCart
 
 		private static void AddEntries(object dict, int playerId, List<Vector3i> result)
 		{
-			foreach (LockEntry entry in GetLockEntries(dict, playerId))
+			foreach (object entry in GetLockEntries(dict, playerId))
 			{
 				AddIfSortingBox(entry, result);
 			}
 		}
 
-		private static IEnumerable<LockEntry> GetLockEntries(object dict, int playerId)
+		private static IEnumerable<object> GetLockEntries(object dict, int playerId)
 		{
 			if (dict == null)
 			{
@@ -81,31 +82,24 @@ namespace SortingCart
 				}
 
 				Type second = args[1].ParameterType;
-				if (second.Name.IndexOf("Span", StringComparison.Ordinal) >= 0
-					|| (second.IsByRef && second.GetElementType() != null && second.GetElementType().Name.IndexOf("Span", StringComparison.Ordinal) >= 0))
+				Type listType = second.IsByRef ? second.GetElementType() : second;
+				if (listType == null || listType.Name.IndexOf("Span", StringComparison.Ordinal) >= 0)
 				{
 					continue;
 				}
 
-				if (!args[1].IsOut && second.IsAssignableFrom(typeof(List<LockEntry>)))
+				if (!typeof(IEnumerable).IsAssignableFrom(listType))
 				{
-					var list = new List<LockEntry>();
-					method.Invoke(dict, new object[] { playerId, list });
-					foreach (LockEntry entry in list)
-					{
-						yield return entry;
-					}
-
-					yield break;
+					continue;
 				}
 
 				if (args[1].IsOut)
 				{
 					object[] invokeArgs = { playerId, null };
 					method.Invoke(dict, invokeArgs);
-					if (invokeArgs[1] is IEnumerable<LockEntry> values)
+					if (invokeArgs[1] is IEnumerable values)
 					{
-						foreach (LockEntry entry in values)
+						foreach (object entry in values)
 						{
 							yield return entry;
 						}
@@ -113,18 +107,37 @@ namespace SortingCart
 
 					yield break;
 				}
+
+				object list;
+				try
+				{
+					list = Activator.CreateInstance(listType);
+				}
+				catch (Exception)
+				{
+					continue;
+				}
+
+				method.Invoke(dict, new object[] { playerId, list });
+				foreach (object entry in (IEnumerable)list)
+				{
+					yield return entry;
+				}
+
+				yield break;
 			}
 		}
 
-		private static void AddIfSortingBox(LockEntry entry, List<Vector3i> result)
+		private static void AddIfSortingBox(object entry, List<Vector3i> result)
 		{
-			if (entry.Target == null)
+			object target = LockTarget(entry);
+			if (target == null)
 			{
 				return;
 			}
 
-			TileEntity te = entry.Target as TileEntity;
-			if (te == null && entry.Target is TEFeatureAbs feature)
+			TileEntity te = target as TileEntity;
+			if (te == null && target is TEFeatureAbs feature)
 			{
 				te = feature.Parent;
 			}
@@ -137,6 +150,23 @@ namespace SortingCart
 					result.Add(pos);
 				}
 			}
+		}
+
+		private static object LockTarget(object entry)
+		{
+			if (entry == null)
+			{
+				return null;
+			}
+
+			const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+			FieldInfo field = entry.GetType().GetField("Target", flags);
+			if (field != null)
+			{
+				return field.GetValue(entry);
+			}
+
+			return entry.GetType().GetProperty("Target", flags)?.GetValue(entry);
 		}
 	}
 }

@@ -96,11 +96,9 @@ namespace FlightLevelAssist
             : null;
 
         private static readonly System.Reflection.FieldInfo VehicleEnabledField;
-        private static readonly System.Reflection.FieldInfo VehicleTurboEnabledField;
+        private static readonly System.Reflection.FieldInfo VehicleSprintLockedField;
         private static readonly System.Reflection.FieldInfo VehicleWasForwardPressedField;
-        private static readonly System.Reflection.FieldInfo VehicleForwardForcedLastFrameField;
         private static readonly System.Reflection.FieldInfo VehicleWasTurboPressedField;
-        private static readonly System.Reflection.FieldInfo VehicleSprintResumeTimeField;
 
         static AutoRunInterop()
         {
@@ -116,18 +114,16 @@ namespace FlightLevelAssist
             }
 
             VehicleEnabledField = AccessTools.Field(stateType, "VehicleEnabled");
-            VehicleTurboEnabledField = AccessTools.Field(stateType, "VehicleTurboEnabled");
+            VehicleSprintLockedField = AccessTools.Field(stateType, "VehicleSprintLocked");
             VehicleWasForwardPressedField = AccessTools.Field(stateType, "VehicleWasForwardPressed");
-            VehicleForwardForcedLastFrameField = AccessTools.Field(stateType, "VehicleForwardForcedLastFrame");
             VehicleWasTurboPressedField = AccessTools.Field(stateType, "VehicleWasTurboPressed");
-            VehicleSprintResumeTimeField = AccessTools.Field(stateType, "VehicleSprintResumeTime");
         }
 
         public static bool IsAvailable()
         {
             return GetOrCreateForVehicleMethod != null
                 && VehicleEnabledField != null
-                && VehicleTurboEnabledField != null;
+                && VehicleSprintLockedField != null;
         }
 
         private static object TryGetVehicleState(EntityVehicle vehicle)
@@ -155,15 +151,9 @@ namespace FlightLevelAssist
                 return false;
             }
 
-            bool forwardHeld = vehicle != null
-                && vehicle.movementInput != null
-                && vehicle.movementInput.moveForward >= 0.55f;
-
             VehicleEnabledField.SetValue(state, true);
-            VehicleTurboEnabledField.SetValue(state, lockTurbo);
-            VehicleSprintResumeTimeField?.SetValue(state, 0f);
-            VehicleWasForwardPressedField?.SetValue(state, forwardHeld);
-            VehicleForwardForcedLastFrameField?.SetValue(state, false);
+            VehicleSprintLockedField.SetValue(state, lockTurbo);
+            VehicleWasForwardPressedField?.SetValue(state, true);
             VehicleWasTurboPressedField?.SetValue(state, lockTurbo);
             player?.SetCVar(VehicleEnabledCVar, 1f);
             return true;
@@ -175,10 +165,8 @@ namespace FlightLevelAssist
             if (state != null)
             {
                 VehicleEnabledField.SetValue(state, false);
-                VehicleTurboEnabledField.SetValue(state, false);
-                VehicleSprintResumeTimeField?.SetValue(state, 0f);
+                VehicleSprintLockedField.SetValue(state, false);
                 VehicleWasForwardPressedField?.SetValue(state, false);
-                VehicleForwardForcedLastFrameField?.SetValue(state, false);
                 VehicleWasTurboPressedField?.SetValue(state, false);
             }
 
@@ -454,20 +442,15 @@ namespace FlightLevelAssist
                     state.PlaneYLockAutoRunCoupled = true;
                 }
 
-                if (state.PlaneYLockUsingExternalAutoRun)
+                if (state.PlaneYLockUsingExternalAutoRun && !AutoRunInterop.IsVehicleAutoRunEnabled(__instance))
                 {
-                    if (!AutoRunInterop.IsVehicleAutoRunEnabled(__instance))
-                    {
-                        DisableAssist(state, __instance);
-                        Debug.Log("[FlightLevelAssist] Y-lock canceled because vehicle auto-run was disabled for vehicle " + __instance.entityId + ".");
-                        return;
-                    }
+                    DisableAssist(state, __instance);
+                    Debug.Log("[FlightLevelAssist] Y-lock canceled because vehicle auto-run was disabled for vehicle " + __instance.entityId + ".");
+                    return;
                 }
-                else
-                {
-                    // Fallback when AutoRun mod is unavailable: hold forward while Y-lock is active.
-                    __instance.movementInput.moveForward = 1f;
-                }
+
+                // Hold forward here as well as through AutoRun. Patch order must not drop thrust for a frame.
+                __instance.movementInput.moveForward = 1f;
             }
         }
 
@@ -1196,7 +1179,8 @@ namespace FlightLevelAssist
                     && Mathf.Abs(pitchRateDegPerSec) <= PitchRateSettleDegPerSec;
                 state.PitchSettledTime = pitchSettled ? state.PitchSettledTime + Time.fixedDeltaTime : 0f;
 
-                if (state.PitchSettledTime >= PitchSettleDurationSec)
+                bool momentumReady = !requiresMomentumForYLock || currentForwardSpeed >= basicPlaneMomentumThreshold;
+                if (state.PitchSettledTime >= PitchSettleDurationSec && momentumReady)
                 {
                     state.HardLockActive = true;
                     if (!helicopterForwardRequested)

@@ -213,6 +213,8 @@ namespace MapPlus
 			PrefabBuffer.Clear();
 			decorator.GetPrefabsAtXZ(x, x, z, z, PrefabBuffer);
 
+			PrefabInstance bestVisited = null;
+			int bestVisitedArea = int.MaxValue;
 			PrefabInstance best = null;
 			int bestArea = int.MaxValue;
 			for (int i = 0; i < PrefabBuffer.Count; i++)
@@ -224,16 +226,25 @@ namespace MapPlus
 				}
 
 				int area = candidate.boundingBoxSize.x * candidate.boundingBoxSize.z;
-				if (area <= 0 || area >= bestArea)
+				if (area <= 0)
 				{
 					continue;
 				}
 
-				best = candidate;
-				bestArea = area;
+				if (area < bestArea)
+				{
+					best = candidate;
+					bestArea = area;
+				}
+
+				if (MapPlusVisits.HasVisited(candidate) && area < bestVisitedArea)
+				{
+					bestVisited = candidate;
+					bestVisitedArea = area;
+				}
 			}
 
-			return best;
+			return bestVisited ?? best;
 		}
 
 		static void BindViews(XUiC_MapArea mapArea)

@@ -38,7 +38,7 @@ public abstract class ProjectileItemGroupAbs<T> : IProjectileItemGroup where T :
 		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
 		//IL_003b: Expected O, but got Unknown
-		Transform val = item.CloneModel(GameManager.Instance.World, new ItemValue(((ItemData)item).Id, false), Vector3.zero, CustomProjectileManager.CustomProjectileParent, (MeshPurpose)0, default(TextureFullArray));
+		Transform val = CloneModelAccess.TransformOf(item, new ItemValue(((ItemData)item).Id, false), CustomProjectileManager.CustomProjectileParent);
 		Utils.SetLayerRecursively(((Component)val).gameObject, 13);
 		((Component)val).gameObject.AddComponent<ProjectileMoveScript>().SetState((State)2);
 		return val;

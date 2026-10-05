@@ -42,16 +42,17 @@ public static class Patch_WorkstationMaterialInputGrid_Update_SmeltTimerTotal
 			}
 
 			ItemStack stack = input[i];
-			if (stack == null || stack.IsEmpty() || stack.count <= 0)
+			int stackCount = stack == null ? 0 : StackAccess.Count(stack);
+			if (stack == null || stack.IsEmpty() || stackCount <= 0)
 			{
 				stackUi.timer.IsVisible = false;
 				continue;
 			}
 
-			ItemClass itemClass = stack.itemValue?.ItemClass;
+			ItemClass itemClass = StackAccess.Value(stack)?.ItemClass;
 			float perItem = SmeltTimerCalculator.GetPerItemMeltSeconds(itemClass, tools, toolsModuleUsed);
 			float remaining = te.GetTimerForSlot(i);
-			float total = SmeltTimerCalculator.GetTotalMeltSeconds(remaining, stack.count, perItem);
+			float total = SmeltTimerCalculator.GetTotalMeltSeconds(remaining, stackCount, perItem);
 			if (total <= 0f)
 			{
 				stackUi.timer.IsVisible = false;

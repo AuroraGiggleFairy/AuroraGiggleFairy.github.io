@@ -37,7 +37,7 @@ namespace DoomSandbox
 				return;
 			}
 
-			string stamp = ConfigStamp(DoomSandboxMod.ConfigPath);
+			string stamp = DoomSandboxBlueprint.Stamp;
 			bool hasDoomTab = mgr.OptionsByCategory?.dict != null
 				&& mgr.OptionsByCategory.dict.ContainsKey("Doom");
 
@@ -60,8 +60,8 @@ namespace DoomSandbox
 
 			try
 			{
-				DoomLog.Info($"Rebuild start ({reason}). Config=" + DoomSandboxMod.ConfigPath);
-				var cfg = DoomSandboxConfig.Load(DoomSandboxMod.ConfigPath);
+				DoomLog.Info($"Rebuild start ({reason}). Blueprint={DoomSandboxBlueprint.Stamp}");
+				var cfg = DoomSandboxConfig.Load();
 				DoomSandboxRebuilder.Apply(mgr, cfg);
 				_lastApplyFrame = frame;
 				_lastConfigStamp = stamp;
@@ -73,18 +73,82 @@ namespace DoomSandbox
 			}
 		}
 
-		static string ConfigStamp(string path)
+		/// <summary>
+		/// Dedicated never opens the sandbox UI, so Init/SetupOptions postfix often never
+		/// runs before GameManager.StartAsServer decodes SandboxCode on vanilla ladders.
+		/// Bring It On's Enemy Health index 2 is vanilla 50% and Doom 110%.
+		/// </summary>
+		public static void EnsureReady(SandboxOptManager mgr, string reason)
 		{
+			if (mgr == null)
+			{
+				DoomLog.Error("EnsureReady skipped (" + reason + "): manager null");
+				return;
+			}
+
 			try
 			{
-				if (string.IsNullOrEmpty(path) || !System.IO.File.Exists(path))
-					return "missing";
-				var fi = new System.IO.FileInfo(path);
-				return $"{fi.Length}:{fi.LastWriteTimeUtc.Ticks}";
+				bool hasOptions = mgr.SandboxOptionsDict != null && mgr.SandboxOptionsDict.Count > 0;
+				if (!mgr.IsInit && !hasOptions)
+				{
+					DoomLog.Info("SandboxOptionManager not initialized; calling Init (" + reason + ")");
+					mgr.Init();
+					return;
+				}
+
+				Rebuild(mgr, reason);
 			}
-			catch
+			catch (Exception ex)
 			{
-				return "err";
+				DoomLog.Error("EnsureReady failed (" + reason + "): " + ex);
+			}
+		}
+
+		static bool _decodingCode;
+
+		/// <summary>
+		/// Re-decode GamePrefs.SandboxCode after Doom value sets are live.
+		/// Vanilla StartAsServer already calls LoadOptionsFromCode, but that happens
+		/// on vanilla ladders if we have not rebuilt yet.
+		/// </summary>
+		public static void ApplySandboxCode(SandboxOptManager mgr, string reason)
+		{
+			if (mgr == null || _decodingCode)
+				return;
+
+			string code = null;
+			try
+			{
+				code = GamePrefs.GetString(EnumGamePrefs.SandboxCode);
+			}
+			catch (Exception ex)
+			{
+				DoomLog.Error("Read SandboxCode failed (" + reason + "): " + ex.Message);
+				return;
+			}
+
+			if (string.IsNullOrEmpty(code))
+			{
+				DoomLog.Info("No SandboxCode to decode (" + reason + ")");
+				return;
+			}
+
+			_decodingCode = true;
+			try
+			{
+				bool ok = mgr.LoadOptionsFromCode(code);
+				try { DoomSandboxRuntime.RefreshFromManager(); } catch { /* ignore */ }
+				DoomLog.Info(
+					$"Decoded SandboxCode ({reason}) ok={ok} code={code} " +
+					$"EnemyHP={DoomSandboxRuntime.EnemyHealthMult:0.##}");
+			}
+			catch (Exception ex)
+			{
+				DoomLog.Error("LoadOptionsFromCode failed (" + reason + "): " + ex);
+			}
+			finally
+			{
+				_decodingCode = false;
 			}
 		}
 	}
@@ -104,6 +168,19 @@ namespace DoomSandbox
 		public static void Postfix(SandboxOptManager __instance)
 		{
 			DoomSandboxRebuildGate.Rebuild(__instance, "Init.Postfix");
+		}
+	}
+
+	/// <summary>
+	/// Swap in Doom ladders before vanilla writes code indices onto CurrentValue.
+	/// Dedicated StartAsServer calls this with the serverconfig code.
+	/// </summary>
+	[HarmonyPatch(typeof(SandboxOptManager), nameof(SandboxOptManager.LoadOptionsFromCode), new[] { typeof(string) })]
+	public static class Patch_SandboxOptionManager_LoadOptionsFromCode
+	{
+		public static void Prefix(SandboxOptManager __instance)
+		{
+			DoomSandboxRebuildGate.EnsureReady(__instance, "LoadOptionsFromCode.Prefix");
 		}
 	}
 

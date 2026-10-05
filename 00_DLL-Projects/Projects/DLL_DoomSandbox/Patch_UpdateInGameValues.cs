@@ -7,6 +7,13 @@ namespace DoomSandbox
 	[HarmonyPatch(typeof(SandboxOptManager), nameof(SandboxOptManager.UpdateInGameValuesWithSandboxOptions))]
 	public static class Patch_UpdateInGameValuesWithSandboxOptions
 	{
+		public static void Prefix()
+		{
+			var mgr = SandboxOptManager.Current;
+			DoomSandboxRebuildGate.EnsureReady(mgr, "UpdateInGameValues.Prefix");
+			DoomSandboxRebuildGate.ApplySandboxCode(mgr, "UpdateInGameValues.Prefix");
+		}
+
 		public static void Postfix()
 		{
 			DoomSandboxRuntime.RefreshFromManager();

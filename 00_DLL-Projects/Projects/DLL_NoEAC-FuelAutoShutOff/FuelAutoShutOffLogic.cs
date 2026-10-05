@@ -253,7 +253,7 @@ namespace FuelAutoShutOff
 				return false;
 			}
 
-			ItemClass itemClass = ItemClass.GetForId(stack.itemValue.type);
+			ItemClass itemClass = ItemClass.GetForId(StackAccess.TypeId(StackAccess.Value(stack)));
 			if (itemClass == null || itemClass.MadeOfMaterial == null || itemClass.MadeOfMaterial.ForgeCategory == null)
 			{
 				return false;
@@ -286,7 +286,8 @@ namespace FuelAutoShutOff
 				}
 
 				ItemStack bin = input[binIndex];
-				int binCount = (bin == null || bin.IsEmpty() || bin.itemValue.type == 0) ? 0 : bin.count;
+				int binType = (bin == null || bin.IsEmpty()) ? 0 : StackAccess.TypeId(StackAccess.Value(bin));
+				int binCount = binType == 0 ? 0 : StackAccess.Count(bin);
 				return binCount + weight <= unitClass.MaxCount;
 			}
 

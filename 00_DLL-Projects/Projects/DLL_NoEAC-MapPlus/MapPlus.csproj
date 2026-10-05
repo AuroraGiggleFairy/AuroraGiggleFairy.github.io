@@ -41,7 +41,7 @@
     </Reference>
   </ItemGroup>
   <PropertyGroup>
-    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-NoEAC-MapPlus-v1.0.0</ActiveBuildDir>
+    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-NoEAC-MapPlus-v1.1.0</ActiveBuildDir>
     <GameModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-MapPlus-v1.0.0</GameModDir>
   </PropertyGroup>
   <Target Name="CopyToModFolders" AfterTargets="Build">

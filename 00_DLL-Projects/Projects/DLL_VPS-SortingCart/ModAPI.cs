@@ -9,6 +9,7 @@ namespace SortingCart
 		{
 			try
 			{
+				GameVersion.Initialize();
 				new Harmony("com.agfprojects.sortingcart").PatchAll();
 				Log.Info("Loaded. Based on Kanaverum / Asylum Robotic Inbox. Maintained by AGF.");
 			}

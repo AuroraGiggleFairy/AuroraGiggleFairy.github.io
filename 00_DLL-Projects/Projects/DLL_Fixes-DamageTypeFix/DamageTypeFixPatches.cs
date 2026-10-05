@@ -1,285 +1,150 @@
 using System;
-using System.Collections.Generic;
+using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
 
 namespace DamageTypeFix
 {
-	internal static class BfgPlayerIgnore
+	internal static class Bfg
 	{
-		static readonly FastTags<TagGroup.Global> BfgTag = FastTags<TagGroup.Global>.Parse("perkBFGExpert");
+		static readonly FastTags<TagGroup.Global> ItemTag = FastTags<TagGroup.Global>.Parse("perkBFGExpert");
+		static readonly FastTags<TagGroup.Global> ExplosionTag = FastTags<TagGroup.Global>.Parse("explosion");
 
-		public static bool IsBfg(DamageSource source)
+		public static bool IsBfg(ItemValue item)
 		{
-			ItemClass itemClass = source?.AttackingItem?.ItemClass;
-			if (itemClass == null)
-			{
-				return false;
-			}
+			return IsBfg(item?.ItemClass);
+		}
 
-			if (!itemClass.ItemTags.IsEmpty && itemClass.ItemTags.Test_AnySet(BfgTag))
-			{
-				return true;
-			}
+		public static bool IsBfg(ItemClass itemClass)
+		{
+			return itemClass != null && !itemClass.ItemTags.IsEmpty && itemClass.ItemTags.Test_AnySet(ItemTag);
+		}
 
-			string name = itemClass.Name;
-			return !string.IsNullOrEmpty(name)
-				&& (name.IndexOf("BFG", StringComparison.OrdinalIgnoreCase) >= 0
-					|| name.StartsWith("DummyBFG", StringComparison.OrdinalIgnoreCase));
+		public static FastTags<TagGroup.Global> ExplosionTags(ItemValue item)
+		{
+			return ExplosionTag | item.ItemClass.ItemTags;
 		}
 	}
 
-	/// <summary>
-	/// BFG must deal 0 to players: health and DoomArmour pool.
-	/// DoomArmour.DamageSplit spends armour in damageEntityLocal before Electrical resist
-	/// zeroes remaining health, so strength must be 0 before that Prefix.
-	/// </summary>
-	[HarmonyPatch(typeof(EntityAlive), nameof(EntityAlive.DamageEntity))]
-	internal static class Patch_EntityAlive_DamageEntity_BfgPlayers
+	internal static class ExplosionDamageTypeRestore
 	{
-		private static void Prefix(EntityAlive __instance, DamageSource _damageSource, ref int _strength)
+		public static void Apply(ref ExplosionData explosionData)
 		{
-			if (_strength <= 0 || !(__instance is EntityPlayer))
+			if (!CustomExplosionManager.GetCustomParticleComponents(explosionData.ParticleIndex, out ExplosionComponent component)
+				|| component == null)
 			{
 				return;
 			}
 
-			if (BfgPlayerIgnore.IsBfg(_damageSource))
+			explosionData.DamageType = component.BoundExplosionData.DamageType;
+			if (Bfg.IsBfg(component.BoundItemClass))
 			{
-				_strength = 0;
+				explosionData.DamageType = EnumDamageTypes.Electrical;
 			}
 		}
 	}
 
-	/// <summary>
-	/// Restores item XML Explosion.DamageType when ExplosionData arrives as default Heat.
-	/// Heat explosions are treated specially by entity damage rules; BFG ammo uses Electrical
-	/// so party/ally friendly-fire rules apply correctly in multiplayer.
-	/// </summary>
-	[HarmonyPatch(typeof(GameManager), nameof(GameManager.ExplosionServer))]
-	internal static class Patch_GameManager_ExplosionServer
+	[HarmonyPatch(typeof(NetPackageExplosionInitiate), "read")]
+	internal static class Patch_NetPackageExplosionInitiate_read
 	{
-		private static bool Prefix(ref ExplosionData _explosionData, ItemValue _itemValueExplosionSource)
+		static void Postfix(NetPackageExplosionInitiate __instance)
 		{
-			try
+			ExplosionData data = __instance.explosionData;
+			ExplosionDamageTypeRestore.Apply(ref data);
+			if (Bfg.IsBfg(__instance.itemValueExplosive))
 			{
-				if (!SingletonMonoBehaviour<ConnectionManager>.Instance.IsServer)
-				{
-					return true;
-				}
-
-				if (_explosionData.DamageType != EnumDamageTypes.Heat)
-				{
-					return true;
-				}
-
-				if (TryResolveExplosionDamageType(_itemValueExplosionSource, out EnumDamageTypes resolvedType)
-					&& resolvedType != EnumDamageTypes.Heat)
-				{
-					_explosionData.DamageType = resolvedType;
-				}
-			}
-			catch (Exception ex)
-			{
-				Debug.LogWarning("[DamageTypeFix] Failed to resolve explosion damage type: " + ex.Message);
+				data.DamageType = EnumDamageTypes.Electrical;
 			}
 
-			return true;
+			__instance.explosionData = data;
 		}
+	}
 
-		private static bool TryResolveExplosionDamageType(ItemValue itemValue, out EnumDamageTypes resolvedType)
+	[HarmonyPatch(typeof(Explosion), nameof(Explosion.AttackEntites))]
+	internal static class Patch_Explosion_AttackEntites
+	{
+		static readonly FieldInfo ExplosionDataField = AccessTools.Field(typeof(Explosion), "explosionData");
+
+		static void Prefix(Explosion __instance, ItemValue _itemValueExplosionSource, ref EnumDamageTypes damageType)
 		{
-			resolvedType = EnumDamageTypes.Heat;
-			if (itemValue == null)
+			if (Bfg.IsBfg(_itemValueExplosionSource))
 			{
-				return false;
+				damageType = EnumDamageTypes.Electrical;
+				return;
 			}
 
-			ItemClass itemClass = itemValue.ItemClass;
-			if (itemClass == null)
+			if (ExplosionDataField == null)
 			{
-				return false;
+				return;
 			}
 
-			// Fast path: projectile action already parsed Explosion (BFG cell / rockets).
-			if (TryResolveFromActions(itemClass, out resolvedType))
+			ExplosionData data = (ExplosionData)ExplosionDataField.GetValue(__instance);
+			if (CustomExplosionManager.GetCustomParticleComponents(data.ParticleIndex, out ExplosionComponent component)
+				&& Bfg.IsBfg(component?.BoundItemClass))
 			{
-				return true;
+				damageType = EnumDamageTypes.Electrical;
 			}
-
-			// Vanilla ProjectileMoveScript passes the launcher, not the ammo cell.
-			if (TryResolveFromSelectedAmmo(itemValue, itemClass, out resolvedType))
-			{
-				return true;
-			}
-
-			// XML / DynamicProperties fallbacks (flat keys, nested Explosion class, Action*.Explosion).
-			if (TryResolveFromProperties(itemClass.Properties, out resolvedType))
-			{
-				return true;
-			}
-
-			return false;
 		}
+	}
 
-		private static bool TryResolveFromSelectedAmmo(ItemValue launcherValue, ItemClass launcherClass, out EnumDamageTypes resolvedType)
+	[HarmonyPatch(typeof(EntityAlive), nameof(EntityAlive.DamageEntity))]
+	internal static class Patch_EntityAlive_DamageEntity_Bfg
+	{
+		static void Prefix(EntityAlive __instance, DamageSource _damageSource, ref int _strength)
 		{
-			resolvedType = EnumDamageTypes.Heat;
-			ItemAction[] actions = launcherClass.Actions;
-			if (actions == null)
+			if (_strength <= 0 || _damageSource == null || !Bfg.IsBfg(_damageSource.AttackingItem))
 			{
-				return false;
+				return;
 			}
 
-			for (int i = 0; i < actions.Length; i++)
+			if (__instance is EntityPlayer)
 			{
-				if (!(actions[i] is ItemActionRanged ranged) || ranged.MagazineItemNames == null || ranged.MagazineItemNames.Length == 0)
-				{
-					continue;
-				}
-
-				int ammoIndex = launcherValue.SelectedAmmoTypeIndex;
-				if (ammoIndex < 0 || ammoIndex >= ranged.MagazineItemNames.Length)
-				{
-					continue;
-				}
-
-				ItemClass ammoClass = ItemClass.GetItemClass(ranged.MagazineItemNames[ammoIndex]);
-				if (ammoClass == null)
-				{
-					continue;
-				}
-
-				if (TryResolveFromActions(ammoClass, out resolvedType))
-				{
-					return true;
-				}
-
-				if (TryResolveFromProperties(ammoClass.Properties, out resolvedType))
-				{
-					return true;
-				}
+				_strength = 0;
+				return;
 			}
 
-			return false;
-		}
-
-		private static bool TryResolveFromActions(ItemClass itemClass, out EnumDamageTypes resolvedType)
-		{
-			resolvedType = EnumDamageTypes.Heat;
-			ItemAction[] actions = itemClass.Actions;
-			if (actions == null)
+			if (_damageSource.GetDamageType() == EnumDamageTypes.Piercing)
 			{
-				return false;
+				return;
 			}
 
-			for (int i = 0; i < actions.Length; i++)
+			_damageSource.CreatorEntityId = -2;
+
+			UnityEngine.Debug.Log("[DamageTypeFix] DamageEntity target=" + (__instance.EntityName ?? __instance.GetType().Name)
+				+ " str=" + _strength
+				+ " type=" + _damageSource.GetDamageType()
+				+ " creator=" + _damageSource.CreatorEntityId);
+
+			ItemValue item = _damageSource.AttackingItem;
+			EntityAlive attacker = GameManager.Instance?.World?.GetEntity(_damageSource.getEntityId()) as EntityAlive;
+			MinEventParams context = attacker?.MinEventContext;
+			EntityAlive oldOther = context?.Other;
+			FastTags<TagGroup.Global> tags = Bfg.ExplosionTags(item);
+
+			if (context != null)
 			{
-				if (actions[i] is ItemActionProjectile projectile
-					&& projectile.Explosion.DamageType != EnumDamageTypes.Heat)
-				{
-					resolvedType = projectile.Explosion.DamageType;
-					return true;
-				}
+				context.Other = null;
 			}
 
-			return false;
-		}
+			float withoutOther = EffectManager.GetValue(PassiveEffects.ExplosionEntityDamage, item, 0f, attacker, null, tags);
 
-		private static bool TryResolveFromProperties(DynamicProperties properties, out EnumDamageTypes resolvedType)
-		{
-			resolvedType = EnumDamageTypes.Heat;
-			if (properties == null)
+			if (context != null)
 			{
-				return false;
+				context.Other = __instance;
 			}
 
-			if (TryParseKey(properties, "Explosion.DamageType", out resolvedType))
+			float withOther = EffectManager.GetValue(PassiveEffects.ExplosionEntityDamage, item, 0f, attacker, null, tags);
+
+			if (context != null)
 			{
-				return true;
+				context.Other = oldOther;
 			}
 
-			if (TryParseNestedExplosion(properties, out resolvedType))
+			int bonus = (int)(withOther - withoutOther);
+			if (bonus > 0)
 			{
-				return true;
+				_strength += bonus;
 			}
-
-			if (properties.Classes != null)
-			{
-				foreach (KeyValuePair<string, DynamicProperties> actionClass in properties.Classes)
-				{
-					if (actionClass.Value == null)
-					{
-						continue;
-					}
-
-					if (TryParseKey(actionClass.Value, "Explosion.DamageType", out resolvedType))
-					{
-						return true;
-					}
-
-					if (TryParseNestedExplosion(actionClass.Value, out resolvedType))
-					{
-						return true;
-					}
-				}
-			}
-
-			// V3: Values is Dictionary<string,string> (no DictionarySave.Dict wrapper).
-			if (properties.Values != null)
-			{
-				foreach (KeyValuePair<string, string> kvp in properties.Values)
-				{
-					if (kvp.Key == null || kvp.Value == null)
-					{
-						continue;
-					}
-
-					if (!kvp.Key.EndsWith("Explosion.DamageType", StringComparison.OrdinalIgnoreCase))
-					{
-						continue;
-					}
-
-					if (EnumUtils.TryParse(kvp.Value, out resolvedType, true))
-					{
-						return true;
-					}
-				}
-			}
-
-			return false;
-		}
-
-		private static bool TryParseNestedExplosion(DynamicProperties properties, out EnumDamageTypes damageType)
-		{
-			damageType = EnumDamageTypes.Heat;
-			if (properties?.Classes == null)
-			{
-				return false;
-			}
-
-			if (!properties.Classes.TryGetValue("Explosion", out DynamicProperties explosion) || explosion == null)
-			{
-				return false;
-			}
-
-			return TryParseKey(explosion, "DamageType", out damageType);
-		}
-
-		private static bool TryParseKey(DynamicProperties properties, string key, out EnumDamageTypes damageType)
-		{
-			damageType = EnumDamageTypes.Heat;
-			if (properties?.Values == null)
-			{
-				return false;
-			}
-
-			if (!properties.Values.TryGetValue(key, out string value) || string.IsNullOrEmpty(value))
-			{
-				return false;
-			}
-
-			return EnumUtils.TryParse(value, out damageType, true);
 		}
 	}
 }

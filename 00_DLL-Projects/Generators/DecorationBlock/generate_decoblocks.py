@@ -47,6 +47,8 @@ OUTPUT_ROOTS = (DRAFT_ROOT, LIVE_ROOT)
 DRAFT_BLOCKS = DRAFT_ROOT / "Config" / "blocks.xml"
 LIVE_BLOCKS = LIVE_ROOT / "Config" / "blocks.xml"
 OUTPUT_BLOCKS = (DRAFT_BLOCKS, LIVE_BLOCKS)
+HELPER_LOOK_PATH = HERE / "helper_look.csv"
+_HELPER_LOOK: dict[str, tuple[str, str]] | None = None
 
 CAMPFIRE_CATEGORIES = (
     ("CFFood/Cooking", "ui_game_symbol_fork", "lblCategoryFood"),
@@ -98,6 +100,7 @@ VISUAL_PROPS = frozenset(
         "CustomIconTint",
         "TintColor",
         "StabilitySupport",
+        "Censor",
     }
 )
 
@@ -235,7 +238,9 @@ def add_visuals(
 def deco_icon(source: str, flat: ET.Element) -> str:
     nl = source.lower()
     if nl.startswith("concreteplateround"):
-        return "concreteNoUpgradeMaster"
+        return "glassIndustrialPlate"
+    if source == "cntBathTubGore":
+        return "cntBathTubEmpty"
     if source == "flagWallHungSign":
         return "flagWallHungUSA"
     icon = prop_value(flat, "CustomIcon") or ""
@@ -559,6 +564,9 @@ SKIP_NAME_PARTS = (
     "invisible",
 )
 
+# Still emit even when a SKIP_NAME_PARTS token is in the name.
+ALLOW_SKIP_NAMES = frozenset({"cntBathTubGore"})
+
 # Intact stations. Broken / busted / collapsed cnt* stay loot via the cnt rule.
 INTACT_WORKSTATIONS = frozenset(
     {
@@ -571,7 +579,7 @@ INTACT_WORKSTATIONS = frozenset(
     }
 )
 
-SHAPE_KEEP_PREFIXES = ("glass", "ibeam", "concreteplateround")
+SHAPE_KEEP_PREFIXES = ("glass", "ibeam", "concreteplateround", "stainedglass")
 
 UPGRADE_NAME_MARKERS = (
     "bandit",
@@ -658,7 +666,7 @@ def is_upgradeable_structure(name: str) -> bool:
         return True
     if nl.startswith("barrier") or "barrierplastic" in nl or "barrierconcrete" in nl:
         return True
-    if nl.startswith("glass") and not any(
+    if (nl.startswith("glass") or nl.startswith("stainedglass")) and not any(
         s in nl for s in ("debris", "broken", "trap")
     ):
         return True
@@ -732,9 +740,11 @@ def classify(flat: ET.Element) -> str | None:
         return None
     if "filler" in nl and "escalator" not in nl:
         return None
-    if any(s in nl for s in SKIP_NAME_PARTS):
+    if any(s in nl for s in SKIP_NAME_PARTS) and name not in ALLOW_SKIP_NAMES:
         return None
-    if name in {"flagWallHungSign", "spawnTrader"}:
+    if name in {"flagWallHungSign", "spawnTrader", "cntLootCrateHero"}:
+        return None
+    if re.fullmatch(r"treePlanted.*1m", name):
         return None
     if nl.startswith("signcanvas") or nl.startswith("signdecal") or nl.startswith("canvas"):
         return None
@@ -781,6 +791,13 @@ def classify(flat: ET.Element) -> str | None:
 
     if name in INTACT_WORKSTATIONS:
         return "loot"
+    if name.startswith("corpseHanging"):
+        return "loot"
+    if name in {
+        "cntSemiTruck01ModularRearEndFlatbedStraight",
+        "cntSemiTruck01ModularRearEndOnly",
+    }:
+        return "deco"
     if cls in {"SecureLoot", "Loot"} or has_class(flat, "TEFeatureStorage"):
         return "loot"
     # Empty / open looks often have no loot Class. Keep them as Player Loot.
@@ -1430,6 +1447,9 @@ LOC_ENGLISH_OVERRIDES = {
     "cntCardboardBox": "Cardboard Box, 2",
     "cntGarageStorage": "Cardboard Box, 3",
     "cntShippingCrateHero": "Shipping Crate",
+    "cntBathTubGore": "Bathtub, Gore",
+    "stainedGlassPlate": "Glass Plate, Stained",
+    "stainedGlassCTRPlate": "Glass Plate, Centered, Stained",
 }
 # Uncolored vanilla parents still have a default paint.
 LOC_IMPLIED_COLORS = {
@@ -2477,10 +2497,30 @@ LOOK_RULES: tuple[tuple[tuple[str, ...], str, str], ...] = (
 )
 
 
+def load_helper_look() -> dict[str, tuple[str, str]]:
+    global _HELPER_LOOK
+    if _HELPER_LOOK is not None:
+        return _HELPER_LOOK
+    out: dict[str, tuple[str, str]] = {}
+    if HELPER_LOOK_PATH.is_file():
+        with HELPER_LOOK_PATH.open(encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f):
+                src = (row.get("Source") or "").strip()
+                parent = (row.get("Parent") or "").strip()
+                child = (row.get("Child") or "").strip()
+                if src and parent and child:
+                    out[src] = (parent, child)
+    _HELPER_LOOK = out
+    return out
+
+
 def look_category(source: str, family_id: str, kind: str) -> tuple[str, str]:
     """Parent and child from what the model is, not loot class."""
     if kind == "campfire":
         return "Kitchen", "Campfires"
+    mapped_src = load_helper_look().get(source)
+    if mapped_src:
+        return mapped_src
     s = source.lower()
     f = family_id.lower()
     blob = f"{s} {f}"

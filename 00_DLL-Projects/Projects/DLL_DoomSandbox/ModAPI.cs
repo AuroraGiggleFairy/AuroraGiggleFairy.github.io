@@ -13,7 +13,7 @@ public class ModAPI : IModApi
 			harmony.PatchAll();
 			int patchCount = 0;
 			try { patchCount = harmony.GetPatchedMethods().Count(); } catch { /* ignore */ }
-			var line = "[DoomSandbox] InitMod OK. Patches=" + patchCount + " Config=" + DoomSandbox.DoomSandboxMod.ConfigPath;
+			var line = "[DoomSandbox] InitMod OK. Patches=" + patchCount + " Blueprint=compiled";
 			Console.WriteLine(line);
 			UnityEngine.Debug.Log(line);
 		}

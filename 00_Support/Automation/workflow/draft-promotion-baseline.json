@@ -174,6 +174,16 @@
     "recorded_at": "2026-08-22T16:06:08",
     "version": "1.0.0"
   },
+  "AGF-NoEAC-ModSync": {
+    "folder": "AGF-NoEAC-ModSync-v0.0.1",
+    "recorded_at": "2026-10-05T06:25:08",
+    "version": "0.0.1"
+  },
+  "AGF-NoEAC-MultiLookStorage": {
+    "folder": "AGF-NoEAC-MultiLookStorage-v0.0.1",
+    "recorded_at": "2026-10-05T06:25:08",
+    "version": "0.0.1"
+  },
   "AGF-NoEAC-OpenAllButton": {
     "folder": "AGF-NoEAC-OpenAllButton-v2.0.0",
     "recorded_at": "2026-07-25T17:24:50",
@@ -184,6 +194,11 @@
     "recorded_at": "2026-08-29T00:24:26",
     "version": "1.0.0"
   },
+  "AGF-NoEAC-QuartermasterCrafting": {
+    "folder": "AGF-NoEAC-QuartermasterCrafting-v0.0.1",
+    "recorded_at": "2026-10-05T06:25:08",
+    "version": "0.0.1"
+  },
   "AGF-NoEAC-ScreamerAlert": {
     "folder": "AGF-NoEAC-ScreamerAlert-v2.0.0",
     "recorded_at": "2026-06-16T03:42:40",
@@ -193,6 +208,11 @@
     "folder": "AGF-NoEAC-SmeltTimerOption-v1.0.0",
     "recorded_at": "2026-08-03T00:51:34",
     "version": "1.0.0"
+  },
+  "AGF-NoEAC-StorageLaptop": {
+    "folder": "AGF-NoEAC-StorageLaptop-v0.0.1",
+    "recorded_at": "2026-10-05T06:25:08",
+    "version": "0.0.1"
   },
   "AGF-NoEAC-TerrainLeveler": {
     "folder": "AGF-NoEAC-TerrainLeveler-v0.0.2",
@@ -213,6 +233,11 @@
     "folder": "AGF-PurpleBookGenerator-v0.0.1",
     "recorded_at": "2026-06-15T02:20:47",
     "version": "0.0.1"
+  },
+  "AGF-Requested-AnimalTrackerAlwaysOn": {
+    "folder": "AGF-Requested-AnimalTrackerAlwaysOn-v1.0.0",
+    "recorded_at": "2026-09-06T01:15:22",
+    "version": "1.0.0"
   },
   "AGF-Requested-NoLootDestroyOnEmpty": {
     "folder": "AGF-Requested-NoLootDestroyOnEmpty-v1.0.0",
@@ -290,9 +315,9 @@
     "version": "2.0.0"
   },
   "AGF-VP-CraftStackEngBattCells": {
-    "folder": "AGF-VP-CraftStackEngBattCells-v3.3.1",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "3.3.1"
+    "folder": "AGF-VP-CraftStackEngBattCells-v4.0.0",
+    "recorded_at": "2026-09-02T20:41:10",
+    "version": "4.0.0"
   },
   "AGF-VP-CraftVitamins": {
     "folder": "AGF-VP-CraftVitamins-v2.0.0",
@@ -337,6 +362,11 @@
   "AGF-VP-FuelBurnPlus": {
     "folder": "AGF-VP-FuelBurnPlus-v3.0.0",
     "recorded_at": "2026-06-26T15:03:49",
+    "version": "3.0.0"
+  },
+  "AGF-VP-HelpfulRenames": {
+    "folder": "AGF-VP-HelpfulRenames-v3.0.0",
+    "recorded_at": "2026-09-04T23:11:31",
     "version": "3.0.0"
   },
   "AGF-VP-LargerStorageOption": {
@@ -428,11 +458,6 @@
     "folder": "AGF-VP-RecipeRottingFlesh-v2.0.0",
     "recorded_at": "2026-07-23T15:34:17",
     "version": "2.0.0"
-  },
-  "AGF-VP-RenamesAlphabeticalSort": {
-    "folder": "AGF-VP-RenamesAlphabeticalSort-v2.0.5",
-    "recorded_at": "2026-06-15T02:20:47",
-    "version": "2.0.5"
   },
   "AGF-VP-RestorePowerAnyTime": {
     "folder": "AGF-VP-RestorePowerAnyTime-v2.0.0",
@@ -549,6 +574,11 @@
     "recorded_at": "2026-09-01T23:11:17",
     "version": "1.0.0"
   },
+  "AGF-VPS-LockableStations": {
+    "folder": "AGF-VPS-LockableStations-v0.0.1",
+    "recorded_at": "2026-09-27T05:28:00",
+    "version": "1.2.2"
+  },
   "AGF-VPS-SortingCart": {
     "folder": "AGF-VPS-SortingCart-v2.0.0",
     "recorded_at": "2026-08-30T04:01:45",
@@ -563,5 +593,10 @@
     "folder": "zzzAGF-Special-Compatibilities-v5.0.0",
     "recorded_at": "2026-07-01T10:57:36",
     "version": "5.0.0"
+  },
+  "zzzAGF-Special-NoEACCompatibilities": {
+    "folder": "zzzAGF-Special-NoEACCompatibilities-v1.0.0",
+    "recorded_at": "2026-09-05T00:24:29",
+    "version": "1.0.0"
   }
 }

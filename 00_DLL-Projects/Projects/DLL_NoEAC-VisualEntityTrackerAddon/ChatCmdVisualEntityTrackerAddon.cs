@@ -32,7 +32,7 @@ namespace VisualEntityTrackerAddon
             }
 
             string cmd = parts[0].ToLowerInvariant();
-            if (cmd != "agf-vet" && cmd != "agfvet")
+            if (!IsEtRoot(cmd))
             {
                 return ModEvents.EModEventResult.Continue;
             }
@@ -59,9 +59,11 @@ namespace VisualEntityTrackerAddon
 
             if (!VisualEntityTrackerModeSettings.TryParseCommandMode(parts[1], out VisualEntityTrackerMode nextMode))
             {
-                WhisperToSender(senderEntityId, Localize("VisualEntityTracker_Chat_Invalid", "[ERROR][Use /agfvet]"));
+                WhisperToSender(senderEntityId, Localize("VisualEntityTracker_Chat_Invalid", "[ERROR][Use /agfet]"));
                 return ModEvents.EModEventResult.StopHandlersAndVanilla;
             }
+
+            bool quiet = HasQuietFlag(parts);
 
             if (!VisualEntityTrackerModeSettings.SetModeForEntityId(senderEntityId, nextMode))
             {
@@ -69,15 +71,38 @@ namespace VisualEntityTrackerAddon
             }
 
             VisualEntityTrackerAddonService.ApplyServerSideMode(senderEntityId, nextMode == VisualEntityTrackerMode.On);
-            WhisperToSender(senderEntityId, nextMode == VisualEntityTrackerMode.Off
-                ? Localize("VisualEntityTracker_Chat_SetOff", "[Visual Entity Tracker = OFF]")
-                : Localize("VisualEntityTracker_Chat_SetOn", "[Visual Entity Tracker = ON]"));
+            if (!quiet)
+            {
+                WhisperToSender(senderEntityId, nextMode == VisualEntityTrackerMode.Off
+                    ? Localize("VisualEntityTracker_Chat_SetOff", "[Visual Entity Tracker = OFF]")
+                    : Localize("VisualEntityTracker_Chat_SetOn", "[Visual Entity Tracker = ON]"));
+            }
+
             return ModEvents.EModEventResult.StopHandlersAndVanilla;
+        }
+
+        private static bool IsEtRoot(string cmd)
+        {
+            return cmd == "agfet" || cmd == "agf-et" || cmd == "agfvet" || cmd == "agf-vet";
         }
 
         private static int lastHandledEntityId = int.MinValue;
         private static string lastHandledText = string.Empty;
         private static int lastHandledTick;
+
+        private static bool HasQuietFlag(string[] parts)
+        {
+            for (int i = 2; i < parts.Length; i++)
+            {
+                string extra = parts[i].Trim().ToLowerInvariant();
+                if (extra == "quiet" || extra == "silent" || extra == "q")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         private static bool IsDuplicateCommand(int senderEntityId, string text)
         {
@@ -107,7 +132,7 @@ namespace VisualEntityTrackerAddon
                 VisualEntityTrackerModeSettings.GetModeToken(current)));
             WhisperToSender(senderEntityId, Localize(
                 "VisualEntityTracker_Chat_Options",
-                "[Options: /agfvet off, on]"));
+                "[Options: /agfet off, on]"));
         }
 
         private static void WhisperToSender(int senderEntityId, string message)

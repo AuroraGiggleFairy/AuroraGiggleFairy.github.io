@@ -325,8 +325,8 @@ namespace DoomSandbox
 		}
 
 		/// <summary>
-		/// Difficulty-group presets from Config/sandbox_difficulties.txt (icons, ratings, ladders).
-		/// Falls back to a single Be Gentle! preset if that file is missing/empty.
+		/// Difficulty-group presets from the blueprint compiled into this DLL.
+		/// Falls back to a single Be Gentle! preset if that blueprint is missing/empty.
 		/// </summary>
 		static string _difficultyEnsureStamp;
 
@@ -335,22 +335,7 @@ namespace DoomSandbox
 			if (mgr?.SandboxPresets == null)
 				return;
 
-			string path = DoomSandboxMod.DifficultiesPath;
-			string stamp;
-			try
-			{
-				if (!string.IsNullOrEmpty(path) && System.IO.File.Exists(path))
-				{
-					var fi = new System.IO.FileInfo(path);
-					stamp = $"{fi.Length}:{fi.LastWriteTimeUtc.Ticks}:{DoomSandboxRuntime.VisibleOptions.Count}";
-				}
-				else
-					stamp = "missing:" + DoomSandboxRuntime.VisibleOptions.Count;
-			}
-			catch
-			{
-				stamp = "err";
-			}
+			string stamp = DoomSandboxBlueprint.Stamp + ":" + DoomSandboxRuntime.VisibleOptions.Count;
 
 			bool hasDifficulty = false;
 			foreach (var p in mgr.SandboxPresets)
@@ -365,7 +350,7 @@ namespace DoomSandbox
 			if (!force && hasDifficulty && stamp == _difficultyEnsureStamp)
 				return;
 
-			var defs = DoomSandboxDifficulties.Load(path);
+			var defs = DoomSandboxDifficulties.Load();
 			DoomSandboxDifficulties.ApplyToManager(mgr, defs);
 			_difficultyEnsureStamp = stamp;
 		}

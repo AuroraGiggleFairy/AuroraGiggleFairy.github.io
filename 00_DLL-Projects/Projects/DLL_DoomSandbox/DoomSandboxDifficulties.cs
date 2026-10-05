@@ -26,18 +26,23 @@ namespace DoomSandbox
 
 	public static class DoomSandboxDifficulties
 	{
-		public static List<DoomDifficultyDef> Load(string path)
+		public static List<DoomDifficultyDef> Load()
 		{
 			var list = new List<DoomDifficultyDef>();
-			if (string.IsNullOrEmpty(path) || !File.Exists(path))
+			string[] lines;
+			try
 			{
-				DoomLog.Info("Difficulties file not found: " + path);
+				lines = DoomSandboxBlueprint.ReadDifficultiesLines();
+			}
+			catch (Exception ex)
+			{
+				DoomLog.Error("Compiled difficulties blueprint missing: " + ex.Message);
 				return list;
 			}
 
 			DoomDifficultyDef current = null;
 			bool inPresetSection = false;
-			foreach (var raw in File.ReadAllLines(path))
+			foreach (var raw in lines)
 			{
 				var line = raw.Trim();
 				if (line.Length == 0 || line.StartsWith("#"))
@@ -134,9 +139,9 @@ namespace DoomSandbox
 				current.Values[name] = value;
 			}
 
-			string stamp = FileStamp(path);
+			string stamp = DoomSandboxBlueprint.Stamp;
 			if (stamp != _lastLoadedStamp || list.Count != _lastLoadedCount)
-				DoomLog.Info($"Loaded {list.Count} difficulty presets from file.");
+				DoomLog.Info($"Loaded {list.Count} difficulty presets from compiled blueprint.");
 			_lastLoadedCount = list.Count;
 			_lastLoadedStamp = stamp;
 			return list;
@@ -146,19 +151,6 @@ namespace DoomSandbox
 		static int _lastLoadedCount = -1;
 		static string _lastAppliedStamp;
 		static int _lastAppliedCount = -1;
-
-		static string FileStamp(string path)
-		{
-			try
-			{
-				var fi = new FileInfo(path);
-				return fi.Exists ? $"{fi.Length}:{fi.LastWriteTimeUtc.Ticks}" : "missing";
-			}
-			catch
-			{
-				return "err";
-			}
-		}
 
 		static bool IsDocPlaceholder(string text)
 		{
@@ -190,7 +182,7 @@ namespace DoomSandbox
 			}
 
 			// Replace ALL prior Difficulty-group presets (modded + accidental user saves in that group).
-			// Official Doom ladder is owned by sandbox_difficulties.txt only.
+			// Official Doom ladder is the blueprint compiled into this DLL.
 			mgr.SandboxPresets.RemoveAll(p =>
 				p != null
 				&& !p.IsCustomPreset
@@ -347,13 +339,13 @@ namespace DoomSandbox
 		}
 
 		/// <summary>
-		/// 3.0/3.1: GetDisplayAtIndex(int). 3.2: GetDisplayAtIndex(int, string languageName = null).
-		/// Direct calls bind one signature at compile time and throw MissingMethodException on the other.
+		/// V 3.2: GetDisplayAtIndex(int, string languageName).
+		/// Bound on the abstract base so Invoke uses virtual dispatch on Float/Int/Bool sets.
 		/// </summary>
 		static class SandboxValueSetCompat
 		{
 			static MethodInfo _getDisplay;
-			static int _argCount = -1;
+			static bool _resolved;
 
 			public static string GetDisplayAtIndex(object valueSet, int index)
 			{
@@ -366,10 +358,7 @@ namespace DoomSandbox
 
 				try
 				{
-					object result = _argCount >= 2
-						? _getDisplay.Invoke(valueSet, new object[] { index, null })
-						: _getDisplay.Invoke(valueSet, new object[] { index });
-					return result as string;
+					return _getDisplay.Invoke(valueSet, new object[] { index, null }) as string;
 				}
 				catch
 				{
@@ -379,27 +368,11 @@ namespace DoomSandbox
 
 			static void Resolve()
 			{
-				if (_argCount >= 0)
+				if (_resolved)
 					return;
 
-				// Bind on the abstract base so Invoke uses virtual dispatch on Float/Int/Bool sets.
-				var type = typeof(SandboxValueSet);
-				MethodInfo two = AccessTools.Method(type, "GetDisplayAtIndex", new[] { typeof(int), typeof(string) });
-				MethodInfo one = AccessTools.Method(type, "GetDisplayAtIndex", new[] { typeof(int) });
-				if (two != null)
-				{
-					_getDisplay = two;
-					_argCount = 2;
-				}
-				else if (one != null)
-				{
-					_getDisplay = one;
-					_argCount = 1;
-				}
-				else
-				{
-					_argCount = 0;
-				}
+				_resolved = true;
+				_getDisplay = AccessTools.Method(typeof(SandboxValueSet), "GetDisplayAtIndex", new[] { typeof(int), typeof(string) });
 			}
 		}
 

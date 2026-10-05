@@ -9,6 +9,7 @@ namespace FuelAutoShutOff
 		{
 			try
 			{
+				GameVersion.Initialize();
 				new Harmony("com.agfprojects.fuelautoshutoff").PatchAll();
 				Console.WriteLine("FuelAutoShutOff: Harmony patches registered.");
 			}

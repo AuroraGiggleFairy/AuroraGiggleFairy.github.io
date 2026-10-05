@@ -49,6 +49,24 @@ namespace GyroFlightModes
 			return true;
 		}
 
+		/// <summary>
+		/// Icon and localized mode name for an interaction-prompt pill.
+		/// Other mods resolve this by name: GyroFlightModes.GyroFlightModesApi.TryGetFlightModePrompt
+		/// </summary>
+		public static bool TryGetFlightModePrompt(EntityVehicle vehicle, out string icon, out string displayName)
+		{
+			icon = null;
+			displayName = null;
+			if (!TryGetFlightMode(vehicle, out GyroFlightMode mode))
+			{
+				return false;
+			}
+
+			icon = GetNavIcon(mode);
+			displayName = GetModeDisplayName(mode);
+			return !string.IsNullOrEmpty(icon) && !string.IsNullOrEmpty(displayName);
+		}
+
 		internal static GyroFlightMode ReadMode(EntityVehicle vehicle)
 		{
 			if (vehicle != null && GyroFlightModeStore.TryGet(vehicle.entityId, out GyroFlightMode live))

@@ -15,6 +15,27 @@ limitations under the License.*/
 using StatControllers;
 using UnityEngine;
 
+static class BagEncumbrance
+{
+    public const string IconNormal = "ui_game_symbol_backpack";
+    // Same glyph as vanilla buffEncumberedInv.
+    public const string IconEncumbered = "ui_game_symbol_pack_mule";
+    public const string ColorNormal = "[ff8000]";
+    // HUDPlus lock-icon red (255,0,0), chosen so it stays readable on the dark compass bar.
+    public const string ColorEncumbered = "[FF0000]";
+
+    public static bool IsEncumbered(EntityPlayer player)
+    {
+        if (player?.bag == null)
+        {
+            return false;
+        }
+
+        int carry = (int)EffectManager.GetValue(PassiveEffects.CarryCapacity, null, 0f, player);
+        return player.bag.GetUsedSlotCount() > carry;
+    }
+}
+
 public class BagUsedSlots : Binding
 {
     private const float RefreshIntervalSeconds = 0.15f;
@@ -105,7 +126,60 @@ public class BagSize: Binding
             return cachedValue;
         }
 
+        // Bag size is the slot count. On 3.3 that starts at 48. Carry capacity (32 at a new game) is the encumbrance line, not the slot total.
         cachedValue = player.bag.SlotCount.ToString();
+        nextRefreshTime = now + RefreshIntervalSeconds;
+        return cachedValue;
+    }
+}
+
+public class BagUsedSlotsColor : Binding
+{
+    private const float RefreshIntervalSeconds = 0.15f;
+    private float nextRefreshTime;
+    private string cachedValue = BagEncumbrance.ColorNormal;
+
+    public BagUsedSlotsColor(int value, string name) : base(value, name)
+    {
+    }
+
+    public override string GetCurrentValue(EntityPlayer player)
+    {
+        float now = Time.realtimeSinceStartup;
+        if (now < nextRefreshTime)
+        {
+            return cachedValue;
+        }
+
+        cachedValue = BagEncumbrance.IsEncumbered(player)
+            ? BagEncumbrance.ColorEncumbered
+            : BagEncumbrance.ColorNormal;
+        nextRefreshTime = now + RefreshIntervalSeconds;
+        return cachedValue;
+    }
+}
+
+public class BagIcon : Binding
+{
+    private const float RefreshIntervalSeconds = 0.15f;
+    private float nextRefreshTime;
+    private string cachedValue = BagEncumbrance.IconNormal;
+
+    public BagIcon(int value, string name) : base(value, name)
+    {
+    }
+
+    public override string GetCurrentValue(EntityPlayer player)
+    {
+        float now = Time.realtimeSinceStartup;
+        if (now < nextRefreshTime)
+        {
+            return cachedValue;
+        }
+
+        cachedValue = BagEncumbrance.IsEncumbered(player)
+            ? BagEncumbrance.IconEncumbered
+            : BagEncumbrance.IconNormal;
         nextRefreshTime = now + RefreshIntervalSeconds;
         return cachedValue;
     }

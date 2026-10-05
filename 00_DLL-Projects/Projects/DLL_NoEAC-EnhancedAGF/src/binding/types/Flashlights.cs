@@ -1,4 +1,4 @@
-﻿/*Copyright 2021 Christopher Beda
+/*Copyright 2021 Christopher Beda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ public class FlashLight : Binding
         List<ItemValue> activatedableItemPool = player.GetActivatableItemPool();
         foreach (ItemValue item in activatedableItemPool)
         {
-            if (item.Activated > 0)
+            if (item.Activated)
             {
                 int itemId = item.ItemClass.Id;
 

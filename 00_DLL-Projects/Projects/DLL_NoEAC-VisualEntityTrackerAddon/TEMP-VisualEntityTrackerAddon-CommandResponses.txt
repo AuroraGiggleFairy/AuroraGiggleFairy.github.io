@@ -8,8 +8,8 @@ Use COMMANDS-README.md for player/admin-facing general command guidance.
 Locked names:
     Mod folder:     AGF-NoEAC-VisualEntityTrackerAddon
     Player label:   Visual Entity Tracker
-    Chat roots:     /agfvet (player-facing), /agf-vet (alias)
-    Console root:   agf-vet
+    Chat roots:     /agfet (player-facing), /agf-et (alias)
+    Console root:   agf-et
     Console prefix: [VisualEntityTracker]
 
 Requires AGF-HUDPlus-VisualEntityTracker on the same server.
@@ -28,80 +28,80 @@ Status / help is two separate whispers, matching Screamer Alert:
     Line 2 = options
 (Screamer Alert also has a third COUNT line. This mod does not.)
 
-    Command: /agfvet, /agf-vet, /agfvet help, /agf-vet help, /agfvet status, /agf-vet status
+    Command: /agfet, /agf-et, /agfet help, /agf-et help, /agfet status, /agf-et status
     Response (two whispers):
         [Visual Entity Tracker = <OFF|ON>]
-        [Options: /agfvet off, on]
+        [Options: /agfet off, on]
 
-    Command: /agfvet on, /agf-vet on
+    Command: /agfet on, /agf-et on
     Response: [Visual Entity Tracker = ON]
 
-    Command: /agfvet off, /agf-vet off
+    Command: /agfet off, /agf-et off
     Response: [Visual Entity Tracker = OFF]
 
-    Command: /agfvet <invalid>, /agf-vet <invalid>
-    Response: [ERROR][Use /agfvet]
+    Command: /agfet <invalid>, /agf-et <invalid>
+    Response: [ERROR][Use /agfet]
 
 --------------------------------------------------------------------
 
 Admin CONSOLE Commands for Visual Entity Tracker (Full Script Spec)
 
     Quick Use:
-        1. agf-vet
-        2. agf-vet default <off|on>
-        3. agf-vet set <entityId|all> <off|on|default>
-        4. agf-vet list
+        1. agf-et
+        2. agf-et default <off|on>
+        3. agf-et set <entityId|all> <off|on|default>
+        4. agf-et list
 
-    Command: agf-vet, agf-vet help, agf-vet default
+    Command: agf-et, agf-et help, agf-et default
     Response (multi-line):
         [VisualEntityTracker] Usage:
-        [VisualEntityTracker]   agf-vet default <off|on>
-        [VisualEntityTracker]   agf-vet set <entityId|all> <off|on|default>
-        [VisualEntityTracker]   agf-vet list
+        [VisualEntityTracker]   agf-et default <off|on>
+        [VisualEntityTracker]   agf-et set <entityId|all> <off|on|default>
+        [VisualEntityTracker]   agf-et list
         [VisualEntityTracker] default currently set to [OFF|ON]
 
-    Command: agf-vet default on
+    Command: agf-et default on
     Response: [VisualEntityTracker] default set to ON. New joining players will start with Visual Entity Tracker set to ON.
 
-    Command: agf-vet default off
+    Command: agf-et default off
     Response: [VisualEntityTracker] default set to OFF. New joining players will start with Visual Entity Tracker set to OFF.
 
-    Command: agf-vet default <invalidMode>
-    Response: [VisualEntityTracker] invalid option. Use: agf-vet default <off|on>.
+    Command: agf-et default <invalidMode>
+    Response: [VisualEntityTracker] invalid option. Use: agf-et default <off|on>.
 
-    Command: agf-vet set <entityId> on
+    Command: agf-et set <entityId> on
     Response: [VisualEntityTracker] entity=<entityId> (<playerName>) mode set to ON.
 
-    Command: agf-vet set <entityId> off
+    Command: agf-et set <entityId> off
     Response: [VisualEntityTracker] entity=<entityId> (<playerName>) mode set to OFF.
 
-    Command: agf-vet set <entityId> default
+    Command: agf-et set <entityId> default
     Response: [VisualEntityTracker] entity=<entityId> (<playerName>) set to current default=<OFF|ON>.
 
-    Command: agf-vet set all on
+    Command: agf-et set all on
     Response: [VisualEntityTracker] all online players set to ON. default unchanged.
 
-    Command: agf-vet set all off
+    Command: agf-et set all off
     Response: [VisualEntityTracker] all online players set to OFF. default unchanged.
 
-    Command: agf-vet set all default
+    Command: agf-et set all default
     Response: [VisualEntityTracker] all online players set to current default=<OFF|ON>.
 
-    Command: agf-vet list
+    Command: agf-et list
     Response (multi-line):
-        [VisualEntityTracker] <index>. id=<entityId>, <playerName>, vet=<OFF|ON>
+        [VisualEntityTracker] <index>. id=<entityId>, <playerName>, et=<OFF|ON>
         [VisualEntityTracker] total online=<N>
 
-    Command: agf-vet set <invalidEntityId> <off|on|default>
+    Command: agf-et set <invalidEntityId> <off|on|default>
     Response: [VisualEntityTracker] invalid entityId. Use numeric entityId or all.
 
-    Command: agf-vet set all <invalidMode>
-    Response: [VisualEntityTracker] invalid mode. Use: agf-vet set all <off|on|default>.
+    Command: agf-et set all <invalidMode>
+    Response: [VisualEntityTracker] invalid mode. Use: agf-et set all <off|on|default>.
 
-    Command: agf-vet set <entityId|all> <invalidMode>, agf-vet <invalid>
-    Response: [VisualEntityTracker] invalid option. Use: agf-vet help.
+    Command: agf-et set <entityId|all> <invalidMode>, agf-et <invalid>
+    Response: [VisualEntityTracker] invalid option. Use: agf-et help.
 
-    Command: agf-vet <anything> (non-admin)
+    Command: agf-et <anything> (non-admin)
     Response: [VisualEntityTracker] admin permission required.
 
     Notes:

@@ -29,7 +29,7 @@ public static class HarmonyPatches
 			EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
 			if (recipe != null && !(entityPlayerLocal == null) && recipe.IsScrap && recipe.ingredients.Count > 0)
 			{
-				ItemClass itemClass = recipe.ingredients[0].itemValue.ItemClass;
+				ItemClass itemClass = ItemStacks.Value(recipe.ingredients[0])?.ItemClass;
 				if (itemClass != null && entityPlayerLocal.equipment != null)
 				{
 					entityPlayerLocal.equipment.UnlockCosmeticItem(itemClass);
@@ -49,7 +49,7 @@ public static class HarmonyPatches
 			if (itemClassOrMissing != null && !(entityPlayerLocal == null))
 			{
 				ItemStack itemStack = __instance.ItemStack;
-				ItemValue itemValue = ((itemStack == null || itemStack.IsEmpty()) ? null : itemStack.itemValue);
+				ItemValue itemValue = ItemStacks.Value(itemStack);
 				if (ArmorIconUIHarmonyPatches.HasMagnitudeIndicator(itemClassOrMissing, itemValue))
 				{
 					return;

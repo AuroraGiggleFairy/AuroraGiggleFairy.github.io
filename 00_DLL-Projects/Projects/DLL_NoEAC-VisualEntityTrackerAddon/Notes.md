@@ -10,8 +10,8 @@ Not the retired DLL compass scanner (`DLL_NoEAC-VisualEntityTracker`).
 | Mod folder | `AGF-NoEAC-VisualEntityTrackerAddon` |
 | Alternate considered | `AGF-NoEAC-Addon4VisualEntityTracker` |
 | Display / chat label | Visual Entity Tracker |
-| Chat | `/agfvet` (player-facing, like `/agfsa`) and `/agf-vet` |
-| F1 console | `agf-vet` |
+| Chat | `/agfet` (player-facing, like `/agfsa`) and `/agf-et` |
+| F1 console | `agf-et` |
 | Console prefix | `[VisualEntityTracker]` |
 | DLL assembly | `VisualEntityTrackerAddon.dll` |
 
@@ -28,7 +28,7 @@ XML tracker stays `AGF-HUDPlus-VisualEntityTracker`. This addon only turns that 
 
 Status / help sends **two whispers**:
 1. `[Visual Entity Tracker = ON]` (or OFF)
-2. `[Options: /agfvet off, on]`
+2. `[Options: /agfet off, on]`
 
 Screamer Alert also sends a third `[COUNT requires EnhancedAGF]` line. This addon has no COUNT, so it stops at two.
 

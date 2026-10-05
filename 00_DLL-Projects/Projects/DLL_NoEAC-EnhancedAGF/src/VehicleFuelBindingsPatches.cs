@@ -240,14 +240,22 @@ public static class VehicleFuelBindingsPatches
                 return true;
             case DurabilityCurrentWithMax:
             {
-                int current = (int)(vehicle?.GetHealth() ?? 0f);
-                int max = (int)(vehicle?.GetMaxHealth() ?? 0f);
+                int current = vehicle?.GetHealth() ?? 0;
+                int max = vehicle?.GetMaxHealth() ?? 0;
+                if (max > 0 && current > max)
+                    current = max;
                 value = current + "/" + max;
                 return true;
             }
             case DurabilityPercent:
-                value = ((int)((vehicle?.GetHealthPercent() ?? 0f) * 100f)).ToString();
+            {
+                int current = vehicle?.GetHealth() ?? 0;
+                int max = vehicle?.GetMaxHealth() ?? 0;
+                if (max > 0 && current > max)
+                    current = max;
+                value = (max > 0 ? (current * 100 / max) : 0).ToString();
                 return true;
+            }
 
             case SpeedCurrent:
                 value = FormatSpeedValue(GetCurrentSpeed(vehicle, entityVehicle), vehicle?.MaxPossibleSpeed ?? 0f);

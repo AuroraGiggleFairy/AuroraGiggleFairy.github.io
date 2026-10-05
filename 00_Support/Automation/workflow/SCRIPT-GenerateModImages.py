@@ -16,6 +16,8 @@ except Exception as ex:
     print(f"Import error: {ex}")
     sys.exit(1)
 
+from image_under2mb import ensure_under2mb_copy, report_scan, scan_final_images
+
 
 WORKFLOW_DIR = os.path.dirname(os.path.abspath(__file__))
 VS_CODE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(WORKFLOW_DIR)))
@@ -1069,6 +1071,7 @@ def generate_for_mod(mod: ModMeta, layout: Dict[str, object], media_image_path: 
 
     out_full_merged = os.path.join(generated_root, f"{mod.base_name}_01.png")
     base_img.convert("RGB").save(out_full_merged, format="PNG", optimize=True)
+    ensure_under2mb_copy(out_full_merged)
 
     for name in os.listdir(generated_root):
         if name.startswith(f"{mod.base_name}_preview_") and name.endswith(".png"):
@@ -1094,6 +1097,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--mod", default="", help="Generate only one base mod name.")
     p.add_argument("--changed-only", action="store_true", help="Generate only mods with changed text/media inputs.")
     p.add_argument("--dry-run", action="store_true", help="Report work without writing files.")
+    p.add_argument(
+        "--under2mb-only",
+        action="store_true",
+        help="Skip banner generation. Write Under2MB copies for oversize ImagesFinal _01 thumbnails.",
+    )
     return p
 
 
@@ -1110,6 +1118,13 @@ def main() -> int:
         print(f"Failed to read layout config: {ex}")
         return 1
 
+    paths = layout.get("paths", {})
+    generated_root = resolve_path(VS_CODE_ROOT, str(paths.get("generated_root", "00_Images/02_ImagesFinal")))
+    if args.under2mb_only:
+        print(f"under2mb-scan={generated_root}")
+        report_scan(scan_final_images(generated_root, dry_run=args.dry_run))
+        return 0
+
     compatibility = load_compatibility(COMPAT_CSV)
     mods = get_mods(layout, compatibility)
     if args.mod:
@@ -1120,10 +1135,8 @@ def main() -> int:
         print("No matching mods found.")
         return 0
 
-    paths = layout.get("paths", {})
     media_root_value = str(paths.get("media_root", "00_Images/01_ImageWorkflow/PrimaryImageSources"))
     media_root = resolve_path(VS_CODE_ROOT, media_root_value)
-    generated_root = resolve_path(VS_CODE_ROOT, str(paths.get("generated_root", "00_Images/02_ImagesFinal")))
     manifest_value = str(paths.get("manifest", "00_Images/01_ImageWorkflow/Data/_modimage-manifest.json"))
     manifest_path = resolve_path(VS_CODE_ROOT, manifest_value)
     media_status_value = str(paths.get("media_status_csv", "00_Images/01_ImageWorkflow/Data/media-status.csv"))
@@ -1195,6 +1208,7 @@ def main() -> int:
         write_manifest(manifest_path, next_manifest)
 
     print(f"done: generated_or_planned={ok_count}, skipped={skip_count}, total={len(mods)}")
+    report_scan(scan_final_images(generated_root, dry_run=args.dry_run))
     return 0
 
 

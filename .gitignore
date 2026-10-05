@@ -16,6 +16,9 @@
 .history/
 __pycache__/
 
+# Third-party Doom Levels source (local only; not ours to publish)
+00_Support/DoomLevelsSource/
+
 # Disposable experiments and short-lived files (see WORKSPACE-ORGANIZATION-PLAN.md)
 00_Support/Temp/
 
@@ -33,3 +36,6 @@ StreamingManagement/Streaming/
 00_Support/FriendModInstaller/INSTALL-DISCORD-WEBHOOK.txt
 00_Support/FriendModInstaller/INSTALL-ONEDRIVE.txt
 00_Support/FriendModInstaller/INSTALL-LOG.txt
+
+# LogReader: generated player-log records (never commit)
+00_Tools/LogReader/Records/

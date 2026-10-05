@@ -60,8 +60,14 @@ namespace MapPlus
 				return null;
 			}
 
+			string name = prefabInstance.prefab.PrefabName;
+			if (string.IsNullOrEmpty(name))
+			{
+				return null;
+			}
+
 			Vector3i pos = prefabInstance.boundingBoxPosition;
-			return prefabInstance.id + ":" + pos.x + "," + pos.y + "," + pos.z + ":" + prefabInstance.prefab.PrefabName;
+			return pos.x + "," + pos.y + "," + pos.z + ":" + name;
 		}
 
 		public static bool HasVisited(PrefabInstance prefabInstance)
@@ -75,8 +81,23 @@ namespace MapPlus
 			EnsureLoaded();
 			lock (Sync)
 			{
-				return VisitedKeys.Contains(key);
+				if (VisitedKeys.Contains(key))
+				{
+					return true;
+				}
+
+				// Older saves put a load-order id in front of the same position and name.
+				string suffix = ":" + key;
+				foreach (string line in VisitedKeys)
+				{
+					if (line != null && line.EndsWith(suffix, StringComparison.Ordinal))
+					{
+						return true;
+					}
+				}
 			}
+
+			return false;
 		}
 
 		public static void RecordIfEntered(PrefabInstance prefabInstance)

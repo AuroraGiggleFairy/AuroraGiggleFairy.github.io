@@ -2,22 +2,22 @@ namespace SortingCart
 {
 	internal static class ItemMover
 	{
-		public static int MoveLikeItems(ITileEntityLootable source, ITileEntityLootable dest, bool likeItemsOnly)
+		public static int MoveLikeItems(StorageBox source, StorageBox dest, bool likeItemsOnly)
 		{
-			if (source == null || dest == null || source.items == null || dest.items == null)
+			if (source?.Items == null || dest?.Items == null)
 			{
 				return 0;
 			}
 
 			int moved = 0;
-			for (int s = 0; s < source.items.Length; s++)
+			for (int s = 0; s < source.Items.Length; s++)
 			{
-				if (ItemStack.Empty.Equals(source.items[s]) || StorageUtil.IsSlotLocked(source, s))
+				if (ItemStack.Empty.Equals(source.Items[s]) || source.IsSlotLocked(s))
 				{
 					continue;
 				}
 
-				moved += MoveStack(source.items, s, dest, likeItemsOnly, () => source.UpdateSlot(s, source.items[s]));
+				moved += MoveStack(source.Items, s, dest, likeItemsOnly, () => source.UpdateSlot(s, source.Items[s]));
 			}
 
 			if (moved > 0)
@@ -30,14 +30,14 @@ namespace SortingCart
 			return moved;
 		}
 
-		public static int MoveLikeItemsFromBag(Bag bag, ITileEntityLootable dest, bool likeItemsOnly)
+		public static int MoveLikeItemsFromBag(Bag bag, StorageBox dest, bool likeItemsOnly)
 		{
-			if (bag == null || dest == null || dest.items == null)
+			if (bag == null || dest?.Items == null)
 			{
 				return 0;
 			}
 
-			ItemStack[] slots = bag.GetSlots();
+			ItemStack[] slots = BagAccess.GetSlots(bag);
 			if (slots == null)
 			{
 				return 0;
@@ -51,12 +51,12 @@ namespace SortingCart
 					continue;
 				}
 
-				int before = slots[s].count;
+				int before = StackAccess.Count(slots[s]);
 				MoveStack(slots, s, dest, likeItemsOnly, null);
-				int after = ItemStack.Empty.Equals(slots[s]) ? 0 : slots[s].count;
+				int after = ItemStack.Empty.Equals(slots[s]) ? 0 : StackAccess.Count(slots[s]);
 				if (after != before)
 				{
-					bag.SetSlot(s, after == 0 ? ItemStack.Empty : slots[s], true);
+					BagAccess.SetSlot(bag, s, after == 0 ? ItemStack.Empty : slots[s]);
 					moved += before - after;
 				}
 			}
@@ -77,17 +77,17 @@ namespace SortingCart
 				return 0;
 			}
 
-			ItemStack[] sourceSlots = source.GetSlots();
-			ItemStack[] destSlots = dest.GetSlots();
+			ItemStack[] sourceSlots = BagAccess.GetSlots(source);
+			ItemStack[] destSlots = BagAccess.GetSlots(dest);
 			if (sourceSlots == null || destSlots == null)
 			{
 				return 0;
 			}
 
-			int moved = MoveLikeItemsToBagSlots(sourceSlots, source, destSlots, dest.LockedSlots, likeItemsOnly);
+			int moved = MoveLikeItemsToBagSlots(sourceSlots, source, destSlots, BagAccess.LockedSlots(dest), likeItemsOnly);
 			if (moved > 0)
 			{
-				dest.SetSlots(destSlots);
+				BagAccess.SetSlots(dest, destSlots);
 				SortBag(dest);
 			}
 
@@ -104,12 +104,12 @@ namespace SortingCart
 					continue;
 				}
 
-				int before = sourceSlots[s].count;
+				int before = StackAccess.Count(sourceSlots[s]);
 				MoveStackToArray(sourceSlots, s, destItems, destLocks, likeItemsOnly);
-				int after = ItemStack.Empty.Equals(sourceSlots[s]) ? 0 : sourceSlots[s].count;
+				int after = ItemStack.Empty.Equals(sourceSlots[s]) ? 0 : StackAccess.Count(sourceSlots[s]);
 				if (after != before)
 				{
-					source.SetSlot(s, after == 0 ? ItemStack.Empty : sourceSlots[s], true);
+					BagAccess.SetSlot(source, s, after == 0 ? ItemStack.Empty : sourceSlots[s]);
 					moved += before - after;
 				}
 			}
@@ -117,22 +117,22 @@ namespace SortingCart
 			return moved;
 		}
 
-		public static int MoveLikeItemsToBagSlots(ITileEntityLootable source, ItemStack[] destItems, PackedBoolArray destLocks, bool likeItemsOnly)
+		public static int MoveLikeItemsToBagSlots(StorageBox source, ItemStack[] destItems, PackedBoolArray destLocks, bool likeItemsOnly)
 		{
-			if (source == null || destItems == null)
+			if (source?.Items == null || destItems == null)
 			{
 				return 0;
 			}
 
 			int moved = 0;
-			for (int s = 0; s < source.items.Length; s++)
+			for (int s = 0; s < source.Items.Length; s++)
 			{
-				if (ItemStack.Empty.Equals(source.items[s]) || StorageUtil.IsSlotLocked(source, s))
+				if (ItemStack.Empty.Equals(source.Items[s]) || source.IsSlotLocked(s))
 				{
 					continue;
 				}
 
-				moved += MoveStackToArray(source.items, s, destItems, destLocks, likeItemsOnly);
+				moved += MoveStackToArray(source.Items, s, destItems, destLocks, likeItemsOnly);
 			}
 
 			if (moved > 0)
@@ -143,7 +143,7 @@ namespace SortingCart
 			return moved;
 		}
 
-		private static int MoveStack(ItemStack[] sourceItems, int sourceIndex, ITileEntityLootable dest, bool likeItemsOnly, System.Action afterChange)
+		private static int MoveStack(ItemStack[] sourceItems, int sourceIndex, StorageBox dest, bool likeItemsOnly, System.Action afterChange)
 		{
 			ItemStack stack = sourceItems[sourceIndex];
 			if (stack == null || stack.IsEmpty())
@@ -151,16 +151,18 @@ namespace SortingCart
 				return 0;
 			}
 
-			int start = stack.count;
+			int start = StackAccess.Count(stack);
 			bool foundMatch = false;
-			for (int t = 0; t < dest.items.Length; t++)
+			ItemValue stackValue = StackAccess.Value(stack);
+			for (int t = 0; t < dest.Items.Length; t++)
 			{
-				if (StorageUtil.IsSlotLocked(dest, t))
+				if (dest.IsSlotLocked(t))
 				{
 					continue;
 				}
 
-				if (dest.items[t].itemValue.ItemClass != stack.itemValue.ItemClass)
+				ItemValue destValue = StackAccess.Value(dest.Items[t]);
+				if (destValue == null || stackValue == null || destValue.ItemClass != stackValue.ItemClass)
 				{
 					continue;
 				}
@@ -177,7 +179,7 @@ namespace SortingCart
 
 			if (likeItemsOnly && !foundMatch)
 			{
-				return start - stack.count;
+				return start - StackAccess.Count(stack);
 			}
 
 			if ((foundMatch || !likeItemsOnly) && !stack.IsEmpty() && dest.AddItem(stack))
@@ -187,7 +189,7 @@ namespace SortingCart
 				return start;
 			}
 
-			return start - stack.count;
+			return start - StackAccess.Count(stack);
 		}
 
 		private static int MoveStackToArray(ItemStack[] sourceItems, int sourceIndex, ItemStack[] destItems, PackedBoolArray destLocks, bool likeItemsOnly)
@@ -198,7 +200,8 @@ namespace SortingCart
 				return 0;
 			}
 
-			int start = stack.count;
+			int start = StackAccess.Count(stack);
+			ItemValue stackValue = StackAccess.Value(stack);
 			bool foundMatch = false;
 			for (int t = 0; t < destItems.Length; t++)
 			{
@@ -212,22 +215,24 @@ namespace SortingCart
 					continue;
 				}
 
-				if (destItems[t].itemValue.ItemClass != stack.itemValue.ItemClass)
+				ItemValue destValue = StackAccess.Value(destItems[t]);
+				if (destValue == null || stackValue == null || destValue.ItemClass != stackValue.ItemClass)
 				{
 					continue;
 				}
 
 				foundMatch = true;
-				int space = destItems[t].itemValue.ItemClass.Stacknumber.Value - destItems[t].count;
+				int space = destValue.ItemClass.Stacknumber.Value - StackAccess.Count(destItems[t]);
 				if (space <= 0)
 				{
 					continue;
 				}
 
-				int take = stack.count < space ? stack.count : space;
-				destItems[t].count += take;
-				stack.count -= take;
-				if (stack.count <= 0)
+				int stackCount = StackAccess.Count(stack);
+				int take = stackCount < space ? stackCount : space;
+				StackAccess.SetCount(destItems[t], StackAccess.Count(destItems[t]) + take);
+				StackAccess.SetCount(stack, stackCount - take);
+				if (StackAccess.Count(stack) <= 0)
 				{
 					sourceItems[sourceIndex] = ItemStack.Empty;
 					return start;
@@ -236,7 +241,7 @@ namespace SortingCart
 
 			if (likeItemsOnly && !foundMatch)
 			{
-				return start - stack.count;
+				return start - StackAccess.Count(stack);
 			}
 
 			if (foundMatch || !likeItemsOnly)
@@ -257,7 +262,7 @@ namespace SortingCart
 				}
 			}
 
-			return start - stack.count;
+			return start - StackAccess.Count(stack);
 		}
 
 		private static bool IsLocked(PackedBoolArray locks, int index)
@@ -265,21 +270,20 @@ namespace SortingCart
 			return locks != null && index >= 0 && index < locks.Length && locks[index];
 		}
 
-		private static void SortDest(ITileEntityLootable dest)
+		private static void SortDest(StorageBox dest)
 		{
-			PackedBoolArray locked = dest.HasSlotLocksSupport ? dest.SlotLocks : null;
-			dest.items = StackSortUtil.CombineAndSortStacks(dest.items, 0, locked);
+			dest.ApplySortedItems(StackSortUtil.CombineAndSortStacks(dest.Items, 0, dest.SlotLocks));
 		}
 
 		private static void SortBag(Bag dest)
 		{
-			ItemStack[] slots = dest.GetSlots();
+			ItemStack[] slots = BagAccess.GetSlots(dest);
 			if (slots == null)
 			{
 				return;
 			}
 
-			dest.SetSlots(StackSortUtil.CombineAndSortStacks(slots, 0, dest.LockedSlots));
+			BagAccess.SetSlots(dest, StackSortUtil.CombineAndSortStacks(slots, 0, BagAccess.LockedSlots(dest)));
 		}
 	}
 }

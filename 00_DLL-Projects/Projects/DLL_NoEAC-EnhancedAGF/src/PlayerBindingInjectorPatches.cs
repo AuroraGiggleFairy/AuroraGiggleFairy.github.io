@@ -114,7 +114,19 @@ public static class PlayerBindingInjectorPatches
         EntityPlayerLocal player = controller.xui?.playerUI?.entityPlayer;
         if (player == null)
         {
-            value = FalseWhenNoPlayerBindings.Contains(bindingName) ? "false" : "0";
+            if (string.Equals(bindingName, "PlayerBagIcon", StringComparison.OrdinalIgnoreCase))
+            {
+                value = BagEncumbrance.IconNormal;
+            }
+            else if (string.Equals(bindingName, "PlayerBagUsedColor", StringComparison.OrdinalIgnoreCase))
+            {
+                value = BagEncumbrance.ColorNormal;
+            }
+            else
+            {
+                value = FalseWhenNoPlayerBindings.Contains(bindingName) ? "false" : "0";
+            }
+
             result = true;
             return true;
         }
@@ -137,9 +149,14 @@ public static class PlayerBindingInjectorPatches
             return false;
         }
 
-        // HUDPlus / Dishong / ammo bindings all start with Player*, DoomGuy*, or Inventory*.
+        // Player* and Inventory* are EnhancedAGF. Names starting with D are Dan's HUD only.
         char c = bindingName[0];
-        return c == 'P' || c == 'p' || c == 'D' || c == 'd' || c == 'I' || c == 'i';
+        if (c == 'D' || c == 'd')
+        {
+            return DoomHudGate.IsLoaded;
+        }
+
+        return c == 'P' || c == 'p' || c == 'I' || c == 'i';
     }
 
     private static void RegisterBinding(XUiController controller, Tracker tracker, string bindingName, Binding binding)

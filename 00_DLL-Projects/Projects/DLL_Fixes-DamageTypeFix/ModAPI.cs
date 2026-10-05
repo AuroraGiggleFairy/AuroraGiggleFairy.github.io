@@ -8,14 +8,22 @@ namespace DamageTypeFix
     {
         public void InitMod(Mod modInstance)
         {
+            Harmony harmony = new Harmony("com.agfprojects.damagetypefix");
+            PatchOne(harmony, typeof(Patch_NetPackageExplosionInitiate_read));
+            PatchOne(harmony, typeof(Patch_Explosion_AttackEntites));
+            PatchOne(harmony, typeof(Patch_EntityAlive_DamageEntity_Bfg));
+        }
+
+        static void PatchOne(Harmony harmony, Type type)
+        {
             try
             {
-                new Harmony("com.agfprojects.damagetypefix").PatchAll();
-                Debug.Log("[DamageTypeFix] Harmony patches registered.");
+                harmony.CreateClassProcessor(type).Patch();
+                Debug.Log("[DamageTypeFix] Patched " + type.Name);
             }
             catch (Exception ex)
             {
-                Debug.LogError("[DamageTypeFix] Patch registration failed: " + ex);
+                Debug.LogError("[DamageTypeFix] Failed " + type.Name + ": " + ex);
             }
         }
     }

@@ -11,7 +11,7 @@ namespace SortingCart
 			TileEntity sourceTe = world.GetTileEntity(boxPos);
 			if (sourceTe == null
 				|| !StorageUtil.IsSortingCart(sourceTe.blockValue.Block)
-				|| !StorageUtil.TryAsContainer(sourceTe, out ITileEntityLootable source)
+				|| !StorageUtil.TryAsContainer(sourceTe, out StorageBox source)
 				|| StorageUtil.IsInUse(sourceTe))
 			{
 				return 0;

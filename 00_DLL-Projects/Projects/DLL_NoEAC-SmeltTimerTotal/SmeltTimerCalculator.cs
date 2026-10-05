@@ -27,8 +27,14 @@ public static class SmeltTimerCalculator
 				continue;
 			}
 
+			ItemValue toolValue = StackAccess.Value(tools[i]);
+			if (toolValue == null)
+			{
+				continue;
+			}
+
 			float perc = 1f;
-			tools[i].itemValue.ModifyValue(null, null, PassiveEffects.CraftingSmeltTime, ref meltSeconds, ref perc, tags);
+			toolValue.ModifyValue(null, null, PassiveEffects.CraftingSmeltTime, ref meltSeconds, ref perc, tags);
 			meltSeconds *= perc;
 		}
 

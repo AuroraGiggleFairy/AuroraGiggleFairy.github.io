@@ -72,7 +72,7 @@
                         </rect>
                         <grid name="optionsList" pos="20,-140" depth="10" rows="6" cols="1" cell_width="300" cell_height="100" arrangement="vertical">
                            <conditional>
-                              <if cond="mod_loaded('AGF-NoEAC-ScreamerAlert')">
+                              <if cond="mod_loaded('AGF-VPS-ScreamerAlert')">
                                  <entry name="screamerAlert">
                                     <rect name="agfOptionsScreamer" controller="ScreamerAlertOptions, ScreamerAlert" pos="0,0" width="280" height="120" disableautobackground="true">
                                        <label name="optionsScreamerTitle" pos="0,-5" depth="10" width="280" height="28" font_size="26" justify="center" color="[textBoldingColor]" effect="outline" effect_color="0,0,0,255" effect_distance="1,1" text_key="windowESC_color_options_screamer_title" visible="{opt_row_1_visible}"/>
@@ -162,7 +162,7 @@
                         </rect>
                         <grid name="optionsList" pos="20,-140" depth="10" rows="6" cols="1" cell_width="300" cell_height="100" arrangement="vertical">
                            <conditional>
-                              <if cond="mod_loaded('AGF-NoEAC-ScreamerAlert')">
+                              <if cond="mod_loaded('AGF-VPS-ScreamerAlert')">
                                  <entry name="screamerAlert">
                                     <rect name="agfOptionsScreamer" controller="ScreamerAlertOptions, ScreamerAlert" pos="0,0" width="280" height="120" disableautobackground="true">
                                        <label name="optionsScreamerTitle" pos="0,-5" depth="10" width="280" height="28" font_size="26" justify="center" color="[textBoldingColorHV]" effect="outline" effect_color="0,0,0,255" effect_distance="1,1" text_key="windowESC_highvisibility_options_screamer_title" visible="{opt_row_1_visible}"/>

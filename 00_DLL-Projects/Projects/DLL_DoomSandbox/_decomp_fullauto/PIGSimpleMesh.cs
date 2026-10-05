@@ -26,7 +26,7 @@ public class PIGSimpleMesh : ProjectileItemGroupAbs<PHSimpleMesh>
 		//IL_00b8: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00bf: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00ca: Unknown result type (might be due to invalid IL or missing references)
-		renderTrans = item.CloneModel(GameManager.Instance.World, new ItemValue(((ItemData)item).Id, false), Vector3.zero, (Transform)null, (MeshPurpose)0, default(TextureFullArray));
+		renderTrans = CloneModelAccess.TransformOf(item, new ItemValue(((ItemData)item).Id, false), (Transform)null);
 		MeshFilter componentInChildren = ((Component)renderTrans).GetComponentInChildren<MeshFilter>();
 		mesh = componentInChildren.sharedMesh;
 		MeshRenderer componentInChildren2 = ((Component)renderTrans).GetComponentInChildren<MeshRenderer>();

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-    <Name value="AGF-VPS-HonkOpensYourDoors"/>
-    <DisplayName value="AGF Honk Opens Your Doors"/>
-    <Version value="1.0.0"/>
-    <Description value="Honk from a vehicle to open or close player-placed unpowered doors." />
-    <Author value="AuroraGiggleFairy (AGF)"/>
-    <Website value="https://auroragigglefairy.github.io/"/>
-</xml>

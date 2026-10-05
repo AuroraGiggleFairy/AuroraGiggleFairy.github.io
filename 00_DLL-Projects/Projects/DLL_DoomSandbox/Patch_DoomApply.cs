@@ -42,7 +42,11 @@ namespace DoomSandbox
 			{
 				if (_passiveEffect == PassiveEffects.HealthMax)
 				{
-					if (_entity != null && !(_entity is EntityPlayer))
+					// Vehicles store durability on the item (MaxUseTimes). Stat.Tick
+					// reapplies HealthMax every tick, so this multiplier lifts the bar
+					// (4000 -> 4400 at 110%) and the next vehicle sync writes the item
+					// value back, which drops the repair.
+					if (_entity != null && !(_entity is EntityPlayer) && !(_entity is EntityVehicle))
 					{
 						float mult = DoomSandboxRuntime.EnemyHealthMult;
 						if (Math.Abs(mult - 1f) > 0.0001f)
@@ -70,7 +74,9 @@ namespace DoomSandbox
 		/// Player Damage Taken: ±1 to remaining health AND ±1 to the doomArmour CVar,
 		/// after DoomArmour's green 40% / blue 60% split. Do not add to the pre-split total.
 		/// Health and armour are floored at 0 so a −1 never heals. Incoming 0 (BFG, etc.)
-		/// is left alone so we do not invent damage. −1 armour only refunds what this hit spent.
+		/// is left alone so we do not invent damage. −1 refunds 1 of this hit's armour spend
+		/// except the last HUD point: that hit breaks the pool (0) even if DoomArmour
+		/// adrenaline/grace/reinforced netted a 0 spend. A fully emptied pool stays 0.
 		/// Skip while buffInvulnerability is active.
 		/// </summary>
 		internal static class PlayerFlatDamageState
@@ -146,10 +152,20 @@ namespace DoomSandbox
 				}
 				else
 				{
-					float spent = armourBefore - held;
-					if (spent <= 0f)
-						return;
-					next = Mathf.Min(armourBefore, held + (-flat));
+					int shownBefore = Mathf.RoundToInt(armourBefore);
+					// Last visible point: break. Do not wait for DoomArmour to leave 0 —
+					// adrenaline / grace / reinforced can net a 0 spend and keep HUD at 1.
+					if (shownBefore <= 1 && armourBefore > 0.0001f)
+						next = 0f;
+					else if (Mathf.RoundToInt(held) <= 0)
+						next = 0f;
+					else
+					{
+						float spent = armourBefore - held;
+						if (spent <= 0f)
+							return;
+						next = Mathf.Min(armourBefore, held + (-flat));
+					}
 				}
 
 				float max = 0f;

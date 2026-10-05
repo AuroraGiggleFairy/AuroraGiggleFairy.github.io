@@ -14,6 +14,9 @@ namespace FlightLevelAssist
         private const string FlightAssistHoverVisible = "flaVehicleFlightAssistHoverVisible";
         private const string FlightAssistYLockVisible = "flaVehicleFlightAssistYLockVisible";
 
+        private static int lastModeSignature = int.MinValue;
+        private static int dirtyFrame = -1;
+
         [HarmonyPatch(typeof(XUiC_HUDStatBar), "GetBindingValueInternal")]
         [HarmonyPrefix]
         private static bool HudStatBarBindingsPrefix(ref bool __result, XUiC_HUDStatBar __instance, ref string _value, string _bindingName)
@@ -32,6 +35,44 @@ namespace FlightLevelAssist
 
             __result = true;
             return false;
+        }
+
+        [HarmonyPatch(typeof(XUiC_HUDStatBar), "hasChanged")]
+        [HarmonyPostfix]
+        private static void HasChangedPostfix(XUiC_HUDStatBar __instance, ref bool __result)
+        {
+            if (__instance == null || __instance.statGroup != HUDStatGroups.Vehicle)
+            {
+                return;
+            }
+
+            int signature = CurrentModeSignature(__instance);
+            if (signature != lastModeSignature)
+            {
+                lastModeSignature = signature;
+                dirtyFrame = Time.frameCount;
+            }
+
+            if (Time.frameCount == dirtyFrame)
+            {
+                __result = true;
+            }
+        }
+
+        private static int CurrentModeSignature(XUiC_HUDStatBar statBar)
+        {
+            EntityPlayerLocal localPlayer = statBar.localPlayer ?? statBar.xui?.playerUI?.entityPlayer;
+            EntityVehicle entityVehicle = (localPlayer?.AttachedToEntity as EntityVehicle) ?? statBar.vehicle;
+            if (!IsLikelyFlyingVehicle(entityVehicle))
+            {
+                return 0;
+            }
+
+            FlightLevelStateStore.State state = FlightLevelStateStore.TryGet(entityVehicle);
+            bool enabled = Patch_EntityVehicle_MoveByAttachedEntity.IsEnabledFor(entityVehicle);
+            int mode = state != null ? (int)state.Mode : 0;
+            int pattern = state != null ? (int)state.ControlPattern : 0;
+            return 1 + (enabled ? 8 : 0) + (mode * 2) + pattern;
         }
 
         private static bool IsFlightAssistBinding(string bindingName)

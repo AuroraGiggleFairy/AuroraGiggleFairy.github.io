@@ -95,8 +95,8 @@ namespace SortingCart
 							continue;
 						}
 
-						if (!StorageUtil.TryAsContainer(te, out ITileEntityLootable storage)
-							|| !StorageUtil.IsPlayerStorage(storage)
+						if (!StorageUtil.TryAsContainer(te, out StorageBox storage)
+							|| !storage.IsPlayerStorage
 							|| StorageUtil.IsSortingCart(te.blockValue.Block)
 							|| StorageUtil.IsInUse(te))
 						{
@@ -230,7 +230,7 @@ namespace SortingCart
 		internal struct ChestTarget
 		{
 			public TileEntity TileEntity;
-			public ITileEntityLootable Storage;
+			public StorageBox Storage;
 			public Vector3i Pos;
 			public int Distance;
 		}

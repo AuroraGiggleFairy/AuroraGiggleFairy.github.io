@@ -6,7 +6,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
 {
     public override string[] getCommands()
     {
-        return new[] { "agf-vet" };
+        return new[] { "agf-et", "agfet", "agf-vet", "agfvet" };
     }
 
     public override string getDescription()
@@ -17,11 +17,11 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
     public override string getHelp()
     {
         return "Usage:\n"
-            + "  agf-vet\n"
-            + "  agf-vet help\n"
-            + "  agf-vet default <off|on>\n"
-            + "  agf-vet set <entityId|all> <off|on|default>\n"
-            + "  agf-vet list";
+            + "  agf-et\n"
+            + "  agf-et help\n"
+            + "  agf-et default <off|on>\n"
+            + "  agf-et set <entityId|all> <off|on|default>\n"
+            + "  agf-et list";
     }
 
     public override void Execute(List<string> _params, CommandSenderInfo _senderInfo)
@@ -54,7 +54,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
                 HandleList();
                 return;
             default:
-                SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-vet help.");
+                SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-et help.");
                 return;
         }
     }
@@ -62,9 +62,9 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
     private static void OutputUsageAndDefault()
     {
         SdtdConsole.Instance.Output("[VisualEntityTracker] Usage:");
-        SdtdConsole.Instance.Output("[VisualEntityTracker]   agf-vet default <off|on>");
-        SdtdConsole.Instance.Output("[VisualEntityTracker]   agf-vet set <entityId|all> <off|on|default>");
-        SdtdConsole.Instance.Output("[VisualEntityTracker]   agf-vet list");
+        SdtdConsole.Instance.Output("[VisualEntityTracker]   agf-et default <off|on>");
+        SdtdConsole.Instance.Output("[VisualEntityTracker]   agf-et set <entityId|all> <off|on|default>");
+        SdtdConsole.Instance.Output("[VisualEntityTracker]   agf-et list");
         SdtdConsole.Instance.Output("[VisualEntityTracker] default currently set to " + VisualEntityTrackerModeSettings.GetModeToken(VisualEntityTrackerModeSettings.GetServerDefaultMode()));
     }
 
@@ -78,7 +78,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
 
         if (!VisualEntityTrackerModeSettings.TryParseCommandMode(args[1], out VisualEntityTrackerMode next))
         {
-            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-vet default <off|on>.");
+            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-et default <off|on>.");
             return;
         }
 
@@ -97,7 +97,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
     {
         if (args.Count < 3)
         {
-            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-vet help.");
+            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-et help.");
             return;
         }
 
@@ -118,7 +118,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
 
         if (!TryParseModeOrDefaultKeyword(modeToken, out VisualEntityTrackerMode requestedMode, out bool useDefault))
         {
-            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-vet help.");
+            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid option. Use: agf-et help.");
             return;
         }
 
@@ -154,7 +154,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
     {
         if (!TryParseModeOrDefaultKeyword(modeToken, out VisualEntityTrackerMode requestedMode, out bool useDefault))
         {
-            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid mode. Use: agf-vet set all <off|on|default>.");
+            SdtdConsole.Instance.Output("[VisualEntityTracker] invalid mode. Use: agf-et set all <off|on|default>.");
             return;
         }
 
@@ -202,7 +202,7 @@ public class ConsoleCmdVisualEntityTrackerAddon : ConsoleCmdAbstract
                 VisualEntityTrackerMode mode = VisualEntityTrackerModeSettings.GetModeForEntityId(
                     player.entityId,
                     VisualEntityTrackerModeSettings.GetServerDefaultMode());
-                SdtdConsole.Instance.Output("[VisualEntityTracker] " + index + ". id=" + player.entityId + ", " + SafePlayerName(player) + ", vet=" + VisualEntityTrackerModeSettings.GetModeToken(mode));
+                SdtdConsole.Instance.Output("[VisualEntityTracker] " + index + ". id=" + player.entityId + ", " + SafePlayerName(player) + ", et=" + VisualEntityTrackerModeSettings.GetModeToken(mode));
                 index++;
             }
         }

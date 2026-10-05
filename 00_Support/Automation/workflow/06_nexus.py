@@ -222,7 +222,15 @@ def resolve_file_description(short_desc: str, mod_type_label: str, mod_type_map:
     return short_desc
 
 
-def generate_details_md(template_text: str, mod_info: dict, nexus_mod_name: str, short_desc: str, file_desc: str, changelog: str) -> str:
+def generate_details_md(
+    template_text: str,
+    mod_info: dict,
+    nexus_mod_name: str,
+    short_desc: str,
+    file_desc: str,
+    changelog: str,
+    full_desc: str = "",
+) -> str:
     """Substitute placeholders in the template with actual values."""
     now = dt.datetime.now().strftime("%Y-%m-%d  %I:%M %p")
     replacements = {
@@ -235,6 +243,7 @@ def generate_details_md(template_text: str, mod_info: dict, nexus_mod_name: str,
         "{{FILE_DESCRIPTION}}": file_desc,
         "{{FILE_DESC_LENGTH}}": str(len(file_desc)),
         "{{CHANGELOG_ENTRIES}}": changelog,
+        "{{FULL_DESCRIPTION}}": full_desc.rstrip("\n"),
     }
     result = template_text
     for placeholder, value in replacements.items():
@@ -299,7 +308,13 @@ def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, descrip
         w("[list]")
         pending_sub_items: list = []
         collecting_deps = False  # Flag: collecting sub-items for Dependencies
+        # Type-5 EAC Varies children — nest under Mod Type as plain text (never colored labels)
+        eac_varies_child_labels = {
+            "dedicated server",
+            "singleplayer and player-hosted",
+        }
         for line in scope.splitlines():
+            indent = len(line) - len(line.lstrip())
             stripped = line.strip()
             if not stripped or stripped.startswith("- Mod Version:"):
                 continue
@@ -309,11 +324,19 @@ def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, descrip
                 if content:
                     pending_sub_items.append(content)
                 continue
+            content_raw = stripped.lstrip("- ").strip()
+            label_key = content_raw.split(":", 1)[0].strip().lower() if ":" in content_raw else ""
+            # Nested under Mod Type / Dependencies: indent >= 4, or known EAC-Varies children
+            if stripped.startswith("- ") and (
+                indent >= 4 or label_key in eac_varies_child_labels
+            ):
+                if content_raw:
+                    pending_sub_items.append(content_raw)
+                continue
             if collecting_deps and stripped.startswith("- ") and ":" in stripped.lstrip("- "):
                 # While collecting deps, treat colon lines as sub-items, not labels
-                content = stripped.lstrip("- ").strip()
-                if content:
-                    pending_sub_items.append(content)
+                if content_raw:
+                    pending_sub_items.append(content_raw)
                 continue
             if ":" in stripped.lstrip("- "):
                 # Flush any pending sub-items before starting a new entry
@@ -330,8 +353,8 @@ def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, descrip
                 if label_s == "Website":
                     continue
                 elif label_s == "Mod Type":
+                    collecting_deps = False
                     w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}")
-                    # Mod Type sub-items follow; collect them
                 elif label_s == "Dependencies":
                     collecting_deps = True
                     w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}")
@@ -466,6 +489,9 @@ def main() -> int:
         default="all",
     )
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--verbose", action="store_true")
+    parser.add_argument("--strict", action="store_true")
+    parser.add_argument("--workers", type=int, default=None)
     args = parser.parse_args()
 
     print("=" * 60)
@@ -496,18 +522,23 @@ def main() -> int:
     print("  PublishHelp directory recreated.")
 
     # Images are NOT copied into PublishHelp — upload them to Nexus directly
-    # from 00_Images/02_ImagesFinal instead. PublishHelp only holds the
-    # text/zip artifacts below (see WORKSPACE-ORGANIZATION-PLAN.md Progress Log).
+    # from 00_Images/02_ImagesFinal instead. One packet per mod:
+    # PublishHelp/{ModName}.md
 
-    # Stage 1: Generate BBCode FullDesc.md directly (moved from SCRIPT-NexusMods.py)
-    print("\n--- Stage 1: BBCode Full Descriptions ---")
+    print("\n--- Generating PublishHelp packets ---")
+    template_text = ""
+    if os.path.isfile(TEMPLATE_DETAILS_PATH):
+        with open(TEMPLATE_DETAILS_PATH, "r", encoding="utf-8") as f:
+            template_text = f.read()
+    else:
+        print(f"  [WARN] Template not found: {TEMPLATE_DETAILS_PATH}")
+        return 1
+
+    mod_type_map = load_mod_type_map()
     game_ver = "3"
     for m in mods:
         base_name = m["base_name"]
         folder_path = m["folder_path"]
-        help_dir = os.path.join(PUBLISHHELP_DIR, base_name)
-        os.makedirs(help_dir, exist_ok=True)
-
         readme = load_readme_text(folder_path)
         if not readme:
             print(f"  [SKIP] {base_name}: no README.txt found")
@@ -515,53 +546,19 @@ def main() -> int:
         sections = parse_readme_sections(readme)
         mod_info = load_modinfo_xml(folder_path)
         nexus_name = format_nexus_mod_name(base_name, game_ver)
-        description = mod_info.get("description", "")
-        bbcode = generate_bbcode_full_description(nexus_name, game_ver, description, sections)
-        full_desc_path = os.path.join(help_dir, "FullDesc.md")
-        with open(full_desc_path, "w", encoding="utf-8") as f:
-            f.write(bbcode)
-            if not bbcode.endswith("\n"):
+        short_desc = mod_info.get("description", "")
+        full_desc = generate_bbcode_full_description(nexus_name, game_ver, short_desc, sections)
+        file_desc = resolve_file_description(short_desc, extract_mod_type_from_readme(readme), mod_type_map)
+        changelog = extract_changelog_entries(readme)
+        packet = generate_details_md(
+            template_text, mod_info, nexus_name, short_desc, file_desc, changelog, full_desc
+        )
+        packet_path = os.path.join(PUBLISHHELP_DIR, f"{base_name}.md")
+        with open(packet_path, "w", encoding="utf-8") as f:
+            f.write(packet)
+            if not packet.endswith("\n"):
                 f.write("\n")
-        print(f"  [FullDesc] {base_name}")
-    print("  BBCode Full Description generation complete.")
-
-    # Stage 2: Generate Details.md from template
-    print("\n--- Stage 2: Generating Details.md ---")
-    template_text = ""
-    if os.path.isfile(TEMPLATE_DETAILS_PATH):
-        with open(TEMPLATE_DETAILS_PATH, "r", encoding="utf-8") as f:
-            template_text = f.read()
-    else:
-        print(f"  [WARN] Template not found: {TEMPLATE_DETAILS_PATH}")
-
-    if template_text:
-        # Load Mod Type description map once for all mods
-        mod_type_map = load_mod_type_map()
-        for m in mods:
-            base_name = m["base_name"]
-            folder_path = m["folder_path"]
-            help_dir = os.path.join(PUBLISHHELP_DIR, base_name)
-            os.makedirs(help_dir, exist_ok=True)
-
-            # Gather data
-            mod_info = load_modinfo_xml(folder_path)
-            readme = load_readme_text(folder_path)
-            mod_type = extract_mod_type_from_readme(readme)
-            # Game version is hardcoded to 3 for current 7d2d compatibility
-            game_ver = "3"
-
-            nexus_name = format_nexus_mod_name(base_name, game_ver)
-            short_desc = mod_info.get("description", "")
-            file_desc = resolve_file_description(short_desc, mod_type, mod_type_map)
-            changelog = extract_changelog_entries(readme)
-
-            details_text = generate_details_md(template_text, mod_info, nexus_name, short_desc, file_desc, changelog)
-            details_path = os.path.join(help_dir, "Details.md")
-            with open(details_path, "w", encoding="utf-8") as f:
-                f.write(details_text)
-                if not details_text.endswith("\n"):
-                    f.write("\n")
-            print(f"  [Details.md] {base_name}")
+        print(f"  [PublishHelp] {base_name}")
 
     print("\n  PublishHelp files updated in:", PUBLISHHELP_DIR)
     print("=" * 60)

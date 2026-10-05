@@ -21,6 +21,149 @@ namespace Toolbelt12Slots
 		public const string Slot12ActionFallbackName = "Inventory12";
 	}
 
+	internal static class V3GameVersion
+	{
+		private static bool initialized;
+
+		internal static int Major { get; private set; }
+		internal static int Minor { get; private set; }
+		internal static string DisplayString { get; private set; } = "Unknown";
+		internal static bool UseV33Toolbelt { get; private set; }
+
+		internal static void Initialize()
+		{
+			if (initialized)
+			{
+				return;
+			}
+
+			initialized = true;
+			Read();
+			if (Major > 0)
+			{
+				UseV33Toolbelt = Major > 3 || (Major == 3 && Minor >= 30);
+			}
+			else
+			{
+				bool legacySlots = typeof(Inventory).GetProperty("PUBLIC_SLOTS_PLAYMODE", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic) != null;
+				bool toolbeltConfig = Type.GetType("ToolbeltConfig, Assembly-CSharp") != null;
+				UseV33Toolbelt = toolbeltConfig && !legacySlots;
+			}
+
+			Console.WriteLine(
+				"Toolbelt12Slots: game " + DisplayString
+				+ "; path=" + (UseV33Toolbelt ? "3.3+" : "3.0-3.2"));
+		}
+
+		private static void Read()
+		{
+			try
+			{
+				Type constantsType = Type.GetType("Constants, Assembly-CSharp") ?? typeof(Constants);
+				object versionInfo = GetStatic(constantsType, "cVersionInformation");
+				if (versionInfo != null)
+				{
+					Major = AsInt(GetInstance(versionInfo, "Major"));
+					Minor = AsInt(GetInstance(versionInfo, "Minor"));
+					string text = GetInstance(versionInfo, "LongString") as string;
+					if (!string.IsNullOrEmpty(text))
+					{
+						DisplayString = text;
+						return;
+					}
+				}
+
+				Major = AsInt(GetStatic(constantsType, "cVersionMajor"));
+				Minor = AsInt(GetStatic(constantsType, "cVersionMinor"));
+				int build = AsInt(GetStatic(constantsType, "cVersionBuild"));
+				if (Major > 0)
+				{
+					DisplayString = "V " + Major + "." + Minor + " (b" + build + ")";
+				}
+			}
+			catch (Exception ex)
+			{
+				DisplayString = "Unknown (" + ex.GetType().Name + ")";
+			}
+		}
+
+		private static int AsInt(object value)
+		{
+			return value is int number ? number : 0;
+		}
+
+		private static object GetStatic(Type type, string memberName)
+		{
+			if (type == null)
+			{
+				return null;
+			}
+
+			const BindingFlags flags = BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
+			FieldInfo field = type.GetField(memberName, flags);
+			if (field != null)
+			{
+				return field.GetValue(null);
+			}
+
+			PropertyInfo prop = type.GetProperty(memberName, flags);
+			if (prop != null && prop.GetIndexParameters().Length == 0)
+			{
+				return prop.GetValue(null, null);
+			}
+
+			return null;
+		}
+
+		private static object GetInstance(object instance, string memberName)
+		{
+			if (instance == null)
+			{
+				return null;
+			}
+
+			const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+			Type type = instance.GetType();
+			FieldInfo field = type.GetField(memberName, flags);
+			if (field != null)
+			{
+				return field.GetValue(instance);
+			}
+
+			PropertyInfo prop = type.GetProperty(memberName, flags);
+			if (prop != null && prop.GetIndexParameters().Length == 0)
+			{
+				return prop.GetValue(instance, null);
+			}
+
+			return null;
+		}
+	}
+
+	internal static class ToolbeltV33
+	{
+		internal static void ApplyPlayModeSlots()
+		{
+			Type configType = AccessTools.TypeByName("ToolbeltConfig");
+			if (configType == null)
+			{
+				Console.WriteLine("Toolbelt12Slots: ToolbeltConfig was not found. 12-slot play belt was not applied.");
+				return;
+			}
+
+			PropertyInfo gameConfigProp = configType.GetProperty("GameConfig", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+			object gameConfig = gameConfigProp?.GetValue(null, null);
+			PropertyInfo slotsProp = configType.GetProperty("SlotsPerBar", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+			if (gameConfig == null || slotsProp == null)
+			{
+				Console.WriteLine("Toolbelt12Slots: GameConfig.SlotsPerBar was not found. 12-slot play belt was not applied.");
+				return;
+			}
+
+			slotsProp.SetValue(gameConfig, ToolbeltConstants.PlayerSlots, null);
+		}
+	}
+
 	internal static class ToolbeltExtendedActions
 	{
 		private static readonly PlayerActionData.ActionGroup ToolbeltCycleGroup = new PlayerActionData.ActionGroup("inpGrpToolbeltName", null, 11, PlayerActionData.TabToolbelt);
@@ -759,9 +902,21 @@ namespace Toolbelt12Slots
 
 	}
 
-	[HarmonyPatch(typeof(Inventory), "get_PUBLIC_SLOTS_PLAYMODE")]
+	// 3.0-3.2 only. 3.3 removed these getters and sizes the belt from ToolbeltConfig.
+	[HarmonyPatch]
 	public class Patch_Inventory_PUBLIC_SLOTS_PLAYMODE
 	{
+		public static bool Prepare()
+		{
+			return !V3GameVersion.UseV33Toolbelt
+				&& AccessTools.PropertyGetter(typeof(Inventory), "PUBLIC_SLOTS_PLAYMODE") != null;
+		}
+
+		public static MethodBase TargetMethod()
+		{
+			return AccessTools.PropertyGetter(typeof(Inventory), "PUBLIC_SLOTS_PLAYMODE");
+		}
+
 		public static bool Prefix(ref int __result)
 		{
 			__result = ToolbeltConstants.PlayerSlots;
@@ -769,13 +924,45 @@ namespace Toolbelt12Slots
 		}
 	}
 
-	[HarmonyPatch(typeof(Inventory), "get_SHIFT_KEY_SLOT_OFFSET")]
+	[HarmonyPatch]
 	public class Patch_Inventory_SHIFT_KEY_SLOT_OFFSET
 	{
+		public static bool Prepare()
+		{
+			return !V3GameVersion.UseV33Toolbelt
+				&& AccessTools.PropertyGetter(typeof(Inventory), "SHIFT_KEY_SLOT_OFFSET") != null;
+		}
+
+		public static MethodBase TargetMethod()
+		{
+			return AccessTools.PropertyGetter(typeof(Inventory), "SHIFT_KEY_SLOT_OFFSET");
+		}
+
 		public static bool Prefix(ref int __result)
 		{
 			__result = ToolbeltConstants.PlayerSlots;
 			return false;
+		}
+	}
+
+	// 3.3 creates the player inventory from ToolbeltConfig. Set the play-mode bar to 12 first.
+	[HarmonyPatch]
+	public class Patch_EntityPlayer_InitInventory
+	{
+		public static bool Prepare()
+		{
+			return V3GameVersion.UseV33Toolbelt
+				&& AccessTools.Method(typeof(EntityPlayer), "InitInventory") != null;
+		}
+
+		public static MethodBase TargetMethod()
+		{
+			return AccessTools.Method(typeof(EntityPlayer), "InitInventory");
+		}
+
+		public static void Prefix()
+		{
+			ToolbeltV33.ApplyPlayModeSlots();
 		}
 	}
 
@@ -941,9 +1128,21 @@ namespace Toolbelt12Slots
 	// Vanilla EmptyToolbelt(start, end) uses exclusive end index, and the button originally
 	// hardcodes EmptyToolbelt(0, 10) which only covers indices 0..9 (toolbelt slots 1..10).
 	// This postfix extends the clear to cover slots 11 (index 10) and 12 (index 11).
-	[HarmonyPatch(typeof(XUiC_ToolbeltWindow), "BtnClearInventory1_OnPress")]
+	// 3.0-3.2 clear button hardcodes slots 0..9. 3.3 clears one bar using ToolbeltConfig.SlotsPerBar.
+	[HarmonyPatch]
 	public class Patch_XUiC_ToolbeltWindow_BtnClearInventory1_OnPress
 	{
+		public static bool Prepare()
+		{
+			return !V3GameVersion.UseV33Toolbelt
+				&& AccessTools.Method(typeof(XUiC_ToolbeltWindow), "BtnClearInventory1_OnPress") != null;
+		}
+
+		public static MethodBase TargetMethod()
+		{
+			return AccessTools.Method(typeof(XUiC_ToolbeltWindow), "BtnClearInventory1_OnPress");
+		}
+
 		[HarmonyPostfix]
 		public static void Postfix(XUiC_ToolbeltWindow __instance)
 		{

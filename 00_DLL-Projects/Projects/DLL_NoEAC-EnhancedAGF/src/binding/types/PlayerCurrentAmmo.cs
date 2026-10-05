@@ -55,6 +55,30 @@ public class PlayerCurrentAmmoVisible : Binding
 
 internal static class AmmoBindingUtil
 {
+    private static int AmmoTypeIndex(ItemValue heldValue)
+    {
+        if (heldValue == null)
+        {
+            return 0;
+        }
+
+        PropertyInfo property = typeof(ItemValue).GetProperty("SelectedAmmoTypeIndex");
+        if (property != null)
+        {
+            object value = property.GetValue(heldValue, null);
+            return value == null ? 0 : Convert.ToInt32(value);
+        }
+
+        FieldInfo field = typeof(ItemValue).GetField("SelectedAmmoTypeIndex");
+        if (field != null)
+        {
+            object value = field.GetValue(heldValue);
+            return value == null ? 0 : Convert.ToInt32(value);
+        }
+
+        return 0;
+    }
+
     private sealed class AmmoSnapshot
     {
         public int Frame = -1;
@@ -175,7 +199,7 @@ internal static class AmmoBindingUtil
         {
             if (rangedAction.MagazineItemNames != null && rangedAction.MagazineItemNames.Length > 0)
             {
-                int index = heldValue.SelectedAmmoTypeIndex;
+                int index = AmmoTypeIndex(heldValue);
                 if (index < 0 || index >= rangedAction.MagazineItemNames.Length)
                 {
                     index = 0;
@@ -193,7 +217,7 @@ internal static class AmmoBindingUtil
             string[] magazineItemNames = GetStringArrayMember(ammoAction, "MagazineItemNames");
             if (magazineItemNames != null && magazineItemNames.Length > 0)
             {
-                int index = heldValue.SelectedAmmoTypeIndex;
+                int index = AmmoTypeIndex(heldValue);
                 if (index < 0 || index >= magazineItemNames.Length)
                 {
                     index = 0;
@@ -214,7 +238,7 @@ internal static class AmmoBindingUtil
 
         if (ammoName.IndexOf(',') >= 0)
         {
-            int index = heldValue.SelectedAmmoTypeIndex;
+            int index = AmmoTypeIndex(heldValue);
             ammoName = SelectCsvValue(ammoName, index);
         }
 
@@ -247,7 +271,7 @@ internal static class AmmoBindingUtil
                 iconName = rangedAction.BulletIcon.Value;
                 if (!string.IsNullOrEmpty(iconName) && iconName.IndexOf(',') >= 0)
                 {
-                    int index = heldValue.SelectedAmmoTypeIndex;
+                    int index = AmmoTypeIndex(heldValue);
                     iconName = SelectCsvValue(iconName, index);
                 }
             }
@@ -257,7 +281,7 @@ internal static class AmmoBindingUtil
             iconName = GetMemberValuePropertyString(ammoAction, "BulletIcon");
             if (!string.IsNullOrEmpty(iconName) && iconName.IndexOf(',') >= 0)
             {
-                int index = heldValue.SelectedAmmoTypeIndex;
+                int index = AmmoTypeIndex(heldValue);
                 iconName = SelectCsvValue(iconName, index);
             }
         }
@@ -347,7 +371,7 @@ internal static class AmmoBindingUtil
         {
             if (rangedAction.MagazineItemNames != null && rangedAction.MagazineItemNames.Length > 0)
             {
-                int index = heldValue.SelectedAmmoTypeIndex;
+                int index = AmmoTypeIndex(heldValue);
                 if (index < 0 || index >= rangedAction.MagazineItemNames.Length)
                 {
                     index = 0;
@@ -365,7 +389,7 @@ internal static class AmmoBindingUtil
             string[] magazineItemNames = GetStringArrayMember(ammoAction, "MagazineItemNames");
             if (magazineItemNames != null && magazineItemNames.Length > 0)
             {
-                int index = heldValue.SelectedAmmoTypeIndex;
+                int index = AmmoTypeIndex(heldValue);
                 if (index < 0 || index >= magazineItemNames.Length)
                 {
                     index = 0;
@@ -386,7 +410,7 @@ internal static class AmmoBindingUtil
 
         if (ammoName.IndexOf(',') >= 0)
         {
-            int index = heldValue.SelectedAmmoTypeIndex;
+            int index = AmmoTypeIndex(heldValue);
             ammoName = SelectCsvValue(ammoName, index);
         }
 
@@ -438,8 +462,8 @@ internal static class AmmoBindingUtil
         }
 
         int total = 0;
-        total += CountInSlotsByName(player.inventory?.GetSlots(), itemClassName);
-        total += CountInSlotsByName(player.bag?.GetSlots(), itemClassName);
+        total += CountInSlotsByName(ReadStacks(player.inventory), itemClassName);
+        total += CountInSlotsByName(ReadStacks(player.bag), itemClassName);
         return total;
     }
 
@@ -451,8 +475,8 @@ internal static class AmmoBindingUtil
         }
 
         int total = 0;
-        total += CountInSlotsById(player.inventory?.GetSlots(), itemClassId);
-        total += CountInSlotsById(player.bag?.GetSlots(), itemClassId);
+        total += CountInSlotsById(ReadStacks(player.inventory), itemClassId);
+        total += CountInSlotsById(ReadStacks(player.bag), itemClassId);
         return total;
     }
 
@@ -467,14 +491,16 @@ internal static class AmmoBindingUtil
         for (int i = 0; i < slots.Length; i++)
         {
             ItemStack stack = slots[i];
-            if (stack == null || stack.count <= 0 || stack.itemValue == null || stack.itemValue.ItemClass == null)
+            int count = StackCount(stack);
+            ItemValue value = StackValue(stack);
+            if (count <= 0 || value == null || value.ItemClass == null)
             {
                 continue;
             }
 
-            if (stack.itemValue.ItemClass.Id == itemClassId)
+            if (value.ItemClass.Id == itemClassId)
             {
-                total += stack.count;
+                total += count;
             }
         }
 
@@ -492,18 +518,105 @@ internal static class AmmoBindingUtil
         for (int i = 0; i < slots.Length; i++)
         {
             ItemStack stack = slots[i];
-            if (stack == null || stack.count <= 0 || stack.itemValue == null || stack.itemValue.ItemClass == null)
+            int count = StackCount(stack);
+            ItemValue value = StackValue(stack);
+            if (count <= 0 || value == null || value.ItemClass == null)
             {
                 continue;
             }
 
-            if (stack.itemValue.ItemClass.Name == itemClassName)
+            if (value.ItemClass.Name == itemClassName)
             {
-                total += stack.count;
+                total += count;
             }
         }
 
         return total;
+    }
+
+    // 3.2: GetSlots() and ItemStack fields. 3.3: ItemGrid plus properties. Direct calls throw on the other version.
+    private static ItemStack[] ReadStacks(object container)
+    {
+        if (container == null)
+        {
+            return null;
+        }
+
+        const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+        Type type = container.GetType();
+        MethodInfo getSlots = type.GetMethod("GetSlots", flags, null, Type.EmptyTypes, null);
+        if (getSlots != null)
+        {
+            return getSlots.Invoke(container, null) as ItemStack[];
+        }
+
+        object grid = ReadMember(container, "ItemGrid");
+        if (grid != null)
+        {
+            object items = ReadMember(grid, "items");
+            if (items is ItemStack[] stacks)
+            {
+                return stacks;
+            }
+        }
+
+        MethodInfo getAt = type.GetMethod("GetStackAt", flags);
+        PropertyInfo countProp = type.GetProperty("SlotCount", flags);
+        if (getAt == null || countProp == null)
+        {
+            return null;
+        }
+
+        int count = (int)countProp.GetValue(container, null);
+        ItemStack[] built = new ItemStack[count];
+        object[] args = new object[1];
+        for (int i = 0; i < count; i++)
+        {
+            args[0] = i;
+            built[i] = getAt.Invoke(container, args) as ItemStack;
+        }
+
+        return built;
+    }
+
+    private static int StackCount(ItemStack stack)
+    {
+        if (stack == null)
+        {
+            return 0;
+        }
+
+        object value = ReadMember(stack, "count");
+        return value is int number ? number : 0;
+    }
+
+    private static ItemValue StackValue(ItemStack stack)
+    {
+        if (stack == null)
+        {
+            return null;
+        }
+
+        return ReadMember(stack, "itemValue") as ItemValue;
+    }
+
+    private static object ReadMember(object source, string name)
+    {
+        const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+        Type type = source.GetType();
+        PropertyInfo property = type.GetProperty(name, flags);
+        if (property != null && property.GetIndexParameters().Length == 0)
+        {
+            return property.GetValue(source, null);
+        }
+
+        FieldInfo field = type.GetField(name, flags);
+        if (field != null)
+        {
+            return field.GetValue(source);
+        }
+
+        return null;
     }
 
     public static int GetInventoryAmmoCount(Inventory inventory, int ammoItemId)
@@ -514,21 +627,18 @@ internal static class AmmoBindingUtil
         }
 
         int total = 0;
-        ItemInventoryData[] slots = inventory.slots;
+        ItemStack[] slots = ReadStacks(inventory);
         if (slots == null)
         {
             return 0;
         }
         for (int i = 0; i < slots.Length; i++)
         {
-            ItemInventoryData data = slots[i];
-            if (data == null) continue;
-            ItemStack stack = data.itemStack;
-            if (stack.count <= 0 || stack.itemValue == null || stack.itemValue.ItemClass == null) continue;
-            // Debug output: log item name and slot index
-            string itemName = stack.itemValue.ItemClass.Name;
-            LogError($"Slot {i}: {itemName}, count={stack.count}, itemId={stack.itemValue.ItemClass.Id}");
-            if (stack.itemValue.ItemClass.Id == ammoItemId) total += stack.count;
+            ItemStack stack = slots[i];
+            int count = StackCount(stack);
+            ItemValue value = StackValue(stack);
+            if (count <= 0 || value == null || value.ItemClass == null) continue;
+            if (value.ItemClass.Id == ammoItemId) total += count;
         }
         LogError($"Total counted for ammoItemId {ammoItemId}: {total}");
         return total;

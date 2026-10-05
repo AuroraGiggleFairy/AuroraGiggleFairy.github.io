@@ -20,17 +20,22 @@ namespace DoomSandbox
 		public readonly List<string> TabOrder = new List<string>();
 		public readonly List<DoomSandboxOptionDef> Options = new List<DoomSandboxOptionDef>();
 
-		public static DoomSandboxConfig Load(string path)
+		public static DoomSandboxConfig Load()
 		{
 			var cfg = new DoomSandboxConfig();
-			if (string.IsNullOrEmpty(path) || !File.Exists(path))
+			string[] lines;
+			try
 			{
-				DoomLog.Error("Config not found: " + path);
+				lines = DoomSandboxBlueprint.ReadOptionsLines();
+			}
+			catch (Exception ex)
+			{
+				DoomLog.Error("Compiled options blueprint missing: " + ex.Message);
 				return cfg;
 			}
 
 			string currentTab = null;
-			foreach (var raw in File.ReadAllLines(path))
+			foreach (var raw in lines)
 			{
 				var line = raw.Trim();
 				if (line.Length == 0 || line.StartsWith("#") || line.StartsWith("="))

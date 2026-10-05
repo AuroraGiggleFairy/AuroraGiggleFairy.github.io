@@ -10,7 +10,7 @@
         "projectUniqueName": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\OpenAll.csproj",
         "projectName": "OpenAll",
         "projectPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\OpenAll.csproj",
-        "packagesPath": "C:\\Users\\rft30\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6726fbecbe224d2ef99eecd72eaec015\\nuget",
+        "packagesPath": "C:\\Users\\rft30\\.nuget\\packages\\",
         "outputPath": "c:\\GitHub\\7D2D-Mods\\00_DLL-Projects\\Projects\\DLL_NoEAC-OpenAllButton\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net48": {
+            "framework": "net48",
             "targetAlias": "net48",
             "projectReferences": {}
           }
@@ -44,12 +45,13 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net48": {
+          "framework": "net48",
           "targetAlias": "net48",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

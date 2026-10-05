@@ -5,6 +5,7 @@
 ### Goal
 - Keep slot-01 source media at 1920x1080 PNG in 00_Images/01_ImageWorkflow/PrimaryImageSources.
 - Keep merged images, numbered extra media, and thumbnails in 00_Images/02_ImagesFinal.
+- If the final `_01` thumbnail PNG is over 2MB, also keep `AGF-ExampleMod_01_Under2MB.png` beside it. Do not overwrite originals. Gallery slots (`_02+`) do not get Under2MB copies.
 - Keep naming consistent so update/publish scripts can use files automatically.
 
 ### One-Click Intake
@@ -40,6 +41,10 @@
 - Full merged image:
   - AGF-ExampleMod_01.png
   - Size: 1920x1080
+- Over-2MB condensed copies (7DaysToDieMods thumbnail only):
+  - Same folder: 00_Images/02_ImagesFinal
+  - Name: AGF-ExampleMod_01_Under2MB.png
+  - Created only for `_01` when that file is over 2 MiB; originals stay untouched
 
 ### Which Image Should You Edit?
 - Edit slot-01 source media in 00_Images/01_ImageWorkflow/PrimaryImageSources.
@@ -74,6 +79,7 @@
 3. README thumbnail references point to 00_Images/02_ImagesFinal/thumbnails/Thumbnail_<base>.png.
 4. Keep source and final media files at 1920x1080 PNG with two-digit slot names.
 5. In changed-only generation, never skip a mod when <base>_01.png is newer than Thumbnail_<base>.png; regenerate both together.
+6. Never shrink an original to meet the 2MB thumbnail limit. Only `_01` gets `<stem>_Under2MB.png`. Delete that copy if `_01` later drops under 2 MiB. Do not make Under2MB copies of `_02+`.
 
 ### Required Automation Behavior
 1. Intake script must:
@@ -86,6 +92,7 @@
    - thumbnail PNG for README
   - full merged PNG 1920x1080
   - changed-only mode must force regeneration when the full merged _01 is newer than its thumbnail
+  - if the final `_01` PNG is over 2 MiB, write `<stem>_Under2MB.png` beside it and leave the original untouched
 3. Engine sync step must copy to mod folders:
    - final image files matching base_<two_digit_number>
   - destination folder name: AGF Mod Images (Not Required)

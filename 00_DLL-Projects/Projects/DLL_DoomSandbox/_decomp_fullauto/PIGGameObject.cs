@@ -46,7 +46,7 @@ public class PIGGameObject : ProjectileItemGroupAbs<PHGameObject>
 		//IL_002f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0035: Unknown result type (might be due to invalid IL or missing references)
 		//IL_003b: Expected O, but got Unknown
-		Transform transform = item.CloneModel(GameManager.Instance.World, new ItemValue(((ItemData)item).Id, false), Vector3.zero, CustomProjectileManager.CustomProjectileParent, (MeshPurpose)0, default(TextureFullArray));
+		Transform transform = CloneModelAccess.TransformOf(item, new ItemValue(((ItemData)item).Id, false), CustomProjectileManager.CustomProjectileParent);
 		return new PHGameObject(transform, par);
 	}
 }

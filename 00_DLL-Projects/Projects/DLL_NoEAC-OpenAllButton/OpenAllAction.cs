@@ -39,7 +39,7 @@ public static class XUiC_ItemActionList_AddActionListEntry_OpenAllPatch
         }
 
         XUiC_ItemStack stackController = OpenAllActionHelpers.GetStackController(actionEntry);
-        if (stackController == null || stackController.ItemStack.count <= 0)
+        if (stackController == null || StackCompat.Count(stackController.ItemStack) <= 0)
         {
             return;
         }
@@ -287,7 +287,7 @@ public static class OpenAllActionQueue
             ActionList = actionList,
             FallbackOpenEntry = fallbackOpenEntry,
             StackController = stackController,
-            ItemType = stackController.ItemStack.itemValue.type
+            ItemType = StackCompat.Value(stackController.ItemStack)?.type ?? 0
         };
 
         return true;
@@ -343,7 +343,7 @@ public static class OpenAllActionQueue
             return false;
         }
 
-        return session.ItemType == stackController.ItemStack.itemValue.type;
+        return session.ItemType == (StackCompat.Value(stackController.ItemStack)?.type ?? 0);
     }
 
     public static bool IsActiveFor(XUiC_ItemActionList actionList)
@@ -401,7 +401,7 @@ public static class OpenAllActionQueue
         int allowedOpensThisFrame = MaxOpensPerFrame;
         if (initialStackController != null)
         {
-            int stackCount = initialStackController.ItemStack.count;
+            int stackCount = StackCompat.Count(initialStackController.ItemStack);
             if (stackCount > 0)
             {
                 allowedOpensThisFrame = Math.Min(MaxOpensPerFrame, stackCount);
@@ -431,7 +431,7 @@ public static class OpenAllActionQueue
                 return;
             }
 
-            int previousCount = stackController.ItemStack.count;
+            int previousCount = StackCompat.Count(stackController.ItemStack);
             if (previousCount <= 0)
             {
                 ActiveLists.Remove(actionList);
@@ -458,7 +458,7 @@ public static class OpenAllActionQueue
                 SuppressedCloseCancel.Remove(actionList);
             }
 
-            int currentCount = stackController.ItemStack.count;
+            int currentCount = StackCompat.Count(stackController.ItemStack);
             if (currentCount <= 0)
             {
                 ActiveLists.Remove(actionList);
@@ -470,7 +470,7 @@ public static class OpenAllActionQueue
             {
                 BaseItemActionEntry stateEntry = liveOpenEntry ?? openEntry;
                 stateEntry.RefreshEnabled();
-                if (!stateEntry.Enabled && stackController.ItemStack.count > 1)
+                if (!stateEntry.Enabled && StackCompat.Count(stackController.ItemStack) > 1)
                 {
                     stateEntry.OnDisabledActivate();
                     ActiveLists.Remove(actionList);
@@ -480,7 +480,7 @@ public static class OpenAllActionQueue
 
                 BaseItemActionEntry refreshedOpenEntry = OpenAllActionHelpers.FindOpenEntry(actionList);
                 XUiC_ItemStack refreshedStackController = OpenAllActionHelpers.GetStackController(refreshedOpenEntry);
-                int refreshedCount = refreshedStackController?.ItemStack.count ?? currentCount;
+                int refreshedCount = refreshedStackController?.ItemStack != null ? StackCompat.Count(refreshedStackController.ItemStack) : currentCount;
                 if (refreshedCount < previousCount)
                 {
                     opensPerformed++;
@@ -717,7 +717,7 @@ public static class OpenAllActionHelpers
     {
         if (itemController is XUiC_ItemStack itemStackController)
         {
-            return itemStackController.ItemStack.count;
+            return StackCompat.Count(itemStackController.ItemStack);
         }
 
         return 0;
@@ -827,7 +827,7 @@ public static class OpenAllActionHelpers
             return maxChecks;
         }
 
-        ItemClass itemClass = stackController.ItemStack.itemValue.ItemClass;
+        ItemClass itemClass = StackCompat.Value(stackController.ItemStack)?.ItemClass;
         if (itemClass?.Actions == null)
         {
             return maxChecks;
@@ -889,7 +889,7 @@ public static class OpenAllActionHelpers
             return false;
         }
 
-        ItemClass itemClass = stackController.ItemStack.itemValue.ItemClass;
+        ItemClass itemClass = StackCompat.Value(stackController.ItemStack)?.ItemClass;
         if (itemClass?.Actions == null)
         {
             return false;
@@ -953,7 +953,7 @@ public static class OpenAllActionHelpers
     {
         var simulatedSlots = new List<ItemStack>();
 
-        ItemStack[] bagSlots = player?.bag?.GetSlots();
+        ItemStack[] bagSlots = StackCompat.Slots(player?.bag);
         if (bagSlots != null)
         {
             for (int index = 0; index < bagSlots.Length; index++)
@@ -962,16 +962,16 @@ public static class OpenAllActionHelpers
             }
         }
 
-        ItemStack[] toolbeltSlots = player?.inventory?.GetSlots();
+        ItemStack[] toolbeltSlots = StackCompat.Slots(player?.inventory);
         if (toolbeltSlots != null)
         {
-            int publicSlots = player.inventory.PUBLIC_SLOTS;
+            int publicSlots = StackCompat.IntMember(player.inventory, "PUBLIC_SLOTS");
             if (publicSlots <= 0 || publicSlots > toolbeltSlots.Length)
             {
                 publicSlots = toolbeltSlots.Length;
             }
 
-            int dummySlotIndex = player.inventory.DUMMY_SLOT_IDX;
+            int dummySlotIndex = StackCompat.IntMember(player.inventory, "DUMMY_SLOT_IDX");
             for (int index = 0; index < publicSlots; index++)
             {
                 if (index == dummySlotIndex)
@@ -988,7 +988,7 @@ public static class OpenAllActionHelpers
 
     private static bool TryPlaceOutputIntoSimulatedSlots(List<ItemStack> simulatedSlots, ItemStack output)
     {
-        if (output == null || output.IsEmpty() || output.count <= 0)
+        if (output == null || output.IsEmpty() || StackCompat.Count(output) <= 0)
         {
             return true;
         }
@@ -998,7 +998,7 @@ public static class OpenAllActionHelpers
             return false;
         }
 
-        int remaining = output.count;
+        int remaining = StackCompat.Count(output);
 
         for (int index = 0; index < simulatedSlots.Count && remaining > 0; index++)
         {
@@ -1008,29 +1008,29 @@ public static class OpenAllActionHelpers
                 continue;
             }
 
-            if (slot.itemValue.type != output.itemValue.type)
+            if ((StackCompat.Value(slot)?.type ?? 0) != (StackCompat.Value(output)?.type ?? 0))
             {
                 continue;
             }
 
-            int slotMaxStackSize = GetMaxStackSize(slot.itemValue);
+            int slotMaxStackSize = GetMaxStackSize(StackCompat.Value(slot));
             if (slotMaxStackSize <= 0)
             {
                 continue;
             }
 
-            int freeSpace = slotMaxStackSize - slot.count;
+            int freeSpace = slotMaxStackSize - StackCompat.Count(slot);
             if (freeSpace <= 0)
             {
                 continue;
             }
 
             int transferred = Math.Min(remaining, freeSpace);
-            slot.count += transferred;
+            StackCompat.SetCount(slot, StackCompat.Count(slot) + transferred);
             remaining -= transferred;
         }
 
-        int maxStackSize = GetMaxStackSize(output.itemValue);
+        int maxStackSize = GetMaxStackSize(StackCompat.Value(output));
         if (maxStackSize <= 0)
         {
             maxStackSize = remaining;
@@ -1055,7 +1055,7 @@ public static class OpenAllActionHelpers
             }
 
             int placeCount = Math.Min(remaining, maxStackSize);
-            simulatedSlots[emptyIndex] = new ItemStack(output.itemValue, placeCount);
+            simulatedSlots[emptyIndex] = new ItemStack(StackCompat.Value(output), placeCount);
             remaining -= placeCount;
         }
 
@@ -1194,7 +1194,7 @@ public static class OpenAllActionHelpers
             return false;
         }
 
-        ItemStack[] slots = bag.GetSlots();
+        ItemStack[] slots = StackCompat.Slots(bag);
         if (slots == null || slots.Length == 0)
         {
             return false;
@@ -1219,19 +1219,19 @@ public static class OpenAllActionHelpers
             return false;
         }
 
-        ItemStack[] slots = inventory.GetSlots();
+        ItemStack[] slots = StackCompat.Slots(inventory);
         if (slots == null || slots.Length == 0)
         {
             return false;
         }
 
-        int publicSlots = inventory.PUBLIC_SLOTS;
+        int publicSlots = StackCompat.IntMember(inventory, "PUBLIC_SLOTS");
         if (publicSlots <= 0 || publicSlots > slots.Length)
         {
             publicSlots = slots.Length;
         }
 
-        int dummySlotIndex = inventory.DUMMY_SLOT_IDX;
+        int dummySlotIndex = StackCompat.IntMember(inventory, "DUMMY_SLOT_IDX");
         for (int index = 0; index < publicSlots; index++)
         {
             if (index == dummySlotIndex)

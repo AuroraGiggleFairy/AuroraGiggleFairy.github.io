@@ -1,48 +1,41 @@
 # Copilot Instructions for 7D2D-Mods
 
+Cursor-era source of truth (always-on): `.cursor/rules/repo-map-and-ownership.mdc`
+7dtdmods first listings: `.cursor/rules/7dtdmods-listing-fill.mdc`.
+
+This file used to be the Visual Studio / GitHub Copilot always-on brief. Cursor does not auto-load it. Keep both aligned when rules change.
+
 ## Communication
 - Keep responses concise.
 - Confirm changes as implemented best effort.
-- Do not claim ready to test in game unless live game mod files were actually updated in that run.
+- Do not claim ready to test in game unless live game Mods files were actually updated in that run.
 
-## README Wording Workflow Defaults
-- For README wording tasks, follow `05_GigglePackReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md` as the source of truth.
+## Lanes and deploy
+- New / `0.x.x` work stays in `01_Draft`. Wait for `RUN-MakeNewMod.bat`; do not invent mod folders.
+- Public/release tools (not game mods) live in `00_Tools` (ModSync, LogReader). Do not put them in Draft/ActiveBuild or in `00_DLL-Projects/Generators`.
+- Do not modify `02_ActiveBuild` or `03_ReleaseSource` unless explicitly requested.
+- Default test deploy is the live game Mods path only:
+  - `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods`
+- For DLL deployment testing, also:
+  - `C:/Program Files (x86)/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods`
+- Do not promote Draft → ActiveBuild yourself. User runs `RUN-Update.bat` for official lane sync.
+- Do not edit ModInfo/README unless the user explicitly asks. Scope metadata goes in `05_ReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv`.
+- New Config xpath XML root: `AGF` plus the last hyphen segment of ModInfo Name (drop `zzz` and middle tokens). Reuse an existing mod root if that mod already has Config XML. See `.cursor/rules/mod-xml-root-name.mdc`.
+
+## Evidence
+- Do not guess. Read vanilla `Data/Config` (and decompile if DLL), then this repo.
+- If a claim cannot be verified from source, label it Unverified.
+
+## README wording (when asked)
+- Follow `05_ReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md`.
 - Work one mod and one section at a time.
-- Default effort pattern:
-  - Medium for normal wording production passes.
-  - High only for workflow calibration turns.
-  - Low only for micro-polish on one to two lines.
-- Default output shape unless user asks otherwise:
-  - Suggestion 1
-  - Suggestion 2
-  - Recommended (short reason)
-- If a substantive claim cannot be verified from source, label it Unverified and avoid hard-claim wording.
+- Default output: Suggestion 1, Suggestion 2, Recommended (short reason).
+- Discussion-only until the user asks to implement.
 
-## Lane Safety
-- Do not modify 02_ActiveBuild or 03_ReleaseSource unless explicitly requested.
-- Default deployment target is the live game Mods path only.
-- For DLL deployment testing, include this dedicated server Mods path:
-  - C:/Program Files (x86)/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods
-
-## Purple Book Generator Source of Truth
-- Edit only this file for Purple Book generator logic:
-  - 00_DLL-Projects/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py
-
-## Purple Book Run Workflow
-- Use validation runs without lane sync by default:
-  - c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe SCRIPT-PurpleBookGenerator.py --no-sync-game-mod --no-sync-activebuild
-- Use live game sync only when explicitly asked or clearly intended:
-  - c:/GitHub/7D2D-Mods/.venv/Scripts/python.exe SCRIPT-PurpleBookGenerator.py --sync-game-mod --no-sync-activebuild
-
-## Purple Book UI Guardrails
-- Keep Schematics opener as iconbutton.
-- For iconbutton tinting, use iconbutton template keys:
-  - color_default, color_hovered, color_selected, color_disabled
-- color(...) expressions require RGBA values (4 channels), not RGB.
-
-## Unlock Review Guardrails
-- Treat unlock review candidates as non-magazine recipes.
-- Include schematic and book sourced unlocks only.
-- Ammo filtering rules:
-  - Exclude gas, thrown, and dart entries.
-  - Keep rocket ammo included.
+## Purple Book generator
+- Logic only: `00_DLL-Projects/Generators/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`
+- Default: `--no-sync-game-mod --no-sync-activebuild`
+- Live game sync only when explicitly asked.
+- Schematics opener stays iconbutton; tint keys `color_default`, `color_hovered`, `color_selected`, `color_disabled`.
+- `color(...)` requires RGBA (4 channels).
+- Unlock review: non-magazine; schematic/book only; exclude gas, thrown, dart; keep rocket ammo.

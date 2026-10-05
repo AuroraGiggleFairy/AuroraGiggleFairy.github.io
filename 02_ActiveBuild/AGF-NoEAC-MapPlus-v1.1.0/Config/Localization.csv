@@ -1,4 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,KeepLoaded,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-xuiMapPlusUnexplored,UI,XUi,,,,"Unknown","Fog of war. This map cell has not been revealed.","Unbekannt","Desconocido","Inconnu","Sconosciuto","不明","알 수 없음","Nieznane","Desconhecido","Неизвестно","Bilinmeyen","未知","未知"
-xuiMapPlusNotVisited,UI,XUi,,,,"Unvisited","Revealed POI the local player has not entered since this mod was installed.","Unbesucht","Sin visitar","Non visité","Non visitato","未訪問","미방문","Nieodwiedzone","Não visitado","Не посещено","Ziyaret edilmedi","未到访","未到訪"
-xuiMapPlusPoiTier,UI,XUi,,,,"(T{0})","Compact POI difficulty after the map name. {0} is the skull/tier number. Keep very short.","(S{0})","(N{0})","(É{0})","(G{0})","(ティア{0})","(티어{0})","(P{0})","(C{0})","(У{0})","(K{0})","({0}级)","({0}層)"

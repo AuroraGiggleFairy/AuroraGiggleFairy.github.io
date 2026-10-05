@@ -1,9 +1,0 @@
-<config>
-    <append xpath="/recipes">
-        <recipe name="cntSortingCartVariantHelper" count="1" >
-            <ingredient name="resourceScrapPolymers" count="16" />
-            <ingredient name="resourceMetalPipe" count="8" />
-            <ingredient name="resourceMechanicalParts" count="4" />
-        </recipe>
-    </append>
-</config>

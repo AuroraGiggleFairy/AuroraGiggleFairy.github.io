@@ -30,6 +30,13 @@ namespace GyroFlightModes
 		private static object forceTypeRelative;
 		private static object forceTypeRelativeTorque;
 
+		internal static bool HasControlTable(EntityVehicle vehicle)
+		{
+			Array motors = MotorsField?.GetValue(vehicle) as Array;
+			Array forces = ForcesField?.GetValue(vehicle) as Array;
+			return motors != null && forces != null && motors.Length >= 2 && forces.Length >= 6;
+		}
+
 		internal static void CaptureOriginalFromXml(EntityVehicle vehicle)
 		{
 			Array motors = MotorsField?.GetValue(vehicle) as Array;
@@ -59,6 +66,11 @@ namespace GyroFlightModes
 
 		internal static void Apply(EntityVehicle vehicle, GyroFlightMode mode)
 		{
+			if (!GyroFlightModesApi.IsGyro(vehicle))
+			{
+				return;
+			}
+
 			if (!originalCaptured)
 			{
 				CaptureOriginalFromXml(vehicle);

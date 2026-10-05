@@ -16,6 +16,10 @@ namespace AutoRun
         private const string AutoRunActionDescKey = "inpActAutoRunDesc";
         private const string RunActionNameKey = "inpActPlayerRunName";
         private const string AutoRunBindingStoreKey = "autorun";
+        private const string FlightAssistActionName = "FlightAssist";
+        private const string FlightAssistActionNameKey = "inpActFlightAssistName";
+        private const string FlightAssistActionDescKey = "inpActFlightAssistDesc";
+        private const string FlightAssistBindingStoreKey = "flightassist";
 
         private static readonly string AutoRunBindingStorePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "7DaysToDie", "autorun.bindingstore.txt");
         private static readonly FieldInfo ControllerRebindableActionsField = AccessTools.Field(typeof(PlayerActionsLocal), "ControllerRebindableActions");
@@ -142,7 +146,139 @@ namespace AutoRun
 
             if (createdAction || Patch_GameOptionsControls_Load.IsRunningLoadControls)
             {
-                TryRestoreStoredBinding(action);
+                TryRestoreStoredBinding(action, AutoRunBindingStoreKey);
+            }
+
+            EnsureFlightAssistAction(actions);
+        }
+
+        public static bool IsFlightAssistPressed(EntityPlayerLocal player)
+        {
+            if (IsInputBlockedByActiveUi(player))
+            {
+                return false;
+            }
+
+            PlayerAction action = GetFlightAssistAction(player?.playerInput);
+            if (action != null)
+            {
+                if (action.IsPressed)
+                {
+                    return true;
+                }
+
+                if (IsAnyBoundKeyPressed(action, out bool hasKeyboardBinding))
+                {
+                    return true;
+                }
+
+                if (hasKeyboardBinding)
+                {
+                    return false;
+                }
+            }
+
+            return Input.GetKey(KeyCode.V);
+        }
+
+        public static string GetActivationKeyLabel()
+        {
+            return GetKeyLabel(GetActivationAction(TryGetLocalActionsFromPlatformInput()), "Z");
+        }
+
+        public static string GetFlightAssistKeyLabel()
+        {
+            return GetKeyLabel(GetFlightAssistAction(TryGetLocalActionsFromPlatformInput()), "V");
+        }
+
+        private static string GetKeyLabel(PlayerAction action, string fallback)
+        {
+            if (action != null)
+            {
+                foreach (BindingSource binding in action.Bindings)
+                {
+                    if (binding is KeyBindingSource keyBinding)
+                    {
+                        string label = keyBinding.Control.ToString();
+                        if (!string.IsNullOrWhiteSpace(label))
+                        {
+                            return label.ToUpperInvariant();
+                        }
+                    }
+                }
+            }
+
+            return fallback;
+        }
+
+        private static void EnsureFlightAssistAction(PlayerActionsLocal actions)
+        {
+            if (actions == null || actions.Run == null)
+            {
+                return;
+            }
+
+            PlayerAction action = GetFlightAssistAction(actions);
+            bool createdAction = false;
+            if (action == null)
+            {
+                action = CreatePlayerAction(actions, FlightAssistActionName);
+                createdAction = action != null;
+            }
+
+            if (action == null)
+            {
+                return;
+            }
+
+            ApplyFlightAssistUserData(actions, action);
+            if (createdAction && !HasKeyboardBinding(action))
+            {
+                action.AddDefaultBinding(Key.V);
+            }
+
+            AddRebindableActionIfMissing(actions, action);
+            PlayerAction anchor = GetActivationAction(actions) ?? actions.Run;
+            MoveActionAfterAnchor(actions, anchor, action);
+            if (createdAction || Patch_GameOptionsControls_Load.IsRunningLoadControls)
+            {
+                TryRestoreStoredBinding(action, FlightAssistBindingStoreKey);
+            }
+        }
+
+        private static void ApplyFlightAssistUserData(PlayerActionsLocal actions, PlayerAction action)
+        {
+            PlayerActionData.ActionUserData runData = actions.Run.UserData as PlayerActionData.ActionUserData;
+            if (runData == null)
+            {
+                return;
+            }
+
+            action.UserData = new PlayerActionData.ActionUserData(
+                FlightAssistActionNameKey,
+                FlightAssistActionDescKey,
+                runData.actionGroup,
+                PlayerActionData.EAppliesToInputType.KbdMouseOnly,
+                _allowRebind: true,
+                _allowMultipleRebindings: false,
+                _doNotDisplay: false,
+                _defaultOnStartup: runData.defaultOnStartup);
+        }
+
+        private static PlayerAction GetFlightAssistAction(PlayerActionsLocal actions)
+        {
+            if (actions == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                return actions[FlightAssistActionName];
+            }
+            catch
+            {
+                return null;
             }
         }
 
@@ -358,7 +494,12 @@ namespace AutoRun
 
         private static void MoveActionAfterRun(PlayerActionsLocal actions, PlayerAction action)
         {
-            if (actions == null || action == null || actions.Run == null)
+            MoveActionAfterAnchor(actions, actions?.Run, action);
+        }
+
+        private static void MoveActionAfterAnchor(PlayerActionsLocal actions, PlayerAction anchor, PlayerAction action)
+        {
+            if (actions == null || action == null || anchor == null)
             {
                 return;
             }
@@ -369,7 +510,7 @@ namespace AutoRun
                 return;
             }
 
-            int runIndex = actionList.IndexOf(actions.Run);
+            int runIndex = actionList.IndexOf(anchor);
             int actionIndex = actionList.IndexOf(action);
             if (runIndex < 0 || actionIndex < 0)
             {
@@ -544,7 +685,17 @@ namespace AutoRun
                 return;
             }
 
-            if (!string.Equals(actionNameKey, AutoRunActionNameKey, StringComparison.Ordinal))
+            string storeKey = null;
+            if (string.Equals(actionNameKey, AutoRunActionNameKey, StringComparison.Ordinal))
+            {
+                storeKey = AutoRunBindingStoreKey;
+            }
+            else if (string.Equals(actionNameKey, FlightAssistActionNameKey, StringComparison.Ordinal))
+            {
+                storeKey = FlightAssistBindingStoreKey;
+            }
+
+            if (storeKey == null)
             {
                 return;
             }
@@ -563,7 +714,7 @@ namespace AutoRun
                 }
 
                 Dictionary<string, string> map = LoadBindingMap();
-                map[AutoRunBindingStoreKey] = $"{includeSize}:{includeData}:{excludeSize}:{excludeData}";
+                map[storeKey] = $"{includeSize}:{includeData}:{excludeSize}:{excludeData}";
                 SaveBindingMap(map);
                 Console.WriteLine("AutoRun: Stored fallback binding.");
             }
@@ -575,10 +726,11 @@ namespace AutoRun
 
         public static void PersistCurrentFallback(PlayerActionsLocal actions)
         {
-            PersistBindingFromAction(GetActivationAction(actions));
+            PersistBindingFromAction(GetActivationAction(actions), AutoRunBindingStoreKey);
+            PersistBindingFromAction(GetFlightAssistAction(actions), FlightAssistBindingStoreKey);
         }
 
-        private static void PersistBindingFromAction(PlayerAction action)
+        private static void PersistBindingFromAction(PlayerAction action, string storeKey)
         {
             if (action == null)
             {
@@ -607,11 +759,11 @@ namespace AutoRun
             }
 
             Dictionary<string, string> map = LoadBindingMap();
-            map[AutoRunBindingStoreKey] = $"{includeSize}:{includeData}:{excludeSize}:{excludeData}";
+            map[storeKey] = $"{includeSize}:{includeData}:{excludeSize}:{excludeData}";
             SaveBindingMap(map);
         }
 
-        private static void TryRestoreStoredBinding(PlayerAction targetAction)
+        private static void TryRestoreStoredBinding(PlayerAction targetAction, string storeKey)
         {
             if (targetAction == null)
             {
@@ -626,7 +778,7 @@ namespace AutoRun
                 }
 
                 Dictionary<string, string> map = LoadBindingMap();
-                if (!map.TryGetValue(AutoRunBindingStoreKey, out string value) || string.IsNullOrWhiteSpace(value))
+                if (!map.TryGetValue(storeKey, out string value) || string.IsNullOrWhiteSpace(value))
                 {
                     return;
                 }
@@ -1249,22 +1401,6 @@ namespace AutoRun
             return AutoRunBindingManager.IsActivationPressed(player);
         }
 
-        private static bool ReadMenuPressed(EntityPlayerLocal player)
-        {
-            PlayerActionsLocal actions = player?.playerInput;
-            if (actions?.Menu != null && actions.Menu.WasPressed)
-            {
-                return true;
-            }
-
-            if (actions?.VehicleActions?.Menu != null && actions.VehicleActions.Menu.WasPressed)
-            {
-                return true;
-            }
-
-            return Input.GetKeyDown(KeyCode.Escape);
-        }
-
         private static void ReadDriverInputs(EntityVehicle vehicle, EntityPlayerLocal player, out bool forwardPressed, out bool reversePressed, out bool sprintPressed)
         {
             forwardPressed = false;
@@ -1333,23 +1469,11 @@ namespace AutoRun
             }
 
             ReadDriverInputs(__instance, _player, out bool forwardPressed, out bool reversePressed, out bool turboPressed);
-            bool menuPressed = ReadMenuPressed(_player);
             bool activationHeld = IsActivationKeyHeld(_player);
             bool controllerMode = ControllerAutoRunOptionStore.IsControllerInputMode(_player);
             bool activationEdge = activationHeld && !state.VehicleWasActivationHeld;
             bool forwardEdge = forwardPressed && !state.VehicleWasForwardPressed;
             bool turboEdge = turboPressed && !state.VehicleWasTurboPressed;
-
-            if (menuPressed)
-            {
-                state.VehicleEnabled = false;
-                state.VehicleSprintLocked = false;
-                state.VehicleWasForwardPressed = forwardPressed;
-                state.VehicleWasTurboPressed = turboPressed;
-                state.VehicleWasActivationHeld = activationHeld;
-                AutoRunStateStore.SetVehicleIndicator(_player, enabled: false);
-                return;
-            }
 
             if (controllerMode)
             {
@@ -1387,6 +1511,48 @@ namespace AutoRun
 
                 __instance.movementInput.moveForward = 1f;
                 __instance.movementInput.running = true;
+                AutoRunStateStore.SetVehicleIndicator(_player, enabled: true);
+                return;
+            }
+
+            if (Patch_FlightAssist_MoveByAttachedEntity.IsLikelyFlyingVehicle(__instance))
+            {
+                FlightLevelStateStore.State flightState = FlightLevelStateStore.TryGet(__instance);
+                bool plane = flightState != null && flightState.ControlPattern == FlightControlPattern.BasicPlane;
+                if (plane && state.VehicleEnabled && (reversePressed || (forwardEdge && !activationHeld)))
+                {
+                    state.VehicleEnabled = false;
+                    state.VehicleSprintLocked = false;
+                    state.VehicleWasForwardPressed = forwardPressed;
+                    state.VehicleWasTurboPressed = turboPressed;
+                    state.VehicleWasActivationHeld = activationHeld;
+                    AutoRunStateStore.SetVehicleIndicator(_player, enabled: false);
+                    return;
+                }
+
+                bool flyingTurboReleased = !turboPressed && state.VehicleWasTurboPressed;
+                if (state.VehicleEnabled && flyingTurboReleased)
+                {
+                    state.VehicleSprintLocked = !state.VehicleSprintLocked;
+                }
+
+                state.VehicleWasForwardPressed = forwardPressed;
+                state.VehicleWasTurboPressed = turboPressed;
+                state.VehicleWasActivationHeld = activationHeld;
+
+                if (!state.VehicleEnabled)
+                {
+                    state.VehicleSprintLocked = false;
+                    AutoRunStateStore.SetVehicleIndicator(_player, enabled: false);
+                    return;
+                }
+
+                __instance.movementInput.moveForward = 1f;
+                if (state.VehicleSprintLocked || turboPressed)
+                {
+                    __instance.movementInput.running = true;
+                }
+
                 AutoRunStateStore.SetVehicleIndicator(_player, enabled: true);
                 return;
             }
@@ -1469,17 +1635,6 @@ namespace AutoRun
         private static bool IsActivationKeyHeld(EntityPlayerLocal player)
         {
             return AutoRunBindingManager.IsActivationPressed(player);
-        }
-
-        private static bool ReadMenuPressed(EntityPlayerLocal player)
-        {
-            PlayerActionsLocal actions = player?.playerInput;
-            if (actions?.Menu != null && actions.Menu.WasPressed)
-            {
-                return true;
-            }
-
-            return Input.GetKeyDown(KeyCode.Escape);
         }
 
         private static bool IsSelectionSetActionActive(EntityPlayerLocal player)
@@ -1588,20 +1743,8 @@ namespace AutoRun
             bool backPressed = ReadBackPressed(__instance);
             bool sprintPressed = ReadSprintPressed(__instance);
             bool activationHeld = IsActivationKeyHeld(__instance);
-            bool menuPressed = ReadMenuPressed(__instance);
             bool controllerMode = ControllerAutoRunOptionStore.IsControllerInputMode(__instance);
             bool sprintEdge = sprintPressed && !state.OnFootWasSprintPressed;
-
-            if (menuPressed)
-            {
-                state.OnFootEnabled = false;
-                state.OnFootSprintLocked = false;
-                state.OnFootWasForwardPressed = forwardPressed;
-                state.OnFootWasSprintPressed = sprintPressed;
-                state.OnFootWasActivationHeld = activationHeld;
-                AutoRunStateStore.SetOnFootIndicator(__instance, enabled: false);
-                return;
-            }
 
             if (controllerMode)
             {
@@ -1962,6 +2105,90 @@ namespace AutoRun
 
             string key = AutoRunBindingManager.GetActionNameKeyForDebug(_action);
             AutoRunBindingManager.PersistBindingFromReceived(key, _binding);
+        }
+    }
+
+    // Seated player chunk position does not follow the vehicle, so the map never
+    // records new ground. Reveal the vehicle chunk on a slow timer instead.
+    [HarmonyPatch(typeof(EntityPlayer), "Update")]
+    internal static class Patch_EntityPlayer_UpdateMapWhileInVehicle
+    {
+        private const float RevealIntervalSeconds = 1f;
+        private const float MapRedrawIntervalSeconds = 3f;
+
+        private static int lastChunkX;
+        private static int lastChunkZ;
+        private static bool hasChunk;
+        private static float nextRevealTime;
+        private static float nextMapRedrawTime;
+
+        public static void Postfix(EntityPlayer __instance)
+        {
+            if (__instance is not EntityPlayerLocal player)
+            {
+                return;
+            }
+
+            if (player.AttachedToEntity is not EntityVehicle vehicle)
+            {
+                return;
+            }
+
+            if (player.ChunkObserver?.mapDatabase == null || player.world == null || !player.IsSpawned())
+            {
+                return;
+            }
+
+            float now = Time.unscaledTime;
+            if (now < nextRevealTime)
+            {
+                return;
+            }
+
+            Vector3 pos = vehicle.position;
+            int chunkX = World.toChunkXZ(Utils.Fastfloor(pos.x));
+            int chunkZ = World.toChunkXZ(Utils.Fastfloor(pos.z));
+            if (hasChunk && lastChunkX == chunkX && lastChunkZ == chunkZ)
+            {
+                return;
+            }
+
+            Chunk center = player.world.GetChunkSync(chunkX, chunkZ) as Chunk;
+            if (center == null || center.NeedsDecoration)
+            {
+                nextRevealTime = now + RevealIntervalSeconds;
+                return;
+            }
+
+            player.ChunkObserver.mapDatabase.Add(new Vector3i(chunkX, 0, chunkZ), player.world);
+            lastChunkX = chunkX;
+            lastChunkZ = chunkZ;
+            hasChunk = true;
+            nextRevealTime = now + RevealIntervalSeconds;
+            ScheduleOpenMapRedraw(player, now);
+        }
+
+        private static void ScheduleOpenMapRedraw(EntityPlayerLocal player, float now)
+        {
+            if (now < nextMapRedrawTime)
+            {
+                return;
+            }
+
+            LocalPlayerUI ui = LocalPlayerUI.GetUIForPlayer(player);
+            XUiC_MapArea map = ui?.xui?.GetChildByType<XUiC_MapArea>();
+            if (map?.windowGroup == null || !map.windowGroup.isShowing)
+            {
+                return;
+            }
+
+            if (map.timeToRedrawMap > 0f || map.bShouldRedrawMap)
+            {
+                return;
+            }
+
+            map.timeToRedrawMap = 0.5f;
+            nextMapRedrawTime = now + MapRedrawIntervalSeconds;
         }
     }
 }

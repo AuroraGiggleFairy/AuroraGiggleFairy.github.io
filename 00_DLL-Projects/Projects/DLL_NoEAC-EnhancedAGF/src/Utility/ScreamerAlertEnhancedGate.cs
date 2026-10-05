@@ -3,7 +3,11 @@ using System.Reflection;
 
 public static class ScreamerAlertEnhancedGate
 {
-    private const string ScreamerModName = "AGF-NoEAC-ScreamerAlert";
+    private static readonly string[] ScreamerModNames =
+    {
+        "AGF-VPS-ScreamerAlert",
+        "AGF-NoEAC-ScreamerAlert"
+    };
     private const string ScreamerManagerTypeName = "ScreamerAlertManager";
 
     private static bool _localPresenceResolved;
@@ -134,9 +138,12 @@ public static class ScreamerAlertEnhancedGate
     {
         try
         {
-            if (ModManager.GetMod(ScreamerModName) != null)
+            for (int i = 0; i < ScreamerModNames.Length; i++)
             {
-                return true;
+                if (ModManager.GetMod(ScreamerModNames[i]) != null)
+                {
+                    return true;
+                }
             }
         }
         catch

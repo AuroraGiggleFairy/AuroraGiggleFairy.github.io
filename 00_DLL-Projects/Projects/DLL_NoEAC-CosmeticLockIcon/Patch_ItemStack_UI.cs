@@ -14,7 +14,7 @@ public class Patch_ItemStack_UI
 
 		ItemClass itemClassOrMissing = __instance.itemClassOrMissing;
 		ItemStack itemStack = __instance.ItemStack;
-		ItemValue itemValue = ((itemStack == null || itemStack.IsEmpty()) ? null : itemStack.itemValue);
+		ItemValue itemValue = ItemStacks.Value(itemStack);
 		EntityPlayerLocal entityPlayerLocal = CosmeticLockIconUiHelpers.GetEntityPlayerLocal(__instance);
 		string icon;
 		if (isIconBinding && ArmorIconUIHarmonyPatches.TryGetCosmeticArmorIcon(itemClassOrMissing, entityPlayerLocal, _bindingName, out icon, itemValue))

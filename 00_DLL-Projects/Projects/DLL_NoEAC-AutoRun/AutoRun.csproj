@@ -41,5 +41,12 @@
       <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
+  <Target Name="CopyToGameMod" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SevenDaysToDieDir)\Mods\AGF-NoEAC-AutoRun-v2.1.1" SkipUnchangedFiles="false" Condition="Exists('$(SevenDaysToDieDir)\Mods\AGF-NoEAC-AutoRun-v2.1.1')" />
+  </Target>
 </Project>

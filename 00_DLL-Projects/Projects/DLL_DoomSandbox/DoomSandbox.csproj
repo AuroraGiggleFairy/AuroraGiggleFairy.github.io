@@ -15,15 +15,29 @@
     <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="sandbox_options.template.txt">
+      <LogicalName>DoomSandbox.Blueprint.sandbox_options.txt</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sandbox_difficulties.template.txt">
+      <LogicalName>DoomSandbox.Blueprint.sandbox_difficulties.txt</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Remove="_decomp\**" />
     <Compile Remove="_decomp_sky\**" />
     <Compile Remove="_decomp_air\**" />
     <Compile Remove="_decomp_ai\**" />
+    <Compile Remove="_decomp_fullauto\**" />
+    <Compile Remove="_decomp_props\**" />
+    <Compile Remove="_decomp_live_armour\**" />
+    <Compile Remove="_decomp_live_sandbox\**" />
     <Compile Remove="Disassembled\**" />
     <None Include="_decomp\**" />
     <None Include="_decomp_sky\**" />
     <None Include="_decomp_air\**" />
     <None Include="_decomp_ai\**" />
+    <None Include="_decomp_fullauto\**" />
+    <None Include="_decomp_props\**" />
     <None Include="Disassembled\**" />
   </ItemGroup>
   <ItemGroup>
