@@ -1,0 +1,25 @@
+<AGF-AnimalTrackerAlwaysOn>
+
+	<!-- Always-on Tracking: same rank tags as vanilla buffAnimalTrackerAcquired. -->
+	<append xpath="/progression/perks/perk[@name='perkAnimalTracker']/effect_group[passive_effect[@name='TrackDistance']]">
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT01">
+			<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
+		</passive_effect>
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT02">
+			<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
+		</passive_effect>
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT03">
+			<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
+		</passive_effect>
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT04">
+			<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
+		</passive_effect>
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT05">
+			<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/>
+		</passive_effect>
+	</append>
+
+	<!-- Stop the crouch-only scan / acquired-buff loop. -->
+	<remove xpath="/progression/perks/perk[@name='perkAnimalTracker']/effect_group/triggered_effect[@buff='buffAnimalTracker']"/>
+
+</AGF-AnimalTrackerAlwaysOn>

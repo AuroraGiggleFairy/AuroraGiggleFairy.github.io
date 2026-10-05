@@ -1,0 +1,24 @@
+---
+description: Open files/canvases with the chat chip, never markdown links
+alwaysApply: true
+---
+
+# Open files via the chat chip
+
+Do **not** give markdown links (`[label](path)`) for the user to open a file or canvas. Those do not create the Open control above the chat. On Windows they also break (`\r` in `C:\Users\rft30\...`).
+
+This overrides the Cursor canvas skill’s “always markdown-link the `.canvas.tsx`” instruction in this workspace.
+
+## Do this instead
+
+When the user needs to open a file or canvas, **touch it with an editor tool** in that turn (Write, StrReplace, or a small Read) so Cursor shows the file/canvas button above the chat.
+
+- Canvas: Write/StrReplace on the `.canvas.tsx`. That is what creates the canvas Open button.
+- After an external script patches a canvas (Python, not this editor), do a **header-only** StrReplace so the chip appears.
+- `deco-helper-block-list.canvas.tsx` is ~2MB of icons. Do **not** Read the whole file. Header-only StrReplace is enough.
+
+## Do not
+
+- “Click this link to open…”
+- File-tree instructions as the only way to open a canvas we just changed
+- Dumping a Windows `C:\...` path in a markdown link

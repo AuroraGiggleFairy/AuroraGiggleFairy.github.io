@@ -33,7 +33,7 @@ Primary evidence:
 - Yes.
 - Wired: `SCRIPT-AuditNexusMods.py` / `RUN-Nexus-Status.bat` writes `Nexus-Status.md` + `.json`
 - Discovery: GraphQL author/name list first, then v1 `search=` fallback (old `name=` returns HTTP 422)
-- Matching uses PublishHelp `Details.md` titles (`AGF - V3 - Category - Name`)
+- Matching uses PublishHelp `{ModName}.md` titles (`AGF - V3 - Category - Name`)
 - Also: `--mode check-live` / `discover-groups`
 
 ## Day-to-day workflow (minimal Nexus site work)

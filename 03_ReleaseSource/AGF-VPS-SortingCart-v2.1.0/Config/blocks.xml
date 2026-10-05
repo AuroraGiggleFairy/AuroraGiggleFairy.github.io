@@ -1,0 +1,296 @@
+<config>
+    <append xpath="/blocks">
+        <!-- Placeable variants use empty/open models. Colors match vanilla. -->
+        <block name="cntSortingCart">
+            <property name="CreativeMode" value="None" />
+            <property name="Class" value="CompositeTileEntity" />
+            <property class="CompositeFeatures">
+                <property class="TEFeatureStorage">
+                    <property name="LootList" value="playerSortingCart" />
+                </property>
+                <property class="TEFeatureLockable" />
+            </property>
+            <property name="DescriptionKey" value="cntSortingCartGroupDesc" />
+            <property name="DisplayInfo" value="Name" />
+            <property name="Material" value="Mplastics" />
+            <property name="CustomIcon" value="cntTiltTruckEmpty" />
+            <property name="Shape" value="ModelEntity" />
+            <property name="Model" value="@:Entities/LootContainers/tiltTruckEmptyPrefab.prefab" />
+            <property name="ModelOffset" value="0,0,0" />
+            <property name="ImposterExchange" value="imposterBlock" param1="143" />
+            <property name="AllowedRotations" value="Basic90" />
+            <property name="StabilitySupport" value="false" />
+            <property name="SellableToTrader" value="false" />
+            <property name="MaxDamage" value="800" />
+            <drop event="Destroy" name="cntSortingCartVariantHelper" count="1" />
+            <drop event="Fall" name="cntSortingCartVariantHelper" count="1" prob="0.9" />
+            <property class="RepairItems">
+                <property name="resourceScrapPolymers" value="16" />
+                <property name="resourceMetalPipe" value="8" />
+                <property name="resourceMechanicalParts" value="4" />
+            </property>
+            <property name="Path" value="solid" />
+            <property name="WaterFlow" value="permitted" />
+            <property name="SortOrder1" value="U900" />
+            <property name="SortOrder2" value="0017" />
+            <property name="Tags" value="timecharge,sortingcart" />
+        </block>
+
+        <block name="cntSortingCartUtilityCart">
+            <property name="Extends" value="cntSortingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="TintColor" value="CCCCCC" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartEmptyPrefab.prefab" />
+            <property name="ModelOffset" value="0,0.5,0" />
+            <property name="ImposterExchange" value="imposterBlock" param1="143" />
+            <property name="SortOrder2" value="0008" />
+        </block>
+        <block name="cntSortingCartUtilityCartBrown">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="6B5B47" />
+            <property name="TintColor" value="6B5B47" />
+            <property name="SortOrder2" value="0009" />
+        </block>
+        <block name="cntSortingCartUtilityCartRed">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="72433F" />
+            <property name="TintColor" value="72433F" />
+            <property name="SortOrder2" value="0010" />
+        </block>
+        <block name="cntSortingCartUtilityCartYellow">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="9A9673" />
+            <property name="TintColor" value="9A9673" />
+            <property name="SortOrder2" value="0011" />
+        </block>
+        <block name="cntSortingCartUtilityCartGreen">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="586D5A" />
+            <property name="TintColor" value="586D5A" />
+            <property name="SortOrder2" value="0012" />
+        </block>
+        <block name="cntSortingCartUtilityCartBlue">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="45686B" />
+            <property name="TintColor" value="45686B" />
+            <property name="SortOrder2" value="0013" />
+        </block>
+        <block name="cntSortingCartUtilityCartGrey">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="6C6C6C" />
+            <property name="TintColor" value="6C6C6C" />
+            <property name="SortOrder2" value="0014" />
+        </block>
+        <block name="cntSortingCartUtilityCartBlack">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartEmptyWhite" />
+            <property name="CustomIconTint" value="2E2E2E" />
+            <property name="TintColor" value="2E2E2E" />
+            <property name="SortOrder2" value="0015" />
+        </block>
+
+        <block name="cntSortingCartShoppingCart">
+            <property name="Extends" value="cntSortingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="TintColor" value="D9D9D9" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartEmptyPrefab.prefab" />
+            <property name="ModelOffset" value="0,0.5,0" />
+            <property name="ImposterExchange" value="imposterCTREighth" param1="111" />
+            <property name="SortOrder2" value="0001" />
+        </block>
+        <block name="cntSortingCartShoppingCartRed">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="CustomIconTint" value="B56666" />
+            <property name="TintColor" value="B56666" />
+            <property name="SortOrder2" value="0002" />
+        </block>
+        <block name="cntSortingCartShoppingCartOrange">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="CustomIconTint" value="DBAE5F" />
+            <property name="TintColor" value="DBAE5F" />
+            <property name="SortOrder2" value="0003" />
+        </block>
+        <block name="cntSortingCartShoppingCartYellow">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="CustomIconTint" value="C9CB75" />
+            <property name="TintColor" value="C9CB75" />
+            <property name="SortOrder2" value="0004" />
+        </block>
+        <block name="cntSortingCartShoppingCartGreen">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="CustomIconTint" value="7CA063" />
+            <property name="TintColor" value="7CA063" />
+            <property name="SortOrder2" value="0005" />
+        </block>
+        <block name="cntSortingCartShoppingCartBlue">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="CustomIconTint" value="6388A0" />
+            <property name="TintColor" value="6388A0" />
+            <property name="SortOrder2" value="0006" />
+        </block>
+        <block name="cntSortingCartShoppingCartGrey">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="CustomIconTint" value="828282" />
+            <property name="TintColor" value="828282" />
+            <property name="SortOrder2" value="0007" />
+        </block>
+
+        <block name="cntSortingCartLaundryCart">
+            <property name="Extends" value="cntSortingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="laundryCartEmpty" />
+            <property name="DisplayType" value="blockMulti" />
+            <property name="Model" value="@:Entities/Industrial/laundryCartPrefab.prefab" />
+            <property name="ModelOffset" value="-0.5,0.5,0" />
+            <property name="OversizedBounds" value="(-0.5,0,0),(2,1,1)" />
+            <property name="ImposterExchange" value="imposterBlock" param1="143" />
+            <property name="SortOrder2" value="0016" />
+        </block>
+
+        <block name="cntSortingCartFull">
+            <property name="Extends" value="cntSortingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntTiltTruckFull" />
+            <property name="Model" value="@:Entities/LootContainers/tiltTruckFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartFull">
+            <property name="Extends" value="cntSortingCartUtilityCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartBrownFull">
+            <property name="Extends" value="cntSortingCartUtilityCartBrown" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartRedFull">
+            <property name="Extends" value="cntSortingCartUtilityCartRed" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartYellowFull">
+            <property name="Extends" value="cntSortingCartUtilityCartYellow" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartGreenFull">
+            <property name="Extends" value="cntSortingCartUtilityCartGreen" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartBlueFull">
+            <property name="Extends" value="cntSortingCartUtilityCartBlue" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartGreyFull">
+            <property name="Extends" value="cntSortingCartUtilityCartGrey" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartUtilityCartBlackFull">
+            <property name="Extends" value="cntSortingCartUtilityCartBlack" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntUtilityCartFullWhite" />
+            <property name="Model" value="@:Entities/LootContainers/utilityCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartFull">
+            <property name="Extends" value="cntSortingCartShoppingCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartRedFull">
+            <property name="Extends" value="cntSortingCartShoppingCartRed" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartOrangeFull">
+            <property name="Extends" value="cntSortingCartShoppingCartOrange" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartYellowFull">
+            <property name="Extends" value="cntSortingCartShoppingCartYellow" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartGreenFull">
+            <property name="Extends" value="cntSortingCartShoppingCartGreen" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartBlueFull">
+            <property name="Extends" value="cntSortingCartShoppingCartBlue" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartShoppingCartGreyFull">
+            <property name="Extends" value="cntSortingCartShoppingCartGrey" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="cntShoppingCartWhite" />
+            <property name="Model" value="@:Entities/LootContainers/groceryCartFullPrefab.prefab" />
+        </block>
+        <block name="cntSortingCartLaundryCartFull">
+            <property name="Extends" value="cntSortingCartLaundryCart" />
+            <property name="CreativeMode" value="None" />
+            <property name="CustomIcon" value="laundryCartFull" />
+            <property name="Model" value="@:Entities/Industrial/laundryCartFullPrefab.prefab" />
+        </block>
+
+        <block name="cntSortingCartVariantHelper">
+            <property name="Extends" value="cntSortingCart" />
+            <property name="CreativeMode" value="Player" />
+            <property name="CustomIcon" value="cntShoppingCartEmptyWhite" />
+            <property name="ItemTypeIcon" value="all_blocks" />
+            <property name="DescriptionKey" value="cntSortingCartGroupDesc" />
+            <property name="EconomicValue" value="500" />
+            <property name="SellableToTrader" value="true" />
+            <property name="SelectAlternates" value="true" />
+            <property name="PlaceAltBlockValue" value="cntSortingCartShoppingCart,cntSortingCartShoppingCartRed,cntSortingCartShoppingCartOrange,cntSortingCartShoppingCartYellow,cntSortingCartShoppingCartGreen,cntSortingCartShoppingCartBlue,cntSortingCartShoppingCartGrey,cntSortingCartUtilityCart,cntSortingCartUtilityCartBrown,cntSortingCartUtilityCartRed,cntSortingCartUtilityCartYellow,cntSortingCartUtilityCartGreen,cntSortingCartUtilityCartBlue,cntSortingCartUtilityCartGrey,cntSortingCartUtilityCartBlack,cntSortingCartLaundryCart,cntSortingCart" />
+            <property name="SortOrder1" value="U900" />
+            <property name="SortOrder2" value="0000" />
+            <property name="Group" value="Building,TCScience,advBuilding" />
+            <property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers" />
+        </block>
+    </append>
+</config>

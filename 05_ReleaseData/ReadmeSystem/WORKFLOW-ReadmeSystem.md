@@ -8,6 +8,7 @@
 - Keep helper script behavior aligned with main pipeline behavior.
 - For Harmony dependency output, use `ModReadme-HARMONYWARNING-txt-Snippet.txt` as source of truth with md/default fallback.
 - Keep Harmony dependency wording owned by `{{DEPENDENCIES_BLOCK}}` generation to avoid duplicate warning sections.
+- Dependency input lives in `HELPER_ModCompatibility.csv` column `DEPENDENCIES`. Separate items with `;`. `0` is standalone. `x` is 0_TFP_Harmony. A plain name is another installed mod. `{Name|Version|URL}` is any external mod (version and URL may be left empty). Repeat the brace block for more mods. Commas inside `{...}` stay with that mod. Example: `x;{OcbLawnMowing|2.5.0|https://www.nexusmods.com/7daystodie/mods/3312}`.
 - For ModInfo description sync, if `<Description value="..." />` is missing, insert it from README summary instead of warning-only skip.
 - When auto-inserting missing Description, strip malformed orphan text lines between XML tags in that insertion region.
 - For `.md` snippet files, do not enforce a 72-character wrap limit; keep natural markdown line readability.
@@ -17,6 +18,7 @@
 - For the top title-card callout block, drive quote/note spacing from one template placeholder block so intro spacing is deterministic.
 
 ## Change history
+- 2026-09-27: `DEPENDENCIES` accepts repeatable `{Name|Version|URL}` blocks in `format_dependencies_block_for_readme`, so a mod can require Harmony plus any number of named mods with a version and a link.
 - 2026-07-11: Normalized preserved `OTHER DETAILS` list indentation in `05_pipeline_engine.py` so repeated README regeneration no longer accumulates extra bullet nesting or wraps malformed continuation lines into deeper list levels.
 - 2026-07-09: Updated `05_pipeline_engine.py` to stop flattening list markers for preserved `features_detailed_block` in both README generation and migration-prep paths so nested `OTHER DETAILS` bullets (for example Keyboard/Controller sublists) keep indentation across regenerations.
 - 2026-07-08: Updated `sync_modinfo_description_from_summary` in `05_pipeline_engine.py` to self-heal missing `<Description value="..." />` tags by inserting from README summary, with targeted orphan-text cleanup and dry-run/live log messaging.

@@ -1,0 +1,306 @@
+{
+  "github_owner": "AuroraGiggleFairy",
+  "defaults": {
+    "github_owner": "AuroraGiggleFairy",
+    "credits": "AuroraGiggleFairy",
+    "game_version": "V3 Mods"
+  },
+  "mods": {
+    "AGF-BackpackPlus-072Slots": {
+      "github_repo": "AGF-BackpackPlus-072Slots",
+      "site_title": "AGF - V3 - BackpackPlus - 072Slots",
+      "category": "Quality of Life",
+      "game_version": "V3 Mods",
+      "server_side": "Server Side Only",
+      "credits": "AuroraGiggleFairy",
+      "site_mod_id": "01M1TXCTB1VYXJXB278K7QY0RW",
+      "site_slug": "agf-v3-backpackplus-072slots",
+      "last_release_tag": "4.1.1"
+    },
+    "AGF-4Modders-Fix4DestroyBiomeBadge": {
+      "github_repo": "AGF-4Modders-Fix4DestroyBiomeBadge"
+    },
+    "AGF-4Modders-Fix4PerkPageReset": {
+      "github_repo": "AGF-4Modders-Fix4PerkPageReset"
+    },
+    "AGF-BackpackPlus-060Slots": {
+      "github_repo": "AGF-BackpackPlus-060Slots",
+      "site_mod_id": "01KXT81FQ9E1W22PDZQKR40N2A"
+    },
+    "AGF-BackpackPlus-084Slots": {
+      "github_repo": "AGF-BackpackPlus-084Slots"
+    },
+    "AGF-BackpackPlus-119Slots": {
+      "github_repo": "AGF-BackpackPlus-119Slots"
+    },
+    "AGF-HUDPlus-1Main": {
+      "github_repo": "AGF-HUDPlus-1Main"
+    },
+    "AGF-HUDPlus-BMCounter": {
+      "github_repo": "AGF-HUDPlus-BMCounter"
+    },
+    "AGF-HUDPlus-PurpleBook": {
+      "github_repo": "AGF-HUDPlus-PurpleBook"
+    },
+    "AGF-HUDPlus-RemoveEnteringPopUp": {
+      "github_repo": "AGF-HUDPlus-RemoveEnteringPopUp"
+    },
+    "AGF-HUDPlus-VisualEntityTracker": {
+      "github_repo": "AGF-HUDPlus-VisualEntityTracker"
+    },
+    "AGF-HUDPlus-Weekday": {
+      "github_repo": "AGF-HUDPlus-Weekday"
+    },
+    "AGF-NoEAC-AudioOptionsPlus": {
+      "github_repo": "AGF-NoEAC-AudioOptionsPlus"
+    },
+    "AGF-NoEAC-AutoRun": {
+      "github_repo": "AGF-NoEAC-AutoRun"
+    },
+    "AGF-NoEAC-CosmeticLockIcon": {
+      "github_repo": "AGF-NoEAC-CosmeticLockIcon"
+    },
+    "AGF-NoEAC-EnhancedAGF": {
+      "github_repo": "AGF-NoEAC-EnhancedAGF"
+    },
+    "AGF-NoEAC-GyroFlightModes": {
+      "github_repo": "AGF-NoEAC-GyroFlightModes"
+    },
+    "AGF-NoEAC-HideDLCCosmetics": {
+      "github_repo": "AGF-NoEAC-HideDLCCosmetics"
+    },
+    "AGF-NoEAC-MapPlus": {
+      "github_repo": "AGF-NoEAC-MapPlus"
+    },
+    "AGF-NoEAC-OpenAllButton": {
+      "github_repo": "AGF-NoEAC-OpenAllButton"
+    },
+    "AGF-NoEAC-PartyGroupPlus": {
+      "github_repo": "AGF-NoEAC-PartyGroupPlus"
+    },
+    "AGF-NoEAC-SmeltTimerOption": {
+      "github_repo": "AGF-NoEAC-SmeltTimerOption"
+    },
+    "AGF-NoEAC-Toolbelt12Slots": {
+      "github_repo": "AGF-NoEAC-Toolbelt12Slots"
+    },
+    "AGF-Requested-AnimalTrackerAlwaysOn": {
+      "github_repo": "AGF-Requested-AnimalTrackerAlwaysOn"
+    },
+    "AGF-Requested-SmallerInteractionPrompt": {
+      "github_repo": "AGF-Requested-SmallerInteractionPrompt"
+    },
+    "AGF-Requested-TinyBuffsPopUp": {
+      "github_repo": "AGF-Requested-TinyBuffsPopUp"
+    },
+    "AGF-VP-AdminModdingSupport": {
+      "github_repo": "AGF-VP-AdminModdingSupport"
+    },
+    "AGF-VP-AlternativeRecipes": {
+      "github_repo": "AGF-VP-AlternativeRecipes"
+    },
+    "AGF-VP-AmmoDisassembly": {
+      "github_repo": "AGF-VP-AmmoDisassembly"
+    },
+    "AGF-VP-ArcheryFeathersChange": {
+      "github_repo": "AGF-VP-ArcheryFeathersChange"
+    },
+    "AGF-VP-AutomobilesRespawn": {
+      "github_repo": "AGF-VP-AutomobilesRespawn"
+    },
+    "AGF-VP-BedrollPlus": {
+      "github_repo": "AGF-VP-BedrollPlus"
+    },
+    "AGF-VP-BetterEggChance": {
+      "github_repo": "AGF-VP-BetterEggChance",
+      "site_mod_id": "01M25FK31GQS6SBM2C6CQCMZKH"
+    },
+    "AGF-VP-BreakItGetIt": {
+      "github_repo": "AGF-VP-BreakItGetIt",
+      "site_mod_id": "01M25GBDT5FNS800M0QAR7W4CR"
+    },
+    "AGF-VP-CraftSewingKits": {
+      "github_repo": "AGF-VP-CraftSewingKits",
+      "site_mod_id": "01M25GP21DCBMRE2DTRX0C3FZ9"
+    },
+    "AGF-VP-CraftStackEngBattCells": {
+      "github_repo": "AGF-VP-CraftStackEngBattCells",
+      "site_mod_id": "01M26K3JZAGNQ6NHZK67G36S8D",
+      "site_slug": "agf-v3-vp-craftstackengbattcells-ab18df"
+    },
+    "AGF-VP-CraftVitamins": {
+      "github_repo": "AGF-VP-CraftVitamins",
+      "site_mod_id": "01M268F1E7KGYQW1N3C6B6GF4F"
+    },
+    "AGF-VP-DoorsPlus": {
+      "github_repo": "AGF-VP-DoorsPlus",
+      "site_mod_id": "01M268NQ8SYM4K38TEMT0YSYA0"
+    },
+    "AGF-VP-DrinkableAcid": {
+      "github_repo": "AGF-VP-DrinkableAcid",
+      "site_mod_id": "01M2690PXMMBF3EEKC59QH1M27"
+    },
+    "AGF-VP-DyesPlus": {
+      "github_repo": "AGF-VP-DyesPlus",
+      "site_mod_id": "01M26983N911BECWHCYG1BZ3DK"
+    },
+    "AGF-VP-FloraHarvester": {
+      "github_repo": "AGF-VP-FloraHarvester",
+      "site_mod_id": "01M269H18VKFFKBAX0Q4Q0C8WW"
+    },
+    "AGF-VP-FuelBurnPlus": {
+      "github_repo": "AGF-VP-FuelBurnPlus",
+      "site_mod_id": "01M269RKQZF88G33DSZ2MQWTPB"
+    },
+    "AGF-VP-HelpfulRenames": {
+      "github_repo": "AGF-VP-HelpfulRenames"
+    },
+    "AGF-VP-LargerStorageOption": {
+      "github_repo": "AGF-VP-LargerStorageOption",
+      "site_mod_id": "01M26M9K6HXY9XR7BEV9X07NJ1",
+      "site_slug": "agf-v3-vp-largerstorageoption"
+    },
+    "AGF-VP-MasterTool": {
+      "github_repo": "AGF-VP-MasterTool",
+      "site_mod_id": "01M26MFRBADJJVBFFYQ81J9GSW",
+      "site_slug": "agf-v3-vp-mastertool"
+    },
+    "AGF-VP-MaxLevel500": {
+      "github_repo": "AGF-VP-MaxLevel500",
+      "site_mod_id": "01M26MQMRM07T0VJZZ4A5B2PHH",
+      "site_slug": "agf-v3-vp-maxlevel500"
+    },
+    "AGF-VP-MiningPlus": {
+      "github_repo": "AGF-VP-MiningPlus",
+      "site_mod_id": "01M26Q902HSMMC4REMQ721QYYG",
+      "site_slug": "agf-v3-vp-miningplus"
+    },
+    "AGF-VP-Mod988": {
+      "github_repo": "AGF-VP-Mod988",
+      "site_mod_id": "01M26Q9Z4N0G9PY4ZBRDGSANGY",
+      "site_slug": "agf-v3-vp-mod988"
+    },
+    "AGF-VP-ModSlotsPlus": {
+      "github_repo": "AGF-VP-ModSlotsPlus",
+      "site_mod_id": "01M26QAGTE08ZGP16TJ90S3D2Y",
+      "site_slug": "agf-v3-vp-modslotsplus"
+    },
+    "AGF-VP-PaintbrushPlus": {
+      "github_repo": "AGF-VP-PaintbrushPlus"
+    },
+    "AGF-VP-PickupLanternsPlus": {
+      "github_repo": "AGF-VP-PickupLanternsPlus",
+      "site_mod_id": "01M26QB1VKWM1PN3RZPDHXWQ11",
+      "site_slug": "agf-v3-vp-pickuplanternsplus"
+    },
+    "AGF-VP-PlayerResetQuests": {
+      "github_repo": "AGF-VP-PlayerResetQuests",
+      "site_mod_id": "01M26QBMQ61HV5P0TA0ZEMSCZV",
+      "site_slug": "agf-v3-vp-playerresetquests"
+    },
+    "AGF-VP-RebundleBundles": {
+      "github_repo": "AGF-VP-RebundleBundles",
+      "site_mod_id": "01M26QC6YMQQHHAFGH8X1R7BPH",
+      "site_slug": "agf-v3-vp-rebundlebundles"
+    },
+    "AGF-VP-RecipeRottingFlesh": {
+      "github_repo": "AGF-VP-RecipeRottingFlesh",
+      "site_mod_id": "01M26QCSFRFYAEPM5N0904Y2HS",
+      "site_slug": "agf-v3-vp-reciperottingflesh"
+    },
+    "AGF-VP-RestorePowerAnyTime": {
+      "github_repo": "AGF-VP-RestorePowerAnyTime",
+      "site_mod_id": "01M26QDCRDHAFMQHC5VBJMS77M",
+      "site_slug": "agf-v3-vp-restorepoweranytime"
+    },
+    "AGF-VP-ScrapBatts4Acid": {
+      "github_repo": "AGF-VP-ScrapBatts4Acid",
+      "site_mod_id": "01M26QE0QJYD5K7Q5G38HSQHFB",
+      "site_slug": "agf-v3-vp-scrapbatts4acid"
+    },
+    "AGF-VP-ScrapEquipmentFaster": {
+      "github_repo": "AGF-VP-ScrapEquipmentFaster",
+      "site_mod_id": "01M26QEK3X265AW4R78XMAE1BT",
+      "site_slug": "agf-v3-vp-scrapequipmentfaster"
+    },
+    "AGF-VP-SimplifiedStacks": {
+      "github_repo": "AGF-VP-SimplifiedStacks",
+      "site_mod_id": "01M26QF5H603G7GRSAVVR0W9Y0",
+      "site_slug": "agf-v3-vp-simplifiedstacks"
+    },
+    "AGF-VP-SmeltingPlus": {
+      "github_repo": "AGF-VP-SmeltingPlus",
+      "site_mod_id": "01M26QFPXC81P6YSVEWE94N47N",
+      "site_slug": "agf-v3-vp-smeltingplus"
+    },
+    "AGF-VP-StayLongerAnimalCorpse": {
+      "github_repo": "AGF-VP-StayLongerAnimalCorpse",
+      "site_mod_id": "01M26QG9JBDRB177GYT8RRMK4K",
+      "site_slug": "agf-v3-vp-staylongeranimalcorpse"
+    },
+    "AGF-VP-StayLongerPlayerBackpack": {
+      "github_repo": "AGF-VP-StayLongerPlayerBackpack",
+      "site_mod_id": "01M26QGXEBBVN3N5TCP18WXD29",
+      "site_slug": "agf-v3-vp-staylongerplayerbackpack"
+    },
+    "AGF-VP-TacticalRiflePlus": {
+      "github_repo": "AGF-VP-TacticalRiflePlus",
+      "site_mod_id": "01M26QHGN30889M8AYXM7PYCJW",
+      "site_slug": "agf-v3-vp-tacticalrifleplus"
+    },
+    "AGF-VP-VehiclePerformance": {
+      "github_repo": "AGF-VP-VehiclePerformance"
+    },
+    "AGF-VP-VehicleStoragePlus": {
+      "github_repo": "AGF-VP-VehicleStoragePlus",
+      "site_mod_id": "01M26QJQ0V6TA0RQR3SA4NYAHA",
+      "site_slug": "agf-v3-vp-vehiclestorageplus"
+    },
+    "AGF-VP-VehiclesExtraSeating": {
+      "github_repo": "AGF-VP-VehiclesExtraSeating",
+      "site_mod_id": "01M26QJ2Q6V9M93720WZAS0TM1",
+      "site_slug": "agf-v3-vp-vehiclesextraseating"
+    },
+    "AGF-VP-ZombieCorpseLeaveQuicker": {
+      "github_repo": "AGF-VP-ZombieCorpseLeaveQuicker",
+      "site_mod_id": "01M26QKB1Q3BSH4GJ3JK9DV24D",
+      "site_slug": "agf-v3-vp-zombiecorpseleavequicker"
+    },
+    "AGF-VP-zHelpfulRenames": {
+      "github_repo": "AGF-VP-zHelpfulRenames"
+    },
+    "AGF-VPS-HonkOpensYourDoors": {
+      "github_repo": "AGF-VPS-HonkOpensYourDoors"
+    },
+    "AGF-VPS-SortingCart": {
+      "github_repo": "AGF-VPS-SortingCart"
+    },
+    "zzzAGF-Requested-LootStaysOnEmpty": {
+      "github_repo": "zzzAGF-Requested-LootStaysOnEmpty"
+    },
+    "zzzAGF-Special-Compatibilities": {
+      "github_repo": "zzzAGF-Special-Compatibilities"
+    },
+    "zzzAGF-Special-LocalizationPatches": {
+      "github_repo": "zzzAGF-Special-LocalizationPatches"
+    },
+    "zzzAGF-Special-NoEACCompatibilities": {
+      "github_repo": "zzzAGF-Special-NoEACCompatibilities"
+    },
+    "AGF-VPS-FuelAutoShutOff": {
+      "github_repo": "AGF-VPS-FuelAutoShutOff"
+    },
+    "AGF-VPS-GlobalStormTracker": {
+      "github_repo": "AGF-VPS-GlobalStormTracker"
+    },
+    "AGF-VPS-ScreamerAlert": {
+      "github_repo": "AGF-VPS-ScreamerAlert"
+    },
+    "AGF-VPS-VisualEntityTrackerAddon": {
+      "github_repo": "AGF-VPS-VisualEntityTrackerAddon"
+    },
+    "AGF-VPS-LootTimerHolds": {
+      "github_repo": "AGF-VPS-LootTimerHolds"
+    }
+  }
+}

@@ -1,23 +1,69 @@
 {
-  "computed_at": "2026-09-01T23:11:35",
-  "since_gigglepack_version": "0.22.0",
+  "computed_at": "2026-09-12T04:01:44",
+  "since_gigglepack_version": "0.23.0",
   "new_mods": [
     [
-      "AGF-NoEAC-GyroFlightModes",
+      "AGF-Requested-AnimalTrackerAlwaysOn",
       "1.0.0"
     ],
     [
-      "AGF-VPS-HonkOpensYourDoors",
+      "AGF-VP-CraftStackEngBattCells",
+      "4.0.0"
+    ],
+    [
+      "AGF-VP-zHelpfulRenames",
+      "3.0.1"
+    ],
+    [
+      "AGF-VPS-FuelAutoShutOff",
+      "1.0.1"
+    ],
+    [
+      "AGF-VPS-GlobalStormTracker",
+      "2.1.2"
+    ],
+    [
+      "AGF-VPS-ScreamerAlert",
+      "2.3.4"
+    ],
+    [
+      "AGF-VPS-VisualEntityTrackerAddon",
+      "1.0.1"
+    ],
+    [
+      "zzzAGF-Special-NoEACCompatibilities",
       "1.0.0"
     ]
   ],
   "updated_mods": [
     [
-      "AGF-NoEAC-MapPlus",
+      "AGF-VP-DoorsPlus",
+      "4.0.0",
+      "4.0.1"
+    ],
+    [
+      "AGF-VPS-HonkOpensYourDoors",
       "1.0.0",
-      "1.1.0"
+      "1.0.1"
     ]
   ],
   "renamed_mods": [],
-  "removed_mods": []
+  "removed_mods": [
+    [
+      "AGF-NoEAC-FuelAutoShutOff",
+      "1.0.0"
+    ],
+    [
+      "AGF-NoEAC-GlobalStormTracker",
+      "2.1.1"
+    ],
+    [
+      "AGF-NoEAC-ScreamerAlert",
+      "2.3.3"
+    ],
+    [
+      "AGF-NoEAC-VisualEntityTrackerAddon",
+      "1.0.0"
+    ]
+  ]
 }

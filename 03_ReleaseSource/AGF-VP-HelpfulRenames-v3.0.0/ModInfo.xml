@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-VP-zHelpfulRenames" />
+  <DisplayName value="AGF Renames Alphabetical Sort" />
+  <Version value="3.0.0" />
+  <Description value="Renames items so sorting keeps like items together and in order." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+</xml>

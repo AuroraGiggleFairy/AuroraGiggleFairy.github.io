@@ -1,0 +1,98 @@
+---
+description: Read when the user says Doom. Propose a changes-report entry after a successful Doom change. Do not read the whole report.
+alwaysApply: false
+---
+
+# Doom changes report
+
+When work is on a Doom mod, or on another mod changed for the Doom install, track it through `00_Support/DoomLevelsSource/Doom-Changes-Report.md`. The `.txt` beside it is the copy to send. Keep the two in sync. Do not edit either file until the user accepts the proposed entry.
+
+## Process
+
+1. Start from an identified issue, or from updated files the user hands over.
+2. Check those changes, or attempt the fix.
+3. When the change is in the file, stop. Do not suggest a **Changes** entry yet. Wait until the user says they tested it and it worked. Then show one proposed **Changes** entry and ask whether to add it. Do not write the report in that same turn.
+4. After an explicit yes, update **Changes**, **Files**, and **Players** in the `.md`, and the same words in the `.txt`. On `Doom-State.md`, set **Newest logged batch** to that date and title. If the entry closes an open issue, remove that issue from the state file and from **Known Issues**. Do not copy the entry body into the state file. In the `.md`, the Known Issues, Changes, Files, and Players headings use `#FF8A3D`. Dated headings and file-path headings use `#E2A0FF`. The `.txt` stays plain text. Section order is Known Issues, Changes, Files, Players.
+
+A new tested change updates the three lists together:
+
+- Add the entry at the top of **Changes**.
+- Under **Files**, add one bullet per path: `mm/dd, hh:mm — Title` when the entry has a clock, or `mm/dd — Title` when it has a date only. Use the EDT date and time. No second time zone on the bullet. A new path gets a heading at the top of **Files**. An existing path gets the bullet at the top of that path, and that path moves to the top of **Files**.
+- Add the title at the top of **Players**. Players is titles only.
+- An entry with no path updates **Changes** and **Players** only.
+
+When an existing **Changes** entry is updated, set its date and time to the current EDT and AWST time, move that entry to the top of **Changes**, update the matching **Files** bullet stamp and move that path to the top of **Files**, move that title to the top of **Players**, and set **Newest logged batch** to that date and title.
+
+A fix that did not land, or that the user has not tested, does not get a **Changes** entry. Leave **Known Issues** as they are unless the user asks. A Known Issues heading is only `- Title`. No date and no time.
+
+**Known Issues** is the first section. Read it when this work might already be listed there. Search **Changes**, **Files**, and **Players** for the mod folder or the topic. Do not read **Changes** from top to bottom. The entry shape below is enough to draft a proposal.
+
+## Entry shape
+
+A dated header is three lines. AWST is 12 hours ahead of EDT, and 13 hours ahead of EST. Use EDT when the US East Coast is on daylight time (UTC-4, roughly March–November) and EST when it is on standard time (UTC-5). AWST is UTC+8 all year. US date order is month/day/year. AWST date order is day/month/year. Time is 24-hour `hh:mm` plus am or pm.
+
+The `.md` header has no parentheses. A colon follows the time zone. Both dates are month/day/year. The two time lines are one monospaced block so the dates and times share columns. Pad `EDT:` with two spaces and `AWST:` with one. Do not use a table. A `<br>` joins the title under them so the preview does not add a blank line:
+
+```
+EDT:  mm/dd/yyyy, hh:mm am
+AWST: mm/dd/yyyy, hh:mm pm
+- Title
+```
+
+The `.txt` header keeps parentheses, uses the same date order, and does not add am or pm. Same spacing, no table:
+
+```
+(EDT:  mm/dd/yyyy, hh:mm)
+(AWST: mm/dd/yyyy, hh:mm)
+- Title
+```
+
+Entries with no recorded clock time use the same aligned lines and the date only. Do not invent a clock time for them.
+
+One change is one entry, even when it touches more than one mod. Title is a short result. The sentence says what changed and why, in the same plain style as the entries already in the report. Each path starts with the mod folder under `Mods`.
+
+The date line stays at the left. Everything under it is indented four spaces.
+
+```
+### EDT:  10/04/2026, 01:46 am<br>AWST: 10/04/2026, 13:46 pm<br>- Slot Sizes for inventory and storages
+
+    On 3.3 every inventory and storage slot is 64 instead of the new default of 73.
+
+    - `zzz-FranticDansHUDbyAGF/Config/XUi_InGame/windows.xml`
+```
+
+Plain-text twin:
+
+```
+(EDT:  10/04/2026, 01:46)
+(AWST: 10/04/2026, 13:46)
+- Slot Sizes for inventory and storages
+    On 3.3 every inventory and storage slot is 64 instead of the new default of 73.
+    zzz-FranticDansHUDbyAGF/Config/XUi_InGame/windows.xml
+```
+
+## Files and Players
+
+**Files** groups the paths from **Changes**. Newest path at the top. Newest bullet at the top of that path. The bullet uses the EDT stamp only.
+
+```
+### `ZZZ_DoomMod_Standalone/Config/items.xml`
+
+    - 10/04, 21:57 — Mancubus fires two shots with a wider spread
+    - 10/03 — Boiled water restores more and infects less
+```
+
+Plain-text twin:
+
+```
+ZZZ_DoomMod_Standalone/Config/items.xml
+    - 10/04, 21:57 — Mancubus fires two shots with a wider spread
+    - 10/03 — Boiled water restores more and infects less
+```
+
+**Players** is the **Changes** titles only, newest first.
+
+```
+- Mancubus fires two shots with a wider spread
+- Boiled water restores more and infects less
+```

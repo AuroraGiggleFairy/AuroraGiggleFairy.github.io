@@ -1,0 +1,32 @@
+---
+description: Config XML root is AGF plus the last segment of the mod name
+alwaysApply: true
+---
+
+# Config XML root names
+
+When creating a 7D2D **Config** xpath patch `.xml` (including `XUi_InGame` / `XUi_Menu`), the wrapper root is:
+
+`AGF` + `-` + the **last hyphen segment** of `ModInfo.xml` `<Name>` (no version, no folder suffix).
+
+Drop `zzz` and every middle token (`Requested`, `VP`, `VPS`, `NoEAC`, `HUDPlus`, `4Modders`, `Special`, …). Always start with `AGF`, never `zzzAGF`.
+
+| ModInfo Name | Root |
+|---|---|
+| `AGF-Requested-AnimalTrackerAlwaysOn` | `<AGF-AnimalTrackerAlwaysOn>` |
+| `zzzAGF-Requested-LootStaysOnEmpty` | `<AGF-LootStaysOnEmpty>` |
+| `AGF-NoEAC-MapPlus` | `<AGF-MapPlus>` |
+| `AGF-HUDPlus-VisualEntityTracker` | `<AGF-VisualEntityTracker>` |
+| `AGF-VP-DoorsPlus` | `<AGF-DoorsPlus>` |
+| `zzzAGF-Special-Compatibilities` | `<AGF-Compatibilities>` |
+
+Do not use `<configs>`, `<config>`, the folder name, or the versioned folder.
+
+## Existing mods
+
+If the mod already has Config XML, **reuse that root** on new files in the same mod. Do not rename old roots unless asked.
+
+## Not this rule
+
+- `ModInfo.xml` stays `<xml>`
+- Non-xpath files owned by a DLL (custom settings XML) keep their own root

@@ -7,7 +7,7 @@ This folder is your Nexus command center.
 | File | What it is |
 |---|---|
 | `Nexus-Status.md` | ReleaseSource vs Nexus (Needs Update / Matches / First Upload Needed) |
-| `PublishHelp/` | Per-mod copy/paste packets (Details / FullDesc) |
+| `PublishHelp/` | One generated `{ModName}.md` packet per ReleaseSource mod |
 | `RUN-Nexus-Status.bat` | Refresh status **and** save discovered Nexus IDs into config |
 | `RUN-Nexus-Update.bat` | Push newer zip versions to **existing** Nexus pages |
 

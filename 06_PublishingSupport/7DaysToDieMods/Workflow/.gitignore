@@ -1,0 +1,7 @@
+# Local Playwright session (cookies) — do not commit
+_playwright_profile/
+# Disposable listing scratch (kept scripts live outside)
+_listing_upload/*.png
+_listing_upload/*.zip
+_listing_upload/*.html
+_listing_upload/fill.json

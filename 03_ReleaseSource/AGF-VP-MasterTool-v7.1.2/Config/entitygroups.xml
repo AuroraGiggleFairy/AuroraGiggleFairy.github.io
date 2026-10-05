@@ -1,0 +1,40 @@
+<AGFVanillaPlus-MasterTool>
+
+
+<append xpath="/entitygroups">
+
+	<entitygroup name="zombieAGFMasterToolGroup">
+		zombieSoldierRadiated
+		zombieSoldierInfernal
+		zombieWightRadiated
+		zombieWightCharged
+		zombieWightInfernal
+		zombieMutatedRadiated
+		zombieMutatedCharged
+		zombieMutatedInfernal
+		zombiePlagueSpitterRadiated
+		zombiePlagueSpitterCharged
+		zombiePlagueSpitterInfernal
+		zombieFrostclawRadiated
+		zombieFrostclawCharged
+		zombieFrostclawInfernal
+		zombieSpiderRadiated
+		zombieSpiderCharged
+		zombieSpiderInfernal
+		zombieMaleHazmatRadiated
+		zombieMaleHazmatCharged
+		zombieMaleHazmatInfernal
+		zombieFatCopRadiated
+		zombieFatCopInfernal
+		animalZombieBear
+		animalDireWolf
+		animalBossGrace
+		animalZombieVultureRadiated
+	</entitygroup>
+
+</append>
+
+
+
+
+</AGFVanillaPlus-MasterTool>

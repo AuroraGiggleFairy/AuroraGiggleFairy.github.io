@@ -1,0 +1,21 @@
+<AGFVanillaPlus-FloraHarvester>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+		
+			<!-- Overview: keep all sizes & positions exactly as-is. Insert FH to the left of chrysanthemum on the same row. -->
+			<insertbefore xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section2']/sprite[@sprite='plantedChrysanthemum1']">
+				<sprite name="itemIcon" depth="3" pos="2,-25" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceYuccaFibers" color="30,117,54" tooltip_key="meleeToolFloraHarvester" />
+			</insertbefore>
+
+			<!-- Zoomed view: level 4 entry (entry[2]) - center three 50x50 icons horizontally in the 220-wide cell. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[@name='QSection'][2]/sprite[@sprite='plantedGoldenrod1']/@pos">25,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[@name='QSection'][2]/sprite[@sprite='plantedChrysanthemum1']/@pos">85,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[@name='QSection'][2]/sprite[@sprite='plantedChrysanthemum1']">
+				<sprite name="itemIcon" depth="3" pos="145,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceYuccaFibers" color="30,117,54" tooltip_key="meleeToolFloraHarvester" />
+			</insertafter>
+
+		</if>
+	</conditional>
+	
+</AGFVanillaPlus-FloraHarvester>

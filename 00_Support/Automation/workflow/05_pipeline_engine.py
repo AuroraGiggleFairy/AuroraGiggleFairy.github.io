@@ -5816,6 +5816,27 @@ def zip_mod_folder(mod_folder: str, dry_run: bool, log: Logger) -> Tuple[str, bo
         return zip_name, False
 
 
+def backpack_final_folders() -> List[str]:
+    if not os.path.isdir(BACKPACK_FINAL_DIR):
+        return []
+    names = []
+    for name in sorted(os.listdir(BACKPACK_FINAL_DIR)):
+        if is_backpack_mod(name) and os.path.isdir(os.path.join(BACKPACK_FINAL_DIR, name)):
+            names.append(name)
+    return names
+
+
+def resolve_pack_mod_path(mod_folder: str) -> str:
+    publish_path = os.path.join(PUBLISH_READY, mod_folder)
+    if os.path.isdir(publish_path):
+        return publish_path
+    if is_backpack_mod(mod_folder):
+        final_path = os.path.join(BACKPACK_FINAL_DIR, mod_folder)
+        if os.path.isdir(final_path):
+            return final_path
+    return ""
+
+
 def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[Dict[str, List[str]]], dry_run: bool, log: Logger) -> bool:
     zip_path = os.path.join(ZIP_OUTPUT, f"{pack_name}.zip")
     if dry_run:
@@ -5825,8 +5846,8 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
     try:
         with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
             for mod_folder in root_mods:
-                mod_path = os.path.join(PUBLISH_READY, mod_folder)
-                if not os.path.isdir(mod_path):
+                mod_path = resolve_pack_mod_path(mod_folder)
+                if not mod_path:
                     continue
                 for root, dirs, files in os.walk(mod_path):
                     dirs.sort()
@@ -5838,8 +5859,8 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
             if optionals_map:
                 for opt_folder, opt_mods in optionals_map.items():
                     for mod_folder in opt_mods:
-                        mod_path = os.path.join(PUBLISH_READY, mod_folder)
-                        if not os.path.isdir(mod_path):
+                        mod_path = resolve_pack_mod_path(mod_folder)
+                        if not mod_path:
                             continue
                         for root, dirs, files in os.walk(mod_path):
                             dirs.sort()
@@ -5855,6 +5876,8 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
 
 def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str], Optional[Dict[str, List[str]]]]]:
     backpackplus_mods = [f for f in all_folders if is_backpack_mod(f)]
+    if not backpackplus_mods:
+        backpackplus_mods = backpack_final_folders()
     hudplus_mods = [f for f in all_folders if is_hudplus_mod(f)]
     hudpluszother_mods = [f for f in all_folders if is_hudpluszother_mod(f)]
     noeac_mods = [f for f in all_folders if is_noeac_mod(f)]
@@ -5864,12 +5887,10 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     special_mods = [f for f in all_folders if f.startswith("zzzAGF-Special")]
     requested_mods = [f for f in all_folders if is_requested_mod(f)]
 
-    backpackplus_84 = next((f for f in backpackplus_mods if "84Slots" in f), None)
-
     packs: List[Tuple[str, List[str], Optional[Dict[str, List[str]]]]] = []
     packs.append(("00_BackpackPlus_All", backpackplus_mods, None))
 
-    giggle_root = hudplus_mods + vp_mods + vps_mods + special_mods + ([backpackplus_84] if backpackplus_84 else [])
+    giggle_root = hudplus_mods + vp_mods + vps_mods + special_mods
     giggle_optionals = {
         ".Optionals-BackpackPlus": backpackplus_mods,
         ".Optionals-HUDPlus": hudplus_mods + hudpluszother_mods,

@@ -1,0 +1,6080 @@
+[
+{
+"key": "plantedAloe1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Aloe Vera",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedAloe2",
+"live": "[aa0002][-][DECEA3]Growing[-] Aloe Vera",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedAloe3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Aloe Vera",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedBlueberry1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Blueberry",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedBlueberry2",
+"live": "[aa0002][-][DECEA3]Growing[-] Blueberry",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedBlueberry3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Blueberry",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedChrysanthemum1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Chrysanthemum",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedChrysanthemum2",
+"live": "[aa0002][-][DECEA3]Growing[-] Chrysanthemum",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedChrysanthemum3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Chrysanthemum",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCoffee1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Coffee",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCoffee2",
+"live": "[aa0002][-][DECEA3]Growing[-] Coffee",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCoffee3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Coffee",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCorn1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCorn2",
+"live": "[aa0002][-][DECEA3]Growing[-] Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCorn3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCotton1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Cotton",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCotton2",
+"live": "[aa0002][-][DECEA3]Growing[-] Cotton",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCotton3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Cotton",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGoldenrod1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Goldenrod",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGoldenrod2",
+"live": "[aa0002][-][DECEA3]Growing[-] Goldenrod",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGoldenrod3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Goldenrod",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGraceCorn1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Super Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGraceCorn2",
+"live": "[aa0002][-][DECEA3]Growing[-] Super Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGraceCorn3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Super Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedHop1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Hop",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedHop2",
+"live": "[aa0002][-][DECEA3]Growing[-] Hop",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedHop3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Hop",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedMushroom1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedMushroom2",
+"live": "[aa0002][-][DECEA3]Growing[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedMushroom3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPotato1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Potato",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPotato2",
+"live": "[aa0002][-][DECEA3]Growing[-] Potato",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPotato3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Potato",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPumpkin1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Pumpkin",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPumpkin2",
+"live": "[aa0002][-][DECEA3]Growing[-] Pumpkin",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPumpkin3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Pumpkin",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedYucca1",
+"live": "[FFA94D][Seed][-][dddd02][-][eeee00][-] Yucca",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedYucca2",
+"live": "[aa0002][-][DECEA3]Growing[-] Yucca",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedYucca3HarvestDesc",
+"live": "[aa0003][-][00ff00]Harvest[-] Yucca",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedAloe3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Aloe Vera",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedBlueberry3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Blueberry",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedChrysanthemum3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Chrysanthemum",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCoffee3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Coffee",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCorn3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedCotton3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Cotton",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGoldenrod3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Goldenrod",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedGraceCorn3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Super Corn",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedHop3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Hop",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedMushroom3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPotato3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Potato",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedPumpkin3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Pumpkin",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "plantedYucca3Harvest",
+"live": "[aa0003][-][00ff00]Harvest[-] Yucca",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroom01",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroom02",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroom01Desc",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroomBiome2",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroomBiome4",
+"live": "[aa0003][-][00ff00]Harvest[-] Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroomRadiated02",
+"live": "[aa0003][-][00ff00]Harvest[-] Radiated Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "mushroomRadiated04",
+"live": "[aa0003][-][00ff00]Harvest[-] Radiated Mushrooms",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedMountainPine1m",
+"live": "[FFA94D][Seed][-][dddd01][-][eeee03][-] Pine",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedOak1m",
+"live": "[FFA94D][Seed][-][dddd01][-][eeee02][-] Oak",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedWinterPine1m",
+"live": "[FFA94D][Seed][-][dddd01][-][eeee01][-] Blue Spruce",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedMountainPine12m",
+"live": "[a00002][-][DECEA3]Growing (2/5)[-] Pine",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedMountainPine19m",
+"live": "[a00003][-][DECEA3]Growing (3/5)[-] Pine",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedMountainPine27m",
+"live": "[a00004][-][DECEA3]Growing (4/5)[-] Pine",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedMountainPine41m",
+"live": "[a00005][-][00ff00]Harvest (5/5)[-] Pine",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedOak08m",
+"live": "[a00002][-][DECEA3]Growing (2/5)[-] Oak",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedOak16m",
+"live": "[a00003][-][DECEA3]Growing (3/5)[-] Oak",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedOak27m",
+"live": "[a00004][-][DECEA3]Growing (4/5)[-] Oak",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedOak41m",
+"live": "[a00005][-][00ff00]Harvest (5/5)[-] Oak",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedWinterPine6m",
+"live": "[a00002][-][DECEA3]Growing (2/5)[-] Blue Spruce",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedWinterPine13m",
+"live": "[a00003][-][DECEA3]Growing (3/5)[-] Blue Spruce",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedWinterPine19m",
+"live": "[a00004][-][DECEA3]Growing (4/5)[-] Blue Spruce",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "treePlantedWinterPine28m",
+"live": "[a00005][-][00ff00]Harvest (5/5)[-] Blue Spruce",
+"cat": "Flora",
+"table": "Flora"
+},
+{
+"key": "modArmorAdvancedMuffledConnectors",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Muffled Connectors, Advanced",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorBandolier",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Bandolier",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorCustomizedFittings",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Fittings, Advanced",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorDoubleStoragePocket",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x2",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorImpactBracing",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Impact Bracing",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorImprovedFittings",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Fittings",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorMuffledConnectors",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Muffled Connectors",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorPlatingBasic",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Plating",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorPlatingReinforced",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Plating, Advanced",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorStoragePocket",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x1",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorTripleStoragePocket",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x3",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorWaterPurifier",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee08][-] Water Purifier",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorQuadStoragePocket",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x4",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modFuelTankLarge",
+"live": "[FFA94D][Mod][-][dddd09][-][eeee02][-] Large Tank",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modFuelTankSmall",
+"live": "[FFA94D][Mod][-][dddd09][-][eeee01][-] Small Tank",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunBarrelExtender",
+"live": "[FFA94D][Mod][-][dddd07][-][eeee01][-] Barrel, Extender",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunBipod",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee03][-] Bipod",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunBowArrowRest",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee01][-] Arrow Rest",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunBowPolymerString",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee02][-] Polymer String",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunChoke",
+"live": "[FFA94D][Mod][-][dddd08][-][eeee01][-] Shotgun Barrel, Choke",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunCrippleEm",
+"live": "[FFA94D][Mod][-][dddd04][-][eeee01][-] Cripple 'Em",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunDrumMagazineExtender",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee09][-] Drum Magazine",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunDuckbill",
+"live": "[FFA94D][Mod][-][dddd08][-][eeee02][-] Shotgun Barrel, Duckbill",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunFlashlight",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee06][-] Weapon Flashlight",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunForegrip",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee04][-] Fore Grip",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunLaserSight",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee07][-] Laser Sight",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunMagazineExtender",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee08][-] Magazine Extender",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunMeleeRadRemover",
+"live": "[FFA94D][Mod][-][dddd04][-][eeee02][-] Rad Remover",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunMeleeTheHunter",
+"live": "[FFA94D][Mod][-][dddd04][-][eeee03][-] The Hunter",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunMuzzleBrake",
+"live": "[FFA94D][Mod][-][dddd07][-][eeee02][-] Barrel, Muzzle Brake",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunReflexSight",
+"live": "[FFA94D][Mod][-][dddd06][-][eeee04][-] Scope, Reflex Sight",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunRetractingStock",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee05][-] Retracting Stock",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunScopeLarge",
+"live": "[FFA94D][Mod][-][dddd06][-][eeee03][-] Scope 8x",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunScopeMedium",
+"live": "[FFA94D][Mod][-][dddd06][-][eeee02][-] Scope 4x",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunScopeSmall",
+"live": "[FFA94D][Mod][-][dddd06][-][eeee01][-] Scope 2x",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunShotgunTubeExtenderMagazine",
+"live": "[FFA94D][Mod][-][dddd08][-][eeee04][-] Shotgun Tube Extender",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunSoundSuppressorSilencer",
+"live": "[FFA94D][Mod][-][dddd07][-][eeee03][-] Barrel, Silencer",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunTriggerGroupAutomatic",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee10][-] Trigger Group: Full Auto",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunTriggerGroupBurst3",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee11][-] Trigger Group: Burst",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modGunTriggerGroupSemi",
+"live": "[FFA94D][Mod][-][dddd05][-][eeee12][-] Trigger Group: Semi",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeBunkerBuster",
+"live": "[FFA94D][Mod][-][dddd02][-][eeee05][-] Bunker Buster",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeClubBarbedWire",
+"live": "[FFA94D][Mod][-][dddd03][-][eeee01][-] Club, Barbed Wire",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeClubBurningShaft",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee01][-] Burning Shaft",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeClubMetalChain",
+"live": "[FFA94D][Mod][-][dddd03][-][eeee02][-] Club, Metal Chain",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeClubMetalSpikes",
+"live": "[FFA94D][Mod][-][dddd03][-][eeee03][-] Club, Metal Spikes",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeDiamondTip",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee04][-] Diamond Blade Tip",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeErgonomicGrip",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee06][-] Ergonomic Grip",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeFiremansAxeMod",
+"live": "[FFA94D][Mod][-][dddd02][-][eeee02][-] Fireman's Axe",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeFortifyingGrip",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee07][-] Fortifying Grip",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeGraveDigger",
+"live": "[FFA94D][Mod][-][dddd02][-][eeee04][-] Grave Digger",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeIronBreaker",
+"live": "[FFA94D][Mod][-][dddd02][-][eeee06][-] Iron Breaker",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeSerratedBlade",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee05][-] Serrated Blade",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeStructuralBrace",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee03][-] Structural Brace",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeStunBatonRepulsor",
+"live": "[FFA94D][Mod][-][dddd04][-][eeee04][-] Stun Baton Repulsor",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeTemperedBlade",
+"live": "[FFA94D][Mod][-][dddd02][-][eeee03][-] Tempered Blade",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeWeightedHead",
+"live": "[FFA94D][Mod][-][dddd01][-][eeee02][-] Weighted Head",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modMeleeWoodSplitter",
+"live": "[FFA94D][Mod][-][dddd02][-][eeee01][-] Wood Splitter",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modRoboticDroneArmorPlatingMod",
+"live": "[FFA94D][Mod-Drone][-] Armor Plating",
+"cat": "Mod-Drone",
+"table": "Mod"
+},
+{
+"key": "modRoboticDroneCargoMod",
+"live": "[FFA94D][Mod-Drone][-] Cargo",
+"cat": "Mod-Drone",
+"table": "Mod"
+},
+{
+"key": "modRoboticDroneHeadlampMod",
+"live": "[FFA94D][Mod-Drone][-] Headlamp",
+"cat": "Mod-Drone",
+"table": "Mod"
+},
+{
+"key": "modRoboticDroneMedicMod",
+"live": "[FFA94D][Mod-Drone][-] Medic",
+"cat": "Mod-Drone",
+"table": "Mod"
+},
+{
+"key": "modRoboticDroneMoraleBoosterMod",
+"live": "[FFA94D][Mod-Drone][-] Morale Booster",
+"cat": "Mod-Drone",
+"table": "Mod"
+},
+{
+"key": "modShotgunSawedOffBarrel",
+"live": "[FFA94D][Mod][-][dddd08][-][eeee03][-] Shotgun Barrel, Sawed-Off",
+"cat": "Mod",
+"table": "Mod"
+},
+{
+"key": "modVehicleExpandedSeat",
+"live": "[FFA94D][Mod-Vehicle][-] Expanded Seating",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehicleFuelSaver",
+"live": "[FFA94D][Mod-Vehicle][-] Fuel Saver",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehicleOffRoadHeadlights",
+"live": "[FFA94D][Mod-Vehicle][-] Off Road Headlights",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehicleReserveFuelTank",
+"live": "[FFA94D][Mod-Vehicle][-] Reserve Fuel Tank",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehicleSuperCharger",
+"live": "[FFA94D][Mod-Vehicle][-] Super Charger",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehiclePlow",
+"live": "[FFA94D][Mod-Vehicle][-] Plow",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehicleArmor",
+"live": "[FFA94D][Mod-Vehicle][-] Armor",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modVehicleStorage",
+"live": "[FFA94D][Mod-Vehicle][-] Storage",
+"cat": "Mod-Vehicle",
+"table": "Mod"
+},
+{
+"key": "modArmorInsulatedLinerT1",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Insulated Armor T1, Cloth",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorInsulatedLinerT2",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Insulated Armor T2, Padded",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorInsulatedLinerT3",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Insulated Armor T3, Advanced",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorAgility",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee01][-] Agility",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorCigar",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee06][-] Cigar",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorFortitude",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee02][-] Fortitude",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorHelmetLight",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee09][-] Helmet Light",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorIntellect",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee03][-] Intellect",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorJumpJets",
+"live": "[FF5555][Admin][-] Jump Jets Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modArmorNightVision",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee10][-] Night Vision",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorPerception",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee04][-] Perception",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorStealthBoots",
+"live": "[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Stealth Boots",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorStrength",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee05][-] Strength",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modArmorTreasureHunter",
+"live": "[FFA94D][Mod-Armor][-][dddd01][-][eeee07][-] Treasure Hunter's",
+"cat": "Mod-Armor",
+"table": "Mod"
+},
+{
+"key": "modGunBowAdminArcheryReloadRecovery",
+"live": "[FF5555][Admin][-] Dev: Archery Reload & Recovery Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modGunButtkick3000",
+"live": "[FF5555][Admin][-] Buttkick 3000 Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modGunButtkick4000",
+"live": "[FF5555][Admin][-] Buttkick 4000 Mod - Perks",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modGunFoldingStock",
+"live": "[FF5555][Admin][-] modGunFoldingStock",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modMeleeGunToolDecapitizer",
+"live": "[FF5555][Admin][-] The Decapitizer",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modRadiationReady",
+"live": "[FF5555][Admin][-] Radiation Ready Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modRoboticDroneStunWeaponMod",
+"live": "[FF5555][Admin][-] Robotic Drone Stun Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modRoboticDroneWeaponMod",
+"live": "[FF5555][Admin][-] Robotic Drone Weapon Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modVehicleMega",
+"live": "[FF5555][Admin][-] Vehicle Mega Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminAssassinQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Assassin Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminAthleticQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Athletic Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminBikerQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Biker Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminCommandoQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Commando Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminEnforcerQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Enforcer Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminFarmerQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Farmer Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminLumberjackQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Lumberjack Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminMinerQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Miner Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminNerdQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Nerd Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminNomadQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Nomad Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminPreacherQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Preacher Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminPrimitiveQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Primitive Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminRaiderQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Raider Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminRangerQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Ranger Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminRogueQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Rogue Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminScavengerQualityArmorBundle",
+"live": "[FF5555][Admin][-] Dev: Scavenger Quality Armor Bundle",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "armorLumberjackHelmetDemo",
+"live": "[FF5555][Admin][-] Lumberjack Hat",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "drugBluePillAdmin",
+"live": "[FF5555][Admin][-] Blue Pill",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "drugHealthBar",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Health Bar",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugRedPillAdmin",
+"live": "[FF5555][Admin][-] Red Pill",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "meleeToolBlockReplaceTool",
+"live": "[FF5555][Admin][-] Dev: Admin Block Replace Tool",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "qtest_nextTraderAdmin",
+"live": "[FF5555][Admin][-] Dev: Find Trader Quest",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminT1QuestTicket",
+"live": "[FF5555][Admin][-] Dev: T1 Quest Ticket",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminT2QuestTicket",
+"live": "[FF5555][Admin][-] Dev: T2 Quest Ticket",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminT3QuestTicket",
+"live": "[FF5555][Admin][-] Dev: T3 Quest Ticket",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminT4QuestTicket",
+"live": "[FF5555][Admin][-] Dev: T4 Quest Ticket",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminT5QuestTicket",
+"live": "[FF5555][Admin][-] Dev: T5 Quest Ticket",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminT6QuestTicket",
+"live": "[FF5555][Admin][-] Dev: T6 Quest Ticket",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "meleeToolPaintToolAdmin",
+"live": "[FF5555][Admin][-] Dev: Paint Brush",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "meleeToolSalvageWrenchAdmin",
+"live": "[FF5555][Admin][-] Dev: Super Wrench",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "gunToolDiggerAdmin",
+"live": "[FF5555][Admin][-] Dev: Super Digger",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "gunHandgunPistolAdmin",
+"live": "[FF5555][Admin][-] Dev: Instant Death Pistol",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "meleeToolHammerOfGodAdmin",
+"live": "[FF5555][Admin][-] Dev: Hammer Of God",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "pimpMiningHelmetAdmin",
+"live": "[FF5555][Admin][-] Dev: Pimp Mining Helmet",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "toughGuyShirtAdmin",
+"live": "[FF5555][Admin][-] Dev: Tough Guy Shirt",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "ringOfFireAdmin",
+"live": "[FF5555][Admin][-] Dev: Ring of Fire",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "staminaBootsAdmin",
+"live": "[FF5555][Admin][-] Dev: Stamina Boots",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "staminaOnlyBootsAdmin",
+"live": "[FF5555][Admin][-] Dev: Stamina Only Boots",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "rocketBootsAdmin",
+"live": "[FF5555][Admin][-] Dev: Rocket Boots",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "drinkJarFullRespecAdmin",
+"live": "[FF5555][Admin][-] Dev: Full Respec",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "drinkJarFullRespecWithPointsAdmin",
+"live": "[FF5555][Admin][-] Dev: Full Respec with XP",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "noteTestersDelightAdmin",
+"live": "[FF5555][Admin][-] Dev: Note to Testers",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "noteTestersElectricityAdmin",
+"live": "[FF5555][Admin][-] Dev: Electricity Test Note",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "upgradeResourcesPackAdmin",
+"live": "[FF5555][Admin][-] Dev: Upgrade Resources Pack",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "craftingResourcesPackAdmin",
+"live": "[FF5555][Admin][-] Dev: Crafting Resources Pack",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "workstationsPackAdmin",
+"live": "[FF5555][Admin][-] Dev: Workstations and Tools Pack",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "levelDesignToolsAdmin",
+"live": "[FF5555][Admin][-] Dev: Level Design Tools",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "toolTerrainModelerAdmin",
+"live": "[FF5555][Admin][-] Dev: Terrain Modeling Tool",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "thrownGrenadeNukeAdmin",
+"live": "[FF5555][Admin][-] Dev: Nuke Grenade",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminPerkBook",
+"live": "[FF5555][Admin][-] Dev: All Perks Book",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminSkillMagazine",
+"live": "[FF5555][Admin][-] Dev: All Crafting Skills Magazine",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminModSchematic",
+"live": "[FF5555][Admin][-] Dev: All Mods Schematic",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "giveXP_T1_admin",
+"live": "[FF5555][Admin][-] Dev: Give XP - T1",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "giveXP_T2_admin",
+"live": "[FF5555][Admin][-] Dev: Give XP - T2",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "giveXP_T3_admin",
+"live": "[FF5555][Admin][-] Dev: Give XP - T3",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "giveXP_T4_admin",
+"live": "[FF5555][Admin][-] Dev: Give XP - T4",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "giveXP_T5_admin",
+"live": "[FF5555][Admin][-] Dev: Give XP - T5",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "giveXP_T6_admin",
+"live": "[FF5555][Admin][-] Dev: Give XP - T6",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffInfection",
+"live": "[FF5555][Admin][-] Dev: Buff Infection",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffAbrasion",
+"live": "[FF5555][Admin][-] Dev: Buff Abrasion 600",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffAbrasion1800",
+"live": "[FF5555][Admin][-] Dev: Buff Abrasion 1800",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffAbrasion2400",
+"live": "[FF5555][Admin][-] Dev: Buff Abrasion 2400",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffAbrasion3200",
+"live": "[FF5555][Admin][-] Dev: Buff Abrasion 3200",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffFatigued",
+"live": "[FF5555][Admin][-] Dev: Buff Fatigued",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffLaceration",
+"live": "[FF5555][Admin][-] Dev: Buff Laceration",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffConcussion",
+"live": "[FF5555][Admin][-] Dev: Buff Concussion",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffDysentery",
+"live": "[FF5555][Admin][-] Dev: Buff Dysentery",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffSprainedLeg",
+"live": "[FF5555][Admin][-] Dev: Buff Sprained Leg",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffBrokenLeg",
+"live": "[FF5555][Admin][-] Dev: Buff Broken Leg",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffSprainedArm",
+"live": "[FF5555][Admin][-] Dev: Buff Sprained Arm",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "adminGiveBuffBrokenArm",
+"live": "[FF5555][Admin][-] Dev: Buff Broken Arm",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "modArmorAdminToughGuyShirt",
+"live": "[FF5555][Admin][-] Dev: Tough Guy Mod",
+"cat": "Admin",
+"table": "Admin"
+},
+{
+"key": "ammo44MagnumBulletAP",
+"live": "[dddd01][-][eeee03][-][FFA94D][Ammo][-] .44 Magnum, AP",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo44MagnumBulletBall",
+"live": "[dddd01][-][eeee01][-][FFA94D][Ammo][-] .44 Magnum",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo44MagnumBulletHP",
+"live": "[dddd01][-][eeee02][-][FFA94D][Ammo][-] .44 Magnum, HiPower",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo762mmBulletAP",
+"live": "[dddd02][-][eeee03][-][FFA94D][Ammo][-] 7.62mm, AP",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo762mmBulletBall",
+"live": "[dddd02][-][eeee01][-][FFA94D][Ammo][-] 7.62mm",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo762mmBulletHP",
+"live": "[dddd02][-][eeee02][-][FFA94D][Ammo][-] 7.62mm, HiPower",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo9mmBulletAP",
+"live": "[dddd03][-][eeee03][-][FFA94D][Ammo][-] 9mm, AP",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo9mmBulletBall",
+"live": "[dddd03][-][eeee01][-][FFA94D][Ammo][-] 9mm",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammo9mmBulletHP",
+"live": "[dddd03][-][eeee02][-][FFA94D][Ammo][-] 9mm, HiPower",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoArrowExploding",
+"live": "[dddd04][-][eeee05][-][FFA94D][Ammo][-] Arrow, Exploding",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoArrowFlaming",
+"live": "[dddd04][-][eeee04][-][FFA94D][Ammo][-] Arrow, Flaming",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoArrowIron",
+"live": "[dddd04][-][eeee02][-][FFA94D][Ammo][-] Arrow, Iron",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoArrowSteelAP",
+"live": "[dddd04][-][eeee03][-][FFA94D][Ammo][-] Arrow, Steel",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoArrowStone",
+"live": "[dddd04][-][eeee01][-][FFA94D][Ammo][-] Arrow, Stone",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoCrossbowBoltExploding",
+"live": "[dddd05][-][eeee05][-][FFA94D][Ammo][-] Bolt, Exploding",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoCrossbowBoltFlaming",
+"live": "[dddd05][-][eeee04][-][FFA94D][Ammo][-] Bolt, Flaming",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoCrossbowBoltIron",
+"live": "[dddd05][-][eeee02][-][FFA94D][Ammo][-] Bolt, Iron",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoCrossbowBoltSteelAP",
+"live": "[dddd05][-][eeee03][-][FFA94D][Ammo][-] Bolt, Steel",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoCrossbowBoltStone",
+"live": "[dddd05][-][eeee01][-][FFA94D][Ammo][-] Bolt, Stone",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoDartIron",
+"live": "[dddd06][-][eeee01][-][FFA94D][Ammo][-] Dart, Iron",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoJunkTurretAP",
+"live": "[dddd08][-][eeee03][-][FFA94D][Ammo][-] Robotic Turret, AP",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoJunkTurretRegular",
+"live": "[dddd08][-][eeee01][-][FFA94D][Ammo][-] Robotic Turret",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoJunkTurretShell",
+"live": "[dddd08][-][eeee02][-][FFA94D][Ammo][-] Robotic Turret, Shells",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoRocketFrag",
+"live": "[dddd09][-][eeee01][-][FFA94D][Ammo][-] Rocket Frag",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoRocketHE",
+"live": "[dddd09][-][eeee02][-][FFA94D][Ammo][-] Rocket HE",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoShotgunBreachingSlug",
+"live": "[dddd07][-][eeee03][-][FFA94D][Ammo][-] Shotgun, Slug, Breaching",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoShotgunShell",
+"live": "[dddd07][-][eeee01][-][FFA94D][Ammo][-] Shotgun, Shell",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoShotgunSlug",
+"live": "[dddd07][-][eeee02][-][FFA94D][Ammo][-] Shotgun, Slug, AP",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "resourceArrowHeadIron",
+"live": "[dddd00][-][eeee07][-][FFA94D][Ammo-I][-] Iron Arrowhead",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceArrowHeadSteelAP",
+"live": "[dddd00][-][eeee08][-][FFA94D][Ammo-I][-] Steel Arrowhead",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceBuckshot",
+"live": "[dddd00][-][eeee04][-][FFA94D][Ammo-I][-] Buckshot",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceBulletTip",
+"live": "[dddd00][-][eeee03][-][FFA94D][Ammo-I][-] Bullet Tip",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceBulletCasing",
+"live": "[dddd00][-][eeee02][-][FFA94D][Ammo-I][-] Bullet Casing",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceFeather",
+"live": "[dddd00][-][eeee06][-][FFA94D][Ammo-I][-] Feather",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceGunPowder",
+"live": "[dddd00][-][eeee01][-][FFA94D][Ammo-I][-] Gunpowder",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourcePaper",
+"live": "[dddd00][-][eeee05][-][FFA94D][Ammo-I][-] Paper",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceRocketCasing",
+"live": "[dddd00][-][eeee09][-][FFA94D][Ammo-I][-] Rocket Casing",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceRocketTip",
+"live": "[dddd00][-][eeee10][-][FFA94D][Ammo-I][-] Rocket Tip",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "thrownAmmoMolotovCocktail",
+"live": "[dddd10][-][eeee03][-][FFA94D][Ammo][-] Molotov Cocktail",
+"cat": "Ammo-Thrown",
+"table": "Ammo"
+},
+{
+"key": "thrownAmmoPipeBomb",
+"live": "[dddd10][-][eeee04][-][FFA94D][Ammo][-] Pipe Bomb",
+"cat": "Ammo-Thrown",
+"table": "Ammo"
+},
+{
+"key": "thrownDynamite",
+"live": "[dddd10][-][eeee05][-][FFA94D][Ammo][-] Stick of Dynamite",
+"cat": "Ammo-Thrown",
+"table": "Ammo"
+},
+{
+"key": "thrownGrenade",
+"live": "[dddd10][-][eeee01][-][FFA94D][Ammo][-] Grenade",
+"cat": "Ammo-Thrown",
+"table": "Ammo"
+},
+{
+"key": "thrownGrenadeContact",
+"live": "[dddd10][-][eeee02][-][FFA94D][Ammo][-] Grenade, Contact",
+"cat": "Ammo-Thrown",
+"table": "Ammo"
+},
+{
+"key": "thrownTimedCharge",
+"live": "[dddd10][-][eeee06][-][FFA94D][Ammo][-] Timed Charge",
+"cat": "Ammo-Thrown",
+"table": "Ammo"
+},
+{
+"key": "armorPrimitiveBoots",
+"live": "[FFA94D][Armor][-] Primitive Shoes",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPrimitiveGloves",
+"live": "[FFA94D][Armor][-] Primitive Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPrimitiveHelmet",
+"live": "[FFA94D][Armor][-] Primitive Hood",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPrimitiveOutfit",
+"live": "[FFA94D][Armor][-] Primitive Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAssassinBoots",
+"live": "[FFA94D][Armor][-] Assassin Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAssassinGloves",
+"live": "[FFA94D][Armor][-] Assassin Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAssassinHelmet",
+"live": "[FFA94D][Armor][-] Assassin Hood",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAssassinOutfit",
+"live": "[FFA94D][Armor][-] Assassin Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAthleticBoots",
+"live": "[FFA94D][Armor][-] Athletic Shoes",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAthleticGloves",
+"live": "[FFA94D][Armor][-] Athletic Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAthleticHelmet",
+"live": "[FFA94D][Armor][-] Athletic Hat",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorAthleticOutfit",
+"live": "[FFA94D][Armor][-] Athletic Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorBikerBoots",
+"live": "[FFA94D][Armor][-] Biker Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorBikerGloves",
+"live": "[FFA94D][Armor][-] Biker Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorBikerHelmet",
+"live": "[FFA94D][Armor][-] Biker Helmet",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorBikerOutfit",
+"live": "[FFA94D][Armor][-] Biker Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorCommandoBoots",
+"live": "[FFA94D][Armor][-] Commando Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorCommandoGloves",
+"live": "[FFA94D][Armor][-] Commando Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorCommandoHelmet",
+"live": "[FFA94D][Armor][-] Commando Helmet",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorCommandoOutfit",
+"live": "[FFA94D][Armor][-] Commando Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorEnforcerBoots",
+"live": "[FFA94D][Armor][-] Enforcer Shoes",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorEnforcerGloves",
+"live": "[FFA94D][Armor][-] Enforcer Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorEnforcerHelmet",
+"live": "[FFA94D][Armor][-] Enforcer Sunglasses",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorEnforcerOutfit",
+"live": "[FFA94D][Armor][-] Enforcer Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorFarmerBoots",
+"live": "[FFA94D][Armor][-] Farmer Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorFarmerGloves",
+"live": "[FFA94D][Armor][-] Farmer Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorFarmerHelmet",
+"live": "[FFA94D][Armor][-] Farmer Hat",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorFarmerOutfit",
+"live": "[FFA94D][Armor][-] Farmer Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorLumberjackBoots",
+"live": "[FFA94D][Armor][-] Lumberjack Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorLumberjackGloves",
+"live": "[FFA94D][Armor][-] Lumberjack Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorLumberjackHelmet",
+"live": "[FFA94D][Armor][-] Lumberjack Hat",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorLumberjackOutfit",
+"live": "[FFA94D][Armor][-] Lumberjack Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorMinerBoots",
+"live": "[FFA94D][Armor][-] Miner Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorMinerGloves",
+"live": "[FFA94D][Armor][-] Miner Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorMinerHelmet",
+"live": "[FFA94D][Armor][-] Miner Helmet",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorMinerOutfit",
+"live": "[FFA94D][Armor][-] Miner Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNerdBoots",
+"live": "[FFA94D][Armor][-] Nerd Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNerdGloves",
+"live": "[FFA94D][Armor][-] Nerd Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNerdHelmet",
+"live": "[FFA94D][Armor][-] Nerd Goggles",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNerdOutfit",
+"live": "[FFA94D][Armor][-] Nerd Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNomadBoots",
+"live": "[FFA94D][Armor][-] Nomad Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNomadGloves",
+"live": "[FFA94D][Armor][-] Nomad Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNomadHelmet",
+"live": "[FFA94D][Armor][-] Nomad Headgear",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorNomadOutfit",
+"live": "[FFA94D][Armor][-] Nomad Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPreacherBoots",
+"live": "[FFA94D][Armor][-] Preacher Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPreacherGloves",
+"live": "[FFA94D][Armor][-] Preacher Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPreacherHelmet",
+"live": "[FFA94D][Armor][-] Preacher Hat",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorPreacherOutfit",
+"live": "[FFA94D][Armor][-] Preacher Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRaiderBoots",
+"live": "[FFA94D][Armor][-] Raider Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRaiderGloves",
+"live": "[FFA94D][Armor][-] Raider Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRaiderHelmet",
+"live": "[FFA94D][Armor][-] Raider Helmet",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRaiderOutfit",
+"live": "[FFA94D][Armor][-] Raider Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRangerBoots",
+"live": "[FFA94D][Armor][-] Ranger Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRangerGloves",
+"live": "[FFA94D][Armor][-] Ranger Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRangerHelmet",
+"live": "[FFA94D][Armor][-] Ranger Hat",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRangerOutfit",
+"live": "[FFA94D][Armor][-] Ranger Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRogueBoots",
+"live": "[FFA94D][Armor][-] Rogue Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRogueGloves",
+"live": "[FFA94D][Armor][-] Rogue Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRogueHelmet",
+"live": "[FFA94D][Armor][-] Rogue Hood",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorRogueOutfit",
+"live": "[FFA94D][Armor][-] Rogue Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorScavengerBoots",
+"live": "[FFA94D][Armor][-] Scavenger Boots",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorScavengerGloves",
+"live": "[FFA94D][Armor][-] Scavenger Gloves",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorScavengerHelmet",
+"live": "[FFA94D][Armor][-] Scavenger Hat",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "armorScavengerOutfit",
+"live": "[FFA94D][Armor][-] Scavenger Outfit",
+"cat": "Armor",
+"table": "Armor"
+},
+{
+"key": "bookArtOfMiningAvalanche",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookArtOfMiningBlackStrap",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookArtOfMiningCoffee",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookArtOfMiningDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookArtOfMiningDiamondTools",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookArtOfMiningLuckyStrike",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookArtOfMiningPallets",
+"live": "[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsDrumMag",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsMachineGuns",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsMaintenance",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsRagdoll",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsRecoil",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookAutoWeaponsUncontrolledBurst",
+"live": "[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling1BasicMoves",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling2DropABomb",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling3KillerInstinct",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling4FinishingMoves",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling5AdrenalineHealing",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling6RageMode",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBarBrawling7BoozedUp",
+"live": "[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpBigHits",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpFoulBalls",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpKnockdown",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpMaintenance",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpMetalChain",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpSlowPitch",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookBatterUpStealingBases",
+"live": "[ffcc01][-][FFA94D][Book][-] Batter Up Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerAPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerApparel",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerCriminalPursuit",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerHPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerIntimidation",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookEnforcerPunks",
+"live": "[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacAxes",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacEquipment",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacHarvest",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacHeat",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacMolotov",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacPrevention",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookFiremansAlmanacSpeed",
+"live": "[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistAdrenalineFall",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistClaimed",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistGems",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistGoldRush",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistMotionDetection",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistSafes",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookGreatHeistSprintSneak",
+"live": "[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalBears",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalCoyotes",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalDeer",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalMountainLions",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalSelfDefense",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalVultures",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookHuntingJournalWolves",
+"live": "[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterAmmunition",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterBooks",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterBrass",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterDukes",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterFood",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterLead",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookLuckyLooterMedical",
+"live": "[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerArchery",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerBlades",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerSilentNight",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerSlumberParty",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerStealthDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerThiefAdrenaline",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookNightStalkerTwilightThief",
+"live": "[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteAPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteHPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteMaintenance",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteSteadyHand",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteSwissKnees",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookPistolPeteTakeAim",
+"live": "[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersAPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersArrowRecovery",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersCripplingShot",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersExplodingBolts",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersFlamingArrows",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersForestGuide",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookRangersKnockdown",
+"live": "[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahBreachingSlugs",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahLimbShot",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahMagazine",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahMaintenance",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahPartyStarter",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookShotgunMessiahSlugs",
+"live": "[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperAPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperControlledBreathing",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperCripplingShot",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperDamage",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperHeadShot",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperHPAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSniperReload",
+"live": "[ffcc01][-][FFA94D][Book][-] Sniper Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter1Damage",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter2Maintenance",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter3Bleed",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter4KillMove",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter5RapidStrike",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter6PenetratingShaft",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSpearHunter7QuickStrike",
+"live": "[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie1Damage",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie2Maintenance",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie3APAmmo",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie4Shells",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie5Repulsor",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie6BatonCharge",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookTechJunkie7Hydraulics",
+"live": "[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatAdrenalineRush",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatCigar",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatJumping",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatLanding",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatLandMines",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatRoomClearing",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookUrbanCombatSneaking",
+"live": "[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresAcid",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresCloth",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresCoffins",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresDoors",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresHoney",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresSinks",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookWasteTreasuresWater",
+"live": "[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaArmorCrusher",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 7",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaConcussiveStrike",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 6",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaCrippledMorale",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 3",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaDegradation",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 2",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaKnockdown",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 1",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaPulverizingFinishers",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 4",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "bookSledgeSagaSavageReaper",
+"live": "[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 5",
+"cat": "Book",
+"table": "Reading"
+},
+{
+"key": "foodCropBlueberries",
+"live": "[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Blueberries [00de50](2)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "foodCropCorn",
+"live": "[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Ear of Corn [00de50](2)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "foodCropGraceCorn",
+"live": "[f00003][-][FFA94D][Crops][-][fb0003][-][fe1000][-] Ear of Super Corn [00de50](3)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "foodCropMushrooms",
+"live": "[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Mushrooms [00de50](2)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "foodCropPotato",
+"live": "[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Potato [00de50](2)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "foodCropPumpkin",
+"live": "[f00003][-][FFA94D][Crops][-][fb0003][-][fe1000][-] Pumpkin [00de50](3)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "foodCropYuccaFruit",
+"live": "[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Yucca Fruit [00de50](2)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "biomeWeatherItem1",
+"live": "[FFA94D][Biome][-][dddd01][-][eeee01][-] Smoke Gear",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "biomeWeatherItem2",
+"live": "[FFA94D][Biome][-][dddd01][-][eeee02][-] Desert Gear",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "biomeWeatherItem3",
+"live": "[FFA94D][Biome][-][dddd01][-][eeee03][-] Snow Gear",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "biomeWeatherItem4",
+"live": "[FFA94D][Biome][-][dddd01][-][eeee04][-] Radiation Gear",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "foodChickenWings",
+"live": "[f00002][-][FFA94D][Food][-][fd0098][-][fe1000][-] Chicken Wings [00de50](98)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodChickenNuggets",
+"live": "[f00002][-][FFA94D][Food][-][fd0025][-][fe1000][-] Chicken Nuggets [00de50](25)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodAshChickenStew",
+"live": "[f00002][-][FFA94D][Food][-][fd0075][-][fe1020][-] Ash Chicken Stew [00de50](75)[-][00c8ff](20)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodRoadrunnerChickenJerky",
+"live": "[f00002][-][FFA94D][Food][-][fd0030][-][fe1000][-] Roadrunner Chicken Jerky [00de50](30)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodFrostbiteSmoothie",
+"live": "[FFA94D][Biome][-][dddd02][-][eeee03][-] Scorcher Stew",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "foodOasisSmoothie",
+"live": "[FFA94D][Biome][-][dddd02][-][eeee02][-] Sunstroke Tonic",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "foodBurntSmoothie",
+"live": "[FFA94D][Biome][-][dddd02][-][eeee01][-] Black Lung Serum",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "foodAtomicSmoothie",
+"live": "[FFA94D][Biome][-][dddd02][-][eeee04][-] Fallout Flush",
+"cat": "Biome",
+"table": "Biome"
+},
+{
+"key": "foodCropMushroomsRadiated",
+"live": "[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Radiated Mushrooms [00de50](2)[-]",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "resourceCropAloeLeaf",
+"live": "[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Aloe Vera Leaf",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "resourceCropChrysanthemumPlant",
+"live": "[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Chrysanthemum",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "resourceCropCoffeeBeans",
+"live": "[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Coffee Beans",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "resourceCropCottonPlant",
+"live": "[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Cotton",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "resourceCropGoldenrodPlant",
+"live": "[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Goldenrod Flower",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "resourceCropHopsFlower",
+"live": "[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Hops Flower",
+"cat": "Crop",
+"table": "Crop"
+},
+{
+"key": "drinkCanMegaCrush",
+"live": "[f00001][-][FFA94D][Drink][-][ed0060][-][ee1000][-] Mega Crush [00c8ff](60)[-]",
+"cat": "Drink-Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarBeer",
+"live": "[f00005][-][FFA94D][Special][-][a00005][-] Beer [DECEA3](I)[-]",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarBlackStrapCoffee",
+"live": "[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Blackstrap Coffee [00c8ff](24)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarBoiledWater",
+"live": "[f00001][-][FFA94D][Drink][-][ed0020][-][ee1000][-] Water [00c8ff](20)[-][DECEA3](I)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarCoffee",
+"live": "[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Coffee [00c8ff](24)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarGoldenRodTea",
+"live": "[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Goldenrod Tea [00c8ff](24)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarGrandpasAwesomeSauce",
+"live": "[f00005][-][FFA94D][Special][-][a00001][-] Grandpa's Awesome Sauce",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarGrandpasForgettingElixir",
+"live": "[f00005][-][FFA94D][Special][-][a00002][-] Grandpa's Fergit'n Elixir",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarGrandpasLearningElixir",
+"live": "[f00005][-][FFA94D][Special][-][a00003][-] Grandpa's Learnin' Elixir",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarGrandpasMoonshine",
+"live": "[f00005][-][FFA94D][Special][-][a00004][-] Grandpa's Moonshine",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarPureMineralWater",
+"live": "[f00001][-][FFA94D][Drink][-][ed0060][-][ee1000][-] Pure Mineral Water [00c8ff](60)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarRedTea",
+"live": "[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Red Tea [00c8ff](24)[-][DECEA3](I)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarRiverWater",
+"live": "[f00001][-][FFA94D][Drink][-][ed0010][-][ee1000][-] Murky Water [00c8ff](10)[-][DECEA3](I)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkJarYuccaJuice",
+"live": "[f00001][-][FFA94D][Drink][-][ed0034][-][ee1000][-] Yucca Juice [00c8ff](34)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "drinkYuccaJuiceSmoothie",
+"live": "[f00001][-][FFA94D][Drink][-][ed0078][-][ee1022][-] Yucca Juice Smoothie [00c8ff](78)[-][00de50](22)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "foodBaconAndEggs",
+"live": "[f00002][-][FFA94D][Food][-][fd0036][-][fe1000][-] Bacon and Eggs [00de50](36)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodBakedPotato",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe0995][-] Baked Potato [00de50](10)[-][00c8ff](-5)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodBlueberryPie",
+"live": "[f00002][-][FFA94D][Food][-][fd0045][-][fe1000][-] Blueberry Pie [00de50](45)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodBoiledMeat",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe1010][-] Boiled Meat [00de50](10)[-][00c8ff](10)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodCharredMeat",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe0995][-] Charred Meat [00de50](10)[-][00c8ff](-5)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodChiliDog",
+"live": "[f00002][-][FFA94D][Food][-][fd0053][-][fe1000][-] Chili Dog [00de50](53)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodCornBread",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe1000][-] Corn Bread [00de50](10)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodCornMeal",
+"live": "[f00002][-][FFA94D][Food][-][fd0002][-][fe0997][-] Cornmeal [00de50](2)[-][00c8ff](-3)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodCornOnTheCob",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe0995][-] Grilled Corn [00de50](10)[-][00c8ff](-5)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodEgg",
+"live": "[f00002][-][FFA94D][Food][-][fd0005][-][fe1000][-] Egg [00de50](5)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodEggBoiled",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe1000][-] Boiled Egg [00de50](10)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodFishTacos",
+"live": "[f00002][-][FFA94D][Food][-][fd0046][-][fe1000][-] Fish Tacos [00de50](46)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodGrilledMeat",
+"live": "[f00002][-][FFA94D][Food][-][fd0010][-][fe1000][-] Grilled Meat [00de50](10)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodGumboStew",
+"live": "[f00002][-][FFA94D][Food][-][fd0112][-][fe1020][-] Gumbo Stew [00de50](112)[-][00c8ff](20)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodHoboStew",
+"live": "[f00002][-][FFA94D][Food][-][fd0064][-][fe1020][-] Hobo Stew [00de50](64)[-][00c8ff](20)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodMeatStew",
+"live": "[f00002][-][FFA94D][Food][-][fd0050][-][fe1020][-] Meat Stew [00de50](50)[-][00c8ff](20)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodPumpkinBread",
+"live": "[f00002][-][FFA94D][Food][-][fd0012][-][fe1000][-] Pumpkin Bread [00de50](12)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodPumpkinCheesecake",
+"live": "[f00002][-][FFA94D][Food][-][fd0042][-][fe1000][-] Pumpkin Cheesecake [00de50](42)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodPumpkinPie",
+"live": "[f00002][-][FFA94D][Food][-][fd0050][-][fe1000][-] Pumpkin Pie [00de50](50)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodRawMeat",
+"live": "[f00002][-][FFA94D][Food][-][fd0002][-][fe1000][-] Raw Meat [00de50](2)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodRottingFlesh",
+"live": "[f00002][-][FFA94D][Food][-][fd0001][-][fe1000][-] Rotting Flesh [00de50](1)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodShamChowder",
+"live": "[f00002][-][FFA94D][Food][-][fd0053][-][fe1010][-] Sham Chowder [00de50](53)[-][00c8ff](10)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodShamSandwich",
+"live": "[f00002][-][FFA94D][Food][-][fd0015][-][fe1000][-] Old Sham Sandwich [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodShepardsPie",
+"live": "[f00002][-][FFA94D][Food][-][fd0104][-][fe1000][-] Shepherd's Pie [00de50](104)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodSpaghetti",
+"live": "[f00002][-][FFA94D][Food][-][fd0122][-][fe1000][-] Spaghetti [00de50](122)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodSteakAndPotato",
+"live": "[f00002][-][FFA94D][Food][-][fd0050][-][fe1000][-] Steak and Potato Meal [00de50](50)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodTunaFishGravyToast",
+"live": "[f00002][-][FFA94D][Food][-][fd0090][-][fe1000][-] Tuna Fish Gravy Toast [00de50](90)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodVegetableStew",
+"live": "[f00002][-][FFA94D][Food][-][fd0031][-][fe1020][-] Vegetable Stew [00de50](31)[-][00c8ff](20)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "resourceAnimalFat",
+"live": "[f00002][-][FFA94D][Food][-][fd0005][-][fe1000][-] Animal Fat [00de50](5)[-][DECEA3](I)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodCanBeef",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Large Beef Ration [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanCatfood",
+"live": "[f00004][-][FFA94D][Canned][-][fc0010][-][fe1000][-] Can of Cat Food [00de50](10)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanChicken",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Chicken Ration [00de50](15)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanChili",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Chili [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanDogfood",
+"live": "[f00004][-][FFA94D][Canned][-][fc0010][-][fe1000][-] Can of Dog Food [00de50](10)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanLamb",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Lamb Rations [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanMiso",
+"live": "[f00004][-][FFA94D][Canned][-][fc0010][-][fe1010][-] Can of Miso [00de50](10)[-][00c8ff](10)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanPasta",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Pasta [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanPears",
+"live": "[f00004][-][FFA94D][Canned][-][fc0010][-][fe1005][-] Can of Pears [00de50](10)[-][00c8ff](5)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanPeas",
+"live": "[f00004][-][FFA94D][Canned][-][fc0010][-][fe1005][-] Can of Peas [00de50](10)[-][00c8ff](5)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanSalmon",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Salmon [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanSham",
+"live": "[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Sham [00de50](15)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanSoup",
+"live": "[f00004][-][FFA94D][Canned][-][fc0010][-][fe1010][-] Chicken Soup [00de50](10)[-][00c8ff](10)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanStock",
+"live": "[f00004][-][FFA94D][Canned][-][fc0005][-][fe1010][-] Can of Stock [00de50](5)[-][00c8ff](10)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "foodCanTuna",
+"live": "[f00004][-][FFA94D][Canned][-][fc0005][-][fe1000][-] Can of Tuna [00de50](5)[-][DECEA3](I)[-]",
+"cat": "Food-Canned",
+"table": "Consumable"
+},
+{
+"key": "drugAtomJunkies",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Atom Junkies",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugCovertCats",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Covert Cats",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugEyeKandy",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Eye Candy",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugHackers",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Hackers",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugJailBreakers",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Jail Breakers",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugNerdTats",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Nerd Tats",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugOhShitzDrops",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Oh Shitz Drops",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugRockBusters",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Rock Busters",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugSkullCrushers",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Skull Crushers",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "drugSugarButts",
+"live": "[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Sugar Butts",
+"cat": "Candy",
+"table": "Consumable"
+},
+{
+"key": "armorSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Armored Up",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "bladesSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Knife Guy",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "bowsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Bow Hunters",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "clubsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Big Hitters",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "electricianSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Wiring 101",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "explosivesSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Explosive Magazine",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "foodSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Home Cooking Weekly",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "handgunsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Handgun Magazine",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "harvestingToolsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Tools Digest",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "knucklesSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Furious Fists",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "machineGunsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Tactical Warfare",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "medicalSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Medical Journal",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "repairToolsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Handy Land",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "riflesSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Rifle World",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "roboticsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Tech Planet",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "salvageToolsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Scrapping 4 Fun",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "seedSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Southern Farming",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "shotgunsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Shotgun Weekly",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "sledgehammersSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Get Hammered",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "spearsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Sharp Sticks",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "trapsSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Electrical Traps",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "vehiclesSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Vehicle Adventures",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "workstationSkillMagazine",
+"live": "[ffcc01][-][FFA94D][Magazine][-] Forge Ahead",
+"cat": "Magazine",
+"table": "Reading"
+},
+{
+"key": "drugAntibiotics",
+"live": "[f00007][-][FFA94D][Medical][-][b00003][-] Antibiotics [FFA94D](25%)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "drugFortBites",
+"live": "[f00005][-][FFA94D][Special][-][a00006][-] Fort Bites [00c8ff](-20)[-]",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drugHerbalAntibiotics",
+"live": "[f00007][-][FFA94D][Medical][-][b00002][-] Herbal Antibiotics [FFA94D](10%)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "drugPainkillers",
+"live": "[f00007][-][FFA94D][Medical][-][b00005][-] Painkillers [00c8ff](-40)[-][FF5555](40)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "drugRecog",
+"live": "[f00005][-][FFA94D][Special][-][a00007][-] Recog [00c8ff](-30)[-]",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drugSteroids",
+"live": "[f00005][-][FFA94D][Special][-][a00008][-] Steroids [00c8ff](-30)[-]",
+"cat": "Special",
+"table": "Consumable"
+},
+{
+"key": "drugVitamins",
+"live": "[f00007][-][FFA94D][Medical][-][b00004][-] Vitamins [DECEA3](I)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "foodHoney",
+"live": "[f00007][-][FFA94D][Medical][-][b00001][-] Jar of Honey [FF5555](3)[-][FFA94D](5%)[-][DECEA3](I)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalAloeCream",
+"live": "[f00007][-][FFA94D][Medical][-][b00008][-] Aloe Cream [FF5555](5)[-][DECEA3](I)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalBandage",
+"live": "[f00007][-][FFA94D][Medical][-][b00009][-] Bandage [DECEA3](I)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalBloodBag",
+"live": "[f00007][-][FFA94D][Medical][-][b00012][-] Blood Bag [DECEA3](I)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalFirstAidBandage",
+"live": "[f00007][-][FFA94D][Medical][-][b00010][-] First Aid Bandage [FF5555](30)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalFirstAidKit",
+"live": "[f00007][-][FFA94D][Medical][-][b00011][-] First Aid Kit [FF5555](180)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalPlasterCast",
+"live": "[f00007][-][FFA94D][Medical][-][b00007][-] Plaster Cast",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "medicalSplint",
+"live": "[f00007][-][FFA94D][Medical][-][b00006][-] Splint",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "armorParts",
+"live": "[FFA94D][Parts][-] Armor",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunBotRoboticsParts",
+"live": "[FFA94D][Parts][-] Robotics",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunBowT1WoodenBowParts",
+"live": "[FFA94D][Parts][-] Bow / Crossbow",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunExplosivesT3RocketLauncherParts",
+"live": "[FFA94D][Parts][-] Rocket Launcher",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunHandgunT1PistolParts",
+"live": "[FFA94D][Parts][-] Handgun",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunMGT1AK47Parts",
+"live": "[FFA94D][Parts][-] Machine Gun",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunRifleT1HuntingRifleParts",
+"live": "[FFA94D][Parts][-] Rifle",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "gunShotgunT1DoubleBarrelParts",
+"live": "[FFA94D][Parts][-] Shotgun",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeToolAllSteelParts",
+"live": "[FFA94D][Parts][-] Steel Tool",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeToolAxeT3ChainsawParts",
+"live": "[FFA94D][Parts][-] Motor Tool",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeWpnBatonT2StunBatonParts",
+"live": "[FFA94D][Parts][-] Baton",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeWpnBladeT3MacheteParts",
+"live": "[FFA94D][Parts][-] Machete",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeWpnClubT3SteelClubParts",
+"live": "[FFA94D][Parts][-] Steel Club",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeWpnKnucklesT3SteelKnucklesParts",
+"live": "[FFA94D][Parts][-] Steel Knuckles",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeWpnSledgeT3SteelSledgehammerParts",
+"live": "[FFA94D][Parts][-] Steel Sledgehammer",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "meleeWpnSpearT3SteelSpearParts",
+"live": "[FFA94D][Parts][-] Steel Spear",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "resourceArmorCraftingKit",
+"live": "[FFA94D][Parts][-] Armor Crafting Kit",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "resourceElectricParts",
+"live": "[dddd04][-][eeee13][-][FFA94D][Resource][-] Electrical Parts",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceLegendaryParts",
+"live": "[FFA94D][Parts][-] Legendary",
+"cat": "Parts",
+"table": "Parts"
+},
+{
+"key": "resourceMechanicalParts",
+"live": "[dddd04][-][eeee12][-][FFA94D][Resource][-] Mechanical Parts",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "questReward4x4PartsBundle",
+"live": "[FFA94D][Reward][-][dddd04][-][eeee02][-] [dddd04][-][eeee02][-]4x4 Parts Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardAmmoCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd05][-][eeee01][-] [dddd05][-][eeee01][-]Ammo Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardAutoTurretBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee08][-] [dddd03][-][eeee08][-]Auto Turret Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardBatonCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee01][-] [dddd06][-][eeee01][-]Baton Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardBatteryBankBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee01][-] [dddd03][-][eeee01][-]Battery Bank Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardBladeTrapBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee06][-] [dddd03][-][eeee06][-]Blade Trap Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardBowCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee02][-] [dddd06][-][eeee02][-]Bow Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardDartTrapBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee07][-] [dddd03][-][eeee07][-]Dart Trap Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardFarmT1Bundle",
+"live": "[FFA94D][Reward][-][dddd02][-][eeee04][-] [dddd02][-][eeee04][-]Farm Bundle 01",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardFarmT2Bundle",
+"live": "[FFA94D][Reward][-][dddd02][-][eeee05][-] [dddd02][-][eeee05][-]Farm Bundle 02",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardFarmT3Bundle",
+"live": "[FFA94D][Reward][-][dddd02][-][eeee06][-] [dddd02][-][eeee06][-]Farm Bundle 03",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardGeneratorBankBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee02][-] [dddd03][-][eeee02][-]Generator Bank Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardGyrocopterPartsBundle",
+"live": "[FFA94D][Reward][-][dddd04][-][eeee03][-] [dddd04][-][eeee03][-]Gyrocopter Parts Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardHandgunCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee06][-] [dddd06][-][eeee06][-]Pistol Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryBatonCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee01][-] [dddd10][-][eeee01][-]Legendary Baton Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryBowCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee02][-] [dddd10][-][eeee02][-]Legendary Bow Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryHandgunCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee06][-] [dddd10][-][eeee06][-]Legendary Pistol Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryMacheteCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee03][-] [dddd10][-][eeee03][-]Legendary Machete Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryMachineGunCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee04][-] [dddd10][-][eeee04][-]Legendary Machine Gun Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryMotorToolsCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee05][-] [dddd10][-][eeee05][-]Legendary Motor Tools Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryRifleCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee07][-] [dddd10][-][eeee07][-]Legendary Rifle Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryRoboticsCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee08][-] [dddd10][-][eeee08][-]Legendary Robotics Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryRocketLauncherCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee09][-] [dddd10][-][eeee09][-]Legendary Rocket Launcher Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendaryShotgunCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee10][-] [dddd10][-][eeee10][-]Legendary Shotgun Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendarySteelClubCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee11][-] [dddd10][-][eeee11][-]Legendary Steel Club Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendarySteelKnuckleCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee12][-] [dddd10][-][eeee12][-]Legendary Steel Knuckle Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendarySteelSledgehammerCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee13][-] [dddd10][-][eeee13][-]Legendary Steel Sledgehammer Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendarySteelSpearCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee14][-] [dddd10][-][eeee14][-]Legendary Steel Spear Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardLegendarySteelToolsCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee15][-] [dddd10][-][eeee15][-]Legendary Steel Tools Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardMacheteCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee03][-] [dddd06][-][eeee03][-]Machete Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardMachineGunCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee04][-] [dddd06][-][eeee04][-]Machine Gun Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardMinibikePartsBundle",
+"live": "[FFA94D][Reward][-][dddd04][-][eeee04][-] [dddd04][-][eeee04][-]Minibike Parts Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardMotorcyclePartsBundle",
+"live": "[FFA94D][Reward][-][dddd04][-][eeee05][-] [dddd04][-][eeee05][-]Motorcycle Parts Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardMotorToolsCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee05][-] [dddd06][-][eeee05][-]Motor Tools Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardPipeBatonBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee01][-] [dddd07][-][eeee01][-]Pipe Baton Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardPipeMachineGunBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee02][-] [dddd07][-][eeee02][-]Pipe Machine Gun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardPipePistolBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee04][-] [dddd07][-][eeee04][-]Pipe Pistol Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardPipeRifleBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee06][-] [dddd07][-][eeee06][-]Pipe Rifle Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardPipeShotgunBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee08][-] [dddd07][-][eeee08][-]Pipe Shotgun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardRifleCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee07][-] [dddd06][-][eeee07][-]Rifle Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardRoboticsCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee08][-] [dddd06][-][eeee08][-]Robotics Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardRocketLauncherCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee09][-] [dddd06][-][eeee09][-]Rocket Launcher Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSecuritySystemBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee10][-] [dddd03][-][eeee10][-]Security Camera Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardShotgunCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee10][-] [dddd06][-][eeee10][-]Shotgun Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardShotgunTurretBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee09][-] [dddd03][-][eeee09][-]Shotgun Turret Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSolarBankBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee03][-] [dddd03][-][eeee03][-]Solar Bank Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSteelClubCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee11][-] [dddd06][-][eeee11][-]Steel Club Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSteelKnuckleCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee12][-] [dddd06][-][eeee12][-]Steel Knuckle Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSteelSledgehammerCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee13][-] [dddd06][-][eeee13][-]Steel Sledgehammer Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSteelSpearCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee14][-] [dddd06][-][eeee14][-]Steel Spear Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardSteelToolsCraftingBundle",
+"live": "[FFA94D][Reward][-][dddd06][-][eeee15][-] [dddd06][-][eeee15][-]Steel Tools Crafting Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT0HandgunBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee05][-] [dddd07][-][eeee05][-]Pipe Pistol Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT0MachineGunBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee03][-] [dddd07][-][eeee03][-]Pipe Machine Gun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT0RifleBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee07][-] [dddd07][-][eeee07][-]Pipe Rifle Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT0ShotgunBundle",
+"live": "[FFA94D][Reward][-][dddd07][-][eeee09][-] [dddd07][-][eeee09][-]Pipe Shotgun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1BookBundle",
+"live": "[FFA94D][Reward][-][dddd01][-][eeee01][-] [dddd01][-][eeee01][-]3 Book Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1HandgunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee01][-] [dddd08][-][eeee01][-]Pistol Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1MachineGunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee10][-] [dddd08][-][eeee10][-]AK-47 Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1MeleeModsBundle",
+"live": "[FFA94D][Reward][-][dddd09][-][eeee01][-] [dddd09][-][eeee01][-]Melee Mods Bundle 01",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1RangedModsBundle",
+"live": "[FFA94D][Reward][-][dddd09][-][eeee04][-] [dddd09][-][eeee04][-]Ranged Mods Bundle 01",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1RifleBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee04][-] [dddd08][-][eeee04][-]Hunting Rifle Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1ShotgunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee07][-] [dddd08][-][eeee07][-]Double Barrel Shotgun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1SkillMagazineBundle",
+"live": "[FFA94D][Reward][-][dddd01][-][eeee06][-] [dddd01][-][eeee06][-]Crafting Skill Magazine Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT1TrapsBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee04][-] [dddd03][-][eeee04][-]Traps Bundle 01",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2BookBundle",
+"live": "[FFA94D][Reward][-][dddd01][-][eeee02][-] [dddd01][-][eeee02][-]4 Book Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2FoodBundle",
+"live": "[FFA94D][Reward][-][dddd02][-][eeee01][-] [dddd02][-][eeee01][-]Food Bundle 01",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2HandgunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee02][-] [dddd08][-][eeee02][-].44 Magnum Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2MachineGunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee11][-] [dddd08][-][eeee11][-]Tactical Assault Rifle Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2MeleeModsBundle",
+"live": "[FFA94D][Reward][-][dddd09][-][eeee02][-] [dddd09][-][eeee02][-]Melee Mods Bundle 02",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2RangedModsBundle",
+"live": "[FFA94D][Reward][-][dddd09][-][eeee05][-] [dddd09][-][eeee05][-]Ranged Mods Bundle 02",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2RifleBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee05][-] [dddd08][-][eeee05][-]Lever Action Rifle Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2ShotgunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee08][-] [dddd08][-][eeee08][-]Pump Shotgun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT2TrapsBundle",
+"live": "[FFA94D][Reward][-][dddd03][-][eeee05][-] [dddd03][-][eeee05][-]Traps Bundle 02",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3BookBundle",
+"live": "[FFA94D][Reward][-][dddd01][-][eeee03][-] [dddd01][-][eeee03][-]5 Book Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3FoodBundle",
+"live": "[FFA94D][Reward][-][dddd02][-][eeee02][-] [dddd02][-][eeee02][-]Food Bundle 02",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3HandgunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee03][-] [dddd08][-][eeee03][-].44 Desert Vulture Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3HandgunLegendaryBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee16][-] [dddd10][-][eeee16][-].44 Desert Vulture Legendary Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3MachineGunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee12][-] [dddd08][-][eeee12][-]M60 Machine Gun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3MachineGunLegendaryBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee19][-] [dddd10][-][eeee19][-]M60 Machine Gun Legendary Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3MeleeModsBundle",
+"live": "[FFA94D][Reward][-][dddd09][-][eeee03][-] [dddd09][-][eeee03][-]Melee Mods Bundle 03",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3RangedModsBundle",
+"live": "[FFA94D][Reward][-][dddd09][-][eeee06][-] [dddd09][-][eeee06][-]Ranged Mods Bundle 03",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3RifleBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee06][-] [dddd08][-][eeee06][-]Sniper Rifle Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3RifleLegendaryBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee17][-] [dddd10][-][eeee17][-]Sniper Rifle Legendary Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3ShotgunBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee09][-] [dddd08][-][eeee09][-]Auto Shotgun Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3ShotgunLegendaryBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee18][-] [dddd10][-][eeee18][-]Auto Shotgun Legendary Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3SMGBundle",
+"live": "[FFA94D][Reward][-][dddd08][-][eeee13][-] [dddd08][-][eeee13][-]SMG-5 Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT3SMGLegendaryBundle",
+"live": "[FFA94D][Reward][-][dddd10][-][eeee20][-] [dddd10][-][eeee20][-]SMG-5 Legendary Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT4BookBundle",
+"live": "[FFA94D][Reward][-][dddd01][-][eeee04][-] [dddd01][-][eeee04][-]6 Book Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT4FoodBundle",
+"live": "[FFA94D][Reward][-][dddd02][-][eeee03][-] [dddd02][-][eeee03][-]Food Bundle 03",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "questRewardT5BookBundle",
+"live": "[FFA94D][Reward][-][dddd01][-][eeee05][-] [dddd01][-][eeee05][-]7 Book Bundle",
+"cat": "Bundle",
+"table": "Bundle"
+},
+{
+"key": "foodCanShamSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Can of Sham",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorAdvancedMuffledConnectorsSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Advanced Muffled Connectors",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorBandolierSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Bandolier",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorCustomizedFittingsSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Advanced Armor Fittings",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorDoubleStoragePocketSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Armor Double Pocket",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorImpactBracingSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Impact Bracing",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorImprovedFittingsSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Armor Fittings",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorMuffledConnectorsSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Muffled Connectors",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorPlatingBasicSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Armor Plating",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorPlatingReinforcedSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Advanced Armor Plating",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorStoragePocketSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Armor Pocket",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorTripleStoragePocketSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Armor Triple Pocket",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modArmorWaterPurifierSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Water Purifier",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modFuelTankLargeSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Motor Tool Large Tank",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modFuelTankSmallSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Motor Tool Small Tank",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunBarrelExtenderSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Barrel Extender",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunBipodSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Bipod",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunBowArrowRestSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Arrow Rest",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunBowPolymerStringSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Polymer String",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunChokeSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Shotgun Choke",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunCrippleEmSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Cripple 'Em",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunDuckbillSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Shotgun Duckbill",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunFlashlightSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Weapon Flashlight",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunForegripSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Fore Grip",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunLaserSightSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Laser Sight",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunMagazineExtenderSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Magazine Extender",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunMeleeRadRemoverSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Rad Remover",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunMeleeTheHunterSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] The Hunter",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunMuzzleBrakeSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Muzzle Brake",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunReflexSightSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Reflex Sight",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunRetractingStockSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Retracting Stock",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunScopeLargeSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Scope 8x",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunScopeMediumSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Scope 4x",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunScopeSmallSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Scope 2x",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunSoundSuppressorSilencerSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Silencer",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunTriggerGroupAutomaticSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Trigger Group: Full Auto",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunTriggerGroupBurst3Schematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Trigger Group: Burst",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modGunTriggerGroupSemiSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Trigger Group: Semi",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeBunkerBusterSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Bunker Buster",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeClubBarbedWireSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Barbed Wire",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeClubBurningShaftSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Burning Shaft",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeClubMetalSpikesSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Metal Spikes",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeErgonomicGripSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Ergonomic Grip",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeFortifyingGripSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Fortifying Grip",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeGraveDiggerSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Grave Digger",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeIronBreakerSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Iron Breaker",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeSerratedBladeSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Serrated Blade",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeStructuralBraceSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Structural Brace",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeTemperedBladeSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Tempered Blade",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeWeightedHeadSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Weighted Head",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modMeleeWoodSplitterSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Wood Splitter",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modRoboticDroneArmorPlatingModSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Armor Plating",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modRoboticDroneCargoModSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Cargo",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modRoboticDroneHeadlampModSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Robotic Headlamp",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modRoboticDroneMedicModSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Medic",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modRoboticDroneMoraleBoosterModSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Morale Booster",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modShotgunSawedOffBarrelSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Sawed-Off Shotgun",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehicleArmorSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Armor",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehicleExpandedSeatSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Expanded Seating",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehicleFuelSaverSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Fuel Saver",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehicleOffRoadHeadlightsSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Off Road Headlights",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehiclePlowSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Plow",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehicleReserveFuelTankSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Reserve Fuel Tank",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "modVehicleSuperChargerSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Super Charger",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "plantedGraceCorn1Schematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Super Corn",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "ammoBundle44MagnumBulletAP",
+"live": "[dddd01][-][eeee03][-][FFA94D][Ammo][-] .44 Magnum, AP [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle44MagnumBulletBall",
+"live": "[dddd01][-][eeee01][-][FFA94D][Ammo][-] .44 Magnum [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle44MagnumBulletHP",
+"live": "[dddd01][-][eeee02][-][FFA94D][Ammo][-] .44 Magnum, HiPower [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle762mmBulletAP",
+"live": "[dddd02][-][eeee03][-][FFA94D][Ammo][-] 7.62mm, AP [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle762mmBulletBall",
+"live": "[dddd02][-][eeee01][-][FFA94D][Ammo][-] 7.62mm [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle762mmBulletHP",
+"live": "[dddd02][-][eeee02][-][FFA94D][Ammo][-] 7.62mm, HiPower [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle9mmBulletAP",
+"live": "[dddd03][-][eeee03][-][FFA94D][Ammo][-] 9mm, AP [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle9mmBulletBall",
+"live": "[dddd03][-][eeee01][-][FFA94D][Ammo][-] 9mm [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundle9mmBulletHP",
+"live": "[dddd03][-][eeee02][-][FFA94D][Ammo][-] 9mm, HiPower [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleArrowExploding",
+"live": "[dddd04][-][eeee05][-][FFA94D][Ammo][-] Arrow, Exploding [DECEA3](75)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleArrowFlaming",
+"live": "[dddd04][-][eeee04][-][FFA94D][Ammo][-] Arrow, Flaming [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleArrowIron",
+"live": "[dddd04][-][eeee02][-][FFA94D][Ammo][-] Arrow, Iron [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleArrowSteelAP",
+"live": "[dddd04][-][eeee03][-][FFA94D][Ammo][-] Arrow, Steel [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleArrowStone",
+"live": "[dddd04][-][eeee01][-][FFA94D][Ammo][-] Arrow, Stone [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleCrossbowBoltExploding",
+"live": "[dddd05][-][eeee05][-][FFA94D][Ammo][-] Bolt, Exploding [DECEA3](75)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleCrossbowBoltFlaming",
+"live": "[dddd05][-][eeee04][-][FFA94D][Ammo][-] Bolt, Flaming [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleCrossbowBoltIron",
+"live": "[dddd05][-][eeee02][-][FFA94D][Ammo][-] Bolt, Iron [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleCrossbowBoltSteelAP",
+"live": "[dddd05][-][eeee03][-][FFA94D][Ammo][-] Bolt, Steel [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleCrossbowBoltStone",
+"live": "[dddd05][-][eeee01][-][FFA94D][Ammo][-] Bolt, Stone [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleJunkTurretAP",
+"live": "[dddd08][-][eeee03][-][FFA94D][Ammo][-] Robotic Turret, AP [DECEA3](1000)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleJunkTurretRegular",
+"live": "[dddd08][-][eeee01][-][FFA94D][Ammo][-] Robotic Turret [DECEA3](1000)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleJunkTurretShell",
+"live": "[dddd08][-][eeee02][-][FFA94D][Ammo][-] Robotic Turret, Shells [DECEA3](1000)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleShotgunBreachingSlug",
+"live": "[dddd07][-][eeee03][-][FFA94D][Ammo][-] Shotgun, Slug, Breaching [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleShotgunShell",
+"live": "[dddd07][-][eeee01][-][FFA94D][Ammo][-] Shotgun, Shell [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoBundleShotgunSlug",
+"live": "[dddd07][-][eeee02][-][FFA94D][Ammo][-] Shotgun, Slug, AP [DECEA3](100)[-]",
+"cat": "Ammo",
+"table": "Ammo"
+},
+{
+"key": "ammoGasCanBundle",
+"live": "[bbbb00][-][eeee03][-] Gas Can Bundle [DECEA3](5000)[-]",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "resourceCoalBundle",
+"live": "[dddd02][-][eeee09][-][FFA94D][Ore][-] Coal Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceGunPowderBundle",
+"live": "[dddd00][-][eeee01][-][FFA94D][Ammo-I][-] Gunpowder Bundle [DECEA3](1000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceLeadBundle",
+"live": "[dddd02][-][eeee06][-][FFA94D][Ore][-] Lead Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceLockPickBundle",
+"live": "[bbbb00][-][eeee02][-] Lockpick Bundle [DECEA3](50)[-]",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "resourceOilShaleBundle",
+"live": "[dddd02][-][eeee10][-][FFA94D][Ore][-] Oil Shale Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourcePotassiumNitratePowderBundle",
+"live": "[dddd02][-][eeee08][-][FFA94D][Ore][-] Nitrate Powder Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceRockSmallBundle",
+"live": "[dddd02][-][eeee02][-][FFA94D][Ore][-] Small Stone Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceScrapIronBundle",
+"live": "[dddd02][-][eeee05][-][FFA94D][Ore][-] Iron Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceWoodBundle",
+"live": "[dddd01][-][eeee01][-][FFA94D][Build][-] Wood Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "toolBeaker",
+"live": "[FFA94D][Station][-][dddd01][-][eeee03][-] Beaker [DECEA3](Campfire)[-]",
+"cat": "Station-C",
+"table": "Station"
+},
+{
+"key": "toolCookingGrill",
+"live": "[FFA94D][Station][-][dddd01][-][eeee02][-] Cooking Grill [DECEA3](Campfire)[-]",
+"cat": "Station-C",
+"table": "Station"
+},
+{
+"key": "toolCookingPot",
+"live": "[FFA94D][Station][-][dddd01][-][eeee01][-] Cooking Pot [DECEA3](Campfire)[-]",
+"cat": "Station-C",
+"table": "Station"
+},
+{
+"key": "toolDewFilter",
+"live": "[FFA94D][Station][-][dddd03][-][eeee03][-] Water Filter [DECEA3](Dew Collector)[-]",
+"cat": "Station-D",
+"table": "Station"
+},
+{
+"key": "toolDewGatherer",
+"live": "[FFA94D][Station][-][dddd03][-][eeee01][-] Gatherer [DECEA3](Dew Collector)[-]",
+"cat": "Station-D",
+"table": "Station"
+},
+{
+"key": "toolDewTarp",
+"live": "[FFA94D][Station][-][dddd03][-][eeee02][-] Tarp [DECEA3](Dew Collector)[-]",
+"cat": "Station-D",
+"table": "Station"
+},
+{
+"key": "toolAnvil",
+"live": "[FFA94D][Station][-][dddd02][-][eeee02][-] Anvil [DECEA3](Forge)[-]",
+"cat": "Station-F",
+"table": "Station"
+},
+{
+"key": "toolBellows",
+"live": "[FFA94D][Station][-][dddd02][-][eeee01][-] Advanced Bellows [DECEA3](Forge)[-]",
+"cat": "Station-F",
+"table": "Station"
+},
+{
+"key": "toolForgeCrucible",
+"live": "[FFA94D][Station][-][dddd02][-][eeee03][-] Crucible [DECEA3](Forge)[-]",
+"cat": "Station-F",
+"table": "Station"
+},
+{
+"key": "meleeToolRepairT0TazasStoneAxe",
+"live": "[bbbb01][-][eeee01][-] Taza's Stone Axe",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolRepairT0StoneAxe",
+"live": "[bbbb01][-][eeee02][-] Stone Axe",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolShovelT0StoneShovel",
+"live": "[bbbb03][-][eeee01][-] Stone Shovel",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolAxeT1IronFireaxe",
+"live": "[bbbb02][-][eeee01][-] Iron Fireaxe",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolPickT1IronPickaxe",
+"live": "[bbbb04][-][eeee01][-] Iron Pickaxe",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolShovelT1IronShovel",
+"live": "[bbbb03][-][eeee02][-] Iron Shovel",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolAxeT2SteelAxe",
+"live": "[bbbb02][-][eeee02][-] Steel Axe",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolPickT2SteelPickaxe",
+"live": "[bbbb04][-][eeee02][-] Steel Pickaxe",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolShovelT2SteelShovel",
+"live": "[bbbb03][-][eeee03][-] Steel Shovel",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolAxeT3Chainsaw",
+"live": "[bbbb02][-][eeee03][-] Chainsaw",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolPickT3Auger",
+"live": "[bbbb04][-][eeee03][-] Auger",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolRepairT1ClawHammer",
+"live": "[bbbb01][-][eeee03][-] Claw Hammer",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolRepairT3Nailgun",
+"live": "[bbbb01][-][eeee04][-] Nailgun",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolSalvageT1Wrench",
+"live": "[bbbb05][-][eeee01][-] Wrench",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolSalvageT2Ratchet",
+"live": "[bbbb05][-][eeee02][-] Ratchet",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolSalvageT3ImpactDriver",
+"live": "[bbbb05][-][eeee03][-] Impact Driver",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolTorch",
+"live": "[bbbb06][-][eeee01][-] Torch",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolFlashlight02",
+"live": "[bbbb06][-][eeee02][-] Flashlight",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolWireTool",
+"live": "[bbbb06][-][eeee03][-] Wire Tool",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeToolPaintTool",
+"live": "[bbbb06][-][eeee04][-] Paint Brush",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "meleeWpnSpearT0StoneSpear",
+"live": "[cccc05][-][eeee01][-] Stone Spear",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnSpearT1IronSpear",
+"live": "[cccc05][-][eeee02][-] Iron Spear",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnSpearT3SteelSpear",
+"live": "[cccc05][-][eeee03][-] Steel Spear",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnClubT1CandyClub",
+"live": "[cccc03][-][eeee03][-] Candy Cane Club",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnClubT0WoodenClub",
+"live": "[cccc03][-][eeee01][-] Wooden Club",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnClubT1BaseballBat",
+"live": "[cccc03][-][eeee02][-] Baseball Bat",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnClubT3SteelClub",
+"live": "[cccc03][-][eeee04][-] Steel Club",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnSledgeT0StoneSledgehammer",
+"live": "[cccc06][-][eeee01][-] Stone Sledgehammer",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnSledgeT1IronSledgehammer",
+"live": "[cccc06][-][eeee02][-] Iron Sledgehammer",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnSledgeT3SteelSledgehammer",
+"live": "[cccc06][-][eeee03][-] Steel Sledgehammer",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnKnucklesT0LeatherKnuckles",
+"live": "[cccc01][-][eeee01][-] Knuckle Wraps",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnKnucklesT1IronKnuckles",
+"live": "[cccc01][-][eeee02][-] Iron Knuckles",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnKnucklesT3SteelKnuckles",
+"live": "[cccc01][-][eeee03][-] Steel Knuckles",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnBladeT1CandyKnife",
+"live": "[cccc02][-][eeee02][-] Candy Cane Knife",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnBladeT0BoneKnife",
+"live": "[cccc02][-][eeee01][-] Bone Knife",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnBladeT1HuntingKnife",
+"live": "[cccc02][-][eeee03][-] Hunting Knife",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnBladeT3Machete",
+"live": "[cccc02][-][eeee04][-] Machete",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnBatonT0PipeBaton",
+"live": "[cccc04][-][eeee01][-] Pipe Baton",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "meleeWpnBatonT2StunBaton",
+"live": "[cccc04][-][eeee02][-] Stun Baton",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBowT0PrimitiveBow",
+"live": "[cccc07][-][eeee01][-] Primitive Bow",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBowT1WoodenBow",
+"live": "[cccc07][-][eeee02][-] Wooden Bow",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBowT3CompoundBow",
+"live": "[cccc07][-][eeee03][-] Compound Bow",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBowT1IronCrossbow",
+"live": "[cccc08][-][eeee01][-] Iron Crossbow",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBowT3CompoundCrossbow",
+"live": "[cccc08][-][eeee02][-] Compound Crossbow",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunShotgunT0PipeShotgun",
+"live": "[cccc10][-][eeee01][-] Pipe Shotgun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunShotgunT1DoubleBarrel",
+"live": "[cccc10][-][eeee02][-] Double Barrel Shotgun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunShotgunT2PumpShotgun",
+"live": "[cccc10][-][eeee03][-] Pump Shotgun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunShotgunT3AutoShotgun",
+"live": "[cccc10][-][eeee04][-] Auto Shotgun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunHandgunT0PipePistol",
+"live": "[cccc09][-][eeee01][-] Pipe Pistol",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunHandgunT1Pistol",
+"live": "[cccc09][-][eeee02][-] Pistol",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunHandgunT3SMG5",
+"live": "[cccc09][-][eeee03][-] SMG-5",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunHandgunT2Magnum44",
+"live": "[cccc09][-][eeee04][-] .44 Magnum",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunHandgunT3DesertVulture",
+"live": "[cccc09][-][eeee05][-] .44 Desert Vulture",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunRifleT0PipeRifle",
+"live": "[cccc11][-][eeee01][-] Pipe Rifle",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunRifleT1HuntingRifle",
+"live": "[cccc11][-][eeee02][-] Hunting Rifle",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunRifleT2LeverActionRifle",
+"live": "[cccc11][-][eeee03][-] Lever Action Rifle",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunRifleT3SniperRifle",
+"live": "[cccc11][-][eeee04][-] Sniper Rifle",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunMGT0PipeMachineGun",
+"live": "[cccc12][-][eeee01][-] Pipe Machine Gun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunMGT1AK47",
+"live": "[cccc12][-][eeee02][-] AK-47 Machine Gun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunMGT2TacticalAR",
+"live": "[cccc12][-][eeee03][-] Tactical Assault Rifle",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunMGT3M60",
+"live": "[cccc12][-][eeee04][-] M60 Machine Gun",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunExplosivesT3RocketLauncher",
+"live": "[cccc13][-][eeee01][-] Rocket Launcher",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBotT1JunkSledge",
+"live": "[cccc14][-][eeee01][-] Robotic Sledge",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBotT2JunkTurret",
+"live": "[cccc14][-][eeee02][-] Robotic Turret",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "gunBotT3JunkDrone",
+"live": "[cccc14][-][eeee03][-] Robotic Drone",
+"cat": "Weapon",
+"table": "Weapon"
+},
+{
+"key": "foodRawMeatBundle",
+"live": "[f00002][-][FFA94D][Food][-][fd0002][-][fe1000][-] Raw Meat Bundle [DECEA3](5)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "modVehicleStorageSchematic",
+"live": "[ffcc01][-][FFA94D][Schematic][-] Vehicle Storage",
+"cat": "Schematic",
+"table": "Reading"
+},
+{
+"key": "toolApiarySmoker",
+"live": "[FFA94D][Station][-][dddd04][-][eeee03][-] Smoker [DECEA3](Apiary)[-]",
+"cat": "Station-A",
+"table": "Station"
+},
+{
+"key": "toolApiaryBroodBox",
+"live": "[FFA94D][Station][-][dddd04][-][eeee02][-] Brood Box [DECEA3](Apiary)[-]",
+"cat": "Station-A",
+"table": "Station"
+},
+{
+"key": "toolApiaryExtractor",
+"live": "[FFA94D][Station][-][dddd04][-][eeee01][-] Honey Extractor [DECEA3](Apiary)[-]",
+"cat": "Station-A",
+"table": "Station"
+},
+{
+"key": "foodHoneyGlazedSham",
+"live": "[f00002][-][FFA94D][Food][-][fd0098][-][fe1000][-] Honey Glazed Sham [00de50](98)[-][FFA94D](5%)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "foodHoneyBrisket",
+"live": "[f00002][-][FFA94D][Food][-][fd0141][-][fe1000][-] Honey Brisket [00de50](141)[-][FFA94D](5%)[-]",
+"cat": "Food",
+"table": "Consumable"
+},
+{
+"key": "drinkJarHoneyTea",
+"live": "[f00001][-][FFA94D][Drink][-][ed0024][-][ee1008][-] Honey Tea [00c8ff](24)[-][00de50](8)[-][FFA94D](5%)[-]",
+"cat": "Drink-Special",
+"table": "Consumable"
+},
+{
+"key": "drinkJarEmpty",
+"live": "[f00001][-][FFA94D][Drink][-][ed0001][-][ee1000][-] Empty Water Jar [DECEA3](I)[-]",
+"cat": "Drink",
+"table": "Consumable"
+},
+{
+"key": "clothingFeetT1",
+"live": "[FFA94D][Clothing][-][aaaaad][-][aa0001][-] Tattered Socks [DECEA3](T1)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingFeetT2",
+"live": "[FFA94D][Clothing][-][aaaaad][-][aa0002][-] Patchwork Socks [DECEA3](T2)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingFeetT3",
+"live": "[FFA94D][Clothing][-][aaaaad][-][aa0003][-] ThermaCore Socks [DECEA3](T3)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingHandsT1",
+"live": "[FFA94D][Clothing][-][aaaaac][-][aa0001][-] Tattered Glove Liners [DECEA3](T1)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingHandsT2",
+"live": "[FFA94D][Clothing][-][aaaaac][-][aa0002][-] Patchwork Glove Liners [DECEA3](T2)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingHandsT3",
+"live": "[FFA94D][Clothing][-][aaaaac][-][aa0003][-] ThermaCore Glove Liners [DECEA3](T3)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingHeadT1",
+"live": "[FFA94D][Clothing][-][aaaaaa][-][aa0001][-] Tattered Cap Liner [DECEA3](T1)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingHeadT2",
+"live": "[FFA94D][Clothing][-][aaaaaa][-][aa0002][-] Patchwork Cap Liner [DECEA3](T2)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingHeadT3",
+"live": "[FFA94D][Clothing][-][aaaaaa][-][aa0003][-] ThermaCore Cap Liner [DECEA3](T3)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingOutfitT1",
+"live": "[FFA94D][Clothing][-][aaaaab][-][aa0001][-] Tattered Undergarments [DECEA3](T1)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingOutfitT2",
+"live": "[FFA94D][Clothing][-][aaaaab][-][aa0002][-] Patchwork Long Underwear [DECEA3](T2)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "clothingOutfitT3",
+"live": "[FFA94D][Clothing][-][aaaaab][-][aa0003][-] ThermaCore Combat Layer [DECEA3](T3)[-]",
+"cat": "Clothes",
+"table": "Clothes"
+},
+{
+"key": "ammoGasCan",
+"live": "[bbbb00][-][eeee03][-] Gas Can",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "vehicleWheels",
+"live": "[dddd06][-][eeee01][-][FFA94D][Vehicle][-] Wheel",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "smallEngine",
+"live": "[dddd06][-][eeee05][-][FFA94D][Vehicle][-] Engine",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "carBattery",
+"live": "[dddd06][-][eeee06][-][FFA94D][Vehicle][-] Car Battery",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleBicycleChassis",
+"live": "[dddd06][-][eeee07][-][FFA94D][Vehicle][-] Bicycle Chassis",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleBicycleHandlebars",
+"live": "[dddd06][-][eeee08][-][FFA94D][Vehicle][-] Bicycle Handlebars",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleMinibikeChassis",
+"live": "[dddd06][-][eeee09][-][FFA94D][Vehicle][-] Minibike Chassis",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleMinibikeHandlebars",
+"live": "[dddd06][-][eeee10][-][FFA94D][Vehicle][-] Minibike Handlebars",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleMotorcycleChassis",
+"live": "[dddd06][-][eeee11][-][FFA94D][Vehicle][-] Motorcycle Chassis",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleMotorcycleHandlebars",
+"live": "[dddd06][-][eeee12][-][FFA94D][Vehicle][-] Motorcycle Handlebars",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleTruck4x4Chassis",
+"live": "[dddd06][-][eeee13][-][FFA94D][Vehicle][-] 4x4 Truck Chassis",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleTruck4x4Accessories",
+"live": "[dddd06][-][eeee14][-][FFA94D][Vehicle][-] 4x4 Truck Accessories",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleGyroCopterChassis",
+"live": "[dddd06][-][eeee15][-][FFA94D][Vehicle][-] Gyrocopter Chassis",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleGyroCopterAccessories",
+"live": "[dddd06][-][eeee16][-][FFA94D][Vehicle][-] Gyrocopter Accessories",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleBicyclePlaceable",
+"live": "[dddd06][-][eeee17][-][FFA94D][Vehicle][-] Bicycle",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleMinibikePlaceable",
+"live": "[dddd06][-][eeee18][-][FFA94D][Vehicle][-] Minibike",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleMotorcyclePlaceable",
+"live": "[dddd06][-][eeee19][-][FFA94D][Vehicle][-] Motorcycle",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleTruck4x4Placeable",
+"live": "[dddd06][-][eeee20][-][FFA94D][Vehicle][-] 4x4 Truck",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "vehicleGyrocopterPlaceable",
+"live": "[dddd06][-][eeee21][-][FFA94D][Vehicle][-] Gyrocopter",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "solarCell",
+"live": "[dddd07][-][eeee01][-][FFA94D][Electric][-] Solar Cell",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "generatorbank",
+"live": "[dddd07][-][eeee02][-][FFA94D][Electric][-] Generator Bank",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "batterybank",
+"live": "[dddd07][-][eeee03][-][FFA94D][Electric][-] Battery Bank",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "carBatteryCharge",
+"live": "[dddd07][-][eeee03][-][FFA94D][Electric][-] Rechargeable Battery",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "solarbank",
+"live": "[dddd07][-][eeee04][-][FFA94D][Electric][-] Solar Bank",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "ceilingLight01_player",
+"live": "[dddd07][-][eeee05][-][FFA94D][Electric][-] Basic Light Bulb",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "ceilingLight07_player",
+"live": "[dddd07][-][eeee06][-][FFA94D][Electric][-] Fluorescent Light",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "spotlightPlayer",
+"live": "[dddd07][-][eeee07][-][FFA94D][Electric][-] Spotlight",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "switch",
+"live": "[dddd07][-][eeee08][-][FFA94D][Electric][-] Switch",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "electricwirerelay",
+"live": "[dddd07][-][eeee09][-][FFA94D][Electric][-] Electric Wire Relay",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "electrictimerrelay",
+"live": "[dddd07][-][eeee10][-][FFA94D][Electric][-] Electric Timer Relay",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "motionsensor",
+"live": "[dddd07][-][eeee11][-][FFA94D][Electric][-] Motion Sensor",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "pressureplate",
+"live": "[dddd07][-][eeee12][-][FFA94D][Electric][-] Trigger Plate 1x1",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "pressureplateLong",
+"live": "[dddd07][-][eeee13][-][FFA94D][Electric][-] Trigger Plate 1x5",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "tripwirepost",
+"live": "[dddd07][-][eeee14][-][FFA94D][Electric][-] Tripwire Post",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "speaker",
+"live": "[dddd07][-][eeee15][-][FFA94D][Electric][-] Speaker",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "electricfencepost",
+"live": "[dddd07][-][eeee16][-][FFA94D][Electric][-] Electric Fence Post",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "dartTrap",
+"live": "[dddd07][-][eeee17][-][FFA94D][Electric][-] Dart Trap",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "bladeTrap",
+"live": "[dddd07][-][eeee18][-][FFA94D][Electric][-] Blade Trap",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "autoTurret",
+"live": "[dddd07][-][eeee19][-][FFA94D][Electric][-] SMG Auto Turret",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "shotgunTurret",
+"live": "[dddd07][-][eeee20][-][FFA94D][Electric][-] Shotgun Auto Turret",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "m60Turret",
+"live": "[dddd07][-][eeee21][-][FFA94D][Electric][-] M60 Auto Turret",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceAcid",
+"live": "[dddd06][-][eeee02][-][FFA94D][Vehicle][-] Acid",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceBeeswax",
+"live": "[FFA94D][Station][-][dddd04][-][eeee00][-] Beeswax [DECEA3](Apiary)[-]",
+"cat": "Station-A",
+"table": "Station"
+},
+{
+"key": "resourceBone",
+"live": "[dddd04][-][eeee04][-][FFA94D][Resource][-] Bone",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceBrokenGlass",
+"live": "[dddd08][-][eeee05][-][FFA94D][Smelt][-] Broken Glass",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceCandleStick",
+"live": "[dddd08][-][eeee01][-][FFA94D][Smelt][-] Brass Candlestick",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceCement",
+"live": "[dddd02][-][eeee04][-][FFA94D][Ore][-] Cement",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceChickenFeed",
+"live": "[FFA94D][Station][-][dddd05][-][eeee00][-] Chicken Feed [DECEA3](Chicken Coop)[-]",
+"cat": "Station-H",
+"table": "Station"
+},
+{
+"key": "resourceClayLump",
+"live": "[dddd02][-][eeee01][-][FFA94D][Ore][-] Clay Soil",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceCloth",
+"live": "[dddd04][-][eeee02][-][FFA94D][Resource][-] Cloth Fragment",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceCoal",
+"live": "[dddd02][-][eeee09][-][FFA94D][Ore][-] Coal",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceCobblestones",
+"live": "[dddd01][-][eeee02][-][FFA94D][Build][-] Cobblestone Rocks",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceConcreteMix",
+"live": "[dddd01][-][eeee03][-][FFA94D][Build][-] Concrete Mix",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceCrushedSand",
+"live": "[dddd02][-][eeee03][-][FFA94D][Ore][-] Crushed Sand",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceDoorKnob",
+"live": "[dddd08][-][eeee02][-][FFA94D][Smelt][-] Brass Door Knob",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceDuctTape",
+"live": "[dddd04][-][eeee06][-][FFA94D][Resource][-] Duct Tape",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceFishingWeight",
+"live": "[dddd08][-][eeee08][-][FFA94D][Smelt][-] Lead Fishing Weight",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceForgedIron",
+"live": "[dddd01][-][eeee04][-][FFA94D][Build][-] Forged Iron",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceForgedSteel",
+"live": "[dddd01][-][eeee05][-][FFA94D][Build][-] Forged Steel",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceGlue",
+"live": "[dddd04][-][eeee05][-][FFA94D][Resource][-] Glue",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceGoldNugget",
+"live": "[dddd03][-][eeee02][-][FFA94D][Gem][-] Gold Nugget",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceHeadlight",
+"live": "[dddd06][-][eeee04][-][FFA94D][Vehicle][-] Headlight",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceLeather",
+"live": "[dddd04][-][eeee03][-][FFA94D][Resource][-] Leather",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceLockPick",
+"live": "[bbbb00][-][eeee02][-] Lockpick",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "resourceMetalPipe",
+"live": "[dddd04][-][eeee09][-][FFA94D][Resource][-] Short Iron Pipe",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceNail",
+"live": "[dddd04][-][eeee10][-][FFA94D][Resource][-] Nails",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceOil",
+"live": "[dddd06][-][eeee03][-][FFA94D][Vehicle][-] Oil",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceOilShale",
+"live": "[dddd02][-][eeee10][-][FFA94D][Ore][-] Oil Shale",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourcePaint",
+"live": "[bbbb00][-][eeee04][-] Paint",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "resourcePotassiumNitratePowder",
+"live": "[dddd02][-][eeee08][-][FFA94D][Ore][-] Nitrate Powder",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceRadiator",
+"live": "[dddd08][-][eeee03][-][FFA94D][Smelt][-] Brass Radiator",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceRawDiamond",
+"live": "[dddd03][-][eeee03][-][FFA94D][Gem][-] Raw Diamond",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceRepairKit",
+"live": "[bbbb00][-][eeee01][-] Repair Kit",
+"cat": "Tool",
+"table": "Tool"
+},
+{
+"key": "resourceRockSmall",
+"live": "[dddd02][-][eeee02][-][FFA94D][Ore][-] Small Stone",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScopeLens",
+"live": "[dddd04][-][eeee14][-][FFA94D][Resource][-] Lens",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScrapBrass",
+"live": "[dddd02][-][eeee07][-][FFA94D][Ore][-] Brass",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScrapBrassBundle",
+"live": "[dddd02][-][eeee07][-][FFA94D][Ore][-] Brass Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceScrapIron",
+"live": "[dddd02][-][eeee05][-][FFA94D][Ore][-] Iron",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScrapLead",
+"live": "[dddd02][-][eeee06][-][FFA94D][Ore][-] Lead",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScrapPolymers",
+"live": "[dddd04][-][eeee08][-][FFA94D][Resource][-] Scrap Polymers",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceSewingKit",
+"live": "[dddd04][-][eeee07][-][FFA94D][Resource][-] Sewing Kit",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceSilverNugget",
+"live": "[dddd03][-][eeee01][-][FFA94D][Gem][-] Silver Nugget",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceSnowBall",
+"live": "[dddd04][-][eeee15][-][FFA94D][Resource][-] Snowball",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceSpring",
+"live": "[dddd04][-][eeee11][-][FFA94D][Resource][-] Spring",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceTestosteroneExtract",
+"live": "[f00007][-][FFA94D][Medical][-][b00013][-] Testosterone Extract [DECEA3](I)[-]",
+"cat": "Medical",
+"table": "Consumable"
+},
+{
+"key": "resourceTrophy1",
+"live": "[dddd08][-][eeee04][-][FFA94D][Smelt][-] Brass Trophy",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceTrophy2",
+"live": "[dddd08][-][eeee09][-][FFA94D][Smelt][-] Lead Trophy",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceWood",
+"live": "[dddd01][-][eeee01][-][FFA94D][Build][-] Wood",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceYuccaFibers",
+"live": "[dddd04][-][eeee01][-][FFA94D][Resource][-] Plant Fibers",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceClayLumpBundle",
+"live": "[dddd02][-][eeee01][-][FFA94D][Ore][-] Clay Soil Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceCrushedSandBundle",
+"live": "[dddd02][-][eeee03][-][FFA94D][Ore][-] Crushed Sand Bundle [DECEA3](6000)[-]",
+"cat": "Bundle",
+"table": "Resource"
+},
+{
+"key": "resourceScrapIronAdvSmelt",
+"live": "[dddd02][-][eeee05][-][FFA94D][Ore][-] Iron [DECEA3](Smelting 1:5)[-]",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScrapLeadAdvSmelt",
+"live": "[dddd02][-][eeee06][-][FFA94D][Ore][-] Lead [DECEA3](Smelting 1:5)[-]",
+"cat": "Resource",
+"table": "Resource"
+},
+{
+"key": "resourceScrapBrassAdvSmelt",
+"live": "[dddd02][-][eeee07][-][FFA94D][Ore][-] Brass [DECEA3](Smelting 1:5)[-]",
+"cat": "Resource",
+"table": "Resource"
+}
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="zzzzAGF-LawnTractorV3Fix"/>
+    <DisplayName value="AGF Lawn Tractor V3 Fix"/>
+    <Version value="1.0.0"/>
+    <Description value="Patch makes OCB Lawn Mowing (v2.5.0) work on 7d2d v3."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

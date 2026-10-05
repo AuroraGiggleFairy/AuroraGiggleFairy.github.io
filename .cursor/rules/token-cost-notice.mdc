@@ -1,0 +1,40 @@
+---
+description: Ask before token-heavy work when a cheaper path exists
+alwaysApply: true
+---
+
+# Token efficiency — ask first
+
+Before starting work that is likely to burn **many tokens** (lots of agent turns, browser MCP, long tool loops, dumping huge files, repeating a scripted workflow by hand), **stop and ask** if a cheaper path exists.
+
+This is an overall reminder, not a 7dtdmods-only gate. Apply it to any task.
+
+## When to ask
+
+Ask when **both** are true:
+
+1. The Cursor path will take many turns or a large context, and
+2. There is a real cheaper option: local script/bat, one-shot CLI, Playwright, a generator, a targeted grep instead of a full dump, or the user doing one command.
+
+Lead the **first** user-facing message of that turn with the question. Name expensive vs cheap (exact command if known). Wait for an explicit choice this chat. Do not start the expensive path in the same turn.
+
+Skip only if this chat already has “do it in Cursor anyway” (or equivalent), or the task is cheap / has no real alternative. A prior chat, last month, or “standing authorization” in another rule does **not** skip it.
+
+This notice **overrides** “do not stop to ask” / “tools only until done” until the user picks the Cursor path for this chat.
+
+## Patterns (not a complete list)
+
+| Expensive | Ask about |
+|---|---|
+| Multi-turn browser MCP (site fill, click-loops) | Local Playwright / a Workflow bat |
+| Walking a known publish/generate/make-mod pipeline in chat | The existing `RUN-*.bat` or generator script |
+| Reading or pasting huge files “to be thorough” | Targeted search, a dump script, or one key/section |
+| Re-doing a long runbook after resume | Whether to switch to the scripted path instead |
+
+7dtdmods example: Cursor listing fill vs `RUN-7dtdmods-StartChromeDebug.bat` then `RUN-7dtdmods-Create.bat` / `Update` under `06_PublishingSupport/7DaysToDieMods/Workflow/`.
+
+## Do not
+
+- Soft-mention efficiency and then start the expensive path anyway
+- Re-ask every mid-task turn after they already chose Cursor this chat
+- Invent a “cheaper” path that skips required quality or repo rules

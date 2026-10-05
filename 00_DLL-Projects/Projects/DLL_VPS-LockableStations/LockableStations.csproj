@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LockableWorkstations</RootNamespace>
+    <AssemblyName>LockableStations</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-VPS-LockableStations-v0.0.1</DraftModDir>
+    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-VPS-LockableStations-v0.0.1</ActiveBuildDir>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-VPS-LockableStations-v0.0.1</GameModDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InControl">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\InControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CopyToModFolders" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="false" Condition="Exists('$(DraftModDir)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ActiveBuildDir)" SkipUnchangedFiles="false" Condition="Exists('$(ActiveBuildDir)')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="false" Condition="Exists('$(GameModDir)')" />
+  </Target>
+</Project>

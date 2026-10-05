@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="0AGF-LawnTractorPatchGuard"/>
+	<DisplayName value="AGF Lawn Tractor Patch Guard"/>
+	<Version value="1.0.0"/>
+	<Description value="3.3 only. Loads before OCB Lawn Mowing and skips the removed SetItemValueMods patch."/>
+	<Author value="AuroraGiggleFairy (AGF)"/>
+	<Website value="https://auroragigglefairy.github.io/"/>
+</xml>

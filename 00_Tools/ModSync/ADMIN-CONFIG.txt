@@ -1,0 +1,74 @@
+﻿# ModSync Generator settings.
+# Fill in the three lines under SERVER, then double-click GENERATE.bat.
+# Send the one .bat file from Output\ to your players. Nothing else.
+
+
+# --- SERVER (required) ---
+
+SERVER_NAME=MandaServer
+SERVER_IP=104.192.227.20
+SERVER_PORT=26920
+
+
+# --- OPTIONAL ---
+
+CLIENT_BAT_NAME=MandaServer
+COPY_FOLDER_NAME=7 Days to Die - MandaServer
+EAC=off
+PACK_URL=https://1drv.ms/u/c/332f582c35c328d9/IQCe4x2wUW3iRJvdPZdWgqvRAePW49fx_C1vDSLbiaeVayA?e=iyAltK
+MOD_SOURCE=
+
+
+
+# SERVER_NAME
+# Shown to players, used for the desktop shortcut name, and used to remember
+# which game folder they picked. Example: Doom Test Server
+
+# SERVER_IP
+# The address players connect to. A numeric IP or a host name both work.
+# Example: 63.143.56.130
+
+# SERVER_PORT
+# The game port, not the web or FTP port. Example: 41341
+
+# CLIENT_BAT_NAME
+# Name of the generated file, without .bat. Leave blank to get
+# ModSync.<ServerName>. Example: ModSync.DoomTest
+
+# COPY_FOLDER_NAME
+# Folder name used when a player lets ModSync make a copy of their game just
+# for this server. Leave blank to get "7 Days to Die - <ServerName>".
+# It is created next to their Steam install.
+
+# EAC
+# off = the desktop shortcut starts the game with EAC disabled (needed for
+# ModSync and other DLL mods). on = the shortcut leaves EAC enabled.
+# Default is off.
+
+# PACK_URL
+# Optional. http/https link to a .zip/.rar/.7z of the server mods, or a
+# personal OneDrive share (1drv.ms) set to Anyone with the link can view.
+# The share may be one archive or a folder of mods. Leave blank to have
+# players get the pack from the server on first join.
+# One archive may hold many mods plus leftover files (readmes, pictures,
+# extra zips). Only folders that contain ModInfo.xml go into Mods. Other
+# files are ignored. Nested .zip/.rar files are opened too.
+# More links: PACK_URL2= and PACK_URL3=, or separate several with |.
+# A .rar needs 7-Zip or WinRAR on the player's PC. A .zip does not.
+
+# MOD_SOURCE
+# Folder holding the built ModSync mod, the one with ModSync.dll in it.
+# Leave blank to use the newest AGF-NoEAC-ModSync* in 01_Draft.
+
+
+# --- NOTES ---
+#
+# Build DLL_NoEAC-ModSync before generating. The generator refuses to run
+# without ModSync.dll, because the mod is packed inside the player file.
+#
+# Put the same ModSync.dll on the server and restart it. The server builds its
+# mod list at startup, so a new DLL does nothing until then.
+#
+# Players need their Steam game on the same version as the server.
+# Mod sync cannot fix a game version mismatch. Set EAC=off if this
+# server uses ModSync or other DLL mods.

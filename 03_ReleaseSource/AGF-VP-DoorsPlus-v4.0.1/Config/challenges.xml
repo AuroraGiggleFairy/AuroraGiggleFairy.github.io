@@ -1,0 +1,9 @@
+<AGFVanillaPlus-DoorsPlus>
+
+	<!-- placeDoor: vanilla oldWoodDoor OR any shape from wood All Doors.
+	     ChallengeObjectiveBlockPlace also matches PlaceAltBlockValue on the expected
+	     block. miscDoorChallengeHelperAGF is a hidden SelectAlternates list and
+	     needs a 10-wood recipe so tracking can build gather requirements. -->
+	<set xpath="/challenges/challenge[@name='placeDoor']/objective/@block">miscDoorChallengeHelperAGF</set>
+
+</AGFVanillaPlus-DoorsPlus>

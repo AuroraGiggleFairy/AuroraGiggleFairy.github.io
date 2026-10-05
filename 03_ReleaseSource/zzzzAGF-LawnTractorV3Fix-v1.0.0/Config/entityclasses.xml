@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AGF-LawnTractorV3Fix>
+	<set xpath="/entity_classes/entity_class[@name='vehicleLawnTractor']/property[@name='Prefab']/@value">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?LawnMowerDriveable.prefab</set>
+</AGF-LawnTractorV3Fix>

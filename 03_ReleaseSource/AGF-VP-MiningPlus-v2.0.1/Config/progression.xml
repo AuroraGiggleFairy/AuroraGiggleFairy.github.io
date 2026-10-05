@@ -1,0 +1,10 @@
+<AGFVanillaPlus-MiningPlus>
+
+
+	<!--Mining Plus, adds clay and sand to mining bundle perk (brass is vanilla now)-->
+		<append xpath="/progression/perks/book[@name='perkArtOfMiningPallets']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">,resourceClayLumpBundle,resourceCrushedSandBundle</append>
+
+
+</AGFVanillaPlus-MiningPlus>
+
+ 

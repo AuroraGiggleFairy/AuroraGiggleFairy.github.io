@@ -449,6 +449,11 @@ def _bbcode_mod_scope(text: str) -> str:
     lines.append("[list]")
     in_sub = False
     pending_parent_close = False
+    # Type-5 EAC Varies children must nest under Mod Type (plain text, not colored labels)
+    eac_varies_child_labels = {
+        "dedicated server",
+        "singleplayer and player-hosted",
+    }
     for raw_line in text.splitlines():
         indent = len(raw_line) - len(raw_line.lstrip())
         s = raw_line.strip()
@@ -459,12 +464,17 @@ def _bbcode_mod_scope(text: str) -> str:
                 lines.append(f"[*]{s}[/*]")
             continue
         content = s[2:]
+        label_key = ""
         if ":" in content:
-            if indent >= 4:
-                # Sub-bullet inside a parent's sub-list — apply color to terms
+            label_key = content.split(":", 1)[0].strip().lower()
+        force_nested = label_key in eac_varies_child_labels
+        if ":" in content:
+            if indent >= 4 or force_nested:
+                # Sub-bullet under Mod Type / Dependencies — plain text (no colored label)
                 if not in_sub:
                     lines.append("[list]")
                     in_sub = True
+                    pending_parent_close = False
                 lines.append(f"[*]{_apply_color_terms_to_bbcode(content)}[/*]")
             else:
                 # Top-level item — close previous sub-list if needed
@@ -740,74 +750,25 @@ ZIP_DIR = os.path.join(VS_CODE_ROOT, "04_DownloadZips")
 
 
 def generate_publish_help() -> int:
-    mods = gather_mod_data()
-    if not mods:
-        print("No mods found in 03_ReleaseSource.")
+    """Delegate to 06_nexus.py — one PublishHelp/{ModName}.md per mod."""
+    import importlib.util
+
+    nexus_step = os.path.join(
+        VS_CODE_ROOT, "00_Support", "Automation", "workflow", "06_nexus.py"
+    )
+    spec = importlib.util.spec_from_file_location("nexus_step6", nexus_step)
+    if spec is None or spec.loader is None:
+        print(f"ERROR: Cannot load {nexus_step}")
         return 1
-
-    total = len(mods)
-    zip_total = 0
-    details_total = 0
-    bbcode_total = 0
-    skipped = 0
-
-    print(f"Generating PublishHelp for {total} mods...")
-    print(f"Output: {PUBLISH_HELP_DIR}")
-    print()
-
-    for mod_name in sorted(mods.keys()):
-        entry = mods[mod_name]
-        version = str(entry.get("version", "0.0.0"))
-        target_dir = os.path.join(PUBLISH_HELP_DIR, mod_name)
-        os.makedirs(target_dir, exist_ok=True)
-
-        zip_name = f"{mod_name}.zip"
-        src_zip = os.path.join(ZIP_DIR, zip_name)
-        if os.path.isfile(src_zip):
-            dst_zip = os.path.join(target_dir, zip_name)
-            shutil.copy2(src_zip, dst_zip)
-            zip_total += 1
-
-        details_md = build_details_markdown(entry)
-        details_path = os.path.join(target_dir, "Details.md")
-        with open(details_path, "w", encoding="utf-8") as handle:
-            handle.write(details_md)
-            if not details_md.endswith("\n"):
-                handle.write("\n")
-        details_total += 1
-
-        readme_text = load_text_file(str(entry.get("readme_path", "")))
-        if readme_text:
-            sections = parse_readme_sections(readme_text)
-            bbcode = generate_bbcode_full_description(entry, sections)
-            bbcode_path = os.path.join(target_dir, "FullDesc.md")
-            with open(bbcode_path, "w", encoding="utf-8") as handle:
-                handle.write(bbcode)
-                if not bbcode.endswith("\n"):
-                    handle.write("\n")
-            bbcode_total += 1
-        else:
-            print(f"  [SKIP FullDesc] {mod_name}: no README found")
-            skipped += 1
-
-        print(f"  [OK] {mod_name} v{version}")
-
-    print()
-    print("=== PublishHelp Generation Complete ===")
-    print(f"Mods processed: {total}")
-    print(f"Details files:  {details_total}")
-    print(f"FullDesc files: {bbcode_total}")
-    print(f"Zips copied:    {zip_total}")
-    if skipped:
-        print(f"Skipped:        {skipped} (no README)")
-    print(f"Output folder:  {PUBLISH_HELP_DIR}")
-    return 0
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return int(module.main())
 
 
 def main() -> int:
     import argparse
     parser = argparse.ArgumentParser(
-        description="Generate Nexus PublishHelp folder structure with Details, FullDesc, and the release zip."
+        description="Generate Nexus PublishHelp packets (one {ModName}.md per mod)."
     )
     parser.add_argument(
         "--dry-run",

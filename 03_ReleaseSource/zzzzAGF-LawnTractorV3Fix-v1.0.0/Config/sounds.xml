@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AGF-LawnTractorV3Fix>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_engine_start']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?engine-start</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_engine_stop']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?engine-stop</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_engine_idle_lp']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?engine-idle-lp</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_mower_running_lp']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?engine-run-lp</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_engine_accel']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?engine-accel</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_blades_start']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?blades-start</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_blades_stop']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?blades-stop</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_blades_run_lp']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?blades-run-lp</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_horn']/AudioClip/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?lawn-tractor-horn</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_stone']/AudioClip[1]/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?lawn-tractor-stone-01</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_stone']/AudioClip[2]/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?lawn-tractor-stone-02</set>
+	<set xpath="/Sounds/SoundDataNode[@name='lawnmower_stone']/AudioClip[3]/@ClipName">#@modfolder(zzzzAGF-LawnTractorV3Fix):Resources/LawnMowers.unity3d?lawn-tractor-stone-03</set>
+</AGF-LawnTractorV3Fix>

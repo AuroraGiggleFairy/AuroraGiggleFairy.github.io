@@ -1,6 +1,6 @@
 # Site Automation Capabilities (Human-Readable)
 
-Last updated: 2026-07-25
+Last updated: 2026-09-06
 Scope: Publish automation capabilities by site for AGF workflow decisions.
 
 This file is the quick control panel:
@@ -23,8 +23,9 @@ This file is the quick control panel:
 - Gap: Image upload automation is not currently wired in script.
 
 3. 7daystodiemods
-- Detailed capability sheet: not created yet
-- Status: discovery not started in this file set yet.
+- Day-to-day: `7DaysToDieMods/README.md`, `PublishHelp/*.md`, `RUN-7DaysToDieMods-Update.bat`.
+- Status: PublishHelp packets are generated on Publish. Missing empty satellite repos are created on Publish if `gh` is logged in. GitHub Releases (version + changelog + zip) are created only by the Update bat. Site login/description/images/title stay manual.
+- Gap: No public creator write API. First zip upload and GitHub-sync connect are still one-time manual steps per listing.
 
 ## Decision Rules
 

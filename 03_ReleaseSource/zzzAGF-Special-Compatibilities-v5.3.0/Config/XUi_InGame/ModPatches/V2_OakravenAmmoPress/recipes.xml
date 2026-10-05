@@ -1,0 +1,44 @@
+<zzzAGF-Compatibilities>
+	<!-- V2_OakravenAmmoPress -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SimplifiedStacks')">
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">1200</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">2000</set>
+			<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP' and @craft_area='ammopress']/ingredient[@name='resourceBulletCasing']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell' and @craft_area='ammopress']/ingredient[@name='resourceBuckshot']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">1600</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell' and @craft_area='ammopress']/ingredient[@name='resourcePaper']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug' and @craft_area='ammopress']/ingredient[@name='resourceBulletTip']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">2000</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug' and @craft_area='ammopress']/ingredient[@name='resourceScrapPolymers']/@count">400</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug' and @craft_area='ammopress']/ingredient[@name='resourceForgedSteel']/@count">1200</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug' and @craft_area='ammopress']/ingredient[@name='resourceClayLump']/@count">800</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug' and @craft_area='ammopress']/ingredient[@name='resourceGunPowder']/@count">1600</set>
+			<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug' and @craft_area='ammopress']/ingredient[@name='resourceScrapPolymers']/@count">400</set>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

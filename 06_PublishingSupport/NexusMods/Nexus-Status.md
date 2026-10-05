@@ -1,22 +1,24 @@
 # Nexus Status Report
 
-Generated: 09-01-2026 9:58 AM
+Generated: 09-10-2026 6:17 PM
 
 ## Summary
 
-- Total: **70**
-- Needs Update: **4**
+- Total: **77**
+- Needs Update: **6**
 - Matches: **61**
-- First Upload Needed: **5**
+- First Upload Needed: **10**
 
 ## Status
 
 | Mod | Local | Nexus | Status |
 |---|---|---|---|
-| `AGF-HUDPlus-VisualEntityTracker` | 1.1.1 | 1.0.1 | Needs Update |
-| `AGF-NoEAC-HideDLCCosmetics` | 1.1.0 | 1.0.0 | Needs Update |
-| `AGF-NoEAC-MapPlus` | 1.0.0 | 11.0.0 | Needs Update |
-| `AGF-VP-DyesPlus` | 4.1.0 | 4.0.0 | Needs Update |
+| `AGF-NoEAC-MapPlus` | 1.1.0 | 1.0.0 | Needs Update |
+| `AGF-VP-DoorsPlus` | 4.0.1 | 4.0.0 | Needs Update |
+| `AGF-VPS-FuelAutoShutOff` | 1.0.1 | 1.0.0 | Needs Update |
+| `AGF-VPS-GlobalStormTracker` | 2.1.2 | 2.1.1 | Needs Update |
+| `AGF-VPS-HonkOpensYourDoors` | 1.0.1 | 1.0.0 | Needs Update |
+| `AGF-VPS-ScreamerAlert` | 2.3.4 | 2.3.3 | Needs Update |
 | `AGF-BackpackPlus-060Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-072Slots` | 4.1.1 | 4.1.1 | Matches |
 | `AGF-BackpackPlus-084Slots` | 4.1.1 | 4.1.1 | Matches |
@@ -25,15 +27,15 @@ Generated: 09-01-2026 9:58 AM
 | `AGF-HUDPlus-BMCounter` | 4.0.2 | 4.0.2 | Matches |
 | `AGF-HUDPlus-PurpleBook` | 3.2.0 | 3.2.0 | Matches |
 | `AGF-HUDPlus-RemoveEnteringPopUp` | 2.1.1 | 2.1.1 | Matches |
+| `AGF-HUDPlus-VisualEntityTracker` | 1.1.1 | 1.1.1 | Matches |
 | `AGF-HUDPlus-Weekday` | 3.1.3 | 3.1.3 | Matches |
 | `AGF-NoEAC-AudioOptionsPlus` | 2.1.0 | 2.1.0 | Matches |
 | `AGF-NoEAC-AutoRun` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-NoEAC-CosmeticLockIcon` | 3.1.2 | 3.1.2 | Matches |
 | `AGF-NoEAC-EnhancedAGF` | 4.3.4 | 4.3.4 | Matches |
-| `AGF-NoEAC-FuelAutoShutOff` | 1.0.0 | 1.0.0 | Matches |
-| `AGF-NoEAC-GlobalStormTracker` | 2.1.1 | 2.1.1 | Matches |
+| `AGF-NoEAC-GyroFlightModes` | 1.0.0 | 1.0.0 | Matches |
+| `AGF-NoEAC-HideDLCCosmetics` | 1.1.0 | 1.1.0 | Matches |
 | `AGF-NoEAC-OpenAllButton` | 2.0.1 | 2.0.1 | Matches |
-| `AGF-NoEAC-ScreamerAlert` | 2.3.3 | 2.3.3 | Matches |
 | `AGF-NoEAC-SmeltTimerOption` | 1.0.0 | 1.0.0 | Matches |
 | `AGF-NoEAC-Toolbelt12Slots` | 2.2.4 | 2.2.4 | Matches |
 | `AGF-Requested-SmallerInteractionPrompt` | 2.0.0 | 2.0.0 | Matches |
@@ -48,8 +50,8 @@ Generated: 09-01-2026 9:58 AM
 | `AGF-VP-BreakItGetIt` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-VP-CraftSewingKits` | 2.1.1 | 2.1.1 | Matches |
 | `AGF-VP-CraftVitamins` | 2.1.2 | 2.1.2 | Matches |
-| `AGF-VP-DoorsPlus` | 4.0.0 | 4.0.0 | Matches |
 | `AGF-VP-DrinkableAcid` | 3.0.0 | 3.0.0 | Matches |
+| `AGF-VP-DyesPlus` | 4.1.0 | 4.1.0 | Matches |
 | `AGF-VP-FloraHarvester` | 3.0.1 | 3.0.1 | Matches |
 | `AGF-VP-FuelBurnPlus` | 3.1.1 | 3.1.1 | Matches |
 | `AGF-VP-LargerStorageOption` | 1.1.1 | 1.1.1 | Matches |
@@ -81,5 +83,10 @@ Generated: 09-01-2026 9:58 AM
 | `AGF-4Modders-Fix4DestroyBiomeBadge` | 2.0.0 | - | First Upload Needed |
 | `AGF-4Modders-Fix4PerkPageReset` | 1.0.0 | - | First Upload Needed |
 | `AGF-NoEAC-PartyGroupPlus` | 1.1.1 | - | First Upload Needed |
-| `AGF-NoEAC-VisualEntityTrackerAddon` | 1.0.0 | - | First Upload Needed |
+| `AGF-Requested-AnimalTrackerAlwaysOn` | 1.0.0 | - | First Upload Needed |
+| `AGF-VP-CraftStackEngBattCells` | 4.0.0 | - | First Upload Needed |
+| `AGF-VP-HelpfulRenames` | 3.0.0 | - | First Upload Needed |
+| `AGF-VP-zHelpfulRenames` | 3.0.1 | - | First Upload Needed |
 | `AGF-VPS-SortingCart` | 2.0.1 | - | First Upload Needed |
+| `AGF-VPS-VisualEntityTrackerAddon` | 1.0.1 | - | First Upload Needed |
+| `zzzAGF-Special-NoEACCompatibilities` | 1.0.0 | - | First Upload Needed |

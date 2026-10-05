@@ -1,0 +1,126 @@
+<AGF-EnhancedAGF>
+	<remove xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]/label[2]"/>
+	<append xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[7]">
+		<label depth="3" pos="15,-3" width="350" font_size="26" text="{agfVehicleFuelPercent}%   ({agfVehicleFuelCurrentWithMax})" justify="right" color="[selectedColor]"/>
+	</append>
+	<remove xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]/label[2]"/>
+	<append xpath="/windows/window[@name='windowVehicle']/rect[@name='content']/rect/rect[1]/rect[@name='stats']/rect[2]">
+		<label depth="3" pos="15,-3" width="350" font_size="26" text="{agfVehicleDurabilityPercent}%   ({agfVehicleDurabilityCurrentWithMax})" justify="right" color="[selectedColor]"/>
+	</append>
+<remove xpath="/windows/window[@name='interactionPrompt']"/>
+	<append xpath="/windows">
+		<window name="interactionPrompt" anchor="Center" pos="0,0" width="2000" height="700" controller="InteractionPrompt" fade_delay="0.02">
+			<sprite name="agfPromptTitleRim" depth="8" pos="0,68" sprite="ui_game_header_fill" type="sliced" color="0,0,0,220" width="206" height="46" pivot="center"/>
+			<sprite name="agfPromptTitleBg" depth="9" pos="0,68" sprite="ui_game_header_fill" type="sliced" color="64,64,64,200" width="200" height="40" pivot="center"/>
+			<label name="lblText" depth="10" pos="0,68" font_size="34" color="[white]" effect="outline" effect_distance="1,1" effect_color="0,0,0,230" justify="center" pivot="center" text="{header}" parse_actions="true" actions_default_format="( ### )" overflow="resizefreely" foregroundlayer="true"/>
+			<rect name="agfPromptCard" pos="0,-88" width="1" height="1" pivot="top" visible="{hasdetails}">
+				<sprite name="agfPromptCardRim" depth="1" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,0" width="438" height="120" pivot="top" visible="false"/>
+				<sprite name="agfPromptCardBg" depth="2" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,110" width="226" height="120" pivot="top"/>
+				<rect name="agfStat0" pos="-99,-28" width="198" height="36" pivot="left" visible="{s0visible}">
+					<sprite name="s0rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s0bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s0fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s0fill}" color="{s0fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s0iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s0iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s0icon" size="26,26" pos="18,0" pivot="center" sprite="{s0icon}" color="{s0color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s0t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s0t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s0t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s0t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s0label" depth="7" pos="34,0" font_size="22" color="{s0color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s0text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat1" pos="-99,-64" width="198" height="36" pivot="left" visible="{s1visible}">
+					<sprite name="s1rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s1bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s1fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s1fill}" color="{s1fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s1iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s1iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s1icon" size="26,26" pos="18,0" pivot="center" sprite="{s1icon}" color="{s1color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s1t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s1t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s1t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s1t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s1label" depth="7" pos="34,0" font_size="22" color="{s1color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s1text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat2" pos="-99,-100" width="198" height="36" pivot="left" visible="{s2visible}">
+					<sprite name="s2rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s2bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s2fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s2fill}" color="{s2fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s2iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s2iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s2icon" size="26,26" pos="18,0" pivot="center" sprite="{s2icon}" color="{s2color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s2t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s2t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s2t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s2t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s2label" depth="7" pos="34,0" font_size="22" color="{s2color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s2text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat3" pos="-99,-136" width="198" height="36" pivot="left" visible="{s3visible}">
+					<sprite name="s3rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s3bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s3fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s3fill}" color="{s3fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s3iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s3iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s3icon" size="26,26" pos="18,0" pivot="center" sprite="{s3icon}" color="{s3color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s3t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s3t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s3t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s3t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s3label" depth="7" pos="34,0" font_size="22" color="{s3color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s3text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat4" pos="-99,-172" width="198" height="36" pivot="left" visible="{s4visible}">
+					<sprite name="s4rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s4bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s4fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s4fill}" color="{s4fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s4iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s4iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s4icon" size="26,26" pos="18,0" pivot="center" sprite="{s4icon}" color="{s4color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s4t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s4t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s4t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s4t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s4label" depth="7" pos="34,0" font_size="22" color="{s4color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s4text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat5" pos="-99,-208" width="198" height="36" pivot="left" visible="{s5visible}">
+					<sprite name="s5rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s5bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s5fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s5fill}" color="{s5fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s5iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s5iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s5icon" size="26,26" pos="18,0" pivot="center" sprite="{s5icon}" color="{s5color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s5t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s5t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s5t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s5t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s5label" depth="7" pos="34,0" font_size="22" color="{s5color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s5text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat6" pos="-99,-244" width="198" height="36" pivot="left" visible="{s6visible}">
+					<sprite name="s6rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s6bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s6fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s6fill}" color="{s6fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s6iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s6iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s6icon" size="26,26" pos="18,0" pivot="center" sprite="{s6icon}" color="{s6color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s6t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s6t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s6t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s6t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s6label" depth="7" pos="34,0" font_size="22" color="{s6color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s6text}" foregroundlayer="true"/>
+				</rect>
+				<rect name="agfStat7" pos="-99,-280" width="198" height="36" pivot="left" visible="{s7visible}">
+					<sprite name="s7rim" depth="3" pos="0,0" sprite="ui_game_header_fill" type="sliced" color="0,0,0,210" width="198" height="32" pivot="left"/>
+					<sprite name="s7bg" depth="4" pos="3,0" sprite="ui_game_header_fill" type="sliced" color="108,108,108,170" width="192" height="26" pivot="left"/>
+					<sprite name="s7fill" depth="5" pos="3,0" sprite="ui_game_header_fill" type="sliced" fill="{s7fill}" color="{s7fillcolor}" width="192" height="26" pivot="left" globalopacity="false"/>
+					<sprite depth="6" name="s7iconrim" size="32,32" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="210,210,210,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s7iconbg" size="28,28" pos="18,0" pivot="center" sprite="ui_game_filled_circle" color="64,64,64,255" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s7icon" size="26,26" pos="18,0" pivot="center" sprite="{s7icon}" color="{s7color}" foregroundlayer="true"/>
+					<sprite depth="6" name="s7t0" size="22,22" pos="48,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s7t1" size="22,22" pos="72,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s7t2" size="22,22" pos="96,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<sprite depth="6" name="s7t3" size="22,22" pos="120,0" pivot="center" foregroundlayer="true" visible="false"/>
+					<label name="s7label" depth="7" pos="34,0" font_size="22" color="{s7color}" effect="outline" effect_distance="1,1" effect_color="0,0,0,220" justify="left" overflow="shrinkcontent" max_line_count="1" size="144,28" pivot="left" text="{s7text}" foregroundlayer="true"/>
+				</rect>
+			</rect>
+		</window>
+	</append>
+</AGF-EnhancedAGF>

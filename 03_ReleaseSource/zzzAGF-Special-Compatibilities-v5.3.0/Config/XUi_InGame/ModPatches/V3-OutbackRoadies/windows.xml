@@ -1,0 +1,811 @@
+<zzzAGF-Compatibilities>
+	<!-- Outback deleted AGF compass / toolbelt / left HUD. Restore AGF layout; keep only Outback left-stat atlas icons and font sizes. -->
+	<remove xpath="/windows/window[@name='windowCompass']"/>
+	<remove xpath="/windows/window[@name='windowToolbelt']"/>
+	<remove xpath="/windows/window[@name='HUDLeftStatBars']"/>
+
+	<append xpath="/windows">
+		<window name="HUDLeftStatBars" anchor="BottomLeft">
+			<rect name="hud" pos="9,145" rows="2" cols="1" width="168" side="right">
+				<rect pos="1,65" width="171" height="46" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+					<sprite depth="3" name="background" color="110,110,110,128" type="filled" fillspritepad="true" fill="1"/>
+					<sprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fillspritepad="true" fill="{statfill}"/>
+					<sprite depth="5" name="Icon" atlas="{staticonatlas}" sprite="ui_game_symbol_stealth2" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
+					<label depth="6" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrent}" width="125" height="35"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1"/>
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="1"/>
+				</rect>
+				<rect pos="1,15" width="171" height="36" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,160" type="sliced"/>
+					<sprite depth="3" name="background" color="110,110,110,160" width="169" type="filled" fillspritepad="true" fill="{statmodifiedmax}"/>
+					<sprite depth="5" name="BarContent" color="255,0,0,160" width="169" type="filled" fillspritepad="true" fill="{statfill}"/>
+					<sprite depth="6" name="Icon" atlas="{staticonatlas}" sprite="ui_game_symbol_health_cross" size="28,28" pos="16,-18" pivot="center" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="44,-20" font_size="26" color="[white]" justify="center" pivot="left" text="{statcurrentwithmax}" width="125" height="26"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				</rect>
+				<rect pos="1,-25" width="171" height="36" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,160" type="sliced"/>
+					<sprite depth="3" name="background" color="110,110,110,160" width="169" type="filled" fillspritepad="true" fill="{statmodifiedmax}"/>
+					<sprite depth="5" name="BarContent" color="0,54,255,160" width="169" type="filled" fillspritepad="true" fill="{statfill}"/>
+					<sprite depth="6" name="Icon" atlas="{staticonatlas}" sprite="ui_game_symbol_stamina" size="28,28" pos="16,-18" pivot="center" foregroundlayer="true"/>
+					<label depth="7" name="TextContent" pos="44,-20" font_size="26" color="[white]" justify="center" pivot="left" text="{statcurrentwithmax}" width="125" height="26"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+					<sprite depth="8" visible="{sprintactive}" name="sprint" atlas="{uiatlas}" sprite="server_z_always_run" size="36,36" pos="170,-19" pivot="left"/>
+					<conditional>
+						<if cond="mod_loaded('AGF-NoEAC-AutoRun')">
+							<sprite depth="8" visible="{autorunactive}" name="autorun" atlas="{uiatlas}" sprite="ui_game_symbol_drive" size="36,36" pos="222,-19" pivot="left"/>
+						</if>
+					</conditional>
+				</rect>
+				<rect name="XPStuff" pos="76,-103" width="75" height="75" cursor_area="true" xp_fill_speed="2" controller="HUDStatBar" visible="{statvisible}">
+					<sprite depth="8" height="77" width="77" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>
+					<sprite depth="9" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/>
+					<sprite depth="10" height="69" width="69" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>
+					<sprite depth="11" height="69" width="69" name="background" sprite="ui_game_filled_circle" color="{xpcolor}" pivot="center" globalopacity="false" type="filled" fill="{xp}" filldirection="radial360" controller="ToolbeltWindow"/>
+					<sprite depth="12" width="55" height="55" name="center" sprite="ui_game_filled_circle" color="115,115,115" pivot="center" globalopacity="false"/>
+					<label depth="15" pos="0,9" name="Level" width="45" height="42" pivot="center" justify="center" text="LEVEL" font_size="18"/>
+					<label depth="15" pos="0,-10" name="LevelNumber" width="45" height="42" pivot="center" justify="center" text="{cvar($LastPlayerLevel)}" font_size="20" controller="MapStats"/>
+				</rect>
+				<rect name="food" pos="1,-64" width="75" height="77" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="5" name="BarContent" color="0,150,54,180" width="75" type="filled" fill="{statfill}" filldirection="vertical"/>
+					<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_food" size="22,28" pos="11,-47" foregroundlayer="true" tooltip_key="xuiFoodPercentage"/>
+					<label depth="7" name="TextContent" pos="0,-2" font_size="20" color="[white]" text="{statcurrentwithmax}" height="34" width="46" justify="center" tooltip_key="xuiFoodPercentage"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				</rect>
+				<rect name="water" pos="76,-64" width="75" height="77" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+					<sprite depth="1" name="border" color="0,0,0,235" type="sliced"/>
+					<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+					<filledsprite depth="3" name="background" color="110,110,110,128" width="75" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="5" name="BarContent" color="0,200,255,180" width="75" type="filled" fill="{statfill}" filldirection="vertical" globalopacity="false"/>
+					<sprite depth="7" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water_flask" size="30,30" pos="38,-45" foregroundlayer="true" tooltip_key="xuiWaterPercentage"/>
+					<label depth="7" name="TextContent" pos="28,-2" font_size="20" color="[white]" text="{statcurrentwithmax}" height="34" width="46" justify="center" tooltip_key="xuiWaterPercentage"/>
+					<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+					<filledsprite depth="8" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+					<filledsprite depth="3" name="background" color="0,0,0,255" width="75" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				</rect>
+				<conditional evaluator="client">
+					<if cond="mod_loaded('AGF-NoEAC-EnhancedAGF')">
+						<rect name="extraStatsHUD1" controller="HUDStatBar" visible="{statvisible}" pos="160,-70" width="160" height="77">
+							<sprite depth="2" name="background" pos="-5,5" width="160" height="77" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/>
+							<sprite depth="2" name="armorIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_light_armor2" color="201, 201, 201" foregroundlayer="true" tooltip_key="statPhysicalDamageResist"/>
+							<label depth="15" name="armorRating" pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerArmor}" font_size="18" tooltip_key="statPhysicalDamageResist"/>
+							<sprite depth="2" name="explosionIcon" pos="15,-35" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_explosion" color="201, 201, 201" foregroundlayer="true" tooltip_key="statExplosionResistance"/>
+							<label depth="15" name="explosionResist" pos="45,-37" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerExplosionResist}" font_size="18" tooltip_key="statExplosionResistance"/>
+							<sprite depth="2" name="critIcon" pos="15,-55" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_map_cursor" color="201, 201, 201" foregroundlayer="true" tooltip_key="statBuffResistance"/>
+							<label depth="15" name="critResist" pos="45,-57" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerCritResist}" font_size="18" tooltip_key="statBuffResistance"/>
+							<sprite depth="2" name="entityDamageIcon" pos="95,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_stunned" color="201, 201, 201" foregroundlayer="true" tooltip_key="statEntityDamage"/>
+							<label depth="15" name="entityDamage" pos="125,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerDamage}" font_size="18" tooltip_key="statEntityDamage"/>
+							<sprite depth="2" name="blockDamageIcon" pos="95,-35" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_mining" color="201, 201, 201" foregroundlayer="true" tooltip_key="statBlockDamage"/>
+							<label depth="15" name="blockDamage" pos="125,-37" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerBlockDamage}" font_size="18" tooltip_key="statBlockDamage"/>
+							<sprite depth="2" name="mobilityIcon" pos="95,-55" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_agility" color="201, 201, 201" foregroundlayer="true" tooltip_key="statMobility"/>
+							<label depth="15" name="mobility" pos="125,-57" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerMobility}" font_size="18" tooltip_key="statMobility"/>
+						</rect>
+					</if>
+					<else>
+						<rect name="Elevation" pos="160,-93" rows="1" cols="1" width="84" controller="HUDStatBar" visible="{statvisible}">
+							<sprite depth="2" name="background" pos="-5,4" width="54" height="52" color="0,0,0,255" type="sliced" sprite="ui_game_header_fill"/>
+							<sprite depth="2" name="windowIcon" pos="13,-2" width="19" height="19" sprite="ui_game_symbol_survival" color="[iconColor]" foregroundlayer="true" tooltip_key="xuiElevation"/>
+							<label depth="15" name="elevationStat" pos="22,-34" width="46" height="42" pivot="center" justify="center" text="[DECEA3]{mapelevation}" font_size="22" tooltip_key="xuiElevation" controller="MapStats"/>
+						</rect>
+					</else>
+				</conditional>
+			</rect>
+			<rect name="hud" pos="91,187" side="left" controller="BuffPopoutList" pivot="BottomLeft">
+				<rect width="168" height="46" name="item" pivot="center" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true">
+					<sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]"/>
+					<filledsprite depth="4" pos="-80,0" name="BarContent" color="0,0,0,0" size="160,40" pivot="Left" type="filled"/>
+					<sprite depth="5" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/>
+					<label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" size="118,40" pivot="left"/>
+				</rect>
+			</rect>
+		</window>
+
+		<window name="windowCompass" anchor="Top" pos="-260,-9" width="520" height="43" controller="CompassWindow">
+			<sprite depth="0" sprite="ui_game_header_fill" pos="32,0" width="456" height="43" type="sliced" color="0,0,0,255" visible="{show_compass}"/>
+			<sprite depth="1" sprite="ui_game_header_fill" pos="35,-3" width="450" height="37" type="sliced" color="120,120,120,255" visible="{show_compass}"/>
+			<texture depth="8" texture="@:Textures/UI/Compass/overlay-{compass_language}.png" pos="35,-12" width="450" height="27" color="[iconColor]" name="compassTexture3" rect_size="0.35,1" rect_offset="{#compass_rotation / 360 + 0.067 - 0.18},0" visible="{show_compass}"/>
+			<label depth="20" name="TextContent" pos="69,5" width="380" height="60" text="I" font_size="60" color="22,22,22,235" justify="center" visible="{show_compass}"/>
+			<sprite pos="240,-8" sprite="" color="255,255,255,255" globalopacitymod="1.8" visible="{showtimenocompass}">
+				<label depth="2" width="300" height="30" text="{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]" font_size="28" pivot="center" style="outline" upper_case="true" justify="center"/>
+			</sprite>
+			<rect name="dayTimeTemp" pos="-250,-4" rows="1" cols="1" width="250">
+				<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,210" foregroundlayer="true" height="46" width="250" type="sliced"/>
+				<label depth="3" pos="40,-8" height="28" width="80" text="{daytitle}" font_size="20" justify="center" pivot="center" visible="{showtime}"/>
+				<label depth="3" pos="40,-28" height="28" width="80" text="[{daycolor}]{day}" font_size="20" justify="center" pivot="center" visible="{showtime}"/>
+				<label depth="3" pos="120,-8" height="28" width="80" text="{# localization('agfTime')}" font_size="20" justify="center" pivot="center" visible="{showtime}"/>
+				<label depth="3" pos="120,-28" height="28" width="80" text="[DECEA3]{time}" font_size="20" justify="center" pivot="center" visible="{showtime}"/>
+				<label depth="3" pos="200,-8" height="28" width="80" text="{# localization('xuifOutdoor')}" font_size="20" justify="center" pivot="center" visible="{showtime}"/>
+				<label depth="2" pos="200,-28" height="28" width="80" text=" [{outsidetempcolor}]{outsidetemp}[-]" font_size="20" upper_case="true" pivot="center" justify="center" visible="{showtime}"/>
+				<conditional evaluator="client">
+					<if cond="mod_loaded('AGF-NoEAC-EnhancedAGF')">
+						<rect name="extraStats1" pos="0,-46" width="250" height="30" pivot="center">
+							<sprite depth="2" name="background" color="0,0,0,180" type="sliced" sprite="ui_game_header_fill" foregroundlayer="true"/>
+							<sprite depth="2" name="coldIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_cold" color="201, 201, 201" foregroundlayer="true" tooltip_key="statHypothermalResist"/>
+							<label depth="15" name="coldResist" pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[00ffff]{PlayerColdResist}" font_size="18" tooltip_key="statHypothermalResist"/>
+							<sprite depth="2" name="tempIcon" pos="106,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_temperature" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiBuffStatCoreTemp"/>
+							<label depth="15" name="coreTemp" pos="136,-17" width="56" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerCoreTemp}" font_size="18" tooltip_key="xuiBuffStatCoreTemp"/>
+							<sprite depth="2" name="hotIcon" pos="197,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_hot" color="201, 201, 201" foregroundlayer="true" tooltip_key="statHyperthermalResist"/>
+							<label depth="15" name="hotResist" pos="227,-17" width="56" height="20" pivot="center" justify="center" text="[ff8000]{PlayerHeatResist}" font_size="18" tooltip_key="statHyperthermalResist"/>
+						</rect>
+					</if>
+				</conditional>
+			</rect>
+			<rect name="Location" pos="521, -4" anchor="CenterTop" width="240" height="60" depth="-20" controller="Location">
+				<sprite pos="0,6" name="Background" sprite="ui_game_header_fill" color="0,0,0,225" foregroundlayer="true" height="46" width="250" type="sliced"/>
+				<label depth="3" text="{locationname}" font_size="20" justify="center" pos="6,2" height="28"/>
+				<grid pos="125, -28" pivot="center" cols="8" cell_width="18" cell_height="16">
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor1}" visible="{visible1}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor2}" visible="{visible2}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor3}" visible="{visible3}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor4}" visible="{visible4}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor5}" visible="{visible5}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor6}" visible="{visible6}"/>
+					<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" color="{difficultycolor7}" visible="{visible7}"/>
+					<rect width="16" height="16" visible="{visible_half}">
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" color="255,128,0"/>
+						<sprite depth="2" name="windowicon" width="16" height="16" sprite="ui_game_symbol_skull" type="filled" fill="0.5" fillinvert="true" color="[lightGrey]"/>
+					</rect>
+				</grid>
+				<conditional evaluator="client">
+					<if cond="mod_loaded('AGF-NoEAC-EnhancedAGF')">
+						<rect name="extraStats2" pos="0,-46" width="250" height="30" pivot="center">
+							<sprite depth="2" name="background" color="0,0,0,210" type="sliced" sprite="ui_game_header_fill" foregroundlayer="true"/>
+							<sprite depth="2" name="elevationIcon" pos="15,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_survival" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiElevation"/>
+							<label depth="15" name="elevation" pos="45,-17" width="56" height="20" pivot="center" justify="center" text="[00ff00]{mapelevation}" font_size="18" tooltip_key="xuiElevation" controller="MapStats"/>
+							<sprite depth="2" name="lootStageIcon" pos="106,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_shopping_cart" color="201, 201, 201" foregroundlayer="true" tooltip_key="xuiLootstage"/>
+							<label depth="15" name="lootStage" pos="136,-17" width="40" height="20" pivot="center" justify="center" text="[DECEA3]{PlayerLootStage}" font_size="18" tooltip_key="xuiLootstage"/>
+							<sprite depth="2" name="inventorySlotsIcon" pos="181,-15" width="19" height="19" pivot="center" justify="center" sprite="ui_game_symbol_backpack" color="201, 201, 201" foregroundlayer="true" tooltip_key="inpActInventoryName"/>
+							<label depth="15" name="inventorySlots" pos="215,-17" width="56" height="20" pivot="center" justify="center" text="[ff8000]{PlayerBagUsedSlots}[-][DECEA3]/{PlayerBagSize}" font_size="18" tooltip_key="inpActInventoryName" controller="MapStats"/>
+						</rect>
+						<label depth="3" name="MessageContent" pos="125,-131" font_size="28" color="[white]" style="outline" text="{messagename}" pivot="center" justify="center" width="250" height="98" controller="EnteringArea">
+							<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0" type="sliced" pivot="center"/>
+						</label>
+					</if>
+					<else>
+						<label depth="3" name="MessageContent" pos="125,-96" font_size="28" color="[white]" style="outline" text="{messagename}" pivot="center" justify="center" width="250" height="98" controller="EnteringArea">
+							<sprite pos="0,0" name="Background" sprite="ui_game_header_fill" color="0,0,0" type="sliced" pivot="center"/>
+						</label>
+					</else>
+				</conditional>
+			</rect>
+		</window>
+
+		<window name="windowToolbelt" width="753" height="78" depth="5" anchor="Bottom" pos="-377,82" controller="ToolbeltWindow" cursor_area="true" xp_fill_speed="2.5">
+			<rect>
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" snap="false" gamepad_selectable="false"/>
+				<rect pos="3,-3" controller="Toolbelt">
+					<grid depth="10" name="inventory" rows="1" cols="10" pos="0,0" cell_width="75" cell_height="75" repeat_content="true">
+						<item_stack name="0"/>
+					</grid>
+					<button depth="3" name="btnClearInventory1" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="800, -32" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{creativewindowopen}"/>
+					<grid depth="10" name="inventory2" rows="1" cols="10" pos="0,82" cell_width="75" cell_height="75" repeat_content="true" visible="{secondrow}">
+						<item_stack name="0"/>
+					</grid>
+					<button depth="3" name="btnClearInventory2" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="800, 50" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{# creativewindowopen and secondrow}"/>
+				</rect>
+			</rect>
+		</window>
+	</append>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-NoEAC-Toolbelt12Slots')">
+			<set xpath="/windows/window[@name='windowToolbelt']/@pos">-452,82</set>
+			<set xpath="/windows/window[@name='windowToolbelt']/rect/rect/grid[1]/@cols">12</set>
+			<set xpath="/windows/window[@name='windowToolbelt']/rect/rect/button[1]/@pos">950,-32</set>
+			<set xpath="/windows/window[@name='windowToolbelt']/rect/rect/grid[2]/@cols">12</set>
+			<set xpath="/windows/window[@name='windowToolbelt']/rect/rect/button[2]/@pos">950,50</set>
+			<append xpath="/windows/window[@name='windowToolbelt']">
+				<rect name="agf12slots">
+					<sprite depth="19" pos="32,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="32,10" width="14" height="12" text="[DECEA3]1" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="107,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="107,10" width="14" height="12" text="[DECEA3]2" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="182,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="182,10" width="14" height="12" text="[DECEA3]3" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="257,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="257,10" width="14" height="12" text="[DECEA3]4" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="332,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="332,10" width="14" height="12" text="[DECEA3]5" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="407,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="407,10" width="14" height="12" text="[DECEA3]6" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="482,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="482,10" width="14" height="12" text="[DECEA3]7" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="557,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="557,10" width="14" height="12" text="[DECEA3]8" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="632,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="632,10" width="14" height="12" text="[DECEA3]9" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="707,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="707,10" width="14" height="12" text="[DECEA3]10" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="782,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="782,10" width="14" height="12" text="[DECEA3]11" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="857,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true"/>
+					<label depth="20" name="slot#" pos="857,10" width="14" height="12" text="[DECEA3]12" font_size="12" color="" justify="center"/>
+				</rect>
+			</append>
+		</if>
+		<else>
+			<append xpath="/windows/window[@name='windowToolbelt']">
+				<rect name="agf10slots">
+					<sprite depth="19" pos="32,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="32,10" width="14" height="12" text="[DECEA3]1" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="107,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="107,10" width="14" height="12" text="[DECEA3]2" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="182,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="182,10" width="14" height="12" text="[DECEA3]3" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="257,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="257,10" width="14" height="12" text="[DECEA3]4" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="332,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="332,10" width="14" height="12" text="[DECEA3]5" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="407,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="407,10" width="14" height="12" text="[DECEA3]6" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="482,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="482,10" width="14" height="12" text="[DECEA3]7" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="557,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="557,10" width="14" height="12" text="[DECEA3]8" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="632,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="632,10" width="14" height="12" text="[DECEA3]9" font_size="12" color="" justify="center"/>
+					<sprite depth="19" pos="707,10" height="13" width="14" color="0,0,0,250" foregroundlayer="true" sprite="ui_game_header_fill"/>
+					<label depth="20" name="slot#" pos="707,10" width="14" height="12" text="[DECEA3]10" font_size="12" color="" justify="center"/>
+				</rect>
+			</append>
+		</else>
+	</conditional>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-BMCounter')">
+			<append xpath="/windows/window[@name='windowCompass']">
+				<rect name="counterBM" pos="70,-53" width="380">
+					<label depth="3" pos="0,-4" text="{# localization('agfNextBloodMoon')}:   [{daycolor}]{# max(0, gamestat('BloodMoonDay') - day) == 0 ? localization('agfBloodMoonTonight') : max(0, gamestat('BloodMoonDay') - day)}[-]" width="380" style="outline" font_size="22" justify="center" height="24" visible="{showtime}"/>
+				</rect>
+			</append>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-Weekday')">
+			<set xpath="/windows/window[@name='windowCompass']/rect[@name='dayTimeTemp']/label[@text='[{daycolor}]{day}']/@text">[{daycolor}]{day}, {# localization('daycount_' + day%7)}[-]</set>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-RemoveEnteringPopUp')">
+			<remove xpath="/windows/window[@name='windowCompass']/rect[@name='Location']//label[@name='MessageContent']"/>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VPS-ScreamerAlert') and mod_loaded('AGF-NoEAC-EnhancedAGF')">
+			<!-- ScreamerAlert appends to windowCompass before Outback deletes it. Restore the EnhancedAGF banner on AGF compass. -->
+			<append xpath="/windows/window[@name='windowCompass']">
+				<rect name="AGFEnhancedScreamerAlertRect" pos="-250,-4" controller="EnhancedScreamerAlerts, EnhancedAGF" visible="{screameralertsvisible}">
+					<sprite depth="2" name="Background" pos="125,-131" width="250" height="98" sprite="ui_game_header_fill" color="0,0,0,180" type="sliced" pivot="center"/>
+					<label depth="3" name="ScreamerAlert" pos="125,-113" font_size="28" color="[white]" style="outline" text="{screameralert}" pivot="center" justify="center" width="250" height="38"/>
+					<label depth="3" name="ScreamerHordeAlert" pos="125,-149" font_size="28" color="[white]" style="outline" text="{screamerhordealert}" pivot="center" justify="center" width="250" height="38"/>
+				</rect>
+			</append>
+		</if>
+	</conditional>
+
+	<!-- AGF backpack window sizes. Outback resized leftover windowBackpack to 10x6; used window is windowBackpackAGF. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/windows/window[@name='windowBackpackAGF']/@width">955</set>
+			<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@width">955</set>
+			<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@height">393</set>
+			<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cols">17</set>
+			<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@rows">7</set>
+			<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cell_width">56</set>
+			<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cell_height">56</set>
+		</if>
+		<else>
+			<conditional>
+				<if cond="mod_loaded('AGF-BackpackPlus-084Slots')">
+					<set xpath="/windows/window[@name='windowBackpackAGF']/@width">675</set>
+					<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@width">675</set>
+					<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@height">393</set>
+					<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cols">12</set>
+					<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@rows">7</set>
+					<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cell_width">56</set>
+					<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cell_height">56</set>
+				</if>
+				<else>
+					<conditional>
+						<if cond="mod_loaded('AGF-BackpackPlus-072Slots')">
+							<set xpath="/windows/window[@name='windowBackpackAGF']/@width">675</set>
+							<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@width">675</set>
+							<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@height">337</set>
+							<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cols">12</set>
+							<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@rows">6</set>
+							<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cell_width">56</set>
+							<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cell_height">56</set>
+						</if>
+						<else>
+							<conditional>
+								<if cond="mod_loaded('AGF-BackpackPlus-060Slots')">
+									<set xpath="/windows/window[@name='windowBackpackAGF']/@width">675</set>
+									<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@width">675</set>
+									<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/sprite[@name='backgroundMain']/@height">407</set>
+									<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@cols">10</set>
+									<set xpath="/windows/window[@name='windowBackpackAGF']/rect[@name='content']/grid[@name='inventory']/@rows">6</set>
+								</if>
+							</conditional>
+						</else>
+					</conditional>
+				</else>
+			</conditional>
+		</else>
+	</conditional>
+
+	<!-- Outback sets windowLooting to 10x10 for dropped backpack. That clips XL storage (up to 12x14) and 72+ dropped bags. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-LargerStorageOption') or mod_loaded('AGF-BackpackPlus-060Slots') or mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_width">56</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cell_height">56</set>
+			<setattribute xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/item_stackAGF" name="cell_size">56</setattribute>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-LargerStorageOption') and (mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots'))">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='header']/rect[@controller='ContainerStandardControls']/@visible">true</set>
+		</if>
+	</conditional>
+
+	<!-- Outback forge group uses windowThreeForgeInput. SmeltingPlus / SmeltTimer still xpath leftover windowForgeInput. -->
+	<conditional>
+		<if cond="mod_loaded('AGF-VP-SmeltingPlus')">
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/@height">280</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/sprite[@name='backgroundMain']/@pos">0,-46</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/sprite[@name='backgroundMain']/@height">229</set>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/sprite[@name='backgroundMain']" name="width">228</setattribute>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']/@pos">0,-46</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']/@height">228</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']/grid/@pos">3,-3</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/@pos">78,-49</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/@height">224</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/grid/@rows">6</set>
+			<set xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/grid/@cell_height">38</set>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/sprite" name="pos">-1,0</setattribute>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/sprite" name="width">149</setattribute>
+			<setattribute xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content2']/sprite" name="height">225</setattribute>
+			<append xpath="/windows/window[@name='windowThreeForgeInput']/rect[@name='content']">
+				<label depth="10" pos="7,-13" height="64" width="64" color="255,255,255,120" text="1" font_size="54" justify="center"/>
+				<label depth="10" pos="7,-88" height="64" width="64" color="255,255,255,120" text="2" font_size="54" justify="center"/>
+				<label depth="10" pos="7,-163" height="64" width="64" color="255,255,255,120" text="3" font_size="54" justify="center"/>
+			</append>
+		</if>
+	</conditional>
+	<conditional>
+		<if cond="mod_loaded('AGF-NoEAC-SmeltTimerOption')">
+			<insertafter xpath="/windows/window[@name='windowThreeForgeInput']/rect[contains(@style,'header.panel')]">
+				<rect name="smeltTimerModeBar" depth="5" pos="0,-46" width="228" height="32" controller="SmeltTimerModeBar, SmeltTimerTotal">
+					<sprite depth="1" name="modeBarBg" sprite="menu_empty3px" color="[darkGrey]" type="sliced" fillcenter="true" width="228" height="32"/>
+					<sprite depth="2" name="modeBarBorder" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" width="228" height="32" foregroundlayer="true"/>
+					<sprite depth="3" name="modeBarClock" width="22" height="22" pos="6,-5" sprite="ui_game_symbol_clock" color="[beige]" foregroundlayer="true" tooltip_key="xuiSmeltTimerClockTooltip"/>
+					<simplebutton name="btnSmeltTimerSingle" depth="3" pos="34,-5" width="94" height="22" font_size="16" caption_key="xuiSmeltTimerSingle" tooltip_key="xuiSmeltTimerSingleTooltip" bordercolor="12,12,12" defaultcolor="58,58,58" selectedsprite="menu_empty" selectedcolor="74,33,150" foregroundlayer="false" selected="{smelttimer_single_selected}" sound="[paging_click]"/>
+					<simplebutton name="btnSmeltTimerTotal" depth="3" pos="130,-5" width="94" height="22" font_size="16" caption_key="xuiSmeltTimerTotal" tooltip_key="xuiSmeltTimerTotalTooltip" bordercolor="12,12,12" defaultcolor="58,58,58" selectedsprite="menu_empty" selectedcolor="74,33,150" foregroundlayer="false" selected="{smelttimer_total_selected}" sound="[paging_click]"/>
+				</rect>
+			</insertafter>
+		</if>
+	</conditional>
+
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-PurpleBook')">
+			<!-- AGF Purple Book overlap:
+			     AGF-VP-SmeltingPlus also adds a right-side box; Outback shares that column (ammopress on top) and recenters the page.
+			     AGF-VP-FloraHarvester uses seeds Section2 chrysanthemum / zoom entry[2]; cactus stays on cotton Section1 / zoom cotton entry.
+			     CraftVitamins / MasterTool / MiningPlus / CraftSewingKits patch other columns or Unlockables misc. -->
+
+			<!-- Overview: leave Forge Ahead vanilla — no room for Check36. -->
+
+			<!-- Zoom: vanilla 5x4 grid. Ammopress sits to the right like Master Tool, then the page recenters. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedWorkstations']/label[@name='checklistWorkstationsMagName']/@pos">185,-225</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstationsTitle']/@pos">185,-255</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedWorkstations']/grid[@name='checklistWorkstations']/@pos">485,-165</set>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedWorkstations']">
+				<rect name="QSectionOutbackAmmopress" pos="1071,-365" width="134" height="100" depth="3">
+					<sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="134" height="100" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" pos="0,0" width="134" height="100" color="[black]" type="sliced" fillcenter="false"/>
+					<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="134" height="100" fillcenter="true" type="filled" fill="{cvar(craftingWorkstationsCheck36)}"/>
+					<sprite depth="3" name="backgroundBorder" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="156, 136, 103" type="sliced" fillcenter="true"/>
+					<label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="36" color="[black]" font_size="26"/>
+					<sprite name="itemIcon" depth="3" pos="42,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammopress" color="" tooltip_key="ammopress"/>
+				</rect>
+			</append>
+			<conditional>
+				<if cond="mod_loaded('AGF-VP-SmeltingPlus')">
+					<!-- Same extra column as SmeltingPlus: ammopress on top, advanced smelt below. -->
+					<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedWorkstations']/rect[@name='QSectionOutbackAmmopress']/@pos">1071,-165</set>
+					<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedWorkstations']/rect[@name='QSectionSmeltingPlusAdv']/@pos">1071,-305</set>
+				</if>
+			</conditional>
+
+			<!-- Zoomed cooking: always-known Outback food in a Check-1 bar above the magazine grid.
+			     38px icons, 16/row max, 3 rows, bar 164px. Even left/between/right spacing.
+			     Order: canned, dry food, wet food, drinks, honey+infection-cure last; each group by food then water (low to high).
+			     Extra+grid centered on vanilla -415; magazine name/title stay at vanilla Y. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedFood']/grid[@name='checklistFood']/@pos">470,-297</set>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedFood']">
+				<rect name="QSectionOutbackFoodAlways" pos="470,-133" width="750" height="164" depth="3">
+					<sprite depth="1" name="backgroundSection" sprite="menu_empty3px" width="750" height="164" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="3" name="backgroundBorderSection" sprite="menu_empty3px" foregroundlayer="true" pos="0,0" width="750" height="164" color="[black]" type="sliced" fillcenter="false"/>
+					<filledsprite depth="2" name="yesUnlocked" color="75,140,75,255" pos="0,0" width="750" height="164" fillcenter="true" type="filled" fill="1"/>
+					<sprite depth="3" name="backgroundBorder" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="0,0" width="50" height="30" color="156, 136, 103" type="sliced" fillcenter="true"/>
+					<label depth="3" name="checkunlock" pos="25,-15" pivot="center" width="50" height="30" justify="center" text="1" color="[black]" font_size="26"/>
+					<sprite name="itemIcon" depth="3" pos="8,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodCanStock" color="" tooltip_key="foodCanStock"/>
+					<sprite name="itemIcon" depth="3" pos="54,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodCanChicken" color="" tooltip_key="foodCanChicken"/>
+					<sprite name="itemIcon" depth="3" pos="101,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodWheatFlour" color="" tooltip_key="foodWheatFlour"/>
+					<sprite name="itemIcon" depth="3" pos="147,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodDamper" color="" tooltip_key="foodDamper"/>
+					<sprite name="itemIcon" depth="3" pos="193,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodGrilledCactusPaddles" color="" tooltip_key="foodGrilledCactusPaddles"/>
+					<sprite name="itemIcon" depth="3" pos="240,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodGrilledYuccaFruit" color="" tooltip_key="foodGrilledYuccaFruit"/>
+					<sprite name="itemIcon" depth="3" pos="286,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSausageRoll" color="" tooltip_key="foodSausageRoll"/>
+					<sprite name="itemIcon" depth="3" pos="332,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSnagSanga" color="" tooltip_key="foodSnagSanga"/>
+					<sprite name="itemIcon" depth="3" pos="379,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodCactusOmelette" color="" tooltip_key="foodCactusOmelette"/>
+					<sprite name="itemIcon" depth="3" pos="425,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodEggSandwich" color="" tooltip_key="foodEggSandwich"/>
+					<sprite name="itemIcon" depth="3" pos="471,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodRoastChicken" color="" tooltip_key="foodRoastChicken"/>
+					<sprite name="itemIcon" depth="3" pos="518,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSaguaroFruitPie" color="" tooltip_key="foodSaguaroFruitPie"/>
+					<sprite name="itemIcon" depth="3" pos="564,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodYuccaFruitPie" color="" tooltip_key="foodYuccaFruitPie"/>
+					<sprite name="itemIcon" depth="3" pos="610,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodCouscousYabbies" color="" tooltip_key="foodCouscousYabbies"/>
+					<sprite name="itemIcon" depth="3" pos="657,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodMeatPie" color="" tooltip_key="foodMeatPie"/>
+					<sprite name="itemIcon" depth="3" pos="703,-40" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodEggQuiche" color="" tooltip_key="foodEggQuiche"/>
+					<sprite name="itemIcon" depth="3" pos="8,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodFishAndChips" color="" tooltip_key="foodFishAndChips"/>
+					<sprite name="itemIcon" depth="3" pos="54,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodFruitPieTrio" color="" tooltip_key="foodFruitPieTrio"/>
+					<sprite name="itemIcon" depth="3" pos="101,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodStimStamStem" color="" tooltip_key="foodStimStamStem"/>
+					<sprite name="itemIcon" depth="3" pos="147,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodCactusStew" color="" tooltip_key="foodCactusStew"/>
+					<sprite name="itemIcon" depth="3" pos="193,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodChickenStew" color="" tooltip_key="foodChickenStew"/>
+					<sprite name="itemIcon" depth="3" pos="240,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodGnocchiChili" color="" tooltip_key="foodGnocchiChili"/>
+					<sprite name="itemIcon" depth="3" pos="286,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodBillyCanYabbies" color="" tooltip_key="foodBillyCanYabbies"/>
+					<sprite name="itemIcon" depth="3" pos="332,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSuperMeatStew" color="" tooltip_key="foodSuperMeatStew"/>
+					<sprite name="itemIcon" depth="3" pos="379,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodFishPie" color="" tooltip_key="foodFishPie"/>
+					<sprite name="itemIcon" depth="3" pos="425,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodFishPieMashPeas" color="" tooltip_key="foodFishPieMashPeas"/>
+					<sprite name="itemIcon" depth="3" pos="471,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="drinkJarBillyTea" color="" tooltip_key="drinkJarBillyTea"/>
+					<sprite name="itemIcon" depth="3" pos="518,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="drinkCactusFruitJuice" color="" tooltip_key="drinkCactusFruitJuice"/>
+					<sprite name="itemIcon" depth="3" pos="564,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="drinkYuccaCactusAloeJuiceCooler" color="" tooltip_key="drinkYuccaCactusAloeJuiceCooler"/>
+					<sprite name="itemIcon" depth="3" pos="610,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodHoney" color="" tooltip_key="foodHoney"/>
+					<sprite name="itemIcon" depth="3" pos="657,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="honeybeer" color="" tooltip_key="drinkHoneyBeer"/>
+					<sprite name="itemIcon" depth="3" pos="703,-78" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="bread2" color="" tooltip_key="foodHoneyBread"/>
+					<sprite name="itemIcon" depth="3" pos="8,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodHoneyGlazedDonuts" color="" tooltip_key="foodHoneyGlazedDonuts"/>
+					<sprite name="itemIcon" depth="3" pos="54,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodChickSticks" color="" tooltip_key="foodChickSticks"/>
+					<sprite name="itemIcon" depth="3" pos="101,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSuperHoneyPopcorn" color="" tooltip_key="foodSuperHoneyPopcorn"/>
+					<sprite name="itemIcon" depth="3" pos="147,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodZombimiteToast" color="" tooltip_key="foodZombimiteToast"/>
+					<sprite name="itemIcon" depth="3" pos="193,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="oakpie" color="" tooltip_key="foodHoneyPumpkinPie"/>
+					<sprite name="itemIcon" depth="3" pos="240,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodBlueberryBreadPudding" color="" tooltip_key="foodBlueberryBreadPudding"/>
+					<sprite name="itemIcon" depth="3" pos="286,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodPocoTucker" color="" tooltip_key="foodPocoTucker"/>
+					<sprite name="itemIcon" depth="3" pos="332,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodWitchettyGrubSoupandSanga" color="" tooltip_key="foodWitchettyGrubSoupandSanga"/>
+					<sprite name="itemIcon" depth="3" pos="379,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodSuperCornFluffyOmelette" color="" tooltip_key="foodSuperCornFluffyOmelette"/>
+					<sprite name="itemIcon" depth="3" pos="425,-116" size="38,38" foregroundlayer="true" atlas="ItemIconAtlas" sprite="foodHordeGorge" color="" tooltip_key="foodHordeGorge"/>
+				</rect>
+			</append>
+
+			<!-- Extra magazine icons. Vehicle mods are magazine AND schematic (both). -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedExplosives']/grid[@name='checklistExplosives']/entry[sprite[@sprite='resourceRocketTip']]/sprite[@sprite='resourceRocketTip']/@pos">5,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedExplosives']/grid[@name='checklistExplosives']/entry[sprite[@sprite='resourceRocketCasing']]/sprite[@sprite='resourceRocketCasing']/@pos">65,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedExplosives']/grid[@name='checklistExplosives']/entry[sprite[@sprite='ammoRocketFrag']]/sprite[@sprite='ammoRocketFrag']/@pos">125,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedExplosives']/grid[@name='checklistExplosives']/entry[sprite[@sprite='ammoRocketHE']]/sprite[@sprite='ammoRocketHE']/@pos">185,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistExplosives']/rect[sprite[@sprite='ammoRocketHE']]/sprite[@sprite='ammoRocketHE']">
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammoRocketFire" color="" tooltip_key="ammoRocketFire"/>
+			</insertafter>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedExplosives']/grid[@name='checklistExplosives']/entry[sprite[@sprite='ammoRocketHE']]/sprite[@sprite='ammoRocketHE']">
+				<sprite name="itemIcon" depth="3" pos="245,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammoRocketFire" color="" tooltip_key="ammoRocketFire"/>
+			</insertafter>
+
+			<!-- Unlocks Ammo: fire rocket next to Frag/HE. Same magazine check (explosives 45). -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllAmmoRowGrid7']/@cols">3</set>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllAmmoRowGrid7']">
+				<entry name="ammoRocketFire">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammoRocketFire" color="" tooltip_key="ammoRocketFire"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck45)}"/>
+				</entry>
+			</append>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAmmo']/entry[@name='ammoRowrocket']/sprite[@sprite='ammoRocketHE']">
+				<sprite depth="2" name="background" sprite="menu_empty3px" pos="872,-381" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+				<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="872,-381" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+				<sprite depth="4" name="itemIcon" pos="876,-385" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="ammoRocketFire" color="" tooltip_key="ammoRocketFire"/>
+				<filledsprite depth="3" name="background" color="0,255,0,120" pos="876,-385" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(craftingExplosivesCheck45)}"/>
+			</insertafter>
+
+			<!-- Unlocks: schematic-only mods. Skip Storm Breaker (always craftable) and admin jet boots. -->
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllArmorRowGrid1']/entry[@name='modArmorStealthBoots']">
+				<entry name="modArmorRunningShoesHP">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="apparelRunningShoesRegular" color="173,216,230" tooltip_key="modArmorRunningShoesHP"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modArmorRunningShoesHP)}"/>
+				</entry>
+			</insertafter>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockArmors']/grid[@name='unlockArmorsSectionGrid1']/entry[@name='modArmorStealthBoots']">
+				<entry name="modArmorRunningShoesHP">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="apparelRunningShoesRegular" color="173,216,230" tooltip_key="modArmorRunningShoesHP"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modArmorRunningShoesHP)}"/>
+				</entry>
+			</insertafter>
+			<!-- Overview Tools column: tighter 50px row pitch (vanilla 58). Special is 2 rows so later rows step 94px. Zoomed special has room for an 8th column. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid1']/@pos">496,-173</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid2']/@pos">496,-223</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid3']/@pos">496,-273</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid4']/@rows">2</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid4']/@pos">496,-323</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid5']/@pos">496,-417</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid6']/@pos">496,-511</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid7']/@pos">496,-561</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid8']/@pos">496,-611</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockToolsWeapons']/grid[@name='unlockToolsWeaponsSectionGrid4']/@cols">8</set>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid4']">
+				<entry name="modMeleeSpartanSledgeStamina">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modMeleeSpartanSledgeStamina" color="" tooltip_key="modMeleeSpartanSledgeStamina"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modMeleeSpartanSledgeStamina)}"/>
+				</entry>
+				<entry name="modWeaponMaintenance">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modWeaponMaintenance" color="" tooltip_key="modWeaponMaintenance"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modWeaponMaintenance)}"/>
+				</entry>
+				<entry name="modGunMagnumMagazineExtender">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modGunMagnumMagazineExtender" color="" tooltip_key="modGunMagnumMagazineExtender"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modGunMagnumMagazineExtender)}"/>
+				</entry>
+				<entry name="modMeleeMacheteArmorPiercing">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modMeleeMacheteArmorPiercing" color="" tooltip_key="modMeleeMacheteArmorPiercing"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modMeleeMacheteArmorPiercing)}"/>
+				</entry>
+			</append>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockToolsWeapons']/grid[@name='unlockToolsWeaponsSectionGrid4']">
+				<entry name="modMeleeSpartanSledgeStamina">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modMeleeSpartanSledgeStamina" color="" tooltip_key="modMeleeSpartanSledgeStamina"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modMeleeSpartanSledgeStamina)}"/>
+				</entry>
+				<entry name="modWeaponMaintenance">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modWeaponMaintenance" color="" tooltip_key="modWeaponMaintenance"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modWeaponMaintenance)}"/>
+				</entry>
+				<entry name="modGunMagnumMagazineExtender">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modGunMagnumMagazineExtender" color="" tooltip_key="modGunMagnumMagazineExtender"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modGunMagnumMagazineExtender)}"/>
+				</entry>
+				<entry name="modMeleeMacheteArmorPiercing">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modMeleeMacheteArmorPiercing" color="" tooltip_key="modMeleeMacheteArmorPiercing"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modMeleeMacheteArmorPiercing)}"/>
+				</entry>
+			</append>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid5']/entry[@name='modGunBowPolymerString']">
+				<entry name="modGunBowArrowGrip">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modGunBowArrowGrip" color="" tooltip_key="modGunBowArrowGrip"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modGunBowArrowGrip)}"/>
+				</entry>
+				<entry name="modArcheryReloadSpeed">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modArcheryReloadSpeed" color="" tooltip_key="modArcheryReloadSpeed"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modArcheryReloadSpeed)}"/>
+				</entry>
+			</insertafter>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockToolsWeapons']/grid[@name='unlockToolsWeaponsSectionGrid5']/entry[@name='modGunBowPolymerString']">
+				<entry name="modGunBowArrowGrip">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modGunBowArrowGrip" color="" tooltip_key="modGunBowArrowGrip"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modGunBowArrowGrip)}"/>
+				</entry>
+				<entry name="modArcheryReloadSpeed">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modArcheryReloadSpeed" color="" tooltip_key="modArcheryReloadSpeed"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modArcheryReloadSpeed)}"/>
+				</entry>
+			</insertafter>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllToolsRowGrid8']">
+				<entry name="modGunDoubleBarrelSpeedLoader">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modGunDoubleBarrelSpeedLoader" color="" tooltip_key="modGunDoubleBarrelSpeedLoader"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(modGunDoubleBarrelSpeedLoader)}"/>
+				</entry>
+			</append>
+			<append xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockToolsWeapons']/grid[@name='unlockToolsWeaponsSectionGrid8']">
+				<entry name="modGunDoubleBarrelSpeedLoader">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="5,-5" width="56" height="56" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="9,-9" width="48" height="48" size="48,48" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modGunDoubleBarrelSpeedLoader" color="" tooltip_key="modGunDoubleBarrelSpeedLoader"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="9,-9" width="48" height="48" fillcenter="true" type="filled" fill="{cvar(modGunDoubleBarrelSpeedLoader)}"/>
+				</entry>
+			</append>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockAll']/grid[@name='unlockAllSectionGrid5']/entry[@name='resourceWoodBundle']">
+				<entry name="resourceClayLumpBundle">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="3,-3" width="38" height="38" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="5,-5" width="34" height="34" size="34,34" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceClayLump" color="" tooltip_key="resourceClayLumpBundle"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="5,-5" width="34" height="34" fillcenter="true" type="filled" fill="{cvar(AGFperkArtOfMiningPallets)}"/>
+					<sprite depth="8" name="itemtypeicon" width="12" height="12" sprite="ui_game_symbol_bundle" pos="5,-5" foregroundlayer="true" color=""/>
+				</entry>
+			</insertafter>
+			<!-- Zoomed Misc: +1 clay bundle. Vanilla is 12 cols at 131,-92; shift left 47px so 13 cols stay centered. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockMisc']/grid[@name='unlockMiscGrid']/@cols">13</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockMisc']/grid[@name='unlockMiscGrid']/@pos">84,-92</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockablesTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='unlockMisc']/grid[@name='unlockMiscGrid']/entry[@name='resourceWoodBundle']">
+				<entry name="resourceClayLumpBundle">
+					<sprite depth="2" name="background" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[darkGrey]" type="sliced" fillcenter="true"/>
+					<sprite depth="2" name="backgroundBorder" foregroundlayer="true" sprite="menu_empty3px" pos="7,-7" width="80" height="80" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="4" name="itemIcon" pos="12,-12" width="70" height="70" size="70,70" foregroundlayer="true" atlas="ItemIconAtlas" sprite="resourceClayLump" color="" tooltip_key="resourceClayLumpBundle"/>
+					<filledsprite depth="3" name="background" color="0,255,0,120" pos="12,-12" width="70" height="70" fillcenter="true" type="filled" fill="{cvar(AGFperkArtOfMiningPallets)}"/>
+					<sprite depth="8" name="itemtypeicon" width="18" height="18" sprite="ui_game_symbol_bundle" pos="12,-12" foregroundlayer="true" color=""/>
+				</entry>
+			</insertafter>
+
+			<!-- Seeds unlock 2: expand like unlock 4. CustomIcon is treeCactus04. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/@height">363</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section1']/@height">51</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section1']/sprite[@name='backgroundSection']/@height">53</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section1']/sprite[@name='backgroundBorderSection']/@height">53</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section1']/filledsprite[@name='yesUnlocked']/@height">51</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section2']/@pos">0,-51</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section3']/@pos">0,-102</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section4']/@pos">0,-132</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section5']/@pos">0,-162</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section6']/@pos">0,-192</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section7']/@pos">0,-243</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section8']/@pos">0,-273</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section9']/@pos">0,-303</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section10']/@pos">0,-333</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistSeeds']/rect[@name='Section1']/sprite[@sprite='plantedCotton1']">
+				<sprite name="itemIcon" depth="3" pos="26,-25" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="treeCactus04" color="" tooltip_key="plantedPricklyCactus1"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[sprite[@sprite='plantedCotton1']]/sprite[@sprite='plantedCotton1']/@pos">55,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedSeeds']/grid[@name='checklistSeeds']/entry[sprite[@sprite='plantedCotton1']]/sprite[@sprite='plantedCotton1']">
+				<sprite name="itemIcon" depth="3" pos="115,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="treeCactus04" color="" tooltip_key="plantedPricklyCactus1"/>
+			</insertafter>
+
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistClubs']/rect[sprite[@sprite='meleeWpnClubT1BaseballBat']]/sprite[@sprite='meleeWpnClubT1BaseballBat']">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnClubT1CanCanBat" color="" tooltip_key="meleeWpnClubT1CanCanBat"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedClubs']/grid[@name='checklistClubs']/entry[sprite[@sprite='meleeWpnClubT1BaseballBat']]/sprite[@sprite='meleeWpnClubT1BaseballBat']/@pos">95,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedClubs']/grid[@name='checklistClubs']/entry[sprite[@sprite='meleeWpnClubT1BaseballBat']]/sprite[@sprite='meleeWpnClubT1BaseballBat']">
+				<sprite name="itemIcon" depth="3" pos="155,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnClubT1CanCanBat" color="" tooltip_key="meleeWpnClubT1CanCanBat"/>
+			</insertafter>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistClubs']/rect[sprite[@sprite='meleeWpnClubT3SteelClub']]/sprite[@sprite='meleeWpnClubT3SteelClub']">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnClubT3OldCricketBat" color="" tooltip_key="meleeWpnClubT3OldCricketBat"/>
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnClubT3NewCricketBat" color="" tooltip_key="meleeWpnClubT3NewCricketBat"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedClubs']/grid[@name='checklistClubs']/entry[sprite[@sprite='meleeWpnClubT3SteelClub']]/sprite[@sprite='meleeWpnClubT3SteelClub']/@pos">65,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedClubs']/grid[@name='checklistClubs']/entry[sprite[@sprite='meleeWpnClubT3SteelClub']]/sprite[@sprite='meleeWpnClubT3SteelClub']">
+				<sprite name="itemIcon" depth="3" pos="125,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnClubT3OldCricketBat" color="" tooltip_key="meleeWpnClubT3OldCricketBat"/>
+				<sprite name="itemIcon" depth="3" pos="185,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnClubT3NewCricketBat" color="" tooltip_key="meleeWpnClubT3NewCricketBat"/>
+			</insertafter>
+
+			<!-- Briston: item-name sprite from Outback's merged ItemIconAtlas (not vanilla steel knuckles). -->
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistKnuckles']/rect[sprite[@sprite='meleeWpnKnucklesT3SteelKnuckles']]/sprite[@sprite='meleeWpnKnucklesT3SteelKnuckles']">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnKnucklesT3SteelOakravenBristonKnuckles" color="" tooltip_key="meleeWpnKnucklesT3SteelOakravenBristonKnuckles"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedKnuckles']/grid[@name='checklistKnuckles']/entry[sprite[@sprite='meleeWpnKnucklesT3SteelKnuckles']]/sprite[@sprite='meleeWpnKnucklesT3SteelKnuckles']/@pos">95,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedKnuckles']/grid[@name='checklistKnuckles']/entry[sprite[@sprite='meleeWpnKnucklesT3SteelKnuckles']]/sprite[@sprite='meleeWpnKnucklesT3SteelKnuckles']">
+				<sprite name="itemIcon" depth="3" pos="155,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="meleeWpnKnucklesT3SteelOakravenBristonKnuckles" color="" tooltip_key="meleeWpnKnucklesT3SteelOakravenBristonKnuckles"/>
+			</insertafter>
+
+			<!-- Magazines unlock vehicle mods; schematics still do too. Both magazine + Unlockables.
+			     Zoom: widen cells so minibike's 7 icons stay 50px on one row, then recenter the page. -->
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/label[@name='checklistVehiclesMagName']/@pos">310,-225</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehiclesTitle']/@pos">310,-255</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/@pos">610,-165</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/@cell_width">470</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry/sprite[@name='backgroundSection']/@width">470</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry/sprite[@name='backgroundBorderSection']/@width">470</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry/filledsprite[@name='yesUnlocked']/@width">470</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleBicycleChassis']]/sprite[@sprite='vehicleBicycleChassis']/@pos">150,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleBicycleHandlebars']]/sprite[@sprite='vehicleBicycleHandlebars']/@pos">210,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleWheels']]/sprite[@sprite='vehicleWheels']/@pos">270,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/@height">430</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section2']/@height">111</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='backgroundSection']/@height">113</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section2']/sprite[@name='backgroundBorderSection']/@height">113</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section2']/filledsprite[@name='yesUnlocked']/@height">111</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleMinibikeChassis']]/sprite[@sprite='ammoGasCan']">
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleFuelSaver" color="" tooltip_key="modVehicleFuelSaver"/>
+				<sprite name="itemIcon" depth="3" pos="2,-85" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleOffRoadHeadlights" color="" tooltip_key="modVehicleOffRoadHeadlights"/>
+				<sprite name="itemIcon" depth="3" pos="26,-85" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleStorage" color="" tooltip_key="modVehicleStorage"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMinibikeChassis']]/sprite[@sprite='vehicleMinibikeChassis']/@pos">30,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMinibikeHandlebars']]/sprite[@sprite='vehicleMinibikeHandlebars']/@pos">90,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='resourceOil']]/sprite[@sprite='resourceOil']/@pos">150,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMinibikeChassis']]/sprite[@sprite='ammoGasCan']/@pos">210,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMinibikeChassis']]/sprite[@sprite='ammoGasCan']">
+				<sprite name="itemIcon" depth="3" pos="270,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleFuelSaver" color="" tooltip_key="modVehicleFuelSaver"/>
+				<sprite name="itemIcon" depth="3" pos="330,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleOffRoadHeadlights" color="" tooltip_key="modVehicleOffRoadHeadlights"/>
+				<sprite name="itemIcon" depth="3" pos="390,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleStorage" color="" tooltip_key="modVehicleStorage"/>
+			</insertafter>
+
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section3']/@pos">0,-172</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section3']/@height">86</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='backgroundSection']/@height">88</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section3']/sprite[@name='backgroundBorderSection']/@height">88</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section3']/filledsprite[@name='yesUnlocked']/@height">86</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleMotorcycleChassis']]/sprite[@sprite='ammoGasCan']">
+				<sprite name="itemIcon" depth="3" pos="2,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleExpandedSeat" color="" tooltip_key="modVehicleExpandedSeat"/>
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleReserveFuelTank" color="" tooltip_key="modVehicleReserveFuelTank"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMotorcycleChassis']]/sprite[@sprite='vehicleMotorcycleChassis']/@pos">90,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMotorcycleHandlebars']]/sprite[@sprite='vehicleMotorcycleHandlebars']/@pos">150,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMotorcycleChassis']]/sprite[@sprite='ammoGasCan']/@pos">210,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMotorcycleChassis']]/sprite[@name='itemtypeicon']/@pos">210,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleMotorcycleChassis']]/sprite[@sprite='ammoGasCan']">
+				<sprite name="itemIcon" depth="3" pos="270,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleExpandedSeat" color="" tooltip_key="modVehicleExpandedSeat"/>
+				<sprite name="itemIcon" depth="3" pos="330,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleReserveFuelTank" color="" tooltip_key="modVehicleReserveFuelTank"/>
+			</insertafter>
+
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section4']/@pos">0,-258</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section4']/@height">86</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section4']/sprite[@name='backgroundSection']/@height">88</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section4']/sprite[@name='backgroundBorderSection']/@height">88</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section4']/filledsprite[@name='yesUnlocked']/@height">86</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleTruck4x4Chassis']]/sprite[@sprite='vehicleTruck4x4Chassis']/@pos">26,-10</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleTruck4x4Chassis']]/sprite[@sprite='vehicleTruck4x4Accessories']/@pos">2,-35</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleTruck4x4Chassis']]/sprite[@sprite='vehicleTruck4x4Accessories']">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleSuperCharger" color="" tooltip_key="modVehicleSuperCharger"/>
+				<sprite name="itemIcon" depth="3" pos="2,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleBalloon1Placeable" color="" tooltip_key="vehicleBalloon1Placeable"/>
+				<sprite name="itemIcon" depth="3" pos="26,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleBalloon2Placeable" color="" tooltip_key="vehicleBalloon2Placeable"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleTruck4x4Chassis']]/sprite[@sprite='vehicleTruck4x4Chassis']/@pos">90,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleTruck4x4Accessories']]/sprite[@sprite='vehicleTruck4x4Accessories']/@pos">150,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleTruck4x4Chassis']]/sprite[@sprite='vehicleTruck4x4Accessories']">
+				<sprite name="itemIcon" depth="3" pos="210,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleSuperCharger" color="" tooltip_key="modVehicleSuperCharger"/>
+				<sprite name="itemIcon" depth="3" pos="270,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleBalloon1Placeable" color="" tooltip_key="vehicleBalloon1Placeable"/>
+				<sprite name="itemIcon" depth="3" pos="330,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="vehicleBalloon2Placeable" color="" tooltip_key="vehicleBalloon2Placeable"/>
+			</insertafter>
+
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section5']/@pos">0,-344</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section5']/@height">86</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section5']/sprite[@name='backgroundSection']/@height">88</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section5']/sprite[@name='backgroundBorderSection']/@height">88</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[@name='Section5']/filledsprite[@name='yesUnlocked']/@height">86</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleGyroCopterChassis']]/sprite[@sprite='vehicleGyroCopterChassis']/@pos">26,-10</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleGyroCopterChassis']]/sprite[@sprite='vehicleGyroCopterAccessories']/@pos">2,-35</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='allChecklists']/rect[@name='checklistVehicles']/rect[sprite[@sprite='vehicleGyroCopterChassis']]/sprite[@sprite='vehicleGyroCopterAccessories']">
+				<sprite name="itemIcon" depth="3" pos="26,-35" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleArmor" color="" tooltip_key="modVehicleArmor"/>
+				<sprite name="itemIcon" depth="3" pos="2,-60" size="21,21" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehiclePlow" color="" tooltip_key="modVehiclePlow"/>
+			</insertafter>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleGyroCopterChassis']]/sprite[@sprite='vehicleGyroCopterChassis']/@pos">120,-40</set>
+			<set xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleGyroCopterAccessories']]/sprite[@sprite='vehicleGyroCopterAccessories']/@pos">180,-40</set>
+			<insertafter xpath="/windows/window[@name='Schematics']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='craftinglistTab']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@name='zoomedVehicles']/grid[@name='checklistVehicles']/entry[sprite[@sprite='vehicleGyroCopterChassis']]/sprite[@sprite='vehicleGyroCopterAccessories']">
+				<sprite name="itemIcon" depth="3" pos="240,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehicleArmor" color="" tooltip_key="modVehicleArmor"/>
+				<sprite name="itemIcon" depth="3" pos="300,-40" size="50,50" foregroundlayer="true" atlas="ItemIconAtlas" sprite="modVehiclePlow" color="" tooltip_key="modVehiclePlow"/>
+			</insertafter>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

@@ -1,0 +1,17 @@
+<AGF-HUDPlus>
+
+<!--Have to do insertafter in order to apply the new property where a book/book_read already exists-->
+
+
+<!--Adding color and opacity settings to the un-read closed book icon and read open book icon.-->
+
+		<insertafter xpath="/items/item/property[@name='AltItemTypeIcon' and @value='book_read']">
+			<property name="AltItemTypeIconColor" value="0,255,0,180" />
+		</insertafter>
+
+
+
+
+  
+</AGF-HUDPlus>
+  

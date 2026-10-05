@@ -1,0 +1,1009 @@
+bucket,category,key,vanilla,mod
+,Flora,plantedAloe1,Aloe Vera (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Aloe Vera
+,Flora,plantedAloe2,Aloe Vera (Growing),[aa0002][-][DECEA3]Growing[-] Aloe Vera
+,Flora,plantedAloe3HarvestDesc,Aloe Vera Plant,[aa0003][-][00ff00]Harvest[-] Aloe Vera
+,Flora,plantedBlueberry1,Blueberry (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Blueberry
+,Flora,plantedBlueberry2,Blueberry (Growing),[aa0002][-][DECEA3]Growing[-] Blueberry
+,Flora,plantedBlueberry3HarvestDesc,Blueberry Plant,[aa0003][-][00ff00]Harvest[-] Blueberry
+,Flora,plantedChrysanthemum1,Chrysanthemum (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Chrysanthemum
+,Flora,plantedChrysanthemum2,Chrysanthemum (Growing),[aa0002][-][DECEA3]Growing[-] Chrysanthemum
+,Flora,plantedChrysanthemum3HarvestDesc,Chrysanthemum,[aa0003][-][00ff00]Harvest[-] Chrysanthemum
+,Flora,plantedCoffee1,Coffee (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Coffee
+,Flora,plantedCoffee2,Coffee (Growing),[aa0002][-][DECEA3]Growing[-] Coffee
+,Flora,plantedCoffee3HarvestDesc,Coffee Plant,[aa0003][-][00ff00]Harvest[-] Coffee
+,Flora,plantedCorn1,Corn (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Corn
+,Flora,plantedCorn2,Corn (Growing),[aa0002][-][DECEA3]Growing[-] Corn
+,Flora,plantedCorn3HarvestDesc,Corn Plant,[aa0003][-][00ff00]Harvest[-] Corn
+,Flora,plantedCotton1,Cotton (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Cotton
+,Flora,plantedCotton2,Cotton (Growing),[aa0002][-][DECEA3]Growing[-] Cotton
+,Flora,plantedCotton3HarvestDesc,Cotton Plant,[aa0003][-][00ff00]Harvest[-] Cotton
+,Flora,plantedGoldenrod1,Goldenrod (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Goldenrod
+,Flora,plantedGoldenrod2,Goldenrod (Growing),[aa0002][-][DECEA3]Growing[-] Goldenrod
+,Flora,plantedGoldenrod3HarvestDesc,Goldenrod Flower,[aa0003][-][00ff00]Harvest[-] Goldenrod
+,Flora,plantedGraceCorn1,Super Corn (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Super Corn
+,Flora,plantedGraceCorn2,Super Corn (Growing),[aa0002][-][DECEA3]Growing[-] Super Corn
+,Flora,plantedGraceCorn3HarvestDesc,Super Corn,[aa0003][-][00ff00]Harvest[-] Super Corn
+,Flora,plantedHop1,Hop (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Hop
+,Flora,plantedHop2,Hop (Growing),[aa0002][-][DECEA3]Growing[-] Hop
+,Flora,plantedHop3HarvestDesc,Hop Plant,[aa0003][-][00ff00]Harvest[-] Hop
+,Flora,plantedMushroom1,Mushroom Spores (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Mushrooms
+,Flora,plantedMushroom2,Mushrooms (Growing),[aa0002][-][DECEA3]Growing[-] Mushrooms
+,Flora,plantedMushroom3HarvestDesc,Mushrooms,[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,plantedPotato1,Potato (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Potato
+,Flora,plantedPotato2,Potato (Growing),[aa0002][-][DECEA3]Growing[-] Potato
+,Flora,plantedPotato3HarvestDesc,Potato Plant,[aa0003][-][00ff00]Harvest[-] Potato
+,Flora,plantedPumpkin1,Pumpkin (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Pumpkin
+,Flora,plantedPumpkin2,Pumpkin (Growing),[aa0002][-][DECEA3]Growing[-] Pumpkin
+,Flora,plantedPumpkin3HarvestDesc,Pumpkin Plant,[aa0003][-][00ff00]Harvest[-] Pumpkin
+,Flora,plantedYucca1,Yucca (Seed),[FFA94D][Seed][-][dddd02][-][eeee00][-] Yucca
+,Flora,plantedYucca2,Yucca (Growing),[aa0002][-][DECEA3]Growing[-] Yucca
+,Flora,plantedYucca3HarvestDesc,Yucca Plant,[aa0003][-][00ff00]Harvest[-] Yucca
+,Flora,plantedAloe3Harvest,Aloe Vera Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Aloe Vera
+,Flora,plantedBlueberry3Harvest,Blueberry Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Blueberry
+,Flora,plantedChrysanthemum3Harvest,Chrysanthemum 3 (POI),[aa0003][-][00ff00]Harvest[-] Chrysanthemum
+,Flora,plantedCoffee3Harvest,Coffee Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Coffee
+,Flora,plantedCorn3Harvest,Corn Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Corn
+,Flora,plantedCotton3Harvest,Cotton 3 (POI),[aa0003][-][00ff00]Harvest[-] Cotton
+,Flora,plantedGoldenrod3Harvest,Goldenrod Flower 3 (POI),[aa0003][-][00ff00]Harvest[-] Goldenrod
+,Flora,plantedGraceCorn3Harvest,Super Corn 3 (POI),[aa0003][-][00ff00]Harvest[-] Super Corn
+,Flora,plantedHop3Harvest,Hop Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Hop
+,Flora,plantedMushroom3Harvest,Mushrooms 3 (POI),[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,plantedPotato3Harvest,Potato Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Potato
+,Flora,plantedPumpkin3Harvest,Pumpkin Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Pumpkin
+,Flora,plantedYucca3Harvest,Yucca Plant 3 (POI),[aa0003][-][00ff00]Harvest[-] Yucca
+,Flora,mushroom01,Mushrooms 01 (POI),[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,mushroom02,Mushrooms 02 (POI),[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,mushroom01Desc,Mushrooms,[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,mushroomBiome2,Mushrooms,[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,mushroomBiome4,Mushrooms,[aa0003][-][00ff00]Harvest[-] Mushrooms
+,Flora,mushroomRadiated02,Radiated Mushrooms,[aa0003][-][00ff00]Harvest[-] Radiated Mushrooms
+,Flora,mushroomRadiated04,Radiated Mushrooms,[aa0003][-][00ff00]Harvest[-] Radiated Mushrooms
+,Flora,treePlantedMountainPine1m,Pine Seed,[FFA94D][Seed][-][dddd01][-][eeee03][-] Pine
+,Flora,treePlantedOak1m,Oak Seed,[FFA94D][Seed][-][dddd01][-][eeee02][-] Oak
+,Flora,treePlantedWinterPine1m,Blue Spruce Seed,[FFA94D][Seed][-][dddd01][-][eeee01][-] Blue Spruce
+,Flora,treePlantedMountainPine12m,Tree Planted Mountain Pine 12m,[a00002][-][DECEA3]Growing (2/5)[-] Pine
+,Flora,treePlantedMountainPine19m,Tree Planted Mountain Pine 19m,[a00003][-][DECEA3]Growing (3/5)[-] Pine
+,Flora,treePlantedMountainPine27m,Tree Planted Mountain Pine 27m,[a00004][-][DECEA3]Growing (4/5)[-] Pine
+,Flora,treePlantedMountainPine41m,Tree Planted Mountain Pine 41m,[a00005][-][00ff00]Harvest (5/5)[-] Pine
+,Flora,treePlantedOak08m,Tree Planted Oak 08m,[a00002][-][DECEA3]Growing (2/5)[-] Oak
+,Flora,treePlantedOak16m,Tree Planted Oak 16m,[a00003][-][DECEA3]Growing (3/5)[-] Oak
+,Flora,treePlantedOak27m,Tree Planted Oak 27m,[a00004][-][DECEA3]Growing (4/5)[-] Oak
+,Flora,treePlantedOak41m,Tree Planted Oak 41m,[a00005][-][00ff00]Harvest (5/5)[-] Oak
+,Flora,treePlantedWinterPine6m,Tree Planted Winter Pine 6m,[a00002][-][DECEA3]Growing (2/5)[-] Blue Spruce
+,Flora,treePlantedWinterPine13m,Tree Planted Winter Pine 13m,[a00003][-][DECEA3]Growing (3/5)[-] Blue Spruce
+,Flora,treePlantedWinterPine19m,Tree Planted Winter Pine 19m,[a00004][-][DECEA3]Growing (4/5)[-] Blue Spruce
+,Flora,treePlantedWinterPine28m,Tree Planted Winter Pine 28m,[a00005][-][00ff00]Harvest (5/5)[-] Blue Spruce
+,Mod-Armor,modArmorAdvancedMuffledConnectors,Advanced Muffled Connectors Mod,"[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Muffled Connectors, Advanced"
+,Mod-Armor,modArmorBandolier,Bandolier Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Bandolier
+,Mod-Armor,modArmorCustomizedFittings,Advanced Armor Fittings Mod,"[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Fittings, Advanced"
+,Mod-Armor,modArmorDoubleStoragePocket,Armor Double Pocket Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x2
+,Mod-Armor,modArmorImpactBracing,Impact Bracing Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Impact Bracing
+,Mod-Armor,modArmorImprovedFittings,Armor Fittings Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Fittings
+,Mod-Armor,modArmorMuffledConnectors,Muffled Connectors Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Muffled Connectors
+,Mod-Armor,modArmorPlatingBasic,Armor Plating Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Plating
+,Mod-Armor,modArmorPlatingReinforced,Advanced Armor Plating Mod,"[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Plating, Advanced"
+,Mod-Armor,modArmorStoragePocket,Armor Pocket Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x1
+,Mod-Armor,modArmorTripleStoragePocket,Armor Triple Pocket Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x3
+,Mod-Armor,modArmorWaterPurifier,Water Purifier Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee08][-] Water Purifier
+,Mod-Armor,modArmorQuadStoragePocket,Armor Quad Pocket Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Pocket x4
+,Mod,modFuelTankLarge,Motor Tool Large Tank Mod,[FFA94D][Mod][-][dddd09][-][eeee02][-] Large Tank
+,Mod,modFuelTankSmall,Motor Tool Small Tank Mod,[FFA94D][Mod][-][dddd09][-][eeee01][-] Small Tank
+,Mod,modGunBarrelExtender,Barrel Extender Mod,"[FFA94D][Mod][-][dddd07][-][eeee01][-] Barrel, Extender"
+,Mod,modGunBipod,Bipod Mod,[FFA94D][Mod][-][dddd05][-][eeee03][-] Bipod
+,Mod,modGunBowArrowRest,Arrow Rest Mod,[FFA94D][Mod][-][dddd05][-][eeee01][-] Arrow Rest
+,Mod,modGunBowPolymerString,Polymer String Mod,[FFA94D][Mod][-][dddd05][-][eeee02][-] Polymer String
+,Mod,modGunChoke,Shotgun Choke Mod,"[FFA94D][Mod][-][dddd08][-][eeee01][-] Shotgun Barrel, Choke"
+,Mod,modGunCrippleEm,Cripple 'Em Mod,[FFA94D][Mod][-][dddd04][-][eeee01][-] Cripple 'Em
+,Mod,modGunDrumMagazineExtender,Drum Magazine Mod,[FFA94D][Mod][-][dddd05][-][eeee09][-] Drum Magazine
+,Mod,modGunDuckbill,Shotgun Duckbill Mod,"[FFA94D][Mod][-][dddd08][-][eeee02][-] Shotgun Barrel, Duckbill"
+,Mod,modGunFlashlight,Weapon Flashlight Mod,[FFA94D][Mod][-][dddd05][-][eeee06][-] Weapon Flashlight
+,Mod,modGunForegrip,Fore Grip Mod,[FFA94D][Mod][-][dddd05][-][eeee04][-] Fore Grip
+,Mod,modGunLaserSight,Laser Sight Mod,[FFA94D][Mod][-][dddd05][-][eeee07][-] Laser Sight
+,Mod,modGunMagazineExtender,Magazine Extender Mod,[FFA94D][Mod][-][dddd05][-][eeee08][-] Magazine Extender
+,Mod,modGunMeleeRadRemover,Rad Remover Mod,[FFA94D][Mod][-][dddd04][-][eeee02][-] Rad Remover
+,Mod,modGunMeleeTheHunter,The Hunter Mod,[FFA94D][Mod][-][dddd04][-][eeee03][-] The Hunter
+,Mod,modGunMuzzleBrake,Muzzle Brake Mod,"[FFA94D][Mod][-][dddd07][-][eeee02][-] Barrel, Muzzle Brake"
+,Mod,modGunReflexSight,Reflex Sight Mod,"[FFA94D][Mod][-][dddd06][-][eeee04][-] Scope, Reflex Sight"
+,Mod,modGunRetractingStock,Retracting Stock Mod,[FFA94D][Mod][-][dddd05][-][eeee05][-] Retracting Stock
+,Mod,modGunScopeLarge,Scope 8x Mod,[FFA94D][Mod][-][dddd06][-][eeee03][-] Scope 8x
+,Mod,modGunScopeMedium,Scope 4x Mod,[FFA94D][Mod][-][dddd06][-][eeee02][-] Scope 4x
+,Mod,modGunScopeSmall,Scope 2x Mod,[FFA94D][Mod][-][dddd06][-][eeee01][-] Scope 2x
+,Mod,modGunShotgunTubeExtenderMagazine,Shotgun Tube Extender Mod,[FFA94D][Mod][-][dddd08][-][eeee04][-] Shotgun Tube Extender
+,Mod,modGunSoundSuppressorSilencer,Silencer Mod,"[FFA94D][Mod][-][dddd07][-][eeee03][-] Barrel, Silencer"
+,Mod,modGunTriggerGroupAutomatic,Trigger Group: Full Auto Mod,[FFA94D][Mod][-][dddd05][-][eeee10][-] Trigger Group: Full Auto
+,Mod,modGunTriggerGroupBurst3,Trigger Group: Burst Mod,[FFA94D][Mod][-][dddd05][-][eeee11][-] Trigger Group: Burst
+,Mod,modGunTriggerGroupSemi,Trigger Group: Semi Mod,[FFA94D][Mod][-][dddd05][-][eeee12][-] Trigger Group: Semi
+,Mod,modMeleeBunkerBuster,Bunker Buster Mod,[FFA94D][Mod][-][dddd02][-][eeee05][-] Bunker Buster
+,Mod,modMeleeClubBarbedWire,Barbed Wire Mod,"[FFA94D][Mod][-][dddd03][-][eeee01][-] Club, Barbed Wire"
+,Mod,modMeleeClubBurningShaft,Burning Shaft Mod,[FFA94D][Mod][-][dddd01][-][eeee01][-] Burning Shaft
+,Mod,modMeleeClubMetalChain,Metal Chain Mod,"[FFA94D][Mod][-][dddd03][-][eeee02][-] Club, Metal Chain"
+,Mod,modMeleeClubMetalSpikes,Metal Spikes Mod,"[FFA94D][Mod][-][dddd03][-][eeee03][-] Club, Metal Spikes"
+,Mod,modMeleeDiamondTip,Diamond Blade Tip Mod,[FFA94D][Mod][-][dddd01][-][eeee04][-] Diamond Blade Tip
+,Mod,modMeleeErgonomicGrip,Ergonomic Grip Mod,[FFA94D][Mod][-][dddd01][-][eeee06][-] Ergonomic Grip
+,Mod,modMeleeFiremansAxeMod,Fireman's Axe Mod,[FFA94D][Mod][-][dddd02][-][eeee02][-] Fireman's Axe
+,Mod,modMeleeFortifyingGrip,Fortifying Grip Mod,[FFA94D][Mod][-][dddd01][-][eeee07][-] Fortifying Grip
+,Mod,modMeleeGraveDigger,Grave Digger Mod,[FFA94D][Mod][-][dddd02][-][eeee04][-] Grave Digger
+,Mod,modMeleeIronBreaker,Iron Breaker Mod,[FFA94D][Mod][-][dddd02][-][eeee06][-] Iron Breaker
+,Mod,modMeleeSerratedBlade,Serrated Blade Mod,[FFA94D][Mod][-][dddd01][-][eeee05][-] Serrated Blade
+,Mod,modMeleeStructuralBrace,Structural Brace Mod,[FFA94D][Mod][-][dddd01][-][eeee03][-] Structural Brace
+,Mod,modMeleeStunBatonRepulsor,Stun Baton Repulsor Mod,[FFA94D][Mod][-][dddd04][-][eeee04][-] Stun Baton Repulsor
+,Mod,modMeleeTemperedBlade,Tempered Blade Mod,[FFA94D][Mod][-][dddd02][-][eeee03][-] Tempered Blade
+,Mod,modMeleeWeightedHead,Weighted Head Mod,[FFA94D][Mod][-][dddd01][-][eeee02][-] Weighted Head
+,Mod,modMeleeWoodSplitter,Wood Splitter Mod,[FFA94D][Mod][-][dddd02][-][eeee01][-] Wood Splitter
+,Mod-Drone,modRoboticDroneArmorPlatingMod,Robotic Drone Armor Plating Mod,[FFA94D][Mod-Drone][-] Armor Plating
+,Mod-Drone,modRoboticDroneCargoMod,Robotic Drone Cargo Mod,[FFA94D][Mod-Drone][-] Cargo
+,Mod-Drone,modRoboticDroneHeadlampMod,Robotic Headlamp Mod,[FFA94D][Mod-Drone][-] Headlamp
+,Mod-Drone,modRoboticDroneMedicMod,Robotic Drone Medic Mod,[FFA94D][Mod-Drone][-] Medic
+,Mod-Drone,modRoboticDroneMoraleBoosterMod,Robotic Drone Morale Booster Mod,[FFA94D][Mod-Drone][-] Morale Booster
+,Mod,modShotgunSawedOffBarrel,Sawed-Off Shotgun Mod,"[FFA94D][Mod][-][dddd08][-][eeee03][-] Shotgun Barrel, Sawed-Off"
+,Mod-Vehicle,modVehicleExpandedSeat,Vehicle Expanded Seating Mod,[FFA94D][Mod-Vehicle][-] Expanded Seating
+,Mod-Vehicle,modVehicleFuelSaver,Vehicle Fuel Saver Mod,[FFA94D][Mod-Vehicle][-] Fuel Saver
+,Mod-Vehicle,modVehicleOffRoadHeadlights,Vehicle Off Road Headlights Mod,[FFA94D][Mod-Vehicle][-] Off Road Headlights
+,Mod-Vehicle,modVehicleReserveFuelTank,Vehicle Reserve Fuel Tank Mod,[FFA94D][Mod-Vehicle][-] Reserve Fuel Tank
+,Mod-Vehicle,modVehicleSuperCharger,Vehicle Super Charger Mod,[FFA94D][Mod-Vehicle][-] Super Charger
+,Mod-Vehicle,modVehiclePlow,Vehicle Plow Mod,[FFA94D][Mod-Vehicle][-] Plow
+,Mod-Vehicle,modVehicleArmor,Vehicle Armor Mod,[FFA94D][Mod-Vehicle][-] Armor
+,Mod-Vehicle,modVehicleStorage,Vehicle Storage Mod,[FFA94D][Mod-Vehicle][-] Storage
+,Mod-Armor,modArmorInsulatedLinerT1,Tattered Insulated Armor Mod,"[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Insulated Armor T1, Cloth"
+,Mod-Armor,modArmorInsulatedLinerT2,Patchwork Insulated Armor Mod,"[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Insulated Armor T2, Padded"
+,Mod-Armor,modArmorInsulatedLinerT3,ThermaCore Insulated Armor Mod,"[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Insulated Armor T3, Advanced"
+,Mod-Armor,modArmorAgility,Agility Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee01][-] Agility
+,Mod-Armor,modArmorCigar,Cigar Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee06][-] Cigar
+,Mod-Armor,modArmorFortitude,Fortitude Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee02][-] Fortitude
+,Mod-Armor,modArmorHelmetLight,Helmet Light Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee09][-] Helmet Light
+,Mod-Armor,modArmorIntellect,Intellect Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee03][-] Intellect
+working,Admin,modArmorJumpJets,Jump Jets Mod,[FF5555][Admin][-] Jump Jets Mod
+,Mod-Armor,modArmorNightVision,Night Vision Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee10][-] Night Vision
+,Mod-Armor,modArmorPerception,Perception Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee04][-] Perception
+,Mod-Armor,modArmorStealthBoots,Stealth Boots Mod,[FFA94D][Mod-Armor][-][dddd02][-][eeee00][-] Stealth Boots
+,Mod-Armor,modArmorStrength,Strength Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee05][-] Strength
+,Mod-Armor,modArmorTreasureHunter,Treasure Hunter's Mod,[FFA94D][Mod-Armor][-][dddd01][-][eeee07][-] Treasure Hunter's
+working,Admin,modGunBowAdminArcheryReloadRecovery,Dev: Archery Reload & Recovery Mod,[FF5555][Admin][-] Dev: Archery Reload & Recovery Mod
+working,Admin,modGunButtkick3000,Buttkick 3000 Mod,[FF5555][Admin][-] Buttkick 3000 Mod
+working,Admin,modGunButtkick4000,Buttkick 4000 Mod - Perks,[FF5555][Admin][-] Buttkick 4000 Mod - Perks
+working,Admin,modGunFoldingStock,,[FF5555][Admin][-] modGunFoldingStock
+working,Admin,modMeleeGunToolDecapitizer,The Decapitizer,[FF5555][Admin][-] The Decapitizer
+working,Admin,modRadiationReady,Radiation Ready Mod,[FF5555][Admin][-] Radiation Ready Mod
+working,Admin,modRoboticDroneStunWeaponMod,Robotic Drone Stun Mod,[FF5555][Admin][-] Robotic Drone Stun Mod
+working,Admin,modRoboticDroneWeaponMod,Robotic Drone Weapon Mod,[FF5555][Admin][-] Robotic Drone Weapon Mod
+working,Admin,modVehicleMega,Vehicle Mega Mod,[FF5555][Admin][-] Vehicle Mega Mod
+working,Admin,adminAssassinQualityArmorBundle,Dev: Assassin Quality Armor Bundle,[FF5555][Admin][-] Dev: Assassin Quality Armor Bundle
+working,Admin,adminAthleticQualityArmorBundle,Dev: Athletic Quality Armor Bundle,[FF5555][Admin][-] Dev: Athletic Quality Armor Bundle
+working,Admin,adminBikerQualityArmorBundle,Dev: Biker Quality Armor Bundle,[FF5555][Admin][-] Dev: Biker Quality Armor Bundle
+working,Admin,adminCommandoQualityArmorBundle,Dev: Commando Quality Armor Bundle,[FF5555][Admin][-] Dev: Commando Quality Armor Bundle
+working,Admin,adminEnforcerQualityArmorBundle,Dev: Enforcer Quality Armor Bundle,[FF5555][Admin][-] Dev: Enforcer Quality Armor Bundle
+working,Admin,adminFarmerQualityArmorBundle,Dev: Farmer Quality Armor Bundle,[FF5555][Admin][-] Dev: Farmer Quality Armor Bundle
+working,Admin,adminLumberjackQualityArmorBundle,Dev: Lumberjack Quality Armor Bundle,[FF5555][Admin][-] Dev: Lumberjack Quality Armor Bundle
+working,Admin,adminMinerQualityArmorBundle,Dev: Miner Quality Armor Bundle,[FF5555][Admin][-] Dev: Miner Quality Armor Bundle
+working,Admin,adminNerdQualityArmorBundle,Dev: Nerd Quality Armor Bundle,[FF5555][Admin][-] Dev: Nerd Quality Armor Bundle
+working,Admin,adminNomadQualityArmorBundle,Dev: Nomad Quality Armor Bundle,[FF5555][Admin][-] Dev: Nomad Quality Armor Bundle
+working,Admin,adminPreacherQualityArmorBundle,Dev: Preacher Quality Armor Bundle,[FF5555][Admin][-] Dev: Preacher Quality Armor Bundle
+working,Admin,adminPrimitiveQualityArmorBundle,Dev: Primitive Quality Armor Bundle,[FF5555][Admin][-] Dev: Primitive Quality Armor Bundle
+working,Admin,adminRaiderQualityArmorBundle,Dev: Raider Quality Armor Bundle,[FF5555][Admin][-] Dev: Raider Quality Armor Bundle
+working,Admin,adminRangerQualityArmorBundle,Dev: Ranger Quality Armor Bundle,[FF5555][Admin][-] Dev: Ranger Quality Armor Bundle
+working,Admin,adminRogueQualityArmorBundle,Dev: Rogue Quality Armor Bundle,[FF5555][Admin][-] Dev: Rogue Quality Armor Bundle
+working,Admin,adminScavengerQualityArmorBundle,Dev: Scavenger Quality Armor Bundle,[FF5555][Admin][-] Dev: Scavenger Quality Armor Bundle
+working,Admin,armorLumberjackHelmetDemo,Lumberjack Hat,[FF5555][Admin][-] Lumberjack Hat
+working,Admin,drugBluePillAdmin,Blue Pill,[FF5555][Admin][-] Blue Pill
+,Candy,drugHealthBar,Health Bar,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Health Bar
+working,Admin,drugRedPillAdmin,Red Pill,[FF5555][Admin][-] Red Pill
+working,Admin,meleeToolBlockReplaceTool,Dev: Admin Block Replace Tool,[FF5555][Admin][-] Dev: Admin Block Replace Tool
+working,Admin,qtest_nextTraderAdmin,Dev: Find Trader Quest,[FF5555][Admin][-] Dev: Find Trader Quest
+working,Admin,adminT1QuestTicket,Dev: T1 Quest Ticket,[FF5555][Admin][-] Dev: T1 Quest Ticket
+working,Admin,adminT2QuestTicket,Dev: T2 Quest Ticket,[FF5555][Admin][-] Dev: T2 Quest Ticket
+working,Admin,adminT3QuestTicket,Dev: T3 Quest Ticket,[FF5555][Admin][-] Dev: T3 Quest Ticket
+working,Admin,adminT4QuestTicket,Dev: T4 Quest Ticket,[FF5555][Admin][-] Dev: T4 Quest Ticket
+working,Admin,adminT5QuestTicket,Dev: T5 Quest Ticket,[FF5555][Admin][-] Dev: T5 Quest Ticket
+working,Admin,adminT6QuestTicket,Dev: T6 Quest Ticket,[FF5555][Admin][-] Dev: T6 Quest Ticket
+working,Admin,meleeToolPaintToolAdmin,Dev: Paint Brush,[FF5555][Admin][-] Dev: Paint Brush
+working,Admin,meleeToolSalvageWrenchAdmin,Dev: Super Wrench,[FF5555][Admin][-] Dev: Super Wrench
+working,Admin,gunToolDiggerAdmin,Dev: Super Digger,[FF5555][Admin][-] Dev: Super Digger
+working,Admin,gunHandgunPistolAdmin,Dev: Instant Death Pistol,[FF5555][Admin][-] Dev: Instant Death Pistol
+working,Admin,meleeToolHammerOfGodAdmin,Dev: Hammer Of God,[FF5555][Admin][-] Dev: Hammer Of God
+working,Admin,pimpMiningHelmetAdmin,Dev: Pimp Mining Helmet,[FF5555][Admin][-] Dev: Pimp Mining Helmet
+working,Admin,toughGuyShirtAdmin,Dev: Tough Guy Shirt,[FF5555][Admin][-] Dev: Tough Guy Shirt
+working,Admin,ringOfFireAdmin,Dev: Ring of Fire,[FF5555][Admin][-] Dev: Ring of Fire
+working,Admin,staminaBootsAdmin,Dev: Stamina Boots,[FF5555][Admin][-] Dev: Stamina Boots
+working,Admin,staminaOnlyBootsAdmin,Dev: Stamina Only Boots,[FF5555][Admin][-] Dev: Stamina Only Boots
+working,Admin,rocketBootsAdmin,Dev: Rocket Boots,[FF5555][Admin][-] Dev: Rocket Boots
+working,Admin,drinkJarFullRespecAdmin,Dev: Full Respec,[FF5555][Admin][-] Dev: Full Respec
+working,Admin,drinkJarFullRespecWithPointsAdmin,Dev: Full Respec with XP,[FF5555][Admin][-] Dev: Full Respec with XP
+working,Admin,noteTestersDelightAdmin,Dev: Note to Testers,[FF5555][Admin][-] Dev: Note to Testers
+working,Admin,noteTestersElectricityAdmin,Dev: Electricity Test Note,[FF5555][Admin][-] Dev: Electricity Test Note
+working,Admin,upgradeResourcesPackAdmin,Dev: Upgrade Resources Pack,[FF5555][Admin][-] Dev: Upgrade Resources Pack
+working,Admin,craftingResourcesPackAdmin,Dev: Crafting Resources Pack,[FF5555][Admin][-] Dev: Crafting Resources Pack
+working,Admin,workstationsPackAdmin,Dev: Workstations and Tools Pack,[FF5555][Admin][-] Dev: Workstations and Tools Pack
+working,Admin,levelDesignToolsAdmin,Dev: Level Design Tools,[FF5555][Admin][-] Dev: Level Design Tools
+working,Admin,toolTerrainModelerAdmin,Dev: Terrain Modeling Tool,[FF5555][Admin][-] Dev: Terrain Modeling Tool
+working,Admin,thrownGrenadeNukeAdmin,Dev: Nuke Grenade,[FF5555][Admin][-] Dev: Nuke Grenade
+working,Admin,adminPerkBook,Dev: All Perks Book,[FF5555][Admin][-] Dev: All Perks Book
+working,Admin,adminSkillMagazine,Dev: All Crafting Skills Magazine,[FF5555][Admin][-] Dev: All Crafting Skills Magazine
+working,Admin,adminModSchematic,Dev: All Mods Schematic,[FF5555][Admin][-] Dev: All Mods Schematic
+working,Admin,giveXP_T1_admin,Dev: Give XP - T1,[FF5555][Admin][-] Dev: Give XP - T1
+working,Admin,giveXP_T2_admin,Dev: Give XP - T2,[FF5555][Admin][-] Dev: Give XP - T2
+working,Admin,giveXP_T3_admin,Dev: Give XP - T3,[FF5555][Admin][-] Dev: Give XP - T3
+working,Admin,giveXP_T4_admin,Dev: Give XP - T4,[FF5555][Admin][-] Dev: Give XP - T4
+working,Admin,giveXP_T5_admin,Dev: Give XP - T5,[FF5555][Admin][-] Dev: Give XP - T5
+working,Admin,giveXP_T6_admin,Dev: Give XP - T6,[FF5555][Admin][-] Dev: Give XP - T6
+working,Admin,adminGiveBuffInfection,Dev: Buff Infection,[FF5555][Admin][-] Dev: Buff Infection
+working,Admin,adminGiveBuffAbrasion,Dev: Buff Abrasion 600,[FF5555][Admin][-] Dev: Buff Abrasion 600
+working,Admin,adminGiveBuffAbrasion1800,Dev: Buff Abrasion 1800,[FF5555][Admin][-] Dev: Buff Abrasion 1800
+working,Admin,adminGiveBuffAbrasion2400,Dev: Buff Abrasion 2400,[FF5555][Admin][-] Dev: Buff Abrasion 2400
+working,Admin,adminGiveBuffAbrasion3200,Dev: Buff Abrasion 3200,[FF5555][Admin][-] Dev: Buff Abrasion 3200
+working,Admin,adminGiveBuffFatigued,Dev: Buff Fatigued,[FF5555][Admin][-] Dev: Buff Fatigued
+working,Admin,adminGiveBuffLaceration,Dev: Buff Laceration,[FF5555][Admin][-] Dev: Buff Laceration
+working,Admin,adminGiveBuffConcussion,Dev: Buff Concussion,[FF5555][Admin][-] Dev: Buff Concussion
+working,Admin,adminGiveBuffDysentery,Dev: Buff Dysentery,[FF5555][Admin][-] Dev: Buff Dysentery
+working,Admin,adminGiveBuffSprainedLeg,Dev: Buff Sprained Leg,[FF5555][Admin][-] Dev: Buff Sprained Leg
+working,Admin,adminGiveBuffBrokenLeg,Dev: Buff Broken Leg,[FF5555][Admin][-] Dev: Buff Broken Leg
+working,Admin,adminGiveBuffSprainedArm,Dev: Buff Sprained Arm,[FF5555][Admin][-] Dev: Buff Sprained Arm
+working,Admin,adminGiveBuffBrokenArm,Dev: Buff Broken Arm,[FF5555][Admin][-] Dev: Buff Broken Arm
+working,Admin,modArmorAdminToughGuyShirt,Dev: Tough Guy Mod,[FF5555][Admin][-] Dev: Tough Guy Mod
+,Ammo,ammo44MagnumBulletAP,AP .44 Magnum Ammo,"[dddd01][-][eeee03][-][FFA94D][Ammo][-] .44 Magnum, AP"
+,Ammo,ammo44MagnumBulletBall,.44 Magnum Ammo,[dddd01][-][eeee01][-][FFA94D][Ammo][-] .44 Magnum
+,Ammo,ammo44MagnumBulletHP,HiPower .44 Magnum Ammo,"[dddd01][-][eeee02][-][FFA94D][Ammo][-] .44 Magnum, HiPower"
+,Ammo,ammo762mmBulletAP,AP 7.62mm Ammo,"[dddd02][-][eeee03][-][FFA94D][Ammo][-] 7.62mm, AP"
+,Ammo,ammo762mmBulletBall,7.62mm Ammo,[dddd02][-][eeee01][-][FFA94D][Ammo][-] 7.62mm
+,Ammo,ammo762mmBulletHP,HiPower 7.62mm Ammo,"[dddd02][-][eeee02][-][FFA94D][Ammo][-] 7.62mm, HiPower"
+,Ammo,ammo9mmBulletAP,AP 9mm Ammo,"[dddd03][-][eeee03][-][FFA94D][Ammo][-] 9mm, AP"
+,Ammo,ammo9mmBulletBall,9mm Ammo,[dddd03][-][eeee01][-][FFA94D][Ammo][-] 9mm
+,Ammo,ammo9mmBulletHP,HiPower 9mm Ammo,"[dddd03][-][eeee02][-][FFA94D][Ammo][-] 9mm, HiPower"
+,Ammo,ammoArrowExploding,Exploding Arrow (Ammo),"[dddd04][-][eeee05][-][FFA94D][Ammo][-] Arrow, Exploding"
+,Ammo,ammoArrowFlaming,Flaming Arrow (Ammo),"[dddd04][-][eeee04][-][FFA94D][Ammo][-] Arrow, Flaming"
+,Ammo,ammoArrowIron,Iron Arrow (Ammo),"[dddd04][-][eeee02][-][FFA94D][Ammo][-] Arrow, Iron"
+,Ammo,ammoArrowSteelAP,Steel Arrow (Ammo),"[dddd04][-][eeee03][-][FFA94D][Ammo][-] Arrow, Steel"
+,Ammo,ammoArrowStone,Stone Arrow (Ammo),"[dddd04][-][eeee01][-][FFA94D][Ammo][-] Arrow, Stone"
+,Ammo,ammoCrossbowBoltExploding,Exploding Crossbow Bolts,"[dddd05][-][eeee05][-][FFA94D][Ammo][-] Bolt, Exploding"
+,Ammo,ammoCrossbowBoltFlaming,Flaming Crossbow Bolt (Ammo),"[dddd05][-][eeee04][-][FFA94D][Ammo][-] Bolt, Flaming"
+,Ammo,ammoCrossbowBoltIron,Iron Crossbow Bolt (Ammo),"[dddd05][-][eeee02][-][FFA94D][Ammo][-] Bolt, Iron"
+,Ammo,ammoCrossbowBoltSteelAP,Steel Crossbow Bolt (Ammo),"[dddd05][-][eeee03][-][FFA94D][Ammo][-] Bolt, Steel"
+,Ammo,ammoCrossbowBoltStone,Stone Crossbow Bolt (Ammo),"[dddd05][-][eeee01][-][FFA94D][Ammo][-] Bolt, Stone"
+,Ammo,ammoDartIron,Iron Dart (Ammo),"[dddd06][-][eeee01][-][FFA94D][Ammo][-] Dart, Iron"
+,Ammo,ammoJunkTurretAP,AP Robotic Turret Ammo,"[dddd08][-][eeee03][-][FFA94D][Ammo][-] Robotic Turret, AP"
+,Ammo,ammoJunkTurretRegular,Robotic Turret Ammo,[dddd08][-][eeee01][-][FFA94D][Ammo][-] Robotic Turret
+,Ammo,ammoJunkTurretShell,Robotic Turret Shells (Ammo),"[dddd08][-][eeee02][-][FFA94D][Ammo][-] Robotic Turret, Shells"
+,Ammo,ammoRocketFrag,Rocket Frag (Ammo),[dddd09][-][eeee01][-][FFA94D][Ammo][-] Rocket Frag
+,Ammo,ammoRocketHE,Rocket HE (Ammo),[dddd09][-][eeee02][-][FFA94D][Ammo][-] Rocket HE
+,Ammo,ammoShotgunBreachingSlug,Shotgun Breaching Slug (Ammo),"[dddd07][-][eeee03][-][FFA94D][Ammo][-] Shotgun, Slug, Breaching"
+,Ammo,ammoShotgunShell,Shotgun Shell (Ammo),"[dddd07][-][eeee01][-][FFA94D][Ammo][-] Shotgun, Shell"
+,Ammo,ammoShotgunSlug,Shotgun AP Slug (Ammo),"[dddd07][-][eeee02][-][FFA94D][Ammo][-] Shotgun, Slug, AP"
+,Resource,resourceArrowHeadIron,Iron Arrowhead,[dddd00][-][eeee07][-][FFA94D][Ammo-I][-] Iron Arrowhead
+,Resource,resourceArrowHeadSteelAP,Steel Arrowhead,[dddd00][-][eeee08][-][FFA94D][Ammo-I][-] Steel Arrowhead
+,Resource,resourceBuckshot,Buckshot,[dddd00][-][eeee04][-][FFA94D][Ammo-I][-] Buckshot
+,Resource,resourceBulletTip,Bullet Tip,[dddd00][-][eeee03][-][FFA94D][Ammo-I][-] Bullet Tip
+,Resource,resourceBulletCasing,Bullet Casing,[dddd00][-][eeee02][-][FFA94D][Ammo-I][-] Bullet Casing
+,Resource,resourceFeather,Feather,[dddd00][-][eeee06][-][FFA94D][Ammo-I][-] Feather
+,Resource,resourceGunPowder,Gunpowder,[dddd00][-][eeee01][-][FFA94D][Ammo-I][-] Gunpowder
+,Resource,resourcePaper,Paper,[dddd00][-][eeee05][-][FFA94D][Ammo-I][-] Paper
+,Resource,resourceRocketCasing,Rocket Casing,[dddd00][-][eeee09][-][FFA94D][Ammo-I][-] Rocket Casing
+,Resource,resourceRocketTip,Rocket Tip,[dddd00][-][eeee10][-][FFA94D][Ammo-I][-] Rocket Tip
+,Ammo-Thrown,thrownAmmoMolotovCocktail,Molotov Cocktail (Ammo),[dddd10][-][eeee03][-][FFA94D][Ammo][-] Molotov Cocktail
+,Ammo-Thrown,thrownAmmoPipeBomb,Pipe Bomb (Ammo),[dddd10][-][eeee04][-][FFA94D][Ammo][-] Pipe Bomb
+,Ammo-Thrown,thrownDynamite,Stick of Dynamite (Ammo),[dddd10][-][eeee05][-][FFA94D][Ammo][-] Stick of Dynamite
+,Ammo-Thrown,thrownGrenade,Grenade (Ammo),[dddd10][-][eeee01][-][FFA94D][Ammo][-] Grenade
+,Ammo-Thrown,thrownGrenadeContact,Contact Grenade (Ammo),"[dddd10][-][eeee02][-][FFA94D][Ammo][-] Grenade, Contact"
+,Ammo-Thrown,thrownTimedCharge,Timed Charge (Ammo),[dddd10][-][eeee06][-][FFA94D][Ammo][-] Timed Charge
+,Armor,armorPrimitiveBoots,Primitive Shoes,[FFA94D][Armor][-] Primitive Shoes
+,Armor,armorPrimitiveGloves,Primitive Gloves,[FFA94D][Armor][-] Primitive Gloves
+,Armor,armorPrimitiveHelmet,Primitive Hood,[FFA94D][Armor][-] Primitive Hood
+,Armor,armorPrimitiveOutfit,Primitive Outfit,[FFA94D][Armor][-] Primitive Outfit
+,Armor,armorAssassinBoots,Assassin Boots,[FFA94D][Armor][-] Assassin Boots
+,Armor,armorAssassinGloves,Assassin Gloves,[FFA94D][Armor][-] Assassin Gloves
+,Armor,armorAssassinHelmet,Assassin Hood,[FFA94D][Armor][-] Assassin Hood
+,Armor,armorAssassinOutfit,Assassin Outfit,[FFA94D][Armor][-] Assassin Outfit
+,Armor,armorAthleticBoots,Athletic Shoes,[FFA94D][Armor][-] Athletic Shoes
+,Armor,armorAthleticGloves,Athletic Gloves,[FFA94D][Armor][-] Athletic Gloves
+,Armor,armorAthleticHelmet,Athletic Hat,[FFA94D][Armor][-] Athletic Hat
+,Armor,armorAthleticOutfit,Athletic Outfit,[FFA94D][Armor][-] Athletic Outfit
+,Armor,armorBikerBoots,Biker Boots,[FFA94D][Armor][-] Biker Boots
+,Armor,armorBikerGloves,Biker Gloves,[FFA94D][Armor][-] Biker Gloves
+,Armor,armorBikerHelmet,Biker Helmet,[FFA94D][Armor][-] Biker Helmet
+,Armor,armorBikerOutfit,Biker Outfit,[FFA94D][Armor][-] Biker Outfit
+,Armor,armorCommandoBoots,Commando Boots,[FFA94D][Armor][-] Commando Boots
+,Armor,armorCommandoGloves,Commando Gloves,[FFA94D][Armor][-] Commando Gloves
+,Armor,armorCommandoHelmet,Commando Helmet,[FFA94D][Armor][-] Commando Helmet
+,Armor,armorCommandoOutfit,Commando Outfit,[FFA94D][Armor][-] Commando Outfit
+,Armor,armorEnforcerBoots,Enforcer Shoes,[FFA94D][Armor][-] Enforcer Shoes
+,Armor,armorEnforcerGloves,Enforcer Gloves,[FFA94D][Armor][-] Enforcer Gloves
+,Armor,armorEnforcerHelmet,Enforcer Sunglasses,[FFA94D][Armor][-] Enforcer Sunglasses
+,Armor,armorEnforcerOutfit,Enforcer Outfit,[FFA94D][Armor][-] Enforcer Outfit
+,Armor,armorFarmerBoots,Farmer Boots,[FFA94D][Armor][-] Farmer Boots
+,Armor,armorFarmerGloves,Farmer Gloves,[FFA94D][Armor][-] Farmer Gloves
+,Armor,armorFarmerHelmet,Farmer Hat,[FFA94D][Armor][-] Farmer Hat
+,Armor,armorFarmerOutfit,Farmer Outfit,[FFA94D][Armor][-] Farmer Outfit
+,Armor,armorLumberjackBoots,Lumberjack Boots,[FFA94D][Armor][-] Lumberjack Boots
+,Armor,armorLumberjackGloves,Lumberjack Gloves,[FFA94D][Armor][-] Lumberjack Gloves
+,Armor,armorLumberjackHelmet,Lumberjack Hat,[FFA94D][Armor][-] Lumberjack Hat
+,Armor,armorLumberjackOutfit,Lumberjack Outfit,[FFA94D][Armor][-] Lumberjack Outfit
+,Armor,armorMinerBoots,Miner Boots,[FFA94D][Armor][-] Miner Boots
+,Armor,armorMinerGloves,Miner Gloves,[FFA94D][Armor][-] Miner Gloves
+,Armor,armorMinerHelmet,Miner Helmet,[FFA94D][Armor][-] Miner Helmet
+,Armor,armorMinerOutfit,Miner Outfit,[FFA94D][Armor][-] Miner Outfit
+,Armor,armorNerdBoots,Nerd Boots,[FFA94D][Armor][-] Nerd Boots
+,Armor,armorNerdGloves,Nerd Gloves,[FFA94D][Armor][-] Nerd Gloves
+,Armor,armorNerdHelmet,Nerd Goggles,[FFA94D][Armor][-] Nerd Goggles
+,Armor,armorNerdOutfit,Nerd Outfit,[FFA94D][Armor][-] Nerd Outfit
+,Armor,armorNomadBoots,Nomad Boots,[FFA94D][Armor][-] Nomad Boots
+,Armor,armorNomadGloves,Nomad Gloves,[FFA94D][Armor][-] Nomad Gloves
+,Armor,armorNomadHelmet,Nomad Headgear,[FFA94D][Armor][-] Nomad Headgear
+,Armor,armorNomadOutfit,Nomad Outfit,[FFA94D][Armor][-] Nomad Outfit
+,Armor,armorPreacherBoots,Preacher Boots,[FFA94D][Armor][-] Preacher Boots
+,Armor,armorPreacherGloves,Preacher Gloves,[FFA94D][Armor][-] Preacher Gloves
+,Armor,armorPreacherHelmet,Preacher Hat,[FFA94D][Armor][-] Preacher Hat
+,Armor,armorPreacherOutfit,Preacher Outfit,[FFA94D][Armor][-] Preacher Outfit
+,Armor,armorRaiderBoots,Raider Boots,[FFA94D][Armor][-] Raider Boots
+,Armor,armorRaiderGloves,Raider Gloves,[FFA94D][Armor][-] Raider Gloves
+,Armor,armorRaiderHelmet,Raider Helmet,[FFA94D][Armor][-] Raider Helmet
+,Armor,armorRaiderOutfit,Raider Outfit,[FFA94D][Armor][-] Raider Outfit
+,Armor,armorRangerBoots,Ranger Boots,[FFA94D][Armor][-] Ranger Boots
+,Armor,armorRangerGloves,Ranger Gloves,[FFA94D][Armor][-] Ranger Gloves
+,Armor,armorRangerHelmet,Ranger Hat,[FFA94D][Armor][-] Ranger Hat
+,Armor,armorRangerOutfit,Ranger Outfit,[FFA94D][Armor][-] Ranger Outfit
+,Armor,armorRogueBoots,Rogue Boots,[FFA94D][Armor][-] Rogue Boots
+,Armor,armorRogueGloves,Rogue Gloves,[FFA94D][Armor][-] Rogue Gloves
+,Armor,armorRogueHelmet,Rogue Hood,[FFA94D][Armor][-] Rogue Hood
+,Armor,armorRogueOutfit,Rogue Outfit,[FFA94D][Armor][-] Rogue Outfit
+,Armor,armorScavengerBoots,Scavenger Boots,[FFA94D][Armor][-] Scavenger Boots
+,Armor,armorScavengerGloves,Scavenger Gloves,[FFA94D][Armor][-] Scavenger Gloves
+,Armor,armorScavengerHelmet,Scavenger Hat,[FFA94D][Armor][-] Scavenger Hat
+,Armor,armorScavengerOutfit,Scavenger Outfit,[FFA94D][Armor][-] Scavenger Outfit
+,Book,bookArtOfMiningAvalanche,Art of Mining Vol 6,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 6
+,Book,bookArtOfMiningBlackStrap,Art of Mining Vol 4,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 4
+,Book,bookArtOfMiningCoffee,Art of Mining Vol 3,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 3
+,Book,bookArtOfMiningDamage,Art of Mining Vol 7,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 7
+,Book,bookArtOfMiningDiamondTools,Art of Mining Vol 2,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 2
+,Book,bookArtOfMiningLuckyStrike,Art of Mining Vol 1,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 1
+,Book,bookArtOfMiningPallets,Art of Mining Vol 5,[ffcc01][-][FFA94D][Book][-] Art of Mining Vol 5
+,Book,bookAutoWeaponsDamage,Automatic Weapons Handbook Vol 1,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 1
+,Book,bookAutoWeaponsDrumMag,Automatic Weapons Handbook Vol 4,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 4
+,Book,bookAutoWeaponsMachineGuns,Automatic Weapons Handbook Vol 7,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 7
+,Book,bookAutoWeaponsMaintenance,Automatic Weapons Handbook Vol 3,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 3
+,Book,bookAutoWeaponsRagdoll,Automatic Weapons Handbook Vol 6,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 6
+,Book,bookAutoWeaponsRecoil,Automatic Weapons Handbook Vol 5,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 5
+,Book,bookAutoWeaponsUncontrolledBurst,Automatic Weapons Handbook Vol 2,[ffcc01][-][FFA94D][Book][-] Automatic Weapons Handbook Vol 2
+,Book,bookBarBrawling1BasicMoves,Bar Brawling Vol 1,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 1
+,Book,bookBarBrawling2DropABomb,Bar Brawling Vol 2,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 2
+,Book,bookBarBrawling3KillerInstinct,Bar Brawling Vol 3,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 3
+,Book,bookBarBrawling4FinishingMoves,Bar Brawling Vol 4,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 4
+,Book,bookBarBrawling5AdrenalineHealing,Bar Brawling Vol 5,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 5
+,Book,bookBarBrawling6RageMode,Bar Brawling Vol 6,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 6
+,Book,bookBarBrawling7BoozedUp,Bar Brawling Vol 7,[ffcc01][-][FFA94D][Book][-] Bar Brawling Vol 7
+,Book,bookBatterUpBigHits,Batter Up Vol 1,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 1
+,Book,bookBatterUpFoulBalls,Batter Up Vol 6,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 6
+,Book,bookBatterUpKnockdown,Batter Up Vol 4,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 4
+,Book,bookBatterUpMaintenance,Batter Up Vol 5,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 5
+,Book,bookBatterUpMetalChain,Batter Up Vol 7,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 7
+,Book,bookBatterUpSlowPitch,Batter Up Vol 3,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 3
+,Book,bookBatterUpStealingBases,Batter Up Vol 2,[ffcc01][-][FFA94D][Book][-] Batter Up Vol 2
+,Book,bookEnforcerAPAmmo,Magnum Enforcer Vol 5,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 5
+,Book,bookEnforcerApparel,Magnum Enforcer Vol 2,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 2
+,Book,bookEnforcerCriminalPursuit,Magnum Enforcer Vol 7,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 7
+,Book,bookEnforcerDamage,Magnum Enforcer Vol 1,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 1
+,Book,bookEnforcerHPAmmo,Magnum Enforcer Vol 6,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 6
+,Book,bookEnforcerIntimidation,Magnum Enforcer Vol 4,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 4
+,Book,bookEnforcerPunks,Magnum Enforcer Vol 3,[ffcc01][-][FFA94D][Book][-] Magnum Enforcer Vol 3
+,Book,bookFiremansAlmanacAxes,The Fireman's Almanac Vol 2,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 2
+,Book,bookFiremansAlmanacEquipment,The Fireman's Almanac Vol 7,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 7
+,Book,bookFiremansAlmanacHarvest,The Fireman's Almanac Vol 6,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 6
+,Book,bookFiremansAlmanacHeat,The Fireman's Almanac Vol 1,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 1
+,Book,bookFiremansAlmanacMolotov,The Fireman's Almanac Vol 4,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 4
+,Book,bookFiremansAlmanacPrevention,The Fireman's Almanac Vol 5,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 5
+,Book,bookFiremansAlmanacSpeed,The Fireman's Almanac Vol 3,[ffcc01][-][FFA94D][Book][-] The Fireman's Almanac Vol 3
+,Book,bookGreatHeistAdrenalineFall,The Great Heist Vol 5,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 5
+,Book,bookGreatHeistClaimed,The Great Heist Vol 4,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 4
+,Book,bookGreatHeistGems,The Great Heist Vol 2,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 2
+,Book,bookGreatHeistGoldRush,The Great Heist Vol 3,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 3
+,Book,bookGreatHeistMotionDetection,The Great Heist Vol 7,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 7
+,Book,bookGreatHeistSafes,The Great Heist Vol 1,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 1
+,Book,bookGreatHeistSprintSneak,The Great Heist Vol 6,[ffcc01][-][FFA94D][Book][-] The Great Heist Vol 6
+,Book,bookHuntingJournalBears,The Hunter's Journal Vol 1,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 1
+,Book,bookHuntingJournalCoyotes,The Hunter's Journal Vol 3,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 3
+,Book,bookHuntingJournalDeer,The Hunter's Journal Vol 5,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 5
+,Book,bookHuntingJournalMountainLions,The Hunter's Journal Vol 4,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 4
+,Book,bookHuntingJournalSelfDefense,The Hunter's Journal Vol 7,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 7
+,Book,bookHuntingJournalVultures,The Hunter's Journal Vol 6,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 6
+,Book,bookHuntingJournalWolves,The Hunter's Journal Vol 2,[ffcc01][-][FFA94D][Book][-] The Hunter's Journal Vol 2
+,Book,bookLuckyLooterAmmunition,Lucky Looter Vol 2,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 2
+,Book,bookLuckyLooterBooks,Lucky Looter Vol 5,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 5
+,Book,bookLuckyLooterBrass,Lucky Looter Vol 3,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 3
+,Book,bookLuckyLooterDukes,Lucky Looter Vol 1,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 1
+,Book,bookLuckyLooterFood,Lucky Looter Vol 6,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 6
+,Book,bookLuckyLooterLead,Lucky Looter Vol 4,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 4
+,Book,bookLuckyLooterMedical,Lucky Looter Vol 7,[ffcc01][-][FFA94D][Book][-] Lucky Looter Vol 7
+,Book,bookNightStalkerArchery,Night Stalker Vol 5,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 5
+,Book,bookNightStalkerBlades,Night Stalker Vol 3,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 3
+,Book,bookNightStalkerSilentNight,Night Stalker Vol 2,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 2
+,Book,bookNightStalkerSlumberParty,Night Stalker Vol 7,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 7
+,Book,bookNightStalkerStealthDamage,Night Stalker Vol 1,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 1
+,Book,bookNightStalkerThiefAdrenaline,Night Stalker Vol 4,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 4
+,Book,bookNightStalkerTwilightThief,Night Stalker Vol 6,[ffcc01][-][FFA94D][Book][-] Night Stalker Vol 6
+,Book,bookPistolPeteAPAmmo,Pistol Pete Vol 6,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 6
+,Book,bookPistolPeteDamage,Pistol Pete Vol 7,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 7
+,Book,bookPistolPeteHPAmmo,Pistol Pete Vol 5,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 5
+,Book,bookPistolPeteMaintenance,Pistol Pete Vol 4,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 4
+,Book,bookPistolPeteSteadyHand,Pistol Pete Vol 3,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 3
+,Book,bookPistolPeteSwissKnees,Pistol Pete Vol 2,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 2
+,Book,bookPistolPeteTakeAim,Pistol Pete Vol 1,[ffcc01][-][FFA94D][Book][-] Pistol Pete Vol 1
+,Book,bookRangersAPAmmo,Ranger's Guide to Archery Vol 4,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 4
+,Book,bookRangersArrowRecovery,Ranger's Guide to Archery Vol 1,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 1
+,Book,bookRangersCripplingShot,Ranger's Guide to Archery Vol 3,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 3
+,Book,bookRangersExplodingBolts,Ranger's Guide to Archery Vol 2,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 2
+,Book,bookRangersFlamingArrows,Ranger's Guide to Archery Vol 5,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 5
+,Book,bookRangersForestGuide,Ranger's Guide to Archery Vol 6,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 6
+,Book,bookRangersKnockdown,Ranger's Guide to Archery Vol 7,[ffcc01][-][FFA94D][Book][-] Ranger's Guide to Archery Vol 7
+,Book,bookShotgunMessiahBreachingSlugs,Shotgun Messiah Vol 2,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 2
+,Book,bookShotgunMessiahDamage,Shotgun Messiah Vol 1,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 1
+,Book,bookShotgunMessiahLimbShot,Shotgun Messiah Vol 3,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 3
+,Book,bookShotgunMessiahMagazine,Shotgun Messiah Vol 6,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 6
+,Book,bookShotgunMessiahMaintenance,Shotgun Messiah Vol 5,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 5
+,Book,bookShotgunMessiahPartyStarter,Shotgun Messiah Vol 7,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 7
+,Book,bookShotgunMessiahSlugs,Shotgun Messiah Vol 4,[ffcc01][-][FFA94D][Book][-] Shotgun Messiah Vol 4
+,Book,bookSniperAPAmmo,Sniper Vol 6,[ffcc01][-][FFA94D][Book][-] Sniper Vol 6
+,Book,bookSniperControlledBreathing,Sniper Vol 5,[ffcc01][-][FFA94D][Book][-] Sniper Vol 5
+,Book,bookSniperCripplingShot,Sniper Vol 2,[ffcc01][-][FFA94D][Book][-] Sniper Vol 2
+,Book,bookSniperDamage,Sniper Vol 1,[ffcc01][-][FFA94D][Book][-] Sniper Vol 1
+,Book,bookSniperHeadShot,Sniper Vol 3,[ffcc01][-][FFA94D][Book][-] Sniper Vol 3
+,Book,bookSniperHPAmmo,Sniper Vol 7,[ffcc01][-][FFA94D][Book][-] Sniper Vol 7
+,Book,bookSniperReload,Sniper Vol 4,[ffcc01][-][FFA94D][Book][-] Sniper Vol 4
+,Book,bookSpearHunter1Damage,Spear Hunter Vol 1,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 1
+,Book,bookSpearHunter2Maintenance,Spear Hunter Vol 2,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 2
+,Book,bookSpearHunter3Bleed,Spear Hunter Vol 3,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 3
+,Book,bookSpearHunter4KillMove,Spear Hunter Vol 4,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 4
+,Book,bookSpearHunter5RapidStrike,Spear Hunter Vol 5,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 5
+,Book,bookSpearHunter6PenetratingShaft,Spear Hunter Vol 6,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 6
+,Book,bookSpearHunter7QuickStrike,Spear Hunter Vol 7,[ffcc01][-][FFA94D][Book][-] Spear Hunter Vol 7
+,Book,bookTechJunkie1Damage,Tech Junkie Vol 1,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 1
+,Book,bookTechJunkie2Maintenance,Tech Junkie Vol 2,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 2
+,Book,bookTechJunkie3APAmmo,Tech Junkie Vol 3,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 3
+,Book,bookTechJunkie4Shells,Tech Junkie Vol 4,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 4
+,Book,bookTechJunkie5Repulsor,Tech Junkie Vol 5,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 5
+,Book,bookTechJunkie6BatonCharge,Tech Junkie Vol 6,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 6
+,Book,bookTechJunkie7Hydraulics,Tech Junkie Vol 7,[ffcc01][-][FFA94D][Book][-] Tech Junkie Vol 7
+,Book,bookUrbanCombatAdrenalineRush,Urban Combat Vol 6,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 6
+,Book,bookUrbanCombatCigar,Urban Combat Vol 2,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 2
+,Book,bookUrbanCombatJumping,Urban Combat Vol 4,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 4
+,Book,bookUrbanCombatLanding,Urban Combat Vol 1,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 1
+,Book,bookUrbanCombatLandMines,Urban Combat Vol 5,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 5
+,Book,bookUrbanCombatRoomClearing,Urban Combat Vol 7,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 7
+,Book,bookUrbanCombatSneaking,Urban Combat Vol 3,[ffcc01][-][FFA94D][Book][-] Urban Combat Vol 3
+,Book,bookWasteTreasuresAcid,Wasteland Treasures Vol 3,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 3
+,Book,bookWasteTreasuresCloth,Wasteland Treasures Vol 6,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 6
+,Book,bookWasteTreasuresCoffins,Wasteland Treasures Vol 2,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 2
+,Book,bookWasteTreasuresDoors,Wasteland Treasures Vol 5,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 5
+,Book,bookWasteTreasuresHoney,Wasteland Treasures Vol 1,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 1
+,Book,bookWasteTreasuresSinks,Wasteland Treasures Vol 7,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 7
+,Book,bookWasteTreasuresWater,Wasteland Treasures Vol 4,[ffcc01][-][FFA94D][Book][-] Wasteland Treasures Vol 4
+,Book,bookSledgeSagaArmorCrusher,Sledge Saga Vol 7,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 7
+,Book,bookSledgeSagaConcussiveStrike,Sledge Saga Vol 6,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 6
+,Book,bookSledgeSagaCrippledMorale,Sledge Saga Vol 3,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 3
+,Book,bookSledgeSagaDegradation,Sledge Saga Vol 2,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 2
+,Book,bookSledgeSagaKnockdown,Sledge Saga Vol 1,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 1
+,Book,bookSledgeSagaPulverizingFinishers,Sledge Saga Vol 4,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 4
+,Book,bookSledgeSagaSavageReaper,Sledge Saga Vol 5,[ffcc01][-][FFA94D][Book][-] Sledge Saga Vol 5
+,Crop,foodCropBlueberries,Blueberries,[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Blueberries [00de50](2)[-]
+,Crop,foodCropCorn,Ear of Corn,[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Ear of Corn [00de50](2)[-]
+,Crop,foodCropGraceCorn,Ear of Super Corn,[f00003][-][FFA94D][Crops][-][fb0003][-][fe1000][-] Ear of Super Corn [00de50](3)[-]
+,Crop,foodCropMushrooms,Mushrooms,[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Mushrooms [00de50](2)[-]
+,Crop,foodCropPotato,Potato,[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Potato [00de50](2)[-]
+,Crop,foodCropPumpkin,Pumpkin,[f00003][-][FFA94D][Crops][-][fb0003][-][fe1000][-] Pumpkin [00de50](3)[-]
+,Crop,foodCropYuccaFruit,Yucca Fruit,[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Yucca Fruit [00de50](2)[-]
+,Biome,biomeWeatherItem1,Smoke Gear,[FFA94D][Biome][-][dddd01][-][eeee01][-] Smoke Gear
+,Biome,biomeWeatherItem2,Desert Gear,[FFA94D][Biome][-][dddd01][-][eeee02][-] Desert Gear
+,Biome,biomeWeatherItem3,Snow Gear,[FFA94D][Biome][-][dddd01][-][eeee03][-] Snow Gear
+,Biome,biomeWeatherItem4,Radiation Gear,[FFA94D][Biome][-][dddd01][-][eeee04][-] Radiation Gear
+,Food,foodChickenWings,Chicken Wings,[f00002][-][FFA94D][Food][-][fd0098][-][fe1000][-] Chicken Wings [00de50](98)[-]
+,Food,foodChickenNuggets,Chicken Nuggets,[f00002][-][FFA94D][Food][-][fd0025][-][fe1000][-] Chicken Nuggets [00de50](25)[-]
+,Food,foodAshChickenStew,Ash Chicken Stew,[f00002][-][FFA94D][Food][-][fd0075][-][fe1020][-] Ash Chicken Stew [00de50](75)[-][00c8ff](20)[-]
+,Food,foodRoadrunnerChickenJerky,Roadrunner Chicken Jerky,[f00002][-][FFA94D][Food][-][fd0030][-][fe1000][-] Roadrunner Chicken Jerky [00de50](30)[-]
+,Biome,foodFrostbiteSmoothie,Scorcher Stew,[FFA94D][Biome][-][dddd02][-][eeee03][-] Scorcher Stew
+,Biome,foodOasisSmoothie,Sunstroke Tonic,[FFA94D][Biome][-][dddd02][-][eeee02][-] Sunstroke Tonic
+,Biome,foodBurntSmoothie,Black Lung Serum,[FFA94D][Biome][-][dddd02][-][eeee01][-] Black Lung Serum
+,Biome,foodAtomicSmoothie,Fallout Flush,[FFA94D][Biome][-][dddd02][-][eeee04][-] Fallout Flush
+,Crop,foodCropMushroomsRadiated,Radiated Mushrooms,[f00003][-][FFA94D][Crops][-][fb0002][-][fe1000][-] Radiated Mushrooms [00de50](2)[-]
+,Crop,resourceCropAloeLeaf,Aloe Vera Leaf,[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Aloe Vera Leaf
+,Crop,resourceCropChrysanthemumPlant,Chrysanthemum,[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Chrysanthemum
+,Crop,resourceCropCoffeeBeans,Coffee Beans,[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Coffee Beans
+,Crop,resourceCropCottonPlant,Cotton,[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Cotton
+,Crop,resourceCropGoldenrodPlant,Goldenrod Flower,[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Goldenrod Flower
+,Crop,resourceCropHopsFlower,Hops Flower,[f00003][-][FFA94D][Crops][-][fb0000][-][fe1000][-] Hops Flower
+,Drink-Special,drinkCanMegaCrush,Mega Crush,[f00001][-][FFA94D][Drink][-][ed0060][-][ee1000][-] Mega Crush [00c8ff](60)[-]
+,Special,drinkJarBeer,Beer,[f00005][-][FFA94D][Special][-][a00005][-] Beer [DECEA3](I)[-]
+,Drink,drinkJarBlackStrapCoffee,Blackstrap Coffee,[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Blackstrap Coffee [00c8ff](24)[-]
+,Drink,drinkJarBoiledWater,Water,[f00001][-][FFA94D][Drink][-][ed0020][-][ee1000][-] Water [00c8ff](20)[-][DECEA3](I)[-]
+,Drink,drinkJarCoffee,Coffee,[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Coffee [00c8ff](24)[-]
+,Drink,drinkJarGoldenRodTea,Goldenrod Tea,[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Goldenrod Tea [00c8ff](24)[-]
+,Special,drinkJarGrandpasAwesomeSauce,Grandpa's Awesome Sauce,[f00005][-][FFA94D][Special][-][a00001][-] Grandpa's Awesome Sauce
+,Special,drinkJarGrandpasForgettingElixir,Grandpa's Fergit'n Elixir,[f00005][-][FFA94D][Special][-][a00002][-] Grandpa's Fergit'n Elixir
+,Special,drinkJarGrandpasLearningElixir,Grandpa's Learnin' Elixir,[f00005][-][FFA94D][Special][-][a00003][-] Grandpa's Learnin' Elixir
+,Special,drinkJarGrandpasMoonshine,Grandpa's Moonshine,[f00005][-][FFA94D][Special][-][a00004][-] Grandpa's Moonshine
+,Drink,drinkJarPureMineralWater,Pure Mineral Water,[f00001][-][FFA94D][Drink][-][ed0060][-][ee1000][-] Pure Mineral Water [00c8ff](60)[-]
+,Drink,drinkJarRedTea,Red Tea,[f00001][-][FFA94D][Drink][-][ed0024][-][ee1000][-] Red Tea [00c8ff](24)[-][DECEA3](I)[-]
+,Drink,drinkJarRiverWater,Murky Water,[f00001][-][FFA94D][Drink][-][ed0010][-][ee1000][-] Murky Water [00c8ff](10)[-][DECEA3](I)[-]
+,Drink,drinkJarYuccaJuice,Yucca Juice,[f00001][-][FFA94D][Drink][-][ed0034][-][ee1000][-] Yucca Juice [00c8ff](34)[-]
+,Drink,drinkYuccaJuiceSmoothie,Yucca Juice Smoothie,[f00001][-][FFA94D][Drink][-][ed0078][-][ee1022][-] Yucca Juice Smoothie [00c8ff](78)[-][00de50](22)[-]
+,Food,foodBaconAndEggs,Bacon and Eggs,[f00002][-][FFA94D][Food][-][fd0036][-][fe1000][-] Bacon and Eggs [00de50](36)[-]
+,Food,foodBakedPotato,Baked Potato,[f00002][-][FFA94D][Food][-][fd0010][-][fe0995][-] Baked Potato [00de50](10)[-][00c8ff](-5)[-]
+,Food,foodBlueberryPie,Blueberry Pie,[f00002][-][FFA94D][Food][-][fd0045][-][fe1000][-] Blueberry Pie [00de50](45)[-]
+,Food,foodBoiledMeat,Boiled Meat,[f00002][-][FFA94D][Food][-][fd0010][-][fe1010][-] Boiled Meat [00de50](10)[-][00c8ff](10)[-]
+,Food,foodCharredMeat,Charred Meat,[f00002][-][FFA94D][Food][-][fd0010][-][fe0995][-] Charred Meat [00de50](10)[-][00c8ff](-5)[-]
+,Food,foodChiliDog,Chili Dog,[f00002][-][FFA94D][Food][-][fd0053][-][fe1000][-] Chili Dog [00de50](53)[-]
+,Food,foodCornBread,Corn Bread,[f00002][-][FFA94D][Food][-][fd0010][-][fe1000][-] Corn Bread [00de50](10)[-][DECEA3](I)[-]
+,Food,foodCornMeal,Cornmeal,[f00002][-][FFA94D][Food][-][fd0002][-][fe0997][-] Cornmeal [00de50](2)[-][00c8ff](-3)[-][DECEA3](I)[-]
+,Food,foodCornOnTheCob,Grilled Corn,[f00002][-][FFA94D][Food][-][fd0010][-][fe0995][-] Grilled Corn [00de50](10)[-][00c8ff](-5)[-]
+,Food,foodEgg,Egg,[f00002][-][FFA94D][Food][-][fd0005][-][fe1000][-] Egg [00de50](5)[-][DECEA3](I)[-]
+,Food,foodEggBoiled,Boiled Egg,[f00002][-][FFA94D][Food][-][fd0010][-][fe1000][-] Boiled Egg [00de50](10)[-]
+,Food,foodFishTacos,Fish Tacos,[f00002][-][FFA94D][Food][-][fd0046][-][fe1000][-] Fish Tacos [00de50](46)[-]
+,Food,foodGrilledMeat,Grilled Meat,[f00002][-][FFA94D][Food][-][fd0010][-][fe1000][-] Grilled Meat [00de50](10)[-][DECEA3](I)[-]
+,Food,foodGumboStew,Gumbo Stew,[f00002][-][FFA94D][Food][-][fd0112][-][fe1020][-] Gumbo Stew [00de50](112)[-][00c8ff](20)[-]
+,Food,foodHoboStew,Hobo Stew,[f00002][-][FFA94D][Food][-][fd0064][-][fe1020][-] Hobo Stew [00de50](64)[-][00c8ff](20)[-]
+,Food,foodMeatStew,Meat Stew,[f00002][-][FFA94D][Food][-][fd0050][-][fe1020][-] Meat Stew [00de50](50)[-][00c8ff](20)[-]
+,Food,foodPumpkinBread,Pumpkin Bread,[f00002][-][FFA94D][Food][-][fd0012][-][fe1000][-] Pumpkin Bread [00de50](12)[-]
+,Food,foodPumpkinCheesecake,Pumpkin Cheesecake,[f00002][-][FFA94D][Food][-][fd0042][-][fe1000][-] Pumpkin Cheesecake [00de50](42)[-]
+,Food,foodPumpkinPie,Pumpkin Pie,[f00002][-][FFA94D][Food][-][fd0050][-][fe1000][-] Pumpkin Pie [00de50](50)[-]
+,Food,foodRawMeat,Raw Meat,[f00002][-][FFA94D][Food][-][fd0002][-][fe1000][-] Raw Meat [00de50](2)[-][DECEA3](I)[-]
+,Food,foodRottingFlesh,Rotting Flesh,[f00002][-][FFA94D][Food][-][fd0001][-][fe1000][-] Rotting Flesh [00de50](1)[-][DECEA3](I)[-]
+,Food,foodShamChowder,Sham Chowder,[f00002][-][FFA94D][Food][-][fd0053][-][fe1010][-] Sham Chowder [00de50](53)[-][00c8ff](10)[-]
+,Food,foodShamSandwich,Old Sham Sandwich,[f00002][-][FFA94D][Food][-][fd0015][-][fe1000][-] Old Sham Sandwich [00de50](15)[-][DECEA3](I)[-]
+,Food,foodShepardsPie,Shepherd's Pie,[f00002][-][FFA94D][Food][-][fd0104][-][fe1000][-] Shepherd's Pie [00de50](104)[-]
+,Food,foodSpaghetti,Spaghetti,[f00002][-][FFA94D][Food][-][fd0122][-][fe1000][-] Spaghetti [00de50](122)[-]
+,Food,foodSteakAndPotato,Steak and Potato Meal,[f00002][-][FFA94D][Food][-][fd0050][-][fe1000][-] Steak and Potato Meal [00de50](50)[-]
+,Food,foodTunaFishGravyToast,Tuna Fish Gravy Toast,[f00002][-][FFA94D][Food][-][fd0090][-][fe1000][-] Tuna Fish Gravy Toast [00de50](90)[-]
+,Food,foodVegetableStew,Vegetable Stew,[f00002][-][FFA94D][Food][-][fd0031][-][fe1020][-] Vegetable Stew [00de50](31)[-][00c8ff](20)[-]
+,Food,resourceAnimalFat,Animal Fat,[f00002][-][FFA94D][Food][-][fd0005][-][fe1000][-] Animal Fat [00de50](5)[-][DECEA3](I)[-]
+,Food-Canned,foodCanBeef,Large Beef Ration,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Large Beef Ration [00de50](15)[-][DECEA3](I)[-]
+,Food-Canned,foodCanCatfood,Can of Cat Food,[f00004][-][FFA94D][Canned][-][fc0010][-][fe1000][-] Can of Cat Food [00de50](10)[-]
+,Food-Canned,foodCanChicken,Chicken Ration,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Chicken Ration [00de50](15)[-]
+,Food-Canned,foodCanChili,Can of Chili,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Chili [00de50](15)[-][DECEA3](I)[-]
+,Food-Canned,foodCanDogfood,Can of Dog Food,[f00004][-][FFA94D][Canned][-][fc0010][-][fe1000][-] Can of Dog Food [00de50](10)[-][DECEA3](I)[-]
+,Food-Canned,foodCanLamb,Lamb Rations,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Lamb Rations [00de50](15)[-][DECEA3](I)[-]
+,Food-Canned,foodCanMiso,Can of Miso,[f00004][-][FFA94D][Canned][-][fc0010][-][fe1010][-] Can of Miso [00de50](10)[-][00c8ff](10)[-]
+,Food-Canned,foodCanPasta,Can of Pasta,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Pasta [00de50](15)[-][DECEA3](I)[-]
+,Food-Canned,foodCanPears,Can of Pears,[f00004][-][FFA94D][Canned][-][fc0010][-][fe1005][-] Can of Pears [00de50](10)[-][00c8ff](5)[-]
+,Food-Canned,foodCanPeas,Can of Peas,[f00004][-][FFA94D][Canned][-][fc0010][-][fe1005][-] Can of Peas [00de50](10)[-][00c8ff](5)[-][DECEA3](I)[-]
+,Food-Canned,foodCanSalmon,Can of Salmon,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Salmon [00de50](15)[-][DECEA3](I)[-]
+,Food-Canned,foodCanSham,Can of Sham,[f00004][-][FFA94D][Canned][-][fc0015][-][fe1000][-] Can of Sham [00de50](15)[-][DECEA3](I)[-]
+,Food-Canned,foodCanSoup,Chicken Soup,[f00004][-][FFA94D][Canned][-][fc0010][-][fe1010][-] Chicken Soup [00de50](10)[-][00c8ff](10)[-]
+,Food-Canned,foodCanStock,Can of Stock,[f00004][-][FFA94D][Canned][-][fc0005][-][fe1010][-] Can of Stock [00de50](5)[-][00c8ff](10)[-][DECEA3](I)[-]
+,Food-Canned,foodCanTuna,Can of Tuna,[f00004][-][FFA94D][Canned][-][fc0005][-][fe1000][-] Can of Tuna [00de50](5)[-][DECEA3](I)[-]
+,Candy,drugAtomJunkies,Atom Junkies,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Atom Junkies
+,Candy,drugCovertCats,Covert Cats,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Covert Cats
+,Candy,drugEyeKandy,Eye Candy,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Eye Candy
+,Candy,drugHackers,Hackers,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Hackers
+,Candy,drugJailBreakers,Jail Breakers,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Jail Breakers
+,Candy,drugNerdTats,Nerd Tats,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Nerd Tats
+,Candy,drugOhShitzDrops,Oh Shitz Drops,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Oh Shitz Drops
+,Candy,drugRockBusters,Rock Busters,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Rock Busters
+,Candy,drugSkullCrushers,Skull Crushers,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Skull Crushers
+,Candy,drugSugarButts,Sugar Butts,[f00006][-][FFA94D][Candy][-][fa0005][-][fe1000][-] Sugar Butts
+,Magazine,armorSkillMagazine,Armored Up,[ffcc01][-][FFA94D][Magazine][-] Armored Up
+,Magazine,bladesSkillMagazine,Knife Guy,[ffcc01][-][FFA94D][Magazine][-] Knife Guy
+,Magazine,bowsSkillMagazine,Bow Hunters,[ffcc01][-][FFA94D][Magazine][-] Bow Hunters
+,Magazine,clubsSkillMagazine,Big Hitters,[ffcc01][-][FFA94D][Magazine][-] Big Hitters
+,Magazine,electricianSkillMagazine,Wiring 101,[ffcc01][-][FFA94D][Magazine][-] Wiring 101
+,Magazine,explosivesSkillMagazine,Explosive Magazine,[ffcc01][-][FFA94D][Magazine][-] Explosive Magazine
+,Magazine,foodSkillMagazine,Home Cooking Weekly,[ffcc01][-][FFA94D][Magazine][-] Home Cooking Weekly
+,Magazine,handgunsSkillMagazine,Handgun Magazine,[ffcc01][-][FFA94D][Magazine][-] Handgun Magazine
+,Magazine,harvestingToolsSkillMagazine,Tools Digest,[ffcc01][-][FFA94D][Magazine][-] Tools Digest
+,Magazine,knucklesSkillMagazine,Furious Fists,[ffcc01][-][FFA94D][Magazine][-] Furious Fists
+,Magazine,machineGunsSkillMagazine,Tactical Warfare,[ffcc01][-][FFA94D][Magazine][-] Tactical Warfare
+,Magazine,medicalSkillMagazine,Medical Journal,[ffcc01][-][FFA94D][Magazine][-] Medical Journal
+,Magazine,repairToolsSkillMagazine,Handy Land,[ffcc01][-][FFA94D][Magazine][-] Handy Land
+,Magazine,riflesSkillMagazine,Rifle World,[ffcc01][-][FFA94D][Magazine][-] Rifle World
+,Magazine,roboticsSkillMagazine,Tech Planet,[ffcc01][-][FFA94D][Magazine][-] Tech Planet
+,Magazine,salvageToolsSkillMagazine,Scrapping 4 Fun,[ffcc01][-][FFA94D][Magazine][-] Scrapping 4 Fun
+,Magazine,seedSkillMagazine,Southern Farming,[ffcc01][-][FFA94D][Magazine][-] Southern Farming
+,Magazine,shotgunsSkillMagazine,Shotgun Weekly,[ffcc01][-][FFA94D][Magazine][-] Shotgun Weekly
+,Magazine,sledgehammersSkillMagazine,Get Hammered,[ffcc01][-][FFA94D][Magazine][-] Get Hammered
+,Magazine,spearsSkillMagazine,Sharp Sticks,[ffcc01][-][FFA94D][Magazine][-] Sharp Sticks
+,Magazine,trapsSkillMagazine,Electrical Traps,[ffcc01][-][FFA94D][Magazine][-] Electrical Traps
+,Magazine,vehiclesSkillMagazine,Vehicle Adventures,[ffcc01][-][FFA94D][Magazine][-] Vehicle Adventures
+,Magazine,workstationSkillMagazine,Forge Ahead,[ffcc01][-][FFA94D][Magazine][-] Forge Ahead
+,Medical,drugAntibiotics,Antibiotics,[f00007][-][FFA94D][Medical][-][b00003][-] Antibiotics [FFA94D](25%)[-]
+,Special,drugFortBites,Fort Bites,[f00005][-][FFA94D][Special][-][a00006][-] Fort Bites [00c8ff](-20)[-]
+,Medical,drugHerbalAntibiotics,Herbal Antibiotics,[f00007][-][FFA94D][Medical][-][b00002][-] Herbal Antibiotics [FFA94D](10%)[-]
+,Medical,drugPainkillers,Painkillers,[f00007][-][FFA94D][Medical][-][b00005][-] Painkillers [00c8ff](-40)[-][FF5555](40)[-]
+,Special,drugRecog,Recog,[f00005][-][FFA94D][Special][-][a00007][-] Recog [00c8ff](-30)[-]
+,Special,drugSteroids,Steroids,[f00005][-][FFA94D][Special][-][a00008][-] Steroids [00c8ff](-30)[-]
+,Medical,drugVitamins,Vitamins,[f00007][-][FFA94D][Medical][-][b00004][-] Vitamins [DECEA3](I)[-]
+,Medical,foodHoney,Jar of Honey,[f00007][-][FFA94D][Medical][-][b00001][-] Jar of Honey [FF5555](3)[-][FFA94D](5%)[-][DECEA3](I)[-]
+,Medical,medicalAloeCream,Aloe Cream,[f00007][-][FFA94D][Medical][-][b00008][-] Aloe Cream [FF5555](5)[-][DECEA3](I)[-]
+,Medical,medicalBandage,Bandage,[f00007][-][FFA94D][Medical][-][b00009][-] Bandage [DECEA3](I)[-]
+,Medical,medicalBloodBag,Blood Bag,[f00007][-][FFA94D][Medical][-][b00012][-] Blood Bag [DECEA3](I)[-]
+,Medical,medicalFirstAidBandage,First Aid Bandage,[f00007][-][FFA94D][Medical][-][b00010][-] First Aid Bandage [FF5555](30)[-]
+,Medical,medicalFirstAidKit,First Aid Kit,[f00007][-][FFA94D][Medical][-][b00011][-] First Aid Kit [FF5555](180)[-]
+,Medical,medicalPlasterCast,Plaster Cast,[f00007][-][FFA94D][Medical][-][b00007][-] Plaster Cast
+,Medical,medicalSplint,Splint,[f00007][-][FFA94D][Medical][-][b00006][-] Splint
+,Parts,armorParts,Armor Parts,[FFA94D][Parts][-] Armor
+,Parts,gunBotRoboticsParts,Robotics Parts,[FFA94D][Parts][-] Robotics
+,Parts,gunBowT1WoodenBowParts,Bow / Crossbow Parts,[FFA94D][Parts][-] Bow / Crossbow
+,Parts,gunExplosivesT3RocketLauncherParts,Rocket Launcher Parts,[FFA94D][Parts][-] Rocket Launcher
+,Parts,gunHandgunT1PistolParts,Handgun Parts,[FFA94D][Parts][-] Handgun
+,Parts,gunMGT1AK47Parts,Machine Gun Parts,[FFA94D][Parts][-] Machine Gun
+,Parts,gunRifleT1HuntingRifleParts,Rifle Parts,[FFA94D][Parts][-] Rifle
+,Parts,gunShotgunT1DoubleBarrelParts,Shotgun Parts,[FFA94D][Parts][-] Shotgun
+,Parts,meleeToolAllSteelParts,Steel Tool Parts,[FFA94D][Parts][-] Steel Tool
+,Parts,meleeToolAxeT3ChainsawParts,Motor Tool Parts,[FFA94D][Parts][-] Motor Tool
+,Parts,meleeWpnBatonT2StunBatonParts,Baton Parts,[FFA94D][Parts][-] Baton
+,Parts,meleeWpnBladeT3MacheteParts,Machete Parts,[FFA94D][Parts][-] Machete
+,Parts,meleeWpnClubT3SteelClubParts,Steel Club Parts,[FFA94D][Parts][-] Steel Club
+,Parts,meleeWpnKnucklesT3SteelKnucklesParts,Steel Knuckles Parts,[FFA94D][Parts][-] Steel Knuckles
+,Parts,meleeWpnSledgeT3SteelSledgehammerParts,Steel Sledgehammer Parts,[FFA94D][Parts][-] Steel Sledgehammer
+,Parts,meleeWpnSpearT3SteelSpearParts,Steel Spear Parts,[FFA94D][Parts][-] Steel Spear
+,Parts,resourceArmorCraftingKit,Armor Crafting Kit,[FFA94D][Parts][-] Armor Crafting Kit
+,Resource,resourceElectricParts,Electrical Parts,[dddd04][-][eeee13][-][FFA94D][Resource][-] Electrical Parts
+,Parts,resourceLegendaryParts,Legendary Parts,[FFA94D][Parts][-] Legendary
+,Resource,resourceMechanicalParts,Mechanical Parts,[dddd04][-][eeee12][-][FFA94D][Resource][-] Mechanical Parts
+,Bundle,questReward4x4PartsBundle,4x4 Parts Bundle,[FFA94D][Reward][-][dddd04][-][eeee02][-] [dddd04][-][eeee02][-]4x4 Parts Bundle
+,Bundle,questRewardAmmoCraftingBundle,Ammo Crafting Bundle,[FFA94D][Reward][-][dddd05][-][eeee01][-] [dddd05][-][eeee01][-]Ammo Crafting Bundle
+,Bundle,questRewardAutoTurretBundle,Auto Turret Bundle,[FFA94D][Reward][-][dddd03][-][eeee08][-] [dddd03][-][eeee08][-]Auto Turret Bundle
+,Bundle,questRewardBatonCraftingBundle,Baton Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee01][-] [dddd06][-][eeee01][-]Baton Crafting Bundle
+,Bundle,questRewardBatteryBankBundle,Battery Bank Bundle,[FFA94D][Reward][-][dddd03][-][eeee01][-] [dddd03][-][eeee01][-]Battery Bank Bundle
+,Bundle,questRewardBladeTrapBundle,Blade Trap Bundle,[FFA94D][Reward][-][dddd03][-][eeee06][-] [dddd03][-][eeee06][-]Blade Trap Bundle
+,Bundle,questRewardBowCraftingBundle,Bow Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee02][-] [dddd06][-][eeee02][-]Bow Crafting Bundle
+,Bundle,questRewardDartTrapBundle,Dart Trap Bundle,[FFA94D][Reward][-][dddd03][-][eeee07][-] [dddd03][-][eeee07][-]Dart Trap Bundle
+,Bundle,questRewardFarmT1Bundle,Farm Bundle 01,[FFA94D][Reward][-][dddd02][-][eeee04][-] [dddd02][-][eeee04][-]Farm Bundle 01
+,Bundle,questRewardFarmT2Bundle,Farm Bundle 02,[FFA94D][Reward][-][dddd02][-][eeee05][-] [dddd02][-][eeee05][-]Farm Bundle 02
+,Bundle,questRewardFarmT3Bundle,Farm Bundle 03,[FFA94D][Reward][-][dddd02][-][eeee06][-] [dddd02][-][eeee06][-]Farm Bundle 03
+,Bundle,questRewardGeneratorBankBundle,Generator Bank Bundle,[FFA94D][Reward][-][dddd03][-][eeee02][-] [dddd03][-][eeee02][-]Generator Bank Bundle
+,Bundle,questRewardGyrocopterPartsBundle,Gyrocopter Parts Bundle,[FFA94D][Reward][-][dddd04][-][eeee03][-] [dddd04][-][eeee03][-]Gyrocopter Parts Bundle
+,Bundle,questRewardHandgunCraftingBundle,Pistol Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee06][-] [dddd06][-][eeee06][-]Pistol Crafting Bundle
+,Bundle,questRewardLegendaryBatonCraftingBundle,Legendary Baton Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee01][-] [dddd10][-][eeee01][-]Legendary Baton Crafting Bundle
+,Bundle,questRewardLegendaryBowCraftingBundle,Legendary Bow Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee02][-] [dddd10][-][eeee02][-]Legendary Bow Crafting Bundle
+,Bundle,questRewardLegendaryHandgunCraftingBundle,Legendary Pistol Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee06][-] [dddd10][-][eeee06][-]Legendary Pistol Crafting Bundle
+,Bundle,questRewardLegendaryMacheteCraftingBundle,Legendary Machete Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee03][-] [dddd10][-][eeee03][-]Legendary Machete Crafting Bundle
+,Bundle,questRewardLegendaryMachineGunCraftingBundle,Legendary Machine Gun Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee04][-] [dddd10][-][eeee04][-]Legendary Machine Gun Crafting Bundle
+,Bundle,questRewardLegendaryMotorToolsCraftingBundle,Legendary Motor Tools Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee05][-] [dddd10][-][eeee05][-]Legendary Motor Tools Crafting Bundle
+,Bundle,questRewardLegendaryRifleCraftingBundle,Legendary Rifle Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee07][-] [dddd10][-][eeee07][-]Legendary Rifle Crafting Bundle
+,Bundle,questRewardLegendaryRoboticsCraftingBundle,Legendary Robotics Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee08][-] [dddd10][-][eeee08][-]Legendary Robotics Crafting Bundle
+,Bundle,questRewardLegendaryRocketLauncherCraftingBundle,Legendary Rocket Launcher Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee09][-] [dddd10][-][eeee09][-]Legendary Rocket Launcher Crafting Bundle
+,Bundle,questRewardLegendaryShotgunCraftingBundle,Legendary Shotgun Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee10][-] [dddd10][-][eeee10][-]Legendary Shotgun Crafting Bundle
+,Bundle,questRewardLegendarySteelClubCraftingBundle,Legendary Steel Club Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee11][-] [dddd10][-][eeee11][-]Legendary Steel Club Crafting Bundle
+,Bundle,questRewardLegendarySteelKnuckleCraftingBundle,Legendary Steel Knuckle Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee12][-] [dddd10][-][eeee12][-]Legendary Steel Knuckle Crafting Bundle
+,Bundle,questRewardLegendarySteelSledgehammerCraftingBundle,Legendary Steel Sledgehammer Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee13][-] [dddd10][-][eeee13][-]Legendary Steel Sledgehammer Crafting Bundle
+,Bundle,questRewardLegendarySteelSpearCraftingBundle,Legendary Steel Spear Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee14][-] [dddd10][-][eeee14][-]Legendary Steel Spear Crafting Bundle
+,Bundle,questRewardLegendarySteelToolsCraftingBundle,Legendary Steel Tools Crafting Bundle,[FFA94D][Reward][-][dddd10][-][eeee15][-] [dddd10][-][eeee15][-]Legendary Steel Tools Crafting Bundle
+,Bundle,questRewardMacheteCraftingBundle,Machete Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee03][-] [dddd06][-][eeee03][-]Machete Crafting Bundle
+,Bundle,questRewardMachineGunCraftingBundle,Machine Gun Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee04][-] [dddd06][-][eeee04][-]Machine Gun Crafting Bundle
+,Bundle,questRewardMinibikePartsBundle,Minibike Parts Bundle,[FFA94D][Reward][-][dddd04][-][eeee04][-] [dddd04][-][eeee04][-]Minibike Parts Bundle
+,Bundle,questRewardMotorcyclePartsBundle,Motorcycle Parts Bundle,[FFA94D][Reward][-][dddd04][-][eeee05][-] [dddd04][-][eeee05][-]Motorcycle Parts Bundle
+,Bundle,questRewardMotorToolsCraftingBundle,Motor Tools Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee05][-] [dddd06][-][eeee05][-]Motor Tools Crafting Bundle
+,Bundle,questRewardPipeBatonBundle,Pipe Baton Bundle,[FFA94D][Reward][-][dddd07][-][eeee01][-] [dddd07][-][eeee01][-]Pipe Baton Bundle
+,Bundle,questRewardPipeMachineGunBundle,Pipe Machine Gun Bundle,[FFA94D][Reward][-][dddd07][-][eeee02][-] [dddd07][-][eeee02][-]Pipe Machine Gun Bundle
+,Bundle,questRewardPipePistolBundle,Pipe Pistol Bundle,[FFA94D][Reward][-][dddd07][-][eeee04][-] [dddd07][-][eeee04][-]Pipe Pistol Bundle
+,Bundle,questRewardPipeRifleBundle,Pipe Rifle Bundle,[FFA94D][Reward][-][dddd07][-][eeee06][-] [dddd07][-][eeee06][-]Pipe Rifle Bundle
+,Bundle,questRewardPipeShotgunBundle,Pipe Shotgun Bundle,[FFA94D][Reward][-][dddd07][-][eeee08][-] [dddd07][-][eeee08][-]Pipe Shotgun Bundle
+,Bundle,questRewardRifleCraftingBundle,Rifle Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee07][-] [dddd06][-][eeee07][-]Rifle Crafting Bundle
+,Bundle,questRewardRoboticsCraftingBundle,Robotics Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee08][-] [dddd06][-][eeee08][-]Robotics Crafting Bundle
+,Bundle,questRewardRocketLauncherCraftingBundle,Rocket Launcher Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee09][-] [dddd06][-][eeee09][-]Rocket Launcher Crafting Bundle
+,Bundle,questRewardSecuritySystemBundle,Security Camera Bundle,[FFA94D][Reward][-][dddd03][-][eeee10][-] [dddd03][-][eeee10][-]Security Camera Bundle
+,Bundle,questRewardShotgunCraftingBundle,Shotgun Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee10][-] [dddd06][-][eeee10][-]Shotgun Crafting Bundle
+,Bundle,questRewardShotgunTurretBundle,Shotgun Turret Bundle,[FFA94D][Reward][-][dddd03][-][eeee09][-] [dddd03][-][eeee09][-]Shotgun Turret Bundle
+,Bundle,questRewardSolarBankBundle,Solar Bank Bundle,[FFA94D][Reward][-][dddd03][-][eeee03][-] [dddd03][-][eeee03][-]Solar Bank Bundle
+,Bundle,questRewardSteelClubCraftingBundle,Steel Club Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee11][-] [dddd06][-][eeee11][-]Steel Club Crafting Bundle
+,Bundle,questRewardSteelKnuckleCraftingBundle,Steel Knuckle Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee12][-] [dddd06][-][eeee12][-]Steel Knuckle Crafting Bundle
+,Bundle,questRewardSteelSledgehammerCraftingBundle,Steel Sledgehammer Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee13][-] [dddd06][-][eeee13][-]Steel Sledgehammer Crafting Bundle
+,Bundle,questRewardSteelSpearCraftingBundle,Steel Spear Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee14][-] [dddd06][-][eeee14][-]Steel Spear Crafting Bundle
+,Bundle,questRewardSteelToolsCraftingBundle,Steel Tools Crafting Bundle,[FFA94D][Reward][-][dddd06][-][eeee15][-] [dddd06][-][eeee15][-]Steel Tools Crafting Bundle
+,Bundle,questRewardT0HandgunBundle,Pipe Pistol Bundle,[FFA94D][Reward][-][dddd07][-][eeee05][-] [dddd07][-][eeee05][-]Pipe Pistol Bundle
+,Bundle,questRewardT0MachineGunBundle,Pipe Machine Gun Bundle,[FFA94D][Reward][-][dddd07][-][eeee03][-] [dddd07][-][eeee03][-]Pipe Machine Gun Bundle
+,Bundle,questRewardT0RifleBundle,Pipe Rifle Bundle,[FFA94D][Reward][-][dddd07][-][eeee07][-] [dddd07][-][eeee07][-]Pipe Rifle Bundle
+,Bundle,questRewardT0ShotgunBundle,Pipe Shotgun Bundle,[FFA94D][Reward][-][dddd07][-][eeee09][-] [dddd07][-][eeee09][-]Pipe Shotgun Bundle
+,Bundle,questRewardT1BookBundle,3 Book Bundle,[FFA94D][Reward][-][dddd01][-][eeee01][-] [dddd01][-][eeee01][-]3 Book Bundle
+,Bundle,questRewardT1HandgunBundle,Pistol Bundle,[FFA94D][Reward][-][dddd08][-][eeee01][-] [dddd08][-][eeee01][-]Pistol Bundle
+,Bundle,questRewardT1MachineGunBundle,AK-47 Bundle,[FFA94D][Reward][-][dddd08][-][eeee10][-] [dddd08][-][eeee10][-]AK-47 Bundle
+,Bundle,questRewardT1MeleeModsBundle,Melee Mods Bundle 01,[FFA94D][Reward][-][dddd09][-][eeee01][-] [dddd09][-][eeee01][-]Melee Mods Bundle 01
+,Bundle,questRewardT1RangedModsBundle,Ranged Mods Bundle 01,[FFA94D][Reward][-][dddd09][-][eeee04][-] [dddd09][-][eeee04][-]Ranged Mods Bundle 01
+,Bundle,questRewardT1RifleBundle,Hunting Rifle Bundle,[FFA94D][Reward][-][dddd08][-][eeee04][-] [dddd08][-][eeee04][-]Hunting Rifle Bundle
+,Bundle,questRewardT1ShotgunBundle,Double Barrel Shotgun Bundle,[FFA94D][Reward][-][dddd08][-][eeee07][-] [dddd08][-][eeee07][-]Double Barrel Shotgun Bundle
+,Bundle,questRewardT1SkillMagazineBundle,Crafting Skill Magazine Bundle,[FFA94D][Reward][-][dddd01][-][eeee06][-] [dddd01][-][eeee06][-]Crafting Skill Magazine Bundle
+,Bundle,questRewardT1TrapsBundle,Traps Bundle 01,[FFA94D][Reward][-][dddd03][-][eeee04][-] [dddd03][-][eeee04][-]Traps Bundle 01
+,Bundle,questRewardT2BookBundle,4 Book Bundle,[FFA94D][Reward][-][dddd01][-][eeee02][-] [dddd01][-][eeee02][-]4 Book Bundle
+,Bundle,questRewardT2FoodBundle,Food Bundle 01,[FFA94D][Reward][-][dddd02][-][eeee01][-] [dddd02][-][eeee01][-]Food Bundle 01
+,Bundle,questRewardT2HandgunBundle,.44 Magnum Bundle,[FFA94D][Reward][-][dddd08][-][eeee02][-] [dddd08][-][eeee02][-].44 Magnum Bundle
+,Bundle,questRewardT2MachineGunBundle,Tactical Assault Rifle Bundle,[FFA94D][Reward][-][dddd08][-][eeee11][-] [dddd08][-][eeee11][-]Tactical Assault Rifle Bundle
+,Bundle,questRewardT2MeleeModsBundle,Melee Mods Bundle 02,[FFA94D][Reward][-][dddd09][-][eeee02][-] [dddd09][-][eeee02][-]Melee Mods Bundle 02
+,Bundle,questRewardT2RangedModsBundle,Ranged Mods Bundle 02,[FFA94D][Reward][-][dddd09][-][eeee05][-] [dddd09][-][eeee05][-]Ranged Mods Bundle 02
+,Bundle,questRewardT2RifleBundle,Lever Action Rifle Bundle,[FFA94D][Reward][-][dddd08][-][eeee05][-] [dddd08][-][eeee05][-]Lever Action Rifle Bundle
+,Bundle,questRewardT2ShotgunBundle,Pump Shotgun Bundle,[FFA94D][Reward][-][dddd08][-][eeee08][-] [dddd08][-][eeee08][-]Pump Shotgun Bundle
+,Bundle,questRewardT2TrapsBundle,Traps Bundle 02,[FFA94D][Reward][-][dddd03][-][eeee05][-] [dddd03][-][eeee05][-]Traps Bundle 02
+,Bundle,questRewardT3BookBundle,5 Book Bundle,[FFA94D][Reward][-][dddd01][-][eeee03][-] [dddd01][-][eeee03][-]5 Book Bundle
+,Bundle,questRewardT3FoodBundle,Food Bundle 02,[FFA94D][Reward][-][dddd02][-][eeee02][-] [dddd02][-][eeee02][-]Food Bundle 02
+,Bundle,questRewardT3HandgunBundle,.44 Desert Vulture Bundle,[FFA94D][Reward][-][dddd08][-][eeee03][-] [dddd08][-][eeee03][-].44 Desert Vulture Bundle
+,Bundle,questRewardT3HandgunLegendaryBundle,.44 Desert Vulture Legendary Bundle,[FFA94D][Reward][-][dddd10][-][eeee16][-] [dddd10][-][eeee16][-].44 Desert Vulture Legendary Bundle
+,Bundle,questRewardT3MachineGunBundle,M60 Machine Gun Bundle,[FFA94D][Reward][-][dddd08][-][eeee12][-] [dddd08][-][eeee12][-]M60 Machine Gun Bundle
+,Bundle,questRewardT3MachineGunLegendaryBundle,M60 Machine Gun Legendary Bundle,[FFA94D][Reward][-][dddd10][-][eeee19][-] [dddd10][-][eeee19][-]M60 Machine Gun Legendary Bundle
+,Bundle,questRewardT3MeleeModsBundle,Melee Mods Bundle 03,[FFA94D][Reward][-][dddd09][-][eeee03][-] [dddd09][-][eeee03][-]Melee Mods Bundle 03
+,Bundle,questRewardT3RangedModsBundle,Ranged Mods Bundle 03,[FFA94D][Reward][-][dddd09][-][eeee06][-] [dddd09][-][eeee06][-]Ranged Mods Bundle 03
+,Bundle,questRewardT3RifleBundle,Sniper Rifle Bundle,[FFA94D][Reward][-][dddd08][-][eeee06][-] [dddd08][-][eeee06][-]Sniper Rifle Bundle
+,Bundle,questRewardT3RifleLegendaryBundle,Sniper Rifle Legendary Bundle,[FFA94D][Reward][-][dddd10][-][eeee17][-] [dddd10][-][eeee17][-]Sniper Rifle Legendary Bundle
+,Bundle,questRewardT3ShotgunBundle,Auto Shotgun Bundle,[FFA94D][Reward][-][dddd08][-][eeee09][-] [dddd08][-][eeee09][-]Auto Shotgun Bundle
+,Bundle,questRewardT3ShotgunLegendaryBundle,Auto Shotgun Legendary Bundle,[FFA94D][Reward][-][dddd10][-][eeee18][-] [dddd10][-][eeee18][-]Auto Shotgun Legendary Bundle
+,Bundle,questRewardT3SMGBundle,SMG-5 Bundle,[FFA94D][Reward][-][dddd08][-][eeee13][-] [dddd08][-][eeee13][-]SMG-5 Bundle
+,Bundle,questRewardT3SMGLegendaryBundle,SMG-5 Legendary Bundle,[FFA94D][Reward][-][dddd10][-][eeee20][-] [dddd10][-][eeee20][-]SMG-5 Legendary Bundle
+,Bundle,questRewardT4BookBundle,6 Book Bundle,[FFA94D][Reward][-][dddd01][-][eeee04][-] [dddd01][-][eeee04][-]6 Book Bundle
+,Bundle,questRewardT4FoodBundle,Food Bundle 03,[FFA94D][Reward][-][dddd02][-][eeee03][-] [dddd02][-][eeee03][-]Food Bundle 03
+,Bundle,questRewardT5BookBundle,7 Book Bundle,[FFA94D][Reward][-][dddd01][-][eeee05][-] [dddd01][-][eeee05][-]7 Book Bundle
+,Schematic,foodCanShamSchematic,Shamway Secret Recipe,[ffcc01][-][FFA94D][Schematic][-] Can of Sham
+,Schematic,modArmorAdvancedMuffledConnectorsSchematic,Adv. Muffled Connectors Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Advanced Muffled Connectors
+,Schematic,modArmorBandolierSchematic,Bandolier Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Bandolier
+,Schematic,modArmorCustomizedFittingsSchematic,Advanced Armor Fittings Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Advanced Armor Fittings
+,Schematic,modArmorDoubleStoragePocketSchematic,Armor Double Pocket Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Armor Double Pocket
+,Schematic,modArmorImpactBracingSchematic,Impact Bracing Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Impact Bracing
+,Schematic,modArmorImprovedFittingsSchematic,Armor Fittings Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Armor Fittings
+,Schematic,modArmorMuffledConnectorsSchematic,Muffled Connectors Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Muffled Connectors
+,Schematic,modArmorPlatingBasicSchematic,Armor Plating Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Armor Plating
+,Schematic,modArmorPlatingReinforcedSchematic,Advanced Armor Plating Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Advanced Armor Plating
+,Schematic,modArmorStoragePocketSchematic,Armor Pocket Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Armor Pocket
+,Schematic,modArmorTripleStoragePocketSchematic,Armor Triple Pocket Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Armor Triple Pocket
+,Schematic,modArmorWaterPurifierSchematic,Water Purifier Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Water Purifier
+,Schematic,modFuelTankLargeSchematic,Motor Tool Large Tank Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Motor Tool Large Tank
+,Schematic,modFuelTankSmallSchematic,Motor Tool Small Tank Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Motor Tool Small Tank
+,Schematic,modGunBarrelExtenderSchematic,Barrel Extender Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Barrel Extender
+,Schematic,modGunBipodSchematic,Bipod Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Bipod
+,Schematic,modGunBowArrowRestSchematic,Arrow Rest Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Arrow Rest
+,Schematic,modGunBowPolymerStringSchematic,Polymer String Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Polymer String
+,Schematic,modGunChokeSchematic,Shotgun Choke Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Shotgun Choke
+,Schematic,modGunCrippleEmSchematic,Cripple 'Em Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Cripple 'Em
+,Schematic,modGunDuckbillSchematic,Shotgun Duckbill Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Shotgun Duckbill
+,Schematic,modGunFlashlightSchematic,Weapon Flashlight Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Weapon Flashlight
+,Schematic,modGunForegripSchematic,Fore Grip Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Fore Grip
+,Schematic,modGunLaserSightSchematic,Laser Sight Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Laser Sight
+,Schematic,modGunMagazineExtenderSchematic,Magazine Extender Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Magazine Extender
+,Schematic,modGunMeleeRadRemoverSchematic,Rad Remover Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Rad Remover
+,Schematic,modGunMeleeTheHunterSchematic,The Hunter Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] The Hunter
+,Schematic,modGunMuzzleBrakeSchematic,Muzzle Brake Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Muzzle Brake
+,Schematic,modGunReflexSightSchematic,Reflex Sight Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Reflex Sight
+,Schematic,modGunRetractingStockSchematic,Retracting Stock Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Retracting Stock
+,Schematic,modGunScopeLargeSchematic,Scope 8x Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Scope 8x
+,Schematic,modGunScopeMediumSchematic,Scope 4x Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Scope 4x
+,Schematic,modGunScopeSmallSchematic,Scope 2x Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Scope 2x
+,Schematic,modGunSoundSuppressorSilencerSchematic,Silencer Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Silencer
+,Schematic,modGunTriggerGroupAutomaticSchematic,Trigger Group: Full Auto Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Trigger Group: Full Auto
+,Schematic,modGunTriggerGroupBurst3Schematic,Trigger Group: Burst Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Trigger Group: Burst
+,Schematic,modGunTriggerGroupSemiSchematic,Trigger Group: Semi Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Trigger Group: Semi
+,Schematic,modMeleeBunkerBusterSchematic,Bunker Buster Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Bunker Buster
+,Schematic,modMeleeClubBarbedWireSchematic,Barbed Wire Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Barbed Wire
+,Schematic,modMeleeClubBurningShaftSchematic,Burning Shaft Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Burning Shaft
+,Schematic,modMeleeClubMetalSpikesSchematic,Metal Spikes Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Metal Spikes
+,Schematic,modMeleeErgonomicGripSchematic,Ergonomic Grip Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Ergonomic Grip
+,Schematic,modMeleeFortifyingGripSchematic,Fortifying Grip Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Fortifying Grip
+,Schematic,modMeleeGraveDiggerSchematic,Grave Digger Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Grave Digger
+,Schematic,modMeleeIronBreakerSchematic,Iron Breaker Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Iron Breaker
+,Schematic,modMeleeSerratedBladeSchematic,Serrated Blade Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Serrated Blade
+,Schematic,modMeleeStructuralBraceSchematic,Structural Brace Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Structural Brace
+,Schematic,modMeleeTemperedBladeSchematic,Tempered Blade Schematic,[ffcc01][-][FFA94D][Schematic][-] Tempered Blade
+,Schematic,modMeleeWeightedHeadSchematic,Weighted Head Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Weighted Head
+,Schematic,modMeleeWoodSplitterSchematic,Wood Splitter Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Wood Splitter
+,Schematic,modRoboticDroneArmorPlatingModSchematic,Robotic Drone Armor Plating Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Armor Plating
+,Schematic,modRoboticDroneCargoModSchematic,Robotic Drone Cargo Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Cargo
+,Schematic,modRoboticDroneHeadlampModSchematic,Robotic Headlamp Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Robotic Headlamp
+,Schematic,modRoboticDroneMedicModSchematic,Robotic Drone Medic Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Medic
+,Schematic,modRoboticDroneMoraleBoosterModSchematic,Robotic Drone Morale Booster Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Robotic Drone Morale Booster
+,Schematic,modShotgunSawedOffBarrelSchematic,Sawed-off Shotgun Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Sawed-Off Shotgun
+,Schematic,modVehicleArmorSchematic,Vehicle Armor Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Armor
+,Schematic,modVehicleExpandedSeatSchematic,Vehicle Expanded Seating Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Expanded Seating
+,Schematic,modVehicleFuelSaverSchematic,Vehicle Fuel Saver Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Fuel Saver
+,Schematic,modVehicleOffRoadHeadlightsSchematic,Vehicle Off Road Headlights Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Off Road Headlights
+,Schematic,modVehiclePlowSchematic,Vehicle Plow Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Plow
+,Schematic,modVehicleReserveFuelTankSchematic,Vehicle Reserve Fuel Tank Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Reserve Fuel Tank
+,Schematic,modVehicleSuperChargerSchematic,Vehicle Super Charger Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Super Charger
+,Schematic,plantedGraceCorn1Schematic,Super Corn (Seed) Recipe,[ffcc01][-][FFA94D][Schematic][-] Super Corn
+,Ammo,ammoBundle44MagnumBulletAP,Box of AP .44 Magnum Ammo (100),"[dddd01][-][eeee03][-][FFA94D][Ammo][-] .44 Magnum, AP [DECEA3](100)[-]"
+,Ammo,ammoBundle44MagnumBulletBall,Box of .44 Magnum Ammo (100),[dddd01][-][eeee01][-][FFA94D][Ammo][-] .44 Magnum [DECEA3](100)[-]
+,Ammo,ammoBundle44MagnumBulletHP,Box of HP .44 Magnum Ammo (100),"[dddd01][-][eeee02][-][FFA94D][Ammo][-] .44 Magnum, HiPower [DECEA3](100)[-]"
+,Ammo,ammoBundle762mmBulletAP,Box of AP 7.62mm Ammo (100),"[dddd02][-][eeee03][-][FFA94D][Ammo][-] 7.62mm, AP [DECEA3](100)[-]"
+,Ammo,ammoBundle762mmBulletBall,Box of 7.62mm Ammo (100),[dddd02][-][eeee01][-][FFA94D][Ammo][-] 7.62mm [DECEA3](100)[-]
+,Ammo,ammoBundle762mmBulletHP,Box of HP 7.62mm Ammo (100),"[dddd02][-][eeee02][-][FFA94D][Ammo][-] 7.62mm, HiPower [DECEA3](100)[-]"
+,Ammo,ammoBundle9mmBulletAP,Box of AP 9mm Ammo (100),"[dddd03][-][eeee03][-][FFA94D][Ammo][-] 9mm, AP [DECEA3](100)[-]"
+,Ammo,ammoBundle9mmBulletBall,Box of 9mm Ammo (100),[dddd03][-][eeee01][-][FFA94D][Ammo][-] 9mm [DECEA3](100)[-]
+,Ammo,ammoBundle9mmBulletHP,Box of HP 9mm Ammo (100),"[dddd03][-][eeee02][-][FFA94D][Ammo][-] 9mm, HiPower [DECEA3](100)[-]"
+,Ammo,ammoBundleArrowExploding,Box of Exploding Arrows (75),"[dddd04][-][eeee05][-][FFA94D][Ammo][-] Arrow, Exploding [DECEA3](75)[-]"
+,Ammo,ammoBundleArrowFlaming,Box of Flaming Arrows (100),"[dddd04][-][eeee04][-][FFA94D][Ammo][-] Arrow, Flaming [DECEA3](100)[-]"
+,Ammo,ammoBundleArrowIron,Box of Iron Arrows (100),"[dddd04][-][eeee02][-][FFA94D][Ammo][-] Arrow, Iron [DECEA3](100)[-]"
+,Ammo,ammoBundleArrowSteelAP,Box of Steel Arrows (100),"[dddd04][-][eeee03][-][FFA94D][Ammo][-] Arrow, Steel [DECEA3](100)[-]"
+,Ammo,ammoBundleArrowStone,Box of Stone Arrows (100),"[dddd04][-][eeee01][-][FFA94D][Ammo][-] Arrow, Stone [DECEA3](100)[-]"
+,Ammo,ammoBundleCrossbowBoltExploding,Box of Exploding Crossbow Bolts (75),"[dddd05][-][eeee05][-][FFA94D][Ammo][-] Bolt, Exploding [DECEA3](75)[-]"
+,Ammo,ammoBundleCrossbowBoltFlaming,Box of Flaming Crossbow Bolts (100),"[dddd05][-][eeee04][-][FFA94D][Ammo][-] Bolt, Flaming [DECEA3](100)[-]"
+,Ammo,ammoBundleCrossbowBoltIron,Box of Iron Crossbow Bolts (100),"[dddd05][-][eeee02][-][FFA94D][Ammo][-] Bolt, Iron [DECEA3](100)[-]"
+,Ammo,ammoBundleCrossbowBoltSteelAP,Box of Steel Crossbow Bolts (100),"[dddd05][-][eeee03][-][FFA94D][Ammo][-] Bolt, Steel [DECEA3](100)[-]"
+,Ammo,ammoBundleCrossbowBoltStone,Box of Stone Crossbow Bolts (100),"[dddd05][-][eeee01][-][FFA94D][Ammo][-] Bolt, Stone [DECEA3](100)[-]"
+,Ammo,ammoBundleJunkTurretAP,Box of AP Robotic Turret Ammo (1000),"[dddd08][-][eeee03][-][FFA94D][Ammo][-] Robotic Turret, AP [DECEA3](1000)[-]"
+,Ammo,ammoBundleJunkTurretRegular,Box of Robotic Turret Ammo (1000),[dddd08][-][eeee01][-][FFA94D][Ammo][-] Robotic Turret [DECEA3](1000)[-]
+,Ammo,ammoBundleJunkTurretShell,Box of Robotic Turret Shell Ammo (1000),"[dddd08][-][eeee02][-][FFA94D][Ammo][-] Robotic Turret, Shells [DECEA3](1000)[-]"
+,Ammo,ammoBundleShotgunBreachingSlug,Box of Shotgun Breaching Slugs (100),"[dddd07][-][eeee03][-][FFA94D][Ammo][-] Shotgun, Slug, Breaching [DECEA3](100)[-]"
+,Ammo,ammoBundleShotgunShell,Box of Shotgun Shells (100),"[dddd07][-][eeee01][-][FFA94D][Ammo][-] Shotgun, Shell [DECEA3](100)[-]"
+,Ammo,ammoBundleShotgunSlug,Box of Shotgun AP Slugs (100),"[dddd07][-][eeee02][-][FFA94D][Ammo][-] Shotgun, Slug, AP [DECEA3](100)[-]"
+,Bundle,ammoGasCanBundle,Stack of Gas Cans (5000),[bbbb00][-][eeee03][-] Gas Can Bundle [DECEA3](5000)[-]
+,Bundle,resourceCoalBundle,Stack of Coal (6000),[dddd02][-][eeee09][-][FFA94D][Ore][-] Coal Bundle [DECEA3](6000)[-]
+,Bundle,resourceGunPowderBundle,Stack of Gunpowder (1000),[dddd00][-][eeee01][-][FFA94D][Ammo-I][-] Gunpowder Bundle [DECEA3](1000)[-]
+,Bundle,resourceLeadBundle,Stack of Lead (6000),[dddd02][-][eeee06][-][FFA94D][Ore][-] Lead Bundle [DECEA3](6000)[-]
+,Bundle,resourceLockPickBundle,Stack of Lockpicks (50),[bbbb00][-][eeee02][-] Lockpick Bundle [DECEA3](50)[-]
+,Bundle,resourceOilShaleBundle,Stack of Oil Shale (6000),[dddd02][-][eeee10][-][FFA94D][Ore][-] Oil Shale Bundle [DECEA3](6000)[-]
+,Bundle,resourcePotassiumNitratePowderBundle,Stack of Nitrate Powder (6000),[dddd02][-][eeee08][-][FFA94D][Ore][-] Nitrate Powder Bundle [DECEA3](6000)[-]
+,Bundle,resourceRockSmallBundle,Stack of Small Stone (6000),[dddd02][-][eeee02][-][FFA94D][Ore][-] Small Stone Bundle [DECEA3](6000)[-]
+,Bundle,resourceScrapIronBundle,Stack of Iron (6000),[dddd02][-][eeee05][-][FFA94D][Ore][-] Iron Bundle [DECEA3](6000)[-]
+,Bundle,resourceWoodBundle,Stack of Wood (6000),[dddd01][-][eeee01][-][FFA94D][Build][-] Wood Bundle [DECEA3](6000)[-]
+,Station-C,toolBeaker,Beaker,[FFA94D][Station][-][dddd01][-][eeee03][-] Beaker [DECEA3](Campfire)[-]
+,Station-C,toolCookingGrill,Cooking Grill,[FFA94D][Station][-][dddd01][-][eeee02][-] Cooking Grill [DECEA3](Campfire)[-]
+,Station-C,toolCookingPot,Cooking Pot,[FFA94D][Station][-][dddd01][-][eeee01][-] Cooking Pot [DECEA3](Campfire)[-]
+,Station-D,toolDewFilter,Water Filter,[FFA94D][Station][-][dddd03][-][eeee03][-] Water Filter [DECEA3](Dew Collector)[-]
+,Station-D,toolDewGatherer,Gatherer,[FFA94D][Station][-][dddd03][-][eeee01][-] Gatherer [DECEA3](Dew Collector)[-]
+,Station-D,toolDewTarp,Tarp,[FFA94D][Station][-][dddd03][-][eeee02][-] Tarp [DECEA3](Dew Collector)[-]
+,Station-F,toolAnvil,Anvil,[FFA94D][Station][-][dddd02][-][eeee02][-] Anvil [DECEA3](Forge)[-]
+,Station-F,toolBellows,Advanced Bellows,[FFA94D][Station][-][dddd02][-][eeee01][-] Advanced Bellows [DECEA3](Forge)[-]
+,Station-F,toolForgeCrucible,Crucible,[FFA94D][Station][-][dddd02][-][eeee03][-] Crucible [DECEA3](Forge)[-]
+,Tool,meleeToolRepairT0TazasStoneAxe,Taza's Stone Axe,[bbbb01][-][eeee01][-] Taza's Stone Axe
+,Tool,meleeToolRepairT0StoneAxe,Stone Axe,[bbbb01][-][eeee02][-] Stone Axe
+,Tool,meleeToolShovelT0StoneShovel,Stone Shovel,[bbbb03][-][eeee01][-] Stone Shovel
+,Tool,meleeToolAxeT1IronFireaxe,Iron Fireaxe,[bbbb02][-][eeee01][-] Iron Fireaxe
+,Tool,meleeToolPickT1IronPickaxe,Iron Pickaxe,[bbbb04][-][eeee01][-] Iron Pickaxe
+,Tool,meleeToolShovelT1IronShovel,Iron Shovel,[bbbb03][-][eeee02][-] Iron Shovel
+,Tool,meleeToolAxeT2SteelAxe,Steel Axe,[bbbb02][-][eeee02][-] Steel Axe
+,Tool,meleeToolPickT2SteelPickaxe,Steel Pickaxe,[bbbb04][-][eeee02][-] Steel Pickaxe
+,Tool,meleeToolShovelT2SteelShovel,Steel Shovel,[bbbb03][-][eeee03][-] Steel Shovel
+,Tool,meleeToolAxeT3Chainsaw,Chainsaw,[bbbb02][-][eeee03][-] Chainsaw
+,Tool,meleeToolPickT3Auger,Auger,[bbbb04][-][eeee03][-] Auger
+,Tool,meleeToolRepairT1ClawHammer,Claw Hammer,[bbbb01][-][eeee03][-] Claw Hammer
+,Tool,meleeToolRepairT3Nailgun,Nailgun,[bbbb01][-][eeee04][-] Nailgun
+,Tool,meleeToolSalvageT1Wrench,Wrench,[bbbb05][-][eeee01][-] Wrench
+,Tool,meleeToolSalvageT2Ratchet,Ratchet,[bbbb05][-][eeee02][-] Ratchet
+,Tool,meleeToolSalvageT3ImpactDriver,Impact Driver,[bbbb05][-][eeee03][-] Impact Driver
+,Tool,meleeToolTorch,Torch,[bbbb06][-][eeee01][-] Torch
+,Tool,meleeToolFlashlight02,Flashlight,[bbbb06][-][eeee02][-] Flashlight
+,Tool,meleeToolWireTool,Wire Tool,[bbbb06][-][eeee03][-] Wire Tool
+,Tool,meleeToolPaintTool,Paint Brush,[bbbb06][-][eeee04][-] Paint Brush
+,Weapon,meleeWpnSpearT0StoneSpear,Stone Spear,[cccc05][-][eeee01][-] Stone Spear
+,Weapon,meleeWpnSpearT1IronSpear,Iron Spear,[cccc05][-][eeee02][-] Iron Spear
+,Weapon,meleeWpnSpearT3SteelSpear,Steel Spear,[cccc05][-][eeee03][-] Steel Spear
+,Weapon,meleeWpnClubT1CandyClub,Candy Cane Club,[cccc03][-][eeee03][-] Candy Cane Club
+,Weapon,meleeWpnClubT0WoodenClub,Wooden Club,[cccc03][-][eeee01][-] Wooden Club
+,Weapon,meleeWpnClubT1BaseballBat,Baseball Bat,[cccc03][-][eeee02][-] Baseball Bat
+,Weapon,meleeWpnClubT3SteelClub,Steel Club,[cccc03][-][eeee04][-] Steel Club
+,Weapon,meleeWpnSledgeT0StoneSledgehammer,Stone Sledgehammer,[cccc06][-][eeee01][-] Stone Sledgehammer
+,Weapon,meleeWpnSledgeT1IronSledgehammer,Iron Sledgehammer,[cccc06][-][eeee02][-] Iron Sledgehammer
+,Weapon,meleeWpnSledgeT3SteelSledgehammer,Steel Sledgehammer,[cccc06][-][eeee03][-] Steel Sledgehammer
+,Weapon,meleeWpnKnucklesT0LeatherKnuckles,Knuckle Wraps,[cccc01][-][eeee01][-] Knuckle Wraps
+,Weapon,meleeWpnKnucklesT1IronKnuckles,Iron Knuckles,[cccc01][-][eeee02][-] Iron Knuckles
+,Weapon,meleeWpnKnucklesT3SteelKnuckles,Steel Knuckles,[cccc01][-][eeee03][-] Steel Knuckles
+,Weapon,meleeWpnBladeT1CandyKnife,Candy Cane Knife,[cccc02][-][eeee02][-] Candy Cane Knife
+,Weapon,meleeWpnBladeT0BoneKnife,Bone Knife,[cccc02][-][eeee01][-] Bone Knife
+,Weapon,meleeWpnBladeT1HuntingKnife,Hunting Knife,[cccc02][-][eeee03][-] Hunting Knife
+,Weapon,meleeWpnBladeT3Machete,Machete,[cccc02][-][eeee04][-] Machete
+,Weapon,meleeWpnBatonT0PipeBaton,Pipe Baton,[cccc04][-][eeee01][-] Pipe Baton
+,Weapon,meleeWpnBatonT2StunBaton,Stun Baton,[cccc04][-][eeee02][-] Stun Baton
+,Weapon,gunBowT0PrimitiveBow,Primitive Bow,[cccc07][-][eeee01][-] Primitive Bow
+,Weapon,gunBowT1WoodenBow,Wooden Bow,[cccc07][-][eeee02][-] Wooden Bow
+,Weapon,gunBowT3CompoundBow,Compound Bow,[cccc07][-][eeee03][-] Compound Bow
+,Weapon,gunBowT1IronCrossbow,Iron Crossbow,[cccc08][-][eeee01][-] Iron Crossbow
+,Weapon,gunBowT3CompoundCrossbow,Compound Crossbow,[cccc08][-][eeee02][-] Compound Crossbow
+,Weapon,gunShotgunT0PipeShotgun,Pipe Shotgun,[cccc10][-][eeee01][-] Pipe Shotgun
+,Weapon,gunShotgunT1DoubleBarrel,Double Barrel Shotgun,[cccc10][-][eeee02][-] Double Barrel Shotgun
+,Weapon,gunShotgunT2PumpShotgun,Pump Shotgun,[cccc10][-][eeee03][-] Pump Shotgun
+,Weapon,gunShotgunT3AutoShotgun,Auto Shotgun,[cccc10][-][eeee04][-] Auto Shotgun
+,Weapon,gunHandgunT0PipePistol,Pipe Pistol,[cccc09][-][eeee01][-] Pipe Pistol
+,Weapon,gunHandgunT1Pistol,Pistol,[cccc09][-][eeee02][-] Pistol
+,Weapon,gunHandgunT3SMG5,SMG-5,[cccc09][-][eeee03][-] SMG-5
+,Weapon,gunHandgunT2Magnum44,.44 Magnum,[cccc09][-][eeee04][-] .44 Magnum
+,Weapon,gunHandgunT3DesertVulture,.44 Desert Vulture,[cccc09][-][eeee05][-] .44 Desert Vulture
+,Weapon,gunRifleT0PipeRifle,Pipe Rifle,[cccc11][-][eeee01][-] Pipe Rifle
+,Weapon,gunRifleT1HuntingRifle,Hunting Rifle,[cccc11][-][eeee02][-] Hunting Rifle
+,Weapon,gunRifleT2LeverActionRifle,Lever Action Rifle,[cccc11][-][eeee03][-] Lever Action Rifle
+,Weapon,gunRifleT3SniperRifle,Sniper Rifle,[cccc11][-][eeee04][-] Sniper Rifle
+,Weapon,gunMGT0PipeMachineGun,Pipe Machine Gun,[cccc12][-][eeee01][-] Pipe Machine Gun
+,Weapon,gunMGT1AK47,AK-47 Machine Gun,[cccc12][-][eeee02][-] AK-47 Machine Gun
+,Weapon,gunMGT2TacticalAR,Tactical Assault Rifle,[cccc12][-][eeee03][-] Tactical Assault Rifle
+,Weapon,gunMGT3M60,M60 Machine Gun,[cccc12][-][eeee04][-] M60 Machine Gun
+,Weapon,gunExplosivesT3RocketLauncher,Rocket Launcher,[cccc13][-][eeee01][-] Rocket Launcher
+,Weapon,gunBotT1JunkSledge,Robotic Sledge,[cccc14][-][eeee01][-] Robotic Sledge
+,Weapon,gunBotT2JunkTurret,Robotic Turret,[cccc14][-][eeee02][-] Robotic Turret
+,Weapon,gunBotT3JunkDrone,Robotic Drone,[cccc14][-][eeee03][-] Robotic Drone
+,Bundle,foodRawMeatBundle,Raw Meat Bundle,[f00002][-][FFA94D][Food][-][fd0002][-][fe1000][-] Raw Meat Bundle [DECEA3](5)[-]
+,Schematic,modVehicleStorageSchematic,Vehicle Storage Mod Schematic,[ffcc01][-][FFA94D][Schematic][-] Vehicle Storage
+,Station-A,toolApiarySmoker,Smoker,[FFA94D][Station][-][dddd04][-][eeee03][-] Smoker [DECEA3](Apiary)[-]
+,Station-A,toolApiaryBroodBox,Brood Box,[FFA94D][Station][-][dddd04][-][eeee02][-] Brood Box [DECEA3](Apiary)[-]
+,Station-A,toolApiaryExtractor,Honey Extractor,[FFA94D][Station][-][dddd04][-][eeee01][-] Honey Extractor [DECEA3](Apiary)[-]
+,Food,foodHoneyGlazedSham,Honey Glazed Sham,[f00002][-][FFA94D][Food][-][fd0098][-][fe1000][-] Honey Glazed Sham [00de50](98)[-][FFA94D](5%)[-]
+,Food,foodHoneyBrisket,Honey Brisket,[f00002][-][FFA94D][Food][-][fd0141][-][fe1000][-] Honey Brisket [00de50](141)[-][FFA94D](5%)[-]
+,Drink-Special,drinkJarHoneyTea,Honey Tea,[f00001][-][FFA94D][Drink][-][ed0024][-][ee1008][-] Honey Tea [00c8ff](24)[-][00de50](8)[-][FFA94D](5%)[-]
+,Drink,drinkJarEmpty,Empty Water Jar,[f00001][-][FFA94D][Drink][-][ed0001][-][ee1000][-] Empty Water Jar [DECEA3](I)[-]
+,Clothes,clothingFeetT1,Tattered Socks,[FFA94D][Clothing][-][aaaaad][-][aa0001][-] Tattered Socks [DECEA3](T1)[-]
+,Clothes,clothingFeetT2,Patchwork Socks,[FFA94D][Clothing][-][aaaaad][-][aa0002][-] Patchwork Socks [DECEA3](T2)[-]
+,Clothes,clothingFeetT3,ThermaCore Socks,[FFA94D][Clothing][-][aaaaad][-][aa0003][-] ThermaCore Socks [DECEA3](T3)[-]
+,Clothes,clothingHandsT1,Tattered Glove Liners,[FFA94D][Clothing][-][aaaaac][-][aa0001][-] Tattered Glove Liners [DECEA3](T1)[-]
+,Clothes,clothingHandsT2,Patchwork Glove Liners,[FFA94D][Clothing][-][aaaaac][-][aa0002][-] Patchwork Glove Liners [DECEA3](T2)[-]
+,Clothes,clothingHandsT3,ThermaCore Glove Liners,[FFA94D][Clothing][-][aaaaac][-][aa0003][-] ThermaCore Glove Liners [DECEA3](T3)[-]
+,Clothes,clothingHeadT1,Tattered Cap Liner,[FFA94D][Clothing][-][aaaaaa][-][aa0001][-] Tattered Cap Liner [DECEA3](T1)[-]
+,Clothes,clothingHeadT2,Patchwork Cap Liner,[FFA94D][Clothing][-][aaaaaa][-][aa0002][-] Patchwork Cap Liner [DECEA3](T2)[-]
+,Clothes,clothingHeadT3,ThermaCore Cap Liner,[FFA94D][Clothing][-][aaaaaa][-][aa0003][-] ThermaCore Cap Liner [DECEA3](T3)[-]
+,Clothes,clothingOutfitT1,Tattered Undergarments,[FFA94D][Clothing][-][aaaaab][-][aa0001][-] Tattered Undergarments [DECEA3](T1)[-]
+,Clothes,clothingOutfitT2,Patchwork Long Underwear,[FFA94D][Clothing][-][aaaaab][-][aa0002][-] Patchwork Long Underwear [DECEA3](T2)[-]
+,Clothes,clothingOutfitT3,ThermaCore Combat Layer,[FFA94D][Clothing][-][aaaaab][-][aa0003][-] ThermaCore Combat Layer [DECEA3](T3)[-]
+,Tool,ammoGasCan,Gas Can,[bbbb00][-][eeee03][-] Gas Can
+,Resource,vehicleWheels,Wheel,[dddd06][-][eeee01][-][FFA94D][Vehicle][-] Wheel
+,Resource,smallEngine,Engine,[dddd06][-][eeee05][-][FFA94D][Vehicle][-] Engine
+,Resource,carBattery,Lead Car Battery,[dddd06][-][eeee06][-][FFA94D][Vehicle][-] Car Battery
+,Resource,vehicleBicycleChassis,Bicycle Chassis,[dddd06][-][eeee07][-][FFA94D][Vehicle][-] Bicycle Chassis
+,Resource,vehicleBicycleHandlebars,Bicycle Handlebars,[dddd06][-][eeee08][-][FFA94D][Vehicle][-] Bicycle Handlebars
+,Resource,vehicleMinibikeChassis,Minibike Chassis,[dddd06][-][eeee09][-][FFA94D][Vehicle][-] Minibike Chassis
+,Resource,vehicleMinibikeHandlebars,Minibike Handlebars,[dddd06][-][eeee10][-][FFA94D][Vehicle][-] Minibike Handlebars
+,Resource,vehicleMotorcycleChassis,Motorcycle Chassis,[dddd06][-][eeee11][-][FFA94D][Vehicle][-] Motorcycle Chassis
+,Resource,vehicleMotorcycleHandlebars,Motorcycle Handlebars,[dddd06][-][eeee12][-][FFA94D][Vehicle][-] Motorcycle Handlebars
+,Resource,vehicleTruck4x4Chassis,4x4 Truck Chassis,[dddd06][-][eeee13][-][FFA94D][Vehicle][-] 4x4 Truck Chassis
+,Resource,vehicleTruck4x4Accessories,4x4 Truck Accessories,[dddd06][-][eeee14][-][FFA94D][Vehicle][-] 4x4 Truck Accessories
+,Resource,vehicleGyroCopterChassis,Gyrocopter Chassis,[dddd06][-][eeee15][-][FFA94D][Vehicle][-] Gyrocopter Chassis
+,Resource,vehicleGyroCopterAccessories,Gyrocopter Accessories,[dddd06][-][eeee16][-][FFA94D][Vehicle][-] Gyrocopter Accessories
+,Resource,vehicleBicyclePlaceable,Bicycle,[dddd06][-][eeee17][-][FFA94D][Vehicle][-] Bicycle
+,Resource,vehicleMinibikePlaceable,Minibike,[dddd06][-][eeee18][-][FFA94D][Vehicle][-] Minibike
+,Resource,vehicleMotorcyclePlaceable,Motorcycle,[dddd06][-][eeee19][-][FFA94D][Vehicle][-] Motorcycle
+,Resource,vehicleTruck4x4Placeable,4x4 Truck,[dddd06][-][eeee20][-][FFA94D][Vehicle][-] 4x4 Truck
+,Resource,vehicleGyrocopterPlaceable,Gyrocopter,[dddd06][-][eeee21][-][FFA94D][Vehicle][-] Gyrocopter
+,Resource,solarCell,Solar Cell,[dddd07][-][eeee01][-][FFA94D][Electric][-] Solar Cell
+,Resource,generatorbank,Generator Bank,[dddd07][-][eeee02][-][FFA94D][Electric][-] Generator Bank
+,Resource,batterybank,Battery Bank,[dddd07][-][eeee03][-][FFA94D][Electric][-] Battery Bank
+,Resource,carBatteryCharge,,[dddd07][-][eeee03][-][FFA94D][Electric][-] Rechargeable Battery
+,Resource,solarbank,Solar Bank,[dddd07][-][eeee04][-][FFA94D][Electric][-] Solar Bank
+,Resource,ceilingLight01_player,Basic Light Bulb,[dddd07][-][eeee05][-][FFA94D][Electric][-] Basic Light Bulb
+,Resource,ceilingLight07_player,Fluorescent Light,[dddd07][-][eeee06][-][FFA94D][Electric][-] Fluorescent Light
+,Resource,spotlightPlayer,Spotlight,[dddd07][-][eeee07][-][FFA94D][Electric][-] Spotlight
+,Resource,switch,Switch,[dddd07][-][eeee08][-][FFA94D][Electric][-] Switch
+,Resource,electricwirerelay,Electric Wire Relay,[dddd07][-][eeee09][-][FFA94D][Electric][-] Electric Wire Relay
+,Resource,electrictimerrelay,Electric Timer Relay,[dddd07][-][eeee10][-][FFA94D][Electric][-] Electric Timer Relay
+,Resource,motionsensor,Motion Sensor,[dddd07][-][eeee11][-][FFA94D][Electric][-] Motion Sensor
+,Resource,pressureplate,Trigger Plate 1x1,[dddd07][-][eeee12][-][FFA94D][Electric][-] Trigger Plate 1x1
+,Resource,pressureplateLong,Trigger Plate 1x5,[dddd07][-][eeee13][-][FFA94D][Electric][-] Trigger Plate 1x5
+,Resource,tripwirepost,Tripwire Post,[dddd07][-][eeee14][-][FFA94D][Electric][-] Tripwire Post
+,Resource,speaker,Speaker,[dddd07][-][eeee15][-][FFA94D][Electric][-] Speaker
+,Resource,electricfencepost,Electric Fence Post,[dddd07][-][eeee16][-][FFA94D][Electric][-] Electric Fence Post
+,Resource,dartTrap,Dart Trap,[dddd07][-][eeee17][-][FFA94D][Electric][-] Dart Trap
+,Resource,bladeTrap,Blade Trap,[dddd07][-][eeee18][-][FFA94D][Electric][-] Blade Trap
+,Resource,autoTurret,SMG Auto Turret,[dddd07][-][eeee19][-][FFA94D][Electric][-] SMG Auto Turret
+,Resource,shotgunTurret,Shotgun Auto Turret,[dddd07][-][eeee20][-][FFA94D][Electric][-] Shotgun Auto Turret
+,Resource,m60Turret,M60 Auto Turret,[dddd07][-][eeee21][-][FFA94D][Electric][-] M60 Auto Turret
+,Resource,resourceAcid,Bottle of Acid,[dddd06][-][eeee02][-][FFA94D][Vehicle][-] Acid
+,Station-A,resourceBeeswax,Beeswax,[FFA94D][Station][-][dddd04][-][eeee00][-] Beeswax [DECEA3](Apiary)[-]
+,Resource,resourceBone,Bone,[dddd04][-][eeee04][-][FFA94D][Resource][-] Bone
+,Resource,resourceBrokenGlass,Broken Glass,[dddd08][-][eeee05][-][FFA94D][Smelt][-] Broken Glass
+,Resource,resourceCandleStick,Brass Candlestick,[dddd08][-][eeee01][-][FFA94D][Smelt][-] Brass Candlestick
+,Resource,resourceCement,Cement,[dddd02][-][eeee04][-][FFA94D][Ore][-] Cement
+,Station-H,resourceChickenFeed,Chicken Feed,[FFA94D][Station][-][dddd05][-][eeee00][-] Chicken Feed [DECEA3](Chicken Coop)[-]
+,Resource,resourceClayLump,Clay Soil,[dddd02][-][eeee01][-][FFA94D][Ore][-] Clay Soil
+,Resource,resourceCloth,Cloth Fragment,[dddd04][-][eeee02][-][FFA94D][Resource][-] Cloth Fragment
+,Resource,resourceCoal,Coal,[dddd02][-][eeee09][-][FFA94D][Ore][-] Coal
+,Resource,resourceCobblestones,Cobblestone Rocks,[dddd01][-][eeee02][-][FFA94D][Build][-] Cobblestone Rocks
+,Resource,resourceConcreteMix,Concrete Mix,[dddd01][-][eeee03][-][FFA94D][Build][-] Concrete Mix
+,Resource,resourceCrushedSand,Crushed Sand,[dddd02][-][eeee03][-][FFA94D][Ore][-] Crushed Sand
+,Resource,resourceDoorKnob,Brass Door Knob,[dddd08][-][eeee02][-][FFA94D][Smelt][-] Brass Door Knob
+,Resource,resourceDuctTape,Duct Tape,[dddd04][-][eeee06][-][FFA94D][Resource][-] Duct Tape
+,Resource,resourceFishingWeight,Lead Fishing Weight,[dddd08][-][eeee08][-][FFA94D][Smelt][-] Lead Fishing Weight
+,Resource,resourceForgedIron,Forged Iron,[dddd01][-][eeee04][-][FFA94D][Build][-] Forged Iron
+,Resource,resourceForgedSteel,Forged Steel,[dddd01][-][eeee05][-][FFA94D][Build][-] Forged Steel
+,Resource,resourceGlue,Glue,[dddd04][-][eeee05][-][FFA94D][Resource][-] Glue
+,Resource,resourceGoldNugget,Gold Nugget,[dddd03][-][eeee02][-][FFA94D][Gem][-] Gold Nugget
+,Resource,resourceHeadlight,Headlight,[dddd06][-][eeee04][-][FFA94D][Vehicle][-] Headlight
+,Resource,resourceLeather,Leather,[dddd04][-][eeee03][-][FFA94D][Resource][-] Leather
+,Tool,resourceLockPick,Lockpick,[bbbb00][-][eeee02][-] Lockpick
+,Resource,resourceMetalPipe,Short Iron Pipe,[dddd04][-][eeee09][-][FFA94D][Resource][-] Short Iron Pipe
+,Resource,resourceNail,Nails,[dddd04][-][eeee10][-][FFA94D][Resource][-] Nails
+,Resource,resourceOil,Oil,[dddd06][-][eeee03][-][FFA94D][Vehicle][-] Oil
+,Resource,resourceOilShale,Oil Shale,[dddd02][-][eeee10][-][FFA94D][Ore][-] Oil Shale
+,Tool,resourcePaint,Paint,[bbbb00][-][eeee04][-] Paint
+,Resource,resourcePotassiumNitratePowder,Nitrate Powder,[dddd02][-][eeee08][-][FFA94D][Ore][-] Nitrate Powder
+,Resource,resourceRadiator,Brass Radiator,[dddd08][-][eeee03][-][FFA94D][Smelt][-] Brass Radiator
+,Resource,resourceRawDiamond,Raw Diamond,[dddd03][-][eeee03][-][FFA94D][Gem][-] Raw Diamond
+,Tool,resourceRepairKit,Repair Kit,[bbbb00][-][eeee01][-] Repair Kit
+,Resource,resourceRockSmall,Small Stone,[dddd02][-][eeee02][-][FFA94D][Ore][-] Small Stone
+,Resource,resourceScopeLens,Lens,[dddd04][-][eeee14][-][FFA94D][Resource][-] Lens
+,Resource,resourceScrapBrass,Brass,[dddd02][-][eeee07][-][FFA94D][Ore][-] Brass
+,Bundle,resourceScrapBrassBundle,Stack of Brass (6000),[dddd02][-][eeee07][-][FFA94D][Ore][-] Brass Bundle [DECEA3](6000)[-]
+,Resource,resourceScrapIron,Iron,[dddd02][-][eeee05][-][FFA94D][Ore][-] Iron
+,Resource,resourceScrapLead,Lead,[dddd02][-][eeee06][-][FFA94D][Ore][-] Lead
+,Resource,resourceScrapPolymers,Scrap Polymers,[dddd04][-][eeee08][-][FFA94D][Resource][-] Scrap Polymers
+,Resource,resourceSewingKit,Sewing Kit,[dddd04][-][eeee07][-][FFA94D][Resource][-] Sewing Kit
+,Resource,resourceSilverNugget,Silver Nugget,[dddd03][-][eeee01][-][FFA94D][Gem][-] Silver Nugget
+,Resource,resourceSnowBall,Snowball,[dddd04][-][eeee15][-][FFA94D][Resource][-] Snowball
+,Resource,resourceSpring,Spring,[dddd04][-][eeee11][-][FFA94D][Resource][-] Spring
+,Medical,resourceTestosteroneExtract,Testosterone Extract,[f00007][-][FFA94D][Medical][-][b00013][-] Testosterone Extract [DECEA3](I)[-]
+,Resource,resourceTrophy1,Brass Trophy,[dddd08][-][eeee04][-][FFA94D][Smelt][-] Brass Trophy
+,Resource,resourceTrophy2,Lead Trophy,[dddd08][-][eeee09][-][FFA94D][Smelt][-] Lead Trophy
+,Resource,resourceWood,Wood,[dddd01][-][eeee01][-][FFA94D][Build][-] Wood
+,Resource,resourceYuccaFibers,Plant Fibers,[dddd04][-][eeee01][-][FFA94D][Resource][-] Plant Fibers

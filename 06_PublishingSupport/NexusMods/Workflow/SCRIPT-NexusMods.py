@@ -865,8 +865,8 @@ def resolve_live_state_for_entry(entry: Dict[str, object], config: Dict[str, obj
 
 
 def parse_publishhelp_details(mod_name: str) -> Dict[str, object]:
-    """Read file name/description/changelog from PublishHelp/<mod>/Details.md."""
-    details_path = os.path.join(PUBLISHHELP_DIR, mod_name, "Details.md")
+    """Read file name/description/changelog from PublishHelp/{mod}.md."""
+    details_path = os.path.join(PUBLISHHELP_DIR, f"{mod_name}.md")
     result: Dict[str, object] = {
         "path": details_path,
         "file_name": "",

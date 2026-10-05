@@ -223,8 +223,8 @@ def build_publishhelp_display_name(mod_name: str, game_ver: str = "3") -> str:
 
 
 def read_publishhelp_title(base_name: str) -> str:
-    """Read the Nexus page/file title from PublishHelp/<mod>/Details.md when present."""
-    details_path = os.path.join(PUBLISHHELP_DIR, base_name, "Details.md")
+    """Read the Nexus page/file title from PublishHelp/{mod}.md when present."""
+    details_path = os.path.join(PUBLISHHELP_DIR, f"{base_name}.md")
     if not os.path.isfile(details_path):
         return ""
     try:
@@ -885,7 +885,7 @@ def run_audit(save_config: bool = True) -> int:
 
     unconfigured = [mod for mod in mods if not mod["configured"]]
     print(f"\n-- Phase 2: Discovering Nexus pages for {len(unconfigured)} unconfigured mods --")
-    print("  Matching against PublishHelp Details.md titles (e.g. 'AGF - V3 - VP - BedrollPlus').\n")
+    print("  Matching against PublishHelp packet titles (e.g. 'AGF - V3 - VP - BedrollPlus').\n")
 
     print("  GraphQL author/name discovery...", end=" ")
     unique_broad = graphql_list_agf_mods()

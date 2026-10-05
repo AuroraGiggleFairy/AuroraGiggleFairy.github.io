@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AGF-LawnTractorV3Fix>
+	<!-- Original unlocks the chassis and accessories at Vehicles 15. Nothing else in this game unlocks there. Minibike is Vehicles 20. -->
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingVehicles']/display_entry[@name_key='vehicleLawnTractor']/@unlock_level">20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingVehicles']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='vehicleLawnTractorChassis,vehicleLawnTractorAccessories']/@level">20,100</set>
+</AGF-LawnTractorV3Fix>

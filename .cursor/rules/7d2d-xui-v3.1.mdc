@@ -1,0 +1,49 @@
+---
+description: >
+  7D2D XUi/HUD/menu layout. READ before pause UI, HUD XML, XUi_InGame,
+  XUi_Menu, XUi_Common, simplebutton, label wrap, font_size, xui scale 1.255,
+  plates/sprites, or in-game UI canvas mocks. Pixel pipeline, wrap-in-XML,
+  16:9 vs 16:10 HUD cap, mock anti-patterns.
+globs: "**/XUi*/**,**/XUi_Common/**,**/*windows.xml,**/styles.xml"
+alwaysApply: false
+---
+
+# 7D2D XUi (v3.1/v3.2) — read before UI work
+
+Vanilla first: `Data/Config/XUi_InGame`, `XUi_Menu`. Mod path is `Config/XUi_InGame` (not old `Config/XUi`). Failed xpath can abort a whole include. Keep controller-required children or Init NRE.
+
+## Must / must not
+
+- **One space:** layout in XML local units (`pos` / `width` / `height` / `font_size`). `y` is negative downward. Default pivot **TopLeft**.
+- **One scale to screen:** `UIRoot` PSA × `XUi.SetScale` (`1.255 * bounds * hud`). Boxes and glyphs share it. At 2560×1440 16:9, Flexible, HUD/bounds 1: **1 XML = 1.255 px**.
+- **Wrap is XML width, not 1.255.** `NGUIText.regionWidth = label.width`. Do not draw CSS at `font_size / 1.255`. Do not treat a downscaled screenshot as a font/box split.
+- **16:10 vs 16:9:** `GetActiveUiScale` = `min(aspectCap, OptionsHudSize)`. 16:10 caps **0.9**; 16:9 caps **1.0**. Native 16:10 shrinks all XUi vs 16:9 1440p.
+- **Mock:** XML 1:1, then one CSS `scale(VIEW)` on the whole core (header + body). Arial Narrow + ~**−0.012em** tracking ≈ ReferenceFont. Regular Arial wraps too early. `line-height = font_size`. Never `overflow:hidden` with `line-height > height` (blanks glyphs).
+- **Screenshots:** Cursor/OS may letterbox (1440p shot was 1024×640 with 32px 16:10 bars; content ×2.5). Use the formula for sizes; jpeg edges are ±border. Do not invent a second scale from a ~10% edge error.
+- **Do not fake plates.** Only XML boxes. Header 126 and body 714 are two plates (`body` at `0,-136`). Command pages have no extra 414×590 column frames. Pages names: do not ShrinkContent-simulate unless ink exceeds inner width (“Lockable Stations” does not).
+- **Pause opener** stays `74,33,150` / `95,89,128`. HV gold `210,178,108`. Do not restyle the opener onto HV tab tokens.
+
+## Pixel pipeline (`NGUI.dll` + `XUi.cs`)
+
+1. **UIRoot** — Flexible default, `maximumHeight` 1536. PSA = 1 when screenH is in 320–1536; Constrained PSA = `activeHeight / screenH`. Root `localScale` = `2 / activeHeight`.
+2. **XUi.SetScale** — `xuiGlobalScaling * OptionsScreenBoundsValue * GetActiveUiScale()`. `xui.xml` `scale="1.255"` is `xuiGlobalScaling`. `stackpanel_scale` is tooltips only.
+3. **GetPixelRatioFactor** — `PSA / xuiScale / bounds / hud` (screen → XML). Inverse: **px/xml = xuiScale × bounds × hud / PSA**.
+
+`UILabel.ProcessText` wrap: glyph advance × `fontScale` + `spacing_x` (default 1). `crispness` unset = Never; simplebutton template `Never`. `pixelDensity` is 1 for these labels.
+
+## simplebutton / sprites / labels
+
+- Caption `btnLabel`: `height-2`, pivot left, overflow **ShrinkContent**, outline alpha 80 (not Outline8), `menu_empty2px` rim, `selectedsprite="menu_empty"`, selected `74,33,150`.
+- `ui_game_header_fill` sliced = rounded plate. `menu_empty2px` = thin near-square frame. `globalopacitymod="1.45"` on AGF plates.
+- Labels: ReferenceFont; `clampcontent` clips; `resizeheight` grows (row Y static — English screenshots). Top-align unless pivot left/center. `Outline8` black 255. Body `220,220,220`, motto `176,176,176`. Cmd center in a tall meaning row: `cmd_y = mean_y - (mean_h - 24) / 2`. One-line: `mean_h` 24 and cmd Y = mean Y.
+
+## AGF Mods pause (`windowAGFFeatures`)
+
+`1920×1080` `CenterCenter` is the hit area. Core `pos="-550,460"`: header `1100×126` (title 48, motto 26), body `1100×714`. Tab rail `24,-92` `186×590`; text `217,-80` `871×614`. Page title 36, headers 26, body 24, meanings 22, lists/hint 20, tabs 22. Canvas: `canvases/agf-mods-pause-page-loc.canvas.tsx`.
+
+## Look-here
+
+- HUD xpath: `02_ActiveBuild/AGF-HUDPlus-1Main-*/Config/XUi_InGame/`
+- Styles: `Config/XUi_Common/styles.xml` `agfFeat*HV`
+- Menu lifecycle: `00_DLL-Projects/Projects/DLL_NoEAC-AudioOptionsPlus/MCP-7D2D-Menu-Influence-Guide.md`
+- NGUI: game `Managed/NGUI.dll` (`UIRoot`, `UILabel.ProcessText`, `NGUIText.WrapText`)

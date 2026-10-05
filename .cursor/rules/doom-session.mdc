@@ -1,0 +1,12 @@
+---
+description: Say Doom to load the short Doom state once. Do not load Doom rules in other chats.
+alwaysApply: true
+---
+
+# Doom session
+
+In a new chat, say **Doom**. Read `00_Support/DoomLevelsSource/Doom-State.md` once, then `.cursor/rules/doom-changes-report.mdc` once. Do not open either file again this chat. Do not search for paths or list Mods folders. That state file is the current map and the open issues.
+
+Do not read the handoff rules, and do not read the changes report from top to bottom, unless the state file says to.
+
+**Doom Work** and **Manda** are separate. The state file says which rule to read.

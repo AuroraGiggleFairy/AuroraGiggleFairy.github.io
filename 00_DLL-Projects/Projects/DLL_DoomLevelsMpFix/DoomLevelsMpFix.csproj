@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DoomLevelsMpFix</RootNamespace>
+    <AssemblyName>DoomCore</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SevenDaysToDieDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom Test</SevenDaysToDieDir>
+    <AssemblyCSharpDll Condition="'$(AssemblyCSharpDll)' == ''">$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</AssemblyCSharpDll>
+    <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="_decomp_autopickup\**" />
+    <None Include="_decomp_autopickup\**" />
+    <Compile Remove="_decomp_EntityAsyncManager\**" />
+    <None Include="_decomp_EntityAsyncManager\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DoomAutoPickupGuns">
+      <HintPath>$(SevenDaysToDieDir)\Mods\ZZZ_DoomMod_Standalone\DoomAutoPickupGuns.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DoomLevels">
+      <HintPath>$(SevenDaysToDieDir)\Mods\zzzz_DoomClassicMaps\DoomLevels.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(AssemblyCSharpDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\ZZZ_DoomMod_Standalone</GameModDir>
+  </PropertyGroup>
+  <Target Name="CopyToDoomMod" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="false" Condition="Exists('$(GameModDir)')" />
+  </Target>
+</Project>

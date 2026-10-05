@@ -1,0 +1,29 @@
+---
+description: Separate what was happening, a proposed fix, and the result after that fix
+alwaysApply: true
+---
+
+# Pre-fix and after-fix
+
+Use this set when describing a potential fix: what was going wrong, what the change would be, and what to expect after. Do not use the full set on later replies once that discussion is over. A finished change gets **FIX APPLIED**. Bold each header. Put the description under it.
+
+**PRE-FIX (What was happening)**
+The behavior before this change. Past tense. This is the problem being discussed.
+
+**POTENTIAL-FIX** or **THE-FIX**
+Always include this section between PRE-FIX and AFTER-FIX. Use **POTENTIAL-FIX** when the change is not in the file yet. Use **THE-FIX** when it is already applied. Say what the change is and where it lives. Do not skip this section on an applied fix.
+
+**AFTER-FIX (What is expected after)**
+What they should see once that change is loaded and they are running it.
+
+**FIX APPLIED:** Yes or No. Always the last section. Yes means the change is in the file. Name the file and its folder. Copying it to a server is not what makes this Yes or No.
+
+Doom dedicated-server mod testing only: when **FIX APPLIED:** Yes and they still have to copy that file onto the server, the last line inside this section is **Ready to copy to server,** then the path. Do not use that line for other projects. Do not turn a missing server copy into No.
+
+## Do not
+
+- Use these headers on an ordinary reply that is not walking through a potential fix.
+- Describe a proposal as if it is already in the file.
+- Put **FIX APPLIED** anywhere except last.
+- Put **Ready to copy to server** outside the **FIX APPLIED** section, or use it outside Doom dedicated-server mod testing.
+- Call it No because the dedicated server or Doom Test does not have the file yet.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "09-01-2026 9:58 AM",
+  "generated_at": "09-10-2026 6:17 PM",
   "high_confidence_threshold": 0.8,
   "mods": {
     "AGF-BackpackPlus-060Slots": {
@@ -128,79 +128,44 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10747"
       }
     },
-    "AGF-NoEAC-FuelAutoShutOff": {
+    "AGF-NoEAC-GyroFlightModes": {
       "action": "add",
       "score": 1.0,
-      "live_name": "AGF - V3 - NoEAC - FuelAutoShutOff",
+      "live_name": "AGF - V3 - NoEAC - GyroFlightModes",
       "live_version": "1.0.0",
       "config": {
         "intent": "update",
-        "nexus_mod_id": 12148,
-        "update_group_id": "7846842",
-        "update_group_name": "AGF - V3 - NoEAC - FuelAutoShutOff",
+        "nexus_mod_id": 12384,
+        "update_group_id": "7898064",
+        "update_group_name": "AGF - V3 - NoEAC - GyroFlightModes",
         "file_category": "main",
         "legacy_latest_file_id": 0,
         "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12148",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12384",
         "tested_game_version_override": "",
         "brief_overview_override": "",
         "detailed_description_override": "",
         "file_description_override": "",
         "summary_override": "",
         "description_override": ""
-      }
-    },
-    "AGF-NoEAC-GlobalStormTracker": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7552094",
-        "update_group_name": "AGF NoEAC GlobalStormTracker",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/10748"
       }
     },
     "AGF-NoEAC-HideDLCCosmetics": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - NoEAC - HideDLCCosmetics",
-      "live_version": "1.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 12209,
         "update_group_id": "7862436",
         "update_group_name": "AGF - V3 - NoEAC - HideDLCCosmetics",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12209",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12209"
       }
     },
     "AGF-NoEAC-MapPlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - NoEAC - MapPlus",
-      "live_version": "11.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 12147,
         "update_group_id": "7846788",
         "update_group_name": "AGF - V3 - NoEAC - MapPlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12147",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12147"
       }
     },
     "AGF-NoEAC-OpenAllButton": {
@@ -210,15 +175,6 @@
         "update_group_id": "7713327",
         "update_group_name": "AGF - V3 - NoEAC - OpenAllButton",
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11641"
-      }
-    },
-    "AGF-NoEAC-ScreamerAlert": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7582658",
-        "update_group_name": "AGF NoEAC ScreamerAlert",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/10891"
       }
     },
     "AGF-NoEAC-SmeltTimerOption": {
@@ -348,25 +304,12 @@
       }
     },
     "AGF-VP-DoorsPlus": {
-      "action": "add",
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VP - DoorsPlus",
-      "live_version": "4.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 12208,
         "update_group_id": "7862424",
         "update_group_name": "AGF - V3 - VP - DoorsPlus",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12208",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12208"
       }
     },
     "AGF-VP-DrinkableAcid": {
@@ -610,6 +553,55 @@
         "update_group_id": "7661795",
         "update_group_name": "AGF - V3 - VP - ZombieCorpseLeaveQuicker",
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11326"
+      }
+    },
+    "AGF-VPS-FuelAutoShutOff": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7846842",
+        "update_group_name": "AGF - V3 - NoEAC - FuelAutoShutOff",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12148"
+      }
+    },
+    "AGF-VPS-GlobalStormTracker": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7552094",
+        "update_group_name": "AGF NoEAC GlobalStormTracker",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/10748"
+      }
+    },
+    "AGF-VPS-HonkOpensYourDoors": {
+      "action": "add",
+      "score": 1.0,
+      "live_name": "AGF - V3 - VPS - HonkOpensYourDoors",
+      "live_version": "1.0.0",
+      "config": {
+        "intent": "update",
+        "nexus_mod_id": 12385,
+        "update_group_id": "7898076",
+        "update_group_name": "AGF - V3 - VPS - HonkOpensYourDoors",
+        "file_category": "main",
+        "legacy_latest_file_id": 0,
+        "legacy_name_hint": "",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12385",
+        "tested_game_version_override": "",
+        "brief_overview_override": "",
+        "detailed_description_override": "",
+        "file_description_override": "",
+        "summary_override": "",
+        "description_override": ""
+      }
+    },
+    "AGF-VPS-ScreamerAlert": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7582658",
+        "update_group_name": "AGF NoEAC ScreamerAlert",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/10891"
       }
     },
     "zzzAGF-Requested-LootStaysOnEmpty": {

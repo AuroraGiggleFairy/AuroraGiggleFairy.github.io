@@ -25,7 +25,13 @@ Length: `{{SHORT_DESC_LENGTH}}` / 350
 
 ---
 
-Full Description: [FullDesc.md](FullDesc.md)
+## 1b) Full Description
+
+Copy the box.
+
+```text
+{{FULL_DESCRIPTION}}
+```
 
 ---
 

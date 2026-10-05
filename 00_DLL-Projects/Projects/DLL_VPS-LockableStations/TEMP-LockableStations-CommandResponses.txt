@@ -1,0 +1,150 @@
+--------------------------------------------------------------------
+
+TEMP SPEC PURPOSE
+
+This file is the full command/response script spec used to structure implementation work.
+It lives in the DLL project (workspace), not in the shipped mod folder.
+Use COMMANDS-README.md for player/admin-facing general command guidance.
+
+Visible wording omits hex tags, same as TEMP-ScreamerAlert-CommandResponses.txt.
+Chat uses color tags: status [B8A3D8], options [86A67F], errors [C38FAE][ERROR][-][86A67F][...].
+F1 does not. F1 uses a [LockableStations] prefix, same pattern as [ScreamerAlert].
+
+Locked names:
+    Mod folder:     AGF-VPS-LockableStations
+    Player label:   Lockable Stations
+    Chat roots:     /agfls (player-facing), /agf-ls (alias)
+    Console root:   agf-ls
+    Console prefix: [LockableStations]
+    Look range:     15m, same hit as the interaction prompt
+
+Chat = player lock/pin/status only.
+F1 = admin only (defaultlock, nearby). Lock/pin/status are not F1 commands. defaultlock and nearby are not chat commands.
+
+First-seen on an existing save:
+    Stations this mod owns that have no saved record yet use current defaultlock
+    the first time they are seen (HUD/use/nearby). Already saved records stay as-is.
+    Unloaded chunks are not written until those stations are seen.
+
+--------------------------------------------------------------------
+
+CHAT Commands
+
+    Command: /agfls, /agf-ls, /agfls help, /agf-ls help
+    Response:
+        [Lockable Stations]
+        [Options: /agfls lock, unlock, status, pin]
+        [/agfls pin set <pin>, pin use <pin>, pin clear]
+
+    Command: /agfls status, /agf-ls status
+    Response: [Lockable Stations = <LOCKED|UNLOCKED>]
+
+    Command: /agfls lock, /agf-ls lock
+    Response: [Lockable Stations = LOCKED]
+
+    Command: /agfls unlock, /agf-ls unlock
+    Response: [Lockable Stations = UNLOCKED]
+
+    Command: /agfls pin set <pin>, /agf-ls pin set <pin>
+    Response: [Lockable Stations = PIN SET]
+
+    Command: /agfls pin clear, /agf-ls pin clear
+    Response: [Lockable Stations = PIN CLEARED]
+
+    Command: /agfls pin use <pin> (correct)
+    Response: [Lockable Stations = ACCESS GRANTED]
+
+    Command: /agfls pin use <pin> (wrong)
+    Response: [Lockable Stations = ACCESS DENIED]
+
+ERRORS:
+
+    Command: /agfls pin, /agf-ls pin
+    Command: /agfls pin set, /agf-ls pin set
+    Command: /agfls pin use, /agf-ls pin use
+    Command: /agfls pin <invalid>, /agf-ls pin <invalid>
+    Response:
+        [ERROR][Use /agfls pin set <pin>]
+        [ERROR][Use /agfls pin use <pin>]
+        [ERROR][Use /agfls pin clear]
+
+    Command: /agfls <invalid>, /agf-ls <invalid>
+    Command: /agfls defaultlock ...
+    Response: [ERROR][Use /agfls]
+
+    Command: /agfls lock|unlock|status|pin ... (no station in view)
+    Response: [ERROR][No station in view]
+
+    Command: /agfls lock|unlock|status|pin ... (look hit is not a lockable station)
+    Response: [ERROR][Not a lockable station]
+
+    Command: /agfls lock|unlock|pin set|pin clear (not owner/admin)
+    Response: [ERROR][Not owner or admin]
+
+--------------------------------------------------------------------
+
+Admin CONSOLE Commands (F1)
+
+    Quick Use:
+        1. agf-ls
+        2. agf-ls defaultlock <true|false>
+        3. agf-ls nearby lock
+        4. agf-ls nearby unlock
+
+    Command: agf-ls, agf-ls help, agf-ls defaultlock
+    Response (multi-line):
+        [LockableStations] Usage:
+        [LockableStations]   agf-ls defaultlock <true|false>
+        [LockableStations]   agf-ls nearby lock
+        [LockableStations]   agf-ls nearby unlock
+        [LockableStations] defaultlock currently set to [ON|OFF]
+        [LockableStations] Newly placed stations and first-seen stations on this save use this lock state. This session only.
+        [LockableStations] Nearby uses the land claim if you are in one, otherwise land-claim size around you.
+
+    Command: agf-ls defaultlock true
+    Response: [LockableStations] defaultlock set to ON. Newly placed stations and first-seen stations on this save will start locked.
+
+    Command: agf-ls defaultlock false
+    Response: [LockableStations] defaultlock set to OFF. Newly placed stations and first-seen stations on this save will start unlocked.
+
+    Command: agf-ls nearby lock
+    Response: [LockableStations] nearby lock applied to <N> stations (land claim).
+    Alternate (not in a land claim):
+        [LockableStations] nearby lock applied to <N> stations (land-claim size around player).
+    Range matches Sorting Cart: land-claim size from this game's LandClaimSize.
+        In a claim: all of this mod's stations inside that claim (loaded chunks).
+        Not in a claim: square of land-claim size centered on the player (loaded chunks).
+
+    Command: agf-ls nearby unlock
+    Response: [LockableStations] nearby unlock applied to <N> stations (land claim).
+    Alternate (not in a land claim):
+        [LockableStations] nearby unlock applied to <N> stations (land-claim size around player).
+
+    Command: agf-ls nearby
+    Command: agf-ls nearby <invalid>
+    Response: [LockableStations] invalid option. Use: agf-ls nearby lock|unlock.
+
+    Command: agf-ls nearby lock|unlock (no in-world player)
+    Response: [LockableStations] nearby needs an in-world player.
+
+Errors:
+
+    Command: agf-ls defaultlock <invalid>
+    Response: [LockableStations] invalid option. Use: agf-ls defaultlock <true|false>.
+
+    Command: agf-ls <invalid>
+    Response: [LockableStations] invalid option. Use: agf-ls help.
+
+    Command: agf-ls <anything> (non-admin)
+    Response: [LockableStations] admin permission required.
+
+    Notes:
+        Player-facing chat root is /agfls. Console root is agf-ls.
+        Extra aliases exist in code (lw, lockws, lockableworkstations, agf-lw, agf-lockws).
+        Do not advertise those in player docs.
+        lock, unlock, status, and pin are chat only.
+        defaultlock and nearby are F1 only. Chat /agfls defaultlock or /agfls nearby is treated as invalid ([ERROR][Use /agfls]).
+        defaultlock true|false is this session only (does not write LockableStationsSettings.xml).
+        Nearby only affects loaded chunks in range. Unseen stations still pick up defaultlock when first seen.
+
+--------------------------------------------------------------------

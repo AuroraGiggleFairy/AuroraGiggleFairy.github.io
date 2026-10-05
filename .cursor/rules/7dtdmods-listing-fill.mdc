@@ -1,0 +1,183 @@
+---
+description: 7DaysToDieMods first-listing fill — standing auth, speed, stop before Publish
+alwaysApply: true
+---
+
+# 7dtdmods listing fill
+
+Until the user says otherwise: **7DaysToDieMods only**. Skip Nexus. Skip GitHub Sync (site OAuth 404/500).
+
+Packets: `06_PublishingSupport/7DaysToDieMods/PublishHelp/`. Checklist: `06_PublishingSupport/Publish-Checklist.md`. Tick 7dtdmods **done** only after the user says the live page looks good (or that they published it).
+
+## Token-cost gate (before first listing fill in this chat)
+
+Cursor browser MCP fill is token-expensive. The cheap path is local Playwright (no agent loop):
+
+1. Close Chrome → `06_PublishingSupport/7DaysToDieMods/Workflow/RUN-7dtdmods-StartChromeDebug.bat`
+2. `RUN-7dtdmods-Create.bat <ModBase>` or `RUN-7dtdmods-Update.bat <ModBase>`
+
+**Before** any listing-fill browser/API work in a new conversation (or after a summary resume): stop. Lead with this notice. Do not start the runbook. Wait until the user explicitly says to fill in Cursor anyway **this chat**.
+
+Skip only if this chat already has that explicit Cursor choice. Then standing authorization below applies for the rest of this fill. This gate overrides “do not stop” / “chat only at end” until they choose.
+
+## Standing authorization (do not ask, do not stop)
+
+When the user has chosen Cursor fill this chat (or already said continue here) and asks to fill / continue / finish a 7dtdmods listing, that is **full standing approval** for the whole packet fill until Publish. These are **listing-form** controls on the user's own drafts, not OS permission and not moderating others.
+
+**Auto-approve intent:** every listing-fill MCP/browser/API/shell step below is pre-authorized. If Auto-review blocks any of them, **immediately** retry the **exact same** call with:
+- `mcpDetails.requestSmartModeApproval: true`
+- `mcpDetails.smartModeBlockReason:` the **exact** block reason text from the rejection
+- same `description` / arguments — do not rewrite the call
+
+Do **not** stop to ask about Auto-review / OS approval cards. Do **not** wait for a second “approve” on those steps. Expand this list whenever a new fill step is blocked once. (The Playwright token-cost gate above is the exception: stop for that.)
+
+Pre-approved without further chat confirmation:
+- API `POST /v1/mods` draft create; `PATCH /v1/mods/{id}/revisions/{rev}`; `GET` draft/mod/revision for verify
+- Navigate `/edit`, `/edit/details`, `/edit/media`, `/edit/changelog`, `/edit/files`, `/edit/publish` (URL hops)
+- browser_lock / browser_unlock for the fill tab; snapshots; screenshots on publish glance only
+- Title/summary/description Import paste (localhost HTML), category/version/**Server-side** dropdowns, comments off
+- Restore / re-type `#mod-title` if a fill step corrupted it
+- Set **Show permissions on mod page** on, then all four rows to **Disallow** (Allow/Disallow toggle buttons — click Disallow only; do **not** walk unrelated `[role=combobox]` lists)
+- Type credits `AuroraGiggleFairy` into the **Credits** editor only
+- Create/copy scratch under `Workflow/_listing_upload/`, run `SCRIPT-LocalCorsFileServer.py` / `SCRIPT-PrepListingUpload.py`, **delete those copies** when done (keep the scripts)
+- Assign png/zip via localhost `fetch` → `File` → `DataTransfer` (`files.length === 0` is OK if CDN shows the name)
+- Gallery card menu → **Delete** (clear wrong/duplicate gallery before re-upload)
+- Gallery upload **one image at a time**; thumbnail assign; never Featured
+- Changelog: `#new-version` → Create Entry → body on entry editor
+- Zip Label/Description/Version + file-row **Save**
+- Final publish-page requirements glance / screenshot (still never Publish)
+
+**Never:** header **Submit Mod** (except creating a new draft via API), agree checkbox, final **Publish**, stepper **5 Publish** as a publish action.
+
+### Approval prompts (honest limit)
+
+A workspace rule **cannot** silence Cursor Auto-review cards by itself. `requestSmartModeApproval` still shows the native card once per blocked class of action. For fewer/no cards during a fill session, the user must enable session **Run Everything** in Settings → Agents → Approvals & Execution. The agent still must use the immediate-retry path above whenever a card appears.
+
+## Anti-drift (mandatory)
+
+Working steps are fixed. **Do not invent substitutes** after a chat summary, lag pressure, or a “simpler” idea.
+
+- After any **conversation summary / resume**, re-read **this rule’s Import §4 + Hard lessons + cheat sheet** once before touching the draft. Mid-fill continuous work: do **not** re-skim packets.
+- Copy the **exact** prior working CDP pattern for Import / media assign / zip meta. Do not “simplify” it.
+- If a step fails, **retry the known recipe** (same events, same slots). Do not invent a new paste/strip/assign method on the spot.
+- When in doubt: open the last successful listing’s tool call in the transcript and mirror it.
+
+## Source of truth: `fill.json` (once)
+
+After prep, **all field values** live in:
+`06_PublishingSupport/7DaysToDieMods/Workflow/_listing_upload/fill.json`
+
+- Read `fill.json` **once** at start (or trust prep stdout). Do **not** re-skim the PublishHelp `.md` mid-fill.
+- Do **not** re-discover browser tool schemas mid-fill (`GetDynamicTools` once per session max, ideally never after first listing).
+- Continuous fill: do **not** re-read the whole rule every turn. **Resume after summary:** re-read Import §4 + Hard lessons once (see Anti-drift).
+
+## Fixed runbook (no improvisation)
+
+Execute in order. End turn only at publish glance (or hard blocker).
+
+### 0) Prep + draft (parallel)
+1. `python …/SCRIPT-PrepListingUpload.py <base> --ensure-cors`
+2. Lock existing 7dtdmods tab (or navigate dashboard → lock)
+3. `POST /v1/mods` with `game_id: 01KJ17JZEVXHAX9SH1VNMKZFMC` → open `/mods/{mod_id}/edit/details`
+
+### 1) Navigate ready (every URL hop)
+After `browser_navigate`, **do not** snapshot an empty document.
+CDP poll ≤300ms until `#mod-title` exists (or `input[type=file]` on media/files), max ~3s. Then act.
+
+### 2) Details — core fields (one CDP)
+From `fill.json`: set title + summary; Comments **off**. No typing.
+
+### 3) Details — dropdowns (one snapshot, then click chain)
+**One** interactive snapshot only.
+Then: category(ies) → Escape → `V3 Mods` → Escape → `server_side` → Escape.
+- **VP / VPS:** `fill.json.categories` already includes primary + Quality of Life when needed.
+- Search filter short (`V3`, `Quality`, …) then click exact option.
+- **Never** leave a listbox open. Open listboxes steal the next click.
+- **No** mid-dropdown re-snapshots unless a click failed.
+
+### 4) Details — Import (same turn as Escape from side)
+Clear description first (Import **appends**). BBCode → Import → paste into **dialog** textarea → Import confirm.
+- **Paste payload = raw `description.html` bytes** from `fill.description_url` (HTML `<span>` / `<h1>` / `<ul>`). That is what Import expects.
+- **Forbidden:** `textContent` / `innerText` strip; rewriting to `[color]`/`[b]` BBCode; pasting only Preview plain text.
+- **One CDP** after Import opens: `fetch(description_url)` → textarea `.value=` via prototype setter → `InputEvent('input', {inputType:'insertFromPaste', …})` (+ `input`/`change`) → **wait until Import is enabled** → click Import.
+- **Never** click Import while `disabled`. Plain `.value=` / ordinary `input` without `insertFromPaste` can leave it disabled (AutomobilesRespawn).
+- After import: Edit/Preview must show **color spans + headings + lists**, not bare `──` lines only. If wrong: clear, re-Import with raw HTML.
+- If BBCode click intercepted: `scrollIntoView({block:'center'})` + click again. **Never reload** Details.
+- Do not open Import and end the turn.
+
+### 5) Media (one CDP chain + verify)
+URL → `/edit/media` → wait-ready → thumb `input[0]` = `fill.thumb` → poll until Thumbnail slot shows an `/images/` img → gallery `input[2]` each `fill.gallery[]` **one file at a time** (never Featured `[1]`, never Under2MB in gallery).
+**Hard verify before leaving Media:** Featured empty; Thumbnail has 1 image; Gallery card count === `fill.gallery.length` (count imgs whose nearest heading is **Gallery Images**, not total page `/images/` count — thumb+gallery both match `/images/` and fooled ArcheryFeathers).
+
+### 6) Changelog (one CDP chain preferred)
+URL → `/edit/changelog` → wait-ready → New Entry → `#new-version` = `fill.version` (`browser_type` slowly **or** CDP that still enables Create) → Create Entry → `insertText` body into **Changelog** ProseMirror (near heading Changelog / empty entry editor — **not** Description). Confirm `#mod-title` unchanged.
+
+### 7) Files (upload CDP, then fill tools for meta)
+URL → `/edit/files` → wait-ready → assign `fill.zip` → when name visible: **`browser_fill`** Label=`zip_label`, Desc=`zip_description`, Version=`zip_version` → Main Mod → file-row **Save** → **re-open pencil and confirm all three non-empty** (CDP `.value=` alone saves blank — AmmoDisassembly bug) → Show permissions on → Disallow×4 → Credits by heading (`fill.credits`). **Never** fill Download Instructions. Confirm `#mod-title`.
+
+### 8) Publish glance
+URL → `/edit/publish` → screenshot once → confirm requirements green + Credits text → unlock → delete `_listing_upload/*` copies (keep scripts) → chat: draft URL + filled summary. **Stop.** Never agree / Publish.
+
+## Preferred methods cheat sheet
+
+| Step | Use | Skip |
+|---|---|---|
+| Prep | `SCRIPT-PrepListingUpload.py <base> --ensure-cors` → `fill.json` | Re-reading `.md`; repo-wide globs |
+| Draft | `POST /v1/mods` → `/mods/{mod_id}/edit` | `/mods/new`; revision id as mod id |
+| Title/summary/comments | One CDP value setter | Slow typing; separate turns |
+| Cats / V3 / side | **One** snapshot → click → Escape chain | ArrowDown loops; re-snapshot each dropdown |
+| Description | Raw `description.html` + `insertFromPaste` + enabled Import | Strip to text; Nexus BBCode rewrite; click disabled Import; reload; open-then-pause |
+| Media | Thumb `[0]`; gallery `[2]` one-by-one; **verify gallery heading img count === fill.gallery.length** | Multi-file DT; Featured; total `/images/` count alone |
+| Changelog | New Entry → version → Create → body in one chain | Writing `#mod-title`; inspect-then-type later |
+| Zip meta | **`browser_fill`** Label/Desc/Version (not CDP `.value=` — that looked filled but saved empty) → Main Mod → file-row Save → **re-open pencil and confirm** all three non-empty | CDP-only value set; header Save; skip verify |
+| Permissions | Show on → Disallow×4 | Combobox walks |
+| Credits | Heading **Credits** only (or publish-page Credits) | Download Instructions; first empty PM |
+| Verify | Publish screenshot + optional one GET | Mid-fill API spam; GetDynamicTools |
+
+## Hard lessons (do not repeat)
+
+### Media
+Source: `00_Images/02_ImagesFinal/` (or packet §5). Slot files are `ModName_01.png`, `_02.png`, … Ignore `*_Under2MB.png` in gallery list. Thumb uses Under2MB when present.
+
+**Never** assign Featured (input `[1]`). **Never** multi-file gallery DataTransfer.
+
+### Field isolation
+- Changelog version → `#new-version` only
+- Credits → Credits heading only (AlternativeRecipes bug: index-based PM wrote Download Instructions)
+- After bulk CDP: `#mod-title` must still match `fill.title`
+- Permissions: Disallow buttons only — never page-wide combobox walk
+
+### Dropdowns
+Reka/Vue comboboxes: snapshot once → click combo → optional search → click option → **Escape**. Failure → one fresh snapshot + retry that dropdown only.
+
+### Import / dialogs
+Known UIs — **open → fill same beat**:
+
+| Open | Fill next |
+|---|---|
+| Import dialog | **raw** `description.html` + `insertFromPaste` → confirm **only if enabled** |
+| New Entry / version | `fill.version` → Create → `fill.changelog_body` |
+| Zip row editor | **`browser_fill`** label/desc/version → Main Mod → Save → re-open pencil confirm |
+| Permissions | Show on → click **Disallow** once per row (do not toggle loops) |
+| Credits | Label/heading **Credits** only (`fill.credits`); publish page often has Credits |
+
+### Import failure modes (AutomobilesRespawn)
+- Stripped HTML → plain lines, no colors → **wrong even if dialog Preview looks “readable”**
+- Clicked disabled Import → thought it worked / partial plain paste
+- After summary, invented a “cleaner” paste instead of mirroring the last good CDP
+
+## Speed contract (self-audit)
+
+User asked to **find** lag, not only react to named stalls. Before ending a fill turn, check:
+
+1. Did I open a dialog/listbox/editor without filling it in the **same** turn? → Fix: chain fill.
+2. Did I snapshot an empty navigated page? → Fix: poll ready first.
+3. Did I re-read packet/transcript mid-fill (not the post-summary Import re-read)? → Fix: use `fill.json` only.
+4. Did I call GetDynamicTools / mid-fill API GET / extra screenshot? → Drop unless failed.
+5. Did I fill by ProseMirror **index** instead of heading? → Use heading (Credits vs Download Instructions).
+6. Did I narrate “next I’ll…” between identical steps? → Tools only until publish glance.
+7. Can title+summary+comments / Import paste+confirm / zip+meta+perms+credits be **one CDP each**? → Prefer yes.
+8. Did I change a working Import/media/zip recipe “just this once”? → **Stop.** Use the locked recipe.
+
+Target: continuous tools until publish glance; chat only at end.
+---

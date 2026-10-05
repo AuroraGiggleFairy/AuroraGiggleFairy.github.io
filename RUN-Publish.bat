@@ -38,6 +38,20 @@ echo ============================================================
 echo.
 "%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\06_nexus.py"
 set "EXIT_CODE=%ERRORLEVEL%"
+if %EXIT_CODE% neq 0 (
+    echo.
+    echo Publish run exited with code %EXIT_CODE%.
+    pause
+    exit /b %EXIT_CODE%
+)
+
+echo.
+echo ============================================================
+echo  STEP 6b — Generating 7DaysToDieMods PublishHelp files
+echo ============================================================
+echo.
+"%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\06_7dtdmods.py"
+set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.
 echo Publish run exited with code %EXIT_CODE%.

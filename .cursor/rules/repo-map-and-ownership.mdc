@@ -1,0 +1,79 @@
+---
+description: Merged lane, deploy, README, evidence, and look-here map (Cursor-era)
+alwaysApply: true
+---
+
+# Merged workspace rules (Cursor-era)
+
+Older VS Copilot file: `.github/copilot-instructions.md` (keep in sync). Longer docs stay source for details; this file is what I follow when they conflict. Update this as the workflow changes.
+
+## Communication
+
+- Be concise. Confirm work as best-effort implemented.
+- Do not say ready to test in-game unless **live game Mods** files were updated in that run.
+- Token-heavy work with a cheaper script/CLI/Playwright path: ask first. See `.cursor/rules/token-cost-notice.mdc`.
+- Do not markdown-link files/canvases to open them. Touch the file with an editor tool so the chat Open chip appears. See `.cursor/rules/open-files-via-chip.mdc`.
+
+## Lanes
+
+| Lane | Role |
+|---|---|
+| `01_Draft` | Default for new / `0.x.x` WIP. MakeNewMod creates mods here. |
+| `02_ActiveBuild` | Tested pack set. Publish source. **Do not edit or copy into unless asked.** |
+| `03_ReleaseSource` | Publish mirror. **Scripts only unless asked.** |
+| Game Mods | What the game loads. **Default test deploy.** |
+| Dedicated server Mods | Extra DLL test path (below). |
+| `00_Tools` | Public/release tools (not game mods). `ModSync`, `LogReader`. Not Draft/ActiveBuild. |
+| `00_DLL-Projects` | DLL / generator source (generators that **build mods**). Workshop helpers stay in `Tools/`. |
+| `05_ReleaseData/ReadmeSystem` | README templates, `HELPER_ModCompatibility.csv`, quotes. |
+
+New mod: wait for `RUN-MakeNewMod.bat`, then edit **Config** (and helper CSV if needed). Do not invent a mod folder.
+Public/release tools: `00_Tools/` (not a game mod; do not use MakeNewMod or Draft/ActiveBuild).
+
+Default test deploy (Cursor-era, from old Copilot):
+
+- Client: `C:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/Mods`
+- DLL also: `C:/Program Files (x86)/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods`
+
+Do not promote Draft → ActiveBuild yourself. Official ActiveBuild ↔ game sync is `RUN-Update.bat` / sync-work (user runs). Scripts own rename, README generate, zips.
+
+## What I edit vs scripts
+
+- New Config xpath XML root: `AGF-{last Name segment}`. See `.cursor/rules/mod-xml-root-name.mdc`.
+- **I may edit:** Config, loc, DLL/generator source, `00_Tools`, helper CSV, research notes, rules when asked.
+- **Not without explicit ask:** ModInfo, README.txt/md, changelog, version bumps, lane promotion. See `.cursor/rules/modinfo-readme-permission.mdc`.
+- Mod scope (type 1–5, EAC, safe install/remove): `HELPER_ModCompatibility.csv`, not hand-written README scope.
+
+## Evidence
+
+- Do not guess. Read vanilla `Data/Config` (decompile if DLL), then this repo.
+- Unverified if source was not checked. Code/config wins over old README wording.
+- Research: `00_Support/WorkspaceData/Research/` plus on-demand rules (blocks flatten, screamer).
+- Loc: `.cursor/rules/localization-quality.mdc` (always on). Blocks flatten and screamer/heatmap stay on-demand.
+
+## README wording (when asked)
+
+Follow `05_ReleaseData/ReadmeSystem/WORKFLOW-AI-README-Review.md`. One mod, one section. Suggest (two options + recommended) unless asked to implement. Wait for DONE before version/changelog.
+
+## Purple Book (when that generator)
+
+- Logic only: `00_DLL-Projects/Generators/AGF-PurpleBookGenerator-v0.0.1/Generator/SCRIPT-PurpleBookGenerator.py`
+- Default run: `--no-sync-game-mod --no-sync-activebuild`. Live sync only if asked.
+- Schematics opener stays `iconbutton`; tint keys `color_default/hovered/selected/disabled`; `color(...)` is RGBA.
+- Unlock review: non-magazine; schematic/book only; exclude gas/thrown/dart ammo; keep rocket.
+
+## 7D2D UI look-here
+
+**Before HUD / menu / pause / XUi XML / UI canvas work:** Read `.cursor/rules/7d2d-xui-v3.1.mdc` (scale vs wrap, 16:9 vs 16:10, plates, mock anti-patterns). Do not guess `font_size / 1.255` or fake extra frames.
+
+Vanilla first: `Data/Config/XUi_InGame`, `XUi_Menu`. v3 path is `Config/XUi_InGame` (not old `Config/XUi`). Keep controller-required children or Init NRE. Failed xpath can abort a whole include.
+
+- Menu lifecycle: `00_DLL-Projects/Projects/DLL_NoEAC-AudioOptionsPlus/MCP-7D2D-Menu-Influence-Guide.md`
+- Bindings vs patch `<if>`: `00_Support/Automation/workflow/BMCounter-BloodMoon-Source-Workflow.md`
+- HUD xpath: `02_ActiveBuild/AGF-HUDPlus-1Main-*/Config/XUi_InGame/`
+- Compat: `02_ActiveBuild/zzzAGF-Special-Compatibilities-*/Config/XUi_InGame/ModPatches/`
+- Forge dump: `00_Support/WorkspaceData/Research/Forge UI Stuff.md`
+
+Pipeline detail: `00_Support/Automation/workflow/Goals-and-Requirements.md` and `Workflow Outline of Main Script.md`.
+
+7dtdmods first listings: `.cursor/rules/7dtdmods-listing-fill.mdc`.

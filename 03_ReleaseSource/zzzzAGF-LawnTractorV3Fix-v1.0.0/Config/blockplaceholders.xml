@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AGF-LawnTractorV3Fix>
+	<!-- The original placeholder list names a v03 color. Those blocks were never defined. Only v01, v02, v04, v05, v06, and v07 exist. -->
+	<remove xpath="/blockplaceholders/placeholder[@name='carsRandomHelper']/block[@name='cntCarLawnTractorDamaged0v03']"/>
+	<remove xpath="/blockplaceholders/placeholder[@name='carsRandomHelper']/block[@name='cntCarLawnTractorDamaged1v03']"/>
+	<remove xpath="/blockplaceholders/placeholder[@name='carsRandomHelper']/block[@name='carLawnTractorDamaged2v03']"/>
+	<remove xpath="/blockplaceholders/placeholder[@name='carWrecksRandomHelper']/block[@name='carLawnTractorDamaged2v03']"/>
+</AGF-LawnTractorV3Fix>

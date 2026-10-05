@@ -25,7 +25,7 @@ echo   [YES] Promote ActiveBuild -^> ReleaseSource (images + readme regeneration
 echo   [YES] Create all mod/category zips
 echo   [YES] Generate thumbnails
 echo   [YES] Update main README.md
-echo   [YES] Generate Nexus PublishHelp files
+echo   [YES] Generate Nexus and 7DaysToDieMods PublishHelp files
 echo.
 echo   [NO]  GigglePack version bump (version stays unchanged)
 echo   [NO]  Discord GigglePack release message
@@ -53,6 +53,22 @@ echo  STEP 6 — Generating Nexus PublishHelp files
 echo ============================================================
 echo.
 "%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\06_nexus.py"
+set "EXIT_CODE=%ERRORLEVEL%"
+if %EXIT_CODE% neq 0 (
+    echo.
+    echo No-GigglePack publish exited with code %EXIT_CODE%.
+    echo Check the log file for details.
+    echo.
+    pause
+    exit /b %EXIT_CODE%
+)
+
+echo.
+echo ============================================================
+echo  STEP 6b — Generating 7DaysToDieMods PublishHelp files
+echo ============================================================
+echo.
+"%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\06_7dtdmods.py"
 set "EXIT_CODE=%ERRORLEVEL%"
 
 echo.

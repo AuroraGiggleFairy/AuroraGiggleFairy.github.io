@@ -1,0 +1,68 @@
+﻿<zzzAGF-Compatibilities>
+	<!-- DishongTowerChallenge -->
+	<conditional>
+		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
+			<append xpath="/buffs/buff[@name='buffStatusCheck02']">
+				<effect_group>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="floorLevel" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="floorLevel" operation="set" value="1"/>-->
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="14">
+						<requirement name="EntityElevation" operation="GTE" value="140"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="13">
+						<requirement name="EntityElevation" operation="LTE" value="139"/>
+						<requirement name="EntityElevation" operation="GT" value="133"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="12">
+						<requirement name="EntityElevation" operation="LTE" value="133"/>
+						<requirement name="EntityElevation" operation="GT" value="127"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="11">
+						<requirement name="EntityElevation" operation="LTE" value="127"/>
+						<requirement name="EntityElevation" operation="GT" value="121"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="10">
+						<requirement name="EntityElevation" operation="LTE" value="121"/>
+						<requirement name="EntityElevation" operation="GT" value="115"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="9">
+						<requirement name="EntityElevation" operation="LTE" value="115"/>
+						<requirement name="EntityElevation" operation="GT" value="103"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="8">
+						<requirement name="EntityElevation" operation="LTE" value="109"/>
+						<requirement name="EntityElevation" operation="GT" value="103"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="7">
+						<requirement name="EntityElevation" operation="LTE" value="103"/>
+						<requirement name="EntityElevation" operation="GT" value="97"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="6">
+						<requirement name="EntityElevation" operation="LTE" value="97"/>
+						<requirement name="EntityElevation" operation="GT" value="91"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="5">
+						<requirement name="EntityElevation" operation="LTE" value="91"/>
+						<requirement name="EntityElevation" operation="GT" value="85"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="4">
+						<requirement name="EntityElevation" operation="LTE" value="85"/>
+						<requirement name="EntityElevation" operation="GT" value="79"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="3">
+						<requirement name="EntityElevation" operation="LTE" value="79"/>
+						<requirement name="EntityElevation" operation="GT" value="73"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="2">
+						<requirement name="EntityElevation" operation="LTE" value="73"/>
+						<requirement name="EntityElevation" operation="GT" value="67"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="floorLevel" operation="set" value="1">
+						<requirement name="EntityElevation" operation="LTE" value="67"/>
+						<requirement name="EntityElevation" operation="GT" value="62"/>
+					</triggered_effect>
+				</effect_group>
+			</append>
+		</if>
+	</conditional>
+</zzzAGF-Compatibilities>

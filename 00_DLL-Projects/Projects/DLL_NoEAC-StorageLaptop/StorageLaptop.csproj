@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>StorageLaptop</RootNamespace>
+    <AssemblyName>StorageLaptop</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-NoEAC-StorageLaptop-v0.0.1</DraftModDir>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-NoEAC-StorageLaptop-v0.0.1</GameModDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NGUI">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\NGUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InControl">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\InControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CopyToDraft" AfterTargets="Build" Condition="Exists('$(DraftModDir)')">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="false" />
+  </Target>
+  <Target Name="CopyToGameMod" AfterTargets="Build" Condition="Exists('$(GameModDir)')">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="false" />
+  </Target>
+</Project>

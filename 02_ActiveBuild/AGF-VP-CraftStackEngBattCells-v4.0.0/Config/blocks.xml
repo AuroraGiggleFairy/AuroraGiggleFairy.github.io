@@ -1,0 +1,19 @@
+<AGFVanillaPlus-CraftStackEngBattCells>
+	
+	
+	
+<!--Battery Bank edit to make sure stackable batteries act like a tier 6 battery-->
+	<set xpath="/blocks/block[@name='batterybank']/property[@name='OutputPerStack']/@value">100</set>
+	<set xpath="/blocks/block[@name='solarbank']/property[@name='OutputPerStack']/@value">60</set>
+	
+	
+	<set xpath="/blocks/block[@name='batterybank']/property[@name='SlotItem']/@value">carBatteryCharge</set>
+			
+
+<!--Craftable Solar Banks-->
+		<append xpath="/blocks/block[@name='solarbank']">
+			<property name="UnlockedBy" value="craftingElectrician"/>
+		</append>
+		
+
+</AGFVanillaPlus-CraftStackEngBattCells>
