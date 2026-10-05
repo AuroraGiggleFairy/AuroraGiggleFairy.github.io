@@ -1,0 +1,13 @@
+<AGF-Backpack72>
+	<conditional>
+		<if cond="game_version() &lt; version(1,3,30)">
+<!--Set the starting carry capacity. Max capacity minus encumbered slots.-->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/triggered_effect[@value='27']/@value">36</set><!--Total capacity - 36-->
+
+<!--Sets the new max backpack size.-->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize']/@value">72</set>
+
+	
+		</if>
+	</conditional>
+</AGF-Backpack72>

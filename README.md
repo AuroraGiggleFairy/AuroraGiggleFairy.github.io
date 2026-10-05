@@ -1,6 +1,6 @@
 # AGF 7 Days to Die Mods
 
-*September 1, 2026, 11:15 PM EST*
+*October 5, 2026, 6:25 AM EST*
 
 ## **1. About AGF**
 
@@ -197,7 +197,7 @@ Ways you can support AGF.
 
 ## **A. GIGGLE PACK**
 
-[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.23.0)**
+[**⬇️ DOWNLOAD ALL AGF MODS**](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip) **(GigglePack v0.24.0)**
 
 All AGF mods in one convenient download.
 
@@ -212,7 +212,7 @@ Non-EAC mods are inside optional folders within the pack.
 ---
 
 <details markdown="1"><summary><i>Changelog (latest 3 releases)</i></summary>
-<ul><li>GigglePack v0.23.0 - September 1, 2026 11:15pm<ul><li>Change summary: +2 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GyroFlightModes.zip">AGF-NoEAC-GyroFlightModes</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-HonkOpensYourDoors.zip">AGF-VPS-HonkOpensYourDoors</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">AGF-NoEAC-MapPlus</a> (v1.0.0 -&gt; v1.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.22.0 - September 1, 2026 9:36am<ul><li>Change summary: +4 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4PerkPageReset.zip">AGF-4Modders-Fix4PerkPageReset</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">AGF-NoEAC-PartyGroupPlus</a> (new: v1.1.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip">AGF-NoEAC-VisualEntityTrackerAddon</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">AGF-VPS-SortingCart</a> (new: v2.0.1)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.1.0 -&gt; v1.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (v1.0.0 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">AGF-VP-DyesPlus</a> (v4.0.0 -&gt; v4.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.21.1 - August 27, 2026 11:32pm<ul><li>Change summary: +0 new, ~2 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li>None</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.0.1 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-CosmeticLockIcon.zip">AGF-NoEAC-CosmeticLockIcon</a> (v3.1.1 -&gt; v3.1.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
+<ul><li>GigglePack v0.24.0 - October 5, 2026 6:25am<ul><li>Change summary: +6 new, ~32 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-AnimalTrackerAlwaysOn.zip">AGF-Requested-AnimalTrackerAlwaysOn</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftStackEngBattCells.zip">AGF-VP-CraftStackEngBattCells</a> (new: v4.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-HelpfulRenames.zip">AGF-VP-HelpfulRenames</a> (new: v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-zHelpfulRenames.zip">AGF-VP-zHelpfulRenames</a> (new: v3.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-LootTimerHolds.zip">AGF-VPS-LootTimerHolds</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-NoEACCompatibilities.zip">zzzAGF-Special-NoEACCompatibilities</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">AGF-BackpackPlus-060Slots</a> (v4.1.1 -&gt; v5.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip">AGF-BackpackPlus-072Slots</a> (v4.1.1 -&gt; v5.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip">AGF-BackpackPlus-084Slots</a> (v4.1.1 -&gt; v5.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip">AGF-BackpackPlus-119Slots</a> (v2.1.1 -&gt; v3.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">AGF-HUDPlus-1Main</a> (v6.5.5 -&gt; v6.6.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">AGF-NoEAC-AutoRun</a> (v2.1.1 -&gt; v2.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">AGF-NoEAC-EnhancedAGF</a> (v4.3.4 -&gt; v5.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GyroFlightModes.zip">AGF-NoEAC-GyroFlightModes</a> (v1.0.0 -&gt; v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">AGF-NoEAC-MapPlus</a> (v1.1.0 -&gt; v1.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">AGF-NoEAC-PartyGroupPlus</a> (v1.1.1-BETA -&gt; v1.2.0-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SmeltTimerOption.zip">AGF-NoEAC-SmeltTimerOption</a> (v1.0.0 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">AGF-NoEAC-Toolbelt12Slots</a> (v2.2.4 -&gt; v2.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">AGF-VP-AmmoDisassembly</a> (v2.0.0 -&gt; v2.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip">AGF-VP-BreakItGetIt</a> (v2.1.1 -&gt; v2.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">AGF-VP-DoorsPlus</a> (v4.0.0 -&gt; v4.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">AGF-VP-DrinkableAcid</a> (v3.0.0 -&gt; v3.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip">AGF-VP-FloraHarvester</a> (v3.0.1 -&gt; v3.0.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">AGF-VP-FuelBurnPlus</a> (v3.1.1 -&gt; v3.1.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">AGF-VP-LargerStorageOption</a> (v1.1.1 -&gt; v1.2.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">AGF-VP-MasterTool</a> (v7.1.1 -&gt; v7.1.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">AGF-VP-MiningPlus</a> (v2.0.0 -&gt; v2.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">AGF-VP-RebundleBundles</a> (v2.1.1 -&gt; v2.1.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">AGF-VP-SimplifiedStacks</a> (v2.1.1 -&gt; v2.1.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SmeltingPlus.zip">AGF-VP-SmeltingPlus</a> (v3.0.0 -&gt; v3.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-FuelAutoShutOff.zip">AGF-VPS-FuelAutoShutOff</a> (v1.0.0 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-GlobalStormTracker.zip">AGF-VPS-GlobalStormTracker</a> (v2.1.1 -&gt; v2.1.2)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-HonkOpensYourDoors.zip">AGF-VPS-HonkOpensYourDoors</a> (v1.0.0 -&gt; v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-ScreamerAlert.zip">AGF-VPS-ScreamerAlert</a> (v2.3.3 -&gt; v2.3.4)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">AGF-VPS-SortingCart</a> (v2.0.1 -&gt; v2.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-VisualEntityTrackerAddon.zip">AGF-VPS-VisualEntityTrackerAddon</a> (v1.0.0 -&gt; v1.0.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">zzzAGF-Special-Compatibilities</a> (v5.2.0 -&gt; v5.3.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-LocalizationPatches.zip">zzzAGF-Special-LocalizationPatches</a> (v1.0.1 -&gt; v1.0.2)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.23.0 - September 1, 2026 11:15pm<ul><li>Change summary: +2 new, ~1 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GyroFlightModes.zip">AGF-NoEAC-GyroFlightModes</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-HonkOpensYourDoors.zip">AGF-VPS-HonkOpensYourDoors</a> (new: v1.0.0)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">AGF-NoEAC-MapPlus</a> (v1.0.0 -&gt; v1.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li><li>GigglePack v0.22.0 - September 1, 2026 9:36am<ul><li>Change summary: +4 new, ~3 updated, =0 renamed, -0 removed</li><li>New mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4PerkPageReset.zip">AGF-4Modders-Fix4PerkPageReset</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">AGF-NoEAC-PartyGroupPlus</a> (new: v1.1.1-BETA)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip">AGF-NoEAC-VisualEntityTrackerAddon</a> (new: v1.0.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">AGF-VPS-SortingCart</a> (new: v2.0.1)</li></ul></li><li>Updated existing mods:<ul><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-VisualEntityTracker.zip">AGF-HUDPlus-VisualEntityTracker</a> (v1.1.0 -&gt; v1.1.1)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-HideDLCCosmetics.zip">AGF-NoEAC-HideDLCCosmetics</a> (v1.0.0 -&gt; v1.1.0)</li><li><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DyesPlus.zip">AGF-VP-DyesPlus</a> (v4.0.0 -&gt; v4.1.0)</li></ul></li><li>Renamed mods:<ul><li>None</li></ul></li><li>Removed mods:<ul><li>None</li></ul></li></ul></li></ul>
 </details>
 
 ---
@@ -236,7 +236,7 @@ Quality-of-life HUD enhancements and visual tweaks.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-HUDPlus-1Main_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-HUDPlus-1Main.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.5.5 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
+<b>AGF HUDPlus</b> &nbsp;·&nbsp; v6.6.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip">Download</a><br>
 Comprehensive HUD overhaul with cleaner stats, wider compass, and menus.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -304,6 +304,8 @@ Adds the weekday name next to the in-game day number.
 
 Increases backpack size. Choose the slot count that fits your needs.
 
+**End of BackpackPlus for 7d2d version 3.3 and on.** These final versions do not load any changes on 7d2d 3.3 or newer.
+
 *[(Back to Top)](#agf-7-days-to-die-mods)*
 
 ---
@@ -313,7 +315,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-BackpackPlus-060Slots_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-BackpackPlus-060Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF BackpackPlus 60 Slots</b> &nbsp;·&nbsp; v4.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">Download</a><br>
+<b>AGF BackpackPlus 60 Slots</b> &nbsp;·&nbsp; v5.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-060Slots.zip">Download</a><br>
 60-slot backpack, encumbrance accounted for, no UI shrinking.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -323,7 +325,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-BackpackPlus-072Slots_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-BackpackPlus-072Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF BackpackPlus 72 Slots</b> &nbsp;·&nbsp; v4.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip">Download</a><br>
+<b>AGF BackpackPlus 72 Slots</b> &nbsp;·&nbsp; v5.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-072Slots.zip">Download</a><br>
 72-slot backpack, encumbrance accounted for, light UI shrinking.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -333,7 +335,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-BackpackPlus-084Slots_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-BackpackPlus-084Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF BackpackPlus 84 Slots</b> &nbsp;·&nbsp; v4.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip">Download</a><br>
+<b>AGF BackpackPlus 84 Slots</b> &nbsp;·&nbsp; v5.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-084Slots.zip">Download</a><br>
 84-slot backpack, encumbrance accounted for, light UI shrinking.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -343,7 +345,7 @@ Increases backpack size. Choose the slot count that fits your needs.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-BackpackPlus-119Slots_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-BackpackPlus-119Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF BackpackPlus 119 Slots</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip">Download</a><br>
+<b>AGF BackpackPlus 119 Slots</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-BackpackPlus-119Slots.zip">Download</a><br>
 119-slot backpack, encumbrance accounted for, light UI shrinking.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -368,7 +370,7 @@ Patches to support other mods and modlets alongside AGF mods.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/zzzAGF-Special-Compatibilities_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_zzzAGF-Special-Compatibilities.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Special Compatibilities</b> &nbsp;·&nbsp; v5.2.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">Download</a><br>
+<b>AGF Special Compatibilities</b> &nbsp;·&nbsp; v5.3.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-Compatibilities.zip">Download</a><br>
 Single-source compatibility pack for AGF and requested modlets.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -378,9 +380,19 @@ Single-source compatibility pack for AGF and requested modlets.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/zzzAGF-Special-LocalizationPatches_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_zzzAGF-Special-LocalizationPatches.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Special Localization Patches</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-LocalizationPatches.zip">Download</a><br>
+<b>AGF Special Localization Patches</b> &nbsp;·&nbsp; v1.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-LocalizationPatches.zip">Download</a><br>
 Full 13-language localization support for partially localized modlets.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/zzzAGF-Special-NoEACCompatibilities_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_zzzAGF-Special-NoEACCompatibilities.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Special No EAC Compatibilities</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzAGF-Special-NoEACCompatibilities.zip">Download</a><br>
+Compatibility pack for AGF and requested modlets when .dll is needed.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
 </td>
 </tr></table>
 
@@ -427,7 +439,7 @@ Alt recipes for cobblestone from clay/stone and first aid from cloth.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-AmmoDisassembly_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-AmmoDisassembly.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Ammo Disassembly</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">Download</a><br>
+<b>AGF Ammo Disassembly</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-AmmoDisassembly.zip">Download</a><br>
 Scrap ammo into ingredient bundles; combine into x100 or x1000 packs.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -477,7 +489,7 @@ Chance to find eggs in birdnest increased from 35% to 63%.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-BreakItGetIt_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-BreakItGetIt.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Break It, Get It</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip">Download</a><br>
+<b>AGF Break It, Get It</b> &nbsp;·&nbsp; v2.2.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-BreakItGetIt.zip">Download</a><br>
 Break it, get it: recover stations, storage, signs, and power blocks.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -489,6 +501,16 @@ Break it, get it: recover stations, storage, signs, and power blocks.
 <td valign="top">
 <b>AGF Craft Sewing Kits</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftSewingKits.zip">Download</a><br>
 You can craft sewing kits after reading Wasteland Treasures 6.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-CraftStackEngBattCells_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-CraftStackEngBattCells.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Craft and Stack Engine/Battery/Cells</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-CraftStackEngBattCells.zip">Download</a><br>
+Makes engines, batteries, and solar cells stackable and craftable.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -507,7 +529,7 @@ Unlocks vitamin crafting at Medical 30, matching herbal antibiotics.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-DoorsPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-DoorsPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Doors Plus</b> &nbsp;·&nbsp; v4.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">Download</a><br>
+<b>AGF Doors Plus</b> &nbsp;·&nbsp; v4.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DoorsPlus.zip">Download</a><br>
 Craft every door-like block in four materials, including unbarricaded.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -517,7 +539,7 @@ Craft every door-like block in four materials, including unbarricaded.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-DrinkableAcid_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-DrinkableAcid.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Drinkable Acid</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">Download</a><br>
+<b>AGF Drinkable Acid</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-DrinkableAcid.zip">Download</a><br>
 Drink acid for risky fun with buffs, damage, and trippy screen effects.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -537,7 +559,7 @@ Adds 36 dyes; craft any dye for 15 paint, or scrap to swap colors.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-FloraHarvester_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-FloraHarvester.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Flora Harvester</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip">Download</a><br>
+<b>AGF Flora Harvester</b> &nbsp;·&nbsp; v3.0.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FloraHarvester.zip">Download</a><br>
 Flora Harvester is a tool for fast plants and crop clearing.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -547,8 +569,18 @@ Flora Harvester is a tool for fast plants and crop clearing.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-FuelBurnPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-FuelBurnPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Fuel Burn Plus</b> &nbsp;·&nbsp; v3.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">Download</a><br>
+<b>AGF Fuel Burn Plus</b> &nbsp;·&nbsp; v3.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-FuelBurnPlus.zip">Download</a><br>
 Craft fuel items with burn times of 10, 60, 600, and 6,000 minutes.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-HelpfulRenames_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-HelpfulRenames.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Renames Alphabetical Sort</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-HelpfulRenames.zip">Download</a><br>
+Renames items so sorting keeps like items together and in order.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
 </tr></table>
@@ -557,7 +589,7 @@ Craft fuel items with burn times of 10, 60, 600, and 6,000 minutes.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-LargerStorageOption_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-LargerStorageOption.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Larger Storage Option</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
+<b>AGF Larger Storage Option</b> &nbsp;·&nbsp; v1.2.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-LargerStorageOption.zip">Download</a><br>
 Adds larger writable storage with 15 shapes, 3x health, break-to-pickup.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -567,7 +599,7 @@ Adds larger writable storage with 15 shapes, 3x health, break-to-pickup.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-MasterTool_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-MasterTool.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Master Tool</b> &nbsp;·&nbsp; v7.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">Download</a><br>
+<b>AGF Master Tool</b> &nbsp;·&nbsp; v7.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MasterTool.zip">Download</a><br>
 Adds the endgame Master Tool, an all-in-one harvesting item.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -587,7 +619,7 @@ Raises the max player level cap from 300 to 500.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-MiningPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-MiningPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Mining Plus</b> &nbsp;·&nbsp; v2.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">Download</a><br>
+<b>AGF Mining Plus</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-MiningPlus.zip">Download</a><br>
 Mining perk unlocks clay/sand bundles; slightly more sand from mining.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -647,7 +679,7 @@ Adds a trader dialogue option to reset the available quest list.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-RebundleBundles_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-RebundleBundles.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Rebundle Bundles</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">Download</a><br>
+<b>AGF Rebundle Bundles</b> &nbsp;·&nbsp; v2.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-RebundleBundles.zip">Download</a><br>
 Unlocking a bundle recipe lets you rebundle full stacks of that item.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -697,7 +729,7 @@ Equipment now scraps in 4 seconds instead of 10.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-SimplifiedStacks_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-SimplifiedStacks.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Simplified Stacks</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">Download</a><br>
+<b>AGF Simplified Stacks</b> &nbsp;·&nbsp; v2.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SimplifiedStacks.zip">Download</a><br>
 Simplified stack sizes to reduce inventory clutter with vanilla feel.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -707,7 +739,7 @@ Simplified stack sizes to reduce inventory clutter with vanilla feel.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-SmeltingPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-SmeltingPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Smelting Plus</b> &nbsp;·&nbsp; v3.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SmeltingPlus.zip">Download</a><br>
+<b>AGF Smelting Plus</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-SmeltingPlus.zip">Download</a><br>
 Third forge slot, 1:5 sand, unit crafting, and advanced metal stacks.
 <ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -784,6 +816,15 @@ Zombie corpses despawn in 10 seconds instead of 30 for game performance.
 </tr></table>
 
 ---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VP-zHelpfulRenames_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VP-zHelpfulRenames.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Renames Alphabetical Sort</b> &nbsp;·&nbsp; v3.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VP-zHelpfulRenames.zip">Download</a><br>
+Renames items so sorting keeps like items together and in order.
+</td>
+</tr></table>
+
+---
 
 ---
 
@@ -802,10 +843,50 @@ Vanilla Plus Special. Server-Side (EAC Varies): dedicated EAC can be on or off. 
 ---
 
 <table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-FuelAutoShutOff_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-FuelAutoShutOff.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Fuel Auto Shut Off</b> &nbsp;·&nbsp; v1.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-FuelAutoShutOff.zip">Download</a><br>
+Fuel burning stops when crafting and smelting are finished.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-GlobalStormTracker_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-GlobalStormTracker.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Global Storm Tracker</b> &nbsp;·&nbsp; v2.1.2 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-GlobalStormTracker.zip">Download</a><br>
+Sends a global chat message showing where the storm is and when it ends.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-HonkOpensYourDoors_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-HonkOpensYourDoors.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Honk Opens Your Doors</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-HonkOpensYourDoors.zip">Download</a><br>
+<b>AGF Honk Opens Your Doors</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-HonkOpensYourDoors.zip">Download</a><br>
 Honk from a vehicle to open or close player-placed unpowered doors.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-LootTimerHolds_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-LootTimerHolds.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Loot Timer Holds</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-LootTimerHolds.zip">Download</a><br>
+Looking at or reopening world loot does not restart the respawn timer.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-ScreamerAlert_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-ScreamerAlert.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Screamer Alert</b> &nbsp;·&nbsp; v2.3.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-ScreamerAlert.zip">Download</a><br>
+Sends private chat alerts for Screamers and Screamer hordes within 120m.
 <ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
 </td>
 </tr></table>
@@ -814,8 +895,18 @@ Honk from a vehicle to open or close player-placed unpowered doors.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-SortingCart_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-SortingCart.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Sorting Cart</b> &nbsp;·&nbsp; v2.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">Download</a><br>
+<b>AGF Sorting Cart</b> &nbsp;·&nbsp; v2.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-SortingCart.zip">Download</a><br>
 Auto-sorts like items from a Sorting Cart into nearby storage.
+<ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
+</td>
+</tr></table>
+
+---
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-VPS-VisualEntityTrackerAddon_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-VPS-VisualEntityTrackerAddon.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Visual Entity Tracker Addon</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-VPS-VisualEntityTrackerAddon.zip">Download</a><br>
+Lets players toggle Visual Entity Tracker. Requires the VET mod.
 <ul><li><em>Server-Side (EAC Varies): Server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.</em></li></ul>
 </td>
 </tr></table>
@@ -853,7 +944,7 @@ Adds audio tabs for custom volume controls and animal pain sounds.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-AutoRun_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-AutoRun.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Auto Run</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">Download</a><br>
+<b>AGF Auto Run</b> &nbsp;·&nbsp; v2.2.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-AutoRun.zip">Download</a><br>
 Auto-Run for keyboard and controller, configurable in the Options menu.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -873,7 +964,7 @@ Shows a scrap icon on armor pieces whose cosmetics are still locked.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-EnhancedAGF_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-EnhancedAGF.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v4.3.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
+<b>AGF Enhanced Patch</b> &nbsp;·&nbsp; v5.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-EnhancedAGF.zip">Download</a><br>
 Client-side enhancement add-on for AGF mods when EAC is off.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -881,29 +972,9 @@ Client-side enhancement add-on for AGF mods when EAC is off.
 
 ---
 <table><tr>
-<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-FuelAutoShutOff_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-FuelAutoShutOff.png?raw=true" width="150"></a></td>
-<td valign="top">
-<b>AGF Fuel Auto Shut Off</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-FuelAutoShutOff.zip">Download</a><br>
-Fuel burning stops when crafting and smelting are finished.
-<ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
-</td>
-</tr></table>
-
----
-<table><tr>
-<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-GlobalStormTracker_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-GlobalStormTracker.png?raw=true" width="150"></a></td>
-<td valign="top">
-<b>AGF Global Storm Tracker</b> &nbsp;·&nbsp; v2.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GlobalStormTracker.zip">Download</a><br>
-Sends a global chat message showing where the storm is and when it ends.
-<ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
-</td>
-</tr></table>
-
----
-<table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-GyroFlightModes_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-GyroFlightModes.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Gyro Flight Modes</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GyroFlightModes.zip">Download</a><br>
+<b>AGF Gyro Flight Modes</b> &nbsp;·&nbsp; v1.0.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-GyroFlightModes.zip">Download</a><br>
 Switch the gyrocopter between Original and Helicopter flight modes.
 <ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -923,7 +994,7 @@ Adds an in-game option to hide DLC cosmetics from your view.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-MapPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-MapPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Map Plus</b> &nbsp;·&nbsp; v1.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">Download</a><br>
+<b>AGF Map Plus</b> &nbsp;·&nbsp; v1.1.1 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip">Download</a><br>
 Hover the cursor on the map to see location names and POI bounds.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -943,7 +1014,7 @@ Adds an Open All button that rapidly opens bundled item stacks.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-PartyGroupPlus_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-PartyGroupPlus.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>BETA - AGF Party Group Plus</b> &nbsp;·&nbsp; v1.1.1-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">Download</a><br>
+<b>BETA - AGF Party Group Plus</b> &nbsp;·&nbsp; v1.2.0-BETA &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-PartyGroupPlus.zip">Download</a><br>
 Unlimited party size, admin force-party options, 192 player colors.
 <ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -951,19 +1022,9 @@ Unlimited party size, admin force-party options, 192 player colors.
 
 ---
 <table><tr>
-<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-ScreamerAlert_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-ScreamerAlert.png?raw=true" width="150"></a></td>
-<td valign="top">
-<b>AGF Screamer Alert</b> &nbsp;·&nbsp; v2.3.3 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-ScreamerAlert.zip">Download</a><br>
-Sends private chat alerts for Screamers and Screamer hordes within 120m.
-<ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
-</td>
-</tr></table>
-
----
-<table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-SmeltTimerOption_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-SmeltTimerOption.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Smelt Timer Option</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SmeltTimerOption.zip">Download</a><br>
+<b>AGF Smelt Timer Option</b> &nbsp;·&nbsp; v1.1.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-SmeltTimerOption.zip">Download</a><br>
 Lets you switch forge smelt timer between one item and full stack.
 <ul><li><em>Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -973,7 +1034,7 @@ Lets you switch forge smelt timer between one item and full stack.
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-Toolbelt12Slots_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-Toolbelt12Slots.png?raw=true" width="150"></a></td>
 <td valign="top">
-<b>AGF Toolbelt 12 Slots</b> &nbsp;·&nbsp; v2.2.4 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">Download</a><br>
+<b>AGF Toolbelt 12 Slots</b> &nbsp;·&nbsp; v2.3.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-Toolbelt12Slots.zip">Download</a><br>
 12-slot toolbelt; default keys are - and =, both rebindable in options.
 <ul><li><em>Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.</em></li></ul>
 </td>
@@ -981,11 +1042,11 @@ Lets you switch forge smelt timer between one item and full stack.
 
 ---
 <table><tr>
-<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-NoEAC-VisualEntityTrackerAddon_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-NoEAC-VisualEntityTrackerAddon.png?raw=true" width="150"></a></td>
+<td width="160"></td>
 <td valign="top">
-<b>AGF Visual Entity Tracker Addon</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-VisualEntityTrackerAddon.zip">Download</a><br>
-Lets players toggle Visual Entity Tracker. Requires the VET mod.
-<ul><li><em>Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.</em></li></ul>
+<b>AGF Lawn Tractor V3 Fix</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/zzzzAGF-LawnTractorV3Fix.zip">Download</a><br>
+Patch makes OCB Lawn Mowing (v2.5.0) work on 7d2d v3.
+<ul><li><em>Download OCB Lawn Tractor here: https://www.nexusmods.com/7daystodie/mods/3312</em></li></ul>
 </td>
 </tr></table>
 
@@ -1045,6 +1106,16 @@ Community-requested modifications and standalone features.
 
 ---
 
+<table><tr>
+<td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-Requested-AnimalTrackerAlwaysOn_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-Requested-AnimalTrackerAlwaysOn.png?raw=true" width="150"></a></td>
+<td valign="top">
+<b>AGF Animal Tracker Always On</b> &nbsp;·&nbsp; v1.0.0 &nbsp;·&nbsp; <a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-Requested-AnimalTrackerAlwaysOn.zip">Download</a><br>
+Animal Tracker stays active at your perk rank without crouching.
+<ul><li><em>Server-Side (EAC-Friendly): Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.</em></li></ul>
+</td>
+</tr></table>
+
+---
 <table><tr>
 <td width="160"><a href="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/AGF-Requested-SmallerInteractionPrompt_01.png?raw=true"><img src="https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/blob/main/00_Images/02_ImagesFinal/thumbnails/Thumbnail_AGF-Requested-SmallerInteractionPrompt.png?raw=true" width="150"></a></td>
 <td valign="top">

@@ -1,0 +1,10 @@
+<AGF-Backpack72>
+	<conditional>
+		<if cond="game_version() &lt; version(1,3,30)">
+<!--Large enough player backpack when players die, requires an update in windows.xml to work.-->
+	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,12</set>
+
+	
+		</if>
+	</conditional>
+</AGF-Backpack72>

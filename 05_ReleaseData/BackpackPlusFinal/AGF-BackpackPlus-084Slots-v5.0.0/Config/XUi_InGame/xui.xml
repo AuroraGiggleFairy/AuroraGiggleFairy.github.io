@@ -1,0 +1,8 @@
+<AGF-Backpack84>
+	<conditional>
+		<if cond="game_version() &lt; version(1,3,30)">
+<set xpath="/xui/window_group[@name='backpack']/window[@name='windowBackpack']/@name">windowBackpackAGF</set>
+	
+		</if>
+	</conditional>
+</AGF-Backpack84>

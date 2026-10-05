@@ -20,6 +20,8 @@ Quality-of-life HUD enhancements and visual tweaks.
 [BACKPACKPLUS]
 Increases backpack size. Choose the slot count that fits your needs.
 
+End of BackpackPlus for 7d2d version 3.3 and on. These final versions do not load any changes on 7d2d 3.3 or newer.
+
 [SPECIAL]
 Patches to support other mods and modlets alongside AGF mods.
 

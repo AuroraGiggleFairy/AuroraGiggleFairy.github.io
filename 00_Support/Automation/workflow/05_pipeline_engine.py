@@ -52,6 +52,7 @@ STAGING = resolve_lane_path(LANE_ACTIVE_BUILD_PREFERRED, LANE_ACTIVE_BUILD_LEGAC
 PUBLISH_READY = resolve_lane_path(LANE_RELEASE_SOURCE_PREFERRED, LANE_RELEASE_SOURCE_LEGACY)
 GAME_MODS = r"C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods"
 ZIP_OUTPUT = resolve_lane_path(LANE_DOWNLOAD_ZIPS_PREFERRED, LANE_DOWNLOAD_ZIPS_LEGACY)
+BACKPACK_FINAL_DIR = os.path.join(VS_CODE_ROOT, "05_ReleaseData", "BackpackPlusFinal")
 README_SYSTEM_ROOT = os.path.join(VS_CODE_ROOT, "05_ReleaseData", "ReadmeSystem")
 QUOTES_DIR = os.path.join(README_SYSTEM_ROOT, "Quotes")
 LOGS_DIR = os.path.join(VS_CODE_ROOT, "00_Support", "Automation", "Logs")
@@ -113,7 +114,7 @@ DISCORD_TEMPLATE_PATH = os.path.join(
 )
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
 
-AGF_PREFIXES = ("AGF-", "zzzAGF-")
+AGF_PREFIXES = ("AGF-", "zzzAGF-", "zzzzAGF-")
 BASE_DOWNLOAD_URL = "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips"
 BACKPACK_DEFAULT_ACTIVE_TOKEN = "084Slots"
 GAME_OPTIONALS_BACKPACK_DIR = ".Optionals-Backpack"
@@ -2288,10 +2289,45 @@ def normalize_safety_value_for_readme(value: str) -> str:
     return str(value).strip()
 
 
+_DEPENDENCY_RECORD_RE = re.compile(r"\{([^{}]*)\}")
+
+
+def _structured_dependency_phrase(body: str) -> str:
+    """Turn {Name|Version|URL} into one dependency phrase. Empty fields are skipped."""
+    parts = [part.strip() for part in (body or "").split("|")]
+    while len(parts) < 3:
+        parts.append("")
+    name, version, url = parts[0], parts[1], parts[2]
+    if name and version and url:
+        return f"{name}, version {version}, from {url}"
+    if name and version:
+        return f"{name}, version {version}"
+    if name and url:
+        return f"{name}, from {url}"
+    if version and url:
+        return f"version {version}, from {url}"
+    return name or url or version
+
+
+def _protect_dependency_records(raw: str) -> Tuple[str, Dict[str, str]]:
+    """Replace {Name|Version|URL} blocks with placeholders so | and commas inside them stay one dependency."""
+    phrases: Dict[str, str] = {}
+
+    def _take(match: re.Match) -> str:
+        phrase = _structured_dependency_phrase(match.group(1))
+        if not phrase:
+            return " "
+        token = f"[[DEP{len(phrases)}]]"
+        phrases[token] = phrase
+        return token
+
+    return _DEPENDENCY_RECORD_RE.sub(_take, raw or ""), phrases
+
+
 def format_dependencies_block_for_readme(value: str) -> str:
-    raw = (value or "").strip()
+    raw, record_phrases = _protect_dependency_records((value or "").strip())
     placeholder_tokens = {"", "0", "none", "missingdata", "tbd", "n/a", "na"}
-    parts = [part.strip() for part in re.split(r"[;\n|,]+", raw) if part.strip()]
+    parts = [record_phrases.get(part.strip(), part.strip()) for part in re.split(r"[;\n|,]+", raw) if part.strip()]
 
     extra: List[str] = []
     saw_harmony = False
@@ -3868,7 +3904,7 @@ def rename_mod_folders_to_modinfo(
 
             mod_name, mod_version = parse_modinfo(modinfo_path, folder_name)
             if not is_agf_mod(mod_name):
-                log.warn(f"Rename skipped for {folder_name}: ModInfo Name does not start with AGF/zzzAGF")
+                log.warn(f"Rename skipped for {folder_name}: ModInfo Name does not start with AGF/zzzAGF/zzzzAGF")
                 continue
 
             folder_base_name = get_base_mod_name(folder_name)
@@ -4292,6 +4328,9 @@ def update_gigglepack_pending_changes(
             removed_mods.append((mod_name, str(prev_mods.get(mod_name, ""))))
 
     renamed_mods, added_mods, removed_mods = detect_renamed_mods(added_mods, removed_mods)
+    added_mods, removed_mods, updated_existing_mods = absorb_versioned_renames_into_updates(
+        added_mods, removed_mods, updated_existing_mods
+    )
 
     updated_mods_payload = [
         [mod_name, old_ver, new_ver]
@@ -5720,25 +5759,57 @@ def build_zip_arcname(*parts: str) -> str:
     return "/".join(normalized_parts)
 
 
+LAWN_TRACTOR_ZIP_BASE = "zzzzAGF-LawnTractorV3Fix"
+LAWN_GUARD_NAME = "0AGF-LawnTractorPatchGuard"
+
+
+def find_lawn_guard_dir() -> str:
+    """Early-load folder that must ship inside the Lawn Tractor zip, never as its own download."""
+    for root in (LANE_DRAFT_PREFERRED, LANE_ACTIVE_BUILD_PREFERRED, LANE_RELEASE_SOURCE_PREFERRED):
+        if not os.path.isdir(root):
+            continue
+        for name in sorted(os.listdir(root)):
+            if name == LAWN_GUARD_NAME or name.startswith(LAWN_GUARD_NAME + "-v"):
+                path = os.path.join(root, name)
+                if os.path.isdir(path):
+                    return path
+    return ""
+
+
+def write_mod_folder_into_zip(zipf: zipfile.ZipFile, folder_path: str, arc_root: str, compression: int) -> None:
+    for root, dirs, files in os.walk(folder_path):
+        dirs.sort()
+        for file in sorted(files):
+            file_path = os.path.join(root, file)
+            arcname = build_zip_arcname(arc_root, os.path.relpath(file_path, folder_path))
+            zipf.write(file_path, arcname, compress_type=compression)
+
+
 def zip_mod_folder(mod_folder: str, dry_run: bool, log: Logger) -> Tuple[str, bool]:
     mod_path = os.path.join(PUBLISH_READY, mod_folder)
     base_name = get_base_mod_name(mod_folder)
     zip_name = f"{base_name}.zip"
     zip_path = os.path.join(ZIP_OUTPUT, zip_name)
     compression = zipfile.ZIP_STORED if base_name in ZIP_STORED_MOD_BASES else zipfile.ZIP_DEFLATED
+    guard_path = find_lawn_guard_dir() if base_name == LAWN_TRACTOR_ZIP_BASE else ""
+
+    if base_name == LAWN_TRACTOR_ZIP_BASE and not guard_path:
+        log.error(f"{zip_name} needs a {LAWN_GUARD_NAME}-vX.Y.Z folder in Draft or ActiveBuild, and it was not found.")
+        return zip_name, False
 
     if dry_run:
         log.info(f"[DRYRUN] Would create mod zip: {zip_name}")
+        if guard_path:
+            log.info(f"[DRYRUN] Would also put {os.path.basename(guard_path)} in {zip_name}")
         return zip_name, True
 
     try:
         with zipfile.ZipFile(zip_path, "w", compression) as zipf:
-            for root, dirs, files in os.walk(mod_path):
-                dirs.sort()
-                for file in sorted(files):
-                    file_path = os.path.join(root, file)
-                    arcname = build_zip_arcname(mod_folder, os.path.relpath(file_path, mod_path))
-                    zipf.write(file_path, arcname, compress_type=compression)
+            write_mod_folder_into_zip(zipf, mod_path, mod_folder, compression)
+            if guard_path:
+                guard_folder = os.path.basename(guard_path)
+                write_mod_folder_into_zip(zipf, guard_path, guard_folder, compression)
+                log.info(f"Added {guard_folder} to {zip_name}")
         return zip_name, True
     except Exception as ex:
         log.error(f"Failed creating mod zip {zip_name}: {ex}")
@@ -5941,6 +6012,41 @@ def detect_renamed_mods(
     remaining_added.sort(key=lambda item: item[0].lower())
     remaining_removed.sort(key=lambda item: item[0].lower())
     return renamed_mods, remaining_added, remaining_removed
+
+
+def absorb_versioned_renames_into_updates(
+    added_mods: List[Tuple[str, str]],
+    removed_mods: List[Tuple[str, str]],
+    updated_existing_mods: List[Tuple[str, str, str]],
+) -> Tuple[List[Tuple[str, str]], List[Tuple[str, str]], List[Tuple[str, str, str]]]:
+    """A category rename that also changed version belongs on the updated list.
+
+    Same mod suffix, different version: the new name is an update from the old
+    version. It is not a new mod and not a removal.
+    """
+    removed_by_suffix: Dict[str, List[Tuple[str, str]]] = {}
+    for old_name, old_ver in removed_mods:
+        key = extract_mod_suffix_for_rename(old_name).lower()
+        removed_by_suffix.setdefault(key, []).append((old_name, old_ver))
+
+    still_added: List[Tuple[str, str]] = []
+    for new_name, new_ver in added_mods:
+        key = extract_mod_suffix_for_rename(new_name).lower()
+        matches = removed_by_suffix.get(key, [])
+        if not matches or key == new_name.lower():
+            still_added.append((new_name, new_ver))
+            continue
+        _old_name, old_ver = matches.pop(0)
+        updated_existing_mods.append((new_name, old_ver, new_ver))
+
+    still_removed: List[Tuple[str, str]] = []
+    for entries in removed_by_suffix.values():
+        still_removed.extend(entries)
+
+    updated_existing_mods.sort(key=lambda item: item[0].lower())
+    still_added.sort(key=lambda item: item[0].lower())
+    still_removed.sort(key=lambda item: item[0].lower())
+    return still_added, still_removed, updated_existing_mods
 
 
 def load_json_file(path: str) -> Dict[str, object]:
@@ -6160,6 +6266,9 @@ def generate_gigglepack_release_artifacts(
             removed_mods.append((mod_name, str(prev_mods.get(mod_name, ""))))
 
     renamed_mods, added_mods, removed_mods = detect_renamed_mods(added_mods, removed_mods)
+    added_mods, removed_mods, updated_existing_mods = absorb_versioned_renames_into_updates(
+        added_mods, removed_mods, updated_existing_mods
+    )
 
     is_baseline_release = not prev_state
     append_latest_mode = bool(append_to_latest_release and not is_baseline_release)
@@ -6542,8 +6651,16 @@ def create_all_zips(dry_run: bool, workers: int, log: Logger) -> List[str]:
     if os.path.isdir(ZIP_OUTPUT):
         existing_zips = [f for f in os.listdir(ZIP_OUTPUT) if f.lower().endswith(".zip")]
 
+    preserved_zips = {
+        LEGACY_FINAL_GIGGLEPACK_ZIP,
+        "00_BackpackPlus_All.zip",
+        "AGF-BackpackPlus-060Slots.zip",
+        "AGF-BackpackPlus-072Slots.zip",
+        "AGF-BackpackPlus-084Slots.zip",
+        "AGF-BackpackPlus-119Slots.zip",
+    }
     for file in existing_zips:
-        if file == LEGACY_FINAL_GIGGLEPACK_ZIP:
+        if file in preserved_zips:
             continue
         path = os.path.join(ZIP_OUTPUT, file)
         if dry_run:
@@ -6714,6 +6831,10 @@ def build_mod_entry(
     mod_type_lines: Optional[Dict[str, str]] = None,
 ) -> str:
     mod_path = os.path.join(PUBLISH_READY, folder_name)
+    if not os.path.isdir(mod_path):
+        final_path = os.path.join(BACKPACK_FINAL_DIR, folder_name)
+        if os.path.isdir(final_path):
+            mod_path = final_path
     modinfo_path = os.path.join(mod_path, "ModInfo.xml")
 
     name, version = parse_modinfo(modinfo_path, folder_name)
@@ -6724,7 +6845,12 @@ def build_mod_entry(
 
     features_block = ""
     base_mod = get_base_mod_name(folder_name)
-    if compat_map is not None:
+    if base_mod == LAWN_TRACTOR_ZIP_BASE:
+        features_block = (
+            "<ul><li><em>Download OCB Lawn Tractor here: "
+            "https://www.nexusmods.com/7daystodie/mods/3312</em></li></ul>\n"
+        )
+    elif compat_map is not None:
         mod_type_id = (compat_map.get(base_mod) or {}).get("MOD_TYPE_ID", "").strip()
         type_line_map = mod_type_lines if mod_type_lines is not None else DEFAULT_MOD_TYPE_LINE_BY_ID
         mod_type_text = type_line_map.get(mod_type_id, "")
@@ -7136,6 +7262,8 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
 
     all_mods = collect_publishready_folders()
     backpackplus_mods = [f for f in all_mods if is_backpack_mod(f)]
+    if not backpackplus_mods and os.path.isdir(BACKPACK_FINAL_DIR):
+        backpackplus_mods = [f for f in scan_mod_folders(BACKPACK_FINAL_DIR) if is_backpack_mod(f)]
     hudplus_mods = [f for f in all_mods if is_hudplus_mod(f)]
     noeac_mods = [f for f in all_mods if is_noeac_mod(f)]
     modders_mods = [f for f in all_mods if is_4modders_mod(f)]
@@ -7274,8 +7402,10 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         )
     )
     md.append("")
-    if noeac_mods:
-        for mod in noeac_mods:
+    lawn_mods = [f for f in all_mods if get_base_mod_name(f) == LAWN_TRACTOR_ZIP_BASE]
+    readme_noeac_mods = list(noeac_mods) + lawn_mods
+    if readme_noeac_mods:
+        for mod in readme_noeac_mods:
             md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
     else:
         md.append("*Updates are in progress.*")
@@ -7502,7 +7632,7 @@ def run_pipeline(args: argparse.Namespace) -> int:
     log = Logger(verbose=args.verbose, dry_run=args.dry_run)
     log.info("Starting workflow automation pipeline")
     log.info(f"Selected mode: {args.mode}")
-    log.info("Scope policy: only AGF-/zzzAGF-prefixed mods are managed in workspace and game folders")
+    log.info("Scope policy: only AGF-/zzzAGF-/zzzzAGF-prefixed mods are managed in workspace and game folders")
     if args.dry_run:
         log.info("Dry-run mode enabled: no file system changes will be written")
 
