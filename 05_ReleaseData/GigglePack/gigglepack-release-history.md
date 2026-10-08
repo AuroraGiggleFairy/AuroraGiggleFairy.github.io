@@ -3,6 +3,7 @@
 ## GigglePack v1.0.0 (October 8, 2026 3:08pm)
 - Mod naming overhaul
 - Delete existing AGF mods and upload with these new mods.
+- A lot of these mods have received 7 Days to Die version 3.3 updates.
 
 ---
 

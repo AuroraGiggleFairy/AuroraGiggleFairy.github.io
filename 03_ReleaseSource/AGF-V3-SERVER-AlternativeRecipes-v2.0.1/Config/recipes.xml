@@ -1,0 +1,33 @@
+<AGFVanillaPlus-AlternativeRecipes>
+
+
+	<!--Build cobblestone blocks directly from clay and rocks. Vanilla Math is used.-->
+		<append xpath="/recipes">
+			<recipe name="cobblestoneShapes:VariantHelper" count="1" craft_time="3">
+				<ingredient name="resourceClayLump" count="10"/>
+				<ingredient name="resourceRockSmall" count="10"/>
+				<!-- ^^^ Takes 1 of each to make 1 cobblestone-->
+				<!-- ^^^ Takes 10 cobblestone to make 1 cobblestone block-->
+			</recipe>
+		</append>
+		
+	<!--First Aid Bandage and First Aid Kit built directly from cloth without making bandages first. Vanilla Math is used.-->
+	<append xpath="/recipes">
+		<recipe name="medicalFirstAidBandage" count="1" tags="learnable">
+			<ingredient name="medicalAloeCream" count="1"/>
+			<ingredient name="resourceCloth" count="10"/>
+			<!-- ^^^ One bandage costs 10 cloth-->
+		</recipe>
+		<recipe name="medicalFirstAidKit" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="medicalBloodBag" count="1"/>
+			<ingredient name="drinkJarBeer" count="1"/>
+			<ingredient name="resourceCloth" count="50"/>
+			<!-- ^^^ Five bandages costs 50 cloth-->
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>
+	</append>
+
+
+</AGFVanillaPlus-AlternativeRecipes>
+
+

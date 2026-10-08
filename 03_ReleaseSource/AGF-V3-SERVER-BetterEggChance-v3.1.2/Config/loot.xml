@@ -1,0 +1,6 @@
+<AGFVanillaPlus-BetterEggChance>
+
+		<!--Increase chance of eggs in birdnests, from 35% eggs to 63% chance eggs-->
+		<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest02']/item[@name='foodEgg']/@loot_prob_template">medHigh</set> <!--Default: medLow-->
+		
+</AGFVanillaPlus-BetterEggChance>

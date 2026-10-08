@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="AGF-Fix4DestroyBiomeBadge" />
+  <DisplayName value="AGF Fix 4 Destroy Biome Badge" />
+  <Version value="2.1.1" />
+  <Description value="Prevents DestroyBiomeBadge from accidentally removing clothing items." />
+  <Author value="AuroraGiggleFairy (AGF)" />
+  <Website value="https://auroragigglefairy.github.io/" />
+  <SkipWithAntiCheat value="true" />
+</xml>

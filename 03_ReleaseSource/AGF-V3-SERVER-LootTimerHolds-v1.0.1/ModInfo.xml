@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-LootTimerHolds"/>
+    <DisplayName value="AGF Loot Timer Holds"/>
+    <Version value="1.0.1"/>
+    <Description value="Looking at or reopening world loot does not restart the respawn timer."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

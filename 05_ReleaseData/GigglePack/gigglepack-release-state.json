@@ -2,105 +2,722 @@
   "gigglepack_version": "1.0.0",
   "previous_gigglepack_version": "0.24.1",
   "is_baseline_release": false,
-  "released_at": "2026-10-08 15:08:24",
+  "released_at": "2026-10-08 16:11:31",
   "mods": {
-    "0AGF-V3-CLIENT-LawnTractorPatchGuard": "1.0.0",
-    "AGF-V3-ADMIN-Fix4DestroyBiomeBadge": "2.1.0",
-    "AGF-V3-ADMIN-Fix4PerkPageReset": "1.0.0",
-    "AGF-V3-BOTH-CosmeticLockIcon": "3.1.2",
-    "AGF-V3-BOTH-GyroFlightModes": "1.0.1",
-    "AGF-V3-BOTH-PartyGroupPlus": "1.2.0",
-    "AGF-V3-BOTH-Toolbelt12Slots": "2.3.0",
-    "AGF-V3-CLIENT-AudioOptionsPlus": "2.1.0",
-    "AGF-V3-CLIENT-AutoRun": "2.2.0",
-    "AGF-V3-CLIENT-ConsoleOpacityMod": "1.0.1",
-    "AGF-V3-CLIENT-EnhancedAGF": "5.0.0",
-    "AGF-V3-CLIENT-HideDLCCosmetics": "1.1.0",
-    "AGF-V3-CLIENT-MapPlus": "1.1.2",
-    "AGF-V3-CLIENT-OpenAllButton": "2.0.1",
-    "AGF-V3-CLIENT-SmeltTimerOption": "1.1.0",
-    "AGF-V3-SERVER-1HUDPlus": "6.6.1",
-    "AGF-V3-SERVER-2BMCounter": "4.0.2",
-    "AGF-V3-SERVER-2PurpleBook": "3.2.0",
-    "AGF-V3-SERVER-2RemoveEnteringPopUp": "2.1.1",
-    "AGF-V3-SERVER-2VisualEntityTracker": "1.1.1",
-    "AGF-V3-SERVER-2Weekday": "3.1.3",
-    "AGF-V3-SERVER-3VisualEntityTrackerAddon": "1.0.1",
-    "AGF-V3-SERVER-AdminModdingSupport": "2.0.0",
-    "AGF-V3-SERVER-AlternativeRecipes": "2.0.0",
-    "AGF-V3-SERVER-AmmoDisassembly": "2.0.1",
-    "AGF-V3-SERVER-AnimalTrackerAlwaysOn": "1.0.0",
-    "AGF-V3-SERVER-ArcheryFeathersChange": "2.0.0",
-    "AGF-V3-SERVER-AutomobilesRespawn": "4.1.1",
-    "AGF-V3-SERVER-BedrollPlus": "2.1.1",
-    "AGF-V3-SERVER-BetterEggChance": "3.1.1",
-    "AGF-V3-SERVER-BreakItGetIt": "2.2.0",
-    "AGF-V3-SERVER-CraftSewingKits": "2.1.1",
-    "AGF-V3-SERVER-CraftStackEngBattCells": "4.0.0",
-    "AGF-V3-SERVER-CraftVitamins": "2.1.2",
-    "AGF-V3-SERVER-DecorationBlock": "3.0.3",
-    "AGF-V3-SERVER-DoorsPlus": "4.0.1",
-    "AGF-V3-SERVER-DrinkableAcid": "3.0.1",
-    "AGF-V3-SERVER-DyesPlus": "4.1.0",
-    "AGF-V3-SERVER-FloraHarvester": "3.0.2",
-    "AGF-V3-SERVER-FuelAutoShutOff": "1.1.0",
-    "AGF-V3-SERVER-FuelBurnPlus": "3.1.2",
-    "AGF-V3-SERVER-GlobalStormTracker": "2.1.2",
-    "AGF-V3-SERVER-HonkOpensYourDoors": "1.0.1",
-    "AGF-V3-SERVER-LargerStorageOption": "1.2.0",
-    "AGF-V3-SERVER-LootTimerHolds": "1.0.0",
-    "AGF-V3-SERVER-MasterTool": "7.1.2",
-    "AGF-V3-SERVER-MaxLevel500": "3.1.1",
-    "AGF-V3-SERVER-MiningPlus": "2.0.1",
-    "AGF-V3-SERVER-Mod988": "3.0.0",
-    "AGF-V3-SERVER-ModSlotsPlus": "4.1.2",
-    "AGF-V3-SERVER-PaintbrushPlus": "3.0.0",
-    "AGF-V3-SERVER-PickupLanternsPlus": "3.1.1",
-    "AGF-V3-SERVER-PlayerResetQuests": "3.1.1",
-    "AGF-V3-SERVER-RebundleBundles": "2.1.2",
-    "AGF-V3-SERVER-RecipeRottingFlesh": "2.0.0",
-    "AGF-V3-SERVER-RestorePowerAnyTime": "2.1.1",
-    "AGF-V3-SERVER-ScrapBatts4Acid": "2.1.1",
-    "AGF-V3-SERVER-ScrapEquipmentFaster": "2.1.1",
-    "AGF-V3-SERVER-ScreamerAlert": "2.3.4",
-    "AGF-V3-SERVER-SimplifiedStacks": "2.1.2",
-    "AGF-V3-SERVER-SmallerInteractionPrompt": "2.0.0",
-    "AGF-V3-SERVER-SmeltingPlus": "3.0.1",
-    "AGF-V3-SERVER-SortingCart": "2.1.0",
-    "AGF-V3-SERVER-StayLongerAnimalCorpse": "3.1.1",
-    "AGF-V3-SERVER-StayLongerPlayerBackpack": "3.1.1",
-    "AGF-V3-SERVER-TacticalRiflePlus": "3.0.0",
-    "AGF-V3-SERVER-TinyBuffsPopUp": "2.0.0",
-    "AGF-V3-SERVER-VehiclePerformance": "2.1.1",
-    "AGF-V3-SERVER-VehicleStoragePlus": "3.1.1",
-    "AGF-V3-SERVER-VehiclesExtraSeating": "2.1.1",
-    "AGF-V3-SERVER-ZombieCorpseLeaveQuicker": "3.1.1",
-    "zzzAGF-V3-CLIENT-LawnTractorV3Fix": "1.0.0",
-    "zzzAGF-V3-SERVER-HelpfulRenames": "3.0.1",
-    "zzzAGF-V3-SERVER-LootStaysOnEmpty": "1.0.4",
-    "zzzzzAGF-V3-COMPAT-0SCore": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-BDubVehicles": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-Companions": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-Dewtas18SlotToolbelt": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-DishongTowerChallenge": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-DoomSurvival": "2.1.0",
-    "zzzzzAGF-V3-COMPAT-GBZ15SlotToolbelt": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-GSVanillaCookBook": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-IZYWeapons": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-OakravenAmmoPress": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-OutbackRoadies": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-POIScourgeLite": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-QuickStack": "1.0.0",
-    "zzzzzAGF-V3-COMPAT-WMM12SlotToolbelt": "1.0.0"
+    "0AGF-V3-CLIENT-LawnTractorPatchGuard": "1.0.1",
+    "AGF-V3-ADMIN-Fix4DestroyBiomeBadge": "2.1.1",
+    "AGF-V3-ADMIN-Fix4PerkPageReset": "1.0.1",
+    "AGF-V3-BOTH-CosmeticLockIcon": "3.1.3",
+    "AGF-V3-BOTH-GyroFlightModes": "1.0.2",
+    "AGF-V3-BOTH-PartyGroupPlus": "1.2.1",
+    "AGF-V3-BOTH-Toolbelt12Slots": "2.3.1",
+    "AGF-V3-CLIENT-AudioOptionsPlus": "2.1.1",
+    "AGF-V3-CLIENT-AutoRun": "2.2.1",
+    "AGF-V3-CLIENT-ConsoleOpacityMod": "1.0.2",
+    "AGF-V3-CLIENT-EnhancedAGF": "5.0.1",
+    "AGF-V3-CLIENT-HideDLCCosmetics": "1.1.1",
+    "AGF-V3-CLIENT-MapPlus": "1.1.3",
+    "AGF-V3-CLIENT-OpenAllButton": "2.0.2",
+    "AGF-V3-CLIENT-SmeltTimerOption": "1.1.1",
+    "AGF-V3-SERVER-1HUDPlus": "6.6.2",
+    "AGF-V3-SERVER-2BMCounter": "4.0.3",
+    "AGF-V3-SERVER-2PurpleBook": "3.2.1",
+    "AGF-V3-SERVER-2RemoveEnteringPopUp": "2.1.2",
+    "AGF-V3-SERVER-2VisualEntityTracker": "1.1.2",
+    "AGF-V3-SERVER-2Weekday": "3.1.4",
+    "AGF-V3-SERVER-3VisualEntityTrackerAddon": "1.0.2",
+    "AGF-V3-SERVER-AdminModdingSupport": "2.0.1",
+    "AGF-V3-SERVER-AlternativeRecipes": "2.0.1",
+    "AGF-V3-SERVER-AmmoDisassembly": "2.0.2",
+    "AGF-V3-SERVER-AnimalTrackerAlwaysOn": "1.0.1",
+    "AGF-V3-SERVER-ArcheryFeathersChange": "2.0.1",
+    "AGF-V3-SERVER-AutomobilesRespawn": "4.1.2",
+    "AGF-V3-SERVER-BedrollPlus": "2.1.2",
+    "AGF-V3-SERVER-BetterEggChance": "3.1.2",
+    "AGF-V3-SERVER-BreakItGetIt": "2.2.1",
+    "AGF-V3-SERVER-CraftSewingKits": "2.1.2",
+    "AGF-V3-SERVER-CraftStackEngBattCells": "4.0.1",
+    "AGF-V3-SERVER-CraftVitamins": "2.1.3",
+    "AGF-V3-SERVER-DecorationBlock": "3.0.4",
+    "AGF-V3-SERVER-DoorsPlus": "4.0.2",
+    "AGF-V3-SERVER-DrinkableAcid": "3.0.2",
+    "AGF-V3-SERVER-DyesPlus": "4.1.1",
+    "AGF-V3-SERVER-FloraHarvester": "3.0.3",
+    "AGF-V3-SERVER-FuelAutoShutOff": "1.1.1",
+    "AGF-V3-SERVER-FuelBurnPlus": "3.1.3",
+    "AGF-V3-SERVER-GlobalStormTracker": "2.1.3",
+    "AGF-V3-SERVER-HonkOpensYourDoors": "1.0.2",
+    "AGF-V3-SERVER-LargerStorageOption": "1.2.1",
+    "AGF-V3-SERVER-LootTimerHolds": "1.0.1",
+    "AGF-V3-SERVER-MasterTool": "7.1.3",
+    "AGF-V3-SERVER-MaxLevel500": "3.1.2",
+    "AGF-V3-SERVER-MiningPlus": "2.0.2",
+    "AGF-V3-SERVER-Mod988": "3.0.1",
+    "AGF-V3-SERVER-ModSlotsPlus": "4.1.3",
+    "AGF-V3-SERVER-PaintbrushPlus": "3.0.1",
+    "AGF-V3-SERVER-PickupLanternsPlus": "3.1.2",
+    "AGF-V3-SERVER-PlayerResetQuests": "3.1.2",
+    "AGF-V3-SERVER-RebundleBundles": "2.1.3",
+    "AGF-V3-SERVER-RecipeRottingFlesh": "2.0.1",
+    "AGF-V3-SERVER-RestorePowerAnyTime": "2.1.2",
+    "AGF-V3-SERVER-ScrapBatts4Acid": "2.1.2",
+    "AGF-V3-SERVER-ScrapEquipmentFaster": "2.1.2",
+    "AGF-V3-SERVER-ScreamerAlert": "2.3.5",
+    "AGF-V3-SERVER-SimplifiedStacks": "2.1.3",
+    "AGF-V3-SERVER-SmallerInteractionPrompt": "2.0.1",
+    "AGF-V3-SERVER-SmeltingPlus": "3.0.2",
+    "AGF-V3-SERVER-SortingCart": "2.1.1",
+    "AGF-V3-SERVER-StayLongerAnimalCorpse": "3.1.2",
+    "AGF-V3-SERVER-StayLongerPlayerBackpack": "3.1.2",
+    "AGF-V3-SERVER-TacticalRiflePlus": "3.0.1",
+    "AGF-V3-SERVER-TinyBuffsPopUp": "2.0.1",
+    "AGF-V3-SERVER-VehiclePerformance": "2.1.2",
+    "AGF-V3-SERVER-VehicleStoragePlus": "3.1.2",
+    "AGF-V3-SERVER-VehiclesExtraSeating": "2.1.2",
+    "AGF-V3-SERVER-ZombieCorpseLeaveQuicker": "3.1.2",
+    "zzzAGF-V3-CLIENT-LawnTractorV3Fix": "1.0.1",
+    "zzzAGF-V3-SERVER-HelpfulRenames": "3.0.2",
+    "zzzAGF-V3-SERVER-LootStaysOnEmpty": "1.0.5",
+    "zzzzzAGF-V3-COMPAT-0SCore": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-BDubVehicles": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-Companions": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-Dewtas18SlotToolbelt": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-DishongTowerChallenge": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-DoomSurvival": "2.1.1",
+    "zzzzzAGF-V3-COMPAT-GBZ15SlotToolbelt": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-GSVanillaCookBook": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-IZYWeapons": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-OakravenAmmoPress": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-OutbackRoadies": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-POIScourgeLite": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-QuickStack": "1.0.1",
+    "zzzzzAGF-V3-COMPAT-WMM12SlotToolbelt": "1.0.1"
   },
-  "updated_mods": [],
+  "updated_mods": [
+    {
+      "mod": "0AGF-V3-CLIENT-LawnTractorPatchGuard",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "AGF-V3-ADMIN-Fix4DestroyBiomeBadge",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "from_display": "2.1.0",
+      "to_display": "2.1.1"
+    },
+    {
+      "mod": "AGF-V3-ADMIN-Fix4PerkPageReset",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "AGF-V3-BOTH-CosmeticLockIcon",
+      "from": "3.1.2",
+      "to": "3.1.3",
+      "from_display": "3.1.2",
+      "to_display": "3.1.3"
+    },
+    {
+      "mod": "AGF-V3-BOTH-GyroFlightModes",
+      "from": "1.0.1",
+      "to": "1.0.2",
+      "from_display": "1.0.1",
+      "to_display": "1.0.2"
+    },
+    {
+      "mod": "AGF-V3-BOTH-PartyGroupPlus",
+      "from": "1.2.0",
+      "to": "1.2.1",
+      "from_display": "1.2.0",
+      "to_display": "1.2.1"
+    },
+    {
+      "mod": "AGF-V3-BOTH-Toolbelt12Slots",
+      "from": "2.3.0",
+      "to": "2.3.1",
+      "from_display": "2.3.0",
+      "to_display": "2.3.1"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-AudioOptionsPlus",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "from_display": "2.1.0",
+      "to_display": "2.1.1"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-AutoRun",
+      "from": "2.2.0",
+      "to": "2.2.1",
+      "from_display": "2.2.0",
+      "to_display": "2.2.1"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-ConsoleOpacityMod",
+      "from": "1.0.1",
+      "to": "1.0.2",
+      "from_display": "1.0.1",
+      "to_display": "1.0.2"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-EnhancedAGF",
+      "from": "5.0.0",
+      "to": "5.0.1",
+      "from_display": "5.0.0",
+      "to_display": "5.0.1"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-HideDLCCosmetics",
+      "from": "1.1.0",
+      "to": "1.1.1",
+      "from_display": "1.1.0",
+      "to_display": "1.1.1"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-MapPlus",
+      "from": "1.1.2",
+      "to": "1.1.3",
+      "from_display": "1.1.2",
+      "to_display": "1.1.3"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-OpenAllButton",
+      "from": "2.0.1",
+      "to": "2.0.2",
+      "from_display": "2.0.1",
+      "to_display": "2.0.2"
+    },
+    {
+      "mod": "AGF-V3-CLIENT-SmeltTimerOption",
+      "from": "1.1.0",
+      "to": "1.1.1",
+      "from_display": "1.1.0",
+      "to_display": "1.1.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-1HUDPlus",
+      "from": "6.6.1",
+      "to": "6.6.2",
+      "from_display": "6.6.1",
+      "to_display": "6.6.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-2BMCounter",
+      "from": "4.0.2",
+      "to": "4.0.3",
+      "from_display": "4.0.2",
+      "to_display": "4.0.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-2PurpleBook",
+      "from": "3.2.0",
+      "to": "3.2.1",
+      "from_display": "3.2.0",
+      "to_display": "3.2.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-2RemoveEnteringPopUp",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-2VisualEntityTracker",
+      "from": "1.1.1",
+      "to": "1.1.2",
+      "from_display": "1.1.1",
+      "to_display": "1.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-2Weekday",
+      "from": "3.1.3",
+      "to": "3.1.4",
+      "from_display": "3.1.3",
+      "to_display": "3.1.4"
+    },
+    {
+      "mod": "AGF-V3-SERVER-3VisualEntityTrackerAddon",
+      "from": "1.0.1",
+      "to": "1.0.2",
+      "from_display": "1.0.1",
+      "to_display": "1.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-AdminModdingSupport",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-AlternativeRecipes",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-AmmoDisassembly",
+      "from": "2.0.1",
+      "to": "2.0.2",
+      "from_display": "2.0.1",
+      "to_display": "2.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-AnimalTrackerAlwaysOn",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-ArcheryFeathersChange",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-AutomobilesRespawn",
+      "from": "4.1.1",
+      "to": "4.1.2",
+      "from_display": "4.1.1",
+      "to_display": "4.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-BedrollPlus",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-BetterEggChance",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-BreakItGetIt",
+      "from": "2.2.0",
+      "to": "2.2.1",
+      "from_display": "2.2.0",
+      "to_display": "2.2.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-CraftSewingKits",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-CraftStackEngBattCells",
+      "from": "4.0.0",
+      "to": "4.0.1",
+      "from_display": "4.0.0",
+      "to_display": "4.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-CraftVitamins",
+      "from": "2.1.2",
+      "to": "2.1.3",
+      "from_display": "2.1.2",
+      "to_display": "2.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-DecorationBlock",
+      "from": "3.0.3",
+      "to": "3.0.4",
+      "from_display": "3.0.3",
+      "to_display": "3.0.4"
+    },
+    {
+      "mod": "AGF-V3-SERVER-DoorsPlus",
+      "from": "4.0.1",
+      "to": "4.0.2",
+      "from_display": "4.0.1",
+      "to_display": "4.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-DrinkableAcid",
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "from_display": "3.0.1",
+      "to_display": "3.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-DyesPlus",
+      "from": "4.1.0",
+      "to": "4.1.1",
+      "from_display": "4.1.0",
+      "to_display": "4.1.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-FloraHarvester",
+      "from": "3.0.2",
+      "to": "3.0.3",
+      "from_display": "3.0.2",
+      "to_display": "3.0.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-FuelAutoShutOff",
+      "from": "1.1.0",
+      "to": "1.1.1",
+      "from_display": "1.1.0",
+      "to_display": "1.1.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-FuelBurnPlus",
+      "from": "3.1.2",
+      "to": "3.1.3",
+      "from_display": "3.1.2",
+      "to_display": "3.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-GlobalStormTracker",
+      "from": "2.1.2",
+      "to": "2.1.3",
+      "from_display": "2.1.2",
+      "to_display": "2.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-HonkOpensYourDoors",
+      "from": "1.0.1",
+      "to": "1.0.2",
+      "from_display": "1.0.1",
+      "to_display": "1.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-LargerStorageOption",
+      "from": "1.2.0",
+      "to": "1.2.1",
+      "from_display": "1.2.0",
+      "to_display": "1.2.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-LootTimerHolds",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-MasterTool",
+      "from": "7.1.2",
+      "to": "7.1.3",
+      "from_display": "7.1.2",
+      "to_display": "7.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-MaxLevel500",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-MiningPlus",
+      "from": "2.0.1",
+      "to": "2.0.2",
+      "from_display": "2.0.1",
+      "to_display": "2.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-Mod988",
+      "from": "3.0.0",
+      "to": "3.0.1",
+      "from_display": "3.0.0",
+      "to_display": "3.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-ModSlotsPlus",
+      "from": "4.1.2",
+      "to": "4.1.3",
+      "from_display": "4.1.2",
+      "to_display": "4.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-PaintbrushPlus",
+      "from": "3.0.0",
+      "to": "3.0.1",
+      "from_display": "3.0.0",
+      "to_display": "3.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-PickupLanternsPlus",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-PlayerResetQuests",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-RebundleBundles",
+      "from": "2.1.2",
+      "to": "2.1.3",
+      "from_display": "2.1.2",
+      "to_display": "2.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-RecipeRottingFlesh",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-RestorePowerAnyTime",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-ScrapBatts4Acid",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-ScrapEquipmentFaster",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-ScreamerAlert",
+      "from": "2.3.4",
+      "to": "2.3.5",
+      "from_display": "2.3.4",
+      "to_display": "2.3.5"
+    },
+    {
+      "mod": "AGF-V3-SERVER-SimplifiedStacks",
+      "from": "2.1.2",
+      "to": "2.1.3",
+      "from_display": "2.1.2",
+      "to_display": "2.1.3"
+    },
+    {
+      "mod": "AGF-V3-SERVER-SmallerInteractionPrompt",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-SmeltingPlus",
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "from_display": "3.0.1",
+      "to_display": "3.0.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-SortingCart",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "from_display": "2.1.0",
+      "to_display": "2.1.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-StayLongerAnimalCorpse",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-StayLongerPlayerBackpack",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-TacticalRiflePlus",
+      "from": "3.0.0",
+      "to": "3.0.1",
+      "from_display": "3.0.0",
+      "to_display": "3.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-TinyBuffsPopUp",
+      "from": "2.0.0",
+      "to": "2.0.1",
+      "from_display": "2.0.0",
+      "to_display": "2.0.1"
+    },
+    {
+      "mod": "AGF-V3-SERVER-VehiclePerformance",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-VehiclesExtraSeating",
+      "from": "2.1.1",
+      "to": "2.1.2",
+      "from_display": "2.1.1",
+      "to_display": "2.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-VehicleStoragePlus",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "AGF-V3-SERVER-ZombieCorpseLeaveQuicker",
+      "from": "3.1.1",
+      "to": "3.1.2",
+      "from_display": "3.1.1",
+      "to_display": "3.1.2"
+    },
+    {
+      "mod": "zzzAGF-V3-CLIENT-LawnTractorV3Fix",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzAGF-V3-SERVER-HelpfulRenames",
+      "from": "3.0.1",
+      "to": "3.0.2",
+      "from_display": "3.0.1",
+      "to_display": "3.0.2"
+    },
+    {
+      "mod": "zzzAGF-V3-SERVER-LootStaysOnEmpty",
+      "from": "1.0.4",
+      "to": "1.0.5",
+      "from_display": "1.0.4",
+      "to_display": "1.0.5"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-0SCore",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-BDubVehicles",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-Companions",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-Dewtas18SlotToolbelt",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-DishongTowerChallenge",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-DoomSurvival",
+      "from": "2.1.0",
+      "to": "2.1.1",
+      "from_display": "2.1.0",
+      "to_display": "2.1.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-GBZ15SlotToolbelt",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-GSVanillaCookBook",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-IZYWeapons",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-OakravenAmmoPress",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-OutbackRoadies",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-POIScourgeLite",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-QuickStack",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    },
+    {
+      "mod": "zzzzzAGF-V3-COMPAT-WMM12SlotToolbelt",
+      "from": "1.0.0",
+      "to": "1.0.1",
+      "from_display": "1.0.0",
+      "to_display": "1.0.1"
+    }
+  ],
   "new_mods": [],
   "renamed_mods": [],
   "removed_mods": [],
   "versioned_zip": "AGF-GigglePack-v1.0.0.zip",
   "change_counts": {
-    "new_mods": 1,
-    "updated_existing_mods": 0,
+    "new_mods": 0,
+    "updated_existing_mods": 88,
     "renamed_mods": 0,
     "removed_mods": 0
   }

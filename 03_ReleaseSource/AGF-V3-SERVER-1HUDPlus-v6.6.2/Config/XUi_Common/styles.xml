@@ -1,0 +1,97 @@
+<AGF-HUDPlus>
+
+
+<!--This is to make the "lock" icone in the header of your inventory to blink RED while you are in locking/unlocking mode-->
+		<append xpath="/styles/global">
+			<style_entry name="agfselectedColor" value="255,0,0" />
+			<style_entry name="agfFeatHeaderBg" value="95,89,128"/>
+			<style_entry name="agfFeatPageBg" value="95,89,128"/>
+			<style_entry name="agfFeatBorder" value="0,0,0"/>
+			<style_entry name="agfFeatTitle" value="141,181,128"/>
+			<style_entry name="agfFeatMotto" value="221,205,250"/>
+			<style_entry name="agfFeatTabBg" value="32,32,32"/>
+			<style_entry name="agfFeatTabBorder" value="70,70,70"/>
+			<style_entry name="agfFeatTabSelected" value="74,33,150"/>
+			<style_entry name="agfFeatPageTitle" value="141,181,128"/>
+			<style_entry name="agfFeatPageBody" value="221,205,250"/>
+			<style_entry name="agfFeatHeaderBgHV" value="20,20,20"/>
+			<style_entry name="agfFeatPageBgHV" value="26,26,26"/>
+			<style_entry name="agfFeatBoxBgHV" value="36,36,36"/>
+			<style_entry name="agfFeatBorderHV" value="102,102,102"/>
+			<style_entry name="agfFeatTitleHV" value="210,178,108"/>
+			<style_entry name="agfFeatMottoHV" value="176,176,176"/>
+			<style_entry name="agfFeatTabBgHV" value="96,96,96"/>
+			<style_entry name="agfFeatTabHoverHV" value="118,118,118"/>
+			<style_entry name="agfFeatTabBorderHV" value="0,0,0"/>
+			<style_entry name="agfFeatTabSelectedHV" value="74,33,150"/>
+			<style_entry name="agfFeatRuleHV" value="168,168,168"/>
+			<style_entry name="agfFeatPageTitleHV" value="210,178,108"/>
+			<style_entry name="agfFeatPageBodyHV" value="220,220,220"/>
+			<style_entry name="agfFeatTextHighlight" value="141,181,128"/>
+			<style_entry name="agfFeatTextBolding" value="221,205,250"/>
+			<style_entry name="agfFeatTextHighlightHV" value="210,178,108"/>
+			<style_entry name="agfFeatTextBoldingHV" value="210,178,108"/>
+		</append>
+
+		<append xpath="/styles">
+
+			<style type="button" name="agfLock">
+				<style_entry name="atlas" value="UIAtlas"/>
+				<style_entry name="sprite" value="[default_sprite]"/>
+				<style_entry name="defaultcolor" value="[iconColor]"/>
+				<style_entry name="hovercolor" value="[hoverColor]" />
+				<style_entry name="selectedcolor" value="[agfselectedColor]" />
+				<style_entry name="hoverscale" value="1.25" />			
+			</style>
+		</append>
+
+
+
+
+
+
+<!--MAP IMPROVEMENTS
+	Feature: 	Map information moved to its own section next to the map with labels.
+	
+		Why: 	Many stats and buttons are crammed together and most don't realize they exist.
+				Some of the map stats cover up the map.
+
+	Default: 	Subheader of the map is crammed with data and buttons that are hard to identify.
+				Map stats are covering the bottom left corner of the map view.
+	
+	Delete?: 	Safe to remove this section on existing games.
+				To remove, delete the sections under windows and styles. Localization can be ignored.
+		
+	XML's: 		windows, styles, Localization
+
+	Code:		(Localization.txt) Created tooltip_key descriptions of stats not included in default localization.
+				(styles.xml) Created an icon style that defaults to red for remove quick waypoint button.
+				(windows.xml) Removed the map stats data that is shown ON the bottom left of the map.
+				(windows.xml) Removed the subheader that is above the map and below the main header.
+				(windows.xml) Created the new panel next to the map of the stats and buttons.
+				(windows.xml) Adjusted Map header width to include the new panel.
+				(windows.xml) Adjusted position of debug map overlay buttons to account for new header width.
+				(windows.xml) Adjusted map view positioning to go where subheader used to be.
+-->
+
+	<!--Created icon style that defaults to red for remove quick waypoint button.-->
+		<append xpath="/styles">
+			<style name="icon32pxRed" type="button">
+				<style_entry name="defaultcolor" value="[red]"/>
+				<style_entry name="width" value="32"/>
+				<style_entry name="height" value="32"/>
+				<style_entry name="foregroundlayer" value="true" />
+			</style>
+			<style name="icon32pxRed" type="sprite">
+				<style_entry name="color" value="[red]"/>
+				<style_entry name="width" value="32"/>
+				<style_entry name="height" value="32"/>
+				<style_entry name="foregroundlayer" value="true" />
+			</style>
+		</append>
+
+
+
+
+
+</AGF-HUDPlus>

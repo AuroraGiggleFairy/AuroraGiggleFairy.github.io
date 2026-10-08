@@ -1,0 +1,4 @@
+<AGF-HideDLCCosmetics>
+	<setattribute xpath="/templates/options_combo_custom" name="width">1150</setattribute>
+	<setattribute xpath="/templates/options_combo_custom/options_combo" name="width">${width}</setattribute>
+</AGF-HideDLCCosmetics>

@@ -1,0 +1,46 @@
+<AGF-StorageLaptop>
+	<append xpath="/blocks">
+		<block name="cntStorageLaptop">
+			<property name="CreativeMode" value="Player" />
+			<property name="Class" value="StorageLaptop.BlockStorageLaptop, StorageLaptop" />
+			<property name="RequiredPower" value="5" />
+			<property name="DescriptionKey" value="cntStorageLaptopDesc" />
+			<property name="DisplayType" value="blockElectrical" />
+			<property name="Material" value="Mmetal_weak" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="Model" value="@:Entities/Commercial/laptopOpenPrefab.prefab" />
+			<property name="ModelOffset" value="0,0,0" />
+			<property name="CustomIcon" value="decoLaptop" />
+			<property name="GndAlign" value="1" />
+			<property name="Place" value="TowardsPlacer" />
+			<property name="OnlySimpleRotations" value="true" />
+			<property name="ImposterDontBlock" value="true" />
+			<property name="WaterFlow" value="permitted" />
+			<property name="Path" value="solid" />
+			<property name="HandleFace" value="South" />
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+			<property name="StabilitySupport" value="false" />
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="Stacknumber" value="10" />
+			<property name="EconomicValue" value="400" />
+			<property name="MaxDamage" value="200" />
+			<property name="TakeDelay" value="5" />
+			<property class="RepairItems">
+				<property name="resourceElectricParts" value="2" />
+				<property name="resourceScrapIron" value="4" />
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble" />
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest" />
+			<drop event="Harvest" name="resourceScrapIron" count="2,5" tag="allHarvest,perkJunkMiner" />
+			<drop event="Destroy" count="0" />
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1" />
+			<property name="SortOrder1" value="B155" />
+			<property name="SortOrder2" value="0099" />
+			<property name="Group" value="Science,TCScience" />
+			<property name="Tags" value="electricianSkill" />
+			<property name="FilterTags" value="MC_playerBlocks,SC_electrical" />
+			<property name="SoundPickup" value="iron_misc_small_grab" />
+			<property name="SoundPlace" value="iron_misc_small_place" />
+		</block>
+	</append>
+</AGF-StorageLaptop>
