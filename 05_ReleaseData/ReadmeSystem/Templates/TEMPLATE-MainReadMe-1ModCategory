@@ -5,8 +5,8 @@
 
   PLACEHOLDERS:
     {{CATEGORY_TITLE}}
-        The section heading text, including the letter prefix.
-        Example: "B. HUD PLUS MODS"
+        The section heading. The wording comes from a TITLE key in TEMPLATE-CategoryDescriptions.md.
+        Example: "SERVER"
 
     {{CATEGORY_DOWNLOAD_LINE}}
         Markdown link for the download-all .zip for this category.
@@ -27,7 +27,7 @@
 
     <br>
 
-    ## **B. HUD PLUS MODS**
+    ## **SERVER**
 
     *[(Back to Top)](#agf-7-days-to-die-mods)*
 

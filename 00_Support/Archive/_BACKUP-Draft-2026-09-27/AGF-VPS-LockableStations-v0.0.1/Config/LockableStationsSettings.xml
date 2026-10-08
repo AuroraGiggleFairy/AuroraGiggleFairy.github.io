@@ -1,0 +1,3 @@
+<AGF-LockableStations>
+	<property name="DefaultLockedOnPlace" value="true"/>
+</AGF-LockableStations>

@@ -1,0 +1,40 @@
+<AGF-DoomSurvival>
+	<conditional>
+		<if cond="mod_loaded('DoomMod_Standalone') or mod_loaded('DoomClassicMaps')">
+			<!-- Dan's HUD removes the stamina bar Auto Run normally uses. Place the icons only when both mods are loaded. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-AutoRun') and mod_loaded('FranticDansCleanerHUD1080')">
+					<append xpath="/windows/window[@name='windowToolbelt']/rect/rect[@stat_type='Health']">
+						<sprite depth="12" visible="{autorunactive}" name="autorun" atlas="{uiatlas}" sprite="ui_game_symbol_drive" size="36,36" pos="-22,-29" pivot="center" foregroundlayer="true"/>
+					</append>
+					<append xpath="/windows/window[@name='windowToolbelt']/rect/rect[@controller='DoomArmour.DoomArmourBar, DoomArmour']">
+						<sprite depth="12" name="sprint" atlas="{uiatlas}" sprite="server_z_always_run" size="36,36" pos="-22,-29" pivot="center" foregroundlayer="true" visible="false" controller="AGF.Compat.DoomSurvival.DoomHudMoveIcon, AGF-DoomSurvival"/>
+					</append>
+					<append xpath="/windows/window[@name='HUDRightStatBars']/rect[@pos='-177,106']/rect[@stat_type='VehicleHealth']">
+						<rect name="flightAssistStatus" pos="-108,-10" width="100" height="26" disableautobackground="true" visible="{flaVehicleFlightAssistVisible}">
+							<sprite depth="2" name="flightAssistBack" color="0,0,0,150" type="sliced"/>
+							<sprite depth="3" name="flightAssistFrameOuter" color="0,0,0,245" type="sliced" fillcenter="false"/>
+							<sprite depth="4" name="flightAssistFrameInner" pos="1,-1" width="98" height="24" color="120,132,142,220" type="sliced" fillcenter="false"/>
+							<sprite depth="5" name="flightAssistOffIcon" sprite="ui_game_symbol_gyrocopter" size="20,20" pos="20,-13" pivot="center" color="204,228,246,226" foregroundlayer="true" visible="{flaVehicleFlightAssistOffVisible}" tooltip="{flaVehicleFlightAssistOffIconTooltip}"/>
+							<sprite depth="5" name="flightAssistHoverIcon" sprite="ui_game_symbol_drone" size="20,20" pos="20,-13" pivot="center" color="204,228,246,226" foregroundlayer="true" visible="{flaVehicleFlightAssistHoverVisible}" tooltip_key="xuiFlightAssist_Hover_Icon_Tooltip"/>
+							<sprite depth="6" name="flightAssistYLockAxisDown" sprite="ui_game_symbol_drop" size="11,11" pos="17,-15" pivot="center" color="[white]" foregroundlayer="true" visible="{flaVehicleFlightAssistYLockVisible}" tooltip_key="xuiFlightAssist_YLock_Icon_Tooltip"/>
+							<sprite depth="6" name="flightAssistYLockAxisUp" sprite="ui_game_symbol_drop" size="11,11" pos="17,-11" pivot="center" flip="Vertically" color="[white]" foregroundlayer="true" visible="{flaVehicleFlightAssistYLockVisible}" tooltip_key="xuiFlightAssist_YLock_Icon_Tooltip"/>
+							<sprite depth="7" name="flightAssistYLockLock" sprite="ui_game_symbol_lock" size="12,12" pos="25,-13" pivot="center" color="[white]" foregroundlayer="true" visible="{flaVehicleFlightAssistYLockVisible}" tooltip_key="xuiFlightAssist_YLock_Icon_Tooltip"/>
+							<label depth="5" name="flightAssistModeText" pos="65,-13" width="64" height="16" justify="center" pivot="center" font_size="16" color="[white]" text="{flaVehicleFlightAssistModeText}" tooltip="{flaVehicleFlightAssistModeTooltip}"/>
+						</rect>
+					</append>
+				</if>
+			</conditional>
+
+			<!-- Dan's HUD removes the day/time row under the compass and uses the 520-wide bar. Center the blood moon line on that bar, then drop the target name so it clears the line. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-2BMCounter') and mod_loaded('FranticDansCleanerHUD1080')">
+					<set xpath="/windows/window[@name='windowCompass']/rect[@name='counterBM']/@pos">70,-53</set>
+					<set xpath="/windows/window[@name='windowCompass']/rect[@name='counterBM']/label/@pos">0,-4</set>
+					<set xpath="/windows/window[@name='windowTargetBar']/rect[@pos='-200,-85']/@pos">-200,-100</set>
+					<set xpath="/windows/window[@name='windowTargetBar']/rect[@pos='-267,-85']/@pos">-267,-100</set>
+				</if>
+			</conditional>
+		</if>
+	</conditional>
+</AGF-DoomSurvival>

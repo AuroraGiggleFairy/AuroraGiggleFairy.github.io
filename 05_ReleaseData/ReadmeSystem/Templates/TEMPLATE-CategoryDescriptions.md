@@ -1,9 +1,38 @@
 # Category Descriptions Template
 
-# Fill in a brief (1-2 sentence) or multi-line description for each category below. Use Markdown formatting as needed.
-# These will appear under the download link for each category in the README.md.
+# A TITLE key is the section heading. The key without TITLE is the text under that heading.
+# Section order is the Giggle Pack header, then SERVER, CLIENT, COMPAT, ADMIN, then the 2.6 pack.
+# CLIENT is the showcase section for both CLIENT and BOTH mods.
+# The shelf keys at the bottom are no longer used for the mod list.
 
 [category_descriptions]
+
+[SERVER TITLE]
+SERVER
+
+[SERVER]
+Below are all my server side mods: Server install works for all joining players.
+
+[CLIENT TITLE]
+CLIENT
+
+[CLIENT]
+Below are all my client side mods: Player's game must have ths installed to work. Some require to also be installed on the server.
+
+[COMPAT TITLE]
+Compatibility
+
+[COMPAT]
+The mods below are compatability patches to make AGF mods work well with other mods.
+
+[ADMIN TITLE]
+ADMIN
+
+[ADMIN]
+For server admins and overhaul creators.
+
+[GIGGLE PACK TITLE]
+Giggle Pack
 
 [GIGGLE PACK]
 All AGF mods in one convenient download.
@@ -13,6 +42,12 @@ New Pack has started for 7d2d Version 3.0!
 Pre-arranged for immediate use as Server-Side (EAC-Friendly).
 
 Non-EAC mods are inside optional folders within the pack.
+
+
+
+
+
+
 
 [HUDPLUS]
 Quality-of-life HUD enhancements and visual tweaks.
@@ -45,6 +80,9 @@ Read each description before installing.
 
 [OTHER]
 Additional requested HUD options and tweaks.
+
+[AGF 7d2d v2.6 GigglePack FINAL TITLE]
+7d2d v2.6 Giggle Pack
 
 [AGF 7d2d v2.6 GigglePack FINAL]
 Everything AGF made for 7d2d 2.6 is here.

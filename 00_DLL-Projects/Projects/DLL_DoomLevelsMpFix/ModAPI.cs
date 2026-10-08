@@ -77,6 +77,7 @@ namespace DoomLevelsMpFix
 		{
 			try
 			{
+				DummyMagazine.FillPlayer(PartyMembers.Find(GameManager.Instance?.World, data.EntityId));
 				ConnectionManager net = SingletonMonoBehaviour<ConnectionManager>.Instance;
 				if (net == null || net.IsServer || !net.IsClient)
 				{

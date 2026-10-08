@@ -64,14 +64,28 @@ def find_mod_source(cfg: dict) -> Path:
             raise SystemExit(f"MOD_SOURCE is not a folder: {candidate}")
         return candidate
 
+    beside = [
+        p for p in ROOT.iterdir()
+        if p.is_dir() and (p / "ModSync.dll").is_file()
+    ]
+    if beside:
+        beside.sort(key=lambda p: p.name, reverse=True)
+        return beside[0]
+
     draft = REPO_ROOT / "01_Draft"
-    matches = sorted(
-        (p for p in draft.glob("AGF-NoEAC-ModSync*") if p.is_dir()),
-        reverse=True,
-    )
+    matches = []
+    if draft.is_dir():
+        matches = sorted(
+            (
+                p for p in draft.iterdir()
+                if p.is_dir() and "ModSync" in p.name and (p / "ModSync.dll").is_file()
+            ),
+            key=lambda p: p.name,
+            reverse=True,
+        )
     if not matches:
         raise SystemExit(
-            "Could not find the ModSync mod in 01_Draft. "
+            "Could not find the ModSync mod. "
             "Build DLL_NoEAC-ModSync, or set MOD_SOURCE in ADMIN-CONFIG.txt."
         )
     return matches[0]
@@ -222,6 +236,92 @@ exit /b %EXIT_CODE%
     return header + "\n".join(lines) + "\n\n" + MARKER + "\n" + installer
 
 
+def build_update_bat(mod_dir: Path, payload: str) -> str:
+    installer = (ENGINE / "UPDATE-ModSync.ps1").read_text(encoding="utf-8")
+    installer = installer.replace("\r\n", "\n").replace("\r", "\n")
+
+    header = f"""@echo off
+setlocal
+cd /d "%~dp0"
+title UpdateModSync
+
+set "MODSYNC_MOD_FOLDER={mod_dir.name}"
+set "MODSYNC_BAT_PATH=%~f0"
+set "MODSYNC_PS=%TEMP%\\UpdateModSync-%RANDOM%.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$t=[IO.File]::ReadAllText($env:MODSYNC_BAT_PATH); $m='{MARKER}'; $i=$t.LastIndexOf($m); if($i -lt 0){{ exit 1 }}; $enc=New-Object System.Text.UTF8Encoding $false; [IO.File]::WriteAllText($env:MODSYNC_PS, $t.Substring($i+$m.Length), $enc)"
+if not errorlevel 1 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%MODSYNC_PS%"
+set "EXIT_CODE=%ERRORLEVEL%"
+del "%MODSYNC_PS%" >nul 2>&1
+echo.
+pause
+exit /b %EXIT_CODE%
+
+"""
+
+    lines = [
+        B64_PREFIX + payload[i : i + B64_WIDTH]
+        for i in range(0, len(payload), B64_WIDTH)
+    ]
+    return header + "\n".join(lines) + "\n\n" + MARKER + "\n" + installer
+
+
+def build_manda_bat(opt: dict, mod_dir: Path, payload: str) -> str:
+    installer = (ENGINE / "UPDATE-Manda.ps1").read_text(encoding="utf-8")
+    installer = installer.replace("\r\n", "\n").replace("\r", "\n")
+
+    header = f"""@echo off
+setlocal
+cd /d "%~dp0"
+title Update Manda
+
+set "MODSYNC_SERVER_NAME={opt["server_name"]}"
+set "MODSYNC_COPY_FOLDER={opt["copy_folder"]}"
+set "MODSYNC_MOD_FOLDER={mod_dir.name}"
+set "MODSYNC_BAT_PATH=%~f0"
+set "MODSYNC_PS=%TEMP%\\UpdateManda-%RANDOM%.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$t=[IO.File]::ReadAllText($env:MODSYNC_BAT_PATH); $m='{MARKER}'; $i=$t.LastIndexOf($m); if($i -lt 0){{ exit 1 }}; $enc=New-Object System.Text.UTF8Encoding $false; [IO.File]::WriteAllText($env:MODSYNC_PS, $t.Substring($i+$m.Length), $enc)"
+if not errorlevel 1 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%MODSYNC_PS%"
+set "EXIT_CODE=%ERRORLEVEL%"
+del "%MODSYNC_PS%" >nul 2>&1
+echo.
+pause
+exit /b %EXIT_CODE%
+
+"""
+
+    lines = [
+        B64_PREFIX + payload[i : i + B64_WIDTH]
+        for i in range(0, len(payload), B64_WIDTH)
+    ]
+    return header + "\n".join(lines) + "\n\n" + MARKER + "\n" + installer
+
+
+def main_manda() -> None:
+    cfg = read_config(CONFIG_PATH)
+    opt = check_config(cfg)
+    mod_dir = find_mod_source(cfg)
+    payload = pack_mod(mod_dir)
+    text = build_manda_bat(opt, mod_dir, payload)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = OUT_DIR / "UpdateManda.bat"
+    out_path.write_bytes(text.replace("\n", "\r\n").encode("ascii", "strict"))
+    size_kb = out_path.stat().st_size / 1024.0
+    print(f"  Wrote {out_path}  ({size_kb:.0f} KB)")
+    print("  Send that one file to players. Nothing else is needed.")
+
+
+def main_update() -> None:
+    mod_dir = find_mod_source({})
+    payload = pack_mod(mod_dir)
+    text = build_update_bat(mod_dir, payload)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = OUT_DIR / "UpdateModSync.bat"
+    out_path.write_bytes(text.replace("\n", "\r\n").encode("ascii", "strict"))
+    size_kb = out_path.stat().st_size / 1024.0
+    print(f"  Wrote {out_path}  ({size_kb:.0f} KB)")
+    print("  Send that one file to players. Nothing else is needed.")
+
+
 def main() -> None:
     cfg = read_config(CONFIG_PATH)
     opt = check_config(cfg)
@@ -241,7 +341,12 @@ def main() -> None:
 
 if __name__ == "__main__":
     try:
-        main()
+        if "--manda" in sys.argv:
+            main_manda()
+        elif "--update" in sys.argv:
+            main_update()
+        else:
+            main()
     except SystemExit as ex:
         if ex.code not in (0, None):
             print(f"\n  {ex.code}\n", file=sys.stderr)

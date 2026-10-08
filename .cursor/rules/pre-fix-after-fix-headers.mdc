@@ -1,29 +1,49 @@
 ---
-description: Separate what was happening, a proposed fix, and the result after that fix
+description: How to write decisions, and the issue-fix table while exploring or after a change
 alwaysApply: true
 ---
 
-# Pre-fix and after-fix
+# Issue and fix
 
-Use this set when describing a potential fix: what was going wrong, what the change would be, and what to expect after. Do not use the full set on later replies once that discussion is over. A finished change gets **FIX APPLIED**. Bold each header. Put the description under it.
+Lead with the decision. Add only what changes the next choice. Yes or no stays yes or no. Leave out how the code works unless they ask. When something cannot be done, stop.
 
-**PRE-FIX (What was happening)**
-The behavior before this change. Past tense. This is the problem being discussed.
+A simple request that is already done, and is not a fix, uses one row. The label is **CONFIRM**. The cell says what has been done. Do not put that request in the four-row table.
 
-**POTENTIAL-FIX** or **THE-FIX**
-Always include this section between PRE-FIX and AFTER-FIX. Use **POTENTIAL-FIX** when the change is not in the file yet. Use **THE-FIX** when it is already applied. Say what the change is and where it lives. Do not skip this section on an applied fix.
+```html
+<td><strong>CONFIRM</strong></td>
+```
 
-**AFTER-FIX (What is expected after)**
-What they should see once that change is loaded and they are running it.
+A fix uses the four-row table. One command does not make it a confirm. Use the same four rows while exploring and after the change is in the mod. Do not use this table, and do not use an all-caps bold first column, on a reply that is not a fix.
 
-**FIX APPLIED:** Yes or No. Always the last section. Yes means the change is in the file. Name the file and its folder. Copying it to a server is not what makes this Yes or No.
+While exploring, **ISSUE** is one summarized accurate statement, such as the craft-count hook is the 3.3 method, so pre-3.3 fails. Not a file-by-file account. **FIX** starts with "Proposed." Use "correct" when that version needs the method that matches it. "Own" means a second method kept beside the other one. **RESULT** is what that suggestion would give. **APPLIED** is No. They use the **FIX** row to offer a cleaner change.
 
-Doom dedicated-server mod testing only: when **FIX APPLIED:** Yes and they still have to copy that file onto the server, the last line inside this section is **Ready to copy to server,** then the path. Do not use that line for other projects. Do not turn a missing server copy into No.
+When the change is in the mod, **FIX** states what was done. Do not start that row with "Proposed." **RESULT** is what that change gives. **APPLIED** is Yes.
+
+One HTML table per issue. The first column is the label, all caps and bold, top-left aligned. Those words are not column headers. Leave out how the code does it. In a cell, ordered steps are a numbered list. A simple list is bullets. Columns do not need to be the same width.
+
+When more than one issue is in the reply, each issue is its own table. A title above that table names which issue it is. Leave a gap between tables. Do not stack several issues in one table.
+
+Do not center the first column. Do not set its width. Do not retry `valign`, `vertical-align`, `<center>`, Custom UI Style, or another reload for this.
+
+```html
+<td><strong>ISSUE</strong></td>
+```
+
+Each four-row table has its own **ISSUE**, **FIX**, **RESULT**, and **APPLIED** rows. The reply that applies a fix shows that table. Leave an earlier table out of a later reply once the user has moved on.
+
+Yes means the change is in the mod. If the mod folder in scope is unclear, ask. Default scope is this workspace. When they say Doom, scope is the Doom areas. Copying a file to a server is not what makes Applied Yes or No.
+
+Doom dedicated-server mod testing only: when Applied is Yes and they still have to copy that file onto the server, end the **APPLIED** cell with "Ready to copy:" and the path. Do not use that line for other projects. Do not turn a missing server copy into No.
 
 ## Do not
 
-- Use these headers on an ordinary reply that is not walking through a potential fix.
-- Describe a proposal as if it is already in the file.
-- Put **FIX APPLIED** anywhere except last.
-- Put **Ready to copy to server** outside the **FIX APPLIED** section, or use it outside Doom dedicated-server mod testing.
+- Collapse a fix into **CONFIRM** because it was one command.
+- Use the four-row table for a simple request that is already done.
+- Use this table on an ordinary reply that is not walking through a fix.
+- Put **ISSUE**, **FIX**, **RESULT**, or **APPLIED** in the header row.
+- Stack more than one issue inside a single table.
+- Describe a proposal as if it is already in the mod.
+- Name DLL project source files in **FIX** or **APPLIED**.
+- Add a **MOD FILES** row or a **NEXT** row.
+- Use "Ready to copy" outside Doom dedicated-server mod testing.
 - Call it No because the dedicated server or Doom Test does not have the file yet.

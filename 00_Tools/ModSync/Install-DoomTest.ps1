@@ -10,7 +10,7 @@ $Ip = '63.143.56.130'
 $Port = 41341
 
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
-$HelperSource = Join-Path $RepoRoot '01_Draft\AGF-NoEAC-ModSync-v0.0.1'
+$HelperSource = Join-Path $RepoRoot '01_Draft\AGF-NoEAC-ModSync-v0.1.3'
 $LogFile = Join-Path $env:TEMP 'ModSync-Setup.log'
 $RememberFile = Join-Path $env:LOCALAPPDATA ('AGF-ModSync\' + ($ServerName -replace '[^A-Za-z0-9]', '') + '.txt')
 
@@ -77,7 +77,7 @@ function Get-OtherInstalls {
 
 function Install-Helper {
     param([string]$GameDir)
-    $dest = Join-Path $GameDir 'Mods\AGF-NoEAC-ModSync-v0.0.1'
+    $dest = Join-Path $GameDir 'Mods\AGF-NoEAC-ModSync-v0.1.2'
     if (Test-Path -LiteralPath $dest) { Remove-Item -LiteralPath $dest -Recurse -Force }
     New-Item -ItemType Directory -Path (Split-Path -Parent $dest) -Force | Out-Null
     Copy-Quiet $HelperSource $dest
@@ -87,8 +87,8 @@ function Install-Helper {
     if (Test-Path -LiteralPath $joinFile) { Remove-Item -LiteralPath $joinFile -Force }
 }
 
-# Only a folder made for one server may have mods removed to match it. Without this
-# marker ModSync will add and update mods but never delete anything.
+# The game does not read this file.
+# Setup writes it so a later setup run does not ask again before using this folder.
 function Set-ManagedMarker {
     param([string]$GameDir, [bool]$Managed)
     $marker = Join-Path $GameDir 'ModSync-Managed.txt'

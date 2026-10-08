@@ -1280,20 +1280,19 @@ public class VPMower : VehiclePart
 						continue;
 					}
 					BlockValue val4 = BlockValue.Air;
+					// Vanilla hidden mushrooms already name their sprout as DowngradeBlock.
+					// Place that sprout. Do not ask the basket for it.
 					bool flag3 = BlockValue.Air.type != block.Block.DowngradeBlock.type;
-					if (DoReseed)
+					if (flag3)
 					{
-						if (flag3)
+						val4 = block.Block.DowngradeBlock;
+					}
+					else if (DoReseed)
+					{
+						string cropReplacement = GetCropReplacement(block.Block);
+						if (cropReplacement != null)
 						{
-							val4 = block.Block.DowngradeBlock;
-						}
-						else
-						{
-							string cropReplacement = GetCropReplacement(block.Block);
-							if (cropReplacement != null)
-							{
-								val4 = Block.GetBlockValue(cropReplacement, false);
-							}
+							val4 = Block.GetBlockValue(cropReplacement, false);
 						}
 						if (val4.type != BlockValue.Air.type)
 						{
@@ -1307,13 +1306,16 @@ public class VPMower : VehiclePart
 					if (flag)
 					{
 						flag2 |= HarvestBlockToBag(block.Block, ((EntityAlive)base.vehicle.entity).bag, gameRandom);
-						if (DecrementBagItem(((EntityAlive)base.vehicle.entity).bag, val4))
+						if (!flag3)
 						{
-							flag2 = true;
-						}
-						else
-						{
-							val4 = BlockValue.Air;
+							if (DecrementBagItem(((EntityAlive)base.vehicle.entity).bag, val4))
+							{
+								flag2 = true;
+							}
+							else
+							{
+								val4 = BlockValue.Air;
+							}
 						}
 					}
 					list.Add(new BlockChangeInfo(new BlockValueRef(blockPosition + zero), val4));
@@ -1381,6 +1383,10 @@ public class VPMower : VehiclePart
 		{
 			return false;
 		}
+		if (IsPlayerPlant(block) || IsHiddenSprout(block))
+		{
+			return false;
+		}
 		string value = default;
 		if (block.Block.Properties.Values.TryGetValue("EnableMowing", out value))
 		{
@@ -1405,15 +1411,26 @@ public class VPMower : VehiclePart
 	private bool IsPlayerPlant(BlockValue block)
 	{
 		string blockName = block.Block.GetBlockName();
-		if (blockName.EndsWith("3HarvestPlayer"))
+		if (string.IsNullOrEmpty(blockName) || !blockName.StartsWith("planted") || blockName.StartsWith("plantedtreeGrass"))
+		{
+			return false;
+		}
+		// Seed, mid growth, and the player harvest stage. Wild POI harvest stays mowable.
+		if (blockName.EndsWith("3HarvestPlayer") || blockName.EndsWith("PlantPlayer"))
 		{
 			return true;
 		}
-		if (blockName.EndsWith("PlantPlayer"))
+		return IsGrowingPlant(block);
+	}
+
+	private bool IsHiddenSprout(BlockValue block)
+	{
+		string model = default;
+		if (!block.Block.Properties.Values.TryGetValue("Model", out model) || string.IsNullOrEmpty(model))
 		{
-			return true;
+			return false;
 		}
-		return false;
+		return model.IndexOf("SproutNoShow", StringComparison.Ordinal) >= 0;
 	}
 
 	private bool DecrementBagItem(Bag bag, BlockValue bv)

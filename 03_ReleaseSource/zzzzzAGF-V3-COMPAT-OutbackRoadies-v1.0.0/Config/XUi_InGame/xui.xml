@@ -1,0 +1,11 @@
+<AGF-OutbackRoadies>
+	<conditional>
+		<if cond="mod_loaded('V3_OutbackRoadies')">
+			<!-- Restore AGF location on compass after Outback. Do not touch toolbelt — AGF HUD already replaced that group, and a failed xpath here aborts this whole include. -->
+			<remove xpath="/xui/window_group[@name='compass']/window[@name='windowLocation']"/>
+			<append xpath="/xui/window_group[@name='compass']">
+				<window name="windowLocation"/>
+			</append>
+		</if>
+	</conditional>
+</AGF-OutbackRoadies>

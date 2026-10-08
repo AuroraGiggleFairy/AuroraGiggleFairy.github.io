@@ -1,0 +1,13 @@
+<AGFVanillaPlus-DecorationBlock>
+
+		
+<!--This allows the larger containers to work properly. 3.3 scrolls that grid, so this size edit is 3.2 only.-->
+	<conditional>
+		<if cond="game_version() &lt; version(1,3,30)">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>
+		</if>
+	</conditional>		
+		
+
+</AGFVanillaPlus-DecorationBlock>

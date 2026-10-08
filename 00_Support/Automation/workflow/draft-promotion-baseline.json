@@ -175,9 +175,9 @@
     "version": "1.0.0"
   },
   "AGF-NoEAC-ModSync": {
-    "folder": "AGF-NoEAC-ModSync-v0.0.1",
+    "folder": "AGF-NoEAC-ModSync-v0.1.3",
     "recorded_at": "2026-10-05T06:25:08",
-    "version": "0.0.1"
+    "version": "0.1.3"
   },
   "AGF-NoEAC-MultiLookStorage": {
     "folder": "AGF-NoEAC-MultiLookStorage-v0.0.1",
@@ -195,9 +195,9 @@
     "version": "1.0.0"
   },
   "AGF-NoEAC-QuartermasterCrafting": {
-    "folder": "AGF-NoEAC-QuartermasterCrafting-v0.0.1",
-    "recorded_at": "2026-10-05T06:25:08",
-    "version": "0.0.1"
+    "folder": "AGF-NoEAC-QuartermasterCrafting-v0.0.2",
+    "recorded_at": "2026-10-06T10:35:02",
+    "version": "0.0.2"
   },
   "AGF-NoEAC-ScreamerAlert": {
     "folder": "AGF-NoEAC-ScreamerAlert-v2.0.0",
@@ -253,6 +253,46 @@
     "folder": "AGF-Requested-TinyBuffsPopUp-v2.0.0",
     "recorded_at": "2026-07-22T23:20:21",
     "version": "2.0.0"
+  },
+  "AGF-V3-ADMIN-ESCWindowPlus": {
+    "folder": "AGF-V3-ADMIN-ESCWindowPlus-v0.3.2",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "0.3.2"
+  },
+  "AGF-V3-ADMIN-ModSync": {
+    "folder": "AGF-V3-ADMIN-ModSync-v0.1.3",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "0.1.3"
+  },
+  "AGF-V3-BOTH-CombatGlitchMitigations": {
+    "folder": "AGF-V3-BOTH-CombatGlitchMitigations-v0.0.1",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "0.0.1"
+  },
+  "AGF-V3-BOTH-MultiLookStorage": {
+    "folder": "AGF-V3-BOTH-MultiLookStorage-v0.0.1",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "0.0.1"
+  },
+  "AGF-V3-BOTH-QuartermasterCrafting": {
+    "folder": "AGF-V3-BOTH-QuartermasterCrafting-v0.0.2",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "0.0.2"
+  },
+  "AGF-V3-BOTH-StorageLaptop": {
+    "folder": "AGF-V3-BOTH-StorageLaptop-v0.0.1",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "0.0.1"
+  },
+  "AGF-V3-CLIENT-ConsoleOpacityMod": {
+    "folder": "AGF-V3-CLIENT-ConsoleOpacityMod-v1.0.1",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "1.0.1"
+  },
+  "AGF-V3-SERVER-DecorationBlock": {
+    "folder": "AGF-V3-SERVER-DecorationBlock-v3.0.3",
+    "recorded_at": "2026-10-08T15:07:01",
+    "version": "3.0.3"
   },
   "AGF-VP-AdminModdingSupport": {
     "folder": "AGF-VP-AdminModdingSupport-v2.0.0",

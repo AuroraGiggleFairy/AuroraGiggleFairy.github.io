@@ -1,5 +1,29 @@
 # GigglePack Release Changelog
 
+## GigglePack v1.0.0 (October 8, 2026 3:08pm)
+- Mod naming overhaul
+- Delete existing AGF mods and upload with these new mods.
+
+---
+
+## GigglePack v0.24.1 (October 6, 2026 12:43pm)
+### Summary: +0 new, ~3 updated, =0 renamed, -4 removed
+- **New Mods**
+  - None
+- **Updated Existing Mods**
+  - [AGF-HUDPlus-1Main](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-HUDPlus-1Main.zip) (v6.6.0 -> v6.6.1)
+  - [AGF-NoEAC-MapPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-NoEAC-MapPlus.zip) (v1.1.1 -> v1.1.2)
+  - [AGF-4Modders-Fix4DestroyBiomeBadge](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-4Modders-Fix4DestroyBiomeBadge.zip) (v2.0.0 -> v2.1.0)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - AGF-BackpackPlus-060Slots (was v5.0.0)
+  - AGF-BackpackPlus-072Slots (was v5.0.0)
+  - AGF-BackpackPlus-084Slots (was v5.0.0)
+  - AGF-BackpackPlus-119Slots (was v3.0.0)
+
+---
+
 ## GigglePack v0.24.0 (October 5, 2026 6:25am)
 ### Summary: +6 new, ~32 updated, =0 renamed, -0 removed
 - **New Mods**

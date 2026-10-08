@@ -10,10 +10,9 @@ HR_LOC = (
 OUT = (
     REPO
     / "02_ActiveBuild"
-    / "zzzAGF-Special-NoEACCompatibilities-v1.0.0"
+    / "zzzzzAGF-V3-COMPAT-OutbackRoadies-v1.0.0"
     / "Config"
-    / "ModPatches"
-    / "HelpfulRenames-V3_OutbackRoadies"
+    / "HelpfulRenames"
     / "Localization.csv"
 )
 INGREDIENT_MARK = "[DECEA3](I)[-]"
@@ -32,15 +31,14 @@ VANILLA_ADD_I = [
 COPIES = [
     REPO
     / "03_ReleaseSource"
-    / "zzzAGF-Special-NoEACCompatibilities-v1.0.0"
+    / "zzzzzAGF-V3-COMPAT-OutbackRoadies-v1.0.0"
     / "Config"
-    / "ModPatches"
-    / "HelpfulRenames-V3_OutbackRoadies"
+    / "HelpfulRenames"
     / "Localization.csv",
     Path(
         r"C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Outback\Mods"
-        r"\zzzAGF-Special-NoEACCompatibilities-v1.0.0\Config\ModPatches"
-        r"\HelpfulRenames-V3_OutbackRoadies\Localization.csv"
+        r"\zzzzzAGF-V3-COMPAT-OutbackRoadies-v1.0.0\Config"
+        r"\HelpfulRenames\Localization.csv"
     ),
 ]
 

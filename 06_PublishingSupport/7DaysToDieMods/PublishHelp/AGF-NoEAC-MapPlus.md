@@ -1,6 +1,6 @@
-# AGF-NoEAC-MapPlus v1.1.1
+# AGF-NoEAC-MapPlus v1.1.2
 ### 7DaysToDieMods Details
-Generated: 2026-10-05  06:25 AM
+Generated: 2026-10-06  12:43 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -252,13 +252,13 @@ Same image on **thumbnail** and **gallery** unless `_01` is over 2MB:
 Version:
 
 ```text
-1.1.1
+1.1.2
 ```
 
 Text field (plain text only — do not copy a code fence; that becomes a code block on the site).
 The site joins a single Enter into one line. Keep the blank line between entries:
 
-Attempted fix at sometimes a visited area changes to unvisited.
+Improved saving of where a player has visited.
 
 ---
 
@@ -285,7 +285,7 @@ Mod Type: Client-Side (Only): EAC off is required, server install has no effect,
 Version of Mod:
 
 ```text
-1.1.1
+1.1.2
 ```
 
 ---

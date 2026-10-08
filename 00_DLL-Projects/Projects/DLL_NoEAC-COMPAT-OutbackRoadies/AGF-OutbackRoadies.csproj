@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AGF.Compat.OutbackRoadies</RootNamespace>
+    <AssemblyName>AGF-OutbackRoadies</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'==''">$(MSBuildProjectDirectory)\..\..\..</SevenDaysToDieDir>
+    <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <HarmonyDll Condition="'$(HarmonyDll)'==''">$(MSBuildProjectDirectory)\..\..\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\zzzzzAGF-V3-COMPAT-OutbackRoadies-v1.0.0</DraftModDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NGUI">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\NGUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CopyToModFolders" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="true" Condition="Exists('$(DraftModDir)')" />
+  </Target>
+</Project>

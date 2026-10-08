@@ -1,0 +1,1 @@
+import{j as r}from"./CJ7ScB-v.js";function a(){const t=r();async function n(){return(await t.get("/v1/users/me/integrations",{auth:!0})).integrations}async function s(e){await t.del(`/v1/users/me/integrations/${e}`,{auth:!0})}return{list:n,remove:s}}export{a as u};

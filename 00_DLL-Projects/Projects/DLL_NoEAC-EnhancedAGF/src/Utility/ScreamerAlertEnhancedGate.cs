@@ -5,7 +5,7 @@ public static class ScreamerAlertEnhancedGate
 {
     private static readonly string[] ScreamerModNames =
     {
-        "AGF-VPS-ScreamerAlert",
+        "AGF-ScreamerAlert",
         "AGF-NoEAC-ScreamerAlert"
     };
     private const string ScreamerManagerTypeName = "ScreamerAlertManager";

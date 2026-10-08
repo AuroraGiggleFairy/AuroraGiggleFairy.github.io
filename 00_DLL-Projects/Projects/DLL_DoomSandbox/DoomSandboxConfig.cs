@@ -62,7 +62,7 @@ namespace DoomSandbox
 					Name = parts[0].Trim(),
 					Default = parts[1].Trim(),
 					Choices = SplitChoices(parts[2]),
-					Does = parts[3].Trim()
+					Does = DoomSandboxBlueprint.AsDisplayText(parts[3].Trim())
 				});
 			}
 

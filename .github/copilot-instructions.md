@@ -7,6 +7,10 @@ This file used to be the Visual Studio / GitHub Copilot always-on brief. Cursor 
 
 ## Communication
 - Keep responses concise.
+- Several questions in one message: one table, one row per question. Columns are Question and Answer. Use their wording in the first column. Do not answer those questions as separate paragraphs. This is not the issue-fix table.
+- A recap of more than one item: one table, one row per item. Name the columns for what the recap is listing. Do not recap those items as separate paragraphs. This is not the issue-fix table.
+- Table columns do not need to be the same width. Do not set a width to even them out.
+- In a table cell, ordered steps are a numbered list. A simple list is bullets.
 - Confirm changes as implemented best effort.
 - Do not claim ready to test in game unless live game Mods files were actually updated in that run.
 

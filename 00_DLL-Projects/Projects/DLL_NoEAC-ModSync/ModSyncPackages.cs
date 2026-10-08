@@ -17,10 +17,6 @@ namespace ModSync
 		{
 		}
 
-		public override int GetLength()
-		{
-			return 4;
-		}
 	}
 
 	/// <summary>
@@ -31,6 +27,7 @@ namespace ModSync
 	public class NetPackageModSyncHello : NetPackage
 	{
 		private int protocol;
+		private string version = "";
 
 		public override NetPackageDirection PackageDirection => NetPackageDirection.ToServer;
 
@@ -38,32 +35,37 @@ namespace ModSync
 
 		public override bool FlushQueue => true;
 
-		public NetPackageModSyncHello Setup()
+		public NetPackageModSyncHello Setup(string ownVersion)
 		{
-			protocol = 1;
+			protocol = ModSyncCommon.Protocol;
+			version = ownVersion ?? "";
 			return this;
 		}
 
 		public override void read(PooledBinaryReader _reader)
 		{
 			protocol = _reader.ReadInt32();
+			if (protocol >= ModSyncCommon.Protocol)
+			{
+				version = _reader.ReadString();
+			}
 		}
 
 		public override void write(PooledBinaryWriter _writer)
 		{
 			base.write(_writer);
 			_writer.Write(protocol);
+			if (protocol >= ModSyncCommon.Protocol)
+			{
+				_writer.Write(version ?? "");
+			}
 		}
 
 		public override void ProcessPackage(World _world, GameManager _callbacks)
 		{
-			ModSyncServer.OnHello(Sender, protocol);
+			ModSyncServer.OnHello(Sender, protocol, version);
 		}
 
-		public override int GetLength()
-		{
-			return 8;
-		}
 	}
 
 	/// <summary>Server -> client: one gzipped slice of the file manifest.</summary>
@@ -114,10 +116,6 @@ namespace ModSync
 			ModSyncClient.OnManifestChunk(version, chunkIndex, chunkCount, data);
 		}
 
-		public override int GetLength()
-		{
-			return 20 + (data != null ? data.Length : 0);
-		}
 	}
 
 	/// <summary>Client -> server: the manifest indices this client is missing or has out of date.</summary>
@@ -167,10 +165,6 @@ namespace ModSync
 			ModSyncServer.OnRequest(Sender, version, indices);
 		}
 
-		public override int GetLength()
-		{
-			return 12 + (indices != null ? indices.Length * 4 : 0);
-		}
 	}
 
 	/// <summary>Server -> client: one slice of one file.</summary>
@@ -219,10 +213,6 @@ namespace ModSync
 			ModSyncClient.OnFileChunk(fileIndex, chunkIndex, chunkCount, data);
 		}
 
-		public override int GetLength()
-		{
-			return 20 + (data != null ? data.Length : 0);
-		}
 	}
 
 	/// <summary>Client -> server: flow control. Tells the server how many chunks have landed.</summary>
@@ -259,10 +249,6 @@ namespace ModSync
 			ModSyncServer.OnAck(Sender, received);
 		}
 
-		public override int GetLength()
-		{
-			return 8;
-		}
 	}
 
 	/// <summary>
@@ -306,10 +292,6 @@ namespace ModSync
 			ModSyncClient.OnQueued(place, total);
 		}
 
-		public override int GetLength()
-		{
-			return 12;
-		}
 	}
 
 	/// <summary>Server -> client: the transfer finished (or failed).</summary>
@@ -350,9 +332,5 @@ namespace ModSync
 			ModSyncClient.OnTransferDone(ok, message);
 		}
 
-		public override int GetLength()
-		{
-			return 8 + (message != null ? message.Length * 2 : 0);
-		}
 	}
 }

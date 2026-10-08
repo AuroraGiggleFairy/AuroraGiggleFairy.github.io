@@ -50,8 +50,8 @@ OTHER DETAILS
           level 30+ and updates the displayed unlock entry to the new
           block.
         - XUi/windows.xml includes a conditional compatibility set for
-          AGF-HUDPlus-PurpleBook so tooltip text points to cntApiaryAGF
-          when that mod is loaded. Usage Notes:
+          AGF-2PurpleBook so tooltip text points to cntApiaryAGF when
+          that mod is loaded. Usage Notes:
         - Existing placed vanilla 3x2x1 apiaries should be broken to get
           the 2x2x1 apiary block.
 
@@ -68,8 +68,8 @@ OTHER DETAILS
             level 30+ and updates the displayed unlock entry to the new
             block.
           - XUi/windows.xml includes a conditional compatibility set for
-            AGF-HUDPlus-PurpleBook so tooltip text points to
-            cntApiaryAGF when that mod is loaded. Usage Notes:
+            AGF-2PurpleBook so tooltip text points to cntApiaryAGF when
+            that mod is loaded. Usage Notes:
           - Existing placed vanilla 3x2x1 apiaries should be broken to
             get the 2x2x1 apiary block.
 
@@ -86,8 +86,8 @@ OTHER DETAILS
             level 30+ and updates the displayed unlock entry to the new
             block.
           - XUi/windows.xml includes a conditional compatibility set for
-            AGF-HUDPlus-PurpleBook so tooltip text points to
-            cntApiaryAGF when that mod is loaded. Usage Notes:
+            AGF-2PurpleBook so tooltip text points to cntApiaryAGF when
+            that mod is loaded. Usage Notes:
           - Existing placed vanilla 3x2x1 apiaries should be broken to
             get the 2x2x1 apiary block.
 
@@ -104,8 +104,8 @@ OTHER DETAILS
               craftingWorkstations level 30+ and updates the displayed
               unlock entry to the new block.
             - XUi/windows.xml includes a conditional compatibility set
-              for AGF-HUDPlus-PurpleBook so tooltip text points to
-              cntApiaryAGF when that mod is loaded. Usage Notes:
+              for AGF-2PurpleBook so tooltip text points to cntApiaryAGF
+              when that mod is loaded. Usage Notes:
             - Existing placed vanilla 3x2x1 apiaries should be broken to
               get the 2x2x1 apiary block.
 

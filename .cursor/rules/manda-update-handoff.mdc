@@ -1,0 +1,39 @@
+---
+description: Read when the user says Manda. Exact local install path and Manda FTP path. Do not rediscover these.
+alwaysApply: false
+---
+
+# Manda update handoff
+
+When the user asks to update the Manda install or the Manda server, copy only the changed files to both places below. Use the same path the file has under `Mods`. Do not search the disk. Do not print the password.
+
+Use the paths in this rule first. Do not list the FTP root when those remote files are already there.
+
+If the install folder or the remote Mods path is missing, FileZilla is the source. Open only the site named `MandaPanda` in `C:\Users\rft30\AppData\Roaming\FileZilla\sitemanager.xml`. Read host, port, user, and `<Pass>` from that site. Do not look through other sites. Connect with those values and list that login's directory once. The server folder is the one that contains `Mods`. Do not scan the PC for it.
+
+This is separate from the Doom Test handoff. Doom Test updates do not go to Manda unless the user asks.
+
+If the user says **Doom Work**, follow `.cursor/rules/doom-work.mdc`. That copies the files in Downloads into `ZZZ_DoomMod_Standalone` on Manda local, Manda dedicated, Doom Test local, and Doom Test dedicated.
+
+Example files:
+
+- `Mods\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
+- `Mods\zzzzzAGF-Compatibilities-Doom-v1\SpecialNoEACCompatibilities.dll`
+
+## 1. Manda install
+
+`C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - MandaServer\Mods\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
+
+`C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - MandaServer\Mods\zzzzzAGF-Compatibilities-Doom-v1\SpecialNoEACCompatibilities.dll`
+
+## 2. Manda server
+
+FTP, not SFTP. The connection comes from the FileZilla site `MandaPanda`: host `104.192.227.20`, port `8821`, user `auroragf`. The `<Pass>` text is plain base64. Decode it in the process. Do not put it on a command line.
+
+Remote files:
+
+`104.192.227.20_26920/Mods/ZZZ_DoomMod_Standalone/DoomMultiplayer.dll`
+
+`104.192.227.20_26920/Mods/zzzzzAGF-Compatibilities-Doom-v1/SpecialNoEACCompatibilities.dll`
+
+After each copy, hash the destination and match it to the file you built. A dedicated server keeps the DLL it loaded at startup, so tell the user to restart the Manda server before the change applies.

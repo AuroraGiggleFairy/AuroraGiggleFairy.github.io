@@ -1,0 +1,40 @@
+<AGF-OutbackRoadies>
+	<conditional>
+		<if cond="mod_loaded('V3_OutbackRoadies')">
+			<!-- Outback overwrote playerBackpack loot size with 10,10 (no vanilla filter). Restore the AGF size. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-BackpackPlus-119Slots')">
+					<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">12,12</set>
+				</if>
+				<else>
+					<conditional>
+						<if cond="mod_loaded('AGF-BackpackPlus-084Slots')">
+							<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,12</set>
+						</if>
+						<else>
+							<conditional>
+								<if cond="mod_loaded('AGF-BackpackPlus-072Slots')">
+									<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,12</set>
+								</if>
+								<else>
+									<conditional>
+										<if cond="mod_loaded('AGF-BackpackPlus-060Slots')">
+											<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>
+										</if>
+									</conditional>
+								</else>
+							</conditional>
+						</else>
+					</conditional>
+				</else>
+			</conditional>
+
+			<!-- Outback last-writer sets gyro storage to 10,6. Re-apply Storage Plus 10,7 when that mod is loaded. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-VehicleStoragePlus')">
+					<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,7</set>
+				</if>
+			</conditional>
+		</if>
+	</conditional>
+</AGF-OutbackRoadies>

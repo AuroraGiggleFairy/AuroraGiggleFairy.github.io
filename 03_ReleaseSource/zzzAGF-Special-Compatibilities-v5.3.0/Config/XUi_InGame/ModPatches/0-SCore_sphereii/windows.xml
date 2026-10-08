@@ -1,8 +1,0 @@
-<zzzAGF-Compatibilities>
-	<!-- 0-SCore ESC buttons sit left of debug menu; HUD 1Main occupies that band. -->
-	<conditional>
-		<if cond="mod_loaded('AGF-HUDPlus-1Main')">
-			<set xpath="/windows/window[@name='ingameMenuSCore']/@pos">-620,-330</set>
-		</if>
-	</conditional>
-</zzzAGF-Compatibilities>

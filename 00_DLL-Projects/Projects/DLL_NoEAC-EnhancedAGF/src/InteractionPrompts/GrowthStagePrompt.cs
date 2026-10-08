@@ -9,7 +9,7 @@ namespace ExpandedInteractionPrompts
     public static class GrowthStagePrompt
     {
         private const string GrassSeedName = "plantedtreeGrassSeed1";
-        private const string VehicleRespawnModName = "AGF-VP-AutomobilesRespawn";
+        private const string VehicleRespawnModName = "AGF-AutomobilesRespawn";
         private const string HostCVar = ".agfGrowHost";
         private const string ReplyNonceCVar = ".agfGrowPnonce";
         private const string ReplySecondsCVar = ".agfGrowPsec";

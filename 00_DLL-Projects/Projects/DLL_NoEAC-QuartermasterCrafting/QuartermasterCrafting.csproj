@@ -15,9 +15,9 @@
     <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
     <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
     <HarmonyDll Condition="'$(HarmonyDll)'==''">$(MSBuildProjectDirectory)\..\..\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
-    <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-NoEAC-QuartermasterCrafting-v0.0.1</DraftModDir>
-    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-NoEAC-QuartermasterCrafting-v0.0.1</GameModDir>
-    <DedicatedModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods\AGF-NoEAC-QuartermasterCrafting-v0.0.1</DedicatedModDir>
+    <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-NoEAC-QuartermasterCrafting-v0.0.2</DraftModDir>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-NoEAC-QuartermasterCrafting-v0.0.2</GameModDir>
+    <DedicatedModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods\AGF-NoEAC-QuartermasterCrafting-v0.0.2</DedicatedModDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>

@@ -269,7 +269,7 @@ Celebrate Kills | No
 DIFFICULTY: Bring It On!
 Rating: 3
 Default: true
-Description: Standard Doom difficulty.
+Description: Standard Doom difficulty.\n(Recommended for first timers)
 Icon: #@modfolder:UIAtlases/doomguy_4.png
 ====================================================================================================
 

@@ -1,111 +1,117 @@
-MOD_NAME,MOD_TYPE_ID,TESTED_GAME_VERSION,SAFE_TO_INSTALL,SAFE_TO_REMOVE,UNIQUE,QUOTE_FILE,EAC_FRIENDLY,SERVER_SIDE_PLAYER,SERVER_SIDE_DEDICATED,CLIENT_SIDE,DEPENDENCIES
-AGF-4Modders-AntiCM,TBD,3,SAFE,SAFE,None,AGF-4Modders-AntiCM.txt,No,TBD,TBD,TBD,x
-AGF-4Modders-CustomWindowEnteringDuration,TBD,3,SAFE,SAFE,None,AGF-4Modders-CustomWindowEnteringDuration.txt,No,TBD,TBD,TBD,x
-AGF-4Modders-ESCWindowPlus,1,3,SAFE,TBD,None,AGF-4Modders-ESCWindowPlus.txt,Yes,Yes,Yes,None,0
-AGF-4Modders-Fix4DestroyBiomeBadge,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4DestroyBiomeBadge.txt,No,TBD,TBD,TBD,x
-AGF-4Modders-Fix4RemoveItems,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4RemoveItems.txt,No,TBD,TBD,TBD,x
-AGF-4Modders-ItemTypeIconColor,TBD,TBD,TBD,TBD,TBD,AGF-4Modders-ItemTypeIconColor.txt,TBD,TBD,TBD,TBD,x
-AGF-NoEAC-AudioOptionsPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-AudioOptionsPlus.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-AutoRun,4,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-NoEAC-AutoRun.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-CombatGlitchMitigations,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-CombatGlitchMitigations.txt,TBD,TBD,TBD,TBD,TBD
-AGF-NoEAC-ConsoleOpacityMod,TBD,3,SAFE,TBD,None,AGF-NoEAC-ConsoleOpacityMod.txt,No,TBD,TBD,TBD,x
-AGF-NoEAC-CosmeticLockIcon,3,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-NoEAC-CosmeticLockIcon.txt,No,No,No,Required,x
-AGF-NoEAC-GyroFlightModes,3,3,SAFE,TBD,Host and every joining client must install this DLL.,AGF-NoEAC-GyroFlightModes.txt,No,No,No,Required,x
-AGF-NoEAC-MapPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-MapPlus.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-ModSync,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-ModSync.txt,TBD,TBD,TBD,TBD,TBD
-AGF-NoEAC-MultiLookStorage,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-MultiLookStorage.txt,TBD,TBD,TBD,TBD,TBD
-AGF-NoEAC-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-OpenAllButton.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-PartyGroupPlus,3,3,SAFE,TBD,Host and every joining client must install this DLL.,AGF-NoEAC-PartyGroupPlus.txt,No,No,No,Required,x
-AGF-NoEAC-QuartermasterCrafting,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-QuartermasterCrafting.txt,TBD,TBD,TBD,TBD,TBD
-AGF-NoEAC-StorageLaptop,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-StorageLaptop.txt,TBD,TBD,TBD,TBD,TBD
-AGF-NoEAC-TerrainLeveler,TBD,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required,x
-AGF-VP-HelpfulRenames,TBD,TBD,TBD,TBD,TBD,AGF-VP-HelpfulRenames.txt,TBD,TBD,TBD,TBD,TBD
-AGF-VP-MedicallyTreatOthers,1,3,SAFE,TBD,TBD,AGF-VP-MedicallyTreatOthers.txt,Yes,Yes,Yes,None,0
-AGF-VP-MedicalTreatOthersTreatedInjuries,1,3,SAFE,TBD,TBD,AGF-VP-MedicalTreatOthersTreatedInjuries.txt,Yes,Yes,Yes,None,0
-AGF-VP-zHelpfulRenames,TBD,TBD,TBD,TBD,TBD,AGF-VP-zHelpfulRenames.txt,TBD,TBD,TBD,TBD,TBD
-AGF-VPS-FuelAutoShutOff,5,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-FuelAutoShutOff.txt,Dedicated,Yes,Yes,None,x
-AGF-VPS-GlobalStormTracker,5,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-GlobalStormTracker.txt,Dedicated,Yes,Yes,None,x
-AGF-VPS-ScreamerAlert,5,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-ScreamerAlert.txt,Dedicated,Yes,Yes,None,x
-zzzAGF-Special-LocalizationPatches,1,3,SAFE,SAFE,None,zzzAGF-Special-LocalizationPatches.txt,Yes,Yes,Yes,None,TBD
-zzzAGF-Special-NoEACCompatibilities,5,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,zzzAGF-Special-NoEACCompatibilities.txt,Dedicated,Yes,Yes,None,x
-AGF-4Modders-10IngredientSlots,1,3,SAFE,SAFE,None,AGF-4Modders-10IngredientSlots.txt,Yes,Yes,Yes,None,0
-AGF-4Modders-Fix4PerkPageReset,4,3,SAFE,SAFE,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-4Modders-Fix4PerkPageReset.txt,No,N/A,N/A,Only,x
-AGF-4Modders-SkillPointCap,3,3,SAFE,DANGEROUS,None,AGF-4Modders-SkillPointCap.txt,No,No,No,Required,x
-AGF-BackpackPlus-060Slots,1,3,SAFE,DANGEROUS,You may upgrade to the others.,AGF-BackpackPlus-060Slots.txt,Yes,Yes,Yes,None,0
-AGF-BackpackPlus-072Slots,1,3,SAFE,DANGEROUS,You may swap with 84 or 119.,AGF-BackpackPlus-072Slots.txt,Yes,Yes,Yes,None,0
-AGF-BackpackPlus-084Slots,1,3,SAFE,DANGEROUS,You may swap with 72 or 119.,AGF-BackpackPlus-084Slots.txt,Yes,Yes,Yes,None,0
-AGF-BackpackPlus-119Slots,1,3,SAFE,DANGEROUS,You may swap with 84 or 72.,AGF-BackpackPlus-119Slots.txt,Yes,Yes,Yes,None,0
-AGF-HUDPlus-1Main,1,3,SAFE,SAFE,None,AGF-HUDPlus-1Main.txt,Yes,Yes,Yes,None,0
-AGF-HUDPlus-BMCounter,1,3,SAFE,SAFE,None,AGF-HUDPlus-BMCounter.txt,Yes,Yes,Yes,None,0
-AGF-HUDPlus-PurpleBook,1,3,SAFE,SAFE,None,AGF-HUDPlus-PurpleBook.txt,Yes,Yes,Yes,None,0
-AGF-HUDPlus-RemoveEnteringPopUp,1,3,SAFE,SAFE,None,AGF-HUDPlus-RemoveEnteringPopUp.txt,Yes,Yes,Yes,None,0
-AGF-HUDPlus-VisualEntityTracker,1,3,SAFE,SAFE,None,AGF-HUDPlus-VisualEntityTracker.txt,Yes,Yes,Yes,None,0
-AGF-HUDPlus-Weekday,1,3,SAFE,SAFE,None,AGF-HUDPlus-Weekday.txt,Yes,Yes,Yes,None,0
-AGF-NoEAC-EnhancedAGF,4,3,SAFE,SAFE,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-EnhancedAGF.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-HideDLCCosmetics,4,3,SAFE,Unknown,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-NoEAC-HideDLCCosmetics.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-SmeltTimerOption,4,3,Safe,Unknown,None,AGF-NoEAC-SmeltTimerOption.txt,No,N/A,N/A,Only,x
-AGF-NoEAC-Toolbelt12Slots,3,3,SAFE,DANGEROUS,None,AGF-NoEAC-Toolbelt12Slots.txt,No,No,No,Required,x
-AGF-Requested-AnimalTrackerAlwaysOn,1,3,SAFE,SAFE,None,AGF-Requested-AnimalTrackerAlwaysOn.txt,Yes,Yes,Yes,None,0
-AGF-Requested-SmallerInteractionPrompt,1,3,SAFE,SAFE,None,AGF-Requested-SmallerInteractionPrompt.txt,Yes,Yes,Yes,None,0
-AGF-Requested-TinyBuffsPopUp,1,3,SAFE,SAFE,None,AGF-Requested-TinyBuffsPopUp.txt,Yes,Yes,Yes,None,0
-AGF-VP-AdminModdingSupport,1,3,SAFE,DANGEROUS,None,AGF-VP-AdminModdingSupport.txt,Yes,Yes,Yes,None,0
-AGF-VP-AlternativeRecipes,1,3,SAFE,SAFE,None,AGF-VP-AlternativeRecipes.txt,Yes,Yes,Yes,None,0
-AGF-VP-AmmoDisassembly,1,3,SAFE,DANGEROUS,None,AGF-VP-AmmoDisassembly.txt,Yes,Yes,Yes,None,0
-AGF-VP-ApiaryPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-ApiaryPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-ArcheryFeathersChange,1,3,SAFE,SAFE,None,AGF-VP-ArcheryFeathersChange.txt,Yes,Yes,Yes,None,0
-AGF-VP-ArmorHarvestMods,1,3,SAFE,DANGEROUS,None,AGF-VP-ArmorHarvestMods.txt,Yes,Yes,Yes,None,0
-AGF-VP-AutomobilesRespawn,1,3,SAFE,DANGEROUS,None,AGF-VP-AutomobilesRespawn.txt,Yes,Yes,Yes,None,0
-AGF-VP-BedrollPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-BedrollPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-BetterEggChance,1,3,SAFE,SAFE,None,AGF-VP-BetterEggChance.txt,Yes,Yes,Yes,None,0
-AGF-VP-BreakItGetIt,1,3,SAFE,SAFE,None,AGF-VP-BreakItGetIt.txt,Yes,Yes,Yes,None,0
-AGF-VP-BuyTraderVendingMachines,1,3,SAFE,SAFE,None,AGF-VP-BuyTraderVendingMachines.txt,Yes,Yes,Yes,None,0
-AGF-VP-CraftSewingKits,1,3,SAFE,SAFE,None,AGF-VP-CraftSewingKits.txt,Yes,Yes,Yes,None,0
-AGF-VP-CraftStackEngBattCells,1,3,SAFE,DANGEROUS,None,AGF-VP-CraftStackEngBattCells.txt,Yes,Yes,Yes,None,0
-AGF-VP-CraftVitamins,1,3,SAFE,SAFE,None,AGF-VP-CraftVitamins.txt,Yes,Yes,Yes,None,0
-AGF-VP-DecorationBlock,1,3,SAFE,DANGEROUS,None,AGF-VP-DecorationBlock.txt,Yes,Yes,Yes,None,0
-AGF-VP-DewsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-DewsPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-DoorsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-DoorsPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-DrinkableAcid,1,3,SAFE,SAFE,None,AGF-VP-DrinkableAcid.txt,Yes,Yes,Yes,None,0
-AGF-VP-DyesPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-DyesPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-FarmingPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-FarmingPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-FloraHarvester,1,3,SAFE,DANGEROUS,None,AGF-VP-FloraHarvester.txt,Yes,Yes,Yes,None,0
-AGF-VP-FuelBurnPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-FuelBurnPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-HelpfulRenames,1,3,SAFE,SAFE,None,AGF-VP-HelpfulRenames.txt,Yes,Yes,Yes,None,0
-AGF-VP-LargerStorageOption,1,3,SAFE,DANGEROUS,None,AGF-VP-LargerStorageOption.txt,Yes,Yes,Yes,None,0
-AGF-VP-MasterTool,1,3,SAFE,DANGEROUS,None,AGF-VP-MasterTool.txt,Yes,Yes,Yes,None,0
-AGF-VP-MaxLevel500,1,3,SAFE,DANGEROUS,None,AGF-VP-MaxLevel500.txt,Yes,Yes,Yes,None,0
-AGF-VP-MedicationNoInsectSlow,1,3,SAFE,DANGEROUS,None,AGF-VP-MedicationNoInsectSlow.txt,Yes,Yes,Yes,None,0
-AGF-VP-MiningPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-MiningPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-Mod988,1,3,SAFE,SAFE,None,AGF-VP-Mod988.txt,Yes,Yes,Yes,None,0
-AGF-VP-ModBundling,1,3,SAFE,DANGEROUS,None,AGF-VP-ModBundling.txt,Yes,Yes,Yes,None,0
-AGF-VP-ModSlotsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-ModSlotsPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-PaintbrushPlus,1,3,SAFE,SAFE,None,AGF-VP-PaintbrushPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-PickupLanternsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-PickupLanternsPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-PlayerResetQuests,1,3,SAFE,SAFE,None,AGF-VP-PlayerResetQuests.txt,Yes,Yes,Yes,None,0
-AGF-VP-PlayerVendingMachinesPlus,1,3,SAFE,SAFE,None,AGF-VP-PlayerVendingMachinesPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-PumpkinsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-PumpkinsPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-RebundleBundles,1,3,SAFE,DANGEROUS,None,AGF-VP-RebundleBundles.txt,Yes,Yes,Yes,None,0
-AGF-VP-RecipeRottingFlesh,1,3,SAFE,SAFE,None,AGF-VP-RecipeRottingFlesh.txt,Yes,Yes,Yes,None,0
-AGF-VP-RestorePowerAnyTime,1,3,SAFE,SAFE,None,AGF-VP-RestorePowerAnyTime.txt,Yes,Yes,Yes,None,0
-AGF-VP-ScrapBatts4Acid,1,3,SAFE,SAFE,None,AGF-VP-ScrapBatts4Acid.txt,Yes,Yes,Yes,None,0
-AGF-VP-ScrapEquipmentFaster,1,3,SAFE,SAFE,None,AGF-VP-ScrapEquipmentFaster.txt,Yes,Yes,Yes,None,0
-AGF-VP-SimplifiedStacks,1,3,SAFE,DANGEROUS,None,AGF-VP-SimplifiedStacks.txt,Yes,Yes,Yes,None,0
-AGF-VP-SmeltingPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-SmeltingPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-StayLongerAnimalCorpse,1,3,SAFE,SAFE,None,AGF-VP-StayLongerAnimalCorpse.txt,Yes,Yes,Yes,None,0
-AGF-VP-StayLongerPlayerBackpack,1,3,SAFE,SAFE,None,AGF-VP-StayLongerPlayerBackpack.txt,Yes,Yes,Yes,None,0
-AGF-VP-TacticalRiflePlus,1,3,SAFE,SAFE,None,AGF-VP-TacticalRiflePlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-TreesPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-TreesPlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-VehiclePerformance,1,3,SAFE,SAFE,None,AGF-VP-VehiclePerformance.txt,Yes,Yes,Yes,None,0
-AGF-VP-VehiclesExtraSeating,1,3,SAFE,SAFE,None,AGF-VP-VehiclesExtraSeating.txt,Yes,Yes,Yes,None,0
-AGF-VP-VehicleStoragePlus,1,3,SAFE,DANGEROUS,None,AGF-VP-VehicleStoragePlus.txt,Yes,Yes,Yes,None,0
-AGF-VP-WriteStoryOnCrate,1,3,SAFE,DANGEROUS,None,AGF-VP-WriteStoryOnCrate.txt,Yes,Yes,Yes,None,0
-AGF-VP-XPDeathPenaltyReduction,1,3,SAFE,SAFE,None,AGF-VP-XPDeathPenaltyReduction.txt,Yes,Yes,Yes,None,0
-AGF-VP-ZombieCorpseLeaveQuicker,1,3,SAFE,SAFE,None,AGF-VP-ZombieCorpseLeaveQuicker.txt,Yes,Yes,Yes,None,0
-AGF-VPS-HonkOpensYourDoors,5,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-HonkOpensYourDoors.txt,Dedicated,Yes,Yes,None,x
-AGF-VPS-LockableStations,5,3,SAFE,DANGEROUS,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-LockableStations.txt,Dedicated,Yes,Yes,None,x
-AGF-VPS-LootTimerHolds,5,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-LootTimerHolds.txt,Dedicated,Yes,Yes,None,x
-AGF-VPS-SortingCart,5,3,SAFE,DANGEROUS,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-SortingCart.txt,Dedicated,Yes,Yes,None,x
-AGF-VPS-VisualEntityTrackerAddon,5,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-VisualEntityTrackerAddon.txt,Dedicated,Yes,Yes,None,x;AGF-HUDPlus-VisualEntityTracker
-zzzAGF-Requested-LootStaysOnEmpty,1,3,SAFE,SAFE,None,zzzAGF-Requested-LootStaysOnEmpty.txt,Yes,Yes,Yes,None,0
-zzzAGF-Special-Compatibilities,1,3,SAFE,DANGEROUS,None,zzzAGF-Special-Compatibilities.txt,Yes,Yes,Yes,None,0
-zzzzAGF-LawnTractorV3Fix,4,3,SAFE,SAFE,Requires EAC off. Requires OCB Lawn Mowing. Applies only to the installing player.,zzzzAGF-LawnTractorV3Fix.txt,No,N/A,N/A,Only,x;{OcbLawnMowing|2.5.0|https://www.nexusmods.com/7daystodie/mods/3312}
+MOD_NAME,MOD_TYPE_ID,TESTED_GAME_VERSION,SAFE_TO_INSTALL,SAFE_TO_REMOVE,UNIQUE,QUOTE_FILE,EAC_FRIENDLY,SERVER_SIDE_PLAYER,SERVER_SIDE_DEDICATED,CLIENT_SIDE,DEPENDENCIES,PREVIOUS_MOD_NAME,FOLDER_BASE
+AGF-4Modders-AntiCM,TBD,3,SAFE,SAFE,None,AGF-4Modders-AntiCM.txt,No,TBD,TBD,TBD,x,,AGF-4Modders-AntiCM
+AGF-4Modders-CustomWindowEnteringDuration,TBD,3,SAFE,SAFE,None,AGF-4Modders-CustomWindowEnteringDuration.txt,No,TBD,TBD,TBD,x,,AGF-4Modders-CustomWindowEnteringDuration
+AGF-4Modders-Fix4RemoveItems,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4RemoveItems.txt,No,TBD,TBD,TBD,x,,AGF-4Modders-Fix4RemoveItems
+AGF-4Modders-ItemTypeIconColor,TBD,TBD,TBD,TBD,TBD,AGF-4Modders-ItemTypeIconColor.txt,TBD,TBD,TBD,TBD,x,,AGF-4Modders-ItemTypeIconColor
+AGF-AudioOptionsPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-AudioOptionsPlus.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-AudioOptionsPlus
+AGF-AutoRun,4,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-AutoRun.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-AutoRun
+AGF-CombatGlitchMitigations,TBD,TBD,TBD,TBD,TBD,AGF-CombatGlitchMitigations.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-CombatGlitchMitigations,AGF-V3-BOTH-CombatGlitchMitigations
+AGF-COMPAT-DoomSurvival,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-COMPAT-DoomSurvival.txt,Dedicated,Yes,Yes,None,x,,zzzzzAGF-V3-COMPAT-DoomSurvival
+AGF-COMPAT-POIScourgeLite,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-COMPAT-POIScourgeLite.txt,Dedicated,Yes,Yes,None,x,,zzzzzAGF-V3-COMPAT-POIScourgeLite
+AGF-ConsoleOpacityMod,TBD,3,SAFE,TBD,None,AGF-ConsoleOpacityMod.txt,No,TBD,TBD,TBD,x,AGF-NoEAC-ConsoleOpacityMod,AGF-V3-CLIENT-ConsoleOpacityMod
+AGF-CosmeticLockIcon,3,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-CosmeticLockIcon.txt,No,No,No,Required,x,,AGF-V3-BOTH-CosmeticLockIcon
+AGF-ESCWindowPlus,1,3,SAFE,TBD,None,AGF-ESCWindowPlus.txt,Yes,Yes,Yes,None,0,AGF-4Modders-ESCWindowPlus,AGF-V3-ADMIN-ESCWindowPlus
+AGF-Fix4DestroyBiomeBadge,TBD,3,SAFE,TBD,None,AGF-Fix4DestroyBiomeBadge.txt,No,TBD,TBD,TBD,x,,AGF-V3-ADMIN-Fix4DestroyBiomeBadge
+AGF-FuelAutoShutOff,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-FuelAutoShutOff.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-FuelAutoShutOff
+AGF-GlobalStormTracker,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-GlobalStormTracker.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-GlobalStormTracker
+AGF-GyroFlightModes,3,3,SAFE,TBD,Host and every joining client must install this DLL.,AGF-GyroFlightModes.txt,No,No,No,Required,x,,AGF-V3-BOTH-GyroFlightModes
+AGF-LawnTractorPatchGuard,TBD,TBD,TBD,TBD,TBD,AGF-LawnTractorPatchGuard.txt,TBD,TBD,TBD,TBD,TBD,,0AGF-V3-CLIENT-LawnTractorPatchGuard
+AGF-MapPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-MapPlus.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-MapPlus
+AGF-ModSync,TBD,TBD,TBD,TBD,TBD,AGF-ModSync.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-ModSync,AGF-V3-ADMIN-ModSync
+AGF-MultiLookStorage,TBD,TBD,TBD,TBD,TBD,AGF-MultiLookStorage.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-MultiLookStorage,AGF-V3-BOTH-MultiLookStorage
+AGF-NoEAC-TerrainLeveler,TBD,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,No,No,No,Required,x,,AGF-NoEAC-TerrainLeveler
+AGF-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-OpenAllButton.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-OpenAllButton
+AGF-PartyGroupPlus,3,3,SAFE,TBD,Host and every joining client must install this DLL.,AGF-PartyGroupPlus.txt,No,No,No,Required,x,,AGF-V3-BOTH-PartyGroupPlus
+AGF-QuartermasterCrafting,TBD,TBD,TBD,TBD,TBD,AGF-QuartermasterCrafting.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-QuartermasterCrafting,AGF-V3-BOTH-QuartermasterCrafting
+AGF-ScreamerAlert,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-ScreamerAlert.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-ScreamerAlert
+AGF-StorageLaptop,TBD,TBD,TBD,TBD,TBD,AGF-StorageLaptop.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-StorageLaptop,AGF-V3-BOTH-StorageLaptop
+AGF-VP-MedicallyTreatOthers,1,3,SAFE,TBD,TBD,AGF-VP-MedicallyTreatOthers.txt,Yes,Yes,Yes,None,0,,AGF-VP-MedicallyTreatOthers
+AGF-VP-MedicalTreatOthersTreatedInjuries,1,3,SAFE,TBD,TBD,AGF-VP-MedicalTreatOthersTreatedInjuries.txt,Yes,Yes,Yes,None,0,,AGF-VP-MedicalTreatOthersTreatedInjuries
+AGF-1HUDPlus,1,3,SAFE,SAFE,None,AGF-1HUDPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-1HUDPlus
+AGF-2BMCounter,1,3,SAFE,SAFE,None,AGF-2BMCounter.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2BMCounter
+AGF-2PurpleBook,1,3,SAFE,SAFE,None,AGF-2PurpleBook.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2PurpleBook
+AGF-2RemoveEnteringPopUp,1,3,SAFE,SAFE,None,AGF-2RemoveEnteringPopUp.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2RemoveEnteringPopUp
+AGF-2VisualEntityTracker,1,3,SAFE,SAFE,None,AGF-2VisualEntityTracker.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2VisualEntityTracker
+AGF-2Weekday,1,3,SAFE,SAFE,None,AGF-2Weekday.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2Weekday
+AGF-3VisualEntityTrackerAddon,2,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-3VisualEntityTrackerAddon.txt,Dedicated,Yes,Yes,None,x;AGF-2VisualEntityTracker,,AGF-V3-SERVER-3VisualEntityTrackerAddon
+AGF-4Modders-10IngredientSlots,1,3,SAFE,SAFE,None,AGF-4Modders-10IngredientSlots.txt,Yes,Yes,Yes,None,0,,AGF-4Modders-10IngredientSlots
+AGF-4Modders-SkillPointCap,3,3,SAFE,DANGEROUS,None,AGF-4Modders-SkillPointCap.txt,No,No,No,Required,x,,AGF-4Modders-SkillPointCap
+AGF-AdminModdingSupport,1,3,SAFE,DANGEROUS,None,AGF-AdminModdingSupport.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-AdminModdingSupport
+AGF-AlternativeRecipes,1,3,SAFE,SAFE,None,AGF-AlternativeRecipes.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-AlternativeRecipes
+AGF-AmmoDisassembly,1,3,SAFE,DANGEROUS,None,AGF-AmmoDisassembly.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-AmmoDisassembly
+AGF-AnimalTrackerAlwaysOn,1,3,SAFE,SAFE,None,AGF-AnimalTrackerAlwaysOn.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-AnimalTrackerAlwaysOn
+AGF-ArcheryFeathersChange,1,3,SAFE,SAFE,None,AGF-ArcheryFeathersChange.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-ArcheryFeathersChange
+AGF-AutomobilesRespawn,1,3,SAFE,DANGEROUS,None,AGF-AutomobilesRespawn.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-AutomobilesRespawn
+AGF-BedrollPlus,1,3,SAFE,DANGEROUS,None,AGF-BedrollPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-BedrollPlus
+AGF-BetterEggChance,1,3,SAFE,SAFE,None,AGF-BetterEggChance.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-BetterEggChance
+AGF-BreakItGetIt,1,3,SAFE,SAFE,None,AGF-BreakItGetIt.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-BreakItGetIt
+AGF-COMPAT-0SCore,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-0SCore.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-0SCore
+AGF-COMPAT-BDubVehicles,1,3,SAFE,SAFE,None,AGF-COMPAT-BDubVehicles.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-BDubVehicles
+AGF-COMPAT-Companions,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-Companions.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-Companions
+AGF-COMPAT-Dewtas18SlotToolbelt,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-Dewtas18SlotToolbelt.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-Dewtas18SlotToolbelt
+AGF-COMPAT-DishongTowerChallenge,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-DishongTowerChallenge.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-DishongTowerChallenge
+AGF-COMPAT-GBZ15SlotToolbelt,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-GBZ15SlotToolbelt.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-GBZ15SlotToolbelt
+AGF-COMPAT-GSVanillaCookBook,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-GSVanillaCookBook.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-GSVanillaCookBook
+AGF-COMPAT-IZYWeapons,1,3,SAFE,SAFE,None,AGF-COMPAT-IZYWeapons.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-IZYWeapons
+AGF-COMPAT-OakravenAmmoPress,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-OakravenAmmoPress.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-OakravenAmmoPress
+AGF-COMPAT-OutbackRoadies,2,3,SAFE,DANGEROUS,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-COMPAT-OutbackRoadies.txt,Dedicated,Yes,Yes,None,x,,zzzzzAGF-V3-COMPAT-OutbackRoadies
+AGF-COMPAT-QuickStack,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-QuickStack.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-QuickStack
+AGF-COMPAT-WMM12SlotToolbelt,1,3,SAFE,DANGEROUS,None,AGF-COMPAT-WMM12SlotToolbelt.txt,Yes,Yes,Yes,None,0,,zzzzzAGF-V3-COMPAT-WMM12SlotToolbelt
+AGF-CraftSewingKits,1,3,SAFE,SAFE,None,AGF-CraftSewingKits.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-CraftSewingKits
+AGF-CraftStackEngBattCells,1,3,SAFE,DANGEROUS,None,AGF-CraftStackEngBattCells.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-CraftStackEngBattCells
+AGF-CraftVitamins,1,3,SAFE,SAFE,None,AGF-CraftVitamins.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-CraftVitamins
+AGF-DecorationBlock,1,3,SAFE,DANGEROUS,None,AGF-DecorationBlock.txt,Yes,Yes,Yes,None,0,AGF-VP-DecorationBlock,AGF-V3-SERVER-DecorationBlock
+AGF-DoorsPlus,1,3,SAFE,DANGEROUS,None,AGF-DoorsPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-DoorsPlus
+AGF-DrinkableAcid,1,3,SAFE,SAFE,None,AGF-DrinkableAcid.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-DrinkableAcid
+AGF-DyesPlus,1,3,SAFE,DANGEROUS,None,AGF-DyesPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-DyesPlus
+AGF-EnhancedAGF,4,3,SAFE,SAFE,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-EnhancedAGF.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-EnhancedAGF
+AGF-Fix4PerkPageReset,4,3,SAFE,SAFE,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-Fix4PerkPageReset.txt,No,N/A,N/A,Only,x,,AGF-V3-ADMIN-Fix4PerkPageReset
+AGF-FloraHarvester,1,3,SAFE,DANGEROUS,None,AGF-FloraHarvester.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-FloraHarvester
+AGF-FuelBurnPlus,1,3,SAFE,DANGEROUS,None,AGF-FuelBurnPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-FuelBurnPlus
+AGF-HelpfulRenames,1,3,SAFE,SAFE,None,AGF-HelpfulRenames.txt,Yes,Yes,Yes,None,0,,zzzAGF-V3-SERVER-HelpfulRenames
+AGF-HideDLCCosmetics,4,3,SAFE,Unknown,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-HideDLCCosmetics.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-HideDLCCosmetics
+AGF-HonkOpensYourDoors,2,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-HonkOpensYourDoors.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-HonkOpensYourDoors
+AGF-LargerStorageOption,1,3,SAFE,DANGEROUS,None,AGF-LargerStorageOption.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-LargerStorageOption
+AGF-LawnTractorV3Fix,4,3,SAFE,SAFE,Requires EAC off. Requires OCB Lawn Mowing. Applies only to the installing player.,AGF-LawnTractorV3Fix.txt,No,N/A,N/A,Only,x;{OcbLawnMowing|2.5.0|https://www.nexusmods.com/7daystodie/mods/3312},,zzzAGF-V3-CLIENT-LawnTractorV3Fix
+AGF-LootStaysOnEmpty,1,3,SAFE,SAFE,None,AGF-LootStaysOnEmpty.txt,Yes,Yes,Yes,None,0,,zzzAGF-V3-SERVER-LootStaysOnEmpty
+AGF-LootTimerHolds,2,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-LootTimerHolds.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-LootTimerHolds
+AGF-MasterTool,1,3,SAFE,DANGEROUS,None,AGF-MasterTool.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-MasterTool
+AGF-MaxLevel500,1,3,SAFE,DANGEROUS,None,AGF-MaxLevel500.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-MaxLevel500
+AGF-MiningPlus,1,3,SAFE,DANGEROUS,None,AGF-MiningPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-MiningPlus
+AGF-Mod988,1,3,SAFE,SAFE,None,AGF-Mod988.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-Mod988
+AGF-ModSlotsPlus,1,3,SAFE,DANGEROUS,None,AGF-ModSlotsPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-ModSlotsPlus
+AGF-PaintbrushPlus,1,3,SAFE,SAFE,None,AGF-PaintbrushPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-PaintbrushPlus
+AGF-PickupLanternsPlus,1,3,SAFE,DANGEROUS,None,AGF-PickupLanternsPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-PickupLanternsPlus
+AGF-PlayerResetQuests,1,3,SAFE,SAFE,None,AGF-PlayerResetQuests.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-PlayerResetQuests
+AGF-RebundleBundles,1,3,SAFE,DANGEROUS,None,AGF-RebundleBundles.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-RebundleBundles
+AGF-RecipeRottingFlesh,1,3,SAFE,SAFE,None,AGF-RecipeRottingFlesh.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-RecipeRottingFlesh
+AGF-RestorePowerAnyTime,1,3,SAFE,SAFE,None,AGF-RestorePowerAnyTime.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-RestorePowerAnyTime
+AGF-ScrapBatts4Acid,1,3,SAFE,SAFE,None,AGF-ScrapBatts4Acid.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-ScrapBatts4Acid
+AGF-ScrapEquipmentFaster,1,3,SAFE,SAFE,None,AGF-ScrapEquipmentFaster.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-ScrapEquipmentFaster
+AGF-SimplifiedStacks,1,3,SAFE,DANGEROUS,None,AGF-SimplifiedStacks.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-SimplifiedStacks
+AGF-SmallerInteractionPrompt,1,3,SAFE,SAFE,None,AGF-SmallerInteractionPrompt.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-SmallerInteractionPrompt
+AGF-SmeltingPlus,1,3,SAFE,DANGEROUS,None,AGF-SmeltingPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-SmeltingPlus
+AGF-SmeltTimerOption,4,3,Safe,Unknown,None,AGF-SmeltTimerOption.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-SmeltTimerOption
+AGF-SortingCart,2,3,SAFE,DANGEROUS,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-SortingCart.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-SortingCart
+AGF-StayLongerAnimalCorpse,1,3,SAFE,SAFE,None,AGF-StayLongerAnimalCorpse.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-StayLongerAnimalCorpse
+AGF-StayLongerPlayerBackpack,1,3,SAFE,SAFE,None,AGF-StayLongerPlayerBackpack.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-StayLongerPlayerBackpack
+AGF-TacticalRiflePlus,1,3,SAFE,SAFE,None,AGF-TacticalRiflePlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-TacticalRiflePlus
+AGF-TinyBuffsPopUp,1,3,SAFE,SAFE,None,AGF-TinyBuffsPopUp.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-TinyBuffsPopUp
+AGF-Toolbelt12Slots,3,3,SAFE,DANGEROUS,None,AGF-Toolbelt12Slots.txt,No,No,No,Required,x,,AGF-V3-BOTH-Toolbelt12Slots
+AGF-VehiclePerformance,1,3,SAFE,SAFE,None,AGF-VehiclePerformance.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-VehiclePerformance
+AGF-VehiclesExtraSeating,1,3,SAFE,SAFE,None,AGF-VehiclesExtraSeating.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-VehiclesExtraSeating
+AGF-VehicleStoragePlus,1,3,SAFE,DANGEROUS,None,AGF-VehicleStoragePlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-VehicleStoragePlus
+AGF-VP-ApiaryPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-ApiaryPlus.txt,Yes,Yes,Yes,None,0,,AGF-VP-ApiaryPlus
+AGF-VP-ArmorHarvestMods,1,3,SAFE,DANGEROUS,None,AGF-VP-ArmorHarvestMods.txt,Yes,Yes,Yes,None,0,,AGF-VP-ArmorHarvestMods
+AGF-VP-BuyTraderVendingMachines,1,3,SAFE,SAFE,None,AGF-VP-BuyTraderVendingMachines.txt,Yes,Yes,Yes,None,0,,AGF-VP-BuyTraderVendingMachines
+AGF-VP-DewsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-DewsPlus.txt,Yes,Yes,Yes,None,0,,AGF-VP-DewsPlus
+AGF-VP-FarmingPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-FarmingPlus.txt,Yes,Yes,Yes,None,0,,AGF-VP-FarmingPlus
+AGF-VP-MedicationNoInsectSlow,1,3,SAFE,DANGEROUS,None,AGF-VP-MedicationNoInsectSlow.txt,Yes,Yes,Yes,None,0,,AGF-VP-MedicationNoInsectSlow
+AGF-VP-ModBundling,1,3,SAFE,DANGEROUS,None,AGF-VP-ModBundling.txt,Yes,Yes,Yes,None,0,,AGF-VP-ModBundling
+AGF-VP-PlayerVendingMachinesPlus,1,3,SAFE,SAFE,None,AGF-VP-PlayerVendingMachinesPlus.txt,Yes,Yes,Yes,None,0,,AGF-VP-PlayerVendingMachinesPlus
+AGF-VP-PumpkinsPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-PumpkinsPlus.txt,Yes,Yes,Yes,None,0,,AGF-VP-PumpkinsPlus
+AGF-VP-TreesPlus,1,3,SAFE,DANGEROUS,None,AGF-VP-TreesPlus.txt,Yes,Yes,Yes,None,0,,AGF-VP-TreesPlus
+AGF-VP-WriteStoryOnCrate,1,3,SAFE,DANGEROUS,None,AGF-VP-WriteStoryOnCrate.txt,Yes,Yes,Yes,None,0,,AGF-VP-WriteStoryOnCrate
+AGF-VP-XPDeathPenaltyReduction,1,3,SAFE,SAFE,None,AGF-VP-XPDeathPenaltyReduction.txt,Yes,Yes,Yes,None,0,,AGF-VP-XPDeathPenaltyReduction
+AGF-VPS-LockableStations,2,3,SAFE,DANGEROUS,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-VPS-LockableStations.txt,Dedicated,Yes,Yes,None,x,,AGF-VPS-LockableStations
+AGF-ZombieCorpseLeaveQuicker,1,3,SAFE,SAFE,None,AGF-ZombieCorpseLeaveQuicker.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-ZombieCorpseLeaveQuicker

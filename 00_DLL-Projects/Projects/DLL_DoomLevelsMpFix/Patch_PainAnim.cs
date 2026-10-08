@@ -1,32 +1,33 @@
+using System;
 using HarmonyLib;
 
 namespace DoomLevelsMpFix
 {
 	/// <summary>
-	/// Chainsaw, chaingun, and plasma rifle hits cross the pain threshold and play a flinch.
-	/// Clear that flag for those weapons. The projectile and the damage are unchanged.
+	/// Doom enemies play a pain flinch when a hit crosses the pain threshold.
+	/// Clear that flag for those enemies only. Animals and the player keep it.
+	/// Damage is unchanged.
 	/// </summary>
 	internal static class Patch_PainAnim
 	{
-		private static readonly FastTags<TagGroup.Global> NoPainTags = FastTags<TagGroup.Global>.Parse("chainsaw,chaingun,chainGun,PlasmaRifle");
-
-		private static bool IsNoPainWeapon(DamageSource source)
+		private static bool SkipPain(EntityAlive entity)
 		{
-			if (source == null || source.AttackingItem == null)
+			if (entity == null)
 			{
 				return false;
 			}
 
-			ItemClass itemClass = source.AttackingItem.ItemClass;
-			return itemClass != null && itemClass.HasAnyTags(NoPainTags);
+			EntityClass entityClass = EntityClass.list[entity.entityClass];
+			string name = entityClass != null ? entityClass.entityClassName : null;
+			return name != null && name.StartsWith("demon", StringComparison.Ordinal);
 		}
 
 		[HarmonyPatch(typeof(EntityAlive), nameof(EntityAlive.ProcessDamageResponseLocal))]
 		private static class Local
 		{
-			private static void Prefix(ref DamageResponse _dmResponse)
+			private static void Prefix(EntityAlive __instance, ref DamageResponse _dmResponse)
 			{
-				if (_dmResponse.PainHit && IsNoPainWeapon(_dmResponse.Source))
+				if (SkipPain(__instance))
 				{
 					_dmResponse.PainHit = false;
 				}
@@ -36,9 +37,9 @@ namespace DoomLevelsMpFix
 		[HarmonyPatch(typeof(EntityAlive), nameof(EntityAlive.damageEntityLocal))]
 		private static class Returned
 		{
-			private static void Postfix(ref DamageResponse __result)
+			private static void Postfix(EntityAlive __instance, ref DamageResponse __result)
 			{
-				if (__result.PainHit && IsNoPainWeapon(__result.Source))
+				if (SkipPain(__instance))
 				{
 					__result.PainHit = false;
 				}

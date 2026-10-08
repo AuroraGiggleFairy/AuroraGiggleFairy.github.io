@@ -308,7 +308,7 @@ def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, descrip
         w("[list]")
         pending_sub_items: list = []
         collecting_deps = False  # Flag: collecting sub-items for Dependencies
-        # Type-5 EAC Varies children — nest under Mod Type as plain text (never colored labels)
+        # Type 2 EAC Varies children — nest under Mod Type as plain text (never colored labels)
         eac_varies_child_labels = {
             "dedicated server",
             "singleplayer and player-hosted",

@@ -1,0 +1,17 @@
+<AGF-OutbackRoadies>
+	<conditional>
+		<if cond="mod_loaded('V3_OutbackRoadies')">
+			<!-- Outback last-writer sets smallEngine stack to 100. Re-apply CraftStack 500. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-CraftStackEngBattCells')">
+					<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">500</set>
+				</if>
+			</conditional>
+			<!-- Outback raises cooked food to 250 but never listed v3 chicken-coop dishes (vanilla 10). -->
+			<set xpath="/items/item[@name='foodChickenWings']/property[@name='Stacknumber']/@value">250</set>
+			<set xpath="/items/item[@name='foodChickenNuggets']/property[@name='Stacknumber']/@value">250</set>
+			<set xpath="/items/item[@name='foodAshChickenStew']/property[@name='Stacknumber']/@value">250</set>
+			<set xpath="/items/item[@name='foodRoadrunnerChickenJerky']/property[@name='Stacknumber']/@value">250</set>
+		</if>
+	</conditional>
+</AGF-OutbackRoadies>

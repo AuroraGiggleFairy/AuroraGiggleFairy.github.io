@@ -144,6 +144,19 @@ namespace ModSync
 		/// <summary>Signals the client to read the mod list again rather than fail.</summary>
 		public const string ManifestChangedMessage = "MODSYNC_LIST_CHANGED";
 
+		/// <summary>Hello protocol of a client that can replace its own copy.</summary>
+		public const int Protocol = 2;
+
+		/// <summary>Manifest version that only asks an old client to open a transfer, then fails it.</summary>
+		public const int TooOldManifestVersion = 0;
+
+		/// <summary>Manifest version that carries only this mod, so the client can replace itself and rejoin.</summary>
+		public const int SelfUpdateManifestVersion = -1;
+
+		public const string TooOldMessage = "ModSync needs an update before you can join this server.";
+
+		public const string ModFolderPrefix = "AGF-ModSync";
+
 		/// <summary>Bytes per NetPackage payload. Kept well under the MTU fragmentation limit.</summary>
 		public const int ChunkSize = 16384;
 
@@ -181,6 +194,64 @@ namespace ModSync
 		public static string ModsDir
 		{
 			get { return Path.Combine(GameDir, "Mods"); }
+		}
+
+		/// <summary>
+		/// The other Mods folder the game loads, usually under AppData. Null when it is the
+		/// same folder as <see cref="ModsDir"/>, so a join never moves the game folder aside.
+		/// </summary>
+		public static string UserModsDir
+		{
+			get
+			{
+				try
+				{
+					string user = ModManager.ModsBasePath;
+					if (string.IsNullOrEmpty(user))
+					{
+						return null;
+					}
+
+					user = Path.GetFullPath(user);
+					string game = Path.GetFullPath(ModsDir);
+					if (string.Equals(user, game, StringComparison.OrdinalIgnoreCase))
+					{
+						return null;
+					}
+
+					return user;
+				}
+				catch (Exception)
+				{
+					return null;
+				}
+			}
+		}
+
+		/// <summary>True when the user Mods folder has anything in it for this join to set aside.</summary>
+		public static bool UserModsNeedSetAside()
+		{
+			string dir = UserModsDir;
+			if (string.IsNullOrEmpty(dir) || !Directory.Exists(dir))
+			{
+				return false;
+			}
+
+			try
+			{
+				return Directory.GetFileSystemEntries(dir).Length > 0;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
+
+		/// <summary>Dated folder beside the user Mods folder. The Mods folder itself stays.</summary>
+		public static string UserModsBackupDir(string stamp)
+		{
+			string dir = UserModsDir;
+			return Path.Combine(Path.GetDirectoryName(dir), "Mods - Backup", stamp);
 		}
 
 		/// <summary>
@@ -224,24 +295,129 @@ namespace ModSync
 			get { return Path.Combine(GameDir, "ModSync-Staging"); }
 		}
 
-		/// <summary>Set by the installer only on a game folder it made for one server.</summary>
-		public static bool IsManagedInstall
-		{
-			get { return File.Exists(Path.Combine(GameDir, "ModSync-Managed.txt")); }
-		}
-
 		/// <summary>Folder name of this mod, so a mirror pass never deletes the syncer itself.</summary>
 		public static string OwnModFolder = "";
 
+		/// <summary>Version from this copy's ModInfo, or 0.0.0 when it cannot be read.</summary>
+		public static string ReadOwnVersion()
+		{
+			try
+			{
+				if (OwnModFolder.Length == 0)
+				{
+					return "0.0.0";
+				}
+
+				return ReadVersion(Path.Combine(ModsDir, OwnModFolder, "ModInfo.xml"));
+			}
+			catch (Exception)
+			{
+				return "0.0.0";
+			}
+		}
+
+		public static string ReadVersion(string modInfoPath)
+		{
+			try
+			{
+				if (!File.Exists(modInfoPath))
+				{
+					return "0.0.0";
+				}
+
+				string text = File.ReadAllText(modInfoPath);
+				int at = text.IndexOf("<Version", StringComparison.OrdinalIgnoreCase);
+				if (at < 0)
+				{
+					return "0.0.0";
+				}
+
+				int value = text.IndexOf("value=\"", at, StringComparison.OrdinalIgnoreCase);
+				if (value < 0)
+				{
+					return "0.0.0";
+				}
+
+				value += "value=\"".Length;
+				int end = text.IndexOf('"', value);
+				if (end <= value)
+				{
+					return "0.0.0";
+				}
+
+				return text.Substring(value, end - value).Trim();
+			}
+			catch (Exception)
+			{
+				return "0.0.0";
+			}
+		}
+
+		/// <summary>Negative when <paramref name="left"/> is older.</summary>
+		public static int CompareVersions(string left, string right)
+		{
+			int[] a = VersionParts(left);
+			int[] b = VersionParts(right);
+			int n = a.Length > b.Length ? a.Length : b.Length;
+			for (int i = 0; i < n; i++)
+			{
+				int av = i < a.Length ? a[i] : 0;
+				int bv = i < b.Length ? b[i] : 0;
+				if (av != bv)
+				{
+					return av < bv ? -1 : 1;
+				}
+			}
+
+			return 0;
+		}
+
+		private static int[] VersionParts(string version)
+		{
+			if (string.IsNullOrEmpty(version))
+			{
+				return new int[0];
+			}
+
+			string[] bits = version.Split('.');
+			int[] parts = new int[bits.Length];
+			for (int i = 0; i < bits.Length; i++)
+			{
+				int n;
+				parts[i] = int.TryParse(bits[i], out n) ? n : 0;
+			}
+
+			return parts;
+		}
+
+		/// <summary>
+		/// Vanilla mods that are already on every dedicated server. They are not part of
+		/// the client sync: the server does not send them, and a client does not delete
+		/// its own copies just because the server left them out.
+		/// </summary>
+		public static bool IsVanillaServerMod(string folderName)
+		{
+			string name = folderName.ToLowerInvariant();
+			return name == "tfp_commandextensions" || name == "xample_markersmod";
+		}
+
 		/// <summary>
 		/// Files a mirror pass must leave alone even when the server does not list them:
-		/// Harmony, this mod, and a leftover join file. The shortcut owns the address;
-		/// a join file inside Mods would be loaded by every install that has this mod.
+		/// Harmony, this mod, the vanilla dedicated-server mods, and a leftover join file.
+		/// The shortcut owns the address; a join file inside Mods would be loaded by every
+		/// install that has this mod.
 		/// </summary>
 		public static bool IsProtected(string relPath)
 		{
 			string rel = relPath.ToLowerInvariant();
 			if (rel.StartsWith("0_tfp_harmony/"))
+			{
+				return true;
+			}
+
+			int slash = rel.IndexOf('/');
+			string folder = slash > 0 ? rel.Substring(0, slash) : rel;
+			if (IsVanillaServerMod(folder))
 			{
 				return true;
 			}
@@ -264,6 +440,7 @@ namespace ModSync
 		{
 			string name = folderName.ToLowerInvariant();
 			return name == "0_tfp_harmony"
+				|| IsVanillaServerMod(name)
 				|| (OwnModFolder.Length > 0 && name == OwnModFolder.ToLowerInvariant());
 		}
 

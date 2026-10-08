@@ -405,24 +405,7 @@ namespace DoomLevelsMpFix
 			}
 
 			NetPackageDoomInstance package = Pack(playerId, map, origin, cell, active, stats);
-			cm.SendPackage(package, _onlyClientsAttachedToAnEntity: false, -1, -1, -1);
-
-			var list = cm.Clients?.List;
-			if (list == null)
-			{
-				return;
-			}
-
-			for (int i = 0; i < list.Count; i++)
-			{
-				ClientInfo client = list[i];
-				if (client == null)
-				{
-					continue;
-				}
-
-				client.SendPackage(Pack(playerId, map, origin, cell, active, stats));
-			}
+			cm.SendPackage(package, _onlyClientsAttachedToAnEntity: true, -1, -1, -1);
 		}
 
 		private static NetPackageDoomInstance Pack(int playerId, string map, Vector3i origin, int cell, bool active, Stats stats)

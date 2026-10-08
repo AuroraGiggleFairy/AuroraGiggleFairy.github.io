@@ -9,7 +9,7 @@ namespace ExpandedInteractionPrompts
         {
             try
             {
-                if (ModManager.GetMod("AGF-NoEAC-EnhancedAGF") != null)
+                if (ModManager.GetMod("AGF-EnhancedAGF") != null)
                 {
                     Console.WriteLine("[ExpandedInteractionPrompts] EnhancedAGF is loaded; skipping HUD patches.");
                     return;

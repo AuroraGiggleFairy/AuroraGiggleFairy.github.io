@@ -1,0 +1,32 @@
+---
+description: Read when the user says Doom. Dan folder, Doom Test local path, and Doom Test SFTP path. Do not rediscover these.
+alwaysApply: false
+---
+
+# Doom update handoff
+
+When a Doom mod file is updated and ready to ship, copy only the changed files to the three places below. Use the same path the file has under `Mods`. Do not search the disk, FileZilla, or the repo for these locations. Do not copy to Manda. Do not use `7 Days to Die - Doom` (that install has no "Test" in the name). Do not print the password.
+
+If the user says **Doom Work**, follow `.cursor/rules/doom-work.mdc` instead. That copies the files in Downloads into `ZZZ_DoomMod_Standalone` on all four locations, including Manda.
+
+Example file: `Mods\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
+
+## 1. Dan folder
+
+`C:\GitHub\7D2D-Mods\00_Support\DoomLevelsSource\UpdateForDan\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
+
+Dan copies the contents of `UpdateForDan` into his Mods folder.
+
+## 2. Doom Test local
+
+`C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom Test\Mods\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
+
+## 3. Doom Test dedicated
+
+SFTP, not FTP. Host `63.143.56.130`, port `8822`, user `aurorat`.
+
+Remote file: `63.143.56.130_41341/Mods/ZZZ_DoomMod_Standalone/DoomMultiplayer.dll`
+
+Password: FileZilla site named `Giggles Site` in `C:\Users\rft30\AppData\Roaming\FileZilla\sitemanager.xml`. The `<Pass>` text is plain base64. Decode it and pass it to SSH.NET `SftpClient`. Accept the host key. Do not use the old FileZilla XOR key. curl cannot do this SFTP.
+
+After each copy, hash the destination and match it to the file you just built. A dedicated server keeps the DLL it loaded at startup, so tell the user to restart Doom Test before the change applies.

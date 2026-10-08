@@ -20,6 +20,7 @@ namespace ModSync
 			public FileStream Stream;
 			public int ChunksSent;
 			public int ChunksAcked;
+			public List<ManifestEntry> Source;
 		}
 
 		/// <summary>Across all downloaders, per tick. Keeps sending from eating a whole frame.</summary>
@@ -46,13 +47,23 @@ namespace ModSync
 
 		private static bool manifestBuilt;
 		private static int manifestVersion;
+
+		private static byte[] tooOldManifest;
+		private static readonly List<ManifestEntry> selfManifest = new List<ManifestEntry>();
+		private static byte[][] selfChunks;
+		private static bool selfBuilt;
+		private static string serverVersion = "";
 		private static DateTime manifestBuiltAt = DateTime.MinValue;
 		private static byte[][] manifestChunks;
 		private static bool registered;
 
 		public static void Init(string modPath)
 		{
+			serverVersion = string.IsNullOrEmpty(modPath)
+				? "0.0.0"
+				: ModSyncCommon.ReadVersion(Path.Combine(modPath, "ModInfo.xml"));
 			ReadServerConfig(modPath);
+			ModSyncCommon.Info("TFP_CommandExtensions and Xample_MarkersMod are left out of the client sync.");
 			if (!registered)
 			{
 				registered = true;
@@ -126,13 +137,18 @@ namespace ModSync
 
 		private static bool IsExcluded(string relPath)
 		{
+			int slash = relPath.IndexOf('/');
+			string folder = (slash > 0 ? relPath.Substring(0, slash) : relPath).ToLowerInvariant();
+			if (ModSyncCommon.IsVanillaServerMod(folder))
+			{
+				return true;
+			}
+
 			if (excludes.Count == 0)
 			{
 				return false;
 			}
 
-			int slash = relPath.IndexOf('/');
-			string folder = (slash > 0 ? relPath.Substring(0, slash) : relPath).ToLowerInvariant();
 			return excludes.Contains(folder);
 		}
 
@@ -309,16 +325,143 @@ namespace ModSync
 			return chunks;
 		}
 
+		/// <summary>
+		/// One file the old client does not have, so it opens a transfer at once. The request
+		/// is then failed before any bytes are sent, which is the box that client already shows.
+		/// </summary>
+		private static void SendTooOldManifest(ClientInfo client)
+		{
+			if (tooOldManifest == null)
+			{
+				List<ManifestEntry> entries = new List<ManifestEntry>();
+				entries.Add(new ManifestEntry
+				{
+					RelPath = "ZZZ-ModSyncUpdate/notice.txt",
+					Size = 1,
+					Hash = "00000000000000000000000000000000"
+				});
+				tooOldManifest = ModSyncCommon.SerializeManifest(entries);
+			}
+
+			client.SendPackage(NetPackageManager.GetPackage<NetPackageModSyncManifest>()
+				.Setup(ModSyncCommon.TooOldManifestVersion, 0, 1, tooOldManifest));
+		}
+
+		/// <summary>Files of the ModSync folder this server loaded. Built once, with the mod list.</summary>
+		private static bool EnsureSelfManifest()
+		{
+			if (selfBuilt)
+			{
+				return selfManifest.Count > 0;
+			}
+
+			selfBuilt = true;
+			selfManifest.Clear();
+			if (ModSyncCommon.OwnModFolder.Length == 0)
+			{
+				return false;
+			}
+
+			string root = Path.Combine(ModSyncCommon.ServerModsDir, ModSyncCommon.OwnModFolder);
+			if (!Directory.Exists(root))
+			{
+				return false;
+			}
+
+			if (hashes == null)
+			{
+				hashes = new ModSyncHashCache(Path.Combine(ModSyncCommon.GameDir, "ModSync-ServerHashes.txt"));
+			}
+
+			string modsRoot = ModSyncCommon.ServerModsDir;
+			string[] files = Directory.GetFiles(root, "*", SearchOption.AllDirectories);
+			for (int i = 0; i < files.Length; i++)
+			{
+				string hash;
+				try
+				{
+					hash = hashes.Get(files[i]);
+				}
+				catch (Exception)
+				{
+					continue;
+				}
+
+				if (hash == null)
+				{
+					continue;
+				}
+
+				FileInfo fi = new FileInfo(files[i]);
+				string rel = ModSyncCommon.NormalizeRel(files[i].Substring(modsRoot.Length));
+				selfManifest.Add(new ManifestEntry { RelPath = rel, Size = fi.Length, Hash = hash });
+			}
+
+			selfChunks = SlicePacked(ModSyncCommon.SerializeManifest(selfManifest));
+			hashes.Save();
+			return selfManifest.Count > 0;
+		}
+
+		private static void SendSelfManifest(ClientInfo client)
+		{
+			for (int i = 0; i < selfChunks.Length; i++)
+			{
+				client.SendPackage(NetPackageManager.GetPackage<NetPackageModSyncManifest>()
+					.Setup(ModSyncCommon.SelfUpdateManifestVersion, i, selfChunks.Length, selfChunks[i]));
+			}
+		}
+
+		private static byte[][] SlicePacked(byte[] packed)
+		{
+			int count = Math.Max(1, (packed.Length + ModSyncCommon.ChunkSize - 1) / ModSyncCommon.ChunkSize);
+			byte[][] chunks = new byte[count][];
+			for (int i = 0; i < count; i++)
+			{
+				int offset = i * ModSyncCommon.ChunkSize;
+				int len = Math.Min(ModSyncCommon.ChunkSize, packed.Length - offset);
+				byte[] slice = new byte[len];
+				Array.Copy(packed, offset, slice, 0, len);
+				chunks[i] = slice;
+			}
+
+			return chunks;
+		}
+
 		/// <summary>Drop the cached manifest so the next client picks up mod changes.</summary>
 		public static void Invalidate()
 		{
 			manifestBuilt = false;
+			selfBuilt = false;
 		}
 
-		public static void OnHello(ClientInfo client, int protocol)
+		public static void OnHello(ClientInfo client, int protocol, string clientVersion)
 		{
 			if (client == null)
 			{
+				return;
+			}
+
+			if (protocol < ModSyncCommon.Protocol)
+			{
+				ModSyncCommon.Info("Client " + Describe(client)
+					+ " cannot update its ModSync. Stopping the join.");
+				SendTooOldManifest(client);
+				return;
+			}
+
+			if (serverVersion != "0.0.0"
+				&& ModSyncCommon.CompareVersions(clientVersion, serverVersion) < 0)
+			{
+				if (EnsureSelfManifest())
+				{
+					ModSyncCommon.Info("Client " + Describe(client) + " has ModSync " + clientVersion
+						+ ". Sending " + serverVersion + ".");
+					SendSelfManifest(client);
+					return;
+				}
+
+				ModSyncCommon.Warn("Could not read this server's ModSync files. Stopping the join.");
+				SendTooOldManifest(client);
 				return;
 			}
 
@@ -338,6 +481,26 @@ namespace ModSync
 				return;
 			}
 
+			if (version == ModSyncCommon.TooOldManifestVersion)
+			{
+				client.SendPackage(NetPackageManager.GetPackage<NetPackageModSyncDone>()
+					.Setup(false, ModSyncCommon.TooOldMessage));
+				return;
+			}
+
+			if (version == ModSyncCommon.SelfUpdateManifestVersion)
+			{
+				if (!EnsureSelfManifest())
+				{
+					client.SendPackage(NetPackageManager.GetPackage<NetPackageModSyncDone>()
+						.Setup(false, ModSyncCommon.TooOldMessage));
+					return;
+				}
+
+				StartTransfer(client, indices, selfManifest);
+				return;
+			}
+
 			// The mod list was rebuilt after this client read it, so its indices no longer line up.
 			if (version != manifestVersion)
 			{
@@ -347,6 +510,11 @@ namespace ModSync
 				return;
 			}
 
+			StartTransfer(client, indices, manifest);
+		}
+
+		private static void StartTransfer(ClientInfo client, int[] indices, List<ManifestEntry> source)
+		{
 			Abort(client);
 
 			if (indices.Length == 0)
@@ -355,15 +523,15 @@ namespace ModSync
 				return;
 			}
 
-			Transfer t = new Transfer { Client = client };
+			Transfer t = new Transfer { Client = client, Source = source };
 			long bytes = 0;
 			for (int i = 0; i < indices.Length; i++)
 			{
 				int idx = indices[i];
-				if (idx >= 0 && idx < manifest.Count)
+				if (source != null && idx >= 0 && idx < source.Count)
 				{
 					t.Files.Add(idx);
-					bytes += manifest[idx].Size;
+					bytes += source[idx].Size;
 				}
 			}
 
@@ -590,6 +758,22 @@ namespace ModSync
 			}
 		}
 
+		private static void RefuseChangedFile(Transfer t, string relPath)
+		{
+			string shown = "Mods\\" + (relPath ?? string.Empty).Replace('/', '\\');
+			string message = "A mod file changed after the server started:\n\n  " + shown
+				+ "\n\nNothing was changed. Restart the server, then log in again.";
+			ModSyncCommon.Warn("Refusing to send " + relPath + " because it no longer matches the startup list.");
+			try
+			{
+				t.Client.SendPackage(NetPackageManager.GetPackage<NetPackageModSyncDone>()
+					.Setup(false, message));
+			}
+			catch (Exception)
+			{
+			}
+		}
+
 		/// <summary>Sends up to this client's share of chunks. Returns false when the transfer is finished.</summary>
 		private static bool Pump(Transfer t, int maxChunks)
 		{
@@ -609,13 +793,16 @@ namespace ModSync
 						return false;
 					}
 
-					ManifestEntry entry = manifest[t.Files[t.FilePos]];
+					List<ManifestEntry> source = t.Source ?? manifest;
+					ManifestEntry entry = source[t.Files[t.FilePos]];
 					string full = Path.Combine(ModSyncCommon.ServerModsDir, entry.RelPath.Replace('/', Path.DirectorySeparatorChar));
-					if (!File.Exists(full))
+					FileInfo live = new FileInfo(full);
+					if (!live.Exists || live.Length != entry.Size)
 					{
-						ModSyncCommon.Warn("Manifest file vanished: " + entry.RelPath);
-						t.FilePos++;
-						continue;
+						// The list is the mods loaded at startup. Sending the file that is on
+						// disk now would hand the client different bytes under the old hash.
+						RefuseChangedFile(t, entry.RelPath);
+						return false;
 					}
 
 					t.Stream = new FileStream(full, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);

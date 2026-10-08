@@ -5,7 +5,7 @@
 
   PLACEHOLDERS:
     {{CATEGORY_TITLE}}
-        The section title. Always "A. GIGGLE PACK".
+        The section title. Wording comes from [GIGGLE PACK TITLE] in TEMPLATE-CategoryDescriptions.md.
 
     {{CATEGORY_DOWNLOAD_LINE}}
         The download button with version number appended.
@@ -24,7 +24,7 @@
 
     <br>
 
-    ## **A. GIGGLE PACK**
+    ## **Giggle Pack**
 
     ⬇️ DOWNLOAD ALL AGF MODS (GigglePack v1.5.0)
 

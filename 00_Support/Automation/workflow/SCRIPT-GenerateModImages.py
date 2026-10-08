@@ -34,10 +34,9 @@ DEFAULT_LAYOUT_PATH = os.path.join(VS_CODE_ROOT, "00_Images", "01_ImageWorkflow"
 # Label and explanation are split on ": " by the renderer for the two-part layout.
 MOD_TYPE_MAP = {
     "1": "Server-Side (EAC-Friendly): server install works for all joining players, EAC can be on or off, and it also works in singleplayer.",
-    "2": "Server-Side (EAC Off): EAC off is required, server install works for all joining players, and it also works in singleplayer.",
+    "2": "Server-Side (EAC Varies): server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.",
     "3": "Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.",
     "4": "Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.",
-    "5": "Server-Side (EAC Varies): server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.",
 }
 
 
@@ -45,6 +44,8 @@ MOD_TYPE_MAP = {
 class ModMeta:
     folder: str
     base_name: str
+    token: str
+    previous_name: str
     mod_name: str
     version: str
     description: str
@@ -63,7 +64,16 @@ def get_base_mod_name(name: str) -> str:
 
 
 def is_agf_mod(folder: str) -> bool:
-    return folder.startswith("AGF-") or folder.startswith("zzzAGF-")
+    return folder.startswith("AGF-") or folder.startswith("0AGF-") or re.match(r"^z+AGF-", folder) is not None
+
+
+def scheme_scope_and_token(folder: str) -> Optional[Tuple[str, str]]:
+    """Return (SCOPE, unique token) for an AGF-V#-SCOPE-Name folder."""
+    base = get_base_mod_name(folder)
+    match = re.match(r"^(?:0|z+)?AGF-V\d+-(SERVER|CLIENT|BOTH|ADMIN|COMPAT|TBD)-(.+)$", base)
+    if not match:
+        return None
+    return match.group(1), match.group(2)
 
 
 def parse_modinfo(modinfo_path: str, fallback_name: str) -> Tuple[str, str, str, str]:
@@ -631,32 +641,46 @@ def apply_features_overflow_notice(
     return result[:capacity]
 
 
-def resolve_media_image_path(media_root: str, mod_base_name: str, legacy_source_root: str = "") -> Optional[str]:
+def resolve_media_image_path(
+    media_root: str,
+    mod_base_name: str,
+    legacy_source_root: str = "",
+    also: Optional[List[str]] = None,
+) -> Optional[str]:
+    """Find a source photo. The name the user types is tried first, then each alias."""
     allowed_ext = [".png", ".jpg", ".jpeg", ".webp"]
+    names: List[str] = []
+    for name in [mod_base_name, *(also or [])]:
+        cleaned = (name or "").strip()
+        if cleaned and cleaned not in names:
+            names.append(cleaned)
 
-    for ext in allowed_ext:
-        candidate = os.path.join(media_root, f"{mod_base_name}_01{ext}")
-        if os.path.isfile(candidate):
-            return candidate
+    for name in names:
+        for ext in allowed_ext:
+            candidate = os.path.join(media_root, f"{name}_01{ext}")
+            if os.path.isfile(candidate):
+                return candidate
 
-    # Backward compatibility with older unnumbered naming.
-    for ext in allowed_ext:
-        candidate = os.path.join(media_root, f"{mod_base_name}{ext}")
-        if os.path.isfile(candidate):
-            return candidate
+        # Backward compatibility with older unnumbered naming.
+        for ext in allowed_ext:
+            candidate = os.path.join(media_root, f"{name}{ext}")
+            if os.path.isfile(candidate):
+                return candidate
 
     if legacy_source_root:
-        legacy_dir = os.path.join(legacy_source_root, mod_base_name)
-        if os.path.isdir(legacy_dir):
+        for name in names:
+            legacy_dir = os.path.join(legacy_source_root, name)
+            if not os.path.isdir(legacy_dir):
+                continue
             numbered: List[Tuple[int, str]] = []
-            for name in os.listdir(legacy_dir):
-                stem, ext = os.path.splitext(name)
+            for filename in os.listdir(legacy_dir):
+                stem, ext = os.path.splitext(filename)
                 if ext.lower() not in allowed_ext:
                     continue
                 if not stem.isdigit():
                     continue
-                numbered.append((int(stem), os.path.join(legacy_dir, name)))
-            numbered.sort(key=lambda t: t[0])
+                numbered.append((int(stem), os.path.join(legacy_dir, filename)))
+            numbered.sort(key=lambda item: item[0])
             if numbered:
                 return numbered[0][1]
 
@@ -729,13 +753,20 @@ def get_mods(layout: Dict[str, object], compatibility: Dict[str, Dict[str, str]]
         full = os.path.join(RELEASE_SOURCE, folder)
         if not os.path.isdir(full) or not is_agf_mod(folder):
             continue
+        scheme = scheme_scope_and_token(folder)
+        if scheme and scheme[0] == "COMPAT":
+            continue
 
         modinfo = os.path.join(full, "ModInfo.xml")
         readme_txt = os.path.join(full, "README.txt")
         base = get_base_mod_name(folder)
+        token = scheme[1] if scheme else base
         display_name, internal_name, version, desc = parse_modinfo(modinfo, base)
         feats = extract_features(readme_txt)
         compat_row = compatibility.get(internal_name, {})
+        previous_name = (compat_row.get("PREVIOUS_MOD_NAME") or "").strip()
+        if previous_name in {"", "0", "TBD", "MISSINGDATA"}:
+            previous_name = ""
         tested_version = (compat_row.get("TESTED_GAME_VERSION") or "TBD").strip()
 
         # Derive mod type from the CSV MOD_TYPE_ID column rather than parsing
@@ -746,7 +777,7 @@ def get_mods(layout: Dict[str, object], compatibility: Dict[str, Dict[str, str]]
         else:
             mod_type = MOD_TYPE_MAP.get(mod_type_id, "")
 
-        mods.append(ModMeta(folder=folder, base_name=base, mod_name=display_name, version=version, description=desc, features=feats, tested_version=tested_version, mod_type=mod_type))
+        mods.append(ModMeta(folder=folder, base_name=base, token=token, previous_name=previous_name, mod_name=display_name, version=version, description=desc, features=feats, tested_version=tested_version, mod_type=mod_type))
 
     return mods
 
@@ -1129,7 +1160,7 @@ def main() -> int:
     mods = get_mods(layout, compatibility)
     if args.mod:
         wanted = args.mod.strip().lower()
-        mods = [m for m in mods if m.base_name.lower() == wanted]
+        mods = [m for m in mods if wanted in {m.base_name.lower(), m.token.lower()}]
 
     if not mods:
         print("No matching mods found.")
@@ -1152,7 +1183,12 @@ def main() -> int:
     media_status_rows: List[Dict[str, str]] = []
     unchanged_count = 0
     for mod in mods:
-        media_image_path = resolve_media_image_path(media_root, mod.base_name, "")
+        media_image_path = resolve_media_image_path(
+            media_root,
+            mod.token,
+            "",
+            also=[mod.base_name, mod.previous_name],
+        )
         media_status_rows.append(
             {
                 "MOD_NAME": mod.base_name,
@@ -1165,6 +1201,16 @@ def main() -> int:
         prev_sig = str(prev.get("signature", ""))
         full_merged_path = os.path.join(generated_root, f"{mod.base_name}_01.png")
         has_full_merged = os.path.isfile(full_merged_path)
+
+        if not media_image_path and has_full_merged:
+            unchanged_count += 1
+            next_manifest[mod.base_name] = {
+                "signature": signature,
+                "version": mod.version,
+                "has_media": False,
+                "media_file": "",
+            }
+            continue
 
         should_skip = (
             args.changed_only

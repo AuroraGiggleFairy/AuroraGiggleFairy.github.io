@@ -10,6 +10,10 @@ Older VS Copilot file: `.github/copilot-instructions.md` (keep in sync). Longer 
 ## Communication
 
 - Be concise. Confirm work as best-effort implemented.
+- Several questions in one message: one table, one row per question. Columns are Question and Answer. Use their wording in the first column. Do not answer those questions as separate paragraphs. This is not the issue-fix table.
+- A recap of more than one item: one table, one row per item. Name the columns for what the recap is listing. Do not recap those items as separate paragraphs. This is not the issue-fix table.
+- Table columns do not need to be the same width. Do not set a width to even them out.
+- In a table cell, ordered steps are a numbered list. A simple list is bullets.
 - Do not say ready to test in-game unless **live game Mods** files were updated in that run.
 - Token-heavy work with a cheaper script/CLI/Playwright path: ask first. See `.cursor/rules/token-cost-notice.mdc`.
 - Do not markdown-link files/canvases to open them. Touch the file with an editor tool so the chat Open chip appears. See `.cursor/rules/open-files-via-chip.mdc`.

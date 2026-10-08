@@ -114,7 +114,7 @@ namespace DoomSandbox
 				{
 					string desc = line.Substring("Description:".Length).Trim();
 					if (!IsDocPlaceholder(desc))
-						current.Description = desc;
+						current.Description = DoomSandboxBlueprint.AsDisplayText(desc);
 					continue;
 				}
 

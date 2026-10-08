@@ -1,0 +1,13 @@
+<AGF-HonkOpensYourDoors>
+
+	<append xpath="/gameevents/action_sequence[@name='honk_trader_doors']">
+		<action class="BlockDoorState">
+			<property name="min_offset" value="-13,-6,-13" />
+			<property name="max_offset" value="13,6,13" />
+			<property name="set_open" value="Toggle" />
+			<property name="trader_only" value="false" />
+			<property name="block_tags" value="door" />
+		</action>
+	</append>
+
+</AGF-HonkOpensYourDoors>

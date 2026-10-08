@@ -1,6 +1,6 @@
-# AGF-4Modders-Fix4DestroyBiomeBadge v2.0.0
+# AGF-4Modders-Fix4DestroyBiomeBadge v2.1.0
 ### 7DaysToDieMods Details
-Generated: 2026-10-05  06:25 AM
+Generated: 2026-10-06  12:43 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -243,13 +243,13 @@ Same image on **thumbnail** and **gallery** unless `_01` is over 2MB:
 Version:
 
 ```text
-2.0.0
+2.1.0
 ```
 
 Text field (plain text only — do not copy a code fence; that becomes a code block on the site).
 The site joins a single Enter into one line. Keep the blank line between entries:
 
--Updated for 7d2d version 3.
+-Updated to work with both 7d2d 3.3 and pre-3.3.
 
 ---
 
@@ -276,7 +276,7 @@ Mod Type: TBD
 Version of Mod:
 
 ```text
-2.0.0
+2.1.0
 ```
 
 ---

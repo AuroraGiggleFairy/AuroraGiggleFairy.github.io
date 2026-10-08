@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-GyroFlightModes"/>
+    <DisplayName value="AGF Gyro Flight Modes"/>
+    <Version value="1.0.1"/>
+    <Description value="Switch the gyrocopter between Original and Helicopter flight modes."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

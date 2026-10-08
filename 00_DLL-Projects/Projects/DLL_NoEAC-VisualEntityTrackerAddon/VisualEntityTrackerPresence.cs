@@ -2,7 +2,7 @@ namespace VisualEntityTrackerAddon
 {
     public static class VisualEntityTrackerPresence
     {
-        private const string VetModName = "AGF-HUDPlus-VisualEntityTracker";
+        private const string VetModName = "AGF-2VisualEntityTracker";
         private static bool resolved;
         private static bool present;
 

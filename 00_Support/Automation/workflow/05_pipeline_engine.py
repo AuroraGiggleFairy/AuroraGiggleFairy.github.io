@@ -114,13 +114,20 @@ DISCORD_TEMPLATE_PATH = os.path.join(
 )
 MAIN_README_PATH = os.path.join(VS_CODE_ROOT, "README.md")
 
-AGF_PREFIXES = ("AGF-", "zzzAGF-", "zzzzAGF-")
+AGF_PREFIXES = ("AGF-", "0AGF-", "zzzAGF-", "zzzzAGF-", "zzzzzAGF-")
 BASE_DOWNLOAD_URL = "https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips"
 BACKPACK_DEFAULT_ACTIVE_TOKEN = "084Slots"
-GAME_OPTIONALS_BACKPACK_DIR = ".Optionals-Backpack"
-GAME_OPTIONALS_HUDPLUS_DIR = ".Optionals-HUDPlus"
-GAME_OPTIONALS_4MODDERS_DIR = ".Optionals-4Modders"
+GAME_OPTIONALS_CLIENT_DIR = ".Optionals-Client"
+GAME_OPTIONALS_PRE33_DIR = ".Optionals-Pre3.3"
 GAME_OPTIONALS_REQUESTED_DIR = ".Optionals-Requested"
+GAME_OPTIONALS_COMPAT_DIR = ".Optionals-Compat"
+GAME_OPTIONALS_ADMIN_DIR = ".Optionals-Admin"
+GIGGLEPACK_OPTIONAL_PLACES = frozenset({"client", "pre33", "requested", "compat", "admin"})
+GIGGLEPACK_REQUESTED_MODINFO_NAMES = frozenset({
+    "AGF-SmallerInteractionPrompt",
+    "AGF-TinyBuffsPopUp",
+    "AGF-LootStaysOnEmpty",
+})
 RELEASE_META_DIR_NAME = ".release"
 GIGGLEPACK_RELEASE_DATA_DIR = "GigglePack"
 GIGGLEPACK_RELEASE_ROOT_DIR = os.path.join(VS_CODE_ROOT, "05_ReleaseData", GIGGLEPACK_RELEASE_DATA_DIR)
@@ -137,6 +144,19 @@ GIGGLEPACK_CANONICAL_ZIP = "00_GigglePack_All.zip"
 GIGGLEPACK_VERSIONED_ZIP_PREFIX = "AGF-GigglePack-v"
 LEGACY_FINAL_GIGGLEPACK_ZIP = "AGF-7d2d-v2.6-GigglePack-Final.zip"
 LEGACY_FINAL_CATEGORY_KEY = "AGF 7d2d v2.6 GigglePack FINAL"
+MAIN_README_SCOPES = ("SERVER", "CLIENT", "BOTH", "COMPAT", "ADMIN")
+MAIN_README_SECTIONS = (
+    ("SERVER", ("SERVER",)),
+    ("CLIENT", ("CLIENT", "BOTH")),
+    ("COMPAT", ("COMPAT",)),
+    ("ADMIN", ("ADMIN",)),
+)
+SECTION_DOWNLOAD_PACKS = (
+    ("SERVER", "00_SERVER_All", "Download All Server Mods"),
+    ("CLIENT", "00_CLIENT_All", "Download All Client Mods"),
+    ("COMPAT", "00_COMPAT_All", "Download All Compat Mods"),
+    ("ADMIN", "00_ADMIN_All", "Download All Admin Mods"),
+)
 GIGGLEPACK_BASELINE_VERSION = "0.1.0"
 GIGGLEPACK_MAJOR_BUMP_MARKER = "gigglepack-major-bump.txt"
 DISCORD_WEBHOOK_ENV_VAR = "AGF_DISCORD_WEBHOOK_URL"
@@ -174,14 +194,16 @@ COMPAT_CSV_FIELD_ORDER = [
     "SERVER_SIDE_DEDICATED",
     "CLIENT_SIDE",
     "DEPENDENCIES",
+    "PREVIOUS_MOD_NAME",
+    "FOLDER_BASE",
 ]
+CSV_BLANK_FIELDS = frozenset({"PREVIOUS_MOD_NAME", "FOLDER_BASE"})
 
 DEFAULT_MOD_TYPE_LINE_BY_ID = {
     "1": "Server-side (EAC-friendly): Server install works for all joining players; EAC on or off. (Also works in singleplayer.)",
-    "2": "Server-side (EAC Off): EAC off required; server install works for all joining players. (Also works in singleplayer.)",
+    "2": "Server-Side (EAC Varies): Server install works for all joining players; dedicated EAC on or off; otherwise EAC off required.",
     "3": "Server/Client-side (Required): EAC off required; host and joining players must install it. (Also works in singleplayer.)",
     "4": "Client-side (Only): EAC off required; server install has no effect; install on each player PC. (Also works in singleplayer.)",
-    "5": "Server-Side (EAC Varies): Server install works for all joining players; dedicated EAC on or off; otherwise EAC off required.",
 }
 
 MOD_TYPE_COMPAT_BY_ID = {
@@ -192,7 +214,7 @@ MOD_TYPE_COMPAT_BY_ID = {
         "CLIENT_SIDE": "None",
     },
     "2": {
-        "EAC_FRIENDLY": "No",
+        "EAC_FRIENDLY": "Dedicated",
         "SERVER_SIDE_PLAYER": "Yes",
         "SERVER_SIDE_DEDICATED": "Yes",
         "CLIENT_SIDE": "None",
@@ -208,12 +230,6 @@ MOD_TYPE_COMPAT_BY_ID = {
         "SERVER_SIDE_PLAYER": "N/A",
         "SERVER_SIDE_DEDICATED": "N/A",
         "CLIENT_SIDE": "Only",
-    },
-    "5": {
-        "EAC_FRIENDLY": "Dedicated",
-        "SERVER_SIDE_PLAYER": "Yes",
-        "SERVER_SIDE_DEDICATED": "Yes",
-        "CLIENT_SIDE": "None",
     },
 }
 
@@ -251,7 +267,7 @@ DEFAULT_MODTYPE_GUIDE_BODY = """---
 ### B. EAC Friendly?
 
 > - EAC stands for **Easy Anti-Cheat**. It's a program built into 7 Days to Die that helps protect multiplayer sessions from cheating.
-> - Mod Type 1 is EAC friendly. Mod Types 2, 3, and 4 require EAC to be turned off.
+> - Mod Type 1 is EAC friendly. Mod Type 2 varies: a dedicated server can keep EAC on, and singleplayer or a player-hosted game needs EAC off. Mod Types 3 and 4 require EAC off.
 > - Running without EAC opens up a wider range of mods and experiences. If you're running a multiplayer server without EAC, here are some good practices to keep things running smoothly:
 >   - **Recommended practices when running multiplayer with EAC off:**
 >     - Require a password and be conservative in distributing it.
@@ -265,7 +281,7 @@ DEFAULT_MODTYPE_GUIDE_BODY = """---
 ### C. Mod Types
 
 > - Mod Type 1 is **Server-Side (EAC-Friendly)**: server install works for all joining players, EAC can be on or off, and it also works in singleplayer.
-> - Mod Type 2 is **Server-Side (EAC Off)**: EAC off is required, server install works for all joining players, and it also works in singleplayer.
+> - Mod Type 2 is **Server-Side (EAC Varies)**: server install works for all joining players, dedicated EAC on or off, otherwise EAC off required.
 > - Mod Type 3 is **Server/Client-Side (Required)**: EAC off is required, the host and all joining players must install it, and it also works in singleplayer.
 > - Mod Type 4 is **Client-Side (Only)**: EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.
 """
@@ -1346,6 +1362,99 @@ def run_writeability_preflight(mode: str, dry_run: bool, log: Logger) -> bool:
 # =============================================================
 def is_agf_mod(folder: str) -> bool:
     return folder.startswith(AGF_PREFIXES)
+
+
+def is_scheme_folder(folder_name: str) -> bool:
+    """Folder already uses AGF-V#-SCOPE-Name. Its Name is not the folder name."""
+    return re.match(
+        r"^(?:0|z+)?AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN|COMPAT|TBD)-",
+        folder_name,
+    ) is not None
+
+
+def gigglepack_modinfo_name(folder_name: str) -> str:
+    """ModInfo Name for pack placement. Falls back to the scheme folder token when the folder is not on disk."""
+    for root in (STAGING, PUBLISH_READY, IN_PROGRESS, BACKPACK_FINAL_DIR):
+        modinfo_path = os.path.join(root, folder_name, "ModInfo.xml")
+        if os.path.isfile(modinfo_path):
+            mod_name, _ = parse_modinfo(modinfo_path, "")
+            if mod_name:
+                return mod_name
+    base_name = get_base_mod_name(folder_name)
+    match = re.match(
+        r"^(?:0|z+)?AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN|COMPAT)-(.+)$",
+        base_name,
+    )
+    if not match:
+        return base_name
+    token = match.group(1)
+    if "-COMPAT-" in f"-{base_name}-":
+        return f"AGF-COMPAT-{token}"
+    return f"AGF-{token}"
+
+
+def gigglepack_place(folder_name: str) -> str:
+    """Where a mod sits in the Giggle Pack: root, client, pre33, requested, compat, admin, or empty when it is outside the pack."""
+    if is_backpack_mod(folder_name):
+        return "pre33"
+    if gigglepack_modinfo_name(folder_name) in GIGGLEPACK_REQUESTED_MODINFO_NAMES:
+        return "requested"
+    scope = readme_scope_from_folder(folder_name)
+    if scope in ("CLIENT", "BOTH"):
+        return "client"
+    if scope == "SERVER":
+        return "root"
+    if scope == "COMPAT":
+        return "compat"
+    if scope == "ADMIN":
+        return "admin"
+    return ""
+
+
+def gigglepack_keeps_game_root(folder_name: str) -> bool:
+    """Server, client, both, and admin are copied into the Steam Mods folder. Compatibility, backpacks, and requested mods are not added."""
+    place = gigglepack_place(folder_name)
+    if place in ("root", "client", "admin"):
+        return True
+    if place in ("requested", "compat", "pre33"):
+        return False
+    if is_backpack_mod(folder_name) or is_4modders_mod(folder_name) or is_requested_mod(folder_name) or is_hudpluszother_mod(folder_name):
+        return False
+    return True
+
+
+def game_mod_updates_when_present(folder_name: str, mod_path: str = "") -> bool:
+    """Requested and compatibility mods are refreshed only when that mod is already in the Steam Mods folder."""
+    if gigglepack_place(folder_name) in ("requested", "compat"):
+        return True
+    if not mod_path:
+        return False
+    mod_name, _version = parse_modinfo(os.path.join(mod_path, "ModInfo.xml"), "")
+    if mod_name in GIGGLEPACK_REQUESTED_MODINFO_NAMES:
+        return True
+    return mod_name.startswith("AGF-COMPAT-")
+
+
+def readme_scope_from_folder(folder_name: str) -> str:
+    """Scope token from a renamed folder, or empty when the folder is not one of the five sections."""
+    match = re.match(
+        r"^(?:0|z+)?AGF-V\d+-(SERVER|CLIENT|BOTH|COMPAT|ADMIN)-",
+        folder_name,
+    )
+    return match.group(1) if match else ""
+
+
+def readme_heading_anchor(title: str) -> str:
+    """GitHub-style heading slug for a main README table-of-contents link."""
+    slug = re.sub(r"[^\w\s-]", "", title.strip().lower())
+    return re.sub(r"[\s_]+", "-", slug).strip("-")
+
+
+def category_heading(cat_desc: Dict[str, str], key: str, fallback: str) -> str:
+    custom = cat_desc.get(f"{key} TITLE", "").strip()
+    if not custom:
+        return fallback
+    return custom.splitlines()[0].strip() or fallback
 
 
 def is_backpack_mod(folder: str) -> bool:
@@ -3225,6 +3334,18 @@ def get_mod_bases_for_dirs(mod_dirs: Tuple[str, ...]) -> set[str]:
     return mod_bases
 
 
+def get_modinfo_names_for_dirs(mod_dirs: Tuple[str, ...]) -> set[str]:
+    """Helper-table keys. These are ModInfo Name values, not the versioned folder."""
+    mod_names: set[str] = set()
+    for mod_dir in mod_dirs:
+        for folder_name, mod_path in scan_mod_folders(mod_dir).items():
+            modinfo_path = os.path.join(mod_path, "ModInfo.xml")
+            mod_name, _ = parse_modinfo(modinfo_path, "")
+            if mod_name:
+                mod_names.add(mod_name)
+    return mod_names
+
+
 def build_readme_metadata_index(
     csv_rows: List[Dict[str, str]],
     target_mod_bases: set[str],
@@ -3291,6 +3412,11 @@ def sync_workspace_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]
             continue
 
         game_folder, game_path = game_by_base[base_name]
+        if gigglepack_place(ws_folder) in GIGGLEPACK_OPTIONAL_PLACES or gigglepack_place(game_folder) in GIGGLEPACK_OPTIONAL_PLACES:
+            log.info(
+                f"Skipping game-root auto-sync for optional pack mod: {ws_folder} / {game_folder}"
+            )
+            continue
         if is_4modders_mod(ws_folder) or is_4modders_mod(game_folder):
             log.info(
                 f"Skipping game-root auto-sync for optional 4Modders mod: {ws_folder} / {game_folder}"
@@ -3356,32 +3482,7 @@ def sync_workspace_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]
             except Exception as ex:
                 log.warn(f"Could not hash compare tied versions for {base_name}: {ex}")
 
-    # Mirror 4Modders mods into game optionals folder in full mode as non-root installs.
-    optionals_4modders_path = os.path.join(GAME_MODS, GAME_OPTIONALS_4MODDERS_DIR)
-    if dry_run:
-        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_4modders_path}")
-    else:
-        os.makedirs(optionals_4modders_path, exist_ok=True)
-
-    workspace_sources = {**pub_folders, **inprog_folders}
-    for folder, ws_path in workspace_sources.items():
-        if not is_4modders_mod(folder):
-            continue
-        if maybe_copytree(ws_path, os.path.join(optionals_4modders_path, folder), dry_run, log):
-            log.info(f"sync mirror: 4Modders optional updated: {folder}")
-
-    # Mirror Requested mods into game optionals folder in full mode as non-root installs.
-    optionals_requested_path = os.path.join(GAME_MODS, GAME_OPTIONALS_REQUESTED_DIR)
-    if dry_run:
-        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_requested_path}")
-    else:
-        os.makedirs(optionals_requested_path, exist_ok=True)
-
-    for folder, ws_path in workspace_sources.items():
-        if not is_requested_mod(folder):
-            continue
-        if maybe_copytree(ws_path, os.path.join(optionals_requested_path, folder), dry_run, log):
-            log.info(f"sync mirror: Requested optional updated: {folder}")
+    remove_game_pack_optionals(dry_run, log)
 
     return mods_pulled_from_game
 
@@ -3911,6 +4012,13 @@ def rename_mod_folders_to_modinfo(
             name_changed = folder_base_name != mod_name
             version_changed = has_version_drift(folder_name, mod_version)
 
+            if is_scheme_folder(folder_name):
+                if version_changed:
+                    log.warn(
+                        f"Rename skipped for {folder_name}: scheme folder keeps its folder name."
+                    )
+                continue
+
             # Policy: name changes are only applied when accompanied by a version bump/change.
             if name_changed and not version_changed:
                 log.warn(
@@ -3955,6 +4063,9 @@ def plan_mod_folder_renames(mod_dirs: Tuple[str, ...], log: Logger) -> List[Tupl
             name_changed = folder_base_name != mod_name
             version_changed = has_version_drift(folder_name, mod_version)
 
+            if is_scheme_folder(folder_name):
+                continue
+
             if name_changed and not version_changed:
                 continue
 
@@ -3969,6 +4080,85 @@ def plan_mod_folder_renames(mod_dirs: Tuple[str, ...], log: Logger) -> List[Tupl
             planned.append((folder_name, target_name, mod_dir))
 
     return planned
+
+
+def csv_value_present(value: object) -> bool:
+    text = str(value or "").strip()
+    return bool(text) and text.upper() not in {"TBD", "MISSINGDATA", "0"}
+
+
+def note_previous_mod_name(row: Dict[str, str], old_name: str, new_name: str) -> bool:
+    """Remember the first unpublished name. A later rename keeps that name until publish clears it."""
+    old_name = str(old_name or "").strip()
+    new_name = str(new_name or "").strip()
+    if not old_name or not new_name or old_name == new_name:
+        return False
+    if csv_value_present(row.get("PREVIOUS_MOD_NAME", "")):
+        return False
+    row["PREVIOUS_MOD_NAME"] = old_name
+    return True
+
+
+def load_previous_mod_names() -> Dict[str, str]:
+    """Current ModInfo Name to the old name publish should replace."""
+    _, rows = load_compat_csv()
+    previous: Dict[str, str] = {}
+    for row in rows:
+        current = str(row.get("MOD_NAME", "") or "").strip()
+        old_name = str(row.get("PREVIOUS_MOD_NAME", "") or "").strip()
+        if current and csv_value_present(old_name):
+            previous[current] = old_name
+    return previous
+
+
+def clear_previous_mod_names(cleared_names: set[str], dry_run: bool, log: Logger) -> None:
+    if not cleared_names:
+        return
+    fieldnames, rows = load_compat_csv()
+    changed = False
+    for row in rows:
+        old_name = str(row.get("PREVIOUS_MOD_NAME", "") or "").strip()
+        if old_name not in cleared_names:
+            continue
+        row["PREVIOUS_MOD_NAME"] = ""
+        changed = True
+        log.info(f"Cleared previous name for {row.get('MOD_NAME', '')}: {old_name}")
+    if changed:
+        save_compat_csv(fieldnames, rows, dry_run, log)
+
+
+def remember_live_folder_names(
+    rows: List[Dict[str, str]],
+    scan_dirs: Tuple[str, ...],
+    log: Logger,
+) -> None:
+    """If a folder stayed put and its ModInfo Name changed, store the old name."""
+    live_name_by_base: Dict[str, str] = {}
+    live_base_by_name: Dict[str, str] = {}
+    for mod_dir in scan_dirs:
+        for folder_name, mod_path in scan_mod_folders(mod_dir).items():
+            mod_name, _ = parse_modinfo(os.path.join(mod_path, "ModInfo.xml"), "")
+            if not mod_name:
+                continue
+            base_name = get_base_mod_name(folder_name)
+            if base_name not in live_name_by_base:
+                live_name_by_base[base_name] = mod_name
+            if mod_name not in live_base_by_name:
+                live_base_by_name[mod_name] = base_name
+
+    for row in rows:
+        current_name = str(row.get("MOD_NAME", "") or "").strip()
+        recorded_base = str(row.get("FOLDER_BASE", "") or "").strip()
+        if not csv_value_present(recorded_base):
+            recorded_base = ""
+        if recorded_base and recorded_base in live_name_by_base:
+            live_name = live_name_by_base[recorded_base]
+            if live_name != current_name and note_previous_mod_name(row, current_name, live_name):
+                log.info(f"Previous name recorded for {live_name}: {current_name}")
+            row["MOD_NAME"] = live_name
+            row["FOLDER_BASE"] = recorded_base
+        elif current_name in live_base_by_name:
+            row["FOLDER_BASE"] = live_base_by_name[current_name]
 
 
 def load_compat_csv() -> Tuple[List[str], List[Dict[str, str]]]:
@@ -4000,6 +4190,8 @@ def load_compat_csv() -> Tuple[List[str], List[Dict[str, str]]]:
 def save_compat_csv(fieldnames: List[str], rows: List[Dict[str, str]], dry_run: bool, log: Logger) -> None:
     def row_has_missingdata(row: Dict[str, str]) -> bool:
         for fn in fieldnames:
+            if fn in CSV_BLANK_FIELDS:
+                continue
             value = str(row.get(fn, ""))
             normalized = value.strip().lower()
             if "missingdata" in normalized or normalized == "tbd":
@@ -4053,6 +4245,9 @@ def normalize_compat_csv(
     for compat_field in compatibility_fields:
         if compat_field not in fieldnames:
             fieldnames.append(compat_field)
+    for field_name in COMPAT_CSV_FIELD_ORDER:
+        if field_name not in fieldnames:
+            fieldnames.append(field_name)
 
     # Keep a stable canonical CSV layout.
     ordered_known_fields = [fn for fn in COMPAT_CSV_FIELD_ORDER if fn in fieldnames]
@@ -4065,15 +4260,18 @@ def normalize_compat_csv(
     }
 
     scan_dirs = mod_dirs if mod_dirs is not None else (PUBLISH_READY, IN_PROGRESS)
-    mods_now: set[str] = set()
-    for mod_dir in scan_dirs:
-        for folder_name in scan_mod_folders(mod_dir):
-            mods_now.add(get_base_mod_name(folder_name))
+    mods_now = get_modinfo_names_for_dirs(scan_dirs)
 
     for row in rows:
         old = row.get("MOD_NAME", "")
         if old in rename_base_map:
-            row["MOD_NAME"] = rename_base_map[old]
+            new_name = rename_base_map[old]
+            if note_previous_mod_name(row, old, new_name):
+                log.info(f"Previous name recorded for {new_name}: {old}")
+            row["MOD_NAME"] = new_name
+            row["FOLDER_BASE"] = new_name
+
+    remember_live_folder_names(rows, scan_dirs, log)
 
     before_non_agf_filter = len(rows)
     rows = [row for row in rows if is_agf_mod(row.get("MOD_NAME", "").strip())]
@@ -4102,6 +4300,10 @@ def normalize_compat_csv(
     for row in rows:
         row["QUOTE_FILE"] = f"{row.get('MOD_NAME', 'TBD')}.txt"
         for fn in fieldnames:
+            if fn in CSV_BLANK_FIELDS:
+                if not csv_value_present(row.get(fn, "")):
+                    row[fn] = ""
+                continue
             if not row.get(fn):
                 row[fn] = "TBD"
 
@@ -4394,8 +4596,8 @@ def generate_mod_readmes(
         template = f.read()
 
     target_dirs = mod_dirs if mod_dirs is not None else (PUBLISH_READY, IN_PROGRESS)
-    target_mod_bases = get_mod_bases_for_dirs(target_dirs)
-    compat_data = build_readme_metadata_index(csv_rows, target_mod_bases, log)
+    target_mod_names = get_modinfo_names_for_dirs(target_dirs)
+    compat_data = build_readme_metadata_index(csv_rows, target_mod_names, log)
 
     for mod_dir in target_dirs:
         folders = scan_mod_folders(mod_dir)
@@ -4414,7 +4616,7 @@ def generate_mod_readmes(
             zip_name = f"{base_name}.zip"
             download_link = zip_download_link(zip_name)
 
-            compat = compat_data.get(base_name, {})
+            compat = compat_data.get(mod_name, {})
             tested_game_version = compat.get("TESTED_GAME_VERSION", "MISSINGDATA")
             eac_friendly = compat.get("EAC_FRIENDLY", "MISSINGDATA")
             server_side_player = compat.get("SERVER_SIDE_PLAYER", "MISSINGDATA")
@@ -4442,10 +4644,10 @@ def generate_mod_readmes(
             harmony_requirement_warning_block = ""
             unique = compat.get("UNIQUE", "MISSINGDATA")
 
-            quote_file_name = compat.get("QUOTE_FILE", f"{base_name}.txt")
+            quote_file_name = compat.get("QUOTE_FILE", f"{mod_name}.txt")
             quote_file_path = os.path.join(QUOTES_DIR, quote_file_name)
-            fallback_quote_path = os.path.join(QUOTES_DIR, f"{base_name}.txt")
-            if not os.path.exists(quote_file_path) and quote_file_name != f"{base_name}.txt" and os.path.exists(fallback_quote_path):
+            fallback_quote_path = os.path.join(QUOTES_DIR, f"{mod_name}.txt")
+            if not os.path.exists(quote_file_path) and quote_file_name != f"{mod_name}.txt" and os.path.exists(fallback_quote_path):
                 quote_file_path = fallback_quote_path
 
             quote_text_rendered = ""
@@ -4911,19 +5113,21 @@ def push_back_pulled_mods(mods_pulled_from_game: List[Tuple[str, str]], dry_run:
             )
             continue
 
-        if is_4modders_mod(pushed_folder_name):
-            existing_game_root_path = os.path.join(GAME_MODS, pushed_folder_name)
-            if not os.path.isdir(existing_game_root_path):
-                log.info(
-                    f"Pushback skipped for {mod_name}: 4Modders mods only push when already present in game root"
+        if not gigglepack_keeps_game_root(pushed_folder_name):
+            if game_mod_updates_when_present(pushed_folder_name):
+                installed_name = gigglepack_modinfo_name(pushed_folder_name)
+                already_installed = any(
+                    parse_modinfo(os.path.join(game_path, "ModInfo.xml"), "")[0] == installed_name
+                    for game_path in scan_mod_folders(GAME_MODS).values()
                 )
-                continue
-
-        if is_requested_mod(pushed_folder_name):
-            existing_game_root_path = os.path.join(GAME_MODS, pushed_folder_name)
-            if not os.path.isdir(existing_game_root_path):
+                if not already_installed:
+                    log.info(
+                        f"Pushback skipped for {mod_name}: requested or compatibility mod is not already in the Steam Mods folder"
+                    )
+                    continue
+            else:
                 log.info(
-                    f"Pushback skipped for {mod_name}: Requested mods only push when already present in game root"
+                    f"Pushback skipped for {mod_name}: backpacks stay out of the Steam Mods folder"
                 )
                 continue
 
@@ -4951,38 +5155,7 @@ def push_staging_mods_to_game(mod_bases: Set[str], dry_run: bool, log: Logger, r
         log.warn("Targeted game sync skipped: ActiveBuild has no managed mods")
         return
 
-    targeted_backpack_updates = any(
-        is_backpack_mod(folder_name) and get_base_mod_name(folder_name) in mod_bases
-        for folder_name in staging_folders
-    )
-
-    backpack_mods = sorted([f for f in staging_folders if is_backpack_mod(f)])
-    active_backpack = next((f for f in backpack_mods if BACKPACK_DEFAULT_ACTIVE_TOKEN in f), None)
-    if active_backpack is None and backpack_mods:
-        active_backpack = backpack_mods[0]
-        log.warn(
-            f"Default backpack token '{BACKPACK_DEFAULT_ACTIVE_TOKEN}' not found. "
-            f"Using '{active_backpack}' as active backpack."
-        )
-
-    optionals_backpack_path = os.path.join(GAME_MODS, GAME_OPTIONALS_BACKPACK_DIR)
-    if targeted_backpack_updates:
-        if dry_run:
-            log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_backpack_path}")
-        else:
-            os.makedirs(optionals_backpack_path, exist_ok=True)
-
-        game_folders = scan_mod_folders(GAME_MODS)
-        for game_folder, game_path in game_folders.items():
-            if is_backpack_mod(game_folder) and active_backpack and game_folder != active_backpack:
-                if maybe_remove_dir(game_path, dry_run, log):
-                    log.info(
-                        "Targeted game sync cleanup: removed non-active backpack from game root: "
-                        f"{game_folder}"
-                    )
-
     synced_root = 0
-    mirrored_backpack_optionals = 0
     for folder_name, staging_path in sorted(staging_folders.items()):
         base_name = get_base_mod_name(folder_name)
         if base_name not in mod_bases:
@@ -5004,33 +5177,32 @@ def push_staging_mods_to_game(mod_bases: Set[str], dry_run: bool, log: Logger, r
             )
             continue
 
-        if is_4modders_mod(folder_name):
-            game_path = os.path.join(GAME_MODS, folder_name)
-            if not os.path.isdir(game_path):
+        place = gigglepack_place(folder_name)
+        installed_name = ""
+        if place in ("requested", "compat"):
+            installed_name = gigglepack_modinfo_name(folder_name)
+            already_installed = any(
+                parse_modinfo(os.path.join(game_path, "ModInfo.xml"), "")[0] == installed_name
+                for game_path in scan_mod_folders(GAME_MODS).values()
+            )
+            if not already_installed:
                 log.info(
-                    f"Targeted game sync skipped for {folder_name}: 4Modders mods only push when already present in game root"
+                    f"Targeted game sync skipped for {folder_name}: requested or compatibility mod is not already in the Steam Mods folder"
                 )
                 continue
+            for game_folder, game_path in list(scan_mod_folders(GAME_MODS).items()):
+                if game_folder == folder_name:
+                    continue
+                game_name, _game_version = parse_modinfo(os.path.join(game_path, "ModInfo.xml"), "")
+                if game_name == installed_name and maybe_remove_dir(game_path, dry_run, log):
+                    log.info(f"Targeted game sync replaced older folder for {installed_name}: {game_folder}")
+        elif place == "pre33" or is_backpack_mod(folder_name):
+            log.info(f"Targeted game sync skipped for {folder_name}: backpacks stay out of the Steam Mods folder")
+            continue
 
-        if is_requested_mod(folder_name):
-            game_path = os.path.join(GAME_MODS, folder_name)
-            if not os.path.isdir(game_path):
-                log.info(
-                    f"Targeted game sync skipped for {folder_name}: Requested mods only push when already present in game root"
-                )
-                continue
-
-        if is_backpack_mod(folder_name):
-            if maybe_copytree(staging_path, os.path.join(optionals_backpack_path, folder_name), dry_run, log):
-                mirrored_backpack_optionals += 1
-                log.info(f"Targeted game sync mirror: backpack optional updated: {folder_name}")
-
-            if active_backpack and folder_name != active_backpack:
-                log.info(
-                    "Targeted game sync skipped for non-active backpack in game root: "
-                    f"{folder_name}"
-                )
-                continue
+        if not gigglepack_keeps_game_root(folder_name) and place not in ("requested", "compat"):
+            log.info(f"Targeted game sync skipped for optional pack mod: {folder_name}")
+            continue
 
         destination_path = os.path.join(GAME_MODS, folder_name)
         if maybe_remove_dir(destination_path, dry_run, log) and maybe_copytree(staging_path, destination_path, dry_run, log):
@@ -5039,8 +5211,8 @@ def push_staging_mods_to_game(mod_bases: Set[str], dry_run: bool, log: Logger, r
             log.info(f"Targeted game sync complete: {folder_name} ({reason})")
 
     log.info(
-        f"Targeted game sync summary: {synced_root} mod(s) {'would be ' if dry_run else ''}pushed to game root "
-        f"for {reason}; backpack optionals mirrored={mirrored_backpack_optionals}"
+        f"Targeted game sync summary: {synced_root} mod(s) {'would be ' if dry_run else ''}pushed to the Steam Mods folder "
+        f"for {reason}"
     )
 
 
@@ -5102,6 +5274,80 @@ def get_managed_mod_names_from_csv(log: Logger) -> set[str]:
     return managed
 
 
+def refresh_installed_requested_and_compat(
+    staging_folders: Dict[str, str],
+    dry_run: bool,
+    log: Logger,
+) -> List[Tuple[str, str]]:
+    """Refresh a requested or compatibility mod that is already in the Steam Mods folder. Do not add a missing one."""
+    pulled: List[Tuple[str, str]] = []
+    sources: Dict[str, Tuple[str, str]] = {}
+    for folder, path in staging_folders.items():
+        if gigglepack_place(folder) not in ("requested", "compat"):
+            continue
+        mod_name = gigglepack_modinfo_name(folder)
+        if mod_name:
+            sources[mod_name] = (folder, path)
+
+    if not sources:
+        return pulled
+
+    for game_folder, game_path in list(scan_mod_folders(GAME_MODS).items()):
+        mod_name, _version = parse_modinfo(os.path.join(game_path, "ModInfo.xml"), "")
+        if mod_name not in sources:
+            continue
+        st_folder, st_path = sources[mod_name]
+        st_ver = get_modinfo_version(st_path)
+        game_ver = get_modinfo_version(game_path)
+        if st_ver is None:
+            log.warn(f"Installed-mod refresh skipped for {mod_name}: staging ModInfo.xml unreadable")
+            continue
+
+        target = os.path.join(GAME_MODS, st_folder)
+
+        def push_refresh() -> None:
+            removed_old = True
+            if os.path.normcase(game_path) != os.path.normcase(target):
+                removed_old = maybe_remove_dir(game_path, dry_run, log)
+            if removed_old and maybe_copytree(st_path, target, dry_run, log):
+                log.stats.synced_push_to_game += 1
+                log.info(f"sync-work refresh: {st_folder} v{st_ver} was already installed and was updated")
+
+        if game_ver is None or compare_versions(st_ver, game_ver) > 0:
+            push_refresh()
+            continue
+        if compare_versions(st_ver, game_ver) < 0:
+            staging_target = os.path.join(STAGING, st_folder)
+            if maybe_copytree(game_path, staging_target, dry_run, log):
+                log.stats.synced_pull_from_game += 1
+                pulled.append((st_folder, staging_target))
+                log.info(f"sync-work refresh pull: {game_folder} v{game_ver} -> staging")
+            continue
+        try:
+            if hash_directory(st_path) != hash_directory(game_path):
+                push_refresh()
+        except Exception as ex:
+            log.warn(f"Could not hash compare installed {mod_name}: {ex}")
+
+    return pulled
+
+
+def remove_game_pack_optionals(dry_run: bool, log: Logger) -> None:
+    """Drop the unpacked optional folders from the Steam Mods folder. The Giggle Pack zip still carries them."""
+    for label in (
+        GAME_OPTIONALS_CLIENT_DIR,
+        GAME_OPTIONALS_PRE33_DIR,
+        GAME_OPTIONALS_REQUESTED_DIR,
+        GAME_OPTIONALS_COMPAT_DIR,
+        GAME_OPTIONALS_ADMIN_DIR,
+    ):
+        path = os.path.join(GAME_MODS, label)
+        if not os.path.isdir(path):
+            continue
+        if maybe_remove_dir(path, dry_run, log):
+            log.info(f"sync-work cleanup: removed {label} from the Steam Mods folder")
+
+
 def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     """Sync only between staging and game lanes.
 
@@ -5109,9 +5355,9 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     """
     log.info("Mode sync-work: Sync Staging <-> Game by version")
     log.info(
-        "Policy: keep one active BackpackPlus in game root, keep all BackpackPlus in .Optionals-Backpack, "
-        "mirror all HUDPlus/HUDPluszOther in .Optionals-HUDPlus and keep HUDPluszOther out of game root, "
-        "and mirror AGF-4Modders into .Optionals-4Modders without auto-pushing them into game root."
+        "Policy: the Steam Mods folder gets server, client, both, and admin mods. "
+        "Drafts stay out. Compatibility, backpacks, and the requested mods are not added. "
+        "A requested or compatibility mod already in that folder is refreshed."
     )
 
     staging_folders = scan_mod_folders(STAGING)
@@ -5128,15 +5374,6 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     log.stats.scanned_workspace_mods = len(staging_folders)
     log.stats.scanned_game_mods = len(game_folders)
 
-    backpack_mods = sorted([f for f in staging_folders if is_backpack_mod(f)])
-    active_backpack = next((f for f in backpack_mods if BACKPACK_DEFAULT_ACTIVE_TOKEN in f), None)
-    if active_backpack is None and backpack_mods:
-        active_backpack = backpack_mods[0]
-        log.warn(
-            f"Default backpack token '{BACKPACK_DEFAULT_ACTIVE_TOKEN}' not found. "
-            f"Using '{active_backpack}' as active backpack."
-        )
-
     # Keep game root clean for root-policy-only mods.
     for game_folder, game_path in game_folders.items():
         game_base = get_base_mod_name(game_folder)
@@ -5144,9 +5381,12 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
             log.info(f"sync-work preserve: kept Draft-tracked game mod in root: {game_folder}")
             continue
 
-        if is_backpack_mod(game_folder) and active_backpack and game_folder != active_backpack:
+        if game_mod_updates_when_present(game_folder, game_path):
+            log.info(f"sync-work keep: requested or compatibility mod already in the Steam Mods folder: {game_folder}")
+            continue
+        if not gigglepack_keeps_game_root(game_folder):
             if maybe_remove_dir(game_path, dry_run, log):
-                log.info(f"sync-work cleanup: removed non-active backpack from game root: {game_folder}")
+                log.info(f"sync-work cleanup: removed backpack or other unpacked mod from the Steam Mods folder: {game_folder}")
             continue
         if is_hudpluszother_mod(game_folder):
             if maybe_remove_dir(game_path, dry_run, log):
@@ -5166,13 +5406,7 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
     # Sync allowed game-root mods by version.
     allowed_staging_root: Dict[str, str] = {}
     for folder, path in staging_folders.items():
-        if is_backpack_mod(folder) and active_backpack and folder != active_backpack:
-            continue
-        if is_hudpluszother_mod(folder):
-            continue
-        if is_4modders_mod(folder):
-            continue
-        if is_requested_mod(folder):
+        if not gigglepack_keeps_game_root(folder):
             continue
         allowed_staging_root[folder] = path
 
@@ -5218,6 +5452,11 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
             continue
 
         for game_folder, game_path in game_by_base_all.get(base_name, []):
+            if game_mod_updates_when_present(game_folder, game_path):
+                log.info(
+                    f"sync-work keep: requested or compatibility mod already in the Steam Mods folder: {game_folder}"
+                )
+                continue
             if base_name in managed_mods:
                 if maybe_remove_dir(game_path, dry_run, log):
                     log.info(
@@ -5304,15 +5543,6 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
             except Exception as ex:
                 log.warn(f"Could not hash compare tied versions for {base_name}: {ex}")
 
-    # Ensure active backpack exists in game root even if it did not overlap.
-    if active_backpack:
-        active_staging_path = staging_folders.get(active_backpack)
-        active_game_path = os.path.join(GAME_MODS, active_backpack)
-        if active_staging_path and active_backpack not in game_folders:
-            if maybe_copytree(active_staging_path, active_game_path, dry_run, log):
-                log.stats.synced_push_to_game += 1
-                log.info(f"sync-work push: ensured active backpack in game root: {active_backpack}")
-
     # Push all other allowed staging mods that are missing from game root by base name.
     missing_in_game = sorted(set(staging_by_base.keys()) - set(game_by_base_all.keys()))
     for base_name in missing_in_game:
@@ -5326,75 +5556,6 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
             log.stats.synced_push_to_game += 1
             log.info(f"sync-work push: added missing game mod {st_folder} v{st_ver}")
 
-    # Mirror optionals folders in game space.
-    optionals_backpack_path = os.path.join(GAME_MODS, GAME_OPTIONALS_BACKPACK_DIR)
-    optionals_hudplus_path = os.path.join(GAME_MODS, GAME_OPTIONALS_HUDPLUS_DIR)
-    optionals_4modders_path = os.path.join(GAME_MODS, GAME_OPTIONALS_4MODDERS_DIR)
-    optionals_requested_path = os.path.join(GAME_MODS, GAME_OPTIONALS_REQUESTED_DIR)
-    if dry_run:
-        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_backpack_path}")
-        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_hudplus_path}")
-        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_4modders_path}")
-        log.info(f"[DRYRUN] Would ensure game optionals folder exists: {optionals_requested_path}")
-    else:
-        os.makedirs(optionals_backpack_path, exist_ok=True)
-        os.makedirs(optionals_hudplus_path, exist_ok=True)
-        os.makedirs(optionals_4modders_path, exist_ok=True)
-        os.makedirs(optionals_requested_path, exist_ok=True)
-
-    cleanup_legacy_4modders_replacements_with_suffixes(
-        optionals_hudplus_path,
-        renamed_suffixes,
-        dry_run,
-        log,
-        GAME_OPTIONALS_HUDPLUS_DIR,
-    )
-
-    for folder, st_path in staging_folders.items():
-        if is_backpack_mod(folder):
-            if maybe_copytree(st_path, os.path.join(optionals_backpack_path, folder), dry_run, log):
-                log.info(f"sync-work mirror: backpack optional updated: {folder}")
-            continue
-        if is_hudplus_mod(folder) or is_hudpluszother_mod(folder):
-            if maybe_copytree(st_path, os.path.join(optionals_hudplus_path, folder), dry_run, log):
-                log.info(f"sync-work mirror: HUD optional updated: {folder}")
-            continue
-        if is_4modders_mod(folder):
-            if maybe_copytree(st_path, os.path.join(optionals_4modders_path, folder), dry_run, log):
-                log.info(f"sync-work mirror: 4Modders optional updated: {folder}")
-            continue
-        if is_requested_mod(folder):
-            if maybe_copytree(st_path, os.path.join(optionals_requested_path, folder), dry_run, log):
-                log.info(f"sync-work mirror: Requested optional updated: {folder}")
-
-    # Remove stale optionals entries that no longer match ActiveBuild folder names.
-    expected_backpack = {folder for folder in staging_folders if is_backpack_mod(folder)}
-    expected_hudplus = {
-        folder
-        for folder in staging_folders
-        if is_hudplus_mod(folder) or is_hudpluszother_mod(folder)
-    }
-    expected_4modders = {folder for folder in staging_folders if is_4modders_mod(folder)}
-    expected_requested = {folder for folder in staging_folders if is_requested_mod(folder)}
-
-    optionals_cleanup_targets = (
-        (optionals_backpack_path, expected_backpack, GAME_OPTIONALS_BACKPACK_DIR),
-        (optionals_hudplus_path, expected_hudplus, GAME_OPTIONALS_HUDPLUS_DIR),
-        (optionals_4modders_path, expected_4modders, GAME_OPTIONALS_4MODDERS_DIR),
-        (optionals_requested_path, expected_requested, GAME_OPTIONALS_REQUESTED_DIR),
-    )
-    for optionals_dir, expected_names, label in optionals_cleanup_targets:
-        if not os.path.isdir(optionals_dir):
-            continue
-        existing = scan_mod_folders(optionals_dir)
-        for folder_name, folder_path in existing.items():
-            if folder_name in expected_names:
-                continue
-            if maybe_remove_dir(folder_path, dry_run, log):
-                log.info(
-                    f"sync-work cleanup: removed stale optional from {label}: {folder_name}"
-                )
-
     # Normalize active-build folder names after pulls so names track ModInfo versions.
     rename_mod_folders_to_modinfo(dry_run, log, mod_dirs=(STAGING,))
 
@@ -5403,17 +5564,9 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
 
     final_staging_folders = scan_mod_folders(STAGING)
     final_allowed_staging_root: Dict[str, str] = {}
-    final_backpack_mods = sorted([f for f in final_staging_folders if is_backpack_mod(f)])
-    final_active_backpack = next((f for f in final_backpack_mods if BACKPACK_DEFAULT_ACTIVE_TOKEN in f), None)
-    if final_active_backpack is None and final_backpack_mods:
-        final_active_backpack = final_backpack_mods[0]
 
     for folder, path in final_staging_folders.items():
-        if is_backpack_mod(folder) and final_active_backpack and folder != final_active_backpack:
-            continue
-        if is_hudpluszother_mod(folder):
-            continue
-        if is_4modders_mod(folder):
+        if not gigglepack_keeps_game_root(folder):
             continue
         final_allowed_staging_root[folder] = path
 
@@ -5459,6 +5612,12 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
             continue
 
         for game_folder, game_path in final_game_by_base_all.get(base_name, []):
+            if game_mod_updates_when_present(game_folder, game_path):
+                log.info(
+                    "sync-work keep: post-rename requested or compatibility mod already in the Steam Mods folder: "
+                    f"{game_folder}"
+                )
+                continue
             if base_name in managed_mods:
                 if maybe_remove_dir(game_path, dry_run, log):
                     log.info(
@@ -5471,32 +5630,8 @@ def sync_staging_and_game(dry_run: bool, log: Logger) -> List[Tuple[str, str]]:
                     f"ActiveBuild and not in CSV: {game_folder}"
                 )
 
-    final_expected_backpack = {folder for folder in final_staging_folders if is_backpack_mod(folder)}
-    final_expected_hudplus = {
-        folder
-        for folder in final_staging_folders
-        if is_hudplus_mod(folder) or is_hudpluszother_mod(folder)
-    }
-    final_expected_4modders = {folder for folder in final_staging_folders if is_4modders_mod(folder)}
-    final_expected_requested = {folder for folder in final_staging_folders if is_requested_mod(folder)}
-
-    final_optionals_cleanup_targets = (
-        (optionals_backpack_path, final_expected_backpack, GAME_OPTIONALS_BACKPACK_DIR),
-        (optionals_hudplus_path, final_expected_hudplus, GAME_OPTIONALS_HUDPLUS_DIR),
-        (optionals_4modders_path, final_expected_4modders, GAME_OPTIONALS_4MODDERS_DIR),
-        (optionals_requested_path, final_expected_requested, GAME_OPTIONALS_REQUESTED_DIR),
-    )
-    for optionals_dir, expected_names, label in final_optionals_cleanup_targets:
-        if not os.path.isdir(optionals_dir):
-            continue
-        existing = scan_mod_folders(optionals_dir)
-        for folder_name, folder_path in existing.items():
-            if folder_name in expected_names:
-                continue
-            if maybe_remove_dir(folder_path, dry_run, log):
-                log.info(
-                    f"sync-work cleanup: post-rename removed stale optional from {label}: {folder_name}"
-                )
+    mods_pulled_from_game.extend(refresh_installed_requested_and_compat(final_staging_folders, dry_run, log))
+    remove_game_pack_optionals(dry_run, log)
 
     return mods_pulled_from_game
 
@@ -5509,8 +5644,21 @@ def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
     publish_folders = scan_mod_folders(PUBLISH_READY)
 
     publish_by_base: Dict[str, Tuple[str, str]] = {}
+    publish_by_identity: Dict[str, Tuple[str, str]] = {}
     for folder, path in publish_folders.items():
         publish_by_base[get_base_mod_name(folder)] = (folder, path)
+        publish_by_identity.setdefault(get_base_mod_name(folder), (folder, path))
+        published_name, _ = parse_modinfo(os.path.join(path, "ModInfo.xml"), "")
+        if published_name:
+            publish_by_identity.setdefault(published_name, (folder, path))
+
+    previous_by_current = load_previous_mod_names()
+    staging_names: set[str] = set()
+    for folder, path in staging_folders.items():
+        staging_name, _ = parse_modinfo(os.path.join(path, "ModInfo.xml"), "")
+        if staging_name:
+            staging_names.add(staging_name)
+    pending_previous_deletes: Dict[str, Dict[str, object]] = {}
 
     for st_folder, st_path in staging_folders.items():
         base_name = get_base_mod_name(st_folder)
@@ -5529,6 +5677,61 @@ def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
                 f"Promote skipped for {st_folder}: staging version {st_ver} is draft-only (major < 1)"
             )
             continue
+
+        if base_name not in publish_by_base:
+            st_mod_name, _ = parse_modinfo(os.path.join(st_path, "ModInfo.xml"), "")
+            prev_name = previous_by_current.get(st_mod_name, "")
+            identity_match: Optional[Tuple[str, str]] = None
+            match_via_previous = False
+            if st_mod_name and st_mod_name in publish_by_identity:
+                identity_match = publish_by_identity[st_mod_name]
+            elif prev_name and prev_name in publish_by_identity:
+                candidate_folder, candidate_path = publish_by_identity[prev_name]
+                candidate_name, _ = parse_modinfo(os.path.join(candidate_path, "ModInfo.xml"), "")
+                if candidate_name in staging_names and candidate_name != st_mod_name:
+                    log.warn(
+                        f"Promote skipped previous-name match for {st_folder}: "
+                        f"{prev_name} is still a current mod ({candidate_name})"
+                    )
+                else:
+                    identity_match = (candidate_folder, candidate_path)
+                    match_via_previous = True
+
+            if identity_match is not None and match_via_previous:
+                pub_folder, pub_path = identity_match
+                pub_ver = get_modinfo_version(pub_path)
+                copied = False
+                if pub_ver is None:
+                    log.warn(f"Promote skipped for {st_folder}: publish copy has unreadable ModInfo.xml")
+                else:
+                    # The old folder's version belongs to the retired name. A split can
+                    # restart at 1.0.0 while the old pack version is higher.
+                    dest = os.path.join(PUBLISH_READY, st_folder)
+                    same_bytes = False
+                    if compare_versions(st_ver, pub_ver) == 0:
+                        try:
+                            same_bytes = hash_directory(st_path) == hash_directory(pub_path)
+                        except Exception as ex:
+                            log.warn(f"Promote hash compare failed for {st_folder}: {ex}")
+                    if same_bytes and os.path.isdir(dest):
+                        copied = True
+                        log.info(f"Promote rename already present: {st_folder} v{st_ver}")
+                    elif maybe_copytree(st_path, dest, dry_run, log):
+                        copied = True
+                        log.stats.promoted_to_publish_ready += 1
+                        log.info(f"Promoted rename: {st_folder} v{st_ver} (replaces {pub_folder})")
+                pending = pending_previous_deletes.setdefault(
+                    pub_folder,
+                    {"path": pub_path, "claimers": set(), "copied": set(), "previous_keys": set()},
+                )
+                pending["claimers"].add(st_folder)
+                pending["previous_keys"].add(prev_name)
+                if copied:
+                    pending["copied"].add(st_folder)
+                continue
+
+            if identity_match is not None:
+                publish_by_base[base_name] = identity_match
 
         if base_name not in publish_by_base:
             legacy_replacement = re.match(
@@ -5593,6 +5796,19 @@ def promote_staging_to_publish_ready(dry_run: bool, log: Logger) -> None:
             log.warn(
                 f"Promote skipped for {st_folder}: staging version {st_ver} is lower than publish-ready {pub_ver}"
             )
+
+    cleared_previous: set[str] = set()
+    for old_folder, pending in pending_previous_deletes.items():
+        claimers = pending["claimers"]
+        copied = pending["copied"]
+        if not claimers or not claimers <= copied:
+            log.info(f"Kept old release folder {old_folder}: a renamed copy was not promoted")
+            continue
+        if maybe_remove_dir(str(pending["path"]), dry_run, log):
+            log.info(f"Removed old release folder after rename: {old_folder}")
+            if not dry_run:
+                cleared_previous.update(pending["previous_keys"])
+    clear_previous_mod_names(cleared_previous, dry_run, log)
 
 
 def cleanup_release_legacy_4modders_renames(dry_run: bool, log: Logger) -> None:
@@ -5759,8 +5975,8 @@ def build_zip_arcname(*parts: str) -> str:
     return "/".join(normalized_parts)
 
 
-LAWN_TRACTOR_ZIP_BASE = "zzzzAGF-LawnTractorV3Fix"
-LAWN_GUARD_NAME = "0AGF-LawnTractorPatchGuard"
+LAWN_TRACTOR_ZIP_BASE = "zzzAGF-V3-CLIENT-LawnTractorV3Fix"
+LAWN_GUARD_NAME = "0AGF-V3-CLIENT-LawnTractorPatchGuard"
 
 
 def find_lawn_guard_dir() -> str:
@@ -5834,6 +6050,10 @@ def resolve_pack_mod_path(mod_folder: str) -> str:
         final_path = os.path.join(BACKPACK_FINAL_DIR, mod_folder)
         if os.path.isdir(final_path):
             return final_path
+    if get_base_mod_name(mod_folder) == LAWN_GUARD_NAME:
+        guard_path = find_lawn_guard_dir()
+        if guard_path and os.path.basename(guard_path) == mod_folder:
+            return guard_path
     return ""
 
 
@@ -5874,6 +6094,24 @@ def zip_category(pack_name: str, root_mods: List[str], optionals_map: Optional[D
         return False
 
 
+def section_download_folders(all_folders: List[str], section_key: str) -> List[str]:
+    """Mods listed in one main-readme section. The client zip also carries the lawn tractor guard."""
+    scopes = dict(MAIN_README_SECTIONS).get(section_key, ())
+    picked: List[str] = []
+    for folder in all_folders:
+        if is_backpack_mod(folder) or get_base_mod_name(folder) == LAWN_GUARD_NAME:
+            continue
+        if readme_scope_from_folder(folder) in scopes:
+            picked.append(folder)
+    if section_key == "CLIENT" and any(get_base_mod_name(folder) == LAWN_TRACTOR_ZIP_BASE for folder in picked):
+        guard_path = find_lawn_guard_dir()
+        if guard_path:
+            guard_folder = os.path.basename(guard_path)
+            if guard_folder not in picked:
+                picked.append(guard_folder)
+    return picked
+
+
 def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str], Optional[Dict[str, List[str]]]]]:
     backpackplus_mods = [f for f in all_folders if is_backpack_mod(f)]
     if not backpackplus_mods:
@@ -5890,16 +6128,35 @@ def build_pack_definitions(all_folders: List[str]) -> List[Tuple[str, List[str],
     packs: List[Tuple[str, List[str], Optional[Dict[str, List[str]]]]] = []
     packs.append(("00_BackpackPlus_All", backpackplus_mods, None))
 
-    giggle_root = hudplus_mods + vp_mods + vps_mods + special_mods
+    giggle_root: List[str] = []
+    giggle_client: List[str] = []
+    giggle_pre33: List[str] = list(backpackplus_mods)
+    giggle_requested: List[str] = []
+    giggle_compat: List[str] = []
+    giggle_admin: List[str] = []
+    for folder in all_folders:
+        place = gigglepack_place(folder)
+        if place == "root":
+            giggle_root.append(folder)
+        elif place == "client":
+            giggle_client.append(folder)
+        elif place == "requested":
+            giggle_requested.append(folder)
+        elif place == "compat":
+            giggle_compat.append(folder)
+        elif place == "admin":
+            giggle_admin.append(folder)
     giggle_optionals = {
-        ".Optionals-BackpackPlus": backpackplus_mods,
-        ".Optionals-HUDPlus": hudplus_mods + hudpluszother_mods,
-        ".Optionals-NoEAC": noeac_mods,
-        ".Optionals-4Modders": modders_mods,
-        ".Optionals-Requested": requested_mods,
+        GAME_OPTIONALS_CLIENT_DIR: giggle_client,
+        GAME_OPTIONALS_PRE33_DIR: giggle_pre33,
+        GAME_OPTIONALS_REQUESTED_DIR: giggle_requested,
+        GAME_OPTIONALS_COMPAT_DIR: giggle_compat,
+        GAME_OPTIONALS_ADMIN_DIR: giggle_admin,
     }
     giggle_optionals = {k: v for k, v in giggle_optionals.items() if v}
     packs.append(("00_GigglePack_All", giggle_root, giggle_optionals or None))
+    for section_key, pack_name, _label in SECTION_DOWNLOAD_PACKS:
+        packs.append((pack_name, section_download_folders(all_folders, section_key), None))
 
     hudplus_all_root = hudplus_mods + special_mods
     hudplus_all_optionals = {
@@ -6809,7 +7066,9 @@ def generate_thumbnails(dry_run: bool, log: Logger) -> None:
     for filename in os.listdir(IMAGES_GENERATED_ROOT):
         if not filename.endswith("_01.png"):
             continue
-        if not filename.startswith("AGF-") and not filename.startswith("zzzAGF-"):
+        if not is_agf_mod(filename):
+            continue
+        if "-COMPAT-" in filename:
             continue
 
         base_name = get_base_mod_name(filename.replace("_01.png", ""))
@@ -6872,7 +7131,7 @@ def build_mod_entry(
             "https://www.nexusmods.com/7daystodie/mods/3312</em></li></ul>\n"
         )
     elif compat_map is not None:
-        mod_type_id = (compat_map.get(base_mod) or {}).get("MOD_TYPE_ID", "").strip()
+        mod_type_id = (compat_map.get(name) or compat_map.get(base_mod) or {}).get("MOD_TYPE_ID", "").strip()
         type_line_map = mod_type_lines if mod_type_lines is not None else DEFAULT_MOD_TYPE_LINE_BY_ID
         mod_type_text = type_line_map.get(mod_type_id, "")
         if mod_type_text:
@@ -6899,6 +7158,9 @@ def build_mod_entry(
         banner_html = f'<a href="{full_url}"><img src="{full_url}" width="150"></a>'
 
     template = re.sub(r"<!--.*?-->", "", (mod_entry_template or DEFAULT_MAIN_README_MOD_ENTRY_TEMPLATE), flags=re.DOTALL).strip("\n")
+    if readme_scope_from_folder(folder_name) == "COMPAT":
+        template = template.replace('<td width="160">{{MOD_BANNER}}</td>\n', "")
+        template = template.replace('<td valign="top">', '<td valign="top" width="100%">')
     entry = template
     entry = entry.replace("{{MOD_NAME}}", display_name)
     entry = entry.replace("{{MOD_VERSION}}", version_display)
@@ -6948,6 +7210,7 @@ def load_recent_gigglepack_release_entries(limit: int = 3) -> List[Dict[str, obj
             current = {
                 "version": header_match.group(1).strip(),
                 "stamp": header_match.group(2).strip(),
+                "notes": [],
                 "new": [],
                 "updated": [],
                 "renamed": [],
@@ -6998,11 +7261,18 @@ def load_recent_gigglepack_release_entries(limit: int = 3) -> List[Dict[str, obj
             section = "removed"
             continue
 
-        if section and line.startswith("- "):
+        if line.startswith("- "):
             item_text = line[2:].strip()
-            current_list = current.get(section)
-            if isinstance(current_list, list):
-                current_list.append(item_text)
+            if not item_text or item_text.lower() == "none":
+                continue
+            if section:
+                current_list = current.get(section)
+                if isinstance(current_list, list):
+                    current_list.append(item_text)
+            else:
+                notes = current.get("notes")
+                if isinstance(notes, list):
+                    notes.append(item_text)
 
     if current:
         entries.append(current)
@@ -7065,12 +7335,14 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
         for entry in history_entries:
             version = str(entry.get("version", "")).strip() or "unknown"
             stamp = str(entry.get("stamp", "")).strip()
+            note_items = [escape_html(str(item).strip()) for item in entry.get("notes", []) if str(item).strip()]
             new_items = [render_release_item_html(str(item).strip(), "new") for item in entry.get("new", []) if str(item).strip()]
             updated_items = [render_release_item_html(str(item).strip(), "updated") for item in entry.get("updated", []) if str(item).strip()]
             renamed_items = [render_release_item_html(str(item).strip(), "renamed") for item in entry.get("renamed", []) if str(item).strip()]
             removed_items = [render_release_item_html(str(item).strip(), "removed") for item in entry.get("removed", []) if str(item).strip()]
             parsed_entries.append({
                 "header": f"GigglePack v{escape_html(version)}" + (f" - {escape_html(stamp)}" if stamp else ""),
+                "notes": note_items,
                 "new_count": int(entry.get("new_count", len(new_items))),
                 "updated_count": int(entry.get("updated_count", len(updated_items))),
                 "renamed_count": int(entry.get("renamed_count", len(renamed_items))),
@@ -7180,6 +7452,17 @@ def build_gigglepack_readme_release_lines(state: Dict[str, object]) -> List[str]
         renamed_items = entry.get("renamed_items", []) if isinstance(entry.get("renamed_items", []), list) else []
         removed_items = entry.get("removed_items", []) if isinstance(entry.get("removed_items", []), list) else []
 
+        notes = entry.get("notes", []) if isinstance(entry.get("notes", []), list) else []
+        if notes and not (new_items or updated_items or renamed_items or removed_items):
+            detail_bits.extend([
+                f"<li>{header_line}",
+                "<ul>",
+                "".join(f"<li>{item}</li>" for item in notes),
+                "</ul>",
+                "</li>",
+            ])
+            continue
+
         detail_bits.extend([
             f"<li>{header_line}",
             "<ul>",
@@ -7282,29 +7565,26 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     main_content = main_content.replace(BACKUP_GUIDE_PLACEHOLDER, load_backup_guide_body(log))
 
     all_mods = collect_publishready_folders()
-    backpackplus_mods = [f for f in all_mods if is_backpack_mod(f)]
-    if not backpackplus_mods and os.path.isdir(BACKPACK_FINAL_DIR):
-        backpackplus_mods = [f for f in scan_mod_folders(BACKPACK_FINAL_DIR) if is_backpack_mod(f)]
-    hudplus_mods = [f for f in all_mods if is_hudplus_mod(f)]
-    noeac_mods = [f for f in all_mods if is_noeac_mod(f)]
-    modders_mods = [f for f in all_mods if is_4modders_mod(f)]
-    vps_mods = [f for f in all_mods if is_vps_mod(f)]
-    vp_mods = [f for f in all_mods if is_vp_mod(f)]
-    special_mods = [f for f in all_mods if f.startswith("zzzAGF-Special")]
-    requested_mods = [f for f in all_mods if is_requested_mod(f)]
-
-    updates_in_progress = "Updates are in progress."
-
-    def category_download_line(mods: List[str], label: str, zip_name: str) -> str:
-        if mods:
-            return f"[**⬇️ {label}**]({zip_download_link(zip_name)})"
-        return updates_in_progress
+    scoped_mods: Dict[str, List[str]] = {scope: [] for scope in MAIN_README_SCOPES}
+    for folder in all_mods:
+        if is_backpack_mod(folder) or get_base_mod_name(folder) == LAWN_GUARD_NAME:
+            continue
+        scope = readme_scope_from_folder(folder)
+        if scope:
+            scoped_mods[scope].append(folder)
+        else:
+            log.warn(f"Main README skipped {folder}: folder has no SERVER, CLIENT, BOTH, COMPAT, or ADMIN scope.")
 
     md: List[str] = []
+    toc_lines: List[str] = []
+
+    def add_toc(title: str) -> None:
+        toc_lines.append(f"  - [{title}](#{readme_heading_anchor(title)})")
+
     giggle_release_state = load_gigglepack_release_state()
     giggle_release_version = str(giggle_release_state.get("gigglepack_version", "")).strip()
-    giggle_download_label = category_download_line(all_mods, "DOWNLOAD ALL AGF MODS", "00_GigglePack_All.zip")
-    if giggle_release_version and giggle_download_label != updates_in_progress:
+    giggle_download_label = f"[**⬇️ DOWNLOAD ALL AGF MODS**]({zip_download_link('00_GigglePack_All.zip')})"
+    if giggle_release_version:
         giggle_download_label += f" **(GigglePack v{giggle_release_version})**"
 
     giggle_release_lines = build_gigglepack_readme_release_lines(giggle_release_state)
@@ -7317,11 +7597,13 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
         except Exception as ex:
             log.warn(f"Could not read GigglePack template {GIGGLE_PACK_TEMPLATE_PATH}: {ex}")
 
+    giggle_title = category_heading(cat_desc, "GIGGLE PACK", "Giggle Pack")
     giggle_description = cat_desc.get("GIGGLE PACK", "All AGF mods in one convenient download.")
     giggle_changelog = "\n".join(giggle_release_lines) if giggle_release_lines else ""
+    add_toc(giggle_title)
 
     giggle_block = re.sub(r"<!--.*?-->", "", giggle_template, flags=re.DOTALL)
-    giggle_block = giggle_block.replace("{{CATEGORY_TITLE}}", "A. GIGGLE PACK")
+    giggle_block = giggle_block.replace("{{CATEGORY_TITLE}}", giggle_title)
     giggle_block = giggle_block.replace("{{CATEGORY_DOWNLOAD_LINE}}", giggle_download_label)
     giggle_block = giggle_block.replace("{{CATEGORY_DESCRIPTION}}", giggle_description)
     giggle_block = giggle_block.replace("{{GIGGLE_CHANGELOG}}", giggle_changelog)
@@ -7329,142 +7611,39 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     md.extend(giggle_block.splitlines())
     md.append("")
 
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "B. HUD PLUS MODS",
-            category_download_line(hudplus_mods, "Download All HUD Plus Mods", "00_HUDPlus_All.zip"),
-            cat_desc.get("HUDPLUS", "Quality-of-life HUD enhancements and visual tweaks."),
+    section_download_labels = {key: (pack_name, label) for key, pack_name, label in SECTION_DOWNLOAD_PACKS}
+
+    for section_key, section_scopes in MAIN_README_SECTIONS:
+        title = category_heading(cat_desc, section_key, section_key)
+        add_toc(title)
+        section_folders = []
+        for scope in section_scopes:
+            section_folders.extend(scoped_mods[scope])
+        download_line = ""
+        if section_folders and section_key in section_download_labels:
+            pack_name, label = section_download_labels[section_key]
+            download_line = f"[**⬇️ {label}**]({zip_download_link(pack_name + '.zip')})"
+        md.extend(
+            render_main_readme_category_block(
+                category_template,
+                title,
+                download_line,
+                cat_desc.get(section_key, ""),
+            )
         )
-    )
-    md.append("")
-    if hudplus_mods:
-        for mod in hudplus_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
+        md.append("")
+        if section_folders:
+            for mod in sorted(section_folders):
+                md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
+        else:
+            md.append("*Updates are in progress.*")
 
+    legacy_title = category_heading(cat_desc, LEGACY_FINAL_CATEGORY_KEY, "7d2d v2.6 Giggle Pack")
+    add_toc(legacy_title)
     md.extend(
         render_main_readme_category_block(
             category_template,
-            "C. BACKPACK PLUS MODS",
-            category_download_line(
-                backpackplus_mods,
-                "Download All Backpack Plus Mods",
-                "00_BackpackPlus_All.zip",
-            ),
-            cat_desc.get("BACKPACKPLUS", "Increases backpack size. Choose the slot count that fits your needs."),
-        )
-    )
-    md.append("")
-
-    preferred_last = "AGF-BackpackPlus-119Slots"
-    backpack_sorted = sorted(backpackplus_mods, key=lambda x: (get_base_mod_name(x) == preferred_last, x))
-    if backpack_sorted:
-        for mod in backpack_sorted:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "D. SPECIAL MOD PATCHES",
-            updates_in_progress if not special_mods else "",
-            cat_desc.get("SPECIAL", "Patches to support other mods and modlets alongside AGF mods."),
-        )
-    )
-    md.append("")
-    if special_mods:
-        for mod in special_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "E. VANILLA PLUS MODS",
-            category_download_line(vp_mods + vps_mods, "Download All VP Mods", "00_VP_All.zip"),
-            cat_desc.get("VP", "Gameplay tweaks and new features that expand on the base game."),
-        )
-    )
-    md.append("")
-    if vp_mods:
-        for mod in vp_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "F. VPS MODS",
-            category_download_line(vp_mods + vps_mods, "Download All VP Mods", "00_VP_All.zip"),
-            cat_desc.get(
-                "VPS",
-                "Vanilla Plus Special. Server-Side (EAC Varies): dedicated EAC can be on or off. Singleplayer and player-hosted: EAC off required.",
-            ),
-        )
-    )
-    md.append("")
-    if vps_mods:
-        for mod in vps_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "G. NO EAC MODS",
-            category_download_line(noeac_mods, "Download All NoEAC Mods", "00_NoEAC_All.zip"),
-            cat_desc.get("NOEAC", "Game enhancements that require a DLL. EAC must be off."),
-        )
-    )
-    md.append("")
-    lawn_mods = [f for f in all_mods if get_base_mod_name(f) == LAWN_TRACTOR_ZIP_BASE]
-    readme_noeac_mods = list(noeac_mods) + lawn_mods
-    if readme_noeac_mods:
-        for mod in readme_noeac_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "H. 4MODDERS MODS",
-            category_download_line(modders_mods, "Download All 4Modders Mods", "00_4Modders_All.zip"),
-            cat_desc.get("4MODDERS", "Modder resources and niche mods. Read each description before installing."),
-        )
-    )
-    md.append("")
-    if modders_mods:
-        for mod in modders_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "I. REQUESTED MODS",
-            category_download_line(requested_mods, "Download All Requested Mods", "00_Requested_All.zip"),
-            cat_desc.get("REQUESTED", "Community-requested modifications and standalone features."),
-        )
-    )
-    md.append("")
-    if requested_mods:
-        for mod in requested_mods:
-            md.append(build_mod_entry(mod, mod_entry_template, compat_map, mod_type_lines))
-    else:
-        md.append("*Updates are in progress.*")
-
-    md.extend(
-        render_main_readme_category_block(
-            category_template,
-            "J. AGF-7d2d-v2.6-GigglePack-Final",
+            legacy_title,
             f"[**⬇️ Download AGF 7D2D v2.6 Final**]({zip_download_link(LEGACY_FINAL_GIGGLEPACK_ZIP)})",
             cat_desc.get(
                 LEGACY_FINAL_CATEGORY_KEY,
@@ -7474,6 +7653,7 @@ def generate_main_readme(dry_run: bool, log: Logger) -> None:
     )
 
     modlist_str = "\n".join(md)
+    main_content = main_content.replace("{{MOD_LIST_TOC}}", "\n".join(toc_lines))
     main_content = re.sub(
         r"<!-- MOD_LIST_START -->(.*?)<!-- MOD_LIST_END -->",
         f"<!-- MOD_LIST_START -->\n{modlist_str}\n<!-- MOD_LIST_END -->",
@@ -7571,6 +7751,14 @@ def run_self_tests(log: Logger) -> bool:
                 "AGF-VP-BedrollPlus-v2.0.0",
                 "AGF-VPS-SortingBox-v1.0.6",
                 "AGF-NoEAC-AutoRun-v2.0.0",
+                "AGF-V3-SERVER-FuelBurnPlus-v3.1.2",
+                "AGF-V3-SERVER-AnimalTrackerAlwaysOn-v1.0.0",
+                "AGF-V3-SERVER-SmallerInteractionPrompt-v1.0.0",
+                "AGF-V3-CLIENT-MapPlus-v1.1.2",
+                "AGF-V3-BOTH-Toolbelt12Slots-v2.3.0",
+                "AGF-BackpackPlus-084Slots",
+                "zzzzzAGF-V3-COMPAT-0SCore-v1.0.0",
+                "AGF-V3-ADMIN-ModSync-v0.1.3",
             ]
         )
     }
@@ -7578,14 +7766,64 @@ def run_self_tests(log: Logger) -> bool:
     giggle_roots, giggle_optionals = packs["00_GigglePack_All"]
     giggle_optionals = giggle_optionals or {}
     vp_optionals = vp_optionals or {}
+    readme_index = build_readme_metadata_index(
+        [{"MOD_NAME": "AGF-FuelBurnPlus", "MOD_TYPE_ID": "1"}],
+        {"AGF-FuelBurnPlus"},
+        log,
+    )
+    record("readme metadata matches the ModInfo name", readme_index["AGF-FuelBurnPlus"]["MOD_TYPE_ID"] == "1")
+    record("readme metadata ignores the folder base", "AGF-V3-SERVER-FuelBurnPlus" not in readme_index)
+    record("client showcase includes both scopes", MAIN_README_SECTIONS[1] == ("CLIENT", ("CLIENT", "BOTH")))
+    record("readme scope from a renamed folder", readme_scope_from_folder("AGF-V3-SERVER-FuelBurnPlus-v3.1.2") == "SERVER")
+    record("compat folder stays in COMPAT", readme_scope_from_folder("zzzzzAGF-V3-COMPAT-0SCore-v1.0.0") == "COMPAT")
+    record("old shelf folder has no scope section", readme_scope_from_folder("AGF-VP-FuelBurnPlus-v3.1.2") == "")
     record("is_vp_mod excludes VPS", is_vp_mod("AGF-VPS-SortingBox-v1.0.6") is False)
     record("is_vps_mod matches VPS", is_vps_mod("AGF-VPS-SortingBox-v1.0.6") is True)
     record("no VPS_All pack", "00_VPS_All" not in packs)
     record("VP pack still includes VP mods", "AGF-VP-BedrollPlus-v2.0.0" in vp_roots)
     record("VPS goes in VP pack root", "AGF-VPS-SortingBox-v1.0.6" in vp_roots)
-    record("VPS goes in gigglepack root", "AGF-VPS-SortingBox-v1.0.6" in giggle_roots)
-    record("VPS is not a gigglepack optional", ".Optionals-VPS" not in giggle_optionals)
     record("VPS is not a VP pack optional", ".Optionals-VPS" not in vp_optionals)
+    record("server mod is in the gigglepack root", "AGF-V3-SERVER-FuelBurnPlus-v3.1.2" in giggle_roots)
+    record("animal tracker stays in the gigglepack root", "AGF-V3-SERVER-AnimalTrackerAlwaysOn-v1.0.0" in giggle_roots)
+    record("requested server mod stays out of the gigglepack root", "AGF-V3-SERVER-SmallerInteractionPrompt-v1.0.0" not in giggle_roots)
+    record("client and both share the client optional", set(giggle_optionals.get(".Optionals-Client", [])) == {
+        "AGF-V3-CLIENT-MapPlus-v1.1.2",
+        "AGF-V3-BOTH-Toolbelt12Slots-v2.3.0",
+    })
+    record("requested optional has the smaller interaction prompt", giggle_optionals.get(".Optionals-Requested") == ["AGF-V3-SERVER-SmallerInteractionPrompt-v1.0.0"])
+    record("backpacks sit in the pre-3.3 optional", "AGF-BackpackPlus-084Slots" in giggle_optionals.get(".Optionals-Pre3.3", []))
+    record("compat sits in the compat optional", giggle_optionals.get(".Optionals-Compat") == ["zzzzzAGF-V3-COMPAT-0SCore-v1.0.0"])
+    record("admin sits in the admin optional", giggle_optionals.get(".Optionals-Admin") == ["AGF-V3-ADMIN-ModSync-v0.1.3"])
+    record("client mod is copied into the steam mods folder", gigglepack_keeps_game_root("AGF-V3-CLIENT-MapPlus-v1.1.2"))
+    record("both mod is copied into the steam mods folder", gigglepack_keeps_game_root("AGF-V3-BOTH-Toolbelt12Slots-v2.3.0"))
+    record("admin mod is copied into the steam mods folder", gigglepack_keeps_game_root("AGF-V3-ADMIN-ModSync-v0.1.3"))
+    record("compat is not added to the steam mods folder", gigglepack_keeps_game_root("zzzzzAGF-V3-COMPAT-0SCore-v1.0.0") is False)
+    record("requested is not added to the steam mods folder", gigglepack_keeps_game_root("AGF-V3-SERVER-SmallerInteractionPrompt-v1.0.0") is False)
+    record("backpack is not added to the steam mods folder", gigglepack_keeps_game_root("AGF-BackpackPlus-084Slots") is False)
+    record("compat already installed is refreshed", game_mod_updates_when_present("zzzzzAGF-V3-COMPAT-0SCore-v1.0.0"))
+    record("requested already installed is refreshed", game_mod_updates_when_present("AGF-V3-SERVER-SmallerInteractionPrompt-v1.0.0"))
+    server_roots, _server_optionals = packs["00_SERVER_All"]
+    client_roots, _client_optionals = packs["00_CLIENT_All"]
+    compat_roots, _compat_optionals = packs["00_COMPAT_All"]
+    admin_roots, _admin_optionals = packs["00_ADMIN_All"]
+    record("server download zip lists the server section", set(server_roots) == {
+        "AGF-V3-SERVER-FuelBurnPlus-v3.1.2",
+        "AGF-V3-SERVER-AnimalTrackerAlwaysOn-v1.0.0",
+        "AGF-V3-SERVER-SmallerInteractionPrompt-v1.0.0",
+    })
+    record("client download zip lists client and both", set(client_roots) == {
+        "AGF-V3-CLIENT-MapPlus-v1.1.2",
+        "AGF-V3-BOTH-Toolbelt12Slots-v2.3.0",
+    })
+    record("compat download zip lists the compat section", compat_roots == ["zzzzzAGF-V3-COMPAT-0SCore-v1.0.0"])
+    record("admin download zip lists the admin section", admin_roots == ["AGF-V3-ADMIN-ModSync-v0.1.3"])
+    previous_row = {"MOD_NAME": "AGF-FuelBurnPlus", "PREVIOUS_MOD_NAME": ""}
+    record("first rename is stored as the previous name", note_previous_mod_name(previous_row, "AGF-VP-FuelBurnPlus", "AGF-FuelBurnPlus"))
+    record(
+        "a later rename keeps the first previous name",
+        note_previous_mod_name(previous_row, "AGF-FuelBurnPlus", "AGF-FuelBurnPlus2") is False
+        and previous_row["PREVIOUS_MOD_NAME"] == "AGF-VP-FuelBurnPlus",
+    )
 
     log.info(f"self-test summary: passed={passed}, failed={failed}")
     return failed == 0

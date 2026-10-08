@@ -1,6 +1,6 @@
-# AGF-HUDPlus-1Main v6.6.0
+# AGF-HUDPlus-1Main v6.6.1
 ### 7DaysToDieMods Details
-Generated: 2026-10-05  06:25 AM
+Generated: 2026-10-06  12:43 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -273,17 +273,13 @@ Same image on **thumbnail** and **gallery** unless `_01` is over 2MB:
 Version:
 
 ```text
-6.6.0
+6.6.1
 ```
 
 Text field (plain text only — do not copy a code fence; that becomes a code block on the site).
 The site joins a single Enter into one line. Keep the blank line between entries:
 
-Updated for 7d2d version 3.3.
-
-Added ESC menu button for mod details and when paired with EnhancedAGF, buttons for options.
-
-Radial Menus were given small visual update for readability.
+Fixed links in AGF Esc Menu tabs.
 
 ---
 
@@ -310,7 +306,7 @@ Mod Type: Server-Side (EAC-Friendly): Server install works for all joining playe
 Version of Mod:
 
 ```text
-6.6.0
+6.6.1
 ```
 
 ---

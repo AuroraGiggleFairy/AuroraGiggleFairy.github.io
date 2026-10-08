@@ -1,0 +1,14 @@
+<AGF-AutoRun>
+    <conditional>
+        <if cond="mod_loaded('AGF-1HUDPlus') or mod_loaded('FranticDansCleanerHUD1080')">
+        </if>
+        <else>
+            <append xpath="/windows/window[@name='HUDLeftStatBars']/rect[1]/rect[2]">
+                <sprite depth="8" visible="{autorunactive}" name="autorun" atlas="{uiatlas}" sprite="ui_game_symbol_drive" size="48,48" pos="222,-23" pivot="left" />
+            </append>
+            <append xpath="/windows/window[@name='HUDRightStatBars']/rect[@pos='-177,106']">
+                <label depth="8" name="flightAssistModeText" pos="0,-52" width="168" height="22" justify="center" font_size="16" color="[white]" visible="{flaVehicleFlightAssistVisible}" text="{flaVehicleFlightAssistModeText}" tooltip="{flaVehicleFlightAssistModeTooltip}"/>
+            </append>
+        </else>
+    </conditional>
+</AGF-AutoRun>

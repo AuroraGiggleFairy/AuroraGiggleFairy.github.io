@@ -58,7 +58,8 @@ MOD_SOURCE=
 
 # MOD_SOURCE
 # Folder holding the built ModSync mod, the one with ModSync.dll in it.
-# Leave blank to use the newest AGF-NoEAC-ModSync* in 01_Draft.
+# Leave blank to use a ModSync folder sitting beside this generator,
+# or the newest ModSync mod in 01_Draft that already contains ModSync.dll.
 
 
 # --- NOTES ---

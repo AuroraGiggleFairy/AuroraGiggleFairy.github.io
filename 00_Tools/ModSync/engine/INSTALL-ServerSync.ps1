@@ -260,6 +260,107 @@ function Install-ModRoots {
     return $count
 }
 
+# Same rules as a join. Files the pack will replace, and anything that is not in
+# the pack, are moved into this run's ModSync-Removed folder before the copy.
+function Install-PackLikeJoin {
+    param([string]$GameDir, [string[]]$Roots)
+    $modsDir = Join-Path $GameDir 'Mods'
+    New-Item -ItemType Directory -Path $modsDir -Force | Out-Null
+
+    $packFiles = @{}
+    $packMods = @{}
+    foreach ($root in $Roots) {
+        $name = Split-Path -Leaf $root
+        if (-not $name -or $name -ieq 'Mods' -or $name -ieq '_unpacked') { continue }
+        if (Test-ProtectedModName $name) { continue }
+        $packMods[$name.ToLowerInvariant()] = $true
+        $rootFull = [System.IO.Path]::GetFullPath($root)
+        foreach ($file in @(Get-ChildItem -LiteralPath $rootFull -File -Recurse -ErrorAction SilentlyContinue)) {
+            $tail = $file.FullName.Substring($rootFull.Length).TrimStart('\')
+            $rel = $name + '\' + $tail
+            $packFiles[$rel.ToLowerInvariant()] = [pscustomobject]@{ Rel = $rel; Source = $file.FullName }
+        }
+    }
+
+    $stamp = Get-Date -Format 'yyyy-MM-dd HHmmss'
+    $removedDir = Join-Path $GameDir ('ModSync-Removed\' + $stamp)
+    $movedMods = New-Object System.Collections.Generic.List[string]
+    $movedFiles = New-Object System.Collections.Generic.List[string]
+    $script:removedReady = $false
+
+    function Ensure-Removed {
+        if (-not $script:removedReady) {
+            New-Item -ItemType Directory -Path $removedDir -Force | Out-Null
+            $script:removedReady = $true
+        }
+    }
+
+    if (Test-Path -LiteralPath $modsDir) {
+        foreach ($dir in @(Get-ChildItem -LiteralPath $modsDir -Directory -ErrorAction SilentlyContinue)) {
+            if (Test-ProtectedModName $dir.Name) { continue }
+            if ($packMods.ContainsKey($dir.Name.ToLowerInvariant())) { continue }
+            Ensure-Removed
+            Move-Item -LiteralPath $dir.FullName -Destination (Join-Path $removedDir $dir.Name) -Force
+            [void]$movedMods.Add($dir.Name)
+        }
+
+        foreach ($file in @(Get-ChildItem -LiteralPath $modsDir -File -Recurse -ErrorAction SilentlyContinue)) {
+            $rel = $file.FullName.Substring($modsDir.Length).TrimStart('\')
+            $top = $rel.Split('\')[0]
+            if ($rel.Contains('\')) {
+                if (Test-ProtectedModName $top) { continue }
+                if (-not $packMods.ContainsKey($top.ToLowerInvariant())) { continue }
+            }
+            if ($packFiles.ContainsKey($rel.ToLowerInvariant())) { continue }
+            Ensure-Removed
+            $dest = Join-Path $removedDir $rel
+            New-Item -ItemType Directory -Path (Split-Path -Parent $dest) -Force | Out-Null
+            Move-Item -LiteralPath $file.FullName -Destination $dest -Force
+            [void]$movedFiles.Add($rel)
+        }
+
+        foreach ($entry in @($packFiles.Values)) {
+            $dest = Join-Path $modsDir $entry.Rel
+            if (-not (Test-Path -LiteralPath $dest)) { continue }
+            if (Test-SameFile $dest $entry.Source) { continue }
+            Ensure-Removed
+            $aside = Join-Path $removedDir $entry.Rel
+            New-Item -ItemType Directory -Path (Split-Path -Parent $aside) -Force | Out-Null
+            Move-Item -LiteralPath $dest -Destination $aside -Force
+            [void]$movedFiles.Add($entry.Rel)
+        }
+    }
+
+    if ($movedMods.Count -gt 0 -or $movedFiles.Count -gt 0) {
+        Write-Host ('  Keeping the previous copies in ModSync-Removed\' + $stamp) -ForegroundColor Cyan
+        if ($movedMods.Count -gt 0) {
+            Write-Host ('  Setting aside ' + $movedMods.Count + ' mod(s) this pack does not include...')
+        }
+        if ($movedFiles.Count -gt 0) {
+            Write-Host ('  Saving ' + $movedFiles.Count + ' file(s) the pack will replace or that are not in the pack...')
+        }
+        $names = @($movedMods) + @($movedFiles)
+        Write-BackupRecord $GameDir $names $removedDir
+    }
+
+    Get-ChildItem -LiteralPath $modsDir -Directory -Recurse -ErrorAction SilentlyContinue |
+        Sort-Object { $_.FullName.Length } -Descending |
+        Where-Object { @(Get-ChildItem -LiteralPath $_.FullName -Force -ErrorAction SilentlyContinue).Count -eq 0 } |
+        Remove-Item -Force -ErrorAction SilentlyContinue
+
+    return (Install-ModRoots $Roots (Join-Path $GameDir 'Mods'))
+}
+
+function Test-SameFile {
+    param([string]$Left, [string]$Right)
+    $a = Get-Item -LiteralPath $Left
+    $b = Get-Item -LiteralPath $Right
+    if ($a.Length -ne $b.Length) { return $false }
+    $ha = (Get-FileHash -LiteralPath $Left -Algorithm MD5).Hash
+    $hb = (Get-FileHash -LiteralPath $Right -Algorithm MD5).Hash
+    return ($ha -eq $hb)
+}
+
 function Get-PackMarkerPath {
     param([string]$GameDir)
     return (Join-Path $GameDir 'ModSync-Pack.txt')
@@ -512,7 +613,7 @@ function Install-OptionalPack {
             Expand-NestedArchives $one
         }
         $roots = @(Get-ModRootFolders $extract)
-        $n = Install-ModRoots $roots (Join-Path $GameDir 'Mods')
+        $n = Install-PackLikeJoin $GameDir $roots
         Save-PackMarker $GameDir $PackUrls
         Write-Host ("  Installed " + $n + " mod folder(s). Extra files in the pack were left out.") -ForegroundColor Green
     } finally {
@@ -679,9 +780,8 @@ function Install-Helper {
     if (Test-Path -LiteralPath $joinFile) { Remove-Item -LiteralPath $joinFile -Force }
 }
 
-# After the player picks a folder for this server, extras may be moved aside.
-# Without this marker ModSync will add and update mods but never delete anything,
-# and the next setup run would treat the pack as "mods of your own."
+# The game does not read this file.
+# Setup writes it so a later setup run does not ask again before using this folder.
 function Set-ManagedMarker {
     param([string]$GameDir, [bool]$Managed)
     $marker = Join-Path $GameDir 'ModSync-Managed.txt'
@@ -718,23 +818,7 @@ function Get-ForeignMods {
     return @($items)
 }
 
-# Moved, never deleted. A player who picks the wrong folder must always be able to
-# put their own mods back. Each setup run gets its own dated folder, so running the
-# tool again never overwrites an earlier rescue.
-function Backup-ExistingMods {
-    param([string]$GameDir, [string[]]$Names)
-    $modsDir = Join-Path $GameDir 'Mods'
-    $backupDir = Join-Path $GameDir ('Mods - Backup\' + (Get-Date -Format 'yyyy-MM-dd HHmmss'))
-    New-Item -ItemType Directory -Path $backupDir -Force | Out-Null
-
-    foreach ($name in $Names) {
-        Move-Item -LiteralPath (Join-Path $modsDir $name) -Destination (Join-Path $backupDir $name) -Force
-    }
-    return $backupDir
-}
-
-# A running log, appended to on every setup run, so there is always a record of
-# what was moved and where it went.
+# A running log of what a pack install moved aside.
 function Write-BackupRecord {
     param([string]$GameDir, [string[]]$Names, [string]$BackupDir)
     # The folder may not exist yet when the choice is a brand new copy.
@@ -763,18 +847,15 @@ function Write-BackupRecord {
 function Confirm-Target {
     param([string]$GameDir, [bool]$IsServerCopy)
 
-    # A folder this server already manages holds the server's own mods, not the
-    # player's. Sweeping those aside would just force the whole pack to download again.
+    # Already accepted for this server. Do not ask again. A pack install, if it
+    # runs, still compares and moves mismatches itself.
     $serverManaged = Test-Path -LiteralPath (Join-Path $GameDir 'ModSync-Managed.txt')
+    if ($serverManaged) { return $true }
 
-    $foreign = @()
-    if (-not $serverManaged) { $foreign = @(Get-ForeignMods $GameDir) }
+    $foreign = @(Get-ForeignMods $GameDir)
 
-    # Nothing at risk, so do not nag.
-    if ($foreign.Count -eq 0 -and ($IsServerCopy -or $serverManaged)) {
-        Write-BackupRecord $GameDir @() ''
-        return $true
-    }
+    # A new copy made for this server has nothing of the player's in it yet.
+    if ($IsServerCopy -and $foreign.Count -eq 0) { return $true }
 
     Write-Host ''
     Write-Host '  Please read this before continuing.' -ForegroundColor Yellow
@@ -782,7 +863,17 @@ function Confirm-Target {
     Write-Host "  You picked:  $GameDir"
     Write-Host ''
     Write-Host "  $ServerName will decide which mods this game uses."
-    Write-Host '  Mods it does not use can be replaced or set aside.'
+    Write-Host '  Files it replaces, and mods it does not use, are moved to:'
+    Write-Host ('  ' + (Join-Path $GameDir 'ModSync-Removed')) -ForegroundColor Cyan
+    Write-Host '  Nothing is deleted. Each join keeps its own dated folder.'
+
+    if ($PackUrls.Count -gt 0) {
+        Write-Host ''
+        Write-Host '  This setup downloads a server pack first.'
+        Write-Host '  That pack is compared the same way before it is copied in.'
+        Write-Host '  Anything it would replace, and anything that is not in the pack,'
+        Write-Host '  is moved into ModSync-Removed first.'
+    }
 
     if ($foreign.Count -gt 0) {
         Write-Host ''
@@ -796,10 +887,6 @@ function Confirm-Target {
         if ($foreign.Count -gt $shown) {
             Write-Host ("    ...and " + ($foreign.Count - $shown) + " more")
         }
-        Write-Host ''
-        Write-Host ('  They will be MOVED to:  ' + (Join-Path $GameDir 'Mods - Backup')) -ForegroundColor Cyan
-        Write-Host '  Nothing is deleted. You can move them back whenever you like.'
-        Write-Host '  Each run keeps its own dated folder in there.'
     }
 
     Write-Host ''
@@ -811,13 +898,6 @@ function Confirm-Target {
         return $false
     }
 
-    $backupDir = ''
-    if ($foreign.Count -gt 0) {
-        $backupDir = Backup-ExistingMods $GameDir $foreign
-        Write-Host ''
-        Write-Host ("  Moved " + $foreign.Count + " mod(s) into " + $backupDir) -ForegroundColor Green
-    }
-    Write-BackupRecord $GameDir $foreign $backupDir
     return $true
 }
 

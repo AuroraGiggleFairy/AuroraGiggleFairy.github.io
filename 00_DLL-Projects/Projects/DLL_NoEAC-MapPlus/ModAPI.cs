@@ -10,19 +10,42 @@ namespace MapPlus
 		{
 			try
 			{
-				if (GameManager.IsDedicatedServer)
+				Harmony harmony = new Harmony("com.agfprojects.mapplus");
+				foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
 				{
-					Console.WriteLine("MapPlus: Dedicated server — client-only, not loading.");
-					return;
+					if (type.GetCustomAttributes(typeof(HarmonyPatch), false).Length == 0)
+					{
+						continue;
+					}
+
+					try
+					{
+						harmony.CreateClassProcessor(type).Patch();
+					}
+					catch (Exception ex)
+					{
+						Console.WriteLine("MapPlus: skipped patch " + type.Name + ": " + ex.Message);
+					}
 				}
 
-				new Harmony("com.agfprojects.mapplus").PatchAll(Assembly.GetExecutingAssembly());
+				ModEvents.GameUpdate.RegisterHandler(OnUpdate);
+				ModEvents.WorldShuttingDown.RegisterHandler(OnWorldDown);
 				Console.WriteLine("MapPlus: Harmony registered (map hover names / entered POIs).");
 			}
 			catch (Exception ex)
 			{
 				Console.WriteLine("MapPlus: Patch registration error: " + ex);
 			}
+		}
+
+		static void OnUpdate(ref ModEvents.SGameUpdateData data)
+		{
+			MapPlusVisits.Tick();
+		}
+
+		static void OnWorldDown(ref ModEvents.SWorldShuttingDownData data)
+		{
+			MapPlusVisits.OnWorldDown();
 		}
 	}
 }

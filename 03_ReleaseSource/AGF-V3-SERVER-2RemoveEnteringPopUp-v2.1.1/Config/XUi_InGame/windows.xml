@@ -1,0 +1,9 @@
+<AGF-2RemoveEnteringPopUp>
+
+
+	<!--Removing the entering area x thing.-->
+		<remove xpath="/windows/window[@name='windowEntering']/rect/label[@name='TextContent']"/>
+		<remove xpath="/windows/window[@name='windowEntering']/rect/grid"/>						
+
+
+</AGF-2RemoveEnteringPopUp>

@@ -233,7 +233,7 @@ namespace QuartermasterCrafting
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
 				ItemStack ingredient = recipe.ingredients[i];
-				if (StackAccess.Value(ingredient) == null || StackAccess.Value(ingredient).type == 0)
+				if (StackAccess.Value(ingredient) == null || StackAccess.TypeId(StackAccess.Value(ingredient)) == 0)
 				{
 					continue;
 				}
@@ -282,7 +282,7 @@ namespace QuartermasterCrafting
 			int nearby = 0;
 			if (TryNearby(xui, out Dictionary<int, int> pool))
 			{
-				pool.TryGetValue(StackAccess.Value(ingredient).type, out nearby);
+				pool.TryGetValue(StackAccess.TypeId(StackAccess.Value(ingredient)), out nearby);
 			}
 
 			if (craftCount < 1)
@@ -319,7 +319,7 @@ namespace QuartermasterCrafting
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
 				ItemStack ingredient = recipe.ingredients[i];
-				if (StackAccess.Value(ingredient) == null || StackAccess.Value(ingredient).type == 0)
+				if (StackAccess.Value(ingredient) == null || StackAccess.TypeId(StackAccess.Value(ingredient)) == 0)
 				{
 					continue;
 				}
@@ -332,7 +332,7 @@ namespace QuartermasterCrafting
 				}
 
 				int have = Storage.CountInv(player, StackAccess.Value(ingredient)) + Storage.CountGrid(bench, StackAccess.Value(ingredient));
-				if (nearby.TryGetValue(StackAccess.Value(ingredient).type, out int extra))
+				if (nearby.TryGetValue(StackAccess.TypeId(StackAccess.Value(ingredient)), out int extra))
 				{
 					have += extra;
 				}

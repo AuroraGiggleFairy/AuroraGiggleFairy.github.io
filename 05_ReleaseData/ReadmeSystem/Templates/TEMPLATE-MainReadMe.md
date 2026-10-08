@@ -17,15 +17,7 @@
 - [3. Ask AuroraGiggleFairy for Help](#3-ask-auroragigglefairy-for-help)
 - [4. Support AuroraGiggleFairy](#4-support-auroragigglefairy)
 - [5. Mod List](#5-mod-list)
-  - [A. GIGGLE PACK](#a-giggle-pack)
-  - [B. HUD PLUS MODS](#b-hud-plus-mods)
-  - [C. BACKPACK PLUS MODS](#c-backpack-plus-mods)
-  - [D. SPECIAL MOD PATCHES](#d-special-mod-patches)
-  - [E. VANILLA PLUS MODS](#e-vanilla-plus-mods)
-  - [F. VPS MODS](#f-vps-mods)
-  - [G. NO EAC MODS](#g-no-eac-mods)
-  - [H. 4MODDERS MODS](#h-4modders-mods)
-  - [I. REQUESTED MODS](#i-requested-mods)
+{{MOD_LIST_TOC}}
 
 <br>
 

@@ -112,10 +112,8 @@ Bad input:
 ### 1.6 Confirmation before a folder is handed to the server
 Source: `INSTALL-ServerSync.ps1:333-362`
 
-Shown on **every** setup run when the chosen folder already holds the player's own
-mods, or when they picked anything other than a fresh copy made for this server.
-Skipped for a folder this server already manages, since the mods in there are the
-server's own.
+Shown when the chosen folder is not already set up for this server, and it is not a
+fresh copy. Skipped when `ModSync-Managed.txt` is already there.
 
 ```
   Please read this before continuing.
@@ -123,29 +121,30 @@ server's own.
   You picked:  {full path}
 
   {ServerName} will decide which mods this game uses.
-  Mods it does not use can be replaced or set aside.
+  Files it replaces, and mods it does not use, are moved to:
+  {path}\ModSync-Removed
+  Nothing is deleted. Each join keeps its own dated folder.
+
+  This setup downloads a server pack first.
+  That pack is compared the same way before it is copied in.
+  Anything it would replace, and anything that is not in the pack,
+  is moved into ModSync-Removed first.
 
   This game already has {count} mod(s) of your own:
     - {mod name}
     ...and {count} more
 
-  They will be MOVED to:  {path}\Mods - Backup
-  Nothing is deleted. You can move them back whenever you like.
-  Each run keeps its own dated folder in there.
-
   Type YES to use this game, or press Enter to pick a different one.
 ```
+
+The pack lines are only there when the bat has a download link. The mod list is only
+there when the folder already has mods. Saying YES does not move anything yet. The
+pack install, or the later join, does the move.
 
 Declined:
 
 ```
   Nothing was changed.
-```
-
-Accepted, when mods were moved:
-
-```
-  Moved {count} mod(s) into {path}\Mods - Backup\{date time}
 ```
 
 ### 1.7 Making the copy
@@ -281,14 +280,33 @@ Source: `ModSyncClient.cs:LaunchApplier`
 ```
 ModSync - installing server mods
 
-  Installing the mods you just downloaded...
+  Finishing the mod check...
   The game will start again by itself. Please wait.
 
+  Moving mods out of the user Mods folder.
+  Keeping them in {AppData}\7DaysToDie\Mods - Backup\{date time}
+  Keeping the previous copies in ModSync-Removed\{date time}
   Setting aside {count} mod(s) this server does not run...
     - {mod name}
   Clearing {count} old file(s) out of mods the server keeps...
+  Saving {count} file(s) the server is about to replace...
   Putting the mods in place...
 ```
+
+If a file is open in another program, nothing is moved and the game stays closed.
+The download is thrown away. The next login starts over.
+
+```
+  This file is open in another program, so it cannot be updated:
+
+  Mods\{path}
+
+  Close that program, then log in again.
+
+  Nothing was changed.
+```
+
+More than one file uses "These files" and "Close the programs that have them open, then log in again."
 
 ---
 
@@ -334,10 +352,11 @@ Mod list changed while {ip} was comparing. Asking it to recheck.
 Worth knowing when reading a player's report.
 
 ```
-ModSync-Managed.txt    this folder is kept matching the server
-ModSync-Backup.txt     running log of every setup run and what it moved
+ModSync-Managed.txt    written by setup only. The game does not read it. A later setup run uses it so it does not ask again
+ModSync-Backup.txt     log of what a pack install moved aside
 ModSync-Hashes.txt     remembered file hashes, so launches are fast
-ModSync-Staging        part-finished download, removed when applied
-ModSync-Removed        mods the server does not run
-Mods - Backup          one dated folder per setup run, holding the player's mods
+ModSync-Staging        part-finished download, removed when applied. Also removed when an open file stops the update
+ModSync-Removed        one dated folder per join, and per pack install, holding mods and files that were removed or replaced
 ```
+
+The game also loads `%AppData%\Roaming\7DaysToDie\Mods`. On a join, everything in that folder is moved to `Mods - Backup\{date time}` beside it. The `Mods` folder stays, empty. That AppData folder is shared by every install that uses the default user data path.

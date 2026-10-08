@@ -34,6 +34,7 @@ namespace DoomLevelsMpFix
 		private static FieldInfo _byPlayer;
 		private static FieldInfo _instancePlayerId;
 		private static bool _loaded;
+		private static bool _host;
 		private static float _next;
 
 		internal static bool PreserveOnRelease;
@@ -382,6 +383,11 @@ namespace DoomLevelsMpFix
 
 		private static void Write()
 		{
+			if (!Authority())
+			{
+				return;
+			}
+
 			string path = FilePath();
 			if (path == null)
 			{
@@ -440,7 +446,13 @@ namespace DoomLevelsMpFix
 		private static bool Authority()
 		{
 			ConnectionManager net = SingletonMonoBehaviour<ConnectionManager>.Instance;
-			return net == null || net.IsServer || !net.IsClient;
+			if (net != null)
+			{
+				_host = net.IsServer;
+				return _host;
+			}
+
+			return _host;
 		}
 
 		internal static void NoteSpawn(int entityId, Vector3i blockPos)

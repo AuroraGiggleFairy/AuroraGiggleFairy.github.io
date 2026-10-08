@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="AGF-SmeltTimerOption"/>
+    <DisplayName value="AGF Smelt Timer Option"/>
+    <Version value="1.1.0"/>
+    <Description value="Lets you switch forge smelt timer between one item and full stack."/>
+    <Author value="AuroraGiggleFairy (AGF)"/>
+    <Website value="https://auroragigglefairy.github.io/"/>
+</xml>

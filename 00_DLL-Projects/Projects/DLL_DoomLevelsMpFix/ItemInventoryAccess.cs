@@ -26,6 +26,44 @@ namespace DoomLevelsMpFix
 			return field != null ? (EntityAlive)field.GetValue(data) : null;
 		}
 
+		internal static int MetaOf(ItemValue value)
+		{
+			if (value == null)
+			{
+				return 0;
+			}
+
+			PropertyInfo property = typeof(ItemValue).GetProperty("Meta");
+			if (property != null)
+			{
+				return Convert.ToInt32(property.GetValue(value, null));
+			}
+
+			FieldInfo field = typeof(ItemValue).GetField("Meta") ?? typeof(ItemValue).GetField("meta");
+			return field != null ? Convert.ToInt32(field.GetValue(value)) : 0;
+		}
+
+		internal static void SetMeta(ItemValue value, int meta)
+		{
+			if (value == null)
+			{
+				return;
+			}
+
+			PropertyInfo property = typeof(ItemValue).GetProperty("Meta");
+			if (property != null)
+			{
+				property.SetValue(value, meta, null);
+				return;
+			}
+
+			FieldInfo field = typeof(ItemValue).GetField("Meta") ?? typeof(ItemValue).GetField("meta");
+			if (field != null)
+			{
+				field.SetValue(value, meta);
+			}
+		}
+
 		internal static int AmmoIndex(ItemValue value)
 		{
 			if (value == null)
@@ -46,6 +84,29 @@ namespace DoomLevelsMpFix
 			}
 
 			return field != null ? Convert.ToInt32(field.GetValue(value)) : 0;
+		}
+
+		internal static void SetAmmoIndex(ItemValue value, int index)
+		{
+			if (value == null)
+			{
+				return;
+			}
+
+			byte ammo = (byte)index;
+			PropertyInfo property = typeof(ItemValue).GetProperty("SelectedAmmoTypeIndex");
+			if (property != null)
+			{
+				property.SetValue(value, ammo, null);
+				return;
+			}
+
+			FieldInfo field = typeof(ItemValue).GetField("SelectedAmmoTypeIndex")
+				?? typeof(ItemValue).GetField("selectedAmmoTypeIndex");
+			if (field != null)
+			{
+				field.SetValue(value, ammo);
+			}
 		}
 	}
 }

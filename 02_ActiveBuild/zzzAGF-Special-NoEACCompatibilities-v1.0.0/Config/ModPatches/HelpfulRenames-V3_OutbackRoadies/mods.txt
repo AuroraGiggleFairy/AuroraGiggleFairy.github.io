@@ -1,3 +1,0 @@
-# All listed ModInfo Names must be loaded (AND) before Localization.csv is merged.
-AGF-VP-HelpfulRenames
-V3_OutbackRoadies

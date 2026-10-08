@@ -1,10 +1,8 @@
 """
-create_new_mod.py
+Create a new Draft mod folder.
 
-Script to automate creation of a new mod folder with correct naming and initial files.
-- Prompts for mod name (e.g., AGF-BackpackPlus-84Slots or zzzAGF-Special-Compatibilities)
-- Creates folder as [mod name]-v1.0.0
-- Generates ModInfo.xml and README.txt with mod name and version
+You type the token, the scope, and whether it loads early, normal, or late.
+The script fills AGF, V3, the folder, the ModInfo name, and the display name.
 """
 import csv
 import argparse
@@ -34,6 +32,53 @@ TEMPLATE_MODINFO = '''<?xml version="1.0" encoding="UTF-8" ?>\n<xml>\n    <Name 
 
 
 VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
+TOKEN_PATTERN = re.compile(r"^[A-Za-z0-9]+$")
+GAME_LINE = "V3"
+SCOPES = ("SERVER", "CLIENT", "BOTH", "ADMIN", "COMPAT")
+LOAD_PREFIX = {"early": "0", "normal": "", "late": "zzz"}
+
+
+def fail(message: str) -> None:
+    print(message)
+    raise SystemExit(1)
+
+
+def spaced_token(token: str) -> str:
+    return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", token).strip()
+
+
+def normalize_scope(value: str) -> str:
+    scope = (value or "").strip().upper()
+    if scope in SCOPES:
+        return scope
+    return ""
+
+
+def normalize_load(value: str) -> str:
+    load = (value or "").strip().lower()
+    if load in LOAD_PREFIX:
+        return load
+    return ""
+
+
+def load_prefix(scope: str, load: str) -> str:
+    if scope == "COMPAT":
+        return "zzzzz"
+    return LOAD_PREFIX[load]
+
+
+def build_mod_identity(token: str, scope: str, load: str, version: str) -> tuple:
+    prefix = load_prefix(scope, load)
+    folder_base = f"{prefix}AGF-{GAME_LINE}-{scope}-{token}"
+    folder_name = f"{folder_base}-v{version}"
+    pretty = spaced_token(token)
+    if scope == "COMPAT":
+        modinfo_name = f"AGF-COMPAT-{token}"
+        display_name = f"AGF COMPAT {pretty}"
+    else:
+        modinfo_name = f"AGF-{token}"
+        display_name = f"AGF {pretty}"
+    return folder_base, folder_name, modinfo_name, display_name
 
 
 def build_initial_readme_txt(mod_name: str, version: str) -> str:
@@ -249,7 +294,16 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--name",
-        help="Mod name, e.g. AGF-BackpackPlus-84Slots or zzzAGF-Special-Compatibilities",
+        help="Mod token only, e.g. FuelBurnPlus or 0SCore",
+    )
+    parser.add_argument(
+        "--scope",
+        help="SERVER, CLIENT, BOTH, ADMIN, or COMPAT",
+    )
+    parser.add_argument(
+        "--load",
+        default="",
+        help="early, normal, or late. Enter for normal. COMPAT always uses five z's.",
     )
     parser.add_argument(
         "--version",
@@ -264,36 +318,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def to_display_name(name: str) -> str:
-    s = name
-    if s.startswith("zzzAGF-Special-"):
-        s = "AGF-Special-" + s[len("zzzAGF-Special-"):]
-    elif s.startswith("zzzAGF-Requested-"):
-        s = "AGF-" + s[len("zzzAGF-Requested-"):]
-    else:
-        for prefix in (
-            "AGF-NoEAC-",
-            "AGF-HUDPluszOther-",
-            "AGF-HUDPlus-",
-            "AGF-VPS-",
-            "AGF-VP-",
-            "AGF-4Modders-",
-            "AGF-Requested-",
-        ):
-            if s.startswith(prefix):
-                s = "AGF-" + s[len(prefix):]
-                break
-    s = s.replace("-", " ")
-    s = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", s)
-    s = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", s)
-    return s.strip()
-
-
-def is_valid_mod_name(mod_name: str) -> bool:
-    return mod_name.startswith("AGF-") or mod_name.startswith("zzzAGF-")
-
-
-def append_compatibility_row(mod_name: str) -> None:
+def append_compatibility_row(mod_name: str, folder_base: str) -> None:
     if not os.path.exists(COMPAT_CSV_PATH):
         return
 
@@ -322,10 +347,14 @@ def append_compatibility_row(mod_name: str) -> None:
     new_row[mod_name_idx] = mod_name
     if "MOD_TYPE_ID" in fieldnames:
         mod_type_idx = fieldnames.index("MOD_TYPE_ID")
-        new_row[mod_type_idx] = "5" if mod_name.startswith("AGF-VPS-") else "TBD"
+        new_row[mod_type_idx] = "TBD"
     if "QUOTE_FILE" in fieldnames:
         quote_idx = fieldnames.index("QUOTE_FILE")
         new_row[quote_idx] = f"{mod_name}.txt"
+    if "PREVIOUS_MOD_NAME" in fieldnames:
+        new_row[fieldnames.index("PREVIOUS_MOD_NAME")] = ""
+    if "FOLDER_BASE" in fieldnames:
+        new_row[fieldnames.index("FOLDER_BASE")] = folder_base
 
     with open(COMPAT_CSV_PATH, "a", encoding="utf-8", newline="") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
@@ -342,36 +371,52 @@ def ensure_quote_file(mod_name: str) -> None:
         f.write("")
 
 
+def prompt_value(label: str, non_interactive: bool) -> str:
+    if non_interactive:
+        return ""
+    return input(label).strip()
+
+
 def main():
     args = parse_args()
 
-    mod_name = (args.name or "").strip()
-    if not mod_name:
-        if args.non_interactive:
-            print("--name is required when --non-interactive is set.")
-            return
-        mod_name = input("Enter new mod name (e.g., AGF-BackpackPlus-84Slots): ").strip()
+    token = (args.name or "").strip()
+    if not token:
+        token = prompt_value("Enter the mod token (e.g. FuelBurnPlus): ", args.non_interactive)
+    if not token:
+        fail("Mod token cannot be empty.")
+    if not TOKEN_PATTERN.match(token):
+        fail("Mod token uses letters and numbers only, such as FuelBurnPlus or 0SCore.")
 
-    if not mod_name:
-        print("Mod name cannot be empty.")
-        return
+    scope = normalize_scope(args.scope or "")
+    if not scope:
+        scope = normalize_scope(prompt_value("Enter scope (SERVER, CLIENT, BOTH, ADMIN, COMPAT): ", args.non_interactive))
+    if not scope:
+        fail("Scope must be SERVER, CLIENT, BOTH, ADMIN, or COMPAT.")
 
-    if not is_valid_mod_name(mod_name):
-        print("Mod name must start with AGF- or zzzAGF-.")
-        return
+    if args.load and not normalize_load(args.load):
+        fail("Load must be early, normal, or late.")
+
+    load = normalize_load(args.load or "")
+    if scope != "COMPAT" and not load:
+        load = normalize_load(prompt_value("Enter load (early, normal, late). Enter for normal: ", args.non_interactive))
+        if not load:
+            load = "normal"
+    if scope != "COMPAT" and not load:
+        fail("Load must be early, normal, or late.")
+    if not load:
+        load = "normal"
 
     version = args.version.strip()
     if not VERSION_PATTERN.match(version):
-        print("Version must be in SemVer format: X.Y.Z")
-        return
+        fail("Version must be in SemVer format: X.Y.Z")
 
-    display_name = to_display_name(mod_name)
-    folder_name = f"{mod_name}-v{version}"
+    folder_base, folder_name, modinfo_name, display_name = build_mod_identity(token, scope, load, version)
     mod_path = os.path.join(INPROGRESS_DIR, folder_name)
 
     if os.path.exists(mod_path):
-        append_compatibility_row(mod_name)
-        ensure_quote_file(mod_name)
+        append_compatibility_row(modinfo_name, folder_base)
+        ensure_quote_file(modinfo_name)
         print(f"Folder {folder_name} already exists in {INPROGRESS_DIR}.")
         print("Compatibility CSV row and quote file were verified/backfilled.")
         return
@@ -381,17 +426,17 @@ def main():
 
     # Add entry to 05_ReleaseData/ReadmeSystem/HELPER_ModCompatibility.csv
     # (without duplicating existing MOD_NAME rows)
-    append_compatibility_row(mod_name)
+    append_compatibility_row(modinfo_name, folder_base)
     # Create default quote file in ReadmeSystem/Quotes if it does not exist yet
-    ensure_quote_file(mod_name)
+    ensure_quote_file(modinfo_name)
 
     # Create ModInfo.xml
     with open(os.path.join(mod_path, "ModInfo.xml"), "w", encoding="utf-8") as f:
-        f.write(TEMPLATE_MODINFO.format(mod_name=mod_name, display_name=display_name, version=version))
+        f.write(TEMPLATE_MODINFO.format(mod_name=modinfo_name, display_name=display_name, version=version))
 
     # Create README.txt scaffold used by readme migration/publish pipelines.
     with open(os.path.join(mod_path, "README.txt"), "w", encoding="utf-8") as f:
-        f.write(build_initial_readme_txt(mod_name, version))
+        f.write(build_initial_readme_txt(display_name, version))
 
     # Create Config and XUi_InGame folders (case sensitive)
     config_path = os.path.join(mod_path, "Config")
@@ -404,6 +449,8 @@ def main():
         f.write(localization_header)
 
     print(f"Created new mod folder: {folder_name}")
+    print(f"ModInfo name: {modinfo_name}")
+    print(f"Display name: {display_name}")
     print(f"Location: {mod_path}")
     print("You can now edit ModInfo.xml, README.txt, and Config files as needed.")
 

@@ -10,12 +10,12 @@ namespace MapPlus
 		{
 			try
 			{
-				if (!(__instance is EntityPlayerLocal) || _prefabInstance == null)
+				if (__instance == null || _prefabInstance == null)
 				{
 					return;
 				}
 
-				MapPlusVisits.RecordIfEntered(_prefabInstance);
+				MapPlusVisits.RecordIfEntered(__instance, _prefabInstance);
 			}
 			catch
 			{

@@ -1,0 +1,238 @@
+<AGF-OutbackRoadies>
+	<conditional>
+		<if cond="mod_loaded('V3_OutbackRoadies')">
+			<!-- Outback last-writer changed steroids CarryCapacity to base_add. Restore AGF base_set + size value. Encumber xpath without vanilla 0.026. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-BackpackPlus-119Slots')">
+					<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">119</set>
+					<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@operation">base_set</set>
+					<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">124</set>
+					<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">124</set>
+					<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">37</set>
+					<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect']/@value">0.00603695</set>
+				</if>
+				<else>
+					<conditional>
+						<if cond="mod_loaded('AGF-BackpackPlus-084Slots')">
+							<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">84</set>
+							<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@operation">base_set</set>
+							<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">89</set>
+							<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">89</set>
+							<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">31</set>
+							<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect']/@value">0.00958334</set>
+						</if>
+						<else>
+							<conditional>
+								<if cond="mod_loaded('AGF-BackpackPlus-072Slots')">
+									<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">72</set>
+									<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@operation">base_set</set>
+									<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">77</set>
+									<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">77</set>
+									<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">31</set>
+									<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect']/@value">0.01297</set>
+								</if>
+								<else>
+									<conditional>
+										<if cond="mod_loaded('AGF-BackpackPlus-060Slots')">
+											<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">60</set>
+											<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@operation">base_set</set>
+											<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">65</set>
+											<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">65</set>
+											<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">25</set>
+											<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect']/@value">0.0155</set>
+										</if>
+									</conditional>
+								</else>
+							</conditional>
+						</else>
+					</conditional>
+				</else>
+			</conditional>
+
+			<conditional>
+				<if cond="mod_loaded('AGF-2PurpleBook')">
+					<!-- Outback added workstation unlock 36 (ammopress). Seed + update Check36 like the generator contract. -->
+					<append xpath="/buffs/buff[@name='agfRecalculate']/effect_group[@name='recaculateChecklistPorgression']">
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="GTE" value="36"/>
+							<requirement name="CVarCompare" cvar="craftingWorkstationsCheck36" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="craftingWorkstationsCheck36" operation="set" value="0">
+							<requirement name="CVarCompare" cvar="craftingWorkstationsCheck" operation="LT" value="36"/>
+							<requirement name="CVarCompare" cvar="craftingWorkstationsCheck36" operation="GTE" value="1"/>
+						</triggered_effect>
+						<!-- Vehicle mods stay schematics. Magazine RecipeTagUnlocked should still green Unlockables cells. Do not reset these cvars — schematic-read already sets them. -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleFuelSaver" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="20"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleOffRoadHeadlights" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="20"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleStorage" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="20"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleExpandedSeat" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="45"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleReserveFuelTank" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="45"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleSuperCharger" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="70"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehicleArmor" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="100"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="modVehiclePlow" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="100"/>
+						</triggered_effect>
+					</append>
+					<append xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group[@name='craftingChecker']">
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleFuelSaver" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="20"/>
+							<requirement name="CVarCompare" cvar="modVehicleFuelSaver" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleOffRoadHeadlights" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="20"/>
+							<requirement name="CVarCompare" cvar="modVehicleOffRoadHeadlights" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleStorage" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="20"/>
+							<requirement name="CVarCompare" cvar="modVehicleStorage" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleExpandedSeat" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="45"/>
+							<requirement name="CVarCompare" cvar="modVehicleExpandedSeat" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleReserveFuelTank" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="45"/>
+							<requirement name="CVarCompare" cvar="modVehicleReserveFuelTank" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleSuperCharger" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="70"/>
+							<requirement name="CVarCompare" cvar="modVehicleSuperCharger" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehicleArmor" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="100"/>
+							<requirement name="CVarCompare" cvar="modVehicleArmor" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="modVehiclePlow" operation="set" value="1">
+							<requirement name="ProgressionLevel" progression_name="craftingVehicles" operation="GTE" value="100"/>
+							<requirement name="CVarCompare" cvar="modVehiclePlow" operation="LT" value="1"/>
+						</triggered_effect>
+					</append>
+				</if>
+			</conditional>
+
+			<!-- Outback VET scans. Tames/hireables are green. Hostiles are red. Chicken/rabbit tames reuse VET's existing green timid scans. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-2VisualEntityTracker')">
+					<append xpath="/buffs/buff[@name='buffZAlert']/effect_group">
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackHostile" buff="buffAGFAnimalOutbackHostileZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackKangaroo" buff="buffAGFAnimalOutbackKangarooZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackMagpie" buff="buffAGFAnimalOutbackMagpieZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetSpiderHostile" buff="buffAGFAnimalSpiderHostileZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackTameWolf" buff="buffAGFAnimalOutbackTameWolfZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackTameBoar" buff="buffAGFAnimalOutbackTameBoarZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackTameSnake" buff="buffAGFAnimalOutbackTameSnakeZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackTameKangaroo" buff="buffAGFAnimalOutbackTameKangarooZEffect"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="25" target_tags="agfVetOutbackHireable" buff="buffAGFOutbackHireableZEffect"/>
+					</append>
+					<append xpath="/buffs">
+						<buff name="buffAGFAnimalOutbackHostileZEffect" icon="ui_game_symbol_animal_tracker">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackHostile" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackHostile" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalOutbackKangarooZEffect" icon="ui_game_symbol_aussieanimal">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackKangaroo" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackKangaroo" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalOutbackMagpieZEffect" icon="ui_game_symbol_magpie">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackMagpie" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackMagpie" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalSpiderHostileZEffect" icon="ui_game_symbol_xythspider">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalSpiderHostile" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalSpiderHostile" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalOutbackTameWolfZEffect" icon="ui_game_symbol_tracking_wolf">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackTameWolf" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackTameWolf" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalOutbackTameBoarZEffect" icon="ui_game_symbol_tracking_pig">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackTameBoar" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackTameBoar" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalOutbackTameSnakeZEffect" icon="ui_game_symbol_tracking_snake">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackTameSnake" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackTameSnake" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFAnimalOutbackTameKangarooZEffect" icon="ui_game_symbol_aussieanimal">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFAnimalOutbackTameKangaroo" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFAnimalOutbackTameKangaroo" add="false"/>
+							</effect_group>
+						</buff>
+						<buff name="buffAGFOutbackHireableZEffect" icon="ui_game_symbol_run_and_gun">
+							<stack_type value="replace"/>
+							<duration value="1.5"/>
+							<effect_group>
+								<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="agfVet" operation="set" value="1"/>
+								<triggered_effect trigger="onSelfBuffStart" action="SetNavObject" nav_object="AGFOutbackHireable" add="true"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="agfVet"/>
+								<triggered_effect trigger="onSelfBuffRemove" action="SetNavObject" nav_object="AGFOutbackHireable" add="false"/>
+							</effect_group>
+						</buff>
+					</append>
+				</if>
+			</conditional>
+		</if>
+	</conditional>
+</AGF-OutbackRoadies>

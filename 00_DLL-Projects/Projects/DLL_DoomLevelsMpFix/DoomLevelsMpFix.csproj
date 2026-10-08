@@ -25,8 +25,8 @@
       <HintPath>$(HarmonyDll)</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DoomAutoPickupGuns">
-      <HintPath>$(SevenDaysToDieDir)\Mods\ZZZ_DoomMod_Standalone\DoomAutoPickupGuns.dll</HintPath>
+    <Reference Include="DoomAutoPickup">
+      <HintPath>$(SevenDaysToDieDir)\Mods\ZZZ_DoomMod_Standalone\DoomAutoPickup.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DoomLevels">
@@ -43,6 +43,10 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">

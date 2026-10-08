@@ -147,6 +147,8 @@ namespace QuartermasterCrafting
 		private static FieldInfo countField;
 		private static PropertyInfo valueProperty;
 		private static FieldInfo valueField;
+		private static PropertyInfo typeProperty;
+		private static FieldInfo typeField;
 		private static bool resolved;
 
 		internal static int Count(ItemStack stack)
@@ -190,6 +192,18 @@ namespace QuartermasterCrafting
 			return value as ItemValue;
 		}
 
+		internal static int TypeId(ItemValue item)
+		{
+			if (item == null)
+			{
+				return 0;
+			}
+
+			Ensure();
+			object value = typeProperty != null ? typeProperty.GetValue(item, null) : typeField?.GetValue(item);
+			return value is int type ? type : 0;
+		}
+
 		private static void Ensure()
 		{
 			if (resolved)
@@ -209,6 +223,12 @@ namespace QuartermasterCrafting
 			if (valueProperty == null)
 			{
 				valueField = typeof(ItemStack).GetField("itemValue", flags);
+			}
+
+			typeProperty = typeof(ItemValue).GetProperty("type", flags);
+			if (typeProperty == null)
+			{
+				typeField = typeof(ItemValue).GetField("type", flags);
 			}
 		}
 	}

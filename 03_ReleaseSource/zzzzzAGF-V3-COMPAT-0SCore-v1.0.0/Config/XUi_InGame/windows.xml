@@ -1,0 +1,12 @@
+<AGF-0SCore>
+	<conditional>
+		<if cond="mod_loaded('0-SCore_sphereii')">
+			<!-- 0-SCore ESC buttons sit left of debug menu; HUD 1Main occupies that band. -->
+			<conditional>
+				<if cond="mod_loaded('AGF-1HUDPlus')">
+					<set xpath="/windows/window[@name='ingameMenuSCore']/@pos">-620,-330</set>
+				</if>
+			</conditional>
+		</if>
+	</conditional>
+</AGF-0SCore>

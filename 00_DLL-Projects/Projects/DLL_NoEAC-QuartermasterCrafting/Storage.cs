@@ -55,7 +55,7 @@ namespace QuartermasterCrafting
 			ItemStack[] slots = station.Input;
 			for (int i = 0; i < slots.Length; i++)
 			{
-				if (slots[i] != null && !slots[i].IsEmpty() && StackAccess.Value(slots[i]).type == item.type)
+				if (slots[i] != null && !slots[i].IsEmpty() && StackAccess.TypeId(StackAccess.Value(slots[i])) == StackAccess.TypeId(item))
 				{
 					count += StackAccess.Count(slots[i]);
 				}
@@ -122,7 +122,7 @@ namespace QuartermasterCrafting
 			{
 				ItemStack ingredient = recipe.ingredients[i];
 				ItemValue item = StackAccess.Value(ingredient);
-				int type = item != null ? item.type : 0;
+				int type = StackAccess.TypeId(item);
 				int per = RecipeLines.PerCraft(recipe, ingredient, player);
 				TallyScratch.TryGetValue(type, out int nearby);
 				lines.Add(new Line
@@ -172,7 +172,7 @@ namespace QuartermasterCrafting
 				}
 
 				ItemValue sample = new ItemValue(lines[i].Type);
-				if (sample.type == 0)
+				if (StackAccess.TypeId(sample) == 0)
 				{
 					Refund(world, undos);
 					undos.Clear();
@@ -250,7 +250,7 @@ namespace QuartermasterCrafting
 			for (int i = 0; i < items.Length && got < amount; i++)
 			{
 				ItemStack stack = items[i];
-				if (!Counts(storage, stack, i) || StackAccess.Value(stack).type != want.type)
+				if (!Counts(storage, stack, i) || StackAccess.TypeId(StackAccess.Value(stack)) != StackAccess.TypeId(want))
 				{
 					continue;
 				}
@@ -261,7 +261,7 @@ namespace QuartermasterCrafting
 					Pos = chest.Pos,
 					Slot = i,
 					Count = take,
-					Type = want.type
+					Type = StackAccess.TypeId(want)
 				});
 				StackAccess.SetCount(stack, StackAccess.Count(stack) - (take));
 				if (StackAccess.Count(stack) <= 0)
@@ -336,7 +336,7 @@ namespace QuartermasterCrafting
 				return count - place;
 			}
 
-			if (StackAccess.Value(stack).type != type || (StackAccess.Value(stack).HasModSlots && StackAccess.Value(stack).HasMods()))
+			if (StackAccess.TypeId(StackAccess.Value(stack)) != type || (StackAccess.Value(stack).HasModSlots && StackAccess.Value(stack).HasMods()))
 			{
 				return count;
 			}
@@ -395,7 +395,7 @@ namespace QuartermasterCrafting
 						continue;
 					}
 
-					int type = StackAccess.Value(stack).type;
+					int type = StackAccess.TypeId(StackAccess.Value(stack));
 					counts.TryGetValue(type, out int have);
 					counts[type] = have + StackAccess.Count(stack);
 				}
@@ -426,7 +426,7 @@ namespace QuartermasterCrafting
 				for (int s = 0; s < items.Length; s++)
 				{
 					ItemStack stack = items[s];
-					if (Counts(chests[i].Storage, stack, s) && StackAccess.Value(stack).type == item.type)
+					if (Counts(chests[i].Storage, stack, s) && StackAccess.TypeId(StackAccess.Value(stack)) == StackAccess.TypeId(item))
 					{
 						count += StackAccess.Count(stack);
 					}
@@ -486,7 +486,7 @@ namespace QuartermasterCrafting
 						continue;
 					}
 
-					int type = StackAccess.Value(stack).type;
+					int type = StackAccess.TypeId(StackAccess.Value(stack));
 					counts.TryGetValue(type, out int have);
 					counts[type] = have + StackAccess.Count(stack);
 				}

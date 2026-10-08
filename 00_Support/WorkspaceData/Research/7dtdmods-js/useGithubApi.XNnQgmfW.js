@@ -1,0 +1,1 @@
+import{j as o}from"./CJ7ScB-v.js";function i(){const e=o();async function t(){return(await e.get("/v1/github/repos",{auth:!0})).repos}async function r(s,n){return(await e.get(`/v1/github/repos/${s}/${n}/releases`,{auth:!0})).releases}return{listRepos:t,listReleases:r}}export{i as u};

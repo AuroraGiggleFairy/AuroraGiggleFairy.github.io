@@ -46,6 +46,17 @@ namespace DoomSandbox
 			return ReadLines(DifficultiesResource);
 		}
 
+		/// <summary>
+		/// Localization turns the two characters \n into a line break while loading.
+		/// Worksheet display text is not a CSV, so do that same conversion here.
+		/// </summary>
+		public static string AsDisplayText(string text)
+		{
+			if (string.IsNullOrEmpty(text) || text.IndexOf('\\') < 0)
+				return text ?? "";
+			return text.Replace("\\n", "\n");
+		}
+
 		static string[] ReadLines(string resourceName)
 		{
 			byte[] bytes = ReadBytes(resourceName);
