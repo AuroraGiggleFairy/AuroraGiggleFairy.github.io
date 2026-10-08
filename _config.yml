@@ -1,0 +1,19 @@
+theme: jekyll-theme-primer
+exclude:
+  - .cursor
+  - .github
+  - .history
+  - .venv
+  - 00_DLL-Projects
+  - 00_Images
+  - 00_Support
+  - 00_Tools
+  - 01_Draft
+  - 02_ActiveBuild
+  - 03_ReleaseSource
+  - 04_DownloadZips
+  - 05_ReleaseData
+  - 06_PublishingSupport
+  - DiscordManagement
+  - StreamingManagement
+  - Player-Reports.md
