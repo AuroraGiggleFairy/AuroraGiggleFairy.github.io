@@ -255,34 +255,34 @@
     "version": "2.0.0"
   },
   "AGF-V3-ADMIN-ESCWindowPlus": {
-    "folder": "AGF-V3-ADMIN-ESCWindowPlus-v0.3.2",
-    "recorded_at": "2026-10-08T15:07:01",
-    "version": "0.3.2"
+    "folder": "AGF-V3-ADMIN-ESCWindowPlus-v0.3.3",
+    "recorded_at": "2026-10-08T16:10:31",
+    "version": "0.3.3"
   },
   "AGF-V3-ADMIN-ModSync": {
-    "folder": "AGF-V3-ADMIN-ModSync-v0.1.3",
-    "recorded_at": "2026-10-08T15:07:01",
-    "version": "0.1.3"
+    "folder": "AGF-V3-ADMIN-ModSync-v0.1.4",
+    "recorded_at": "2026-10-08T16:10:31",
+    "version": "0.1.4"
   },
   "AGF-V3-BOTH-CombatGlitchMitigations": {
-    "folder": "AGF-V3-BOTH-CombatGlitchMitigations-v0.0.1",
-    "recorded_at": "2026-10-08T15:07:01",
-    "version": "0.0.1"
-  },
-  "AGF-V3-BOTH-MultiLookStorage": {
-    "folder": "AGF-V3-BOTH-MultiLookStorage-v0.0.1",
-    "recorded_at": "2026-10-08T15:07:01",
-    "version": "0.0.1"
-  },
-  "AGF-V3-BOTH-QuartermasterCrafting": {
-    "folder": "AGF-V3-BOTH-QuartermasterCrafting-v0.0.2",
-    "recorded_at": "2026-10-08T15:07:01",
+    "folder": "AGF-V3-BOTH-CombatGlitchMitigations-v0.0.2",
+    "recorded_at": "2026-10-08T16:10:31",
     "version": "0.0.2"
   },
+  "AGF-V3-BOTH-MultiLookStorage": {
+    "folder": "AGF-V3-BOTH-MultiLookStorage-v0.0.2",
+    "recorded_at": "2026-10-08T16:10:31",
+    "version": "0.0.2"
+  },
+  "AGF-V3-BOTH-QuartermasterCrafting": {
+    "folder": "AGF-V3-BOTH-QuartermasterCrafting-v0.0.3",
+    "recorded_at": "2026-10-08T16:10:31",
+    "version": "0.0.3"
+  },
   "AGF-V3-BOTH-StorageLaptop": {
-    "folder": "AGF-V3-BOTH-StorageLaptop-v0.0.1",
-    "recorded_at": "2026-10-08T15:07:01",
-    "version": "0.0.1"
+    "folder": "AGF-V3-BOTH-StorageLaptop-v0.0.2",
+    "recorded_at": "2026-10-08T16:10:31",
+    "version": "0.0.2"
   },
   "AGF-V3-CLIENT-ConsoleOpacityMod": {
     "folder": "AGF-V3-CLIENT-ConsoleOpacityMod-v1.0.1",

@@ -1,8 +1,0 @@
-<AGF-StorageLaptop>
-	<append xpath="/xui">
-		<window_group name="storageLaptop" controller="StorageLaptop.StorageLaptopWindow, StorageLaptop" open_backpack_on_open="true" close_compass_on_open="true">
-			<window name="windowStorageLaptop" />
-			<window name="windowNonPagingHeader" />
-		</window_group>
-	</append>
-</AGF-StorageLaptop>

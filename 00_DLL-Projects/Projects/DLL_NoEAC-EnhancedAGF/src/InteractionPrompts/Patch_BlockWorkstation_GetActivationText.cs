@@ -584,8 +584,8 @@ namespace ExpandedInteractionPrompts
                 var stack = slots[i];
                 if (stack != null && !stack.IsEmpty())
                 {
-                    current += stack.count;
-                    int stackMax = CachedStackMax(stack.itemValue?.ItemClass);
+                    current += StackAccess.Count(stack);
+                    int stackMax = CachedStackMax(StackAccess.Value(stack)?.ItemClass);
                     max += stackMax > 0 ? stackMax : fallback;
                 }
                 else
@@ -638,7 +638,7 @@ namespace ExpandedInteractionPrompts
                 {
                     if (slots[i] == null || slots[i].IsEmpty())
                         continue;
-                    string icon = ItemIconName(slots[i].itemValue?.ItemClass);
+                    string icon = ItemIconName(StackAccess.Value(slots[i])?.ItemClass);
                     if (!string.IsNullOrEmpty(icon))
                         return icon;
                 }
@@ -755,18 +755,19 @@ namespace ExpandedInteractionPrompts
             for (int i = 0; i < tools.Length; i++)
             {
                 var stack = tools[i];
-                if (stack == null || stack.IsEmpty() || stack.itemValue == null)
+                ItemValue held = stack == null ? null : StackAccess.Value(stack);
+                if (stack == null || stack.IsEmpty() || held == null)
                     continue;
 
-                var itemClass = stack.itemValue.ItemClass;
+                var itemClass = held.ItemClass;
                 if (itemClass == null)
                     continue;
 
                 string name = itemClass.GetLocalizedItemName();
                 if (string.IsNullOrEmpty(name))
                     name = itemClass.GetItemName();
-                if (stack.itemValue.HasQuality && stack.itemValue.Quality > 0)
-                    name += " T" + stack.itemValue.Quality;
+                if (held.HasQuality && StackAccess.Quality(held) > 0)
+                    name += " T" + StackAccess.Quality(held);
                 names.Add(name);
             }
 

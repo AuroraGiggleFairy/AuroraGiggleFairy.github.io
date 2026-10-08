@@ -781,16 +781,109 @@ DOWNLOAD_ZIP_BASE = (
 )
 
 # Old ModInfo <Name> → current ActiveBuild name (zip / latest lookup).
+# BEGIN NAME MAP
 AGF_NAME_ALIASES = {
-    "AGF-NoEAC-GlobalStormTracker": "AGF-VPS-GlobalStormTracker",
-    "AGF-NoEAC-FuelAutoShutOff": "AGF-VPS-FuelAutoShutOff",
-    "AGF-NoEAC-ScreamerAlert": "AGF-VPS-ScreamerAlert",
-    "AGF-NoEAC-VisualEntityTrackerAddon": "AGF-VPS-VisualEntityTrackerAddon",
+    "0AGF-LawnTractorPatchGuard": "AGF-LawnTractorPatchGuard",
+    "AGF-4Modders-ESCWindowPlus": "AGF-ESCWindowPlus",
+    "AGF-4Modders-Fix4DestroyBiomeBadge": "AGF-Fix4DestroyBiomeBadge",
+    "AGF-4Modders-Fix4PerkPageReset": "AGF-Fix4PerkPageReset",
+    "AGF-HUDPlus-1Main": "AGF-1HUDPlus",
+    "AGF-HUDPlus-BMCounter": "AGF-2BMCounter",
+    "AGF-HUDPlus-PurpleBook": "AGF-2PurpleBook",
+    "AGF-HUDPlus-RemoveEnteringPopUp": "AGF-2RemoveEnteringPopUp",
+    "AGF-HUDPlus-VisualEntityTracker": "AGF-2VisualEntityTracker",
+    "AGF-HUDPlus-Weekday": "AGF-2Weekday",
+    "AGF-NoEAC-AudioOptionsPlus": "AGF-AudioOptionsPlus",
+    "AGF-NoEAC-AutoRun": "AGF-AutoRun",
+    "AGF-NoEAC-CombatGlitchMitigations": "AGF-CombatGlitchMitigations",
+    "AGF-NoEAC-ConsoleOpacityMod": "AGF-ConsoleOpacityMod",
+    "AGF-NoEAC-CosmeticLockIcon": "AGF-CosmeticLockIcon",
+    "AGF-NoEAC-EnhancedAGF": "AGF-EnhancedAGF",
+    "AGF-NoEAC-FuelAutoShutOff": "AGF-FuelAutoShutOff",
+    "AGF-NoEAC-GlobalStormTracker": "AGF-GlobalStormTracker",
+    "AGF-NoEAC-GyroFlightModes": "AGF-GyroFlightModes",
+    "AGF-NoEAC-HideDLCCosmetics": "AGF-HideDLCCosmetics",
+    "AGF-NoEAC-MapPlus": "AGF-MapPlus",
+    "AGF-NoEAC-ModSync": "AGF-ModSync",
+    "AGF-NoEAC-MultiLookStorage": "AGF-MultiLookStorage",
+    "AGF-NoEAC-OpenAllButton": "AGF-OpenAllButton",
+    "AGF-NoEAC-PartyGroupPlus": "AGF-PartyGroupPlus",
+    "AGF-NoEAC-QuartermasterCrafting": "AGF-QuartermasterCrafting",
+    "AGF-NoEAC-ScreamerAlert": "AGF-ScreamerAlert",
+    "AGF-NoEAC-SmeltTimerOption": "AGF-SmeltTimerOption",
+    "AGF-NoEAC-StorageLaptop": "AGF-StorageLaptop",
+    "AGF-NoEAC-Toolbelt12Slots": "AGF-Toolbelt12Slots",
+    "AGF-NoEAC-VisualEntityTrackerAddon": "AGF-3VisualEntityTrackerAddon",
+    "AGF-Requested-AnimalTrackerAlwaysOn": "AGF-AnimalTrackerAlwaysOn",
+    "AGF-Requested-SmallerInteractionPrompt": "AGF-SmallerInteractionPrompt",
+    "AGF-Requested-TinyBuffsPopUp": "AGF-TinyBuffsPopUp",
+    "AGF-VP-AdminModdingSupport": "AGF-AdminModdingSupport",
+    "AGF-VP-AlternativeRecipes": "AGF-AlternativeRecipes",
+    "AGF-VP-AmmoDisassembly": "AGF-AmmoDisassembly",
+    "AGF-VP-ArcheryFeathersChange": "AGF-ArcheryFeathersChange",
+    "AGF-VP-AutomobilesRespawn": "AGF-AutomobilesRespawn",
+    "AGF-VP-BedrollPlus": "AGF-BedrollPlus",
+    "AGF-VP-BetterEggChance": "AGF-BetterEggChance",
+    "AGF-VP-BreakItGetIt": "AGF-BreakItGetIt",
+    "AGF-VP-CraftSewingKits": "AGF-CraftSewingKits",
+    "AGF-VP-CraftStackEngBattCells": "AGF-CraftStackEngBattCells",
+    "AGF-VP-CraftVitamins": "AGF-CraftVitamins",
+    "AGF-VP-DecorationBlock": "AGF-DecorationBlock",
+    "AGF-VP-DoorsPlus": "AGF-DoorsPlus",
+    "AGF-VP-DrinkableAcid": "AGF-DrinkableAcid",
+    "AGF-VP-DyesPlus": "AGF-DyesPlus",
+    "AGF-VP-FloraHarvester": "AGF-FloraHarvester",
+    "AGF-VP-FuelBurnPlus": "AGF-FuelBurnPlus",
+    "AGF-VP-LargerStorageOption": "AGF-LargerStorageOption",
+    "AGF-VP-MasterTool": "AGF-MasterTool",
+    "AGF-VP-MaxLevel500": "AGF-MaxLevel500",
+    "AGF-VP-MiningPlus": "AGF-MiningPlus",
+    "AGF-VP-Mod988": "AGF-Mod988",
+    "AGF-VP-ModSlotsPlus": "AGF-ModSlotsPlus",
+    "AGF-VP-PaintbrushPlus": "AGF-PaintbrushPlus",
+    "AGF-VP-PickupLanternsPlus": "AGF-PickupLanternsPlus",
+    "AGF-VP-PlayerResetQuests": "AGF-PlayerResetQuests",
+    "AGF-VP-RebundleBundles": "AGF-RebundleBundles",
+    "AGF-VP-RecipeRottingFlesh": "AGF-RecipeRottingFlesh",
+    "AGF-VP-RestorePowerAnyTime": "AGF-RestorePowerAnyTime",
+    "AGF-VP-ScrapBatts4Acid": "AGF-ScrapBatts4Acid",
+    "AGF-VP-ScrapEquipmentFaster": "AGF-ScrapEquipmentFaster",
+    "AGF-VP-SimplifiedStacks": "AGF-SimplifiedStacks",
+    "AGF-VP-SmeltingPlus": "AGF-SmeltingPlus",
+    "AGF-VP-StayLongerAnimalCorpse": "AGF-StayLongerAnimalCorpse",
+    "AGF-VP-StayLongerPlayerBackpack": "AGF-StayLongerPlayerBackpack",
+    "AGF-VP-TacticalRiflePlus": "AGF-TacticalRiflePlus",
+    "AGF-VP-VehiclePerformance": "AGF-VehiclePerformance",
+    "AGF-VP-VehicleStoragePlus": "AGF-VehicleStoragePlus",
+    "AGF-VP-VehiclesExtraSeating": "AGF-VehiclesExtraSeating",
+    "AGF-VP-ZombieCorpseLeaveQuicker": "AGF-ZombieCorpseLeaveQuicker",
+    "AGF-VP-zHelpfulRenames": "AGF-HelpfulRenames",
+    "AGF-VPS-FuelAutoShutOff": "AGF-FuelAutoShutOff",
+    "AGF-VPS-GlobalStormTracker": "AGF-GlobalStormTracker",
+    "AGF-VPS-HonkOpensYourDoors": "AGF-HonkOpensYourDoors",
+    "AGF-VPS-LootTimerHolds": "AGF-LootTimerHolds",
+    "AGF-VPS-ScreamerAlert": "AGF-ScreamerAlert",
+    "AGF-VPS-SortingCart": "AGF-SortingCart",
+    "AGF-VPS-VisualEntityTrackerAddon": "AGF-3VisualEntityTrackerAddon",
+    "zzzAGF-Requested-LootStaysOnEmpty": "AGF-LootStaysOnEmpty",
+    "zzzzAGF-LawnTractorV3Fix": "AGF-LawnTractorV3Fix",
 }
+
+# Old pack Name → the COMPAT mod Names that replaced that one pack.
+AGF_REPLACED_BY: dict[str, list[str]] = {
+    "zzzAGF-Special-Compatibilities": ["AGF-COMPAT-0SCore", "AGF-COMPAT-Companions", "AGF-COMPAT-Dewtas18SlotToolbelt", "AGF-COMPAT-DishongTowerChallenge", "AGF-COMPAT-GBZ15SlotToolbelt", "AGF-COMPAT-OakravenAmmoPress", "AGF-COMPAT-OutbackRoadies", "AGF-COMPAT-QuickStack", "AGF-COMPAT-WMM12SlotToolbelt"],
+    "zzzAGF-Special-LocalizationPatches": ["AGF-COMPAT-BDubVehicles", "AGF-COMPAT-GSVanillaCookBook", "AGF-COMPAT-IZYWeapons"],
+    "zzzAGF-Special-NoEACCompatibilities": ["AGF-COMPAT-DoomSurvival", "AGF-COMPAT-POIScourgeLite"],
+}
+# END NAME MAP
 
 
 def agf_canonical_name(name: str) -> str:
-    return AGF_NAME_ALIASES.get(name, name)
+    seen: set[str] = set()
+    while name in AGF_NAME_ALIASES and name not in seen:
+        seen.add(name)
+        name = AGF_NAME_ALIASES[name]
+    return name
 
 
 def agf_download_url(canonical_name: str) -> str:
@@ -877,6 +970,17 @@ def ignored_has_latest(mods: list[ModTry], name: str, latest_ver: str) -> bool:
         if other_ver and other_ver >= want:
             return True
     return False
+
+
+def replaced_packs(mods: list[ModTry]) -> list[tuple[ModTry, list[str]]]:
+    out = []
+    for mod in mods:
+        if mod.status != "loaded" or not mod.name:
+            continue
+        kids = AGF_REPLACED_BY.get(mod.name)
+        if kids:
+            out.append((mod, kids))
+    return out
 
 
 def outdated_agf(mods: list[ModTry], latest: dict[str, str]) -> list[tuple[ModTry, str, str]]:
@@ -1130,6 +1234,15 @@ def discord_update_lines(mod: ModTry, latest: str, canon: str) -> list[str]:
     ]
 
 
+def discord_replaced_lines(mod: ModTry, kids: list[str]) -> list[str]:
+    out = [
+        f"- **{mod.name}**",
+        "  - This pack was split into separate COMPAT mods. Remove it.",
+    ]
+    out.extend(f"  - `{kid}`" for kid in kids)
+    return out
+
+
 def discord_major_error_lines(issue: Issue, mods: list[ModTry]) -> list[str]:
     area = guess_area(issue)
     title = issue.text.splitlines()[0].split(":", 1)[0].strip() or "Red error"
@@ -1241,6 +1354,7 @@ def write_record(p: Parsed, catalog: list[Knowledge] | None = None) -> Path:
     stale_repo = outdated_agf(p.mods, latest)
     uploaded = load_uploaded_versions(sorted({canon for _, _, canon in stale_repo}))
     stale, unpublished = split_agf_stale(stale_repo, uploaded)
+    replaced = replaced_packs(p.mods)
     catalog = catalog or load_knowledge()
     previous = find_previous_same_save(p, catalog)
     added: list[str] = []
@@ -1289,7 +1403,7 @@ def write_record(p: Parsed, catalog: list[Knowledge] | None = None) -> Path:
         lines.append("- none")
 
     lines += ["", "## AGF versions"]
-    if stale or unpublished:
+    if stale or unpublished or replaced:
         for mod, cur, canon in stale:
             rename = f" → `{canon}`" if canon != mod.name else ""
             lines.append(
@@ -1303,6 +1417,14 @@ def write_record(p: Parsed, catalog: list[Knowledge] | None = None) -> Path:
                 f"- {color_warn(mod.name)} {mod.version} — {up_note}, "
                 f"repo {repo_ver}{rename} (not uploaded)"
             )
+        for mod, kids in replaced:
+            lines.append(
+                f"- {color_warn(mod.name)} {mod.version} — split into COMPAT mods. Remove this pack."
+            )
+            for kid in kids:
+                kid_ver = latest.get(kid, "")
+                ver_note = f" {kid_ver}" if kid_ver else ""
+                lines.append(f"  - `{kid}`{ver_note}")
     elif any(agf_canonical_name(m.name or "") in latest for m in loaded):
         lines.append("- All loaded AGF mods match ActiveBuild")
     else:
@@ -1403,7 +1525,7 @@ def write_record(p: Parsed, catalog: list[Knowledge] | None = None) -> Path:
         for extra in froms[1:]:
             lines.append(f"    - `{extra}`")
         lines.append(f"  - to `{steam_mods}`")
-    if bad or stale:
+    if bad or stale or replaced:
         discord_section("## Clean-Up")
         for mod in bad:
             winner = find_winner(p.mods, mod)
@@ -1412,6 +1534,9 @@ def write_record(p: Parsed, catalog: list[Knowledge] | None = None) -> Path:
         for mod, cur, canon in stale:
             lines.append("")
             lines.extend(discord_update_lines(mod, cur, canon))
+        for mod, kids in replaced:
+            lines.append("")
+            lines.extend(discord_replaced_lines(mod, kids))
     if xui_significant and not first_error:
         discord_section("## XUi")
         named = xui_mismatch_mods(p.mods)

@@ -1,8 +1,0 @@
-<AGFVanillaPlus-CraftVitamins>
-
-	<append xpath="/items/item[@name='resourceSewingKit']">	
-		<property name="UnlockedBy" value="perkWasteTreasuresCloth"/>		
-	</append>
-
-
-</AGFVanillaPlus-CraftVitamins>
