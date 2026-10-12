@@ -1,0 +1,14 @@
+<AGFVanillaPlus-MasterTool>
+
+
+	<append xpath="/gamestages">
+		<group name="zombieAGFMasterTool" spawner="zombieAGFMasterTool"/>
+		<spawner name="zombieAGFMasterTool">
+			<gamestage stage="1">
+				<spawn group="zombieAGFMasterToolGroup" duration="1"/>
+			</gamestage>		
+		</spawner>	
+	</append>
+
+
+</AGFVanillaPlus-MasterTool>

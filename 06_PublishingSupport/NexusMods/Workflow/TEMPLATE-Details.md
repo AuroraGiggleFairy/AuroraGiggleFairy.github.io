@@ -39,7 +39,7 @@ Copy the box.
 
 
 ```text
-{{NEXUS_MOD_NAME}}
+{{FILE_DISPLAY_NAME}}
 ```
 
 ---

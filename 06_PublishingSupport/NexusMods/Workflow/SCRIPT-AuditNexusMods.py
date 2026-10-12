@@ -212,14 +212,18 @@ def pick_update_group(mod_files: List[dict], preferred_id: str = "") -> Tuple[st
 
 def build_publishhelp_display_name(mod_name: str, game_ver: str = "3") -> str:
     """Same naming rules as SCRIPT-NexusPublishHelp.build_display_name / Details.md titles."""
-    parts = mod_name.split("-", 2)
-    if len(parts) >= 3:
-        name_part = parts[2].replace("-", " ")
-        name_display = f"{parts[1]} - {name_part}"
-    else:
-        name_display = mod_name.replace("-", " ")
-    game_token = str(game_ver or "3").strip() or "3"
-    return f"AGF - V{game_token} - {name_display}"
+    m = re.match(r"^(?:[0z]+)?AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN)-(.*)$", mod_name)
+    if m:
+        return f"AGF - {m.group(1)}"
+    m_compat = re.match(r"^(?:[0z]+)?AGF-V\d+-COMPAT-(.*)$", mod_name)
+    if m_compat:
+        return f"AGF - COMPAT-{m_compat.group(1)}"
+    clean = mod_name
+    if clean.startswith("AGF-"):
+        clean = clean[4:]
+    elif clean.startswith("zzzAGF-"):
+        clean = clean[7:]
+    return f"AGF - {clean}"
 
 
 def read_publishhelp_title(base_name: str) -> str:

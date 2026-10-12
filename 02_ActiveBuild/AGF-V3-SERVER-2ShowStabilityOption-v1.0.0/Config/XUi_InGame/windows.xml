@@ -1,0 +1,18 @@
+<AGF-2ShowStabilityOption>
+
+	<!-- Same 250x46 slot as the AGF pause button, one row above it. -->
+	<append xpath="/windows">
+		<window name="windowShowStability" anchor="CenterCenter" pos="0,0" width="1920" height="1080" depth="12">
+			<rect name="stabilityPlate" width="250" height="46" anchor_left="#TopLeft,0,20" anchor_right="#TopLeft,0,270" anchor_top="#TopLeft,0,-724" anchor_bottom="#TopLeft,0,-770" controller="InGameDebugMenu" disableautobackground="true">
+				<rect name="toggleDebugShaders" depth="3" pos="0,0" width="250" height="46" controller="ToggleButton" visible="true" enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]">
+					<button name="clickable" sprite="menu_empty" defaultcolor="[mediumGrey]" disabledcolor="[darkGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" hoverscale="1.0"/>
+					<sprite depth="1" name="border" sprite="menu_empty2px" color="[black]" type="sliced" fillcenter="false"/>
+					<sprite depth="2" name="tickbox" width="26" height="26" pos="10,-10" color="[darkGrey]" sprite="Highlight - Shadowed" type="sliced"/>
+					<sprite depth="3" name="tickmark" width="18" height="18" pos="14,-14" color="[white]" sprite="ui_game_symbol_check" visible="{value}"/>
+					<label depth="4" name="btnLabel" width="200" height="44" pos="40,-23" justify="center" text_key="xuiDebugMenuShowStability" effect="outline" pivot="left" font_size="34" overflow="shrinkcontent" foregroundlayer="true"/>
+				</rect>
+			</rect>
+		</window>
+	</append>
+
+</AGF-2ShowStabilityOption>

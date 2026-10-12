@@ -1,6 +1,6 @@
 # AGF-V3-SERVER-StayLongerAnimalCorpse v3.1.2
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - SERVER - StayLongerAnimalCorpse
+AGF - Stay Longer Animal Corpse - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Server Side Only
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - SERVER - StayLongerAnimalCorpse</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - SERVER - StayLongerAnimalCorpse</span></h1>
 
 Animal corpses disappear after 10 minutes instead of 5.
 
@@ -264,7 +264,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - SERVER - StayLongerAnimalCorpse
+AGF - V3 - SERVER - StayLongerAnimalCorpse
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):

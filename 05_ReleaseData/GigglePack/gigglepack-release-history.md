@@ -1,5 +1,26 @@
 # GigglePack Release Changelog
 
+## GigglePack v1.1.0 (October 12, 2026 5:52pm)
+### Summary: +2 new, ~7 updated, =0 renamed, -2 removed
+- **New Mods**
+  - [AGF-V3-SERVER-2ShowStabilityOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-2ShowStabilityOption.zip) (new: v1.0.0)
+  - [AGF-V3-SERVER-POISwitchesUnlockDoors](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-POISwitchesUnlockDoors.zip) (new: v1.0.0)
+- **Updated Existing Mods**
+  - [AGF-V3-BOTH-PartyGroupPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-BOTH-PartyGroupPlus.zip) (v1.2.1-BETA -> v1.2.2-BETA)
+  - [AGF-V3-SERVER-2PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-2PurpleBook.zip) (v3.2.1 -> v3.3.0)
+  - [AGF-V3-SERVER-CraftStackEngBattCells](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-CraftStackEngBattCells.zip) (v4.0.1 -> v4.0.2)
+  - [AGF-V3-SERVER-CraftVitamins](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-CraftVitamins.zip) (v2.1.3 -> v2.1.4)
+  - [AGF-V3-SERVER-FloraHarvester](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-FloraHarvester.zip) (v3.0.3 -> v3.0.4)
+  - [AGF-V3-SERVER-LargerStorageOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-LargerStorageOption.zip) (v1.2.1 -> v1.2.2)
+  - [AGF-V3-SERVER-MasterTool](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-MasterTool.zip) (v7.1.3 -> v7.1.4)
+- **Renamed Mods**
+  - None
+- **Removed Mods**
+  - AGF-V3-CLIENT-ConsoleOpacityMod (was v1.0.2)
+  - AGF-V3-SERVER-DecorationBlock (was v3.0.4)
+
+---
+
 ## GigglePack v1.0.0 (October 8, 2026 3:08pm)
 - Mod naming overhaul
 - Delete existing AGF mods and upload with these new mods.

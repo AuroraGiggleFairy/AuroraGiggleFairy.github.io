@@ -57,6 +57,11 @@ def main() -> int:
         action="store_true",
         help="Validate what would be updated without changing Nexus",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force upload even if local version is not newer than live version",
+    )
     args = parser.parse_args()
 
     api_key = load_api_key()
@@ -87,6 +92,8 @@ def main() -> int:
         command.extend(["--mod", args.mod])
     if args.dry_run:
         command.append("--dry-run")
+    if args.force:
+        command.append("--force")
 
     print("=" * 60)
     print("  NEXUS MODS UPDATE")

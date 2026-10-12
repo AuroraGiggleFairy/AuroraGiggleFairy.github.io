@@ -18,6 +18,12 @@ echo.
 "%PYTHON_EXE%" "%~dp000_Support\Automation\workflow\00_dispatch.py" --mode update %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
+if %EXIT_CODE% equ 0 (
+    echo.
+    echo Syncing Publishing Matrix Canvas...
+    "%PYTHON_EXE%" "%~dp006_PublishingSupport\SCRIPT-SyncPublishingMatrix.py"
+)
+
 echo.
 echo Update run exited with code %EXIT_CODE%.
 pause

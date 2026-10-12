@@ -1,0 +1,55 @@
+<AGFVanillaPlus-MasterTool>
+
+
+
+<!--Master Tool Harvesting-->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']">
+		<display_entry icon="meleeToolAllSteelParts" name_key="resourceMasterToolHarvesting" has_quality="false" unlock_level="100" >
+			<unlock_entry item="resourceMasterToolHarvesting" unlock_tier="1" />
+		</display_entry>
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100" value="1" tags="resourceMasterToolHarvesting"/>
+	</append>
+
+
+
+<!--Master Tool Electrical-->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']">
+		<display_entry icon="resourceElectricParts" name_key="resourceMasterToolElectricals" has_quality="false" unlock_level="100" >
+			<unlock_entry item="resourceMasterToolElectricals" unlock_tier="1" />
+		</display_entry>
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100" value="1" tags="resourceMasterToolElectricals"/>
+	</append>
+
+
+
+<!--Master Tool Salvaging-->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']">
+		<display_entry icon="meleeToolAxeT3ChainsawParts" name_key="resourceMasterToolSalvaging" has_quality="false" unlock_level="75" >
+			<unlock_entry item="resourceMasterToolSalvaging" unlock_tier="1" />
+		</display_entry>
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75" value="1" tags="resourceMasterToolSalvaging"/>
+	</append>
+
+
+
+<!--Master Tool Butchering-->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']">
+		<display_entry icon="meleeWpnBladeT3MacheteParts" name_key="resourceMasterToolButchering" has_quality="false" unlock_level="75" >
+			<unlock_entry item="resourceMasterToolButchering" unlock_tier="1" />
+		</display_entry>
+	</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75" value="1" tags="resourceMasterToolButchering"/>
+	</append>
+
+
+
+
+
+</AGFVanillaPlus-MasterTool>

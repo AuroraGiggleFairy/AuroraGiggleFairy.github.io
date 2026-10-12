@@ -1,0 +1,14 @@
+<AGF-DoomSurvival>
+	<!-- Dan's Fuel Burn Plus icons. Drop the 100-hour fuel item. -->
+	<conditional>
+		<if cond="mod_loaded('DoomMod_Standalone') or mod_loaded('DoomClassicMaps')">
+			<conditional>
+				<if cond="mod_loaded('AGF-FuelBurnPlus')">
+					<set xpath="/items/item[@name='resourceWood60min']/property[@name='CustomIcon']/@value">modularFireWoodStackB</set>
+					<set xpath="/items/item[@name='resourceWood600min']/property[@name='CustomIcon']/@value">woodLogPillar100</set>
+					<remove xpath="/items/item[@name='resourceWood6000min']"/>
+				</if>
+			</conditional>
+		</if>
+	</conditional>
+</AGF-DoomSurvival>

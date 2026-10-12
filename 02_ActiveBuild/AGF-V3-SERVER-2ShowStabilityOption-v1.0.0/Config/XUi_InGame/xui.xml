@@ -1,0 +1,7 @@
+<AGF-2ShowStabilityOption>
+
+	<append xpath="/xui/window_group[@name='ingameMenu']">
+		<window name="windowShowStability"/>
+	</append>
+
+</AGF-2ShowStabilityOption>

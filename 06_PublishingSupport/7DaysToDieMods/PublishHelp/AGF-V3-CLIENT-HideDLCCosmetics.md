@@ -1,6 +1,6 @@
 # AGF-V3-CLIENT-HideDLCCosmetics v1.1.1
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - CLIENT - HideDLCCosmetics
+AGF - Hide DLC Cosmetics - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Client Side Only
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - CLIENT - HideDLCCosmetics</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - CLIENT - HideDLCCosmetics</span></h1>
 
 Adds an in-game option to hide DLC cosmetics from your view.
 
@@ -66,7 +66,7 @@ Adds an in-game option to hide DLC cosmetics from your view.
 <ul>
 <li><span style="color:#DDCDFA"><strong>7d2d Version:</strong></span> 3</li>
 <li><span style="color:#DDCDFA"><strong>Languages Supported:</strong></span> All 13 game-supported languages.</li>
-<li><span style="color:#DDCDFA"><strong>Mod Type:</strong></span> Client-Side (Only)
+<li><span style="color:#DDCDFA"><strong>Mod Type:</strong></span> Client-Side (EAC Off)
 <ul>
 <li>EAC off required.</li>
 <li>Each player installs it on their own game.</li>
@@ -74,10 +74,13 @@ Adds an in-game option to hide DLC cosmetics from your view.
 </ul></li>
 <li><span style="color:#DDCDFA"><strong>Safe to install on existing game:</strong></span> Yes (Safe)</li>
 <li><span style="color:#DDCDFA"><strong>Safe to remove from existing game:</strong></span> Unknown</li>
-<li><span style="color:#DDCDFA"><strong>Dependencies:</strong></span> Requires 0_TFP_Harmony (built-in game mod).
+<li><span style="color:#DDCDFA"><strong>Dependencies:</strong></span>
 <ul>
-<li>To check, explore Installed Files and confirm Mods/0_TFP_Harmony</li>
-<li>To restore, use Steam Verify: Right click 7 Days to Die -></li>
+<li><span style="color:#DDCDFA"><strong>MOD 1:</strong></span> 0_TFP_Harmony (built-in game mod)
+<ul>
+<li>To check, explore Installed Files and confirm Mods/0_TFP_Harmony exists.</li>
+<li>To restore, use Steam Verify: Right click 7 Days to Die -> Properties -> Installed Files -> Verify integrity of game files.</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -269,7 +272,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - CLIENT - HideDLCCosmetics
+AGF - V3 - CLIENT - HideDLCCosmetics
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):
@@ -277,7 +280,7 @@ Description (same as Nexus file description: summary, blank line, Mod Type):
 ```text
 Adds an in-game option to hide DLC cosmetics from your view.
 
-Mod Type: Client-Side (Only): EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.
+Mod Type: Client-Side (EAC Off): EAC off is required, each player installs it on their own game, and it also works in singleplayer.
 ```
 
 Version of Mod:

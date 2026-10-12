@@ -1,0 +1,10 @@
+<AGFVanillaPlus-CraftVitamins>
+
+
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/display_entry[@icon='medicalPlasterCast,drugHerbalAntibiotics,drugRecog']/unlock_entry[@item='drugHerbalAntibiotics']/@item">,drugVitamins</append>
+		<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[@tags='drugHerbalAntibiotics']/@tags">,drugVitamins</append>
+	
+	
+</AGFVanillaPlus-CraftVitamins>
+
+ 

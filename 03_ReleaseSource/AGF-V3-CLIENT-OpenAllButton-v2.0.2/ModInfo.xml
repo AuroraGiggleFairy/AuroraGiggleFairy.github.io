@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
   <Name value="AGF-OpenAllButton" />
-  <DisplayName value="AGF Open All Button" />
+  <DisplayName value="AGF - Open All Button - V3" />
   <Version value="2.0.2" />
   <Description value="Adds an Open All button that rapidly opens bundled item stacks." />
   <Author value="AuroraGiggleFairy (AGF)" />

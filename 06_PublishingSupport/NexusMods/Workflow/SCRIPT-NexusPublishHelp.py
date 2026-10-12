@@ -213,16 +213,20 @@ def parse_readme_sections(readme_text: str) -> Dict[str, str]:
     return sections
 
 
-def build_display_name(mod_name: str, game_ver: str) -> str:
-    """Build the Nexus display name from mod code and game version.
-    Preserves original casing (e.g. HUDPlus, 1Main, BMCounter)."""
-    parts = mod_name.split("-", 2)
-    if len(parts) >= 3:
-        name_part = parts[2].replace("-", " ")
-        name_display = f"{parts[1]} - {name_part}"
-    else:
-        name_display = mod_name.replace("-", " ")
-    return f"AGF - V3 - {name_display}"
+def build_display_name(mod_name: str, game_ver: str = "") -> str:
+    """Build the Nexus display name: 'AGF - Name' (e.g. 'AGF - 2Weekday')."""
+    m = re.match(r"^(?:[0z]+)?AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN)-(.*)$", mod_name)
+    if m:
+        return f"AGF - {m.group(1)}"
+    m_compat = re.match(r"^(?:[0z]+)?AGF-V\d+-COMPAT-(.*)$", mod_name)
+    if m_compat:
+        return f"AGF - COMPAT-{m_compat.group(1)}"
+    clean = mod_name
+    if clean.startswith("AGF-"):
+        clean = clean[4:]
+    elif clean.startswith("zzzAGF-"):
+        clean = clean[7:]
+    return f"AGF - {clean}"
 
 
 # --- Static BBCode footer (never changes between mods) ---
@@ -576,7 +580,8 @@ def generate_bbcode_full_description(plan_entry: Dict[str, object], sections: Di
     game_ver = str(plan_entry.get("tested_game_version", ""))
     mod_code = str(plan_entry.get("mod_name", ""))
     desc = str(plan_entry.get("description", ""))
-    one_liner = desc.split(".")[0] + "." if "." in desc else desc
+    m_one = re.match(r"^(.*?\.)(?:\s|$)", desc.strip())
+    one_liner = m_one.group(1) if m_one else desc.strip()
 
     parts = mod_code.split("-", 2)
     if len(parts) >= 3:
@@ -608,7 +613,9 @@ MODTYPE_LOOKUP = {
     "Server-Side (EAC-Friendly)": "Mod Type: Server-Side (EAC-Friendly) — Server install works for all joining players, EAC can be on or off, and it also works in singleplayer.",
     "Server-Side (EAC Off)": "Mod Type: Server-Side (EAC Off) — EAC off is required, server install works for all joining players, and it also works in singleplayer.",
     "Server/Client-Side (Required)": "Mod Type: Server/Client-Side (Required) — EAC off is required, the host and all joining players must install it, and it also works in singleplayer.",
+    "Server/Client-Side (EAC Off)": "Mod Type: Server/Client-Side (EAC Off) — EAC off is required, the host and all joining players must install it, and it also works in singleplayer.",
     "Client-Side (Only)": "Mod Type: Client-Side (Only) — EAC off is required, server install has no effect, each player installs it on their own PC, and it also works in singleplayer.",
+    "Client-Side (EAC Off)": "Mod Type: Client-Side (EAC Off) — EAC off is required, server install has no effect, each player installs it on their own game, and it also works in singleplayer.",
 }
 
 

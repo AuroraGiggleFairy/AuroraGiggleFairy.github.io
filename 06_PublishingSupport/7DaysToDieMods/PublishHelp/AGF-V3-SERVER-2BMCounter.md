@@ -1,6 +1,6 @@
 # AGF-V3-SERVER-2BMCounter v4.0.3
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - SERVER - 2BMCounter
+AGF - BM Counter - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Server Side Only
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - SERVER - 2BMCounter</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - SERVER - 2BMCounter</span></h1>
 
 Adds a Blood Moon countdown under the compass for any frequency/range.
 
@@ -265,7 +265,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - SERVER - 2BMCounter
+AGF - V3 - SERVER - 2BMCounter
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):

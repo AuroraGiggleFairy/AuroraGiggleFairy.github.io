@@ -216,7 +216,7 @@ def dtd_cell(
     entry = (cfg.get("mods") or {}).get(base) or {}
     mid, live = resolve_7dtd_id(base, entry, fetch=fetch)
     if not mid:
-        return "**upload**" if screenshot else "**upload**"
+        return "**upload**"
     # Persist discovered id into memory only this run (caller may save)
     entry_ids = cfg.setdefault("_discovered_7dtd", {})
     entry_ids[base] = mid
@@ -320,6 +320,16 @@ def main() -> int:
     print(f"  nexus status rows loaded: {len(nexus)}")
     if not nexus:
         print("  NOTE: Nexus-Status.json missing — run RUN-Nexus-Status.bat first for Nexus column.")
+
+    sync_matrix = HERE / "SCRIPT-SyncPublishingMatrix.py"
+    if sync_matrix.is_file():
+        import subprocess
+        import sys
+        try:
+            subprocess.run([sys.executable, str(sync_matrix)], check=True)
+        except Exception as e:
+            print(f"Note: Matrix canvas sync skipped: {e}")
+
     return 0
 
 

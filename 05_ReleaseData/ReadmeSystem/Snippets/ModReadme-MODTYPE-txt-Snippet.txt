@@ -11,13 +11,13 @@ MOD TYPE 2
     - Singleplayer and player-hosted: EAC off required.
 
 MOD TYPE 3
-  - Mod Type: Server/Client-Side (Required)
+  - Mod Type: Server/Client-Side (EAC Off)
     - EAC off required.
     - Host and all joining players must install it.
     - Also works in singleplayer.
 
 MOD TYPE 4
-  - Mod Type: Client-Side (Only)
+  - Mod Type: Client-Side (EAC Off)
     - EAC off required.
     - Each player installs it on their own game.
     - Also works in singleplayer.

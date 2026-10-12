@@ -1,0 +1,165 @@
+<AGF-NoScrollBackpack>
+	<!-- 7D2D v3.3+ No Scroll Backpack - Templates (Action Entry & Recipe/Unlock Tables for 646px Panel) -->
+	<conditional>
+		<if cond="game_version() &gt;= version(1,3,30)">
+			<!-- ======================================================== -->
+			<!-- 1. ITEM ACTION ENTRY (Unified MediumGrey, Clickable)     -->
+			<!-- ======================================================== -->
+			<setattribute xpath="/templates/item_action_entry/rect" name="height">28</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect" name="default_background_color">[mediumGrey]</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/sprite[@name='background']" name="depth">3</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/sprite[@name='background']" name="color">[mediumGrey]</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/sprite[@name='background']" name="height">28</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/sprite[@name='Icon']" name="depth">4</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/sprite[@name='Icon']" name="pos">4,-3</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/sprite[@name='Icon']" name="size">22,22</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/label[@name='Name']" name="depth">4</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/label[@name='Name']" name="pos">30,-14</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/label[@name='Name']" name="font_size">20</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/gamepad_icon[@name='gamepadIcon']" name="depth">4</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/gamepad_icon[@name='gamepadIcon']" name="pos">146,-14</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/gamepad_icon[@name='gamepadIcon']" name="size">26,26</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/label[@name='keyboardButton']" name="depth">4</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/label[@name='keyboardButton']" name="pos">145,-14</setattribute>
+			<setattribute xpath="/templates/item_action_entry/rect/label[@name='keyboardButton']" name="font_size">20</setattribute>
+
+			<!-- ======================================================== -->
+			<!-- 2. INGREDIENTS TABLE (493px width, 43px row height)      -->
+			<!-- ======================================================== -->
+			<set xpath="/templates/ingredient_header/rect[@name='header']/@width">493</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/@height">43</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[1]/@height">43</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[1]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[1]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[1]/label/@pos">32,-21</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/@width">282</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/@height">43</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/sprite[@name='backgroundMain']/@width">288</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/label/@width">276</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[2]/label/@pos">141,-21</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/@pos">353,0</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/@width">140</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/@height">43</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/sprite[@name='backgroundMain']/@width">143</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/ingredient_header/rect[@name='header']/rect[3]/label/@pos">70,-21</set>
+
+			<set xpath="/templates/ingredient_row/rect[@name='row']/@width">493</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/@height">43</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[1]/@height">43</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[1]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[1]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[1]/sprite[@name='icon']/@pos">30,-21</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/@width">282</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/@height">43</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/sprite[@name='backgroundMain']/@width">288</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/label[@name='name']/@width">276</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[2]/label[@name='name']/@pos">141,-21</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/@pos">353,0</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/@width">140</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/@height">43</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/sprite[@name='backgroundMain']/@width">143</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/ingredient_row/rect[@name='row']/rect[3]/label[@name='needCount']/@pos">70,-21</set>
+
+			<!-- ======================================================== -->
+			<!-- 3. UNLOCKED BY TABLE (493px width, 43px row height)      -->
+			<!-- ======================================================== -->
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/@width">493</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/@height">43</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[1]/@height">43</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[1]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[1]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[1]/label/@pos">32,-21</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[2]/@width">345</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[2]/@height">43</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[2]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[2]/sprite[@name='backgroundMain']/@width">351</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[2]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[2]/label/@pos">0,-11</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/@pos">416,0</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/@width">77</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/@height">43</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/sprite[@name='backgroundMain']/@width">80</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/unlocked_by_header/rect[@name='header']/rect[3]/label/@pos">-3,-11</set>
+
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/@width">493</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/@height">43</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[1]/@height">43</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[1]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[1]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[1]/sprite[@name='icon']/@pos">30,-21</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[2]/@width">345</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[2]/@height">43</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[2]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[2]/sprite[@name='backgroundMain']/@width">351</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[2]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[2]/label[@name='name']/@pos">0,-11</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/@pos">416,0</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/@width">77</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/@height">43</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/sprite[@name='backgroundMain']/@pos">-3,1</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/sprite[@name='backgroundMain']/@width">80</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/sprite[@name='backgroundMain']/@height">45</set>
+			<set xpath="/templates/unlocked_by_row/rect[@name='row']/rect[3]/label[@name='name']/@pos">0,-11</set>
+
+			<!-- ======================================================== -->
+			<!-- 4. ITEM STACK TEMPLATE FOR 53px CELLS (No-Scroll Grid)   -->
+			<!-- ======================================================== -->
+			<append xpath="/templates">
+				<item_stack_noscroll controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" cell_size="53">
+					<rect controller="${controller}" style="itemStack, hover" width="53" height="53" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }">
+						<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" color="[black]" type="sliced" fillcenter="false" width="56" height="56" />
+						<sprite depth="3" name="background" sprite="menu_empty3px" color="{selectionbordercolor}" type="sliced" fillcenter="false" width="51" height="51" />
+						<sprite depth="2" name="highlightOverlay" color="{backgroundcolor}" type="sliced" width="50" height="50" />
+						<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" size="51,51" />
+						<sprite depth="8" name="favoriteIcon" width="16" height="16" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}" />
+						<rect name="itemIconHoverEnlargeEncapsulation">
+							<sprite depth="7" name="itemIcon" width="42" height="42" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}" globalopacitymod="0" pos="26,-26" />
+						</rect>
+						<sprite depth="8" name="lockTypeIcon" width="16" height="16" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true" />
+						<sprite depth="8" name="itemtypeicon" width="16" height="16" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+						<sprite depth="2" name="durabilityBackground" sprite="menu_empty3px" color="185,0,0,255" type="sliced" globalopacitymod="0" visible="{haspermadurability}" width="48" height="6" pos="1,-44" />
+						<sprite depth="4" name="durability" sprite="menu_empty2px" color="[darkGrey]" fill="{removeddurabilityfill}" type="filled" fillspritepad="true" globalopacitymod="0" visible="{hasdurability}" width="48" height="6" pos="1,-44" />
+						<filledsprite depth="5" name="durability" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" globalopacitymod="0" visible="{hasdurability}" width="48" height="6" pos="1,-44" />
+						<label depth="8" name="stackValue" height="20" text="{itemcount}" font_size="19" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}" pos="-2,-29" width="49" />
+						<label depth="8" name="timer" height="18" font_size="18" justify="center" pivot="center" color="[beige]" effect="outline" pos="26,-26" width="48" effect_distance="1,1" effect_color="0,0,0,255" />
+						<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" visible="{# ishovered and islocked}" foregroundlayer="true" pos="2,-2" width="48" height="48" />
+						<sprite depth="13" name="assembleIcon" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="17,-17" foregroundlayer="true" size="18,18" />
+						<sprite depth="14" name="quickswapIcon" size="16,16" sprite="server_refresh" pos="34,-2" foregroundlayer="true" visible="{isQuickSwap}" />
+						<button name="rectSlotLock" depth="15" style="press, hover" width="51" height="51" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+							<sprite depth="16" name="slotLockIcon" width="18" height="18" sprite="{# !defined('userlockmode') ? '' : (userlockedslot ? 'ui_game_symbol_lock' : 'ui_game_symbol_unlock') }" pos="42,-11" pivot="center" color="{# !defined('userlockmode') ? '255,255,255,1' : (userlockedslot ? '222,206,163' : '255,255,255') }" foregroundlayer="true" />
+						</button>
+						<sprite depth="15" name="iconSlotLock" width="16" height="16" sprite="ui_game_symbol_lock" pos="42,-11" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]" foregroundlayer="true" />
+					</rect>
+				</item_stack_noscroll>
+			</append>
+
+			<!-- ======================================================== -->
+			<!-- 5. HUDPLUS COMPATIBILITY FOR LOCKED SLOTS                -->
+			<!-- When HUDPlus is installed, replace corner lock icons with-->
+			<!-- full-slot red/green overlay tints scaled for 53px cells. -->
+			<!-- ======================================================== -->
+			<if cond="mod_loaded('AGF-1HUDPlus') or mod_loaded('AGF-HUDPlus-1Main')">
+				<remove xpath="/templates/item_stack_noscroll/rect/button[@name='rectSlotLock']" />
+				<remove xpath="/templates/item_stack_noscroll/rect/sprite[@name='iconSlotLock']" />
+				<append xpath="/templates/item_stack_noscroll/rect">
+					<button name="rectSlotLock" depth="6" style="press, hover" width="51" height="51" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+						<sprite name="slotLockOverlayFill" width="50" height="50" sprite="menu_empty3px" type="sliced" fillcenter="true" color="{# userlockedslot ? '255,0,0,150' : '0,255,0,150' }" />
+						<sprite name="slotLockOverlayBorder" width="50" height="50" sprite="menu_empty3px" type="sliced" fillcenter="false" color="{# userlockedslot ? '255,0,0,150' : '0,255,0,150' }" />
+					</button>
+					<sprite depth="6" name="iconSlotLockFill" width="50" height="50" sprite="menu_empty3px" type="sliced" fillcenter="true" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="255,0,0,150" />
+					<sprite depth="6" name="iconSlotLockBorder" width="50" height="50" sprite="menu_empty3px" type="sliced" fillcenter="false" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="255,0,0,150" />
+				</append>
+			</if>
+		</if>
+	</conditional>
+</AGF-NoScrollBackpack>

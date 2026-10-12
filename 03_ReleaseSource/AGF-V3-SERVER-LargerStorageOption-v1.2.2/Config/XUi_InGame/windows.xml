@@ -1,0 +1,29 @@
+﻿<AGF-LargerStorageOption>
+		
+	<!--Required for viewing the expanded large storage containers in the looting window. 3.3 scrolls that grid, so this size edit is 3.2 only.-->
+	<conditional>
+		<if cond="game_version() &lt; version(1,3,30)">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">15</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">15</set>
+		</if>
+		<if cond="game_version() &gt;= version(1,3,30)">
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/scrollview/grid[@name='queue']/@cols">8</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/scrollview/grid[@name='queue']/@rows">21</set>
+		</if>
+	</conditional>
+	
+
+	<conditional>
+		<if cond="mod_loaded('AGF-BackpackPlus-072Slots') or mod_loaded('AGF-BackpackPlus-084Slots') or mod_loaded('AGF-BackpackPlus-119Slots')">
+			<setattribute xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/item_stackAGF" name="cell_size">56</setattribute>
+		
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/@cell_width">56</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid/@cell_height">56</set>
+			<set xpath="/windows/window[@name='windowLooting']/rect[@name='header']/rect[@controller='ContainerStandardControls']/@visible">true</set>
+		
+		</if>
+	</conditional>	
+	
+	
+</AGF-LargerStorageOption>
+ 

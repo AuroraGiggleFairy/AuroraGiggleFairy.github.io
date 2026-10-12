@@ -16,17 +16,18 @@ MOD SCOPE
   - 7d2d Version: 3
   - Website: https://auroragigglefairy.github.io/
   - Languages Supported: All 13 game-supported languages.
-  - Mod Type: Server/Client-Side (Required)
+  - Mod Type: Server/Client-Side (EAC Off)
     - EAC off required.
     - Host and all joining players must install it.
     - Also works in singleplayer.
   - Safe to install on existing game: Yes (Safe)
   - Safe to remove from existing game: Unknown
-  - Dependencies: Requires 0_TFP_Harmony (built-in game mod).
-    - To check, explore Installed Files and confirm Mods/0_TFP_Harmony
-      exists.
-    - To restore, use Steam Verify: Right click 7 Days to Die ->
-      Properties -> Installed Files -> Verify integrity of game files.
+  - Dependencies:
+    - MOD 1: 0_TFP_Harmony (built-in game mod)
+      - To check, explore Installed Files and confirm Mods/0_TFP_Harmony
+        exists.
+      - To restore, use Steam Verify: Right click 7 Days to Die ->
+        Properties -> Installed Files -> Verify integrity of game files.
 
 
 ------------------------------------------------------------------------

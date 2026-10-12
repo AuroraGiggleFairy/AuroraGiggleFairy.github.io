@@ -44,6 +44,44 @@ DEFAULT_DOWNLOAD_BASE_URL = (
 )
 AGF_PREFIXES = ("AGF-", "zzzAGF-")
 
+SPECIAL_MAP = {
+    "1hudplus": "hudplus1main",
+    "2bmcounter": "hudplusbmcounter",
+    "2purplebook": "hudpluspurplebook",
+    "2removeenteringpopup": "hudplusremoveenteringpopup",
+    "2visualentitytracker": "hudplusvisualentitytracker",
+    "2weekday": "hudplusweekday",
+    "3visualentitytrackeraddon": "visualentitytrackeraddon",
+    "2showstabilityoption": "showstabilityoption",
+}
+
+
+def clean_key(s: str) -> str:
+    s = s.lower()
+    s = re.sub(r"^(?:agf-|zzzagf-|zzzzzagf-)?", "", s)
+    s = re.sub(r"^(?:v3-)?", "", s)
+    s = re.sub(r"^(?:server-|client-|both-|admin-|compat-|vp-|vps-|noeac-|requested-|4modders-)?", "", s)
+    s = re.sub(r"^[0-9]+", "", s)
+    s = s.replace("-", "").replace("_", "")
+    return s
+
+
+def find_matching_entry(base: str, catalog: Dict[str, object]) -> Optional[Tuple[str, Dict[str, object]]]:
+    ck = clean_key(base)
+    core_alias = None
+    for k_alias, v_alias in SPECIAL_MAP.items():
+        if k_alias in base.lower():
+            core_alias = v_alias
+            break
+
+    for k, v in catalog.items():
+        if not isinstance(v, dict):
+            continue
+        cnk = clean_key(k)
+        if ck == cnk or (core_alias and core_alias == cnk):
+            return k, v
+    return None
+
 # Upload polling defaults
 UPLOAD_POLL_INTERVAL_SEC = 5
 UPLOAD_MAX_POLL_ATTEMPTS = 30
@@ -349,6 +387,10 @@ def build_release_plan(config: Dict[str, object]) -> Dict[str, object]:
     for base_name in sorted(release_mods.keys()):
         release_entry = release_mods[base_name]
         config_entry = config_mods.get(base_name, {})
+        if not isinstance(config_entry, dict) or not config_entry:
+            matched = find_matching_entry(base_name, config_mods)
+            if matched:
+                config_entry = matched[1]
         if not isinstance(config_entry, dict):
             config_entry = {}
 
@@ -1498,7 +1540,8 @@ def generate_bbcode_full_description(
     parts = [p for p in clean.split("-") if p]
     mod_name_display = " - ".join(parts)
     description = str(plan_entry.get("description", ""))
-    one_liner = description.split(".")[0] + "." if "." in description else description
+    m_one = re.match(r"^(.*?\.)(?:\s|$)", description.strip())
+    one_liner = m_one.group(1) if m_one else description.strip()
 
     lines: List[str] = []
 
@@ -2162,9 +2205,13 @@ def filter_plan_mods_by_name(plan: Dict[str, object], mod_filter: str) -> None:
     mods = plan.get("mods", [])
     if not isinstance(mods, list):
         return
+    wanted_ck = clean_key(wanted)
     plan["mods"] = [
         entry for entry in mods
-        if isinstance(entry, dict) and str(entry.get("mod_name", "")).strip() == wanted
+        if isinstance(entry, dict) and (
+            str(entry.get("mod_name", "")).strip() == wanted
+            or clean_key(str(entry.get("mod_name", ""))) == wanted_ck
+        )
     ]
 
 
@@ -2183,6 +2230,10 @@ def persist_update_group_to_config(config_path: str, mod_name: str, update_group
     if not isinstance(mods, dict):
         return
     entry = mods.get(mod_name)
+    if not isinstance(entry, dict):
+        matched = find_matching_entry(mod_name, mods)
+        if matched:
+            entry = matched[1]
     if not isinstance(entry, dict):
         return
     current = str(entry.get("update_group_id", "") or "").strip()
@@ -2206,6 +2257,7 @@ def run_upload_pipeline(
     only: str,
     dry_run: bool,
     mod_filter: str = "",
+    force: bool = False,
 ) -> int:
     """
     Update existing Nexus mod pages with a newer file version.
@@ -2261,6 +2313,20 @@ def run_upload_pipeline(
         mod_name = str(target.get("mod_name", ""))
         if mod_filter and mod_name != mod_filter:
             continue
+
+        # Check Publishing Matrix skip status
+        matrix_state_path = os.path.join(VS_CODE_ROOT, "06_PublishingSupport", "Publish-State.json")
+        if os.path.isfile(matrix_state_path):
+            try:
+                with open(matrix_state_path, "r", encoding="utf-8") as sf:
+                    s_data = json.load(sf)
+                if s_data.get(mod_name, {}).get("mode") == "skip" and not mod_filter:
+                    skipped += 1
+                    print(f"[SKIP] {mod_name}: mode is set to 'skip' in Publishing Matrix")
+                    continue
+            except Exception:
+                pass
+
         zip_path = str(target.get("zip_path", ""))
         local_version = str(target.get("local_version", "0.0.0"))
         live_version = str(target.get("live_version", "0.0.0"))
@@ -2276,10 +2342,10 @@ def run_upload_pipeline(
                 entry_live = live_obj if isinstance(live_obj, dict) else {}
                 break
 
-        # Only push when local is newer than Nexus.
-        if compare_versions(local_version, live_version) <= 0:
+        # Only push when local is newer than Nexus (unless force is set).
+        if not force and compare_versions(local_version, live_version) <= 0:
             skipped += 1
-            print(f"[SKIP] {mod_name}: local v{local_version} is not newer than Nexus v{live_version}")
+            print(f"[SKIP] {mod_name}: local v{local_version} is not newer than Nexus v{live_version} (use --force to override)")
             continue
 
         mod_file_id = resolve_mod_file_id(mod_entry, entry_live)
@@ -2388,6 +2454,26 @@ def run_upload_pipeline(
         if page_url:
             print(f"          Page: {page_url}")
 
+        # Refresh Nexus-Status.json entry and trigger checklist/canvas sync
+        try:
+            status_json_path = os.path.join(NEXUS_WORKFLOW_DIR, "Nexus-Status.json")
+            if os.path.isfile(status_json_path):
+                with open(status_json_path, "r", encoding="utf-8") as sf:
+                    st_data = json.load(sf)
+                for sm in st_data.get("mods", []):
+                    if sm.get("base_name") == mod_name:
+                        sm["live_version"] = local_version
+                        sm["status"] = "Matches"
+                        sm["bucket"] = "Matches"
+                        break
+                with open(status_json_path, "w", encoding="utf-8") as sf:
+                    json.dump(st_data, sf, indent=2)
+            gen_script = os.path.join(VS_CODE_ROOT, "06_PublishingSupport", "SCRIPT-GeneratePublishChecklist.py")
+            if os.path.isfile(gen_script):
+                subprocess.run([sys.executable, gen_script], capture_output=True, check=False)
+        except Exception:
+            pass
+
     print()
     print(f"Ready/updated: {ready} | Already current (skipped): {skipped} | Blocked: {blocked} | Failed: {failures}")
     if dry_run:
@@ -2442,6 +2528,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Preview file writes or upload operations without making changes",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force upload even if local version is not newer than live version",
+    )
     return parser
 
 
@@ -2468,7 +2559,7 @@ def main() -> int:
 
     # For upload mode, the pipeline handles its own plan output
     if args.mode == "upload":
-        return run_upload_pipeline(plan, config, args.only, args.dry_run, mod_filter=str(args.mod or ""))
+        return run_upload_pipeline(plan, config, args.only, args.dry_run, mod_filter=str(args.mod or ""), force=args.force)
 
 
     plan_output = os.path.abspath(args.plan_output)

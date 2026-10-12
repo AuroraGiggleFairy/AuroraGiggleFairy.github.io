@@ -1,6 +1,6 @@
 # AGF-V3-SERVER-CraftSewingKits v2.1.2
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - SERVER - CraftSewingKits
+AGF - Craft Sewing Kits - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Server Side Only
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - SERVER - CraftSewingKits</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - SERVER - CraftSewingKits</span></h1>
 
 You can craft sewing kits after reading Wasteland Treasures 6.
 
@@ -263,7 +263,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - SERVER - CraftSewingKits
+AGF - V3 - SERVER - CraftSewingKits
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):

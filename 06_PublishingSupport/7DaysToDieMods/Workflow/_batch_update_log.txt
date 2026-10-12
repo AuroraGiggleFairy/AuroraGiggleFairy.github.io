@@ -1,0 +1,2033 @@
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-11 18:22:34 (2 mods) ====
+[1/2] SUCCESS AGF-V3-BOTH-GyroFlightModes (29.4s)
+[2/2] SUCCESS AGF-V3-BOTH-Toolbelt12Slots (33.4s)
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-11 18:24:37 (53 mods) ====
+[1/53] SUCCESS AGF-V3-CLIENT-AudioOptionsPlus (33.2s)
+[2/53] SUCCESS AGF-V3-CLIENT-AutoRun (34.4s)
+[3/53] SUCCESS AGF-V3-CLIENT-EnhancedAGF (37.1s)
+[4/53] SUCCESS AGF-V3-CLIENT-HideDLCCosmetics (28.2s)
+[5/53] SUCCESS AGF-V3-CLIENT-MapPlus (29.5s)
+[6/53] SUCCESS AGF-V3-CLIENT-OpenAllButton (30.2s)
+[7/53] SUCCESS AGF-V3-CLIENT-SmeltTimerOption (33.1s)
+[8/53] SUCCESS AGF-V3-SERVER-1HUDPlus (35.0s)
+[9/53] SUCCESS AGF-V3-SERVER-2BMCounter (33.8s)
+[10/53] SUCCESS AGF-V3-SERVER-2PurpleBook (72.6s)
+[11/53] SUCCESS AGF-V3-SERVER-2RemoveEnteringPopUp (32.7s)
+[12/53] SUCCESS AGF-V3-SERVER-2VisualEntityTracker (37.4s)
+[13/53] SUCCESS AGF-V3-SERVER-2Weekday (31.6s)
+[14/53] SUCCESS AGF-V3-SERVER-AdminModdingSupport (29.0s)
+[15/53] SUCCESS AGF-V3-SERVER-AlternativeRecipes (27.5s)
+[16/53] SUCCESS AGF-V3-SERVER-AmmoDisassembly (27.2s)
+[17/53] SUCCESS AGF-V3-SERVER-ArcheryFeathersChange (26.8s)
+[18/53] SUCCESS AGF-V3-SERVER-AutomobilesRespawn (28.1s)
+[19/53] SUCCESS AGF-V3-SERVER-BedrollPlus (27.8s)
+[20/53] SUCCESS AGF-V3-SERVER-BetterEggChance (28.5s)
+[21/53] SUCCESS AGF-V3-SERVER-BreakItGetIt (28.7s)
+[22/53] SUCCESS AGF-V3-SERVER-CraftSewingKits (27.2s)
+[23/53] SUCCESS AGF-V3-SERVER-CraftStackEngBattCells (28.1s)
+[24/53] SUCCESS AGF-V3-SERVER-CraftVitamins (27.0s)
+[25/53] SUCCESS AGF-V3-SERVER-DoorsPlus (36.4s)
+[26/53] SUCCESS AGF-V3-SERVER-DrinkableAcid (27.8s)
+[27/53] SUCCESS AGF-V3-SERVER-DyesPlus (28.8s)
+[28/53] FAILED AGF-V3-SERVER-FloraHarvester (47.8s):
+packet AGF-V3-SERVER-FloraHarvester.md
+thumb AGF-V3-SERVER-FloraHarvester_01.png
+gallery AGF-V3-SERVER-FloraHarvester_01.png
+zip AGF-V3-SERVER-FloraHarvester.zip
+fill.json AGF - Flora Harvester - V3 3.0.3 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-FloraHarvester.zip	8649
+  AGF-V3-SERVER-FloraHarvester_01.png	1227406
+  description.html	10860
+  fill.json	1009
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-FloraHarvester
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[29/53] FAILED AGF-V3-SERVER-FuelAutoShutOff (48.0s):
+packet AGF-V3-SERVER-FuelAutoShutOff.md
+thumb AGF-V3-SERVER-FuelAutoShutOff_01_Under2MB.png
+gallery AGF-V3-SERVER-FuelAutoShutOff_01.png
+zip AGF-V3-SERVER-FuelAutoShutOff.zip
+fill.json AGF - Fuel Auto Shut Off - V3 1.1.1 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-FuelAutoShutOff.zip	9166
+  AGF-V3-SERVER-FuelAutoShutOff_01.png	2263159
+  AGF-V3-SERVER-FuelAutoShutOff_01_Under2MB.png	2062536
+  description.html	11274
+  fill.json	1020
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-FuelAutoShutOff
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[30/53] FAILED AGF-V3-SERVER-GlobalStormTracker (48.3s):
+packet AGF-V3-SERVER-GlobalStormTracker.md
+thumb AGF-V3-SERVER-GlobalStormTracker_01.png
+gallery AGF-V3-SERVER-GlobalStormTracker_01.png
+zip AGF-V3-SERVER-GlobalStormTracker.zip
+fill.json AGF - Global Storm Tracker - V3 2.1.3 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-GlobalStormTracker.zip	7815
+  AGF-V3-SERVER-GlobalStormTracker_01.png	1536694
+  description.html	11143
+  fill.json	1053
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-GlobalStormTracker
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[31/53] FAILED AGF-V3-SERVER-HonkOpensYourDoors (47.8s):
+packet AGF-V3-SERVER-HonkOpensYourDoors.md
+thumb AGF-V3-SERVER-HonkOpensYourDoors_01_Under2MB.png
+gallery AGF-V3-SERVER-HonkOpensYourDoors_01.png
+zip AGF-V3-SERVER-HonkOpensYourDoors.zip
+fill.json AGF - Honk Opens Your Doors - V3 1.0.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-HonkOpensYourDoors.zip	7543
+  AGF-V3-SERVER-HonkOpensYourDoors_01.png	2408766
+  AGF-V3-SERVER-HonkOpensYourDoors_01_Under2MB.png	2035656
+  description.html	11300
+  fill.json	1046
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-HonkOpensYourDoors
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[32/53] FAILED AGF-V3-SERVER-LargerStorageOption (48.2s):
+packet AGF-V3-SERVER-LargerStorageOption.md
+thumb AGF-V3-SERVER-LargerStorageOption_01.png
+gallery AGF-V3-SERVER-LargerStorageOption_01.png, AGF-V3-SERVER-LargerStorageOption_02.png, AGF-V3-SERVER-LargerStorageOption_03.png
+zip AGF-V3-SERVER-LargerStorageOption.zip
+fill.json AGF - Larger Storage Option - V3 1.2.1 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-LargerStorageOption.zip	15793
+  AGF-V3-SERVER-LargerStorageOption_01.png	1831935
+  AGF-V3-SERVER-LargerStorageOption_02.png	3418512
+  AGF-V3-SERVER-LargerStorageOption_03.png	3282548
+  description.html	11821
+  fill.json	1163
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-LargerStorageOption
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[33/53] FAILED AGF-V3-SERVER-MasterTool (48.0s):
+packet AGF-V3-SERVER-MasterTool.md
+thumb AGF-V3-SERVER-MasterTool_01.png
+gallery AGF-V3-SERVER-MasterTool_01.png, AGF-V3-SERVER-MasterTool_02.png, AGF-V3-SERVER-MasterTool_03.png, AGF-V3-SERVER-MasterTool_04.png, AGF-V3-SERVER-MasterTool_05.png, AGF-V3-SERVER-MasterTool_06.png, AGF-V3-SERVER-MasterTool_07.png, AGF-V3-SERVER-MasterTool_08.png
+zip AGF-V3-SERVER-MasterTool.zip
+fill.json AGF - Master Tool - V3 7.1.3 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-MasterTool.zip	18873
+  AGF-V3-SERVER-MasterTool_01.png	1673830
+  AGF-V3-SERVER-MasterTool_02.png	2513930
+  AGF-V3-SERVER-MasterTool_03.png	3060769
+  AGF-V3-SERVER-MasterTool_04.png	3030732
+  AGF-V3-SERVER-MasterTool_05.png	2875934
+  AGF-V3-SERVER-MasterTool_06.png	4189038
+  AGF-V3-SERVER-MasterTool_07.png	3571275
+  AGF-V3-SERVER-MasterTool_08.png	2212922
+  description.html	11795
+  fill.json	1265
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-MasterTool
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[34/53] FAILED AGF-V3-SERVER-MaxLevel500 (48.3s):
+packet AGF-V3-SERVER-MaxLevel500.md
+thumb AGF-V3-SERVER-MaxLevel500_01.png
+gallery AGF-V3-SERVER-MaxLevel500_01.png
+zip AGF-V3-SERVER-MaxLevel500.zip
+fill.json AGF - Max Level 500 - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-MaxLevel500.zip	4089
+  AGF-V3-SERVER-MaxLevel500_01.png	209029
+  description.html	10750
+  fill.json	969
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-MaxLevel500
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[35/53] FAILED AGF-V3-SERVER-MiningPlus (47.9s):
+packet AGF-V3-SERVER-MiningPlus.md
+thumb AGF-V3-SERVER-MiningPlus_01.png
+gallery AGF-V3-SERVER-MiningPlus_01.png
+zip AGF-V3-SERVER-MiningPlus.zip
+fill.json AGF - Mining Plus - V3 2.0.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-MiningPlus.zip	7890
+  AGF-V3-SERVER-MiningPlus_01.png	2037413
+  description.html	10821
+  fill.json	1005
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-MiningPlus
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[36/53] FAILED AGF-V3-SERVER-Mod988 (47.9s):
+packet AGF-V3-SERVER-Mod988.md
+thumb AGF-V3-SERVER-Mod988_01.png
+gallery AGF-V3-SERVER-Mod988_01.png
+zip AGF-V3-SERVER-Mod988.zip
+fill.json AGF - Mod 988 - V3 3.0.1 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-Mod988.zip	4285
+  AGF-V3-SERVER-Mod988_01.png	324656
+  description.html	10931
+  fill.json	969
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-Mod988
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[37/53] FAILED AGF-V3-SERVER-ModSlotsPlus (48.1s):
+packet AGF-V3-SERVER-ModSlotsPlus.md
+thumb AGF-V3-SERVER-ModSlotsPlus_01.png
+gallery AGF-V3-SERVER-ModSlotsPlus_01.png
+zip AGF-V3-SERVER-ModSlotsPlus.zip
+fill.json AGF - Mod Slots Plus - V3 4.1.3 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-ModSlotsPlus.zip	4928
+  AGF-V3-SERVER-ModSlotsPlus_01.png	1192680
+  description.html	11411
+  fill.json	1011
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-ModSlotsPlus
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[38/53] FAILED AGF-V3-SERVER-PickupLanternsPlus (48.0s):
+packet AGF-V3-SERVER-PickupLanternsPlus.md
+thumb AGF-V3-SERVER-PickupLanternsPlus_01.png
+gallery AGF-V3-SERVER-PickupLanternsPlus_01.png
+zip AGF-V3-SERVER-PickupLanternsPlus.zip
+fill.json AGF - Pickup Lanterns Plus - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-PickupLanternsPlus.zip	8486
+  AGF-V3-SERVER-PickupLanternsPlus_01.png	1979319
+  description.html	11002
+  fill.json	1051
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-PickupLanternsPlus
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[39/53] FAILED AGF-V3-SERVER-PlayerResetQuests (47.9s):
+packet AGF-V3-SERVER-PlayerResetQuests.md
+thumb AGF-V3-SERVER-PlayerResetQuests_01.png
+gallery AGF-V3-SERVER-PlayerResetQuests_01.png
+zip AGF-V3-SERVER-PlayerResetQuests.zip
+fill.json AGF - Player Reset Quests - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-PlayerResetQuests.zip	3864
+  AGF-V3-SERVER-PlayerResetQuests_01.png	1573569
+  description.html	10771
+  fill.json	1037
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-PlayerResetQuests
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[40/53] FAILED AGF-V3-SERVER-RebundleBundles (47.8s):
+packet AGF-V3-SERVER-RebundleBundles.md
+thumb AGF-V3-SERVER-RebundleBundles_01.png
+gallery AGF-V3-SERVER-RebundleBundles_01.png
+zip AGF-V3-SERVER-RebundleBundles.zip
+fill.json AGF - Rebundle Bundles - V3 2.1.3 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-RebundleBundles.zip	11197
+  AGF-V3-SERVER-RebundleBundles_01.png	1294722
+  description.html	10862
+  fill.json	1033
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-RebundleBundles
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[41/53] FAILED AGF-V3-SERVER-RecipeRottingFlesh (48.0s):
+packet AGF-V3-SERVER-RecipeRottingFlesh.md
+thumb AGF-V3-SERVER-RecipeRottingFlesh_01.png
+gallery AGF-V3-SERVER-RecipeRottingFlesh_01.png
+zip AGF-V3-SERVER-RecipeRottingFlesh.zip
+fill.json AGF - Recipe Rotting Flesh - V3 2.0.1 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-RecipeRottingFlesh.zip	3821
+  AGF-V3-SERVER-RecipeRottingFlesh_01.png	2032845
+  description.html	10852
+  fill.json	1043
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-RecipeRottingFlesh
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[42/53] FAILED AGF-V3-SERVER-RestorePowerAnyTime (48.2s):
+packet AGF-V3-SERVER-RestorePowerAnyTime.md
+thumb AGF-V3-SERVER-RestorePowerAnyTime_01.png
+gallery AGF-V3-SERVER-RestorePowerAnyTime_01.png
+zip AGF-V3-SERVER-RestorePowerAnyTime.zip
+fill.json AGF - Restore Power Any Time - V3 2.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-RestorePowerAnyTime.zip	8151
+  AGF-V3-SERVER-RestorePowerAnyTime_01.png	1872874
+  description.html	10773
+  fill.json	1053
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-RestorePowerAnyTime
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[43/53] FAILED AGF-V3-SERVER-ScrapBatts4Acid (48.0s):
+packet AGF-V3-SERVER-ScrapBatts4Acid.md
+thumb AGF-V3-SERVER-ScrapBatts4Acid_01.png
+gallery AGF-V3-SERVER-ScrapBatts4Acid_01.png
+zip AGF-V3-SERVER-ScrapBatts4Acid.zip
+fill.json AGF - Scrap Batts 4 Acid - V3 2.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-ScrapBatts4Acid.zip	7054
+  AGF-V3-SERVER-ScrapBatts4Acid_01.png	1592688
+  description.html	10751
+  fill.json	1011
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-ScrapBatts4Acid
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[44/53] FAILED AGF-V3-SERVER-ScrapEquipmentFaster (47.9s):
+packet AGF-V3-SERVER-ScrapEquipmentFaster.md
+thumb AGF-V3-SERVER-ScrapEquipmentFaster_01.png
+gallery AGF-V3-SERVER-ScrapEquipmentFaster_01.png
+zip AGF-V3-SERVER-ScrapEquipmentFaster.zip
+fill.json AGF - Scrap Equipment Faster - V3 2.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-ScrapEquipmentFaster.zip	3881
+  AGF-V3-SERVER-ScrapEquipmentFaster_01.png	1555709
+  description.html	10740
+  fill.json	1023
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-ScrapEquipmentFaster
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+[45/53] FAILED AGF-V3-SERVER-ScreamerAlert (48.1s):
+packet AGF-V3-SERVER-ScreamerAlert.md
+thumb AGF-V3-SERVER-ScreamerAlert_01_Under2MB.png
+gallery AGF-V3-SERVER-ScreamerAlert_01.png
+zip AGF-V3-SERVER-ScreamerAlert.zip
+fill.json AGF - Screamer Alert - V3 2.3.5 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-ScreamerAlert.zip	28980
+  AGF-V3-SERVER-ScreamerAlert_01.png	2467668
+  AGF-V3-SERVER-ScreamerAlert_01_Under2MB.png	1749834
+  description.html	12774
+  fill.json	1030
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-ScreamerAlert
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1411, in <module>
+    def main() -> None:
+        ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1407, in main
+    page.wait_for_timeout(30_000)
+    ^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1235, in cmd_update
+    if not args.images_only:
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    confirm.click()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+
+
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-11 18:54:04 (1 mods) ====
+[46/53] FAILED AGF-V3-SERVER-SimplifiedStacks (48.1s):
+packet AGF-V3-SERVER-SimplifiedStacks.md
+thumb AGF-V3-SERVER-SimplifiedStacks_01.png
+gallery AGF-V3-SERVER-SimplifiedStacks_01.png
+zip AGF-V3-SERVER-SimplifiedStacks.zip
+fill.json AGF - Simplified Stacks - V3 2.1.3 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-SimplifiedStacks.zip	15790
+  AGF-V3-SERVER-SimplifiedStacks_01.png	1355812
+  description.html	11102
+  fill.json	1039
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-SimplifiedStacks
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1418, in <module>
+    print(" ", live)
+    ^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1414, in main
+    click_final_publish(page)
+    ^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1242, in cmd_update
+    use_system_profile=not args.automation_profile,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 381, in clear_and_import_description
+    with page.expect_response(
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 17876, in click
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.click(
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[role=\"dialog\"]").get_by_role("button", name="Import", exact=True)
+    - waiting for "https://7daystodiemods.com/mods" navigation to finish...
+    - navigated to "https://7daystodiemods.com/mods"
+
+
+[1/1] FAILED AGF-V3-SERVER-FloraHarvester (0.8s):
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+ProtocolError: Protocol error (Page.handleJavaScriptDialog): No dialog is showing
+    at C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:34783:61
+    at new Promise (<anonymous>)
+    at _CRSession.send (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:34782:16)
+    at Dialog._onHandle (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:37653:32)
+    at Dialog._accept (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:12954:20)
+    at Dialog._close (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:12964:22)
+    at DialogManager.dialogDidOpen (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:12986:18)
+    at _FrameSession._onDialog (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:37646:49)
+    at _CRSession.<anonymous> (C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\driver\package\lib\coreBundle.js:37320:103)
+    at _CRSession.emit (node:events:509:28) {
+  type: 'error',
+  method: 'Page.handleJavaScriptDialog',
+  logs: undefined
+}
+
+Node.js v24.18.1
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1434, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1430, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1245, in cmd_update
+    wait_logged_in(page)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 233, in wait_logged_in
+    page.goto(f"{SITE}/mods", wait_until="domcontentloaded")
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 9875, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_page.py", line 560, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 156, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Page.goto: Connection closed while reading from the driver
+[47/53] FAILED AGF-V3-SERVER-SmeltingPlus (87.0s):
+packet AGF-V3-SERVER-SmeltingPlus.md
+thumb AGF-V3-SERVER-SmeltingPlus_01.png
+gallery AGF-V3-SERVER-SmeltingPlus_01.png
+zip AGF-V3-SERVER-SmeltingPlus.zip
+fill.json AGF - Smelting Plus - V3 3.0.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-SmeltingPlus.zip	12009
+  AGF-V3-SERVER-SmeltingPlus_01.png	1930733
+  description.html	11053
+  fill.json	1015
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-SmeltingPlus
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+  [Rate limit detected] 'going too fast' visible after click: waiting 65s...
+update media...
+  file inputs: 5
+  clearing existing gallery (replace, not append)...
+  gallery cleared (0)
+  thumb -> input[0] set_input_files
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 583, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-SmeltingPlus_01.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1434, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1430, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1263, in cmd_update
+    fill_media(page, fill)
+    ~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 585, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-SmeltingPlus_01.png'
+
+[48/53] FAILED AGF-V3-SERVER-StayLongerAnimalCorpse (87.4s):
+packet AGF-V3-SERVER-StayLongerAnimalCorpse.md
+thumb AGF-V3-SERVER-StayLongerAnimalCorpse_01_Under2MB.png
+gallery AGF-V3-SERVER-StayLongerAnimalCorpse_01.png
+zip AGF-V3-SERVER-StayLongerAnimalCorpse.zip
+fill.json AGF - Stay Longer Animal Corpse - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-StayLongerAnimalCorpse.zip	3968
+  AGF-V3-SERVER-StayLongerAnimalCorpse_01.png	2522784
+  AGF-V3-SERVER-StayLongerAnimalCorpse_01_Under2MB.png	2090531
+  description.html	10756
+  fill.json	1060
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-StayLongerAnimalCorpse
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+  [Rate limit detected] 'going too fast' visible after click: waiting 65s...
+update media...
+  file inputs: 5
+  clearing existing gallery (replace, not append)...
+  gallery cleared (0)
+  thumb -> input[0] set_input_files
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 583, in fill_media
+    if n < 3:
+            ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-StayLongerAnimalCorpse_01_Under2MB.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1434, in <module>
+    print()
+    ^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1430, in main
+    goto_edit(page, mod_id, "publish")
+    ^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1263, in cmd_update
+    wait_logged_in(page)
+            ~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 585, in fill_media
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-StayLongerAnimalCorpse_01_Under2MB.png'
+
+[49/53] FAILED AGF-V3-SERVER-StayLongerPlayerBackpack (89.0s):
+packet AGF-V3-SERVER-StayLongerPlayerBackpack.md
+thumb AGF-V3-SERVER-StayLongerPlayerBackpack_01_Under2MB.png
+gallery AGF-V3-SERVER-StayLongerPlayerBackpack_01.png
+zip AGF-V3-SERVER-StayLongerPlayerBackpack.zip
+fill.json AGF - Stay Longer Player Backpack - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-StayLongerPlayerBackpack.zip	3948
+  AGF-V3-SERVER-StayLongerPlayerBackpack_01.png	2666801
+  AGF-V3-SERVER-StayLongerPlayerBackpack_01_Under2MB.png	1844447
+  description.html	10782
+  fill.json	1096
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-StayLongerPlayerBackpack
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+  [Rate limit detected] 'going too fast' visible after click: waiting 65s...
+update media...
+  file inputs: 5
+  clearing existing gallery (replace, not append)...
+  gallery cleared (0)
+  thumb -> input[0] set_input_files
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 597, in fill_media
+    timeout=15_000,
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-StayLongerPlayerBackpack_01_Under2MB.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1452, in <module>
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1448, in main
+    ap = build_parser()
+    ^^^^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1281, in cmd_update
+    goto_edit(page, mod_id, "media")
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 599, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-StayLongerPlayerBackpack_01_Under2MB.png'
+
+[50/53] FAILED AGF-V3-SERVER-TacticalRiflePlus (126.8s):
+packet AGF-V3-SERVER-TacticalRiflePlus.md
+thumb AGF-V3-SERVER-TacticalRiflePlus_01.png
+gallery AGF-V3-SERVER-TacticalRiflePlus_01.png
+zip AGF-V3-SERVER-TacticalRiflePlus.zip
+fill.json AGF - Tactical Rifle Plus - V3 3.0.1 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-TacticalRiflePlus.zip	3784
+  AGF-V3-SERVER-TacticalRiflePlus_01.png	1604383
+  description.html	10816
+  fill.json	1035
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-TacticalRiflePlus
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+  [Rate limit detected] 'going too fast' visible after click: waiting 65s...
+update media...
+  file inputs: 5
+  clearing existing gallery (replace, not append)...
+  gallery cleared (0)
+  thumb -> input[0] set_input_files
+  gallery -> input[2] set_input_files (AGF-V3-SERVER-TacticalRiflePlus_01.png)
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 610, in fill_media
+    with page.expect_response(
+         ~~~~~~~~~~~~~~~~~~~~^
+        lambda r: "/revisions/" in r.url and r.request.method in ("PATCH", "POST") and r.status == 200,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        timeout=20_000,
+        ^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 85, in __exit__
+    self._event.value
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 59, in value
+    raise exception
+playwright._impl._errors.TimeoutError: Timeout 20000ms exceeded while waiting for event "response"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1454, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1450, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1283, in cmd_update
+    fill_media(page, fill)
+    ~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 616, in fill_media
+    inputs.nth(2).set_input_files(str(gpath))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-TacticalRiflePlus_01.png'
+
+[51/53] FAILED AGF-V3-SERVER-VehicleStoragePlus (22.1s):
+packet AGF-V3-SERVER-VehicleStoragePlus.md
+thumb AGF-V3-SERVER-VehicleStoragePlus_01_Under2MB.png
+gallery AGF-V3-SERVER-VehicleStoragePlus_01.png
+zip AGF-V3-SERVER-VehicleStoragePlus.zip
+fill.json AGF - Vehicle Storage Plus - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-VehicleStoragePlus.zip	4236
+  AGF-V3-SERVER-VehicleStoragePlus_01.png	2313032
+  AGF-V3-SERVER-VehicleStoragePlus_01_Under2MB.png	1950670
+  description.html	10921
+  fill.json	1058
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-VehicleStoragePlus
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+update media...
+  file inputs: 5
+  clearing existing gallery (replace, not append)...
+  gallery cleared (0)
+  thumb -> input[0] set_input_files
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 599, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-VehicleStoragePlus_01_Under2MB.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1454, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1450, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1283, in cmd_update
+    fill_media(page, fill)
+    ~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 601, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-VehicleStoragePlus_01_Under2MB.png'
+
+[52/53] FAILED AGF-V3-SERVER-VehiclesExtraSeating (87.3s):
+packet AGF-V3-SERVER-VehiclesExtraSeating.md
+thumb AGF-V3-SERVER-VehiclesExtraSeating_01_Under2MB.png
+gallery AGF-V3-SERVER-VehiclesExtraSeating_01.png
+zip AGF-V3-SERVER-VehiclesExtraSeating.zip
+fill.json AGF - Vehicles Extra Seating - V3 2.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-VehiclesExtraSeating.zip	5673
+  AGF-V3-SERVER-VehiclesExtraSeating_01.png	2284223
+  AGF-V3-SERVER-VehiclesExtraSeating_01_Under2MB.png	1939952
+  description.html	10896
+  fill.json	1064
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-VehiclesExtraSeating
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+  [Rate limit detected] 'going too fast' visible after click: waiting 65s...
+update media...
+  file inputs: 5
+  clearing existing gallery (replace, not append)...
+  gallery cleared (0)
+  thumb -> input[0] set_input_files
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 599, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-VehiclesExtraSeating_01_Under2MB.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1454, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1450, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1283, in cmd_update
+    fill_media(page, fill)
+    ~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 601, in fill_media
+    inputs.nth(0).set_input_files(str(thumb_path))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20177, in set_input_files
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.set_input_files(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 659, in set_input_files
+    return await self._frame.set_input_files(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 836, in set_input_files
+    converted = await convert_input_files(files, self.page.context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 75, in convert_input_files
+    (local_paths, local_directory) = resolve_paths_and_directory_for_input_files(
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(Sequence[Union[str, Path]], items)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_set_input_files_helpers.py", line 148, in resolve_paths_and_directory_for_input_files
+    item_stat = os.stat(item)  # Raises FileNotFoundError if doesn't exist
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\GitHub\\7D2D-Mods\\06_PublishingSupport\\7DaysToDieMods\\Workflow\\_listing_upload\\AGF-V3-SERVER-VehiclesExtraSeating_01_Under2MB.png'
+
+[53/53] FAILED AGF-V3-SERVER-ZombieCorpseLeaveQuicker (49.2s):
+packet AGF-V3-SERVER-ZombieCorpseLeaveQuicker.md
+thumb AGF-V3-SERVER-ZombieCorpseLeaveQuicker_01_Under2MB.png
+gallery AGF-V3-SERVER-ZombieCorpseLeaveQuicker_01.png
+zip AGF-V3-SERVER-ZombieCorpseLeaveQuicker.zip
+fill.json AGF - Zombie Corpse Leave Quicker - V3 3.1.2 Server Side Only
+upload C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\_listing_upload
+  AGF-V3-SERVER-ZombieCorpseLeaveQuicker.zip	3941
+  AGF-V3-SERVER-ZombieCorpseLeaveQuicker_01.png	2485549
+  AGF-V3-SERVER-ZombieCorpseLeaveQuicker_01_Under2MB.png	2063735
+  description.html	10792
+  fill.json	1106
+prep: C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-PrepListingUpload.py AGF-V3-SERVER-ZombieCorpseLeaveQuicker
+attached to Chrome via CDP http://127.0.0.1:9222
+logged in OK
+update details/description...
+  [Rate limit detected] 'going too fast' visible after click: waiting 65s...
+
+Traceback (most recent call last):
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1454, in <module>
+    main()
+    ~~~~^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1450, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 1278, in cmd_update
+    clear_and_import_description(page, html)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\GitHub\7D2D-Mods\06_PublishingSupport\7DaysToDieMods\Workflow\SCRIPT-7dtdmods-Playwright.py", line 409, in clear_and_import_description
+    page.wait_for_timeout(65_000)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 12696, in wait_for_timeout
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_timeout(timeout=to_milliseconds(timeout))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_page.py", line 1142, in wait_for_timeout
+    await self._main_frame.wait_for_timeout(timeout)
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 924, in wait_for_timeout
+    await self._channel.send("waitForTimeout", None, {"waitTimeout": timeout})
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\rft30\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed
+
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-11 19:16:29 (1 mods) ====
+[1/1] SUCCESS AGF-V3-SERVER-FloraHarvester (26.3s)
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-11 19:18:21 (25 mods) ====
+[1/25] SUCCESS AGF-V3-SERVER-FuelAutoShutOff (285.9s)
+[2/25] SUCCESS AGF-V3-SERVER-GlobalStormTracker (28.9s)
+[3/25] SUCCESS AGF-V3-SERVER-HonkOpensYourDoors (73.0s)
+[4/25] SUCCESS AGF-V3-SERVER-LargerStorageOption (37.8s)
+[5/25] SUCCESS AGF-V3-SERVER-MasterTool (56.1s)
+[6/25] SUCCESS AGF-V3-SERVER-MaxLevel500 (27.2s)
+[7/25] SUCCESS AGF-V3-SERVER-MiningPlus (30.7s)
+[8/25] SUCCESS AGF-V3-SERVER-Mod988 (28.0s)
+[9/25] SUCCESS AGF-V3-SERVER-ModSlotsPlus (27.6s)
+[10/25] SUCCESS AGF-V3-SERVER-PickupLanternsPlus (28.6s)
+[11/25] SUCCESS AGF-V3-SERVER-PlayerResetQuests (27.6s)
+[12/25] SUCCESS AGF-V3-SERVER-RebundleBundles (28.0s)
+[13/25] SUCCESS AGF-V3-SERVER-RecipeRottingFlesh (29.1s)
+[14/25] SUCCESS AGF-V3-SERVER-RestorePowerAnyTime (28.4s)
+[15/25] SUCCESS AGF-V3-SERVER-ScrapBatts4Acid (30.2s)
+[16/25] SUCCESS AGF-V3-SERVER-ScrapEquipmentFaster (27.4s)
+[17/25] SUCCESS AGF-V3-SERVER-ScreamerAlert (28.2s)
+[18/25] SUCCESS AGF-V3-SERVER-SimplifiedStacks (28.8s)
+[19/25] SUCCESS AGF-V3-SERVER-SmeltingPlus (28.0s)
+[20/25] SUCCESS AGF-V3-SERVER-StayLongerAnimalCorpse (28.4s)
+[21/25] SUCCESS AGF-V3-SERVER-StayLongerPlayerBackpack (28.8s)
+[22/25] SUCCESS AGF-V3-SERVER-TacticalRiflePlus (28.1s)
+[23/25] SUCCESS AGF-V3-SERVER-VehicleStoragePlus (27.6s)
+[24/25] SUCCESS AGF-V3-SERVER-VehiclesExtraSeating (28.5s)
+[25/25] SUCCESS AGF-V3-SERVER-ZombieCorpseLeaveQuicker (27.6s)
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-12 10:00:21 (1 mods) ====
+[1/1] SUCCESS AGF-V3-BOTH-CosmeticLockIcon (16.7s)
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-12 10:01:48 (56 mods) ====
+[1/56] SUCCESS AGF-V3-BOTH-GyroFlightModes (14.1s)
+[2/56] SUCCESS AGF-V3-BOTH-Toolbelt12Slots (14.2s)
+[3/56] SUCCESS AGF-V3-CLIENT-AudioOptionsPlus (14.9s)
+[4/56] SUCCESS AGF-V3-CLIENT-AutoRun (14.7s)
+[5/56] SUCCESS AGF-V3-CLIENT-EnhancedAGF (14.2s)
+[6/56] SUCCESS AGF-V3-CLIENT-HideDLCCosmetics (15.7s)
+[7/56] SUCCESS AGF-V3-CLIENT-MapPlus (14.0s)
+[8/56] SUCCESS AGF-V3-CLIENT-OpenAllButton (14.2s)
+[9/56] SUCCESS AGF-V3-SERVER-1HUDPlus (14.0s)
+[10/56] SUCCESS AGF-V3-SERVER-2BMCounter (16.3s)
+[11/56] SUCCESS AGF-V3-SERVER-2PurpleBook (17.0s)
+[12/56] SUCCESS AGF-V3-SERVER-2RemoveEnteringPopUp (14.3s)
+[13/56] SUCCESS AGF-V3-SERVER-2VisualEntityTracker (14.3s)
+[14/56] SUCCESS AGF-V3-SERVER-2Weekday (14.4s)
+[15/56] SUCCESS AGF-V3-SERVER-AdminModdingSupport (14.4s)
+[16/56] SUCCESS AGF-V3-SERVER-AlternativeRecipes (14.6s)
+[17/56] SUCCESS AGF-V3-SERVER-AmmoDisassembly (14.8s)
+[18/56] SUCCESS AGF-V3-SERVER-ArcheryFeathersChange (14.5s)
+[19/56] SUCCESS AGF-V3-SERVER-AutomobilesRespawn (14.5s)
+[20/56] SUCCESS AGF-V3-SERVER-BedrollPlus (14.2s)
+[21/56] SUCCESS AGF-V3-SERVER-BetterEggChance (14.6s)
+[22/56] SUCCESS AGF-V3-SERVER-BreakItGetIt (14.4s)
+[23/56] SUCCESS AGF-V3-SERVER-CraftSewingKits (13.9s)
+[24/56] SUCCESS AGF-V3-SERVER-CraftStackEngBattCells (17.0s)
+[25/56] SUCCESS AGF-V3-SERVER-CraftVitamins (16.3s)
+[26/56] SUCCESS AGF-V3-SERVER-DoorsPlus (14.4s)
+[27/56] SUCCESS AGF-V3-SERVER-DrinkableAcid (14.9s)
+[28/56] SUCCESS AGF-V3-SERVER-DyesPlus (14.3s)
+[29/56] SUCCESS AGF-V3-SERVER-FloraHarvester (16.8s)
+[30/56] SUCCESS AGF-V3-SERVER-FuelAutoShutOff (15.0s)
+[31/56] SUCCESS AGF-V3-SERVER-FuelBurnPlus (16.5s)
+[32/56] SUCCESS AGF-V3-SERVER-GlobalStormTracker (20.0s)
+[33/56] SUCCESS AGF-V3-SERVER-HonkOpensYourDoors (20.2s)
+[34/56] SUCCESS AGF-V3-SERVER-LargerStorageOption (19.5s)
+[35/56] SUCCESS AGF-V3-SERVER-MasterTool (23.5s)
+[36/56] SUCCESS AGF-V3-SERVER-MaxLevel500 (19.5s)
+[37/56] SUCCESS AGF-V3-SERVER-MiningPlus (21.0s)
+[38/56] SUCCESS AGF-V3-SERVER-Mod988 (19.9s)
+[39/56] SUCCESS AGF-V3-SERVER-ModSlotsPlus (19.9s)
+[40/56] SUCCESS AGF-V3-SERVER-PickupLanternsPlus (19.7s)
+[41/56] SUCCESS AGF-V3-SERVER-PlayerResetQuests (19.6s)
+[42/56] SUCCESS AGF-V3-SERVER-RebundleBundles (20.1s)
+[43/56] SUCCESS AGF-V3-SERVER-RecipeRottingFlesh (19.4s)
+[44/56] SUCCESS AGF-V3-SERVER-RestorePowerAnyTime (18.3s)
+[45/56] SUCCESS AGF-V3-SERVER-ScrapBatts4Acid (20.7s)
+[46/56] SUCCESS AGF-V3-SERVER-ScrapEquipmentFaster (74.5s)
+[47/56] SUCCESS AGF-V3-SERVER-ScreamerAlert (25.9s)
+[48/56] SUCCESS AGF-V3-SERVER-SimplifiedStacks (18.8s)
+[49/56] SUCCESS AGF-V3-SERVER-SmeltingPlus (20.2s)
+[50/56] SUCCESS AGF-V3-SERVER-StayLongerAnimalCorpse (21.2s)
+[51/56] FAILED AGF-V3-SERVER-StayLongerPlayerBackpack (15.3s)
+--- Output for AGF-V3-SERVER-StayLongerPlayerBackpack ---
+
+---
+[52/56] SUCCESS AGF-V3-SERVER-TacticalRiflePlus (23.2s)
+[53/56] SUCCESS AGF-V3-SERVER-VehicleStoragePlus (22.4s)
+[54/56] SUCCESS AGF-V3-SERVER-VehiclesExtraSeating (20.4s)
+[55/56] SUCCESS AGF-V3-SERVER-ZombieCorpseLeaveQuicker (21.3s)
+[56/56] SUCCESS zzzAGF-V3-CLIENT-LawnTractorV3Fix (20.2s)
+
+
+==== Batch Run [AUTO-PUBLISH]: 2026-10-12 10:33:22 (1 mods) ====
+[1/1] SUCCESS AGF-V3-SERVER-StayLongerPlayerBackpack (15.0s)

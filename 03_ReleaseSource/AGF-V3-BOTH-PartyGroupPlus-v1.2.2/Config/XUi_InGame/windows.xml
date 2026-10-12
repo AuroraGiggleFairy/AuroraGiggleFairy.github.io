@@ -1,0 +1,117 @@
+<AGF-PartyGroupPlus>
+	<!-- Party icon + total count on the voice row, at the right edge of the first health bar. -->
+	<append xpath="/windows/window[@name='windowGroupBars']">
+		<sprite depth="8" name="partyCountIcon" style="icon32px" pos="158,-68" pivot="center" sprite="ui_game_symbol_players" visible="{partycountvisible}" color="200,200,200,255" />
+		<label depth="8" name="partyCountLabel" pos="184,-71" width="48" height="32" font_size="28" color="200,200,200,255" justify="left" pivot="left" text="{partycount}" visible="{partycountvisible}" effect="outline" effect_distance="1,1" effect_color="[black]" />
+	</append>
+
+	<!-- Color picker is a window child so it stays visible on Players, Party, Discord, and Blocked. -->
+	<append xpath="/windows/window[@name='players']">
+		<rect name="partyGroupPlusColorRail" controller="PartyGroupPlusColorRail, PartyGroupPlus" pos="-54,-130" width="48" height="100" depth="80" cursor_area="true">
+			<sprite depth="1" name="railBg" sprite="ui_game_header_fill" color="0,0,0,255" type="sliced" width="48" height="100" foregroundlayer="true" globalopacitymod="0" />
+			<sprite depth="2" name="railBorder" sprite="menu_empty3px" color="128,128,128,255" type="sliced" fillcenter="false" width="48" height="100" visible="false" foregroundlayer="true" globalopacitymod="0" />
+			<button name="btnPartyColor" depth="4" pos="24,-28" width="32" height="32" pivot="center" style="icon32px, press, hover" sprite="ui_game_symbol_paint_bucket" tooltip_key="xuiPartyGroupPlusColorHeaderTooltip" sound="[paging_click]" use_selection_box="false" collider_scale="1.35" globalopacitymod="0" on_press="true" />
+			<sprite depth="4" name="myArrow" pos="24,-74" width="32" height="32" pivot="center" sprite="ui_game_symbol_map_player_arrow" color="{mycolor}" tooltip_key="xuiPartyGroupPlusColorArrowTooltip" foregroundlayer="true" globalopacitymod="0" />
+			<rect name="partyGroupPlusColorOverlay" controller="PartyGroupPlusColorOverlay, PartyGroupPlus" pos="54,0" width="456" height="636" depth="3" cursor_area="true" globalopacitymod="0">
+				<label depth="3" pos="0,-10" width="456" height="32" font_size="26" justify="center" color="[white]" text_key="xuiPartyGroupPlusColorPicker" globalopacitymod="0" foregroundlayer="true" />
+				<grid name="colorGrid" controller="PartyGroupPlusColorGrid, PartyGroupPlus" rows="16" cols="12" pos="12,-48" width="432" height="576" cell_width="36" cell_height="36" repeat_content="true" arrangement="horizontal">
+					<rect width="36" height="36" controller="PartyGroupPlusColorChoice, PartyGroupPlus">
+						<sprite depth="1" name="mineRingOuter" visible="{mine}" sprite="menu_empty3px" color="0,0,0,255" type="sliced" fillcenter="false" pos="0,0" width="36" height="36" foregroundlayer="true" globalopacitymod="0" />
+						<sprite depth="2" name="mineRing" visible="{mine}" sprite="menu_empty3px" color="255,255,255,255" type="sliced" fillcenter="false" pos="2,-2" width="32" height="32" foregroundlayer="true" globalopacitymod="0" />
+						<button name="btnColor" depth="3" pos="18,-18" width="30" height="30" pivot="center" style="press, hover" sprite="ui_game_symbol_map_player_arrow" defaultcolor="{swatchcolor}" hovercolor="{swatchcolor}" selectedcolor="{swatchcolor}" hoverscale="1" tooltip="{swatchtooltip}" sound="[paging_click]" use_selection_box="false" globalopacitymod="0" on_press="true" />
+						<sprite depth="4" name="takenMarkShadow" visible="{taken}" sprite="ui_game_symbol_x" color="0,0,0,255" pos="18,-18" width="26" height="26" pivot="center" foregroundlayer="true" globalopacitymod="0" />
+						<sprite depth="5" name="takenMark" visible="{taken}" sprite="ui_game_symbol_x" color="255,255,255,255" pos="18,-18" width="20" height="20" pivot="center" foregroundlayer="true" globalopacitymod="0" />
+					</rect>
+				</grid>
+			</rect>
+		</rect>
+	</append>
+
+	<!-- Party roster: three Discord-width columns, fill down then across, then page. -->
+	<insertAfter xpath="/windows/window[@name='players']//rect[@controller='TabSelectorTab' and @tab_key='xuiPlayers']">
+		<rect controller="TabSelectorTab" tab_key="xuiParty">
+			<rect name="partyMembers" controller="PartyGroupPlusPartyList, PartyGroupPlus">
+				<rect name="header" height="43" depth="1">
+					<headerbg />
+					<sprite depth="1" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_players"/>
+					<label style="header.name" text="PARTY" text_key="xuiParty" />
+					<label depth="1" name="numberOfParty" pos="1260,-12" width="60" height="28" text="0" font_size="22" />
+				</rect>
+
+				<rect name="partyCol0Wrap" pos="0,-43" width="420" height="648">
+					<rect name="partyHeader0" depth="0" pos="0,0" width="420" height="50">
+						<sprite depth="10" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="420" height="47" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[mediumGrey]" type="sliced" pos="3,-3" height="44" width="414" />
+						<label depth="1" pos="32,-22" width="178" height="44" text="NAME" text_key="xuiPartyGroupPlusColName" font_size="22" pivot="left" />
+						<label depth="1" pos="214,-22" width="88" height="44" text="DISTANCE" text_key="xuiPartyGroupPlusColDistance" font_size="22" justify="center" pivot="left" />
+						<label depth="1" pos="302,-22" width="48" height="44" text="MAP" text_key="xuiMap" font_size="22" justify="center" pivot="left" />
+						<label depth="1" pos="354,-22" width="64" height="44" text="PRIORITY" text_key="xuiPartyGroupPlusColPriority" font_size="22" justify="center" pivot="left" />
+					</rect>
+					<grid name="partyCol0" rows="13" cols="1" pos="0,-50" width="420" height="598" cell_width="420" cell_height="46" repeat_content="true" arrangement="vertical">
+						<rect depth="1" width="420" height="46" pos="0,0" controller="PartyGroupPlusPartyEntry, PartyGroupPlus">
+							<sprite depth="10" name="backgroundMain" sprite="menu_empty3px" width="420" height="46" color="[black]" type="sliced" fillcenter="false" />
+							<sprite name="background" color="[darkGrey]" height="46" width="420" type="sliced" />
+							<sprite depth="2" name="memberArrow" pos="14,-23" width="22" height="22" pivot="center" sprite="ui_game_symbol_map_player_arrow" foregroundlayer="true" />
+							<label depth="2" name="memberName" pos="32,-23" width="178" height="32" font_size="24" justify="left" pivot="left" overflow="shrinkcontent" />
+							<label depth="2" name="memberDistance" pos="214,-23" width="88" height="32" font_size="24" justify="center" pivot="left" />
+							<button depth="3" name="iconShowOnMap" style="icon32px, press, hover" pos="326,-23" pivot="center" sprite="ui_game_symbol_map" color="[lightGrey]" disabledcolor="[disabledLabelColor]" sound="[craft_click]" tooltip="Show on Map" tooltip_key="lblShowOnMap" />
+							<checkbox name="priorityCheck" depth="3" height="28" pos="372,-9" tooltip_key="xuiPartyGroupPlusPriorityTooltip" />
+						</rect>
+					</grid>
+				</rect>
+
+				<rect name="partyCol1Wrap" pos="450,-43" width="420" height="648">
+					<rect name="partyHeader1" depth="0" pos="0,0" width="420" height="50">
+						<sprite depth="10" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="420" height="47" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[mediumGrey]" type="sliced" pos="3,-3" height="44" width="414" />
+						<label depth="1" pos="32,-22" width="178" height="44" text="NAME" text_key="xuiPartyGroupPlusColName" font_size="22" pivot="left" />
+						<label depth="1" pos="214,-22" width="88" height="44" text="DISTANCE" text_key="xuiPartyGroupPlusColDistance" font_size="22" justify="center" pivot="left" />
+						<label depth="1" pos="302,-22" width="48" height="44" text="MAP" text_key="xuiMap" font_size="22" justify="center" pivot="left" />
+						<label depth="1" pos="354,-22" width="64" height="44" text="PRIORITY" text_key="xuiPartyGroupPlusColPriority" font_size="22" justify="center" pivot="left" />
+					</rect>
+					<grid name="partyCol1" rows="13" cols="1" pos="0,-50" width="420" height="598" cell_width="420" cell_height="46" repeat_content="true" arrangement="vertical">
+						<rect depth="1" width="420" height="46" pos="0,0" controller="PartyGroupPlusPartyEntry, PartyGroupPlus">
+							<sprite depth="10" name="backgroundMain" sprite="menu_empty3px" width="420" height="46" color="[black]" type="sliced" fillcenter="false" />
+							<sprite name="background" color="[darkGrey]" height="46" width="420" type="sliced" />
+							<sprite depth="2" name="memberArrow" pos="14,-23" width="22" height="22" pivot="center" sprite="ui_game_symbol_map_player_arrow" foregroundlayer="true" />
+							<label depth="2" name="memberName" pos="32,-23" width="178" height="32" font_size="24" justify="left" pivot="left" overflow="shrinkcontent" />
+							<label depth="2" name="memberDistance" pos="214,-23" width="88" height="32" font_size="24" justify="center" pivot="left" />
+							<button depth="3" name="iconShowOnMap" style="icon32px, press, hover" pos="326,-23" pivot="center" sprite="ui_game_symbol_map" color="[lightGrey]" disabledcolor="[disabledLabelColor]" sound="[craft_click]" tooltip="Show on Map" tooltip_key="lblShowOnMap" />
+							<checkbox name="priorityCheck" depth="3" height="28" pos="372,-9" tooltip_key="xuiPartyGroupPlusPriorityTooltip" />
+						</rect>
+					</grid>
+				</rect>
+
+				<rect name="partyCol2Wrap" pos="900,-43" width="420" height="648">
+					<rect name="partyHeader2" depth="0" pos="0,0" width="420" height="50">
+						<sprite depth="10" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="420" height="47" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[mediumGrey]" type="sliced" pos="3,-3" height="44" width="414" />
+						<label depth="1" pos="32,-22" width="178" height="44" text="NAME" text_key="xuiPartyGroupPlusColName" font_size="22" pivot="left" />
+						<label depth="1" pos="214,-22" width="88" height="44" text="DISTANCE" text_key="xuiPartyGroupPlusColDistance" font_size="22" justify="center" pivot="left" />
+						<label depth="1" pos="302,-22" width="48" height="44" text="MAP" text_key="xuiMap" font_size="22" justify="center" pivot="left" />
+						<label depth="1" pos="354,-22" width="64" height="44" text="PRIORITY" text_key="xuiPartyGroupPlusColPriority" font_size="22" justify="center" pivot="left" />
+					</rect>
+					<grid name="partyCol2" rows="13" cols="1" pos="0,-50" width="420" height="598" cell_width="420" cell_height="46" repeat_content="true" arrangement="vertical">
+						<rect depth="1" width="420" height="46" pos="0,0" controller="PartyGroupPlusPartyEntry, PartyGroupPlus">
+							<sprite depth="10" name="backgroundMain" sprite="menu_empty3px" width="420" height="46" color="[black]" type="sliced" fillcenter="false" />
+							<sprite name="background" color="[darkGrey]" height="46" width="420" type="sliced" />
+							<sprite depth="2" name="memberArrow" pos="14,-23" width="22" height="22" pivot="center" sprite="ui_game_symbol_map_player_arrow" foregroundlayer="true" />
+							<label depth="2" name="memberName" pos="32,-23" width="178" height="32" font_size="24" justify="left" pivot="left" overflow="shrinkcontent" />
+							<label depth="2" name="memberDistance" pos="214,-23" width="88" height="32" font_size="24" justify="center" pivot="left" />
+							<button depth="3" name="iconShowOnMap" style="icon32px, press, hover" pos="326,-23" pivot="center" sprite="ui_game_symbol_map" color="[lightGrey]" disabledcolor="[disabledLabelColor]" sound="[craft_click]" tooltip="Show on Map" tooltip_key="lblShowOnMap" />
+							<checkbox name="priorityCheck" depth="3" height="28" pos="372,-9" tooltip_key="xuiPartyGroupPlusPriorityTooltip" />
+						</rect>
+					</grid>
+				</rect>
+
+				<rect depth="3" width="1320" height="49" pos="0,-691">
+					<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="1320" height="49" color="[black]" type="sliced" fillcenter="false" />
+					<sprite name="pagingControls" color="[mediumGrey]" type="sliced" />
+					<rect pos="1206,0" width="104" height="49">
+						<pager name="partyPager" pos="-16,-6" contents_parent="partyMembers"/>
+					</rect>
+				</rect>
+			</rect>
+		</rect>
+	</insertAfter>
+</AGF-PartyGroupPlus>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6IiksaHvN/w=",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\7D2D-Mods\\00_Support\\InspectTool\\InspectTool.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rft30\\.nuget\\packages\\icsharpcode.decompiler\\11.1.0.9782\\icsharpcode.decompiler.11.1.0.9782.nupkg.sha512"
+  ],
+  "logs": []
+}

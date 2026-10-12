@@ -1,9 +1,57 @@
 {
-  "computed_at": "2026-10-08T15:08:24",
+  "computed_at": "2026-10-12T08:50:41",
   "since_gigglepack_version": "1.0.0",
-  "new_mods": [],
-  "updated_mods": [],
+  "new_mods": [
+    [
+      "AGF-V3-SERVER-2ShowStabilityOption",
+      "1.0.0"
+    ],
+    [
+      "AGF-V3-SERVER-POISwitchesUnlockDoors",
+      "1.0.0"
+    ]
+  ],
+  "updated_mods": [
+    [
+      "AGF-V3-BOTH-PartyGroupPlus",
+      "1.2.1",
+      "1.2.2"
+    ],
+    [
+      "AGF-V3-SERVER-2PurpleBook",
+      "3.2.1",
+      "3.3.0"
+    ],
+    [
+      "AGF-V3-SERVER-CraftStackEngBattCells",
+      "4.0.1",
+      "4.0.2"
+    ],
+    [
+      "AGF-V3-SERVER-CraftVitamins",
+      "2.1.3",
+      "2.1.4"
+    ],
+    [
+      "AGF-V3-SERVER-FloraHarvester",
+      "3.0.3",
+      "3.0.4"
+    ],
+    [
+      "AGF-V3-SERVER-MasterTool",
+      "7.1.3",
+      "7.1.4"
+    ]
+  ],
   "renamed_mods": [],
-  "removed_mods": [],
-  "note": "Mod naming overhaul. Delete existing AGF mods and upload with these new mods."
+  "removed_mods": [
+    [
+      "AGF-V3-CLIENT-ConsoleOpacityMod",
+      "1.0.2"
+    ],
+    [
+      "AGF-V3-SERVER-DecorationBlock",
+      "3.0.4"
+    ]
+  ]
 }

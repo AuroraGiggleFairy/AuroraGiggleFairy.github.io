@@ -93,9 +93,6 @@
 				<recipe name="resourceWood600min" count="1" craft_exp_gain="0" craft_time="8" always_unlocked="true" tags="packMuleCrafting">
 					<ingredient name="resourceWood" count="1200"/>
 				</recipe>
-				<recipe name="resourceWood6000min" count="1" craft_exp_gain="0" craft_time="8" always_unlocked="true" tags="packMuleCrafting">
-					<ingredient name="resourceWood" count="12000"/>
-				</recipe>
 				<recipe name="resourceWood10min" count="1" craft_exp_gain="0" craft_time="2" always_unlocked="true" tags="packMuleCrafting">
 					<ingredient name="resourceCoal" count="5"/>
 				</recipe>
@@ -104,9 +101,6 @@
 				</recipe>
 				<recipe name="resourceWood600min" count="1" craft_exp_gain="0" craft_time="8" always_unlocked="true" tags="packMuleCrafting">
 					<ingredient name="resourceCoal" count="300"/>
-				</recipe>
-				<recipe name="resourceWood6000min" count="1" craft_exp_gain="0" craft_time="8" always_unlocked="true" tags="packMuleCrafting">
-					<ingredient name="resourceCoal" count="3000"/>
 				</recipe>
 			</append>
 		</if>

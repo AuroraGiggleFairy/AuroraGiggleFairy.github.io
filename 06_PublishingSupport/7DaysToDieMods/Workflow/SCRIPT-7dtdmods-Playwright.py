@@ -61,6 +61,11 @@ def port_open(host: str = "127.0.0.1", port: int = CDP_PORT) -> bool:
 def find_chrome_exe() -> Path | None:
     candidates = [
         Path(os.environ.get("PROGRAMFILES", r"C:\Program Files"))
+        / "BraveSoftware/Brave-Browser/Application/brave.exe",
+        Path(os.environ.get("PROGRAMFILES(X86)", r"C:\Program Files (x86)"))
+        / "BraveSoftware/Brave-Browser/Application/brave.exe",
+        Path(os.environ.get("LOCALAPPDATA", "")) / "BraveSoftware/Brave-Browser/Application/brave.exe",
+        Path(os.environ.get("PROGRAMFILES", r"C:\Program Files"))
         / "Google/Chrome/Application/chrome.exe",
         Path(os.environ.get("PROGRAMFILES(X86)", r"C:\Program Files (x86)"))
         / "Google/Chrome/Application/chrome.exe",
@@ -73,6 +78,9 @@ def find_chrome_exe() -> Path | None:
 
 
 def chrome_user_data_dir() -> Path:
+    brave_user_data = Path(os.environ.get("LOCALAPPDATA", "")) / "BraveSoftware/Brave-Browser/User Data"
+    if brave_user_data.is_dir():
+        return brave_user_data
     return Path(os.environ.get("LOCALAPPDATA", "")) / "Google/Chrome/User Data"
 
 
@@ -119,12 +127,8 @@ class BrowserSession:
 
     def close(self) -> None:
         if self.mode == "cdp":
-            # Leave the user's Chrome running; only disconnect.
-            try:
-                if self.browser is not None:
-                    self.browser.close()
-            except Exception:
-                pass
+            # Leave Chrome/Brave running in the background; do not call self.browser.close()
+            # because that terminates the remote browser process and forces a focus-stealing relaunch.
             return
         try:
             self.context.close()
@@ -139,6 +143,18 @@ def try_connect_cdp(playwright, cdp_url: str) -> BrowserSession | None:
         browser = playwright.chromium.connect_over_cdp(cdp_url)
         context = browser.contexts[0] if browser.contexts else browser.new_context()
         page = context.pages[0] if context.pages else context.new_page()
+        try:
+            page.add_init_script("""
+                window.addEventListener('beforeunload', (e) => {
+                    delete e['returnValue'];
+                }, { capture: true });
+                Object.defineProperty(window, 'onbeforeunload', {
+                    get: () => null,
+                    set: () => {}
+                });
+            """)
+        except Exception:
+            pass
         print(f"attached to Chrome via CDP {cdp_url}")
         return BrowserSession(
             playwright=playwright,
@@ -172,10 +188,21 @@ def start_system_chrome_debug() -> bool:
         "--no-first-run",
         "--no-default-browser-check",
         "--disable-background-mode",
+        "--start-minimized",
         f"{SITE}/mods",
     ]
     print("starting Chrome with debugging:", " ".join(cmd[:3]), "...")
-    subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    startupinfo = None
+    if sys.platform == "win32":
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        startupinfo.wShowWindow = 7  # SW_SHOWMINNOACTIVE: minimized, does not steal window focus
+    subprocess.Popen(
+        cmd,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        startupinfo=startupinfo,
+    )
     for _ in range(40):
         if port_open():
             return True
@@ -222,6 +249,10 @@ def open_session(playwright, *, headless: bool, cdp_url: str, use_system_profile
 
 
 def wait_logged_in(page, timeout_ms: int = 120_000) -> None:
+    try:
+        page.evaluate("window.onbeforeunload = null;")
+    except Exception:
+        pass
     page.goto(f"{SITE}/mods", wait_until="domcontentloaded")
     deadline = time.time() + timeout_ms / 1000
     while time.time() < deadline:
@@ -363,13 +394,14 @@ def clear_and_import_description(page, html: str) -> None:
         page.wait_for_timeout(80)
     if not confirm.is_enabled():
         raise SystemExit("Import confirm stayed disabled — paste recipe failed")
-    confirm.click()
-    page.wait_for_timeout(350)
 
-    edit = page.get_by_role("tab", name="Edit")
+    confirm.click()
+    page.wait_for_timeout(500)
+
+    edit = page.get_by_role("tab", name="Edit").first
     if edit.count():
         edit.click()
-        page.wait_for_timeout(120)
+        page.wait_for_timeout(300)
 
 
 def fill_details(page, fill: dict, html: str) -> None:
@@ -544,14 +576,30 @@ def fill_media(page, fill: dict) -> None:
 
     thumb_path = UPLOAD / fill["thumb"]
     print("  thumb -> input[0] set_input_files")
-    inputs.nth(0).set_input_files(str(thumb_path))
+    try:
+        with page.expect_response(
+            lambda r: "/revisions/" in r.url and r.request.method in ("PATCH", "POST") and r.status == 200,
+            timeout=15_000,
+        ):
+            inputs.nth(0).set_input_files(str(thumb_path))
+    except Exception:
+        inputs.nth(0).set_input_files(str(thumb_path))
+    page.wait_for_timeout(1000)
     wait_cdn_images(page, 1)
 
     before = count_gallery_cdn_images(page)
     for gname in fill.get("gallery") or []:
         gpath = UPLOAD / gname
         print(f"  gallery -> input[2] set_input_files ({gname})")
-        inputs.nth(2).set_input_files(str(gpath))
+        try:
+            with page.expect_response(
+                lambda r: "/revisions/" in r.url and r.request.method in ("PATCH", "POST") and r.status == 200,
+                timeout=20_000,
+            ):
+                inputs.nth(2).set_input_files(str(gpath))
+        except Exception:
+            inputs.nth(2).set_input_files(str(gpath))
+        page.wait_for_timeout(1000)
         page.wait_for_function(
             """(prev) => {
               const gh = [...document.querySelectorAll('h3,h4')]
@@ -578,6 +626,7 @@ def fill_media(page, fill: dict) -> None:
         raise SystemExit(f"Gallery still empty after upload (got {got}, need {need}).")
     if need and got > need:
         print(f"  WARNING: gallery has extras ({got} > {need}) — delete extras manually")
+    page.wait_for_timeout(1500)
 
 
 def fill_changelog(page, fill: dict) -> None:
@@ -623,6 +672,15 @@ def open_zip_row_editor(page, zip_name: str) -> None:
     """Click the edit (pencil) icon on the existing zip row — never the delete icon."""
     opened = page.evaluate(
         """(zipName) => {
+          const rows = document.querySelectorAll('.space-y-2 > div.border');
+          for (const r of rows) {
+            if ((r.innerText || '').includes(zipName)) {
+              const edit = r.querySelector('button[aria-label="Toggle file details"]')
+                || [...r.querySelectorAll('button')].find(b => !/destructive|danger/i.test(b.className || ''))
+                || r.querySelector('button');
+              if (edit) { edit.click(); return true; }
+            }
+          }
           let zipEl = null;
           const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
           while (walk.nextNode()) {
@@ -636,10 +694,9 @@ def open_zip_row_editor(page, zip_name: str) -> None:
           for (let d = 0; d < 12 && n; d++) {
             const text = n.innerText || '';
             if (text.includes(zipName) && text.length < 900) {
-              const btns = [...n.querySelectorAll('button')].filter(b => !(b.textContent || '').trim());
-              // First icon = edit; last often = delete (text-destructive)
-              const edit = btns.find(b => !/destructive|danger/i.test(b.className || ''))
-                || btns[0];
+              const edit = n.querySelector('button[aria-label="Toggle file details"]')
+                || [...n.querySelectorAll('button')].find(b => !/destructive|danger/i.test(b.className || ''))
+                || n.querySelector('button');
               if (edit) { edit.click(); return true; }
             }
             n = n.parentElement;
@@ -649,8 +706,81 @@ def open_zip_row_editor(page, zip_name: str) -> None:
         zip_name,
     )
     if not opened:
-        raise SystemExit("Could not open existing zip row editor (pencil)")
+        raise SystemExit(f"Could not open existing zip row editor (pencil) for {zip_name}")
     page.wait_for_timeout(400)
+
+
+def check_rate_limit(page, timeout_sec: int = 65) -> bool:
+    """Check if the page or recent responses hit rate limiting.
+    If so, wait the required 60-65 seconds for the window to reset and reload/continue.
+    """
+    is_limited = False
+    try:
+        if page.locator("text=going too fast").count() > 0 or page.locator("text=rate limited").count() > 0:
+            is_limited = True
+    except Exception:
+        pass
+    if is_limited:
+        print(f"\n  [Site Rate Limit Detected] 'going too fast' message visible.")
+        print(f"  Cooling down for {timeout_sec}s for the 1-minute site window to reset...")
+        for remaining in range(timeout_sec, 0, -10):
+            print(f"    {remaining}s remaining...")
+            page.wait_for_timeout(10_000)
+        return True
+    return False
+
+
+def remove_superseded_files(page, keep_zip_name: str) -> int:
+    """Find and remove any file row in the Mod Files section that does not match keep_zip_name.
+    Returns count of removed files.
+    """
+    page.wait_for_timeout(500)
+    removed_count = 0
+    for _ in range(10):
+        if check_rate_limit(page):
+            page.reload()
+            page.wait_for_timeout(2000)
+
+        removed_name = page.evaluate(
+            """(keepName) => {
+              const rows = document.querySelectorAll('.space-y-2 > div.border');
+              for (const r of rows) {
+                const text = r.innerText || '';
+                if ((text.includes('.zip') || text.includes('.7z') || text.includes('.rar')) && !text.includes(keepName)) {
+                  const btn = r.querySelector('button[aria-label="Remove file"]') || r.querySelector('button[aria-label="Remove"]');
+                  if (btn) {
+                    btn.click();
+                    return text.split('\\n')[0].trim();
+                  }
+                }
+              }
+              return null;
+            }""",
+            keep_zip_name,
+        )
+        if not removed_name:
+            break
+
+        print(f"    Removing superseded file: {removed_name}")
+        page.wait_for_timeout(500)
+        dialogs = page.locator('[role="dialog"], [role="alertdialog"]')
+        if dialogs.count():
+            confirm_btn = dialogs.first.get_by_role("button", name="Remove", exact=True)
+            if not confirm_btn.count():
+                confirm_btn = dialogs.first.locator(
+                    'button:has-text("Remove"), button:has-text("Delete"), button:has-text("Confirm")'
+                )
+            if confirm_btn.count():
+                confirm_btn.first.click()
+                try:
+                    dialogs.first.wait_for(state="hidden", timeout=8_000)
+                except Exception:
+                    if check_rate_limit(page):
+                        page.reload()
+                        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1000)
+        removed_count += 1
+    return removed_count
 
 
 def fill_existing_zip_meta(page, fill: dict) -> None:
@@ -764,47 +894,86 @@ def set_permissions_disallow(page) -> None:
 
 
 def fill_files_and_perms(page, fill: dict) -> None:
-    zip_input = page.locator('input[type="file"][accept*="zip"]').first
-    if zip_input.count() == 0:
-        zip_input = page.locator('input[type="file"]').last
-    zip_input.wait_for(state="attached", timeout=15_000)
-    zip_input.set_input_files(str(UPLOAD / fill["zip"]))
+    # Remove any old/superseded files from previous versions
+    remove_superseded_files(page, fill["zip"])
 
-    page.get_by_text(fill["zip"], exact=False).first.wait_for(state="visible", timeout=30_000)
+    # Check if target zip is already on the page
+    has_target = page.evaluate(
+        """(zipName) => {
+          const rows = document.querySelectorAll('.space-y-2 > div.border');
+          return [...rows].some(r => (r.innerText || '').includes(zipName));
+        }""",
+        fill["zip"],
+    )
 
-    page.get_by_placeholder("Name of your file").fill(fill["zip_label"])
+    if not has_target:
+        print(f"  uploading {fill['zip']}...")
+        zip_input = page.locator('input[type="file"][accept*="zip"]').first
+        if zip_input.count() == 0:
+            zip_input = page.locator('input[type="file"]').last
+        zip_input.wait_for(state="attached", timeout=15_000)
+        zip_input.set_input_files(str(UPLOAD / fill["zip"]))
+        page.get_by_text(fill["zip"], exact=False).first.wait_for(
+            state="visible", timeout=30_000
+        )
+        if check_rate_limit(page):
+            page.reload()
+            page.wait_for_selector('input[type="file"]', state="attached", timeout=20_000)
+            zip_input = page.locator('input[type="file"][accept*="zip"]').first
+            zip_input.set_input_files(str(UPLOAD / fill["zip"]))
+            page.get_by_text(fill["zip"], exact=False).first.wait_for(
+                state="visible", timeout=30_000
+            )
+    else:
+        print(f"  {fill['zip']} already present on page, ensuring details open...")
+
+    # Ensure details editor is open (pencil clicked if collapsed)
+    label_input = page.get_by_placeholder("Name of your file")
+    if label_input.count() == 0 or not label_input.first.is_visible():
+        open_zip_row_editor(page, fill["zip"])
+
+    label = page.get_by_placeholder("Name of your file")
+    label.first.wait_for(state="visible", timeout=10_000)
+    label.first.fill(fill["zip_label"])
     page.get_by_placeholder("Any special instructions relating to the mod file").fill(
         fill["zip_description"]
     )
     page.get_by_placeholder("e.g. v2.5").fill(fill["zip_version"])
-    page.get_by_role("button", name="Main Mod", exact=True).click()
+    main = page.get_by_role("button", name="Main Mod", exact=True)
+    if main.count():
+        main.first.click()
+
     # File-row Save — prefer enabled Save near the zip editor
-    page.locator("button:text-is('Save')").nth(1).click()
+    saves = page.locator("button:text-is('Save')")
+    for i in range(saves.count()):
+        btn = saves.nth(i)
+        try:
+            if btn.is_visible() and btn.is_enabled():
+                btn.click()
+                break
+        except Exception:
+            continue
     page.wait_for_timeout(500)
 
     # Re-open pencil and confirm non-empty meta
-    page.evaluate(
-        """() => {
-          const upload = [...document.querySelectorAll('button')]
-            .find(b => b.textContent.trim()==='Upload File');
-          if (!upload) return;
-          let n = upload.parentElement;
-          for (let i=0;i<8 && n;i++) {
-            const cands = [...n.querySelectorAll('button')].filter(b => !b.textContent.trim());
-            if (cands.length) { cands[0].click(); return; }
-            n = n.parentElement;
-          }
-        }"""
-    )
+    open_zip_row_editor(page, fill["zip"])
     page.wait_for_timeout(300)
     label = page.get_by_placeholder("Name of your file")
-    if label.count() and label.input_value() != fill["zip_label"]:
-        label.fill(fill["zip_label"])
+    if label.count() and label.first.input_value() != fill["zip_label"]:
+        label.first.fill(fill["zip_label"])
         page.get_by_placeholder("Any special instructions relating to the mod file").fill(
             fill["zip_description"]
         )
         page.get_by_placeholder("e.g. v2.5").fill(fill["zip_version"])
-        page.locator("button:text-is('Save')").nth(1).click()
+        saves = page.locator("button:text-is('Save')")
+        for i in range(saves.count()):
+            btn = saves.nth(i)
+            try:
+                if btn.is_visible() and btn.is_enabled():
+                    btn.click()
+                    break
+            except Exception:
+                continue
         page.wait_for_timeout(300)
 
     # Always verify full description (summary + blank + Mod Type)
@@ -813,10 +982,19 @@ def fill_files_and_perms(page, fill: dict) -> None:
         got = desc.first.input_value()
         if got.strip() != fill["zip_description"].strip():
             desc.first.fill(fill["zip_description"])
-            page.locator("button:text-is('Save')").nth(1).click()
+            saves = page.locator("button:text-is('Save')")
+            for i in range(saves.count()):
+                btn = saves.nth(i)
+                try:
+                    if btn.is_visible() and btn.is_enabled():
+                        btn.click()
+                        break
+                except Exception:
+                    continue
             page.wait_for_timeout(300)
 
     set_permissions_disallow(page)
+    remove_superseded_files(page, fill["zip"])
 
 
 def fill_credits_on_publish(page, credits: str) -> None:
@@ -895,11 +1073,11 @@ def click_final_publish(page) -> None:
         raise SystemExit("Could not find Terms/agree checkbox on publish page")
 
     page.wait_for_timeout(300)
-    pub = page.get_by_role("button", name=re.compile(r"^Publish$", re.I))
+    pub = page.get_by_role("button", name=re.compile(r"^(?:Push Live|Publish)$", re.I))
     if pub.count() == 0:
-        pub = page.get_by_role("button", name=re.compile(r"Publish", re.I))
+        pub = page.get_by_role("button", name=re.compile(r"Push Live|Publish", re.I))
     if pub.count() == 0:
-        raise SystemExit("Publish button not found")
+        raise SystemExit("Push Live / Publish button not found")
     btn = pub.last
     for _ in range(40):
         if btn.is_enabled():
@@ -908,8 +1086,8 @@ def click_final_publish(page) -> None:
     if not btn.is_enabled():
         raise SystemExit("Publish button stayed disabled after agree")
     btn.click()
-    page.wait_for_timeout(1500)
-    print("  Publish clicked")
+    page.wait_for_timeout(2500)
+    print("  Push Live / Publish clicked")
 
 
 def api_create_draft(page, title: str) -> tuple[str, str | None]:
@@ -942,12 +1120,58 @@ def remember_mod_id(base: str, mod_id: str, slug: str | None = None) -> None:
     print("saved site_mod_id to 7dtdmods-config.json ->", base)
 
 
+def remember_version(base: str, version: str, title: str = "") -> None:
+    cfg = load_json(CONFIG_PATH) if CONFIG_PATH.is_file() else {"mods": {}}
+    mods = cfg.setdefault("mods", {})
+    ck = clean_key(base)
+    target_mid = None
+    for k, v in mods.items():
+        if isinstance(v, dict) and clean_key(k) == ck and v.get("site_mod_id"):
+            target_mid = v["site_mod_id"]
+            break
+
+    found = False
+    for k, v in mods.items():
+        if isinstance(v, dict):
+            if clean_key(k) == ck or (target_mid and v.get("site_mod_id") == target_mid):
+                if version:
+                    v["last_release_tag"] = version
+                if title:
+                    v["last_published_title"] = title
+                found = True
+    if not found:
+        entry = mods.setdefault(base, {})
+        if version:
+            entry["last_release_tag"] = version
+        if title:
+            entry["last_published_title"] = title
+    save_json(CONFIG_PATH, cfg)
+    print(f"saved last_release_tag ({version}) to 7dtdmods-config.json -> {base}")
+
+
+def clean_key(s: str) -> str:
+    s = s.lower()
+    s = re.sub(r"^(?:agf-|zzzagf-|zzzzzagf-)?", "", s)
+    s = re.sub(r"^(?:v3-)?", "", s)
+    s = re.sub(r"^(?:server-|client-|both-|admin-|compat-|vp-|vps-|noeac-|requested-|4modders-)?", "", s)
+    s = re.sub(r"^[0-9]+", "", s)
+    s = s.replace("-", "").replace("_", "")
+    return s
+
+
 def resolve_mod_id(base: str, override: str | None) -> str:
     if override:
         return override
     cfg = load_json(CONFIG_PATH)
-    entry = (cfg.get("mods") or {}).get(base) or {}
+    mods = cfg.get("mods") or {}
+    entry = mods.get(base) or {}
     mid = entry.get("site_mod_id")
+    if not mid:
+        ck = clean_key(base)
+        for k, v in mods.items():
+            if isinstance(v, dict) and clean_key(k) == ck and v.get("site_mod_id"):
+                mid = v["site_mod_id"]
+                break
     if not mid:
         raise SystemExit(
             f"No site_mod_id for {base} in 7dtdmods-config.json.\n"
@@ -957,6 +1181,10 @@ def resolve_mod_id(base: str, override: str | None) -> str:
 
 
 def goto_edit(page, mod_id: str, section: str) -> None:
+    try:
+        page.evaluate("window.onbeforeunload = null;")
+    except Exception:
+        pass
     page.goto(f"{SITE}/mods/{mod_id}/edit/{section}", wait_until="domcontentloaded")
     if section == "details":
         page.wait_for_selector("#mod-title", timeout=20_000)
@@ -999,9 +1227,14 @@ def cmd_create(args: argparse.Namespace) -> None:
         )
         page = sess.page
         wait_logged_in(page)
-        if args.mod_id:
-            mod_id = args.mod_id
-            print("using existing draft", mod_id)
+        existing_mid = args.mod_id
+        if not existing_mid:
+            cfg = load_json(CONFIG_PATH) if CONFIG_PATH.is_file() else {"mods": {}}
+            existing_mid = cfg.get("mods", {}).get(base, {}).get("site_mod_id")
+
+        if existing_mid:
+            mod_id = existing_mid
+            print("using existing draft/mod", mod_id)
             remember_mod_id(base, mod_id)
         else:
             mod_id, slug = api_create_draft(page, fill["title"])
@@ -1084,7 +1317,7 @@ def cmd_update(args: argparse.Namespace) -> None:
                 set_comments_off(page)
                 clear_and_import_description(page, html)
 
-            if not args.desc_only:
+            if not args.desc_only and not getattr(args, "no_media", False):
                 goto_edit(page, mod_id, "media")
                 print("update media...")
                 fill_media(page, fill)
@@ -1095,10 +1328,11 @@ def cmd_update(args: argparse.Namespace) -> None:
             fill_changelog(page, fill)
 
         # Files: default update refreshes zip Label/Description/Version + Disallow perms.
-        # --zip also uploads a new zip. --files-only skips desc/media.
+        # --zip also uploads a new zip. --files-only skips desc/media. --no-media updates details+files.
         do_files = (
             args.zip
             or getattr(args, "files_only", False)
+            or getattr(args, "no_media", False)
             or (
                 not args.desc_only
                 and not args.images_only
@@ -1107,11 +1341,19 @@ def cmd_update(args: argparse.Namespace) -> None:
         )
         if do_files:
             goto_edit(page, mod_id, "files")
-            if args.zip:
-                print("upload zip + meta/perms...")
+            has_target = page.evaluate(
+                """(zipName) => {
+                  const rows = document.querySelectorAll('.space-y-2 > div.border');
+                  return [...rows].some(r => (r.innerText || '').includes(zipName));
+                }""",
+                fill["zip"],
+            )
+            if args.zip or not has_target:
+                print("upload/verify zip + meta/perms...")
                 fill_files_and_perms(page, fill)
             else:
                 print("update zip meta + permissions...")
+                remove_superseded_files(page, fill["zip"])
                 fill_existing_zip_meta(page, fill)
                 set_permissions_disallow(page)
 
@@ -1120,7 +1362,11 @@ def cmd_update(args: argparse.Namespace) -> None:
         url = f"{SITE}/mods/{mod_id}/edit/publish"
         print()
         print("DONE - review:", url)
-        if args.keep_open:
+        if getattr(args, "publish", False):
+            click_final_publish(page)
+            remember_version(base, fill["version"], fill["title"])
+            print("PUBLISHED - live:", f"{SITE}/mods/{mod_id}")
+        elif args.keep_open:
             print("Press Enter here when finished.")
             try:
                 input()
@@ -1177,6 +1423,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_update.add_argument("--no-prep", action="store_true")
     p_update.add_argument("--headless", action="store_true")
     p_update.add_argument("--desc-only", action="store_true", help="Skip media and files")
+    p_update.add_argument("--no-media", action="store_true", help="Skip media upload; update details/description and files")
     p_update.add_argument("--images-only", action="store_true", help="Skip description and files")
     p_update.add_argument(
         "--files-only",
@@ -1190,6 +1437,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p_update.add_argument("--changelog", action="store_true", help="Also add changelog entry")
     p_update.add_argument("--zip", action="store_true", help="Upload a new zip then set meta/perms")
+    p_update.add_argument("--publish", action="store_true", help="Agree and click Push Live / Publish after updating")
     p_update.add_argument("--no-keep-open", dest="keep_open", action="store_false", default=True)
     add_browser_args(p_update)
     p_update.set_defaults(func=cmd_update)
@@ -1214,6 +1462,13 @@ def cmd_publish(args: argparse.Namespace) -> None:
 
     base = args.mod
     mod_id = resolve_mod_id(base, args.mod_id)
+    try:
+        fill = load_fill(base, do_prep=True)
+        ver = fill.get("version", "")
+        title = fill.get("title", "")
+    except Exception:
+        ver, title = "", ""
+
     with sync_playwright() as p:
         sess = open_session(
             p,
@@ -1226,6 +1481,7 @@ def cmd_publish(args: argparse.Namespace) -> None:
         goto_edit(page, mod_id, "publish")
         print("publish...")
         click_final_publish(page)
+        remember_version(base, ver, title)
         live = f"{SITE}/mods/{mod_id}"
         print()
         print("PUBLISHED - double-check live page:")
@@ -1239,6 +1495,10 @@ def cmd_publish(args: argparse.Namespace) -> None:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(line_buffering=True)
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(line_buffering=True)
     ap = build_parser()
     args = ap.parse_args()
     args.func(args)

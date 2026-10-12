@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "InspectTool/1.0.0": {
+        "dependencies": {
+          "ICSharpCode.Decompiler": "11.1.0.9782"
+        },
+        "runtime": {
+          "InspectTool.dll": {}
+        }
+      },
+      "ICSharpCode.Decompiler/11.1.0.9782": {
+        "runtime": {
+          "lib/netstandard2.0/ICSharpCode.Decompiler.dll": {
+            "assemblyVersion": "11.1.0.9782",
+            "fileVersion": "11.1.0.9782"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InspectTool/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.Decompiler/11.1.0.9782": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8aXhTlTHfq+Ng+w415pMapSfhsI768AQrix7q3lDf8BBbmPyNUaJVB+mFg2Sv7oCs72MZkK2Zk8K6DE6tsb1Mg==",
+      "path": "icsharpcode.decompiler/11.1.0.9782",
+      "hashPath": "icsharpcode.decompiler.11.1.0.9782.nupkg.sha512"
+    }
+  }
+}

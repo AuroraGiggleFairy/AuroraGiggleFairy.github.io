@@ -1,3 +1,4 @@
-- Dependencies: Requires 0_TFP_Harmony (built-in game mod).
-  - To check, explore Installed Files and confirm Mods/0_TFP_Harmony exists.
-  - To restore, use Steam Verify: Right click 7 Days to Die -> Properties -> Installed Files -> Verify integrity of game files.
+- Dependencies: 
+  - MOD 1: 0_TFP_Harmony (built-in game mod)
+    - To check, explore Installed Files and confirm Mods/0_TFP_Harmony exists.
+    - To restore, use Steam Verify: Right click 7 Days to Die -> Properties -> Installed Files -> Verify integrity of game files.

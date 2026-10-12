@@ -1,6 +1,6 @@
-# AGF-V3-BOTH-PartyGroupPlus v1.2.1
+# AGF-V3-BOTH-PartyGroupPlus v1.2.2
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - BOTH - PartyGroupPlus
+BETA - AGF - Party Group Plus - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Server & Client Side
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - BOTH - PartyGroupPlus</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - BOTH - PartyGroupPlus</span></h1>
 
 Unlimited party size, admin force-party options, 192 player colors.
 
@@ -66,7 +66,7 @@ Unlimited party size, admin force-party options, 192 player colors.
 <ul>
 <li><span style="color:#DDCDFA"><strong>7d2d Version:</strong></span> 3</li>
 <li><span style="color:#DDCDFA"><strong>Languages Supported:</strong></span> All 13 game-supported languages.</li>
-<li><span style="color:#DDCDFA"><strong>Mod Type:</strong></span> Server/Client-Side (Required)
+<li><span style="color:#DDCDFA"><strong>Mod Type:</strong></span> Server/Client-Side (EAC Off)
 <ul>
 <li>EAC off required.</li>
 <li>Host and all joining players must install it.</li>
@@ -74,10 +74,13 @@ Unlimited party size, admin force-party options, 192 player colors.
 </ul></li>
 <li><span style="color:#DDCDFA"><strong>Safe to install on existing game:</strong></span> Yes (Safe)</li>
 <li><span style="color:#DDCDFA"><strong>Safe to remove from existing game:</strong></span> Unknown</li>
-<li><span style="color:#DDCDFA"><strong>Dependencies:</strong></span> Requires 0_TFP_Harmony (built-in game mod).
+<li><span style="color:#DDCDFA"><strong>Dependencies:</strong></span>
 <ul>
-<li>To check, explore Installed Files and confirm Mods/0_TFP_Harmony</li>
-<li>To restore, use Steam Verify: Right click 7 Days to Die -></li>
+<li><span style="color:#DDCDFA"><strong>MOD 1:</strong></span> 0_TFP_Harmony (built-in game mod)
+<ul>
+<li>To check, explore Installed Files and confirm Mods/0_TFP_Harmony exists.</li>
+<li>To restore, use Steam Verify: Right click 7 Days to Die -> Properties -> Installed Files -> Verify integrity of game files.</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -266,13 +269,13 @@ Same image on **thumbnail** and **gallery** unless `_01` is over 2MB:
 Version:
 
 ```text
-1.2.1
+1.2.2
 ```
 
 Text field (plain text only — do not copy a code fence; that becomes a code block on the site).
 The site joins a single Enter into one line. Keep the blank line between entries:
 
-Mod name overhaul.
+Updated to function on both 7d2d version 3.3 and pre-3.3.
 
 ---
 
@@ -285,7 +288,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - BOTH - PartyGroupPlus
+AGF - V3 - BOTH - PartyGroupPlus
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):
@@ -293,13 +296,13 @@ Description (same as Nexus file description: summary, blank line, Mod Type):
 ```text
 Unlimited party size, admin force-party options, 192 player colors.
 
-Mod Type: Server/Client-Side (Required): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.
+Mod Type: Server/Client-Side (EAC Off): EAC off is required, the host and all joining players must install it, and it also works in singleplayer.
 ```
 
 Version of Mod:
 
 ```text
-1.2.1
+1.2.2
 ```
 
 ---

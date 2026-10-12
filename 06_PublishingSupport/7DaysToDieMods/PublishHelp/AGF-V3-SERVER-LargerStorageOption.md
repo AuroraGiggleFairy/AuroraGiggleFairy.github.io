@@ -1,6 +1,6 @@
-# AGF-V3-SERVER-LargerStorageOption v1.2.1
+# AGF-V3-SERVER-LargerStorageOption v1.2.2
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - SERVER - LargerStorageOption
+AGF - Larger Storage Option - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Server Side Only
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - SERVER - LargerStorageOption</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - SERVER - LargerStorageOption</span></h1>
 
 Adds larger writable storage with 15 shapes, 3x health, break-to-pickup.
 
@@ -266,13 +266,13 @@ Upload these:
 Version:
 
 ```text
-1.2.1
+1.2.2
 ```
 
 Text field (plain text only — do not copy a code fence; that becomes a code block on the site).
 The site joins a single Enter into one line. Keep the blank line between entries:
 
-Mod name overhaul.
+Corrected localization file.
 
 ---
 
@@ -285,7 +285,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - SERVER - LargerStorageOption
+AGF - V3 - SERVER - LargerStorageOption
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):
@@ -299,7 +299,7 @@ Mod Type: Server-Side (EAC-Friendly): Server install works for all joining playe
 Version of Mod:
 
 ```text
-1.2.1
+1.2.2
 ```
 
 ---

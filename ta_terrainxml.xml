@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uvmapping>
+  <uv id="1" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.2862745,0.282353,0.2862745" globaluv="True" index="0" material="stone" texture="stone.tga" />
+  <uv id="2" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.3529412,0.3176471,0.2784314" globaluv="True" index="0" material="dirt" texture="dirt.tga" />
+  <uv id="6" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.5490196,0.5921569,0.6431373" globaluv="True" index="0" material="dirt" texture="snow.tga" />
+  <uv id="8" x="34" y="34" w="239" h="239" blockw="4" blockh="4" color="0.3960784,0.3960784,0.3764706" globaluv="True" index="0" material="stone" texture="concrete.tga" />
+  <uv id="10" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.3411765,0.3490196,0.345098" globaluv="True" index="0" material="stone" texture="asphalt.tga" />
+  <uv id="11" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.4588235,0.4235294,0.3764706" globaluv="True" index="0" material="dirt" texture="gravel.tga" />
+  <uv id="33" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.1921569,0.1921569,0.2117647" globaluv="True" index="0" material="metal" texture="iron_ore.tga" />
+  <uv id="34" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.08627451,0.1019608,0.1137255" globaluv="True" index="0" material="stone" texture="coal.tga" />
+  <uv id="184" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.4352941,0.2745098,0.2078431" globaluv="True" index="0" material="dirt" texture="desert_wall.tga" />
+  <uv id="185" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.5058824,0.3882353,0.2901961" globaluv="True" index="0" material="dirt" texture="sand.tga" />
+  <uv id="195" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.172549,0.1882353,0.09411765" globaluv="True" index="0" material="dirt" texture="forest_ground.tga" />
+  <uv id="288" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.3215686,0.3176471,0.3098039" globaluv="True" index="0" material="dirt" texture="burnt_forest_ground.tga" />
+  <uv id="300" x="34" y="34" w="495" h="495" blockw="4" blockh="4" color="0.6,0.5882353,0.5686275" globaluv="True" index="0" material="stone" texture="potassium_nitrate.tga" />
+  <uv id="316" x="34" y="34" w="495" h="495" blockw="4" blockh="4" color="0.2352941,0.2313726,0.2470588" globaluv="True" index="0" material="metal" texture="lead.tga" />
+  <uv id="403" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.2470588,0.2627451,0.1803922" globaluv="True" index="0" material="stone" texture="terrain_filler.tga" />
+  <uv id="438" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.3372549,0.3176471,0.3058824" globaluv="True" index="0" material="stone" texture="rubble.tga" />
+  <uv id="439" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.3372549,0.3176471,0.3058824" globaluv="True" index="0" material="stone" texture="rubble.tga" />
+  <uv id="440" x="34" y="34" w="495" h="495" blockw="4" blockh="4" color="0.427451,0.3176471,0.3411765" globaluv="True" index="0" material="stone" texture="oil_deposit.tga" />
+  <uv id="569" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.2862745,0.282353,0.2862745" globaluv="True" index="0" material="dirt" texture="stone.tga" />
+  <uv id="570" x="34" y="34" w="247" h="247" blockw="8" blockh="8" color="0.2862745,0.282353,0.2862745" globaluv="True" index="0" material="dirt" texture="stone.tga" />
+</uvmapping>

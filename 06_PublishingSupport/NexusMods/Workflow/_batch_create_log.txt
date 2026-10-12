@@ -1,0 +1,59 @@
+
+
+==== Nexus Batch Create: 2026-10-12 08:40:07 (6 mods) ====
+[1/6] SUCCESS AGF-V3-SERVER-2ShowStabilityOption (50.7s)
+[2/6] SUCCESS AGF-V3-SERVER-3VisualEntityTrackerAddon (47.1s)
+[3/6] FAILED AGF-V3-SERVER-AnimalTrackerAlwaysOn (65.5s)
+--- Output for AGF-V3-SERVER-AnimalTrackerAlwaysOn ---
+
+---
+[4/6] SUCCESS AGF-V3-SERVER-CraftStackEngBattCells (49.9s)
+[5/6] FAILED AGF-V3-SERVER-LootTimerHolds (54.3s)
+--- Output for AGF-V3-SERVER-LootTimerHolds ---
+
+---
+[6/6] FAILED AGF-V3-SERVER-SortingCart (54.8s)
+--- Output for AGF-V3-SERVER-SortingCart ---
+
+---
+
+
+==== Nexus Batch Create: 2026-10-12 12:37:59 (3 mods) ====
+[1/3] FAILED AGF-V3-SERVER-AnimalTrackerAlwaysOn (37.7s)
+--- Output for AGF-V3-SERVER-AnimalTrackerAlwaysOn ---
+============================================================
+AUTOMATED NEW MOD PUBLICATION PIPELINE: AGF-V3-SERVER-AnimalTrackerAlwaysOn
+============================================================
+  Mod Name: AGF - Animal Tracker Always On - V3
+  Version: 1.0.1
+  Category: Gameplay
+  File Display Name: AGF - V3 - SERVER - AnimalTrackerAlwaysOn
+
+[Step 1] Opening Draft Creation modal...
+  Filling Mod Name and Short Description...
+  Selecting Category: Gameplay...
+  Submitting Draft Creation modal...
+ERROR: Failed to detect newly created mod ID.
+
+---
+[2/3] FAILED AGF-V3-SERVER-LootTimerHolds (37.5s)
+--- Output for AGF-V3-SERVER-LootTimerHolds ---
+============================================================
+AUTOMATED NEW MOD PUBLICATION PIPELINE: AGF-V3-SERVER-LootTimerHolds
+============================================================
+  Mod Name: AGF - Loot Timer Holds - V3
+  Version: 1.0.1
+  Category: Gameplay
+  File Display Name: AGF - V3 - SERVER - LootTimerHolds
+
+[Step 1] Opening Draft Creation modal...
+  Filling Mod Name and Short Description...
+  Selecting Category: Gameplay...
+  Submitting Draft Creation modal...
+ERROR: Failed to detect newly created mod ID.
+
+---
+[3/3] FAILED AGF-V3-SERVER-SortingCart (33.1s)
+--- Output for AGF-V3-SERVER-SortingCart ---
+
+---

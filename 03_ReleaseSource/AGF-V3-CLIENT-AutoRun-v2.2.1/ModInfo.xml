@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
   <Name value="AGF-AutoRun" />
-  <DisplayName value="AGF Auto Run" />
+  <DisplayName value="AGF - Auto Run - V3" />
   <Version value="2.2.1" />
   <Description value="Auto-Run for keyboard and controller, configurable in the Options menu." />
   <Author value="AuroraGiggleFairy (AGF)" />

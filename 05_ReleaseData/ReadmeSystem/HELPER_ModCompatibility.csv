@@ -5,6 +5,7 @@ AGF-4Modders-Fix4RemoveItems,TBD,3,SAFE,TBD,None,AGF-4Modders-Fix4RemoveItems.tx
 AGF-4Modders-ItemTypeIconColor,TBD,TBD,TBD,TBD,TBD,AGF-4Modders-ItemTypeIconColor.txt,TBD,TBD,TBD,TBD,x,,AGF-4Modders-ItemTypeIconColor
 AGF-AudioOptionsPlus,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-AudioOptionsPlus.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-AudioOptionsPlus
 AGF-AutoRun,4,3,SAFE,TBD,"May only require client install, ignores server install.",AGF-AutoRun.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-AutoRun
+AGF-BiomePaints,TBD,TBD,TBD,TBD,TBD,AGF-BiomePaints.txt,TBD,TBD,TBD,TBD,TBD,,AGF-V3-BOTH-BiomePaints
 AGF-CombatGlitchMitigations,TBD,TBD,TBD,TBD,TBD,AGF-CombatGlitchMitigations.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-CombatGlitchMitigations,AGF-V3-BOTH-CombatGlitchMitigations
 AGF-COMPAT-DoomSurvival,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-COMPAT-DoomSurvival.txt,Dedicated,Yes,Yes,None,x,,zzzzzAGF-V3-COMPAT-DoomSurvival
 AGF-COMPAT-POIScourgeLite,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-COMPAT-POIScourgeLite.txt,Dedicated,Yes,Yes,None,x,,zzzzzAGF-V3-COMPAT-POIScourgeLite
@@ -23,6 +24,7 @@ AGF-NoEAC-TerrainLeveler,TBD,3,SAFE,DANGEROUS,None,AGF-NoEAC-TerrainLeveler.txt,
 AGF-OpenAllButton,4,3,SAFE,TBD,Requires EAC off; ignores server mod requirements and applies only to the installing player.,AGF-OpenAllButton.txt,No,N/A,N/A,Only,x,,AGF-V3-CLIENT-OpenAllButton
 AGF-PartyGroupPlus,3,3,SAFE,TBD,Host and every joining client must install this DLL.,AGF-PartyGroupPlus.txt,No,No,No,Required,x,,AGF-V3-BOTH-PartyGroupPlus
 AGF-QuartermasterCrafting,TBD,TBD,TBD,TBD,TBD,AGF-QuartermasterCrafting.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-QuartermasterCrafting,AGF-V3-BOTH-QuartermasterCrafting
+AGF-RepairToolsPlus,TBD,TBD,TBD,TBD,TBD,AGF-RepairToolsPlus.txt,TBD,TBD,TBD,TBD,TBD,,AGF-V3-BOTH-RepairToolsPlus
 AGF-ScreamerAlert,2,3,SAFE,TBD,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-ScreamerAlert.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-ScreamerAlert
 AGF-StorageLaptop,TBD,TBD,TBD,TBD,TBD,AGF-StorageLaptop.txt,TBD,TBD,TBD,TBD,TBD,AGF-NoEAC-StorageLaptop,AGF-V3-BOTH-StorageLaptop
 AGF-VP-MedicallyTreatOthers,1,3,SAFE,TBD,TBD,AGF-VP-MedicallyTreatOthers.txt,Yes,Yes,Yes,None,0,,AGF-VP-MedicallyTreatOthers
@@ -31,6 +33,7 @@ AGF-1HUDPlus,1,3,SAFE,SAFE,None,AGF-1HUDPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERV
 AGF-2BMCounter,1,3,SAFE,SAFE,None,AGF-2BMCounter.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2BMCounter
 AGF-2PurpleBook,1,3,SAFE,SAFE,None,AGF-2PurpleBook.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2PurpleBook
 AGF-2RemoveEnteringPopUp,1,3,SAFE,SAFE,None,AGF-2RemoveEnteringPopUp.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2RemoveEnteringPopUp
+AGF-2ShowStabilityOption,1,3,SAFE,SAFE,None,AGF-2ShowStabilityOption.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2ShowStabilityOption
 AGF-2VisualEntityTracker,1,3,SAFE,SAFE,None,AGF-2VisualEntityTracker.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2VisualEntityTracker
 AGF-2Weekday,1,3,SAFE,SAFE,None,AGF-2Weekday.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-2Weekday
 AGF-3VisualEntityTrackerAddon,2,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-3VisualEntityTrackerAddon.txt,Dedicated,Yes,Yes,None,x;AGF-2VisualEntityTracker,,AGF-V3-SERVER-3VisualEntityTrackerAddon
@@ -80,9 +83,11 @@ AGF-MaxLevel500,1,3,SAFE,DANGEROUS,None,AGF-MaxLevel500.txt,Yes,Yes,Yes,None,0,,
 AGF-MiningPlus,1,3,SAFE,DANGEROUS,None,AGF-MiningPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-MiningPlus
 AGF-Mod988,1,3,SAFE,SAFE,None,AGF-Mod988.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-Mod988
 AGF-ModSlotsPlus,1,3,SAFE,DANGEROUS,None,AGF-ModSlotsPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-ModSlotsPlus
+AGF-NoScrollBackpack,1,3,SAFE,SAFE,None,AGF-NoScrollBackpack.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-NoScrollBackpack
 AGF-PaintbrushPlus,1,3,SAFE,SAFE,None,AGF-PaintbrushPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-PaintbrushPlus
 AGF-PickupLanternsPlus,1,3,SAFE,DANGEROUS,None,AGF-PickupLanternsPlus.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-PickupLanternsPlus
 AGF-PlayerResetQuests,1,3,SAFE,SAFE,None,AGF-PlayerResetQuests.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-PlayerResetQuests
+AGF-POISwitchesUnlockDoors,2,3,SAFE,SAFE,Singleplayer and player-hosted need EAC off. Dedicated can keep EAC on.,AGF-POISwitchesUnlockDoors.txt,Dedicated,Yes,Yes,None,x,,AGF-V3-SERVER-POISwitchesUnlockDoors
 AGF-RebundleBundles,1,3,SAFE,DANGEROUS,None,AGF-RebundleBundles.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-RebundleBundles
 AGF-RecipeRottingFlesh,1,3,SAFE,SAFE,None,AGF-RecipeRottingFlesh.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-RecipeRottingFlesh
 AGF-RestorePowerAnyTime,1,3,SAFE,SAFE,None,AGF-RestorePowerAnyTime.txt,Yes,Yes,Yes,None,0,,AGF-V3-SERVER-RestorePowerAnyTime

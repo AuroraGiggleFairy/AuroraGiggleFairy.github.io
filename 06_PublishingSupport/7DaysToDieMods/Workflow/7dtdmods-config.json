@@ -18,265 +18,504 @@
       "last_release_tag": "4.1.1"
     },
     "AGF-4Modders-Fix4DestroyBiomeBadge": {
-      "github_repo": "AGF-4Modders-Fix4DestroyBiomeBadge"
+      "github_repo": "AGF-4Modders-Fix4DestroyBiomeBadge",
+      "site_title": "AGF - Fix 4 Destroy Biome Badge - V3"
     },
     "AGF-4Modders-Fix4PerkPageReset": {
-      "github_repo": "AGF-4Modders-Fix4PerkPageReset"
+      "github_repo": "AGF-4Modders-Fix4PerkPageReset",
+      "site_title": "AGF - Fix 4 Perk Page Reset - V3"
     },
     "AGF-BackpackPlus-060Slots": {
       "github_repo": "AGF-BackpackPlus-060Slots",
-      "site_mod_id": "01KXT81FQ9E1W22PDZQKR40N2A"
+      "site_mod_id": "01KXT81FQ9E1W22PDZQKR40N2A",
+      "last_release_tag": "4.1.1",
+      "site_title": "AGF - V3 - BackpackPlus - 060Slots",
+      "site_slug": "agf-v3-backpackplus-060slots"
     },
     "AGF-BackpackPlus-084Slots": {
-      "github_repo": "AGF-BackpackPlus-084Slots"
+      "github_repo": "AGF-BackpackPlus-084Slots",
+      "site_mod_id": "01M1V1VPH2TMXE3CHWPPZ6HE1T",
+      "site_title": "AGF - V3 - BackpackPlus - 084Slots",
+      "site_slug": "agf-v3-backpackplus-084slots",
+      "last_release_tag": "4.1.1"
     },
     "AGF-BackpackPlus-119Slots": {
-      "github_repo": "AGF-BackpackPlus-119Slots"
+      "github_repo": "AGF-BackpackPlus-119Slots",
+      "site_mod_id": "01M1V2ZVQBJ0BZY1B0QV61BNRD",
+      "site_title": "AGF - V3 - BackpackPlus - 119Slots",
+      "site_slug": "agf-v3-backpackplus-119slots",
+      "last_release_tag": "2.1.1"
     },
     "AGF-HUDPlus-1Main": {
-      "github_repo": "AGF-HUDPlus-1Main"
+      "github_repo": "AGF-HUDPlus-1Main",
+      "site_mod_id": "01KVCBB28PT432RC137KDQP57V",
+      "site_title": "AGF - V3 - HUDPlus - 1Main",
+      "site_slug": "agf-v3-hudplus-1main",
+      "last_release_tag": "6.6.2",
+      "last_published_title": "AGF - HUD Plus - V3"
     },
     "AGF-HUDPlus-BMCounter": {
-      "github_repo": "AGF-HUDPlus-BMCounter"
+      "github_repo": "AGF-HUDPlus-BMCounter",
+      "site_mod_id": "01M1V3K07GPP5SMPHMDE7DF2W1",
+      "site_title": "AGF - V3 - HUDPlus - BMCounter",
+      "site_slug": "agf-v3-hudplus-bmcounter",
+      "last_release_tag": "4.0.3",
+      "last_published_title": "AGF - BM Counter - V3"
     },
     "AGF-HUDPlus-PurpleBook": {
-      "github_repo": "AGF-HUDPlus-PurpleBook"
+      "github_repo": "AGF-HUDPlus-PurpleBook",
+      "site_mod_id": "01M1V3RDB2DQ8N0200GDYVCR9G",
+      "site_title": "AGF - V3 - HUDPlus - PurpleBook",
+      "site_slug": "agf-v3-hudplus-purplebook",
+      "last_release_tag": "3.3.0",
+      "last_published_title": "AGF - Purple Book - V3"
     },
     "AGF-HUDPlus-RemoveEnteringPopUp": {
-      "github_repo": "AGF-HUDPlus-RemoveEnteringPopUp"
+      "github_repo": "AGF-HUDPlus-RemoveEnteringPopUp",
+      "site_mod_id": "01M1V3Z2NSN21GQZ56XMB1GF0Y",
+      "site_title": "AGF - V3 - HUDPlus - RemoveEnteringPopUp",
+      "site_slug": "agf-v3-hudplus-removeenteringpopup",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Remove Entering Pop Up - V3"
     },
     "AGF-HUDPlus-VisualEntityTracker": {
-      "github_repo": "AGF-HUDPlus-VisualEntityTracker"
+      "github_repo": "AGF-HUDPlus-VisualEntityTracker",
+      "site_mod_id": "01M1V42X1FGFZ5D8VFYD980ME3",
+      "site_title": "AGF - V3 - HUDPlus - VisualEntityTracker",
+      "site_slug": "agf-v3-hudplus-visualentitytracker",
+      "last_release_tag": "1.1.2",
+      "last_published_title": "AGF - Visual Entity Tracker - V3"
     },
     "AGF-HUDPlus-Weekday": {
-      "github_repo": "AGF-HUDPlus-Weekday"
+      "github_repo": "AGF-HUDPlus-Weekday",
+      "site_mod_id": "01M1V4SH3Q3KME1YVWM5XN6WCH",
+      "site_title": "AGF - V3 - HUDPlus - Weekday",
+      "site_slug": "agf-v3-hudplus-weekday",
+      "last_release_tag": "3.1.4",
+      "last_published_title": "AGF - Weekday - V3"
     },
     "AGF-NoEAC-AudioOptionsPlus": {
-      "github_repo": "AGF-NoEAC-AudioOptionsPlus"
+      "github_repo": "AGF-NoEAC-AudioOptionsPlus",
+      "site_mod_id": "01M1V50PEVX7CWTZBMPJZ00185",
+      "site_title": "AGF - Audio Options Plus - V3",
+      "site_slug": "agf-v3-noeac-audiooptionsplus",
+      "last_release_tag": "2.1.1",
+      "last_published_title": "AGF - Audio Options Plus - V3"
     },
     "AGF-NoEAC-AutoRun": {
-      "github_repo": "AGF-NoEAC-AutoRun"
+      "github_repo": "AGF-NoEAC-AutoRun",
+      "site_mod_id": "01M1V56766XETVC2PFB81WHDDE",
+      "site_title": "AGF - Auto Run - V3",
+      "site_slug": "agf-v3-noeac-autorun",
+      "last_release_tag": "2.2.1",
+      "last_published_title": "AGF - Auto Run - V3"
     },
     "AGF-NoEAC-CosmeticLockIcon": {
-      "github_repo": "AGF-NoEAC-CosmeticLockIcon"
+      "github_repo": "AGF-NoEAC-CosmeticLockIcon",
+      "site_mod_id": "01M1V5AGMZ6E69M1R0FQ6DQQRZ",
+      "site_title": "AGF - Cosmetic Lock Icon - V3",
+      "site_slug": "agf-v3-noeac-cosmeticlockicon",
+      "last_release_tag": "3.1.3",
+      "last_published_title": "AGF - Cosmetic Lock Icon - V3"
     },
     "AGF-NoEAC-EnhancedAGF": {
-      "github_repo": "AGF-NoEAC-EnhancedAGF"
+      "github_repo": "AGF-NoEAC-EnhancedAGF",
+      "site_mod_id": "01M1V5EBA8Y7Z06TYRKMN9WBPW",
+      "site_title": "AGF - Enhanced - V3",
+      "site_slug": "agf-v3-noeac-enhancedagf",
+      "last_release_tag": "5.0.1",
+      "last_published_title": "AGF - Enhanced - V3"
     },
     "AGF-NoEAC-GyroFlightModes": {
-      "github_repo": "AGF-NoEAC-GyroFlightModes"
+      "github_repo": "AGF-NoEAC-GyroFlightModes",
+      "site_mod_id": "01M250BRD0S4SKPSDXKPEJ5DPF",
+      "site_title": "AGF - Gyro Flight Modes - V3",
+      "site_slug": "agf-v3-noeac-gyroflightmodes",
+      "last_release_tag": "1.0.2",
+      "last_published_title": "AGF - Gyro Flight Modes - V3"
     },
     "AGF-NoEAC-HideDLCCosmetics": {
-      "github_repo": "AGF-NoEAC-HideDLCCosmetics"
+      "github_repo": "AGF-NoEAC-HideDLCCosmetics",
+      "site_mod_id": "01M252H62KQWJC20FMKNFT6RNA",
+      "site_title": "AGF - Hide DLC Cosmetics - V3",
+      "site_slug": "agf-v3-noeac-hidedlccosmetics",
+      "last_release_tag": "1.1.1",
+      "last_published_title": "AGF - Hide DLC Cosmetics - V3"
     },
     "AGF-NoEAC-MapPlus": {
-      "github_repo": "AGF-NoEAC-MapPlus"
+      "github_repo": "AGF-NoEAC-MapPlus",
+      "site_mod_id": "01M253B35MS33WB2ZXDT4GGXH9",
+      "site_title": "AGF - Map Plus - V3",
+      "site_slug": "agf-v3-noeac-mapplus",
+      "last_release_tag": "1.1.3",
+      "last_published_title": "AGF - Map Plus - V3"
     },
     "AGF-NoEAC-OpenAllButton": {
-      "github_repo": "AGF-NoEAC-OpenAllButton"
+      "github_repo": "AGF-NoEAC-OpenAllButton",
+      "site_mod_id": "01M255F77QRNNK7KP44TDETMSA",
+      "site_title": "AGF - Open All Button - V3",
+      "site_slug": "agf-v3-noeac-openallbutton",
+      "last_release_tag": "2.0.2",
+      "last_published_title": "AGF - Open All Button - V3"
     },
     "AGF-NoEAC-PartyGroupPlus": {
-      "github_repo": "AGF-NoEAC-PartyGroupPlus"
+      "github_repo": "AGF-NoEAC-PartyGroupPlus",
+      "site_title": "BETA - AGF - Party Group Plus - V3"
     },
     "AGF-NoEAC-SmeltTimerOption": {
-      "github_repo": "AGF-NoEAC-SmeltTimerOption"
+      "github_repo": "AGF-NoEAC-SmeltTimerOption",
+      "site_mod_id": "01M256RQJZTK7HK0DTFE2WGFS2",
+      "site_title": "AGF - Smelt Timer Option - V3",
+      "site_slug": "agf-v3-noeac-smelttimeroption",
+      "last_release_tag": "1.1.1",
+      "last_published_title": "AGF - Smelt Timer Option - V3"
     },
     "AGF-NoEAC-Toolbelt12Slots": {
-      "github_repo": "AGF-NoEAC-Toolbelt12Slots"
+      "github_repo": "AGF-NoEAC-Toolbelt12Slots",
+      "site_mod_id": "01M257F6KFRAQMJAD3FQYV64FR",
+      "site_title": "AGF - Toolbelt 12 Slots - V3",
+      "site_slug": "agf-v3-noeac-toolbelt12slots",
+      "last_release_tag": "2.3.1",
+      "last_published_title": "AGF - Toolbelt 12 Slots - V3"
     },
     "AGF-Requested-AnimalTrackerAlwaysOn": {
-      "github_repo": "AGF-Requested-AnimalTrackerAlwaysOn"
+      "github_repo": "AGF-Requested-AnimalTrackerAlwaysOn",
+      "site_title": "AGF - Animal Tracker Always On - V3"
     },
     "AGF-Requested-SmallerInteractionPrompt": {
-      "github_repo": "AGF-Requested-SmallerInteractionPrompt"
+      "github_repo": "AGF-Requested-SmallerInteractionPrompt",
+      "site_title": "AGF - Smaller Interaction Prompt - V3"
     },
     "AGF-Requested-TinyBuffsPopUp": {
-      "github_repo": "AGF-Requested-TinyBuffsPopUp"
+      "github_repo": "AGF-Requested-TinyBuffsPopUp",
+      "site_title": "AGF - Tiny Buffs Pop Up - V3"
     },
     "AGF-VP-AdminModdingSupport": {
-      "github_repo": "AGF-VP-AdminModdingSupport"
+      "github_repo": "AGF-VP-AdminModdingSupport",
+      "site_mod_id": "01M25AM9K3ASSPXWV3G9Y8YKJA",
+      "site_title": "AGF - Admin Modding Support - V3",
+      "site_slug": "agf-v3-vp-adminmoddingsupport",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Admin Modding Support - V3"
     },
     "AGF-VP-AlternativeRecipes": {
-      "github_repo": "AGF-VP-AlternativeRecipes"
+      "github_repo": "AGF-VP-AlternativeRecipes",
+      "site_mod_id": "01M25B24SF75XVACG2ABEY9GE7",
+      "site_title": "AGF - Alternative Recipes - V3",
+      "site_slug": "agf-v3-vp-alternativerecipes",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Alternative Recipes - V3"
     },
     "AGF-VP-AmmoDisassembly": {
-      "github_repo": "AGF-VP-AmmoDisassembly"
+      "github_repo": "AGF-VP-AmmoDisassembly",
+      "site_mod_id": "01M25BQMM3RVTPSCDJQWXEQTJS",
+      "site_title": "AGF - Ammo Disassembly - V3",
+      "site_slug": "agf-v3-vp-ammodisassembly",
+      "last_release_tag": "2.0.2",
+      "last_published_title": "AGF - Ammo Disassembly - V3"
     },
     "AGF-VP-ArcheryFeathersChange": {
-      "github_repo": "AGF-VP-ArcheryFeathersChange"
+      "github_repo": "AGF-VP-ArcheryFeathersChange",
+      "site_mod_id": "01M25CD1ADC3X0P14QCXPDP6R4",
+      "site_title": "AGF - Archery Feathers Change - V3",
+      "site_slug": "agf-v3-vp-archeryfeatherschange",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Archery Feathers Change - V3"
     },
     "AGF-VP-AutomobilesRespawn": {
-      "github_repo": "AGF-VP-AutomobilesRespawn"
+      "github_repo": "AGF-VP-AutomobilesRespawn",
+      "site_mod_id": "01M25D1DJKXRDRFNPBQAZR31AJ",
+      "site_title": "AGF - Automobiles Respawn - V3",
+      "site_slug": "agf-v3-vp-automobilesrespawn",
+      "last_release_tag": "4.1.2",
+      "last_published_title": "AGF - Automobiles Respawn - V3"
     },
     "AGF-VP-BedrollPlus": {
-      "github_repo": "AGF-VP-BedrollPlus"
+      "github_repo": "AGF-VP-BedrollPlus",
+      "site_mod_id": "01M25E3R63Y72MD212PSP2G3TC",
+      "site_title": "AGF - Bedroll Plus - V3",
+      "site_slug": "agf-v3-vp-bedrollplus-1f756a",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Bedroll Plus - V3"
     },
     "AGF-VP-BetterEggChance": {
       "github_repo": "AGF-VP-BetterEggChance",
-      "site_mod_id": "01M25FK31GQS6SBM2C6CQCMZKH"
+      "site_mod_id": "01M25FK31GQS6SBM2C6CQCMZKH",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Better Egg Chance - V3",
+      "site_slug": "agf-v3-vp-bettereggchance",
+      "last_published_title": "AGF - Better Egg Chance - V3"
     },
     "AGF-VP-BreakItGetIt": {
       "github_repo": "AGF-VP-BreakItGetIt",
-      "site_mod_id": "01M25GBDT5FNS800M0QAR7W4CR"
+      "site_mod_id": "01M25GBDT5FNS800M0QAR7W4CR",
+      "last_release_tag": "2.2.1",
+      "site_title": "AGF - Break It Get It - V3",
+      "site_slug": "agf-v3-vp-breakitgetit",
+      "last_published_title": "AGF - Break It Get It - V3"
     },
     "AGF-VP-CraftSewingKits": {
       "github_repo": "AGF-VP-CraftSewingKits",
-      "site_mod_id": "01M25GP21DCBMRE2DTRX0C3FZ9"
+      "site_mod_id": "01M25GP21DCBMRE2DTRX0C3FZ9",
+      "last_release_tag": "2.1.2",
+      "site_title": "AGF - Craft Sewing Kits - V3",
+      "site_slug": "agf-v3-vp-craftsewingkits",
+      "last_published_title": "AGF - Craft Sewing Kits - V3"
     },
     "AGF-VP-CraftStackEngBattCells": {
       "github_repo": "AGF-VP-CraftStackEngBattCells",
       "site_mod_id": "01M26K3JZAGNQ6NHZK67G36S8D",
-      "site_slug": "agf-v3-vp-craftstackengbattcells-ab18df"
+      "site_slug": "agf-v3-vp-craftstackengbattcells-ab18df",
+      "last_release_tag": "4.0.2",
+      "site_title": "AGF - Craft Stack Eng Batt Cells - V3",
+      "last_published_title": "AGF - Craft Stack Eng Batt Cells - V3"
     },
     "AGF-VP-CraftVitamins": {
       "github_repo": "AGF-VP-CraftVitamins",
-      "site_mod_id": "01M268F1E7KGYQW1N3C6B6GF4F"
+      "site_mod_id": "01M268F1E7KGYQW1N3C6B6GF4F",
+      "last_release_tag": "2.1.4",
+      "site_title": "AGF - Craft Vitamins - V3",
+      "site_slug": "agf-v3-vp-craftvitamins",
+      "last_published_title": "AGF - Craft Vitamins - V3"
     },
     "AGF-VP-DoorsPlus": {
       "github_repo": "AGF-VP-DoorsPlus",
-      "site_mod_id": "01M268NQ8SYM4K38TEMT0YSYA0"
+      "site_mod_id": "01M268NQ8SYM4K38TEMT0YSYA0",
+      "last_release_tag": "4.0.2",
+      "site_title": "AGF - Doors Plus - V3",
+      "site_slug": "agf-v3-vp-doorsplus",
+      "last_published_title": "AGF - Doors Plus - V3"
     },
     "AGF-VP-DrinkableAcid": {
       "github_repo": "AGF-VP-DrinkableAcid",
-      "site_mod_id": "01M2690PXMMBF3EEKC59QH1M27"
+      "site_mod_id": "01M2690PXMMBF3EEKC59QH1M27",
+      "last_release_tag": "3.0.2",
+      "site_title": "AGF - Drinkable Acid - V3",
+      "site_slug": "agf-v3-vp-drinkableacid",
+      "last_published_title": "AGF - Drinkable Acid - V3"
     },
     "AGF-VP-DyesPlus": {
       "github_repo": "AGF-VP-DyesPlus",
-      "site_mod_id": "01M26983N911BECWHCYG1BZ3DK"
+      "site_mod_id": "01M26983N911BECWHCYG1BZ3DK",
+      "last_release_tag": "4.1.1",
+      "site_title": "AGF - Dyes Plus - V3",
+      "site_slug": "agf-v3-vp-dyesplus",
+      "last_published_title": "AGF - Dyes Plus - V3"
     },
     "AGF-VP-FloraHarvester": {
       "github_repo": "AGF-VP-FloraHarvester",
-      "site_mod_id": "01M269H18VKFFKBAX0Q4Q0C8WW"
+      "site_mod_id": "01M269H18VKFFKBAX0Q4Q0C8WW",
+      "last_release_tag": "3.0.4",
+      "site_title": "AGF - Flora Harvester - V3",
+      "site_slug": "agf-v3-vp-floraharvester",
+      "last_published_title": "AGF - Flora Harvester - V3"
     },
     "AGF-VP-FuelBurnPlus": {
       "github_repo": "AGF-VP-FuelBurnPlus",
-      "site_mod_id": "01M269RKQZF88G33DSZ2MQWTPB"
+      "site_mod_id": "01M269RKQZF88G33DSZ2MQWTPB",
+      "last_release_tag": "3.1.3",
+      "site_title": "AGF - Fuel Burn Plus - V3",
+      "site_slug": "agf-fuel-burn-plus-v3",
+      "last_published_title": "AGF - Fuel Burn Plus - V3"
     },
     "AGF-VP-HelpfulRenames": {
-      "github_repo": "AGF-VP-HelpfulRenames"
+      "github_repo": "AGF-VP-HelpfulRenames",
+      "site_title": "AGF - Helpful Renames - V3"
     },
     "AGF-VP-LargerStorageOption": {
       "github_repo": "AGF-VP-LargerStorageOption",
       "site_mod_id": "01M26M9K6HXY9XR7BEV9X07NJ1",
-      "site_slug": "agf-v3-vp-largerstorageoption"
+      "site_slug": "agf-v3-vp-largerstorageoption",
+      "last_release_tag": "1.2.1",
+      "site_title": "AGF - Larger Storage Option - V3",
+      "last_published_title": "AGF - Larger Storage Option - V3"
     },
     "AGF-VP-MasterTool": {
       "github_repo": "AGF-VP-MasterTool",
       "site_mod_id": "01M26MFRBADJJVBFFYQ81J9GSW",
-      "site_slug": "agf-v3-vp-mastertool"
+      "site_slug": "agf-v3-vp-mastertool",
+      "last_release_tag": "7.1.4",
+      "site_title": "AGF - Master Tool - V3",
+      "last_published_title": "AGF - Master Tool - V3"
     },
     "AGF-VP-MaxLevel500": {
       "github_repo": "AGF-VP-MaxLevel500",
       "site_mod_id": "01M26MQMRM07T0VJZZ4A5B2PHH",
-      "site_slug": "agf-v3-vp-maxlevel500"
+      "site_slug": "agf-v3-vp-maxlevel500",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Max Level 500 - V3",
+      "last_published_title": "AGF - Max Level 500 - V3"
     },
     "AGF-VP-MiningPlus": {
       "github_repo": "AGF-VP-MiningPlus",
       "site_mod_id": "01M26Q902HSMMC4REMQ721QYYG",
-      "site_slug": "agf-v3-vp-miningplus"
+      "site_slug": "agf-v3-vp-miningplus",
+      "last_release_tag": "2.0.2",
+      "site_title": "AGF - Mining Plus - V3",
+      "last_published_title": "AGF - Mining Plus - V3"
     },
     "AGF-VP-Mod988": {
       "github_repo": "AGF-VP-Mod988",
       "site_mod_id": "01M26Q9Z4N0G9PY4ZBRDGSANGY",
-      "site_slug": "agf-v3-vp-mod988"
+      "site_slug": "agf-v3-vp-mod988",
+      "last_release_tag": "3.0.1",
+      "site_title": "AGF - Mod 988 - V3",
+      "last_published_title": "AGF - Mod 988 - V3"
     },
     "AGF-VP-ModSlotsPlus": {
       "github_repo": "AGF-VP-ModSlotsPlus",
       "site_mod_id": "01M26QAGTE08ZGP16TJ90S3D2Y",
-      "site_slug": "agf-v3-vp-modslotsplus"
+      "site_slug": "agf-v3-vp-modslotsplus",
+      "last_release_tag": "4.1.3",
+      "site_title": "AGF - Mod Slots Plus - V3",
+      "last_published_title": "AGF - Mod Slots Plus - V3"
     },
     "AGF-VP-PaintbrushPlus": {
-      "github_repo": "AGF-VP-PaintbrushPlus"
+      "github_repo": "AGF-VP-PaintbrushPlus",
+      "site_title": "AGF - Paintbrush Plus - V3"
     },
     "AGF-VP-PickupLanternsPlus": {
       "github_repo": "AGF-VP-PickupLanternsPlus",
       "site_mod_id": "01M26QB1VKWM1PN3RZPDHXWQ11",
-      "site_slug": "agf-v3-vp-pickuplanternsplus"
+      "site_slug": "agf-v3-vp-pickuplanternsplus",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Pickup Lanterns Plus - V3",
+      "last_published_title": "AGF - Pickup Lanterns Plus - V3"
     },
     "AGF-VP-PlayerResetQuests": {
       "github_repo": "AGF-VP-PlayerResetQuests",
       "site_mod_id": "01M26QBMQ61HV5P0TA0ZEMSCZV",
-      "site_slug": "agf-v3-vp-playerresetquests"
+      "site_slug": "agf-v3-vp-playerresetquests",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Player Reset Quests - V3",
+      "last_published_title": "AGF - Player Reset Quests - V3"
     },
     "AGF-VP-RebundleBundles": {
       "github_repo": "AGF-VP-RebundleBundles",
       "site_mod_id": "01M26QC6YMQQHHAFGH8X1R7BPH",
-      "site_slug": "agf-v3-vp-rebundlebundles"
+      "site_slug": "agf-v3-vp-rebundlebundles",
+      "last_release_tag": "2.1.3",
+      "site_title": "AGF - Rebundle Bundles - V3",
+      "last_published_title": "AGF - Rebundle Bundles - V3"
     },
     "AGF-VP-RecipeRottingFlesh": {
       "github_repo": "AGF-VP-RecipeRottingFlesh",
       "site_mod_id": "01M26QCSFRFYAEPM5N0904Y2HS",
-      "site_slug": "agf-v3-vp-reciperottingflesh"
+      "site_slug": "agf-v3-vp-reciperottingflesh",
+      "last_release_tag": "2.0.1",
+      "site_title": "AGF - Recipe Rotting Flesh - V3",
+      "last_published_title": "AGF - Recipe Rotting Flesh - V3"
     },
     "AGF-VP-RestorePowerAnyTime": {
       "github_repo": "AGF-VP-RestorePowerAnyTime",
       "site_mod_id": "01M26QDCRDHAFMQHC5VBJMS77M",
-      "site_slug": "agf-v3-vp-restorepoweranytime"
+      "site_slug": "agf-v3-vp-restorepoweranytime",
+      "last_release_tag": "2.1.2",
+      "site_title": "AGF - Restore Power Any Time - V3",
+      "last_published_title": "AGF - Restore Power Any Time - V3"
     },
     "AGF-VP-ScrapBatts4Acid": {
       "github_repo": "AGF-VP-ScrapBatts4Acid",
       "site_mod_id": "01M26QE0QJYD5K7Q5G38HSQHFB",
-      "site_slug": "agf-v3-vp-scrapbatts4acid"
+      "site_slug": "agf-v3-vp-scrapbatts4acid",
+      "last_release_tag": "2.1.2",
+      "site_title": "AGF - Scrap Batts 4 Acid - V3",
+      "last_published_title": "AGF - Scrap Batts 4 Acid - V3"
     },
     "AGF-VP-ScrapEquipmentFaster": {
       "github_repo": "AGF-VP-ScrapEquipmentFaster",
       "site_mod_id": "01M26QEK3X265AW4R78XMAE1BT",
-      "site_slug": "agf-v3-vp-scrapequipmentfaster"
+      "site_slug": "agf-v3-vp-scrapequipmentfaster",
+      "last_release_tag": "2.1.2",
+      "site_title": "AGF - Scrap Equipment Faster - V3",
+      "last_published_title": "AGF - Scrap Equipment Faster - V3"
     },
     "AGF-VP-SimplifiedStacks": {
       "github_repo": "AGF-VP-SimplifiedStacks",
       "site_mod_id": "01M26QF5H603G7GRSAVVR0W9Y0",
-      "site_slug": "agf-v3-vp-simplifiedstacks"
+      "site_slug": "agf-v3-vp-simplifiedstacks",
+      "last_release_tag": "2.1.3",
+      "site_title": "AGF - Simplified Stacks - V3",
+      "last_published_title": "AGF - Simplified Stacks - V3"
     },
     "AGF-VP-SmeltingPlus": {
       "github_repo": "AGF-VP-SmeltingPlus",
       "site_mod_id": "01M26QFPXC81P6YSVEWE94N47N",
-      "site_slug": "agf-v3-vp-smeltingplus"
+      "site_slug": "agf-v3-vp-smeltingplus",
+      "last_release_tag": "3.0.2",
+      "site_title": "AGF - Smelting Plus - V3",
+      "last_published_title": "AGF - Smelting Plus - V3"
     },
     "AGF-VP-StayLongerAnimalCorpse": {
       "github_repo": "AGF-VP-StayLongerAnimalCorpse",
       "site_mod_id": "01M26QG9JBDRB177GYT8RRMK4K",
-      "site_slug": "agf-v3-vp-staylongeranimalcorpse"
+      "site_slug": "agf-v3-vp-staylongeranimalcorpse",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Stay Longer Animal Corpse - V3",
+      "last_published_title": "AGF - Stay Longer Animal Corpse - V3"
     },
     "AGF-VP-StayLongerPlayerBackpack": {
       "github_repo": "AGF-VP-StayLongerPlayerBackpack",
       "site_mod_id": "01M26QGXEBBVN3N5TCP18WXD29",
-      "site_slug": "agf-v3-vp-staylongerplayerbackpack"
+      "site_slug": "agf-v3-vp-staylongerplayerbackpack",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Stay Longer Player Backpack - V3",
+      "last_published_title": "AGF - Stay Longer Player Backpack - V3"
     },
     "AGF-VP-TacticalRiflePlus": {
       "github_repo": "AGF-VP-TacticalRiflePlus",
       "site_mod_id": "01M26QHGN30889M8AYXM7PYCJW",
-      "site_slug": "agf-v3-vp-tacticalrifleplus"
+      "site_slug": "agf-v3-vp-tacticalrifleplus",
+      "last_release_tag": "3.0.1",
+      "site_title": "AGF - Tactical Rifle Plus - V3",
+      "last_published_title": "AGF - Tactical Rifle Plus - V3"
     },
     "AGF-VP-VehiclePerformance": {
-      "github_repo": "AGF-VP-VehiclePerformance"
+      "github_repo": "AGF-VP-VehiclePerformance",
+      "site_title": "AGF - Vehicle Performance - V3"
     },
     "AGF-VP-VehicleStoragePlus": {
       "github_repo": "AGF-VP-VehicleStoragePlus",
       "site_mod_id": "01M26QJQ0V6TA0RQR3SA4NYAHA",
-      "site_slug": "agf-v3-vp-vehiclestorageplus"
+      "site_slug": "agf-v3-vp-vehiclestorageplus",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Vehicle Storage Plus - V3",
+      "last_published_title": "AGF - Vehicle Storage Plus - V3"
     },
     "AGF-VP-VehiclesExtraSeating": {
       "github_repo": "AGF-VP-VehiclesExtraSeating",
       "site_mod_id": "01M26QJ2Q6V9M93720WZAS0TM1",
-      "site_slug": "agf-v3-vp-vehiclesextraseating"
+      "site_slug": "agf-v3-vp-vehiclesextraseating",
+      "last_release_tag": "2.1.2",
+      "site_title": "AGF - Vehicles Extra Seating - V3",
+      "last_published_title": "AGF - Vehicles Extra Seating - V3"
     },
     "AGF-VP-ZombieCorpseLeaveQuicker": {
       "github_repo": "AGF-VP-ZombieCorpseLeaveQuicker",
       "site_mod_id": "01M26QKB1Q3BSH4GJ3JK9DV24D",
-      "site_slug": "agf-v3-vp-zombiecorpseleavequicker"
+      "site_slug": "agf-v3-vp-zombiecorpseleavequicker",
+      "last_release_tag": "3.1.2",
+      "site_title": "AGF - Zombie Corpse Leave Quicker - V3",
+      "last_published_title": "AGF - Zombie Corpse Leave Quicker - V3"
     },
     "AGF-VP-zHelpfulRenames": {
       "github_repo": "AGF-VP-zHelpfulRenames"
     },
     "AGF-VPS-HonkOpensYourDoors": {
-      "github_repo": "AGF-VPS-HonkOpensYourDoors"
+      "github_repo": "AGF-VPS-HonkOpensYourDoors",
+      "site_mod_id": "01M259D9964K4B0EKSS66H0M2G",
+      "site_title": "AGF - Honk Opens Your Doors - V3",
+      "site_slug": "agf-v3-vps-honkopensyourdoors",
+      "last_release_tag": "1.0.2",
+      "last_published_title": "AGF - Honk Opens Your Doors - V3"
     },
     "AGF-VPS-SortingCart": {
-      "github_repo": "AGF-VPS-SortingCart"
+      "github_repo": "AGF-VPS-SortingCart",
+      "site_title": "AGF - Sorting Cart - V3"
     },
     "zzzAGF-Requested-LootStaysOnEmpty": {
-      "github_repo": "zzzAGF-Requested-LootStaysOnEmpty"
+      "github_repo": "zzzAGF-Requested-LootStaysOnEmpty",
+      "site_title": "AGF - Loot Stays On Empty - V3"
     },
     "zzzAGF-Special-Compatibilities": {
       "github_repo": "zzzAGF-Special-Compatibilities"
@@ -288,19 +527,594 @@
       "github_repo": "zzzAGF-Special-NoEACCompatibilities"
     },
     "AGF-VPS-FuelAutoShutOff": {
-      "github_repo": "AGF-VPS-FuelAutoShutOff"
+      "github_repo": "AGF-VPS-FuelAutoShutOff",
+      "site_mod_id": "01M1V5JM0DRR23S3C0RRB6VR5P",
+      "site_title": "AGF - Fuel Auto Shut Off - V3",
+      "site_slug": "agf-v3-vps-fuelautoshutoff",
+      "last_release_tag": "1.1.1",
+      "last_published_title": "AGF - Fuel Auto Shut Off - V3"
     },
     "AGF-VPS-GlobalStormTracker": {
-      "github_repo": "AGF-VPS-GlobalStormTracker"
+      "github_repo": "AGF-VPS-GlobalStormTracker",
+      "site_mod_id": "01M258P7SD6C822ZZRX25BJKK3",
+      "site_title": "AGF - Global Storm Tracker - V3",
+      "site_slug": "agf-v3-vps-globalstormtracker",
+      "last_release_tag": "2.1.3",
+      "last_published_title": "AGF - Global Storm Tracker - V3"
     },
     "AGF-VPS-ScreamerAlert": {
-      "github_repo": "AGF-VPS-ScreamerAlert"
+      "github_repo": "AGF-VPS-ScreamerAlert",
+      "site_mod_id": "01M259YHN6NCANA87S78ZT012H",
+      "site_title": "AGF - Screamer Alert - V3",
+      "site_slug": "agf-v3-vps-screameralert",
+      "last_release_tag": "2.3.5",
+      "last_published_title": "AGF - Screamer Alert - V3"
     },
     "AGF-VPS-VisualEntityTrackerAddon": {
-      "github_repo": "AGF-VPS-VisualEntityTrackerAddon"
+      "github_repo": "AGF-VPS-VisualEntityTrackerAddon",
+      "site_title": "AGF - Visual Entity Tracker Addon - V3"
     },
     "AGF-VPS-LootTimerHolds": {
-      "github_repo": "AGF-VPS-LootTimerHolds"
+      "github_repo": "AGF-VPS-LootTimerHolds",
+      "site_title": "AGF - Loot Timer Holds - V3"
+    },
+    "AGF-V3-ADMIN-Fix4DestroyBiomeBadge": {
+      "github_repo": "AGF-V3-ADMIN-Fix4DestroyBiomeBadge",
+      "site_title": "AGF - Fix 4 Destroy Biome Badge - V3"
+    },
+    "AGF-V3-ADMIN-Fix4PerkPageReset": {
+      "github_repo": "AGF-V3-ADMIN-Fix4PerkPageReset",
+      "site_title": "AGF - Fix 4 Perk Page Reset - V3",
+      "site_mod_id": "01M4RBY25T3EN0R32SHZTBQ44D",
+      "site_slug": "agf-fix-4-perk-page-reset-v3"
+    },
+    "AGF-V3-BOTH-CosmeticLockIcon": {
+      "github_repo": "AGF-V3-BOTH-CosmeticLockIcon",
+      "site_mod_id": "01M1V5AGMZ6E69M1R0FQ6DQQRZ",
+      "site_title": "AGF - Cosmetic Lock Icon - V3",
+      "site_slug": "agf-v3-noeac-cosmeticlockicon",
+      "last_release_tag": "3.1.3",
+      "last_published_title": "AGF - Cosmetic Lock Icon - V3"
+    },
+    "AGF-V3-BOTH-GyroFlightModes": {
+      "github_repo": "AGF-V3-BOTH-GyroFlightModes",
+      "site_mod_id": "01M250BRD0S4SKPSDXKPEJ5DPF",
+      "site_title": "AGF - Gyro Flight Modes - V3",
+      "site_slug": "agf-v3-noeac-gyroflightmodes",
+      "last_release_tag": "1.0.2",
+      "last_published_title": "AGF - Gyro Flight Modes - V3"
+    },
+    "AGF-V3-BOTH-PartyGroupPlus": {
+      "github_repo": "AGF-V3-BOTH-PartyGroupPlus",
+      "site_mod_id": "01M4R0VPDT4HJ1MQBX394F70A2",
+      "site_slug": "beta-agf-party-group-plus-v3",
+      "site_title": "BETA - AGF - Party Group Plus - V3"
+    },
+    "AGF-V3-BOTH-Toolbelt12Slots": {
+      "github_repo": "AGF-V3-BOTH-Toolbelt12Slots",
+      "site_mod_id": "01M257F6KFRAQMJAD3FQYV64FR",
+      "site_title": "AGF - Toolbelt 12 Slots - V3",
+      "site_slug": "agf-v3-noeac-toolbelt12slots",
+      "last_release_tag": "2.3.1",
+      "last_published_title": "AGF - Toolbelt 12 Slots - V3"
+    },
+    "AGF-V3-CLIENT-AudioOptionsPlus": {
+      "github_repo": "AGF-V3-CLIENT-AudioOptionsPlus",
+      "site_mod_id": "01M1V50PEVX7CWTZBMPJZ00185",
+      "site_title": "AGF - Audio Options Plus - V3",
+      "site_slug": "agf-v3-noeac-audiooptionsplus",
+      "last_release_tag": "2.1.1",
+      "last_published_title": "AGF - Audio Options Plus - V3"
+    },
+    "AGF-V3-CLIENT-AutoRun": {
+      "github_repo": "AGF-V3-CLIENT-AutoRun",
+      "site_mod_id": "01M1V56766XETVC2PFB81WHDDE",
+      "site_title": "AGF - Auto Run - V3",
+      "site_slug": "agf-v3-noeac-autorun",
+      "last_release_tag": "2.2.1",
+      "last_published_title": "AGF - Auto Run - V3"
+    },
+    "AGF-V3-CLIENT-ConsoleOpacityMod": {
+      "github_repo": "AGF-V3-CLIENT-ConsoleOpacityMod",
+      "site_title": "AGF - V3 - CLIENT - ConsoleOpacityMod"
+    },
+    "AGF-V3-CLIENT-EnhancedAGF": {
+      "github_repo": "AGF-V3-CLIENT-EnhancedAGF",
+      "site_mod_id": "01M1V5EBA8Y7Z06TYRKMN9WBPW",
+      "site_title": "AGF - Enhanced - V3",
+      "site_slug": "agf-v3-noeac-enhancedagf",
+      "last_release_tag": "5.0.1",
+      "last_published_title": "AGF - Enhanced - V3"
+    },
+    "AGF-V3-CLIENT-HideDLCCosmetics": {
+      "github_repo": "AGF-V3-CLIENT-HideDLCCosmetics",
+      "site_mod_id": "01M252H62KQWJC20FMKNFT6RNA",
+      "site_title": "AGF - Hide DLC Cosmetics - V3",
+      "site_slug": "agf-v3-noeac-hidedlccosmetics",
+      "last_release_tag": "1.1.1",
+      "last_published_title": "AGF - Hide DLC Cosmetics - V3"
+    },
+    "AGF-V3-CLIENT-MapPlus": {
+      "github_repo": "AGF-V3-CLIENT-MapPlus",
+      "site_mod_id": "01M253B35MS33WB2ZXDT4GGXH9",
+      "site_title": "AGF - Map Plus - V3",
+      "site_slug": "agf-v3-noeac-mapplus",
+      "last_release_tag": "1.1.3",
+      "last_published_title": "AGF - Map Plus - V3"
+    },
+    "AGF-V3-CLIENT-OpenAllButton": {
+      "github_repo": "AGF-V3-CLIENT-OpenAllButton",
+      "site_mod_id": "01M255F77QRNNK7KP44TDETMSA",
+      "site_title": "AGF - Open All Button - V3",
+      "site_slug": "agf-v3-noeac-openallbutton",
+      "last_release_tag": "2.0.2",
+      "last_published_title": "AGF - Open All Button - V3"
+    },
+    "AGF-V3-CLIENT-SmeltTimerOption": {
+      "github_repo": "AGF-V3-CLIENT-SmeltTimerOption",
+      "site_mod_id": "01M256RQJZTK7HK0DTFE2WGFS2",
+      "site_title": "AGF - Smelt Timer Option - V3",
+      "site_slug": "agf-v3-noeac-smelttimeroption",
+      "last_release_tag": "1.1.1",
+      "last_published_title": "AGF - Smelt Timer Option - V3"
+    },
+    "AGF-V3-SERVER-1HUDPlus": {
+      "github_repo": "AGF-V3-SERVER-1HUDPlus",
+      "site_mod_id": "01KVCBB28PT432RC137KDQP57V",
+      "site_title": "AGF - HUD Plus - V3",
+      "site_slug": "agf-v3-hudplus-1main",
+      "last_release_tag": "6.6.2",
+      "last_published_title": "AGF - HUD Plus - V3"
+    },
+    "AGF-V3-SERVER-2BMCounter": {
+      "github_repo": "AGF-V3-SERVER-2BMCounter",
+      "site_mod_id": "01M1V3K07GPP5SMPHMDE7DF2W1",
+      "site_title": "AGF - BM Counter - V3",
+      "site_slug": "agf-v3-hudplus-bmcounter",
+      "last_release_tag": "4.0.3",
+      "last_published_title": "AGF - BM Counter - V3"
+    },
+    "AGF-V3-SERVER-2PurpleBook": {
+      "github_repo": "AGF-V3-SERVER-2PurpleBook",
+      "site_mod_id": "01M1V3RDB2DQ8N0200GDYVCR9G",
+      "site_title": "AGF - Purple Book - V3",
+      "site_slug": "agf-v3-hudplus-purplebook",
+      "last_release_tag": "3.3.0",
+      "last_published_title": "AGF - Purple Book - V3"
+    },
+    "AGF-V3-SERVER-2RemoveEnteringPopUp": {
+      "github_repo": "AGF-V3-SERVER-2RemoveEnteringPopUp",
+      "site_mod_id": "01M1V3Z2NSN21GQZ56XMB1GF0Y",
+      "site_title": "AGF - Remove Entering Pop Up - V3",
+      "site_slug": "agf-v3-hudplus-removeenteringpopup",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Remove Entering Pop Up - V3"
+    },
+    "AGF-V3-SERVER-2ShowStabilityOption": {
+      "github_repo": "AGF-V3-SERVER-2ShowStabilityOption",
+      "site_title": "AGF - Show Stability Option - V3",
+      "site_mod_id": "01M4RC1W4B08CWT2BVZS525J10",
+      "site_slug": "agf-show-stability-option-v3"
+    },
+    "AGF-V3-SERVER-2VisualEntityTracker": {
+      "github_repo": "AGF-V3-SERVER-2VisualEntityTracker",
+      "site_mod_id": "01M1V42X1FGFZ5D8VFYD980ME3",
+      "site_title": "AGF - Visual Entity Tracker - V3",
+      "site_slug": "agf-v3-hudplus-visualentitytracker",
+      "last_release_tag": "1.1.2",
+      "last_published_title": "AGF - Visual Entity Tracker - V3"
+    },
+    "AGF-V3-SERVER-2Weekday": {
+      "github_repo": "AGF-V3-SERVER-2Weekday",
+      "site_mod_id": "01M1V4SH3Q3KME1YVWM5XN6WCH",
+      "site_title": "AGF - Weekday - V3",
+      "site_slug": "agf-v3-hudplus-weekday",
+      "last_release_tag": "3.1.4",
+      "last_published_title": "AGF - Weekday - V3"
+    },
+    "AGF-V3-SERVER-3VisualEntityTrackerAddon": {
+      "github_repo": "AGF-V3-SERVER-3VisualEntityTrackerAddon",
+      "site_title": "AGF - Visual Entity Tracker Addon - V3",
+      "site_mod_id": "01M4RC38JZVF31ZPZTT675G0SX",
+      "site_slug": "agf-visual-entity-tracker-addon-v3"
+    },
+    "AGF-V3-SERVER-AdminModdingSupport": {
+      "github_repo": "AGF-V3-SERVER-AdminModdingSupport",
+      "site_mod_id": "01M25AM9K3ASSPXWV3G9Y8YKJA",
+      "site_title": "AGF - Admin Modding Support - V3",
+      "site_slug": "agf-v3-vp-adminmoddingsupport",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Admin Modding Support - V3"
+    },
+    "AGF-V3-SERVER-AlternativeRecipes": {
+      "github_repo": "AGF-V3-SERVER-AlternativeRecipes",
+      "site_mod_id": "01M25B24SF75XVACG2ABEY9GE7",
+      "site_title": "AGF - Alternative Recipes - V3",
+      "site_slug": "agf-v3-vp-alternativerecipes",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Alternative Recipes - V3"
+    },
+    "AGF-V3-SERVER-AmmoDisassembly": {
+      "github_repo": "AGF-V3-SERVER-AmmoDisassembly",
+      "site_mod_id": "01M25BQMM3RVTPSCDJQWXEQTJS",
+      "site_title": "AGF - Ammo Disassembly - V3",
+      "site_slug": "agf-v3-vp-ammodisassembly",
+      "last_release_tag": "2.0.2",
+      "last_published_title": "AGF - Ammo Disassembly - V3"
+    },
+    "AGF-V3-SERVER-AnimalTrackerAlwaysOn": {
+      "github_repo": "AGF-V3-SERVER-AnimalTrackerAlwaysOn",
+      "site_title": "AGF - Animal Tracker Always On - V3",
+      "site_mod_id": "01M4RC4KX84C5GEWA17KXESV4N",
+      "site_slug": "agf-animal-tracker-always-on-v3"
+    },
+    "AGF-V3-SERVER-ArcheryFeathersChange": {
+      "github_repo": "AGF-V3-SERVER-ArcheryFeathersChange",
+      "site_mod_id": "01M25CD1ADC3X0P14QCXPDP6R4",
+      "site_title": "AGF - Archery Feathers Change - V3",
+      "site_slug": "agf-v3-vp-archeryfeatherschange",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Archery Feathers Change - V3"
+    },
+    "AGF-V3-SERVER-AutomobilesRespawn": {
+      "github_repo": "AGF-V3-SERVER-AutomobilesRespawn",
+      "site_mod_id": "01M25D1DJKXRDRFNPBQAZR31AJ",
+      "site_title": "AGF - Automobiles Respawn - V3",
+      "site_slug": "agf-v3-vp-automobilesrespawn",
+      "last_release_tag": "4.1.2",
+      "last_published_title": "AGF - Automobiles Respawn - V3"
+    },
+    "AGF-V3-SERVER-BedrollPlus": {
+      "github_repo": "AGF-V3-SERVER-BedrollPlus",
+      "site_mod_id": "01M25E3R63Y72MD212PSP2G3TC",
+      "site_title": "AGF - Bedroll Plus - V3",
+      "site_slug": "agf-v3-vp-bedrollplus-1f756a",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Bedroll Plus - V3"
+    },
+    "AGF-V3-SERVER-BetterEggChance": {
+      "github_repo": "AGF-V3-SERVER-BetterEggChance",
+      "site_mod_id": "01M25FK31GQS6SBM2C6CQCMZKH",
+      "site_title": "AGF - Better Egg Chance - V3",
+      "site_slug": "agf-v3-vp-bettereggchance",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Better Egg Chance - V3"
+    },
+    "AGF-V3-SERVER-BreakItGetIt": {
+      "github_repo": "AGF-V3-SERVER-BreakItGetIt",
+      "site_mod_id": "01M25GBDT5FNS800M0QAR7W4CR",
+      "site_title": "AGF - Break It Get It - V3",
+      "site_slug": "agf-v3-vp-breakitgetit",
+      "last_release_tag": "2.2.1",
+      "last_published_title": "AGF - Break It Get It - V3"
+    },
+    "AGF-V3-SERVER-CraftSewingKits": {
+      "github_repo": "AGF-V3-SERVER-CraftSewingKits",
+      "site_mod_id": "01M25GP21DCBMRE2DTRX0C3FZ9",
+      "site_title": "AGF - Craft Sewing Kits - V3",
+      "site_slug": "agf-v3-vp-craftsewingkits",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Craft Sewing Kits - V3"
+    },
+    "AGF-V3-SERVER-CraftStackEngBattCells": {
+      "github_repo": "AGF-V3-SERVER-CraftStackEngBattCells",
+      "site_mod_id": "01M26K3JZAGNQ6NHZK67G36S8D",
+      "site_title": "AGF - Craft Stack Eng Batt Cells - V3",
+      "site_slug": "agf-v3-vp-craftstackengbattcells-ab18df",
+      "last_release_tag": "4.0.2",
+      "last_published_title": "AGF - Craft Stack Eng Batt Cells - V3"
+    },
+    "AGF-V3-SERVER-CraftVitamins": {
+      "github_repo": "AGF-V3-SERVER-CraftVitamins",
+      "site_mod_id": "01M268F1E7KGYQW1N3C6B6GF4F",
+      "site_title": "AGF - Craft Vitamins - V3",
+      "site_slug": "agf-v3-vp-craftvitamins",
+      "last_release_tag": "2.1.4",
+      "last_published_title": "AGF - Craft Vitamins - V3"
+    },
+    "AGF-V3-SERVER-DecorationBlock": {
+      "github_repo": "AGF-V3-SERVER-DecorationBlock",
+      "site_title": "AGF - V3 - SERVER - DecorationBlock"
+    },
+    "AGF-V3-SERVER-DoorsPlus": {
+      "github_repo": "AGF-V3-SERVER-DoorsPlus",
+      "site_mod_id": "01M268NQ8SYM4K38TEMT0YSYA0",
+      "site_title": "AGF - Doors Plus - V3",
+      "site_slug": "agf-v3-vp-doorsplus",
+      "last_release_tag": "4.0.2",
+      "last_published_title": "AGF - Doors Plus - V3"
+    },
+    "AGF-V3-SERVER-DrinkableAcid": {
+      "github_repo": "AGF-V3-SERVER-DrinkableAcid",
+      "site_mod_id": "01M2690PXMMBF3EEKC59QH1M27",
+      "site_title": "AGF - Drinkable Acid - V3",
+      "site_slug": "agf-v3-vp-drinkableacid",
+      "last_release_tag": "3.0.2",
+      "last_published_title": "AGF - Drinkable Acid - V3"
+    },
+    "AGF-V3-SERVER-DyesPlus": {
+      "github_repo": "AGF-V3-SERVER-DyesPlus",
+      "site_mod_id": "01M26983N911BECWHCYG1BZ3DK",
+      "site_title": "AGF - Dyes Plus - V3",
+      "site_slug": "agf-v3-vp-dyesplus",
+      "last_release_tag": "4.1.1",
+      "last_published_title": "AGF - Dyes Plus - V3"
+    },
+    "AGF-V3-SERVER-FloraHarvester": {
+      "github_repo": "AGF-V3-SERVER-FloraHarvester",
+      "site_mod_id": "01M269H18VKFFKBAX0Q4Q0C8WW",
+      "site_title": "AGF - Flora Harvester - V3",
+      "site_slug": "agf-v3-vp-floraharvester",
+      "last_release_tag": "3.0.4",
+      "last_published_title": "AGF - Flora Harvester - V3"
+    },
+    "AGF-V3-SERVER-FuelAutoShutOff": {
+      "github_repo": "AGF-V3-SERVER-FuelAutoShutOff",
+      "site_mod_id": "01M1V5JM0DRR23S3C0RRB6VR5P",
+      "site_title": "AGF - Fuel Auto Shut Off - V3",
+      "site_slug": "agf-v3-vps-fuelautoshutoff",
+      "last_release_tag": "1.1.1",
+      "last_published_title": "AGF - Fuel Auto Shut Off - V3"
+    },
+    "AGF-V3-SERVER-FuelBurnPlus": {
+      "github_repo": "AGF-V3-SERVER-FuelBurnPlus",
+      "site_mod_id": "01M269RKQZF88G33DSZ2MQWTPB",
+      "site_title": "AGF - Fuel Burn Plus - V3",
+      "site_slug": "agf-fuel-burn-plus-v3",
+      "last_release_tag": "3.1.3",
+      "last_published_title": "AGF - Fuel Burn Plus - V3"
+    },
+    "AGF-V3-SERVER-GlobalStormTracker": {
+      "github_repo": "AGF-V3-SERVER-GlobalStormTracker",
+      "site_mod_id": "01M258P7SD6C822ZZRX25BJKK3",
+      "site_title": "AGF - Global Storm Tracker - V3",
+      "site_slug": "agf-v3-vps-globalstormtracker",
+      "last_release_tag": "2.1.3",
+      "last_published_title": "AGF - Global Storm Tracker - V3"
+    },
+    "AGF-V3-SERVER-HonkOpensYourDoors": {
+      "github_repo": "AGF-V3-SERVER-HonkOpensYourDoors",
+      "site_mod_id": "01M259D9964K4B0EKSS66H0M2G",
+      "site_title": "AGF - Honk Opens Your Doors - V3",
+      "site_slug": "agf-v3-vps-honkopensyourdoors",
+      "last_release_tag": "1.0.2",
+      "last_published_title": "AGF - Honk Opens Your Doors - V3"
+    },
+    "AGF-V3-SERVER-LargerStorageOption": {
+      "github_repo": "AGF-V3-SERVER-LargerStorageOption",
+      "site_mod_id": "01M26M9K6HXY9XR7BEV9X07NJ1",
+      "site_title": "AGF - Larger Storage Option - V3",
+      "site_slug": "agf-v3-vp-largerstorageoption",
+      "last_release_tag": "1.2.1",
+      "last_published_title": "AGF - Larger Storage Option - V3"
+    },
+    "AGF-V3-SERVER-LootTimerHolds": {
+      "github_repo": "AGF-V3-SERVER-LootTimerHolds",
+      "site_title": "AGF - Loot Timer Holds - V3",
+      "site_mod_id": "01M4RC5YV38NJW6667GMTCS4WY",
+      "site_slug": "agf-loot-timer-holds-v3"
+    },
+    "AGF-V3-SERVER-MasterTool": {
+      "github_repo": "AGF-V3-SERVER-MasterTool",
+      "site_mod_id": "01M26MFRBADJJVBFFYQ81J9GSW",
+      "site_title": "AGF - Master Tool - V3",
+      "site_slug": "agf-v3-vp-mastertool",
+      "last_release_tag": "7.1.4",
+      "last_published_title": "AGF - Master Tool - V3"
+    },
+    "AGF-V3-SERVER-MaxLevel500": {
+      "github_repo": "AGF-V3-SERVER-MaxLevel500",
+      "site_mod_id": "01M26MQMRM07T0VJZZ4A5B2PHH",
+      "site_title": "AGF - Max Level 500 - V3",
+      "site_slug": "agf-v3-vp-maxlevel500",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Max Level 500 - V3"
+    },
+    "AGF-V3-SERVER-MiningPlus": {
+      "github_repo": "AGF-V3-SERVER-MiningPlus",
+      "site_mod_id": "01M26Q902HSMMC4REMQ721QYYG",
+      "site_title": "AGF - Mining Plus - V3",
+      "site_slug": "agf-v3-vp-miningplus",
+      "last_release_tag": "2.0.2",
+      "last_published_title": "AGF - Mining Plus - V3"
+    },
+    "AGF-V3-SERVER-Mod988": {
+      "github_repo": "AGF-V3-SERVER-Mod988",
+      "site_mod_id": "01M26Q9Z4N0G9PY4ZBRDGSANGY",
+      "site_title": "AGF - Mod 988 - V3",
+      "site_slug": "agf-v3-vp-mod988",
+      "last_release_tag": "3.0.1",
+      "last_published_title": "AGF - Mod 988 - V3"
+    },
+    "AGF-V3-SERVER-ModSlotsPlus": {
+      "github_repo": "AGF-V3-SERVER-ModSlotsPlus",
+      "site_mod_id": "01M26QAGTE08ZGP16TJ90S3D2Y",
+      "site_title": "AGF - Mod Slots Plus - V3",
+      "site_slug": "agf-v3-vp-modslotsplus",
+      "last_release_tag": "4.1.3",
+      "last_published_title": "AGF - Mod Slots Plus - V3"
+    },
+    "AGF-V3-SERVER-POISwitchesUnlockDoors": {
+      "github_repo": "AGF-V3-SERVER-POISwitchesUnlockDoors",
+      "site_title": "AGF - POISwitches Unlock Doors - V3",
+      "site_mod_id": "01M4RC79VX760QDYWJE449B1TK",
+      "site_slug": "agf-poiswitches-unlock-doors-v3"
+    },
+    "AGF-V3-SERVER-PaintbrushPlus": {
+      "github_repo": "AGF-V3-SERVER-PaintbrushPlus",
+      "site_title": "AGF - Paintbrush Plus - V3",
+      "site_mod_id": "01M4RC8MK0GE8VB8YG220K05AV",
+      "site_slug": "agf-paintbrush-plus-v3"
+    },
+    "AGF-V3-SERVER-PickupLanternsPlus": {
+      "github_repo": "AGF-V3-SERVER-PickupLanternsPlus",
+      "site_mod_id": "01M26QB1VKWM1PN3RZPDHXWQ11",
+      "site_title": "AGF - Pickup Lanterns Plus - V3",
+      "site_slug": "agf-v3-vp-pickuplanternsplus",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Pickup Lanterns Plus - V3"
+    },
+    "AGF-V3-SERVER-PlayerResetQuests": {
+      "github_repo": "AGF-V3-SERVER-PlayerResetQuests",
+      "site_mod_id": "01M26QBMQ61HV5P0TA0ZEMSCZV",
+      "site_title": "AGF - Player Reset Quests - V3",
+      "site_slug": "agf-v3-vp-playerresetquests",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Player Reset Quests - V3"
+    },
+    "AGF-V3-SERVER-RebundleBundles": {
+      "github_repo": "AGF-V3-SERVER-RebundleBundles",
+      "site_mod_id": "01M26QC6YMQQHHAFGH8X1R7BPH",
+      "site_title": "AGF - Rebundle Bundles - V3",
+      "site_slug": "agf-v3-vp-rebundlebundles",
+      "last_release_tag": "2.1.3",
+      "last_published_title": "AGF - Rebundle Bundles - V3"
+    },
+    "AGF-V3-SERVER-RecipeRottingFlesh": {
+      "github_repo": "AGF-V3-SERVER-RecipeRottingFlesh",
+      "site_mod_id": "01M26QCSFRFYAEPM5N0904Y2HS",
+      "site_title": "AGF - Recipe Rotting Flesh - V3",
+      "site_slug": "agf-v3-vp-reciperottingflesh",
+      "last_release_tag": "2.0.1",
+      "last_published_title": "AGF - Recipe Rotting Flesh - V3"
+    },
+    "AGF-V3-SERVER-RestorePowerAnyTime": {
+      "github_repo": "AGF-V3-SERVER-RestorePowerAnyTime",
+      "site_mod_id": "01M26QDCRDHAFMQHC5VBJMS77M",
+      "site_title": "AGF - Restore Power Any Time - V3",
+      "site_slug": "agf-v3-vp-restorepoweranytime",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Restore Power Any Time - V3"
+    },
+    "AGF-V3-SERVER-ScrapBatts4Acid": {
+      "github_repo": "AGF-V3-SERVER-ScrapBatts4Acid",
+      "site_mod_id": "01M26QE0QJYD5K7Q5G38HSQHFB",
+      "site_title": "AGF - Scrap Batts 4 Acid - V3",
+      "site_slug": "agf-v3-vp-scrapbatts4acid",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Scrap Batts 4 Acid - V3"
+    },
+    "AGF-V3-SERVER-ScrapEquipmentFaster": {
+      "github_repo": "AGF-V3-SERVER-ScrapEquipmentFaster",
+      "site_mod_id": "01M26QEK3X265AW4R78XMAE1BT",
+      "site_title": "AGF - Scrap Equipment Faster - V3",
+      "site_slug": "agf-v3-vp-scrapequipmentfaster",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Scrap Equipment Faster - V3"
+    },
+    "AGF-V3-SERVER-ScreamerAlert": {
+      "github_repo": "AGF-V3-SERVER-ScreamerAlert",
+      "site_mod_id": "01M259YHN6NCANA87S78ZT012H",
+      "site_title": "AGF - Screamer Alert - V3",
+      "site_slug": "agf-v3-vps-screameralert",
+      "last_release_tag": "2.3.5",
+      "last_published_title": "AGF - Screamer Alert - V3"
+    },
+    "AGF-V3-SERVER-SimplifiedStacks": {
+      "github_repo": "AGF-V3-SERVER-SimplifiedStacks",
+      "site_mod_id": "01M26QF5H603G7GRSAVVR0W9Y0",
+      "site_title": "AGF - Simplified Stacks - V3",
+      "site_slug": "agf-v3-vp-simplifiedstacks",
+      "last_release_tag": "2.1.3",
+      "last_published_title": "AGF - Simplified Stacks - V3"
+    },
+    "AGF-V3-SERVER-SmallerInteractionPrompt": {
+      "github_repo": "AGF-V3-SERVER-SmallerInteractionPrompt",
+      "site_title": "AGF - Smaller Interaction Prompt - V3",
+      "site_mod_id": "01M4RCA04388XWG8JKQWB953A0",
+      "site_slug": "agf-smaller-interaction-prompt-v3"
+    },
+    "AGF-V3-SERVER-SmeltingPlus": {
+      "github_repo": "AGF-V3-SERVER-SmeltingPlus",
+      "site_mod_id": "01M26QFPXC81P6YSVEWE94N47N",
+      "site_title": "AGF - Smelting Plus - V3",
+      "site_slug": "agf-v3-vp-smeltingplus",
+      "last_release_tag": "3.0.2",
+      "last_published_title": "AGF - Smelting Plus - V3"
+    },
+    "AGF-V3-SERVER-SortingCart": {
+      "github_repo": "AGF-V3-SERVER-SortingCart",
+      "site_title": "AGF - Sorting Cart - V3",
+      "site_mod_id": "01M4RCBEXAABB1ESSB4N3HV38G",
+      "site_slug": "agf-sorting-cart-v3"
+    },
+    "AGF-V3-SERVER-StayLongerAnimalCorpse": {
+      "github_repo": "AGF-V3-SERVER-StayLongerAnimalCorpse",
+      "site_mod_id": "01M26QG9JBDRB177GYT8RRMK4K",
+      "site_title": "AGF - Stay Longer Animal Corpse - V3",
+      "site_slug": "agf-v3-vp-staylongeranimalcorpse",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Stay Longer Animal Corpse - V3"
+    },
+    "AGF-V3-SERVER-StayLongerPlayerBackpack": {
+      "github_repo": "AGF-V3-SERVER-StayLongerPlayerBackpack",
+      "site_mod_id": "01M26QGXEBBVN3N5TCP18WXD29",
+      "site_title": "AGF - Stay Longer Player Backpack - V3",
+      "site_slug": "agf-v3-vp-staylongerplayerbackpack",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Stay Longer Player Backpack - V3"
+    },
+    "AGF-V3-SERVER-TacticalRiflePlus": {
+      "github_repo": "AGF-V3-SERVER-TacticalRiflePlus",
+      "site_mod_id": "01M26QHGN30889M8AYXM7PYCJW",
+      "site_title": "AGF - Tactical Rifle Plus - V3",
+      "site_slug": "agf-v3-vp-tacticalrifleplus",
+      "last_release_tag": "3.0.1",
+      "last_published_title": "AGF - Tactical Rifle Plus - V3"
+    },
+    "AGF-V3-SERVER-TinyBuffsPopUp": {
+      "github_repo": "AGF-V3-SERVER-TinyBuffsPopUp",
+      "site_title": "AGF - Tiny Buffs Pop Up - V3",
+      "site_mod_id": "01M4RCCSK51VJ1NGF9MCJEMW50",
+      "site_slug": "agf-tiny-buffs-pop-up-v3"
+    },
+    "AGF-V3-SERVER-VehiclePerformance": {
+      "github_repo": "AGF-V3-SERVER-VehiclePerformance",
+      "site_title": "AGF - Vehicle Performance - V3",
+      "site_mod_id": "01M4RCE87BW44ACJ6WMRRD6WVD",
+      "site_slug": "agf-vehicle-performance-v3"
+    },
+    "AGF-V3-SERVER-VehicleStoragePlus": {
+      "github_repo": "AGF-V3-SERVER-VehicleStoragePlus",
+      "site_mod_id": "01M26QJQ0V6TA0RQR3SA4NYAHA",
+      "site_title": "AGF - Vehicle Storage Plus - V3",
+      "site_slug": "agf-v3-vp-vehiclestorageplus",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Vehicle Storage Plus - V3"
+    },
+    "AGF-V3-SERVER-VehiclesExtraSeating": {
+      "github_repo": "AGF-V3-SERVER-VehiclesExtraSeating",
+      "site_mod_id": "01M26QJ2Q6V9M93720WZAS0TM1",
+      "site_title": "AGF - Vehicles Extra Seating - V3",
+      "site_slug": "agf-v3-vp-vehiclesextraseating",
+      "last_release_tag": "2.1.2",
+      "last_published_title": "AGF - Vehicles Extra Seating - V3"
+    },
+    "AGF-V3-SERVER-ZombieCorpseLeaveQuicker": {
+      "github_repo": "AGF-V3-SERVER-ZombieCorpseLeaveQuicker",
+      "site_mod_id": "01M26QKB1Q3BSH4GJ3JK9DV24D",
+      "site_title": "AGF - Zombie Corpse Leave Quicker - V3",
+      "site_slug": "agf-v3-vp-zombiecorpseleavequicker",
+      "last_release_tag": "3.1.2",
+      "last_published_title": "AGF - Zombie Corpse Leave Quicker - V3"
+    },
+    "zzzAGF-V3-CLIENT-LawnTractorV3Fix": {
+      "github_repo": "zzzAGF-V3-CLIENT-LawnTractorV3Fix",
+      "site_mod_id": "01M4PCFY6C8RM99Z1RE57NJD76",
+      "site_slug": "agf-lawn-tractor-fix-v3",
+      "site_title": "AGF - Lawn Tractor Fix - V3",
+      "last_release_tag": "1.0.1",
+      "last_published_title": "AGF - Lawn Tractor Fix - V3"
+    },
+    "zzzAGF-V3-SERVER-HelpfulRenames": {
+      "github_repo": "zzzAGF-V3-SERVER-HelpfulRenames",
+      "site_title": "AGF - Helpful Renames - V3"
+    },
+    "zzzAGF-V3-SERVER-LootStaysOnEmpty": {
+      "github_repo": "zzzAGF-V3-SERVER-LootStaysOnEmpty",
+      "site_title": "AGF - Loot Stays On Empty - V3",
+      "site_mod_id": "01M4RCFM3CNHF8HN3YBJQSZ6G9",
+      "site_slug": "agf-loot-stays-on-empty-v3"
     }
   }
 }

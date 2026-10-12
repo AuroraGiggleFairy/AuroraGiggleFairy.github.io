@@ -32,7 +32,9 @@ SIDE_MAP = {
     "Server-Side (EAC-Friendly)": "Server Side Only",
     "Server-Side (EAC Off)": "Server Side Only",
     "Server/Client-Side (Required)": "Server & Client Side",
+    "Server/Client-Side (EAC Off)": "Server & Client Side",
     "Client-Side (Only)": "Client Side Only",
+    "Client-Side (EAC Off)": "Client Side Only",
 }
 
 
@@ -212,6 +214,17 @@ def latest_changelog_plain(nexus, readme: str) -> str:
     return "\n\n".join(lines)
 
 
+def format_7dtdmods_title(base_name: str, game_ver: str = "3") -> str:
+    clean = re.sub(r"^[0z]+(?=AGF)", "", base_name)
+    m = re.match(r"^AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN|COMPAT)-.*$", clean)
+    if m:
+        return " - ".join(clean.split("-"))
+    if clean.startswith("AGF-"):
+        clean = clean[4:]
+    parts = [p for p in clean.split("-") if p]
+    return f"AGF - V{game_ver} - " + " - ".join(parts)
+
+
 def build_packet(nexus, entry: dict, cfg_entry: dict, defaults: dict) -> str:
     folder_path = entry["folder_path"]
     base_name = entry["base_name"]
@@ -220,7 +233,19 @@ def build_packet(nexus, entry: dict, cfg_entry: dict, defaults: dict) -> str:
     sections = nexus.parse_readme_sections(readme)
     mod_type = nexus.extract_mod_type_from_readme(readme)
     game_ver = "3"
-    title = str(cfg_entry.get("site_title") or nexus.format_nexus_mod_name(base_name, game_ver))
+
+    raw_site_title = str(cfg_entry.get("site_title") or "").strip()
+    is_stale_title = any(token in raw_site_title for token in [
+        "NoEAC", "VP -", "VPS -", "HUDPlus -",
+        " - SERVER - ", " - CLIENT - ", " - BOTH - ", " - ADMIN - ", " - COMPAT - "
+    ])
+
+    if base_name == "AGF-V3-BOTH-PartyGroupPlus" or "BETA" in mod_info.get("display_name", ""):
+        title = "BETA - AGF - Party Group Plus - V3"
+    elif raw_site_title and not is_stale_title:
+        title = raw_site_title
+    else:
+        title = nexus.format_nexus_listing_title(base_name, mod_info)
     summary = str(cfg_entry.get("summary") or mod_info.get("description", "")).strip()
     category = str(cfg_entry.get("category") or infer_category(base_name))
     game_version = str(cfg_entry.get("game_version") or defaults.get("game_version") or "V3 Mods")
@@ -232,7 +257,9 @@ def build_packet(nexus, entry: dict, cfg_entry: dict, defaults: dict) -> str:
     mod_type_map = nexus.load_mod_type_map()
     file_desc = nexus.resolve_file_description(summary, mod_type, mod_type_map)
     changelog = latest_changelog_plain(nexus, readme)
-    nexus_bbcode = nexus.generate_bbcode_full_description(title, game_ver, summary, sections)
+    file_label = nexus.format_file_display_name(base_name, game_ver)
+    bbcode_title = file_label
+    nexus_bbcode = nexus.generate_bbcode_full_description(bbcode_title, game_ver, summary, sections)
     description = nexus_bbcode_to_7dtd(nexus_bbcode).rstrip() + "\n"
     images_section = format_images_section(base_name)
     now = dt.datetime.now().strftime("%Y-%m-%d  %I:%M %p")
@@ -324,7 +351,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-{title}
+{file_label}
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):

@@ -1,6 +1,23 @@
-#   GigglePack v1.0.0 - *October 8, 2026 3:08pm*
+#   GigglePack v1.1.0 - *October 12, 2026 5:52pm*
 ## [Download GigglePack (All Mods)](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/00_GigglePack_All.zip)
+## *Or download the individual changed mods below.*
 --------------------------------------------------------------------
-- Mod naming overhaul
-- Delete existing AGF mods and upload with these new mods.
-- A lot of these mods have received 7 Days to Die version 3.3 updates.
+###  **Change summary: +2 new, ~7 updated, =0 renamed, -2 removed**
+- **New mods:**
+  - [AGF-V3-SERVER-2ShowStabilityOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-2ShowStabilityOption.zip) (new: v1.0.0)
+  - [AGF-V3-SERVER-POISwitchesUnlockDoors](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-POISwitchesUnlockDoors.zip) (new: v1.0.0)
+- **Updated existing mods:**
+  - [AGF-V3-BOTH-PartyGroupPlus](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-BOTH-PartyGroupPlus.zip) (v1.2.1-BETA -> v1.2.2-BETA)
+  - [AGF-V3-SERVER-2PurpleBook](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-2PurpleBook.zip) (v3.2.1 -> v3.3.0)
+  - [AGF-V3-SERVER-CraftStackEngBattCells](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-CraftStackEngBattCells.zip) (v4.0.1 -> v4.0.2)
+  - [AGF-V3-SERVER-CraftVitamins](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-CraftVitamins.zip) (v2.1.3 -> v2.1.4)
+  - [AGF-V3-SERVER-FloraHarvester](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-FloraHarvester.zip) (v3.0.3 -> v3.0.4)
+  - [AGF-V3-SERVER-LargerStorageOption](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-LargerStorageOption.zip) (v1.2.1 -> v1.2.2)
+  - [AGF-V3-SERVER-MasterTool](https://github.com/AuroraGiggleFairy/AuroraGiggleFairy.github.io/raw/main/04_DownloadZips/AGF-V3-SERVER-MasterTool.zip) (v7.1.3 -> v7.1.4)
+- **Renamed mods:**
+  - None
+- **Removed mods:**
+  - AGF-V3-CLIENT-ConsoleOpacityMod (was v1.0.2)
+  - AGF-V3-SERVER-DecorationBlock (was v3.0.4)
+--------------------------------------------------------------------
+## Remember, all downloads are available here:  https://auroragigglefairy.github.io/

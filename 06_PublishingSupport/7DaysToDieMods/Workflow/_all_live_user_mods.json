@@ -1,0 +1,3826 @@
+[
+  {
+    "id": "01M4PCFY6C8RM99Z1RE57NJD76",
+    "slug": "agf-lawn-tractor-fix-v3",
+    "title": "AGF - Lawn Tractor Fix - V3",
+    "summary": "Patch makes OCB Lawn Mowing (v2.5.0) work on 7d2d v3.",
+    "thumbnail": {
+      "id": "01M4PEWD8CPRZXZ8QWMPTVHH5R",
+      "url": "https://downloads.7daystodiemods.com/mods/01M4PCFY6C8RM99Z1RE57NJD76/images/01M4PEWCN9YXJ27XPSA7A5JMVZ/zzzAGF-V3-CLIENT-LawnTractorV3Fix_01.webp",
+      "blurhash": "L35}w1]@++-Y]@kokotQ+kk.TCSc",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.0.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 4,
+    "download_count": 0,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-10-11T21:04:25.292Z",
+    "updated_at": "2026-10-11T22:02:40.030Z",
+    "recent_activity_at": "2026-10-11T22:02:40.030Z"
+  },
+  {
+    "id": "01M26QKB1Q3BSH4GJ3JK9DV24D",
+    "slug": "agf-v3-vp-zombiecorpseleavequicker",
+    "title": "AGF - V3 - VP - ZombieCorpseLeaveQuicker",
+    "summary": "Zombie corpses despawn in 10 seconds instead of 30 for game performance.",
+    "thumbnail": {
+      "id": "01M26QKJRRYK36H5JCSTB1W731",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QKB1Q3BSH4GJ3JK9DV24D/images/01M26QKJAB9XW8P3GQ37N8NN3N/AGF-VP-ZombieCorpseLeaveQuicker_01_Under2MB.webp",
+      "blurhash": "LAG*4y0O0N0O5axss8={03}?-n=_",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 820,
+    "download_count": 97,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:39:16.535Z",
+    "updated_at": "2026-09-10T22:44:32.529Z",
+    "recent_activity_at": "2026-09-10T22:44:32.529Z"
+  },
+  {
+    "id": "01M26QJQ0V6TA0RQR3SA4NYAHA",
+    "slug": "agf-v3-vp-vehiclestorageplus",
+    "title": "AGF - V3 - VP - VehicleStoragePlus",
+    "summary": "Increases vehicle storage, adding +2 or more rows depending on vehicle.",
+    "thumbnail": {
+      "id": "01M26QJY93YN2RMT27X55YF4Y4",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QJQ0V6TA0RQR3SA4NYAHA/images/01M26QJXVKS3TWFQPMY2MZJ92X/AGF-VP-VehicleStoragePlus_01_Under2MB.webp",
+      "blurhash": "L7FhCn9K030506%1~9^i03xu%K};",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEX4YE8E931WN3QDBHS",
+        "slug": "vehicle",
+        "name": "Vehicle",
+        "icon": "lucide:car"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1357,
+    "download_count": 247,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:38:56.026Z",
+    "updated_at": "2026-09-10T22:44:44.097Z",
+    "recent_activity_at": "2026-09-10T22:44:44.097Z"
+  },
+  {
+    "id": "01M26QJ2Q6V9M93720WZAS0TM1",
+    "slug": "agf-v3-vp-vehiclesextraseating",
+    "title": "AGF - V3 - VP - VehiclesExtraSeating",
+    "summary": "Adds seats: bikes seat 3; 4x4 seats 5, upto 8 with Expanded Seating.",
+    "thumbnail": {
+      "id": "01M26QJACS0BF43NZEHM6709JC",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QJ2Q6V9M93720WZAS0TM1/images/01M26QJA08PVTM71PPDFVX10Z6/AGF-VP-VehiclesExtraSeating_01_Under2MB.webp",
+      "blurhash": "L7FhCn0P4;0506-n=_^i03%KOr}:",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEX4YE8E931WN3QDBHS",
+        "slug": "vehicle",
+        "name": "Vehicle",
+        "icon": "lucide:car"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 884,
+    "download_count": 46,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:38:35.238Z",
+    "updated_at": "2026-09-10T22:44:54.103Z",
+    "recent_activity_at": "2026-09-10T22:44:54.103Z"
+  },
+  {
+    "id": "01M26QHGN30889M8AYXM7PYCJW",
+    "slug": "agf-v3-vp-tacticalrifleplus",
+    "title": "AGF - V3 - VP - TacticalRiflePlus",
+    "summary": "Tactical Rifle is full-auto with magazine raised from 30 to 36.",
+    "thumbnail": {
+      "id": "01M26QHPZC15325E20GTJ8NQCN",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QHGN30889M8AYXM7PYCJW/images/01M26QHPG8CW606MY3GFFKQMY5/AGF-VP-TacticalRiflePlus_01.webp",
+      "blurhash": "L8C~xYM+009a%5S0t6t700tQ~Wxt",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 671,
+    "download_count": 37,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:38:16.738Z",
+    "updated_at": "2026-09-10T22:45:03.600Z",
+    "recent_activity_at": "2026-09-10T22:45:03.600Z"
+  },
+  {
+    "id": "01M26QGXEBBVN3N5TCP18WXD29",
+    "slug": "agf-v3-vp-staylongerplayerbackpack",
+    "title": "AGF - V3 - VP - StayLongerPlayerBackpack",
+    "summary": "Player dropped backpack after death stays for 5 hours instead of 1.",
+    "thumbnail": {
+      "id": "01M26QH47ZHMMQ7C6EZ6QJYFYB",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QGXEBBVN3N5TCP18WXD29/images/01M26QH3T5NR9WG8GBPNTKG2WZ/AGF-VP-StayLongerPlayerBackpack_01_Under2MB.webp",
+      "blurhash": "LAIWce0403Em0n={Swt603^O~A$%",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 722,
+    "download_count": 30,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:37:57.066Z",
+    "updated_at": "2026-09-10T22:45:11.520Z",
+    "recent_activity_at": "2026-09-10T22:45:11.520Z"
+  },
+  {
+    "id": "01M26QG9JBDRB177GYT8RRMK4K",
+    "slug": "agf-v3-vp-staylongeranimalcorpse",
+    "title": "AGF - V3 - VP - StayLongerAnimalCorpse",
+    "summary": "Animal corpses disappear after 10 minutes instead of 5.",
+    "thumbnail": {
+      "id": "01M26QGH55J04ZZ7MAK2FTDYJ5",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QG9JBDRB177GYT8RRMK4K/images/01M26QGGN04WEZ38TMKQVJDBQE/AGF-VP-StayLongerAnimalCorpse_01_Under2MB.webp",
+      "blurhash": "L8IM+i05030i05-o^i%205}?=u=_",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 538,
+    "download_count": 26,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:37:36.715Z",
+    "updated_at": "2026-09-10T22:45:20.900Z",
+    "recent_activity_at": "2026-09-10T22:45:20.900Z"
+  },
+  {
+    "id": "01M26QFPXC81P6YSVEWE94N47N",
+    "slug": "agf-v3-vp-smeltingplus",
+    "title": "AGF - V3 - VP - SmeltingPlus",
+    "summary": "Third forge slot, 1:5 sand, unit crafting, and advanced metal stacks.",
+    "thumbnail": {
+      "id": "01M26QFXBBJYYA54ZF69S5Y3GT",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QFPXC81P6YSVEWE94N47N/images/01M26QFWYXYKN9CF1BDQ2SN11Y/AGF-VP-SmeltingPlus_01.webp",
+      "blurhash": "L2Bfw=04I0000C^*tj?G00yWtd_2",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 1465,
+    "download_count": 221,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:37:17.612Z",
+    "updated_at": "2026-09-10T22:45:32.926Z",
+    "recent_activity_at": "2026-09-10T22:45:32.926Z"
+  },
+  {
+    "id": "01M26QF5H603G7GRSAVVR0W9Y0",
+    "slug": "agf-v3-vp-simplifiedstacks",
+    "title": "AGF - V3 - VP - SimplifiedStacks",
+    "summary": "Simplified stack sizes to reduce inventory clutter with vanilla feel.",
+    "thumbnail": {
+      "id": "01M26QFBPJN6C7X2G9HZZ8X6NX",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QF5H603G7GRSAVVR0W9Y0/images/01M26QFB8YB4K7MPVEJFYKH8Z9/AGF-VP-SimplifiedStacks_01.webp",
+      "blurhash": "L48D*Am_Mk~XnD%LtPRkVzo{o[R$",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1723,
+    "download_count": 275,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:36:59.813Z",
+    "updated_at": "2026-09-10T22:45:41.478Z",
+    "recent_activity_at": "2026-09-10T22:45:41.478Z"
+  },
+  {
+    "id": "01M26QEK3X265AW4R78XMAE1BT",
+    "slug": "agf-v3-vp-scrapequipmentfaster",
+    "title": "AGF - V3 - VP - ScrapEquipmentFaster",
+    "summary": "Equipment now scraps in 4 seconds instead of 10.",
+    "thumbnail": {
+      "id": "01M26QET3EHTYXBYPXDTCQRP3K",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QEK3X265AW4R78XMAE1BT/images/01M26QESJH6P6TBAAMNWMAGS7Q/AGF-VP-ScrapEquipmentFaster_01.webp",
+      "blurhash": "L29%SN,|000?-t?FXmNH02P9_1~8",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 774,
+    "download_count": 96,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:36:40.957Z",
+    "updated_at": "2026-09-10T22:45:50.625Z",
+    "recent_activity_at": "2026-09-10T22:45:50.625Z"
+  },
+  {
+    "id": "01M26QE0QJYD5K7Q5G38HSQHFB",
+    "slug": "agf-v3-vp-scrapbatts4acid",
+    "title": "AGF - V3 - VP - ScrapBatts4Acid",
+    "summary": "Scrapping a car battery provides 2 acid instead of lead.",
+    "thumbnail": {
+      "id": "01M26QE7HE326SRPYA1D43CPZB",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QE0QJYD5K7Q5G38HSQHFB/images/01M26QE73HQFEQ4R0QRHCEXWZV/AGF-VP-ScrapBatts4Acid_01.webp",
+      "blurhash": "L19sxZ0D@_760Z?G.Q~C+U_KKbEJ",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 756,
+    "download_count": 106,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:36:22.130Z",
+    "updated_at": "2026-09-10T22:45:59.342Z",
+    "recent_activity_at": "2026-09-10T22:45:59.342Z"
+  },
+  {
+    "id": "01M26QDCRDHAFMQHC5VBJMS77M",
+    "slug": "agf-v3-vp-restorepoweranytime",
+    "title": "AGF - V3 - VP - RestorePowerAnyTime",
+    "summary": "Restore Power quests can now be done at any time of day or night.",
+    "thumbnail": {
+      "id": "01M26QDME0DB8BTWGK09TG689Q",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QDCRDHAFMQHC5VBJMS77M/images/01M26QDKWYETW0J6HEGTBV9Z4X/AGF-VP-RestorePowerAnyTime_01.webp",
+      "blurhash": "L59?tU9k4?~C^-S1bXoy0j-.--EM",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 860,
+    "download_count": 95,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:36:01.677Z",
+    "updated_at": "2026-09-10T22:46:07.115Z",
+    "recent_activity_at": "2026-09-10T22:46:07.115Z"
+  },
+  {
+    "id": "01M26QCSFRFYAEPM5N0904Y2HS",
+    "slug": "agf-v3-vp-reciperottingflesh",
+    "title": "AGF - V3 - VP - RecipeRottingFlesh",
+    "summary": "Campfire recipe for rotting flesh from raw meat and murky water.",
+    "thumbnail": {
+      "id": "01M26QD0WXNVV8XAJS6EQJZY5T",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QCSFRFYAEPM5N0904Y2HS/images/01M26QD0HA8AZNAAYEXYD7XEQ8/AGF-VP-RecipeRottingFlesh_01.webp",
+      "blurhash": "L3Av%@D@Q=014_~UJP%N00Fa?Y?Z",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 667,
+    "download_count": 42,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:35:41.944Z",
+    "updated_at": "2026-09-10T22:46:15.873Z",
+    "recent_activity_at": "2026-09-10T22:46:15.873Z"
+  },
+  {
+    "id": "01M26QC6YMQQHHAFGH8X1R7BPH",
+    "slug": "agf-v3-vp-rebundlebundles",
+    "title": "AGF - V3 - VP - RebundleBundles",
+    "summary": "Unlocking a bundle recipe lets you rebundle full stacks of that item.",
+    "thumbnail": {
+      "id": "01M26QCDYM2W6YRKMNFBX2SN6H",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QC6YMQQHHAFGH8X1R7BPH/images/01M26QCDESQFFC1QT5R3RT1NHY/AGF-VP-RebundleBundles_01.webp",
+      "blurhash": "L38D#1nYH]?cwSt3tkxuIE-:pCIn",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 650,
+    "download_count": 36,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:35:22.964Z",
+    "updated_at": "2026-09-10T22:46:24.549Z",
+    "recent_activity_at": "2026-09-10T22:46:24.549Z"
+  },
+  {
+    "id": "01M26QBMQ61HV5P0TA0ZEMSCZV",
+    "slug": "agf-v3-vp-playerresetquests",
+    "title": "AGF - V3 - VP - PlayerResetQuests",
+    "summary": "Adds a trader dialogue option to reset the available quest list.",
+    "thumbnail": {
+      "id": "01M26QBV79F3KSTZDZKSRTA9QK",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QBMQ61HV5P0TA0ZEMSCZV/images/01M26QBTTWJ6TKYST5F627JF8B/AGF-VP-PlayerResetQuests_01.webp",
+      "blurhash": "L28Ws?4~wQ?d}_Xm-.IoED--o[ou",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1023,
+    "download_count": 168,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:35:04.294Z",
+    "updated_at": "2026-09-10T22:46:32.989Z",
+    "recent_activity_at": "2026-09-10T22:46:32.989Z"
+  },
+  {
+    "id": "01M26QB1VKWM1PN3RZPDHXWQ11",
+    "slug": "agf-v3-vp-pickuplanternsplus",
+    "title": "AGF - V3 - VP - PickupLanternsPlus",
+    "summary": "Pick up lanterns, flashlights, burning barrels, and jack-o-lanterns.",
+    "thumbnail": {
+      "id": "01M26QB95ASDEPMH3A80E512H2",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QB1VKWM1PN3RZPDHXWQ11/images/01M26QB8RBSAF7QPQ3Y9CJAY3T/AGF-VP-PickupLanternsPlus_01.webp",
+      "blurhash": "L28|hkrk0C?09A%e?X%fD]x=y4NY",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 918,
+    "download_count": 153,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:34:44.978Z",
+    "updated_at": "2026-09-10T22:46:42.301Z",
+    "recent_activity_at": "2026-09-10T22:46:42.301Z"
+  },
+  {
+    "id": "01M26QAGTE08ZGP16TJ90S3D2Y",
+    "slug": "agf-v3-vp-modslotsplus",
+    "title": "AGF - V3 - VP - ModSlotsPlus",
+    "summary": "Rebalances mod slots: fewer tier-up losses, max slots raised to 6.",
+    "thumbnail": {
+      "id": "01M26QAPVQC7N5PHTNTP45YN4M",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26QAGTE08ZGP16TJ90S3D2Y/images/01M26QAPC3GWDHDCZHN3Q9H66M/AGF-VP-ModSlotsPlus_01.webp",
+      "blurhash": "L29ZyU0?zENO=ktk%eI:03^hGW?F",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.1.2",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1427,
+    "download_count": 218,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:34:27.534Z",
+    "updated_at": "2026-09-10T22:46:50.870Z",
+    "recent_activity_at": "2026-09-10T22:46:50.870Z"
+  },
+  {
+    "id": "01M26Q9Z4N0G9PY4ZBRDGSANGY",
+    "slug": "agf-v3-vp-mod988",
+    "title": "AGF - V3 - VP - Mod988",
+    "summary": "Replaces the noose block with plain rope. For those who need it.",
+    "thumbnail": {
+      "id": "01M26QA5GCYAWA1MH584NW0A23",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26Q9Z4N0G9PY4ZBRDGSANGY/images/01M26QA52FC3SA1KMMRP216SE8/AGF-VP-Mod988_01.webp",
+      "blurhash": "L35=08^9+I_4[epIcXng%NbqkQSd",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 506,
+    "download_count": 3,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:34:09.428Z",
+    "updated_at": "2026-09-10T22:47:31.837Z",
+    "recent_activity_at": "2026-09-10T22:47:31.837Z"
+  },
+  {
+    "id": "01M26Q902HSMMC4REMQ721QYYG",
+    "slug": "agf-v3-vp-miningplus",
+    "title": "AGF - V3 - VP - MiningPlus",
+    "summary": "Mining perk unlocks clay/sand bundles; slightly more sand from mining.",
+    "thumbnail": {
+      "id": "01M26Q97NTXQJSFSF5D0Z667BR",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26Q902HSMMC4REMQ721QYYG/images/01M26Q974SRDN4CGKH30XTSPYZ/AGF-VP-MiningPlus_01.webp",
+      "blurhash": "L2B3jI4XH~0003^%%#^+01u3tI_L",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 1126,
+    "download_count": 59,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T22:33:37.617Z",
+    "updated_at": "2026-09-10T22:47:40.881Z",
+    "recent_activity_at": "2026-09-10T22:47:40.881Z"
+  },
+  {
+    "id": "01M26MQMRM07T0VJZZ4A5B2PHH",
+    "slug": "agf-v3-vp-maxlevel500",
+    "title": "AGF - V3 - VP - MaxLevel500",
+    "summary": "Raises the max player level cap from 300 to 500.",
+    "thumbnail": {
+      "id": "01M26MQV9CYB9HDF7Z8JWB1J6B",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26MQMRM07T0VJZZ4A5B2PHH/images/01M26MQTWD4ZXZC8FFCG2EK5WA/AGF-VP-MaxLevel500_01.webp",
+      "blurhash": "L36@vd=%RD%4,|o|tQt7DTx@%yoy",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 2,
+    "view_count": 992,
+    "download_count": 233,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T21:49:11.827Z",
+    "updated_at": "2026-09-10T21:50:05.976Z",
+    "recent_activity_at": "2026-09-10T21:50:05.976Z"
+  },
+  {
+    "id": "01M26MFRBADJJVBFFYQ81J9GSW",
+    "slug": "agf-v3-vp-mastertool",
+    "title": "AGF - V3 - VP - MasterTool",
+    "summary": "Adds the endgame Master Tool, an all-in-one harvesting item.",
+    "thumbnail": {
+      "id": "01M26MFZ7Q98PQ0XPARDDQR80P",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26MFRBADJJVBFFYQ81J9GSW/images/01M26MFYQJH26ZMHEHXV0RTCSJ/AGF-VP-MasterTool_01.webp",
+      "blurhash": "L3BM*~z|0000D]IT_M%M00?]o??u",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "7.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 881,
+    "download_count": 83,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T21:44:53.353Z",
+    "updated_at": "2026-09-10T21:45:53.757Z",
+    "recent_activity_at": "2026-09-10T21:45:53.757Z"
+  },
+  {
+    "id": "01M26M9K6HXY9XR7BEV9X07NJ1",
+    "slug": "agf-v3-vp-largerstorageoption",
+    "title": "AGF - V3 - VP - LargerStorageOption",
+    "summary": "Adds larger writable storage with 15 shapes, 3x health, break-to-pickup.",
+    "thumbnail": {
+      "id": "01M26MAWKJX2YMN2SC20PNCB6A",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26M9K6HXY9XR7BEV9X07NJ1/images/01M26MAW347R86M1XVSNQ6W2YZ/AGF-VP-LargerStorageOption_01.webp",
+      "blurhash": "L39G:m4Vw6wQao?8Otoe8xt,%bko",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1142,
+    "download_count": 161,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T21:41:31.473Z",
+    "updated_at": "2026-09-10T21:42:52.683Z",
+    "recent_activity_at": "2026-09-10T21:42:52.683Z"
+  },
+  {
+    "id": "01M26K3JZAGNQ6NHZK67G36S8D",
+    "slug": "agf-v3-vp-craftstackengbattcells-ab18df",
+    "title": "AGF - V3 - VP - CraftStackEngBattCells",
+    "summary": "Makes engines, batteries, and solar cells stackable and craftable.",
+    "thumbnail": {
+      "id": "01M26KSP8TGZVEZQBY098H419T",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26K3JZAGNQ6NHZK67G36S8D/images/01M26KSNRNCXB5R8ZENEY3D5Q2/AGF-VP-CraftStackEngBattCells_01.webp",
+      "blurhash": "L6A]]R^n00020NW-?a?HwQSwScou",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 865,
+    "download_count": 147,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T21:20:46.058Z",
+    "updated_at": "2026-09-10T21:40:20.925Z",
+    "recent_activity_at": "2026-09-10T21:40:20.925Z"
+  },
+  {
+    "id": "01M269RKQZF88G33DSZ2MQWTPB",
+    "slug": "agf-fuel-burn-plus-v3",
+    "title": "AGF - Fuel Burn Plus - V3",
+    "summary": "Craft fuel items with burn times of 10, 60, 600, and 6,000 minutes.",
+    "thumbnail": {
+      "id": "01M4PEYPS8YS0G2WD2D7M9157C",
+      "url": "https://downloads.7daystodiemods.com/mods/01M269RKQZF88G33DSZ2MQWTPB/images/01M4PEYP06QPPQ9R3459KA0BMB/AGF-V3-SERVER-FuelBurnPlus_01.webp",
+      "blurhash": "L197Ixq;DAHv[$.6.7Io00.PXx?[",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.3",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 583,
+    "download_count": 47,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T18:37:29.215Z",
+    "updated_at": "2026-10-11T22:02:11.442Z",
+    "recent_activity_at": "2026-10-11T22:02:11.442Z"
+  },
+  {
+    "id": "01M269H18VKFFKBAX0Q4Q0C8WW",
+    "slug": "agf-v3-vp-floraharvester",
+    "title": "AGF - V3 - VP - FloraHarvester",
+    "summary": "Flora Harvester is a tool for fast plants and crop clearing.",
+    "thumbnail": {
+      "id": "01M269M6BXJW7318G19X4FW4T4",
+      "url": "https://downloads.7daystodiemods.com/mods/01M269H18VKFFKBAX0Q4Q0C8WW/images/01M269M5MG3C7RNW72XVVEV3FK/AGF-VP-FloraHarvester_01.webp",
+      "blurhash": "L371KG,{M+^-?1oyo{ofrftkthNF",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.0.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 717,
+    "download_count": 64,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T18:33:20.923Z",
+    "updated_at": "2026-09-10T21:10:13.367Z",
+    "recent_activity_at": "2026-09-10T21:10:13.367Z"
+  },
+  {
+    "id": "01M26983N911BECWHCYG1BZ3DK",
+    "slug": "agf-v3-vp-dyesplus",
+    "title": "AGF - V3 - VP - DyesPlus",
+    "summary": "Adds 36 dyes; craft any dye for 15 paint, or scrap to swap colors.",
+    "thumbnail": {
+      "id": "01M269A8GB554PTQ170S533V9P",
+      "url": "https://downloads.7daystodiemods.com/mods/01M26983N911BECWHCYG1BZ3DK/images/01M269A7SPHBVGF2P9ECMFQ6SD/AGF-VP-DyesPlus_01.webp",
+      "blurhash": "L4BWPn03Z%0004^%b_~A8wpHxst,",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.1.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 2,
+    "view_count": 614,
+    "download_count": 76,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T18:28:28.457Z",
+    "updated_at": "2026-09-10T19:11:39.794Z",
+    "recent_activity_at": "2026-09-10T19:11:39.794Z"
+  },
+  {
+    "id": "01M2690PXMMBF3EEKC59QH1M27",
+    "slug": "agf-v3-vp-drinkableacid",
+    "title": "AGF - V3 - VP - DrinkableAcid",
+    "summary": "Drink acid for risky fun with buffs, damage, and trippy screen effects.",
+    "thumbnail": {
+      "id": "01M2692XBZX9K1WEHV59CBZMA6",
+      "url": "https://downloads.7daystodiemods.com/mods/01M2690PXMMBF3EEKC59QH1M27/images/01M2692WMST9RY7YX02SEMVHGN/AGF-VP-DrinkableAcid_01.webp",
+      "blurhash": "L6BpU-0X4Tak0Z^*xm#*l:TW%%I.",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 307,
+    "download_count": 9,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T18:24:26.036Z",
+    "updated_at": "2026-09-10T19:10:44.124Z",
+    "recent_activity_at": "2026-09-10T19:10:44.124Z"
+  },
+  {
+    "id": "01M268NQ8SYM4K38TEMT0YSYA0",
+    "slug": "agf-v3-vp-doorsplus",
+    "title": "AGF - V3 - VP - DoorsPlus",
+    "summary": "Craft every door-like block in four materials, including unbarricaded.",
+    "thumbnail": {
+      "id": "01M268V8W33PJ3G32S2Y93WVF1",
+      "url": "https://downloads.7daystodiemods.com/mods/01M268NQ8SYM4K38TEMT0YSYA0/images/01M268V843X9JCNJJD6CN0HMP4/AGF-VP-DoorsPlus_01_Under2MB.webp",
+      "blurhash": "L3Av;0984W0ON+^iEe%003O,_0x=",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEWJAVSN9QPXJWZPQWF",
+        "slug": "building",
+        "name": "Building",
+        "icon": "lucide:building"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.0.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1213,
+    "download_count": 116,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T18:18:25.944Z",
+    "updated_at": "2026-09-10T19:09:55.614Z",
+    "recent_activity_at": "2026-09-10T19:09:55.614Z"
+  },
+  {
+    "id": "01M268F1E7KGYQW1N3C6B6GF4F",
+    "slug": "agf-v3-vp-craftvitamins",
+    "title": "AGF - V3 - VP - CraftVitamins",
+    "summary": "Unlocks vitamin crafting at Medical 30, matching herbal antibiotics.",
+    "thumbnail": {
+      "id": "01M268HFWHAW2Q42QN9P913FD2",
+      "url": "https://downloads.7daystodiemods.com/mods/01M268F1E7KGYQW1N3C6B6GF4F/images/01M268HF6FSHCBYAA1K4NBTG4P/AGF-VP-CraftVitamins_01.webp",
+      "blurhash": "L29%#X00Zr:nDd_2O,%K4T.m$^GG",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.2",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 452,
+    "download_count": 61,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T18:14:46.983Z",
+    "updated_at": "2026-09-10T19:08:19.815Z",
+    "recent_activity_at": "2026-09-10T19:08:19.815Z"
+  },
+  {
+    "id": "01M25GP21DCBMRE2DTRX0C3FZ9",
+    "slug": "agf-v3-vp-craftsewingkits",
+    "title": "AGF - V3 - VP - CraftSewingKits",
+    "summary": "You can craft sewing kits after reading Wasteland Treasures 6.",
+    "thumbnail": {
+      "id": "01M25GRD9DJV016S8R8WYWGBSX",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25GP21DCBMRE2DTRX0C3FZ9/images/01M25GRCS1GPZ6ASH8Q6B6PAQ7/AGF-VP-CraftSewingKits_01.webp",
+      "blurhash": "L49@Cs8zD+-Y$;otx[bC00?bx@Ns",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 394,
+    "download_count": 49,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T11:19:11.149Z",
+    "updated_at": "2026-09-10T19:07:51.741Z",
+    "recent_activity_at": "2026-09-10T19:07:51.741Z"
+  },
+  {
+    "id": "01M25GBDT5FNS800M0QAR7W4CR",
+    "slug": "agf-v3-vp-breakitgetit",
+    "title": "AGF - V3 - VP - BreakItGetIt",
+    "summary": "Break it, get it: recover stations, storage, signs, and power blocks.",
+    "thumbnail": {
+      "id": "01M25GH2QMZ6XRAZY21EJFB7S0",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25GBDT5FNS800M0QAR7W4CR/images/01M25GH28S9YY8GY88HQ9BV2SR/AGF-VP-BreakItGetIt_01_Under2MB.webp",
+      "blurhash": "L2ATD,MZ039OM=x=%L-:00%c~n_1",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 892,
+    "download_count": 123,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T11:13:22.757Z",
+    "updated_at": "2026-09-10T18:49:32.104Z",
+    "recent_activity_at": "2026-09-10T18:49:32.104Z"
+  },
+  {
+    "id": "01M25FK31GQS6SBM2C6CQCMZKH",
+    "slug": "agf-v3-vp-bettereggchance",
+    "title": "AGF - V3 - VP - BetterEggChance",
+    "summary": "Chance to find eggs in birdnest increased from 35% to 63%.",
+    "thumbnail": {
+      "id": "01M25FXP0GJS5AGJWEC52W37JB",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25FK31GQS6SBM2C6CQCMZKH/images/01M25FXNJ1RC7XP7VV7NESHHSH/AGF-VP-BetterEggChance_01_Under2MB.webp",
+      "blurhash": "L48|w~RF4q%7?1ozXMbY4Y-:%eR}",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 528,
+    "download_count": 70,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T11:00:05.296Z",
+    "updated_at": "2026-09-10T18:48:06.061Z",
+    "recent_activity_at": "2026-09-10T18:48:06.061Z"
+  },
+  {
+    "id": "01M25E3R63Y72MD212PSP2G3TC",
+    "slug": "agf-v3-vp-bedrollplus-1f756a",
+    "title": "AGF - V3 - VP - BedrollPlus",
+    "summary": "Adds a tougher Bedroll+ spawn point available in all bed models.",
+    "thumbnail": {
+      "id": "01M25E7KEBQPHYY5DCG4HTV8YS",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25E3R63Y72MD212PSP2G3TC/images/01M25E7JZPWJJ2W5FC84N83PAQ/AGF-VP-BedrollPlus_01_Under2MB.webp",
+      "blurhash": "L3AA8q^U0203M.x[%e%202J5yA_1",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 658,
+    "download_count": 54,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T10:34:14.083Z",
+    "updated_at": "2026-09-10T10:49:34.974Z",
+    "recent_activity_at": "2026-09-10T10:49:34.974Z"
+  },
+  {
+    "id": "01M25D1DJKXRDRFNPBQAZR31AJ",
+    "slug": "agf-v3-vp-automobilesrespawn",
+    "title": "AGF - V3 - VP - AutomobilesRespawn",
+    "summary": "Salvaged vehicles downgrade to a hubcap seed that regrows a vehicle.",
+    "thumbnail": {
+      "id": "01M25D9ZX9G4JETYKK2NXKWSKG",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25D1DJKXRDRFNPBQAZR31AJ/images/01M25D9ZCFRC1X1619CCRQEYX8/AGF-VP-AutomobilesRespawn_01.webp",
+      "blurhash": "L29Q8Y0Hvpxym|%KyBx[0B~TOlxm",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 791,
+    "download_count": 103,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T10:15:29.107Z",
+    "updated_at": "2026-09-10T10:26:06.667Z",
+    "recent_activity_at": "2026-09-10T10:26:06.667Z"
+  },
+  {
+    "id": "01M25CD1ADC3X0P14QCXPDP6R4",
+    "slug": "agf-v3-vp-archeryfeatherschange",
+    "title": "AGF - V3 - VP - ArcheryFeathersChange",
+    "summary": "Feathers replace plastic in archery ammo; craft feathers from plastic.",
+    "thumbnail": {
+      "id": "01M25CJ37W937ZXREZ9JGEMWYX",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25CD1ADC3X0P14QCXPDP6R4/images/01M25CJ2SJTFCEJM4J3C2STG60/AGF-VP-ArcheryFeathersChange_01.webp",
+      "blurhash": "L4AAOB^U0001?1X5oxt400th%g%f",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 429,
+    "download_count": 19,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T10:04:21.197Z",
+    "updated_at": "2026-09-10T10:14:29.781Z",
+    "recent_activity_at": "2026-09-10T10:14:29.781Z"
+  },
+  {
+    "id": "01M25BQMM3RVTPSCDJQWXEQTJS",
+    "slug": "agf-v3-vp-ammodisassembly",
+    "title": "AGF - V3 - VP - AmmoDisassembly",
+    "summary": "Scrap ammo into ingredient bundles; combine into x100 or x1000 packs.",
+    "thumbnail": {
+      "id": "01M25BTVXBNBA36G1REXHCGTK1",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25BQMM3RVTPSCDJQWXEQTJS/images/01M25BTVFMD64D8TE269X3V4NG/AGF-VP-AmmoDisassembly_01.webp",
+      "blurhash": "L39G{[M2N6UvjQtPx[$_8w.RIlyY",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 758,
+    "download_count": 61,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T09:52:40.066Z",
+    "updated_at": "2026-09-10T09:59:51.691Z",
+    "recent_activity_at": "2026-09-10T09:59:51.691Z"
+  },
+  {
+    "id": "01M25B24SF75XVACG2ABEY9GE7",
+    "slug": "agf-v3-vp-alternativerecipes",
+    "title": "AGF - V3 - VP - AlternativeRecipes",
+    "summary": "Alt recipes for cobblestone from clay/stone and first aid from cloth.",
+    "thumbnail": {
+      "id": "01M25B60P6K04WNNQHDBXETHYW",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25B24SF75XVACG2ABEY9GE7/images/01M25B607FG8VSA34WTD1TJCB0/AGF-VP-AlternativeRecipes_01.webp",
+      "blurhash": "L39js5QT4xUuaC%eo_%F8w.TRyTf",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 425,
+    "download_count": 18,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T09:40:55.726Z",
+    "updated_at": "2026-09-10T09:47:17.734Z",
+    "recent_activity_at": "2026-09-10T09:47:17.734Z"
+  },
+  {
+    "id": "01M25AM9K3ASSPXWV3G9Y8YKJA",
+    "slug": "agf-v3-vp-adminmoddingsupport",
+    "title": "AGF - V3 - VP - AdminModdingSupport",
+    "summary": "Faster hold-to-use Block Replace, Dev XP books, harvest test blocks.",
+    "thumbnail": {
+      "id": "01M25ASAKWYRZQW8RAHNN4ZAR5",
+      "url": "https://downloads.7daystodiemods.com/mods/01M25AM9K3ASSPXWV3G9Y8YKJA/images/01M25ASA5P8XSAF5V1V7TWJPAJ/AGF-VP-AdminModdingSupport_01_Under2MB.webp",
+      "blurhash": "L3A,td8w00-Z0F-h~pWV00%~%xR}",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 542,
+    "download_count": 11,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T09:33:21.890Z",
+    "updated_at": "2026-09-10T09:38:38.316Z",
+    "recent_activity_at": "2026-09-10T09:38:38.316Z"
+  },
+  {
+    "id": "01M259YHN6NCANA87S78ZT012H",
+    "slug": "agf-v3-vps-screameralert",
+    "title": "AGF - V3 - VPS - ScreamerAlert",
+    "summary": "Sends private chat alerts for Screamers and Screamer hordes within 120m.",
+    "thumbnail": {
+      "id": "01M25A4TAQXKXDYVSH7Q7088MP",
+      "url": "https://downloads.7daystodiemods.com/mods/01M259YHN6NCANA87S78ZT012H/images/01M25A4STZ282X2PHJM4B2AESZ/AGF-VPS-ScreamerAlert_01_Under2MB.webp",
+      "blurhash": "L4AJpD4bM:xc#xkQ-:I-03?tSaxu",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.3.4",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 668,
+    "download_count": 46,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T09:21:29.254Z",
+    "updated_at": "2026-09-10T09:28:39.345Z",
+    "recent_activity_at": "2026-09-10T09:28:39.345Z"
+  },
+  {
+    "id": "01M259D9964K4B0EKSS66H0M2G",
+    "slug": "agf-v3-vps-honkopensyourdoors",
+    "title": "AGF - V3 - VPS - HonkOpensYourDoors",
+    "summary": "Honk from a vehicle to open or close player-placed unpowered doors.",
+    "thumbnail": {
+      "id": "01M259J6REWFHMQGCSM05NBYDC",
+      "url": "https://downloads.7daystodiemods.com/mods/01M259D9964K4B0EKSS66H0M2G/images/01M259J67W05C6EXYBYRBW71DP/AGF-VPS-HonkOpensYourDoors_01_Under2MB.webp",
+      "blurhash": "L8CF^z05iIIq-@xtImR+00~Akrxs",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEX4YE8E931WN3QDBHS",
+        "slug": "vehicle",
+        "name": "Vehicle",
+        "icon": "lucide:car"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.0.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 876,
+    "download_count": 121,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T09:12:03.622Z",
+    "updated_at": "2026-09-10T09:17:17.745Z",
+    "recent_activity_at": "2026-09-10T09:17:17.745Z"
+  },
+  {
+    "id": "01M258P7SD6C822ZZRX25BJKK3",
+    "slug": "agf-v3-vps-globalstormtracker",
+    "title": "AGF - V3 - VPS - GlobalStormTracker",
+    "summary": "Sends a global chat message showing where the storm is and when it ends.",
+    "thumbnail": {
+      "id": "01M258T6WFQSJ032GGJ5SKYT80",
+      "url": "https://downloads.7daystodiemods.com/mods/01M258P7SD6C822ZZRX25BJKK3/images/01M258T68WG6H03ZNAEV9Q662K/AGF-VPS-GlobalStormTracker_01.webp",
+      "blurhash": "L5BDmOL#00D-4W-:%fk900yZ.S$|",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.2",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 565,
+    "download_count": 42,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T08:59:28.429Z",
+    "updated_at": "2026-09-10T09:06:42.909Z",
+    "recent_activity_at": "2026-09-10T09:06:42.909Z"
+  },
+  {
+    "id": "01M257F6KFRAQMJAD3FQYV64FR",
+    "slug": "agf-v3-noeac-toolbelt12slots",
+    "title": "AGF - V3 - NoEAC - Toolbelt12Slots",
+    "summary": "12-slot toolbelt; default keys are - and =, both rebindable in options.",
+    "thumbnail": {
+      "id": "01M257MMG45HS6CNSYRFYBFV6Z",
+      "url": "https://downloads.7daystodiemods.com/mods/01M257F6KFRAQMJAD3FQYV64FR/images/01M257MM26AFGHBH57PD9MXZSG/AGF-NoEAC-Toolbelt12Slots_01.webp",
+      "blurhash": "LAE:DH0000I94T%Mxu%h00?w%god",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANRT1EDDN8P4C6WGRN",
+      "slug": "server-and-client",
+      "name": "Server & Client Side"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.2.4",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 927,
+    "download_count": 157,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T08:38:09.262Z",
+    "updated_at": "2026-09-10T08:53:33.289Z",
+    "recent_activity_at": "2026-09-10T08:53:33.289Z"
+  },
+  {
+    "id": "01M256RQJZTK7HK0DTFE2WGFS2",
+    "slug": "agf-v3-noeac-smelttimeroption",
+    "title": "AGF - V3 - NoEAC - SmeltTimerOption",
+    "summary": "Lets you switch forge smelt timer between one item and full stack.",
+    "thumbnail": {
+      "id": "01M256WXSNBNF54KTYFJH6NYJ2",
+      "url": "https://downloads.7daystodiemods.com/mods/01M256RQJZTK7HK0DTFE2WGFS2/images/01M256WXAAJC5KK65PVD0C2H54/AGF-NoEAC-SmeltTimerOption_01.webp",
+      "blurhash": "L2Bfz|00Dn000E^*J4~W00_M.5.6",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 679,
+    "download_count": 35,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T08:25:52.991Z",
+    "updated_at": "2026-09-10T08:35:30.141Z",
+    "recent_activity_at": "2026-09-10T08:35:30.141Z"
+  },
+  {
+    "id": "01M255F77QRNNK7KP44TDETMSA",
+    "slug": "agf-v3-noeac-openallbutton",
+    "title": "AGF - V3 - NoEAC - OpenAllButton",
+    "summary": "Adds an Open All button that rapidly opens bundled item stacks.",
+    "thumbnail": {
+      "id": "01M2561STZHGSJD9A6STBYMNZ1",
+      "url": "https://downloads.7daystodiemods.com/mods/01M255F77QRNNK7KP44TDETMSA/images/01M2561SFFJPC42R6Q3F4QWNTK/AGF-NoEAC-OpenAllButton_01.webp",
+      "blurhash": "L384MkrhH]~D#vx@o{ozMLyBx@Io",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.0.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 611,
+    "download_count": 28,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T08:03:12.759Z",
+    "updated_at": "2026-09-10T08:21:38.856Z",
+    "recent_activity_at": "2026-09-10T08:21:38.856Z"
+  },
+  {
+    "id": "01M253B35MS33WB2ZXDT4GGXH9",
+    "slug": "agf-v3-noeac-mapplus",
+    "title": "AGF - V3 - NoEAC - MapPlus",
+    "summary": "Hover the cursor on the map to see location names and POI bounds.",
+    "thumbnail": {
+      "id": "01M254ER0KQ4DCY3NEEFYMBJYH",
+      "url": "https://downloads.7daystodiemods.com/mods/01M253B35MS33WB2ZXDT4GGXH9/images/01M254EQJQGMS9AF9GVJXR1TJG/AGF-NoEAC-MapPlus_01.webp",
+      "blurhash": "L4BM*~00v;Dg02~VOT^*QSt+k5Ou",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.1.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 1106,
+    "download_count": 121,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T07:26:00.372Z",
+    "updated_at": "2026-09-10T07:55:35.790Z",
+    "recent_activity_at": "2026-09-10T07:55:35.790Z"
+  },
+  {
+    "id": "01M252H62KQWJC20FMKNFT6RNA",
+    "slug": "agf-v3-noeac-hidedlccosmetics",
+    "title": "AGF - V3 - NoEAC - HideDLCCosmetics",
+    "summary": "Adds an in-game option to hide DLC cosmetics from your view.",
+    "thumbnail": {
+      "id": "01M252R9NKVG1BQA98SBCQY3F7",
+      "url": "https://downloads.7daystodiemods.com/mods/01M252H62KQWJC20FMKNFT6RNA/images/01M252R9432GQCP1X72HQRCE54/AGF-NoEAC-HideDLCCosmetics_01.webp",
+      "blurhash": "L45}E$^n%4%N}_X7Sct7$-SvXMk8",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.1.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 448,
+    "download_count": 7,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T07:11:51.379Z",
+    "updated_at": "2026-09-10T07:22:10.818Z",
+    "recent_activity_at": "2026-09-10T07:22:10.818Z"
+  },
+  {
+    "id": "01M250BRD0S4SKPSDXKPEJ5DPF",
+    "slug": "agf-v3-noeac-gyroflightmodes",
+    "title": "AGF - V3 - NoEAC - GyroFlightModes",
+    "summary": "Switch the gyrocopter between Original and Helicopter flight modes.",
+    "thumbnail": {
+      "id": "01M250X2HKFTCM7RC3QMCWC2HB",
+      "url": "https://downloads.7daystodiemods.com/mods/01M250BRD0S4SKPSDXKPEJ5DPF/images/01M250X20JE4BMBWV96F82PEH2/AGF-NoEAC-GyroFlightModes_01.webp",
+      "blurhash": "L3ATNG03^Q4r05--S~_300_MNEtK",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANRT1EDDN8P4C6WGRN",
+      "slug": "server-and-client",
+      "name": "Server & Client Side"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.0.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 663,
+    "download_count": 62,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-10T06:33:56.383Z",
+    "updated_at": "2026-09-10T06:59:39.937Z",
+    "recent_activity_at": "2026-09-10T06:59:39.937Z"
+  },
+  {
+    "id": "01M1V5JM0DRR23S3C0RRB6VR5P",
+    "slug": "agf-v3-vps-fuelautoshutoff",
+    "title": "AGF - V3 - VPS - FuelAutoShutOff",
+    "summary": "Fuel burning stops when crafting and smelting are finished.",
+    "thumbnail": {
+      "id": "01M1V6SS47C0JBAKHACNXS1YRS",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V5JM0DRR23S3C0RRB6VR5P/images/01M1V6SRGHQRJWQ4H8191N3QHV/AGF-VPS-FuelAutoShutOff_01_Under2MB.webp",
+      "blurhash": "L7D]JD0101Md07~VnLj]00tP?a%f",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.0.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 7,
+    "view_count": 2224,
+    "download_count": 598,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:52:39.821Z",
+    "updated_at": "2026-09-12T08:03:22.454Z",
+    "recent_activity_at": "2026-09-06T10:55:02.230Z"
+  },
+  {
+    "id": "01M1V5EBA8Y7Z06TYRKMN9WBPW",
+    "slug": "agf-v3-noeac-enhancedagf",
+    "title": "AGF - V3 - NoEAC - EnhancedAGF",
+    "summary": "Client-side enhancement add-on for AGF mods when EAC is off.",
+    "thumbnail": {
+      "id": "01M1V5FN1187EVXQNPNP131EJS",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V5EBA8Y7Z06TYRKMN9WBPW/images/01M1V5FMK8968Q35BPBAMC0CC1/AGF-NoEAC-EnhancedAGF_01.webp",
+      "blurhash": "L3A,FE0XD5IXDtW,_2-q04~TJ$x?",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.3.4",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1540,
+    "download_count": 129,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:50:19.847Z",
+    "updated_at": "2026-09-06T10:52:26.850Z",
+    "recent_activity_at": "2026-09-06T10:52:26.850Z"
+  },
+  {
+    "id": "01M1V5AGMZ6E69M1R0FQ6DQQRZ",
+    "slug": "agf-v3-noeac-cosmeticlockicon",
+    "title": "AGF - V3 - NoEAC - CosmeticLockIcon",
+    "summary": "Shows a scrap icon on armor pieces whose cosmetics are still locked.",
+    "thumbnail": {
+      "id": "01M1V5BS5XYQZ65SAYJ60QV7TY",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V5AGMZ6E69M1R0FQ6DQQRZ/images/01M1V5BRSP3E4EC6MAEV7EW1GP/AGF-NoEAC-CosmeticLockIcon_01.webp",
+      "blurhash": "LACG0^-r9G00IYocxtxu00NFxu~p",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANRT1EDDN8P4C6WGRN",
+      "slug": "server-and-client",
+      "name": "Server & Client Side"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.2",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 733,
+    "download_count": 18,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:48:14.238Z",
+    "updated_at": "2026-09-06T10:50:06.824Z",
+    "recent_activity_at": "2026-09-06T10:50:06.824Z"
+  },
+  {
+    "id": "01M1V56766XETVC2PFB81WHDDE",
+    "slug": "agf-v3-noeac-autorun",
+    "title": "AGF - V3 - NoEAC - AutoRun",
+    "summary": "Auto-Run for keyboard and controller, configurable in the Options menu.",
+    "thumbnail": {
+      "id": "01M1V57J2MDM50PA4QJX77XJF3",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V56766XETVC2PFB81WHDDE/images/01M1V57HNGPMANV8JJGBHPZXSS/AGF-NoEAC-AutoRun_01.webp",
+      "blurhash": "L8EVpW8x009$5Fxs%Lxa00yX~p$w",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 888,
+    "download_count": 57,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:45:53.478Z",
+    "updated_at": "2026-09-06T10:48:01.742Z",
+    "recent_activity_at": "2026-09-06T10:48:01.742Z"
+  },
+  {
+    "id": "01M1V50PEVX7CWTZBMPJZ00185",
+    "slug": "agf-v3-noeac-audiooptionsplus",
+    "title": "AGF - V3 - NoEAC - AudioOptionsPlus",
+    "summary": "Adds audio tabs for custom volume controls and animal pain sounds.",
+    "thumbnail": {
+      "id": "01M1V52A9RFWMHTG8P2NBJPAE2",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V50PEVX7CWTZBMPJZ00185/images/01M1V529YTS1W7AG7BF84CHSGH/AGF-NoEAC-AudioOptionsPlus_01.webp",
+      "blurhash": "L467vT^n$--r^nX7Sct7%5SvXMW-",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXHGM1067HR4VHRGDC",
+        "slug": "sound",
+        "name": "Sound",
+        "icon": "lucide:volume-2"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBANJ4036JR7BYG4F2WG",
+      "slug": "client-only",
+      "name": "Client Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 748,
+    "download_count": 46,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:42:52.507Z",
+    "updated_at": "2026-09-06T10:45:10.090Z",
+    "recent_activity_at": "2026-09-06T10:45:10.090Z"
+  },
+  {
+    "id": "01M1V4SH3Q3KME1YVWM5XN6WCH",
+    "slug": "agf-v3-hudplus-weekday",
+    "title": "AGF - V3 - HUDPlus - Weekday",
+    "summary": "Adds the weekday name next to the in-game day number.",
+    "thumbnail": {
+      "id": "01M1V4V41C21MA61ZE09RKHBAD",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V4SH3Q3KME1YVWM5XN6WCH/images/01M1V4V3NENN3S1MY9Q1G571X3/AGF-HUDPlus-Weekday_01.webp",
+      "blurhash": "L5A^h48w8wDj02?ZyDxt8wcG%%-;",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.1.3",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 2,
+    "view_count": 1293,
+    "download_count": 129,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:38:57.655Z",
+    "updated_at": "2026-09-06T10:41:35.570Z",
+    "recent_activity_at": "2026-09-06T10:41:35.570Z"
+  },
+  {
+    "id": "01M1V42X1FGFZ5D8VFYD980ME3",
+    "slug": "agf-v3-hudplus-visualentitytracker",
+    "title": "AGF - V3 - HUDPlus - VisualEntityTracker",
+    "summary": "Provides visual compass cues for nearby entities within 25m.",
+    "thumbnail": {
+      "id": "01M1V4NZBKMB75T4KPYV71MVKR",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V42X1FGFZ5D8VFYD980ME3/images/01M1V4NYXPX3QSN3Y7SMVAS95K/AGF-HUDPlus-VisualEntityTracker_01_Under2MB.webp",
+      "blurhash": "L4Ci]y03008{00~p-k?H00td?]X7",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "1.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1480,
+    "download_count": 131,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:26:36.207Z",
+    "updated_at": "2026-09-06T10:38:42.510Z",
+    "recent_activity_at": "2026-09-06T10:38:42.510Z"
+  },
+  {
+    "id": "01M1V3Z2NSN21GQZ56XMB1GF0Y",
+    "slug": "agf-v3-hudplus-removeenteringpopup",
+    "title": "AGF - V3 - HUDPlus - RemoveEnteringPopUp",
+    "summary": "Removes the Entering popup.",
+    "thumbnail": {
+      "id": "01M1V40CNGMMK5NC202ZYDX6Q3",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V3Z2NSN21GQZ56XMB1GF0Y/images/01M1V40C8T22427BJ66TWR2GWP/AGF-HUDPlus-RemoveEnteringPopUp_01.webp",
+      "blurhash": "L4CZO.4V00v:0aR#~U-n4T_NOX9t",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 0,
+    "view_count": 886,
+    "download_count": 20,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:24:30.905Z",
+    "updated_at": "2026-09-06T10:26:23.212Z",
+    "recent_activity_at": "2026-09-06T10:26:23.212Z"
+  },
+  {
+    "id": "01M1V3RDB2DQ8N0200GDYVCR9G",
+    "slug": "agf-v3-hudplus-purplebook",
+    "title": "AGF - V3 - HUDPlus - PurpleBook",
+    "summary": "Purple Book at-a-glance tracking of magazines, books, unlocks, armor.",
+    "thumbnail": {
+      "id": "01M1V3SQ25A9VZSVMYG1H7XZ3G",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V3RDB2DQ8N0200GDYVCR9G/images/01M1V3SPPFXF7QZRHY6GJHHFXZ/AGF-HUDPlus-PurpleBook_01.webp",
+      "blurhash": "L29js24XvZL#0C~VO;-.y@GA%VPW",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      },
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "3.2.0",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1588,
+    "download_count": 179,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:20:52.449Z",
+    "updated_at": "2026-09-06T10:23:20.536Z",
+    "recent_activity_at": "2026-09-06T10:23:20.536Z"
+  },
+  {
+    "id": "01M1V3K07GPP5SMPHMDE7DF2W1",
+    "slug": "agf-v3-hudplus-bmcounter",
+    "title": "AGF - V3 - HUDPlus - BMCounter",
+    "summary": "Adds a Blood Moon countdown under the compass for any frequency/range.",
+    "thumbnail": {
+      "id": "01M1V3MEHSH237HF7J36DZVJR5",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V3K07GPP5SMPHMDE7DF2W1/images/01M1V3ME2YPEWXX7VYF5TB963F/AGF-HUDPlus-BMCounter_01.webp",
+      "blurhash": "L5DJPB0000%N00?b?b%M00_N.9M_",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.0.2",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 2,
+    "view_count": 1114,
+    "download_count": 123,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:17:55.184Z",
+    "updated_at": "2026-09-06T10:20:05.977Z",
+    "recent_activity_at": "2026-09-06T10:20:05.977Z"
+  },
+  {
+    "id": "01M1V2ZVQBJ0BZY1B0QV61BNRD",
+    "slug": "agf-v3-backpackplus-119slots",
+    "title": "AGF - V3 - BackpackPlus - 119Slots",
+    "summary": "119-slot backpack, encumbrance accounted for, light UI shrinking.",
+    "thumbnail": {
+      "id": "01M1V31CSN6M8WZATZ4FPHFVSC",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V2ZVQBJ0BZY1B0QV61BNRD/images/01M1V31CD78T2RECV70KXN593Q/AGF-BackpackPlus-119Slots_01.webp",
+      "blurhash": "L29%rC4TIJMfmw%fbq?c4U%#x,ND",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "2.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 3,
+    "view_count": 2093,
+    "download_count": 509,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T10:07:27.979Z",
+    "updated_at": "2026-09-06T10:13:26.895Z",
+    "recent_activity_at": "2026-09-06T10:09:34.998Z"
+  },
+  {
+    "id": "01M1V1VPH2TMXE3CHWPPZ6HE1T",
+    "slug": "agf-v3-backpackplus-084slots",
+    "title": "AGF - V3 - BackpackPlus - 084Slots",
+    "summary": "84-slot backpack, encumbrance accounted for, light UI shrinking.",
+    "thumbnail": {
+      "id": "01M1V1XPWZQ71F1BHSKF6YGJJK",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1V1VPH2TMXE3CHWPPZ6HE1T/images/01M1V1XPDKM8CTEQ20ENM8MK8C/AGF-BackpackPlus-084Slots_01.webp",
+      "blurhash": "L28|;l+Q9OL#V5tQ%e.8D4t,oWyZ",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1237,
+    "download_count": 222,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T09:47:43.010Z",
+    "updated_at": "2026-09-06T10:06:15.550Z",
+    "recent_activity_at": "2026-09-06T09:51:48.969Z"
+  },
+  {
+    "id": "01M1TXCTB1VYXJXB278K7QY0RW",
+    "slug": "agf-v3-backpackplus-072slots",
+    "title": "AGF - V3 - BackpackPlus - 072Slots",
+    "summary": "72-slot backpack, encumbrance accounted for, light UI shrinking.",
+    "thumbnail": {
+      "id": "01M1TYR06WTVWW91KJJV6T0H39",
+      "url": "https://downloads.7daystodiemods.com/mods/01M1TXCTB1VYXJXB278K7QY0RW/images/01M1TYQZVNYF5TCEE7PEKYX55V/AGF-BackpackPlus-072Slots_01.webp",
+      "blurhash": "L28|@tma9JhyM3%fyD%gL~yDaZu6",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 1,
+    "view_count": 1044,
+    "download_count": 167,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-09-06T08:29:41.088Z",
+    "updated_at": "2026-09-06T09:23:49.843Z",
+    "recent_activity_at": "2026-09-06T09:14:26.707Z"
+  },
+  {
+    "id": "01KXT81FQ9E1W22PDZQKR40N2A",
+    "slug": "agf-v3-backpackplus-060slots",
+    "title": "AGF - V3 - BackpackPlus - 060Slots",
+    "summary": "60-slot backpack, encumbrance accounted for, no UI shrinking.",
+    "thumbnail": {
+      "id": "01M26MYYM7SYW3CKPDE3A3FF4Z",
+      "url": "https://downloads.7daystodiemods.com/mods/01KXT81FQ9E1W22PDZQKR40N2A/images/01M26MYY4XKT96KFRJS8W11HMQ/AGF-BackpackPlus-060Slots_01.webp",
+      "blurhash": "L29tAmD7j#004W%gx?_N8w?uIlt-",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KS3RXRYM4TJT0FM78WAH9C32",
+        "slug": "quality-of-life",
+        "name": "Quality of Life",
+        "icon": "bitcoin-icons:gear-outline"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "4.1.1",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 7,
+    "view_count": 4750,
+    "download_count": 837,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-07-18T09:13:42.377Z",
+    "updated_at": "2026-09-10T22:08:53.428Z",
+    "recent_activity_at": "2026-09-10T22:08:53.428Z"
+  },
+  {
+    "id": "01KVCBB28PT432RC137KDQP57V",
+    "slug": "agf-v3-hudplus-1main",
+    "title": "AGF - V3 - HUDPlus - 1Main",
+    "summary": "Comprehensive HUD overhaul with cleaner stats, wider compass, and menus.",
+    "thumbnail": {
+      "id": "01M1V3E6JZDSDTYR8Q2D1XXVPA",
+      "url": "https://downloads.7daystodiemods.com/mods/01KVCBB28PT432RC137KDQP57V/images/01M1V3E62FSGFM3S8NBY47GT8A/AGF-HUDPlus-1Main_01.webp",
+      "blurhash": "L3Am3w0XM2M+Dsov_2%M04~9JP%L",
+      "alt_text": null,
+      "width": null,
+      "height": null
+    },
+    "categories": [
+      {
+        "id": "01KJ17JZEXMCA3EVG448CTR83Q",
+        "slug": "ui",
+        "name": "UI",
+        "icon": "lucide:layout-dashboard"
+      }
+    ],
+    "server_side": {
+      "id": "01KMWSDBAMX7RP9DHA20NATQ05",
+      "slug": "server-only",
+      "name": "Server Side Only"
+    },
+    "game_versions": [
+      {
+        "id": "01KV6CZ1SH2W4FMNTWTBFTAHYZ",
+        "slug": "v3",
+        "name": "V3 Mods"
+      }
+    ],
+    "current_version": "6.5.5",
+    "author": {
+      "id": "01JXG9WFQ8KD9YKFNFMXM3C9DX",
+      "username": "auroragigglefairy1",
+      "display_name": "AuroraGiggleFairy",
+      "avatar_url": "https://downloads.7daystodiemods.com/users/01JXG9WFQ8KD9YKFNFMXM3C9DX/avatars/01M1V0JAGGTW91CHHPGQ4V68YQ/avatar.webp",
+      "is_verified": true,
+      "is_premium": false,
+      "is_unclaimed": false,
+      "profile_frame": null,
+      "is_following": false,
+      "has_published_mod": true
+    },
+    "is_published": true,
+    "has_draft": false,
+    "approval_status": "approved",
+    "is_adult": false,
+    "favorite_count": 22,
+    "view_count": 11822,
+    "download_count": 2586,
+    "is_favorited": false,
+    "is_saved": false,
+    "download_source": null,
+    "total_file_size": null,
+    "created_at": "2026-06-18T03:10:36.310Z",
+    "updated_at": "2026-09-06T10:17:02.336Z",
+    "recent_activity_at": "2026-09-06T10:17:02.336Z"
+  }
+]

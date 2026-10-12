@@ -1,6 +1,6 @@
 # AGF-V3-SERVER-MiningPlus v2.0.2
 ### 7DaysToDieMods Details
-Generated: 2026-10-08  04:13 PM
+Generated: 2026-10-12  05:52 PM
 
 Description is for **Import**, not Edit paste.
 
@@ -14,7 +14,7 @@ Description is for **Import**, not Edit paste.
 ## 1) Title
 
 ```text
-AGF - V3 - V3 - SERVER - MiningPlus
+AGF - Mining Plus - V3
 ```
 
 ---
@@ -55,7 +55,7 @@ Server Side Only
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 <span style="color:#5F5980">──────────────────────────────────────────────────────────────</span>
 
-<h1><span style="color:#8DB580">AGF - V3 - V3 - SERVER - MiningPlus</span></h1>
+<h1><span style="color:#8DB580">AGF - V3 - SERVER - MiningPlus</span></h1>
 
 Mining perk unlocks clay/sand bundles; slightly more sand from mining.
 
@@ -264,7 +264,7 @@ GitHub sync fills **version** (tag) and **changelog** (release notes) plus the z
 Label:
 
 ```text
-AGF - V3 - V3 - SERVER - MiningPlus
+AGF - V3 - SERVER - MiningPlus
 ```
 
 Description (same as Nexus file description: summary, blank line, Mod Type):

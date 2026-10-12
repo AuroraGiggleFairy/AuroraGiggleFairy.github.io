@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RepairToolsPlus</RootNamespace>
+    <AssemblyName>RepairToolsPlus</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
+    <DedicatedServerDir Condition="'$(DedicatedServerDir)'=='' and Exists('C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods')">C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server</DedicatedServerDir>
+    <DedicatedServerDir Condition="'$(DedicatedServerDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods')">C:\Program Files\Steam\steamapps\common\7 Days to Die Dedicated Server</DedicatedServerDir>
+    <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <HarmonyDll Condition="'$(HarmonyDll)'==''">$(MSBuildProjectDirectory)\..\..\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
+    <DraftModDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-V3-BOTH-RepairToolsPlus-v0.0.1'))</DraftModDir>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-V3-BOTH-RepairToolsPlus-v0.0.1</GameModDir>
+    <DedicatedModDir>$(DedicatedServerDir)\Mods\AGF-V3-BOTH-RepairToolsPlus-v0.0.1</DedicatedModDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InControl">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\InControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="DeployAll" AfterTargets="PostBuildEvent">
+    <Message Text="Deploying DLL to $(DraftModDir)..." Importance="high" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="true" Condition="Exists('$(DraftModDir)')" />
+    <Message Text="Deploying full mod to game: $(GameModDir)..." Importance="high" />
+    <MakeDir Directories="$(GameModDir)" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="true" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+    <ItemGroup>
+      <DraftFiles Include="$(DraftModDir)\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(DraftFiles)" DestinationFiles="@(DraftFiles->'$(GameModDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+    <MakeDir Directories="$(DedicatedModDir)" Condition="Exists('$(DedicatedModDir)\..')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DedicatedModDir)" SkipUnchangedFiles="true" Condition="Exists('$(DedicatedModDir)\..')" />
+    <Copy SourceFiles="@(DraftFiles)" DestinationFiles="@(DraftFiles->'$(DedicatedModDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" Condition="Exists('$(DedicatedModDir)\..')" />
+  </Target>
+</Project>

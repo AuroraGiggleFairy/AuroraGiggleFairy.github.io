@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
   <Name value="AGF-COMPAT-DoomSurvival" />
-  <DisplayName value="AGF COMPAT DoomSurvival" />
+  <DisplayName value="AGF - COMPAT DoomSurvival - V3" />
   <Version value="2.1.1" />
   <Description value="Compatibility between AGF mods and DoomSurvival." />
   <Author value="AuroraGiggleFairy (AGF)" />

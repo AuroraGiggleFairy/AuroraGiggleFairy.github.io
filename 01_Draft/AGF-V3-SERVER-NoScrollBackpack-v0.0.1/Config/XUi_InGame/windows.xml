@@ -1,0 +1,394 @@
+<AGF-NoScrollBackpack>
+	<!-- 7D2D v3.3+ No Scroll Backpack (12 cols x 8 rows = 96 slots, 53px cells, flush 646px column, 337px compact inspect) -->
+	<conditional>
+		<if cond="game_version() &gt;= version(1,3,30)">
+			<!-- ======================================================== -->
+			<!-- 1. EMPTY INFO PANEL (Width 646px, Height 337px)          -->
+			<!-- ======================================================== -->
+			<set xpath="/windows/window[@name='emptyInfoPanel']/@width">646</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/@height">337</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/@pos">0,-43</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/@height">294</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@name='backgroundMain']/@width">646</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@name='backgroundMain']/@height">294</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/label[@name='descriptionText']/@pos">30,-147</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/label[@name='descriptionText']/@width">600</set>
+			<set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/label[@name='descriptionText']/@height">280</set>
+
+			<!-- ======================================================== -->
+			<!-- 2. CRAFTING INFO PANEL (Width 646px, Height 337px)       -->
+			<!-- ======================================================== -->
+			<set xpath="/windows/window[@name='craftingInfoPanel']/@width">646</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/@height">337</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/@pos">0,-43</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/@height">294</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='5']/@width">646</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@depth='5']/@height">294</set>
+
+			<!-- Left Column: Preview (145px height) -->
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/@height">145</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='backgroundMain']/@height">151</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='itemPreview']/@pos">74,-48</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='itemPreview']/@width">72</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='itemPreview']/@height">72</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='durabilityBackground']/@pos">31,-88</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='durabilityBackground']/@height">18</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='durabilityBar']/@pos">31,-88</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='durabilityBar']/@height">18</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/label[@name='durabilityValue']/@pos">0,-84</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/label[@name='durabilityValue']/@height">32</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/label[@name='durabilityValue']/@font_size">30</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/button[@name='subtractQualityButton']/@pos">14,-97</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/button[@name='addQualityButton']/@pos">132,-97</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='clockIcon']/@pos">25,-116</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/sprite[@name='clockIcon']/@size">24,24</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/label[@name='craftingTime']/@pos">56,-116</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/label[@name='craftingTime']/@height">26</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='preview']/label[@name='craftingTime']/@font_size">24</set>
+
+			<!-- Left Column: Unified Actions background & 5 Rows (1 craft count + 4 actions, cell_height 29px) -->
+			<insertBefore xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@pos='0,-174']">
+				<sprite depth="1" name="actionBackground" color="[mediumGrey]" pos="0,-148" width="153" height="146" type="sliced" />
+			</insertBefore>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@pos='0,-174']/@height">146</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@pos='0,-174']/@pos">0,-148</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/@pos">3,-150</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/@rows">5</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/@cell_height">29</set>
+			<append xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']">
+				<item_action_entry name="action4" />
+			</append>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/@height">28</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/sprite/@height">28</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/sprite/@color">[mediumGrey]</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/rect[@name='recipeCraftCountControl']/@height">28</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/rect[@name='recipeCraftCountControl']/button[@name='countDown']/@pos">-10,-14</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/rect[@name='recipeCraftCountControl']/textfield[@name='count_input']/@pos">7,-1</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/rect[@name='recipeCraftCountControl']/textfield[@name='count_input']/@height">26</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/rect[@name='recipeCraftCountControl']/button[@name='countUp']/@pos">64,-14</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/grid[@name='itemActions']/rect[@name='actions']/rect[@name='recipeCraftCountControl']/button[@name='countMax']/@pos">96,-14</set>
+
+			<!-- Right Column: Controls, Description, Ingredients, and UnlockedBy (493px width, ends at -294px) -->
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/@pos">153,0</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/@width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/@height">36</set>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/sprite" name="width">493</setattribute>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/sprite" name="height">36</setattribute>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/button[@name='ingredientsButton']/@pos">22,-18</set>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/button[@name='ingredientsButton']" name="style">icon30px, press</setattribute>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/button[@name='descriptionButton']/@pos">65,-18</set>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/button[@name='descriptionButton']" name="style">icon30px, press</setattribute>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/button[@name='showunlocksButton']/@pos">108,-18</set>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='searchControls']/button[@name='showunlocksButton']" name="style">icon30px, press</setattribute>
+
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/@pos">153,-36</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/@width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/@height">258</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite[@name='backgroundMain']/@width">496</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/sprite[@name='backgroundMain']/@height">258</set>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect" name="width">493</setattribute>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect" name="height">258</setattribute>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/sprite[@depth='1']" name="width">493</setattribute>
+			<setattribute xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/sprite[@depth='1']" name="height">258</setattribute>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/label[@name='descriptionText']/@width">480</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='description']/rect/label[@name='descriptionText']/@height">248</set>
+
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/@pos">153,-36</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/@width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/@height">258</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@height">258</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='ingredients']/grid/@cell_height">43</set>
+
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/@pos">153,-36</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/@width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/@height">258</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/grid/@width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/grid/@height">258</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/grid/@cell_width">493</set>
+			<set xpath="/windows/window[@name='craftingInfoPanel']/rect[@name='contentCraftingInfo']/rect[@name='unlockedBy']/grid/@cell_height">43</set>
+
+			<!-- ======================================================== -->
+			<!-- 3. ITEM INFO PANEL (Width 646px, Height 337px)           -->
+			<!-- ======================================================== -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/@width">646</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/@height">337</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='header']/label[@pivot='topright']/@pos">615,-8</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='header']/sprite[@name='costIcon']/@pos">618,-10</set>
+
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/@pos">0,-43</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/@height">294</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@depth='5']/@width">646</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@depth='5']/@height">294</set>
+
+			<!-- Left Column: Preview (114px height, balanced 68px icon with 12px top and 10px bottom margin) -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/@height">114</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='backgroundMain']/@height">117</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='itemPreview']/@pos">74,-46</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='itemPreview']/@width">68</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='itemPreview']/@height">68</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='durabilityBackground']/@pos">1,-90</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='durabilityBackground']/@width">145</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/sprite[@name='durabilityBackground']/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/filledsprite[@name='removedurabilityBar']/@pos">1,-90</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/filledsprite[@name='removedurabilityBar']/@width">145</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/filledsprite[@name='removedurabilityBar']/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/filledsprite[@name='durabilityBar']/@pos">1,-90</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/filledsprite[@name='durabilityBar']/@width">145</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/filledsprite[@name='durabilityBar']/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/label[@name='durabilityValue']/@pos">0,-86</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/label[@name='durabilityValue']/@height">32</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='preview']/label[@name='durabilityValue']/@font_size">30</set>
+
+			<!-- Left Column: Unified Actions background & Normal/Trader Grids (cell_height 29px, ends at -294px) -->
+			<insertBefore xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@pos='0,-130']">
+				<sprite depth="1" name="actionBackground" color="[mediumGrey]" pos="0,-114" width="153" height="180" type="sliced" />
+			</insertBefore>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@pos='0,-130']/@height">180</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@pos='0,-130']/@pos">0,-114</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{shownormaloptions}']/@pos">3,-114</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{shownormaloptions}']/grid[@name='itemActions']/@cell_height">29</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showtraderoptions}']/@pos">3,-114</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showtraderoptions}']/sprite/@color">[mediumGrey]</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showtraderoptions}']/rect[@name='counterControl']/@height">36</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showtraderoptions}']/grid[@name='vendorItemActions']/@pos">0,-36</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showtraderoptions}']/grid[@name='vendorItemActions']/@cell_height">29</set>
+
+			<!-- Right Column: Tab Bar searchControls (493px width, height 36px) -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@pos">153,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@width">493</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@height">36</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite/@width">493</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite/@height">36</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/button[@name='statButton']/@pos">22,-18</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/button[@name='statButton']" name="style">icon30px, press</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/button[@name='descriptionButton']/@pos">65,-18</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/button[@name='descriptionButton']" name="style">icon30px, press</setattribute>
+
+			<!-- Right Column: Description Only when no stats (496px border width at pos -3,0) -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/@pos">153,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/@width">493</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/@height">232</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/sprite[@name='backgroundMain']/@width">496</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/sprite[@name='backgroundMain']/@height">232</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/label[@name='descriptionText']/@width">480</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showonlydescription}']/label[@name='descriptionText']/@height">222</set>
+
+			<!-- Right Column: Stats & Description when stats present (496px border width at pos -3,0) -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/@pos">153,-36</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/@width">493</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/@height">196</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/sprite[@name='backgroundMain']/@width">496</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/sprite[@name='backgroundMain']/@height">196</set>
+
+			<!-- Description sub-tab when stats present -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showdescription}']/label[@name='descriptionText']/@width">480</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showdescription}']/label[@name='descriptionText']/@height">186</set>
+
+			<!-- Stats sub-tab: 7 Stats Rows (Overlapping rects seamlessly touching with 0 gaps, font_size 20) -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/@width">493</set>
+
+			<!-- Row 1 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/@pos">-3,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/sprite[@depth='8']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/sprite[@depth='8']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/sprite[@depth='1']/@pos">0,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/sprite[@depth='1']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[1]/label[2]/@font_size">20</set>
+
+			<!-- Row 2 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/@pos">-3,-28</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/sprite[@depth='8']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/sprite[@depth='8']" name="width">496</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/sprite[@depth='1']" name="pos">0,0</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/sprite[@depth='1']" name="height">30</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[2]/label[2]/@font_size">20</set>
+
+			<!-- Row 3 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/@pos">-3,-56</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/sprite[@depth='8']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/sprite[@depth='8']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/sprite[@depth='1']/@pos">0,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/sprite[@depth='1']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[3]/label[2]/@font_size">20</set>
+
+			<!-- Row 4 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/@pos">-3,-84</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/sprite[@depth='8']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/sprite[@depth='8']" name="width">496</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/sprite[@depth='1']" name="pos">0,0</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/sprite[@depth='1']" name="height">30</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[4]/label[2]/@font_size">20</set>
+
+			<!-- Row 5 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/@pos">-3,-112</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/sprite[@depth='8']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/sprite[@depth='8']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/sprite[@depth='1']/@pos">0,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/sprite[@depth='1']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[5]/label[2]/@font_size">20</set>
+
+			<!-- Row 6 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/@pos">-3,-140</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/sprite[@depth='8']/@height">30</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/sprite[@depth='8']" name="width">496</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/sprite[@depth='1']" name="pos">0,0</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/sprite[@depth='1']" name="height">30</setattribute>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[6]/label[2]/@font_size">20</set>
+
+			<!-- Row 7 -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/@pos">-3,-168</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/@height">28</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/sprite[@depth='8']/@height">28</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/sprite[@depth='8']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/sprite[@depth='1']/@pos">0,0</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/sprite[@depth='1']/@height">28</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/sprite[@depth='1']" name="width">496</setattribute>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[1]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[1]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[1]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[1]/@font_size">20</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[2]/@pos">10,-4</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[2]/@width">476</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[2]/@height">22</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{showstatanddescription}'][@name='description']/rect[@visible='{showstats}']/rect[7]/label[2]/@font_size">20</set>
+
+			<!-- Right Column: Mod slots (8 cols x 62px = 496px, pos 153,-232. Flush boundary, zero gap!) -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@pos">153,-232</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cols">8</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cell_width">61</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cell_height">62</set>
+			<setattribute xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/item_stack" name="cell_size">61</setattribute>
+
+			<!-- Right Column: Comparing notice to fit new 493px width -->
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@pos">153,-232</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@width">493</set>
+			<set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@height">62</set>
+
+			<!-- ======================================================== -->
+			<!-- 4. BUFF INFO PANEL (Width 646px, Height 337px)           -->
+			<!-- ======================================================== -->
+			<set xpath="/windows/window[@name='buffInfoPanel']/@width">646</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/@height">337</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='header']/label[@name='status']/@width">638</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/@pos">0,-43</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/@height">294</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@depth='5']/@width">646</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@depth='5']/@height">294</set>
+
+			<!-- Left Column: Buff Preview & Action Grid -->
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@depth='8'][@pos='0,0']/@height">114</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@name='preview']/@height">110</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@name='itemPreview']/@pos">27,-8</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@depth='8'][@pos='0,-150']/@height">180</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@depth='8'][@pos='0,-150']/@pos">0,-114</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/grid[@name='itemActions']/@pos">3,-114</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/grid[@name='itemActions']/@cell_height">36</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@name='fillerBackground']/@pos">3,-258</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@name='fillerBackground']/@height">36</set>
+
+			<!-- Right Column: Description -->
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/@pos">153,0</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/@width">493</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/@height">294</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/sprite[@name='backgroundMain']/@width">496</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/sprite[@name='backgroundMain']/@height">294</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/rect/label[@name='descriptionText']/@width">480</set>
+			<set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/rect/label[@name='descriptionText']/@height">284</set>
+
+			<!-- ======================================================== -->
+			<!-- 5. BACKPACK WINDOW (12 cols x 8 rows = 96 slots, 53px)   -->
+			<!-- ======================================================== -->
+			<set xpath="/windows/window[@name='windowBackpack']/@width">646</set>
+			<set xpath="/windows/window[@name='windowBackpack']/@height">471</set>
+
+			<!-- Header Controls Repositioning for 646px Width -->
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/rect[@controller='ContainerStandardControls']/@pos">270,0</set>
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@text='{currencyamount}']/@pos">532,-8</set>
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@text='{currencyamount}']/@width">80</set>
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/label[@text='{currencyamount}']/@justify">right</set>
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/sprite[@name='costIcon']/@pos">618,-10</set>
+
+			<!-- Content Panel (428px height, on_scroll false, remove scrollview) -->
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/@height">428</set>
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/@pos">0,-43</set>
+			<set xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/@on_scroll">false</set>
+			<remove xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/defaultscrollbar"/>
+			<remove xpath="/windows/window[@name='windowBackpack']/rect[@name='content']/scrollview"/>
+
+			<!-- Direct inventory grid without scrollview (12 cols x 8 rows = 96 slots, 53px cells, 5px margin) -->
+			<append xpath="/windows/window[@name='windowBackpack']/rect[@name='content']">
+				<grid depth="1" name="inventory" rows="8" cols="12" pos="5,-2" cell_width="53" cell_height="53" controller="Backpack" repeat_content="true">
+					<item_stack_noscroll name="0"/>
+				</grid>
+			</append>
+
+			<!-- If HUDPlus is installed, ensure the inventory lock toggle button uses agfLock style -->
+			<if cond="mod_loaded('AGF-1HUDPlus') or mod_loaded('AGF-HUDPlus-1Main')">
+				<set xpath="/windows/window[@name='windowBackpack']/rect[@name='header']/rect[@controller='ContainerStandardControls']/button[@name='btnToggleLockMode']/@style">icon32px, press, agfLock</set>
+			</if>
+		</if>
+	</conditional>
+</AGF-NoScrollBackpack>

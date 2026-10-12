@@ -1,116 +1,17 @@
 {
-  "generated_at": "09-10-2026 6:17 PM",
+  "generated_at": "10-12-2026 11:56 AM",
   "high_confidence_threshold": 0.8,
   "mods": {
-    "AGF-BackpackPlus-060Slots": {
+    "AGF-V3-ADMIN-Fix4PerkPageReset": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
-        "update_group_id": "2238391",
-        "update_group_name": "V2 Backpack 60 Slots",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/1684"
+        "update_group_id": "8133684",
+        "update_group_name": "AGF - V3 - ADMIN - Fix4PerkPageReset",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13091"
       }
     },
-    "AGF-BackpackPlus-072Slots": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661132",
-        "update_group_name": "AGF BackpackPlus 072Slots",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11299"
-      }
-    },
-    "AGF-BackpackPlus-084Slots": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661135",
-        "update_group_name": "AGF - V3 - BackpackPlus - 084Slots",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11300"
-      }
-    },
-    "AGF-BackpackPlus-119Slots": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661144",
-        "update_group_name": "AGF - V3 - BackpackPlus - 119Slots",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11301"
-      }
-    },
-    "AGF-HUDPlus-1Main": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "1843750",
-        "update_group_name": "AGF - HUDPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/870"
-      }
-    },
-    "AGF-HUDPlus-BMCounter": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7653149",
-        "update_group_name": "AGF HUDPlus BMCounter",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11219"
-      }
-    },
-    "AGF-HUDPlus-PurpleBook": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7597679",
-        "update_group_name": "AGF HUDPlus PurpleBook",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/10948"
-      }
-    },
-    "AGF-HUDPlus-RemoveEnteringPopUp": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7653170",
-        "update_group_name": "AGF HUDPlus RemoveEnteringPopUp",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11220"
-      }
-    },
-    "AGF-HUDPlus-VisualEntityTracker": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7677765",
-        "update_group_name": "AGF - V3 - HUDPlus - VisualEntityTracker",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11423"
-      }
-    },
-    "AGF-HUDPlus-Weekday": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7653185",
-        "update_group_name": "AGF - V3 - Weekday",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11221"
-      }
-    },
-    "AGF-NoEAC-AudioOptionsPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7674123",
-        "update_group_name": "AGF - V3 - NoEAC - AudioOptionsPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11397"
-      }
-    },
-    "AGF-NoEAC-AutoRun": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7567253",
-        "update_group_name": "AGF NoEAC Toolbelt12Slots",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/10836"
-      }
-    },
-    "AGF-NoEAC-CosmeticLockIcon": {
+    "AGF-V3-BOTH-CosmeticLockIcon": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -119,74 +20,25 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11222"
       }
     },
-    "AGF-NoEAC-EnhancedAGF": {
+    "AGF-V3-BOTH-GyroFlightModes": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
-        "update_group_id": "7552088",
-        "update_group_name": "AGF NoEAC EnhancedAGF",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/10747"
-      }
-    },
-    "AGF-NoEAC-GyroFlightModes": {
-      "action": "add",
-      "score": 1.0,
-      "live_name": "AGF - V3 - NoEAC - GyroFlightModes",
-      "live_version": "1.0.0",
-      "config": {
-        "intent": "update",
-        "nexus_mod_id": 12384,
         "update_group_id": "7898064",
         "update_group_name": "AGF - V3 - NoEAC - GyroFlightModes",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12384",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12384"
       }
     },
-    "AGF-NoEAC-HideDLCCosmetics": {
+    "AGF-V3-BOTH-PartyGroupPlus": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
-        "update_group_id": "7862436",
-        "update_group_name": "AGF - V3 - NoEAC - HideDLCCosmetics",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12209"
+        "update_group_id": "8139294",
+        "update_group_name": "AGF - V3 - BOTH - PartyGroupPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13108"
       }
     },
-    "AGF-NoEAC-MapPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7846788",
-        "update_group_name": "AGF - V3 - NoEAC - MapPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12147"
-      }
-    },
-    "AGF-NoEAC-OpenAllButton": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7713327",
-        "update_group_name": "AGF - V3 - NoEAC - OpenAllButton",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11641"
-      }
-    },
-    "AGF-NoEAC-SmeltTimerOption": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7753134",
-        "update_group_name": "AGF - V3 - NoEAC - SmeltTimerOption",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11824"
-      }
-    },
-    "AGF-NoEAC-Toolbelt12Slots": {
+    "AGF-V3-BOTH-Toolbelt12Slots": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -195,25 +47,142 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10749"
       }
     },
-    "AGF-Requested-SmallerInteractionPrompt": {
+    "AGF-V3-CLIENT-AudioOptionsPlus": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
-        "update_group_id": "7709718",
-        "update_group_name": "AGF - V3 - Requested - SmallerInteractionPrompt",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11617"
+        "update_group_id": "7674123",
+        "update_group_name": "AGF - V3 - NoEAC - AudioOptionsPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11397"
       }
     },
-    "AGF-Requested-TinyBuffsPopUp": {
+    "AGF-V3-CLIENT-AutoRun": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
-        "update_group_id": "7709727",
-        "update_group_name": "AGF - V3 - Requested - TinyBuffsPopUp",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11618"
+        "update_group_id": "7567253",
+        "update_group_name": "AGF NoEAC Toolbelt12Slots",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/10836"
       }
     },
-    "AGF-VP-AdminModdingSupport": {
+    "AGF-V3-CLIENT-EnhancedAGF": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7552088",
+        "update_group_name": "AGF NoEAC EnhancedAGF",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/10747"
+      }
+    },
+    "AGF-V3-CLIENT-HideDLCCosmetics": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7862436",
+        "update_group_name": "AGF - V3 - NoEAC - HideDLCCosmetics",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12209"
+      }
+    },
+    "AGF-V3-CLIENT-MapPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7846788",
+        "update_group_name": "AGF - V3 - NoEAC - MapPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12147"
+      }
+    },
+    "AGF-V3-CLIENT-OpenAllButton": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7713327",
+        "update_group_name": "AGF - V3 - NoEAC - OpenAllButton",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11641"
+      }
+    },
+    "AGF-V3-CLIENT-SmeltTimerOption": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7753134",
+        "update_group_name": "AGF - V3 - NoEAC - SmeltTimerOption",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11824"
+      }
+    },
+    "AGF-V3-SERVER-1HUDPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "1843750",
+        "update_group_name": "AGF - HUDPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/870"
+      }
+    },
+    "AGF-V3-SERVER-2BMCounter": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7653149",
+        "update_group_name": "AGF HUDPlus BMCounter",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11219"
+      }
+    },
+    "AGF-V3-SERVER-2PurpleBook": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7597679",
+        "update_group_name": "AGF HUDPlus PurpleBook",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/10948"
+      }
+    },
+    "AGF-V3-SERVER-2RemoveEnteringPopUp": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7653170",
+        "update_group_name": "AGF HUDPlus RemoveEnteringPopUp",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11220"
+      }
+    },
+    "AGF-V3-SERVER-2ShowStabilityOption": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8139420",
+        "update_group_name": "AGF - V3 - SERVER - 2ShowStabilityOption",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13109"
+      }
+    },
+    "AGF-V3-SERVER-2VisualEntityTracker": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7677765",
+        "update_group_name": "AGF - V3 - HUDPlus - VisualEntityTracker",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11423"
+      }
+    },
+    "AGF-V3-SERVER-2Weekday": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7653185",
+        "update_group_name": "AGF - V3 - Weekday",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11221"
+      }
+    },
+    "AGF-V3-SERVER-3VisualEntityTrackerAddon": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8139423",
+        "update_group_name": "AGF - V3 - SERVER - 3VisualEntityTrackerAddon",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13110"
+      }
+    },
+    "AGF-V3-SERVER-AdminModdingSupport": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -222,7 +191,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11619"
       }
     },
-    "AGF-VP-AlternativeRecipes": {
+    "AGF-V3-SERVER-AlternativeRecipes": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -231,7 +200,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11620"
       }
     },
-    "AGF-VP-AmmoDisassembly": {
+    "AGF-V3-SERVER-AmmoDisassembly": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -240,7 +209,16 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11622"
       }
     },
-    "AGF-VP-ArcheryFeathersChange": {
+    "AGF-V3-SERVER-AnimalTrackerAlwaysOn": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8139423",
+        "update_group_name": "AGF - V3 - SERVER - 3VisualEntityTrackerAddon",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13110"
+      }
+    },
+    "AGF-V3-SERVER-ArcheryFeathersChange": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -249,7 +227,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11621"
       }
     },
-    "AGF-VP-AutomobilesRespawn": {
+    "AGF-V3-SERVER-AutomobilesRespawn": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -258,7 +236,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11304"
       }
     },
-    "AGF-VP-BedrollPlus": {
+    "AGF-V3-SERVER-BedrollPlus": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -267,7 +245,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11305"
       }
     },
-    "AGF-VP-BetterEggChance": {
+    "AGF-V3-SERVER-BetterEggChance": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -276,7 +254,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11306"
       }
     },
-    "AGF-VP-BreakItGetIt": {
+    "AGF-V3-SERVER-BreakItGetIt": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -285,7 +263,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11307"
       }
     },
-    "AGF-VP-CraftSewingKits": {
+    "AGF-V3-SERVER-CraftSewingKits": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -294,7 +272,16 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11308"
       }
     },
-    "AGF-VP-CraftVitamins": {
+    "AGF-V3-SERVER-CraftStackEngBattCells": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8139441",
+        "update_group_name": "AGF - V3 - SERVER - CraftStackEngBattCells",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13112"
+      }
+    },
+    "AGF-V3-SERVER-CraftVitamins": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -303,7 +290,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11309"
       }
     },
-    "AGF-VP-DoorsPlus": {
+    "AGF-V3-SERVER-DoorsPlus": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -312,7 +299,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/12208"
       }
     },
-    "AGF-VP-DrinkableAcid": {
+    "AGF-V3-SERVER-DrinkableAcid": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -321,7 +308,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11623"
       }
     },
-    "AGF-VP-DyesPlus": {
+    "AGF-V3-SERVER-DyesPlus": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -330,7 +317,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11624"
       }
     },
-    "AGF-VP-FloraHarvester": {
+    "AGF-V3-SERVER-FloraHarvester": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -339,223 +326,7 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11332"
       }
     },
-    "AGF-VP-FuelBurnPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661633",
-        "update_group_name": "AGF - V3 - VP - FuelBurnPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11310"
-      }
-    },
-    "AGF-VP-LargerStorageOption": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7586129",
-        "update_group_name": "AGF VP LargerStorageOption",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/10904"
-      }
-    },
-    "AGF-VP-MasterTool": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661660",
-        "update_group_name": "AGF - V3 - VP - MasterTool",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11311"
-      }
-    },
-    "AGF-VP-MaxLevel500": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661675",
-        "update_group_name": "AGF - V3 - VP - MaxLevel500",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11312"
-      }
-    },
-    "AGF-VP-MiningPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7709832",
-        "update_group_name": "AGF - V3 - VP - MiningPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11625"
-      }
-    },
-    "AGF-VP-Mod988": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "2473387",
-        "update_group_name": "AGF V2 Mod988",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/3086"
-      }
-    },
-    "AGF-VP-ModSlotsPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661681",
-        "update_group_name": "AGF - V3 - VP - ModSlotsPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11313"
-      }
-    },
-    "AGF-VP-PaintbrushPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7709841",
-        "update_group_name": "AGF - V3 - VP - PaintbrushPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11626"
-      }
-    },
-    "AGF-VP-PickupLanternsPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661687",
-        "update_group_name": "AGF - V3 - VP - PickupLanternsPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11314"
-      }
-    },
-    "AGF-VP-PlayerResetQuests": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661699",
-        "update_group_name": "AGF - V3 - VP - PlayerResetQuests",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11315"
-      }
-    },
-    "AGF-VP-RebundleBundles": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661702",
-        "update_group_name": "AGF - V3 - VP - RebundleBundles",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11316"
-      }
-    },
-    "AGF-VP-RecipeRottingFlesh": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7709853",
-        "update_group_name": "AGF - V3 - VP - RecipeRottingFlesh",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11627"
-      }
-    },
-    "AGF-VP-RestorePowerAnyTime": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661708",
-        "update_group_name": "AGF - V3 - VP - RestorePowerAnyTime",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11317"
-      }
-    },
-    "AGF-VP-ScrapBatts4Acid": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661711",
-        "update_group_name": "AGF - V3 - VP - ScrapBatts4Acid",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11318"
-      }
-    },
-    "AGF-VP-ScrapEquipmentFaster": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661723",
-        "update_group_name": "AGF - V3 - VP - ScrapEquipmentFaster",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11319"
-      }
-    },
-    "AGF-VP-SimplifiedStacks": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661735",
-        "update_group_name": "AGF - V3 - VP - SimplifiedStacks",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11320"
-      }
-    },
-    "AGF-VP-SmeltingPlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7753143",
-        "update_group_name": "AGF - V3 - VP - SmeltingPlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11825"
-      }
-    },
-    "AGF-VP-StayLongerAnimalCorpse": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661741",
-        "update_group_name": "AGF - V3 - VP - StayLongerAnimalCorpse",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11321"
-      }
-    },
-    "AGF-VP-StayLongerPlayerBackpack": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661747",
-        "update_group_name": "AGF - V3 - VP - StayLongerPlayerBackpack",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11322"
-      }
-    },
-    "AGF-VP-TacticalRiflePlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7709862",
-        "update_group_name": "AGF - V3 - VP - TacticalRiflePlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11628"
-      }
-    },
-    "AGF-VP-VehiclePerformance": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661765",
-        "update_group_name": "AGF - V3 - VP - VehiclePerformance",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11323"
-      }
-    },
-    "AGF-VP-VehicleStoragePlus": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661780",
-        "update_group_name": "AGF - V3 - VP - VehicleStoragePlus",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11325"
-      }
-    },
-    "AGF-VP-VehiclesExtraSeating": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661774",
-        "update_group_name": "AGF - V3 - VP - VehiclesExtraSeating",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11324"
-      }
-    },
-    "AGF-VP-ZombieCorpseLeaveQuicker": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661795",
-        "update_group_name": "AGF - V3 - VP - ZombieCorpseLeaveQuicker",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11326"
-      }
-    },
-    "AGF-VPS-FuelAutoShutOff": {
+    "AGF-V3-SERVER-FuelAutoShutOff": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -564,7 +335,16 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/12148"
       }
     },
-    "AGF-VPS-GlobalStormTracker": {
+    "AGF-V3-SERVER-FuelBurnPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661633",
+        "update_group_name": "AGF - V3 - VP - FuelBurnPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11310"
+      }
+    },
+    "AGF-V3-SERVER-GlobalStormTracker": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -573,29 +353,160 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10748"
       }
     },
-    "AGF-VPS-HonkOpensYourDoors": {
-      "action": "add",
+    "AGF-V3-SERVER-HonkOpensYourDoors": {
+      "action": "patch_update_group",
       "score": 1.0,
-      "live_name": "AGF - V3 - VPS - HonkOpensYourDoors",
-      "live_version": "1.0.0",
       "config": {
-        "intent": "update",
-        "nexus_mod_id": 12385,
         "update_group_id": "7898076",
         "update_group_name": "AGF - V3 - VPS - HonkOpensYourDoors",
-        "file_category": "main",
-        "legacy_latest_file_id": 0,
-        "legacy_name_hint": "",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/12385",
-        "tested_game_version_override": "",
-        "brief_overview_override": "",
-        "detailed_description_override": "",
-        "file_description_override": "",
-        "summary_override": "",
-        "description_override": ""
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/12385"
       }
     },
-    "AGF-VPS-ScreamerAlert": {
+    "AGF-V3-SERVER-LargerStorageOption": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7586129",
+        "update_group_name": "AGF VP LargerStorageOption",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/10904"
+      }
+    },
+    "AGF-V3-SERVER-LootTimerHolds": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8139441",
+        "update_group_name": "AGF - V3 - SERVER - CraftStackEngBattCells",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13112"
+      }
+    },
+    "AGF-V3-SERVER-MasterTool": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661660",
+        "update_group_name": "AGF - V3 - VP - MasterTool",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11311"
+      }
+    },
+    "AGF-V3-SERVER-MaxLevel500": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661675",
+        "update_group_name": "AGF - V3 - VP - MaxLevel500",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11312"
+      }
+    },
+    "AGF-V3-SERVER-MiningPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7709832",
+        "update_group_name": "AGF - V3 - VP - MiningPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11625"
+      }
+    },
+    "AGF-V3-SERVER-Mod988": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "2473387",
+        "update_group_name": "AGF V2 Mod988",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/3086"
+      }
+    },
+    "AGF-V3-SERVER-ModSlotsPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661681",
+        "update_group_name": "AGF - V3 - VP - ModSlotsPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11313"
+      }
+    },
+    "AGF-V3-SERVER-POISwitchesUnlockDoors": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8133306",
+        "update_group_name": "AGF - V3 - SERVER - POISwitchesUnlockDoors",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13090"
+      }
+    },
+    "AGF-V3-SERVER-PaintbrushPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7709841",
+        "update_group_name": "AGF - V3 - VP - PaintbrushPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11626"
+      }
+    },
+    "AGF-V3-SERVER-PickupLanternsPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661687",
+        "update_group_name": "AGF - V3 - VP - PickupLanternsPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11314"
+      }
+    },
+    "AGF-V3-SERVER-PlayerResetQuests": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661699",
+        "update_group_name": "AGF - V3 - VP - PlayerResetQuests",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11315"
+      }
+    },
+    "AGF-V3-SERVER-RebundleBundles": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661702",
+        "update_group_name": "AGF - V3 - VP - RebundleBundles",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11316"
+      }
+    },
+    "AGF-V3-SERVER-RecipeRottingFlesh": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7709853",
+        "update_group_name": "AGF - V3 - VP - RecipeRottingFlesh",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11627"
+      }
+    },
+    "AGF-V3-SERVER-RestorePowerAnyTime": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661708",
+        "update_group_name": "AGF - V3 - VP - RestorePowerAnyTime",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11317"
+      }
+    },
+    "AGF-V3-SERVER-ScrapBatts4Acid": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661711",
+        "update_group_name": "AGF - V3 - VP - ScrapBatts4Acid",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11318"
+      }
+    },
+    "AGF-V3-SERVER-ScrapEquipmentFaster": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661723",
+        "update_group_name": "AGF - V3 - VP - ScrapEquipmentFaster",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11319"
+      }
+    },
+    "AGF-V3-SERVER-ScreamerAlert": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
@@ -604,31 +515,130 @@
         "page_url": "https://www.nexusmods.com/7daystodie/mods/10891"
       }
     },
-    "zzzAGF-Requested-LootStaysOnEmpty": {
+    "AGF-V3-SERVER-SimplifiedStacks": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661735",
+        "update_group_name": "AGF - V3 - VP - SimplifiedStacks",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11320"
+      }
+    },
+    "AGF-V3-SERVER-SmallerInteractionPrompt": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7709718",
+        "update_group_name": "AGF - V3 - Requested - SmallerInteractionPrompt",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11617"
+      }
+    },
+    "AGF-V3-SERVER-SmeltingPlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7753143",
+        "update_group_name": "AGF - V3 - VP - SmeltingPlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11825"
+      }
+    },
+    "AGF-V3-SERVER-SortingCart": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8139441",
+        "update_group_name": "AGF - V3 - SERVER - CraftStackEngBattCells",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13112"
+      }
+    },
+    "AGF-V3-SERVER-StayLongerAnimalCorpse": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661741",
+        "update_group_name": "AGF - V3 - VP - StayLongerAnimalCorpse",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11321"
+      }
+    },
+    "AGF-V3-SERVER-StayLongerPlayerBackpack": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661747",
+        "update_group_name": "AGF - V3 - VP - StayLongerPlayerBackpack",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11322"
+      }
+    },
+    "AGF-V3-SERVER-TacticalRiflePlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7709862",
+        "update_group_name": "AGF - V3 - VP - TacticalRiflePlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11628"
+      }
+    },
+    "AGF-V3-SERVER-TinyBuffsPopUp": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7709727",
+        "update_group_name": "AGF - V3 - Requested - TinyBuffsPopUp",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11618"
+      }
+    },
+    "AGF-V3-SERVER-VehiclePerformance": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661765",
+        "update_group_name": "AGF - V3 - VP - VehiclePerformance",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11323"
+      }
+    },
+    "AGF-V3-SERVER-VehicleStoragePlus": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661780",
+        "update_group_name": "AGF - V3 - VP - VehicleStoragePlus",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11325"
+      }
+    },
+    "AGF-V3-SERVER-VehiclesExtraSeating": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661774",
+        "update_group_name": "AGF - V3 - VP - VehiclesExtraSeating",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11324"
+      }
+    },
+    "AGF-V3-SERVER-ZombieCorpseLeaveQuicker": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "7661795",
+        "update_group_name": "AGF - V3 - VP - ZombieCorpseLeaveQuicker",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/11326"
+      }
+    },
+    "zzzAGF-V3-CLIENT-LawnTractorV3Fix": {
+      "action": "patch_update_group",
+      "score": 1.0,
+      "config": {
+        "update_group_id": "8133816",
+        "update_group_name": "AGF - V3 - CLIENT - LawnTractorV3Fix",
+        "page_url": "https://www.nexusmods.com/7daystodie/mods/13093"
+      }
+    },
+    "zzzAGF-V3-SERVER-LootStaysOnEmpty": {
       "action": "patch_update_group",
       "score": 1.0,
       "config": {
         "update_group_id": "7709871",
         "update_group_name": "AGF - V3 - Requested - LootStaysOnEmpty",
         "page_url": "https://www.nexusmods.com/7daystodie/mods/11629"
-      }
-    },
-    "zzzAGF-Special-Compatibilities": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661804",
-        "update_group_name": "AGF - V3 - Special - Compatibilities",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11327"
-      }
-    },
-    "zzzAGF-Special-LocalizationPatches": {
-      "action": "patch_update_group",
-      "score": 1.0,
-      "config": {
-        "update_group_id": "7661810",
-        "update_group_name": "AGF - V3 - Special - LocalizationPatches",
-        "page_url": "https://www.nexusmods.com/7daystodie/mods/11329"
       }
     }
   }

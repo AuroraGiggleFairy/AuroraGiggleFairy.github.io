@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>InventoryZoomTest</AssemblyName>
+    <RootNamespace>InventoryZoomTest</RootNamespace>
+    <Optimize>true</Optimize>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>.\</OutputPath>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\zzzAGF-V3-CLIENT-InventoryZoomTest</GameModDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NGUI">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\NGUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(SevenDaysToDieDir)\7DaysToDie_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CopyToMods" AfterTargets="Build">
+    <MakeDir Directories="$(GameModDir)\Config\XUi_InGame" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" SkipUnchangedFiles="false" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\Config\XUi_InGame\windows.xml" DestinationFolder="$(GameModDir)\Config\XUi_InGame" SkipUnchangedFiles="false" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\Config\Localization.csv" DestinationFolder="$(GameModDir)\Config" SkipUnchangedFiles="false" Condition="Exists('$(SevenDaysToDieDir)\Mods')" />
+  </Target>
+</Project>
