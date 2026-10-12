@@ -133,7 +133,7 @@ namespace PartyGroupPlus
 
 			ClientSet(local.entityId, colorIndex);
 			SingletonMonoBehaviour<ConnectionManager>.Instance.SendToServer(
-				NetPackageManager.GetPackage<NetPackagePartyGroupPlusColor>().SetupRequest(colorIndex));
+				PackageEmit.Take<NetPackagePartyGroupPlusColor>().SetupRequest(colorIndex));
 		}
 
 		public static void RequestSync()
@@ -150,7 +150,7 @@ namespace PartyGroupPlus
 			}
 
 			SingletonMonoBehaviour<ConnectionManager>.Instance.SendToServer(
-				NetPackageManager.GetPackage<NetPackagePartyGroupPlusColor>().SetupQuery());
+				PackageEmit.Take<NetPackagePartyGroupPlusColor>().SetupQuery());
 		}
 
 		public static void ServerAssignDefault(EntityPlayer player)
@@ -256,7 +256,7 @@ namespace PartyGroupPlus
 
 			int[] idArr = ids.ToArray();
 			int[] colorArr = colors.ToArray();
-			NetPackagePartyGroupPlusColor package = NetPackageManager.GetPackage<NetPackagePartyGroupPlusColor>()
+			NetPackagePartyGroupPlusColor package = PackageEmit.Take<NetPackagePartyGroupPlusColor>()
 				.SetupSyncAll(idArr, colorArr);
 
 			EntityPlayerLocal local = GameManager.Instance?.World?.GetPrimaryPlayer();
@@ -353,14 +353,14 @@ namespace PartyGroupPlus
 
 		static void BroadcastSync(int entityId, int colorIndex)
 		{
-			NetPackagePartyGroupPlusColor package = NetPackageManager.GetPackage<NetPackagePartyGroupPlusColor>()
+			NetPackagePartyGroupPlusColor package = PackageEmit.Take<NetPackagePartyGroupPlusColor>()
 				.SetupSync(entityId, colorIndex);
 			SingletonMonoBehaviour<ConnectionManager>.Instance.SendPackage(package);
 		}
 
 		static void BroadcastRelease(int entityId)
 		{
-			NetPackagePartyGroupPlusColor package = NetPackageManager.GetPackage<NetPackagePartyGroupPlusColor>()
+			NetPackagePartyGroupPlusColor package = PackageEmit.Take<NetPackagePartyGroupPlusColor>()
 				.SetupRelease(entityId);
 			SingletonMonoBehaviour<ConnectionManager>.Instance.SendPackage(package);
 		}

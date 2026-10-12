@@ -284,7 +284,6 @@ namespace DoomSandbox
 			"meleeHandDemonHellKnightProjectile",
 			"meleeHandDemonBaronHellProjectile",
 			"meleeHandDemonPainElementalProjectile",
-			"meleeHandDemonRevenantProjectile",
 			"meleeHandDemonMancubusProjectile",
 			"meleeHandDemonCyberProjectile",
 		};

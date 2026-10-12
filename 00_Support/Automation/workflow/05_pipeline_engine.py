@@ -561,10 +561,10 @@ DEFAULT_MODSCOPE_GUIDE_BODY = """- Mod Version: {{MOD_VERSION}}
 - Safe to remove from existing game: {{SAFE_TO_REMOVE}}
 {{DEPENDENCIES_BLOCK}}"""
 
-DEFAULT_HARMONY_REQUIREMENT_WARNING_BODY = """- Harmony requirement details:
-    - Requires 0_TFP_Harmony (built-in game mod).
-    - To check, confirm Mods/0_TFP_Harmony exists in the game folder.
-    - To restore, run Steam Verify integrity of game files."""
+DEFAULT_HARMONY_REQUIREMENT_WARNING_BODY = """- Dependencies: 
+  - MOD 1: 0_TFP_Harmony (built-in game mod)
+    - To check, explore Installed Files and confirm Mods/0_TFP_Harmony exists.
+    - To restore, use Steam Verify: Right click 7 Days to Die -> Properties -> Installed Files -> Verify integrity of game files."""
 
 DEFAULT_SHORT_GUIDE_BODY = """## A. Install Mods
 > 1. **Close the game.**
@@ -1370,6 +1370,11 @@ def is_scheme_folder(folder_name: str) -> bool:
         r"^(?:0|z+)?AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN|COMPAT|TBD)-",
         folder_name,
     ) is not None
+
+
+def scheme_version_folder_name(folder_name: str, mod_version: str) -> str:
+    """Keep AGF-V#-SCOPE-Name and replace only the trailing version."""
+    return f"{get_base_mod_name(folder_name)}-v{mod_version}"
 
 
 def gigglepack_modinfo_name(folder_name: str) -> str:
@@ -2418,49 +2423,65 @@ def _structured_dependency_phrase(body: str) -> str:
     return name or url or version
 
 
-def _protect_dependency_records(raw: str) -> Tuple[str, Dict[str, str]]:
+def _protect_dependency_records(raw: str) -> Tuple[str, Dict[str, Dict[str, str]]]:
     """Replace {Name|Version|URL} blocks with placeholders so | and commas inside them stay one dependency."""
-    phrases: Dict[str, str] = {}
+    records: Dict[str, Dict[str, str]] = {}
 
     def _take(match: re.Match) -> str:
-        phrase = _structured_dependency_phrase(match.group(1))
-        if not phrase:
-            return " "
-        token = f"[[DEP{len(phrases)}]]"
-        phrases[token] = phrase
+        body = match.group(1)
+        parts = [part.strip() for part in (body or "").split("|")]
+        while len(parts) < 3:
+            parts.append("")
+        token = f"[[DEP{len(records)}]]"
+        records[token] = {"name": parts[0], "version": parts[1], "url": parts[2]}
         return token
 
-    return _DEPENDENCY_RECORD_RE.sub(_take, raw or ""), phrases
+    return _DEPENDENCY_RECORD_RE.sub(_take, raw or ""), records
 
 
 def format_dependencies_block_for_readme(value: str) -> str:
-    raw, record_phrases = _protect_dependency_records((value or "").strip())
+    raw, records = _protect_dependency_records((value or "").strip())
     placeholder_tokens = {"", "0", "none", "missingdata", "tbd", "n/a", "na"}
-    parts = [record_phrases.get(part.strip(), part.strip()) for part in re.split(r"[;\n|,]+", raw) if part.strip()]
+    parts = [part.strip() for part in re.split(r"[;\n|,]+", raw) if part.strip()]
 
-    extra: List[str] = []
+    extra: List[Dict[str, str]] = []
     saw_harmony = False
     for part in parts:
+        if part in records:
+            extra.append(records[part])
+            continue
         token_lower = part.lower()
         if token_lower in placeholder_tokens:
             continue
         if is_harmony_dependency_token(part):
             saw_harmony = True
             continue
-        extra.append(part)
+        extra.append({"name": part, "version": "", "url": ""})
 
-    extra_lines = [f"  - Also requires {part}." for part in extra]
+    def _format_mod_bullet(item: Dict[str, str], mod_idx: int) -> str:
+        name = item.get("name", "")
+        version = item.get("version", "")
+        url = item.get("url", "")
+        lines = [f"  - MOD {mod_idx}: {name}"]
+        if version:
+            lines.append(f"    - version {version}")
+        if url:
+            lines.append(f"    - {url}")
+        return "\n".join(lines)
 
     if saw_harmony:
         harmony_body = load_harmony_requirement_warning_body()
+        extra_lines = [_format_mod_bullet(item, i) for i, item in enumerate(extra, start=2)]
         if extra_lines:
             return harmony_body.rstrip("\n") + "\n" + "\n".join(extra_lines)
         return harmony_body
 
-    if len(extra) == 1:
-        return f"- Dependencies: {extra[0]}"
+    if len(extra) == 1 and not extra[0]["version"] and not extra[0]["url"]:
+        return f"- Dependencies: {extra[0]['name']}"
+
     if extra:
-        return "- Dependencies:\n" + "\n".join(f"  - {part}" for part in extra)
+        extra_lines = [_format_mod_bullet(item, i) for i, item in enumerate(extra, start=1)]
+        return "- Dependencies:\n" + "\n".join(extra_lines)
 
     return "- Dependencies: None, works standalone."
 
@@ -4013,10 +4034,20 @@ def rename_mod_folders_to_modinfo(
             version_changed = has_version_drift(folder_name, mod_version)
 
             if is_scheme_folder(folder_name):
-                if version_changed:
-                    log.warn(
-                        f"Rename skipped for {folder_name}: scheme folder keeps its folder name."
-                    )
+                if not version_changed:
+                    continue
+                target_name = scheme_version_folder_name(folder_name, mod_version)
+                if target_name == folder_name:
+                    continue
+                src = folder_path
+                dst = os.path.join(mod_dir, target_name)
+                if os.path.exists(dst):
+                    log.warn(f"Rename skipped due to collision: {folder_name} -> {target_name}")
+                    continue
+                if maybe_move(src, dst, dry_run, log):
+                    folder_renames.append((folder_name, target_name, mod_dir))
+                    log.stats.renamed_folders += 1
+                    log.info(f"Renamed folder version: {folder_name} -> {target_name}")
                 continue
 
             # Policy: name changes are only applied when accompanied by a version bump/change.
@@ -4064,6 +4095,15 @@ def plan_mod_folder_renames(mod_dirs: Tuple[str, ...], log: Logger) -> List[Tupl
             version_changed = has_version_drift(folder_name, mod_version)
 
             if is_scheme_folder(folder_name):
+                if not version_changed:
+                    continue
+                target_name = scheme_version_folder_name(folder_name, mod_version)
+                if target_name == folder_name:
+                    continue
+                dst = os.path.join(mod_dir, target_name)
+                if os.path.exists(dst):
+                    continue
+                planned.append((folder_name, target_name, mod_dir))
                 continue
 
             if name_changed and not version_changed:

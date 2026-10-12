@@ -13,7 +13,7 @@ Example file: `Mods\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
 
 ## 1. Dan folder
 
-`C:\GitHub\7D2D-Mods\00_Support\DoomLevelsSource\UpdateForDan\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
+`C:\GitHub\7D2D-Mods\00_Support\DoomSurvival\Support\DoomLevelsSource\UpdateForDan\ZZZ_DoomMod_Standalone\DoomMultiplayer.dll`
 
 Dan copies the contents of `UpdateForDan` into his Mods folder.
 

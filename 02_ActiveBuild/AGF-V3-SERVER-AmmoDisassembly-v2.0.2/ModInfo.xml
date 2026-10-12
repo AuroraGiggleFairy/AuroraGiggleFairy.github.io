@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
   <Name value="AGF-AmmoDisassembly" />
-  <DisplayName value="AGF Ammo Disassembly" />
+  <DisplayName value="AGF - Ammo Disassembly - V3" />
   <Version value="2.0.2" />
   <Description value="Scrap ammo into ingredient bundles; combine into x100 or x1000 packs." />
   <Author value="AuroraGiggleFairy (AGF)" />

@@ -124,13 +124,19 @@ namespace QuartermasterCrafting
 				ItemValue item = StackAccess.Value(ingredient);
 				int type = StackAccess.TypeId(item);
 				int per = RecipeLines.PerCraft(recipe, ingredient, player);
+				int need = per * craftCount;
+				int haveGrid = CountGrid(bench, item);
+				int takeGrid = need < haveGrid ? need : haveGrid;
+				int haveInv = CountInv(player, item);
+				int needInv = need - takeGrid;
+				int takeInv = needInv < haveInv ? needInv : haveInv;
 				TallyScratch.TryGetValue(type, out int nearby);
 				lines.Add(new Line
 				{
 					Type = type,
-					Need = per * craftCount,
-					Inv = CountInv(player, item),
-					Grid = CountGrid(bench, item),
+					Need = need,
+					Inv = takeInv,
+					Grid = takeGrid,
 					Nearby = nearby,
 					Open = 0
 				});

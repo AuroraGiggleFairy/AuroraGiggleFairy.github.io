@@ -264,6 +264,11 @@
     "recorded_at": "2026-10-08T16:10:31",
     "version": "0.1.4"
   },
+  "AGF-V3-BOTH-BiomePaints": {
+    "folder": "AGF-V3-BOTH-BiomePaints-v0.0.1",
+    "recorded_at": "2026-10-12T17:51:25",
+    "version": "0.0.1"
+  },
   "AGF-V3-BOTH-CombatGlitchMitigations": {
     "folder": "AGF-V3-BOTH-CombatGlitchMitigations-v0.0.2",
     "recorded_at": "2026-10-08T16:10:31",
@@ -275,9 +280,14 @@
     "version": "0.0.2"
   },
   "AGF-V3-BOTH-QuartermasterCrafting": {
-    "folder": "AGF-V3-BOTH-QuartermasterCrafting-v0.0.3",
-    "recorded_at": "2026-10-08T16:10:31",
-    "version": "0.0.3"
+    "folder": "AGF-V3-BOTH-QuartermasterCrafting-v0.0.4",
+    "recorded_at": "2026-10-12T16:25:00",
+    "version": "0.0.4"
+  },
+  "AGF-V3-BOTH-RepairToolsPlus": {
+    "folder": "AGF-V3-BOTH-RepairToolsPlus-v0.0.1",
+    "recorded_at": "2026-10-12T17:51:25",
+    "version": "0.0.1"
   },
   "AGF-V3-BOTH-StorageLaptop": {
     "folder": "AGF-V3-BOTH-StorageLaptop-v0.0.2",
@@ -289,10 +299,25 @@
     "recorded_at": "2026-10-08T15:07:01",
     "version": "1.0.1"
   },
+  "AGF-V3-SERVER-2ShowStabilityOption": {
+    "folder": "AGF-V3-SERVER-2ShowStabilityOption-v0.0.1",
+    "recorded_at": "2026-10-09T06:09:36",
+    "version": "1.0.0"
+  },
   "AGF-V3-SERVER-DecorationBlock": {
     "folder": "AGF-V3-SERVER-DecorationBlock-v3.0.3",
     "recorded_at": "2026-10-08T15:07:01",
     "version": "3.0.3"
+  },
+  "AGF-V3-SERVER-NoScrollBackpack": {
+    "folder": "AGF-V3-SERVER-NoScrollBackpack-v0.0.1",
+    "recorded_at": "2026-10-12T08:49:38",
+    "version": "0.0.1"
+  },
+  "AGF-V3-SERVER-POISwitchesUnlockDoors": {
+    "folder": "AGF-V3-SERVER-POISwitchesUnlockDoors-v1.0.0",
+    "recorded_at": "2026-10-11T13:02:14",
+    "version": "1.0.0"
   },
   "AGF-VP-AdminModdingSupport": {
     "folder": "AGF-VP-AdminModdingSupport-v2.0.0",

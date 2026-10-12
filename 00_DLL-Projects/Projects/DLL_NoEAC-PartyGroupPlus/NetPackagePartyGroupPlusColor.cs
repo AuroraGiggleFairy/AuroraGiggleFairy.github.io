@@ -3,7 +3,7 @@ using UnityEngine.Scripting;
 namespace PartyGroupPlus
 {
 	[Preserve]
-	public class NetPackagePartyGroupPlusColor : NetPackage
+	public abstract class NetPackagePartyGroupPlusColor : NetPackage
 	{
 		public enum Actions : byte
 		{
@@ -132,7 +132,8 @@ namespace PartyGroupPlus
 			}
 		}
 
-		public override int GetLength()
+		// 3.2 NetPackage.GetLength. Not an override: 3.3 removed that method. PackageEmit adds the override on 3.2.
+		public int GetLength()
 		{
 			return 13 + (ids != null ? ids.Length * 8 : 0);
 		}

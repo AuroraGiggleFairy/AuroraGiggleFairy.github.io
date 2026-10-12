@@ -171,19 +171,47 @@ def extract_changelog_entries(readme_text: str) -> str:
     return "\n".join(result_lines).strip()
 
 
-def format_nexus_mod_name(base_name: str, game_version: str) -> str:
-    """Format eg 'AGF-HUDPlus-1Main' -> 'AGF - V3 - HUDPlus - 1Main'."""
-    clean = base_name
+def format_nexus_listing_title(base_name: str, mod_info: dict = None) -> str:
+    """Listing title for Nexus (Section 1): ModInfo <DisplayName> (e.g. 'AGF Weekday')."""
+    if mod_info and mod_info.get("display_name"):
+        raw = mod_info["display_name"].strip()
+        return re.sub(r"^[0z]+(?=AGF)", "", raw)
+    if mod_info and mod_info.get("name"):
+        raw = mod_info["name"].strip()
+        if raw.startswith("AGF-"):
+            return f"AGF {raw[4:]}"
+        return f"AGF {raw}"
+
+    clean = re.sub(r"^[0z]+(?=AGF)", "", base_name)
+    m = re.match(r"^AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN)-(.*)$", clean)
+    if m:
+        return f"AGF {m.group(1)}"
+    m_compat = re.match(r"^AGF-V\d+-COMPAT-(.*)$", clean)
+    if m_compat:
+        return f"AGF COMPAT {m_compat.group(1)}"
+
     if clean.startswith("AGF-"):
         clean = clean[4:]
     elif clean.startswith("zzzAGF-"):
         clean = clean[7:]
+    return f"AGF {clean}"
+
+
+def format_file_display_name(base_name: str, game_ver: str = "3") -> str:
+    """Full folder display name for Nexus Banner Header & File Details: 'AGF - V3 - SCOPE - ModName'."""
+    clean = re.sub(r"^[0z]+(?=AGF)", "", base_name)
+    m = re.match(r"^AGF-V\d+-(?:SERVER|CLIENT|BOTH|ADMIN|COMPAT)-.*$", clean)
+    if m:
+        return " - ".join(clean.split("-"))
+    if clean.startswith("AGF-"):
+        clean = clean[4:]
     parts = [p for p in clean.split("-") if p]
-    display_parts = [p for p in parts if p]
-    joined = " - ".join(display_parts)
-    if game_version:
-        return f"AGF - V{game_version} - {joined}"
-    return f"AGF - {joined}"
+    return f"AGF - V{game_ver} - " + " - ".join(parts)
+
+
+def format_nexus_mod_name(base_name: str, game_version: str = "", mod_info: dict = None) -> str:
+    """Format mod name for Nexus (backward-compatibility alias)."""
+    return format_nexus_listing_title(base_name, mod_info)
 
 
 def load_mod_type_map() -> dict:
@@ -207,6 +235,13 @@ def load_mod_type_map() -> dict:
                 label = desc.split(":")[0].strip() if ":" in desc else desc
                 if label:
                     mod_type_map[label] = desc
+        fallback_aliases = {
+            "Server/Client-Side (Required)": mod_type_map.get("Server/Client-Side (EAC Off)"),
+            "Client-Side (Only)": mod_type_map.get("Client-Side (EAC Off)"),
+        }
+        for old_k, v in fallback_aliases.items():
+            if old_k not in mod_type_map and v:
+                mod_type_map[old_k] = v
     except Exception:
         pass
     return mod_type_map
@@ -230,6 +265,7 @@ def generate_details_md(
     file_desc: str,
     changelog: str,
     full_desc: str = "",
+    file_display_name: str = "",
 ) -> str:
     """Substitute placeholders in the template with actual values."""
     now = dt.datetime.now().strftime("%Y-%m-%d  %I:%M %p")
@@ -238,6 +274,7 @@ def generate_details_md(
         "{{MOD_VERSION}}": mod_info.get("version", "?"),
         "{{GENERATED_TIMESTAMP}}": now,
         "{{NEXUS_MOD_NAME}}": nexus_mod_name,
+        "{{FILE_DISPLAY_NAME}}": file_display_name or nexus_mod_name,
         "{{SHORT_DESCRIPTION}}": short_desc,
         "{{SHORT_DESC_LENGTH}}": str(len(short_desc)),
         "{{FILE_DESCRIPTION}}": file_desc,
@@ -286,7 +323,8 @@ def parse_readme_sections(readme_text: str) -> dict:
 
 def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, description: str, sections: dict) -> str:
     """Generate a branded BBCode full description for a mod."""
-    one_liner = description.split(".")[0] + "." if "." in description else description
+    m_one = re.match(r"^(.*?\.)(?:\s|$)", description.strip())
+    one_liner = m_one.group(1) if m_one else description.strip()
     lines: list = []
 
     def w(text: str = ""):
@@ -305,75 +343,115 @@ def generate_bbcode_full_description(nexus_mod_name: str, game_ver: str, descrip
     scope = sections.get("mod_scope", "")
     if scope:
         w(f"[heading][color={AGF_COLOR_HEADING}][size=5][b]Mod Scope[/b][/size][/color][/heading]")
-        w("[list]")
-        pending_sub_items: list = []
-        collecting_deps = False  # Flag: collecting sub-items for Dependencies
-        # Type 2 EAC Varies children — nest under Mod Type as plain text (never colored labels)
-        eac_varies_child_labels = {
-            "dedicated server",
-            "singleplayer and player-hosted",
-        }
-        for line in scope.splitlines():
-            indent = len(line) - len(line.lstrip())
-            stripped = line.strip()
-            if not stripped or stripped.startswith("- Mod Version:"):
+        # Unfold wrapped lines in scope
+        unwrapped_scope_lines: list[str] = []
+        for raw in scope.splitlines():
+            s = raw.strip()
+            if not s:
                 continue
-            if stripped.lstrip("- ").startswith("To restore, use Steam Verify:"):
-                # This is a sub-item of Dependencies with a colon; treat as sub-item
-                content = stripped.lstrip("- ").strip()
-                if content:
-                    pending_sub_items.append(content)
-                continue
-            content_raw = stripped.lstrip("- ").strip()
-            label_key = content_raw.split(":", 1)[0].strip().lower() if ":" in content_raw else ""
-            # Nested under Mod Type / Dependencies: indent >= 4, or known EAC-Varies children
-            if stripped.startswith("- ") and (
-                indent >= 4 or label_key in eac_varies_child_labels
-            ):
-                if content_raw:
-                    pending_sub_items.append(content_raw)
-                continue
-            if collecting_deps and stripped.startswith("- ") and ":" in stripped.lstrip("- "):
-                # While collecting deps, treat colon lines as sub-items, not labels
-                if content_raw:
-                    pending_sub_items.append(content_raw)
-                continue
-            if ":" in stripped.lstrip("- "):
-                # Flush any pending sub-items before starting a new entry
-                if pending_sub_items:
-                    w("[list]")
-                    for si in pending_sub_items:
-                        w(f"[*]{si}[/*]")
-                    w("[/list]")
-                    w("[/*]")
-                    pending_sub_items = []
-                label, value = stripped.lstrip("- ").split(":", 1)
-                label_s = label.strip()
-                value_s = value.strip()
-                if label_s == "Website":
-                    continue
-                elif label_s == "Mod Type":
-                    collecting_deps = False
-                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}")
-                elif label_s == "Dependencies":
-                    collecting_deps = True
-                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}")
-                    continue
+            if s.startswith("- ") or s.startswith("* ") or re.match(r"^\d+\.\s+", s):
+                unwrapped_scope_lines.append(raw)
+            elif ":" in s and (len(raw) - len(raw.lstrip())) <= 2:
+                unwrapped_scope_lines.append(raw)
+            else:
+                if unwrapped_scope_lines:
+                    unwrapped_scope_lines[-1] = unwrapped_scope_lines[-1].rstrip() + " " + s
                 else:
-                    collecting_deps = False
-                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label_s}:[/b][/color] {value_s}[/*]")
-            elif stripped.startswith("- "):
-                # Sub-item under Mod Type or Dependencies
-                content = stripped.lstrip("- ").strip()
-                if content:
-                    pending_sub_items.append(content)
-        # Flush any remaining sub-items at end of list
-        if pending_sub_items:
-            w("[list]")
-            for si in pending_sub_items:
-                w(f"[*]{si}[/*]")
-            w("[/list]")
-            w("[/*]")
+                    unwrapped_scope_lines.append(raw)
+
+        top_keys = {
+            "7d2d version",
+            "mod version",
+            "website",
+            "languages supported",
+            "mod type",
+            "safe to install on existing game",
+            "safe to remove from existing game",
+            "dependencies",
+        }
+
+        lines_parsed = []
+        for line in unwrapped_scope_lines:
+            indent = len(line) - len(line.lstrip())
+            content = line.strip().lstrip("-* ").strip()
+            lines_parsed.append((indent, content))
+
+        entries: list[dict] = []
+        curr_entry: dict | None = None
+        curr_child: dict | None = None
+        curr_child_indent = 0
+
+        for indent, content in lines_parsed:
+            colon_parts = content.split(":", 1)
+            k = colon_parts[0].strip().lower()
+            if k in top_keys:
+                label = colon_parts[0].strip()
+                val = colon_parts[1].strip() if len(colon_parts) > 1 else ""
+                curr_entry = {"label": label, "value": val, "children": []}
+                entries.append(curr_entry)
+                curr_child = None
+                curr_child_indent = 0
+                continue
+
+            if curr_entry is None:
+                continue
+
+            if curr_entry["label"].lower() == "dependencies":
+                if curr_entry["value"]:
+                    curr_child = {"text": content, "children": []}
+                    curr_entry["children"].append(curr_child)
+                else:
+                    if curr_child is not None and indent > curr_child_indent:
+                        curr_child["children"].append(content)
+                    else:
+                        curr_child = {"text": content, "children": []}
+                        curr_child_indent = indent
+                        curr_entry["children"].append(curr_child)
+            else:
+                curr_child = {"text": content, "children": []}
+                curr_entry["children"].append(curr_child)
+
+        w("[list]")
+        for entry in entries:
+            label = entry["label"]
+            val = entry["value"]
+            kids = entry["children"]
+
+            if label.lower() in ("mod version", "website"):
+                continue
+
+            if not kids:
+                w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label}:[/b][/color] {val}[/*]")
+            else:
+                if val:
+                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label}:[/b][/color] {val}")
+                else:
+                    w(f"[*][color={AGF_COLOR_HIGHLIGHT}][b]{label}:[/b][/color]")
+                w("[list]")
+                for kid in kids:
+                    kt = kid["text"]
+                    if entry["label"].lower() == "dependencies":
+                        mod_match = re.match(r"^(MOD\s*\d+):?\s*(.*)$", kt, flags=re.IGNORECASE)
+                        if mod_match:
+                            prefix = f"{mod_match.group(1)}:"
+                            rest = mod_match.group(2).strip()
+                            kt = (
+                                f"[color={AGF_COLOR_HIGHLIGHT}][b]{prefix}[/b][/color] {rest}"
+                                if rest
+                                else f"[color={AGF_COLOR_HIGHLIGHT}][b]{prefix}[/b][/color]"
+                            )
+                    gkids = kid["children"]
+                    if not gkids:
+                        w(f"[*]{kt}[/*]")
+                    else:
+                        w(f"[*]{kt}")
+                        w("[list]")
+                        for gk in gkids:
+                            w(f"[*]{gk}[/*]")
+                        w("[/list]")
+                        w("[/*]")
+                w("[/list]")
+                w("[/*]")
         w("[/list]")
         w()
         w(AGF_DIVIDER)
@@ -545,13 +623,14 @@ def main() -> int:
             continue
         sections = parse_readme_sections(readme)
         mod_info = load_modinfo_xml(folder_path)
-        nexus_name = format_nexus_mod_name(base_name, game_ver)
+        listing_title = format_nexus_listing_title(base_name, mod_info)
+        file_display_name = format_file_display_name(base_name, game_ver)
         short_desc = mod_info.get("description", "")
-        full_desc = generate_bbcode_full_description(nexus_name, game_ver, short_desc, sections)
+        full_desc = generate_bbcode_full_description(file_display_name, game_ver, short_desc, sections)
         file_desc = resolve_file_description(short_desc, extract_mod_type_from_readme(readme), mod_type_map)
         changelog = extract_changelog_entries(readme)
         packet = generate_details_md(
-            template_text, mod_info, nexus_name, short_desc, file_desc, changelog, full_desc
+            template_text, mod_info, listing_title, short_desc, file_desc, changelog, full_desc, file_display_name
         )
         packet_path = os.path.join(PUBLISHHELP_DIR, f"{base_name}.md")
         with open(packet_path, "w", encoding="utf-8") as f:

@@ -1,8 +1,0 @@
-<AGFVanillaPlus-CraftVitamins>
-
-	<append xpath="/items/item[@name='drugVitamins']">	
-		<property name="UnlockedBy" value="craftingMedical"/>		
-	</append>
-
-
-</AGFVanillaPlus-CraftVitamins>

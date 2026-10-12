@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
     <Name value="AGF-AnimalTrackerAlwaysOn"/>
-    <DisplayName value="AGF Animal Tracker Always On"/>
+    <DisplayName value="AGF - Animal Tracker Always On - V3"/>
     <Version value="1.0.1"/>
     <Description value="Animal Tracker stays active at your perk rank without crouching."/>
     <Author value="AuroraGiggleFairy (AGF)"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
     <Name value="AGF-LootStaysOnEmpty"/>
-    <DisplayName value="AGF Loot Stays On Empty"/>
+    <DisplayName value="AGF - Loot Stays On Empty - V3"/>
     <Version value="1.0.5"/>
     <Description value="Loot stays after emptying, except airdrops and buried supplies."/>
     <Author value="AuroraGiggleFairy (AGF)"/>

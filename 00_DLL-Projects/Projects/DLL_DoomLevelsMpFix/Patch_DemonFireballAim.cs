@@ -42,9 +42,12 @@ namespace DoomLevelsMpFix
 
 		internal static Vector3 Direction => direction;
 
+		internal static int HomingTargetId { get; private set; }
+
 		internal static void Clear()
 		{
 			active = false;
+			HomingTargetId = 0;
 		}
 
 		internal static bool IsDemonVomit(ItemActionVomit vomit, ItemActionData actionData)
@@ -65,9 +68,30 @@ namespace DoomLevelsMpFix
 			return ProjectileItems.Contains(names[index]);
 		}
 
+		internal static bool IsRevenantVomit(ItemActionVomit vomit, ItemActionData actionData)
+		{
+			EntityAlive entity = ItemInventoryAccess.Holding(actionData?.invData);
+			if (vomit == null || entity == null || entity.inventory == null)
+			{
+				return false;
+			}
+
+			string[] names = vomit.MagazineItemNames;
+			int index = ItemInventoryAccess.AmmoIndex(entity.inventory.holdingItemItemValue);
+			if (names == null || index < 0 || index >= names.Length)
+			{
+				return false;
+			}
+
+			return string.Equals(names[index], "meleeHandDemonRevenantProjectile", StringComparison.OrdinalIgnoreCase);
+		}
+
 		internal static void Arm(ItemActionVomit vomit, ItemActionData actionData, Vector3 serverDirection, int userData)
 		{
 			active = false;
+			// Negative user data is the homing target id. A positive value is the
+			// ballistic flag, and that shot is not one of these balls.
+			HomingTargetId = userData < 0 ? -userData : 0;
 			if (userData > 0 || serverDirection.sqrMagnitude < 0.0001f)
 			{
 				return;
@@ -245,6 +269,12 @@ namespace DoomLevelsMpFix
 		{
 			string name = shot?.itemProjectile?.GetItemName();
 			return !string.IsNullOrEmpty(name) && ProjectileItems.Contains(name);
+		}
+
+		internal static bool IsRevenantProjectile(ProjectileMoveScript shot)
+		{
+			string name = shot?.itemProjectile?.GetItemName();
+			return string.Equals(name, "meleeHandDemonRevenantProjectile", StringComparison.OrdinalIgnoreCase);
 		}
 
 		/// <summary>

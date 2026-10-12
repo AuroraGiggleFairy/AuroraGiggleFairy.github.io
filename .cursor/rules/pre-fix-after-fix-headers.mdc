@@ -19,6 +19,24 @@ While exploring, **ISSUE** is one summarized accurate statement, such as the cra
 
 When the change is in the mod, **FIX** states what was done. Do not start that row with "Proposed." **RESULT** is what that change gives. **APPLIED** is Yes.
 
+Inside **APPLIED**, after the Yes or No and the rest of that sentence, list the mod files as bullets. A mod file is the file under the mod folder, such as `ZZZ_DoomMod_Standalone/DoomCore.dll` or `ZZZ_DoomMod_Standalone/Config/items.xml`. One bullet per file. When **APPLIED** is Yes, those are the files that were adjusted. When **APPLIED** is No, those are the files the proposed fix would adjust. Do not list DLL project source files. Do not list the same file once per copy.
+
+```html
+<td>Yes. Doom Test has the new file.
+<ul>
+<li><code>ZZZ_DoomMod_Standalone/DoomCore.dll</code></li>
+</ul>
+</td>
+```
+
+```html
+<td>No
+<ul>
+<li><code>ZZZ_DoomMod_Standalone/Config/items.xml</code></li>
+</ul>
+</td>
+```
+
 One HTML table per issue. The first column is the label, all caps and bold, top-left aligned. Those words are not column headers. Leave out how the code does it. In a cell, ordered steps are a numbered list. A simple list is bullets. Columns do not need to be the same width.
 
 When more than one issue is in the reply, each issue is its own table. A title above that table names which issue it is. Leave a gap between tables. Do not stack several issues in one table.
@@ -44,6 +62,6 @@ Doom dedicated-server mod testing only: when Applied is Yes and they still have 
 - Stack more than one issue inside a single table.
 - Describe a proposal as if it is already in the mod.
 - Name DLL project source files in **FIX** or **APPLIED**.
-- Add a **MOD FILES** row or a **NEXT** row.
+- Add a **MOD FILES** row or a **NEXT** row. Mod files stay bullets inside **APPLIED**.
 - Use "Ready to copy" outside Doom dedicated-server mod testing.
 - Call it No because the dedicated server or Doom Test does not have the file yet.

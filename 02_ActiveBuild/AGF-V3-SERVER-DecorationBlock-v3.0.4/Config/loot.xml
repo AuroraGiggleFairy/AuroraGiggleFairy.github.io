@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<AGFVanillaPlus-DecorationBlock>
-	<!-- No loot containers here. Deco uses vanilla writable lists, or Larger Storage Option *Large lists via the blocks.xml conditional. -->
-</AGFVanillaPlus-DecorationBlock>

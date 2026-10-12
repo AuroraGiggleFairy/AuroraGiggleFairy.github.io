@@ -10,6 +10,8 @@ namespace PartyGroupPlus
 		{
 			try
 			{
+				GameVersion.Initialize();
+				PackageEmit.Prepare(typeof(NetPackagePartyGroupPlusColor));
 				PartyGroupPlusSettings.Load(_modInstance?.Path);
 				PartyGroupPlusColorStore.LoadPreference();
 				PartyGroupPlusPriorityStore.Load();

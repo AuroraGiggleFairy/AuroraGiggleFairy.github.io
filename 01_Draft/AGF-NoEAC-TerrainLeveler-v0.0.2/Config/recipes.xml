@@ -1,16 +1,8 @@
-<AGFVanillaPlus-FloraHarvester>
-
-
-<append xpath="/recipes">
-
-	<recipe name="meleeToolFloraHarvester" count="1" tags="learnable">
-		<ingredient name="resourceYuccaFibers" count="250"/>
-	</recipe>
-
-</append>	
-
-	
-	
-</AGFVanillaPlus-FloraHarvester>
-
-
+<AGF-TerrainLeveler>
+	<append xpath="/recipes">
+		<recipe name="meleeToolTerrainLeveler" count="1">
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceRockSmall" count="10"/>
+		</recipe>
+	</append>
+</AGF-TerrainLeveler>

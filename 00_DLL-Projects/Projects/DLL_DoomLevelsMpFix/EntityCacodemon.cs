@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using HarmonyLib;
 using UnityEngine;
 using UnityEngine.Scripting;
 
@@ -7,7 +10,9 @@ namespace DoomLevelsMpFix
 	/// <summary>
 	/// The body stays level and only turns left and right. It flies a straight
 	/// line toward one meter above its target, ducking, climbing, or going
-	/// around when something is in the way. The projectile aims at the chest.
+	/// around when something is in the way. A high blockage is passed underneath
+	/// when the gap fits the body. The ranged line on the entity sets the shot.
+	/// The projectile aims at the chest.
 	/// </summary>
 	[Preserve]
 	public class EntityCacodemon : EntityFlying
@@ -26,8 +31,6 @@ namespace DoomLevelsMpFix
 
 		private const float TouchMeters = 1.9f;
 
-		private const float TouchHeight = 1.5f;
-
 		private const float HoverAbove = 1f;
 
 		private const float CruiseUp = 10f;
@@ -38,11 +41,17 @@ namespace DoomLevelsMpFix
 
 		private const float SearchRadius = 28f;
 
-		private const int WindupTicks = 9;
+		private const int ShotPauseTicks = 20;
+
+		private const int ShotFireTick = 10;
 
 		private static readonly FastTags<TagGroup.Global> DemonTag = FastTags<TagGroup.Global>.Parse("demon");
 
+		private static readonly AccessTools.FieldRef<ItemActionVomit, string> WarningSound =
+			AccessTools.FieldRefAccess<ItemActionVomit, string>("soundWarning");
+
 		private readonly List<Bounds> hits = new List<Bounds>();
+		private readonly List<Bounds> held = new List<Bounds>();
 
 		private readonly List<Entity> nearby = new List<Entity>();
 
@@ -57,6 +66,24 @@ namespace DoomLevelsMpFix
 		private int avoidSide;
 
 		private int avoidHold;
+
+		private int detourHold;
+
+		private int detourSide = 1;
+
+		private bool detourDrop;
+
+		private bool shotReady;
+
+		private float shotCooldown = 3f;
+
+		private float shotDuration = 3f;
+
+		private float shotMin = 2f;
+
+		private float shotMax = 40f;
+
+		private string shotSound = "";
 
 		private Vector3 steer;
 
@@ -78,7 +105,11 @@ namespace DoomLevelsMpFix
 
 		private int windup;
 
+		private bool shotReleased;
+
 		private int attackWait;
+
+		private int biteWait;
 
 		private bool painCancel;
 
@@ -118,21 +149,51 @@ namespace DoomLevelsMpFix
 
 			fallDistance = 0f;
 			onGround = false;
+			bool clip = HeadInCeiling();
+			bool chasing = (bool)attackTarget && !attackTarget.IsDead();
 			Vector3 unpack = Unpack();
-			if (unpack.sqrMagnitude > 0.0001f)
+			if (clip && CanDrop())
+			{
+				motion.y = Mathf.Min(motion.y, -Mathf.Max(StepLength(), 0.25f));
+				motion.x += unpack.x * 0.35f;
+				motion.z += unpack.z * 0.35f;
+			}
+			else if (chasing && mode != Mode.Windup)
+			{
+				motion.x += unpack.x * 0.35f;
+				motion.z += unpack.z * 0.35f;
+			}
+			else if (unpack.sqrMagnitude > 0.0001f)
 			{
 				motion = unpack;
 			}
-			else
+			else if (!clip)
 			{
-				float surface = GroundAt(position.x, position.z);
-				if (boundingBox.min.y < surface + 0.35f)
+				Gap here = Measure(position.x, boundingBox.min.y, position.z);
+				if (here.HasFloor && boundingBox.min.y < here.Floor + 0.35f)
 				{
-					motion.y = Mathf.Max(motion.y, StepLength());
+					float lift = StepLength();
+					if (here.HasCeiling)
+					{
+						float room = here.Ceiling - boundingBox.max.y;
+						if (room < lift)
+						{
+							lift = Mathf.Max(0f, room - 0.05f);
+						}
+					}
+
+					if (lift > 0f)
+					{
+						motion.y = Mathf.Max(motion.y, lift);
+					}
 				}
 			}
 
 			entityCollision(motion);
+			if (clip && CanDrop() && HeadInCeiling())
+			{
+				SetPosition(position + Vector3.down * Mathf.Max(StepLength(), 0.2f), true);
+			}
 		}
 
 		public override int DamageEntity(DamageSource _damageSource, int _strength, bool _criticalHit, float _impulseScale = 1f)
@@ -176,6 +237,10 @@ namespace DoomLevelsMpFix
 				{
 					SearchLastSeen();
 				}
+				else if (HasInvestigatePosition)
+				{
+					FlyTo(InvestigatePosition);
+				}
 				else if (Searches())
 				{
 					Cruise();
@@ -196,8 +261,15 @@ namespace DoomLevelsMpFix
 				if (painCancel || target.IsDead())
 				{
 					mode = Mode.Drift;
-					attackWait = rand.RandomRange(6, 14);
+					shotReleased = false;
+					attackWait = ShotGap();
 					return;
+				}
+
+				if (!shotReleased && windup <= ShotFireTick && InShotRange(target))
+				{
+					Spit();
+					shotReleased = true;
 				}
 
 				if (windup > 0)
@@ -205,17 +277,9 @@ namespace DoomLevelsMpFix
 					return;
 				}
 
-				if (Touching(target))
-				{
-					Bite(target);
-				}
-				else
-				{
-					Spit();
-				}
-
 				mode = Mode.Drift;
-				attackWait = rand.RandomRange(8, 27);
+				shotReleased = false;
+				attackWait = ShotGap();
 				return;
 			}
 
@@ -224,15 +288,32 @@ namespace DoomLevelsMpFix
 				attackWait--;
 			}
 
+			if (biteWait > 0)
+			{
+				biteWait--;
+			}
+
 			Drift(target);
-			if (attackWait <= 0 && CanSee(target) && WantsShot(FlatMeters(target)))
+			if (Touching(target) && biteWait <= 0)
+			{
+				Bite(target);
+				biteWait = BiteTicks();
+			}
+
+			if (attackWait > 0 || !CanSee(target))
+			{
+				return;
+			}
+
+			if (InShotRange(target) && WantsShot(FlatMeters(target)) && !Touching(target))
 			{
 				mode = Mode.Windup;
-				windup = WindupTicks;
+				windup = ShotPauseTicks;
+				shotReleased = false;
 				painCancel = false;
 				motion = Vector3.zero;
 			}
-			else if (attackWait <= 0)
+			else if (InShotRange(target))
 			{
 				attackWait = rand.RandomRange(8, 21);
 			}
@@ -406,21 +487,25 @@ namespace DoomLevelsMpFix
 
 		private void SearchLastSeen()
 		{
-			Vector3 spot = lastSeenPos + Vector3.up * HoverAbove;
-			Vector3 flat = lastSeenPos - position;
+			FlyTo(lastSeenPos);
+		}
+
+		private void FlyTo(Vector3 point)
+		{
+			Vector3 flat = point - position;
 			flat.y = 0f;
 			if (flat.sqrMagnitude > 0.25f)
 			{
 				SeekYaw(Mathf.Atan2(flat.x, flat.z) * Mathf.Rad2Deg, 0f, 12f);
 			}
 
-			if ((lastSeenPos - position).sqrMagnitude < 2.25f)
+			if ((point - position).sqrMagnitude < 2.25f)
 			{
 				motion = Ease(Vector3.zero, StepLength());
 				return;
 			}
 
-			motion = StepToward(spot);
+			motion = StepToward(point + Vector3.up * HoverAbove);
 		}
 
 		private bool Searches()
@@ -485,7 +570,7 @@ namespace DoomLevelsMpFix
 
 		private Vector3 ApproachPoint(EntityAlive target)
 		{
-			Vector3 center = target.position + Vector3.up * HoverAbove;
+			Vector3 center = target.position;
 			float flatDist = FlatMeters(target);
 			if (flatDist > 16f)
 			{
@@ -578,7 +663,17 @@ namespace DoomLevelsMpFix
 
 			float step = StepLength();
 			push.y = 0f;
-			return push.normalized * step + Vector3.up * (step * 0.45f);
+			Vector3 shove = push.normalized * step;
+			if (!HeadInCeiling())
+			{
+				Gap gap = Measure(position.x, boundingBox.min.y, position.z);
+				if (!gap.HasCeiling || boundingBox.max.y < gap.Ceiling - 0.45f)
+				{
+					shove.y = step * 0.45f;
+				}
+			}
+
+			return shove;
 		}
 
 		private float StepLength()
@@ -626,12 +721,68 @@ namespace DoomLevelsMpFix
 			float arrive = Mathf.Clamp01(dist / 2.4f);
 			float mag = Mathf.Min(stepLen, dist) * Mathf.Lerp(0.4f, 1f, arrive);
 			Vector3 wish = dir * mag;
-			if (Blocked(wish))
+			bool dropping = false;
+			if (HeadInCeiling() && CanDrop())
 			{
-				wish = BlendedOpen(dir, side, goal, mag);
+				Vector3 flatDrop = new Vector3(dir.x, 0f, dir.z);
+				if (flatDrop.sqrMagnitude > 0.0001f)
+				{
+					flatDrop.Normalize();
+				}
+
+				wish = flatDrop * (mag * 0.35f);
+				wish.y = -Mathf.Max(mag, 0.2f);
+				dropping = true;
+				detourDrop = true;
+				detourHold = 20;
 			}
 
-			wish = ClearGround(wish, goal, mag);
+			bool forwardOpen = dropping || (!Blocked(wish) && StepFits(wish));
+			if (detourHold > 0 && !forwardOpen)
+			{
+				detourHold--;
+				Vector3 committed = DetourStep(dir, side, mag);
+				if (committed.sqrMagnitude > 0.0001f && !Blocked(committed) && StepFits(committed))
+				{
+					wish = committed;
+				}
+				else
+				{
+					detourHold = 0;
+					wish = Vector3.zero;
+				}
+			}
+			else
+			{
+				detourHold = 0;
+			}
+
+			if (!dropping && detourHold <= 0 && (Blocked(wish) || !StepFits(wish)))
+			{
+				Vector3 under;
+				if (TryUnder(dir, mag, out under))
+				{
+					wish = under;
+					detourDrop = true;
+					detourHold = 30;
+				}
+				else
+				{
+					Vector3 slide = Slide(dir, side, mag, goal);
+					if (slide.sqrMagnitude > 0.0001f)
+					{
+						wish = slide;
+						detourDrop = false;
+						detourHold = 30;
+					}
+					else
+					{
+						wish = BlendedOpen(dir, side, goal, mag);
+					}
+				}
+			}
+
+			wish = FitStep(wish, mag);
 			return Ease(wish, stepLen);
 		}
 
@@ -654,7 +805,7 @@ namespace DoomLevelsMpFix
 			for (int i = 0; i < mix.Length; i++)
 			{
 				Vector3 step = mix[i] * mag;
-				if (Blocked(step))
+				if (Blocked(step) || !StepFits(step))
 				{
 					continue;
 				}
@@ -730,26 +881,387 @@ namespace DoomLevelsMpFix
 			return (entityId & 1) == 0 ? 1 : -1;
 		}
 
-		private Vector3 ClearGround(Vector3 step, Vector3 goal, float mag)
+		private Vector3 FitStep(Vector3 step, float mag)
 		{
 			if (step.sqrMagnitude < 0.0001f)
 			{
 				return step;
 			}
 
-			float pad = step.y < -0.2f ? 0.45f : GroundClearance;
-			float floor = GroundAt(position.x + step.x, position.z + step.z) + pad;
-			float destY = position.y + step.y;
-			if (goal.y < floor - 0.2f && destY < floor)
+			float feet = boundingBox.min.y + step.y;
+			Gap gap = Measure(position.x + step.x, feet, position.z + step.z);
+			bool clipping = HeadInCeiling();
+			bool shortRoom = gap.HasFloor && gap.HasCeiling && gap.Ceiling - gap.Floor < BodyHeight() + GroundClearance;
+			if (gap.HasFloor && !clipping)
 			{
-				step.y += floor - destY;
-				if (mag > 0.001f && step.sqrMagnitude > mag * mag)
+				float minFeet = gap.Floor + GroundClearance;
+				if (gap.HasCeiling)
 				{
-					step = step.normalized * mag;
+					float maxFeet = gap.Ceiling - BodyHeight() - 0.15f;
+					if (maxFeet < gap.Floor)
+					{
+						minFeet = gap.Floor;
+					}
+					else if (minFeet > maxFeet)
+					{
+						minFeet = maxFeet;
+					}
+				}
+
+				if (feet < minFeet)
+				{
+					step.y += minFeet - feet;
+					feet = minFeet;
 				}
 			}
 
+			if (gap.HasCeiling && GapFits(gap))
+			{
+				float maxFeet = gap.Ceiling - BodyHeight() - 0.15f;
+				if (feet > maxFeet)
+				{
+					step.y -= feet - maxFeet;
+					feet = boundingBox.min.y + step.y;
+				}
+			}
+
+			if (!clipping && !shortRoom && gap.HasFloor && feet <= gap.Floor + GroundClearance + 0.25f && step.y < 0f)
+			{
+				step.y = 0f;
+			}
+
+			if (mag > 0.001f && step.sqrMagnitude > mag * mag)
+			{
+				step = step.normalized * mag;
+			}
+
 			return step;
+		}
+
+		private Vector3 DetourStep(Vector3 dir, Vector3 side, float mag)
+		{
+			Vector3 flat = new Vector3(dir.x, 0f, dir.z);
+			if (flat.sqrMagnitude < 0.0001f)
+			{
+				return Vector3.zero;
+			}
+
+			flat.Normalize();
+			if (detourDrop)
+			{
+				Vector3 under;
+				if (TryUnder(flat, mag, out under))
+				{
+					return under;
+				}
+
+				return Vector3.zero;
+			}
+
+			Vector3 slide = (flat + side * detourSide).normalized * mag;
+			slide.y = 0f;
+			return slide;
+		}
+
+		private bool TryUnder(Vector3 dir, float mag, out Vector3 step)
+		{
+			step = Vector3.zero;
+			if (OnFloorNow())
+			{
+				return false;
+			}
+
+			Vector3 flat = new Vector3(dir.x, 0f, dir.z);
+			if (flat.sqrMagnitude < 0.0001f)
+			{
+				return false;
+			}
+
+			flat.Normalize();
+			float body = BodyHeight();
+			float ahead = Mathf.Max(mag, 0.35f);
+			float opening;
+			if (!OpeningUnder(position.x + flat.x * ahead, position.z + flat.z * ahead, boundingBox.min.y, body, out opening))
+			{
+				return false;
+			}
+
+			float drop = opening - boundingBox.min.y;
+			if (drop >= -0.02f)
+			{
+				return false;
+			}
+
+			Vector3 wish = flat * mag;
+			wish.y = Mathf.Clamp(drop, -mag, 0f);
+			if (Blocked(wish) || !StepFits(wish))
+			{
+				wish = new Vector3(0f, Mathf.Clamp(drop, -mag, 0f), 0f);
+				if (Blocked(wish) || !StepFits(wish))
+				{
+					return false;
+				}
+			}
+
+			step = wish;
+			return true;
+		}
+
+		private Vector3 Slide(Vector3 dir, Vector3 side, float mag, Vector3 goal)
+		{
+			Vector3 flat = new Vector3(dir.x, 0f, dir.z);
+			if (flat.sqrMagnitude < 0.0001f)
+			{
+				return Vector3.zero;
+			}
+
+			flat.Normalize();
+			Vector3 left = (flat + side).normalized * mag;
+			Vector3 right = (flat - side).normalized * mag;
+			left.y = 0f;
+			right.y = 0f;
+			bool leftOk = !Blocked(left) && StepFits(left);
+			bool rightOk = !Blocked(right) && StepFits(right);
+			if (leftOk && rightOk)
+			{
+				float leftDist = (goal - (position + left)).sqrMagnitude;
+				float rightDist = (goal - (position + right)).sqrMagnitude;
+				detourSide = leftDist <= rightDist ? 1 : -1;
+				return leftDist <= rightDist ? left : right;
+			}
+
+			if (leftOk)
+			{
+				detourSide = 1;
+				return left;
+			}
+
+			if (rightOk)
+			{
+				detourSide = -1;
+				return right;
+			}
+
+			return Vector3.zero;
+		}
+
+		private bool OpeningUnder(float x, float z, float feet, float body, out float feetY)
+		{
+			feetY = feet;
+			int ix = Utils.Fastfloor(x);
+			int iz = Utils.Fastfloor(z);
+			int top = Utils.Fastfloor(feet + body);
+			bool seenSolid = false;
+			for (int i = 0; i <= 14; i++)
+			{
+				int by = top - i;
+				if (by < 1)
+				{
+					break;
+				}
+
+				if (Solid(ix, by, iz))
+				{
+					seenSolid = true;
+					continue;
+				}
+
+				if (!seenSolid)
+				{
+					continue;
+				}
+
+				float ceiling = by + 1f;
+				float floor = ceiling - 16f;
+				bool hasFloor = false;
+				for (int d = 1; d <= 16; d++)
+				{
+					int fy = by - d;
+					if (fy < 0)
+					{
+						break;
+					}
+
+					if (Solid(ix, fy, iz))
+					{
+						floor = fy + 1f;
+						hasFloor = true;
+						break;
+					}
+				}
+
+				if (ceiling - floor < body + 0.15f)
+				{
+					return false;
+				}
+
+				float tucked = ceiling - body - 0.15f;
+				if (hasFloor)
+				{
+					tucked = Mathf.Max(tucked, floor + GroundClearance);
+				}
+
+				if (tucked >= feet - 0.02f)
+				{
+					return false;
+				}
+
+				feetY = tucked;
+				return true;
+			}
+
+			return false;
+		}
+
+		private bool StepFits(Vector3 step)
+		{
+			if (step.sqrMagnitude < 0.0001f)
+			{
+				return true;
+			}
+
+			float feet = boundingBox.min.y + step.y;
+			Gap gap = Measure(position.x + step.x, feet, position.z + step.z);
+			if (!gap.HasFloor || !gap.HasCeiling || gap.Ceiling - gap.Floor >= BodyHeight() + 0.15f)
+			{
+				return true;
+			}
+
+			Gap here = Measure(position.x, boundingBox.min.y, position.z);
+			float hereRoom = here.HasFloor && here.HasCeiling ? here.Ceiling - here.Floor : float.MaxValue;
+			return gap.Ceiling - gap.Floor + 0.05f >= hereRoom;
+		}
+
+		private bool OnFloorNow()
+		{
+			Gap gap = Measure(position.x, boundingBox.min.y, position.z);
+			return gap.HasFloor && boundingBox.min.y <= gap.Floor + GroundClearance + 0.25f;
+		}
+
+		private bool CanDrop()
+		{
+			Gap gap = Measure(position.x, boundingBox.min.y, position.z);
+			if (gap.HasFloor && gap.Floor > boundingBox.min.y + 0.05f)
+			{
+				return true;
+			}
+
+			if (OnFloorNow())
+			{
+				return false;
+			}
+
+			if (!gap.HasFloor)
+			{
+				return true;
+			}
+
+			return boundingBox.min.y - 0.25f >= gap.Floor + GroundClearance;
+		}
+
+		private bool HeadInCeiling()
+		{
+			Bounds box = boundingBox;
+			float y = box.max.y - 0.08f;
+			float mid = box.min.y + (box.max.y - box.min.y) * 0.55f;
+			if (y < mid)
+			{
+				return false;
+			}
+
+			float hx = box.extents.x * 0.8f;
+			float hz = box.extents.z * 0.8f;
+			Vector3 c = box.center;
+			return SolidAt(c.x, y, c.z)
+				|| SolidAt(c.x + hx, y, c.z)
+				|| SolidAt(c.x - hx, y, c.z)
+				|| SolidAt(c.x, y, c.z + hz)
+				|| SolidAt(c.x, y, c.z - hz);
+		}
+
+		private bool SolidAt(float x, float y, float z)
+		{
+			return Solid(Utils.Fastfloor(x), Utils.Fastfloor(y), Utils.Fastfloor(z));
+		}
+
+		private float BodyHeight()
+		{
+			return Mathf.Max(0.8f, boundingBox.size.y);
+		}
+
+		private bool GapFits(Gap gap)
+		{
+			if (!gap.HasFloor || !gap.HasCeiling)
+			{
+				return true;
+			}
+
+			return gap.Ceiling - gap.Floor >= BodyHeight() + 0.15f;
+		}
+
+		private Gap Measure(float x, float feet, float z)
+		{
+			int ix = Utils.Fastfloor(x);
+			int iz = Utils.Fastfloor(z);
+			int iy = Utils.Fastfloor(feet - 0.05f);
+			Gap gap = new Gap();
+			for (int i = 0; i <= 16; i++)
+			{
+				int by = iy - i;
+				if (by < 0)
+				{
+					break;
+				}
+
+				if (Solid(ix, by, iz))
+				{
+					gap.HasFloor = true;
+					gap.Floor = by + 1f;
+					break;
+				}
+			}
+
+			int head = Utils.Fastfloor(feet + BodyHeight() - 0.05f);
+			for (int i = 1; i <= 16; i++)
+			{
+				int by = head + i;
+				if (by > 255)
+				{
+					break;
+				}
+
+				if (Solid(ix, by, iz))
+				{
+					gap.HasCeiling = true;
+					gap.Ceiling = by;
+					break;
+				}
+			}
+
+			return gap;
+		}
+
+		private bool Solid(int x, int y, int z)
+		{
+			BlockValue block = world.GetBlock(x, y, z);
+			if (block.isair)
+			{
+				return false;
+			}
+
+			Block shape = block.Block;
+			return shape != null && shape.IsCollideMovement;
+		}
+
+		private struct Gap
+		{
+			public float Floor;
+
+			public float Ceiling;
+
+			public bool HasFloor;
+
+			public bool HasCeiling;
 		}
 
 		private float GroundAt(float x, float z)
@@ -817,7 +1329,42 @@ namespace DoomLevelsMpFix
 
 		private bool Blocked(Vector3 step)
 		{
-			Bounds box = boundingBox;
+			if (step.sqrMagnitude < 0.0001f)
+			{
+				return false;
+			}
+
+			Bounds box = ProbeBox(boundingBox);
+			hits.Clear();
+			world.GetCollidingBounds(this, box, hits);
+			held.Clear();
+			held.AddRange(hits);
+			box.center += step;
+			hits.Clear();
+			world.GetCollidingBounds(this, box, hits);
+			if (hits.Count == 0)
+			{
+				return false;
+			}
+
+			if (held.Count == 0)
+			{
+				return true;
+			}
+
+			for (int i = 0; i < hits.Count; i++)
+			{
+				if (!SameBlock(held, hits[i]))
+				{
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+		private static Bounds ProbeBox(Bounds box)
+		{
 			Vector3 size = box.size;
 			const float floorGap = 0.45f;
 			if (size.y > floorGap + 0.35f)
@@ -827,10 +1374,20 @@ namespace DoomLevelsMpFix
 				box.center += new Vector3(0f, floorGap * 0.5f, 0f);
 			}
 
-			box.center += step;
-			hits.Clear();
-			world.GetCollidingBounds(this, box, hits);
-			return hits.Count > 0;
+			return box;
+		}
+
+		private static bool SameBlock(List<Bounds> before, Bounds hit)
+		{
+			for (int i = 0; i < before.Count; i++)
+			{
+				if ((before[i].center - hit.center).sqrMagnitude < 0.01f && (before[i].size - hit.size).sqrMagnitude < 0.01f)
+				{
+					return true;
+				}
+			}
+
+			return false;
 		}
 
 		private float FlatMeters(EntityAlive target)
@@ -842,12 +1399,22 @@ namespace DoomLevelsMpFix
 
 		private bool Touching(EntityAlive target)
 		{
-			if (FlatMeters(target) > TouchMeters)
+			if (FlatMeters(target) > BiteReach())
 			{
 				return false;
 			}
 
-			return Mathf.Abs(boundingBox.center.y - target.boundingBox.center.y) <= TouchHeight;
+			float gap = 0f;
+			if (boundingBox.min.y > target.boundingBox.max.y)
+			{
+				gap = boundingBox.min.y - target.boundingBox.max.y;
+			}
+			else if (target.boundingBox.min.y > boundingBox.max.y)
+			{
+				gap = target.boundingBox.min.y - boundingBox.max.y;
+			}
+
+			return gap <= 0.75f;
 		}
 
 		private bool WantsShot(float meters)
@@ -866,16 +1433,66 @@ namespace DoomLevelsMpFix
 			return rand.RandomFloat * 256f >= dist;
 		}
 
+		private ItemAction MeleeAction()
+		{
+			if (inventory == null || inventory.holdingItem == null)
+			{
+				return null;
+			}
+
+			ItemAction[] actions = inventory.holdingItem.Actions;
+			if (actions == null || actions.Length < 1)
+			{
+				return null;
+			}
+
+			return actions[0];
+		}
+
+		private float BiteReach()
+		{
+			ItemAction melee = MeleeAction();
+			if (melee != null && melee.Range > 0f)
+			{
+				return melee.Range;
+			}
+
+			return TouchMeters;
+		}
+
+		private int BiteTicks()
+		{
+			ItemAction melee = MeleeAction();
+			float delay = melee != null ? melee.Delay : 0.2f;
+			if (delay <= 0f)
+			{
+				delay = 0.2f;
+			}
+
+			int ticks = Mathf.CeilToInt(delay / Tick);
+			return ticks < 1 ? 1 : ticks;
+		}
+
 		private void Bite(EntityAlive target)
 		{
-			int steps = 1 + (int)(rand.RandomFloat * 6f);
-			if (steps > 6)
+			ItemActionAttack attack = MeleeAction() as ItemActionAttack;
+			if (attack == null || inventory.holdingItemItemValue == null)
 			{
-				steps = 6;
+				return;
+			}
+
+			EntityAlive previous = MinEventContext.Other;
+			MinEventContext.Other = target;
+			MinEventContext.ItemValue = inventory.holdingItemItemValue;
+			int damage = Mathf.RoundToInt(attack.GetDamageEntity(inventory.holdingItemItemValue, this, 0));
+			MinEventContext.Other = previous;
+			if (damage <= 0)
+			{
+				return;
 			}
 
 			DamageSourceEntity source = new DamageSourceEntity(EnumDamageSource.External, EnumDamageTypes.Piercing, entityId);
-			target.DamageEntity(source, steps * 10, false, 1f);
+			target.DamageEntity(source, damage, false, 1f);
 		}
 
 		private void Spit()
@@ -901,9 +1518,141 @@ namespace DoomLevelsMpFix
 			data.warningTime = 0f;
 			data.numVomits = 0;
 			data.isActive = false;
-			PlayOneShot("DemonFireballThrown");
+			ReadShotLine();
+			string sound = shotSound;
+			if (string.IsNullOrEmpty(sound))
+			{
+				sound = HandWarning();
+			}
+
+			if (!string.IsNullOrEmpty(sound))
+			{
+				PlayOneShot(sound);
+			}
+
 			UseHoldingItem(1, false);
 			UseHoldingItem(1, true);
+		}
+
+		private bool InShotRange(EntityAlive target)
+		{
+			ReadShotLine();
+			float meters = FlatMeters(target);
+			return meters >= shotMin && meters <= shotMax;
+		}
+
+		private int ShotGap()
+		{
+			ReadShotLine();
+			float cooldown = shotCooldown + shotCooldown * 0.5f * rand.RandomFloat;
+			int ticks = Mathf.CeilToInt((shotDuration + cooldown) / Tick);
+			return ticks < 1 ? 1 : ticks;
+		}
+
+		private void ReadShotLine()
+		{
+			if (shotReady)
+			{
+				return;
+			}
+
+			shotReady = true;
+			EntityClass kind = EntityClass.list[entityClass];
+			if (kind == null || kind.Properties == null)
+			{
+				return;
+			}
+
+			string raw = kind.Properties.GetString("AITask");
+			if (string.IsNullOrEmpty(raw))
+			{
+				return;
+			}
+
+			int at = raw.IndexOf("RangedAttackTarget", StringComparison.Ordinal);
+			if (at < 0)
+			{
+				return;
+			}
+
+			int end = raw.IndexOf('|', at);
+			string line = end < 0 ? raw.Substring(at) : raw.Substring(at, end - at);
+			shotCooldown = Number(line, "cooldown", shotCooldown);
+			shotDuration = Number(line, "duration", shotDuration);
+			shotMin = Number(line, "minRange", shotMin);
+			shotMax = Number(line, "maxRange", shotMax);
+			shotSound = Text(line, "sndStart");
+		}
+
+		private string HandWarning()
+		{
+			if (inventory == null || inventory.holdingItem == null)
+			{
+				return "";
+			}
+
+			ItemAction[] actions = inventory.holdingItem.Actions;
+			if (actions == null || actions.Length < 2)
+			{
+				return "";
+			}
+
+			ItemActionVomit vomit = actions[1] as ItemActionVomit;
+			if (vomit == null)
+			{
+				return "";
+			}
+
+			return WarningSound(vomit);
+		}
+
+		private static float Number(string line, string key, float fallback)
+		{
+			string token = key + "=";
+			int at = line.IndexOf(token, StringComparison.Ordinal);
+			if (at < 0)
+			{
+				return fallback;
+			}
+
+			at += token.Length;
+			int end = at;
+			while (end < line.Length && (char.IsDigit(line[end]) || line[end] == '.' || line[end] == '-'))
+			{
+				end++;
+			}
+
+			float value;
+			if (end > at && float.TryParse(line.Substring(at, end - at), NumberStyles.Float, CultureInfo.InvariantCulture, out value))
+			{
+				return value;
+			}
+
+			return fallback;
+		}
+
+		private static string Text(string line, string key)
+		{
+			string token = key + "=";
+			int at = line.IndexOf(token, StringComparison.Ordinal);
+			if (at < 0)
+			{
+				return "";
+			}
+
+			at += token.Length;
+			int end = at;
+			while (end < line.Length && line[end] != ';' && line[end] != '|' && !char.IsWhiteSpace(line[end]))
+			{
+				end++;
+			}
+
+			if (end <= at)
+			{
+				return "";
+			}
+
+			return line.Substring(at, end - at);
 		}
 	}
 }

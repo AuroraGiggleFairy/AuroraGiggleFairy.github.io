@@ -1,4 +1,5 @@
 using HarmonyLib;
+using UnityEngine;
 
 namespace DoomLevelsMpFix
 {
@@ -6,7 +7,10 @@ namespace DoomLevelsMpFix
 	/// Dummy rounds stay in the game. They are the projectile.
 	/// An empty gun fills itself with the selected dummy round.
 	/// That happens when the gun is created, moved, or emptied.
-	/// Scrap does not give that round back. The BFG can still switch cores.
+	/// A gun that is already drawn also gets its loaded round before the next trigger,
+	/// so the first shot after a fill or a reload is a real shot.
+	/// Scrap does not give that round back.
+	/// Switching the BFG core changes which dummy round is selected. That round stays in the gun.
 	/// </summary>
 	internal static class DummyMagazine
 	{
@@ -41,6 +45,74 @@ namespace DoomLevelsMpFix
 			if (max > 0)
 			{
 				ItemInventoryAccess.SetMeta(item, max);
+			}
+		}
+
+		/// <summary>
+		/// The magazine count has to match before the trigger is accepted.
+		/// A launcher also needs its one loaded mesh, or that trigger spends ammo and fires nothing.
+		/// </summary>
+		internal static void Chamber(ItemActionRanged action, ItemActionData data)
+		{
+			if (action == null || data?.invData == null || !UsesDummy(action))
+			{
+				return;
+			}
+
+			ItemValue item = data.invData.itemValue;
+			if (item == null || ItemInventoryAccess.Holding(data.invData) == null)
+			{
+				return;
+			}
+
+			int max = action.GetMaxAmmoCount(data);
+			int meta = ItemInventoryAccess.MetaOf(item);
+			if (max > 0 && meta < max)
+			{
+				int index = ItemInventoryAccess.AmmoIndex(item);
+				if (index < 0 || index >= action.MagazineItemNames.Length)
+				{
+					ItemInventoryAccess.SetAmmoIndex(item, 0);
+				}
+
+				ItemInventoryAccess.SetMeta(item, max);
+				meta = max;
+			}
+
+			PlaceLoadedRound(action as ItemActionLauncher, data, meta);
+		}
+
+		internal static void PlaceLoadedRound(ItemActionLauncher launcher, ItemActionData data, int meta)
+		{
+			ItemActionLauncher.ItemActionDataLauncher held = data as ItemActionLauncher.ItemActionDataLauncher;
+			if (launcher == null || held == null || meta <= 0 || !UsesDummy(launcher))
+			{
+				return;
+			}
+
+			for (int i = held.projectileTs.Count - 1; i >= 0; i--)
+			{
+				if (held.projectileTs[i] == null)
+				{
+					held.projectileTs.RemoveAt(i);
+				}
+			}
+
+			if (held.projectileTs.Count > 0)
+			{
+				return;
+			}
+
+			Transform shot = launcher.instantiateProjectile(data);
+			if (shot == null)
+			{
+				return;
+			}
+
+			held.projectileTs.Add(shot);
+			if (RocketInMag.HidesLoadedRound(launcher))
+			{
+				shot.gameObject.SetActive(false);
 			}
 		}
 
@@ -80,13 +152,13 @@ namespace DoomLevelsMpFix
 				return;
 			}
 
-			FillGrid(player.inventory?.ItemGrid);
-			FillGrid(player.bag?.itemGrid);
+			FillStacks(ItemInventoryAccess.SlotsOf(player.inventory));
+			FillStacks(ItemInventoryAccess.SlotsOf(player.bag));
 		}
 
 		internal static void FillStack(ItemStack stack)
 		{
-			Fill(stack?.itemValue);
+			Fill(ItemInventoryAccess.ItemOf(stack));
 		}
 
 		internal static void FillStacks(ItemStack[] slots)
@@ -99,20 +171,6 @@ namespace DoomLevelsMpFix
 			for (int i = 0; i < slots.Length; i++)
 			{
 				FillStack(slots[i]);
-			}
-		}
-
-		private static void FillGrid(ItemStackGrid grid)
-		{
-			if (grid == null)
-			{
-				return;
-			}
-
-			int length = grid.Length;
-			for (int i = 0; i < length; i++)
-			{
-				Fill(grid.GetItem(i)?.itemValue);
 			}
 		}
 
@@ -175,23 +233,37 @@ namespace DoomLevelsMpFix
 		{
 			private static void Postfix(ItemActionRanged __instance, ItemActionData _actionData)
 			{
-				if (!DummyMagazine.UsesDummy(__instance))
+				DummyMagazine.Chamber(__instance, _actionData);
+			}
+		}
+
+		/// <summary>
+		/// Runs before the magazine requirement, so the first trigger is accepted.
+		/// </summary>
+		[HarmonyPatch(typeof(ItemAction), nameof(ItemAction.CanExecute))]
+		private static class Patch_ChamberBeforeTrigger
+		{
+			private static void Prefix(ItemAction __instance, ItemActionData _actionData)
+			{
+				DummyMagazine.Chamber(__instance as ItemActionRanged, _actionData);
+			}
+		}
+
+		/// <summary>
+		/// The mesh has to be on the gun before this shot looks for it.
+		/// </summary>
+		[HarmonyPatch(typeof(ItemActionLauncher), nameof(ItemActionLauncher.ItemActionEffects))]
+		private static class Patch_ChamberBeforeLaunch
+		{
+			private static void Prefix(ItemActionLauncher __instance, ItemActionData _actionData, int _firingState)
+			{
+				if (_firingState == 0)
 				{
 					return;
 				}
 
 				ItemValue item = _actionData?.invData?.itemValue;
-				int meta = ItemInventoryAccess.MetaOf(item);
-				if (item == null || meta > 0)
-				{
-					return;
-				}
-
-				int max = __instance.GetMaxAmmoCount(_actionData);
-				if (max > 0)
-				{
-					ItemInventoryAccess.SetMeta(item, max);
-				}
+				DummyMagazine.PlaceLoadedRound(__instance, _actionData, ItemInventoryAccess.MetaOf(item));
 			}
 		}
 
@@ -278,7 +350,7 @@ namespace DoomLevelsMpFix
 		{
 			private static bool Prefix(ItemStack _stack, ref ItemStack __result)
 			{
-				if (DummyMagazine.Find(_stack?.itemValue) == null)
+				if (DummyMagazine.Find(ItemInventoryAccess.ItemOf(_stack)) == null)
 				{
 					return true;
 				}
@@ -319,12 +391,74 @@ namespace DoomLevelsMpFix
 				}
 
 				EntityAlive entity = ItemInventoryAccess.Holding(_actionData.invData);
-				if (entity != null)
+				ItemClass ammo = ItemClass.GetItemClass(__instance.MagazineItemNames[next], false);
+				if (entity != null && ammo != null)
 				{
-					__instance.SwapAmmoType(entity, next);
+					__instance.SwapAmmoType(entity, ammo.Id);
 				}
 
 				return false;
+			}
+		}
+
+		/// <summary>
+		/// The BFG core switch still runs. The loaded dummy round is not handed back.
+		/// </summary>
+		[HarmonyPatch(typeof(ItemActionRanged), nameof(ItemActionRanged.removeCurrentlyLoadedAmmunition))]
+		private static class Patch_SwapKeepsDummyAmmo
+		{
+			private static bool Prefix(ItemActionRanged __instance)
+			{
+				return !DummyMagazine.UsesDummy(__instance);
+			}
+		}
+
+		/// <summary>
+		/// The BFG radial number is shots the energy cells can pay for.
+		/// One shot spends 40 cells. Both damage cores share that count.
+		/// </summary>
+		[HarmonyPatch(typeof(ItemActionAttack), nameof(ItemActionAttack.SetupRadial))]
+		private static class Patch_BfgRadialShotCount
+		{
+			private const int CellsPerShot = 40;
+
+			private static void Postfix(ItemActionAttack __instance, XUiC_Radial _xuiRadialWindow)
+			{
+				string[] names = __instance?.MagazineItemNames;
+				if (_xuiRadialWindow?.menuItem == null || names == null || names.Length == 0)
+				{
+					return;
+				}
+
+				for (int i = 0; i < names.Length; i++)
+				{
+					if (names[i] != "DummyBFGCellEntity" && names[i] != "DummyBFGCellBlock")
+					{
+						return;
+					}
+				}
+
+				ItemClass cells = ItemClass.GetItemClass("PlasmaCellDM", false);
+				if (cells == null || _xuiRadialWindow.xui?.PlayerInventory == null)
+				{
+					return;
+				}
+
+				int shots = _xuiRadialWindow.xui.PlayerInventory.GetItemCount(cells.Id) / CellsPerShot;
+				string count = shots.ToString();
+				string atlas = shots > 0 ? "ItemIconAtlas" : "ItemIconAtlasGreyscale";
+				XUiC_RadialEntry[] entries = _xuiRadialWindow.menuItem;
+				for (int i = 0; i < entries.Length; i++)
+				{
+					XUiC_RadialEntry entry = entries[i];
+					if (entry == null || entry.MenuItemIndex < 0)
+					{
+						continue;
+					}
+
+					entry.SetText(count);
+					entry.SetAtlas(atlas);
+				}
 			}
 		}
 	}

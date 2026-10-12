@@ -626,17 +626,20 @@ namespace QuartermasterCrafting
 			for (int i = 0; i < lines.Count; i++)
 			{
 				ItemValue item = StackAccess.Value(recipe.ingredients[i]);
-				if (lines[i].Inv > 0)
+				int takeInv = lines[i].Inv > lines[i].Need ? lines[i].Need : lines[i].Inv;
+				if (takeInv > 0)
 				{
-					if (click.Xui.PlayerInventory.GetItemCount(item) < lines[i].Inv)
+					if (click.Xui.PlayerInventory.GetItemCount(item) < takeInv)
 					{
 						return false;
 					}
 
-					inv.Add(new ItemStack(item.Clone(), lines[i].Inv));
+					inv.Add(new ItemStack(item.Clone(), takeInv));
 				}
 
-				if (lines[i].Grid > 0 && (grid == null || grid.GetItemCount(item) < lines[i].Grid))
+				int remNeed = lines[i].Need - takeInv;
+				int takeGrid = lines[i].Grid > remNeed ? remNeed : lines[i].Grid;
+				if (takeGrid > 0 && (grid == null || grid.GetItemCount(item) < takeGrid))
 				{
 					return false;
 				}
@@ -649,9 +652,12 @@ namespace QuartermasterCrafting
 
 			for (int i = 0; i < lines.Count; i++)
 			{
-				if (lines[i].Grid > 0)
+				int takeInv = lines[i].Inv > lines[i].Need ? lines[i].Need : lines[i].Inv;
+				int remNeed = lines[i].Need - takeInv;
+				int takeGrid = lines[i].Grid > remNeed ? remNeed : lines[i].Grid;
+				if (takeGrid > 0)
 				{
-					grid.DecItem(StackAccess.Value(recipe.ingredients[i]), lines[i].Grid, null);
+					grid.DecItem(StackAccess.Value(recipe.ingredients[i]), takeGrid, null);
 				}
 			}
 
@@ -671,14 +677,17 @@ namespace QuartermasterCrafting
 			for (int i = 0; i < lines.Count && i < recipe.ingredients.Count; i++)
 			{
 				ItemValue item = StackAccess.Value(recipe.ingredients[i]).Clone();
-				if (lines[i].Inv > 0)
+				int takeInv = lines[i].Inv > lines[i].Need ? lines[i].Need : lines[i].Inv;
+				if (takeInv > 0)
 				{
-					inv.Add(new ItemStack(item, lines[i].Inv));
+					inv.Add(new ItemStack(item, takeInv));
 				}
 
-				if (lines[i].Grid > 0 && grid != null)
+				int remNeed = lines[i].Need - takeInv;
+				int takeGrid = lines[i].Grid > remNeed ? remNeed : lines[i].Grid;
+				if (takeGrid > 0 && grid != null)
 				{
-					grid.AddToItemStackArray(new ItemStack(item.Clone(), lines[i].Grid));
+					grid.AddToItemStackArray(new ItemStack(item.Clone(), takeGrid));
 				}
 			}
 

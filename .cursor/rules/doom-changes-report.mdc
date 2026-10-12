@@ -5,7 +5,7 @@ alwaysApply: false
 
 # Doom changes report
 
-When work is on a Doom mod, or on another mod changed for the Doom install, track it through `00_Support/DoomLevelsSource/Doom-Changes-Report.md`. The `.txt` beside it is the copy to send. Keep the two in sync. Do not edit either file until the user accepts the proposed entry.
+When work is on a Doom mod, or on another mod changed for the Doom install, track it through `00_Support/DoomSurvival/Support/DoomLevelsSource/Doom-Changes-Report.md`. The `.txt` beside it is the copy to send. Keep the two in sync. Do not edit either file until the user accepts the proposed entry.
 
 ## Process
 

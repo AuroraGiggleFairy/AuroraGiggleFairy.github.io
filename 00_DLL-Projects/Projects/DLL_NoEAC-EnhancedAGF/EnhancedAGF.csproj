@@ -50,8 +50,8 @@
     </Reference>
   </ItemGroup>
   <PropertyGroup>
-    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-NoEAC-EnhancedAGF-v4.3.4</ActiveBuildDir>
-    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-NoEAC-EnhancedAGF-v4.3.4</GameModDir>
+    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-V3-CLIENT-EnhancedAGF-v5.0.1</ActiveBuildDir>
+    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-V3-CLIENT-EnhancedAGF-v5.0.1</GameModDir>
     <MainGameDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die</MainGameDir>
     <DoomTestHudDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die - Doom Test\Mods\zzz-FranticDansHUDbyAGF</DoomTestHudDir>
   </PropertyGroup>

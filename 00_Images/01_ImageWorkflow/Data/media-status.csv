@@ -8,7 +8,6 @@ AGF-V3-BOTH-PartyGroupPlus,No,
 AGF-V3-BOTH-Toolbelt12Slots,Yes,Toolbelt12Slots_01.png
 AGF-V3-CLIENT-AudioOptionsPlus,Yes,AudioOptionsPlus_01.png
 AGF-V3-CLIENT-AutoRun,Yes,AutoRun_01.png
-AGF-V3-CLIENT-ConsoleOpacityMod,No,
 AGF-V3-CLIENT-EnhancedAGF,Yes,EnhancedAGF_01.png
 AGF-V3-CLIENT-HideDLCCosmetics,Yes,HideDLCCosmetics_01.png
 AGF-V3-CLIENT-MapPlus,Yes,MapPlus_01.png
@@ -18,6 +17,7 @@ AGF-V3-SERVER-1HUDPlus,Yes,1HUDPlus_01.png
 AGF-V3-SERVER-2BMCounter,Yes,2BMCounter_01.png
 AGF-V3-SERVER-2PurpleBook,Yes,2PurpleBook_01.png
 AGF-V3-SERVER-2RemoveEnteringPopUp,Yes,2RemoveEnteringPopUp_01.png
+AGF-V3-SERVER-2ShowStabilityOption,Yes,2ShowStabilityOption_01.png
 AGF-V3-SERVER-2VisualEntityTracker,Yes,2VisualEntityTracker_01.png
 AGF-V3-SERVER-2Weekday,Yes,2Weekday_01.png
 AGF-V3-SERVER-3VisualEntityTrackerAddon,No,
@@ -33,7 +33,6 @@ AGF-V3-SERVER-BreakItGetIt,Yes,BreakItGetIt_01.png
 AGF-V3-SERVER-CraftSewingKits,Yes,CraftSewingKits_01.png
 AGF-V3-SERVER-CraftStackEngBattCells,Yes,CraftStackEngBattCells_01.png
 AGF-V3-SERVER-CraftVitamins,Yes,CraftVitamins_01.png
-AGF-V3-SERVER-DecorationBlock,No,
 AGF-V3-SERVER-DoorsPlus,Yes,DoorsPlus_01.png
 AGF-V3-SERVER-DrinkableAcid,Yes,DrinkableAcid_01.png
 AGF-V3-SERVER-DyesPlus,Yes,DyesPlus_01.png
@@ -52,6 +51,7 @@ AGF-V3-SERVER-ModSlotsPlus,Yes,ModSlotsPlus_01.png
 AGF-V3-SERVER-PaintbrushPlus,No,
 AGF-V3-SERVER-PickupLanternsPlus,Yes,PickupLanternsPlus_01.png
 AGF-V3-SERVER-PlayerResetQuests,Yes,PlayerResetQuests_01.png
+AGF-V3-SERVER-POISwitchesUnlockDoors,No,
 AGF-V3-SERVER-RebundleBundles,Yes,RebundleBundles_01.png
 AGF-V3-SERVER-RecipeRottingFlesh,Yes,RecipeRottingFlesh_01.png
 AGF-V3-SERVER-RestorePowerAnyTime,Yes,RestorePowerAnyTime_01.png

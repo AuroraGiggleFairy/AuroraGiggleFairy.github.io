@@ -56,7 +56,7 @@ Doom’s own zoom range inside a level is 0.15 to 6.15 (`GameMap.LevelMinZoom` /
 
 ## Where it lives
 
-- Draw: `00_Support/DoomLevelsSource/DoomLevels/mod/UI/Map.cs`
+- Draw: `00_Support/DoomSurvival/Support/DoomLevelsSource/DoomLevels/mod/UI/Map.cs`
 - Seen-walls sweep: `.../mod/Logic/Automap.cs`
 - Zoom, drag, center: `.../mod/Patches/GameMap.cs`
 - Line bake (Doom units / 32): `.../src/Output/SoundBake.cs` `WriteLines`

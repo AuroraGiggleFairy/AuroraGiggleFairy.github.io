@@ -31,7 +31,7 @@ namespace DoomLevelsMpFix
 
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
-				if (RealQuality(recipe.ingredients[i]?.itemValue))
+				if (RealQuality(ItemInventoryAccess.ItemOf(recipe.ingredients[i])))
 				{
 					return true;
 				}
@@ -49,7 +49,8 @@ namespace DoomLevelsMpFix
 
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
-				if (recipe.ingredients[i]?.itemValue?.ItemClass is ItemClassModifier)
+				ItemValue value = ItemInventoryAccess.ItemOf(recipe.ingredients[i]);
+				if (value?.ItemClass is ItemClassModifier)
 				{
 					return true;
 				}
@@ -60,19 +61,20 @@ namespace DoomLevelsMpFix
 
 		internal static int OneNeed(Recipe recipe, ItemStack ingredient, EntityAlive player, int tier)
 		{
-			if (ingredient?.itemValue == null)
+			ItemValue value = ItemInventoryAccess.ItemOf(ingredient);
+			if (value == null)
 			{
 				return 0;
 			}
 
-			int need = ingredient.count;
+			int need = ItemInventoryAccess.CountOf(ingredient);
 			if (!recipe.UseIngredientModifier)
 			{
 				return need;
 			}
 
-			need = (int)EffectManager.GetValue(PassiveEffects.CraftingIngredientCount, null, ingredient.count, player, recipe, FastTags<TagGroup.Global>.Parse(ingredient.itemValue.ItemClass.GetItemName()), calcEquipment: true, calcHoldingItem: true, calcProgression: true, calcBuffs: true, calcChallenges: true, craftingTier: tier);
-			if (RealQuality(ingredient.itemValue) && need <= 0)
+			need = (int)EffectManager.GetValue(PassiveEffects.CraftingIngredientCount, null, ItemInventoryAccess.CountOf(ingredient), player, recipe, FastTags<TagGroup.Global>.Parse(value.ItemClass.GetItemName()), calcEquipment: true, calcHoldingItem: true, calcProgression: true, calcBuffs: true, calcChallenges: true, craftingTier: tier);
+			if (RealQuality(value) && need <= 0)
 			{
 				return 1;
 			}
@@ -120,9 +122,10 @@ namespace DoomLevelsMpFix
 					continue;
 				}
 
-				int have = RealQuality(ingredient.itemValue)
-					? EligibleCount(player, ingredient.itemValue.type)
-					: xui.PlayerInventory.GetItemCount(ingredient.itemValue);
+				ItemValue value = ItemInventoryAccess.ItemOf(ingredient);
+				int have = RealQuality(value)
+					? EligibleCount(player, value.type)
+					: xui.PlayerInventory.GetItemCount(value);
 				max = Math.Min(max, have / one);
 			}
 
@@ -156,9 +159,10 @@ namespace DoomLevelsMpFix
 					continue;
 				}
 
-				int have = RealQuality(ingredient.itemValue)
-					? EligibleCount(player, ingredient.itemValue.type)
-					: xui.PlayerInventory.GetItemCount(ingredient.itemValue);
+				ItemValue value = ItemInventoryAccess.ItemOf(ingredient);
+				int have = RealQuality(value)
+					? EligibleCount(player, value.type)
+					: xui.PlayerInventory.GetItemCount(value);
 				if (have < one * crafts)
 				{
 					return false;
@@ -181,21 +185,22 @@ namespace DoomLevelsMpFix
 			for (int i = 0; i < slots.Count && count > 0; i++)
 			{
 				SlotRef slot = slots[i];
-				ItemStack live = slot.Grid[slot.Index];
-				if (live == null || live.IsEmpty() || live.itemValue.type != type)
+				ItemStack live = slot.Stack;
+				ItemValue liveValue = ItemInventoryAccess.ItemOf(live);
+				if (live == null || live.IsEmpty() || liveValue == null || liveValue.type != type)
 				{
 					continue;
 				}
 
-				int pull = Math.Min(live.count, count);
-				ItemValue kept = live.itemValue.Clone();
-				live.count -= pull;
-				if (live.count <= 0)
+				int pull = Math.Min(ItemInventoryAccess.CountOf(live), count);
+				ItemValue kept = liveValue.Clone();
+				ItemInventoryAccess.SetCount(live, ItemInventoryAccess.CountOf(live) - pull);
+				if (ItemInventoryAccess.CountOf(live) <= 0)
 				{
 					live.Clear();
 				}
 
-				slot.Grid.OnSlotChanged(slot.Index);
+				ItemInventoryAccess.NotifySlot(slot.Grid, slot.Index);
 				taken.Add(new ItemStack(kept, pull));
 				count -= pull;
 			}
@@ -213,7 +218,7 @@ namespace DoomLevelsMpFix
 			List<int> types = new List<int>();
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
-				ItemValue value = recipe.ingredients[i]?.itemValue;
+				ItemValue value = ItemInventoryAccess.ItemOf(recipe.ingredients[i]);
 				if (!RealQuality(value) || types.Contains(value.type))
 				{
 					continue;
@@ -246,13 +251,14 @@ namespace DoomLevelsMpFix
 			for (int i = recipe.ingredients.Count - 1; i >= 0; i--)
 			{
 				ItemStack stack = recipe.ingredients[i];
-				if (!RealQuality(stack?.itemValue) || stack.count <= 0)
+				ItemValue value = ItemInventoryAccess.ItemOf(stack);
+				if (!RealQuality(value) || ItemInventoryAccess.CountOf(stack) <= 0)
 				{
 					continue;
 				}
 
 				recipe.ingredients.RemoveAt(i);
-				ItemStack refund = new ItemStack(stack.itemValue.Clone(), stack.count);
+				ItemStack refund = new ItemStack(value.Clone(), ItemInventoryAccess.CountOf(stack));
 				if (!xui.PlayerInventory.AddItem(refund))
 				{
 					GameManager.Instance.ItemDropServer(refund, player.GetPosition(), UnityEngine.Vector3.zero, player.entityId, 120f);
@@ -266,9 +272,10 @@ namespace DoomLevelsMpFix
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
 				ItemStack stack = recipe.ingredients[i];
-				if (RealQuality(stack?.itemValue) && stack.itemValue.type == type)
+				ItemValue value = ItemInventoryAccess.ItemOf(stack);
+				if (RealQuality(value) && value.type == type)
 				{
-					count += stack.count;
+					count += ItemInventoryAccess.CountOf(stack);
 				}
 			}
 
@@ -280,16 +287,17 @@ namespace DoomLevelsMpFix
 			for (int i = 0; i < ingredients.Count && count > 0;)
 			{
 				ItemStack stack = ingredients[i];
-				if (!RealQuality(stack?.itemValue) || stack.itemValue.type != type)
+				ItemValue value = ItemInventoryAccess.ItemOf(stack);
+				if (!RealQuality(value) || value.type != type)
 				{
 					i++;
 					continue;
 				}
 
-				int pull = Math.Min(stack.count, count);
-				stack.count -= pull;
+				int pull = Math.Min(ItemInventoryAccess.CountOf(stack), count);
+				ItemInventoryAccess.SetCount(stack, ItemInventoryAccess.CountOf(stack) - pull);
 				count -= pull;
-				if (stack.count <= 0)
+				if (ItemInventoryAccess.CountOf(stack) <= 0)
 				{
 					ingredients.RemoveAt(i);
 				}
@@ -306,7 +314,7 @@ namespace DoomLevelsMpFix
 			List<SlotRef> slots = EligibleSlots(player, type);
 			for (int i = 0; i < slots.Count; i++)
 			{
-				count += slots[i].Grid[slots[i].Index].count;
+				count += ItemInventoryAccess.CountOf(slots[i].Stack);
 			}
 
 			return count;
@@ -320,38 +328,39 @@ namespace DoomLevelsMpFix
 				return slots;
 			}
 
-			AddGrid(slots, player.bag?.ItemGrid, player, type, false);
-			AddGrid(slots, player.inventory?.ItemGrid, player, type, true);
+			AddSlots(slots, ItemInventoryAccess.SlotsOf(player.bag), ItemInventoryAccess.GridOf(player.bag), player, type, false);
+			AddSlots(slots, ItemInventoryAccess.SlotsOf(player.inventory), ItemInventoryAccess.GridOf(player.inventory), player, type, true);
 			return slots;
 		}
 
-		private static void AddGrid(List<SlotRef> slots, ItemStackGrid grid, EntityPlayer player, int type, bool toolbelt)
+		private static void AddSlots(List<SlotRef> slots, ItemStack[] stacks, object grid, EntityPlayer player, int type, bool toolbelt)
 		{
-			if (grid == null)
+			if (stacks == null)
 			{
 				return;
 			}
 
 			int held = toolbelt ? player.inventory.holdingItemIdx : -1;
-			for (int i = 0; i < grid.Length; i++)
+			for (int i = 0; i < stacks.Length; i++)
 			{
 				if (toolbelt && i == held)
 				{
 					continue;
 				}
 
-				ItemStack stack = grid[i];
-				if (stack == null || stack.IsEmpty() || stack.itemValue.type != type)
+				ItemStack stack = stacks[i];
+				ItemValue value = ItemInventoryAccess.ItemOf(stack);
+				if (stack == null || stack.IsEmpty() || value == null || value.type != type)
 				{
 					continue;
 				}
 
-				if (stack.itemValue.HasMods() || IsWorn(player, stack.itemValue))
+				if (value.HasMods() || IsWorn(player, value))
 				{
 					continue;
 				}
 
-				slots.Add(new SlotRef { Grid = grid, Index = i });
+				slots.Add(new SlotRef { Stack = stack, Grid = grid, Index = i });
 			}
 		}
 
@@ -392,8 +401,8 @@ namespace DoomLevelsMpFix
 
 		private static int CompareWorstFirst(SlotRef a, SlotRef b)
 		{
-			ItemValue left = a.Grid[a.Index].itemValue;
-			ItemValue right = b.Grid[b.Index].itemValue;
+			ItemValue left = ItemInventoryAccess.ItemOf(a.Stack);
+			ItemValue right = ItemInventoryAccess.ItemOf(b.Stack);
 			int quality = left.Quality.CompareTo(right.Quality);
 			if (quality != 0)
 			{
@@ -416,7 +425,8 @@ namespace DoomLevelsMpFix
 
 		private struct SlotRef
 		{
-			public ItemStackGrid Grid;
+			public ItemStack Stack;
+			public object Grid;
 			public int Index;
 		}
 	}
@@ -534,12 +544,12 @@ namespace DoomLevelsMpFix
 			{
 				ItemStack ingredient = recipe.ingredients[i];
 				int one = CraftQueue.OneNeed(recipe, ingredient, player, tier);
-				if (one <= 0 || CraftQueue.RealQuality(ingredient.itemValue))
+				if (one <= 0 || CraftQueue.RealQuality(ItemInventoryAccess.ItemOf(ingredient)))
 				{
 					continue;
 				}
 
-				plain.Add(new ItemStack(ingredient.itemValue, one));
+				plain.Add(new ItemStack(ItemInventoryAccess.ItemOf(ingredient), one));
 			}
 
 			queued.AddIngredients(plain);
@@ -559,13 +569,14 @@ namespace DoomLevelsMpFix
 			for (int i = 0; i < recipe.ingredients.Count; i++)
 			{
 				ItemStack ingredient = recipe.ingredients[i];
-				if (!CraftQueue.RealQuality(ingredient?.itemValue))
+				ItemValue value = ItemInventoryAccess.ItemOf(ingredient);
+				if (!CraftQueue.RealQuality(value))
 				{
 					continue;
 				}
 
 				int one = CraftQueue.OneNeed(recipe, ingredient, player, tier);
-				List<ItemStack> taken = CraftQueue.Take(player, ingredient.itemValue.type, one * crafts);
+				List<ItemStack> taken = CraftQueue.Take(player, value.type, one * crafts);
 				for (int n = 0; n < taken.Count; n++)
 				{
 					queued.ingredients.Add(taken[n]);

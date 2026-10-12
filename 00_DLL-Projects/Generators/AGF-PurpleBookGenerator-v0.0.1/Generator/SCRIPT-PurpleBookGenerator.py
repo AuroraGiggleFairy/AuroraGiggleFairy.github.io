@@ -1178,7 +1178,7 @@ def _detect_workspace() -> Path:
     """Resolve the repository root regardless of launcher location."""
     here = Path(__file__).resolve()
     for parent in here.parents:
-        if (parent / "SCRIPT-MakeNewMod.py").exists():
+        if (parent / "RUN-MakeNewMod.bat").exists() or (parent / "02_ActiveBuild").exists():
             return parent
     # Fallback keeps older behavior if structure changes.
     return here.parent
@@ -1196,10 +1196,10 @@ DEFAULT_BUFFS = GAME_CONFIG / "buffs.xml"
 DEFAULT_GAME_LOCALIZATION = GAME_CONFIG / "Localization.csv"
 DEFAULT_OUT_MOD = GENERATOR_MOD_DIR.name
 DEFAULT_SEED_WINDOWS = WORKSPACE / "windowBackup.xml"
-DEFAULT_RELEASE_WINDOWS = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi_InGame" / "windows.xml"
-DEFAULT_RELEASE_BUFFS = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "buffs.xml"
-DEFAULT_ACTIVEBUILD_WINDOWS = WORKSPACE / "02_ActiveBuild" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "XUi_InGame" / "windows.xml"
-DEFAULT_GAME_MOD_WINDOWS = Path(r"c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods") / DEFAULT_OUT_MOD / "Config" / "XUi_InGame" / "windows.xml"
+DEFAULT_RELEASE_WINDOWS = WORKSPACE / "03_ReleaseSource" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "XUi_InGame" / "windows.xml"
+DEFAULT_RELEASE_BUFFS = WORKSPACE / "03_ReleaseSource" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "buffs.xml"
+DEFAULT_ACTIVEBUILD_WINDOWS = WORKSPACE / "02_ActiveBuild" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "XUi_InGame" / "windows.xml"
+DEFAULT_GAME_MOD_WINDOWS = Path(r"c:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods") / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "XUi_InGame" / "windows.xml"
 DEFAULT_BOOKS_TEMPLATE = GENERATOR_MOD_DIR / "Generator" / "TEMPLATE-BooksTab.xml"
 DEFAULT_UNLOCKS_TEMPLATE = GENERATOR_MOD_DIR / "Generator" / "TEMPLATE-UnlockablesTab.xml"
 DEFAULT_UNLOCK_REVIEW_LEDGER = GENERATOR_MOD_DIR / "Generator" / "UnlockReviewLedger.json"
@@ -1270,7 +1270,7 @@ DEFAULT_LOCALIZATION_HEADER_FIELDS = [
 # window in stacking order). Vertical placement of the entire panel is
 # controlled by <window_group stack_panel_y_offset="..."> in xui.xml,
 # whose default is 457 (NGUI: smaller value = panel sits lower on screen).
-WIN_WIDTH = 1390
+WIN_WIDTH = 1379
 WIN_HEIGHT = 720
 STACK_PANEL_Y_OFFSET = 397  # default 457 minus 60 px to clear page-header band
 MAG_STRIP_TOP_Y = -10
@@ -1432,6 +1432,7 @@ QCOLORS = [
 # Per-skill book-cover sprite (lifted from existing Purple Book v2.0.1)
 BOOK_SPRITE: dict[str, str] = {
     "craftingArmor":           "bookArmoredUp",
+    "craftingBackpack":        "bookPackRat",
     "craftingBlades":          "bookKnifeGuy",
     "craftingBows":            "bookBowHunters",
     "craftingClubs":           "bookBigHitters",
@@ -1460,6 +1461,7 @@ BOOK_SPRITE: dict[str, str] = {
 # localized magazine name (e.g. "Tech Planet") shows above the cover sprite.
 MAG_ITEM: dict[str, str] = {
     "craftingArmor":           "armorSkillMagazine",
+    "craftingBackpack":        "backpackSkillMagazine",
     "craftingBlades":          "bladesSkillMagazine",
     "craftingBows":            "bowsSkillMagazine",
     "craftingClubs":           "clubsSkillMagazine",
@@ -1490,7 +1492,7 @@ TAB_ORDER = [
     "craftingMachineGuns", "craftingShotguns", "craftingHarvestingTools",
     "craftingBlades", "craftingClubs", "craftingKnuckles",
     "craftingSledgehammers", "craftingSpears", "craftingSalvageTools",
-    "craftingRepairTools", "craftingArmor", "craftingTraps", "craftingMedical",
+    "craftingBackpack", "craftingRepairTools", "craftingArmor", "craftingTraps", "craftingMedical",
     "craftingVehicles", "craftingElectrician", "craftingSeeds",
     "craftingExplosives", "craftingWorkstations", "craftingFood",
 ]
@@ -3754,9 +3756,9 @@ def _emit_tier6_section_vertical_rect(w: W, skill: str, levels: list[int],
 # ---------------------------------------------------------------------------
 
 def emit_magazine_strip(w: W, skills: list[Skill]) -> None:
-    """The 23-icon row across the top of every zoomed<Cat> rect."""
-    w.open("grid", name="tabButtons", pos="5,-10", depth=3, rows=1, cols=23,
-           cell_width=60, cell_height=100, repeat_content="false",
+    """The 24-icon row across the top of every zoomed<Cat> rect."""
+    w.open("grid", name="tabButtons", pos="11,-10", depth=3, rows=1, cols=24,
+           cell_width=57, cell_height=100, repeat_content="false",
            arrangement="horizontal", controller="MapStats")
     by_name = {s.name: s for s in skills}
     for tab_skill in TAB_ORDER:
@@ -3764,16 +3766,16 @@ def emit_magazine_strip(w: W, skills: list[Skill]) -> None:
         if not sk:
             continue
         w.open("entry")
-        w.open("rect", depth=10, pos="5,0", width=50, height=100)
-        w.leaf("sprite", depth=10, name="itemIcon", pos="2,-9", width=50, height=50,
-               size="46,46", foregroundlayer="true", atlas="ItemIconAtlas",
+        w.open("rect", depth=10, pos="0,0", width=46, height=100)
+        w.leaf("sprite", depth=10, name="itemIcon", pos="2,-9", width=46, height=46,
+               size="42,42", foregroundlayer="true", atlas="ItemIconAtlas",
                sprite=sk.book_sprite, color="")
-        w.leaf("label", depth=10, name="check", pos="0,-60", width=50, height=16,
-               justify="center", text=f"[fc8c03]{{cvar({sk.name}Check)}}[-]", font_size=22)
-        w.leaf("label", depth=10, name="check", pos="0,-77", width=50, height=16,
-               justify="center", text=f"/{sk.max_level}", font_size=22)
+        w.leaf("label", depth=10, name="check", pos="0,-60", width=46, height=16,
+               justify="center", text=f"[fc8c03]{{cvar({sk.name}Check)}}[-]", font_size=20)
+        w.leaf("label", depth=10, name="check", pos="0,-77", width=46, height=16,
+               justify="center", text=f"/{sk.max_level}", font_size=20)
         w.leaf("filledsprite", depth=1, name="yesUnlocked", color="10,255,10,65",
-               pos="2,-1", width=46, height=98, fillcenter="true", type="filled",
+               pos="2,-1", width=42, height=98, fillcenter="true", type="filled",
                fill=f"{{cvar({sk.name}Check{sk.max_level})}}")
         w.close("rect")
         w.close("entry")
@@ -3834,7 +3836,7 @@ def emit_compact_strip(w: W, sk: Skill, x: int) -> None:
         for _lvl, items, _names in seeds_slots:
             total_h += _nontiered_height(max(1, len(items)))
 
-        w.open("rect", name=f"checklist{short_n}", depth=3, pos=f"{x},-110", width=50, height=total_h, controller="MapStats")
+        w.open("rect", name=f"checklist{short_n}", depth=3, pos=f"{x},-110", width=46, height=total_h, controller="MapStats")
         y_cursor = 0
         section_idx = 0
         for lvl, items, names in seeds_slots:
@@ -3870,7 +3872,7 @@ def emit_compact_strip(w: W, sk: Skill, x: int) -> None:
                     total_h += _nontiered_height(n)
     # y=-110 places the strip directly below the 100px tab buttons (which
     # sit at y=-10..-110). Sections start at y=0 within this rect.
-    w.open("rect", name=f"checklist{short_n}", depth=3, pos=f"{x},-110", width=50, height=total_h, controller="MapStats")
+    w.open("rect", name=f"checklist{short_n}", depth=3, pos=f"{x},-110", width=46, height=total_h, controller="MapStats")
     # Section1..N Ã¢â‚¬â€ one per display row, with cumulative y-offset so taller
     # sections (multi-icon rows) push later sections down.
     y_cursor = 0
@@ -3891,21 +3893,21 @@ def emit_compact_strip(w: W, sk: Skill, x: int) -> None:
 def _icon_slots(n: int) -> list[tuple[int, int]]:
     """Return (x,y) positions for `n` icons in a non-tiered Section.
     Special-cases:
-      n=1 -> single icon centered with shrunk container, at (26,-5)
-      n=2 -> vertical stack at (26,-5), (26,-25) (single column, tight)
+      n=1 -> single icon centered with shrunk container, at (24,-5)
+      n=2 -> vertical stack at (24,-5), (24,-25) (single column, tight)
       n>=3 -> alternating left/right grid pattern matching the hand-built book.
     """
     if n <= 0:
         return []
     if n == 1:
-        return [(26, -5)]
+        return [(24, -5)]
     if n == 2:
-        return [(26, -5), (26, -25)]
-    slots: list[tuple[int, int]] = [(26, -10)]
+        return [(24, -5), (24, -25)]
+    slots: list[tuple[int, int]] = [(24, -10)]
     for r in range(1, 16):
         y = -10 - r * 25
         slots.append((2, y))
-        slots.append((26, y))
+        slots.append((24, y))
         if len(slots) >= n:
             break
     return slots[:n]
@@ -3946,15 +3948,15 @@ def _food_compact_layout(n: int) -> tuple[int, list[tuple[int, int, int]]]:
     if n <= 0:
         return 30, []
     if n == 1:
-        return 30, [(26, -5, 21)]
+        return 30, [(24, -5, 19)]
     if n == 2:
-        return 30, [(31, -4, 11), (31, -15, 11)]
+        return 30, [(29, -4, 11), (29, -15, 11)]
     cols = 2
     rows = math.ceil(n / cols)
     icon_size = 11
     row_gap = 3
     col_gap = 2
-    area_left, area_w = 24, 26
+    area_left, area_w = 22, 24
     content_h = rows * icon_size + (rows - 1) * row_gap
     sec_h = max(30, content_h + 4)
     top_pad = max(2, (sec_h - content_h) // 2)
@@ -3985,7 +3987,7 @@ def _emit_icon_grid(w: W, items: list[str], names: list[str]) -> int:
         tip = TOOLTIP_OVERRIDES.get(it) or (it if it in ITEM_ICONS else (names[i] if i < len(names) and names[i] else it))
         ic = resolve_item_icon(it)
         w.leaf("sprite", name="itemIcon", depth=3,
-               pos=f"{x},{y}", size="21,21",
+               pos=f"{x},{y}", size="19,19",
                foregroundlayer="true", atlas="ItemIconAtlas",
                sprite=ic.sprite, color=ic.tint, tooltip_key=tip)
         if ic.type_icon:
@@ -4003,42 +4005,42 @@ def _emit_tiered_section(w: W, sk: Skill, row: 'DisplayRow', idx: int, y: int) -
     n_icons = max(1, len(items))
     sec_h = max(120, 10 + 25 * n_icons + 5)
     w.open("rect", name=f"Section{idx}", pos=f"0,{y}",
-           width=50, height=sec_h)
+           width=46, height=sec_h)
     w.leaf("sprite", depth=1, name="backgroundSection", sprite="menu_empty3px",
-           width=50, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
+           width=46, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
     w.leaf("sprite", depth=3, name="backgroundBorderSection", sprite="menu_empty3px",
-           foregroundlayer="true", width=50, height=sec_h + 2, color="[black]",
+           foregroundlayer="true", width=46, height=sec_h + 2, color="[black]",
            type="sliced", fillcenter="false")
     for i, lvl in enumerate(row.unlock_levels[:6]):
         h = 20 * (i + 1)
         w.leaf("filledsprite", depth=2, name="yesUnlocked", color="75,140,75,255",
-               pos="0,0", width=50, height=h, fillcenter="true", type="filled",
+               pos="0,0", width=46, height=h, fillcenter="true", type="filled",
                fill=f"{{cvar({sk.name}Check{lvl})}}")
     for i, lvl in enumerate(row.unlock_levels[:6]):
         by = -2 - i * 20
         iy = -3 - i * 20
         color = QCOLORS[i]
         w.leaf("sprite", depth=2, name="backgroundBorder", sprite="menu_empty3px",
-               pos=f"2,{by}", width=21, height=18, color="[black]",
+               pos=f"2,{by}", width=19, height=18, color="[black]",
                type="sliced", fillcenter="false")
         w.leaf("sprite", depth=2, name="background", sprite="menu_empty3px",
-               pos=f"3,{iy}", width=19, height=16, color=color,
+               pos=f"3,{iy}", width=17, height=16, color=color,
                type="sliced", fillcenter="true")
         w.leaf("label", depth=3, name="checkunlock", pos=f"0,{iy}",
-               width=25, height=16, justify="center", text=str(lvl),
-               color="[black]", font_size=16)
+               width=23, height=16, justify="center", text=str(lvl),
+               color="[black]", font_size=15)
     # Tiered icon column: vertical stack starting at y=-10
     for i, it in enumerate(items):
         iy = -10 - i * 25
         tip = TOOLTIP_OVERRIDES.get(it) or (it if it in ITEM_ICONS else (names[i] if i < len(names) and names[i] else it))
         ic = resolve_item_icon(it)
         w.leaf("sprite", name="itemIcon", depth=3,
-               pos=f"26,{iy}", size="21,21",
+               pos=f"24,{iy}", size="19,19",
                foregroundlayer="true", atlas="ItemIconAtlas",
                sprite=ic.sprite, color=ic.tint, tooltip_key=tip)
         if ic.type_icon:
             w.leaf("sprite", name="itemtypeicon", depth=8,
-                   pos=f"26,{iy}", width=10, height=10,
+                   pos=f"24,{iy}", width=10, height=10,
                    sprite=ic.type_icon, foregroundlayer="true", color="")
     w.close("rect")
     return sec_h
@@ -4086,17 +4088,17 @@ def _emit_merged_singles_section(w: W, sk: Skill, row: 'DisplayRow',
     pitch = 22
     n = len(indices)
     sec_h = _merged_singles_height(n)
-    w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=50, height=sec_h)
+    w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=46, height=sec_h)
     w.leaf("sprite", depth=1, name="backgroundSection", sprite="menu_empty3px",
-           width=50, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
+           width=46, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
     w.leaf("sprite", depth=3, name="backgroundBorderSection", sprite="menu_empty3px",
-           foregroundlayer="true", width=50, height=sec_h + 2, color="[black]",
+           foregroundlayer="true", width=46, height=sec_h + 2, color="[black]",
            type="sliced", fillcenter="false")
     # Pass 1: per-row green fills (drawn before chip backgrounds so chips win)
     for slot, li in enumerate(indices):
         lvl = row.unlock_levels[li]
         w.leaf("filledsprite", depth=2, name="yesUnlocked", color="75,140,75,255",
-               pos=f"0,{-slot*pitch}", width=50, height=pitch, fillcenter="true",
+               pos=f"0,{-slot*pitch}", width=46, height=pitch, fillcenter="true",
                type="filled", fill=f"{{cvar({sk.name}Check{lvl})}}")
     # Pass 2: chips + icons
     for slot, li in enumerate(indices):
@@ -4111,23 +4113,23 @@ def _emit_merged_singles_section(w: W, sk: Skill, row: 'DisplayRow',
         by = -2 - slot * pitch
         iy = -3 - slot * pitch
         w.leaf("sprite", depth=2, name="backgroundBorder", sprite="menu_empty3px",
-               pos=f"2,{by}", width=21, height=18, color="[black]",
+               pos=f"2,{by}", width=19, height=18, color="[black]",
                type="sliced", fillcenter="false")
         w.leaf("sprite", depth=2, name="background", sprite="menu_empty3px",
-               pos=f"3,{iy}", width=19, height=16, color=QCOLORS[0],
+               pos=f"3,{iy}", width=17, height=16, color=QCOLORS[0],
                type="sliced", fillcenter="true")
         w.leaf("label", depth=3, name="checkunlock", pos=f"0,{iy}",
-               width=25, height=16, justify="center", text=str(lvl),
-               color="[black]", font_size=16)
+               width=23, height=16, justify="center", text=str(lvl),
+               color="[black]", font_size=15)
         if it:
             ic = resolve_item_icon(it)
             w.leaf("sprite", name="itemIcon", depth=3,
-                   pos=f"26,{iy}", size="21,21",
+                   pos=f"24,{iy}", size="19,19",
                    foregroundlayer="true", atlas="ItemIconAtlas",
                    sprite=ic.sprite, color=ic.tint, tooltip_key=tip)
             if ic.type_icon:
                 w.leaf("sprite", name="itemtypeicon", depth=8,
-                       pos=f"26,{iy}", width=10, height=10,
+                       pos=f"24,{iy}", width=10, height=10,
                        sprite=ic.type_icon, foregroundlayer="true", color="")
     w.close("rect")
     return sec_h
@@ -4151,38 +4153,35 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
     food_compact = (sk.name == "craftingFood")
     if food_compact:
         sec_h, icon_positions = _food_compact_layout(n)
-        w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=50, height=sec_h)
+        w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=46, height=sec_h)
         w.leaf("sprite", depth=1, name="backgroundSection", sprite="menu_empty3px",
-               width=50, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
+               width=46, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
         w.leaf("sprite", depth=3, name="backgroundBorderSection", sprite="menu_empty3px",
-               foregroundlayer="true", width=50, height=sec_h + 2, color="[black]",
+               foregroundlayer="true", width=46, height=sec_h + 2, color="[black]",
                type="sliced", fillcenter="false")
         w.leaf("filledsprite", depth=2, name="yesUnlocked", color="75,140,75,255",
-               pos="0,0", width=50, height=sec_h, fillcenter="true", type="filled",
+               pos="0,0", width=46, height=sec_h, fillcenter="true", type="filled",
                fill=f"{{cvar({sk.name}Check{lvl})}}")
         # Chip pinned to top-left (consistent with all other sections)
         w.leaf("sprite", depth=2, name="backgroundBorder", sprite="menu_empty3px",
-               pos="2,-2", width=21, height=18, color="[black]",
+               pos="2,-2", width=19, height=18, color="[black]",
                type="sliced", fillcenter="false")
         w.leaf("sprite", depth=2, name="background", sprite="menu_empty3px",
-               pos="3,-3", width=19, height=16, color=QCOLORS[0],
+               pos="3,-3", width=17, height=16, color=QCOLORS[0],
                type="sliced", fillcenter="true")
         w.leaf("label", depth=3, name="checkunlock", pos="0,-3",
-               width=25, height=16, justify="center", text=str(lvl),
-               color="[black]", font_size=16)
-        # Right cell = x[24..50] = 26 wide, full 30 px tall.
-        # n=1: full-size 21x21 icon centered in right cell.
-        # n=2: vertical stack of two 14x14 icons, centered horizontally and
-        # vertically inside the right cell (no border overlap).
+               width=23, height=16, justify="center", text=str(lvl),
+               color="[black]", font_size=15)
+        # Right cell = x[22..46] = 24 wide, full 30 px tall.
         if n == 1:
             it = items[0]
             tip = TOOLTIP_OVERRIDES.get(it) or (it if it in ITEM_ICONS else (names[0] if names and names[0] else it))
             ic = resolve_item_icon(it)
-            # Match _icon_slots(1) exactly: pos=(26,-5), size=21x21
-            ix, iy = 26, -5
+            # Match _icon_slots(1) exactly: pos=(24,-5), size=19x19
+            ix, iy = 24, -5
             ov = FOOD_ICON_OVERRIDES.get(ic.sprite) or FOOD_ICON_OVERRIDES.get(it) or {}
             ix += ov.get("dx", 0); iy += ov.get("dy", 0)
-            sz = ov.get("size", 21)
+            sz = ov.get("size", 19)
             w.leaf("sprite", name="itemIcon", depth=3,
                    pos=f"{ix},{iy}", size=f"{sz},{sz}",
                    foregroundlayer="true", atlas="ItemIconAtlas",
@@ -4192,11 +4191,7 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
                        pos=f"{ix},{iy}", width=10, height=10,
                        sprite=ic.type_icon, foregroundlayer="true", color="")
         elif n == 2:
-            # n=2 vertical stack inset from borders. Sprites have variable
-            # built-in padding so use a conservative 11x11 with 4px top/bottom.
-            # Container 30 tall: top icon y=-4..-15, bottom icon y=-15..-26.
-            # Horizontally: 11 in 26 -> x = 24 + (26-11)/2 = 31 (rounded down).
-            cascade = [(31, -4), (31, -15)]
+            cascade = [(29, -4), (29, -15)]
             sz_default = 11
             for i in range(min(n, 2)):
                 it = items[i]
@@ -4215,12 +4210,8 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
                            pos=f"{ix},{iy}", width=8, height=8,
                            sprite=ic.type_icon, foregroundlayer="true", color="")
         else:
-            # n>=3: shrink-to-fit grid from _food_compact_layout so extra
-            # items (e.g. a game update adding a 3rd item to an existing
-            # unlock level) pack into the same small footprint instead of
-            # falling back to the much taller generic icon grid.
             for i, it in enumerate(items):
-                ix, iy, sz_base = icon_positions[i] if i < len(icon_positions) else (31, -15, 11)
+                ix, iy, sz_base = icon_positions[i] if i < len(icon_positions) else (29, -15, 11)
                 tip = TOOLTIP_OVERRIDES.get(it) or (it if it in ITEM_ICONS else (names[i] if i < len(names) and names[i] else it))
                 ic = resolve_item_icon(it)
                 ov = FOOD_ICON_OVERRIDES.get(ic.sprite) or FOOD_ICON_OVERRIDES.get(it) or {}
@@ -4237,26 +4228,26 @@ def _emit_nontiered_section(w: W, sk: Skill, row: 'DisplayRow',
         w.close("rect")
         return sec_h
     sec_h = _nontiered_height(n)
-    w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=50, height=sec_h)
+    w.open("rect", name=f"Section{idx}", pos=f"0,{y}", width=46, height=sec_h)
     w.leaf("sprite", depth=1, name="backgroundSection", sprite="menu_empty3px",
-           width=50, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
+           width=46, height=sec_h + 2, color="[darkGrey]", type="sliced", fillcenter="true")
     w.leaf("sprite", depth=3, name="backgroundBorderSection", sprite="menu_empty3px",
-           foregroundlayer="true", width=50, height=sec_h + 2, color="[black]",
+           foregroundlayer="true", width=46, height=sec_h + 2, color="[black]",
            type="sliced", fillcenter="false")
     # Single full-height green fill driven by this level's cvar
     w.leaf("filledsprite", depth=2, name="yesUnlocked", color="75,140,75,255",
-           pos="0,0", width=50, height=sec_h, fillcenter="true", type="filled",
+           pos="0,0", width=46, height=sec_h, fillcenter="true", type="filled",
            fill=f"{{cvar({sk.name}Check{lvl})}}")
     # One Q1 brown chip
     w.leaf("sprite", depth=2, name="backgroundBorder", sprite="menu_empty3px",
-           pos="2,-2", width=21, height=18, color="[black]",
+           pos="2,-2", width=19, height=18, color="[black]",
            type="sliced", fillcenter="false")
     w.leaf("sprite", depth=2, name="background", sprite="menu_empty3px",
-           pos="3,-3", width=19, height=16, color=QCOLORS[0],
+           pos="3,-3", width=17, height=16, color=QCOLORS[0],
            type="sliced", fillcenter="true")
     w.leaf("label", depth=3, name="checkunlock", pos="0,-3",
-           width=25, height=16, justify="center", text=str(lvl),
-           color="[black]", font_size=16)
+           width=23, height=16, justify="center", text=str(lvl),
+           color="[black]", font_size=15)
     _emit_icon_grid(w, items, names)
     w.close("rect")
     return sec_h
@@ -4573,47 +4564,45 @@ def emit_craftinglist_tab(w: W, skills: list[Skill]) -> None:
     #      below Ã¢â‚¬â€ exactly how the hand-written zoomed views work.
     w.open("rect", name="tabsHeader")
     # ---- (1) Click surfaces ----
-    w.open("grid", name="tabButtons", pos="-55,-10", depth=3, rows=1, cols=24,
-           cell_width=60, cell_height=100, repeat_content="true", arrangement="horizontal")
+    w.open("grid", name="tabButtons", pos="11,-10", depth=3, rows=1, cols=24,
+           cell_width=57, cell_height=100, repeat_content="true", arrangement="horizontal")
     w.open("rect", controller="TabSelectorButton")
-    w.leaf("simplebutton", name="tabButton", depth=8, pos="5,0",
-           width=50, height=100, font_size=20, bordercolor="[black]",
+    w.leaf("simplebutton", name="tabButton", depth=8, pos="0,0",
+           width=46, height=100, font_size=20, bordercolor="[black]",
            defaultcolor="[darkestGrey]", selectedsprite="menu_empty",
            selectedcolor="74, 33, 150", foregroundlayer="false",
            caption="{tab_name_localized}")
     w.close("rect")
     w.close("grid")
     # ---- (2) Decorative magazine overlay ----
-    # First cell (col 0) is reserved for the All button (already shows
-    # "All" caption from the template above), so the magazine grid starts
-    # at column 1: pos x = -55 + 60 = 5.
+    # Decorative magazine grid aligns with tabButtons: pos x = 11, cols = 24, cell_width = 57.
     # depth=10 (above button at depth=8) + foregroundlayer="true" so they
     # render visually on top of the button background. Sprites and labels
     # have NO NGUI collider, so clicks pass through to the simplebutton.
     # This is exactly the pattern the hand-written zoomed views use.
-    w.open("grid", name="magazineDecor", pos="5,-10", depth=10, rows=1, cols=23,
-           cell_width=60, cell_height=100, repeat_content="false",
+    w.open("grid", name="magazineDecor", pos="11,-10", depth=10, rows=1, cols=24,
+           cell_width=57, cell_height=100, repeat_content="false",
            arrangement="horizontal", controller="MapStats")
     for tab_skill in TAB_ORDER:
         sk = by_name.get(tab_skill)
         if not sk:
             continue
         w.open("entry")
-        w.open("rect", depth=10, pos="5,0", width=50, height=100)
+        w.open("rect", depth=10, pos="0,0", width=46, height=100)
         # NOTE: No tooltip_key on these sprites/labels. tooltip_key turns a
         # widget into a hover/click target that blocks the simplebutton
         # underneath. The hand-written zoomed views deliberately omit it.
-        w.leaf("sprite", depth=10, name="itemIcon", pos="2,-9", width=50, height=50,
-               size="46,46", foregroundlayer="true", atlas="ItemIconAtlas",
+        w.leaf("sprite", depth=10, name="itemIcon", pos="2,-9", width=46, height=46,
+               size="42,42", foregroundlayer="true", atlas="ItemIconAtlas",
                sprite=sk.book_sprite, color="")
-        w.leaf("label", depth=10, name="check", pos="0,-60", width=50, height=16,
-               justify="center", text=f"[fc8c03]{{cvar({sk.name}Check)}}[-]", font_size=22,
+        w.leaf("label", depth=10, name="check", pos="0,-60", width=46, height=16,
+               justify="center", text=f"[fc8c03]{{cvar({sk.name}Check)}}[-]", font_size=20,
                foregroundlayer="true")
-        w.leaf("label", depth=10, name="check", pos="0,-77", width=50, height=16,
-               justify="center", text=f"/{sk.max_level}", font_size=22,
+        w.leaf("label", depth=10, name="check", pos="0,-77", width=46, height=16,
+               justify="center", text=f"/{sk.max_level}", font_size=20,
                foregroundlayer="true")
         w.leaf("filledsprite", depth=9, name="yesUnlocked", color="10,255,10,65",
-               pos="2,-1", width=46, height=98, fillcenter="true", type="filled",
+               pos="2,-1", width=42, height=98, fillcenter="true", type="filled",
                foregroundlayer="true",
                fill=f"{{cvar({sk.name}Check{sk.max_level})}}")
         w.close("rect")
@@ -4628,7 +4617,7 @@ def emit_craftinglist_tab(w: W, skills: list[Skill]) -> None:
         sk = by_name.get(tab_skill)
         if not sk:
             continue
-        x = 10 + i * 60
+        x = 11 + i * 57
         emit_compact_strip(w, sk, x)
     w.close("rect")
     # Per-skill zoomed views
@@ -4674,7 +4663,7 @@ def emit_window(
     # Non-EnhancedAGF fallback header objects (title/day-time/location)
     # are generated here so manual live-file edits are not required.
     w.open("conditional", evaluator="client")
-    w.open("if", cond="mod_loaded('AGF-NoEAC-EnhancedAGF') == false")
+    w.open("if", cond="mod_loaded('AGF-EnhancedAGF') == false and mod_loaded('AGF-NoEAC-EnhancedAGF') == false")
     w.open("rect", name="agfPbFallbackTitle", pos="480,102", width="430", height="46", depth="10")
     w.leaf("sprite", name="backgroundDark", sprite="ui_game_header_fill", pos="-3,3",
            width="436", height="52", color="0,0,0,255", type="sliced", pivot="topleft")
@@ -4747,7 +4736,7 @@ def emit_window(
     # 4-tab shell Ã¢â‚¬â€ header is small + top-centered so it sits above the magazine strip
     w.open("rect", name="tabs", controller="TabSelector", select_tab_contents_on_open="true")
     w.open("rect", name="tabsHeader")
-    w.open("grid", name="tabButtons", pos="455,40", depth=2, rows=1, cols=4,
+    w.open("grid", name="tabButtons", pos="450,40", depth=2, rows=1, cols=4,
            cell_width=120, cell_height=40, repeat_content="true", arrangement="horizontal")
     w.open("rect", controller="TabSelectorButton")
     w.leaf("simplebutton", name="tabButton", depth=8, width=120, height=40,
@@ -6665,17 +6654,16 @@ def _normalize_shared_all_buttons_and_unlocks_tabs(xml_text: str) -> str:
         all_btn.attrib.update(all_button_attrs)
 
         if tab_name == "craftinglistTab":
-            # Magazines has 24 tabs including All; move All out and keep 23 in grid.
-            old_x, old_y = _parse_pos_xy(tab_grid.attrib.get("pos", "-55,-10"), -55, -10)
-            try:
-                cols = int(tab_grid.attrib.get("cols", "24"))
-            except ValueError:
-                cols = 24
-            if cols >= 24:
-                tab_grid.set("cols", "23")
-                # Preserve original non-All visual position after removing the
-                # first (All) slot from the grid.
-                tab_grid.set("pos", f"{old_x + 60},{old_y}")
+            # Magazines has 24 skills (excluding All). All tab button was moved out.
+            # Grid has 24 columns at cell_width 57 starting at pos="11,-10".
+            tab_grid.set("cols", "24")
+            tab_grid.set("cell_width", "57")
+            tab_grid.set("pos", "11,-10")
+            btn = tab_grid.find("./rect/simplebutton[@name='tabButton']")
+            if btn is not None:
+                btn.set("width", "46")
+                btn.set("height", "100")
+                btn.set("pos", "0,0")
 
         # Retarget the per-page "all" tab key to dedicated overview key so
         # caption localization can be specific without touching global lblAll.
@@ -6705,7 +6693,7 @@ def _normalize_shared_all_buttons_and_unlocks_tabs(xml_text: str) -> str:
             except ValueError:
                 cell_w = 166
             _x, y = _parse_pos_xy(tab_grid.attrib.get("pos", "120,-10"), 120, -10)
-            centered_x = max(0, (1390 - cols * cell_w) // 2)
+            centered_x = max(0, (WIN_WIDTH - cols * cell_w) // 2)
             tab_grid.set("pos", f"{centered_x},{y}")
 
             # Vanilla unlock source for rocket ammo is craftingExplosives level 45,
@@ -6748,7 +6736,7 @@ def _normalize_global_header_hint(xml_text: str) -> str:
 
             main_grid = tabs_header.find("./grid[@name='tabButtons']")
             if main_grid is not None:
-                gx, gy = _parse_pos_xy(main_grid.attrib.get("pos", "455,40"), 455, 40)
+                gx, gy = _parse_pos_xy(main_grid.attrib.get("pos", "450,40"), 450, 40)
                 try:
                     cols = int(main_grid.attrib.get("cols", "4"))
                 except ValueError:
@@ -9054,6 +9042,11 @@ def main() -> int:
 
     xml_text = emit_window(skills)
     existing_windows_text = out_path.read_text(encoding="utf-8") if out_path.exists() else None
+    if existing_windows_text and "<conditional>" in existing_windows_text:
+        # Extract the 3.3+ Schematics window to avoid nesting conditional blocks
+        m_v33 = re.search(r'<if cond="game_version\(\) &gt;= version\(1,3,30\)">\s*(<append xpath="/windows">.*?</append>)\s*</if>', existing_windows_text, re.DOTALL)
+        if m_v33:
+            existing_windows_text = f"<AGF-PurpleBookGenerator>\n{m_v33.group(1)}\n</AGF-PurpleBookGenerator>"
 
     seed_path = Path(args.seed_windows)
     if not seed_path.exists() and DEFAULT_RELEASE_WINDOWS.exists():
@@ -9249,6 +9242,44 @@ def main() -> int:
         return 5
     crafting_skill_count = sum(1 for s in skills if s.name.startswith("crafting"))
     print(f"[ok] buffs contract check passed ({crafting_skill_count} crafting categories)")
+
+    # Wrap the 3.3+ generated windows.xml alongside pre-3.3 legacy window inside version conditionals
+    pre33_windows_path = WORKSPACE / "03_ReleaseSource" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "XUi_InGame" / "windows.xml"
+    if not pre33_windows_path.exists():
+        pre33_windows_path = WORKSPACE / "02_ActiveBuild" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "XUi_InGame" / "windows.xml"
+    
+    pre33_append_block = None
+    if pre33_windows_path.exists():
+        pre_text = pre33_windows_path.read_text(encoding="utf-8")
+        if '<if cond="game_version() &lt; version(1,3,30)">' in pre_text:
+            m_pre = re.search(r'<if cond="game_version\(\) &lt; version\(1,3,30\)">\s*(<append xpath="/windows">.*?</append>)\s*</if>', pre_text, re.DOTALL)
+            if m_pre:
+                pre33_append_block = m_pre.group(1).strip()
+        else:
+            s_idx = pre_text.find('<append xpath="/windows">')
+            e_idx = pre_text.rfind('</append>')
+            if s_idx != -1 and e_idx != -1 and e_idx > s_idx:
+                pre33_append_block = pre_text[s_idx:e_idx + len('</append>')].strip()
+
+    v33_s = xml_text.find('<append xpath="/windows">')
+    v33_e = xml_text.rfind('</append>')
+    if pre33_append_block and v33_s != -1 and v33_e != -1 and v33_e > v33_s:
+        v33_append_block = xml_text[v33_s:v33_e + len('</append>')].strip()
+        header_part = xml_text[:v33_s].rstrip()
+        footer_part = xml_text[v33_e + len('</append>'):].strip()
+        xml_text = (
+            f"{header_part}\n"
+            f"    <conditional>\n"
+            f'        <if cond="game_version() &gt;= version(1,3,30)">\n'
+            f"            {v33_append_block}\n"
+            f"        </if>\n"
+            f'        <if cond="game_version() &lt; version(1,3,30)">\n'
+            f"            {pre33_append_block}\n"
+            f"        </if>\n"
+            f"    </conditional>\n"
+            f"{footer_part}\n"
+        )
+        print("[ok] version-gated windows.xml (game_version >= 1.3.30 vs < 1.3.30)")
 
     if args.autobackup:
         backup_path = _write_windows_backup(out_path)
@@ -9469,9 +9500,9 @@ def main() -> int:
 
     existing_loc_path = loc_path if loc_path.exists() else (out_mod_dir / "Config" / "Localization.txt")
     existing_loc_text = existing_loc_path.read_text(encoding="utf-8") if existing_loc_path.exists() else None
-    fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "Localization.csv"
+    fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "Localization.csv"
     if not fallback_loc_path.exists():
-        fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-HUDPlus-PurpleBook-v2.0.1" / "Config" / "Localization.txt"
+        fallback_loc_path = WORKSPACE / "03_ReleaseSource" / "AGF-V3-SERVER-2PurpleBook-v3.2.1" / "Config" / "Localization.txt"
     fallback_loc_text = fallback_loc_path.read_text(encoding="utf-8") if fallback_loc_path.exists() else None
     loc_text = _merge_localization_text(
         generated_loc_text,

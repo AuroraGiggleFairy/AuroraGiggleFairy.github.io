@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
   <Name value="AGF-AutomobilesRespawn" />
-  <DisplayName value="AGF Automobiles Respawn" />
+  <DisplayName value="AGF - Automobiles Respawn - V3" />
   <Version value="4.1.2" />
   <Description value="Salvaged vehicles downgrade to a hubcap seed that regrows a vehicle." />
   <Author value="AuroraGiggleFairy (AGF)" />

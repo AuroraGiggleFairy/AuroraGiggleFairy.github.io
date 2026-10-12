@@ -39,8 +39,8 @@
     </Reference>
   </ItemGroup>
   <PropertyGroup>
-    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-NoEAC-PartyGroupPlus-v1.1.1</ActiveBuildDir>
-    <GameModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-NoEAC-PartyGroupPlus-v1.1.1</GameModDir>
+    <ActiveBuildDir>$(MSBuildProjectDirectory)\..\..\..\02_ActiveBuild\AGF-V3-BOTH-PartyGroupPlus-v1.2.1</ActiveBuildDir>
+    <GameModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\AGF-V3-BOTH-PartyGroupPlus-v1.2.1</GameModDir>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="_decomp_autoparty\**" />

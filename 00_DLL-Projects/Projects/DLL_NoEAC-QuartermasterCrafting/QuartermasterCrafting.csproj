@@ -15,9 +15,9 @@
     <SevenDaysToDieDir Condition="'$(SevenDaysToDieDir)'=='' and Exists('C:\Program Files\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe')">C:\Program Files\Steam\steamapps\common\7 Days To Die</SevenDaysToDieDir>
     <HarmonyDll Condition="Exists('$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll')">$(SevenDaysToDieDir)\Mods\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
     <HarmonyDll Condition="'$(HarmonyDll)'==''">$(MSBuildProjectDirectory)\..\..\0_TFP_Harmony\0Harmony.dll</HarmonyDll>
-    <DraftModDir>$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-NoEAC-QuartermasterCrafting-v0.0.2</DraftModDir>
-    <GameModDir>$(SevenDaysToDieDir)\Mods\AGF-NoEAC-QuartermasterCrafting-v0.0.2</GameModDir>
-    <DedicatedModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods\AGF-NoEAC-QuartermasterCrafting-v0.0.2</DedicatedModDir>
+    <DraftModDir>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\..\..\01_Draft\AGF-V3-BOTH-QuartermasterCrafting-v0.0.4'))</DraftModDir>
+    <GameModDir>$([System.IO.Path]::GetFullPath('$(SevenDaysToDieDir)\Mods\AGF-V3-BOTH-QuartermasterCrafting-v0.0.4'))</GameModDir>
+    <DedicatedModDir>C:\Program Files (x86)\Steam\steamapps\common\7 Days to Die Dedicated Server\Mods\AGF-V3-BOTH-QuartermasterCrafting-v0.0.4</DedicatedModDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>
@@ -38,21 +38,13 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <Target Name="CopyToDraft" AfterTargets="Build" Condition="Exists('$(DraftModDir)')">
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="true" />
-  </Target>
-  <Target Name="CopyToGame" AfterTargets="CopyToDraft" Condition="Exists('$(DraftModDir)')">
+  <Target Name="DeployAll" AfterTargets="Build">
+    <Message Text="Deploying from $(MSBuildProjectDirectory)\QuartermasterCrafting.dll to $(DraftModDir)" Importance="high" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\QuartermasterCrafting.dll" DestinationFolder="$(DraftModDir)" SkipUnchangedFiles="false" Condition="Exists('$(DraftModDir)')" />
     <ItemGroup>
       <DraftFiles Include="$(DraftModDir)\**\*.*" />
     </ItemGroup>
-    <MakeDir Directories="$(GameModDir)" />
-    <Copy SourceFiles="@(DraftFiles)" DestinationFiles="@(DraftFiles->'$(GameModDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-  </Target>
-  <Target Name="CopyToDedicated" AfterTargets="CopyToGame" Condition="Exists('$(DedicatedModDir)\..')">
-    <ItemGroup>
-      <DraftFilesDedicated Include="$(DraftModDir)\**\*.*" />
-    </ItemGroup>
-    <MakeDir Directories="$(DedicatedModDir)" />
-    <Copy SourceFiles="@(DraftFilesDedicated)" DestinationFiles="@(DraftFilesDedicated->'$(DedicatedModDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(DraftFiles)" DestinationFiles="@(DraftFiles->'$(GameModDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" Condition="Exists('$(GameModDir)\..')" />
+    <Copy SourceFiles="@(DraftFiles)" DestinationFiles="@(DraftFiles->'$(DedicatedModDir)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" Condition="Exists('$(DedicatedModDir)\..')" />
   </Target>
 </Project>

@@ -708,446 +708,458 @@
     "media_file": ""
   },
   "AGF-V3-ADMIN-Fix4DestroyBiomeBadge": {
-    "signature": "8d144ca2dec9a3428ad515aa4fbdb960912a4773d026897cff2f71e675524d7b",
+    "signature": "bf81724056251ed5b3f82457211e5b9cf82146fa798f5429bdd0f99cc4e93354",
     "version": "2.1.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-ADMIN-Fix4PerkPageReset": {
-    "signature": "68e93dd27be3b609991df50c09e95c3f9d72538b808317143d91193799386695",
+    "signature": "a893bebe011ccf156cb4e5f96caf3df49568253f875a1ce5843c7a1597f07459",
     "version": "1.0.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-BOTH-PartyGroupPlus": {
-    "signature": "b7f8eba625cb4a742967a15c8cfe88dcbd0f2ba54183144eb77c3cc37711b859",
-    "version": "1.2.1",
+    "signature": "e54682d173f60891b41935b88f8656363a68294efc49a3f5fd017436e6f289be",
+    "version": "1.2.2",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-3VisualEntityTrackerAddon": {
-    "signature": "3d2562f022a29557c764cd312bcdc7fd3bdad84edf7d4bf663db615d30e9646e",
+    "signature": "ddef1ec687b5679a60e9ad2b6f755a025435e0fb8b0cdab36af1382486a0f210",
     "version": "1.0.2",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-AnimalTrackerAlwaysOn": {
-    "signature": "e97f08158bdb14d58792764ba8af7ff2c4c83dd79cc01b5f41bc7826d293f242",
+    "signature": "e8103ae87787503d7833e03342b1461995028da5fe67a2dd57c4a026633f2966",
     "version": "1.0.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-LootTimerHolds": {
-    "signature": "81531bc202eaf9574f4422fb551875011210d90c16773023bd8caa694c78609c",
+    "signature": "9845a994fc6f2469756cae25933ecc9ee3f8e4bd180abf72ad568456fd1b77ac",
     "version": "1.0.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-PaintbrushPlus": {
-    "signature": "161d04858ded23de8ddbe5c786cbfb593e11f15caaebfbaa894ad6de63829753",
+    "signature": "85b8e05243172fee839aa85d958bbeddc0390280def013ee8db903fbda1857c3",
     "version": "3.0.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-SortingCart": {
-    "signature": "c6d9204cad4b28fec1fd3bbec4f2668434dc07a6fd9f3e1bc8f04407738e4c9d",
+    "signature": "686b29db47543e19be03426b6ebd9b91832dfc227c9d1129e8a5ad2fc2ae1d72",
     "version": "2.1.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-VehiclePerformance": {
-    "signature": "67f82d7b300cd690d36bf728715b0306a3ba91e61ef83efa47c9596bff9ffcab",
+    "signature": "44d87a6c4ccd471a79c20385f7c88deb3f8813c1a02834216893efe44e9d1e5e",
     "version": "2.1.2",
     "has_media": false,
     "media_file": ""
   },
   "zzzAGF-V3-SERVER-HelpfulRenames": {
-    "signature": "cedde122e43917a416a2f8bec613945497b392094b27e4df7ac0b4f36d2bb430",
+    "signature": "76cfd8659d3ebcd6acacf2693e1b493460adc98e196dbc42c545d16cebfd96ca",
     "version": "3.0.2",
     "has_media": false,
     "media_file": ""
   },
   "zzzAGF-V3-SERVER-LootStaysOnEmpty": {
-    "signature": "9d837535eaf3b1e25334b0fddd81ebf8840fcfb8178f5a9134a5ec52d2957667",
+    "signature": "3c1f98c54a9b4e389e9fe321dfa9abb3d6fb1a3512e405a627a2abeb684a43ba",
     "version": "1.0.5",
     "has_media": false,
     "media_file": ""
   },
   "0AGF-V3-CLIENT-LawnTractorPatchGuard": {
-    "signature": "0e63d8cf43a019117c29652561c3c247258ebdf75ae2fcfc3ba35a1feb392bea",
+    "signature": "a726d22e23fc51857428b653b7ded6957e2d9f6d6c2cd9292c85cfb333aa86b1",
     "version": "1.0.1",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-BOTH-CosmeticLockIcon": {
-    "signature": "45130d8889d52efc23ef92b070371cbdf150682abff81b0160ea13a206d24158",
+    "signature": "b0bddb8d87efbf9c5478cacec49cb34a4ae7847c98eb21bef566ee6e93ea60d3",
     "version": "3.1.3",
     "has_media": true,
     "media_file": "CosmeticLockIcon_01.png"
   },
   "AGF-V3-BOTH-GyroFlightModes": {
-    "signature": "58c3bd52c56ced639621cf29decd22939f06b8dd9c448c9fed6d9d0b2079942c",
+    "signature": "68f4156c6080e6429125b6315110b656347f35ad864f98aca08ed45ee597f1c8",
     "version": "1.0.2",
     "has_media": true,
     "media_file": "GyroFlightModes_01.png"
   },
   "AGF-V3-BOTH-Toolbelt12Slots": {
-    "signature": "fbff1a8e108d7af7d74b7ad2f323cfb0277ba6734a1ba38764d66d6e9e240789",
+    "signature": "4af3ce53318c5a6c46479020a98223def6cde347da4ac7b8b47d49664b82bd22",
     "version": "2.3.1",
     "has_media": true,
     "media_file": "Toolbelt12Slots_01.png"
   },
   "AGF-V3-CLIENT-AudioOptionsPlus": {
-    "signature": "50f79f2510bc0271b4680ff3a7249fb7f964e45a37f9045e4163df02e75572f7",
+    "signature": "06c3f26d573f9617e9f6ff0e0c42dd64e7b78f951bd685fc2af155e157c00611",
     "version": "2.1.1",
     "has_media": true,
     "media_file": "AudioOptionsPlus_01.png"
   },
   "AGF-V3-CLIENT-AutoRun": {
-    "signature": "054b87cb51f71ece6d00db046959b644016630b9c521514c0f648c9d1b1dd984",
+    "signature": "f4a49bf3e99caf4364e7c2d1c3793ea7ec6ffd87f6aeaa9595eeb7a7144d5c1e",
     "version": "2.2.1",
     "has_media": true,
     "media_file": "AutoRun_01.png"
   },
   "AGF-V3-CLIENT-ConsoleOpacityMod": {
-    "signature": "cfb355fafba12c26b9de02d3aa483227bda8d09def5dbc1ac0d05d040b22a2f9",
+    "signature": "3aeaaf3c670cca29d503abcc15607f7fee6724555567b4cf8edd41358516356b",
     "version": "1.0.2",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-CLIENT-EnhancedAGF": {
-    "signature": "0122c9c4b523d609a30807a3397ddb2777d0f51f4e3100ef05d5bf0c6772c3fa",
+    "signature": "2655795073a531183d09587c3833365760a89626bc68c7983971bc32cd19f4cf",
     "version": "5.0.1",
     "has_media": true,
     "media_file": "EnhancedAGF_01.png"
   },
   "AGF-V3-CLIENT-HideDLCCosmetics": {
-    "signature": "6977d2168d72263d2e06b94929b8b487fc2dbed9466b58418ad8cac141463f02",
+    "signature": "b521f3690db4c86ca5b56192a26dcac7310de4b4c708fae642b35740b9534587",
     "version": "1.1.1",
     "has_media": true,
     "media_file": "HideDLCCosmetics_01.png"
   },
   "AGF-V3-CLIENT-MapPlus": {
-    "signature": "5d4d7bcda6180a1fdc3c9d3d2dac43a1cb8dc1dcd720a492a0ebd79b45f9c75e",
+    "signature": "129e9785c6832fd2963673ea9263caee7fa4d55f931677c935227b166a1af6bb",
     "version": "1.1.3",
     "has_media": true,
     "media_file": "MapPlus_01.png"
   },
   "AGF-V3-CLIENT-OpenAllButton": {
-    "signature": "c42ede624f2f2a199f8d5ef519c72ca0256bd0de1325681e900eb73712ecb9a1",
+    "signature": "fc08220a29090eb938b65c97e8e943f43ce91f21c9c1d33ff3a1b61e3af621f0",
     "version": "2.0.2",
     "has_media": true,
     "media_file": "OpenAllButton_01.png"
   },
   "AGF-V3-CLIENT-SmeltTimerOption": {
-    "signature": "c7a9af7cc1f6810d9d8ee042496f0a5dffdada3bc049c7b7a2bcd919099b593b",
+    "signature": "cba9b3ea2111c82828b983a5357b3e61236f03392616969a3735a9334a5befbc",
     "version": "1.1.1",
     "has_media": true,
     "media_file": "SmeltTimerOption_01.png"
   },
   "AGF-V3-SERVER-1HUDPlus": {
-    "signature": "ac04a23893697ca67a2c477a5705c20c5f6670a0e6f4b838f68f73073e7bb0f1",
+    "signature": "5f75406922da07ca84f11a1258060e12b21e5218c7c0ffb9c4044f9c7ed82135",
     "version": "6.6.2",
     "has_media": true,
     "media_file": "1HUDPlus_01.png"
   },
   "AGF-V3-SERVER-2BMCounter": {
-    "signature": "1f945dbcfefd1f40e908a86f1d1aa238dd1fcaa39506ef90edbb85c7dd460a11",
+    "signature": "b7a6a9557e4dfd72e44ba413d80a29c16014463c2665cc9bb05ff39d7dde1700",
     "version": "4.0.3",
     "has_media": true,
     "media_file": "2BMCounter_01.png"
   },
   "AGF-V3-SERVER-2PurpleBook": {
-    "signature": "cfedb9df3e1dbe7401fdde62b23bf7cdfdbde02e9f7a61bb7fc40993774375fd",
-    "version": "3.2.1",
+    "signature": "08ffb397dcce80e7b75dc253cc0d799e3c36e02f8a5e6ddace802284214a0319",
+    "version": "3.3.0",
     "has_media": true,
     "media_file": "2PurpleBook_01.png"
   },
   "AGF-V3-SERVER-2RemoveEnteringPopUp": {
-    "signature": "5a36ae69199fbf7c20ca4ae7952c375c06c7746f04fd8128ca804b7626847e42",
+    "signature": "cf4c93e1e6c0f4a5a8b3b976441dbc20a8fbc8fef0d005c6e117d8366c5d9fd8",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "2RemoveEnteringPopUp_01.png"
   },
   "AGF-V3-SERVER-2VisualEntityTracker": {
-    "signature": "cbd181e6d39fb37043b316169d48639bad7962ec894a7e4a6998a27e51a98ef7",
+    "signature": "a646d5596ab9543dd9c3233afc5d9bf412dd48a45e0652be818e733cc2053ad1",
     "version": "1.1.2",
     "has_media": true,
     "media_file": "2VisualEntityTracker_01.png"
   },
   "AGF-V3-SERVER-2Weekday": {
-    "signature": "43b5d64f7c9aaefb41d80c44acb1ecbc0486f715d5da99f0daaba6e22d99fea7",
+    "signature": "1f680e9ecfb33d7a90c3014ae63c7c8168b04c010bc29081b3e66bc60c9cac1d",
     "version": "3.1.4",
     "has_media": true,
     "media_file": "2Weekday_01.png"
   },
   "AGF-V3-SERVER-AdminModdingSupport": {
-    "signature": "ce2bd7e7740e27efecfc6d215944866d341762b50f6fc66e4156e2fb27aef165",
+    "signature": "f041a3d894131f3f4d3fa1d51c69972c9fefeb195df334969729f95e70851848",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "AdminModdingSupport_01.png"
   },
   "AGF-V3-SERVER-AlternativeRecipes": {
-    "signature": "92d464c252d53f47e306ae7187f1131df1654c02e060e868e7a0e768ec772b48",
+    "signature": "f133ea96a3adc309bca76d7dd0f206c3d3eae66e9864039c8544c6268d996c7d",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "AlternativeRecipes_01.png"
   },
   "AGF-V3-SERVER-AmmoDisassembly": {
-    "signature": "cbe08ecc0c5472c825ff3120cef8cf36a76e12fd9da62722899cfa2826b69dfc",
+    "signature": "e1c483e16abbc6c97d9f5c25cd1902acf6035590c8bcbc24b466ae6ae283eaff",
     "version": "2.0.2",
     "has_media": true,
     "media_file": "AmmoDisassembly_01.png"
   },
   "AGF-V3-SERVER-ArcheryFeathersChange": {
-    "signature": "326079126246ff6200f04d180d5de6666e48c819cc41ad387e8854f648d20930",
+    "signature": "a7f029c9bdef52824bfdcb98a15c2b6ae37ae6071b62c3d73e5b47d365320910",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "ArcheryFeathersChange_01.png"
   },
   "AGF-V3-SERVER-AutomobilesRespawn": {
-    "signature": "31370aa257a94d5efddd4ec2bfa522eeee1b11e09d76c8f37d308e9358d178b0",
+    "signature": "a46fed1cfd1278f8237898c3d5c64a5753ffcee9c2d90236f6715fa7164cbb9b",
     "version": "4.1.2",
     "has_media": true,
     "media_file": "AutomobilesRespawn_01.png"
   },
   "AGF-V3-SERVER-BedrollPlus": {
-    "signature": "a9da731b42f630f859f71ee51f4a55c3469078a71b68b11c2c074289d1b762bd",
+    "signature": "78aa3852e2b34e96177e1ccc7da977666b2847571a1f7bf0c87d23b842e40710",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "BedrollPlus_01.png"
   },
   "AGF-V3-SERVER-BetterEggChance": {
-    "signature": "109cafc0510ee50f5e509e07b461932649aca2bf1eb3a7d3a9664a142f230a03",
+    "signature": "f46a059adafd566b94b1142b2a5808b00de1c720af44016919b20210720bca5c",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "BetterEggChance_01.png"
   },
   "AGF-V3-SERVER-BreakItGetIt": {
-    "signature": "0ae4e00e13b6521b5b417d92e3572f1a89e22ffb4d1b2967f6884004512f1a3e",
+    "signature": "7b97470f899638b558bd5996b44f65427e7e8d5607de0998cbcf20451db87c45",
     "version": "2.2.1",
     "has_media": true,
     "media_file": "BreakItGetIt_01.png"
   },
   "AGF-V3-SERVER-CraftSewingKits": {
-    "signature": "6deddbe63b74bb9ca2f1f99ea95175e0b17da581eee8f9ec73683b78698c2850",
+    "signature": "c1c10da2c046e7f5fed0308d0e67f2f7c578d5e2f45e0da27213d3050efdf191",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "CraftSewingKits_01.png"
   },
   "AGF-V3-SERVER-CraftStackEngBattCells": {
-    "signature": "d7121e1823cbe525cbb8925326f2a43b40aeb4d11dc0b2719703e73c68411402",
-    "version": "4.0.1",
+    "signature": "260dea45c45e1f1fd0e11e62335cab3f540dd227fcb63c0438fb45695c855652",
+    "version": "4.0.2",
     "has_media": true,
     "media_file": "CraftStackEngBattCells_01.png"
   },
   "AGF-V3-SERVER-CraftVitamins": {
-    "signature": "dd529b327dbcaa5954b28653f4212e5c4249ae76e067b41a862d3dcd7c00a6e9",
-    "version": "2.1.3",
+    "signature": "dd89b7a8bfb11f60e6e62399940a0b56a3281e604d6ed3f4107e8435e5436fdc",
+    "version": "2.1.4",
     "has_media": true,
     "media_file": "CraftVitamins_01.png"
   },
   "AGF-V3-SERVER-DecorationBlock": {
-    "signature": "2abf4eb0159023aee9ed082bc6bc429b5b5a186a305c8087928042a48efe97d3",
+    "signature": "834b7d6f77e0e1bfaba93f53c40466d2d8b69bb7b87f1a86292952f509229af7",
     "version": "3.0.4",
     "has_media": false,
     "media_file": ""
   },
   "AGF-V3-SERVER-DoorsPlus": {
-    "signature": "4fb3bbcd942096c5df8529b3451332e43e68e94367f1a00d74183a1974154197",
+    "signature": "b56435c0ae38aeb98060ad700aac74518be501ca815f4ece9995bbdf66410be5",
     "version": "4.0.2",
     "has_media": true,
     "media_file": "DoorsPlus_01.png"
   },
   "AGF-V3-SERVER-DrinkableAcid": {
-    "signature": "bd9d228c7f0634b7a4be4fb4a9c15be18d120d82213fca03f52c0ed0117b191d",
+    "signature": "2a4a36b499bafddb72e60db1e638bdf3295a6ebd36060d1f8a7e51f3b062773c",
     "version": "3.0.2",
     "has_media": true,
     "media_file": "DrinkableAcid_01.png"
   },
   "AGF-V3-SERVER-DyesPlus": {
-    "signature": "5b3b08d66ec7c2920615dbcc3c7122a3f2840714421b5244bd6d5436ad276706",
+    "signature": "6aba80d16a458c14e27ee800e3d3c118e1d3643dee748971f554e03fa470639b",
     "version": "4.1.1",
     "has_media": true,
     "media_file": "DyesPlus_01.png"
   },
   "AGF-V3-SERVER-FloraHarvester": {
-    "signature": "e514388c1bfd11e284277763719f821e5d5c71f6ae40b0ca40442fb1a63e81b4",
-    "version": "3.0.3",
+    "signature": "200f9f86f8dc14c9b9aa376e30f29197fd539b03e778287acd042b372906ceaf",
+    "version": "3.0.4",
     "has_media": true,
     "media_file": "FloraHarvester_01.png"
   },
   "AGF-V3-SERVER-FuelAutoShutOff": {
-    "signature": "edcf6e10e0a7ae402d4a6fb041bad57ed170c8ab6079290d1eef28d3d15290ce",
+    "signature": "801f0ba85dd769364a83b6f593b25113708330e589b45444bc218a4dad82ef40",
     "version": "1.1.1",
     "has_media": true,
     "media_file": "FuelAutoShutOff_01.png"
   },
   "AGF-V3-SERVER-FuelBurnPlus": {
-    "signature": "f675cd43221438a87cbd99e18e19fa74eae6812e7b034c0f10cc1a737e639b99",
+    "signature": "875b665e9c4e2e2600bb9c568503e7e24f68bd350c6a55a662a4317d631c49d5",
     "version": "3.1.3",
     "has_media": true,
     "media_file": "FuelBurnPlus_01.png"
   },
   "AGF-V3-SERVER-GlobalStormTracker": {
-    "signature": "a5117d15a8d6cd46125012cf71aee40773820f10715bc1756a2df869675d6fb8",
+    "signature": "f7f4dcc70a7d1b18120ed99fcc23f6cbe2782fc2ce980211f754b5b5da29b7fd",
     "version": "2.1.3",
     "has_media": true,
     "media_file": "GlobalStormTracker_01.png"
   },
   "AGF-V3-SERVER-HonkOpensYourDoors": {
-    "signature": "21ff37e0b43908be740c4c3143d19f2ad7381f2f90e0cb79d2be6a19311e24af",
+    "signature": "86caed6fd4edbfeadf73767835de7fd56e695b8e04afd52d5b5f6690906041c3",
     "version": "1.0.2",
     "has_media": true,
     "media_file": "HonkOpensYourDoors_01.png"
   },
   "AGF-V3-SERVER-LargerStorageOption": {
-    "signature": "16aa82cf2ff82b6a98fdc7586e8b3d68653339e2f500c6f798e3f456102fa625",
-    "version": "1.2.1",
+    "signature": "66fc4aaef52d9c047f0ea50186d0c24ad9ada0130791da8476ca7b62e621f7b4",
+    "version": "1.2.2",
     "has_media": true,
     "media_file": "LargerStorageOption_01.png"
   },
   "AGF-V3-SERVER-MasterTool": {
-    "signature": "e9f72e47b2d39da8d46fb923afcbf886fb0d8140787de4d2d4898551de0fa158",
-    "version": "7.1.3",
+    "signature": "286a90f1c27b94822a54a461bf5f3488f6dead9c25924e43bacb067938504e12",
+    "version": "7.1.4",
     "has_media": true,
     "media_file": "MasterTool_01.png"
   },
   "AGF-V3-SERVER-MaxLevel500": {
-    "signature": "1bb46f9760efb08b5db9e9b30c8e068c1dfcf3a64b2c828ed960e7e00c2c8d75",
+    "signature": "86612e330034edc079bdc7e3b3c54910cb1f0bc52b8a24697b963e1619a558fd",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "MaxLevel500_01.png"
   },
   "AGF-V3-SERVER-MiningPlus": {
-    "signature": "67b5cf9d1e8be335a8e7ed56ad82a94c3fa869f73405790dde478de9acc5aa5b",
+    "signature": "105f536edc4f1494b02aad5de8a372cc0a1ceb1e35a6229f6d5a32d1ee7a967f",
     "version": "2.0.2",
     "has_media": true,
     "media_file": "MiningPlus_01.png"
   },
   "AGF-V3-SERVER-Mod988": {
-    "signature": "ea359f0fa6fc9ffffe3994f7a4b0f52e4988541f4c8169e6bc37e3e7c03c62dc",
+    "signature": "08fcd55c925b930e4e07a5a9d6212dc2979004368243d93f2b72dad326273996",
     "version": "3.0.1",
     "has_media": true,
     "media_file": "Mod988_01.png"
   },
   "AGF-V3-SERVER-ModSlotsPlus": {
-    "signature": "4ead762891e02d27ccc3dc2168943c39315d6661b6a2fa3f176461de1de0d3ed",
+    "signature": "6ce1aa0859178d2d4e221058fe18a9da1fe21667e210148d8b6d3173f15f6c36",
     "version": "4.1.3",
     "has_media": true,
     "media_file": "ModSlotsPlus_01.png"
   },
   "AGF-V3-SERVER-PickupLanternsPlus": {
-    "signature": "9eeaaae028143005bcfda5e45db75e41df568506d6d59424b0a4d4e4654de50c",
+    "signature": "c80f9b87c5c6adb5a61aefce1fc1c82c6e26320193511cde296561f9b84083c2",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "PickupLanternsPlus_01.png"
   },
   "AGF-V3-SERVER-PlayerResetQuests": {
-    "signature": "1b494c73e254f4bc14593178058da63632c80699153b17fdd0083259be773e73",
+    "signature": "17a34bb8748a9a7a0ae3391d17f485e3830e9cecb9c36b2ac38fc47c48577598",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "PlayerResetQuests_01.png"
   },
   "AGF-V3-SERVER-RebundleBundles": {
-    "signature": "d88c53fc3fae02af2221274b75ed3848986cad02f6c6cc7018d587b05fed4205",
+    "signature": "7afae25188c4e66977ee0319db0961e5c09baa233ff41768c6bf162475879945",
     "version": "2.1.3",
     "has_media": true,
     "media_file": "RebundleBundles_01.png"
   },
   "AGF-V3-SERVER-RecipeRottingFlesh": {
-    "signature": "b0e949e802395f2565d0aed95dd3a320a137a32c1120a4f3862c3cd327fbf044",
+    "signature": "006560363de5a3cc88844fd57325fef6fed55126415832fcc29a290327588ddb",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "RecipeRottingFlesh_01.png"
   },
   "AGF-V3-SERVER-RestorePowerAnyTime": {
-    "signature": "4d21927dbf89a007da243a650001657eb846175244624b0ded4726c5306a3b71",
+    "signature": "aa854bd101fdaa2beb375015f8d1e20587285482de111eab4efa148fb776ada9",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "RestorePowerAnyTime_01.png"
   },
   "AGF-V3-SERVER-ScrapBatts4Acid": {
-    "signature": "f97e26fc50d28865f20a89ab9e473b5b41307db9047814250a47e4e32ff38b99",
+    "signature": "eb10c11655cc0d3d336016c777809c1c0f68af59949d3eaefde00c9a65bc93c5",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "ScrapBatts4Acid_01.png"
   },
   "AGF-V3-SERVER-ScrapEquipmentFaster": {
-    "signature": "f4f563ce23ab954a2e43cbc2c6c75f0617eb8a712127b03b54a8cada9bcecd45",
+    "signature": "a6d637f9f8a1dfcd83878a942b6c5fadc83038da92036e1dc8e36b35f859ea52",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "ScrapEquipmentFaster_01.png"
   },
   "AGF-V3-SERVER-ScreamerAlert": {
-    "signature": "c9323b44188c4673d0aeb93d4e4f59f81f2a612ef9a1a5eabccc09cdc9387216",
+    "signature": "522204297914397b2b6e46adbe2e7d7b0e50939dbaafce7af5a99659ff20862f",
     "version": "2.3.5",
     "has_media": true,
     "media_file": "ScreamerAlert_01.png"
   },
   "AGF-V3-SERVER-SimplifiedStacks": {
-    "signature": "87ee1e64266f76a6eb455a613fd4d4617dc1029cd0d8f73bf3a14d1b1b5c771c",
+    "signature": "59aaec500c34ce8c4a041b656f22ad0e8a33e7f3c2cb26e4ea4a32560f3c6649",
     "version": "2.1.3",
     "has_media": true,
     "media_file": "SimplifiedStacks_01.png"
   },
   "AGF-V3-SERVER-SmallerInteractionPrompt": {
-    "signature": "8241c2ceb4f1c07a60d0b834643f8d87ce1f1f58e5fb351127a06b32526f1819",
+    "signature": "3f26b8f9cda8a5062abb01c34a28b7117f92bc1a913829001f05405ac70cdf52",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "SmallerInteractionPrompt_01.png"
   },
   "AGF-V3-SERVER-SmeltingPlus": {
-    "signature": "b396d010c2f5ec3bf4b6d56192dfc3f2ed0d40d54c4c48c000956afad4d33312",
+    "signature": "a56593d458f99959badd6741c29e5937d0ac961bb9a85b497db15c63dc5a5b73",
     "version": "3.0.2",
     "has_media": true,
     "media_file": "SmeltingPlus_01.png"
   },
   "AGF-V3-SERVER-StayLongerAnimalCorpse": {
-    "signature": "2d4315b4147dd66ef2ddd214e3fc15db312d1fa0fea4e7620853aece06e05175",
+    "signature": "20c4fca2379253d71bf24d1964a9ad24c3ddf231171472292471faa2d62b1ec8",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "StayLongerAnimalCorpse_01.png"
   },
   "AGF-V3-SERVER-StayLongerPlayerBackpack": {
-    "signature": "931eb1624fe7a1d0e5aae5e32a7a1178277afbd6523928592bae851a77bd04f2",
+    "signature": "80b2760f3a3f2cc18c24359a1d00e2ed35115d5a3e8e2c85b854bb7994dc46b4",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "StayLongerPlayerBackpack_01.png"
   },
   "AGF-V3-SERVER-TacticalRiflePlus": {
-    "signature": "1c31e3bc68fcfbcba6fa999921ba1110aa3ce0bf2c16cf6d06832566952a094a",
+    "signature": "4f6ad86c581782dd664d5a1068d8e74a0e688a4fc86900dcf5f082624305cf16",
     "version": "3.0.1",
     "has_media": true,
     "media_file": "TacticalRiflePlus_01.png"
   },
   "AGF-V3-SERVER-TinyBuffsPopUp": {
-    "signature": "c378165f7e1ce11866abc2c73dd51b780b4109381d058529d6a982a2265336e5",
+    "signature": "cbb567e52f8240a7b5bf14bf2f28fa77d2172baf6b461721badccba901441e96",
     "version": "2.0.1",
     "has_media": true,
     "media_file": "TinyBuffsPopUp_01.png"
   },
   "AGF-V3-SERVER-VehiclesExtraSeating": {
-    "signature": "cbf642f3bad2caad2d73aa7e823f57e237f1c6ce89a7870a55068e141d9708b5",
+    "signature": "9d7f935af3bd53b42ba420571df5a951162cca7415ff6f6179b1856108511fbd",
     "version": "2.1.2",
     "has_media": true,
     "media_file": "VehiclesExtraSeating_01.png"
   },
   "AGF-V3-SERVER-VehicleStoragePlus": {
-    "signature": "bbfa38d8190a4558f3ccd174e8638acee5c0703eff321b06b7ca5cbba5e430d6",
+    "signature": "9fffcccab1cb2193d40830e0eecf72592b631dba17a896deb9ae094f7e0e9d27",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "VehicleStoragePlus_01.png"
   },
   "AGF-V3-SERVER-ZombieCorpseLeaveQuicker": {
-    "signature": "6caab8e7f04fa9e5bc554d220dbacb10266fe51f46d317617c53fe25d37026d0",
+    "signature": "2440c7d626c7e219bc8de321d92164298be818c7e746b10a7dd6154b46dabfbc",
     "version": "3.1.2",
     "has_media": true,
     "media_file": "ZombieCorpseLeaveQuicker_01.png"
   },
   "zzzAGF-V3-CLIENT-LawnTractorV3Fix": {
-    "signature": "c324ac431fd43f63492b5d5259e70b1b95e92c219ccdb6521d39425f6d87bc05",
+    "signature": "bb929878708e32419a7ad941dfd79aa93482ba5efd41d9240a17f0f04abc3f28",
     "version": "1.0.1",
+    "has_media": false,
+    "media_file": ""
+  },
+  "AGF-V3-SERVER-2ShowStabilityOption": {
+    "signature": "915f5407c42fe7218342fa5b26015d4049f10fd43a6fdb3853c60a6b3488205a",
+    "version": "1.0.0",
+    "has_media": true,
+    "media_file": "2ShowStabilityOption_01.png"
+  },
+  "AGF-V3-SERVER-POISwitchesUnlockDoors": {
+    "signature": "519fc1e8afaa544d707c0ae68886a8426be504d4c17fc59d307b96d6ceddf73f",
+    "version": "1.0.0",
     "has_media": false,
     "media_file": ""
   }

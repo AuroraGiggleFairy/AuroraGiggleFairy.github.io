@@ -17,7 +17,7 @@ Live grants (what the levels actually spawn):
 - Item effects: `ZZZ_DoomMod_Standalone\Config\items.xml`
 - Immediate buffs: `zzzz_DoomClassicMaps\Config\buffs.xml`
 
-The repo file `00_Support/DoomLevelsSource/DoomLevels/content/pickups/pickups.xml` is older than the loaded levels. It still lists `stimPack` / `mediKit` and 10 pistol rounds for a clip. The MandaServer levels use `stimPackweak` / `mediKitweak` and 15 pistol rounds. This note follows the loaded levels.
+The repo file `00_Support/DoomSurvival/Support/DoomLevelsSource/DoomLevels/content/pickups/pickups.xml` is older than the loaded levels. It still lists `stimPack` / `mediKit` and 10 pistol rounds for a clip. The MandaServer levels use `stimPackweak` / `mediKitweak` and 15 pistol rounds. This note follows the loaded levels.
 
 ## Health and armor
 

@@ -137,11 +137,9 @@ namespace ExpandedInteractionPrompts
                 return;
 
             string raw = PromptTextField.GetValue(prompt) as string;
-            if (string.IsNullOrEmpty(raw))
-                return;
             if (!TryLook(out _, out Vector3i pos, out BlockValue blockValue))
                 return;
-            if (!TryStage(blockValue.type, out _, out _))
+            if (!TryStage(blockValue.type, out int index, out int count) || index >= count)
                 return;
 
             int second = Mathf.FloorToInt(Time.unscaledTime);
@@ -151,13 +149,17 @@ namespace ExpandedInteractionPrompts
             lastPaintSecond = second;
             lastPaintBlock = blockValue.type;
             lastPaintPos = pos;
+            if (string.IsNullOrEmpty(raw))
+            {
+                raw = blockValue.Block.GetLocalizedBlockName();
+                if (string.IsNullOrEmpty(raw))
+                    raw = blockValue.Block.GetBlockName();
+            }
             XUiC_InteractionPrompt.SetText(prompt.xui.playerUI, raw);
         }
 
         private static void Decorate(ref string text)
         {
-            if (string.IsNullOrEmpty(text))
-                return;
             if (!TryLook(out World world, out Vector3i pos, out BlockValue blockValue))
                 return;
 
@@ -165,7 +167,31 @@ namespace ExpandedInteractionPrompts
             if (!TryStage(blockValue.type, out int index, out int count))
                 return;
 
-            PromptStateHelpers.SplitPrompt(text, out string header, out _);
+            if (index >= count && string.IsNullOrEmpty(text))
+                return;
+
+            string header;
+            if (!string.IsNullOrEmpty(text))
+            {
+                PromptStateHelpers.SplitPrompt(text, out header, out _);
+            }
+            else
+            {
+                EntityPlayerLocal player = world.GetPrimaryPlayer();
+                if (player?.HitInfo != null)
+                {
+                    float distSq = player.HitInfo.hit.distanceSq;
+                    float maxDistSq = blockValue.Block.GetActivationDistanceSq();
+                    if (maxDistSq <= 0f)
+                        maxDistSq = 16f;
+                    if (distSq > maxDistSq)
+                        return;
+                }
+                header = blockValue.Block.GetLocalizedBlockName();
+                if (string.IsNullOrEmpty(header))
+                    header = blockValue.Block.GetBlockName();
+            }
+
             var lines = new List<string>(2);
             lines.Add(PromptStateHelpers.FormatIconRow(
                 IconStage,
@@ -242,7 +268,7 @@ namespace ExpandedInteractionPrompts
                 return -1;
 
             EnsureChains();
-            if (!Stages.ContainsKey(blockId))
+            if (!Stages.ContainsKey(blockId) && !TryStage(blockId, out _, out _))
                 return -1;
 
             BlockValue blockValue = world.GetBlock(pos);
@@ -385,8 +411,11 @@ namespace ExpandedInteractionPrompts
         {
             if (seconds < 0)
                 seconds = 0;
-            int mins = seconds / 60;
+            int hours = seconds / 3600;
+            int mins = (seconds % 3600) / 60;
             int secs = seconds % 60;
+            if (hours > 0)
+                return hours.ToString("00") + ":" + mins.ToString("00") + ":" + secs.ToString("00");
             return mins.ToString("00") + ":" + secs.ToString("00");
         }
 
@@ -395,11 +424,74 @@ namespace ExpandedInteractionPrompts
             index = 0;
             count = 0;
             EnsureChains();
-            if (!Stages.TryGetValue(blockId, out Stage stage))
-                return false;
-            index = stage.Index;
-            count = stage.Count;
-            return count > 0;
+            if (Stages.TryGetValue(blockId, out Stage stage))
+            {
+                index = stage.Index;
+                count = stage.Count;
+                return count > 0;
+            }
+
+            if (blockId >= 0 && Block.list != null && blockId < Block.list.Length)
+            {
+                Block b = Block.list[blockId];
+                if (b is BlockPlantGrowing growing && NextPlantField != null)
+                {
+                    BlockValue next = (BlockValue)NextPlantField.GetValue(growing);
+                    if (!next.isair && next.type != blockId)
+                    {
+                        index = 1;
+                        count = 2;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private static bool IsMasterTemplate(Block block)
+        {
+            if (block == null)
+                return true;
+            string name = block.GetBlockName();
+            if (string.IsNullOrEmpty(name))
+                return true;
+            return name.IndexOf("master", StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
+        private static void BuildChain(Block[] list, int startId)
+        {
+            var chain = new List<int>(8);
+            int id = startId;
+            int guard = 0;
+            bool grass = false;
+            while (NextByType.ContainsKey(id) && guard++ < 32)
+            {
+                if (chain.Contains(id))
+                    break;
+                Block step = id >= 0 && id < list.Length ? list[id] : null;
+                if (step != null && step.GetBlockName() == GrassSeedName)
+                    grass = true;
+                chain.Add(id);
+                id = NextByType[id];
+            }
+
+            if (id > 0 && !chain.Contains(id))
+            {
+                Block end = id < list.Length ? list[id] : null;
+                if (end != null && end.GetBlockName() == GrassSeedName)
+                    grass = true;
+                chain.Add(id);
+            }
+
+            if (grass || chain.Count == 0)
+                return;
+
+            for (int s = 0; s < chain.Count; s++)
+            {
+                if (Stages.ContainsKey(chain[s]))
+                    continue;
+                Stages[chain[s]] = new Stage { Index = s + 1, Count = chain.Count };
+            }
         }
 
         private static void EnsureChains()
@@ -418,7 +510,7 @@ namespace ExpandedInteractionPrompts
 
             for (int i = 0; i < list.Length; i++)
             {
-                if (!(list[i] is BlockPlantGrowing growing))
+                if (!(list[i] is BlockPlantGrowing growing) || IsMasterTemplate(list[i]))
                     continue;
                 BlockValue next = (BlockValue)NextPlantField.GetValue(growing);
                 if (next.isair || next.type == growing.blockID)
@@ -429,44 +521,26 @@ namespace ExpandedInteractionPrompts
             var targeted = new HashSet<int>(NextByType.Values);
             foreach (var pair in NextByType)
             {
-                Block start = list[pair.Key];
-                if (start == null || targeted.Contains(pair.Key))
+                if (targeted.Contains(pair.Key))
                     continue;
-                bool playerStart = start.CreativeMode == EnumCreativeMode.Player || start.CreativeMode == EnumCreativeMode.All;
-                if (!playerStart && !IsVehicleRespawnSeed(start))
-                    continue;
+                BuildChain(list, pair.Key);
+            }
 
-                var chain = new List<int>(8);
-                int id = pair.Key;
-                int guard = 0;
-                bool grass = false;
-                while (NextByType.ContainsKey(id) && guard++ < 32)
+            foreach (var pair in NextByType)
+            {
+                if (!Stages.ContainsKey(pair.Key))
+                    BuildChain(list, pair.Key);
+            }
+
+            foreach (var pair in Stages)
+            {
+                if (pair.Value.Index < pair.Value.Count && pair.Key >= 0 && pair.Key < list.Length)
                 {
-                    if (chain.Contains(id))
-                        break;
-                    Block step = id >= 0 && id < list.Length ? list[id] : null;
-                    if (step != null && step.GetBlockName() == GrassSeedName)
-                        grass = true;
-                    chain.Add(id);
-                    id = NextByType[id];
-                }
-
-                if (id > 0 && !chain.Contains(id))
-                {
-                    Block end = id < list.Length ? list[id] : null;
-                    if (end != null && end.GetBlockName() == GrassSeedName)
-                        grass = true;
-                    chain.Add(id);
-                }
-
-                if (grass || chain.Count == 0)
-                    continue;
-
-                for (int s = 0; s < chain.Count; s++)
-                {
-                    if (Stages.ContainsKey(chain[s]))
-                        continue;
-                    Stages[chain[s]] = new Stage { Index = s + 1, Count = chain.Count };
+                    Block b = list[pair.Key];
+                    if (b != null && b.DisplayInfo == Block.EnumDisplayInfo.None)
+                    {
+                        b.DisplayInfo = Block.EnumDisplayInfo.Name;
+                    }
                 }
             }
         }
